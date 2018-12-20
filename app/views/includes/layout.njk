@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>NHS digital service manual</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NHS digital service manual" />
+
+    <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
+    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" href="/nhsuk-frontend/assets/favicons/favicon.png">
+
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
+
+  </head>
+
+  <body>
+    {% include 'includes/header.njk' %}
+
+    {% block body %}{% endblock %}
+
+    {% include 'includes/footer.njk' %}
+  </body>
+
+</html>
