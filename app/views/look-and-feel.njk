@@ -1,0 +1,93 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ]
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+    <h1 class="nhsuk-u-margin-bottom-5">Look and feel</h1>
+         <p class="nhsuk-body-l">Grid, colours and typography.</p>
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
+                <div class="nhsuk-grid-column-one-third">
+                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="#">Grid</a></h2>
+                    <p>Placeholder text, to be updated.</p>
+                </div>
+
+                <div class="nhsuk-grid-column-one-third">
+                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="#">Typography</a></h2>
+                    <p>Placeholder text, to be updated.</p>   
+                </div>
+
+                <div class="nhsuk-grid-column-one-third">
+                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="#">Colour</a></h2>
+                    <p>Placeholder text, to be updated.</p>  
+                </div>
+    </div>
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
+
+
+
+										
+            <h2>Tested NHS.UK look and feel styles</h2>
+
+            <p>Use our grid, colours and font and typographic styles to make your service consistent with other NHS services.</p>
+
+            <p>Our look and feel is based on the <a href="">NHS Identity guidelines</a>.</p>
+
+            <p>Visit the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a> to discuss and give feedback about any of the look and feel styles.
+            </p>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+   
+
+  
+
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-thirds">
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
