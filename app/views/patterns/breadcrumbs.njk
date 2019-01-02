@@ -1,0 +1,161 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+    <h1 class="nhsuk-u-margin-bottom-5">Breadcrumbs</h1>
+         <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+              {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+                {{ breadcrumb({
+                  items: [
+                    {
+                      href: "/level-one",
+                      text: "Level one"
+                    },
+                    {
+                      href: "/level-one/level-two",
+                      text: "Level two"
+                    }
+                  ],
+                  href: "/level-one/level-two/level-three",
+                  text: "Level three"
+                }) }}
+
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
+            <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb" rel="nofollow">Get the HTML markup and Nunjucks macro for the breadcrumb component on GitHub</a> </p>
+
+            <h2 class="nhsuk-u-margin-top-8">When to use breadcrumbs</h2>
+                <p>Use this callout for information that:</p>
+
+                <ul>
+                <li>is time critical</li>
+                <li>could have a significant effect on someone's health</li>
+                <li>addresses a common or significant misconception or mistake</li>
+            </ul>
+
+
+            <p>If the information is important but not important enough for a warning callout, use inset text instead.</p>
+            
+            <p>If you need to tell a user to contact their GP or get medical help, use a <a href="">care card</a>.</p>
+
+
+<h2>How to use breadcrumbs</h2>
+
+            <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+
+            <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
+
+            <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
+
+            <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
+
+            <p>If possible, put at least 1 short paragraph of text between 2 callouts or between an action link and a callout.</p>
+
+            <p>Give priority to <a href="">care cards</a> over callouts.</p>
+
+            <h3>Accessibility</h3>
+
+            <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
+
+            <p>We recommend adding an aria label, for example: aria-label="Important". This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
+
+            <p>If you can help with this, please get in touch on the <a href=""> NHS.UK #standards Slack channel</a> or email us at <a href="">service-manual@nhs.net</a>.</p>
+
+            <h2>Research</h2>
+            
+            <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
+
+            <p>Research shows that clearly worded callout headings:</p>
+
+            <ul>
+                <li>help users spot relevant information quickly</li>
+                <li>help users who cannot distinguish callouts by their colour</li>
+                <li>are better than icons, which may not be accessible and can be interpreted in different ways</li>
+            </ul>
+
+            <h2>Discuss</h2>
+            <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+
+
+  
+{% from 'components/panel/macro.njk' import panel %}
+
+{{ panel({
+  "label": "Similar patterns",
+  "HTML": "<ul>    
+                            <li><a href='/examples/manual/header'>Header</a></li>
+                            <li><a href='#'>Footer</a></li>
+                        </ul>"
+}) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+<div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="#">Care cards</a></li>
+               <li><a href="#">Do and Don't lists</a></li>
+               <li><a href="#">Footer</a></li>
+               <li><a href="/examples/manual/header">Header</a></li>
+               <li><a href="#">Icons</a></li>
+               <li><a href="#">Inset text</a></li>
+               <li><a href="/examples/manual/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
