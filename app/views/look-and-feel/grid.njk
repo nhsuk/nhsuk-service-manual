@@ -1,0 +1,95 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/look-and-feel",
+  text: "Look and feel"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Grid</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                <!--PLACE MACRO HERE-->
+
+
+            </div>
+
+        
+
+
+            <p><a href="#">Preview the template component</a></p>
+            <p>You can <a href="#">get the latest template code</a> in the NHS frontend library in GitHub.</p>
+            
+
+
+
+            <h2>Title</h2>
+            <p>Placeholder *TEXT GOES HERE*</p>
+
+
+  
+
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Look and feel</h3>
+           <ul>
+               <li><a href="/look-and-feel/grid">Grid</a></li>
+               <li><a href="/look-and-feel/typography">Typography</a></li>
+               <li><a href="/look-and-feel/colour">Colour</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
