@@ -1,0 +1,22 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{{ breadcrumb({ 
+  href: "/index",
+  text: "Home"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+    <h1 class="">Cookies</h1>
+
+  </main>
+</div>
+{% endblock %}
