@@ -1,0 +1,77 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/frontend-kit",
+  text: "Frontend library"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Download and install</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Get started straight away.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+        <h2>Title</h2>
+            <p>Placeholder *TEXT GOES HERE*</p>
+
+
+  
+
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Frontend library</h3>
+           <ul>
+               <li><a href="/frontend/download">Download and install</a></li>
+               <li><a href="/frontend/examples">Examples</a></li>
+               <li><a href="/frontend/about">About</a></li>
+
+               
+
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}

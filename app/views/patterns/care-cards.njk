@@ -1,0 +1,212 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Care cards</h1>
+                     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Cards that help users understand the sort of care they need.</p>
+            </div>
+        </div> 
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <p>We have 3 care cards for 3 levels of urgency:</p>
+            <ul>
+                <li><a href="#non-urgent-care-card-blue">non-urgent care card (blue)</a></li>
+                <li><a href="#urgent-care-card-red">urgent care card (red)</a></li>
+                <li><a href="#emergency-care-card-red-and-black">immediate care card (red and black)</a></li>
+            </ul>
+										
+                
+                
+                
+        <h2 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+                {% from 'components/care-card/macro.njk' import careCard %}
+
+                    {{ careCard({
+                    "type": "non-urgent",
+                    "heading": "Speak to a GP if:",
+                    "HTML": "
+                    <ul>
+                        <li>you're not sure it's chickenpox</li>
+                        <li>the skin around the blisters is red, hot or painful (signs of infection)</li>
+                        <li>your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+                        <li>you're concerned about your child or they get worse</li>
+                    </ul>
+                    <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+                    "
+                    }) }}
+            </div>
+
+                <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-non-urgent.html" rel="nofollow">Preview the non-urgent care card (blue) component</a></p>
+                <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" rel="nofollow">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+
+                <p>Use this card when you want users to contact their GP or arrange an appointment with a GP or another health professional, like a practice nurse. You can also use it to tell users to go to or get in touch with a clinic, for example for a chlamydia test.</p>
+                <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
+
+
+        <h2 id="urgent-care-card-red">Urgent care card (red)</h2>
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+                        {% from 'components/care-card/macro.njk' import careCard %}
+
+                        {{ careCard({
+                        "type": "urgent",
+                        "heading": "Ask for an urgent GP appointment if:",
+                        "HTML": "
+                        <ul>
+                            <li>you're an adult and have chickenpox</li>
+                            <li>you're pregnant and haven't had chickenpox before and you've been near someone with it </li>
+                            <li>you have a weakened immune system and you've been near someone with chickenpox</li>
+                            <li>you think your newborn baby has chickenpox</li>
+                        </ul>
+                        <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
+                        "
+                        }) }}
+            </div>
+
+                <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-urgent.html">Preview the urgent care card (red) component</a></p>
+                <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+
+                <p>Use this card when you want users to call or visit a GP or hospital urgently. This can include getting urgent care in a walk-in centre or minor injuries centre.</p>
+
+                <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can empower them.</p>
+
+                <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
+
+
+
+        <h2 id="emergency-care-card-red-and-black">Immediate care card (red and black)</h2>
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+                        {% from 'components/care-card/macro.njk' import careCard %}
+
+                        {{ careCard({
+                        "type": "immediate",
+                        "heading": "Call 999 if you have sudden chest pain that:",
+                        "HTML": "
+                        <ul>
+                            <li>spreads to your arms, back, neck or jaw</li>
+                            <li>makes your chest feel tight or heavy</li>
+                            <li>also started with shortness of breath, sweating and feeling or being sick</li>
+                        </ul>
+                        <p>You could be having a heart attack. Call 999 immediately as you need immediate treatment in hospital.</p>
+                        "
+                        }) }}
+            </div>
+
+                <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-immediate.html">Preview the immediate care card (red and black) component</a></p>
+                <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" >Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+
+                <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency department.</p>
+                <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital accident and emergency (A&amp;E) department</a>.</p>
+                <p>Avoid linking to more information about a condition from an emergency care card. If it's an emergency, the important thing is to dial 999 or go to A&amp;E.</p>
+                <p>We are still testing the emergency care card. If you have anything to contribute, please contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHSUK #standards Slack channel</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+                <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h2 class="nhsuk-u-margin-top-8" id="how-to-use-care-cards">How to use care cards</h2>
+                    <p>Use care cards to tell users to contact their GP or get medical advice or help. If you want to highlight a key point, use inset text. If you want to warn a user about something, use a <a href="/service-manual/patterns/warning_callout/">warning callout</a> instead.</p>
+                    <p>Give the card a heading. It should be a clear call to action, for example "Call 111" or "Speak to a GP". If the card includes more than one call to action, use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list.</p>
+                    <p>Make sure the care card is concise, specific and self-contained. Don't say: "Contact your GP if this happens." Explain in the care card in what circumstances users should contact their GP.</p>
+                    <p>Avoid using more than 2 care cards on a page. We want to give essential information and reassure people, not to scare them. Give priority to the care cards over <a href="/service-manual/patterns/warning_callout/">warning callouts</a> or inset text. If you use more than one care card - or a care card and a warning callout, it's best to separate them with at least one paragraph of text.</p>
+                    
+                <h3>Accessibility</h3>
+                <p>People with visual disabilities may not be able to recognise care cards by their colour. Use clearly worded headings to help them.</p>
+                <p>Screen reader users may rely on heading levels or hidden labels to recognise care cards. We are considering heading levels and testing hidden labels to make care cards meaningful for screen reader users. If you can contribute, please get in touch on the <a href="https://nhsuk.slack.com/messages/standards">NHSUK #standards Slack channel</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+
+            <h2>Research</h2>
+                <p>Get in touch to share your research findings if you've used this pattern.</p>
+
+            <h2>Discuss</h2>
+            <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+
+
+  
+{% from 'components/panel/macro.njk' import panel %}
+
+{{ panel({
+  "label": "Similar patterns",
+  "HTML": "<ul>    
+                            <li></li>
+
+                        </ul>"
+}) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}

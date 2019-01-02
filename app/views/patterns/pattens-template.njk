@@ -23,9 +23,16 @@
 <div class="nhsuk-width-container">
   <main class="nhsuk-main-wrapper">
 
-    <h1 class="nhsuk-u-margin-bottom-5">Patterns template</h1>
-         <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
 
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Patterns template</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+            </div>
+    </div> 
+
+    
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
@@ -48,15 +55,11 @@
         
 
 
-            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
-            <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb" rel="nofollow">Get the HTML markup and Nunjucks macro for the breadcrumb component on GitHub</a> </p>
+            <p><a href="#">Preview the template component</a></p>
+            <p>You can <a href="#">get the latest template code</a> in the NHS frontend library in GitHub.</p>
+            
 
-            <h2 class="nhsuk-u-margin-top-8">When to use breadcrumbs</h2>
-                <p>Placeholder intro text, to be updated.</p>
-
-
-
-            <h2>How to use breadcrumbs</h2>
+            <h2>How to use </h2>
                 <p>Placeholder intro text, to be updated.</p>
 
             <h3>Accessibility</h3>
@@ -70,15 +73,14 @@
 
 
   
-{% from 'components/panel/macro.njk' import panel %}
+                    {% from 'components/panel/macro.njk' import panel %}
 
-{{ panel({
-  "label": "Similar patterns",
-  "HTML": "<ul>    
-                            <li><a href='/examples/manual/header'>Header</a></li>
-                            <li><a href='#'>Footer</a></li>
-                        </ul>"
-}) }}
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
 
 
     </div>
@@ -86,16 +88,17 @@
 
     <div class="nhsuk-grid-column-one-third">
 
-<div class="eric-shame-in-this-section">
+        <div class="eric-shame-in-this-section">
            <h3>Patterns</h3>
            <ul>
-               <li><a href="#">Care cards</a></li>
-               <li><a href="#">Do and Don't lists</a></li>
-               <li><a href="#">Footer</a></li>
-               <li><a href="/examples/manual/header">Header</a></li>
-               <li><a href="#">Icons</a></li>
-               <li><a href="#">Inset text</a></li>
-               <li><a href="/examples/manual/warning-callout">Warning callout</a></li>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
            </ul> 
         </div>
 

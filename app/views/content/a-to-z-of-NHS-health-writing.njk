@@ -1,0 +1,79 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/content-style-guide",
+  text: "Content style guide"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">A to Z of NHS health writing</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+        <h2>Title</h2>
+            <p>Placeholder *TEXT GOES HERE*</p>
+
+
+  
+
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Content style guide</h3>
+           <ul>
+               <li><a href="/content/how-we-write">How we write</a></li>
+               <li><a href="/content/voice-and-tone">Voice and tone</a></li>
+               <li><a href="/content/inclusive-language">Inclusive language</a></li>
+               <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
+               <li><a href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+               <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
+               
+
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
