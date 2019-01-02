@@ -28,7 +28,6 @@
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
                 <h1 class="nhsuk-u-margin-bottom-5">Formatting and punctuation</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
             </div>
     </div> 
 
@@ -39,12 +38,69 @@
 
 
 
-										
-        <h2>Title</h2>
-            <p>Placeholder *TEXT GOES HERE*</p>
+				<h5>In this section</h5>				
+        <ul>
+          <li><a href="#">Abbreviations and acronyms</a></li>
+          <li><a href="#">Apostrophes</a></li>
+          <li><a href="#">Capitalisation</a></li>
+          <li><a href="#">Contractions</a></li>
+          <li><a href="#">Hyphens and dashes</a></li>
+          <li><a href="#">Lists</a></li>
+          <li><a href="#">Numbers, times and dates and measurements</a></li>
+          <li><a href="#">Quotation marks</a></li>
+        </ul>
+        
+        <h2>Abbreviations and acronyms</h2>
+            <p>We explain an abbreviation or acronym in full on its first use unless it's well known, like UK, NHS, GP. Then we refer to it by initials.</p>
+            <p>Example: A body mass index (BMI) above the healthy weight range can increase your risk of serious health problems.</p>
+        <h2>Apostrophes</h2>
+        <p>We use straight, not curly apostrophes. Take care when pasting in text.</p>
+        
+        {% from 'components/tables/macro.njk' import table %}
+
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          head: [
+            {
+              text: "Don't use"
+            },
+            {
+              text: "Use"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "you’ll"
+              },
+              {
+                text: "you'll"
+              }
+            ]
+          ]
+        }) }}
 
 
-  
+        <h2>Capitalisation</h2>
+        <p>We do not use block capitals as they're difficult for people to read.</p>
+        <p>We always use lower case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
+        <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>cancer of the colon</li>
+          <li>multiple sclerosis</li>
+          <li>Parkinson's disease</li>
+          <li>Alzheimer's disease</li>
+        </ul>
+        <p>But note: caesarean section.</p>
+
+        <h2>Contractions</h2>
+        <p>We use contractions like you'll, we'll, you're and what's. Often contractions make content friendlier and easier to read.</p>
+        <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
+        <p>Also avoid negative contractions like can't and don't. When you’re telling users not to do something, use "Do not" rather than "Don't".</p>
+
 
 
 
