@@ -8,9 +8,15 @@
 
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/practices",
+  text: "Practices"
 }) }}
 
 
