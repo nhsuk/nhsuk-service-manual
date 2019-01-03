@@ -27,7 +27,8 @@
       <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
               <h1 class="nhsuk-u-margin-bottom-5">Breadcrumbs</h1>
-              <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+              <p class="nhsuk-body-l">Breadcrumbs are a row of links at the top of the page which help users understand where they are in the website.</p>
+              <p class="nhsuk-u-margin-bottom-8">They give users context and let them move back or up a level if they can't find what they want on the page.</p>
             </div>
     </div> 
 
@@ -71,44 +72,23 @@
 
 
             <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
-            <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb" rel="nofollow">Get the HTML markup and Nunjucks macro for the breadcrumb component on GitHub</a> </p>
 
-            <h2 class="nhsuk-u-margin-top-8">When to use breadcrumbs</h2>
-                <p>Use this callout for information that:</p>
-
-                <ul>
-                <li>is time critical</li>
-                <li>could have a significant effect on someone's health</li>
-                <li>addresses a common or significant misconception or mistake</li>
-            </ul>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb">get the latest breadcrumb code</a> in the NHS frontend library in GitHub.</p>
 
 
-            <p>If the information is important but not important enough for a warning callout, use inset text instead.</p>
+            <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
             
-            <p>If you need to tell a user to contact their GP or get medical help, use a <a href="">care card</a>.</p>
+                <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if it doesn't fit the line.</p>
+                <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
+                <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
 
 
-<h2>How to use breadcrumbs</h2>
+                <h3>Accessibility</h3>
+                    <p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use screen readers know what it is.</p>
+                    <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg icons to hide them from people who use screen readers.</p>
 
-            <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
 
-            <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
 
-            <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
-
-            <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
-
-            <p>If possible, put at least 1 short paragraph of text between 2 callouts or between an action link and a callout.</p>
-
-            <p>Give priority to <a href="">care cards</a> over callouts.</p>
-
-            <h3>Accessibility</h3>
-
-            <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
-
-            <p>We recommend adding an aria label, for example: aria-label="Important". This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
-
-            <p>If you can help with this, please get in touch on the <a href=""> NHS.UK #standards Slack channel</a> or email us at <a href="">service-manual@nhs.net</a>.</p>
 
             <h2>Research</h2>
             
@@ -123,7 +103,7 @@
             </ul>
 
             <h2>Discuss</h2>
-            <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+                <p >Discuss breadcrumbs on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
 
   
