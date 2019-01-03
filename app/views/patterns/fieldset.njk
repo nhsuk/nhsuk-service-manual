@@ -27,8 +27,8 @@
 
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Patterns template</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+                <h1 class="nhsuk-u-margin-bottom-5">Fieldset</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the fieldset component to group related form inputs.</p>
             </div>
     </div> 
 
@@ -38,7 +38,8 @@
     <div class="nhsuk-grid-column-two-thirds">
 
 
-
+        <h2 id="when-to-use-this-component">When to use this component</h2>
+            <p>Use the fieldset component when you need to show a relationship between multiple form inputs. For example, you may need to group a set of text inputs into a single fieldset when asking for an address.</p>
 										
             <h2 >Code and design</h2>
 
@@ -47,7 +48,15 @@
             <div class="example grey-background nhsuk-u-margin-bottom-4">
 
 
-                <!--PLACE MACRO HERE-->
+                {% from 'components/fieldset/macro.njk' import fieldset %}
+
+                    {{ fieldset({
+                    "legend": {
+                        "text": "What is your address?",
+                        "classes": "nhsuk-fieldset__legend--xl",
+                        "isPageHeading": true
+                    }
+                    }) }}
 
 
             </div>
