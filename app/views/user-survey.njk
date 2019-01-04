@@ -1,0 +1,122 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({ 
+  href: "/index",
+  text: "Home"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">User survey</h1>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        
+        {% from 'components/textarea/macro.njk' import textarea %}
+
+        {{ textarea({
+          "name": "more-detail",
+          "id": "more-detail",
+          "label": {
+            "text": "1. Why did you use the manual today?"
+          }
+        }) }}
+
+        {% from 'components/input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "text": "2. What is your job title?"
+          },
+          "id": "input-example",
+          "name": "test-name"
+        }) }}
+
+        {% from 'components/radios/macro.njk' import radios %}
+
+        {{ radios({
+          "idPrefix": "example",
+          "name": "example",
+          "fieldset": {
+            "legend": {
+              "text": "3. Did you find what you needed?"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            },
+            {
+              "value": "not sure",
+              "text": "Not sure"
+            }
+          ]
+        }) }}
+
+        {% from 'components/textarea/macro.njk' import textarea %}
+
+        {{ textarea({
+          "name": "more-detail",
+          "id": "more-detail",
+          "label": {
+            "text": "4. What would make the manual better?"
+          }
+        }) }}
+
+        {% from 'components/input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "text": "If you'd like us to reply, please provide your email address."
+          },
+          "id": "input-example",
+          "name": "test-name"
+        }) }}
+
+        <p>// Placeholder for reCAPTCHA //</p>
+
+        {% from 'components/button/macro.njk' import button %}
+
+        {{ button({
+          "text": "Finish survey"
+        }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
