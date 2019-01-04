@@ -1,0 +1,140 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Details</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make a page easier to scan by letting users reveal more detailed information only if they need it.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+                            {% from 'components/details/macro.njk' import details %}
+                            
+                                {{ details({
+                                        "text": "Where can I find my NHS number?",
+                                        "HTML": "
+                                        <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+                                        <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                                        <ul>
+                                            <li>prescriptions</li>
+                                            <li>test results</li>
+                                            <li>hospital referral letters</li>
+                                            <li>appointment letters</li>
+                                            <li>your NHS medical card</li>
+                                        </ul>
+                                        <p>Ask your GP practice for help if you can't find your NHS number.</p>
+                                        "
+                                        }) }}
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/details.html">Preview the template component</a></p>
+            <p>You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/details.html">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+
+            <h2 id="when-to-use-this-component">When to use details</h2>
+                <p><a href="https://design-system.service.gov.uk/components/select/">GOV.UK Design System suggest</a> using the details component to make a page easier to scan when it contains information that only some users will need.</p>
+
+
+            <h2 id="when-not-to-use-this-component">When not to use details</h2>   
+                <p>Do not use the details component to hide information that the majority of your users will need.</p> 
+
+            <h2 id="how-it-works">How it works</h2>
+                <p>The details component is a short link that expands into more detailed help text when a user clicks on it.</p>
+
+
+                <h3 id="write-clear-link-text">Write clear link text</h3>
+                    <p>Make the link text short and descriptive so users can quickly work out if they need to click on it.</p>
+
+
+            <h2 id="research-on-this-component">Research</h2> 
+                <p>Anecdotally we've heard users being reluctant to expand the details component in user testing sessions for transational services (forms). When asked why they wouldn't click they explained that they thought the link text (blue underlined text) would take them to a new page and they would lose their progress.</p>
+                <p>If you’ve used this component, get in touch to share your user research findings.</p>       
+
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+  
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
