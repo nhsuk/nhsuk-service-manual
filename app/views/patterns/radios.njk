@@ -1,0 +1,301 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Radios</h1>
+                <!--<p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>-->
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                {% from 'components/radios/macro.njk' import radios %}
+
+                    {{ radios({
+                    "idPrefix": "example",
+                    "name": "example",
+                    "fieldset": {
+                        "legend": {
+                        "text": "Have you changed your name?"
+                        }
+                    },
+                    "hint": {
+                        "text": "This includes changing your last name or spelling your name differently."
+                    },
+                    "items": [
+                        {
+                        "value": "yes",
+                        "text": "Yes"
+                        },
+                        {
+                        "value": "no",
+                        "text": "No",
+                        "checked": true
+                        }
+                    ]
+                    }) }}
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/radios/index.html">Preview the radio component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/radios">get the latest radios code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+
+            <h2 id="when-to-use-this-component">When to use radios</h2>
+                <p>Use the radios component when users can only select one option from a list.</p>
+
+             <h2 id="when-not-to-use-this-component">When not to use this component</h2>
+                <p>Do not use the radios component if users might need to select more than one option. In this case, you should use the <a href="/patterns/checkboxes/">checkboxes</a> component instead.</p> 
+
+
+            <h2 id="how-it-works">How radios work</h2>      
+                <p class="rich-text">Radios are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.</p>
+                <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+                <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how GOV.UK set legends as headings</a>.</p>
+                <p>Unlike with checkboxes, users can only select one option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone. </p>
+                <p>If needed, add a hint explaining this, for example, ‘Select one option’.</p>
+                <p>Do not pre-select radio options as this makes it more likely that users will:</p>
+                    <ul>
+                        <li>not realise they’ve missed a question</li>
+                        <li>submit the wrong answer</li>
+                    </ul>
+                 <p>Users cannot go back to having no option selected once they have selected one, without refreshing their browser window. Therefore, you should include ‘None of the above’ or ‘I do not know’ if they are valid options. </p>   
+                 <p>Order radio options alphabetically by default. </p>
+
+            <h3 id="inline-radios">Inline radios</h3>
+                <p>If there are only 2 options, you can either stack the radios or display them inline, like so:</p>
+
+                    <div class="example grey-background nhsuk-u-margin-bottom-4">    
+                        {% from 'components/radios/macro.njk' import radios %}
+
+                            {{ radios({
+                            "idPrefix": "example'",
+                            "classes": "nhsuk-radios--inline",
+                            "name": "example",
+                            "fieldset": {
+                                "legend": {
+                                "text": "Have you changed your name?"
+                                }
+                            },
+                            "hint": {
+                                "text": "This includes changing your last name or spelling your name differently."
+                            },
+                            "items": [
+                                {
+                                "value": "yes",
+                                "text": "Yes"
+                                },
+                                {
+                                "value": "no",
+                                "text": "No",
+                                "checked": true
+                                }
+                            ]
+                            }) }}
+                    </div>
+
+
+            <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
+                <p>If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.</p>   
+                        <div class="example grey-background nhsuk-u-margin-bottom-4">
+                                {% from 'components/radios/macro.njk' import radios %}
+
+                                    {{ radios({
+                                    "idPrefix": "example-divider",
+                                    "name": "example",
+                                    "fieldset": {
+                                        "legend": {
+                                        "text": "How do you want to sign in?"
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                        "value": "government-gateway",
+                                        "text": "Use Government Gateway"
+                                        },
+                                        {
+                                        "value": "nhsuk-login",
+                                        "text": "Use NHS.UK Login"
+                                        },
+                                        {
+                                        "divider": "or"
+                                        },
+                                        {
+                                        "value": "create-account",
+                                        "text": "Create an account"
+                                        }
+                                    ]
+                                    }) }}
+                        </div>     
+
+
+
+                <h3 id="radio-items-with-hints">Radio items with hints</h3>    
+                    <p>You can add hints to radio items to provide additional information about the options.</p> 
+
+                        <div class="example grey-background nhsuk-u-margin-bottom-4">
+                                {% from 'components/radios/macro.njk' import radios %}
+
+                                    {{ radios({
+                                    "idPrefix": "gov",
+                                    "name": "gov",
+                                    "fieldset": {
+                                        "legend": {
+                                        "text": "How do you want to sign in?",
+                                        "isPageHeading": true
+                                        }
+                                    },
+                                    "items": [
+                                        {
+                                        "value": "gateway",
+                                        "text": "Sign in with Government Gateway",
+                                        "hint": {
+                                            "text": "You'll have a user ID if you've registered for Self Assessment or filed a tax return online before."
+                                        }
+                                        },
+                                        {
+                                        "value": "verify",
+                                        "text": "Sign in with NHS.UK Login",
+                                        "hint": {
+                                            "text": "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
+                                        }
+                                        }
+                                    ]
+                                    }) }}
+                        </div>                   
+
+
+                        <h3 id="error-messages">Error messages</h3>
+                            <p>Error messages should be styled like this:</p>
+
+                                    <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+                                        {% from 'components/radios/macro.njk' import radios %}
+
+                                            {{ radios({
+                                            "idPrefix": "example",
+                                            "name": "example",
+                                            "errorMessage": {
+                                                "text": "Please select an option"
+                                            },
+                                            "fieldset": {
+                                                "classes": "app-fieldset--custom-modifier",
+                                                "attributes": {
+                                                "data-attribute": "value",
+                                                "data-second-attribute": "second-value"
+                                                },
+                                                "legend": {
+                                                "text": "Have you changed your name?"
+                                                }
+                                            },
+                                            "hint": {
+                                                "text": "This includes changing your last name or spelling your name differently."
+                                            },
+                                            "items": [
+                                                {
+                                                "value": "yes",
+                                                "text": "Yes"
+                                                },
+                                                {
+                                                "value": "no",
+                                                "text": "No",
+                                                "checked": true
+                                                }
+                                            ]
+                                            }) }}
+                                    </div>
+
+
+                    <p>Make sure errors follow the guidance in <a href="/patterns/error-message/">error message</a> and have specific error messages for specific error states.</p>
+                    <p>GDS design system has <a href="https://design-system.service.gov.uk/components/radios/">some great examples of tried and tested error messages.</a></p>
+
+
+            <h2>Research</h2>
+                <p>Placeholder intro text, to be updated.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+  
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}

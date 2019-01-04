@@ -1,0 +1,242 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Text input</h1>
+                <!--<p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>-->
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                {% from 'components/input/macro.njk' import input %}
+
+                    {{ input({
+                    "label": {
+                        "text": "National Insurance number"
+                    },
+                    "id": "input-example",
+                    "name": "test-name"
+                    }) }}
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/input/index.html">Preview the text input component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/input">get the latest text input code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+
+            <h2>When to use text input </h2>
+                <p>Use the text input component when you need to let users enter text that’s no longer than a single line, such as their name or phone number.</p>
+
+            <h2>When not to use text input </h2>
+                <p>Do not use the text input component if you need to let users enter longer answers that might span multiple lines. In this case, you should use the <a href="/patterns/text-area">textarea component</a>.</p>
+
+
+            <h2>How text area works</h2>
+                 <h3 id="label-text-inputs">Label text inputs</h3>    
+                 <p>All text inputs must have visible labels; placeholder text is not an acceptable replacement for a label as it vanishes when users click on the text input.</p>       
+                 <p>Labels should be aligned above the text input they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+                 <p class="rich-text">If you’re asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as GDS recommended, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+
+
+            <h3 id="use-appropriately-sized-text-inputs">Use appropriately-sized text inputs</h3>  
+                <p>Help users understand what they should enter by making text inputs the right size for the content they’re intended for.</p>  
+                <p>By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.</p>  
+                <p>If you want to make the input smaller, you can either use a fixed width input, or use the width override classes to create a smaller, fluid width input.</p>           
+
+                <h4 id="fixed-width-inputs">Fixed width inputs</h4>
+                    <p>Use fixed width inputs for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.</p>
+                    <p>On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.</p>
+
+                        <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+                            {% from 'components/input/macro.njk' import input %}
+
+                                {{ input({
+                                "label": {
+                                    "text": "20 character width"
+                                },
+                                "id": "input-width-20",
+                                "name": "test-width-20",
+                                "classes": "nhsuk-input--width-20"
+                                }) }}
+
+                                {{ input({
+                                "label": {
+                                    "text": "10 character width"
+                                },
+                                "id": "input-width-10",
+                                "name": "test-width-10",
+                                "classes": "nhsuk-input--width-10"
+                                }) }}
+
+                                {{ input({
+                                "label": {
+                                    "text": "5 character width"
+                                },
+                                "id": "input-width-5",
+                                "name": "test-width-5",
+                                "classes": "nhsuk-input--width-5"
+                                }) }}
+
+                                {{ input({
+                                "label": {
+                                    "text": "4 character width"
+                                },
+                                "id": "input-width-4",
+                                "name": "test-width-4",
+                                "classes": "nhsuk-input--width-4"
+                                }) }}
+
+                                {{ input({
+                                "label": {
+                                    "text": "3 character width"
+                                },
+                                "id": "input-width-3",
+                                "name": "test-width-3",
+                                "classes": "nhsuk-input--width-3"
+                                }) }}
+
+                                {{ input({
+                                "label": {
+                                    "text": "2 character width"
+                                },
+                                "id": "input-width-2",
+                                "name": "test-width-2",
+                                "classes": "nhsuk-input--width-2"
+                                }) }}
+
+
+
+
+                        </div>
+
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/input">get the latest fixed width text input code</a> in the NHS.UK frontend library in GitHub.</p>
+
+
+            <h3 id="using-hint-text">Using hint text</h3>
+                            <p>Use hint for help that’s relevant to the majority of users - like how their information will be used, or where to find it.</p>
+
+
+                        <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                                {% from 'components/input/macro.njk' import input %}
+
+                                {{ input({
+                                "label": {
+                                    "text": "National insurance number"
+                                },
+                                "hint": {
+                                    "text": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
+                                },
+                                "id": "input-with-hint-text",
+                                "name": "test-name-2"
+                                }) }}
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/hint/index.html">Preview the hint text component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/hint">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+            <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
+                <p>Users often need to copy and paste information into a text input, so do not stop them from doing this.</p>
+
+
+            <h3>Error messages</h3>
+                <p>Make sure errors follow the guidance in <a href="/patterns/error-message/">error message</a> and have specific error messages for specific error states.</p>
+                <p>GDS design system has <a href="https://design-system.service.gov.uk/components/text-input/">some great examples of tried and tested error messages.</a></p>
+
+            <h2>Research</h2>
+                <p>If you’ve used this component, get in touch to share your user research findings.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+  
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}

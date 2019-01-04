@@ -43,18 +43,17 @@
 										
             <h2 >Code and design</h2>
 
-
+            <h3>Fieldset</h3>
 
             <div class="example grey-background nhsuk-u-margin-bottom-4">
 
 
-                {% from 'components/fieldset/macro.njk' import fieldset %}
+                
+                    {% from 'components/fieldset/macro.njk' import fieldset %}
 
                     {{ fieldset({
                     "legend": {
-                        "text": "What is your address?",
-                        "classes": "nhsuk-fieldset__legend--xl",
-                        "isPageHeading": true
+                        "text": "What is your address?"
                     }
                     }) }}
 
@@ -64,18 +63,40 @@
         
 
 
-            <p><a href="#">Preview the template component</a></p>
-            <p>You can <a href="#">get the latest template code</a> in the NHS frontend library in GitHub.</p>
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/fieldset/index.html">Preview the fieldset component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/fieldset">get the latest fieldset component code</a> in the NHS.UK frontend library in GitHub.</p>
             
 
-            <h2>How to use </h2>
-                <p>Placeholder intro text, to be updated.</p>
+            <h3>Fieldset as page heading</h3>
+
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                    {% from 'components/fieldset/macro.njk' import fieldset %}
+
+                        {{ fieldset({
+                        "legend": {
+                            "text": "What is your address?",
+                            "classes": "nhsuk-fieldset__legend--xl",
+                            "isPageHeading": true
+                        }
+                        }) }}
+                </div>
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/fieldset/page-heading.html">Preview the Fieldset as page heading component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/fieldset">get the latest Fieldset as page heading component code</a> in the NHS.UK frontend library in GitHub.</p>
+
+
+            <h2 id="how-it-works">How fieldset works</h2>
+                <p class="rich-text">The first element inside a fieldset must be a <code>legend</code> which describes the group of inputs. This could be a question, such as ‘What is your current address?’ or a statement like ‘Personal details’.</p>
+                <p class="rich-text">If you’re asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended by GDS, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading, as shown in the example below. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+
+                <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how GDS set legends as headings</a>.</p>
 
             <h3>Accessibility</h3>
-                <p>Placeholder intro text, to be updated.</p>
+                <p>On question pages containing a group of inputs, including the question as the legend helps users of screenreaders to understand that the inputs are all related to that question.</p>
+                <p>Include any general help text which is important for filling in the form and cannot be written as <a href="/patterns/hint-text">hint text</a> in the legend, but try to keep it as concise as possible.</p>
 
             <h2>Research</h2>
-                <p>Placeholder intro text, to be updated.</p>
+                <p>If you’ve used this component, get in touch to share your user research findings.</p>
 
             <h2>Discuss</h2>
                 <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
