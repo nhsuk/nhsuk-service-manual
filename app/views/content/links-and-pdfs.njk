@@ -1,0 +1,119 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/content-style-guide",
+  text: "Content style guide"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Links and PDFs</h1>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+					
+        <h2>Links</h2>
+            <p>Make links active, specific and concise.</p>
+            <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
+            <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
+
+            {% from 'components/tables/macro.njk' import table %}
+
+            {{ table({
+              panel: false,
+              caption: "TBD",
+              firstCellIsHeader: false,
+              head: [
+                {
+                  text: "We would use:"
+                },
+                {
+                  text: "We would not use:"
+                }
+              ],
+              rows: [
+                [
+                  {
+                    text: "symptoms of asthma"
+                  },
+                  {
+                    text: "symptoms"
+                  }
+                ],
+                [
+                  {
+                    text: "more about asthma"
+                  },
+                  {
+                    text: "more about asthma"
+                  }
+                ]
+              ]
+            }) }}
+
+            <h2>PDFs</h2>
+            <p>PDFs can be bad for accessibility. Often they do not work very well with assistive technologies like screen readers.</p>
+            <p>Wherever possible, we create content in HTML formats. If we do need to publish a PDF, we provide an HTML version as well.</p>
+            <p>Any PDFs must meet level AA of the <a href="https://www.w3.org/WAI/intro/wcag.php">Web Content Accessibility Guidelines (WCAG) 2.0</a>.</p>
+            <p>Check the GOV.UK guidance on <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">publishing accessible documents</a>.</p>
+            <p>When linking to a PDF:</p>
+            <ul>
+              <li>open the document in the same tab</li>
+              <li>add "PDF, [file size in Mb or kb]" in brackets to the end of the link text, for example - "weight loss progress chart (PDF, 545kb)"</li>
+              <li>consider linking to a page containing the PDF so if the PDF is changed or updated, users can still find the latest information</li>
+            </ul>
+            
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Content style guide</h3>
+           <ul>
+               <li><a href="/content/how-we-write">How we write</a></li>
+               <li><a href="/content/voice-and-tone">Voice and tone</a></li>
+               <li><a href="/content/inclusive-language">Inclusive language</a></li>
+               <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
+               <li><a href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+               <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
+               
+
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
