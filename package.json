@@ -18,6 +18,7 @@
     "express": "^4.16.4",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "nunjucks": "^3.1.6",
