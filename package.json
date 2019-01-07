@@ -7,11 +7,13 @@
     "start": "node app",
     "test": "",
     "prewatch": "gulp styles",
-    "watch": "concurrently \"gulp\" \"nodemon -e js,njk,scss --watch app\""
+    "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
   },
   "author": "https://github.com/nhsuk",
   "license": "MIT",
   "dependencies": {
+    "basic-auth": "^2.0.1",
+    "chalk": "^2.4.2",
     "express": "^4.16.4",
     "nunjucks": "^3.1.6",
     "path": "^0.12.7"
