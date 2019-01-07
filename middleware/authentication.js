@@ -18,8 +18,8 @@ module.exports = function (req, res, next) {
 
   // Set configuration variables
   const env = (process.env.NODE_ENV || 'development').toLowerCase();
-  const username = process.env.USERNAME;
-  const password = process.env.PASSWORD;
+  const username = process.env.MANUAL_USERNAME;
+  const password = process.env.MANUAL_PASSWORD;
 
   if (env === 'production') {
     if (!username || !password) {
