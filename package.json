@@ -7,7 +7,7 @@
     "build": "gulp styles",
     "start": "node app",
     "test": "",
-    "prewatch": "gulp styles",
+    "prewatch": "npm run build",
     "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
   },
   "author": "https://github.com/nhsuk",

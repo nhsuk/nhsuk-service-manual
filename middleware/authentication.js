@@ -21,7 +21,7 @@ module.exports = function (req, res, next) {
   const username = process.env.MANUAL_USERNAME;
   const password = process.env.MANUAL_PASSWORD;
 
-  if (env === 'production') {
+  if (env === 'production' || env === 'staging') {
     if (!username || !password) {
       console.error('Username or password is not set in environment variables.');
       return res.send('<p>Username or password not set in environment variables.</p>');
