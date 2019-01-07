@@ -27,8 +27,7 @@
 
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Typography</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Placeholder intro text, to be updated.</p>
+                <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-bottom-8">Typography</h1>
             </div>
     </div> 
 
@@ -40,33 +39,321 @@
 
 
 										
-            <h2 >Code and design</h2>
+        <h2 id="font">Font</h2>
+              <h3>Frutiger</h3>
+                <p>Frutiger has been the NHS brand font since 1999. We use the web font for consistency between online and offline materials.</p>
+                <p>Email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a> for the desktop font. The web font will be part of the front-end toolkit.</p>
+
+              <h3>Fallback font</h3>  
+                <p>Default to Arial when Frutiger isn't available.</p>
+
+            <h2 id="accessibility">Accessibility</h2>
+                <p>The body paragraph size is 19px for large screens and 16px for smaller screens, the clearest sizes to read Frutiger online.</p>
+                <p>Line height should always be 1.5 times the size of the font, meeting level <a href="https://www.w3.org/TR/WCAG20/">AAA of the Web Content Accessibility Guidelines (WCAG 2.0)</a>.</p>
+
+            <h2 id="headings">Headings</h2>
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                    <h1 class="nhsuk-heading-xl">nhs-heading-xl</h1>
+                    <h2 class="nhsuk-heading-l">nhs-heading-l</h2>
+                    <h3 class="nhsuk-heading-m">nhs-heading-m</h3>
+                    <h4 class="nhsuk-heading-s">nhs-heading-s</h4>
+                    <h5 class="nhsuk-heading-xs">nhs-heading-xs</h5>            
+                </div>
+
+            <h2 id="paragraphs">Paragraphs</h2>
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                    <p class="nhsuk-body">nhsuk-body</p>
+                    <p class="nhsuk-body-s">nhsuk-body-s</p>           
+                </div>
+
+                <p>We use nhsuk-body-s for:</p>
+                    <ul>
+                        <li>page review dates</li>
+                        <li>captions for images</li>
+                        <li>some form elements - we're working on these</li>
+                    </ul>
+
+            <h2 id="links">Links</h2>
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                    <p><a href="#section">Link</a></p>           
+                </div>
+
+
+            <h2 id="lists">Lists</h2>
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                    <ul class="nhsuk-list nhsuk-list--bullet">
+                        <li>The quick brown</li>
+                        <li>fox jumps over</li>
+                        <li>the lazy dog</li>
+                    </ul>
+
+                    <ol class="nhsuk-list nhsuk-list--number">
+                        <li>The quick brown</li>
+                        <li>fox jumps over</li>
+                        <li>the lazy dog</li>
+                    </ol>         
+                </div>
+
+
+            <h2 id="sizes-and-spacing">Sizes and spacing</h2>
+                <h3>Small screens</h3>
+
+                <table>
+    
+        <thead>
+            <tr>
+                    <th>Class</th>
+                    <th>font-size</th>
+                    <th>line-height</th>
+                    <th>margin-top</th>
+            </tr>
+        </thead>
+    
+    <tbody>
+    
+        <tr>
+                    <td>nhs-heading-xl</td>
+                    <td>32px</td>
+                    <td>36px</td>
+                    <td>56px</td> 
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-l</td>
+                    <td>24px</td>
+                    <td>32px</td>
+                    <td>40px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-m</td>
+                    <td>20px</td>
+                    <td>28px</td>
+                    <td>32px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-s</td>
+                    <td>18px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-xs</td>
+                    <td>16px</td>
+                    <td>24px</td>
+                    <td>16px</td>   
+        </tr>
+    
+        <tr>
+                    <td>nhs-body-l</td>
+                    <td>20px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhsuk-body</td>
+                    <td>16px</td>
+                    <td>24px</td>
+                    <td>16px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-body-s</td>
+                    <td>14px</td>
+                    <td>24px</td>
+                    <td>16px</td>
+        </tr>
+    
+        <tr>
+                    <td>link</td>
+                    <td>16px</td>
+                    <td>24px</td>
+                    <td>16px</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+<table>
+    
+        <thead>
+        <tr>
+                <th>Class</th>
+                <th>ul-margin</th>
+                <th>li-margin</th>
+        </tr>
+        </thead>
+    
+    <tbody>
+    
+        <tr>
+                    <td>nhsuk-list nhsuk-list-bullet</td>
+                    <td>16px</td>
+                    <td>8px</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+<table>
+    
+        <thead>
+        <tr>
+                <th>Class</th>
+                <th>ol-margin</th>
+                <th>li-margin</th>
+        </tr>
+        </thead>
+    
+    <tbody>
+        <tr>
+                    <td>nhsuk-list nhsuk-list-number</td>
+                    <td>16px</td>
+                    <td>8px</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+              <h2 id="large-screens">Large screens</h2>
+
+                  <table>
+    
+        <thead>
+        <tr>
+                <th>Class</th>
+                <th>font-size</th>
+                <th>line-height</th>
+                <th>margin-top</th>
+        </tr>
+        </thead>
+    
+    <tbody>
+        <tr>             
+                    <td>nhs-heading-xl</td>
+                    <td>48px</td>
+                    <td>56px</td>
+                    <td>64px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-l</td>
+                    <td>32px</td>
+                    <td>40px</td>
+                    <td>56px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-m</td>
+                    <td>24px</td>
+                    <td>32px</td>
+                    <td>40px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-s</td>
+                    <td>22px</td>
+                    <td>32px</td>
+                    <td>32px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-heading-xs</td>
+                    <td>19px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-body-l</td>
+                    <td>24px</td>
+                    <td>32px</td>
+                    <td>32px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhsuk-body</td>
+                    <td>19px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+        <tr>
+                    <td>nhs-body-s</td>
+                    <td>16px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+        <tr>
+                    <td>Link</td>
+                    <td>19px</td>
+                    <td>28px</td>
+                    <td>24px</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+<table>
+    
+        <thead>
+        <tr>
+                <th>Class</th>
+                <th>ul-margin</th>
+                <th>li-margin</th>
+        </tr>
+        </thead>
+    
+    <tbody>
+    
+        <tr>
+                    <td>nhsuk-list nhsuk-list-bullet</td>
+                    <td>24px</td>
+                    <td>8px</td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
 
-            <div class="example grey-background nhsuk-u-margin-bottom-4">
+<table>
+    
+        <thead>
+        <tr>
+                <th>Class</th>
+                <th>ol-margin</th>
+                <th>li-margin</th>
+        </tr>
+        </thead>
+    
+    <tbody>
+    
+        <tr>
+          <td>nhsuk-list nhsuk-list-number</td>
+          <td>24px</td>
+          <td>8px</td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
-                <!--PLACE MACRO HERE-->
+    <h2 id="weights">Weights</h2>
+      <p>Use Frutiger Regular for body text.</p>
+      <p>Use Frutiger Regular Bold for headings and emphasis.</p>
 
 
-            </div>
+    <h2 id="research">Research</h2>  
+      <p>We've tested our typography with lots of users including, for example, people with dyslexia and colour blindness.</p>
 
-        
-
-
-            <p><a href="#">Preview the template component</a></p>
-            <p>You can <a href="#">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
-            
-
-
-
-            <h2>Title</h2>
-            <p>Placeholder *TEXT GOES HERE*</p>
-
-
-  
-
+      <p>Updated: January 2019.</p>
 
 
     </div>
