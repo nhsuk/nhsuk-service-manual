@@ -1,0 +1,79 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/frontend-kit",
+  text: "NHS.UK frontend library"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Install</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">There are 2 ways to install the NHS.UK frontend.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h2>1. Install with package managers (recommended)</h2>
+      <p>We recommend installing the NHS.UK frontend with 1 of these package managers: node package manager (npm), yarn, or the Python Package Index (PyPi).</p>
+      <ul>
+        <li><a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-npm.md">Install using npm</a></li>
+        <li><a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-yarn.md">Install using yarn</a></li>
+        <li><a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-pypi.md">Install using PyPi</a></li>
+      </ul>
+
+      <h2>2. Install using compiled files</h2>
+      <p>If you're not using 1 of the above package managers, you can install the NHS frontend using our compiled files.</p>
+      <ul>
+        <li>Install using compiled files</li>
+      </ul>
+
+      {% from 'components/review-date/macro.njk' import reviewDate %}
+
+      {{ reviewDate({
+        "lastReview": "January 2019"
+      }) }}
+
+
+  
+
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
