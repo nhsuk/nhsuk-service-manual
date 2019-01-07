@@ -4,24 +4,27 @@
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "build": "gulp styles",
+    "start": "npm run build && node app",
     "test": "",
     "prewatch": "gulp styles",
-    "watch": "concurrently \"gulp\" \"nodemon -e js,njk,scss --watch app\""
+    "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
   },
   "author": "https://github.com/nhsuk",
   "license": "MIT",
   "dependencies": {
+    "basic-auth": "^2.0.1",
+    "chalk": "^2.4.2",
     "express": "^4.16.4",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "nunjucks": "^3.1.6",
     "path": "^0.12.7"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
     "nhsuk-frontend": "^0.7.0",
     "nodemon": "^1.18.9"
   }
