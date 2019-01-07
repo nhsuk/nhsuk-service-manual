@@ -4,8 +4,7 @@
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
-    "build": "gulp styles",
-    "start": "npm run build && node app",
+    "start": "gulp styles && node app",
     "test": "",
     "prewatch": "gulp styles",
     "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
