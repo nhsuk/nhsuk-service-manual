@@ -25,17 +25,17 @@
   <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
       <div class="nhsuk-grid-column-one-third">
           <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/look-and-feel/grid">Grid</a></h2>
-          <p>Placeholder text, to be updated.</p>
+          <p>Our layout and how to use it.</p>
       </div>
 
       <div class="nhsuk-grid-column-one-third">
           <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/look-and-feel/typography">Typography</a></h2>
-          <p>Placeholder text, to be updated.</p>   
+          <p>The NHS brand font, sizes and spacing.</p>   
       </div>
 
       <div class="nhsuk-grid-column-one-third">
           <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/look-and-feel/colour">Colour</a></h2>
-          <p>Placeholder text, to be updated.</p>  
+          <p>Our palette and colours in context.</p>  
       </div>
     </div>
 
@@ -43,38 +43,28 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-
-
-
 										
-            <h2>Tested NHS.UK look and feel styles</h2>
+        <h2>Tested NHS.UK look and feel styles</h2>
 
-            <p>Use our grid, colours and font and typographic styles to make your service consistent with other NHS services.</p>
+        <p>Use our grid, colours and font and typographic styles to make your service consistent with other NHS services.</p>
 
-            <p>Our look and feel is based on the <a href="">NHS Identity guidelines</a>.</p>
+        <p>Our look and feel is based on the <a href="">NHS Identity guidelines</a>.</p>
 
-            <p>Visit the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a> to discuss and give feedback about any of the look and feel styles.
-            </p>
+        <p>Visit the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a> to discuss and give feedback about any of the look and feel styles.
+        </p>
 
+        <h2>Download code and design files</h2>
+        <h3>Frontend library</h3>
+        <p>We now have a <a href="https://github.com/nhsuk/nhsuk-frontend">library of frontend code on GitHub</a> to help you build NHS digital services quickly. You’re welcome to use it but please be aware that we’re still testing it with NHS.UK teams. We expect to release the tested version in early January 2019.</p>
+        <h3>Sketch file</h3>
+        <p><a href="https://github.com/nhsuk/nhsuk-sketch-file">Download the NHS.UK Sketch file from GitHub</a>. It will help you build prototypes and mockups quickly with tried and tested components and styles that are ready to use.</p>
+        <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> to let us know what you think.</p>
 
+        {% from 'components/review-date/macro.njk' import reviewDate %}
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-   
-
-  
-
+        {{ reviewDate({
+        "lastReview": "December 2018"
+        }) }}
 
 
     </div>
