@@ -158,3 +158,82 @@
     margin-top: 10px;
     color: black;
 }
+
+
+
+/* A to Z stuff starts */
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding-left: 12px;
+    position: relative;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .eric-shame-in-this-section {
+        margin-left: 32px;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-back-to-top-link {
+        font-size: 19px;
+    }
+}
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link:visited {
+    color: #005EB8;
+}
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link .nhsuk-icon {
+    transform: rotate(270deg);
+    height: 19px;
+    left: -8px;
+    position: absolute;
+    top: 4px;
+    width: 19px;
+    fill: #005EB8;
+}
+
+.nhsuk-icon__arrow-right {
+    fill: #005EB8;
+}
+
+.nhsuk-a-z-list--results-items h2 {
+    background: #005EB8;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+/* A to Z stuff ends */
+
+
+/* Sections */
+
+.nhsuk-section {
+    display: block;
+}
+
+.nhsuk-section .nhsuk-main-wrapper {
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-section .nhsuk-main-wrapper {
+        padding-bottom: 72px;
+        padding-top: 72px;
+    }
+}
+
+.nhsuk-section--white {
+    background: #fff;
+}
+
+.nhsuk-section--white .nhsuk-promo__link-wrapper {
+    background-color: #f0f4f5;
+}
