@@ -16,14 +16,16 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install  
-    npm run build
+    mkdir src
+    find . -maxdepth 1 -not -name 'azure-pipelines.yml' -not -name .git -not -name .gitignore -not -name README.md -not -name src -not -name . -exec mv '{}' './src/' \;
+    npm install  --prefix src
+    npm run build --prefix src
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src'
     includeRootFolder: false
 
 - task: PublishBuildArtifacts@1
