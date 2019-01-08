@@ -1,0 +1,162 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Contents list</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Allow users to navigate between related pages, such as a guide to a single condition.</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                {% from 'components/contents-list/macro.njk' import contentsList %}
+
+                    {{ contentsList({
+                    items: [
+                        {
+                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/",
+                        text: "What is AMD?",
+                        current: "true"
+                        },
+                        {
+                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/",
+                        text: "Symptoms"
+                        },
+                        {
+                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/",
+                        text: "Getting diagnosed"
+                        }
+                        ,
+                        {
+                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/",
+                        text: "Treatments"
+                        }
+                        ,
+                        {
+                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/",
+                        text: "Living with AMD"
+                        }
+                    ]
+                    }) }}
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/contents-list.html">Preview the contents list component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/contents-list">get the latest contents list code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+            <h2>When to use a contents list</h2>
+                <p>Use pagination as a method of navigation for small groups (up to 8 pages) of related content, such as a group of pages on a specific condition.</p>
+                <p>This component also requires <a href="/patterns/paginantion">paginantion</a> at the top of the page - both components together become the multi-page navigation pattern.</p>
+
+            <h2>When not to use a contents list</h2>
+                <p>Do not use the contents list component on non grouped pages or 'related' pages as it will likely confuse the user.</p>  
+                <p>Do not use contents list in the context of a transactional service or a form as these have their own means of navigation <a href="/patterns/buttons">buttons</a> to move forward (progress) and <a href="/patterns/back-link">back link</a> to navigate back.</p>
+
+            <h2>How to use </h2>
+                <p>The <a href="/patterns/contents-list">contents list</a> at the top of the page must be used in conjunction with the <a href="/patterns/pagination">pagination component</a>, used at the bottom of each page.</p>
+
+                <p>Keep links short and descriptive. Links that are too long (more than two lines) inhibit the scannability of this component.</p>
+
+                <p>Page titles must reflect the subject of the specific page (e.g. ‘Treatment’), whilst the overall subject of the section must form the sub-header (e.g. ‘Age-related macular degeneration’). This is so users are clear where they have navigated to.</p>
+
+
+            <h3>Accessibility</h3>
+                <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to indicate that they are navigations links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. This will be read out by screen readers that support this attribute to help clarify what the list of links are.</p>
+
+                <p class="rich-text">Additionally there is a visually hidden heading title <code>Contents</code> which will be read by screen readers as a heading to the links.</p>
+
+                <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
+
+            <h2>Research</h2>
+                <p>The contents list component has been tested in the context of grouped / related information pages and guides, not on forms or 'related' pages.</p>
+                <p>All users engaged with the contents list navigation, stating that it fits how they thought the content would be made up.</p>
+                <p>Users found the active link formatting on the menu helpful in knowing where they are.</p>
+                <p>Some users indicated that the page titles helped them orientate themselves, knowing they’re in the right place.</p>
+                <p>Some felt that the links helped them to understand what information there is, and choose what is relevant to them.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+  
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
