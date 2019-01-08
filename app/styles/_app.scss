@@ -159,6 +159,8 @@
     color: black;
 }
 
+
+
 /* A to Z stuff starts */
 
 .nhsuk-a-z-list--results-items .nhsuk-back-to-top-link {
@@ -199,7 +201,6 @@
     fill: #005EB8;
 }
 
-
 .nhsuk-a-z-list--results-items h2 {
     background: #005EB8;
     color: #FFFFFF;
@@ -209,3 +210,30 @@
 
 
 /* A to Z stuff ends */
+
+
+/* Sections */
+
+.nhsuk-section {
+    display: block;
+}
+
+.nhsuk-section .nhsuk-main-wrapper {
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-section .nhsuk-main-wrapper {
+        padding-bottom: 72px;
+        padding-top: 72px;
+    }
+}
+
+.nhsuk-section--white {
+    background: #fff;
+}
+
+.nhsuk-section--white .nhsuk-promo__link-wrapper {
+    background-color: #f0f4f5;
+}
