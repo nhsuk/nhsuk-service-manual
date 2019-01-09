@@ -30,3 +30,9 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
+
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish artifacts: deploy'
+  inputs:
+    artifactName: 'deploy'
+    targetPath: '$(System.DefaultWorkingDirectory)/deploy'
