@@ -45,6 +45,10 @@ app.get(/^([^.]+)$/, function (req, res, next) {
   routing.matchRoutes(req, res, next)
 })
 
+app.get('*', function(req, res){
+  res.render('page-not-found');
+});
+
 // Run the application
 app.listen(port, () => {
   console.log(chalk.green(`App is running and watching for changes at http://localhost:${port}`));
