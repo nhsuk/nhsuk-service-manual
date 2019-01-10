@@ -1,39 +1,26 @@
 {% extends 'includes/layout.njk' %}
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 
 {% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Practices</h1>
+    <p class="nhsuk-body-l">How we approach our working practices at NHS Digital and what we expect of teams.</p>
+  </div>
+</div>
 
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
+<div class="nhsuk-grid-row nhsuk-u-margin-top-8">
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/practices/make-your-service-accessible">Make your service accessible</a></h2>
+    <p>Meet everyone’s different needs and abilities.</p>
+  </div>
+</div>
 
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper" id="maincontent">
-
-    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
-      <div class="nhsuk-grid-column-two-thirds">
-        <h1 class="nhsuk-u-margin-bottom-5">Practices</h1>
-        <p class="nhsuk-body-l">How we approach our working practices at NHS Digital and what we expect of teams.</p>
-      </div>
-    </div>
-
-    <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
-      <div class="nhsuk-grid-column-one-third">
-        <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/practices/make-your-service-accessible">Make your service accessible</a></h2>
-        <p>Meet everyone’s different needs and abilities.</p>
-      </div>
-    </div>
-
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-        <h2>What we're working on next</h2>
-        <p>We've started with <a href="">accessibility</a> because teams tell us it's a very important area for them. We'll be researching and testing more detailed accessibility guidance over the next couple of months.</p>
-        <p>We're also starting work on guidance on agile working and will be looking at what user researchers need from the service manual.</p>
-        <p>Please get in touch on the <a href="#">NHS.UK #standards Slack channel</a> if you'd like to contribute or email the standards team at <a href="#">service-manual@nhs.net</a>.</p>
-      </div>
-    </div>
-
-  </main>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
+    <h2>What we're working on next</h2>
+    <p>We've started with <a href="">accessibility</a> because teams tell us it's a very important area for them. We'll be researching and testing more detailed accessibility guidance over the next couple of months.</p>
+    <p>We're also starting work on guidance on agile working and will be looking at what user researchers need from the service manual.</p>
+    <p>Please get in touch on the <a href="#">NHS.UK #standards Slack channel</a> if you'd like to contribute or email the standards team at <a href="#">service-manual@nhs.net</a>.</p>
+  </div>
 </div>
 {% endblock %}

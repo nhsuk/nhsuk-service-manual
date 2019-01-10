@@ -3,15 +3,16 @@
 {% from 'components/hero/macro.njk' import hero %}
 {% from 'components/promo/macro.njk' import promo%}
 
-{% block body %}
+{% block breadcrumb %}{% endblock %}
+
+{% block outerBody %}
 {{ hero({
   "heading": "Design and build digital services for the NHS",
   "text": "Things you need to make consistent, usable services that put people first."
 }) }}
 
 <section class="nhsuk-section nhsuk-section--white">
-  <div class="nhsuk-width-container">
-    <main class="nhsuk-main-wrapper" id="maincontent">
+  <div class="nhsuk-width-container nhsuk-main-wrapper">
 
       <div class="nhsuk-grid-row nhsuk-promo-group">
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
@@ -61,23 +62,24 @@
         </div>
       </div>
 
-    </main>
   </div>
 </section>
+{% endblock %}
 
+{% block body %}
 <section class="nhsuk-section">
   <div class="nhsuk-width-container">
 
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <h2>Community</h2>
-          <p>The NHS digital service manual comes from the experience of the teams at NHS Digital behind the <a href="http://nhs.uk">NHS website</a>. It is maintained by the standards team. <a href="">Email us</a> or get in touch on the <a href="">NHS.UK #standards Slack channel</a> if you have any questions.</p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
-          <h2>Contribute</h2>
-          <p>The manual is always evolving as we learn more. Help us to improve and grow it: <a href="/contribute">discuss patterns, give feedback and submit new work</a>.</p>
-        </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <h2>Community</h2>
+        <p>The NHS digital service manual comes from the experience of the teams at NHS Digital behind the <a href="http://nhs.uk">NHS website</a>. It is maintained by the standards team. <a href="">Email us</a> or get in touch on the <a href="">NHS.UK #standards Slack channel</a> if you have any questions.</p>
       </div>
+      <div class="nhsuk-grid-column-one-half">
+        <h2>Contribute</h2>
+        <p>The manual is always evolving as we learn more. Help us to improve and grow it: <a href="/contribute">discuss patterns, give feedback and submit new work</a>.</p>
+      </div>
+    </div>
 
   </div>
 </section>

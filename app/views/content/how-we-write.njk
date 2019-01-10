@@ -1,13 +1,6 @@
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
-
-{% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
+{% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
@@ -18,13 +11,9 @@
   href: "/content-style-guide",
   text: "Content style guide"
 }) }}
+{% endblock %}
 
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
-
+{% block body %}
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
                 <h1 class="nhsuk-u-margin-bottom-5">How we write</h1>
@@ -149,8 +138,4 @@
 
 
   </div>      
-
-
-  </main>
-</div>
 {% endblock %}
