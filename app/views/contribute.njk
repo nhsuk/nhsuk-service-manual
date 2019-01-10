@@ -1,70 +1,44 @@
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
+{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 
 {{ breadcrumb({ 
   href: "/index",
   text: "Home"
 }) }}
 
-
 <div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
+  <main class="nhsuk-main-wrapper" id="maincontent">
 
     <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Contribute</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Help to grow and improve the digital service manual.</p>
-            </div>
-    </div> 
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-u-margin-bottom-5">Contribute</h1>
+        <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Help to grow and improve the digital service manual.</p>
+      </div>
+    </div>
 
-    
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-										
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
         <h2>Discuss</h2>
         <p>Talk about patterns and anything else in the manual with other teams on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net.</a></p>
-
+        
         <h2>Share your work</h2>
-        <p>If you have new research findings, designs, code or content patterns, share them on the <a href="https://nhsuk.slack.com/messages/standards">#standards Slack channel</a> or email them to <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</h2>
-
+        <p>If you have new research findings, designs, code or content patterns, share them on the <a href="https://nhsuk.slack.com/messages/standards">#standards Slack channel</a> or email them to <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.
+        
         <h2>Give feedback</h2>
         <p>Tell us about your experience using the manual - <a href="/user-survey">complete a quick survey</a>.</p>
-
+        
         <h2>Ask us a question</h2>
         <p>For anything else, email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-
-        {% from 'components/review-date/macro.njk' import reviewDate %}
 
         {{ reviewDate({
           "lastReview": "August 2018"
         }) }}
 
-
+      </div>
     </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-
-
-    </div>
-
-
-  </div>      
-
 
   </main>
 </div>

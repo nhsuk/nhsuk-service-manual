@@ -1,8 +1,6 @@
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
+{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 
@@ -11,113 +9,112 @@
   text: "Home"
 }) }}
 
-
-
 <div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
+  <main class="nhsuk-main-wrapper" id="maincontent">
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
         <h1 class="nhsuk-u-margin-bottom-5">Design principles</h1>
         <p>These principles guide all of our design. Use them to get started on a project and to help with making decisions.</p>
         <p>They're inspired by the <a href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">NHS Constitution</a> that's steered the NHS for 70 years.</p>
- 
-
-       <p><a href="/service-manual/documents/2/NHS_design_principles.pdf">Download design principles poster PDF, 829kb</a></p> 
-
+        <p><a href="/service-manual/documents/2/NHS_design_principles.pdf">Download design principles poster PDF, 829kb</a></p>
 
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl nhsuk-!-margin-bottom-1">1</div>
-                Put people at the heart of everything you do
-            </h3>
-            <div class="rich-text"><p>Patients, family, carers, staff. Design things that understand and respect people's needs. Take the time to learn about the whole person - their emotional, physical and technical needs.</p><p>Design with compassion.</p></div>
-        </div>
-
-        <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">2</div>
-                Design for the outcome
-            </h3>
-            <div class="rich-text"><p>What will good look like? What are the health, wellbeing or other measurable outcomes that your work will impact? Your work should improve lives, either directly or indirectly.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl nhsuk-!-margin-bottom-1">1</div>
+            Put people at the heart of everything you do
+          </h3>
+          <div class="rich-text">
+            <p>Patients, family, carers, staff. Design things that understand and respect people's needs. Take the time to learn about the whole person - their emotional, physical and technical needs.</p>
+            <p>Design with compassion.</p>
+          </div>
         </div>
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">3</div>
-                Be inclusive
-            </h3>
-            <div class="rich-text"><p>NHS services are for everyone. Make sure people with different physical, mental health, social, cultural or learning needs can use your design.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">2</div>
+            Design for the outcome
+          </h3>
+          <div class="rich-text">
+            <p>What will good look like? What are the health, wellbeing or other measurable outcomes that your work will impact? Your work should improve lives, either directly or indirectly.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">4</div>
-                Design for context
-            </h3>
-            <div class="rich-text"><p>Don’t just design your part of a service. Consider people's entire experience, and the infrastructure and processes involved. Think about how people begin and end their time with what you are designing.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">3</div>
+            Be inclusive
+          </h3>
+          <div class="rich-text">
+            <p>NHS services are for everyone. Make sure people with different physical, mental health, social, cultural or learning needs can use your design.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">5</div>
-                Design for trust
-            </h3>
-            <div class="rich-text"><p>People trust the NHS. Take care not to jeopardise that. Design things that are reliable and secure.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">4</div>
+            Design for context
+          </h3>
+          <div class="rich-text">
+            <p>Don’t just design your part of a service. Consider people's entire experience, and the infrastructure and processes involved. Think about how people begin and end their time with what you are designing.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">6</div>
-                Test your assumptions
-            </h3>
-            <div class="rich-text"><p>Design and test your work with real people. Observe behaviour and gather evidence. Work with subject experts and existing research. Do not rely on hunches.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">5</div>
+            Design for trust
+          </h3>
+          <div class="rich-text">
+            <p>People trust the NHS. Take care not to jeopardise that. Design things that are reliable and secure.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">7</div>
-                Make, learn, iterate
-            </h3>
-            <div class="rich-text"><p>Start small. Experiment with different ways of doing things. Make prototypes to improve your understanding. Test and refine.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">6</div>
+            Test your assumptions
+          </h3>
+          <div class="rich-text">
+            <p>Design and test your work with real people. Observe behaviour and gather evidence. Work with subject experts and existing research. Do not rely on hunches.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">8</div>
-                Do the hard work to make it simple
-            </h3>
-            <div class="rich-text"><p>Healthcare journeys can be complex. Take the time to understand what you are trying to solve. Do not push complexity onto the people using what you are designing.</p></div>
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">7</div>
+            Make, learn, iterate
+          </h3>
+          <div class="rich-text">
+            <p>Start small. Experiment with different ways of doing things. Make prototypes to improve your understanding. Test and refine.</p>
+          </div>
         </div>
-
         <div class="featured-item__content">
-            <h3 class="featured-item__heading nhsuk-heading-l">
-                <div class="featured-item__number nhsuk-heading-xl">9</div>
-                Make things open. It makes things better
-            </h3>
-            <div class="rich-text"><p>Share your learning. Share your work. Be transparent in your design decisions.</p><p>Be accountable and have confidence in your solutions.</p>
-            
-            {% from 'components/review-date/macro.njk' import reviewDate %}
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">8</div>
+            Do the hard work to make it simple
+          </h3>
+          <div class="rich-text">
+            <p>Healthcare journeys can be complex. Take the time to understand what you are trying to solve. Do not push complexity onto the people using what you are designing.</p>
+          </div>
+        </div>
+        <div class="featured-item__content">
+          <h3 class="featured-item__heading nhsuk-heading-l">
+            <div class="featured-item__number nhsuk-heading-xl">9</div>
+            Make things open. It makes things better
+          </h3>
+          <div class="rich-text">
+            <p>Share your learning. Share your work. Be transparent in your design decisions.</p>
+            <p>Be accountable and have confidence in your solutions.</p>
 
             {{ reviewDate({
-            "lastReview": "August 2018"
+              "lastReview": "August 2018"
             }) }}
-            </div>
+          </div>
         </div>
+      </div>
 
-
+      <div class="nhsuk-grid-column-one-third">
+        <div class="get-in-touch">
+          <h3 class="nhsuk-heading-s">What do you think of the design principles?</h3>
+          <p>Discuss and give feedback on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email<a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>.</p>
+        </div>
+      </div>
     </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-                <div class="get-in-touch" >
-                    <h3 class="nhsuk-heading-s">What do you think of the design principles?</h3>
-                        <p>Discuss and give feedback on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email<a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>.</p>
-                </div>
-    </div>
-
-
-  </div>      
-
 
   </main>
 </div>

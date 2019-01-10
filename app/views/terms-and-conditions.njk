@@ -1,47 +1,33 @@
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
 
 {% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 
 {{ breadcrumb({ 
   href: "/index",
   text: "Home"
 }) }}
 
-
 <div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
+  <main class="nhsuk-main-wrapper" id="maincontent">
 
     <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Terms and conditions</h1>
-            </div>
-    </div> 
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-u-margin-bottom-5">Terms and conditions</h1>
+      </div>
+    </div>
 
-    
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-										
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
         <p>This website is operated by NHS Digital. These terms of use govern your use of this website (the NHS digital service manual). We may update these terms of use from time to time, and the revised version will be effective when displayed here.</p>
         <p>You may access and use the NHS digital service manual if you agree to be legally bound by the terms set out here. If you do not agree to be legally bound by these terms please do not access or use the NHS digital service manual. If you break these terms and conditions your rights of use will end immediately.</p>
-
+        
         <h2>Licence</h2>
         <p>The images, trademarks, trade names, logos included in the website are either owned by NHS Digital, or licensed for use on this website by the Department of Health or third parties.</p>
         <p>We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by intellectual property right laws and treaties around the world. All such rights are reserved.</p>
         <p>You may print off one copy, and may download extracts, of any page(s) from our site for your personal use. You must not modify the paper or digital copies of any materials you have printed off or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text.</p>
         <p>Our status (and that of any identified contributors) as the authors of content on our site must always be acknowledged. You must not use any part of the content on our site for commercial purposes without obtaining a licence to do so from us.</p>
-
+        
         <h2>Terms of use</h2>
         <p>References to ‘the NHS’ mean ‘the NHS in England’ unless otherwise stated. Service descriptions, entitlements and costs refer to services in England and arrangements may differ elsewhere in the UK.</p>
         <p>We can’t guarantee uninterrupted access to the website, or the sites to which it links. We accept no responsibility for any damage arising from the unavailability of this website or the information it contains.</p>
@@ -53,31 +39,15 @@
         <p>You must not attempt to gain unauthorised access to our site, the server on which this website is stored, or any server, computer or database connected to this website.
         <p>You must not attack this website via a denial-of-service attack or a distributed denial-of service attack.</p>
         <p>By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use this website will end immediately.</p>
-
+        
         <h2>General</h2>
         <p>These terms of use shall be governed by and interpreted in accordance with the laws of England, and we both agree to the exclusive jurisdiction of the courts of England in respect of any disputes which may arise in relation to our website.</p>
-
+        
         <h2>Contact details</h2>
         <p>Contact us by email at <a href="enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a> if you have any questions.</p>
-
-</p>
-        
-
-
-      
-
-
+        </p>
+      </div>
     </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-
-
-    </div>
-
-
-  </div>      
-
 
   </main>
 </div>
