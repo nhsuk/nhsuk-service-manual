@@ -31,7 +31,8 @@ steps:
 - task: CopyFiles@2
   displayName: 'copy deployment scripts'
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)/deploy'
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: 'deploy\**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
