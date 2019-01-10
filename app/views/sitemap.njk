@@ -1,22 +1,7 @@
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
-
 {% block body %}
-
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
-
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-    <h1 class="">Sitemap</h1>
-
+    <h1>Sitemap</h1>
     <ul>
       <li><a href="/index">Home</a></li>
       <li><a href="/design-principles">Design principles</a></li>
@@ -62,14 +47,10 @@
       <ul>
         <li><a href="practices/make-your-service-accessible">Make your service accessible</a></li>
       </ul>
-      <li><a href="/contribute">Contribute</li>
+      <li><a href="/contribute"></a>Contribute</li>
       <li><a href="/contribute/user-survey">User survey</li>
       <li><a href="/cookies">Cookies</a></li>
       <li><a href="/privacy-policy">Privacy policy</a></li>
       <li><a href="/terms-and-conditions">Terms and conditions</a></li>
     </ul>
-
-
-  </main>
-</div>
 {% endblock %}
