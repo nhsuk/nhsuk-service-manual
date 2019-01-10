@@ -1,5 +1,5 @@
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,7 +25,20 @@
   <body>
     {% include 'includes/header.njk' %}
 
-    {% block body %}{% endblock %}
+    {% block breadcrumb %}
+      {{ breadcrumb({ 
+        href: "/index",
+        text: "Home"
+      }) }}
+    {% endblock %}
+
+    {% block outerBody %}{% endblock %}
+
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper" id="maincontent">
+        {% block body %}{% endblock %}
+      </main>
+    </div>
 
     {% include 'includes/footer.njk' %}
   </body>

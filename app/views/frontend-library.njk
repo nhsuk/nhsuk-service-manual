@@ -1,39 +1,24 @@
 {% extends 'includes/layout.njk' %}
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">NHS.UK frontend library</h1>
+    <p class="nhsuk-body-l">Production code to start building user interfaces for the NHS.</p>
 
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
+    <h2>What is a frontend library?</h2>
+    <p>We've made our production code available to NHS developers and designers in a "frontend library". The code in the library will help you build accessible websites with an NHS look and feel. You'll also get tested components and patterns.</p>
+    <p>Our <a href="https://github.com/nhsuk/nhsuk-frontend">frontend library</a> is in GitHub. You need to sign up to GitHub to use it.</p>
 
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper" id="maincontent">
+    <h2>Get in touch</h2>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/docs/contributing">contribute</a> code via GitHub.</p>
+    <p>And you can contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHSUK #standards Slack channel</a> or email the standards team at service-manual@nhs.net.</p>
 
-    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
-      <div class="nhsuk-grid-column-two-thirds">
-        <h1 class="nhsuk-u-margin-bottom-5">NHS.UK frontend library</h1>
-        <p class="nhsuk-body-l">Production code to start building user interfaces for the NHS.</p>
-      </div>
-    </div>
-
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-        <h2>What is a frontend library?</h2>
-        <p>We've made our production code available to NHS developers and designers in a "frontend library". The code in the library will help you build accessible websites with an NHS look and feel. You'll also get tested components and patterns.</p>
-        <p>Our <a href="https://github.com/nhsuk/nhsuk-frontend">frontend library</a> is in GitHub. You need to sign up to GitHub to use it.</p>
-
-        <h2 class="nhsuk-u-margin-top-8">Get in touch</h2>
-        <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/docs/contributing">contribute</a> code via GitHub.</p>
-        <p>And you can contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHSUK #standards Slack channel</a> or email the standards team at service-manual@nhs.net.</p>
-        {{ reviewDate({
-          "lastReview": "January 2019"
-        }) }}
-      </div>
-    </div>
-
-  </main>
+    {{ reviewDate({
+      "lastReview": "January 2019"
+    }) }}
+  </div>
+  </div>
 </div>
 {% endblock %}

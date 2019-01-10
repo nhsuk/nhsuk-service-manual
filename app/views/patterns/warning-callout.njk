@@ -1,13 +1,6 @@
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
-
-{% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
+{% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
@@ -18,13 +11,9 @@
   href: "/patterns",
   text: "Patterns and components"
 }) }}
+{% endblock %}
 
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
-
+{% block body %}
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
                 <h1 class="nhsuk-u-margin-bottom-5">Warning callout</h1>
@@ -146,8 +135,4 @@
 
 
   </div>      
-
-
-  </main>
-</div>
 {% endblock %}
