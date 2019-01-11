@@ -1,0 +1,108 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Skip link</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the skip link component to help keyboard-only users skip to the main content on a page.</p>
+            </div>
+    </div>
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+                <p>To view the skip link component tab to this example, or click inside this example and press tab.</p>
+
+                {% from 'components/skip-link/macro.njk' import skipLink %}
+
+                {{ skipLink({
+                "href": "#maincontent",
+                "text": "Skip to main content"
+                }) }}
+
+
+            </div>
+
+
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/skip-link.html">Preview the skip link component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/skip-link">get the latest skip link code</a> in the NHS.UK frontend library in GitHub.</p>
+
+
+            <h2>When to use skip link </h2>
+                <p>All NHS.UK pages must include a skip link in the header <a href="https://design-system.service.gov.uk/components/skip-link/">following GOV.UK Design System guidance</a>.</p>
+
+            <h2 id="how-it-works">How it works</h2>
+                <p>Some people use the tab key on their keyboard to navigate through the links and form elements on a web page.</p>
+                <p>Including the skip link component gives users the option to bypass the top-level navigation links and jump to the main content on a page.</p>
+                <p>The skip link component is visually hidden until a keyboard press activates it.</p>
+
+            <h2>Research</h2>
+                <p>If you’ve used this component, get in touch to share your user research findings.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul>
+        </div>
+
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

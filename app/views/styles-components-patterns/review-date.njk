@@ -1,0 +1,93 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Review date</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Reassure users that our information is up-to-date.</p>
+            </div>
+    </div>
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+            <h2 >Code and design</h2>
+                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                                {% from 'components/review-date/macro.njk' import reviewDate %}
+
+                                {{ reviewDate({
+                                "lastReview": "12 February 2016",
+                                "nextReview": "1 February 2019"
+                                }) }}
+                </div>
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/review-date.html">Preview the review date component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/review-date">get the latest review date code</a> in the NHS.UK frontend library in GitHub.</p>
+
+
+            <h2>How to use </h2>
+                <p>The review date information should sit at the bottom of every page of clinical content on the NHS website to meet <a href="https://www.england.nhs.uk/tis/about/the-info-standard/">NHS England's information standard</a> . If the page includes embedded content such as a video, then the production/review date for that content should be contained within the component that holds that content.</p>
+                <p>Don't make review dates the main focus of the page - review dates are low on users priority when seeking information.</p>
+                <p>Don't hide the review dates; dates need to sit in context close to the content they relate to.</p>
+
+            <h3>Accessibility</h3>
+                <p>The text currently meets AA accessibity standards with a contrast ratio of 6.99:1.</p>
+
+            <h2>Research</h2>
+                <p>We initally tested the review dates detatched from the content, closer to the footer of the page and separated by a rule - which users didn't notice. It wasn't until we removed the rule and brought closer that users read the dates and commented on them being helpful.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul>
+        </div>
+
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

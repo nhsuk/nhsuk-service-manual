@@ -1,0 +1,86 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-u-margin-bottom-5">Back link</h1>
+      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the back link component to help users go back to the previous page in a multi-page transaction.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2 >Code and design</h2>
+
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+      {% from 'components/back-link/macro.njk' import backLink %}
+
+      {{ backLink({
+      "href": "#",
+      "text": "Go back"
+      }) }}
+
+    </div>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/back-link/index.html">Preview the template component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/back-link">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
+
+    <h2>When to use a back link</h2>
+    <p><a href="https://design-system.service.gov.uk/">GOV.UK design system</a> suggests to always include the back link component <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages</a>.</p>
+    <p>You can include a back link on other pages within a multi-page transaction, if it makes sense to do so.</p>
+    <p>Make sure the text used in the link describes the action.</p>
+
+    <h2>When not to use a back link</h2>
+    <p>Never use the back link component together with breadcrumbs. If necessary, you should do research with your users to learn which they find more helpful in your service.</p>
+    <p>Consider placement; don't have it close to other links or buttons as it might confuse the primary action on a page.</p>
+
+    <h2>How a back link works</h2>
+    <p><a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK</a> suggest that back links must always go at the top of a page, but a couple of our services; <a href="https://111.nhs.uk/">111.nhs.uk</a> and <a href="https://your-data-matters.service.nhs.uk">Find out why your NHS data matters</a> have found it to works better at the bottom of the page below the primary action, as this makes better sense to a screen reader (why would you suggest leaving a page before you know its purpose).</p>
+    <h3>Accessibility</h3>
+    <p>Consider the placement of the back link on a page, especially with screen readers in mind.</p>
+    <p>Also, make sure the text used describes the action - don't rely on 'back' as it might not mirror the users expectation of a journey.</p>
+
+    <h2>Research</h2>
+    <p><a href="https://111.nhs.uk/">111.nhs.uk</a> found users wanting to change their answers during testing so they introduced a back link and labelled it to 'change my previous answer'.</p>
+    <p><a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a> received a recommendation from <a href="http://digitalaccessibilitycentre.org/">Digital Accessibility Centre</a> to place their back link below the primary action - as it was confusing to screen reader users to land on a page and to be immediately told to go back before the heading, or purpose of the page was read out.</p>
+
+    <h2>Discuss</h2>
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+    {% from 'components/review-date/macro.njk' import reviewDate %}
+
+    {{ reviewDate({
+      "lastReview": "January 2019"
+    }) }}
+
+    {% from 'components/panel/macro.njk' import panel %}
+
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+                <li><a href='/patterns/buttons'>Buttons</a></li>
+            </ul>"
+    }) }}
+
+  </div>
+</div>
+{% endblock %}

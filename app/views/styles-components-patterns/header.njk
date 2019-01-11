@@ -1,0 +1,147 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Header</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">The header shows users they are on an NHS service and helps them get started in finding what they need.</p>
+            </div>
+    </div>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+
+                {% from 'components/header/macro.njk' import header %}
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "true",
+    "primaryLinks": [
+      {
+        "url"  : "https://www.nhs.uk/conditions",
+        "label" : "Health A-Z"
+      },
+      {
+        'url' : 'https://www.nhs.uk/live-well/',
+        'label' : 'Live Well'
+      },
+      {
+        'url'  : 'https://www.nhs.uk/conditions/social-care-and-support/',
+        'label' : 'Care and support'
+      },
+      {
+        'url'  : 'https://www.nhs.uk/news/',
+        'label' : 'Health news'
+      },
+      {
+        'url' : 'https://www.nhs.uk/service-search',
+        'label' : 'Services near you'
+      }
+    ]
+  })
+}}
+
+
+            </div>
+
+
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/header-navigation.html">Preview the header with navigation component</a></p>
+            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/header">get the latest navigation component code</a> in the NHS.UK frontend library in GitHub.</p>
+
+
+            <h2>When to use the header</h2>
+                <p>Use this header at the top of every page if your service is part of the new NHS.UK website, replacing what was NHS Choices.</p>
+                <p>If your service is not part of what was NHS Choices, get in touch on the <a href="">NHS.UK #standards Slack channel</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>. We are considering how to use the header on other NHS Digital sites and services on the NHS.UK domain including, for example, some transactional journeys.</p>
+
+
+
+            <h2>How to use the header</h2>
+                <p>For smaller viewports, for example on mobile devices, the search and navigation items are hidden and can be expanded by buttons, which need JavaScript to work. You can find the <a href="">JavaScript code above</a>.</p>
+                <p>For the search suggestions functionality, you need two JavaScript files:</p>
+                <ul>
+                    <li><a href="">typeahead.bundle.min.js</a></li>
+                    <li><a href="">could have a significant effect on someone's health</a></li>
+                </ul>
+
+
+
+
+
+            <h2>Research</h2>
+                <p>Our research has shown that this header is clearer and more usable than the old NHS Choices header, and it expresses the NHS brand.</p>
+                <p>Removing drop downs on larger screens, for example, has made it easier for people with motor skills problems or touchscreens.</p>
+                <p>Get in touch to share your research findings if you've used this pattern.</p>
+
+
+
+
+
+
+
+            <h2>Discuss</h2>
+            <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+
+
+
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>
+                                                <li><a href='/patterns/breadcrumbs'>Breadcrumbs</a></li>
+                                                <li><a href='/patterns/footer'>Footer</a></li>
+                                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul>
+        </div>
+
+
+    </div>
+
+
+  </div>
+{% endblock %}
