@@ -1,6 +1,6 @@
 .code-snippet {
     margin-top: 48px;
-    background-color: $color--white;
+    background-color: $color_nhsuk-white;
 
     .js-hidden {
         display: none;
@@ -20,7 +20,7 @@
             z-index: 1;
             margin-top: 8px;
             font-size: 16px;
-            color: $color--blue;
+            color: $color_nhsuk-blue;
             cursor: pointer;
             background-color: transparent;
             border: 0;
@@ -35,7 +35,7 @@
                 height: 16px;
                 margin: 5px 5px 0 0;
                 transform: rotate(-90deg);
-                fill: $color--blue;
+                fill: $color_nhsuk-blue;
             }
         }
     }
@@ -45,7 +45,7 @@
         align-items: flex-end;
         flex-direction: column;
         padding: 16px;
-        border-bottom: $light-grey-border;
+        border-bottom: 1px solid $color_nhsuk-grey-4;
 
         @include mq($from: tablet) {
             padding: 24px;
@@ -56,7 +56,7 @@
 .app-tabs {
     $root: &;
     display: none;
-    border: $light-grey-border;
+    border: 1px solid $color_nhsuk-grey-4;
     border-bottom: 0;
 
     @include mq($from: tablet) {
@@ -79,18 +79,18 @@
 
             &:hover {
                 outline: 0;
-                box-shadow:  0 0 0 4px $color--hover;
+                box-shadow:  0 0 0 4px $color_tint_nhsuk-warm-yellow-30;
             }
 
             &:focus {
                 outline: 0;
-                box-shadow:  0 0 0 4px $color--focus;
+                box-shadow:  0 0 0 4px $color_nhsuk-warm-yellow;
             }
         }
 
         &--current {
             a {
-                background-color: $color--white;
+                background-color: $color_nhsuk-white;
 
                 @include mq($from: tablet) {
                     border-bottom: 4px solid #005ea5;
@@ -101,7 +101,7 @@
         &--mobile {
             display: block;
             margin: -1px 0;
-            border: $light-grey-border;
+            border: 1px solid $color_nhsuk-grey-4;
             border-width: 1px 0;
 
             @include mq($from: tablet) {
@@ -112,24 +112,31 @@
 
     &__container {
         margin-top: 0;
-        border: $light-grey-border;
+        border: 1px solid $color_nhsuk-grey-4;
         border-bottom: 0;
 
         pre {
             align-self: stretch;
             padding: 0;
-            background-color: $color--white;
+            background-color: $color_nhsuk-white;
         }
     }
 }
 
-
 // Highlight JS overrides
+
+$color-syntax--body: #28333b;
+$color-syntax--comment: #757575;
+$color-syntax--keyword: #990155;
+$color-syntax--var: #527a00;
+$color-syntax--string: #025eb8;
+$color-syntax--selector: #330072;
+
 .hljs {
     padding: 0;
     overflow-x: scroll;
     color: $color-syntax--body;
-    background-color: $color--white;
+    background-color: $color_nhsuk-white;
 
     @include mq($from: tablet) {
         // Fixes issue with overflowing <code> el. 71.5vw = width of column. 121px = total width of padding/borders.

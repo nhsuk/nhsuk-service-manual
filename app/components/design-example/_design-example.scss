@@ -13,9 +13,9 @@
         position: absolute;
         padding: 0 16px;
         line-height: 32px;
-        color: $color--white;
+        color: $color_nhsuk-white;
         text-decoration: none;
-        background-color: $nhsuk-secondary-text;
+        background-color: $color_nhsuk-grey-1;
 
         @include mq($from: tablet) {
             padding: 0 24px;
@@ -23,23 +23,23 @@
 
         &:hover,
         &:focus {
-            color: $nhsuk-secondary-text;
+            color: $color_nhsuk-grey-1;
             box-shadow: none;
         }
 
         &:hover {
-            background-color: $color--hover;
+            background-color: $color_tint_nhsuk-warm-yellow-30;
         }
 
         &:focus {
-            background-color: $color--focus;
+            background-color: $color_nhsuk-warm-yellow;
         }
 
         &:visited {
-            color: $color--white;
+            color: $color_nhsuk-white;
 
             &:hover {
-                color: $nhsuk-secondary-text;
+                color: $color_nhsuk-grey-1;
             }
         }
     }
