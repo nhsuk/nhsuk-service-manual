@@ -1,0 +1,70 @@
+{% macro designExample(params) %}
+
+<div class="design-example">
+
+  <a href="{{ page.url}}demo/{{ block_uuid }}" class="design-example__pop-out" target="_blank">Open in new window</a>
+  <div class="code-embed">
+      <!-- TODO
+      <iframe title="{{ value.code_preview_title }}" src="{{ page.url}}demo/{{ block_uuid }}" frameborder="0" scrolling="yes"></iframe>
+      -->
+      <iframe frameborder="0" scrolling="yes"></iframe>
+  </div>
+
+  <div class="code-snippet">
+      <ul class="app-tabs" role="tablist">
+          <!-- for each code snippet -->
+          <li class="app-tabs__item" role="presentation" data-index="ex-1">
+              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
+                Language 1
+              </a>
+          </li>
+          <!-- end for each loop -->
+          <!-- for each code snippet -->
+          <li class="app-tabs__item" role="presentation" data-index="ex-2">
+              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
+                Language 2
+              </a>
+          </li>
+          <!-- end for each loop -->
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+
+          <!-- for each code snippet -->
+          <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
+                Language name 1
+              </a>
+          </div>
+          <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
+              <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
+              <pre><code class="{{ snippet.language }}">
+                Code goes here
+              </code></pre>
+              <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
+                  <svg><use xlink:href="#caret-right"></use></svg>Close
+              </button>
+          </div>
+          <!-- end for -->
+          <!-- TODO: re-use the above for block
+          for each code snippet -->
+          <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
+              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
+                Language name 2
+              </a>
+          </div>
+          <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
+              <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
+              <pre><code class="{{ snippet.language }}">
+                Code goes here also
+              </code></pre>
+              <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
+                  <svg><use xlink:href="#caret-right"></use></svg>Close
+              </button>
+          </div>
+          <!-- end for -->
+      </div>
+  </div>
+
+</div>
+{% endmacro %}

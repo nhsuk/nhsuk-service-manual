@@ -1,5 +1,7 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'includes/design-example.njk' import designExample %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -30,10 +32,11 @@
 
 
 
-										
+
             <h2 >Code and design</h2>
 
 
+            {{ designExample({}) }}
 
             <div class="example grey-background nhsuk-u-margin-bottom-4">
 

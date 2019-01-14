@@ -1,0 +1,46 @@
+@import 'govuk/main';
+@import 'code-embed';
+@import 'code-snippet';
+
+
+.design-example {
+    $root: &;
+    position: relative;
+    width: 100%;
+
+    &__pop-out {
+        @include nhsuk-font(16);
+        position: absolute;
+        padding: 0 16px;
+        line-height: 32px;
+        color: $color--white;
+        text-decoration: none;
+        background-color: $nhsuk-secondary-text;
+
+        @include mq($from: tablet) {
+            padding: 0 24px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $nhsuk-secondary-text;
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: $color--hover;
+        }
+
+        &:focus {
+            background-color: $color--focus;
+        }
+
+        &:visited {
+            color: $color--white;
+
+            &:hover {
+                color: $nhsuk-secondary-text;
+            }
+        }
+    }
+}

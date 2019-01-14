@@ -18,11 +18,12 @@
     <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
 
     <script src="//assets.adobedtm.com/launch-ENe7f6cdd7cc05409b86547d9153429788.min.js" async></script>
-    <script src="/js/bundle.js"></script>
+    <script src="/js/bundle.js" defer></script>
 
   </head>
 
   <body>
+    {% include 'includes/sprites.njk' %}
     {% include 'includes/header.njk' %}
 
     {% block breadcrumb %}
