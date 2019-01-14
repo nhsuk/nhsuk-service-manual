@@ -1,0 +1,14 @@
+.code-embed {
+    margin-top: 48px;
+    background-color: $nhsuk-grey-5;
+    border: $light-grey-border;
+
+    iframe {
+        display: block;
+        width: 100%;
+    }
+
+    + .code-snippet {
+        margin-top: -1px;
+    }
+}

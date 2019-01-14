@@ -42,7 +42,7 @@ function javascript() {
 
 function watch() {
   gulp.watch('app/styles/**/*.scss', styles);
-  gulp.watch('app/javascript/**/*.js', javascript);
+  gulp.watch('app/{javascript,components}/**/*.js', javascript);
 }
 
 exports.styles = styles;

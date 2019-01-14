@@ -1,0 +1,85 @@
+.app-tabs {
+    margin: -1px auto;
+    padding: 0;
+    overflow: visible;
+    list-style-type: none;
+    border: 1px solid #bfc1c3;
+    margin-bottom: 0;
+    padding: 0;
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        margin: 0;
+
+        a {
+            display: block;
+            margin-top: -1px;
+            padding: 15px;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            color: #005ea5;
+            background: inherit;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        &--current {
+            a {
+                border-top-color: #005ea5;
+                border-bottom-color: #005ea5;
+                background-color: #f0f0f0
+            }
+        }
+
+        &__heading {
+            a {
+                display: none;
+                position: relative;
+                z-index: 2;
+                padding: 15px;
+                border: 1px solid #bfc1c3;
+                border-top: 0;
+                color: #005ea5;
+                background: inherit;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:visited {
+                    color: #005ea5;
+                }
+            }
+
+            &--current {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    &__text {
+        padding:20px 20px 20px 20px;
+    }
+
+    &__container {
+        position: relative;
+        margin-top: -2px;
+        border: 1px solid #bfc1c3;
+
+        pre {
+            position: relative;
+            margin: 0;
+            padding: 15px;
+            overflow: auto;
+            border: 1px solid #bfc1c3;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            max-width: 38em;
+            margin-bottom: 15px;
+            max-width: inherit;
+            margin-bottom: 0;
+            border: 0;
+            font-size: inherit;
+        }
+    }
+}
