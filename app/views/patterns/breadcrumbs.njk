@@ -36,33 +36,9 @@
             <h2 >Code and design</h2>
 
 
-            {{ designExample({}) }}
-
-            <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-              {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-                {{ breadcrumb({
-                  items: [
-                    {
-                      href: "/level-one",
-                      text: "Level one"
-                    },
-                    {
-                      href: "/level-one/level-two",
-                      text: "Level two"
-                    }
-                  ],
-                  href: "/level-one/level-two/level-three",
-                  text: "Level three"
-                }) }}
-
-
-
-            </div>
-
-        
-
+            {{ designExample({
+              type: 'breadcrumb'
+            }) }}
 
             <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
 

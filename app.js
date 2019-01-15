@@ -1,5 +1,6 @@
 // Core dependencies
 const path = require('path');
+const fs = require('fs');
 
 // External dependencies
 const express = require('express');
@@ -38,6 +39,24 @@ nunjucks.configure(appViews, {
   express: app,
   noCache: true,
   watch: true
+})
+
+// Render standalone design examples
+app.get('/design-example/:example', function(req, res) {
+  var example = req.params.example
+  var examplePath = path.join(__dirname, `/app/examples/${example}.njk`)
+
+  fs.readFile(examplePath, function(err, data) {
+    if(err) throw err;
+
+    // render the example into html
+    var exampleHtml = nunjucks.renderString(data.toString())
+
+    // wrap the example html into a very basic html document
+    exampleHtml = nunjucks.render('includes/design-example-wrapper.njk', { body: exampleHtml })
+
+    res.send(exampleHtml)
+  })
 })
 
 // Automatically route pages
