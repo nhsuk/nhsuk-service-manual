@@ -2,12 +2,9 @@
 
 <div class="design-example">
 
-  <a href="{{ page.url}}demo/{{ block_uuid }}" class="design-example__pop-out" target="_blank">Open in new window</a>
+  <a href="/design-example/{{ params.type }}" class="design-example__pop-out" target="_blank">Open in new window</a>
   <div class="code-embed">
-      <!-- TODO
-      <iframe title="{{ value.code_preview_title }}" src="{{ page.url}}demo/{{ block_uuid }}" frameborder="0" scrolling="yes"></iframe>
-      -->
-      <iframe frameborder="0" scrolling="yes"></iframe>
+      <iframe title="{{ params.type }}" src="/design-example/{{ params.type }}" frameborder="0" scrolling="yes"></iframe>
   </div>
 
   <div class="code-snippet">
