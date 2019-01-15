@@ -1,5 +1,3 @@
-// TODO: remove jquery
-//import $ from '../globals';
 import * as iframeResize from 'iframe-resizer/js/iframeResizer'
 
 class DesignExample {
