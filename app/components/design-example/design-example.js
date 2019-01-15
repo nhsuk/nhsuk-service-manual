@@ -1,6 +1,6 @@
 // TODO: remove jquery
 //import $ from '../globals';
-import iFrameResize from 'iframe-resizer/js/iframeResizer';
+import * as iframeResize from 'iframe-resizer/js/iframeResizer'
 
 class DesignExample {
 
@@ -21,12 +21,7 @@ class DesignExample {
 
         this.bindEvents();
 
-        /* TODO: what is this for?
-        $(this.iframe).load(
-            // () => this.setIframeHeight(this.iframe)
-            iFrameResize([{ heightCalculationMethod: 'max' }], this.iframe)
-        );
-        */
+        iFrameResize([{ heightCalculationMethod: 'max' }], this.iframe)
     }
 
     bindEvents() {
