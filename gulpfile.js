@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var rollup = require('rollup-stream');
 var source = require('vinyl-source-stream');
 var babel = require('rollup-plugin-babel');
+var resolve = require('rollup-plugin-node-resolve');
 
 function styles() {
   return gulp.src('app/styles/**/*.scss')
@@ -27,6 +28,9 @@ function javascript() {
     input: './app/javascript/main.js',
     format: 'umd',
     plugins: [
+      resolve({
+        browser: true,
+      }),
       babel({
         exclude: 'node_modules/**'
       })
