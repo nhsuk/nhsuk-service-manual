@@ -1,10 +1,13 @@
 {% macro designExample(params) %}
 
+{% set examplePath = 'app/examples/' + params.type + '.njk' %}
+{% set standaloneURL = '/design-example/' + params.type %}
+
 <div class="design-example">
 
-  <a href="/design-example/{{ params.type }}" class="design-example__pop-out" target="_blank">Open in new window</a>
+  <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank">Open in new window</a>
   <div class="code-embed">
-      <iframe title="{{ params.type }}" src="/design-example/{{ params.type }}" frameborder="0" scrolling="yes"></iframe>
+      <iframe title="{{ params.type }}" src="{{ standaloneURL }}" frameborder="0" scrolling="yes"></iframe>
   </div>
 
   <div class="code-snippet">
@@ -12,14 +15,14 @@
           <!-- for each code snippet -->
           <li class="app-tabs__item" role="presentation" data-index="ex-1">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Language 1
+                HTML
               </a>
           </li>
           <!-- end for each loop -->
           <!-- for each code snippet -->
           <li class="app-tabs__item" role="presentation" data-index="ex-2">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Language 2
+                Nunjucks
               </a>
           </li>
           <!-- end for each loop -->
@@ -30,13 +33,13 @@
           <!-- for each code snippet -->
           <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Language name 1
+                HTML
               </a>
           </div>
           <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
               <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
-                Code goes here
+                {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
               </code></pre>
               <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
                   <svg><use xlink:href="#caret-right"></use></svg>Close
@@ -47,13 +50,13 @@
           for each code snippet -->
           <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Language name 2
+                Nunjucks
               </a>
           </div>
           <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
               <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
-                Code goes here also
+                  {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
               </code></pre>
               <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
                   <svg><use xlink:href="#caret-right"></use></svg>Close

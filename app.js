@@ -6,6 +6,9 @@ const fs = require('fs');
 const express = require('express');
 const nunjucks = require('nunjucks');
 const chalk = require('chalk');
+const highlightjs = require('highlight.js');
+
+const fileHelper = require('./app/utils/file-helper.js');
 
 // Set configuration variables
 const port = process.env.PORT || 3000;
@@ -34,11 +37,21 @@ var appViews = [
   path.join(__dirname, '/node_modules/nhsuk-frontend/packages')
 ]
 
-nunjucks.configure(appViews, {
+var env = nunjucks.configure(appViews, {
   autoescape: true,
   express: app,
   noCache: true,
   watch: true
+})
+
+/*
+ * Add some global nunjucks helpers
+ */
+env.addGlobal('getHTMLCode', fileHelper.getHTMLCode)
+env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
+env.addFilter('highlight', function(code, language) {
+  const languages = language ? [language] : false
+  return highlightjs.highlightAuto(code.trim(), languages).value
 })
 
 // Render standalone design examples
@@ -46,17 +59,11 @@ app.get('/design-example/:example', function(req, res) {
   var example = req.params.example
   var examplePath = path.join(__dirname, `/app/examples/${example}.njk`)
 
-  fs.readFile(examplePath, function(err, data) {
-    if(err) throw err;
+  // Get the given example as HTML.
+  exampleHtml = fileHelper.getHTMLCode(examplePath)
 
-    // render the example into html
-    var exampleHtml = nunjucks.renderString(data.toString())
-
-    // wrap the example html into a very basic html document
-    exampleHtml = nunjucks.render('includes/design-example-wrapper.njk', { body: exampleHtml })
-
-    res.send(exampleHtml)
-  })
+  // Wrap the example HTML in a basic html base template.
+  res.render('includes/design-example-wrapper.njk', { body: exampleHtml })
 })
 
 // Automatically route pages
