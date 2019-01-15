@@ -3,6 +3,16 @@
 {% set examplePath = 'app/examples/' + params.type + '.njk' %}
 {% set standaloneURL = '/design-example/' + params.type %}
 
+{% set html %}
+  {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
+{% endset %}
+
+{% set nunjucks %}
+  {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+{% endset %}
+
+{% set snippets = [{ name: 'HTML', code: html }, { name: 'Nunjucks', code: nunjucks }] %}
+
 <div class="design-example">
 
   <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank">Open in new window</a>
@@ -12,57 +22,32 @@
 
   <div class="code-snippet">
       <ul class="app-tabs" role="tablist">
-          <!-- for each code snippet -->
-          <li class="app-tabs__item" role="presentation" data-index="ex-1">
+          {% for snippet in snippets %}
+          <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                HTML
+                {{ snippet.name }}
               </a>
           </li>
-          <!-- end for each loop -->
-          <!-- for each code snippet -->
-          <li class="app-tabs__item" role="presentation" data-index="ex-2">
-              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Nunjucks
-              </a>
-          </li>
-          <!-- end for each loop -->
+          {% endfor %}
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
-
-          <!-- for each code snippet -->
-          <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+        {% for snippet in snippets %}
+          <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-{{ loop.index }}">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
                 HTML
               </a>
           </div>
-          <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
+          <div class="code-snippet__preformatted js-hidden" data-index="ex-{{ loop.index }}">
               <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
-                {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
+                {{- snippet.code | safe -}}
               </code></pre>
               <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
                   <svg><use xlink:href="#caret-right"></use></svg>Close
               </button>
           </div>
-          <!-- end for -->
-          <!-- TODO: re-use the above for block
-          for each code snippet -->
-          <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
-              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                Nunjucks
-              </a>
-          </div>
-          <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
-              <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
-              <pre><code class="{{ snippet.language }}">
-                  {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
-              </code></pre>
-              <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
-                  <svg><use xlink:href="#caret-right"></use></svg>Close
-              </button>
-          </div>
-          <!-- end for -->
+        {% endfor %}
       </div>
   </div>
 
