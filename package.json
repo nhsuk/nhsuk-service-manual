@@ -4,7 +4,7 @@
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "node app",
     "test": "",
     "prewatch": "npm run build",
@@ -26,7 +26,16 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.9"
+    "highlight.js": "^9.13.1",
+    "iframe-resizer": "^3.6.3",
+    "js-beautify": "^1.8.9",
+    "nodemon": "^1.18.9",
+    "rollup-plugin-babel": "^4.3.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-stream": "^1.24.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
