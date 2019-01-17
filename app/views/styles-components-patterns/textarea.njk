@@ -1,5 +1,9 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/textarea/macro.njk' import textarea %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -14,161 +18,98 @@
 {% endblock %}
 
 {% block body %}
-
-    <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-bottom-8">Textarea</h1>
-            </div>
-    </div>
-
-
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-
-            <h2 >Code and design</h2>
-
-
-
-            <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-
-                {% from 'components/textarea/macro.njk' import textarea %}
-
-                    {{ textarea({
-                    "name": "more-detail",
-                    "id": "more-detail",
-                    "label": {
-                        "text": "Can you provide more detail?"
-                    },
-                    "hint": {
-                        "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
-                    }
-                    }) }}
-
-
-            </div>
-
-
-
-
-            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/index.html">Preview the textarea component</a></p>
-            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea code</a> in the NHS.UK frontend library in GitHub.</p>
-
-
-            <h2 id="when-to-use-this-component">When to use textarea</h2>
-                <p><a href="https://design-system.service.gov.uk/components/select/">GOV.UK Design System suggest</a> using the textarea component when you need to let users enter an amount of text that’s longer than a single line.</p>
-
-
-            <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
-                <p>Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using <a href="/pattterns/radios">radios</a>.</p>
-
-
-                <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
-                    <p>Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the <a href="/paterns/text-input">text input</a> component.</p>
-
-
-            <h2 id="how-it-works">How it works</h2>
-                <h3 id="label-textareas">Label textareas</h3>
-                    <p>You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.</p>
-                    <p>Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
-
-                <h3 id="use-appropriately-sized-textareas">Use appropriately-sized textareas</h3>
-                    <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the <code>rows</code> attribute.</p>
-
-
-            <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-
-                {% from 'components/textarea/macro.njk' import textarea %}
-
-                    {{ textarea({
-                    "name": "more-detail",
-                    "id": "more-detail",
-                    "rows": "10",
-                    "label": {
-                        "text": "Can you provide more detail?"
-                    },
-                    "hint": {
-                        "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
-                    }
-                    }) }}
-
-
-            </div>
-
-
-                <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
-                    <p>Users will often need to copy and paste information into a textarea, so do not stop them from doing this.</p>
-
-                <h3 id="error-messages">Error messages</h3>
-                    <p>Error messages should be styled like this:</p>
-
-                        <div class="example grey-background nhsuk-u-margin-bottom-4">
-                                {% from 'components/textarea/macro.njk' import textarea %}
-
-                                        {{ textarea({
-                                        "name": "no-ni-reason",
-                                        "id": "no-ni-reason",
-                                        "label": {
-                                            "text": "Why can't you provide a National Insurance number?"
-                                        },
-                                        "errorMessage": {
-                                            "text": "You must provide an explanation"
-                                        }
-                                        }) }}
-
-                        </div>
-
-                             <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/error.html">Preview the textarea error component</a></p>
-                            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea error code</a> in the NHS.UK frontend library in GitHub.</p>
-                            <p>GOV.UK Design System have some <a href="https://design-system.service.gov.uk/components/textarea/#error-messages">great examples of textarea error messages.</a></p>
-
-
-
-            <h2>Research</h2>
-                <p>If you’ve used this component, get in touch to share your user research findings.</p>
-
-            <h2>Discuss</h2>
-                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
-
-                    {% from 'components/panel/macro.njk' import panel %}
-
-                    {{ panel({
-                    "label": "Similar patterns",
-                    "HTML": "<ul>
-                                <li></li>
-                            </ul>"
-                    }) }}
-
-
-    </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-
-        <div class="eric-shame-in-this-section">
-           <h3>Patterns</h3>
-           <ul>
-               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
-               <li><a href="/patterns/care-cards">Care cards</a></li>
-               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
-               <li><a href="/patterns/footer">Footer</a></li>
-               <li><a href="/patterns/header">Header</a></li>
-               <li><a href="/patterns/icons">Icons</a></li>
-               <li><a href="/patterns/inset-text">Inset text</a></li>
-               <li><a href="/patterns/warning-callout">Warning callout</a></li>
-           </ul>
-        </div>
-
-
-    </div>
-
-
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-bottom-8">Textarea</h1>
   </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 >Code and design</h2>
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+      {{ textarea({
+      "name": "more-detail",
+      "id": "more-detail",
+      "label": {
+          "text": "Can you provide more detail?"
+      },
+      "hint": {
+          "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+      }
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/index.html">Preview the textarea component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea code</a> in the NHS.UK frontend library in GitHub.</p>
+    <h2 id="when-to-use-this-component">When to use textarea</h2>
+    <p><a href="https://design-system.service.gov.uk/components/select/">GOV.UK Design System suggest</a> using the textarea component when you need to let users enter an amount of text that’s longer than a single line.</p>
+    <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
+    <p>Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using <a href="/pattterns/radios">radios</a>.</p>
+    <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
+    <p>Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the <a href="/paterns/text-input">text input</a> component.</p>
+    <h2 id="how-it-works">How it works</h2>
+    <h3 id="label-textareas">Label textareas</h3>
+    <p>You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.</p>
+    <p>Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+    <h3 id="use-appropriately-sized-textareas">Use appropriately-sized textareas</h3>
+    <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the <code>rows</code> attribute.</p>
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+      {{ textarea({
+      "name": "more-detail",
+      "id": "more-detail",
+      "rows": "10",
+      "label": {
+          "text": "Can you provide more detail?"
+      },
+      "hint": {
+          "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+      }
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
+    <p>Users will often need to copy and paste information into a textarea, so do not stop them from doing this.</p>
+    <h3 id="error-messages">Error messages</h3>
+    <p>Error messages should be styled like this:</p>
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+      {{ textarea({
+      "name": "no-ni-reason",
+      "id": "no-ni-reason",
+      "label": {
+          "text": "Why can't you provide a National Insurance number?"
+      },
+      "errorMessage": {
+          "text": "You must provide an explanation"
+      }
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/error.html">Preview the textarea error component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea error code</a> in the NHS.UK frontend library in GitHub.</p>
+    <p>GOV.UK Design System have some <a href="https://design-system.service.gov.uk/components/textarea/#error-messages">great examples of textarea error messages.</a></p>
+    <h2>Research</h2>
+    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <h2>Discuss</h2>
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
+
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+                <li></li>
+            </ul>"
+    }) }}
+  </div>
+</div>
 {% endblock %}

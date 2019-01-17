@@ -1,5 +1,10 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/error-message/macro.njk' import errorMessage %}
+{% from 'components/date-input/macro.njk' import dateInput %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -22,26 +27,23 @@
 </div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
-
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/error-message/macro.njk' import errorMessage %}
-
       {{ errorMessage({
       "text": "Error message about full name goes here"
       }) }}
-
     </div>
-
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/error-message/index.html">Preview the error message component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/error-message">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
     <h3>Error message in context</h3>
-
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-      {% from 'components/date-input/macro.njk' import dateInput %}
-
       {{ dateInput({
       "id": "dob-day-error",
       "namePrefix": "dob-day-error",
@@ -73,33 +75,26 @@
       }) }}
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-
     <h2>When to use error messages </h2>
     <p>Show an error message next to the field and in the <a href="patterns/error-summary/">error summary</a> when there is a validation error.</p>
     <p>Use standard messages for different components.</p>
     <p>Follow GOV.UK Design System's advice to try to <a href="https://www.gov.uk/service-manual/design/form-structure">design your service to be easy to use and understand so someone never sees an error message</a>.</p>
-
     <h2>When not to use error messages</h2>
     <p><a href="https://design-system.service.gov.uk/components/error-message/">GOV.UK Design System</a> suggest only displaying an error when someone tries to move to the next part of the service. Do not show error messages:</p>
     <ul>
-        <li>when users select or tab to a field</li>
-        <li>as they are typing</li>
-        <li>when they move away from a field</li>
+      <li>when users select or tab to a field</li>
+      <li>as they are typing</li>
+      <li>when they move away from a field</li>
     </ul>
     <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
     <ul>
-        <li>explains why we cannot accept the entry or selection</li>
-        <li>tells them what to do next</li>
-        <li>includes a way to leave the transaction</li>
+      <li>explains why we cannot accept the entry or selection</li>
+      <li>tells them what to do next</li>
+      <li>includes a way to leave the transaction</li>
     </ul>
-
     <h2>How it works</h2>
     <p>GOV.UK Design System has some great <a href="https://design-system.service.gov.uk/components/error-message/">advice on how error messages work</a> along with guidance on how to use them effectively.</p>
-
     <h2>Research</h2>
     <p>Error messages designed using this guidance have been tested with all types of users on GOV.UK live services, including tax credits.</p>
     <p>Research showed users:</p>
@@ -108,18 +103,11 @@
         <li>knew how to fix the problem</li>
         <li>were able to recover from the error</li>
       </ul>
-
     <h2>Discuss</h2>
-      <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-    {% from 'components/review-date/macro.njk' import reviewDate %}
-
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     {{ reviewDate({
       "lastReview": "January 2019"
     }) }}
-
-    {% from 'components/panel/macro.njk' import panel %}
-
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>

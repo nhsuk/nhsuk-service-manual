@@ -1,4 +1,7 @@
 {% extends 'includes/layout.njk' %}
+{% from 'components/care-card/macro.njk' import careCard %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -33,11 +36,11 @@
 </div>
 
 <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-u-margin-top-8" id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
+  </div>
   <div class="nhsuk-grid-column-full">
-    <h2 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/care-card/macro.njk' import careCard %}
 
       {{ careCard({
       "type": "non-urgent",
@@ -52,27 +55,23 @@
       <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
       "
       }) }}
+
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-non-urgent.html" rel="nofollow">Preview the non-urgent care card (blue) component</a></p>
     <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" rel="nofollow">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
-
     <p>Use this card when you want users to contact their GP or arrange an appointment with a GP or another health professional, like a practice nurse. You can also use it to tell users to go to or get in touch with a clinic, for example for a chlamydia test.</p>
     <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
   </div>
 </div>
 
 <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-u-margin-top-8" id="urgent-care-card-red">Urgent care card (red)</h2>
+  </div>
   <div class="nhsuk-grid-column-full">
-    <h2 id="urgent-care-card-red">Urgent care card (red)</h2>
-
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/care-card/macro.njk' import careCard %}
 
       {{ careCard({
       "type": "urgent",
@@ -90,9 +89,6 @@
 
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-urgent.html">Preview the urgent care card (red) component</a></p>
     <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
@@ -104,8 +100,7 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h2 id="emergency-care-card-red-and-black">Immediate care card (red and black)</h2>
-
+    <h2 class="nhsuk-u-margin-top-8" id="emergency-care-card-red-and-black">Immediate care card (red and black)</h2>
     <div class="example grey-background nhsuk-u-margin-bottom-4">
 
       {% from 'components/care-card/macro.njk' import careCard %}
@@ -125,9 +120,6 @@
 
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-immediate.html">Preview the immediate care card (red and black) component</a></p>
     <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" >Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
@@ -152,14 +144,17 @@
     <h2>Discuss</h2>
     <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
 
-    {% from 'components/panel/macro.njk' import panel %}
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
 
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-          <li></li>
-
-      </ul>"
+              <li><a href='/styles-components-patterns/do-and-dont-lists'>Do and Don't list</a></li>
+              <li><a href='/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/styles-components-patterns/warning-callout'>Warning callout</a></li>
+            </ul>"
     }) }}
 
   </div>

@@ -1,5 +1,9 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/error-summary/macro.njk' import errorSummary %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -21,15 +25,12 @@
     <p class="nhsuk-u-margin-bottom-8">When a user makes an error, you must show both an error summary and an <a href="/patterns/error-message">error message</a> next to each answer that contains an error.</p>
 </div>
 </div>
-
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-
     <h2 >Code and design</h2>
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/error-summary/macro.njk' import errorSummary %}
-
       {{ errorSummary({
       "titleText": "Message to alert the user to a problem goes here",
       "descriptionText": "Optional description of the errors and how to correct them",
@@ -44,19 +45,13 @@
           }
       ]
       }) }}
-
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/error-summary/index.html">Preview the error summary component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/error-summary">get the latest error summary code</a> in the NHS.UK frontend library in GitHub.</p>
-
     <h2>When to use an error summary</h2>
     <p>Always show an error summary when there is a validation error, even if there’s only one.</p>
-
     <h2 id="how-it-works">How it works</h2>
     <p>You must:</p>
     <ul>
@@ -69,7 +64,6 @@
     </ul>
     <p>Follow GOV.UK Design System guidance on <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a>.</p>
     <p>GOV.UK Design System has some great <a href="https://design-system.service.gov.uk/components/error-summary/">advice on how the error summary works</a> along with guidance on how to use it effectively.</p>
-
     <h2>Research</h2>
     <p>Error messages designed using this guidance have been tested with all types of users on GOV.UK live services, including tax credits.</p>
     <p>Research showed users:</p>
@@ -78,25 +72,17 @@
       <li>knew how to fix the problem</li>
       <li>were able to recover from the error</li>
     </ul>
-
     <h2>Discuss</h2>
     <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-    {% from 'components/review-date/macro.njk' import reviewDate %}
-
     {{ reviewDate({
       "lastReview": "January 2019"
     }) }}
-
-    {% from 'components/panel/macro.njk' import panel %}
-
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
                 <li></li>
             </ul>"
     }) }}
-
   </div>
 </div>
 {% endblock %}

@@ -1,5 +1,9 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/button/macro.njk' import button %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -20,10 +24,8 @@
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-
     <p>We have 3 buttons</p>
     <ul>
       <li><a href="#primary-button">Primary button</a></li>
@@ -32,22 +34,17 @@
     </ul>
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8"  id="primary-button">Primary button</h2>
-
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-      {% from 'components/button/macro.njk' import button %}
-
-          {{ button({
-          "text": "Save and continue"
-          }) }}
+      {{ button({
+      "text": "Save and continue"
+      }) }}
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/index.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
@@ -56,24 +53,18 @@
     <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8"  id="secondary-button">Secondary button</h2>
-
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/button/macro.njk' import button %}
-
       {{ button({
       "text": "Find my location",
       "classes": "nhsuk-button--secondary"
       }) }}
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/secondary.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
@@ -82,31 +73,24 @@
     <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8"  id="reverse-button">White button on solid background colour (reverse button)</h2>
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4" style="background-color: #005eb8;">
-      {% from 'components/button/macro.njk' import button %}
-
       {{ button({
       "text": "Save and continue",
       "classes": "nhsuk-button--reverse"
       }) }}
     </div>
   </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/reverse.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
     <h3>When to use a white button on solid background colour button</h3>
     <p>White buttons on solid background colour are good on components such as interuption cards (see the intruption card being used on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>), where link text, primary and secondary buttons would be lost.   </p>
-
-
     <h2 class="nhsuk-u-margin-top-8" id="how-to-use-care-cards">How to use buttons</h2>
-
     <p><a href="https://design-system.service.gov.uk/">GOV.UK design system</a> suggests using the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
     <p>This advice relates to starting or saving transactional journeys, not links from one flat content page to another.</p>
     <p>Write button text in sentence case, describing the action it performs. For example ‘Save and continue’ or ‘Start now’.</p>
@@ -124,39 +108,22 @@
       <li>White button on solid background colour  14.42:1</li>
     </ul>
     <p>Please note that the disabled versions of the three buttons do not meet accessibility colour contrast ratios. If your team have discovered a user need for disabled buttons, use with caution and test with users with access needs.</p>
-
     <h2 class="nhsuk-u-margin-top-8"  id="when-not-to-use-this-component">When not to use this component</h2>
     <p>Don't use buttons as links to non related pages or external websites.</p>
     <p>Try not to have multiple buttons on one page, we suggest following GOV.UK 'one thing per page' advice <a href="https://www.gov.uk/service-manual/design/form-structure">https://www.gov.uk/service-manual/design/form-structure</a></p>
-
     <h2 class="nhsuk-u-margin-top-8"  id="research">Research</h2>
     <p>Primary buttons were tested as part of a register with a GP form. Users understood that it was a button and knew what action it performed. All participants were able to complete the set task.</p>
-
     <h2>Discuss</h2>
     <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-    {% from 'components/review-date/macro.njk' import reviewDate %}
-
     {{ reviewDate({
       "lastReview": "January 2019."
     }) }}
-
-
-
-
-{% from 'components/panel/macro.njk' import panel %}
-
-{{ panel({
-"label": "Similar patterns",
-"HTML": "<ul>
-        <li><a href='/patterns/action-link'>Action link</a></li>
-    </ul>"
-}) }}
-
-
-</div>
-
-
-
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+            <li><a href='/styles-components-patterns/action-link'>Action link</a></li>
+        </ul>"
+    }) }}
   </div>
+</div>
 {% endblock %}

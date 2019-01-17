@@ -1,5 +1,9 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/action-link/macro.njk' import actionLink %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -18,33 +22,26 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Action link</h1>
     <p class="nhsuk-body-l">Action links help users get to the next stage of a journey quickly by signposting the start of a digital service.</p>
-    <p class="nhsuk-u-margin-bottom-8">They include a few simple words which tell the user what to do next, like “Find a pharmacy” or “Order a test kit”.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">They include a few simple words which tell the user what to do next, like “Find a pharmacy” or “Order a test kit”.</p>
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
-
+  </div>
+  <div class="nhsuk-grid-column-full">
     <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-      {% from 'components/action-link/macro.njk' import actionLink %}
-
       {{ actionLink({
       "text": "Find a minor injuries unit",
       "href": "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
       }) }}
-
     </div>
-
   </div>
 </div>
-
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">Preview the action link component</a></p>
     <p>You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">get the latest action link code</a> in the NHS.UK frontend library in GitHub.</p>
-
     <h2 id="how-to-use-action-links">How to use action links</h2>
     <p>Keep the words on the action link short. Start with a verb, for example: "Book an appointment" or "Apply for an EHIC card".</p>
     <p>Action links usually sit in a block of text. You can also put one in a <a href="/patterns/care-cards">care card</a>.</p>
@@ -53,26 +50,25 @@
     <p>Do not use action links just to link to another page or site. If you need a link to stand out, you can use <a href="/patterns/inset_text/">inset text</a>.</p>
     <h3>Accessibility</h3>
     <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
-
     <h2 id="research">Research</h2>
     <p>We tested the action links on health information pages with lots of content, callout boxes and multi-page navigation.</p>
     <p>Users didn't notice early versions, so we made the size of the text larger than body text size.</p>
     <p>We used NHS blue first but users didn't notice it. So we changed the arrow colour to green - our "action" colour. Users seemed to see the green better.</p>
     <p>In follow-up tests on busy content pages, users pointed out the action links and said they found them useful.</p>
     <p>Get in touch to <a href="https://nhs-service-manual-alpha.staging.torchbox.com/service-manual/contribute/">share your research findings</a> about this pattern.</p>
-
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p><p>Updated: January 2019.</p>
-
-    {% from 'components/panel/macro.njk' import panel %}
-
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-                <li></li>
+              <li><a href='/styles-components-patterns/care-cards'>Care cards</a></li>
+              <li><a href='/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/styles-components-patterns/warning-callout'>Warning callout</a></li>
             </ul>"
     }) }}
-
     </div>
   </div>
 {% endblock %}
