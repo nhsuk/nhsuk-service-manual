@@ -4,10 +4,10 @@
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
-    "build": "gulp build",
+    "postinstall": "gulp build",
     "start": "node app",
     "test": "",
-    "prewatch": "npm run build",
+    "prewatch": "npm run postinstall",
     "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
   },
   "author": "https://github.com/nhsuk",
