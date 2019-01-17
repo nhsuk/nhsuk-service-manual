@@ -8,13 +8,12 @@ const nunjucks = require('nunjucks');
 const chalk = require('chalk');
 const highlightjs = require('highlight.js');
 
-const fileHelper = require('./app/utils/file-helper.js');
-
 // Set configuration variables
 const port = process.env.PORT || 3000;
 
 // Local dependencies
 const authentication = require('./middleware/authentication');
+const fileHelper = require('./app/utils/file-helper.js');
 const routing = require('./middleware/routing.js');
 
 // Initialise applications

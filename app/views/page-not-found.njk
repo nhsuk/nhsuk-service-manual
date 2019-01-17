@@ -1,10 +1,12 @@
+{% set pageTitle = 'Page not found' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Page not found</h1>
-    <p>Well this is embarrassing... return to the <a href="/">NHS digital service manual homepage</a>.</p>
+    <h1>{{pageTitle}}</h1>
+    <p>Return to the <a href="/">NHS digital service manual homepage</a>.</p>
   </div>
 </div>
 {% endblock %}
