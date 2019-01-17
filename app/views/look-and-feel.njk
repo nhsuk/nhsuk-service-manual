@@ -1,11 +1,14 @@
+{% set pageTitle = 'Look and feel' %}
+{% set pageDescription = 'Guides to using our grid, colours and typography.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Look and feel</h1>
-    <p class="nhsuk-body-l">Grid, colours and typography.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
   </div>
 </div>
 
@@ -36,16 +39,16 @@
     <p>Use our grid, colours and font and typographic styles to make your service consistent with other NHS services.</p>
     <p>Our look and feel is based on the <a href="">NHS Identity guidelines</a>.</p>
     <p>Visit the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a> to discuss and give feedback about any of the look and feel styles.</p>
-    
+
     <h2>Download code and design files</h2>
-    
+
     <h3>Frontend library</h3>
     <p>We now have a <a href="https://github.com/nhsuk/nhsuk-frontend">library of frontend code on GitHub</a> to help you build NHS digital services quickly. You’re welcome to use it but please be aware that we’re still testing it with NHS.UK teams. We expect to release the tested version in early January 2019.</p>
-    
+
     <h3>Sketch file</h3>
     <p><a href="https://github.com/nhsuk/nhsuk-sketch-file">Download the NHS.UK Sketch file from GitHub</a>. It will help you build prototypes and mockups quickly with tried and tested components and styles that are ready to use.</p>
     <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> to let us know what you think.</p>
-    
+
     {{ reviewDate({
       "lastReview": "December 2018"
     }) }}

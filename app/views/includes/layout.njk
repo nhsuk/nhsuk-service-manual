@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
 
-    <title>NHS digital service manual</title>
+    <title>{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NHS digital service manual" />
+    <meta name="description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
 
     <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
     <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
@@ -20,6 +20,20 @@
     <script src="//assets.adobedtm.com/launch-ENe7f6cdd7cc05409b86547d9153429788.min.js" async></script>
     <script src="/js/bundle.js" defer></script>
 
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary.html -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nhsuk" />
+    <meta name="twitter:title" content="{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}" />
+    <meta name="twitter:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
+    <meta name="twitter:image" content="/images/open-graph.png" />
+
+    <!-- https://developers.facebook.com/docs/sharing/webmasters/ -->
+    <meta property="og:url" content="https://beta.nhs.uk/service-manual/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}" />
+    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
+    <meta property="og:image" content="/images/open-graph.png" />
+
   </head>
 
   <body>
@@ -27,7 +41,7 @@
     {% include 'includes/header.njk' %}
 
     {% block breadcrumb %}
-      {{ breadcrumb({ 
+      {{ breadcrumb({
         href: "/index",
         text: "Home"
       }) }}
