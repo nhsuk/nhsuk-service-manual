@@ -2,8 +2,8 @@ provider "azurerm" {
   version = "=1.21.0"
 }
 
-variable "environment" {
-  type = "string"
+variable "production" {
+  default = "false"
 }
 
 variable "manual_username" {
@@ -33,7 +33,7 @@ resource "azurerm_app_service_plan" "nhsuk-service-manual" {
 }
 
 resource "azurerm_app_service" "nhsuk-service-manual" {
-  name                = "nhsuk-service-manual${var.environment == "staging" ? "-staging" : ""}"
+  name                = "nhsuk-service-manual${var.production ? "" : "-staging"}"
   location            = "${azurerm_resource_group.nhsuk-service-manual.location}"
   resource_group_name = "${azurerm_resource_group.nhsuk-service-manual.name}"
   app_service_plan_id = "${azurerm_app_service_plan.nhsuk-service-manual.id}"
@@ -44,7 +44,7 @@ resource "azurerm_app_service" "nhsuk-service-manual" {
   }
 
   app_settings {
-    "NODE_ENV" = "${var.environment}"
+    "NODE_ENV" = "${var.production ? "production" : "staging"}"
     "MANUAL_USERNAME" = "${var.manual_username}"
     "MANUAL_PASSWORD" = "${var.manual_password}"
   }
