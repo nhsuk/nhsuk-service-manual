@@ -1,11 +1,14 @@
+{% set pageTitle = 'NHS.UK frontend library' %}
+{% set pageDescription = 'Production code to start building user interfaces for the NHS.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">NHS.UK frontend library</h1>
-    <p class="nhsuk-body-l">Production code to start building user interfaces for the NHS.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
 
     <h2>What is a frontend library?</h2>
     <p>We've made our production code available to NHS developers and designers in a "frontend library". The code in the library will help you build accessible websites with an NHS look and feel. You'll also get tested components and patterns.</p>
