@@ -1,5 +1,7 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -18,7 +20,7 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Icons</h1>
     <p class="nhsuk-body-l">Icons can help users identify, understand and navigate content more quickly.</p>
-    <p class=" nhsuk-u-margin-bottom-8">We use a small set of icons that we know our users need and understand. They fit together as a set.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">We use a small set of icons that we know our users need and understand. They fit together as a set.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -112,6 +114,9 @@
     </ul>
     <h2>Discuss</h2>
     <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
   </div>
 </div>
 {% endblock %}
