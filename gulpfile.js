@@ -16,7 +16,7 @@ function styles() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest('./public/css'))
     .on('error', (err) => {
       console.log(err)
       process.exit(1)
@@ -25,7 +25,7 @@ function styles() {
 
 function javascript() {
   return rollup({
-    input: './app/javascript/main.js',
+    input: './app/scripts/main.js',
     format: 'umd',
     plugins: [
       resolve({
@@ -41,12 +41,12 @@ function javascript() {
   .pipe(source('bundle.js'))
 
   // and output to ./dist/app.js as normal.
-  .pipe(gulp.dest('./app/assets/js/'));
+  .pipe(gulp.dest('./public/js/'));
 }
 
 function watch() {
   gulp.watch('app/styles/**/*.scss', styles);
-  gulp.watch('app/{javascript,components}/**/*.js', javascript);
+  gulp.watch('app/{scripts,components}/**/*.js', javascript);
 }
 
 exports.styles = styles;
