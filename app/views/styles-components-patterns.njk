@@ -1,5 +1,7 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
@@ -27,7 +29,7 @@
       <li><a href="/styles-components-patterns/check-boxes">Checkboxes</a></li>
       <li><a href="/styles-components-patterns/date-input">Date input</a></li>
       <li><a href="/styles-components-patterns/details">Details</a></li>
-      <li><a href="/styles-components-patterns/do-and-dont-lists">Do and Don't lists</a></li>
+      <li><a href="/styles-components-patterns/do-and-dont-list">Do and Don't list</a></li>
       <li><a href="/styles-components-patterns/error-message">Error message</a></li>
       <li><a href="/styles-components-patterns/error-summary">Error summary</a></li>
       <li><a href="/styles-components-patterns/expander">Expander</a></li>
@@ -55,7 +57,10 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8">Contribute</h2>
-    <p>Let us know <a href="#">if you design a new content pattern or find new evidence</a> on content style.</p>
+    <p>Let us know <a href="/contribute">if you design a new content pattern or find new evidence</a> on content style.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
   </div>
 </div>
 {% endblock %}
