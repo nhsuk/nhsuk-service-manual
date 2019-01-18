@@ -1,0 +1,116 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/tables/macro.njk' import table %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-u-margin-bottom-5">Table</h1>
+      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the table component to make information easier to compare and scan for users.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 >Code and design</h2>
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+      {{ table({
+      panel: true,
+      heading: "Skin symptoms and possible causes",
+      caption: "Skin symptoms and possible causes",
+      firstCellIsHeader: false,
+      head: [
+          {
+          text: "Skin symptoms"
+          },
+          {
+          text: "Possible cause"
+          }
+      ],
+      rows: [
+          [
+          {
+              text: "Blisters on lips or around the mouth"
+          },
+          {
+              text: "cold sores"
+          }
+          ],
+          [
+          {
+              text: "Itchy, dry, cracked, sore"
+          },
+          {
+              text: "eczema"
+          }
+          ],
+          [
+          {
+              text: "Itchy blisters"
+          },
+          {
+              text: "shingles, chickenpox"
+          }
+          ]
+      ]
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/tables-panel.html">Preview the table in a planel component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/tables">get the latest table in a planel code</a> in the NHS.UK frontend library in GitHub.</p>
+    <h2 id="when-to-use-this-component">When to use this a table</h2>
+    <p>Use the table component to let users to compare information in rows and columns.</p>
+    <h2 id="when-not-to-use-this-component">When not to use a table component</h2>
+    <p>Never use the table component to layout content on a page. Instead, use the <a href="/look-and-feel/grid">grid system</a>.</p>
+    <h2 id="how-it-works">How it works</h2>
+    <h3>Accessibility</h3>
+    <p>Following webaim.org's<a href="https://webaim.org/techniques/tables/data"> guidance for tables</a> we suggest:</p>
+    <ul>
+      <li>Tables should have captions</li>
+      <li>Use the scope attribute to associate the data cells with the appropriate headers</li>
+      <li>Let the browser window determine the width of the table whenever possible, to reduce the horizontal scrolling required of those with low vision</li>
+    </ul>
+    <h3 id="table-captions">Table captions</h3>
+    <p class="rich-text">Use the <code>&lt;caption&gt;</code> element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.</p>
+    <h3 id="table-headers">Table headers</h3>
+    <p>Use table headers to tell users what the rows and columns represent.</p>
+    <h2 id="reseach">Research</h2>
+    <p>The table component tested well with users on a conditions page where the white panel helped scanability - when surrounded by text content.</p>
+    <p>For context, its also worth noting that on the NHS website:</p>
+    <ul>
+      <li>tables never exceeded three columns, we didn't design for or test any tables over three columns.</li>
+      <li>The majority of NHS website tables are text, a few contain data (numerical).</li>
+      <li>We haven't uncovered any needs around re-ordering data in tables.</li>
+    </ul>
+    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <h2>Discuss</h2>
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+                <li></li>
+            </ul>"
+    }) }}
+  </div>
+</div>
+{% endblock %}

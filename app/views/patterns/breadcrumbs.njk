@@ -1,13 +1,8 @@
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'includes/design-example.njk' import designExample %}
 
-
-
-{% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
+{% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
@@ -18,12 +13,9 @@
   href: "/patterns",
   text: "Patterns and components"
 }) }}
+{% endblock %}
 
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
+{% block body %}
       <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
               <h1 class="nhsuk-u-margin-bottom-5">Breadcrumbs</h1>
@@ -40,44 +32,16 @@
 
 
 
-										
+
             <h2 >Code and design</h2>
 
 
-
-            <div class="example grey-background nhsuk-u-margin-bottom-4">
-
-              {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-                {{ breadcrumb({
-                  items: [
-                    {
-                      href: "/level-one",
-                      text: "Level one"
-                    },
-                    {
-                      href: "/level-one/level-two",
-                      text: "Level two"
-                    }
-                  ],
-                  href: "/level-one/level-two/level-three",
-                  text: "Level three"
-                }) }}
-
-
-
-            </div>
-
-        
-
-
-            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
-
-            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb">get the latest breadcrumb code</a> in the NHS.UK frontend library in GitHub.</p>
-
+            {{ designExample({
+              type: 'breadcrumb'
+            }) }}
 
             <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
-            
+
                 <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if it doesn't fit the line.</p>
                 <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
                 <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
@@ -142,8 +106,4 @@
 
 
   </div>      
-
-
-  </main>
-</div>
 {% endblock %}

@@ -1,22 +1,9 @@
+{% set pageTitle = 'Sitemap' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
-
 {% block body %}
-
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
-
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-    <h1 class="">Sitemap</h1>
-
+    <h1>Sitemap</h1>
     <ul>
       <li><a href="/index">Home</a></li>
       <li><a href="/design-principles">Design principles</a></li>
@@ -28,13 +15,25 @@
       </ul>
       <li><a href="/patterns">Patterns</a></li>
       <ul>
-        <li><a href="/patterns/x">Care cards</a></li>
-        <li><a href="/patterns/x">Do and Don't lists</a></li>
-        <li><a href="/patterns/x">Footer</a></li>
-        <li><a href="/patterns/x">Header</a></li>
-        <li><a href="/patterns/x">Icons</a></li>
-        <li><a href="/patterns/x">Inset text</a></li>
-        <li><a href="/patterns/x">Warning callout</a></li>
+        <li><a href="/patterns/action-link">Action link</a></li>
+        <li><a href="/patterns/back-link">Back link</a></li>
+        <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+        <li><a href="/patterns/buttons">Buttons</a></li>
+        <li><a href="/patterns/care-cards">Care cards</a></li>
+        <li><a href="/patterns/check-boxes">Checkboxes</a></li>
+        <li><a href="/patterns/date-input">Date input</a></li>
+        <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+        <li><a href="/patterns/error-message">Error message</a></li>
+        <li><a href="/patterns/error-summary">Error summary</a></li>
+        <li><a href="/patterns/fieldset">Fieldset</a></li>
+        <li><a href="/patterns/footer">Footer</a></li>
+        <li><a href="/patterns/header">Header</a></li>
+        <li><a href="/patterns/hint-text">Hint text</a></li>
+        <li><a href="/patterns/icons">Icons</a></li>
+        <li><a href="/patterns/inset-text">Inset text</a></li>
+        <li><a href="/patterns/radios">Radios</a></li>
+        <li><a href="/patterns/text-input">Text input</a></li>
+        <li><a href="/patterns/warning-callout">Warning callout</a></li>
       </ul>
       <li><a href="/content-style-guide">Content style guide</a></li>
       <ul>
@@ -50,14 +49,10 @@
       <ul>
         <li><a href="practices/make-your-service-accessible">Make your service accessible</a></li>
       </ul>
-      <li><a href="/contribute">Contribute</li>
+      <li><a href="/contribute"></a>Contribute</li>
       <li><a href="/contribute/user-survey">User survey</li>
       <li><a href="/cookies">Cookies</a></li>
       <li><a href="/privacy-policy">Privacy policy</a></li>
       <li><a href="/terms-and-conditions">Terms and conditions</a></li>
     </ul>
-
-
-  </main>
-</div>
 {% endblock %}

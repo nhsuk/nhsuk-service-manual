@@ -1,0 +1,104 @@
+{% extends 'includes/layout.njk' %}
+{% from 'components/warning-callout/macro.njk' import warningCallout %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Warning callout</h1>
+    <p class="nhsuk-body-l">The warning callout is designed to stand out from the rest of the content.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">It helps users identify and understand the important content on the page, even if they don't read the whole page.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 >Code and design</h2>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+      {% from 'components/warning-callout/macro.njk' import warningCallout %}
+
+      {{ warningCallout({
+      "heading": "School, nursery or work",
+      "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
+      }) }}
+
+    </div>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/warning-callout.html">Preview the warning callout component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/warning-callout">get the latest warning callout component code</a> in the NHS.UK frontend library in GitHub.</p>
+
+    <h2>When to use a warning callout</h2>
+    <p>Use this callout for information that:</p>
+      <ul>
+          <li>is time critical</li>
+          <li>could have a significant effect on someone's health</li>
+          <li>addresses a common or significant misconception or mistake</li>
+      </ul>
+    <p>If the information is important but not important enough for a warning callout, use inset text instead.</p>
+    <p>If you need to tell a user to contact their GP or get medical help, use a <a href="/patterns/care-card">care card</a>.</p>
+
+    <h2>How to use a warning callout</h2>
+    <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+    <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
+    <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
+    <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
+    <p>If possible, put at least 1 short paragraph of text between 2 callouts or between an action link and a callout.</p>
+    <p>Give priority to <a href="">care cards</a> over callouts.</p>
+
+    <h3>Accessibility</h3>
+    <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
+    <p>We recommend adding an aria label, for example: aria-label="Important". This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
+    <p>If you can help with this, please get in touch on the <a href=""> NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+    <h2>Research</h2>
+    <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
+    <p>Research shows that clearly worded callout headings:</p>
+    <ul>
+      <li>help users spot relevant information quickly</li>
+      <li>help users who cannot distinguish callouts by their colour</li>
+      <li>are better than icons, which may not be accessible and can be interpreted in different ways</li>
+    </ul>
+
+    <h2>Discuss</h2>
+    <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
+
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+                <li><a href='/styles-components-patterns/care-cards'>Care cards </a></li>
+                <li><a href='/styles-components-patterns/do-and-dont-lists'>Do and don't lists </a></li>
+                <li><a href='/styles-components-patterns/inset-text'>Inset text </a></li>
+            </ul>"
+    }) }}
+
+  </div>
+</div>
+{% endblock %}

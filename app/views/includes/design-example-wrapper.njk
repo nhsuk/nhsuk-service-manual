@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Standalone example</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NHS digital service manual - standalone example" />
+
+    <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
+    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" href="/nhsuk-frontend/assets/favicons/favicon.png">
+
+    <link rel="stylesheet" href="/nhsuk-frontend/nhsuk.css">
+
+    <style>
+      html {
+        background-color: white;
+      }
+      body {
+        margin: 30px;
+      }
+    </style>
+
+    <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
+  </head>
+
+  <body>
+    {{ body | safe }}
+
+    <script type="text/javascript" src="/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+  </body>
+
+</html>

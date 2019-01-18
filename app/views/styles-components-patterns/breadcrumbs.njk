@@ -1,0 +1,74 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Breadcrumbs</h1>
+    <p class="nhsuk-body-l">Breadcrumbs are a row of links at the top of the page which help users understand where they are in the website.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">They give users context and let them move back or up a level if they can't find what they want on the page.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Code and design</h2>
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+        {{ breadcrumb({
+          items: [
+            {
+              href: "/level-one",
+              text: "Level one"
+            },
+            {
+              href: "/level-one/level-two",
+              text: "Level two"
+            }
+          ],
+          href: "/level-one/level-two/level-three",
+          text: "Level three"
+        }) }}
+    </div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb">get the latest breadcrumb code</a> in the NHS.UK frontend library in GitHub.</p>
+    <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
+    <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if it doesn't fit the line.</p>
+    <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
+    <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
+    <h3>Accessibility</h3>
+    <p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use screen readers know what it is.</p>
+    <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/styles-components-patterns/icons">icons</a> to hide them from people who use screen readers.</p>
+    <h2>Research</h2>
+    <p>In our user testing, people noticed the breadcrumb and appreciated the context it gave. They also used it to get back to where they came from or to get back home.</p>
+    <p><a href="contribute">Get in touch to share your research findings</a> about this pattern.</p>
+    <h2>Discuss</h2>
+    <p >Discuss breadcrumbs on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
+    {{ panel({
+      "label": "Similar patterns",
+      "HTML": "<ul>
+                  <li><a href='/styles-components-patterns/header'>Header</a></li>
+                  <li><a href='/styles-components-patterns/footer'>Footer</a></li>
+              </ul>"
+    }) }}
+</div>
+{% endblock %}

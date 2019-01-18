@@ -1,21 +1,17 @@
+{% set pageTitle = 'Cookies' %}
+
 {% extends 'includes/layout.njk' %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
+{% from 'components/tables/macro.njk' import table %}
 
 {% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+  </div>
+</div>
 
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
-
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-    <h1 class="">Cookies</h1>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
     <p>The NHS digital service manual puts small files (known as "cookies") onto your computer to collect information about how you browse the site.</p>
     <p>Cookies are used to:</p>
     <ul>
@@ -26,11 +22,8 @@
 
     <h2>Cookies we use to make the site work better</h2>
 
-    {% from 'components/tables/macro.njk' import table %}
-
     {{ table({
       panel: false,
-      caption: "TBD",
       firstCellIsHeader: false,
       head: [
         {
@@ -144,14 +137,11 @@
         ]
       ]
     }) }}
-
     <p>If you browse the web without using javascript, Google Analytics will use something called a pixel gif graphic instead of a cookie. This collects information about your device and behaviour.</p>
     <p>You can <a href="https://tools.google.com/dlpage/gaoptout">opt out of Google Analytics cookies.</a></p>
 
-
     <h2>How to change your cookie settings</h2>
     <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org/">www.aboutcookies.org</a> or <a href="http://www.allaboutcookies.org/">www.allaboutcookies.org.</a></p>
-
     <p>Find out how to manage cookies on:</a>
     <ul>
       <li><a href="https://support.apple.com/kb/ph21411?locale=en_US">Apple Safari</a></li>
@@ -161,10 +151,7 @@
       <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Mozilla Firefox</a></li>
       <li><a href="https://www.opera.com/help/tutorials/security/privacy/">Opera</a></li>
     </ul>
-
     <p>If you need to contact us about the use of cookies email e<a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>.</p>
-
-
-  </main>
+  </div>
 </div>
 {% endblock %}

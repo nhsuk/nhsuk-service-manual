@@ -1,13 +1,9 @@
 {% extends 'includes/layout.njk' %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/tables/macro.njk' import table %}
 
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
-
-{% block body %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
+{% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
@@ -18,125 +14,110 @@
   href: "/content-style-guide",
   text: "Content style guide"
 }) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-u-margin-bottom-5">Formatting and punctuation</h1>
+   </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h5>In this section</h5>
+    <ul>
+      <li><a href="#abbreviations-and-acronyms">Abbreviations and acronyms</a></li>
+      <li><a href="#apostrophes">Apostrophes</a></li>
+      <li><a href="#capitalisation">Capitalisation</a></li>
+      <li><a href="#contractions">Contractions</a></li>
+      <li><a href="#hyphens-and-dashes">Hyphens and dashes</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#numbers-times-dates-measurements">Numbers, times and dates and measurements</a></li>
+      <li><a href="#quotation-marks">Quotation marks</a></li>
+    </ul>
+
+    <h2 id="abbreviations-and-acronyms">Abbreviations and acronyms</h2>
+    <p>We explain an abbreviation or acronym in full on its first use unless it's well known, like UK, NHS, GP. Then we refer to it by initials.</p>
+    <p>Example: A body mass index (BMI) above the healthy weight range can increase your risk of serious health problems.</p>
+
+    <h2 id="apostrophes">Apostrophes</h2>
+    <p>We use straight, not curly apostrophes. Take care when pasting in text.</p>
+          
+    {{ table({
+      panel: false,
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "Don't use"
+        },
+        {
+          text: "Use"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "you’ll"
+          },
+          {
+            text: "you'll"
+          }
+        ]
+      ]
+    }) }}
+
+    <h2 id="capitalisation">Capitalisation</h2>
+    <p>We do not use block capitals as they're difficult for people to read.</p>
+    <p>We always use lower case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
+    <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
+    <p>Examples:</p>
+    <ul>
+      <li>cancer of the colon</li>
+      <li>multiple sclerosis</li>
+      <li>Parkinson's disease</li>
+      <li>Alzheimer's disease</li>
+    </ul>
+    <p>But note: caesarean section.</p>
+
+    <h2 id="contractions">Contractions</h2>
+    <p>We use contractions like you'll, we'll, you're and what's. Often contractions make content friendlier and easier to read.</p>
+    <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
+    <p>Also avoid negative contractions like can't and don't. When you’re telling users not to do something, use "Do not" rather than "Don't".</p>
+
+    {{ insetText({
+      "HTML": "<h3>Research insight</h3><p>GOV.UK Design System research shows that many users find negative contractions harder to read and they sometimes misread them as the opposite of what they say.</p><p>The NHS Digital medicines team observed that, when we're telling people not to do something, they find \'do not\' clearer and more emphatic than \'don't\'.</p>"
+    }) }}
+
+    <h2 id="hyphens-and-dashes">Hyphens and dashes</h2>
+
+    <h3>Hyphens</h3>
+    <p>We avoid using hyphens unless it confuses people to leave them out.</p>
+    <p>We do use a hyphen for:</p>
+    <ul>
+      <li>non-alcoholic</li>
+      <li>non-drowsy</li>
+      <li>sufar-free</li>
+    </ul>
+    <p>We do not use a hyphen for:
+    <ul>
+      <li>anticoagulant</li>
+      <li>beta blockers</li>
+      <li>breastfeeding</li>
+      <li>long term and short term</li>
+      <li>straight away</li>
+    </ul>
+
+    <h3>Dashes</h3>
+    <p>Avoid using dashes to indicate a pause. Instead use a comma, or write shorter sentences.</p>
+    <p>Use "to" for time and date ranges, not hyphens or dashes. Example: The surgery is open Monday to Friday, 2pm to 6pm.</p>
+
+    {{ insetText({
+      "HTML": "<h3>Research insight</h3><p>There are some accessibility concerns with dashes. Assistive technologies read them out in different ways. But <a href=\"https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/\">GOV.UK research</a> shows that commas are consistently read out with a pause.</p><p>People with poor literacy can find hyphens and dashes an obstacle to easy reading. They also find long sentences with lots of commas difficult.</p>"
+    }) }}
 
 
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-
-
-
-    <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Formatting and punctuation</h1>
-            </div>
-    </div> 
-
-    
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-				<h5>In this section</h5>				
-        <ul>
-          <li><a href="#">Abbreviations and acronyms</a></li>
-          <li><a href="#">Apostrophes</a></li>
-          <li><a href="#">Capitalisation</a></li>
-          <li><a href="#">Contractions</a></li>
-          <li><a href="#">Hyphens and dashes</a></li>
-          <li><a href="#">Lists</a></li>
-          <li><a href="#">Numbers, times and dates and measurements</a></li>
-          <li><a href="#">Quotation marks</a></li>
-        </ul>
-        
-        <h2>Abbreviations and acronyms</h2>
-            <p>We explain an abbreviation or acronym in full on its first use unless it's well known, like UK, NHS, GP. Then we refer to it by initials.</p>
-            <p>Example: A body mass index (BMI) above the healthy weight range can increase your risk of serious health problems.</p>
-        <h2>Apostrophes</h2>
-        <p>We use straight, not curly apostrophes. Take care when pasting in text.</p>
-        
-        {% from 'components/tables/macro.njk' import table %}
-
-        {{ table({
-          panel: false,
-          caption: "Skin symptoms and possible causes",
-          firstCellIsHeader: false,
-          head: [
-            {
-              text: "Don't use"
-            },
-            {
-              text: "Use"
-            }
-          ],
-          rows: [
-            [
-              {
-                text: "you’ll"
-              },
-              {
-                text: "you'll"
-              }
-            ]
-          ]
-        }) }}
-
-
-        <h2>Capitalisation</h2>
-        <p>We do not use block capitals as they're difficult for people to read.</p>
-        <p>We always use lower case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
-        <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
-        <p>Examples:</p>
-        <ul>
-          <li>cancer of the colon</li>
-          <li>multiple sclerosis</li>
-          <li>Parkinson's disease</li>
-          <li>Alzheimer's disease</li>
-        </ul>
-        <p>But note: caesarean section.</p>
-
-
-        <h2>Contractions</h2>
-        <p>We use contractions like you'll, we'll, you're and what's. Often contractions make content friendlier and easier to read.</p>
-        <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
-        <p>Also avoid negative contractions like can't and don't. When you’re telling users not to do something, use "Do not" rather than "Don't".</p>
-
-        {% from 'components/inset-text/macro.njk' import insetText %}
-
-        {{ insetText({
-          "HTML": "<h3>Research insight</h3><p>GOV.UK Design System research shows that many users find negative contractions harder to read and they sometimes misread them as the opposite of what they say.</p><p>The NHS Digital medicines team observed that, when we're telling people not to do something, they find \"do not\" clearer and more emphatic than \"don't\".</p>"
-        }) }}
-
-
-        <h2>Hyphens and dashes</h2>
-        <h3>Hyphens</h3>
-        <p>We avoid using hyphens unless it confuses people to leave them out.</p>
-        <p>We do use a hyphen for:</p>
-        <ul>
-          <li>non-alcoholic</li>
-          <li>non-drowsy</li>
-          <li>sufar-free</li>
-        </ul>
-        <p>We do not use a hyphen for:
-        <ul>
-          <li>anticoagulant</li>
-          <li>beta blockers</li>
-          <li>breastfeeding</li>
-          <li>long term and short term</li>
-          <li>straight away</li>
-        </ul>
-
-        <h3>Dashes</h3>
-        <p>Avoid using dashes to indicate a pause. Instead use a comma, or write shorter sentences.</p>
-        <p>Use "to" for time and date ranges, not hyphens or dashes. Example: The surgery is open Monday to Friday, 2pm to 6pm.</p>
-
-        {{ insetText({
-          "HTML": "<h3>Research insight</h3><p>There are some accessibility concerns with dashes. Assistive technologies read them out in different ways. But <a href=\"https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/\">GOV.UK research</a> shows that commas are consistently read out with a pause.</p><p>People with poor literacy can find hyphens and dashes an obstacle to easy reading. They also find long sentences with lots of commas difficult.</p>"
-        }) }}
-
-
-        <h2>Lists</h2>
+        <h2 id="lists">Lists</h2>
         <p>Use lists to make text easier to read.​</p>
         <p>Bulleted lists should be short and snappy. If possible, limit your list to no more than 6 items.​ Each item in the list should be roughly the same length.</p>
         </p>Use a lead-in line with a colon. The bullets should make sense running on from the lead-in line. In effect, the list is 1 continuous sentence.</p>
@@ -162,7 +143,7 @@
           <li>Repeat as often as you like.</li>
         </ol>
 
-        <h2>Numbers, times and dates and measurements</h2>
+        <h2 id="numbers-times-dates-measurements">Numbers, times and dates and measurements</h2>
         <h3>Numbers</h3>
         <p>We use numerals for all numbers (including 1 to 9) when they refer to amounts and time. We use "one" in running text and phrases.</p>
         <p>Examples:</p>
@@ -176,7 +157,6 @@
 
         {{ table({
           panel: false,
-          caption: "TBD",
           firstCellIsHeader: false,
           head: [
             {
@@ -274,7 +254,7 @@
         <p>We generally use metric. If it's helpful, add imperial in brackets.</p>
         <p>Example: Babies who are having more than 500ml (about a pint) of infant formula a day do not need vitamin supplements.</p>
 
-        <h4>Quotation marks</h4>
+        <h2 id="quotation-marks">Quotation marks</h2>
         <p>We generally use straight double quotes:</p>
         <ul>
           <li>when quoting another source</li>
@@ -309,14 +289,12 @@
         <div class="eric-shame-in-this-section">
            <h3>Content style guide</h3>
            <ul>
-               <li><a href="/content/how-we-write">How we write</a></li>
-               <li><a href="/content/voice-and-tone">Voice and tone</a></li>
-               <li><a href="/content/inclusive-language">Inclusive language</a></li>
-               <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
-               <li><a href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
-               <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
-               
-
+              <li><a href="/content/how-we-write">How we write</a></li>
+              <li><a href="/content/voice-and-tone">Voice and tone</a></li>
+              <li><a href="/content/inclusive-language">Inclusive language</a></li>
+              <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
+              <li><a href="/content/links-and-pdfs">Links and pdfs</a></li>
+              <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
            </ul> 
         </div>
 
@@ -325,8 +303,4 @@
 
 
   </div>      
-
-
-  </main>
-</div>
 {% endblock %}

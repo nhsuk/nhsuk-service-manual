@@ -1,0 +1,58 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/hint/macro.njk' import hint %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/panel/macro.njk' import panel %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Hint text</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Help the majority of users understand a question.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 >Code and design</h2>
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="example grey-background nhsuk-u-margin-bottom-4">
+      {{ hint({
+      "text": "It’s on your National Insurance card, benefit letter, payslip or P60.\nFor example, ‘QQ 12 34 56 C’.\n"
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/hint/index.html">Preview the hint text component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/hint">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
+    <h2>How to use hint text </h2>
+    <p>Use hint for help that’s relevant to the majority of users - like how their information will be used, or where to find it.</p>
+    <h2>Research</h2>
+    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <h2>Discuss</h2>
+    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019."
+    }) }}
+    {{ panel({
+    "label": "Similar patterns",
+    "HTML": "<ul>
+                <li></li>
+            </ul>"
+    }) }}
+  </div>
+</div>
+{% endblock %}

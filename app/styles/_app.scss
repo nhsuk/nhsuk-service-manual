@@ -158,3 +158,149 @@
     margin-top: 10px;
     color: black;
 }
+
+
+
+/* A to Z stuff starts */
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding-left: 12px;
+    position: relative;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .eric-shame-in-this-section {
+        margin-left: 32px;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-back-to-top-link {
+        font-size: 19px;
+    }
+}
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link:visited {
+    color: #005EB8;
+}
+
+.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link .nhsuk-icon {
+    transform: rotate(270deg);
+    height: 19px;
+    left: -8px;
+    position: absolute;
+    top: 4px;
+    width: 19px;
+    fill: #005EB8;
+}
+
+.nhsuk-icon__arrow-right {
+    fill: #005EB8;
+}
+
+.nhsuk-a-z-list--results-items h2 {
+    background: #005EB8;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+/* A to Z stuff ends */
+
+
+/* Sections stuff starts */
+
+.nhsuk-section {
+    display: block;
+}
+
+.nhsuk-section .nhsuk-main-wrapper {
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-section .nhsuk-main-wrapper {
+        padding-bottom: 72px;
+        padding-top: 72px;
+    }
+}
+
+.nhsuk-section--white {
+    background: #fff;
+}
+
+.nhsuk-section--white .nhsuk-promo__link-wrapper {
+    background-color: #f0f4f5;
+}
+
+/* Sections stuff ends */
+
+
+/* Design principles stuff starts */
+
+.featured-list {
+    max-width: 800px;
+    margin: 50px 0;
+}
+
+.featured-item {
+    margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    .featured-item {
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 80px;
+        margin-bottom: 100px;
+    }
+}
+
+.featured-item__content {
+    max-width: 99.99%;
+}
+
+.featured-item__number {
+    display: none;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+    .featured-item__number {
+        position: absolute;
+        left: -80px;
+        display: block;
+        margin: 0;
+    }
+}
+
+.featured-item__number--mobile {
+    display: block;
+}
+
+.featured-item__heading {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 0;
+    border-top: 4px solid #005eb8;
+}
+
+@media only screen and (min-width: 768px) {
+.featured-item__heading {
+    padding-top: 30px;
+}
+}
+
+
+
+/* Design principles stuff ends */

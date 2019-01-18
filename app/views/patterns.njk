@@ -1,129 +1,104 @@
+{% set pageTitle = 'Patterns and components' %}
+{% set pageDescription = 'Reusable components and design patterns that solve common problems.' %}
+
 {% extends 'includes/layout.njk' %}
-
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-
-
+{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
+  </div>
+</div>
 
-{{ breadcrumb({ 
-  href: "/index",
-  text: "Home"
-}) }}
+<div class="nhsuk-grid-row nhsuk-u-margin-top-8">
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/breadcrumbs">Breadcrumbs</a>
+    </h2>
+    <p>Help users understand where they are in the website.</p>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/care-cards">Care cards</a>
+    </h2>
+    <p>Help users understand the sort of care they need.</p>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/do-and-dont-lists">Do and Don’t lists</a>
+    </h2>
+    <p>Help users understand what they should and shouldn’t do.</p>
+  </div>
+</div>
 
+<div class="nhsuk-grid-row nhsuk-u-margin-top-8">
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/footer">Footer</a>
+    </h2>
+    <p>Help users find links they expect at the bottom of our pages.</p>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/header">Header</a>
+    </h2>
+    <p>Show users they’re on an NHS service and help them get started.</p>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/icons">Icons</a>
+    </h2>
+    <p>A small set of icons that we know our users need and understand.</p>
+  </div>
+</div>
 
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
+<div class="nhsuk-grid-row nhsuk-u-margin-top-8">
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/inset-text">Inset text</a>
+    </h2>
+    <p>Help users identify and understand important content on the page.</p>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
+      <a href="/patterns/warning-callout">Warning callout</a>
+    </h2>
+    <p>Help users identify and understand warning content.</p>
+  </div>
+</div>
 
-    <h1 class="nhsuk-u-margin-bottom-5">Patterns and components</h1>
-         <p class="nhsuk-body-l">Reusable components and design patterns that solve common problems.</p>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
+    <h2>Tested NHS.UK patterns</h2>
+    <p>We know that these patterns help users find what they need. They will also make your service consistent with other NHS services.</p>
+    <p>We are continuing to test and improve them and we are working on new patterns, including components for forms. If you can’t find what you want here, contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>.</p>
 
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/breadcrumbs">Breadcrumbs</a></h2>
-                    <p>Placeholder text, to be updated.</p>
-                </div>
+    <h2 class="nhsuk-u-margin-top-8">Download code and design files</h2>
 
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/care-cards">Care cards</a></h2>
-                    <p>Cards that help users understand the sort of care they need.</p>   
-                </div>
+    <h3>Frontend library</h3>
+    <p>We now have a <a href="https://github.com/nhsuk/nhsuk-frontend">library of frontend code on GitHub</a> to help you build NHS digital services quickly. You’re welcome to use it but please be aware that we’re still testing it with NHS.UK teams. We expect to release the tested version in early January 2019.</p>
 
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/do-and-dont-lists">Do and Don’t lists</a></h2>
-                    <p>Help users understand what they should and shouldn’t do.</p>  
-                </div>
-    </div>
+    <h3>Sketch file</h3>
+    <p><a href="https://github.com/nhsuk/nhsuk-sketch-file">Download the NHS.UK Sketch file from GitHub</a>. It will help you build prototypes and mockups quickly with tried and tested components and styles that are ready to use.</p>
+    <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> to let us know what you think.</p>
 
-      <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/footer">Footer</a></h2>
-                    <p>Helps users find links they expect at the bottom of our pages.</p>
-                </div>
+    <h2 class="nhsuk-u-margin-top-8">Creating or changing patterns</h2>
+    <p>You're welcome to adapt one of these patterns or to create a new one. Check with us first on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>. We may already be working on what you need.</p>
+    <p>Help improve the manual by <a href="/contribute">contributing your work</a>.</p>
 
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/header">Header</a></h2>
-                    <p>Shows users they are on an NHS service and helps them get started.</p>   
-                </div>
+    <h2 class="nhsuk-u-margin-top-8">Why use patterns?</h2>
+    <p>Following design patterns means you can:</p>
+    <ul>
+      <li>avoid repeating work done by other teams</li>
+      <li>build on the research and experience of other teams</li>
+      <li>make your service consistent with other NHS services</li>
+    </ul>
 
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/icons">Icons</a></h2>
-                    <p>A small set of icons that we know our users need and understand.</p>  
-                </div>
-    </div>
-
-          <div class="nhsuk-grid-row nhsuk-u-margin-top-8">
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/inset-text">Inset text</a></h2>
-                    <p>Help users identify and understand important content on the page, even if they don't read the whole page.</p>
-                </div>
-
-                <div class="nhsuk-grid-column-one-third">
-                    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/patterns/warning-callout">Warning callout</a></h2>
-                    <p>Designed to stand out from the rest of the content.</p>   
-                </div>
-
-    </div>
-
-
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-
-
-
-										
-            <h2>Tested NHS.UK look and feel styles</h2>
-
-            <p>We know that these patterns help users find what they need. They will also make your service consistent with other NHS services.</p>
-
-            <p>We are continuing to test and improve them and we are working on new patterns, including components for forms. If you can’t find what you want here, contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>.</p>
-
-
-
-            <h2 class="nhsuk-u-margin-top-8">Creating or changing patterns</h2>
-
-            <p>You're welcome to adapt one of these patterns or to create a new one. Check with us first on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net"> service-manual@nhs.net</a>. We may already be working on what you need.</p>
-      
-            <p>Help improve the manual by contributing your work.</p>
-
-
-            <h2 class="nhsuk-u-margin-top-8">Why use patterns?</h2>
-
-            <p>Following design patterns means you can:</p>
-                <ul>
-                    <li>avoid repeating work done by other teams</li>
-                    <li>build on the research and experience of other teams</li>
-                    <li>make your service consistent with other NHS services</li>
-                </ul>
-
-
-
-
-
-  
-
-
-
-
-
-   
-
-  
-
-
-
-    </div>
-
-
-    <div class="nhsuk-grid-column-one-thirds">
-
-    </div>
-
-
-  </div>      
-
-
-  </main>
+    {{ reviewDate({
+      "lastReview": "December 2018"
+    }) }}
+  </div>
 </div>
 {% endblock %}

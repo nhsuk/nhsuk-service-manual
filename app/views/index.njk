@@ -1,93 +1,87 @@
-{% extends 'includes/layout.njk' %}
+{% set pageDescription = 'Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.' %}
 
+{% extends 'includes/layout.njk' %}
 {% from 'components/hero/macro.njk' import hero %}
 {% from 'components/promo/macro.njk' import promo%}
 
-{% block body %}
+{% block breadcrumb %}{% endblock %}
+
+{% block outerBody %}
 {{ hero({
   "heading": "Design and build digital services for the NHS",
   "text": "Things you need to make consistent, usable services that put people first."
 }) }}
 
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper">
-    <div class="nhsuk-grid-row nhsuk-promo-group">
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/design-principles",
-          "heading": "Design principles",
-          "description": "These principles guide all of our design."
-        }) }}
+<section class="nhsuk-section nhsuk-section--white">
+  <div class="nhsuk-width-container nhsuk-main-wrapper">
+
+      <div class="nhsuk-grid-row nhsuk-promo-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/design-principles",
+            "heading": "Design principles",
+            "description": "These principles guide all of our design."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/frontend-library",
+            "heading": "NHS.UK frontend library",
+            "description": "Production code to start building user interfaces for the NHS."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/prototyping-tools",
+            "heading": "Prototyping tools",
+            "description": "New placeholder text needed here"
+          }) }}
+        </div>
       </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/look-and-feel",
-          "heading": "Look and feel",
-          "description": "Grids, colours and typography."
-        }) }}
+
+      <div class="nhsuk-grid-row nhsuk-promo-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/styles-components-patterns",
+            "heading": "User interface styles, components and patterns",
+            "description": "New placeholder text needed here"
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/content-style-guide",
+            "heading": "Content style guide",
+            "description": "How to write for digital NHS services."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/practices",
+            "heading": "Practices",
+            "description": "How we approach accessibility, agile delivery and service design."
+          }) }}
+        </div>
       </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/patterns",
-          "heading": "Patterns and components",
-          "description": "Reusable components that solve common problems."
-        }) }}
-      </div>
-    </div>
-        <div class="nhsuk-grid-row nhsuk-promo-group nhsuk-u-margin-bottom-8">
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/content-style-guide",
-          "heading": "Content style guide",
-          "description": "How to write for digital NHS services."
-        }) }}
-      </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/frontend-kit",
-          "heading": "NHS.UK frontend kit",
-          "description": "Production code to start building user interfaces for the NHS."
-        }) }}
-      </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/practices",
-          "heading": "Practices",
-          "description": "How we approach accessibility, agile delivery and service design."
-        }) }}
-      </div>
-    </div>
 
-    <hr />
-
-
-<section class="nhsuk-section nhsuk-u-margin-top-2">
-            <div class="nhsuk-o-width-container ">
-                <div class="nhsuk-grid-row ">        
-                    
-                        <div class="nhsuk-grid-column-one-half nhsuk-section__content">
-
-                            <h2 style="nhsuk-!-margin-top-8">Community</h2>
-                            <p>The NHS digital service manual comes from the experience of the teams at NHS Digital behind the <a href="http://nhs.uk">NHS website</a>. It is maintained by the standards team. <a href="">Email us</a> or get in touch on the <a href="">NHS.UK #standards Slack channel</a> if you have any questions.</p>
-
-                        </div>
-            
-                        <div class="nhsuk-grid-column-one-half nhsuk-section__content">
-
-                            <h2>Contribute</h2>
-                            <p>The manual is always evolving as we learn more. Help us to improve and grow it: <a href="/contribute">discuss patterns, give feedback and submit new work</a>.</p>
-
-                         </div>
-
-                </div>
-
-            </div>
+  </div>
 </section>
+{% endblock %}
 
+{% block body %}
+<section class="nhsuk-section">
+  <div class="nhsuk-width-container">
 
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <h2>Community</h2>
+        <p>The NHS digital service manual comes from the experience of the teams at NHS Digital behind the <a href="http://nhs.uk">NHS website</a>. It is maintained by the standards team. <a href="">Email us</a> or get in touch on the <a href="">NHS.UK #standards Slack channel</a> if you have any questions.</p>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <h2>Contribute</h2>
+        <p>The manual is always evolving as we learn more. Help us to improve and grow it: <a href="/contribute">discuss patterns, give feedback and submit new work</a>.</p>
+      </div>
+    </div>
 
-
-
-  </main>
-</div>
+  </div>
+</section>
 {% endblock %}
