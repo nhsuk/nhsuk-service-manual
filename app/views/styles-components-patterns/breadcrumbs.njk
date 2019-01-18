@@ -3,6 +3,7 @@
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -28,26 +29,11 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2>Code and design</h2>
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
-        {{ breadcrumb({
-          items: [
-            {
-              href: "/level-one",
-              text: "Level one"
-            },
-            {
-              href: "/level-one/level-two",
-              text: "Level two"
-            }
-          ],
-          href: "/level-one/level-two/level-three",
-          text: "Level three"
-        }) }}
-    </div>
+            {{ designExample({
+              type: 'breadcrumb'
+            }) }}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/breadcrumb.html" rel="nofollow">Preview the breadcrumb component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/breadcrumb">get the latest breadcrumb code</a> in the NHS.UK frontend library in GitHub.</p>
     <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
     <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if it doesn't fit the line.</p>
     <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>

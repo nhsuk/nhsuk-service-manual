@@ -1,0 +1,145 @@
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+{% block body %}
+
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/patterns",
+  text: "Patterns and components"
+}) }}
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+
+
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <h1 class="nhsuk-u-margin-bottom-5">Feedback banner</h1>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Ask users for feedback</p>
+            </div>
+    </div> 
+
+    
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+
+										
+            <h2 >Code and design</h2>
+
+
+
+            <div class="example grey-background nhsuk-u-margin-bottom-4">
+
+                <div class="nhsuk-feedback-banner" style="position: relative;display:block;">
+                    <div class="nhsuk-width-container">
+                        <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+                            <div class="nhsuk-feedback-banner__content">
+                            <h2 class="nhsuk-feedback-banner__heading">Help us make the NHS website better</h2>
+                            <p class="nhsuk-feedback-banner__message">Your feedback helps us improve the NHS website. <a href="https://www.nhs.uk" class="nhsuk-u-nowrap">Take our short survey</a>.</p>
+                            <button class="nhsuk-feedback-banner__close" id="nhsuk-feedback-banner-close" type="button">Close<span class="nhsuk-u-visually-hidden"> feedback invite</span></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        
+
+
+            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/feedback-banner.html">Preview the feedback banner component</a></p>
+            <p>You can <a href="#">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
+            
+
+            <h2>How to use the feedback banner</h2>
+                <p>Make sure the feedback banner doesn't appear until the user has agreed to use the appropriate cookies.</p>
+                <p>Include a descriptive heading (h2)</p>
+                <p>Make the link text describe its purpose and destination</p>
+                <p>Add hidden text to the close button to give screen readers context.</p>
+
+            <h2>When not to use the feedback banner</h2>
+                <p>Do not use in states of emergency - when emergency messages are shown to a user.</p>
+                <p>Don't use the feedback banner when displaying messages that suggest users get emergency healthcare. </p>     
+                <p>In both cases, the feedback banner could detract from the importance of the messaging.</p>           
+
+            <h2>How the feedback banner works</h2>
+                <p>The banner appears 5 seconds after a user lands on the page.  </p>
+
+                <p>The feedback banner should:</p>
+                    <ul>
+                        <li>appear after the users’ journey – so we don’t annoy them (too much)</li>
+                        <li>be prominent – so they notice it</li>
+                        <li>be able to close (dismiss) it</li>
+                    </ul>    
+
+
+            <h3>Accessibility</h3>
+                <p>Placeholder intro text, to be updated.</p>
+
+            <h2>Research</h2>
+                <p>Placeholder intro text, to be updated.</p>
+
+            <h2>Discuss</h2>
+                <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+            <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
+  
+                    {% from 'components/panel/macro.njk' import panel %}
+
+                    {{ panel({
+                    "label": "Similar patterns",
+                    "HTML": "<ul>    
+                                <li></li>
+                            </ul>"
+                    }) }}
+
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+
+        <div class="eric-shame-in-this-section">
+           <h3>Patterns</h3>
+           <ul>
+               <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
+               <li><a href="/patterns/care-cards">Care cards</a></li>
+               <li><a href="/patterns/do-and-dont-lists">Do and Don't lists</a></li>
+               <li><a href="/patterns/footer">Footer</a></li>
+               <li><a href="/patterns/header">Header</a></li>
+               <li><a href="/patterns/icons">Icons</a></li>
+               <li><a href="/patterns/inset-text">Inset text</a></li>
+               <li><a href="/patterns/warning-callout">Warning callout</a></li>
+           </ul> 
+        </div>
+
+
+    </div>
+
+
+  </div>      
+
+
+  </main>
+</div>
+{% endblock %}
