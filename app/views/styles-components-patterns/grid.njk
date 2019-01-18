@@ -1,0 +1,187 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    }
+  ],
+  href: "/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-bottom-8">Grid</h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 >Grid system</h2>
+    <p>We use the GOV.UK grid with some small changes to breakpoints, page width and spacing to support the <a href="/look-and-feel/typography/">NHS Frutiger font</a>.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+<div class="nhsuk-grid-column-full">
+  <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="nhsuk-grid-row">
+      <h4 class="nhsuk-u-margin-bottom-0">Full width (100%)</h4>
+      <div class="nhsuk-grid-row nhsuk-o-grid--example">
+        <div class="nhsuk-o-grid__item nhsuk-o-grid__item--full">
+          <p>nhsuk-grid-row</p>
+        </div>
+      </div>
+      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Halves (50%)</h4>
+      <div class="nhsuk-grid-row nhsuk-o-grid--example">
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
+          <p>nhsuk-grid-column-one-half</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
+          <p>nhsuk-grid-column-one-half</p>
+        </div>
+      </div>
+      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Thirds (33%)</h4>
+      <div class="nhsuk-grid-row nhsuk-o-grid--example">
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
+          <p>nhsuk-grid-column-two-thirds</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
+          <p>nhsuk-grid-column-one-third</p>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row nhsuk-o-grid--example">
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
+          <p>nhsuk-grid-column-one-third</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
+          <p>nhsuk-grid-column-two-thirds</p>
+        </div>
+      </div>
+      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Quarters (25%)</h4>
+      <div class="nhsuk-grid-row nhsuk-o-grid--example">
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-three-quarters">
+          <p>nhsuk-grid-column-three-quarters</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
+          <p>nhsuk-grid-column-one-quarter</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
+          <p>nhsuk-grid-column-one-quarter</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
+          <p>nhsuk-grid-column-one-quarter</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
+          <p>nhsuk-grid-column-one-quarter</p>
+        </div>
+        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
+          <p>nhsuk-grid-column-one-quarter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h3>Screen size</h3>
+      <p>Design for mobile first using a single-column layout and work up to wider layouts. Most visitors to the NHS website are on a mobile device, so it's our first consideration.</p>
+      <p>The maximum page width is 1020px. Lines of text shouldn't be longer than 70 to 80 characters, for ease of reading.</p>
+      <h3>Breakpoints</h3>
+      <ul>
+        <li>mobile: 641px</li>
+        <li>tablet: 769px</li>
+        <li>desktop: 990px</li>
+      </ul>
+      <h2 id="implementing-the-grid">Implementing the grid</h2>
+      <h3>Page wrappers</h3>
+      <p>Create two wrappers to set up your layout.</p>
+      <p class="rich-text"><code>nhsuk-width-container</code> will set a maximum width for content.</p>
+      <p class="rich-text">Within <code>nhsuk-width-container</code>, add <code>nhsuk-main-wrapper</code> to your <code>&lt;main&gt;</code> element.</p>
+      <p>This gives responsive padding to the top and bottom of the page and will be the container for your main content.</p>
+      <p class="rich-text">Add an id to the <code>&lt;main&gt;</code> element if you need a 'skip to main content' link:</p>
+      <h3>Page rows</h3>
+      <p class="rich-text"><code>nhsuk-o-grid</code> acts as a wrapper around grid items.</p>
+      <p class="rich-text">It uses a negative margin value of -16px on the left and right hand sides, removing the padding set by the <code>nhsuk-o-width-wrapper</code> element. It also makes sure grid items stay on the same row.</p>
+      <p class="rich-text">If you fill a page width with grid items, wrap the next set of grid items with the <code>nhsuk-o-grid</code> wrapper.</p>
+      <h3>Page width</h3>
+      <p class="rich-text">When using a wider grid unit, wrap text content with the class <code>nhsuk-reading-width</code> to limit the number of characters per line (70 to 80 characters maximum).</p>
+      <h3>Spacing</h3>
+      <p class="rich-text">Helper classes <code>nhsuk-page-heading</code> and <code>nhsuk-page-content</code> align content and give page elements equal spacing.</p>
+      <h3>Grid overrides for different screen sizes</h3>
+      <p>You'll need to include these grid override classes to use grid items on tablet or mobile screens.</p>
+      <h4>All screen sizes</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Grid unit</th>
+            <th>Override class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Halves</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-!-one-half</td>
+          </tr>
+          <tr>
+            <td>One third</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-!-one-third</td>
+          </tr>
+          <tr>
+            <td>Two thirds</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-!-two-thirds</td>
+          </tr>
+          <tr>
+            <td>One quarter</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-!-one-quarter</td>
+          </tr>
+          <tr>
+            <td>Three quarters</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-!-three-quarters</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="rich-text">For example, use <code>nhsuk-!-one-third</code> to give a grid item one-third width on any breakpoint and screen size.</p>
+      <h4>Tablet and desktop screen sizes</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Grid unit</th>
+            <th>Override class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Halves</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-!-one-half-tablet</td>
+          </tr>
+          <tr>
+            <td>One third</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-!-one-third-tablet</td>
+          </tr>
+          <tr>
+            <td>Two thirds</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-!-two-thirds-tablet</td>
+          </tr>
+          <tr>
+            <td>One quarter</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-!-one-quarter-tablet</td>
+          </tr>
+          <tr>
+            <td>Three quarters</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-!-three-quarters-tablet</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="rich-text">For example, use <code>nhsuk-!-one-quarter-tablet</code> to give a grid item one-quarter width on tablet and desktop breakpoints and screen sizes:</p>
+      {% from 'components/review-date/macro.njk' import reviewDate %}
+
+      {{ reviewDate({
+        "lastReview": "August 2018."
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
