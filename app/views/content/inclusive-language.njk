@@ -1,5 +1,8 @@
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
@@ -14,123 +17,91 @@
 {% endblock %}
 
 {% block body %}
-    <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Inclusive language</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-4">NHS services are for everyone. They should be welcoming and impartial.</p>
-                
-                <p class ="nhsuk-body-l nhsuk-u-margin-bottom-8">We write for and about people in a way that's inclusive and respectful. This helps us to be accurate and build trust with our users.</p>
-            </div>
-    </div> 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Inclusive language</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-4">NHS services are for everyone. They should be welcoming and impartial.</p>
 
-    
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-										
-        <h2>Disabilities and conditions</h2>
-            <p>We use positive language and don't label people when talking about disabilities and conditions.</p>
-            <p>We do say things like:</p>
-            <ul>
-              <li>people living with a disability, or disabled person</li>
-              <li>people with diabetes</li>
-              <li>wheelchair user</li>
-            </ul>
-            <p>We do not say:</p>
-            <ul>
-              <li>afflicted by</li>
-              <li>suffering from</li>
-              <li>victim of</li>
-              <li>confined to a wheelchair</li>
-              <li>handicapped</li>
-              <li>diabetic person</li>
-              <li>sick or diseased person</li>
-            </ul>
-            <p>NHS digital services should be accessible to everyone who needs them. Read more about <a href="https://beta.nhs.uk/service-manual/content-style-guide/writing-for-accessibility/">writing for accessibility</a> in the digital service manual.</p>
-
-        <h2>Mental health</h2>
-          <p>We do not describe people as mentally ill.</p>
-          <p>We do say:</p>
-          <ul>
-            <li>mental health condition</li>
-            <li>mental health problems</li>
-          </ul>
-
-        <h3>Race, ethnicity, religion and nationality</h3>
-        <p>We only refer to people's heritage or religion if it's relevant to the content.</p>
-        <p>For example:</p>
-
-        {% from 'components/inset-text/macro.njk' import insetText %}
-
-        {{ insetText({
-          "HTML": "<p>You're more at risk of developing type 2 diabetes if you are over 40 - or 25 for south Asian people.</p>"
-        }) }}
-
-        <h3>Gender and sexuality</h3>
-        <p>We make content gender neutral wherever possible.</p>
-        <p>We do not label people with their gender identity or sexuality. Instead we say:</p>
-        <ul>
-          <li>trans woman or trans man</li>
-          <li>trans and non-binary people</li>
-          <li>lesbian woman</li>
-          <li>gay man</li>
-          <li>men who have sex with men</li>
-        </ul>
-        <p>It's alright to use "they" to avoid "he or she" or where you need a gender-neutral pronoun.</p>
-        <p>For example:</p>
-        {% from 'components/inset-text/macro.njk' import insetText %}
-
-        {{ insetText({
-          "HTML": "<p>You should see your GP if you have persistent symptoms of osteoarthritis so they can confirm the diagnosis and prescribe any necessary treatment.</p>"
-        }) }}
-
-        <h2>Age</h2>
-            <p>We do not say old age pensioner, pensioner or OAP.</p>
-            <p>We use:</p>
-            <ul>
-              <li>fertilised egg: from conception to 14 days</li>
-              <li>embryo: from 2 to 9 weeks</li>
-              <li>unborn baby: from week 10 to birth</li>
-              <li>baby: 0 to 12 months</li>
-              <li>infant: under 2 years</li>
-              <li>toddler: 1 to 3 years</li>
-              <li>child: 1 to 12 years</li>
-              <li>teenager, or young person: 13 to 19 years (we do not say pubescent or adolescent)</li>
-              <li>older person: 60 to 70 years</li>
-              <li>elderly person: over 70 years</li>
-            </ul>
-
-        {% from 'components/review-date/macro.njk' import reviewDate %}
-
-        {{ reviewDate({
-          "lastReview": "August 2018."
-        }) }}
-
-
-
-    </div>
-
-
-    <div class="nhsuk-grid-column-one-third">
-
-        <div class="eric-shame-in-this-section">
-           <h3>Content style guide</h3>
-           <ul>
-              <li><a href="/content/how-we-write">How we write</a></li>
-              <li><a href="/content/voice-and-tone">Voice and tone</a></li>
-              <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
-              <li><a href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
-              <li><a href="/content/links-and-pdfs">Links and pdfs</a></li>
-              <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
-           </ul> 
-        </div>
-
-
-    </div>
-
-
+    <p class ="nhsuk-body-l nhsuk-u-margin-bottom-8">We write for and about people in a way that's inclusive and respectful. This helps us to be accurate and build trust with our users.</p>
   </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2>Disabilities and conditions</h2>
+    <p>We use positive language and don't label people when talking about disabilities and conditions.</p>
+    <p>We do say things like:</p>
+    <ul>
+      <li>people living with a disability, or disabled person</li>
+      <li>people with diabetes</li>
+      <li>wheelchair user</li>
+    </ul>
+    <p>We do not say:</p>
+    <ul>
+      <li>afflicted by</li>
+      <li>suffering from</li>
+      <li>victim of</li>
+      <li>confined to a wheelchair</li>
+      <li>handicapped</li>
+      <li>diabetic person</li>
+      <li>sick or diseased person</li>
+    </ul>
+    <p>NHS digital services should be accessible to everyone who needs them. Read more about <a href="https://beta.nhs.uk/service-manual/content-style-guide/writing-for-accessibility/">writing for accessibility</a> in the digital service manual.</p>
+    <h2>Mental health</h2>
+    <p>We do not describe people as mentally ill.</p>
+    <p>We do say:</p>
+    <ul>
+      <li>mental health condition</li>
+      <li>mental health problems</li>
+    </ul>
+    <h3>Race, ethnicity, religion and nationality</h3>
+    <p>We only refer to people's heritage or religion if it's relevant to the content.</p>
+    <p>For example:</p>
+    {{ insetText({
+      "HTML": "<p>You're more at risk of developing type 2 diabetes if you are over 40 - or 25 for south Asian people.</p>"
+    }) }}
+    <h3>Gender and sexuality</h3>
+    <p>We make content gender neutral wherever possible.</p>
+    <p>We do not label people with their gender identity or sexuality. Instead we say:</p>
+    <ul>
+      <li>trans woman or trans man</li>
+      <li>trans and non-binary people</li>
+      <li>lesbian woman</li>
+      <li>gay man</li>
+      <li>men who have sex with men</li>
+    </ul>
+    <p>It's alright to use "they" to avoid "he or she" or where you need a gender-neutral pronoun.</p>
+    <p>For example:</p>
+    {{ insetText({
+      "HTML": "<p>You should see your GP if you have persistent symptoms of osteoarthritis so they can confirm the diagnosis and prescribe any necessary treatment.</p>"
+    }) }}
+    <h2>Age</h2>
+    <p>We do not say old age pensioner, pensioner or OAP.</p>
+    <p>We use:</p>
+    <ul>
+      <li>fertilised egg: from conception to 14 days</li>
+      <li>embryo: from 2 to 9 weeks</li>
+      <li>unborn baby: from week 10 to birth</li>
+      <li>baby: 0 to 12 months</li>
+      <li>infant: under 2 years</li>
+      <li>toddler: 1 to 3 years</li>
+      <li>child: 1 to 12 years</li>
+      <li>teenager, or young person: 13 to 19 years (we do not say pubescent or adolescent)</li>
+      <li>older person: 60 to 70 years</li>
+      <li>elderly person: over 70 years</li>
+    </ul>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <div class="eric-shame-in-this-section">
+      <h3>Content style guide</h3>
+      <ul>
+        <li><a href="/content/how-we-write">How we write</a></li>
+        <li><a href="/content/voice-and-tone">Voice and tone</a></li>
+        <li><a href="/content/writing-for-accessibility">Writing for accessibility</a></li>
+        <li><a href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+        <li><a href="/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
+        <li><a href="/content/links-and-pdfs">Links and PDFs</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 {% endblock %}
