@@ -14,15 +14,16 @@
     <link rel="icon" href="/nhsuk-frontend/assets/favicons/favicon.png">
 
     <link rel="stylesheet" href="/css/main.min.css">
-    
+
     <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
 
     <script src="//assets.adobedtm.com/launch-ENe7f6cdd7cc05409b86547d9153429788.min.js" async></script>
-    <script src="/js/digitalData.js" defer></script>
+    <script src="/js/bundle.js" defer></script>
 
   </head>
 
   <body>
+    {% include 'includes/sprites.njk' %}
     {% include 'includes/header.njk' %}
 
     {% block breadcrumb %}

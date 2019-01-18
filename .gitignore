@@ -1,2 +1,4 @@
 node_modules
 app/assets/css
+app/assets/js
+.terraform
