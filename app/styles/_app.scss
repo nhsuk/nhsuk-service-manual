@@ -1,53 +1,31 @@
+.app-u-border-top {
+  border-top: 2px solid #005eb8;
+  margin-top: 8px;
 
-.eric-shame-in-this-section {
-    border-top: 2px solid #005eb8;
-    margin-top: 8px;
-}
+  @include mq($from: desktop) {
+    margin-left: 32px;
+  }
 
-.eric-shame-in-this-section h3 {
+  h3 {
     margin-top: 16px;
-}
+  }
 
-.eric-shame-in-this-section ul {
+  ul {
     margin-top: 16px;
     list-style: none;
     padding-left: 0;
+  }
 }
 
-@media only screen and (min-width: 800px) {
-    .eric-shame-in-this-section {
-        margin-left: 32px;
-    }
-}
+.app-example {
+  background-color: $color_nhsuk-grey-5;
+  border: 1px solid #d8dde0;
+  margin: 40px 0 0;
+  overflow: hidden;
+  padding: 64px 16px 16px;
+  position: relative;
 
-@media only screen and (min-width: 800px) {
-    .eric-shame-in-this-section {
-        margin-left: 32px;
-    }
-}
-
-
-.get-in-touch {
-    padding: 19px 24px;
-    border: 1px solid #d8dde0;
-}
-
-
-.example.grey-background {
-    background: 0 0;
-}
-
-
-.example {
-    background: #fff;
-    border: 1px solid #d8dde0;
-    margin: 40px 0 0;
-    overflow: hidden;
-    padding: 64px 16px 16px;
-    position: relative;
-}
-
-.example:before {
+  &:before {
     background: #425563;
     color: #fff;
     content: 'EXAMPLE';
@@ -57,8 +35,8 @@
     padding: 12px 16px;
     position: absolute;
     top: -1px;
+  }
 }
-
 
 .rich-text code {
     font-size: 1rem;
@@ -168,13 +146,6 @@
     margin-top: 16px;
     padding-left: 12px;
     position: relative;
-}
-
-
-@media only screen and (min-width: 800px) {
-    .eric-shame-in-this-section {
-        margin-left: 32px;
-    }
 }
 
 @media (min-width: 40.0625em) {
