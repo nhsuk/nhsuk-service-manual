@@ -1,3 +1,6 @@
+{% set pageTitle = 'Care cards' %}
+{% set pageDescription = 'How to use care cards to help users understand the sort of care they need and how quickly they need to act.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/care-card/macro.njk' import careCard %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -19,8 +22,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Care cards</h1>
-    <p class="nhsuk-body-l">Cards that help users understand the sort of care they need.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
   </div>
 </div>
 

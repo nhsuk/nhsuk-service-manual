@@ -1,7 +1,11 @@
+{% set pageTitle = 'How we write' %}
+{% set pageDescription = 'Everything we write follows these general principles.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/tables/macro.njk' import table %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/inset-text/macro.njk' import insetText %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -19,8 +23,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">How we write</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Everything we write follows these general principles.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">

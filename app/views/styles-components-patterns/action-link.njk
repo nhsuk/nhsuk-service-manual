@@ -1,3 +1,6 @@
+{% set pageTitle = 'Action link - NHS Digital service manual' %}
+{% set pageDescription = 'Action links help users get to the next stage of a journey quickly by signposting the start of a digital service.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/action-link/macro.njk' import actionLink %}
@@ -20,8 +23,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Action link</h1>
-    <p class="nhsuk-body-l">Action links help users get to the next stage of a journey quickly by signposting the start of a digital service.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">They include a few simple words which tell the user what to do next, like “Find a pharmacy” or “Order a test kit”.</p>
   </div>
 </div>

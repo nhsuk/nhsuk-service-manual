@@ -1,3 +1,6 @@
+{% set pageTitle = 'Do and Don\'t lists' %}
+{% set pageDescription = 'How to use Do and Don\'t lists to help users understand more easily what they should and shouldn\'t do.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/do-dont-list/macro.njk' import list %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -19,8 +22,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Do and Don't list</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Do and Don't lists help users understand more easily what they should and shouldn't do.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
