@@ -1,3 +1,6 @@
+{% set pageTitle = 'Header' %}
+{% set pageDescription = 'Design and code for the header component on the NHS website.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/header/macro.njk' import header %}
@@ -20,7 +23,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Header</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">The header shows users they are on an NHS service and helps them get started in finding what they need.</p>
   </div>
 </div>
