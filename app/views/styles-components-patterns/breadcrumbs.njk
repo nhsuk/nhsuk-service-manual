@@ -1,7 +1,6 @@
 {% set pageTitle = 'Breadcrumbs - NHS Digital service manual' %}
 {% set pageDescription = 'Breadcrumbs are a row of links at the top of the page which help users understand where they are in the website.' %}
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
@@ -31,9 +30,11 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2>Code and design</h2>
-            {{ designExample({
-              type: 'breadcrumb'
-            }) }}
+    {{ designExample({
+      type: 'breadcrumb'
+    }) }}
+  </div>
+</div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
