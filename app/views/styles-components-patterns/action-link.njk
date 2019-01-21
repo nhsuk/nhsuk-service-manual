@@ -1,8 +1,8 @@
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/action-link/macro.njk' import actionLink %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,22 +26,15 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
-      {{ actionLink({
-      "text": "Find a minor injuries unit",
-      "href": "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+    <h2>Code and design</h2>
+      {{ designExample({
+        type: 'action-link'
       }) }}
-    </div>
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">Preview the action link component</a></p>
-    <p>You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">get the latest action link code</a> in the NHS.UK frontend library in GitHub.</p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <h2 id="how-to-use-action-links">How to use action links</h2>
     <p>Keep the words on the action link short. Start with a verb, for example: "Book an appointment" or "Apply for an EHIC card".</p>
     <p>Action links usually sit in a block of text. You can also put one in a <a href="/patterns/care-cards">care card</a>.</p>
