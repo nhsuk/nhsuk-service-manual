@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 
 // Local dependencies
 const authentication = require('./middleware/authentication');
-const fileHelper = require('./app/utils/file-helper.js');
+const fileHelper = require('./middleware/file-helper.js');
 const routing = require('./middleware/routing.js');
 
 // Initialise applications
@@ -57,7 +57,7 @@ env.addFilter('highlight', function(code, language) {
 // Render standalone design examples
 app.get('/design-example/:example', function(req, res) {
   var example = req.params.example
-  var examplePath = path.join(__dirname, `/app/examples/${example}.njk`)
+  var examplePath = path.join(__dirname, `/app/components/${example}.njk`)
 
   // Get the given example as HTML.
   exampleHtml = fileHelper.getHTMLCode(examplePath)

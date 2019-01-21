@@ -51,7 +51,7 @@ function assets() {
 
 function watch() {
   gulp.watch('app/styles/**/*.scss', styles);
-  gulp.watch('app/{scripts,components}/**/*.js', javascript);
+  gulp.watch('app/scripts/**/*.js', javascript);
   gulp.watch('app/assets/**/*.*', assets);
 }
 
