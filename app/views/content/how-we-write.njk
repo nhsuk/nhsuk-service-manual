@@ -1,7 +1,11 @@
+{% set pageTitle = 'How we write' %}
+{% set pageDescription = 'Everything we write follows these general principles.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/tables/macro.njk' import table %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
+{% from 'components/inset-text/macro.njk' import insetText %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
