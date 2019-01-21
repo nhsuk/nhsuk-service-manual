@@ -1,3 +1,6 @@
+{% set pageTitle = 'Inclusive language' %}
+{% set pageDescription = 'Writing for and about people in a way thats inclusive and respectful.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/inset-text/macro.njk' import insetText %}
@@ -19,7 +22,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Inclusive language</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-4">NHS services are for everyone. They should be welcoming and impartial.</p>
 
     <p class ="nhsuk-body-l nhsuk-u-margin-bottom-8">We write for and about people in a way that's inclusive and respectful. This helps us to be accurate and build trust with our users.</p>
@@ -91,7 +94,7 @@
     </ul>
   </div>
   <div class="nhsuk-grid-column-one-third">
-    <div class="eric-shame-in-this-section">
+    <div class="app-u-border-top">
       <h3>Content style guide</h3>
       <ul>
         <li><a href="/content/how-we-write">How we write</a></li>

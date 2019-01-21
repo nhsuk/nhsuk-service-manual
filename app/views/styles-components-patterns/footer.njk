@@ -1,3 +1,6 @@
+{% set pageTitle = 'Footer' %}
+{% set pageDescription = 'Design and code for the footer component on the NHS website.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/footer/macro.njk' import footer %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -20,8 +23,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Footer</h1>
-    <p class="nhsuk-body-l">The NHS footer shows users they are on an NHS service.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">It also helps them find some of the links they expect at the bottom of our pages, for example contact and copyright information.</p>
     </div>
 </div>
@@ -29,7 +32,7 @@
   <div class="nhsuk-grid-column-full nhsuk-u-margin-bottom-8">
     <h2>Code and design</h2>
     {{ designExample({
-      type: 'breadcrumb'
+      type: 'footer'
     }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">

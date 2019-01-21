@@ -1,3 +1,6 @@
+{% set pageTitle = 'Do and Dont lists' %}
+{% set pageDescription = 'How to use Do and Dont lists to help users understand more easily what they should and shouldnt do.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/do-dont-list/macro.njk' import list %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -20,16 +23,54 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Do and Don't list</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Do and Don't lists help users understand more easily what they should and shouldn't do.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
+<<<<<<< HEAD
     <h2>Code and design</h2>
     {{ designExample({
       type: 'do-dont-list'
     }) }}
+=======
+    <div class="app-example nhsuk-u-margin-bottom-4">
+        {{ list({
+        "title": "Do",
+        "type": "tick",
+        "items": [
+            {
+            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
+            },
+            {
+            "item": "wash your hands before touching a burst blister"
+            },
+            {
+            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
+            }
+        ]
+        }) }}
+        {{ list({
+        "title": "Don't",
+        "type": "cross",
+        "items": [
+            {
+            "item": "burst a blister yourself"
+            },
+            {
+            "item": "peel the skin off a burst blister"
+            },
+            {
+            "item": "pick at the edges of the remaining skin"
+            },
+            {
+            "item": "wear the shoes or use the equipment that caused your blister until it heals"
+            }
+        ]
+        }) }}
+    </div>
+>>>>>>> master
   </div>
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <h2>When to use Do and Don't lists</h2>

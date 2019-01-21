@@ -1,3 +1,6 @@
+{% set pageTitle = 'Icons' %}
+{% set pageDescription = 'Which icons to use, and how to use them on digital NHS services.' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -18,7 +21,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Icons</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l">Icons can help users identify, understand and navigate content more quickly.</p>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">We use a small set of icons that we know our users need and understand. They fit together as a set.</p>
   </div>

@@ -1,3 +1,6 @@
+{% set pageTitle = 'Writing for accessibility' %}
+{% set pageDescription = 'We aim for at least level AA of the Web Content Accessibility Guidelines (WCAG 2.0).' %}
+
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/inset-text/macro.njk' import insetText %}
@@ -19,7 +22,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-u-margin-bottom-5">Writing for accessibility</h1>
+      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
       <p class="nhsuk-body-l">All content must meet at least level AA of the Web Content Accessibility Guidelines (WCAG 2.0).</p>
       <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Aim for AAA where possible.</p>
   </div>
@@ -37,7 +40,7 @@
     }) }}
   </div>
   <div class="nhsuk-grid-column-one-third">
-    <div class="eric-shame-in-this-section">
+    <div class="app-u-border-top">
         <h3>Content style guide</h3>
         <ul>
           <li><a href="/content/how-we-write">How we write</a></li>

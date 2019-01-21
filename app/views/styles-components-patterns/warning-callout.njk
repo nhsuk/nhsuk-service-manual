@@ -1,3 +1,6 @@
+{% set pageTitle = 'Warning callout' %}
+{% set pageDescription = 'How to use a warning callout to help users identify and understand warning content.' %}
+
 {% extends 'includes/layout.njk' %}
 {% from 'components/warning-callout/macro.njk' import warningCallout %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
@@ -19,7 +22,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Warning callout</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l">The warning callout is designed to stand out from the rest of the content.</p>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">It helps users identify and understand the important content on the page, even if they don't read the whole page.</p>
   </div>
@@ -33,7 +36,7 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
 
       {% from 'components/warning-callout/macro.njk' import warningCallout %}
 

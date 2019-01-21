@@ -22,49 +22,42 @@
 
 <div class="nhsuk-width-container">
   <main class="nhsuk-main-wrapper">
-
-
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-u-margin-bottom-5">Buttons</h1>
+        <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
+      </div>
+    </div>
 
     <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Buttons</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
+      <div class="nhsuk-grid-column-two-thirds">
+        <p>We have 3 buttons</p>
+        <ul>
+          <li><a href="#primary-button">Primary button</a></li>
+          <li><a href="#secondary-button">Secondary button</a></li>
+          <li><a href="#reverse-button">White button on solid background colour (reverse button)</a></li>
+      </ul>
 
-            </div>
-    </div> 
+      <h2 class="nhsuk-u-margin-top-8" id="primary-button">Primary button</h2>
 
-    
+      <div class="app-example nhsuk-u-margin-bottom-4">
+          {% from 'components/button/macro.njk' import button %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+          {{ button({
+          "text": "Save and continue"
+          }) }}
+      </div>
 
-<p>We have 3 buttons</p>
-    <ul>
-        <li><a href="#primary-button">Primary button</a></li>
-        <li><a href="#secondary-button">Secondary button</a></li>
-        <li><a href="#reverse-button">White button on solid background colour (reverse button)</a></li>
-        </ul>
-
-										
-            <h2 class="nhsuk-u-margin-top-8"  id="primary-button">Primary button</h2>
-                <div class="example grey-background nhsuk-u-margin-bottom-4">
-                    {% from 'components/button/macro.njk' import button %}
-
-                        {{ button({
-                        "text": "Save and continue"
-                        }) }}
-                </div>
-
-            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/index.html">Preview the button component</a></p>
-            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
+      <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/index.html">Preview the button component</a></p>
+      <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
 
         <h3>When to use a primary button</h3>
-            <p>Use the primary button to help users carry out an action on a page like starting an application or saving their progress.</p> 
+            <p>Use the primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
             <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
 
 
             <h2 class="nhsuk-u-margin-top-8"  id="secondary-button">Secondary button</h2>
-                <div class="example grey-background nhsuk-u-margin-bottom-4">
+                <div class="app-example nhsuk-u-margin-bottom-4">
                         {% from 'components/button/macro.njk' import button %}
 
                         {{ button({
@@ -75,12 +68,12 @@
 
             <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/secondary.html">Preview the button component</a></p>
             <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
-        <h3>When to use a secondary button</h3> 
+        <h3>When to use a secondary button</h3>
             <p>Use a secondary button on pages that have multiple actions or when standard link text isn't being noticed by users.</p>
             <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
 
             <h2 class="nhsuk-u-margin-top-8"  id="reverse-button">White button on solid background colour (reverse button)</h2>
-                <div class="example grey-background nhsuk-u-margin-bottom-4" style="background-color: #005eb8;">
+                <div class="app-example nhsuk-u-margin-bottom-4" style="background-color: #005eb8;">
                         {% from 'components/button/macro.njk' import button %}
 
                         {{ button({
@@ -114,21 +107,21 @@
                     <p>All three active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
                         <ul>
                             <li>Primary button 5.12:1</li>
-                            <li>Secondary button 7.75:1</li> 
-                            <li>White button on solid background colour  14.42:1</li>   
+                            <li>Secondary button 7.75:1</li>
+                            <li>White button on solid background colour  14.42:1</li>
 
-                         </ul>   
+                         </ul>
 
                     <p>Please note that the disabled versions of the three buttons do not meet accessibility colour contrast ratios. If your team have discovered a user need for disabled buttons, use with caution and test with users with access needs.</p>
-                
 
 
-             <h2 class="nhsuk-u-margin-top-8"  id="when-not-to-use-this-component">When not to use this component</h2>  
-                    <p>Don't use buttons as links to non related pages or external websites.</p>    
-                    <p>Try not to have multiple buttons on one page, we suggest following GOV.UK 'one thing per page' advice <a href="https://www.gov.uk/service-manual/design/form-structure">https://www.gov.uk/service-manual/design/form-structure</a></p> 
-                    
-                    
-                        
+
+             <h2 class="nhsuk-u-margin-top-8"  id="when-not-to-use-this-component">When not to use this component</h2>
+                    <p>Don't use buttons as links to non related pages or external websites.</p>
+                    <p>Try not to have multiple buttons on one page, we suggest following GOV.UK 'one thing per page' advice <a href="https://www.gov.uk/service-manual/design/form-structure">https://www.gov.uk/service-manual/design/form-structure</a></p>
+
+
+
 
 
 
@@ -140,7 +133,7 @@
 
                     <p>We found issues when testing the <a href="https://design-system.service.gov.uk/components/button/">GOV.UK Design systems buttons</a> going 'full width' on smaller screens. Users didn't recognised them as buttons, some believing them to be headings or decorative elements - not clickable buttons.</p>
 
-                    <p>For this reason, on smaller screens - we size buttons to the text within them.</p>  
+                    <p>For this reason, on smaller screens - we size buttons to the text within them.</p>
 
 
 
@@ -154,18 +147,18 @@
 
             <h2>Discuss</h2>
             <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-            
+
 
             <p class="nhsuk-u-margin-bottom-9">Updated: January 2019.</p>
 
 
 
-  
+
                     {% from 'components/panel/macro.njk' import panel %}
 
                     {{ panel({
                     "label": "Similar patterns",
-                    "HTML": "<ul>    
+                    "HTML": "<ul>
                                 <li><a href='/patterns/action-link'>Action link</a></li>
                             </ul>"
                     }) }}
@@ -176,7 +169,7 @@
 
     <div class="nhsuk-grid-column-one-third">
 
-        <div class="eric-shame-in-this-section">
+        <div class="app-u-border-top">
            <h3>Patterns</h3>
            <ul>
                <li><a href="/patterns/breadcrumbs">Breadcrumbs</a></li>
@@ -187,14 +180,14 @@
                <li><a href="/patterns/icons">Icons</a></li>
                <li><a href="/patterns/inset-text">Inset text</a></li>
                <li><a href="/patterns/warning-callout">Warning callout</a></li>
-           </ul> 
+           </ul>
         </div>
 
 
     </div>
 
 
-  </div>      
+  </div>
 
 
   </main>
