@@ -16,7 +16,7 @@ function styles() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest('public/css'))
     .on('error', (err) => {
       console.log(err)
       process.exit(1)
@@ -25,7 +25,7 @@ function styles() {
 
 function javascript() {
   return rollup({
-    input: './app/javascript/main.js',
+    input: './app/scripts/main.js',
     format: 'umd',
     plugins: [
       resolve({
@@ -41,19 +41,28 @@ function javascript() {
   .pipe(source('bundle.js'))
 
   // and output to ./dist/app.js as normal.
-  .pipe(gulp.dest('./app/assets/js/'));
+  .pipe(gulp.dest('public/js/'));
+}
+
+function assets() {
+  return gulp.src('app/assets/**')
+    .pipe(gulp.dest('public/assets/'))
 }
 
 function watch() {
   gulp.watch('app/styles/**/*.scss', styles);
-  gulp.watch('app/{javascript,components}/**/*.js', javascript);
+  gulp.watch('app/{scripts,components}/**/*.js', javascript);
+  gulp.watch('app/assets/**/*.*', assets);
 }
 
 exports.styles = styles;
+exports.assets = assets;
+exports.javascript = javascript;
 exports.watch = watch;
 
 gulp.task('default', watch);
 gulp.task('styles', styles);
 gulp.task('javascript', javascript);
+gulp.task('assets', assets);
 
-gulp.task('build', gulp.parallel(['styles', 'javascript']));
+gulp.task('build', gulp.parallel(['styles', 'javascript', 'assets']));

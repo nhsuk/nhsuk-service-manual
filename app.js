@@ -23,7 +23,7 @@ const app = express()
 app.use(authentication);
 
 // Middleware to serve static assets
-app.use(express.static(path.join(__dirname, 'app/assets')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
 app.use('/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')))
