@@ -35,11 +35,8 @@ function renderPath (path, res, next) {
 
 exports.matchRoutes = function (req, res, next) {
   var path = req.path
-  console.log(path);
 
   path = path.substr(16) // [6] //
-
-  console.log(path);
 
   if (path === '') { // [7] //
     path = 'index'
