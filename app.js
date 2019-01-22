@@ -66,6 +66,10 @@ app.get('/design-example/:example', function(req, res) {
   res.render('includes/design-example-wrapper.njk', { body: exampleHtml })
 })
 
+app.get('/', (req, res) => {
+  res.redirect('/service-manual');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, function (req, res, next) {
   routing.matchRoutes(req, res, next)
