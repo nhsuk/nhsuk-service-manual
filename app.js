@@ -55,7 +55,7 @@ env.addFilter('highlight', function(code, language) {
 })
 
 // Render standalone design examples
-app.get('/service-manual/design-example/:example', function(req, res) {
+app.get('/design-example/:example', function(req, res) {
   var example = req.params.example
   var examplePath = path.join(__dirname, `/app/components/${example}.njk`)
 
