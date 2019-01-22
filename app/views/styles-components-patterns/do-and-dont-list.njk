@@ -3,7 +3,6 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'components/do-dont-list/macro.njk' import list %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 
 {% block breadcrumb %}
@@ -89,9 +88,9 @@
     <p>We don't say "do" at the start of every line in a Do list. People found this unnecessary and annoying.</p>
     <h2>Discuss</h2>
     <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
-    {{ reviewDate({
-      "lastReview": "December 2018."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>December 2018</time></p>
+    </div>
     {{ panel({
       "label": "Similar patterns",
       "HTML": "<ul>
