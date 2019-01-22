@@ -2,7 +2,6 @@
 {% set pageDescription = 'The NHS is for everyone, so everything we create must be accessible to everyone, considering different needs and abilities.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -67,9 +66,9 @@
     <p>For example, how would someone with dyslexia consume your content? Or how would someone with a broken arm interact on a mobile device?</p>
     <p>Accessibility is also part of the law; if your service isn’t accessible to everyone who needs it, you may be breaking the <a href="https://www.gov.uk/guidance/equality-act-2010-guidance">2010 Equality Act</a>.</p>
 
-    {{ reviewDate({
-      "lastReview": "August 2018"
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>August 2018</time></p>
+    </div>
   </div>
 </div>
 
