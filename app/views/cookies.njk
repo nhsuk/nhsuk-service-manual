@@ -7,7 +7,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">Cookies</h1>
   </div>
 </div>
 
@@ -153,7 +153,10 @@
       <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Mozilla Firefox</a></li>
       <li><a href="https://www.opera.com/help/tutorials/security/privacy/">Opera</a></li>
     </ul>
-    <p>If you need to contact us about the use of cookies email <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>.</p>
+    <p>If you need to contact us about the use of cookies, email <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>.</p>
+    {{ reviewDate({
+      "lastReview": "August 2018"
+    }) }}
   </div>
 </div>
 {% endblock %}
