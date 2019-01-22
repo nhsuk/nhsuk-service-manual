@@ -5,6 +5,7 @@
 {% from 'components/care-card/macro.njk' import careCard %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -39,62 +40,26 @@
 </div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 class="nhsuk-u-margin-top-8" id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-
-      {{ careCard({
-      "type": "non-urgent",
-      "heading": "Speak to a GP if:",
-      "HTML": "
-      <ul>
-        <li>you're not sure it's chickenpox</li>
-        <li>the skin around the blisters is red, hot or painful (signs of infection)</li>
-        <li>your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
-        <li>you're concerned about your child or they get worse</li>
-      </ul>
-      <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
-      "
-      }) }}
-
-    </div>
+    <h2 class="nhsuk-u-margin-top-8" id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
+    {{ designExample({
+      type: 'care-card-non-urgent'
+    }) }}
   </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-non-urgent.html" rel="nofollow">Preview the non-urgent care card (blue) component</a></p>
-    <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" rel="nofollow">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <p>Use this card when you want users to contact their GP or arrange an appointment with a GP or another health professional, like a practice nurse. You can also use it to tell users to go to or get in touch with a clinic, for example for a chlamydia test.</p>
     <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
   </div>
 </div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 class="nhsuk-u-margin-top-8" id="urgent-care-card-red">Urgent care card (red)</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-
-      {{ careCard({
-      "type": "urgent",
-      "heading": "Ask for an urgent GP appointment if:",
-      "HTML": "
-      <ul>
-          <li>you're an adult and have chickenpox</li>
-          <li>you're pregnant and haven't had chickenpox before and you've been near someone with it </li>
-          <li>you have a weakened immune system and you've been near someone with chickenpox</li>
-          <li>you think your newborn baby has chickenpox</li>
-      </ul>
-      <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
-      "
-      }) }}
-
-    </div>
+    <h2 class="nhsuk-u-margin-top-8" id="urgent-care-card-red">Urgent care card (red)</h2>
+    {{ designExample({
+      type: 'care-card-urgent'
+    }) }}
   </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-urgent.html">Preview the urgent care card (red) component</a></p>
-    <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card">Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <p>Use this card when you want users to call or visit a GP or hospital urgently. This can include getting urgent care in a walk-in centre or minor injuries centre.</p>
     <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can empower them.</p>
     <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
@@ -104,28 +69,11 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2 class="nhsuk-u-margin-top-8" id="emergency-care-card-red-and-black">Immediate care card (red and black)</h2>
-    <div class="app-example nhsuk-u-margin-bottom-4">
-
-      {% from 'components/care-card/macro.njk' import careCard %}
-
-      {{ careCard({
-      "type": "immediate",
-      "heading": "Call 999 if you have sudden chest pain that:",
-      "HTML": "
-      <ul>
-          <li>spreads to your arms, back, neck or jaw</li>
-          <li>makes your chest feel tight or heavy</li>
-          <li>also started with shortness of breath, sweating and feeling or being sick</li>
-      </ul>
-      <p>You could be having a heart attack. Call 999 immediately as you need immediate treatment in hospital.</p>
-      "
-      }) }}
-
-    </div>
+    {{ designExample({
+      type: 'care-card-immediate'
+    }) }}
   </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/care-card-immediate.html">Preview the immediate care card (red and black) component</a></p>
-    <p><a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/care-card" >Get the HTML markup and Nunjucks macro for the care card component on GitHub</a> </p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency department.</p>
     <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital accident and emergency (A&amp;E) department</a>.</p>
     <p>Avoid linking to more information about a condition from an emergency care card. If it's an emergency, the important thing is to dial 999 or go to A&amp;E.</p>
