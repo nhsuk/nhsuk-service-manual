@@ -2,8 +2,6 @@
 {% set pageDescription = 'Look and feel and design components and patterns that solve common problems.' %}
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/review-date/macro.njk' import reviewDate %}
-
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
@@ -61,9 +59,9 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8">Contribute</h2>
     <p>Let us know <a href="/contribute">if you design a new content pattern or find new evidence</a> on content style.</p>
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>January 2019</time></p>
+    </div>
   </div>
 </div>
 {% endblock %}
