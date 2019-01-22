@@ -2,7 +2,6 @@
 {% set pageDescription = 'These principles guide all of our design. Use them to get started on a project and to help with making decisions.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -86,9 +85,9 @@
       <p>Be accountable and have confidence in your solutions.</p>
     </div>
 
-      {{ reviewDate({
-        "lastReview": "August 2018"
-      }) }}
+     <div class="nhsuk-review-date">
+     <p class="nhsuk-body-s">Page updated: <time>August 2018</time></p>
+     </div>
   </div>
 </div>
 {% endblock %}
