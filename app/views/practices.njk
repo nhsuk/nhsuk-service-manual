@@ -3,6 +3,8 @@
 
 {% extends 'includes/layout.njk' %}
 
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
@@ -24,6 +26,9 @@
     <p>We've started with <a href="">accessibility</a> because teams tell us it's a very important area for them. We'll be researching and testing more detailed accessibility guidance over the next couple of months.</p>
     <p>We're also starting work on guidance on agile working and will be looking at what user researchers need from the service manual.</p>
     <p>Please get in touch on the <a href="#">NHS.UK #standards Slack channel</a> if you'd like to contribute or email the standards team at <a href="#">service-manual@nhs.net</a>.</p>
+    {{ reviewDate({
+      "lastReview": "January 2019"
+    }) }}
   </div>
 </div>
 {% endblock %}

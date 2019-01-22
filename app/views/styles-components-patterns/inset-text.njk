@@ -6,6 +6,7 @@
 {% from 'components/inset-text/macro.njk' import insetText %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -31,13 +32,9 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ insetText({
-        "HTML": "<p>If you drive you must tell the <a href=\"https://www.gov.uk/contact-the-dvla\" title=\"External website\">DVLA</a> about your vertigo. Visit the GOV.UK website for more information on <a href=\"https://www.gov.uk/dizziness-and-driving\" title=\"External website\">driving with vertigo</a>.</p>"
-      }) }}
-    </div>
+    {{ designExample({
+      type: 'inset-text'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/inset-text.html">Preview the inset text component</a></p>

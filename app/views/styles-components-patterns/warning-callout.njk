@@ -5,6 +5,7 @@
 {% from 'components/warning-callout/macro.njk' import warningCallout %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -29,31 +30,16 @@
 </div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-
-      {% from 'components/warning-callout/macro.njk' import warningCallout %}
-
-      {{ warningCallout({
-      "heading": "School, nursery or work",
-      "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
-      }) }}
-
-    </div>
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'warning-callout'
+    }) }}
   </div>
 </div>
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/warning-callout.html">Preview the warning callout component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/warning-callout">get the latest warning callout component code</a> in the NHS.UK frontend library in GitHub.</p>
-
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <h2>When to use a warning callout</h2>
     <p>Use this callout for information that:</p>
       <ul>
