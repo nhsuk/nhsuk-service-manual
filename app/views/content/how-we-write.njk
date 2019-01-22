@@ -4,7 +4,6 @@
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/tables/macro.njk' import table %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/inset-text/macro.njk' import insetText %}
 
 {% block breadcrumb %}
@@ -97,9 +96,9 @@
     <p>We use short sentences - up to 20 words. We use short paragraphs - up to 3 sentences.</p>
     <p>We use subheadings and bulleted lists to help users find what they need.</p>
     <p>We use the active voice - "find a pharmacy" rather than "a pharmacy can be found".</p>
-    {{ reviewDate({
-      "lastReview": "October 2018."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>Ocotber 2018</time></p>
+    </div>
   </div>
   <div class="nhsuk-grid-column-one-third">
     <div class="eric-shame-in-this-section">
