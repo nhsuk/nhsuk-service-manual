@@ -1,5 +1,4 @@
 {% extends 'includes/layout.njk' %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
@@ -29,9 +28,9 @@
     <h2>Contribute</h2>
     <p>New contribute text <a href="#">here?</a>.</p>
 
-    {{ reviewDate({
-      "lastReview": "December 2018"
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>December 2018</time></p>
+    </div>
   </div>
 </div>
 {% endblock %}
