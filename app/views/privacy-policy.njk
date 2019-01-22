@@ -8,11 +8,6 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
     <p>It also tells you:</p>
     <ul>
       <li>how we use your information</li>
@@ -20,6 +15,11 @@
       <li>how we keep your data secure</li>
       <li>about your rights to see or change information held about you</li>
     </ul>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
     <h2>Information we may collect</h2>
     <p>You can leave feedback on most pages of the website and on a user survey. You have the option to share your email address if you want a response. Otherwise, feedback is collected anonymously</p>
@@ -51,6 +51,10 @@
       <li>contact the Information Commissioner’s Office, Wycliffe House Water Lane, Wilmslow SK9 5AF <a href="https://ico.org.uk/">ico.org.uk</a> if you want to make a complaint about how we have managed your data</li>
     </ul>
     <p>NHS Digital, 1 Trevelyan Square, Boar Lane, Leeds, LS1 6AE is the Data Controller for NHS digital service manual under data protection legislation. We will process your data in line with data protection legislation.</p>
+
+    {{ reviewDate({
+      "lastReview": "August 2018"
+    }) }}
   </div>
 </div>
 {% endblock %}
