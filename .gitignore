@@ -1,4 +1,5 @@
 node_modules
-app/assets/css
-app/assets/js
+public
 .terraform
+.DStore
+.DS_Store

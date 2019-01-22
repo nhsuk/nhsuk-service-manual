@@ -1,19 +1,20 @@
-{% set pageTitle = 'Do and Don\'t lists' %}
-{% set pageDescription = 'How to use Do and Don\'t lists to help users understand more easily what they should and shouldn\'t do.' %}
+{% set pageTitle = 'Do and Dont lists' %}
+{% set pageDescription = 'How to use Do and Dont lists to help users understand more easily what they should and shouldnt do.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'components/do-dont-list/macro.njk' import list %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -26,49 +27,13 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
-        {{ list({
-        "title": "Do",
-        "type": "tick",
-        "items": [
-            {
-            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
-            },
-            {
-            "item": "wash your hands before touching a burst blister"
-            },
-            {
-            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
-            }
-        ]
-        }) }}
-        {{ list({
-        "title": "Don't",
-        "type": "cross",
-        "items": [
-            {
-            "item": "burst a blister yourself"
-            },
-            {
-            "item": "peel the skin off a burst blister"
-            },
-            {
-            "item": "pick at the edges of the remaining skin"
-            },
-            {
-            "item": "wear the shoes or use the equipment that caused your blister until it heals"
-            }
-        ]
-        }) }}
-    </div>
+    <h2>Code and design</h2>
+    {{ designExample({
+      type: 'do-dont-list'
+    }) }}
   </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/do-dont-list.html">Preview the Do and Don't list component.</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">get the latest Do and Don't list code</a> in the NHS.UK frontend library in GitHub.</p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <h2>When to use Do and Don't lists</h2>
     <p>Use a Do and Don't list to give users clear and simple advice, for example about treating a problem themselves.</p>
     <h2 id="when-not-to-use-do-and-dont-lists">When not to use Do and Don't lists</h2>

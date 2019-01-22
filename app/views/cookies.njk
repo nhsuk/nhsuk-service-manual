@@ -7,7 +7,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">Cookies</h1>
   </div>
 </div>
 
@@ -138,6 +138,7 @@
         ]
       ]
     }) }}
+
     <p>If you browse the web without using javascript, Google Analytics will use something called a pixel gif graphic instead of a cookie. This collects information about your device and behaviour.</p>
     <p>You can <a href="https://tools.google.com/dlpage/gaoptout">opt out of Google Analytics cookies.</a></p>
 
@@ -146,13 +147,16 @@
     <p>Find out how to manage cookies on:</a>
     <ul>
       <li><a href="https://support.apple.com/kb/ph21411?locale=en_US">Apple Safari</a></li>
-      <li><a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en">Google Chrome</a></li>
+      <li><a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&amp;hl=en">Google Chrome</a></li>
       <li><a href="https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy">Microsoft Edge</a></li>
       <li><a href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies">Microsoft Internet Explorer</a></li>
       <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Mozilla Firefox</a></li>
       <li><a href="https://www.opera.com/help/tutorials/security/privacy/">Opera</a></li>
     </ul>
-    <p>If you need to contact us about the use of cookies email e<a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>.</p>
+    <p>If you need to contact us about the use of cookies, email <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>.</p>
+    {{ reviewDate({
+      "lastReview": "August 2018"
+    }) }}
   </div>
 </div>
 {% endblock %}

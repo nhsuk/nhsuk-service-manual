@@ -1,5 +1,5 @@
 import digitalData from './digitalData';
-import DesignExample from '../components/design-example/design-example';
+import DesignExample from './design-example';
 
 digitalData();
 

@@ -7,11 +7,11 @@
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -30,7 +30,7 @@
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ pagination({
       "previousUrl": "/section/treatments",
       "previousPage": "Treatments",
@@ -46,12 +46,12 @@
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/pagination">get the latest pagination code</a> in the NHS.UK frontend library in GitHub.</p>
     <h2>When to use pagination</h2>
     <p>Use pagination as a method of navigation for small groups (up to 8 pages) of related content, such as a group of pages on a specific condition.</p>
-    <p>This component also requires <a href="/patterns/contents-list">contents list</a> at the top of the page - both components together become the multi-page navigation pattern.</p>
+    <p>This component also requires <a href="/service-manual/patterns/contents-list">contents list</a> at the top of the page - both components together become the multi-page navigation pattern.</p>
     <h2>When not to use pagination</h2>
     <p>Do not use the pagination component on non grouped pages or 'related' pages as it will likely confuse the user.</p>
-    <p>Do not use pagination in the context of a transactional service or a form as these have their own means of navigation <a href="/patterns/buttons">buttons</a> to move forward (progress) and <a href="/patterns/back-link">back link</a> to navigate back.</p>
+    <p>Do not use pagination in the context of a transactional service or a form as these have their own means of navigation <a href="/service-manual/patterns/buttons">buttons</a> to move forward (progress) and <a href="/patterns/back-link">back link</a> to navigate back.</p>
     <h2>How to use </h2>
-    <p>The <a href="/patterns/contents-list">contents list</a> at the top of the page must be used in conjunction with the pagination component, used at the bottom of each page.</p>
+    <p>The <a href="/service-manual/patterns/contents-list">contents list</a> at the top of the page must be used in conjunction with the pagination component, used at the bottom of each page.</p>
     <p>Keep links short and descriptive. Links that are too long (more than two lines) inhibit the scannability of this component.</p>
     <p>Page titles must reflect the subject of the specific page (e.g. ‘Treatment’), whilst the overall subject of the section must form the sub-header (e.g. ‘Age-related macular degeneration’). This is so users are clear where they have navigated to.</p>
     <h3>Accessibility</h3>

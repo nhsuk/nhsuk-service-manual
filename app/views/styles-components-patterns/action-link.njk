@@ -1,20 +1,20 @@
-{% set pageTitle = 'Action link - NHS Digital service manual' %}
+{% set pageTitle = 'Action link' %}
 {% set pageDescription = 'Action links help users get to the next stage of a journey quickly by signposting the start of a digital service.' %}
 
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/action-link/macro.njk' import actionLink %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -28,28 +28,21 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
-      {{ actionLink({
-      "text": "Find a minor injuries unit",
-      "href": "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
-      }) }}
-    </div>
+    <h2>Code and design</h2>
+    {{ designExample({
+      type: 'action-link'
+    }) }}
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">Preview the action link component</a></p>
-    <p>You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/action-link.html">get the latest action link code</a> in the NHS.UK frontend library in GitHub.</p>
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
     <h2 id="how-to-use-action-links">How to use action links</h2>
     <p>Keep the words on the action link short. Start with a verb, for example: "Book an appointment" or "Apply for an EHIC card".</p>
-    <p>Action links usually sit in a block of text. You can also put one in a <a href="/patterns/care-cards">care card</a>.</p>
+    <p>Action links usually sit in a block of text. You can also put one in a <a href="/service-manual/patterns/care-cards">care card</a>.</p>
     <p>You can have more than one action link on a page but avoid putting them near each other.</p>
     <p>We don't use action links in forms. Use a button instead.</p>
-    <p>Do not use action links just to link to another page or site. If you need a link to stand out, you can use <a href="/patterns/inset_text/">inset text</a>.</p>
+    <p>Do not use action links just to link to another page or site. If you need a link to stand out, you can use <a href="/service-manual/patterns/inset_text/">inset text</a>.</p>
     <h3>Accessibility</h3>
     <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
     <h2 id="research">Research</h2>

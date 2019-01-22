@@ -8,11 +8,6 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
     <p>It also tells you:</p>
     <ul>
       <li>how we use your information</li>
@@ -20,6 +15,11 @@
       <li>how we keep your data secure</li>
       <li>about your rights to see or change information held about you</li>
     </ul>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
     <h2>Information we may collect</h2>
     <p>You can leave feedback on most pages of the website and on a user survey. You have the option to share your email address if you want a response. Otherwise, feedback is collected anonymously</p>
@@ -27,7 +27,7 @@
 
     <h2>Keeping your personal data secure</h2>
     <p>We convert your data into secure code (encrypt it) and store it on secure servers in England. A partner organisation is providing hosting services but has no say in how the information is used. There are no legal ways for their employees to see the data, only approved people in the NHS digital service manual development team can see it.</p>
-    <p>If you shared your email with us as part of your survey answers it will be deleted after 2 years. At that point you can't be identified in the survey data.
+    <p>If you shared your email with us as part of your survey answers it will be deleted after 2 years. At that point you can't be identified in the survey data.</p>
 
     <h2>Links to other websites</h2>
     <p>This privacy policy only applies to this website and doesn’t cover other websites that we link to. If you go to another website from this one, read the privacy policy on that website to find out what it does with your information.</p>
@@ -51,7 +51,10 @@
       <li>contact the Information Commissioner’s Office, Wycliffe House Water Lane, Wilmslow SK9 5AF <a href="https://ico.org.uk/">ico.org.uk</a> if you want to make a complaint about how we have managed your data</li>
     </ul>
     <p>NHS Digital, 1 Trevelyan Square, Boar Lane, Leeds, LS1 6AE is the Data Controller for NHS digital service manual under data protection legislation. We will process your data in line with data protection legislation.</p>
-    </p>
+
+    {{ reviewDate({
+      "lastReview": "August 2018"
+    }) }}
   </div>
 </div>
 {% endblock %}

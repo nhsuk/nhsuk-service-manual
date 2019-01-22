@@ -1,7 +1,6 @@
-{% set pageTitle = 'Breadcrumbs - NHS Digital service manual' %}
+{% set pageTitle = 'Breadcrumbs' %}
 {% set pageDescription = 'Breadcrumbs are a row of links at the top of the page which help users understand where they are in the website.' %}
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
@@ -10,11 +9,11 @@
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -30,9 +29,11 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2>Code and design</h2>
-            {{ designExample({
-              type: 'breadcrumb'
-            }) }}
+    {{ designExample({
+      type: 'breadcrumb'
+    }) }}
+  </div>
+</div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 class="nhsuk-u-margin-top-8">How to use breadcrumbs</h2>
@@ -41,7 +42,7 @@
     <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
     <h3>Accessibility</h3>
     <p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use screen readers know what it is.</p>
-    <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/styles-components-patterns/icons">icons</a> to hide them from people who use screen readers.</p>
+    <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/service-manual/styles-components-patterns/icons">icons</a> to hide them from people who use screen readers.</p>
     <h2>Research</h2>
     <p>In our user testing, people noticed the breadcrumb and appreciated the context it gave. They also used it to get back to where they came from or to get back home.</p>
     <p><a href="contribute">Get in touch to share your research findings</a> about this pattern.</p>

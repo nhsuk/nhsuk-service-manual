@@ -7,11 +7,11 @@
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -27,7 +27,7 @@
     <h2 >Code and design</h2>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ textarea({
       "name": "more-detail",
       "id": "more-detail",
@@ -46,9 +46,9 @@
     <h2 id="when-to-use-this-component">When to use textarea</h2>
     <p><a href="https://design-system.service.gov.uk/components/textarea/">GOV.UK Design System suggest</a> using the textarea component when you need to let users enter an amount of text that’s longer than a single line.</p>
     <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
-    <p>Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using <a href="/pattterns/radios">radios</a>.</p>
+    <p>Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using <a href="/service-manual/patterns/radios">radios</a>.</p>
     <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
-    <p>Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the <a href="/paterns/text-input">text input</a> component.</p>
+    <p>Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the <a href="/service-manual/patterns/text-input">text input</a> component.</p>
     <h2 id="how-it-works">How it works</h2>
     <h3 id="label-textareas">Label textareas</h3>
     <p>You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.</p>
@@ -57,7 +57,7 @@
     <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the <code>rows</code> attribute.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ textarea({
       "name": "more-detail",
       "id": "more-detail",
@@ -78,7 +78,7 @@
     <p>Error messages should be styled like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ textarea({
       "name": "no-ni-reason",
       "id": "no-ni-reason",

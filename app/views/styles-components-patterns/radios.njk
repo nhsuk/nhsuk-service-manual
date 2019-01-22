@@ -7,11 +7,11 @@
 {{ breadcrumb({
   items: [
     {
-      href: "/index",
+      href: "/service-manual/",
       text: "Home"
     }
   ],
-  href: "/styles-components-patterns",
+  href: "/service-manual/styles-components-patterns",
   text: "Styles, components and patterns"
 }) }}
 {% endblock %}
@@ -27,7 +27,7 @@
       <h2 >Code and design</h2>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ radios({
       "idPrefix": "example",
       "name": "example",
@@ -59,7 +59,7 @@
     <h2 id="when-to-use-this-component">When to use radios</h2>
     <p>Use the radios component when users can only select one option from a list.</p>
     <h2 id="when-not-to-use-this-component">When not to use this component</h2>
-    <p>Do not use the radios component if users might need to select more than one option. In this case, you should use the <a href="/styles-components-patterns/check-boxes">checkboxes</a> component instead.</p>
+    <p>Do not use the radios component if users might need to select more than one option. In this case, you should use the <a href="/service-manual/styles-components-patterns/check-boxes">checkboxes</a> component instead.</p>
     <h2 id="how-it-works">How radios work</h2>
     <p class="rich-text">Radios are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.</p>
     <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
@@ -77,7 +77,7 @@
     <p>If there are only 2 options, you can either stack the radios or display them inline, like so:</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ radios({
       "idPrefix": "example'",
       "classes": "nhsuk-radios--inline",
@@ -109,7 +109,7 @@
     <p>If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ radios({
       "idPrefix": "example-divider",
       "name": "example",
@@ -143,7 +143,7 @@
     <p>You can add hints to radio items to provide additional information about the options.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ radios({
       "idPrefix": "gov",
       "name": "gov",
@@ -177,7 +177,7 @@
     <p>Error messages should be styled like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="example grey-background nhsuk-u-margin-bottom-4">
+    <div class="app-example nhsuk-u-margin-bottom-4">
       {{ radios({
       "idPrefix": "example",
       "name": "example",
@@ -212,7 +212,7 @@
     </div>
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p>Make sure errors follow the guidance in <a href="/styles-components-patterns/error-message">error message</a> and have specific error messages for specific error states.</p>
+    <p>Make sure errors follow the guidance in <a href="/service-manual/styles-components-patterns/error-message">error message</a> and have specific error messages for specific error states.</p>
     <p>GOV.UK Design System has <a href="https://design-system.service.gov.uk/components/radios/">some great examples of tried and tested error messages.</a></p>
     <h2>Research</h2>
     <p>If you’ve used this component, get in touch to share your user research findings.</p>
