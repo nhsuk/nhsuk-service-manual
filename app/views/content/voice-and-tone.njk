@@ -4,7 +4,6 @@
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/inset-text/macro.njk' import insetText %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -49,9 +48,9 @@
     {{ insetText({
       "HTML": "<p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>"
     }) }}
-    {{ reviewDate({
-      "lastReview": "August 2018."
-    }) }}
+   <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Page updated: <time>August 2018</time></p>
+    </div>
   </div>
   <div class="nhsuk-grid-column-one-third">
     <div class="eric-shame-in-this-section">
