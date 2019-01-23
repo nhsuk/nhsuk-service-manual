@@ -20,41 +20,38 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Pagination</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">Feedback banner</h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Allow users to navigate between related pages, such as a guide to a single condition.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
+
   </div>
 </div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ pagination({
-      "previousUrl": "/section/treatments",
-      "previousPage": "Treatments",
-      "nextUrl": "/section/symptoms",
-      "nextPage": "Symptoms"
-      }) }}
-    </div>
-  </div>
-</div>
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/pagination.html">Preview the pagination component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/pagination">get the latest pagination code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use pagination</h2>
-    <p>Use pagination as a method of navigation for small groups (up to 8 pages) of related content, such as a group of pages on a specific condition.</p>
-    <p>This component also requires <a href="/patterns/contents-list">contents list</a> at the top of the page - both components together become the multi-page navigation pattern.</p>
-    <h2>When not to use pagination</h2>
-    <p>Do not use the pagination component on non grouped pages or 'related' pages as it will likely confuse the user.</p>
-    <p>Do not use pagination in the context of a transactional service or a form as these have their own means of navigation <a href="/patterns/buttons">buttons</a> to move forward (progress) and <a href="/patterns/back-link">back link</a> to navigate back.</p>
-    <h2>How to use </h2>
-    <p>The <a href="/patterns/contents-list">contents list</a> at the top of the page must be used in conjunction with the pagination component, used at the bottom of each page.</p>
-    <p>Keep links short and descriptive. Links that are too long (more than two lines) inhibit the scannability of this component.</p>
-    <p>Page titles must reflect the subject of the specific page (e.g. ‘Treatment’), whilst the overall subject of the section must form the sub-header (e.g. ‘Age-related macular degeneration’). This is so users are clear where they have navigated to.</p>
+    <h2>How to use the feedback banner</h2>
+        <p>Make sure the feedback banner doesn't appear until the user has agreed to use the appropriate cookies.</p>
+        <p>Include a descriptive heading (h2)</p>
+        <p>Make the feedback/survey link text describe its purpose and destination</p>
+        <p>Add hidden text to the close button to give screen readers context.</p>
+    <h2>When not to use the feedback banner</h2>
+        <p>Do not use in states of emergency - when emergency messages are shown to a user.</p>
+        <p>Do not use the  banner when displaying messages that suggest users get emergency healthcare. </p>
+        <p>In both cases, the  banner could detract from the importance of the messaging.</p>
+
+    <h2>How the  banner works</h2>
+        <p>The banner appears 5 seconds after a user lands on the page.  </p>
+        <p>The banner should:</p>
+            <ul>
+                <li>appear after the users’ journey – so we don’t annoy them (too much)</li>
+                <li>be prominent – so they notice it</li>
+                <li>be able to close (dismiss) it</li>
+            </ul>
+
     <h3>Accessibility</h3>
     <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to indicate that they are navigations links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. This will be read out by screen readers that support this attribute to help clarify what the list of links are.</p>
     <p class="rich-text">Additionally there is a visually hidden heading title <code>Contents</code> which will be read by screen readers as a heading to the links.</p>
