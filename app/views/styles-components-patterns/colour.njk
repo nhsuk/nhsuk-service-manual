@@ -3,7 +3,6 @@
 
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -264,9 +263,9 @@
       <li><a href="http://colororacle.org/">Color Oracle (free colour blindness simulator)</a></li>
     </ul>
     <p>Also test colour contrast with people of all abilities.</p>
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
   </div>
 </div>
 {% endblock %}
