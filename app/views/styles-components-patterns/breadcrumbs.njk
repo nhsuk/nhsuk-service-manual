@@ -2,7 +2,6 @@
 {% set pageDescription = 'Breadcrumbs are a row of links at the top of the page which help users understand where they are in the website.' %}
 {% extends 'includes/layout.njk' %}
 {% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
@@ -49,9 +48,9 @@
     <p><a href="contribute">Get in touch to share your research findings</a> about this pattern.</p>
     <h2>Discuss</h2>
     <p >Discuss breadcrumbs on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
     {{ panel({
       "label": "Similar patterns",
       "HTML": "<ul>
