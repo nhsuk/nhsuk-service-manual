@@ -3,7 +3,6 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'components/warning-callout/macro.njk' import warningCallout %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
@@ -48,7 +47,7 @@
           <li>addresses a common or significant misconception or mistake</li>
       </ul>
     <p>If the information is important but not important enough for a warning callout, use inset text instead.</p>
-    <p>If you need to tell a user to contact their GP or get medical help, use a <a href="/service-manual/patterns/care-card">care card</a>.</p>
+    <p>If you need to tell a user to contact their GP or get medical help, use a <a href="/service-manual/styles-components-patterns/care-cards">care card</a>.</p>
 
     <h2>How to use a warning callout</h2>
     <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
@@ -56,12 +55,12 @@
     <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
     <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
     <p>If possible, put at least 1 short paragraph of text between 2 callouts or between an action link and a callout.</p>
-    <p>Give priority to <a href="">care cards</a> over callouts.</p>
+    <p>Give priority to <a href="/service-manual/styles-components-patterns/care-cards">care cards</a> over callouts.</p>
 
     <h3>Accessibility</h3>
     <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
     <p>We recommend adding an aria label, for example: aria-label="Important". This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
-    <p>If you can help with this, please get in touch on the <a href=""> NHS.UK #standards Slack channel</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>If you can help with this, please get in touch on the <a href=""> NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
     <h2>Research</h2>
     <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
@@ -73,18 +72,18 @@
     </ul>
 
     <h2>Discuss</h2>
-    <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+    <p>Discuss warning callouts on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
 
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-                <li><a href='/styles-components-patterns/care-cards'>Care cards </a></li>
-                <li><a href='/styles-components-patterns/do-and-dont-lists'>Do and don't lists </a></li>
-                <li><a href='/styles-components-patterns/inset-text'>Inset text </a></li>
+                <li><a href='/serivce-manual/styles-components-patterns/care-cards'>Care cards </a></li>
+                <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and don't lists </a></li>
+                <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text </a></li>
             </ul>"
     }) }}
 

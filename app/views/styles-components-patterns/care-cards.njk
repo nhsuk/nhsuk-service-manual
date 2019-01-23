@@ -1,9 +1,8 @@
 {% set pageTitle = 'Care cards' %}
-{% set pageDescription = 'How to use care cards to help users understand the sort of care they need and how quickly they need to act.' %}
+{% set pageDescription = 'Care cards are boxes designed to stand out from the rest of the content. They help users identify and understand the sort of care they need, who to contact and how quickly.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'components/care-card/macro.njk' import careCard %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
@@ -47,7 +46,7 @@
     }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when you want users to contact their GP or arrange an appointment with a GP or another health professional, like a practice nurse. You can also use it to tell users to go to or get in touch with a clinic, for example for a chlamydia test.</p>
+    <p>Use this card when you want users to contact their GP or arrange an appointment with a health professional, like a practice nurse. You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
     <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
   </div>
 </div>
@@ -60,28 +59,28 @@
     }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when you want users to call or visit a GP or hospital urgently. This can include getting urgent care in a walk-in centre or minor injuries centre.</p>
-    <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can empower them.</p>
+    <p>Use this card when you want users to call or visit a GP or hospital urgently because they need advice or care quickly. You can, for example, use it to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
+    <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.</p>
     <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
   </div>
 </div>
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h2 class="nhsuk-u-margin-top-8" id="emergency-care-card-red-and-black">Immediate care card (red and black)</h2>
+    <h2 class="nhsuk-u-margin-top-8" id="emergency-care-card-red-and-black">Immediate care card (red and dark grey)</h2>
     {{ designExample({
       type: 'care-card-immediate'
     }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency department.</p>
-    <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital accident and emergency (A&amp;E) department</a>.</p>
+    <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency (A&amp;E) department.</p>
+    <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital A&amp;E department</a>.</p>
     <p>Avoid linking to more information about a condition from an emergency care card. If it's an emergency, the important thing is to dial 999 or go to A&amp;E.</p>
     <p>Only use this card for emergencies.</p>
 
     <h2 class="nhsuk-u-margin-top-8" id="how-to-use-care-cards">How to use care cards</h2>
     <h3>When to use care cards</h3>
-    <p>Use care cards to tell users to contact their GP or get medical advice or help. If you want to highlight a key point, use inset text. If you want to warn a user about something, use a warning callout instead.</p>
+    <p>Use care cards to tell users to take action to get medical advice or help.</p>
     <h3>When not to use care cards</h3>
     <p>Don't use care cards:</p>
     <ul>
@@ -95,22 +94,39 @@
       <li>to warn a user about something, use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead</li>
     </ul>
 
+    <h2>Placing care cards on the page</h2>
+    <p>You can use more than 1 care card on a page - for example, if people need different kinds of care depending on how severe their symptoms are. You can choose where to put the cards and what order to put them in.</p>
+    <p>Avoid having more than 2 care cards on a page though. We want to give essential information and reassure people, not to scare them.</p>
+    <p>If you use more than 1 care card - or a care card and a warning callout close to each other, be aware that users often overlook text between them.</p>
+
+    <h2>Care card content</h2>
+    <p>Give the card a short heading. It should be 1 clear call to action, for example "Speak to a GP".</p>
+    <p>We also add hidden text to the care card header to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.</p>
+
+    <p class="rich-text"><code>&lt;h3&gt;&lt;span class="visually-hidden"&gt;Non urgent care:</span> Speak to a GP if&lt;h3&gt;</code></p>
+
+    <p>If people use high contrast mode in Windows, the care card colours don't show, so people can't distinguish them. To make the cards look important, we use a border in this mode to make them stand out from the rest of the content.</p>
+
     <h2>Research</h2>
-    <p>Get in touch to share your research findings if you've used this pattern.</p>
+    <p>The care card design has tested well in long content pages. We've tested it in content in lots of labs and users scanning the page have stopped to read the cards.</p>
+    <p>We haven't tested care cards in transactional services and do not recommend using them. If you use a care card in a transactional service, please test it with users and let us know what you find.</p>
+    <p>We've tested care cards with 1 call to action, for example "Speak to a GP". If you use more than 1 action, please test it and share your research findings with us.</p>
+    <p>We found that users overlook text between care cards, or between care cards and warning callouts, when they are close to each other.</p>
+    <p>Accessibility testing showed up some issues around communicating the importance of the cards with hidden text, which we've dealt with. See the Accessibility section.</p>
 
     <h2>Discuss</h2>
-    <p>Discuss warning callouts on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
+    <p>Discuss warning callouts on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
 
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-              <li><a href='/styles-components-patterns/do-and-dont-lists'>Do and Don't list</a></li>
-              <li><a href='/styles-components-patterns/inset-text'>Inset text</a></li>
-              <li><a href='/styles-components-patterns/warning-callout'>Warning callout</a></li>
+              <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and Don't list</a></li>
+              <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
             </ul>"
     }) }}
 

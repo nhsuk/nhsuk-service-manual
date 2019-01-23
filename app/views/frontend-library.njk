@@ -1,8 +1,8 @@
-{% set pageTitle = 'NHS.UK frontend library' %}
+{% set pageTitle = 'Frontend library' %}
 {% set pageDescription = 'The code you need to start building user interfaces for NHS websites and services' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
+
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -30,22 +30,30 @@
     <h3>What are the advantages of this code?</h3>
     <p>The code you get is:</p>
     <ul>
-      <li><b>high quality</b> - easy to understand - it's been checked by GDS and industry experts (?)</li>
-      <li><b>tested</b> - has been tested with lots of users and across different browsers and devices</li>
-      <li><b>accessible</b> - meets WCAG 2.1 AA standard accessibility and AAA where possible</li>
-      <li><b>well designed</b> - has been designed to reflect the NHS brand</li>
-      <li><b>up to date</b> - is kept up to date and maintained by developers working on the NHS website</li>
-      <li><b>constantly being improved</b> - is improved and added to by a community of people committed to sharing quality code in the NHS</li>
+      <li><b>high quality</b> - it's been checked by the <a href="https://gds.blog.gov.uk/about/">Government Digital Service</a> and industry CSS experts</li>
+      <li><b>user centred</b> - it's designed to meet user needs and tested with real users</li>
+      <li><b>well designed</b> - it reflects the NHS brand and values</li>
+      <li><b>accessible</b> - it meets <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> AA standard and AAA where possible</b></li>
+      <li><b>tested</b> - across different browsers and devices</li>
+      <li><b>modern</b> - it's built with HTML5 semantics</li>
+      <li><b>responsive</b> - with a mobile-first design</li>
+      <li><b>robust</b> - it has browser support for earlier versions and no-js fallbacks</li>
+      <li><b>modular</b> - you choose the components you need</li>
+      <li><b>versioned</b> - you only need to upgrade when you're ready</li>
+      <li><b>optimised</b> - so that pages load quickly</li>
+      <li><b>open source</b> - we share our learning and are transparent in our decisions</li>
+      <li><b>up-to-date and supported</b> - it's maintained by developers working on the NHS website and continuously improved by a community of people committed to sharing quality code in the NHS</li>
+
     </ul>
 
     <h2>Get in touch</h2>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/docs/contributing">contribute</a> code via GitHub.</p>
-    <p>And you can contact us on the <a href="https://nhsuk.slack.com/messages/standards">NHSUK #standards Slack channel</a> or email the standards team at service-manual@nhs.net.</p>
+    <p>And you can contact us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHSUK #standards Slack channel</a> or email the standards team at service-manual@nhs.net.</p>
 
-    {{ reviewDate({
-      "lastReview": "January 2019"
-    }) }}
-
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
+  </div>
   </div>
 </div>
 {% endblock %}

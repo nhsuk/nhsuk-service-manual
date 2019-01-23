@@ -24,7 +24,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 >Grid system</h2>
-    <p>We use the GOV.UK grid with some small changes to breakpoints, page width and spacing to support the <a href="/service-manual/look-and-feel/typography/">NHS Frutiger font</a>.</p>
+    <p>We use the GOV.UK grid with some small changes to breakpoints, page width and spacing to support the <a href="/service-manual/styles-components-patterns/typography">NHS Frutiger font</a>.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -125,27 +125,27 @@
         <tbody>
           <tr>
             <td>Halves</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-!-one-half</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-u-one-half</td>
           </tr>
           <tr>
             <td>One third</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-!-one-third</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-u-one-third</td>
           </tr>
           <tr>
             <td>Two thirds</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-!-two-thirds</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-u-two-thirds</td>
           </tr>
           <tr>
             <td>One quarter</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-!-one-quarter</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-u-one-quarter</td>
           </tr>
           <tr>
             <td>Three quarters</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-!-three-quarters</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-u-three-quarters</td>
           </tr>
         </tbody>
       </table>
-      <p class="rich-text">For example, use <code>nhsuk-!-one-third</code> to give a grid item one-third width on any breakpoint and screen size.</p>
+      <p class="rich-text">For example, use <code>nhsuk-u-one-third</code> to give a grid item one-third width on any breakpoint and screen size.</p>
       <h4>Tablet and desktop screen sizes</h4>
       <table>
         <thead>
@@ -157,32 +157,31 @@
         <tbody>
           <tr>
             <td>Halves</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-!-one-half-tablet</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-half .nhsuk-u-one-half-tablet</td>
           </tr>
           <tr>
             <td>One third</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-!-one-third-tablet</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-third .nhsuk-u-one-third-tablet</td>
           </tr>
           <tr>
             <td>Two thirds</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-!-two-thirds-tablet</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds .nhsuk-u-two-thirds-tablet</td>
           </tr>
           <tr>
             <td>One quarter</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-!-one-quarter-tablet</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--one-quarter .nhsuk-u-one-quarter-tablet</td>
           </tr>
           <tr>
             <td>Three quarters</td>
-            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-!-three-quarters-tablet</td>
+            <td>nhsuk-o-grid__item nhsuk-o-grid__item--three-quarters .nhsuk-u-three-quarters-tablet</td>
           </tr>
         </tbody>
       </table>
-      <p class="rich-text">For example, use <code>nhsuk-!-one-quarter-tablet</code> to give a grid item one-quarter width on tablet and desktop breakpoints and screen sizes:</p>
-      {% from 'components/review-date/macro.njk' import reviewDate %}
+      <p class="rich-text">For example, use <code>nhsuk-u-one-quarter-tablet</code> to give a grid item one-quarter width on tablet and desktop breakpoints and screen sizes:</p>
 
-      {{ reviewDate({
-        "lastReview": "August 2018."
-      }) }}
+      <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: <time>August 2018</time></p>
+      </div>
     </div>
   </div>
 </div>

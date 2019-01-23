@@ -4,7 +4,6 @@
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/inset-text/macro.njk' import insetText %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -34,10 +33,10 @@
         <li>our <a href="/service-manual/practices/make-your-service-accessible">guide to making your NHS service accessible</li>
         <li>the <a href="https://www.w3.org/WAI/tips/writing/">Web Accessibility Initiative (WAI) guide to writing for web accessibility</a></li>
       </ul>
-    <p>As well as writing content that is accessible, we make sure that no one feels that our language excludes them. Read more about <a href="/service-manual/content/inclusive-language">inclusive language</a> in the digital service manual.</p>
-    {{ reviewDate({
-      "lastReview": "August 2018."
-    }) }}
+    <p>As well as writing content that is accessible, we make sure that no one feels that our language excludes them. Read more about <a href="/content/inclusive-language">inclusive language</a> in the digital service manual.</p>
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>August 2018</time></p>
+    </div>
   </div>
   <div class="nhsuk-grid-column-one-third">
     <div class="app-u-border-top">
