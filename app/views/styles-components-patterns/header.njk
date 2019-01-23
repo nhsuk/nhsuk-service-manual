@@ -2,8 +2,8 @@
 {% set pageDescription = 'Design and code for the header component on the NHS website.' %}
 
 {% extends 'includes/layout.njk' %}
+
 {% from 'components/header/macro.njk' import header %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
@@ -56,9 +56,9 @@
     <p>Get in touch to <a href="/service-manual/contribute">share your research findings</a> if you've used this pattern.</p>
     <h2>Discuss</h2>
     <p>Discuss the header on the <a href="">NHS.UK #standards Slack channel</a> or email the standards team at <a href="">service-manual@nhs.net</a>.</p>
-    {{ reviewDate({
-      "lastReview": "December 2018."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>December 2018</time></p>
+    </div>
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
