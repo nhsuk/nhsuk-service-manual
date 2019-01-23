@@ -178,11 +178,10 @@
         </tbody>
       </table>
       <p class="rich-text">For example, use <code>nhsuk-!-one-quarter-tablet</code> to give a grid item one-quarter width on tablet and desktop breakpoints and screen sizes:</p>
-      {% from 'components/review-date/macro.njk' import reviewDate %}
-
-      {{ reviewDate({
-        "lastReview": "August 2018."
-      }) }}
+     
+      <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: <time>August 2018</time></p>
+      </div>
     </div>
   </div>
 </div>
