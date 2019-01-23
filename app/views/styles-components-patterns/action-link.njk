@@ -3,7 +3,6 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'components/action-link/macro.njk' import actionLink %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
@@ -23,7 +22,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Action link</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
     <p class="nhsuk-body-l">{{pageDescription}}</p>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">They include a few simple words which tell the user what to do next, like “Find a pharmacy” or “Order a test kit”.</p>
   </div>
@@ -54,9 +53,9 @@
     <p>Get in touch to <a href="https://nhs-service-manual-alpha.staging.torchbox.com/service-manual/contribute/">share your research findings</a> about this pattern.</p>
     <h2>Discuss</h2>
     <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
+    </div>
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
