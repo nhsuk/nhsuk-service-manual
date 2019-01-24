@@ -1,6 +1,6 @@
 .code-snippet {
     margin-top: 48px;
-    background-color: $color_nhsuk-white;
+    background-color: $color_nhsuk-grey-5;
 
     .js-hidden {
         display: none;
@@ -11,6 +11,7 @@
         &--copy {
             position: static;
             margin-bottom: 8px;
+            background-color: $color_nhsuk-grey-5;
         }
 
         &--close {
@@ -90,7 +91,7 @@
 
         &--current {
             a {
-                background-color: $color_nhsuk-white;
+                background-color: $color_nhsuk-grey-5;
 
                 @include mq($from: tablet) {
                     border-bottom: 4px solid #005ea5;
@@ -118,7 +119,7 @@
         pre {
             align-self: stretch;
             padding: 0;
-            background-color: $color_nhsuk-white;
+            background-color: $color_nhsuk-grey-5;
         }
     }
 }

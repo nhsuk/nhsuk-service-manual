@@ -18,12 +18,12 @@
         background-color: $color_nhsuk-grey-1;
 
         @include mq($from: tablet) {
-            padding: 0 24px;
+            padding:  8px 16px;
         }
 
         &:hover,
         &:focus {
-            color: $color_nhsuk-grey-1;
+            color: $color_nhsuk-white;
             box-shadow: none;
         }
 
@@ -39,7 +39,7 @@
             color: $color_nhsuk-white;
 
             &:hover {
-                color: $color_nhsuk-grey-1;
+                color: $color_nhsuk-white;
             }
         }
     }
