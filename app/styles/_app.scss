@@ -5,16 +5,12 @@
   border-top: 2px solid $color_nhsuk-blue;
   margin-top: 8px;
 
-  @include mq($until: desktop) {
-    margin-left: 32px;
-  }
-
-  h2 {
+  h3 {
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   ul {
-    margin-top: 16px;
     list-style: none;
     padding-left: 0;
   }
