@@ -33,7 +33,7 @@
     <ul>
       <li><a href="#non-urgent-care-card-blue">non-urgent care card (blue)</a></li>
       <li><a href="#urgent-care-card-red">urgent care card (red)</a></li>
-      <li><a href="#emergency-care-card-red-and-black">immediate care card (red and black)</a></li>
+      <li><a href="#emergency-care-card-red-and-black">immediate care card (red and dark grey)</a></li>
     </ul>
   </div>
 </div>
@@ -89,7 +89,7 @@
     </ul>
     <p>If you want:</p>
     <ul>
-      <li>to signpost users to the start of a digital service, use an action link - for example, to find a pharmacy</li>
+      <li>to signpost users to the start of a digital service, use an <a href="/service-manual/styles-components-patterns/action-link">action link</a> - for example, to find a pharmacy</li>
       <li>to point them to another organisation, like a charity, use <a href="/service-manual/styles-components-patterns/inset-text">inset text</a> - or just link from a line of text</li>
       <li>to warn a user about something, use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead</li>
     </ul>
@@ -101,10 +101,13 @@
 
     <h2>Care card content</h2>
     <p>Give the card a short heading. It should be 1 clear call to action, for example "Speak to a GP".</p>
+    <p>If the card includes more than one condition, use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list.</p>
+    <p>Make sure the care card is concise, specific and self-contained. Don't say: "Contact your GP if this happens." Explain in the care card in what circumstances users should contact their GP.</p>
+
+    <h2 id="accessibility">Accessibility</h2>
+    <p>People with visual disabilities may not be able to recognise care cards by their colour. Use clearly worded headings to help them.</p>
     <p>We also add hidden text to the care card header to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.</p>
-
     <p class="rich-text"><code>&lt;h3&gt;&lt;span class="visually-hidden"&gt;Non urgent care:</span> Speak to a GP if&lt;h3&gt;</code></p>
-
     <p>If people use high contrast mode in Windows, the care card colours don't show, so people can't distinguish them. To make the cards look important, we use a border in this mode to make them stand out from the rest of the content.</p>
 
     <h2>Research</h2>
@@ -112,7 +115,7 @@
     <p>We haven't tested care cards in transactional services and do not recommend using them. If you use a care card in a transactional service, please test it with users and let us know what you find.</p>
     <p>We've tested care cards with 1 call to action, for example "Speak to a GP". If you use more than 1 action, please test it and share your research findings with us.</p>
     <p>We found that users overlook text between care cards, or between care cards and warning callouts, when they are close to each other.</p>
-    <p>Accessibility testing showed up some issues around communicating the importance of the cards with hidden text, which we've dealt with. See the Accessibility section.</p>
+    <p>Accessibility testing showed up some issues around communicating the importance of the cards with hidden text, which we've dealt with. <a href="#accessibility">See the Accessibility section.</p>
 
     <h2>Discuss</h2>
     <p>Discuss warning callouts on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>

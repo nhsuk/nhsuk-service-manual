@@ -39,49 +39,55 @@
       </thead>
       <tbody>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-search-blue.original.original.png" alt="icon search"></td>
+          <td><img src="/assets/icons/icon-search.png" alt="icon search"></td>
           <td>Search</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-search.svg">icon-search.svg</a></td>
           <td><a href="/service-manual/styles-components-patterns/header" title="Header">Header</a></td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-chevron-right.original.original.png" alt="Icon chevron right;"></td>
-          <td>Chevron right</td>
+          <td><img src="/assets/icons/icon-chevron-left.png" alt="Icon chevron left;"></td>
+          <td>Chevron left</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-chevron-right.svg">icon-chevron-right.svg</a></td>
-          <td>Mobile menu</td>
+          <td>Breadcrumbs on mobile</td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-close_PAJ9jM2.original.original.png" alt="Icon close;"></td>
+          <td><img src="/assets/icons/icon-chevron-right.png" alt="Icon chevron right;"></td>
+          <td>Chevron right</td>
+          <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-chevron-right.svg">icon-chevron-right.svg</a></td>
+          <td>Mobile menu and breadcrumb on desktop</td>
+        </tr>
+        <tr>
+          <td><img src="/assets/icons/icon-close.png" alt="Icon close;"></td>
           <td>Close</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-close.svg">icon-close.svg</a></td>
           <td>Mobile menu</td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-cross.original.original.png" alt="Icon cross"></td>
+          <td><img src="/assets/icons/icon-cross.png" alt="Icon cross"></td>
           <td>Cross (don't)</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-cross.svg">icon-cross.svg</a></td>
           <td><a href="/service-manual/styles-components-patterns/do-and-dont-list" title="Do and Don" t="" lists'="">Do and Don't lists</a></td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-tick.original.original.png" alt="Icon tick"></td>
+          <td><img src="/assets/icons/icon-tick.png" alt="Icon tick"></td>
           <td>Tick (do)</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-tick.svg">icon-tick.svg</a></td>
           <td><a href="/service-manual/styles-components-patterns/do-and-dont-list" title="Do and Don" t="" lists'="">Do and Don't lists</a></td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-arrow-right.original.original.png" alt="Icon arrow right circle;"></td>
+          <td><img src="/assets/icons/icon-arrow-right-circle.png" alt="Icon arrow right circle;"></td>
           <td>Arrow right circle</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-arrow-right-circle.svg">icon-arrow-right-circle.svg</a></td>
-          <td>Action links</td>
+          <td><a href="/service-manual/styles-components-patterns/action-link">Action link</a></td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/icon-arrow-right.original.png" alt="Icon arrow right;"></td>
+          <td><img src="/assets/icons/icon-arrow-right.png" alt="Icon arrow right;"></td>
           <td>Arrow right</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-arrow-right.svg">icon-arrow-right.svg</a></td>
           <td>Next page (pagination)</td>
         </tr>
         <tr>
-          <td><img src="https://nhsservicemanual-production.s3.amazonaws.com/images/arrow-left.original.png" alt="Icon arrow left"></td>
+          <td><img src="/assets/icons/icon-arrow-left.png" alt="Icon arrow left"></td>
           <td>Arrow left</td>
           <td><a target="_blank" href="https://github.com/nhsuk/nhsuk-frontend/blob/master/packages/assets/icons/icon-arrow-left.svg">icon-arrow-left.svg</a></td>
           <td>Previous page (pagination)</td>
@@ -114,9 +120,10 @@
     </ul>
     <h3>Using SVG classes for icons</h3>
     <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
-    <p>SVG icons are sharp, flexible, and load quickly - and you can control how they appear, for example their colour, with style sheets (CSS).</p><p>If you're using a server side or templating language, you can include the icons with <code>include 'partials/icons/icon-search.svg'</code>.</p>
-    <p>SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon__search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
-    <p>Some older browsers like Internet Explorer 8 can't display SVG. So every SVG icon has a PNG fallback. The fallback images have a class, such as <code>.nhsuk-icon__search—fallback</code>, which you can use to modify their sizing and spacing.</p>
+    <p>SVG icons are sharp, flexible, and load quickly - and you can control how they appear, for example their colour, with style sheets (CSS).</p>
+    <p class="rich-text">If you're using a server side or templating language, you can include the icons with <code>include 'partials/icons/icon-search.svg'</code>.</p>
+    <p class="rich-text">SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon__search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
+    <p class="rich-text">Some older browsers like Internet Explorer 8 can't display SVG. So every SVG icon has a PNG fallback. The fallback images have a class, such as <code>.nhsuk-icon__search—fallback</code>, which you can use to modify their sizing and spacing.</p>
     <h3>Accessibility</h3>
     <p>SVG icons must be accessible. For example, they need to meet accessible colour contrast standards. Our recommended tool to test colour combinations is the <a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a>. Read more about <a href="https://css-tricks.com/accessible-svgs/">accessible SVGs on CSS Tricks website</a>.</p>
     <p>If you have any research or experience to share, please get in touch on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
@@ -126,10 +133,10 @@
     <p>Read more about the benefits of SVG icons:</p>
     <ul>
       <li><a href="https://css-tricks.com/pretty-good-svg-icon-system/">CSS Tricks - a pretty good SVG icon system</a></li>
-      <li><a href="https://nhsuk-redesign.azurewebsites.net/styles/icons">CSS Tricks - a complete guide to SVG fallbacks</a></li>
+      <li><a href="https://css-tricks.com/a-complete-guide-to-svg-fallbacks/">CSS Tricks - a complete guide to SVG fallbacks</a></li>
     </ul>
     <h2>Discuss</h2>
-    <p>Discuss warning callouts on the <a href="">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss warning callouts on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>
