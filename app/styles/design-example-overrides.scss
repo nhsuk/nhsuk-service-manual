@@ -1,0 +1,27 @@
+/*
+ * WARNING: This file is intended for adding extra styles to the code snippet
+ * examples and standalone examples.
+ * Beware of adding too much in to this file, we should aim for our example
+ * code to look as close to the unmodified nhsuk-frontend library as possible.
+ */
+
+html {
+ background-color: #f0f4f5;
+}
+
+/* Component examples need a bit of space around them */
+body {
+ margin: 64px 16px 32px 16px;
+}
+
+/*
+  In order to show how the grid works, we need to have an element inside the
+  grid that is visible and fills the available space with a background color.
+*/
+.nhsuk-grid-row > div > p {
+   background-color: #004ba4;
+   color: #fff;
+   text-align: center;
+   margin: 30px 0 0;
+   padding: 20px;
+}
