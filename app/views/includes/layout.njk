@@ -40,6 +40,10 @@
     {% include 'includes/sprites.njk' %}
     {% include 'includes/header.njk' %}
 
+    {% block scripts %}
+      {% include "./scripts.html" %}
+    {% endblock %}
+
     {% block breadcrumb %}
       {{ breadcrumb({
         href: "/service-manual/",
