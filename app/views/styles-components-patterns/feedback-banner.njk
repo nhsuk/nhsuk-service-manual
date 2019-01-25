@@ -1,8 +1,11 @@
+{% set pageTitle = 'Feedback banner' %}
+{% set pageDescription = 'Ask users for feedback, it makes your service better.' %}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/pagination/macro.njk' import pagination %}
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -20,23 +23,25 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Feedback banner</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Allow users to navigate between related pages, such as a guide to a single condition.</p>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
+
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Code and design</h2>
+    {{ designExample({
+      type: 'feedback-banner'
+    }) }}
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>How to use the feedback banner</h2>
+    <h2 class="nhsuk-u-margin-top-8">How to use the feedback banner</h2>
         <p>Make sure the feedback banner doesn't appear until the user has agreed to use the appropriate cookies.</p>
-        <p>Include a descriptive heading (h2)</p>
-        <p>Make the feedback/survey link text describe its purpose and destination</p>
+        <p>Include a descriptive heading.</p>
+        <p>Make the feedback/survey link text describe its purpose and destination.</p>
         <p>Add hidden text to the close button to give screen readers context.</p>
     <h2>When not to use the feedback banner</h2>
         <p>Do not use in states of emergency - when emergency messages are shown to a user.</p>
@@ -53,9 +58,14 @@
             </ul>
 
     <h3>Accessibility</h3>
-    <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to indicate that they are navigations links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. This will be read out by screen readers that support this attribute to help clarify what the list of links are.</p>
-    <p class="rich-text">Additionally there is a visually hidden heading title <code>Contents</code> which will be read by screen readers as a heading to the links.</p>
-    <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
+        <ul>
+            <li>exceeds AAA colour contrast guidelines with its text colour</li>
+            <li>exceeds AA colour contrast guidelines with its link colour (just short of AAA)</li>
+            <li>has a ‘Close’ action is button and not a link. Find out more about accessible links and buttons</li>
+            <li>includes hidden text within the ‘Close’ button to give screen readers context, for example: ‘Close feedback invite’</li>
+            <li>has a descriptive heading (h2)</li>
+            <li>includes link text that describes its purpose and destination.</li>
+        </ul>
     <h2>Research</h2>
     <p>The pagination component was tested in the context of a condition information guide (grouped pages on same subject) in three labs: 20th June 2018, 4th July 2018 and 16th July 2018.</p>
     <p>This component hasn't been tested on forms or 'related' pages.</p>
