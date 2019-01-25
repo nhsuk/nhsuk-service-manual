@@ -1,6 +1,7 @@
 {% set pageTitle = 'Grid' %}
 {% set pageDescription = 'Use the grid to make sure content and elements are laid out consistently.' %}
 {% extends 'includes/layout.njk' %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -28,67 +29,15 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-<div class="nhsuk-grid-column-full">
-  <div class="app-example nhsuk-u-margin-bottom-4">
-    <div class="nhsuk-grid-row">
-      <h4 class="nhsuk-u-margin-bottom-0">Full width (100%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-o-grid__item--full">
-          <p>nhsuk-grid-row</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Halves (50%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
-          <p>nhsuk-grid-column-one-half</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
-          <p>nhsuk-grid-column-one-half</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Thirds (33%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
-          <p>nhsuk-grid-column-two-thirds</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
-          <p>nhsuk-grid-column-one-third</p>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
-          <p>nhsuk-grid-column-one-third</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
-          <p>nhsuk-grid-column-two-thirds</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Quarters (25%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-three-quarters">
-          <p>nhsuk-grid-column-three-quarters</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-      </div>
-    </div>
+  <div class="nhsuk-grid-column-full">
+  {{ designExample({
+      type: 'grid'
+    }) }}
   </div>
+</div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h3>Screen size</h3>
+      <h3 class="nhsuk-u-margin-top-8">Screen size</h3>
       <p>Design for mobile first using a single-column layout and work up to wider layouts. Most visitors to the NHS website are on a mobile device, so it's our first consideration.</p>
       <p>The maximum page width is 1020px. Lines of text shouldn't be longer than 70 to 80 characters, for ease of reading.</p>
       <h3>Breakpoints</h3>
