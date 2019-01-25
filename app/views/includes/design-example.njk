@@ -35,7 +35,7 @@
         {% for snippet in snippets %}
           <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-{{ loop.index }}">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                HTML
+                {{ snippet.name }}
               </a>
           </div>
           <div class="code-snippet__preformatted js-hidden" data-index="ex-{{ loop.index }}">
