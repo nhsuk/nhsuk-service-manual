@@ -11,8 +11,24 @@
   {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
 {% endset %}
 
-{% set snippets = [{ name: 'HTML', code: html }, { name: 'Nunjucks', code: nunjucks }] %}
 
+{#
+  Set up the `snippets` array to be a definition of the types of snippet to
+  display. If `params.htmlOnly` is true, the only snippet type to show is HTML.
+  Otherwise we show HTML and nunjucks.
+
+  Code definitions should be an object with a `name` and the raw `code` to
+  render onto the page with the `|safe` filter.
+#}
+{% set htmlDefinition = { name: 'HTML', code: html } %}
+{% set nunjucksDefinition = { name: 'Nunjucks', code: nunjucks } %}
+{% if params.htmlOnly %}
+  {% set snippets = [htmlDefinition] %}
+{% else %}
+  {% set snippets = [htmlDefinition, nunjucksDefinition] %}
+{% endif %}
+
+<p>More than 1 snippet : {{snippets|length > 1}}</p>
 <div class="design-example">
 
   <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank">Open in new window</a>
@@ -21,31 +37,37 @@
   </div>
 
   <div class="code-snippet">
-      <ul class="app-tabs" role="tablist">
-          {% for snippet in snippets %}
-          <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
-              <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
-                {{ snippet.name }}
-              </a>
-          </li>
-          {% endfor %}
-      </ul>
+      {% if snippets|length > 1 %}
+          <ul class="app-tabs" role="tablist">
+              {% for snippet in snippets %}
+              <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
+                  <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
+                    {{ snippet.name }}
+                  </a>
+              </li>
+              {% endfor %}
+          </ul>
+      {% endif %}
 
       <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
         {% for snippet in snippets %}
+          {% if snippets|length > 1 %}
           <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-{{ loop.index }}">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
                 {{ snippet.name }}
               </a>
           </div>
-          <div class="code-snippet__preformatted js-hidden" data-index="ex-{{ loop.index }}">
+          {% endif %}
+          <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
               <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}
               </code></pre>
+              {% if snippets|length > 1 %}
               <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
                   <svg><use xlink:href="#caret-right"></use></svg>Close
               </button>
+              {% endif %}
           </div>
         {% endfor %}
       </div>
