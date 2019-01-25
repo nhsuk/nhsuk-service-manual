@@ -3,6 +3,9 @@
 {% set examplePath = 'app/components/' + params.type + '.njk' %}
 {% set standaloneURL = '/design-example/' + params.type %}
 
+{# `showExample` is true, unless explicitly turned off with params #}
+{% set showExample = params.showExample !== false %}
+
 {% set html %}
   {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
 {% endset %}
@@ -30,10 +33,12 @@
 
 <div class="design-example">
 
-  <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank">Open in new window</a>
-  <div class="code-embed">
-      <iframe title="{{ params.type }}" src="{{ standaloneURL }}" frameborder="0" scrolling="yes"></iframe>
-  </div>
+  {% if showExample %}
+    <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank">Open in new window</a>
+    <div class="code-embed">
+        <iframe title="{{ params.type }}" src="{{ standaloneURL }}" frameborder="0" scrolling="yes"></iframe>
+    </div>
+  {% endif %}
 
   <div class="code-snippet">
       {% if snippets|length > 1 %}
