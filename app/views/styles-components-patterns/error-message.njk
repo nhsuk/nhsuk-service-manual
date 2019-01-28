@@ -3,6 +3,7 @@
 {% from 'components/error-message/macro.njk' import errorMessage %}
 {% from 'components/date-input/macro.njk' import dateInput %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -28,54 +29,19 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
+    <h3 class="nhsuk-u-margin-top-8">Error message</h3>
+    {{ designExample({
+      type: 'error-message'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ errorMessage({
-      "text": "Error message about full name goes here"
-      }) }}
-    </div>
+    <h3 class="nhsuk-u-margin-top-8">Error message in context</h3>
+    {{ designExample({
+      type: 'error-message-in-context'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/error-message/index.html">Preview the error message component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/error-message">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h3>Error message in context</h3>
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ dateInput({
-      "id": "dob-day-error",
-      "namePrefix": "dob-day-error",
-      "fieldset": {
-          "legend": {
-          "text": "What is your date of birth?"
-          }
-      },
-      "hint": {
-          "text": "For example, 31 3 1980"
-      },
-      "errorMessage": {
-          "text": "Error message goes here"
-      },
-      "items": [
-          {
-          "name": "day",
-          "classes": "nhsuk-input--width-2 nhsuk-input--error"
-          },
-          {
-          "name": "month",
-          "classes": "nhsuk-input--width-2"
-          },
-          {
-          "name": "year",
-          "classes": "nhsuk-input--width-4"
-          }
-      ]
-      }) }}
-    </div>
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>When to use error messages </h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use error messages </h2>
     <p>Show an error message next to the field and in the <a href="patterns/error-summary/">error summary</a> when there is a validation error.</p>
     <p>Use standard messages for different components.</p>
     <p>Follow GOV.UK Design System's advice to try to <a href="https://www.gov.uk/service-manual/design/form-structure">design your service to be easy to use and understand so someone never sees an error message</a>.</p>
