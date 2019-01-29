@@ -1,16 +1,7 @@
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/fieldset/macro.njk' import fieldset %}
 
-{{ breadcrumb({
-  items: [
-    {
-      href: "/level-one",
-      text: "Level one"
-    },
-    {
-      href: "/level-one/level-two",
-      text: "Level two"
-    }
-  ],
-  href: "/level-one/level-two/level-three",
-  text: "Level three"
+{{ fieldset({
+  "legend": {
+    "text": "What is your address?"
+  }
 }) }}
