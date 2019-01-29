@@ -1,6 +1,7 @@
 {% set pageTitle = 'Grid' %}
 {% set pageDescription = 'Use the grid to make sure content and elements are laid out consistently.' %}
 {% extends 'includes/layout.njk' %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -28,67 +29,16 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-<div class="nhsuk-grid-column-full">
-  <div class="app-example nhsuk-u-margin-bottom-4">
-    <div class="nhsuk-grid-row">
-      <h4 class="nhsuk-u-margin-bottom-0">Full width (100%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-o-grid__item--full">
-          <p>nhsuk-grid-row</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Halves (50%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
-          <p>nhsuk-grid-column-one-half</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-half">
-          <p>nhsuk-grid-column-one-half</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Thirds (33%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
-          <p>nhsuk-grid-column-two-thirds</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
-          <p>nhsuk-grid-column-one-third</p>
-        </div>
-      </div>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-third">
-          <p>nhsuk-grid-column-one-third</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-two-thirds">
-          <p>nhsuk-grid-column-two-thirds</p>
-        </div>
-      </div>
-      <h4 class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4 ">Quarters (25%)</h4>
-      <div class="nhsuk-grid-row nhsuk-o-grid--example">
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-three-quarters">
-          <p>nhsuk-grid-column-three-quarters</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-        <div class="nhsuk-o-grid__item nhsuk-grid-column-one-quarter">
-          <p>nhsuk-grid-column-one-quarter</p>
-        </div>
-      </div>
-    </div>
+  <div class="nhsuk-grid-column-full">
+  {{ designExample({
+      type: 'grid',
+      htmlOnly: true
+    }) }}
   </div>
+</div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h3>Screen size</h3>
+      <h3 class="nhsuk-u-margin-top-8">Screen size</h3>
       <p>Design for mobile first using a single-column layout and work up to wider layouts. Most visitors to the NHS website are on a mobile device, so it's our first consideration.</p>
       <p>The maximum page width is 1020px. Lines of text shouldn't be longer than 70 to 80 characters, for ease of reading.</p>
       <h3>Breakpoints</h3>
@@ -104,15 +54,35 @@
       <p class="rich-text">Within <code>nhsuk-width-container</code>, add <code>nhsuk-main-wrapper</code> to your <code>&lt;main&gt;</code> element.</p>
       <p>This gives responsive padding to the top and bottom of the page and will be the container for your main content.</p>
       <p class="rich-text">Add an id to the <code>&lt;main&gt;</code> element if you need a 'skip to main content' link:</p>
-      <h3>Page rows</h3>
+      {{ designExample({
+        type: 'grid-wrappers',
+        htmlOnly: true,
+        showExample: false
+      }) }}
+      <h3 class="nhsuk-u-margin-top-8">Page rows</h3>
       <p class="rich-text"><code>nhsuk-o-grid</code> acts as a wrapper around grid items.</p>
       <p class="rich-text">It uses a negative margin value of -16px on the left and right hand sides, removing the padding set by the <code>nhsuk-o-width-wrapper</code> element. It also makes sure grid items stay on the same row.</p>
       <p class="rich-text">If you fill a page width with grid items, wrap the next set of grid items with the <code>nhsuk-o-grid</code> wrapper.</p>
-      <h3>Page width</h3>
+      {{ designExample({
+        type: 'grid-rows',
+        htmlOnly: true,
+        showExample: false
+      }) }}
+      <h3 class="nhsuk-u-margin-top-8">Page width</h3>
       <p class="rich-text">When using a wider grid unit, wrap text content with the class <code>nhsuk-reading-width</code> to limit the number of characters per line (70 to 80 characters maximum).</p>
-      <h3>Spacing</h3>
+      {{ designExample({
+        type: 'grid-page-width',
+        htmlOnly: true,
+        showExample: false
+      }) }}
+      <h3 class="nhsuk-u-margin-top-8">Spacing</h3>
       <p class="rich-text">Helper classes <code>nhsuk-page-heading</code> and <code>nhsuk-page-content</code> align content and give page elements equal spacing.</p>
-      <h3>Grid overrides for different screen sizes</h3>
+      {{ designExample({
+        type: 'grid-spacing',
+        htmlOnly: true,
+        showExample: false
+      }) }}
+      <h3 class="nhsuk-u-margin-top-8">Grid overrides for different screen sizes</h3>
       <p>You'll need to include these grid override classes to use grid items on tablet or mobile screens.</p>
       <h4>All screen sizes</h4>
       <table>
@@ -146,7 +116,12 @@
         </tbody>
       </table>
       <p class="rich-text">For example, use <code>nhsuk-u-one-third</code> to give a grid item one-third width on any breakpoint and screen size.</p>
-      <h4>Tablet and desktop screen sizes</h4>
+      {{ designExample({
+        type: 'grid-overrides-any-breakpoint',
+        htmlOnly: true,
+        showExample: false
+      }) }}
+      <h4 class="nhsuk-u-margin-top-8">Tablet and desktop screen sizes</h4>
       <table>
         <thead>
           <tr>
@@ -178,6 +153,11 @@
         </tbody>
       </table>
       <p class="rich-text">For example, use <code>nhsuk-u-one-quarter-tablet</code> to give a grid item one-quarter width on tablet and desktop breakpoints and screen sizes:</p>
+      {{ designExample({
+        type: 'grid-overrides-tablet-desktop',
+        htmlOnly: true,
+        showExample: false
+      }) }}
 
       <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: <time>August 2018</time></p>
