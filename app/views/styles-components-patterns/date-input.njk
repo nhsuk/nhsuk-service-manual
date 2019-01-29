@@ -3,6 +3,7 @@
 {% extends 'includes/layout.njk' %}
 {% from 'components/date-input/macro.njk' import dateInput %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -25,43 +26,14 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ dateInput({
-      "id": "dob",
-      "namePrefix": "dob",
-      "fieldset": {
-          "legend": {
-          "text": "What is your date of birth?"
-          }
-      },
-      "hint": {
-          "text": "For example, 31 3 1980"
-      },
-      "items": [
-          {
-          "name": "day",
-          "classes": "nhsuk-input--width-2"
-          },
-          {
-          "name": "month",
-          "classes": "nhsuk-input--width-2"
-          },
-          {
-          "name": "year",
-          "classes": "nhsuk-input--width-4"
-          }
-      ]
-      }) }}
-    </div>
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'date-input'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/date-input/index.html">Preview the date input component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/date-input">get the latest date input code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use date input</h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use date input</h2>
     <p>The <a href="https://design-system.service.gov.uk/components/date-input/">GOV.UK design system</a> suggests using date input when you’re asking users for a date they already know or can look up without using a calendar.</p>
     <h2>When not to use date input</h2>
     <p>Do not use date input if users are unlikely to know the exact date you’re asking about.</p>
@@ -74,46 +46,15 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-full">
     <h2>Error messages</h2>
     <p>Style error messages like this:</p>
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ dateInput({
-      "id": "dob-errors",
-      "fieldset": {
-          "legend": {
-          "text": "What is your date of birth?"
-          }
-      },
-      "hint": {
-          "text": "For example, 31 3 1980"
-      },
-      "errorMessage": {
-          "text": "Error message goes here"
-      },
-      "items": [
-          {
-          "name": "day",
-          "classes": "nhsuk-input--width-2 nhsuk-input--error"
-          },
-          {
-          "name": "month",
-          "classes": "nhsuk-input--width-2 nhsuk-input--error"
-          },
-          {
-          "name": "year",
-          "classes": "nhsuk-input--width-4 nhsuk-input--error"
-          }
-      ]
-      }) }}
-    </div>
+    {{ designExample({
+      type: 'date-input-errors'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/date-input/multiple-errors.html">Preview the date input with errors component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/date-input">get the latest date input with errors component code</a> in the NHS.UK frontend library in GitHub.</p>
-    <p>Follow the guidance on <a href="/service-manual/styles-components-patterns/error-message">error messages</a> and give specific error messages for specific error states.</p>
+    <p class="nhsuk-u-margin-top-8">Follow the guidance on <a href="/service-manual/styles-components-patterns/error-message">error messages</a> and give specific error messages for specific error states.</p>
     <p>Read more guidance on date input specific error messaging <a href="https://design-system.service.gov.uk/components/date-input/">on the GOV.UK design system</a>.</p>
     <h2>Research</h2>
     <p>We tested date input as part of a "Register for a GP" journey in 2 labs. All users understood what they needed to do and were able to successfully complete the set task.</p>
