@@ -4,6 +4,7 @@
 
 {% from 'components/error-summary/macro.njk' import errorSummary %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -29,6 +30,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2 >Code and design</h2>
+<<<<<<< HEAD
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -54,6 +56,16 @@
     <h2>When to use an error summary</h2>
     <p>Always show an error summary when there is a validation error, even if there’s only 1 mistake.</p>
     <h2 id="how-it-works">How to use an error summary</h2>
+=======
+    {{ designExample({
+      type: 'error-summary'
+    }) }}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-u-margin-top-8">When to use an error summary</h2>
+    <p>Always show an error summary when there is a validation error, even if there’s only one.</p>
+    <h2 id="how-it-works">How it works</h2>
+>>>>>>> master
     <p>You must:</p>
     <ul>
       <li class="rich-text">add "Error: " to the beginning of the <code>&lt;title&gt;</code> so screen readers read it out as soon as possible</li>

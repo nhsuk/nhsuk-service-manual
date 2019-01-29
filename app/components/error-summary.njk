@@ -1,0 +1,16 @@
+{% from 'components/error-summary/macro.njk' import errorSummary %}
+
+{{ errorSummary({
+  "titleText": "Message to alert the user to a problem goes here",
+  "descriptionText": "Optional description of the errors and how to correct them",
+  "errorList": [
+    {
+      "text": "Descriptive link to the question with an error",
+      "href": "#example-error-1"
+    },
+    {
+      "text": "Descriptive link to the question with an error",
+      "href": "#example-error-1"
+    }
+  ]
+}) }}

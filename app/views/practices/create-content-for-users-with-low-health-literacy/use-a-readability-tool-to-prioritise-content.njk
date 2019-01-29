@@ -1,0 +1,162 @@
+{% set pageTitle = 'Use a readability tool to prioritise content' %}
+{% set pageDescription = 'If you have a lot of content, one way to decide what to focus on is to use a readability tool.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/tables/macro.njk' import table %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from 'components/action-link/macro.njk' import actionLink %}
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    },
+    {
+      href: "/service-manual/practices",
+      text: "Practices"
+    }
+  ],
+    href: "/service-manual/practices/create-content-for-users-with-low-health-literacy",
+    text: "Create content for users with low health literacy"
+
+  }) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p>It cannot tell you how easy your content is to understand. But it can show if the language might be too complex for many people.</p>
+
+    <h2>Use the SMOG calculator</h2>
+    <p>We use a tool called the SMOG calculator to measure readability.</p>
+    <p>This uses the number of sentences and complex words (3 or more syllables) to give a readability score.</p>
+    <p>Before using the SMOG calculator:</p>
+
+    <ul>
+    <li>add full stops to the end of every heading and bullet point</li>
+    <li>if the title of the content includes a word with 3 or more syllables (for example, “paracetamol"), remove this word from the text</li>
+    </ul>
+
+    <p>This will help you get more accurate scores when comparing content.</p>
+
+    {{ actionLink({
+      "text": "Use the SMOG calculator",
+      "href": "https://www.learningandwork.org.uk/SMOG-calculator/smogcalc.php"
+    }) }}
+
+    <h2>Prioritise content with a score over 14</h2>
+    <p>The lower the score, the fewer complex words you're using.</p>
+    <p>A score higher than 14 means most users might struggle with the language in your content.</p>
+
+    {{ table({
+      panel: false,
+      caption: "What SMOG readability scores mean",
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "SMOG readability score"
+        },
+        {
+          text: "UK adults at this level"
+        }
+        ,
+        {
+          text: "Typical literacy skills at this level"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "7 to 9"
+          },
+          {
+            text: "93%"
+          },
+          {
+            text: "understands short, simple content on familiar topics from familiar sources"
+          }
+        ],
+        [
+          {
+            text: "10 to 11"
+          },
+          {
+            text: "76%"
+          },
+          {
+            text: "understands short, simple content from a range of everyday sources (like newspapers)"
+          }
+        ],
+        [
+          {
+            text: "12 to 13"
+          },
+          {
+            text: "51%"
+          },
+          {
+            text: "understands simple content of varying lengths on a variety of topics"
+          }
+        ],
+        [
+          {
+            text: "14 to 16"
+          },
+          {
+            text: "22%"
+          },
+          {
+            text: "understands content of varying complexity, from a range of sources"
+          }
+        ],
+        [
+          {
+            text: "17 or more"
+          },
+          {
+            text: "Less than 22%"
+          },
+          {
+            text: "able to obtain, interpret and evaluate complex content"
+          }
+        ]
+      ]
+    }) }}
+
+    {{ insetText({
+      "HTML": "
+      <p>Read our page about <a href='/service-manual/practices/create-content-for-users-with-low-health-literacy' title='External website'>health literacy</a> to see why it’s important to create content that’s simple to read.</p>"
+    }) }}
+
+    <h2>Do not rely on readability scores alone</h2>
+
+    <p>A readability score under 14 does not prove your content is useful for your users. It just means you're not using lots of complex words.</p>
+    <p>Readability scores do not tell you if your content is easy to understand or act on.</p>
+    <p>You can only find out how well your content works by testing it with users.</p>
+
+    <h2>Improve your content</h2>
+    <p>When you’ve identified content with a high readability score, look to improve it using:</p>
+    <ul>
+      <li>the <a href="/service-manual/design-principles/">NHS design principles</a></li>
+      <li>our guidance about <a href="/service-manual/content-style-guide/how-we-write/">how to write for NHS digital services</a></li>
+    </ul>
+
+    {{ reviewDate({
+      "lastReview": "January 2019"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

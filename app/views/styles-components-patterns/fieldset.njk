@@ -4,6 +4,7 @@
 
 {% from 'components/fieldset/macro.njk' import fieldset %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -34,25 +35,14 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h3>Fieldset</h3>
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ fieldset({
-      "legend": {
-          "text": "What is your address?"
-      }
-      }) }}
-    </div>
+    {{ designExample({
+      type: 'fieldset'
+    }) }}
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/fieldset/index.html">Preview the fieldset component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/fieldset">get the latest fieldset component code</a> in the NHS.UK frontend library in GitHub.</p>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+<<<<<<< HEAD
 
     <h3>Fieldset as page heading</h3>
   </div>
@@ -78,6 +68,18 @@
     <p class="rich-text">The first element in a fieldset must be a <code>legend</code> which describes the group of inputs. This could be a question, such as "What is your current address?" or a statement like "Personal details".</p>
     <p class="rich-text">If you’re asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page"> 1 question per page</a>, as recommended by the GOV.UK design system, you can set the <code>&lt;legend&gt;</code> as the page heading. You can see an example at the top of this page. This is good practice as it means that users of screen readers will only hear the contents once.</p>
     <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how the GOV.UK design system sets legends as headings</a>.</p>
+=======
+    <h3 class="nhsuk-u-margin-top-8">Fieldset as page heading</h3>
+    {{ designExample({
+      type: 'fieldset-as-heading'
+    }) }}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 id="how-it-works" class="nhsuk-u-margin-top-8">How fieldset works</h2>
+    <p class="rich-text">The first element inside a fieldset must be a <code>legend</code> which describes the group of inputs. This could be a question, such as ‘What is your current address?’ or a statement like ‘Personal details’.</p>
+    <p class="rich-text">If you’re asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended by GOV.UK Design System, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading, as shown in the example below. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+    <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how GOV.UK Design System set legends as headings</a>.</p>
+>>>>>>> master
     <h3>Accessibility</h3>
     <p>On question pages containing a group of inputs, include the question as the legend as that helps screenreader users understand that the inputs are all related to that question.</p>
     <p>Include any general help text which is important for filling in the form and cannot be written as <a href="/service-manual/patterns/hint-text">hint text</a> in the legend, but try to keep it as concise as possible.</p>

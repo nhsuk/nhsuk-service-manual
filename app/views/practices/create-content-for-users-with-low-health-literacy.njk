@@ -1,0 +1,113 @@
+{% set pageTitle = 'Create content for users with low health literacy' %}
+{% set pageDescription = 'NHS services are for everyone. But many adults in the UK have low "health literacy" skills. This means they struggle to read and understand medical content intended for the public.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/review-date/macro.njk' import reviewDate %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/practices",
+  text: "Practices"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2>What is health literacy?</h2>
+
+    <p>Health literacy is about a person's ability to understand and use information to make decisions about their health.</p>
+
+    <p>A user with low health literacy will generally struggle to:</p>
+
+    <ul>
+      <li>read and understand health information</li>
+      <li>know how to act on this information</li>
+      <li>know which health services to use and when to use them</li>
+    </ul>
+
+    <p>Research shows that:</p>
+
+    <ul>
+      <li>more than 4 in 10 adults struggle with health content for the public</li>
+      <li>more than 6 in 10 adults struggle with health content that includes numbers and statistics</li>
+    </ul>
+
+    <p>This is because a lot of health content is written, often unintentionally, for people with higher health literacy skills.</p>
+
+    <h2>Why health literacy is important</h2>
+
+    <p>Low health literacy has been linked to a range of important problems.</p>
+
+    <p>These include:</p>
+
+    <ul>
+      <li>unhealthy lifestyles and poor general health</li>
+      <li>low use of preventative services, like vaccinations and screening</li>
+      <li>difficulty taking medicines correctly</li>
+      <li>increased A&E attendances and hospital admissions</li>
+      <li>reduced life expectancy</li>
+    </ul>
+
+    <p>It's estimated that health literacy-related problems like these account for up to 5% of national health spending.</p>
+
+    <p>Health literacy is also a health inequality issue. There is a close link between socio-economic deprivation and low health literacy.</p>
+
+    <h2>Examples of problems caused by low health literacy</h2>
+
+    <p>Here are some real examples where low health literacy caused an issue:</p>
+
+    <ul>
+      <li>a woman who sprayed her inhaler on her neck because she had been told to spray it on her "throat"</li>
+      <li>a man who did not turn up for cancer tests because he did not know Radiology and X-ray department were the same thing</li>
+      <li>a man with diabetes who decided to stop taking his medicine because he had trouble understanding the instructions</li>
+      <li>a woman who thought chemotherapy would not help because it was given into a vein on the other side of the body to where her cancer was</li>
+    </ul>
+
+    <p>It’s easy to see from this how miscommunication of health information could be very serious, and how clearer information could help.</p>
+
+    <h2>How you can create better content</h2>
+
+    <p>You can help reduce the problems caused by low health literacy by making sure your content is written at a level most users can understand.</p>
+
+    <p>You can do this by:</p>
+
+    <ul>
+      <li><a href="/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content">using a readability tool to help prioritise your content</a></li>
+      <li>following the <a href="/service-manual/design-principles">NHS design principles</a> when you create content</li>
+      <li>following our advice <a href="/service-manual/content/how-we-write">how to write for NHS digital services</a></li>
+      <li>doing user research with users who have low health literacy</li>
+    </ul>
+    <p>We’ve found that doing these things benefits all users, not just those with low health literacy.</p>
+
+    <h3>Read more about this</h3>
+
+    <ul>
+      <li><a href="https://www.hee.nhs.uk/our-work/health-literacy">Health Education England: health literacy toolkit</a></li>
+      <li><a href="https://www.learningandwork.org.uk/wp-content/uploads/2017/03/Readability.pdf">Learning and Work Institute: How to produce clear written materials for a range of readers (PDF, 377kb)</a></li>
+      <li><a href="https://www.pifonline.org.uk/toolkit/">Patient Information Forum: Toolkit for creating health information that works</a></li>
+      <li><a href="https://health.gov/healthliteracyonline/">US Office for Disease Prevention and Health Promotion: Health literacy online</a></li>
+    </ul>
+
+    {{ reviewDate({
+      "lastReview": "January 2019"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}
