@@ -1,5 +1,6 @@
+{% set pageTitle = 'Buttons' %}
+{% set pageDescription = 'Use buttons to help users carry out an action on a page like starting an application or saving their progress.'%}
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/button/macro.njk' import button %}
 {% from 'components/panel/macro.njk' import panel %}
 
@@ -20,16 +21,16 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Buttons</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use buttons to help users carry out an action on a page like starting an application or saving their progress.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p>We have 3 buttons</p>
     <ul>
-      <li><a href="#primary-button">Primary button</a></li>
-      <li><a href="#secondary-button">Secondary button</a></li>
-      <li><a href="#reverse-button">White button on solid background colour (reverse button)</a></li>
+      <li><a href="#primary-button">primary button</a></li>
+      <li><a href="#secondary-button">secondary button</a></li>
+      <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
     </ul>
   </div>
 </div>
@@ -48,8 +49,8 @@
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/index.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
     <h3>When to use a primary button</h3>
-    <p>Use the primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
-    <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
+    <p>Use a primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
+    <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -68,8 +69,8 @@
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/secondary.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
     <h3>When to use a secondary button</h3>
-    <p>Use a secondary button on pages that have multiple actions or when standard link text isn't being noticed by users.</p>
-    <p>Keep GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">'Start with one thing per page' guidance</a> in mind when using buttons.</p>
+    <p>Use a secondary button on pages that have more than 1 action or when users aren't noticing standard link text.</p>
+    <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -87,33 +88,37 @@
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/button/reverse.html">Preview the button component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest button code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h3>When to use a white button on solid background colour button</h3>
-    <p>White buttons on solid background colour are good on components such as interuption cards (see the intruption card being used on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>), where link text, primary and secondary buttons would be lost.   </p>
-    <h2 class="nhsuk-u-margin-top-8" id="how-to-use-care-cards">How to use buttons</h2>
-    <p><a href="https://design-system.service.gov.uk/">GOV.UK design system</a> suggests using the button component to help users carry out an action on a page like starting an application or saving their progress.</p>
-    <p>This advice relates to starting or saving transactional journeys, not links from one flat content page to another.</p>
-    <p>Write button text in sentence case, describing the action it performs. For example ‘Save and continue’ or ‘Start now’.</p>
+    <h3>When to use a white button on solid background colour</h3>
+    <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>.)</p>
+    <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
+     <h2 class="nhsuk-u-margin-top-8"  id="when-to-use-buttons">When to use buttons</h2>
+     <p>Use buttons to start or save transactional journeys.</p>
+    <h2 class="nhsuk-u-margin-top-8"  id="when-not-to-use-buttons">When not to use buttons</h2>
+    <p>Do not use buttons as links:
+    <ul><li>to pages which aren't part of your user journey</li>
+    <li>from 1 flat content page to another</li>
+    <li>to external websites</li></ul>
+    <p>Try not to have multiple buttons on 1 page. Follow GOV.UK guidance on <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">One thing per page</a>.</p>
+    <h2 class="nhsuk-u-margin-top-8" id="how-to-use-buttons">How to use buttons</h2>
+    <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK design system</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
+        <p>Write button text in sentence case and describe the action the button performs. For example "Save and continue" or "Start now".</p>
     <p>Align the primary action button to the left edge of your form.</p>
     <h3>Disabled buttons</h3>
-    <p>Disabled buttons have poor contrast and can confuse some users, so avoid them if possible.</p>
-    <p>Only use disabled buttons if research shows it makes the user interface easier to understand.</p>
-    <p>We have developed disabled versions of the three buttons shown above but they're yet to be tested. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest disabled button code</a> in the NHS.UK frontend library in GitHub.</p>
+    <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
+    <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest disabled button code</a> in the NHS.UK frontend library in GitHub.</p>
     <h3>Accessibility</h3>
-    <p>Make sure the text used describes the action.</p>
-    <p>All three active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
+    <p>Make sure the text you use describes the action.</p>
+    <p>All 3 active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
     <ul>
-      <li>Primary button 5.12:1</li>
-      <li>Secondary button 7.75:1</li>
-      <li>White button on solid background colour  14.42:1</li>
+      <li>primary button 5.12:1</li>
+      <li>secondary button 7.75:1</li>
+      <li>white button on solid background colour  14.42:1</li>
     </ul>
-    <p>Please note that the disabled versions of the three buttons do not meet accessibility colour contrast ratios. If your team have discovered a user need for disabled buttons, use with caution and test with users with access needs.</p>
-    <h2 class="nhsuk-u-margin-top-8"  id="when-not-to-use-this-component">When not to use this component</h2>
-    <p>Don't use buttons as links to non related pages or external websites.</p>
-    <p>Try not to have multiple buttons on one page, we suggest following GOV.UK 'one thing per page' advice <a href="https://www.gov.uk/service-manual/design/form-structure">https://www.gov.uk/service-manual/design/form-structure</a></p>
-    <h2 class="nhsuk-u-margin-top-8"  id="research">Research</h2>
-    <p>Primary buttons were tested as part of a register with a GP form. Users understood that it was a button and knew what action it performed. All participants were able to complete the set task.</p>
+    <p>Please note that the disabled versions of the 3 buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
+        <h2 class="nhsuk-u-margin-top-8"  id="research">Research</h2>
+    <p>We tested a primary button on a "Register with a GP" form. Users understood that it was a button and knew what action it performed. Everyone was able to complete the set task.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss buttons on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>

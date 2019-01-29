@@ -1,5 +1,6 @@
+{% set pageTitle = 'Date input' %}
+{% set pageDescription = 'Use date input to help users enter a memorable date, like their date of birth.' %}
 {% extends 'includes/layout.njk' %}
-
 {% from 'components/date-input/macro.njk' import dateInput %}
 {% from 'components/panel/macro.njk' import panel %}
 
@@ -20,7 +21,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Date input</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the date input component to help users enter a memorable date.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use date input to help users enter a memorable date, like their date of birth.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -60,22 +61,22 @@
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/date-input/index.html">Preview the date input component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/date-input">get the latest date input code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use the date input component</h2>
-    <p><a href="https://design-system.service.gov.uk/components/date-input/">The GOV.UK Design System suggests</a> using the date input component when you’re asking users for a date they’ll already know, or can look up without using a calendar.</p>
-    <h2>When not to use the date input component</h2>
-    <p>Do not use the date input component if users are unlikely to know the exact date of the event you’re asking about.</p>
-    <p>Read more on the GOV.UK Design System about how to <a href="https://design-system.service.gov.uk/patterns/dates/">ask users for dates</a>.</p>
-    <h2>How it works</h2>
-    <p>The date input component consists of 3 fields to let users enter a day, month and year.</p>
-    <p class="rich-text">The 3 date fields are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘What is your date of birth?’.</p>
-    <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as GOV.UK Design System recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
-    <p>Read more on the GOV.UK Design System about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how to set legends as headings</a>.</p>
+    <h2>When to use date input</h2>
+    <p>The <a href="https://design-system.service.gov.uk/components/date-input/">GOV.UK design system</a> suggests using date input when you’re asking users for a date they already know or can look up without using a calendar.</p>
+    <h2>When not to use date input</h2>
+    <p>Do not use date input if users are unlikely to know the exact date you’re asking about.</p>
+    <p>Read more on the GOV.UK design system about how to <a href="https://design-system.service.gov.uk/patterns/dates/">ask users for dates</a>.</p>
+    <h2>How to use date input</h2>
+    <p>Date input consists of 3 fields to let users enter a day, month and year.</p>
+    <p class="rich-text">Group the 3 date fields together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "What is your date of birth?".</p>
+    <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as the GOV.UK design system recommends, you can set the page heading as the <code>&lt;legend&gt;</code>. This is good practice as it means that screen reader users will only hear the contents once.</p>
+    <p>Read more on the GOV.UK design system about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how to set legends as headings</a>.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2>Error messages</h2>
-    <p>Error messages should be styled like this:</p>
+    <p>Style error messages like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -112,21 +113,20 @@
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/date-input/multiple-errors.html">Preview the date input with errors component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/date-input">get the latest date input with errors component code</a> in the NHS.UK frontend library in GitHub.</p>
-    <p>Make sure errors follow the guidance in <a href="/patterns/error-message/">error message</a> and have specific error messages for specific error states.</p>
-    <p>There is some great guidance on date input specific error messaging <a href="https://design-system.service.gov.uk/components/date-input/">on the GOV.UK Design System</a></p>
+    <p>Follow the guidance on <a href="/service-manual/styles-components-patterns/error-message">error messages</a> and give specific error messages for specific error states.</p>
+    <p>Read more guidance on date input specific error messaging <a href="https://design-system.service.gov.uk/components/date-input/">on the GOV.UK design system</a>.</p>
     <h2>Research</h2>
-    <p>Date input has been tested in as part of a register for a GP journey in 2 labs. All users understood the action they performed and were able to successfully complete the set task.</p>
-    <p>If you’ve used this component, get in touch to share your user research findings.</p>
-    <p>As our date input is based on the one featured in the <a href="https://design-system.service.gov.uk/components/date-input/">GOV.UK Design System</a>, they suggest more research is needed to determine the extent to which users struggle to enter months as numbers, and whether allowing them to enter months as text is helpful.</p>
+    <p>We tested date input as part of a "Register for a GP" journey in 2 labs. All users understood what they needed to do and were able to successfully complete the set task.</p>
+    <p>If you’ve used this component, <a href="/service-manual/contribute">get in touch</a> to share your user research findings.</p>
+    <p>Our date input is based on the one in the <a href="https://design-system.service.gov.uk/components/date-input/">GOV.UK design system</a>. GOV.UK say that they need to do more research to understand if users struggle to enter months as numbers and whether it's more helpful to let them enter months as text.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss date input on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>
     {{ panel({
     "label": "Similar patterns",
-    "HTML": "<ul>
-                <li></li>
+    "HTML": "<ul><li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
             </ul>"
     }) }}
 

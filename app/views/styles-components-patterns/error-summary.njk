@@ -1,3 +1,5 @@
+{% set pageTitle = "Error summary" %}
+{% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/error-summary/macro.njk' import errorSummary %}
@@ -21,13 +23,40 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Error summary</h1>
-    <p class="nhsuk-body-l">Use this component at the top of a page to summarise any errors a user has made.</p>
-    <p class="nhsuk-u-margin-bottom-8">When a user makes an error, you must show both an error summary and an <a href="/service-manual/patterns/error-message">error message</a> next to each answer that contains an error.</p>
+    <p class="nhsuk-body-l">Include an error summary at the top of a page to summarise any mistakes a user has made.</p>
+    <p class="nhsuk-u-margin-bottom-8">When a user makes a mistake, you must show an error summary at the top of the page as well as an <a href="/service-manual/patterns/error-message">error message</a> next to each answer that contains an error.</p>
 </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2 >Code and design</h2>
+<<<<<<< HEAD
+  </div>
+  <div class="nhsuk-grid-column-full">
+    <div class="app-example nhsuk-u-margin-bottom-4">
+      {{ errorSummary({
+      "titleText": "There is a problem",
+      "descriptionText": "Optional description of the errors and how to correct them",
+      "errorList": [
+          {
+          "text": "Link to error with explanation",
+          "href": "#example-error-1"
+          },
+          {
+          "text": "Link to error with explanation",
+          "href": "#example-error-1"
+          }
+      ]
+      }) }}
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/error-summary/index.html">Preview the error summary component</a></p>
+    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/error-summary">get the latest error summary code</a> in the NHS.UK frontend library in GitHub.</p>
+    <h2>When to use an error summary</h2>
+    <p>Always show an error summary when there is a validation error, even if there’s only 1 mistake.</p>
+    <h2 id="how-it-works">How to use an error summary</h2>
+=======
     {{ designExample({
       type: 'error-summary'
     }) }}
@@ -36,34 +65,36 @@
     <h2 class="nhsuk-u-margin-top-8">When to use an error summary</h2>
     <p>Always show an error summary when there is a validation error, even if there’s only one.</p>
     <h2 id="how-it-works">How it works</h2>
+>>>>>>> master
     <p>You must:</p>
     <ul>
-      <li class="rich-text">add ‘Error: ’ to the beginning of the <code>&lt;title&gt;</code> so screen readers read it out as soon as possible</li>
+      <li class="rich-text">add "Error: " to the beginning of the <code>&lt;title&gt;</code> so screen readers read it out as soon as possible</li>
       <li>show an error summary at the top of a page</li>
-      <li>move keyboard focus to the error summary</li>
-      <li>include the heading ‘There is a problem’</li>
+      <li>move the keyboard focus to the error summary</li>
+      <li>include the heading "There is a problem"</li>
       <li>link to each of the answers that have validation errors</li>
       <li>show the same error messages next to the inputs with errors</li>
     </ul>
-    <p>Follow GOV.UK Design System guidance on <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a>.</p>
-    <p>GOV.UK Design System has some great <a href="https://design-system.service.gov.uk/components/error-summary/">advice on how the error summary works</a> along with guidance on how to use it effectively.</p>
+    <p>Follow GOV.UK design system guidance on:
+    <ul><li><a href="https://design-system.service.gov.uk/components/error-summary/">error summaries</a> </li>
+    <li><a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a></li></ul>
+    </p>
     <h2>Research</h2>
-    <p>Error messages designed using this guidance have been tested with all types of users on GOV.UK live services, including tax credits.</p>
-    <p>Research showed users:</p>
+        <p>GOV.UK research on error summaries showed users:</p>
     <ul>
       <li>understood what went wrong</li>
       <li>knew how to fix the problem</li>
       <li>were able to recover from the error</li>
     </ul>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss error summaries on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-                <li></li>
+                <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
             </ul>"
     }) }}
   </div>
