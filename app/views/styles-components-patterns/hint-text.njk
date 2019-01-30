@@ -4,6 +4,7 @@
 
 {% from 'components/hint/macro.njk' import hint %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,20 +27,16 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ hint({
-      "text": "It’s on your National Insurance card, benefit letter, payslip or P60.\nFor example, ‘QQ 12 34 56 C’.\n"
-      }) }}
-    </div>
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'hint-text'
+    }) }}
   </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/hint/index.html">Preview the hint text component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/hint">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>How to use hint text </h2>
+    <h2 class="nhsuk-u-margin-top-8">How to use hint text </h2>
     <p>Use hint text that’s relevant for most of your users - like where to find information or how their data will be used.</p>
     <h2>Research</h2>
     <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your research findings</a>.</p>

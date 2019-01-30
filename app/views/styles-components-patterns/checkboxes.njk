@@ -3,6 +3,7 @@
 {% extends 'includes/layout.njk' %}
 {% from 'components/checkboxes/macro.njk' import checkboxes %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -27,41 +28,12 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h2 >Code and design</h2>
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ checkboxes({
-      "idPrefix": "nationality",
-      "name": "nationality",
-      "fieldset": {
-          "legend": {
-          "text": "What is your nationality?"
-          }
-      },
-      "hint": {
-          "text": "If you have more than 1 nationality, select all the options that are relevant to you."
-      },
-      "items": [
-          {
-          "value": "british",
-          "text": "British"
-          },
-          {
-          "value": "irish",
-          "text": "Irish"
-          },
-          {
-          "value": "other",
-          "text": "citizen of another country"
-          }
-      ]
-      }) }}
-    </div>
+     {{ designExample({
+      type: 'checkboxes'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/checkboxes/index.html">Preview the checkbox component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/checkboxes">get the latest checkbox code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use checkboxes</h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use checkboxes</h2>
     <p>Use checkboxes when you need to help users:</p>
     <ul>
         <li>select more than 1 option from a list</li>
