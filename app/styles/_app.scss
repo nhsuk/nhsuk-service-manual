@@ -287,11 +287,17 @@
 /* Design principles stuff ends */
 
 .ogl-footer {
-    background-color: #d8dde0;   
+    background-color: #d8dde0;
 }
 
 .ogl-text {
     font-weight: 400;
     font-size: .875rem;
     color: #425563;
+}
+
+// Fix for ie8
+.nhsuk-header,
+.nhsuk-hero {
+  display: block;
 }
