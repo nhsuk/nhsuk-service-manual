@@ -1,3 +1,5 @@
+{% set pageTitle = "Radios" %}
+{% set pageDescription = "Use radios when you want users to select only 1 option from a list."%}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/radios/macro.njk' import radios %}
@@ -20,6 +22,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
       <h1 class="nhsuk-u-margin-bottom-8">Radios</h1>
+         <p class="nhsuk-body-l">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -54,27 +57,24 @@
     </div>
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/radios/index.html">Preview the radio component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/radios">get the latest radios code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2 id="when-to-use-this-component">When to use radios</h2>
-    <p>Use the radios component when users can only select one option from a list.</p>
-    <h2 id="when-not-to-use-this-component">When not to use this component</h2>
-    <p>Do not use the radios component if users might need to select more than one option. In this case, you should use the <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> component instead.</p>
-    <h2 id="how-it-works">How radios work</h2>
-    <p class="rich-text">Radios are grouped together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them, as shown in the examples on this page. This is usually a question, like ‘Where do you live?’.</p>
-    <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a> as recommended, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
-    <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how GOV.UK set legends as headings</a>.</p>
-    <p>Unlike with checkboxes, users can only select one option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone. </p>
-    <p>If needed, add a hint explaining this, for example, ‘Select one option’.</p>
+      <h2 id="when-to-use-this-component">When to use radios</h2>
+    <p>Use radios if users can only choose 1 option from a list.</p>
+    <h2 id="when-not-to-use-this-component">When not to use radios</h2>
+    <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
+    <h2 id="how-it-works">How to use radios</h2>
+    <p class="rich-text">Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Where do you live?".</p>
+    <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as the GOV.UK design system recommends, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+    <p>Read more on the GOV.UK design system about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+    <p>Unlike with checkboxes, users can only select 1 option from a list of radios. Do not assume that users will know how many options they can select. Make it clear with a hint - for example, say: "Select 1 option".</p>
     <p>Do not pre-select radio options as this makes it more likely that users will:</p>
     <ul>
       <li>not realise they’ve missed a question</li>
       <li>submit the wrong answer</li>
     </ul>
-    <p>Users cannot go back to having no option selected once they have selected one, without refreshing their browser window. Therefore, you should include ‘None of the above’ or ‘I do not know’ if they are valid options. </p>
+    <p>Users can't go back to having no option selected once they have selected one, without refreshing their browser window. So you should include ‘None of these’ or ‘I do not know’ if they are valid options. </p>
     <p>Order radio options alphabetically by default. </p>
     <h3 id="inline-radios">Inline radios</h3>
-    <p>If there are only 2 options, you can either stack the radios or display them inline, like so:</p>
+    <p>If there are only 2 options, you can either stack the radios or display them inline, like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -106,7 +106,7 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
     <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
-    <p>If one or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word ‘or’.</p>
+    <p>If 1 or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word "or".</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -125,7 +125,7 @@
           },
           {
           "value": "nhsuk-login",
-          "text": "Use NHS.UK Login"
+          "text": "Use NHS.UK login"
           },
           {
           "divider": "or"
@@ -140,7 +140,7 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
     <h3 id="radio-items-with-hints">Radio items with hints</h3>
-    <p>You can add hints to radio items to provide additional information about the options.</p>
+    <p>You can add hints to radios to give more information about the options.</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -158,12 +158,12 @@
           "value": "gateway",
           "text": "Sign in with Government Gateway",
           "hint": {
-              "text": "You'll have a user ID if you've registered for Self Assessment or filed a tax return online before."
+              "text": "You'll have a user ID if you've registered for self-assessment or filed a tax return online before."
           }
           },
           {
           "value": "verify",
-          "text": "Sign in with NHS.UK Login",
+          "text": "Sign in with NHS.UK login",
           "hint": {
               "text": "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
           }
@@ -174,7 +174,7 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
     <h3 id="error-messages">Error messages</h3>
-    <p>Error messages should be styled like this:</p>
+    <p>Style error messages like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -212,19 +212,25 @@
     </div>
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p>Make sure errors follow the guidance in <a href="/service-manual/styles-components-patterns/error-message">error message</a> and have specific error messages for specific error states.</p>
-    <p>GOV.UK Design System has <a href="https://design-system.service.gov.uk/components/radios/">some great examples of tried and tested error messages.</a></p>
+    <p>Follow:
+    <ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
+    <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li></ul>
     <h2>Research</h2>
-    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss radios on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>
     {{ panel({
     "label": "Similar patterns",
-    "HTML": "<ul>
-                <li></li>
+    "HTML": " <ul>
+    <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+    <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>                     <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+     <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+      <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
+      <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
+      <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
             </ul>"
     }) }}
   </div>
