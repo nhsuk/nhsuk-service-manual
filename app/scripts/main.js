@@ -1,3 +1,5 @@
+import './polyfills'
+
 import cookieConsent from './cookieConsent';
 import digitalData from './digitalData';
 import DesignExample from './design-example';
