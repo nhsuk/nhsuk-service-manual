@@ -6,7 +6,9 @@
   "scripts": {
     "postinstall": "gulp build",
     "start": "node app",
-    "test": "",
+    "test": "npm run lint",
+    "lint": "npm run lint:css",
+    "lint:css": "sass-lint -c ./tests/linters/.sass-lint.yml 'app/styles/**/*.scss' -v -q",
     "prewatch": "npm run postinstall",
     "watch": "concurrently \"gulp\" \"nodemon -q -e js,njk,scss --watch app\""
   },
@@ -36,6 +38,7 @@
     "rollup-plugin-babel": "^4.3.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-stream": "^1.24.1",
+    "sass-lint": "^1.12.1",
     "vinyl-source-stream": "^2.0.0"
   }
 }
