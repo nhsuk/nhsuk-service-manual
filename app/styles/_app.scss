@@ -286,12 +286,25 @@
 
 /* Design principles stuff ends */
 
+
+/* footer */
+
 .ogl-footer {
-    background-color: #d8dde0;   
+  background-color: #d8dde0;
 }
 
 .ogl-text {
-    font-weight: 400;
-    font-size: .875rem;
-    color: #425563;
+  color: #425563;
+  font-size: .875rem;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  @media (min-width: 40.0625em) {
+    font-size: 1rem;
+  }
+
 }
