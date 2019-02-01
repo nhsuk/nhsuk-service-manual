@@ -290,21 +290,17 @@
 /* footer */
 
 .ogl-footer {
-  background-color: #d8dde0;
+  background-color: $color_nhsuk-grey-4;
 }
 
 .ogl-text {
-  color: #425563;
-  font-size: .875rem;
+  @include nhsuk-font(16);
+  color: $color_nhsuk-grey-1;
   margin-bottom: 0;
-  padding-bottom: 24px;
+  padding-bottom: nhsuk-spacing(4);
 
   svg {
-    margin-right: 8px;
-  }
-
-  @media (min-width: 40.0625em) {
-    font-size: 1rem;
+    margin-right: nhsuk-spacing(2);
   }
 
 }
