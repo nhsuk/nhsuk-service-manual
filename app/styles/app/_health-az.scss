@@ -1,3 +1,7 @@
+.nhsuk-a-z-list--results-items {
+  @include nhsuk-responsive-margin(9, 'bottom');
+}
+
 .nhsuk-a-z-list--results-items .nhsuk-back-to-top-link {
   display: inline-block;
   margin-top: 16px;
