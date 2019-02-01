@@ -4,6 +4,7 @@
 
 {% from 'components/input/macro.njk' import input %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,22 +27,16 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ input({
-      "label": {
-          "text": "National Insurance number"
-      },
-      "id": "input-example",
-      "name": "test-name"
-      }) }}
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'input'
+    }) }}
   </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-
-    <h2>When to use text input </h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use text input </h2>
     <p>Use text input when you need users to enter text that’s no longer than a single line, such as their name or phone number.</p>
     <h2>When not to use text input </h2>
     <p>Do not use text input if you need users to enter longer answers that might span several lines. In this case, use <a href="/service-manual/styles-components-patterns/textarea">textarea</a>.</p>
@@ -59,86 +54,28 @@
     <p>On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ input({
-      "label": {
-          "text": "20 character width"
-      },
-      "id": "input-width-20",
-      "name": "test-width-20",
-      "classes": "nhsuk-input--width-20"
-      }) }}
-      {{ input({
-      "label": {
-          "text": "10 character width"
-      },
-      "id": "input-width-10",
-      "name": "test-width-10",
-      "classes": "nhsuk-input--width-10"
-      }) }}
-      {{ input({
-      "label": {
-          "text": "5 character width"
-      },
-      "id": "input-width-5",
-      "name": "test-width-5",
-      "classes": "nhsuk-input--width-5"
-      }) }}
-      {{ input({
-      "label": {
-          "text": "4 character width"
-      },
-      "id": "input-width-4",
-      "name": "test-width-4",
-      "classes": "nhsuk-input--width-4"
-      }) }}
-      {{ input({
-      "label": {
-          "text": "3 character width"
-      },
-      "id": "input-width-3",
-      "name": "test-width-3",
-      "classes": "nhsuk-input--width-3"
-      }) }}
-      {{ input({
-      "label": {
-          "text": "2 character width"
-      },
-      "id": "input-width-2",
-      "name": "test-width-2",
-      "classes": "nhsuk-input--width-2"
-      }) }}
-    </div>
+    {{ designExample({
+      type: 'input-fixed-width'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/input">get the latest fixed width text input code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h3 id="using-hint-text">Using hint text</h3>
+    <h3 id="using-hint-text" class="nhsuk-u-margin-top-8">Using hint text</h3>
     <p>Follow our advice on <a href='/service-manual/styles-components-patterns/hint-text'>hint text</a> and this example of hint text with text input.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ input({
-      "label": {
-          "text": "National Insurance number"
-      },
-      "hint": {
-          "text": "It’s on your National Insurance card, benefit letter, payslip or P60\. For example, ‘QQ 12 34 56 C’."
-      },
-      "id": "input-with-hint-text",
-      "name": "test-name-2"
-      }) }}
-    </div>
+    {{ designExample({
+      type: 'input-hint-text'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/hint/index.html">Preview the hint text component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/hint">get the latest template code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
+    <h3 id="do-not-disable-copy-and-paste" class="nhsuk-u-margin-top-8">Do not disable copy and paste</h3>
     <p>Users often need to copy and paste information into a text input, so do not stop them from doing this.</p>
     <h3>Error messages</h3>
-    <p>Follow:<ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
-<li><a href="https://design-system.service.gov.uk/components/text-input#error-messages">GOV.UK guidance on error messages for text input</a></li></ul>
-
-
+    <p>Follow:</p>
+    <ul>
+      <li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
+      <li><a href="https://design-system.service.gov.uk/components/text-input#error-messages">GOV.UK guidance on error messages for text input</a></li>
+    </ul>
     <h2>Research</h2>
     <p>If you’ve used text input, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
     <h2>Discuss</h2>
