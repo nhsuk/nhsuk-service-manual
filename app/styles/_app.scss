@@ -286,12 +286,21 @@
 
 /* Design principles stuff ends */
 
+
+/* footer */
+
 .ogl-footer {
-    background-color: #d8dde0;   
+  background-color: $color_nhsuk-grey-4;
 }
 
 .ogl-text {
-    font-weight: 400;
-    font-size: .875rem;
-    color: #425563;
+  @include nhsuk-font(16);
+  color: $color_nhsuk-grey-1;
+  margin-bottom: 0;
+  padding-bottom: nhsuk-spacing(4);
+
+  svg {
+    margin-right: nhsuk-spacing(2);
+  }
+
 }
