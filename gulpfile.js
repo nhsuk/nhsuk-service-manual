@@ -81,4 +81,4 @@ gulp.task('javascript', javascript);
 gulp.task('assets', assets);
 gulp.task('minifyJS', minifyJS);
 
-gulp.task('build', gulp.parallel(['styles', 'javascript', 'minifyJS', 'assets']));
+gulp.task('build', gulp.parallel(['styles', 'javascript', 'assets']));
