@@ -1,85 +1,80 @@
 .app-tabs {
-    margin: -1px auto;
-    padding: 0;
-    overflow: visible;
-    list-style-type: none;
-    border: 1px solid #bfc1c3;
-    margin-bottom: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: -1px auto;
+  margin-bottom: 0;
+  overflow: visible;
+  padding: 0;
 
-    &__item {
-        display: inline-block;
+  &__item {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+
+    a {
+      background: inherit;
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid transparent;
+      color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+      display: block;
+      font-weight: bold;
+      margin-top: -1px;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    &--current {
+      a {
+        background-color: #f0f4f5; // sass-lint:disable-line no-color-hex no-color-literals
+        border-bottom-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+        border-top-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+      }
+    }
+
+    &__heading {
+      a {
+        background: inherit;
+        border: 1px solid #bfc1c3; // sass-lint:disable-line no-color-hex no-color-literals
+        border-top: 0;
+        color: #005ea5; // sass-lint:disable-line no-color-hex no-color-literals
+        display: none;
+        font-weight: bold;
+        padding: 15px;
         position: relative;
+        text-decoration: none;
         z-index: 2;
-        margin: 0;
 
-        a {
-            display: block;
-            margin-top: -1px;
-            padding: 15px;
-            border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent;
-            color: #005ea5;
-            background: inherit;
-            font-weight: bold;
-            text-decoration: none;
+        &:visited {
+          color: #005ea5; // sass-lint:disable-line no-color-hex no-color-literals
         }
+      }
 
-        &--current {
-            a {
-                border-top-color: #005ea5;
-                border-bottom-color: #005ea5;
-                background-color: #f0f0f0
-            }
-        }
-
-        &__heading {
-            a {
-                display: none;
-                position: relative;
-                z-index: 2;
-                padding: 15px;
-                border: 1px solid #bfc1c3;
-                border-top: 0;
-                color: #005ea5;
-                background: inherit;
-                font-weight: bold;
-                text-decoration: none;
-
-                &:visited {
-                    color: #005ea5;
-                }
-            }
-
-            &--current {
-                background-color: #f0f0f0;
-            }
-        }
+      &--current {
+        background-color: #f0f0f0; // sass-lint:disable-line no-color-hex no-color-literals
+      }
     }
 
-    &__text {
-        padding:20px 20px 20px 20px;
-    }
+  }
 
-    &__container {
-        position: relative;
-        margin-top: -2px;
-        border: 1px solid #bfc1c3;
+  &__text {
+    padding: 20px;
+  }
 
-        pre {
-            position: relative;
-            margin: 0;
-            padding: 15px;
-            overflow: auto;
-            border: 1px solid #bfc1c3;
-            background-color: #f8f8f8;
-            font-size: 16px;
-            max-width: 38em;
-            margin-bottom: 15px;
-            max-width: inherit;
-            margin-bottom: 0;
-            border: 0;
-            font-size: inherit;
-        }
+  &__container {
+    border: 1px solid #bfc1c3; // sass-lint:disable-line no-color-hex no-color-literals
+    margin-top: -2px;
+    position: relative;
+
+    pre {
+      background-color: #f8f8f8; // sass-lint:disable-line no-color-hex no-color-literals
+      border: 0;
+      font-size: inherit;
+      margin: 0;
+      margin-bottom: 0;
+      max-width: inherit;
+      overflow: auto;
+      padding: 15px;
+      position: relative;
     }
+  }
 }

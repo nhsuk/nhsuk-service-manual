@@ -1,127 +1,133 @@
+// sass-lint:disable border-zero no-color-hex
+
 .code-snippet {
-    margin-top: 48px;
-    background-color: $color_nhsuk-grey-5;
+  background-color: $color_nhsuk-grey-5;
+  margin-top: 48px;
 
-    .js-hidden {
-        display: none;
+  .js-hidden {
+    display: none;
+  }
+
+  .app-link {
+
+    &--copy {
+      background-color: $color_nhsuk-grey-5;
+      margin-bottom: 8px;
+      position: static;
     }
 
-    .app-link {
+    &--close {
+      background-color: transparent;
+      border: 0;
+      bottom: 16px;
+      color: $color_nhsuk-blue;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 8px;
+      position: static;
+      right: 16px;
+      z-index: 1;
 
-        &--copy {
-            position: static;
-            margin-bottom: 8px;
-            background-color: $color_nhsuk-grey-5;
-        }
+      @include mq($from: tablet) {
+        bottom: 24px;
+        right: 24px;
+      }
 
-        &--close {
-            position: static;
-            right: 16px;
-            bottom: 16px;
-            z-index: 1;
-            margin-top: 8px;
-            font-size: 16px;
-            color: $color_nhsuk-blue;
-            cursor: pointer;
-            background-color: transparent;
-            border: 0;
-
-            @include mq($from: tablet) {
-                right: 24px;
-                bottom: 24px;
-            }
-
-            svg {
-                width: 16px;
-                height: 16px;
-                margin: 5px 5px 0 0;
-                transform: rotate(-90deg);
-                fill: $color_nhsuk-blue;
-            }
-        }
+      svg {
+        fill: $color_nhsuk-blue;
+        height: 16px;
+        margin: 5px 5px 0 0;
+        transform: rotate(-90deg);
+        width: 16px;
+      }
     }
+  }
 
-    &__preformatted {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        padding: 16px;
-        border-bottom: 1px solid $color_nhsuk-grey-4;
+  &__preformatted {
+    align-items: flex-end;
+    border-bottom: 1px solid $color_nhsuk-grey-4;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
 
-        @include mq($from: tablet) {
-            padding: 24px;
-        }
+    @include mq($from: tablet) {
+      padding: 24px;
     }
+  }
 }
 
 .app-tabs {
-    $root: &;
-    display: none;
+  border: 1px solid $color_nhsuk-grey-4;
+  border-bottom: 0;
+  $root: &;
+  display: none;
+
+  @include mq($from: tablet) {
+    display: block;
+  }
+
+  &__item {
+    background-color: transparent;
+    margin: 0;
+
+    a {
+      border: 0;
+      font-weight: normal;
+      margin: 0;
+      padding: 8px 16px;
+
+      @include mq($from: tablet) {
+        padding: 12px 24px;
+      }
+
+      &:hover {
+        box-shadow:  0 0 0 4px $color_tint_nhsuk-warm-yellow-30;
+        outline: 0;
+      }
+
+      &:focus {
+        box-shadow:  0 0 0 4px $color_nhsuk-warm-yellow;
+        outline: 0;
+      }
+
+    }
+
+    &--current {
+      a {
+        background-color: $color_nhsuk-grey-5;
+
+        @include mq($from: tablet) {
+          border-bottom: 4px solid $color_nhsuk-blue;
+        }
+
+      }
+    }
+
+    &--mobile {
+      border: 1px solid $color_nhsuk-grey-4;
+      border-width: 1px 0;
+      display: block;
+      margin: -1px 0;
+
+      @include mq($from: tablet) {
+        display: none;
+      }
+
+      }
+    }
+
+  &__container {
     border: 1px solid $color_nhsuk-grey-4;
     border-bottom: 0;
+    margin-top: 0;
 
-    @include mq($from: tablet) {
-        display: block;
+    pre {
+      align-self: stretch;
+      background-color: $color_nhsuk-grey-5;
+      padding: 0;
     }
 
-    &__item {
-        margin: 0;
-        background-color: transparent;
-
-        a {
-            padding: 8px 16px;
-            margin: 0;
-            font-weight: normal;
-            border: 0;
-
-            @include mq($from: tablet) {
-                padding: 12px 24px;
-            }
-
-            &:hover {
-                outline: 0;
-                box-shadow:  0 0 0 4px $color_tint_nhsuk-warm-yellow-30;
-            }
-
-            &:focus {
-                outline: 0;
-                box-shadow:  0 0 0 4px $color_nhsuk-warm-yellow;
-            }
-        }
-
-        &--current {
-            a {
-                background-color: $color_nhsuk-grey-5;
-
-                @include mq($from: tablet) {
-                    border-bottom: 4px solid #005ea5;
-                }
-            }
-        }
-
-        &--mobile {
-            display: block;
-            margin: -1px 0;
-            border: 1px solid $color_nhsuk-grey-4;
-            border-width: 1px 0;
-
-            @include mq($from: tablet) {
-                display: none;
-            }
-        }
-    }
-
-    &__container {
-        margin-top: 0;
-        border: 1px solid $color_nhsuk-grey-4;
-        border-bottom: 0;
-
-        pre {
-            align-self: stretch;
-            padding: 0;
-            background-color: $color_nhsuk-grey-5;
-        }
-    }
+  }
 }
 
 // Highlight JS overrides
@@ -134,117 +140,117 @@ $color-syntax--string: #025eb8;
 $color-syntax--selector: #330072;
 
 .hljs {
-    padding: 0;
-    overflow-x: scroll;
-    color: $color-syntax--body;
-    background-color: $color_nhsuk-white;
+  background-color: $color_nhsuk-white;
+  color: $color-syntax--body;
+  overflow-x: scroll;
+  padding: 0;
 
-    @include mq($from: tablet) {
-        // Fixes issue with overflowing <code> el. 71.5vw = width of column. 121px = total width of padding/borders.
-        max-width: calc(71.5vw - 121px);
+  @include mq($from: tablet) {
+    // Fixes issue with overflowing <code> el. 71.5vw = width of column. 121px = total width of padding/borders.
+    max-width: calc(71.5vw - 121px);
+  }
+
+  @include mq($from: 1024px) {
+    max-width: 586px;
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: $color-syntax--comment;
+    font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: $color-syntax--keyword;
+    font-weight: normal;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr { //sass-lint:disable-line force-element-nesting
+    color: $color-syntax--var;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: $color-syntax--string;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: $color-syntax--keyword;
+    font-weight: normal;
+  }
+
+  .hljs-subst {
+    font-weight: normal;
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title { //sass-lint:disable-line force-element-nesting
+    color: $color-syntax--var;
+    font-weight: normal;
+  }
+
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: $color-syntax--keyword;
+    font-weight: normal;
+  }
+
+  .hljs-regexp,
+  .hljs-link {
+    color: $color-syntax--var;
+  }
+
+  .hljs-symbol,
+  .hljs-bullet {
+    color: $color-syntax--keyword;
+  }
+
+  .hljs-built_in, //sass-lint:disable-line class-name-format
+  .hljs-builtin-name {
+    color: $color-syntax--string;
+  }
+
+  .hljs-meta {
+    color: $color-syntax--comment;
+    font-weight: normal;
+  }
+
+  // language specific customisations
+  &.html {
+    .hljs-tag {
+      color: $color-syntax--comment;
     }
+  }
 
-    @include mq($from: 1024px) {
-        max-width: 586px;
-    }
-
-    .hljs-comment,
-    .hljs-quote {
-        font-style: italic;
-        color: $color-syntax--comment;
-    }
-
-    .hljs-keyword,
+  &.css {
+    .hljs-selector-class,
     .hljs-selector-tag,
-    .hljs-subst {
-        font-weight: normal;
-        color: $color-syntax--keyword;
+    .hljs-keyword {
+      color: $color-syntax--selector;
     }
+  }
 
-    .hljs-number,
-    .hljs-literal,
-    .hljs-variable,
-    .hljs-template-variable,
-    .hljs-tag .hljs-attr { //sass-lint:disable-line force-element-nesting
-        color: $color-syntax--var;
-    }
-
-    .hljs-string,
-    .hljs-doctag {
-        color: $color-syntax--string;
-    }
-
+  &.javascript,
+  &.python {
     .hljs-title,
     .hljs-section,
     .hljs-selector-id {
-        font-weight: normal;
-        color: $color-syntax--keyword;
+      color: $color-syntax--string;
     }
+  }
 
-    .hljs-subst {
-        font-weight: normal;
+  &.json {
+    .hljs-attr {
+      color: $color-syntax--keyword;
     }
-
-    .hljs-type,
-    .hljs-class .hljs-title { //sass-lint:disable-line force-element-nesting
-        font-weight: normal;
-        color: $color-syntax--var;
-    }
-
-    .hljs-tag,
-    .hljs-name,
-    .hljs-attribute {
-        font-weight: normal;
-        color: $color-syntax--keyword;
-    }
-
-    .hljs-regexp,
-    .hljs-link {
-        color: $color-syntax--var;
-    }
-
-    .hljs-symbol,
-    .hljs-bullet {
-        color: $color-syntax--keyword;
-    }
-
-    .hljs-built_in, //sass-lint:disable-line class-name-format
-    .hljs-builtin-name {
-        color: $color-syntax--string;
-    }
-
-    .hljs-meta {
-        font-weight: normal;
-        color: $color-syntax--comment;
-    }
-
-    // language specific customisations
-    &.html {
-        .hljs-tag {
-            color: $color-syntax--comment;
-        }
-    }
-
-    &.css {
-        .hljs-selector-class,
-        .hljs-selector-tag,
-        .hljs-keyword {
-            color: $color-syntax--selector;
-        }
-    }
-
-    &.javascript,
-    &.python {
-        .hljs-title,
-        .hljs-section,
-        .hljs-selector-id {
-            color: $color-syntax--string;
-        }
-    }
-
-    &.json {
-        .hljs-attr {
-            color: $color-syntax--keyword;
-        }
-    }
+  }
 }

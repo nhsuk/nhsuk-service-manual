@@ -6,12 +6,12 @@
  */
 
 html {
- background-color: #f0f4f5;
+  background-color: #f0f4f5; // sass-lint:disable-line no-color-hex no-color-literals
 }
 
 /* Component examples need a bit of space around them */
 body {
- margin: 64px 16px 32px 16px;
+  margin: 64px 16px 32px;
 }
 
 /*
@@ -19,9 +19,9 @@ body {
   grid that is visible and fills the available space with a background color.
 */
 .nhsuk-grid-row > div > p {
-   background-color: #004ba4;
-   color: #fff;
-   text-align: center;
-   margin: 30px 0 0;
-   padding: 20px;
+  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+  color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
+  margin: 30px 0 0;
+  padding: 20px;
+  text-align: center;
 }
