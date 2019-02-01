@@ -1,3 +1,5 @@
+{% set pageTitle = "Textarea" %}
+{% set pageDescription = "Use textarea to let users enter more than 1 line of text." %}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/textarea/macro.njk' import textarea %}
@@ -19,7 +21,8 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-bottom-8">Textarea</h1>
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -44,17 +47,17 @@
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/index.html">Preview the textarea component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea code</a> in the NHS.UK frontend library in GitHub.</p>
     <h2 id="when-to-use-this-component">When to use textarea</h2>
-    <p><a href="https://design-system.service.gov.uk/components/textarea/">GOV.UK Design System suggest</a> using the textarea component when you need to let users enter an amount of text that’s longer than a single line.</p>
+    <p>Use textarea when you want users to enter an amount of text that’s longer than a single line.</p>
     <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
-    <p>Users can find open-ended questions difficult to answer. It might be better to break up one complex question into a series of simple ones, for example where users can select from options using <a href="/service-manual/patterns/radios">radios</a>.</p>
+    <p>Users can find open-ended questions difficult to answer. It's usually better to break up 1 complex question into a series of simple ones, for example where users can select from options using <a href="/service-manual/patterns/radios">radios</a>.</p>
     <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
-    <p>Do not use the textarea component if you need to let users enter shorter answers no longer than a single line, such as a phone number or name. In this case, you should use the <a href="/service-manual/patterns/text-input">text input</a> component.</p>
-    <h2 id="how-it-works">How it works</h2>
+    <p>Do not use textarea if you want users to enter an answer no longer than a single line, such as a phone number or name. In this case, you should use <a href="/service-manual/styles-components-patterns/text-input">text input</a>.</p>
+    <h2 id="how-it-works">How to use textarea</h2>
     <h3 id="label-textareas">Label textareas</h3>
-    <p>You must label textareas. Placeholder text is not a suitable substitute for a label, as it disappears when users click inside the textarea.</p>
-    <p>Labels must be aligned above the textarea they refer to. They should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
-    <h3 id="use-appropriately-sized-textareas">Use appropriately-sized textareas</h3>
-    <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by by specifying the <code>rows</code> attribute.</p>
+    <p>You must label textareas. Do not use placeholder text for a label, as it disappears when users click inside the textarea.</p>
+    <p>Align labels above the textarea they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+    <h3 id="use-appropriately-sized-textareas">Use the right size of textarea</h3>
+    <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by specifying the <code>rows</code> attribute.</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -75,7 +78,7 @@
     <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
     <p>Users will often need to copy and paste information into a textarea, so do not stop them from doing this.</p>
     <h3 id="error-messages">Error messages</h3>
-    <p>Error messages should be styled like this:</p>
+    <p>Style error messages like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
     <div class="app-example nhsuk-u-margin-bottom-4">
@@ -94,13 +97,14 @@
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/textarea/error.html">Preview the textarea error component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/textarea">get the latest textarea error code</a> in the NHS.UK frontend library in GitHub.</p>
-    <p>GOV.UK Design System have some <a href="https://design-system.service.gov.uk/components/textarea/#error-messages">great examples of textarea error messages.</a></p>
+    <p>Follow:<ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
+<li><a href="https://design-system.service.gov.uk/components/textarea/#error-messages">GOV.UK design system guidance on textarea error messages.</a></li></ul></p>
+
     <h2>Research</h2>
-    <p>We tested the textarea component on a 'Register with a GP' prototype at two labs on 18th October 2018 and 11th December. </p>
-    <p>Users understood the purpose of the component and were able to use it.</p>
-    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <p>We tested the textarea component on a "Register with a GP" prototype at 2 labs in December 2018. Users understood the purpose of the textarea and were able to use it.</p>
+    <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss textarea on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: <time>January 2019</time></p>
     </div>
@@ -108,7 +112,16 @@
     {{ panel({
     "label": "Similar patterns",
     "HTML": "<ul>
-                <li></li>
+              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
+              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+              <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+              <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
+              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
+              <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
+              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
+              <li><a href='/service-manual/styles-components-patterns/select'>Select</a></li>
+              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
             </ul>"
     }) }}
   </div>
