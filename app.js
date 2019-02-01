@@ -23,10 +23,10 @@ const app = express()
 app.use(authentication);
 
 // Middleware to serve static assets
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
-app.use('/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')))
+app.use('/service-manual', express.static(path.join(__dirname, 'public')));
+app.use('/service-manual/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
+app.use('/service-manual/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
+app.use('/service-manual/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')))
 
 // View engine (nunjucks)
 app.set('view engine', 'njk');
