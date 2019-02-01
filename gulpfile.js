@@ -6,6 +6,7 @@ var rollup = require('rollup-stream');
 var source = require('vinyl-source-stream');
 var babel = require('rollup-plugin-babel');
 var resolve = require('rollup-plugin-node-resolve');
+var uglify = require('gulp-uglify');
 
 function styles() {
   return gulp.src('app/styles/**/*.scss')
@@ -44,6 +45,19 @@ function javascript() {
   .pipe(gulp.dest('public/js/'));
 }
 
+/* Minify the JS file for release */
+function minifyJS() {
+  return gulp.src([
+    'public/js/*.js',
+    '!public/js/*.min.js', // don't re-minify minified javascript
+  ])
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(gulp.dest('public/js/'))
+}
+
 function assets() {
   return gulp.src('app/assets/**')
     .pipe(gulp.dest('public/assets/'))
@@ -58,11 +72,13 @@ function watch() {
 exports.styles = styles;
 exports.assets = assets;
 exports.javascript = javascript;
+exports.minifyJS = minifyJS;
 exports.watch = watch;
 
 gulp.task('default', watch);
 gulp.task('styles', styles);
 gulp.task('javascript', javascript);
 gulp.task('assets', assets);
+gulp.task('minifyJS', minifyJS);
 
-gulp.task('build', gulp.parallel(['styles', 'javascript', 'assets']));
+gulp.task('build', gulp.parallel(['styles', 'javascript', 'minifyJS', 'assets']));
