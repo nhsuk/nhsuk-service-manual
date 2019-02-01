@@ -4,6 +4,7 @@
 
 {% from 'components/radios/macro.njk' import radios %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -21,43 +22,21 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-u-margin-bottom-8">Radios</h1>
+      <h1 class="nhsuk-u-margin-bottom-5">Radios</h1>
          <p class="nhsuk-body-l">{{pageDescription}}</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-      <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ radios({
-      "idPrefix": "example",
-      "name": "example",
-      "fieldset": {
-          "legend": {
-          "text": "Have you changed your name?"
-          }
-      },
-      "hint": {
-          "text": "This includes changing your last name or spelling your name differently."
-      },
-      "items": [
-          {
-          "value": "yes",
-          "text": "Yes"
-          },
-          {
-          "value": "no",
-          "text": "No",
-          "checked": true
-          }
-      ]
-      }) }}
+      <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'radios'
+    }) }}
     </div>
   </div>
-  <div class="nhsuk-grid-column-two-thirds">
-      <h2 id="when-to-use-this-component">When to use radios</h2>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2 id="when-to-use-this-component" class="nhsuk-u-margin-top-8">When to use radios</h2>
     <p>Use radios if users can only choose 1 option from a list.</p>
     <h2 id="when-not-to-use-this-component">When not to use radios</h2>
     <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
@@ -76,143 +55,42 @@
     <h3 id="inline-radios">Inline radios</h3>
     <p>If there are only 2 options, you can either stack the radios or display them inline, like this:</p>
   </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ radios({
-      "idPrefix": "example'",
-      "classes": "nhsuk-radios--inline",
-      "name": "example",
-      "fieldset": {
-          "legend": {
-          "text": "Have you changed your name?"
-          }
-      },
-      "hint": {
-          "text": "This includes changing your last name or spelling your name differently."
-      },
-      "items": [
-          {
-          "value": "yes",
-          "text": "Yes"
-          },
-          {
-          "value": "no",
-          "text": "No",
-          "checked": true
-          }
-      ]
-      }) }}
-    </div>
+   {{ designExample({
+      type: 'radios-inline'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
+    <h3 id="radio-items-with-a-text-divider" class="nhsuk-u-margin-top-8">Radio items with a text divider</h3>
     <p>If 1 or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word "or".</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ radios({
-      "idPrefix": "example-divider",
-      "name": "example",
-      "fieldset": {
-          "legend": {
-          "text": "How do you want to sign in?"
-          }
-      },
-      "items": [
-          {
-          "value": "government-gateway",
-          "text": "Use Government Gateway"
-          },
-          {
-          "value": "nhsuk-login",
-          "text": "Use NHS.UK login"
-          },
-          {
-          "divider": "or"
-          },
-          {
-          "value": "create-account",
-          "text": "Create an account"
-          }
-      ]
-      }) }}
-    </div>
+   {{ designExample({
+      type: 'radios-divider'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <h3 id="radio-items-with-hints">Radio items with hints</h3>
+    <h3 id="radio-items-with-hints" class="nhsuk-u-margin-top-8">Radio items with hints</h3>
     <p>You can add hints to radios to give more information about the options.</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ radios({
-      "idPrefix": "gov",
-      "name": "gov",
-      "fieldset": {
-          "legend": {
-          "text": "How do you want to sign in?",
-          "isPageHeading": true
-          }
-      },
-      "items": [
-          {
-          "value": "gateway",
-          "text": "Sign in with Government Gateway",
-          "hint": {
-              "text": "You'll have a user ID if you've registered for self-assessment or filed a tax return online before."
-          }
-          },
-          {
-          "value": "verify",
-          "text": "Sign in with NHS.UK login",
-          "hint": {
-              "text": "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
-          }
-          }
-      ]
-      }) }}
-    </div>
+   {{ designExample({
+      type: 'radios-hints'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <h3 id="error-messages">Error messages</h3>
+    <h3 id="error-messages" class="nhsuk-u-margin-top-8">Error messages</h3>
     <p>Style error messages like this:</p>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ radios({
-      "idPrefix": "example",
-      "name": "example",
-      "errorMessage": {
-          "text": "Please select an option"
-      },
-      "fieldset": {
-          "classes": "app-fieldset--custom-modifier",
-          "attributes": {
-          "data-attribute": "value",
-          "data-second-attribute": "second-value"
-          },
-          "legend": {
-          "text": "Have you changed your name?"
-          }
-      },
-      "hint": {
-          "text": "This includes changing your last name or spelling your name differently."
-      },
-      "items": [
-          {
-          "value": "yes",
-          "text": "Yes"
-          },
-          {
-          "value": "no",
-          "text": "No",
-          "checked": true
-          }
-      ]
-      }) }}
-    </div>
+   {{ designExample({
+      type: 'radios-error'
+    }) }}
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <p>Follow:
+    <p class="nhsuk-u-margin-top-4">Follow:
     <ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
     <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li></ul>
     <h2>Research</h2>

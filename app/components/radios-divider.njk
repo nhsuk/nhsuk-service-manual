@@ -1,0 +1,30 @@
+{% from 'components/radios/macro.njk' import radios %}
+
+{{ radios({
+  "idPrefix": "example-divider",
+  "name": "example",
+  "fieldset": {
+    "legend": {
+      "text": "How do you want to sign in?"
+    }
+  },
+  "items": [
+    {
+      "value": "government-gateway",
+      "text": "Use Government Gateway"
+    },
+    {
+      "value": "nhsuk-login",
+      "text": "Use NHS.UK login"
+    },
+    {
+      "divider": "or"
+    },
+    {
+      "value": "create-account",
+      "text": "Create an account"
+    }
+  ]
+}) }}
+
+
