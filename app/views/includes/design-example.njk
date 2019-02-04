@@ -1,7 +1,7 @@
 {% macro designExample(params) %}
 
 {% set examplePath = 'app/components/' + params.type + '.njk' %}
-{% set standaloneURL = '/design-example/' + params.type %}
+{% set standaloneURL = '/service-manual/design-example/' + params.type %}
 
 {# `showExample` is true, unless explicitly turned off with params #}
 {% set showExample = params.showExample !== false %}
