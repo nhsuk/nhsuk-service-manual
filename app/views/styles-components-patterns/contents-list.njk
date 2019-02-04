@@ -1,3 +1,5 @@
+{% set pageTitle = 'Contents list' %}
+{% set pageDescription = 'Use contents lists to allow users to navigate between related pages, for example about a single condition.' %}
 {% extends 'includes/layout.njk' %}
 
 {% block breadcrumb %}
@@ -17,7 +19,7 @@
     <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
                 <h1 class="nhsuk-u-margin-bottom-5">Contents list</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Allow users to navigate between related pages, such as a guide to a single condition.</p>
+                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use contents lists to allow users to navigate between related pages, for example about a single condition.</p>
             </div>
     </div>
 
@@ -76,48 +78,52 @@
             <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/contents-list">get the latest contents list code</a> in the NHS.UK frontend library in GitHub.</p>
 
             <h2>When to use a contents list</h2>
-                <p>Use the contents list component as a method of navigation for small groups (up to 8 pages) of related content, such as a group of pages on a specific condition.</p>
-                <p>This component requires <a href="/service-manual/styles-components-patterns/paginantion">pagination</a> at the top of the page - both components together become the multi-page navigation pattern.</p>
+                <p>Use a contents list to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
+                <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/paginantion">pagination</a> at the bottom of the page. The two components make up the multi-page navigation pattern.</p>
 
             <h2>When not to use a contents list</h2>
-                <p>Do not use the contents list component on non grouped pages or 'related' pages as it will likely confuse the user.</p>
-                <p>Do not use contents list in the context of a transactional service or a form as these have their own means of navigation <a href="/service-manual/patterns/buttons">buttons</a> to move forward (progress) and <a href="/patterns/back-link">back link</a> to navigate back.</p>
+                <p>Do not use a contents list on pages which aren't grouped together or "related" as that is likely confuse users.</p>
+                <p>Do not use a contents list in a transactional service or a form. We use other components instead, including:
+                <ul>
+                  <li><a href="/service-manual/patterns/buttons">buttons</a> to move forward</li>
+                  <li><a href="/patterns/back-link">back link</a> to navigate back</li>
+                </ul></p>
 
-            <h2>How to use </h2>
-                <p>The <a href="/service-manual/patterns/contents-list">contents list</a> at the top of the page must be used in conjunction with the <a href="/service-manual/patterns/pagination">pagination component</a>, used at the bottom of each page.</p>
+            <h2>How to use a contents list</h2>
+                <p>Use the contents list at the top of the page together with <a href="/service-manual/patterns/pagination">pagination</a> at the bottom of each page.</p>
 
-                <p>Keep links short and descriptive. Links that are too long (more than two lines) inhibit the scannability of this component.</p>
+                <p>Keep links short and descriptive. Links that are too long (more than 2 lines) make it difficult for users to scan the list.</p>
 
-                <p>Page titles must reflect the subject of the specific page (e.g. ‘Treatment’), whilst the overall subject of the section must form the sub-header (e.g. ‘Age-related macular degeneration’). This is so users are clear where they have navigated to.</p>
+                <p>Page titles must reflect the subject of the page (for example, "Treatment"), with the overall subject of the section as the sub-header (for example, "Age-related macular degeneration"). This is so users are clear where they have navigated to.</p>
 
 
             <h3>Accessibility</h3>
-                <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to indicate that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. This will be read out by screen readers that support this attribute to help clarify what the list of links are.</p>
+                <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. Screen readers that support this attribute will read this out and that makes it clear what the list of links are.</p>
 
-                <p class="rich-text">Additionally there is a visually hidden heading title <code>Contents</code> which will be read by screen readers as a heading to the links.</p>
+                <p class="rich-text">There is also a visually hidden heading title <code>Contents</code> which screen readers will read as a heading to the links.</p>
 
                 <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
 
             <h2>Research</h2>
-                <p>The contents list component has been tested in the context of grouped / related information pages and guides, not on forms or 'related' pages.</p>
-                <p>All users engaged with the contents list navigation, stating that it fits how they thought the content would be made up.</p>
-                <p>Users found the active link formatting on the menu helpful in knowing where they are.</p>
-                <p>Some users indicated that the page titles helped them orientate themselves, knowing they’re in the right place.</p>
-                <p>Some felt that the links helped them to understand what information there is, and choose what is relevant to them.</p>
+                <p>We tested contents lists in grouped information pages, like the <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/">AMD page</a>, not on forms.</p>
+                <p>Users understood and engaged with the contents list navigation and said that it fitted how they thought the content would be made up.</p>
+                <p>The active link formatting helped users know where they were.</p>
+                <p>Some users said that the page titles helped them orientate themselves, so they knew they were in the right place. Some felt that the links helped them understand what information there was and choose what was relevant to them.</p>
 
             <h2>Discuss</h2>
-                <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+                <p>Discuss contents lists on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
             <div class="nhsuk-review-date">
-              <p class="nhsuk-body-s">Updated: January 2019</p>
+              <p class="nhsuk-body-s">Updated: February 2019</p>
             </div>
 
             {% from 'components/panel/macro.njk' import panel %}
 
             {{ panel({
-            "label": "Similar patterns",
+            "label": "Similar components",
             "HTML": "<ul>
-                        <li></li>
+                      <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
+                      <li><a href='/service-manual/styles-components-patterns/review-date'>Review date</a></li>
                     </ul>"
             }) }}
 
