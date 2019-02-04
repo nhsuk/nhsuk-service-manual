@@ -63,12 +63,12 @@
           </div>
           {% endif %}
           <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              <a class="govuk-link app-link--copy" href="" aria-live="assertive">Copy</a>
+              <a class="app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}
               </code></pre>
               {% if snippets|length > 1 %}
-              <button class="govuk-link app-link--close" href="#close" aria-live="assertive">
+              <button class="app-link--close" href="#close" aria-live="assertive">
                   <svg><use xlink:href="#caret-right"></use></svg>Close
               </button>
               {% endif %}
