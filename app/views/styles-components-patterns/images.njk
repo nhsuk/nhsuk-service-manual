@@ -1,3 +1,5 @@
+{% set pageTitle = 'Images' %}
+{% set pageDescription = 'Use images only if there is a real user need. Avoid unnecessary decoration.' %}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/images/macro.njk' import image %}
@@ -20,7 +22,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Images</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Avoid unnecessary decoration. Only use images if there’s a real user need.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use images only if there is a real user need. Avoid unnecessary decoration.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -40,55 +42,35 @@
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/images.html">Preview the image component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/images">get the latest image code</a> in the NHS.UK frontend library in GitHub.</p>
     <h2>When to use images</h2>
-    <p>Informative images (that meet real user needs) can be essential on health services - especially in cases such as medical conditions where photos can help a user identify specific ailments and seek related treatments.</p>
-    <p>We've also found users with certain access needs (such as dyslexia) navigate conditions and treatments pages through images, it helps with orientation and separates out the content.</p>
-    <p>But having unnecessary or decorative images can cause frustration for users especially on information pages or transactional journeys.</p>
-    <h2>How to use </h2>
-    <p>The image component is made up of two elements, the image and caption in a white box.</p>
-    <p>Images should flow with the text content; not appear too prominent or isolated.</p>
-    <p>In testing we found gallery views (images side by side) confusing to users. With gallery views, users either missed the images in the right hand column or they didn't know how to interpret the sequence. To simplify this we recommend stacking images.</p>
-    <p>We also found users clicking images in gallery views - expecting them to appear larger in a pop-up modal. By increasing the size of the images, and having them stacked in one column (not in two) we didn't see anyone clicking on them to expand in testing.</p>
+    <p>Informative images that meet real user needs can be realy important on health services - especially where they help users identify specific health problems and get the treatment they need.</p>
+    <p>We've also found users with some access needs (such as dyslexia) navigate health information (conditions and treatment) pages through images. Images help them orient themselves and they separate out the content.</p>
+    <p>But having unnecessary or decorative images can frustrate users, especially on information pages or transactional journeys.</p>
+    <p>We are working on more guidance about when to use images. We expect to publish it in spring 2019.</p>
+    <h2>How to use images</h2>
+    <p>The image component is made up of 2 elements - the image and caption - in a white box.</p>
+    <p>Images should flow with the text content, not appear too prominent or isolated.</p>
+    <p>We recommend stacking images. We've found that gallery views (images side by side) confuse users.</p>
     <h3>Accessibility</h3>
-    <p><a href="https://www.w3.org/TR/WCAG20-TECHS/H37.html">Follow w3c's guidance on making images accessible</a>. Images must have text alternatives that describe the information or function represented by them, this ensures that images can be used by people with various disabilities.</p>
-    <p>When using image (or the img element) specify a text alternative with the alt attribute (alt text).</p>
-    <p>Don't have images that contain words, because this will be unaccessible to screen readers.</p>
-    <h3>Alternative text</h3>
-    <p><a href="https://design-system.service.gov.uk/styles/images/#alternative-text">GOV.UK Design System suggest</a> alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off.</p>
-    <p>All images, except decorative images, must have alt text that:</p>
-    <ul>
-      <li>tells people what information the image provides</li>
-      <li>describes the content and function of the image</li>
-      <li>is specific, meaningful and concise</li>
-    </ul>
-    <p>Use normal punctuation, like commas and full stops, so the text is easy to read and understand.</p>
-    <p>Do not:</p>
-    <ul>
-      <li>include the name of the photographer or person who created the image</li>
-      <li>start with ‘Image of’, ‘Graphic of’ or ‘Photo of’</li>
-      <li>repeat information from the page</li>
-      <li>include extra information not on the page</li>
-    </ul>
-    <p class="rich-text">Some images do not need descriptions. Use <code>alt=""</code> if the image is:</p>
-    <ul>
-      <li>decorative and does not include important content</li>
-      <li>an icon that has a text label that the alt text would repeat</li>
-      <li>used in a link and the image is not needed to understand the link</li>
-    </ul>
-    <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Web Accessibility initiative alt decision tree</a> to work out if the image needs alt text.</p>
-    <p>Avoid images that contain text, especially PNGs and JPGs because the text becomes unreadable when the user zooms in. If the image does contain text, use SVG because it remains readable when the user zooms in. The alt text should be the same as the text displayed in the image.</p>
+    <p><a href="https://www.w3.org/TR/WCAG20-TECHS/H37.html">Follow W3C's guidance on making images accessible</a>. Images must have text alternatives that describe the information or function they represent. This makes sure that people with disabilities can understand them.</p>
+    <p>Don't use images that have words in them, because screen readers won't be able to read the words.</p>
+    <p>When using an image (or the img element), specify a text alternative with the alt attribute. Alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off. Follow the <a href="https://design-system.service.gov.uk/styles/images/#alternative-text">guidance on alternative text in the GOV.UK design system.</a>
     <h2>Research</h2>
-    <p>The image component was tested on <a href="https://www.nhs.uk/conditions/chickenpox/">Chickenpox</a> conditions page. </p>
-
-    <p>It tested well and all users said that it helped them understand the symptoms.</p>
+    <p>In testing we found gallery views (images side by side) confused users. Users either missed the images in the right hand column or they didn't know how to interpret the sequence. To get around this we recommend stacking images.</p>
+    <p>We also found that users clicked images in gallery views, expecting them to appear larger in a pop-up modal. When we increased the size of the images and stacked them in 1 column (not 2), we didn't see anyone clicking on them to expand them.</p>
+    <p>We tested images on the <a href="https://www.nhs.uk/conditions/chickenpox/">chickenpox</a> page on nhs.uk in 2018. They tested well and all users said that the images helped them understand the symptoms.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss images on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2019</p>
+    <p class="nhsuk-body-s">Updated: February 2019</p>
     </div>
     {{ panel({
-    "label": "Similar patterns",
+    "label": "Similar components",
     "HTML": "<ul>
-                <li></li>
+              <li><a href='/service-manual/styles-components-patterns/care-cards'>Care cards</a></li>
+              <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and Don't lists</a></li>
+              <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/service-manual/styles-components-patterns/table'>Table</a></li>
+              <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
             </ul>"
     }) }}
   </div>

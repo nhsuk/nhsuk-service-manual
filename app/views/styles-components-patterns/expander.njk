@@ -1,3 +1,5 @@
+{% set pageTitle = 'Expander' %}
+{% set pageDescription = 'Make a complex topic easier to digest by letting users reveal more detailed information only if they need it.' %}
 {% extends 'includes/layout.njk' %}
 
 {% from 'components/details/macro.njk' import details %}
@@ -20,7 +22,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Expander</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make a complex subjects easier to digest by letting users reveal more detailed information only if they need it.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make a complex topic easier to digest by letting users reveal more detailed information only if they need it.</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -76,17 +78,17 @@
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/expander.html">Preview the expanders component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/details">get the latest expanders code</a> in the NHS.UK frontend library in GitHub.</p>
     <h2 id="when-to-use-this-component">When to use expanders</h2>
-    <p>Expanders are more prominent then the details component, they are contained within a white box and use a + and - icon to indicate open and close. </p>
-    <p>Expanders were created when a number of services found users overwhelmed when reading about life changing health conditions such as Diabetes. Expanders help break down complex information into bite size pieces which the user can 'expand' at their own pace, when they're ready to do so.</p>
-    <p>Details are good for detailed information for users at the point of when they need it - and most importantly, IF they need it. Information within an expander is intended for a wider audience, in many other scenarios it wouldn't be hidden but because the subject is overwhelming - an expander helps breakdown a difficult topic which helps meet the users emotional needs.</p>
+    <p>Expanders stand out more than the <a href="/service-manual/styles-components-patterns/details">details component</a>. They sit in a white box and use a + and - icon to show open and closed. </p>
+    <p>We use them when users may get overwhelmed reading about life-changing health conditions such as diabetes. Expanders help break down complex information into bite size pieces which the user can "expand" at their own pace, when they're ready to do so.</p>
+    <p>Information in an expander is intended for a wide audience. Often it's the sort of information we wouldn't usually hide but if users feel overwhelmed by the amount of information on the page, an expander breaks it down which helps meet their emotional needs.</p>
+     <h2 id="when-not-to-use-this-component">When not to use an expander</h2>
+    <p>Do not use an expander if only some users will need the information. Use <a href="/service-manual/styles-components-patterns/details">details</a> instead.
+    <p>As expanders are quite prominent, they don't work well on pages with other interactive elements - such as <a href="/service-manual/styles-components-patterns/buttons">buttons</a> or <a href="/service-manual/styles-components-patterns/text-input">text input</a>. There's a risk that they will distract users.</p> <p>We don't put expanders in other components, like <a href="/service-manual/styles-components-patterns/care-cards">care cards</a> for the same reason.</p>
 
-    <h2 id="when-not-to-use-this-component">When not to use an expander</h2>
-    <p>As expanders are quite prominent they don't work well on pages with other interactive elements - such as <a href="/service-manual/styles-components-patterns/buttons">buttons</a> or <a href="/service-manual/styles-components-patterns/text-input">text input</a> and they take the focus. Same for placing expanders within other components, such as <a href="patterns/care=cards">care cards</a>.</p>
-
-    <h2 id="how-it-works">How it works</h2>
-    <p>The expander component is a short link within a box that expands into more detailed text when a user clicks on it.</p>
-    <h3>Multiple expanders</h3>
-    <p>Expanders work well in multiples, see the example below:</p>
+    <h2 id="how-it-works">How expanders work</h2>
+    <p>The expander is a short link in a box that expands into more detailed text when a user clicks on it.</p>
+    <h3>More than 1 expander</h3>
+    <p>It can work well to have several expanders. See the example below.</p>
   </div>
 </div>
 
@@ -103,7 +105,7 @@
           <ul>
           <li>a blood glucose metre</li>
           <li>small needles called lancets</li>
-          <li>a plastic pen to hold the lancest</li>
+          <li>a plastic pen to hold the lancets</li>
           <li>small test strips</li>
           </ul>
           "
@@ -132,17 +134,17 @@
     <h3 id="write-clear-link-text">Write clear link text</h3>
     <p>Make the link text short and descriptive so users can quickly work out if they need to click on it.</p>
     <h2 id="research-on-this-component">Research</h2>
-    <p>Expanders tested well in multiples for Type 1 Diabetes where users where overwhelmed by the amount of information. They've also been successfully tested on conditions and medicines pages where they appeared amongst written content. </p>
-    <p>If you’ve used this component, get in touch to share your user research findings.</p>
+    <p>We tested several expanders in our information about type 1 diabetes where users felt overwhelmed by the amount of information. They tested well. We've also tested them on other pages about health and medicines.</p>
+    <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p>Discuss expanders on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2019</p>
+    <p class="nhsuk-body-s">Updated: February 2019</p>
     </div>
     {{ panel({
-    "label": "Similar patterns",
+    "label": "Similar components",
     "HTML": "<ul>
-                <li></li>
+               <li><a href='/service-manual/styles-components-patterns/details'>Details</a></li>
             </ul>"
     }) }}
     </div>
