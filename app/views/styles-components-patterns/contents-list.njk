@@ -78,15 +78,15 @@
             <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/contents-list">get the latest contents list code</a> in the NHS.UK frontend library in GitHub.</p>
 
             <h2>When to use a contents list</h2>
-                <p>Use a contents list to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
-                <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/paginantion">pagination</a> at the bottom of the page. The two components make up the multi-page navigation pattern.</p>
+                <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
+                <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
 
             <h2>When not to use a contents list</h2>
-                <p>Do not use a contents list on pages which aren't grouped together or "related" as that is likely confuse users.</p>
+                <p>Do not use a contents list on pages which aren't grouped together or "related" as this is likely confuse users.</p>
                 <p>Do not use a contents list in a transactional service or a form. We use other components instead, including:
                 <ul>
-                  <li><a href="/service-manual/patterns/buttons">buttons</a> to move forward</li>
-                  <li><a href="/patterns/back-link">back link</a> to navigate back</li>
+                  <li><a href="/service-manual/styles-components-patterns/buttons">buttons</a> to move forward</li>
+                  <li><a href="/service-manual/styles-components-patterns/back-link">back link</a> to navigate back</li>
                 </ul></p>
 
             <h2>How to use a contents list</h2>
@@ -94,11 +94,11 @@
 
                 <p>Keep links short and descriptive. Links that are too long (more than 2 lines) make it difficult for users to scan the list.</p>
 
-                <p>Page titles must reflect the subject of the page (for example, "Treatment"), with the overall subject of the section as the sub-header (for example, "Age-related macular degeneration"). This is so users are clear where they have navigated to.</p>
+                <p>Page titles must reflect the subject of the page (for example, "Treatment"), with the overall subject of the section as the sub-header (for example, "Age-related macular degeneration (AMD)"). This is so users are clear where they have navigated to.</p>
 
 
             <h3>Accessibility</h3>
-                <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. Screen readers that support this attribute will read this out and that makes it clear what the list of links are.</p>
+                <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. Screen readers that support this attribute will read this out and that makes it clear what the list of links is.</p>
 
                 <p class="rich-text">There is also a visually hidden heading title <code>Contents</code> which screen readers will read as a heading to the links.</p>
 
