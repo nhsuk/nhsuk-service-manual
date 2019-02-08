@@ -1,0 +1,41 @@
+{% from 'components/tables/macro.njk' import table %}
+
+{{ table({
+  panel: false,
+  caption: "Skin symptoms and possible causes",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Skin symptoms"
+    },
+    {
+      text: "Possible cause"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Blisters on lips or around the mouth"
+      },
+      {
+        text: "cold sores"
+      }
+    ],
+    [
+      {
+        text: "Itchy, dry, cracked, sore"
+      },
+      {
+        text: "eczema"
+      }
+    ],
+    [
+      {
+        text: "Itchy blisters"
+      },
+      {
+        text: "shingles, chickenpox"
+      }
+    ]
+  ]
+}) }}
