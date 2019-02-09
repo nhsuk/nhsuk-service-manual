@@ -70,6 +70,10 @@ app.get('/', (req, res) => {
   res.redirect('/service-manual');
 });
 
+app.get('/service-manual/content-style-guide', (req, res) => {
+  res.redirect('/service-manual/content');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, function (req, res, next) {
   routing.matchRoutes(req, res, next)
@@ -81,7 +85,7 @@ app.get('*', function(req, res){
 
 // Run the application
 app.listen(port, () => {
-  console.log(chalk.green(`App is running and watching for changes at http://localhost:${port}`));
+  console.log(chalk.green(`App is running and watching for changes at http://localhost:${port}/service-manual`));
 });
 
 module.exports = app;
