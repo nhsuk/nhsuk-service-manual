@@ -2,6 +2,7 @@
 {% set pageDescription = 'Help to grow and improve the digital service manual.' %}
 
 {% extends 'includes/layout.njk' %}
+{% from 'components/action-link/macro.njk' import actionLink %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -13,17 +14,23 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h2>Discuss</h2>
-    <p>Talk about patterns and anything else in the manual with other teams on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net.</a></p>
 
-    <h2>Share your work</h2>
-    <p>If you have new research findings, designs, code or content patterns, share them on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace.</a> or email them to <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.
+    <h2>Community backlog</h2>
+    <p>The service manual is for everyone making products and services at the NHS. Anyone can propose, contribute, and work on new things.</p>
+    {{ actionLink({
+      "text": "Go to the community backlog",
+      "href": "/service-manual/contribute/backlog"
+    }) }}
 
-    <h2>Give feedback</h2>
-    <p>Tell us about your experience using the manual - <a href="https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh">complete a quick survey</a>.</p>
+    <h2 class="nhsuk-u-margin-top-8">How to contribute</h2>
+    <p>Find out how to:</p>
+    <ul>
+      <li><a href="/service-manual/contribute/propose-new-thing">Propose a new thing that's not in the backlog</a></li>
+      <li><a href="/service-manual/contribute/work-new-thing">Work on something</a></li>
+    </ul>
 
-    <h2>Ask us a question</h2>
-    <p>For anything else, email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <h2 class="nhsuk-u-margin-top-6">Contribution criteria</h2>
+    <p>To make sure everything in the service manual is of high quality, it needs to meet the following <a href="/service-manual/contribute/criteria">contribution criteria:</a></p>
 
     <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: January 2019</p>
