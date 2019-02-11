@@ -70,6 +70,8 @@ app.get('/', (req, res) => {
   res.redirect('/service-manual');
 });
 
+// The content style guide pages have moved to /content
+// Temporary redirect incase anyone still visits /content-style-guide
 app.get('/service-manual/content-style-guide', (req, res) => {
   res.redirect('/service-manual/content');
 });
