@@ -1,0 +1,79 @@
+{% set pageTitle = '1. Understand users and their needs in the context of health and care' %}
+{% set pageDescription = 'Take time to understand your users\' clinical, practical and emotional needs - and abilities - and how you can help them manage their own health better.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/service-standard",
+  text: "NHS service standard"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">Take time to understand your users' clinical, practical and emotional needs - and abilities - and how you can help them manage their own health better. Take account of the needs of partners, carers and health professionals too.</p>
+    <p class="nhsuk-body-l">Think about people's entire experience and the systems and processes around the product or service you're building.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Why it's important</h2>
+    <p>Lots of products and services aren't useful for users. Others are frustrating and hard to use. You need to understand your users and their needs - from their point of view - to build something that helps them.</p>
+    <p>The most obvious problem isn't always the one that really needs solving. Test your assumptions early to reduce the risk of building the wrong thing.</p>
+    <p>Understanding as much of the context as possible will give you the best chance of meeting users' needs in a simple, cost effective way.</p>
+
+    <h2>What you should do</h2>
+    <p>You should be able to show that:</p>
+    <ul>
+      <li>you have done user research with patients, their families, carers and health service staff, including in their natural environment, such as at home or in a GP surgery</li>
+      <li>you have used user research, search data, analytics or other data to understand the problem you need to solve</li>
+      <li>you've built quick, throwaway prototypes to test your hypothesis</li>
+      <li>your solution works well for users</li>
+    </ul>
+
+    <h2>Guidance</h2>
+
+    <h3>NHS service manual</h3>
+    <ul>
+      <li>Guidance on user research methods in health and care settings. [This is an example. Guidance not written yet.]</li>
+    </ul>
+
+    <h3>GOV.UK resources</h3>
+    <p>This point reflects point 1 in the Government service standard.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs">Learning about users and their needs</a> (GOV.UK service manual)</li>
+      <li><a href="https://www.gov.uk/service-manual/design/making-prototypes">Making prototypes</a> (GOV.UK service manual)</li>
+    </ul>
+
+    <h3>Read more about this</h3>
+    <ul>
+      <li><a href="https://digital.nhs.uk/blog/transformation-blog/2018/do-you-know-what-your-users-need%E2%80%A6and-who-they-all-are/">Do you know what your users need ... and who they all are?</a> (NHS Digital blog by Matt Lund)</li>
+      <li>How we do user-centred design for citizen-facing services - <a href="https://digital.nhs.uk/blog/transformation-blog/2017/how-we-do-user-centred-design-for-citizen-facing-services---part-1/">part one</a> and <a href="https://digital.nhs.uk/blog/transformation-blog/2017/how-we-do-user-centred-design-for-citizen-facing-services---part-2/">part two</a> (NHS Digital blog by Matt Edgar)</li>
+      <li><a href="https://gds.blog.gov.uk/2014/08/12/helping-government-find-user-needs-with-analytics/">Helping government find user needs with analytics</a> (GDS blog)</li>
+      <li><a href="https://gds.blog.gov.uk/2018/01/10/working-with-citizens-advice-and-its-amazing-data/">Working with Citizens Advice and its amazing data</a> (GDS blog)</li>
+    </ul>
+
+    <h3>Other help</h3>
+    <ul>
+      <li>Talk to us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+      <li>Contact us to pair up with someone</li>
+      <li>Book training or a workshop</li>
+    </ul>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: January 2019</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

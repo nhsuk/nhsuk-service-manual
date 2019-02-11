@@ -4,6 +4,7 @@
 
 {% from 'components/skip-link/macro.njk' import skipLink %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -30,13 +31,13 @@
     <h2 >Code and design</h2>
   </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      <p>To view the skip link, tab to this example or click inside this example and press tab.</p>
-      {{ skipLink({
-      "href": "#maincontent",
-      "text": "Skip to main content"
-      }) }}
-    </div>
+    <p>To view the skip link, tab to this example or click inside this example and press tab.</p>
+    {{ designExample({
+      type: 'skip-link'
+    }) }}
+  </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/skip-link.html">Preview the skip link component</a></p>
     <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/skip-link">get the latest skip link code</a> in the NHS.UK frontend library in GitHub.</p>
