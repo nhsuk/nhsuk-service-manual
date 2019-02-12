@@ -1,0 +1,27 @@
+---
+trigger:
+  branches:
+    include:
+    - master
+    - develop
+  paths:
+    include:
+    - deploy/terraform/*
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- bash: |
+    terraform plan > terraform.plan
+  displayName: 'terraform plan'
+  cwd:  '$(System.DefaultWorkingDirectory)/deploy/terraform'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/deploy/terraform'
+    includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts: drop'
