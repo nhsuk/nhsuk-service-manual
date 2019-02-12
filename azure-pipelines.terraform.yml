@@ -22,11 +22,13 @@ steps:
     failOnStderr: true
     targetType: inline
     script: |
-      ENVIRONMENT=staging
       if [ "$BUILD_SOURCEBRANCH" = "refs/heads/master" ]; then
         ENVIRONMENT=production
+      else
+        ENVIRONMENT=staging
       fi
       echo "##vso[task.setvariable variable=ENVIRONMENT]$ENVIRONMENT"
+      echo "##vso[build.addbuildtag]$ENVIRONMENT"
 
 - task: AzureCLI@1
   displayName: 'Get storage account key'
