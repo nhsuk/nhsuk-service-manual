@@ -54,7 +54,7 @@ steps:
       
       terraform init -backend-config="key=nhs-service-manual.$ENVIRONMENT.terraform.tfstate" -backend-config="access_key=$STORAGE_ACCOUNT_KEY" -reconfigure
       
-      terraform plan -input=false | tee terraform.plan
+      terraform plan -input=false -out=terraform.plan
   env:
     TF_VAR_manual_username: $(MANUAL_USERNAME)
     TF_VAR_manual_password: $(MANUAL_PASSWORD)
