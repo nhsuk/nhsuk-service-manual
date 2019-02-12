@@ -19,6 +19,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Get storage account key'
   inputs:
+    failOnStandardError: true
     azureSubscription: 'www.nhs.uk (1e543650-5458-44ea-a3b1-35a6d0d92cc9)'
     scriptLocation: inlineScript
     inlineScript: |
@@ -28,6 +29,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'terraform plan'
   inputs:
+    failOnStandardError: true
     azureSubscription: 'Beta.nhs.uk (d29bb595-46d1-4c56-82c4-9f2e0062c2da)'
     workingDirectory: '$(System.DefaultWorkingDirectory)/deploy/terraform'
     addSpnToEnvironment: true
