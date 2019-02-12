@@ -16,6 +16,18 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+- task: Bash@3
+  displayName: 'Set environment'
+  inputs:
+    failOnStderr: true
+    targetType: inline
+    script: |
+      ENVIRONMENT=staging
+      if [ "$BUILD_SOURCEBRANCH" = "refs/heads/master" ]; then
+        ENVIRONMENT=production
+      fi
+      echo "##vso[task.setvariable variable=ENVIRONMENT]$ENVIRONMENT"
+
 - task: AzureCLI@1
   displayName: 'Get storage account key'
   inputs:
