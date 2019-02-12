@@ -15,7 +15,7 @@ steps:
 - bash: |
     terraform plan > terraform.plan
   displayName: 'terraform plan'
-  cwd:  '$(System.DefaultWorkingDirectory)/deploy/terraform'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/deploy/terraform'
 
 - task: ArchiveFiles@2
   displayName: 'Archive files'
