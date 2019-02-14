@@ -1,0 +1,75 @@
+{% set pageTitle = 'Contribution criteria' %}
+{% set pageDescription = 'TBD.' %}
+
+{% extends 'includes/layout.njk' %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/contribute",
+  text: "Contribute"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">All contributions need to meet the following criteria.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Criteria for new proposals</h2>
+    <p>Proposals need to show that the new resource or guidance would be useful and unique.</p>
+
+    <div class="nhsuk-table-responsive nhsuk-u-margin-top-0">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">TBD</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col">Criteria</th>
+            <th class="nhsuk-table__header" scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Useful</td>
+            <td class="nhsuk-table__cell ">There is evidence that this new thing would be useful for many teams or services.</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Unique</td>
+            <td class="nhsuk-table__cell ">It does not replicate something</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: February 2019</p>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-third">
+    <div class="app-u-border-top">
+      <h3>Contribute</h3>
+      <ul>
+        <li><a href="/service-manual/contribute/backlog">Community backlog</a></li>
+        <li><a href="/service-manual/contribute/work-new-thing">Work on a new thing</a></li>
+        <li><a href="/service-manual/contribute/criteria">Contribution criteria</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
