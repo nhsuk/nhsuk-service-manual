@@ -11,6 +11,7 @@ trigger:
 variables:
   MANUAL_USERNAME: $(SECRET_MANUAL_USERNAME)
   MANUAL_PASSWORD: $(SECRET_MANUAL_PASSWORD)
+  GPG_ENCRYPT_PASSWORD: $(SECRET_GPG_ENCRYPT_PASSWORD)
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -67,6 +68,19 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/deploy/terraform'
     includeRootFolder: false
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+
+- task: Bash@3
+  displayName: 'Encrypt zip file'
+  inputs:
+    failOnStderr: true
+    workingDirectory: '$(Build.ArtifactStagingDirectory)/'
+    targetType: inline
+    script: |
+      sudo apt install pgp --yes
+      gpg --batch --yes --passphrase $GPG_ENCRYPT_PASSWORD -c $BUILD_BUILDID.zip -o $BUILD_BUILDID.zip.gpg
+  env:
+    GPG_ENCRYPT_PASSWORD: $(GPG_ENCRYPT_PASSWORD)
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
