@@ -73,7 +73,6 @@ steps:
 - task: Bash@3
   displayName: 'Encrypt zip file'
   inputs:
-    failOnStderr: true
     workingDirectory: '$(Build.ArtifactStagingDirectory)/'
     targetType: inline
     script: |
