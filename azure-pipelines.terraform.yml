@@ -77,7 +77,7 @@ steps:
     workingDirectory: '$(Build.ArtifactStagingDirectory)/'
     targetType: inline
     script: |
-      echo $GPG_ENCRYPT_PASSWORD | gpg --yes --passphrase-fd 0 --symmetric $BUILD_BUILDID.zip --output $BUILD_BUILDID.zip.gpg
+      gpg --yes --passphrase $GPG_ENCRYPT_PASSWORD --output $BUILD_BUILDID.zip.gpg --symmetric $BUILD_BUILDID.zip 
       rm $BUILD_BUILDID.zip
   env:
     GPG_ENCRYPT_PASSWORD: $(GPG_ENCRYPT_PASSWORD)
