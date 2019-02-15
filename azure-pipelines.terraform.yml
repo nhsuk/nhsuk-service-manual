@@ -73,10 +73,11 @@ steps:
 - task: Bash@3
   displayName: 'Encrypt zip file'
   inputs:
+    failOnStandardError: true
     workingDirectory: '$(Build.ArtifactStagingDirectory)/'
     targetType: inline
     script: |
-      gpg --yes --passphrase "$GPG_ENCRYPT_PASSWORD" --output $BUILD_BUILDID.zip.gpg --symmetric $BUILD_BUILDID.zip 
+      gpg --quiet --yes --passphrase "$GPG_ENCRYPT_PASSWORD" --output $BUILD_BUILDID.zip.gpg --symmetric $BUILD_BUILDID.zip 
       rm $BUILD_BUILDID.zip
   env:
     GPG_ENCRYPT_PASSWORD: "$(GPG_ENCRYPT_PASSWORD)"
