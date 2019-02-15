@@ -77,8 +77,7 @@ steps:
     workingDirectory: '$(Build.ArtifactStagingDirectory)/'
     targetType: inline
     script: |
-      sudo apt install gnupg --yes
-      gpg --batch --yes --passphrase $GPG_ENCRYPT_PASSWORD -c $BUILD_BUILDID.zip -o $BUILD_BUILDID.zip.gpg
+      echo $GPG_ENCRYPT_PASSWORD | gpg --yes --passphrase-fd 0 --symmetric $BUILD_BUILDID.zip --output $BUILD_BUILDID.zip.gpg
       rm $BUILD_BUILDID.zip
   env:
     GPG_ENCRYPT_PASSWORD: $(GPG_ENCRYPT_PASSWORD)
