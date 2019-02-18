@@ -2,7 +2,7 @@
 {% set pageDescription = 'Help to grow and improve the digital service manual.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/action-link/macro.njk' import actionLink %}
+{% from 'components/inset-text/macro.njk' import insetText %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -17,10 +17,11 @@
 
     <h2>Community backlog</h2>
     <p>The service manual is for everyone making products and services at the NHS. Anyone can propose, contribute, and work on new things.</p>
-    {{ actionLink({
-      "text": "Go to the community backlog",
-      "href": "/service-manual/contribute/backlog"
-    }) }}
+
+    <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p><a href="/service-manual/contribute/backlog">Go to the community backlog</a></p>
+    </div>
 
     <h2 class="nhsuk-u-margin-top-8">How to contribute</h2>
     <p>Find out how to:</p>
