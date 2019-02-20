@@ -1,0 +1,80 @@
+{% set pageTitle = 'Contribution criteria' %}
+{% set pageDescription = 'TBD.' %}
+
+{% extends 'includes/layout.njk' %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/contribute",
+  text: "Contribute"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">All contributions need to meet the following criteria.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2 class="nhsuk-heading-xs">Criteria for:</h2>
+    <ul>
+      <li><a href="#backlog-components-patterns">Making new proposals</a></li>
+      <li><a href="#backlog-content-style-guide">Publishing new components and patterns</a></li>
+      <li><a href="#backlog-practices">Publishing in the content style guide</a></li>
+      <li><a href="#backlog-practices">Publishing new guidance on practices and ways of working</a></li>
+    </ul>
+
+    <h2>Criteria for new proposals</h2>
+    <p>Proposals need to show that the new resource or guidance would be useful and unique.</p>
+
+    <h3>1. Useful</h3>
+    <p>There is evidence that this new thing would be useful for many teams or services.</p>
+
+    <h3>2. Unique</h3>
+    <p>It does not replicate something</p>
+
+
+    <h2>Criteria for publishing a component</h2>
+    <p>To make sure the implemention is usable, consistent and versatile.</p>
+
+    <h3>1. Usable</h3>
+    <p>It has been tested in user research and shown to work with a representative sample of users, including those with disabilities.</p>
+
+    <h3>2. Consistent</h3>
+    <p>It reuses <a href="#">existing styles and components</a> where relevant. It follows the <a href="#">content style guide</a> and <a href="#">NHS.UK</a> frontend standards.</p>
+
+    <h3>3. Versatile</h3>
+    <p>The implementation is versatile enough that the component or pattern can be used in a range of different services that may need it. The component or pattern must also have been tested and shown to work with a range of browsers, assistive technologies and devices.</p>
+
+
+    <h2>Criteria for publishing in the content style guide</h2>
+    <p>Placeholder blurb.</p>
+
+    <h3>1. Example</h3>
+    <p>Placeholder blurb</p>
+
+    <h3>2. Example</h3>
+    <p>Placeholder blurb</p>
+
+    <h3>3. Example</h3>
+    <p>Placeholder blurb</p>
+
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: February 2019</p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
