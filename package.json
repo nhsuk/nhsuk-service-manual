@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
@@ -24,18 +24,18 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "nhsuk-frontend": "^0.9.1",
+    "nhsuk-frontend": "^1.0.1",
     "nunjucks": "^3.1.7",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "concurrently": "^4.1.0",
     "highlight.js": "^9.14.2",
-    "iframe-resizer": "^3.6.4",
+    "iframe-resizer": "^3.6.5",
     "js-beautify": "^1.8.9",
-    "nodemon": "^1.18.9",
+    "nodemon": "^1.18.10",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-stream": "^1.24.1",
