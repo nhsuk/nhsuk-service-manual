@@ -4,6 +4,7 @@
 
 {% from 'components/pagination/macro.njk' import pagination %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,27 +27,16 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ pagination({
-      "previousUrl": "/section/treatments",
-      "previousPage": "Treatments",
-      "nextUrl": "/section/symptoms",
-      "nextPage": "Symptoms"
-      }) }}
-    </div>
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'pagination'
+    }) }}
   </div>
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/pagination.html">Preview the pagination component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/pagination">get the latest pagination code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use pagination</h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use pagination</h2>
     <p>Use pagination at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.</p>
     <p>If you're using pagination, you should also use a <a href="/service-manual/styles-components-patterns/contents-list">contents list</a> at the top of the page. The 2 components make up the multi-page navigation pattern.</p>
     <h2>When not to use pagination</h2>
@@ -59,9 +49,9 @@
     <h2>How to use pagination</h2>
     <p>Use a <a href="/service-manual/styles-components-patterns/contents-list">contents list</a> at the top of the page together with pagination at the bottom of each page.</p>
     <p>Use the word "Previous" with an arrow left and a link to the previous page. Use the word Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
-    <h3>Accessibility - THIS ALL NEEDS CHECKING</h3>
-    <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigations links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. Screen readers that support this attribute will read this.</p>
-    <p class="rich-text">There is also a visually hidden heading title <code>Contents</code> which will be read by screen readers as a heading to the links. </p>
+    <h3>Accessibility</h3>
+    <p class="rich-text">The pagination components are surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pagination</code>. Screen readers that support this attribute will read this.</p>
+    <p class="rich-text">There is also a visually hidden heading title <code>pagination</code> which will be read by screen readers as a heading to the links. </p>
     <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
     <h2>Research</h2>
     <p>We tested pagination in grouped information pages in 3 labs in summer 2018. We haven't tested it in forms.</p>
@@ -77,6 +67,7 @@
     "HTML": "<ul>
                 <li><a href='/service-manual/styles-components-patterns/contents-list'>Contents list</a></li>
                 <li><a href='/service-manual/styles-components-patterns/review-date'>Review date</a></li>
+                <li><a href='/service-manual/styles-components-patterns/skip-link'>Skip link</a></li>
               </ul>"
     }) }}
   </div>

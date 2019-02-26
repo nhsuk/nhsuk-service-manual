@@ -2,6 +2,9 @@
 {% set pageDescription = 'Use contents lists to allow users to navigate between related pages, for example about a single condition.' %}
 
 {% extends 'includes/layout.njk' %}
+{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
+{% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -17,78 +20,34 @@
 {% endblock %}
 
 {% block body %}
-    <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <h1 class="nhsuk-u-margin-bottom-5">Contents list</h1>
-                <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use contents lists to allow users to navigate between related pages, for example about a single condition.</p>
-            </div>
-    </div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
+  </div>
+</div>
 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2>Code and design</h2>
+    {{ designExample({
+      type: 'contents-list'
+    }) }}
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+  <h2 class="nhsuk-u-margin-top-8">When to use a contents list</h2>
+  <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
+  <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
 
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-
-
-
-            <h2 >Code and design</h2>
-
-
-
-            <div class="app-example nhsuk-u-margin-bottom-4">
-
-
-                {% from 'components/contents-list/macro.njk' import contentsList %}
-
-                    {{ contentsList({
-                    items: [
-                        {
-                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/",
-                        text: "What is AMD?",
-                        current: "true"
-                        },
-                        {
-                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/",
-                        text: "Symptoms"
-                        },
-                        {
-                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/",
-                        text: "Getting diagnosed"
-                        }
-                        ,
-                        {
-                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/",
-                        text: "Treatments"
-                        }
-                        ,
-                        {
-                        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/",
-                        text: "Living with AMD"
-                        }
-                    ]
-                    }) }}
-
-
-            </div>
-
-
-
-
-            <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/contents-list.html">Preview the contents list component</a></p>
-            <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/contents-list">get the latest contents list code</a> in the NHS.UK frontend library in GitHub.</p>
-
-            <h2>When to use a contents list</h2>
-                <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
-                <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
-
-            <h2>When not to use a contents list</h2>
-                <p>Do not use a contents list on pages which aren't grouped together or "related" as this is likely confuse users.</p>
-                <p>Do not use a contents list in a transactional service or a form. We use other components instead, including:</p>
-                <ul>
-                  <li><a href="/service-manual/styles-components-patterns/buttons">buttons</a> to move forward</li>
-                  <li><a href="/service-manual/styles-components-patterns/back-link">back link</a> to navigate back</li>
-                </ul>
+  <h2>When not to use a contents list</h2>
+  <p>Do not use a contents list on pages which aren't grouped together or "related" as this is likely confuse users.</p>
+  <p>Do not use a contents list in a transactional service or a form. We use other components instead, including:</p>
+  <ul>
+    <li><a href="/service-manual/styles-components-patterns/buttons">buttons</a> to move forward</li>
+    <li><a href="/service-manual/styles-components-patterns/back-link">back link</a> to navigate back</li>
+  </ul>
 
                 <h2>How to use a contents list</h2>
                 <p>Use the contents list at the top of the page together with pagination at the bottom of each page.</p>
@@ -125,6 +84,7 @@
             "HTML": "<ul>
                       <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
                       <li><a href='/service-manual/styles-components-patterns/review-date'>Review date</a></li>
+                      <li><a href='/service-manual/styles-components-patterns/skip-link'>Skip link</a></li>
                     </ul>"
             }) }}
 

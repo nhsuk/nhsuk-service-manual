@@ -4,6 +4,7 @@
 
 {% from 'components/review-date/macro.njk' import reviewDate %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,21 +27,16 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ reviewDate({
-      "lastReview": "12 February 2017",
-      "nextReview": "1 February 2020"
-      }) }}
-    </div>
+    <h2>Code and design</h2>
+    {{ designExample({
+      type: 'review-date'
+    }) }}
   </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/review-date.html">Preview the review date component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/review-date">get the latest review date code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use review dates</h2>
+    <h2 class="nhsuk-u-margin-top-8">When to use review dates</h2>
     <p>We use 2 dates - last reviewed date and next review date - on every page of health content on the NHS website (<a href="https://www.nhs.uk">nhs.uk</a>). We do this as part of our work to meet <a href="https://www.england.nhs.uk/tis/about/the-info-standard/">NHS England's Information Standard</a>.
     <h2>When not to use review dates</h2>
     <p>We do not use review dates on our news content (<a href="https://www.nhs.uk/news/">Behind the Headlines</a>), our campaign content or in the service manual.</p>
@@ -63,6 +59,7 @@
     "HTML": "<ul>
                 <li><a href='/service-manual/styles-components-patterns/contents-list'>Contents list</a></li>
                 <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
+                <li><a href='/service-manual/styles-components-patterns/skip-link'>Skip link</a></li>
               </ul>"
     }) }}
   </div>

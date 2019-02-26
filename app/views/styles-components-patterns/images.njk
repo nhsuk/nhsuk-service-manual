@@ -4,6 +4,7 @@
 
 {% from 'components/images/macro.njk' import image %}
 {% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,23 +27,17 @@
   </div>
 </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 >Code and design</h2>
-  </div>
   <div class="nhsuk-grid-column-full">
-    <div class="app-example nhsuk-u-margin-bottom-4">
-      {{ image({
-      "alt": "Picture of allergic conjunctivitis",
-      "src": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg",
-      "caption": "Itchy, red, watering eyes"
-      }) }}
-    </div>
+    <h2 >Code and design</h2>
+    {{ designExample({
+      type: 'images'
+    }) }}
   </div>
+</div>
+<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <p><a href="https://nhsuk.github.io/nhsuk-frontend/components/images.html">Preview the image component</a></p>
-    <p>You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/images">get the latest image code</a> in the NHS.UK frontend library in GitHub.</p>
-    <h2>When to use images</h2>
-    <p>Informative images that meet real user needs can be realy important on health services - especially where they help users identify specific health problems and get the treatment they need.</p>
+    <h2 class="nhsuk-u-margin-top-8">When to use images</h2>
+    <p>Informative images that meet real user needs can be very important on health services - especially where they help users identify specific health problems and get the treatment they need.</p>
     <p>We've also found users with some access needs (such as dyslexia) navigate health information (conditions and treatment) pages through images. Images help them orient themselves and they separate out the content.</p>
     <p>But having unnecessary or decorative images can frustrate users, especially on information pages or transactional journeys.</p>
     <p>We are working on more guidance about when to use images. We expect to publish it in spring 2019.</p>
