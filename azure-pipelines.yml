@@ -9,16 +9,6 @@ trigger:
     - /
     exclude:
     - deploy/terraform/*
-pr:
-  branches:
-    include:
-    - master
-    - develop
-  paths:
-    include:
-    - /
-    exclude:
-    - deploy/terraform/*
 
 pool:
   vmImage: 'Ubuntu-16.04'
