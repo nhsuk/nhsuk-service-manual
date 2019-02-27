@@ -51,6 +51,7 @@ resource "azurerm_app_service" "nhsuk-service-manual" {
   location            = "${azurerm_resource_group.nhsuk-service-manual.location}"
   resource_group_name = "${azurerm_resource_group.nhsuk-service-manual.name}"
   app_service_plan_id = "${azurerm_app_service_plan.nhsuk-service-manual.id}"
+  https_only          = true
 
   site_config {
     http2_enabled    = true
