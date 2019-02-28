@@ -1,6 +1,13 @@
 # NHS digital service manual Changelog
 
-## 1.1.0 - Feb 26, 2019
+## 1.1.1 - 4 March 2019
+
+:wrench: **Fixes**
+
+- Add more terms to A to Z of NHS health writing after January Style Council meeting
+- Update temperature info on Formatting and punctuation page and link to A to Z
+
+## 1.1.0 - 26 February 2019
 
 :new: **New features**
 
