@@ -26,6 +26,6 @@ Expander, Images, Pagination, Review date, Skip link and Table
 - Use the corrext Sass colour variable names and colour hex codes
 - Fix broken breadcrumb Home link on error message component page
 
-## 1.0.0 - Feb 5, 2019
+## 1.0.0 - 5 February 2019
 
 :tada: **Official release of the NHS digital service manual**
