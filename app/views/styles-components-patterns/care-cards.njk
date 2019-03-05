@@ -2,8 +2,9 @@
 {% set pageDescription = 'Use care cards to help users identify and understand the sort of care they need, who to contact and how quickly.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/care-card/macro.njk' import careCard %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'care-card/macro.njk' import careCard %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

@@ -1,9 +1,10 @@
 {% set pageTitle = "Error summary" %}
 {% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/error-summary/macro.njk' import errorSummary %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'error-summary/macro.njk' import errorSummary %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

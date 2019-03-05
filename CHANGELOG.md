@@ -7,6 +7,10 @@
 - Publish new contribution pages for proposing and working on new features with contribution criteria
 - Publish new pattern; Mini-hub
 
+:wrench: **Fixes**
+
+- Use the correct paths in the component code snippets for importing Nunjucks macros
+
 ## 1.1.1 - 4 March 2019
 
 :wrench: **Fixes**
