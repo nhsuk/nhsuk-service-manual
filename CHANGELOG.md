@@ -13,6 +13,10 @@
 - Use latest version of the NHS.UK frontend library (2.0.0)
 - Amend typo on the inset text component page
 
+:wrench: **Fixes**
+
+- Use the correct paths in the component code snippets for importing Nunjucks macros
+
 ## 1.1.1 - 4 March 2019
 
 :wrench: **Fixes**
