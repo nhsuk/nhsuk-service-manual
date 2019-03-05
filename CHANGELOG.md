@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 1.2.0 - 5 March 2019
+
+:new: **New features**
+- Publish new contribution pages for proposing and working on new features with contribution criteria
+
 ## 1.1.1 - 4 March 2019
 
 :wrench: **Fixes**
