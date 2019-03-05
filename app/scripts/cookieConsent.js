@@ -154,7 +154,7 @@ export default () => {
   /*! no static exports found */
   /***/ (function(module, exports) {
 
-  eval("module.exports = \"<div id=\\\"cookie-banner\\\">\\n  <div class=\\\".nhsuk-grid-column-full\\\">\\n    <div class=\\\"cookie-text clear\\\">\\n      <p>\\n        The NHS website uses cookies to improve your on-site experience.\\n        <a class=\\\"cookie-banner-policy\\\" href=\\\"https://nhsuk-service-manual.azurewebsites.net/service-manual/cookies\\\" target=\\\"_blank\\\">Find out more about cookies</a>\\n      </p>\\n      <p class=\\\"cookie-banner-close\\\">\\n        <a href=\\\"#\\\">\\n          <img src=\\\"/service-manual/assets/icons/icon-close-das.gif\\\" alt=\\\"Close cookie banner\\\">\\n        </a>\\n      </p>\\n    </div>\\n  </div>\\n</div>\\n\";\n\n//# sourceURL=webpack:///./src/modal.html?");
+  eval("module.exports = \"<div id=\\\"cookie-banner\\\">\\n  <div class=\\\".nhsuk-grid-column-full\\\">\\n    <div class=\\\"cookie-text clear\\\">\\n      <p>\\n        The NHS website uses cookies to improve your on-site experience.\\n        <a class=\\\"cookie-banner-policy\\\" href=\\\"/service-manual/cookies\\\" target=\\\"_blank\\\">Find out more about cookies</a>\\n      </p>\\n      <p class=\\\"cookie-banner-close\\\">\\n        <a href=\\\"#\\\">\\n          <img src=\\\"/service-manual/assets/icons/icon-close-das.gif\\\" alt=\\\"Close cookie banner\\\">\\n        </a>\\n      </p>\\n    </div>\\n  </div>\\n</div>\\n\";\n\n//# sourceURL=webpack:///./src/modal.html?");
 
   /***/ }),
 
