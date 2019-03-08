@@ -33,7 +33,14 @@
         <img src="/service-manual/assets/mini-hub-amd.png"  style="width:100%;"/>
       </div>
 
-<p>The mini-hub is made up of the <a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> which sits at the top of the page and the <a href="/service-manual/styles-components-patterns/pagination">paginantion component</a> which goes at the bottom of the page.</p>
+<p>The mini-hub is made up of:</p> 
+<ul>
+<li><a href="/service-manual/styles-components-patterns/typography">heading and sub-heading</a> which sits at the top of the page</li>
+<li><a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> beneath the heading</li> 
+<li><a href="/service-manual/styles-components-patterns/pagination">paginantion component</a> which goes at the bottom of the page.</li>
+</ul>
+
+</p>
 
   </div>
   <div class="nhsuk-grid-column-two-thirds">
@@ -71,7 +78,38 @@
 
     <h2>Elements of the mini-hub</h2>
 
-    <h3>
+        <h3>
+    Heading and sub-heading
+    </h3>
+
+    <p>
+  Use a <a href="/service-manual/styles-components-patterns/typography">h1 heading</a> at the top of the page. The h1 heading should be for the page your on, not the mini-hub topic. 
+   </p>
+   <p class="rich-text">
+   The mini-hub topic sits beneath the page heading as a sub-heading. The sub-heading has a <code>h1</code> tag but with the class of <code>class="nhsuk-caption-xl"</code>
+   </p> 
+
+    <p>
+    We originally tested the mini-hub topic being the main h1 heading but found when users navigated between pages it wasn't obvious what page they were on, and in some cases they didn't realise that they had moved between pages. Only when we made the page heading the h1 - that users understood what page they were on.
+    </p>
+
+    <p class="rich-text">
+    We found screen readers struggling to pronounce heading and sub-headings as one thing. They would read them separately which caused confusion so we've used <code>&lt;span&gt;</code> tags around the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause. 
+    </p>
+
+
+
+
+
+
+
+        {{ designExample({
+      type: 'typography-mini-hub-heading'
+    }) }}
+
+
+
+    <h3 class="nhsuk-u-margin-top-6">
     Contents list
     </h3>
 
