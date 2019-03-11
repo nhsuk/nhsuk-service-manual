@@ -1,9 +1,10 @@
 {% set pageTitle = 'Expander' %}
 {% set pageDescription = 'Make a complex topic easier to digest by letting users reveal more detailed information only if they need it.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/details/macro.njk' import details %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'details/macro.njk' import details %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

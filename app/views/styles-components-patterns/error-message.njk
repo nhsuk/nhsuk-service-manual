@@ -1,10 +1,11 @@
 {% set pageTitle = "Error message" %}
 {% set pageDescription = "Use an error message when there is a validation error. Explain what went wrong and how to fix it." %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/error-message/macro.njk' import errorMessage %}
-{% from 'components/date-input/macro.njk' import dateInput %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'error-message/macro.njk' import errorMessage %}
+{% from 'date-input/macro.njk' import dateInput %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

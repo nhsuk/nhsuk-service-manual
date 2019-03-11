@@ -1,9 +1,10 @@
 {% set pageTitle = 'Images' %}
 {% set pageDescription = 'Use images only if there is a real user need. Avoid unnecessary decoration.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/images/macro.njk' import image %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'images/macro.njk' import image %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

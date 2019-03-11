@@ -1,9 +1,10 @@
 {% set pageTitle = "Fieldset" %}
 {% set pageDescription = "Use a fieldset to group related form inputs."%}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/fieldset/macro.njk' import fieldset %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

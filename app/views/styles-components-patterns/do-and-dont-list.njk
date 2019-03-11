@@ -2,8 +2,9 @@
 {% set pageDescription = "Use Do and Don't lists to help users understand more easily what they should and shouldn't do." %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/do-dont-list/macro.njk' import list %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'do-dont-list/macro.njk' import list %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
