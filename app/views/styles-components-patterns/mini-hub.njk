@@ -3,8 +3,7 @@
 
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/header/macro.njk' import header %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
@@ -33,10 +32,10 @@
         <img src="/service-manual/assets/mini-hub-amd.png"  style="width:100%;"/>
       </div>
 
-<p>The mini-hub is made up of:</p> 
+<p>The mini-hub is made up of:</p>
 <ul>
 <li><a href="/service-manual/styles-components-patterns/typography">heading and sub-heading</a> which sits at the top of the page</li>
-<li><a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> beneath the heading</li> 
+<li><a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> beneath the heading</li>
 <li><a href="/service-manual/styles-components-patterns/pagination">paginantion component</a> which goes at the bottom of the page.</li>
 </ul>
 
@@ -57,9 +56,9 @@
     <p>
     NHS.UK uses mini-hubs to present topics that:
     </p>
-    
+
     <ul>
-	<li>have a handful of pages on one subject/topic</li> 
+	<li>have a handful of pages on one subject/topic</li>
 	<li>are made up for 2-8 pages</li>
     </ul>
 
@@ -70,7 +69,7 @@
     <p>
     NHS.UK does not use mini-hub:
     </p>
-    
+
     <ul>
 	<li>on non-related topic pages</li>
 	<li>for content inside a transactional service</li>
@@ -83,18 +82,18 @@
     </h3>
 
     <p>
-  Use a <a href="/service-manual/styles-components-patterns/typography">h1 heading</a> at the top of the page. The h1 heading should be for the page your on, not the mini-hub topic. 
+  Use a <a href="/service-manual/styles-components-patterns/typography">h1 heading</a> at the top of the page. The h1 heading should be for the page your on, not the mini-hub topic.
    </p>
    <p class="rich-text">
    The mini-hub topic sits beneath the page heading as a sub-heading. The sub-heading has a <code>h1</code> tag but with the class of <code>class="nhsuk-caption-xl"</code>
-   </p> 
+   </p>
 
     <p>
     We originally tested the mini-hub topic being the main h1 heading but found when users navigated between pages it wasn't obvious what page they were on, and in some cases they didn't realise that they had moved between pages. Only when we made the page heading the h1 - that users understood what page they were on.
     </p>
 
     <p class="rich-text">
-    We found screen readers struggling to pronounce heading and sub-headings as one thing. They would read them separately which caused confusion so we've used <code>&lt;span&gt;</code> tags around the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause. 
+    We found screen readers struggling to pronounce heading and sub-headings as one thing. They would read them separately which caused confusion so we've used <code>&lt;span&gt;</code> tags around the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.
     </p>
 
 
@@ -150,7 +149,7 @@
     </p>
 
     <p>
-    In testing, the structure and labelling of the pages fitted the mental model of all users, helping them to understand the structure of the content. 
+    In testing, the structure and labelling of the pages fitted the mental model of all users, helping them to understand the structure of the content.
     </p>
 
     <p>
@@ -158,10 +157,10 @@
     </p>
 
     <p>
-    The majority of users we tested with, including a user with very low digital skills - used pagination to navigate through pages and knew this was associated with the contents list at the top of the page. 
+    The majority of users we tested with, including a user with very low digital skills - used pagination to navigate through pages and knew this was associated with the contents list at the top of the page.
     </p>
 
-    
+
 
     <h2>Discuss</h2>
     <p>Discuss the header on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
