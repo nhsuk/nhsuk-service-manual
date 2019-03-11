@@ -1,9 +1,10 @@
 {% set pageTitle = 'Table' %}
 {% set pageDescription = 'Use a table to make it easier for users to compare and scan information.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/tables/macro.njk' import table %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'tables/macro.njk' import table %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

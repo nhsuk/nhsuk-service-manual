@@ -1,9 +1,10 @@
 {% set pageTitle = "Hint text" %}
 {% set pageDescription = "Use hint text to help users understand a question."%}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/hint/macro.njk' import hint %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'hint/macro.njk' import hint %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

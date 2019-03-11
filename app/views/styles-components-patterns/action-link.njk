@@ -2,8 +2,9 @@
 {% set pageDescription = 'Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/action-link/macro.njk' import actionLink %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'action-link/macro.njk' import actionLink %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

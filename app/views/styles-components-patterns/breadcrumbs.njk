@@ -1,8 +1,10 @@
 {% set pageTitle = 'Breadcrumbs' %}
 {% set pageDescription = 'Use breadcrumbs to help users understand where they are in the website.' %}
+
 {% extends 'includes/layout.njk' %}
-{% from 'components/breadcrumb/macro.njk' import breadcrumb %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

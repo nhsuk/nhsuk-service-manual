@@ -1,9 +1,10 @@
 {% set pageTitle = 'Pagination' %}
 {% set pageDescription = 'Use pagination to allow users to navigate between related pages, for example about a single condition.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/pagination/macro.njk' import pagination %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'pagination/macro.njk' import pagination %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

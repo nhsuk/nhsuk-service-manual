@@ -1,8 +1,10 @@
 {% set pageTitle = 'Checkboxes' %}
 {% set pageDescription = 'Use checkboxes to let users select one or more options on a form.' %}
+
 {% extends 'includes/layout.njk' %}
-{% from 'components/checkboxes/macro.njk' import checkboxes %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'checkboxes/macro.njk' import checkboxes %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

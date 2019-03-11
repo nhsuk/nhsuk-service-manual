@@ -1,9 +1,10 @@
 {% set pageTitle = 'Skip link' %}
 {% set pageDescription = 'Use a skip link to help keyboard-only users skip to the main content on a page.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/skip-link/macro.njk' import skipLink %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'skip-link/macro.njk' import skipLink %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

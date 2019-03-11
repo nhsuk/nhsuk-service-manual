@@ -1,8 +1,10 @@
 {% set pageTitle = 'Back link' %}
 {% set pageDescription = 'Use back links to help users go back to the previous page in a multi-page transaction' %}
+
 {% extends 'includes/layout.njk' %}
-{% from 'components/back-link/macro.njk' import backLink %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

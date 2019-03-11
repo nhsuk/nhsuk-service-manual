@@ -1,8 +1,10 @@
 {% set pageTitle = 'Date input' %}
 {% set pageDescription = 'Use date input to help users enter a memorable date, like their date of birth.' %}
+
 {% extends 'includes/layout.njk' %}
-{% from 'components/date-input/macro.njk' import dateInput %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'date-input/macro.njk' import dateInput %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

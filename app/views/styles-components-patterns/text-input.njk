@@ -1,9 +1,10 @@
 {% set pageTitle = "Text input" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/input/macro.njk' import input %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'input/macro.njk' import input %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

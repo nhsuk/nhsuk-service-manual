@@ -1,8 +1,9 @@
 {% set pageDescription = 'Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/hero/macro.njk' import hero %}
-{% from 'components/promo/macro.njk' import promo%}
+
+{% from 'hero/macro.njk' import hero %}
+{% from 'promo/macro.njk' import promo%}
 
 {% block breadcrumb %}{% endblock %}
 
@@ -20,6 +21,7 @@
         {{ promo({
           "href": "/service-manual/design-principles",
           "heading": "Design principles",
+          "headingLevel": "2",
           "description": "These principles guide all of our design."
         }) }}
       </div>
@@ -27,6 +29,7 @@
         {{ promo({
           "href": "/service-manual/frontend-library",
           "heading": "Frontend library",
+          "headingLevel": "2",
           "description": "Production code to start building user interfaces for the NHS."
         }) }}
       </div>
@@ -34,6 +37,7 @@
         {{ promo({
           "href": "/service-manual/prototyping-tools",
           "heading": "Prototyping tools",
+          "headingLevel": "2",
           "description": "Build prototypes or mockups quickly to show people and test with users."
         }) }}
       </div>
@@ -44,6 +48,7 @@
         {{ promo({
           "href": "/service-manual/styles-components-patterns",
           "heading": "UI styles, components and patterns",
+          "headingLevel": "2",
           "description": "Build consistent, accessible user interfaces."
         }) }}
       </div>
@@ -51,6 +56,7 @@
         {{ promo({
           "href": "/service-manual/content",
           "heading": "Content style guide",
+          "headingLevel": "2",
           "description": "How to write for digital NHS services."
         }) }}
       </div>
@@ -58,6 +64,7 @@
         {{ promo({
           "href": "/service-manual/practices",
           "heading": "Practices",
+          "headingLevel": "2",
           "description": "How we approach our working practices at NHS Digital and what we expect of teams."
         }) }}
       </div>

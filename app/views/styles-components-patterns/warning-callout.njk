@@ -2,8 +2,9 @@
 {% set pageDescription = 'Use a warning callout to help users identify and understand warning content on the page, even if they do noticedt read the whole page.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/warning-callout/macro.njk' import warningCallout %}
-{% from 'components/panel/macro.njk' import panel %}
+
+{% from 'warning-callout/macro.njk' import warningCallout %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
