@@ -10,6 +10,7 @@
 :wrench: **Fixes**
 
 - Use the correct paths in the component code snippets for importing Nunjucks macros
+- Add links to discuss each of the component on the GitHub service manual backlog
 
 ## 1.1.1 - 4 March 2019
 
