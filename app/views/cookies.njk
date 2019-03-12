@@ -2,8 +2,9 @@
 {% set pageDescription = 'The NHS digital service manual puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.' %}
 
 {% extends 'includes/layout.njk' %}
-{% from 'components/tables/macro.njk' import table %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
+
+{% from 'tables/macro.njk' import table %}
+{% from 'review-date/macro.njk' import reviewDate %}
 
 {% block body %}
 <div class="nhsuk-grid-row">

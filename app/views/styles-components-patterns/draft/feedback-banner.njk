@@ -1,10 +1,11 @@
 {% set pageTitle = 'Feedback banner' %}
 {% set pageDescription = 'Ask users for feedback, it makes your service better.' %}
+
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/pagination/macro.njk' import pagination %}
-{% from 'components/review-date/macro.njk' import reviewDate %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'pagination/macro.njk' import pagination %}
+{% from 'review-date/macro.njk' import reviewDate %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}

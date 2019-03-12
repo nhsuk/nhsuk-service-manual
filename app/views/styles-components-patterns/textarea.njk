@@ -2,8 +2,8 @@
 {% set pageDescription = "Use textarea to let users enter more than 1 line of text." %}
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/textarea/macro.njk' import textarea %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'textarea/macro.njk' import textarea %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
@@ -68,14 +68,25 @@
     <div class="nhsuk-grid-column-two-thirds">
       <p class="nhsuk-u-margin-top-4">Follow:<ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
       <li><a href="https://design-system.service.gov.uk/components/textarea/#error-messages">GOV.UK design system guidance on textarea error messages.</a></li></ul></p>
+
       <h2>Research</h2>
       <p>We tested the textarea component on a "Register with a GP" prototype at 2 labs in December 2018. Users understood the purpose of the textarea and were able to use it.</p>
       <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
+
       <h2>Discuss</h2>
-      <p>Discuss textarea on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+      <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/22">Discuss textarea on GitHub</a></p>
+
+      <h2>Get in touch</h2>
+      <p>If you have a question:</p>
+      <ul>
+        <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
+        <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net<a></li>
+      </ul>
+
       <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: January 2019</p>
+        <p class="nhsuk-body-s">Updated: January 2019</p>
       </div>
+
       {{ panel({
       "label": "Similar components",
       "HTML": "<ul>
@@ -91,6 +102,7 @@
                 <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
               </ul>"
       }) }}
+
   </div>
 </div>
 {% endblock %}

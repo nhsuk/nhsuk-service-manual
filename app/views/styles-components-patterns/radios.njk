@@ -2,8 +2,8 @@
 {% set pageDescription = "Use radios when you want users to select only 1 option from a list."%}
 {% extends 'includes/layout.njk' %}
 
-{% from 'components/radios/macro.njk' import radios %}
-{% from 'components/panel/macro.njk' import panel %}
+{% from 'radios/macro.njk' import radios %}
+{% from 'panel/macro.njk' import panel %}
 {% from 'includes/design-example.njk' import designExample %}
 
 {% block breadcrumb %}
@@ -93,13 +93,21 @@
     <p class="nhsuk-u-margin-top-4">Follow:
     <ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
     <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li></ul>
-    <h2>Research</h2>
-    <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
+
     <h2>Discuss</h2>
-    <p>Discuss radios on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/19">Discuss radios on GitHub</a></p>
+
+    <h2>Get in touch</h2>
+    <p>If you have a question:</p>
+    <ul>
+      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
+      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net<a></li>
+    </ul>
+
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
+      <p class="nhsuk-body-s">Updated: February 2019</p>
     </div>
+
     {{ panel({
     "label": "Similar components",
     "HTML": " <ul>
@@ -114,6 +122,7 @@
                 <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
               </ul>"
     }) }}
+
   </div>
 </div>
 {% endblock %}
