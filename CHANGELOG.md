@@ -5,7 +5,6 @@
 :new: **New features**
 
 - Publish new contribution pages for proposing and working on new features with contribution criteria
-- Publish new pattern; Mini-hub
 
 :wrench: **Fixes**
 
