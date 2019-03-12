@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 1.2.0 - 5 March 2019
+## 1.2.0 - 12 March 2019
 
 :new: **New features**
 
