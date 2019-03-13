@@ -1,0 +1,79 @@
+{% set pageTitle = '4. Make sure everyone can use the service' %}
+{% set noFollow = true %}
+{% set pageDescription = 'Make sure people with different physical, mental health, social, cultural or learning needs can use your service, whether it&#39;s for the public or staff.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/service-standard",
+  text: "NHS service standard"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">Make sure people with different physical, mental health, social, cultural or learning needs can use your service, whether it's for the public or staff.</p>
+    <p class="nhsuk-body-l">Also people who don’t have access to the internet or lack the skills or confidence to use it.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Why it's important</h2>
+    <p>NHS services are for everyone. We have a legal duty to consider everyone’s needs when we’re designing and delivering services.</p>
+    <p>Inclusive, accessible services are better for everyone. For example, using simple words helps people who are sick or stressed as well as people who have a learning disability.</p>
+
+    <h2>What you should do</h2>
+    <p>Your team should be able to show that:</p>
+    <ul>
+      <li>your service meets accessibility standards, for both online and offline parts</li>
+      <li>you carry out research with participants who represent the potential audience for the service, including people with access needs</li>
+      <li>you avoid excluding any groups your service serves - or making people feel excluded</li>
+      <li>you make sure that people aren’t excluded because they lack digital skills or internet access and you provide assisted digital support to cover any gaps</li>
+      <li>you make your content easy to understand for people with low health literacy</li>
+    </ul>
+
+    <h2>Guidance</h2>
+
+    <h3>NHS service manual</h3>
+    <ul>
+      <li><a href="/service-manual/practices/create-content-for-users-with-low-health-literacy">Creating content for users with low health literacy</a></li>
+      <li><a href="/service-manual/content/inclusive-language">Inclusive language</a></li>
+      <li><a href="/service-manual/practices/make-your-service-accessible">Make your service accessible</a></li>
+    </ul>
+
+    <h3>GOV.UK resources</h3>
+    <p>This point reflects point 5 in the Government service standard.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/designing-assisted-digital">Designing assisted digital support</a> (GOV.UK service manual)
+      <li><a href="https://www.gov.uk/service-manual/user-research/find-user-research-participants">Finding participants for user research</a> (GOV.UK service manual)</li>
+      <li><a href="https://www.gov.uk/service-manual/design/making-your-service-more-inclusive">Making your service more inclusive</a> (GOV.UK service manual)</li>
+    </ul>
+
+    <h3>Read more about this</h3>
+    <ul>
+      <li><a href="https://www.england.nhs.uk/ourwork/accessibleinfo/">Accessible Information Standard</a> (NHS England) - this standard sets out a specific, consistent approach to identifying, recording, flagging, sharing and meeting the information and communication support needs of patients, service users, carers and parents with a disability, impairment or sensory loss</li>
+      <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/digital-inclusion">Digital inclusion for health and social care</a> (NHS Digital, 2018) - a guide to help healthcare providers, commissioners, and designers create products and services which are inclusive of all types of user, and accessible to those with additional needs.</li>
+    </ul>
+
+    <h3>Other help</h3>
+    <ul>
+      <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+    </ul>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: March 2019</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
