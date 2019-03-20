@@ -24,3 +24,15 @@ body {
   padding: 20px;
   text-align: center;
 }
+
+
+/*
+  Spacing examples for on divs
+*/
+.spacing-example div {
+  background: #80afdc;
+}
+
+.spacing-example div:nth-of-type(odd) {
+  background: #337ec6;
+}
