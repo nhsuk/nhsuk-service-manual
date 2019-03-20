@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 1.2.0 - 12 March 2019
+
+:new: **New features**
+
+- Publish new contribution pages for proposing and working on new features with contribution criteria
+
+:wrench: **Fixes**
+
+- Use the correct paths in the component code snippets for importing Nunjucks macros
+- Add links to discuss each of the component on the GitHub service manual backlog
+- Use latest version of the NHS.UK frontend library (2.0.0)
+- Amend typo on the inset text component page
+
 ## 1.1.1 - 4 March 2019
 
 :wrench: **Fixes**
