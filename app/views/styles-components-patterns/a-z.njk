@@ -1,0 +1,182 @@
+{% set pageTitle = 'A-Z' %}
+{% set pageDescription = 'Mini-hubs are a way of presenting a number of pages about one topic on NHS.UK.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'components/header/macro.njk' import header %}
+{% from 'components/panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">A-Z is a way of presenting a number of pages alphabetically.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds ">
+
+  
+
+{% from 'components/images/macro.njk' import image %}
+
+
+<figure class="nhsuk-image ">
+  <img class="nhsuk-image__img" style="border: 1px solid #d8dde0;" src="/service-manual/assets/a-z-desktop-example.png" alt="Medicines A-Z example on desktop">
+  <figcaption class="nhsuk-image__caption">
+    Medicines A-Z example on desktop
+  </figcaption>
+</figure>
+
+<figure class="nhsuk-image ">
+  <img class="nhsuk-image__img" style="border: 1px solid #d8dde0;" src="/service-manual/assets/a-z-mobile-example.png" alt="Medicines A-Z example on mobile">
+  <figcaption class="nhsuk-image__caption">
+    Medicines A-Z example on mobile
+  </figcaption>
+</figure>
+
+
+<p>The A-Z is made up of:</p> 
+<ul>
+<li>A-Z navigation which sits at the top of the page</li>
+<li>A-Z list panel which houses all the links to pages</li> 
+</ul>
+
+</p>
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-u-margin-top-6">
+    When to use this pattern
+    </h2>
+    <p>
+    A-Z lists are great to categorise a large number of pages under one subject, but they only work when users know the name of the thing they're looking for, and that it sits under the specific subject. 
+    </p>
+    <p>
+    We've found users preferring an A-Z list of pages over search. In testing we've seen users chose to use the A-Z because they were not sure they could spell a medical term such as 'appendicitis' to search for it, but expected to find it in the A-Z.
+    </p>
+
+    <p>
+    NHS.UK currently uses A-Z on the following subjects:
+    </p>
+    
+    <ul>
+	<li><a href="https://www.nhs.uk/conditions/">Conditions</a></li> 
+	<li><a href="https://www.nhs.uk/medicines/">Medicines</a></li>
+    </ul>
+
+    <h2>
+    When not to use this pattern
+    </h2>
+    
+    <p>Don't use the A-Z pattern:</p>
+
+    <ul>
+	<li>to group non-related subject pages</li>
+	<li>as part of a transactional service</li>
+  <li>as part of a content page</li>
+    </ul>
+
+    <h2>Elements of the A-Z pattern</h2>
+
+        <h3>
+    A-Z navigation
+    </h3>
+
+    <p>
+  Use the A-Z navigation at the top of the page.
+   </p>
+
+
+        {{ designExample({
+      type: 'a-z-nav'
+    }) }}
+
+
+
+    <h3 class="nhsuk-u-margin-top-6">
+    A-Z list panel
+    </h3>
+
+    <p>
+   Use a <a href="/service-manual/styles-components-patterns/contents-list">contents list</a> at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about age-related macular degeneration.
+    </p>
+
+        {{ designExample({
+      type: 'a-z-list-panel'
+    }) }}
+
+    <h3 class="nhsuk-u-margin-top-6">
+    Pagination
+    </h3>
+
+    <p>
+      Use <a href="/service-manual/styles-components-patterns/pagination">pagination</a>  at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.
+    </p>
+
+        {{ designExample({
+      type: 'pagination'
+    }) }}
+
+    <h2 class="nhsuk-u-margin-top-8">
+      Research on this pattern
+    </h2>
+
+    <p>
+    The mini-hub pattern was created to work on NHS.UK conditions pages.
+    </p>
+
+    <p>
+    While developing the pattern, we ran 3 rounds of research with users, including those with disabilities and people with low digital literacy on Age-related macular degeneration.
+    </p>
+
+    <p>
+    The pattern was also reviewed by the Digital Accessibility Centre.
+    </p>
+
+    <p>
+    In testing, the structure and labelling of the pages fitted the mental model of all users, helping them to understand the structure of the content. 
+    </p>
+
+    <p>
+    Users found the active link formatting on the menu helpful in knowing where they are. Some users felt that the links (in the content list) helped them understand what information there is, and choose what is relevant to them.
+    </p>
+
+    <p>
+    The majority of users we tested with, including a user with very low digital skills - used pagination to navigate through pages and knew this was associated with the contents list at the top of the page. 
+    </p>
+
+    
+
+    <h2>Discuss</h2>
+    <p>Discuss the header on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: March 2019</p>
+    </div>
+    {{ panel({
+    "label": "Similar components",
+    "HTML": "<ul>
+                <li><a href='/service-manual/styles-components-patterns/footer'>Footer</a></li>
+            </ul>"
+    }) }}
+  </div>
+</div>
+{% endblock %}
