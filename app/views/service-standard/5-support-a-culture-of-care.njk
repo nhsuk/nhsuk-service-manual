@@ -1,0 +1,76 @@
+{% set pageTitle = '5. Support a culture of care' %}
+{% set noFollow = true %}
+{% set pageDescription = 'Caring is the core business of the NHS. NHS services should provide a positive experience of care or help NHS staff provide a caring service.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/service-standard",
+  text: "NHS service standard"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">Caring is the core business of the NHS. NHS services should provide a positive experience of care or help NHS staff provide a caring service.</p>
+    <p class="nhsuk-body-l">All services should make patients, the public and staff feel valued and supported and that their concerns are understood and important.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Why it's important</h2>
+    <p>Digital services are not excluded from the NHS commitment to care and compassion. Small things make a difference when people are, for example, sick or stressed, grieving or dying.</p>
+    <p>We can improve people's experience of care by being inclusive and treating them with respect.</p>
+
+    <h2>What you should do</h2>
+    <p>Your team should be able to show that:</p>
+    <ul>
+      <li>you listen and understand your users' needs and take their fears and frustrations seriously</li>
+      <li>you think carefully about their context and circumstances</li>
+      <li>you make things simple</li>
+      <li>you are inclusive and respectful, for example of people's time</li>
+      <li>your service balances helping users complete the task with an appropriate tone of voice, reassurance, clear explanations and signposting to support</li>
+      <li>your service doesn't do anything that is better done face to face, for example, delivering bad news</li>
+    </ul>
+
+    <h2>Guidance</h2>
+
+    <h3>NHS service manual</h3>
+    <ul>
+      <li><a href="/service-manual/content/inclusive-language">Inclusive language</a></li>
+    </ul>
+    <p>See also service standard points:</p>
+    <ul>
+      <li><a href="/service-manual/service-standard/3-make-the-service-easy-to-use">3. Make the service easy to use</a></li>
+      <li><a href="/service-manual/service-standard/4-make-sure-everyone-can-use-the-service">4. Make sure everyone can use the service</a></li>
+      <li><a href="/service-manual/service-standard/6-make-your-service-clinically-safe">6. Make your service clinically safe</a></li>
+    </ul>
+
+    <h3>GOV.UK resources</h3>
+    <p>This point isn't included in the Government service standard.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/user-research/researching-emotionally-sensitive-subjects">Researching emotionally sensitive subjects</a></li>
+    </ul>
+
+    <h3>Other help</h3>
+    <ul>
+      <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+    </ul>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: March 2019</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
