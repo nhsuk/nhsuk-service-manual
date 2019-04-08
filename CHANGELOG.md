@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 1.4.0 - TBC
+
+ :wrench: **Fixes**
+
+- Update package dependencies including latest version (2.1.0) of the NHS.UK frontend
+
 ## 1.3.0 - 5 April 2019
 
 :new: **New content**
