@@ -1,5 +1,21 @@
 # NHS digital service manual Changelog
 
+## 1.4.0 - TBC
+
+ :wrench: **Fixes**
+
+- Update package dependencies including latest version (2.1.0) of the NHS.UK frontend
+
+## 1.3.0 - 5 April 2019
+
+:new: **New content**
+
+- Add more terms to the A to Z of NHS health writing after March Style Council meeting, plus other content updates
+
+:wrench: **Fixes**
+
+- Rename Grid page - now Layout - and iterate content
+
 ## 1.2.0 - 12 March 2019
 
 :new: **New features**
