@@ -5,6 +5,7 @@
 :new: **New content**
 
 - Example of a transactional header with service name on the header component page
+- Publish new styles: Spacing
 
  :wrench: **Fixes**
 
