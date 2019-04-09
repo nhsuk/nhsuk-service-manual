@@ -35,15 +35,20 @@
     </div>
   </div>
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2 id="when-to-use-this-component">When to use radios</h2>
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 id="when-to-use-this-component" class="nhsuk-u-margin-top-8">When to use radios</h2>
     <p>Use radios if users can only choose 1 option from a list.</p>
     <h2 id="when-not-to-use-this-component">When not to use radios</h2>
     <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
     <h2 id="how-it-works">How to use radios</h2>
     <p class="rich-text">Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Where do you live?".</p>
     <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as the GOV.UK design system recommends, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
-    <p>Read more on the GOV.UK design system about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+    
+    {{ designExample({
+      type: 'radios-heading'
+    }) }}
+
+    <p class="nhsuk-u-margin-top-8">Read more on the GOV.UK design system about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
     <p>Unlike with checkboxes, users can only select 1 option from a list of radios. Do not assume that users will know how many options they can select. Make it clear with a hint - for example, say: "Select 1 option".</p>
     <p>Do not pre-select radio options as this makes it more likely that users will:</p>
     <ul>
