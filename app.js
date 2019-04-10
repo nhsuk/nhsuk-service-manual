@@ -76,6 +76,12 @@ app.get('/service-manual/content-style-guide', (req, res) => {
   res.redirect('/service-manual/content');
 });
 
+// The grid page has moved to /layout
+// Temporary redirect incase anyone still visits /grid
+app.get('/service-manual/styles-components-patterns/grid', (req, res) => {
+  res.redirect('/service-manual/styles-components-patterns/layout');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, function (req, res, next) {
   routing.matchRoutes(req, res, next)

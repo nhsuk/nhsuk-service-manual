@@ -1,0 +1,65 @@
+{% set pageTitle = '8. Create a team that includes multidisciplinary skills and perspectives' %}
+{% set noFollow = true %}
+{% set pageDescription = 'Make sure you have the right - and diverse - skills and roles to build and operate the service.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/service-standard",
+  text: "NHS service standard"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">Make sure you have the right - and diverse - skills and roles to build and operate the service.</p>
+    <p class="nhsuk-body-l">Make as many decisions as possible in the team so that you can respond quickly to what you learn about users and their needs.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Why it's important</h2>
+    <p>A team with diversity of expertise and perspectives is more likely to come up with the best solution. The size and roles you'll need will change as you build the service.</p>
+
+    <p>You will get most value from the broad range of roles recommended by the Government Digital Service.</p>
+
+    <h2>What you should do</h2>
+    <p>Your team should be able to show that:</p>
+    <ul>
+      <li>you are building your service with a multidisciplinary team that will help you achieve what you need to in each phase of development, and you have co-located them as far as possible</li>
+      <li>you include people on the team with expertise in how services are delivered across all the relevant channels, and the back end systems the service will need to integrate with</li>
+      <li>the team has access to the specialist expertise it needs (for example clinical, legal or policy expertise - from inside or outside the organisation)</li>
+      <li>the team you have will help you deal with what you believe are your riskiest assumptions</a>
+      <li>if the team is working with contractors and outside suppliers, you make sure it’s on a sustainable basis</li>
+    </ul>
+
+    <h2>Guidance</h2>
+    <h3>GOV.UK resources</h3>
+    <p>This point reflects points 6 in the Government service standard.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/the-team">The team</a></li>
+      <li><a href="https://www.gov.uk/service-manual/the-team/working-contractors-third-parties">Working with contractors or third parties</a></li>
+    </ul>
+
+    <h3>Other help</h3>
+    <ul>
+      <li>Talk to us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+    </ul>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: March 2019</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

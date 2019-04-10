@@ -1,0 +1,74 @@
+{% set pageTitle = '12. Make your service interoperable' %}
+{% set noFollow = true %}
+{% set pageDescription = 'In an organisation as diverse and complex as the NHS, we need systems and services which talk to each other. Build for interoperability to share patient records and get data quickly from one place to another.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/service-standard",
+  text: "NHS service standard"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">In an organisation as diverse and complex as the NHS, we need systems and services which talk to each other. Build for interoperability to share patient records and get data quickly from one place to another.</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2>Why it's important</h2>
+    <p>Connected systems make it easier for the public and health professionals to access and share the information they need. Interoperability helps make sure that data is communicated accurately and quickly and that patients get seamless care.</p>
+
+    <h2>What you should do</h2>
+    <p>Your team should be able to show that:</p>
+    <ul>
+      <li>you work to open standards and the Technology Code of Practice</li>
+      <li>you maximise flexibility and make content, tools and services available through well-designed APIs to reach more people</li>
+      <li>use agreed FIHR-based APIs to join up care for patients</li>
+      <li>where appropriate, you use the NHS number and NHS data registers and comply with NHS clinical information standards</li>
+      <li>if you create any data sets that are potentially useful to others, you publish them in an open machine readable format, under an Open Government Licence - unless they contain personally identifiable information, sensitive information, or where publishing the data would infringe the intellectual property rights of someone outside the NHS or government</li>
+    </ul>
+
+    <h2>Guidance</h2>
+
+    <h3>GOV.UK resources</h3>
+    <p>This point reflects point 10 in the Government service standard.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/technology/application-programming-interfaces-apis">Application programming interfaces (APIs)</a>
+      <li><a href="https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles">Open Standards principles</a></li>
+       <li><a href="https://www.gov.uk/government/publications/technology-code-of-practice">Technology Code of Practice</a></li>
+      <li><a href="https://www.gov.uk/service-manual/technology/working-with-open-standards">Working with open standards</a></li>
+    </ul>
+
+    <h3>Read more about this</h3>
+    <ul>
+      <li><a href="https://www.gov.uk/government/publications/code-of-conduct-for-data-driven-health-and-care-technology/initial-code-of-conduct-for-data-driven-health-and-care-technology">Code of conduct for data-driven health and care technology</a> (Department of Health and Social Care)</li>
+      <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/clinical-information-standards">NHS clinical information standards</a> (NHS Digital)</li>
+      <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/framework/detailed-specification-for-nhs-digital-reference-data-registers">NHS data registers</a> (NHS Digital)</li>
+      <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">NHS number</a> (NHS Digital)</li>
+      <li><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> (The National Archives)</li>
+      <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/framework/beta---use-of-fhir-based-apis">Use of FHIR-based APIs</a> (NHS Digital)</li></ul>
+
+    <h3>Other help</h3>
+    <ul>
+      <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+    </ul>
+
+    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: March 2019</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
