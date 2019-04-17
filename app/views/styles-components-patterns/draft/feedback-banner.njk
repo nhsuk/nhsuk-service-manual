@@ -1,5 +1,5 @@
 {% set pageTitle = 'Feedback banner' %}
-{% set pageDescription = 'Ask users for feedback, it makes your service better.' %}
+{% set pageDescription = 'Use the banner to ask users for feedback. It makes your service better.' %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -39,48 +39,59 @@
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h2>How to use the feedback banner</h2>
+    <h2>When to use the feedback banner</h2>
+    <p>Use the feedback banner to ask people to complete a survey or give you feedback in some other way.</p>
     <p>Make sure the feedback banner doesn't appear until the user has agreed to use the appropriate cookies.</p>
-    <p>Include a descriptive heading.</p>
-    <p>Make the feedback/survey link text describe its purpose and destination.</p>
-    <p>Add hidden text to the close button to give screen readers context.</p>
-    <h2>When not to use the feedback banner</h2>
-    <p>Do not use in states of emergency - when emergency messages are shown to a user.</p>
-    <p>Do not use the  banner when displaying messages that suggest users get emergency healthcare. </p>
-    <p>In both cases, the  banner could detract from the importance of the messaging.</p>
 
-    <h2>How the  banner works</h2>
-    <p>The banner appears 5 seconds after a user lands on the page.  </p>
-    <p>The banner should:</p>
+    <h2>When not to use the feedback banner</h2>
+    <p>Do not use the feedback banner when there is a state of emergency, for example an epidemic, and your page has emergency messages.</p>
+    <p>Do not use the banner when your page is telling users to get emergency healthcare, for example in a <a href="/service-manual/styles-components-patterns/care-cards#emergency-care-card-red-and-black">immediate care card</a>. </p>
+    <p>In both cases, the banner could distract users from more important messages.</p>
+
+    <h2>How to use the  banner</h2>
+    <p>The banner appears 5 seconds after a user lands on the page.</p>
+    <p>It should:</p>
     <ul>
-      <li>appear after the users’ journey – so we don’t annoy them (too much)</li>
+      <li>appear at the end of a user's journey, for example in a transactional service – so you don’t annoy them (too much)</li>
       <li>be prominent – so they notice it</li>
-      <li>be able to close (dismiss) it</li>
+      <li>be easy to close (dismiss)</li>
     </ul>
 
+    <p>Include a short, clear heading, like "Help us make the NHS website better" and make sure that the link text to the survey tells users where they are going and why, for example: "Take our short survey".</p>
+    <p>Add hidden text to the close button so that people who use screen readers understand what they are closing.</p>
     <h3>Accessibility</h3>
+    <p>The feedback banner</li>
     <ul>
       <li>exceeds AAA colour contrast guidelines with its text colour</li>
       <li>exceeds AA colour contrast guidelines with its link colour (just short of AAA)</li>
-      <li>has a ‘Close’ action is button and not a link. Find out more about accessible links and buttons</li>
-      <li>includes hidden text within the ‘Close’ button to give screen readers context, for example: ‘Close feedback invite’</li>
-      <li>has a descriptive heading (h2)</li>
-      <li>includes link text that describes its purpose and destination.</li>
+      <li>has a short, clear heading (h2)</li>
+      <li>includes link text that describes where the link is taking users and why</li>
+      <li>has a close action which is button and not a link</li>
+      <li>includes hidden text in the close button to help people who use screen readers understand what they are closing, for example: "Close feedback invite"</li>
     </ul>
 
     <h2>Research</h2>
-    <p>The feedback banner was introduced onto the NHS website in April 2018.</p>
-    <p>Prior to this we had a persistent green banner which appeared straight away and stuck to the footer of the browser window. We had a significant number of negative comments from users saying they were unhappy to be asked for their views before reading the page.</p>
-    <p>Since changing the colour to white and adding a 5 second delay we've reduced the number of negative comments and increased feedback on the actual page. </p>
+    <p>We introduced the feedback banner on the NHS website in April 2018.</p>
+    <p>Before this we had a persistent green banner which appeared straight away and stuck to the footer of the browser window. A lot of users said that they were unhappy about being asked for their views before they had read the page.</p>
+    <p>Since we changed the colour to white and added a 5 second delay, we've received fewer negative comments and increased feedback on the page. </p>
     <h2>Discuss</h2>
-    <p>Discuss action links on the <a href="https://nhsuk.slack.com/messages/standards">NHS.UK #standards Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-    {{ reviewDate({
-      "lastReview": "January 2019."
-    }) }}
+    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/34">Discuss the feedback banner on GitHub</a></p>
+
+
+<h2>Get in touch</h2>
+    <p>If you have a question:</p>
+    <ul>
+      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
+      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net<a></li>
+    </ul>
+   <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: April 2019</p>
+    </div>
     {{ panel({
     "label": "Similar components",
     "HTML": "<ul>
-                <li></li>
+                <li><a href='/service-manual/styles-components-patterns/header'>Header</a></li>
+                <li><a href='/service-manual/styles-components-patterns/footer'>Footer</a></li>
             </ul>"
     }) }}
   </div>

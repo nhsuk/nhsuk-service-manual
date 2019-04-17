@@ -1,5 +1,5 @@
 {% set pageTitle = 'Mini-hub' %}
-{% set pageDescription = 'Mini-hubs are a way of presenting a number of pages about one topic on NHS.UK.' %}
+{% set pageDescription = 'Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website (nhs.uk).' %}
 {% set noFollow = true %}
 {% extends 'includes/layout.njk' %}
 
@@ -23,7 +23,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Mini-hubs are a way of presenting a number of pages about one topic on NHS.UK.</p>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website (nhs.uk).</p>
   </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -34,9 +34,9 @@
 
 <p>The mini-hub is made up of:</p>
 <ul>
-<li><a href="/service-manual/styles-components-patterns/typography">heading and sub-heading</a> which sits at the top of the page</li>
-<li><a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> beneath the heading</li>
-<li><a href="/service-manual/styles-components-patterns/pagination">paginantion component</a> which goes at the bottom of the page.</li>
+<li>a <a href="/service-manual/styles-components-patterns/typography">heading and sub-heading</a> which sit at the top of the page</li>
+<li>a <a href="/service-manual/styles-components-patterns/contents-list">contents list component</a> underneath the heading and sub-heading</li>
+<li>a <a href="/service-manual/styles-components-patterns/pagination">pagination component</a> which goes at the bottom of the page</li>
 </ul>
 
 </p>
@@ -47,130 +47,77 @@
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h2 class="nhsuk-u-margin-top-6">
-    When to use this pattern
-    </h2>
-<p>We've found mini-hubs to be a great way to help users understand complex topics. They break complex subjects down into manageable chunks and allow the user to digest the information in a way that meets their needs.</p>
-<p>But this isn't the case for all of our pages on <a href="https://www.nhs.uk">NHS.UK</a>. We tested this pattern <a href="https://www.nhs.uk/medicines/">medicines information</a> pages and found users not understanding that the separate pages of a mini-hub made up a whole medicines topic.</p>
+    <h2 class="nhsuk-u-margin-top-6">When to use this pattern</h2>
+    <p>Use mini-hubs to present information on 1 complex topic spread over 2-8 pages.</p>
+    <p>We've found that mini-hubs help users understand complex topics. They break the topic down into manageable chunks and help users digest the information in a way that meets their needs.</p>
+    <p>But this isn't the case for all of the NHS website. (We explain more in the <a href=#research>Research section</a> on this page.) Test the pattern with your users to make sure that it works for your content.</p>
 
-    <p>
-    NHS.UK uses mini-hubs to present topics that:
-    </p>
-
+    <h2>When not to use this pattern</h2>
+    <p>Do not use mini-hubs:</p>
     <ul>
-	<li>have a handful of pages on one subject/topic</li>
-	<li>are made up for 2-8 pages</li>
-    </ul>
-
-    <h2>
-    When not to use this pattern
-    </h2>
-
-    <p>
-    NHS.UK does not use mini-hub:
-    </p>
-
-    <ul>
-	<li>on non-related topic pages</li>
-	<li>for content inside a transactional service</li>
+	    <li>for pages that are not about a single topic</li>
+	    <li>in a transactional service</li>
     </ul>
 
     <h2>Elements of the mini-hub</h2>
+    <h3>Heading and sub-heading</h3>
+    <p>Use an h1 <a href="/service-manual/styles-components-patterns/typography#headings">heading</a> at the top of the page. The h1 heading should be the title of the page you're on, not the mini-hub topic.</p>
+    <p class="rich-text">Put the mini-hub topic underneath the page heading as a sub-heading. The sub-heading has an <code>h1</code> tag but with the class of <code>class="nhsuk-caption-xl"</code>. (We explain why we do this in the <a href=#research>Research section</a> on this page.)</p>
 
-        <h3>
-    Heading and sub-heading
-    </h3>
-
-    <p>
-  Use a <a href="/service-manual/styles-components-patterns/typography">h1 heading</a> at the top of the page. The h1 heading should be for the page your on, not the mini-hub topic.
-   </p>
-   <p class="rich-text">
-   The mini-hub topic sits beneath the page heading as a sub-heading. The sub-heading has a <code>h1</code> tag but with the class of <code>class="nhsuk-caption-xl"</code>
-   </p>
-
-    <p>
-    We originally tested the mini-hub topic being the main h1 heading but found when users navigated between pages it wasn't obvious what page they were on, and in some cases they didn't realise that they had moved between pages. Only when we made the page heading the h1 - that users understood what page they were on.
-    </p>
-
-    <p class="rich-text">
-    We found screen readers struggling to pronounce heading and sub-headings as one thing. They would read them separately which caused confusion so we've used <code>&lt;span&gt;</code> tags around the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.
-    </p>
-
-
-
-
-
-
+    <p>In this example, "Age-related macular degeneration (AMD)" is the topic. "What is AMD?" is the heading for the page.</p>
 
         {{ designExample({
       type: 'typography-mini-hub-heading'
     }) }}
 
-
-
-    <h3 class="nhsuk-u-margin-top-6">
-    Contents list
-    </h3>
-
-    <p>
-   Use a <a href="/service-manual/styles-components-patterns/contents-list">contents list</a> at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about age-related macular degeneration.
-    </p>
+    <h3 class="nhsuk-u-margin-top-6">Contents list</h3>
+    <p>Use a <a href="/service-manual/styles-components-patterns/contents-list">contents list</a> at the top of the page, underneath the heading and sub-heading, to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is from the NHS website information about AMD.</p>
 
         {{ designExample({
       type: 'contents-list'
     }) }}
 
-    <h3 class="nhsuk-u-margin-top-6">
-    Pagination
-    </h3>
-
-    <p>
-      Use <a href="/service-manual/styles-components-patterns/pagination">pagination</a>  at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.
-    </p>
+    <h3 class="nhsuk-u-margin-top-6">Pagination</h3>
+    <p>Use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition.</p>
 
         {{ designExample({
       type: 'pagination'
     }) }}
 
-    <h2 class="nhsuk-u-margin-top-8">
-      Research on this pattern
-    </h2>
-
-    <p>
-    The mini-hub pattern was created to work on NHS.UK conditions pages.
-    </p>
-
-    <p>
-    While developing the pattern, we ran 3 rounds of research with users, including those with disabilities and people with low digital literacy on Age-related macular degeneration.
-    </p>
-
-    <p>
-    The pattern was also reviewed by the Digital Accessibility Centre.
-    </p>
-
-    <p>
-    In testing, the structure and labelling of the pages fitted the mental model of all users, helping them to understand the structure of the content.
-    </p>
-
-    <p>
-    Users found the active link formatting on the menu helpful in knowing where they are. Some users felt that the links (in the content list) helped them understand what information there is, and choose what is relevant to them.
-    </p>
-
-    <p>
-    The majority of users we tested with, including a user with very low digital skills - used pagination to navigate through pages and knew this was associated with the contents list at the top of the page.
-    </p>
-
-
+    <h2 id="research" class="nhsuk-u-margin-top-8">Research on this pattern</h2>
+    <p>We developed the mini-hub pattern for NHS website pages about health conditions.</p>
+    <p>We ran 3 rounds of research and tested our information about AMD with a range of users, including people with disabilities and people with low digital literacy. The Digital Accessibility Centre also tested the pattern.</p>
+    <p>We found that:</p>
+    <ul>
+      <li>the structure and labelling of the pages fitted users' mental model and helped them understand the structure of the content</li>
+      <li>the active link formatting in the contents list helped users know where they were and, in some cases, it helped them choose the information that was relevant to them</li>
+      <li>most users (including a user with very low digital skills) used the pagination to navigate through pages and knew it was related to the contents list at the top of the page</li>
+    </ul>
+    <h3>Heading structure</h3>
+    <p>At first we made the mini-hub topic the main h1 heading but, when users navigated between pages, it wasn't obvious to them which page they were on. In some cases they didn't realise they had moved between pages. It was only when we made the page heading the h1 that users were clear which page they were on.</p>
+    <p class="rich-text">We found that screen readers struggled to pronounce the heading and sub-heading together and that confused people. So we've used <code>&lt;span&gt;</code> tags around the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.</p>
+    <h3>Where this pattern did not work</h3>
+    <p>We tried using this pattern for information about <a href="https://www.nhs.uk/medicines/">medicines</a> and found that users didn't understand that the separate pages of a mini-hub made up a whole medicines topic. Users expected to see all the information about a medicine on 1 long page.</p>
 
     <h2>Discuss</h2>
-    <p>Discuss the header on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/86">Discuss mini hubs on GitHub</a></p>
+
+    <h2>Get in touch</h2>
+    <p>If you have a question:</p>
+    <ul>
+      <li>join the NHS.UK <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
+      <li>email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
+     </ul>
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: March 2019</p>
+      <p class="nhsuk-body-s">Updated: April 2019</p>
     </div>
+
     {{ panel({
-    "label": "Similar components",
+    "label": "Components in this pattern",
     "HTML": "<ul>
-                <li><a href='/service-manual/styles-components-patterns/footer'>Footer</a></li>
+                <li><a href='/service-manual/styles-components-patterns/contents-list'>Contents list</a></li>
+                <li><a href='/service-manual/styles-components-patterns/typography#headings'>Headings</a></li>
+                <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
             </ul>"
     }) }}
   </div>
