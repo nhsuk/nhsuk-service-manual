@@ -6,3 +6,9 @@
 
 // Design examples
 @import 'design-example/design-example';
+
+// Table numeric styling
+.nhsuk-table__header--numeric,
+.nhsuk-table__cell--numeric {
+  text-align: right;
+}
