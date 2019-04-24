@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "scripts": {
