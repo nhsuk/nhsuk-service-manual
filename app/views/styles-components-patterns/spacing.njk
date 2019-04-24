@@ -29,13 +29,15 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">We've followed the Government Design System's approach to spacing pages and setting the width of page elements so that they are consistent, responsive and clear. But we have adapted it for NHS-specific styles.</p>
+
     <h2 id="spacing-scale">The responsive spacing scale</h2>
 
     <p>We use a responsive spacing scale which adapts based on screen size. For example, if you apply spacing unit 9 to a margin, it will be 64px on large screens and 56px on small screens.</p>
 
     {{ table({
       panel: false,
-      caption: "Skin symptoms and possible causes",
+      caption: "",
       head: [
         {
           text: "Spacing unit"
@@ -187,7 +189,7 @@
 
     <h3 id="spacing-override-classes">Spacing override classes</h3>
 
-    <p>Occasionally, you might need to make minor adjustments like adding or removing spacing to elements of your design. You can use the responsive spacing override classes for this.</p>
+    <p>Occasionally, you might need to make minor adjustments like adding spacing or removing it from elements of your design. You can use the responsive spacing override classes for this.</p>
 
     <h3 id="using-the-override-classes">Using the override classes</h3>
 
@@ -199,7 +201,7 @@
 
     <p class="rich-text">If you want to add the margin or padding in a particular direction, add <code>left</code> for left, <code>right</code> for right, <code>top</code> for top, or <code>bottom</code> for bottom. For example, <code>-margin-top</code> will set margin-top, <code>-padding-right</code> will set padding-right. If you do not specify a direction, the margin or padding will be applied to all sides of the element.</p>
 
-    <p class="rich-text">The last part of the class represents the value you want to apply. For example, in <code>nhsuk-u-margin-9</code>, the <code>-9</code> represents 9 on the spacing scale.</p>
+    <p class="rich-text">The last part of the class represents the spacing unit value you want to apply. For example, in <code>nhsuk-u-margin-9</code>, the <code>-9</code> represents 9 on the spacing scale.</p>
 
   </div>
 </div>
@@ -227,7 +229,7 @@
 
     <h2 id="spacing-on-custom-components">Spacing on custom components</h2>
 
-    <p>If you’re building your own components and want to reference the spacing scale directly in your SCSS file you can use the spacing scale through a mixin or a function.</p>
+    <p>If you’re building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a mixin or a function.</p>
 
     <h3 id="using-the-static-spacing-function">Using the static spacing function</h3>
 
@@ -239,15 +241,22 @@
 
     <p>If you want to use the responsive spacing scale you can reference the mixin.</p>
 
-    <p class="rich-text">For example, use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens.</p>
-
-    <p class="rich-text">Use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens.</p>
+    <p>For example:</p>
+    <ul>
+      <li><p class="rich-text">use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens</p></li>
+      <li><p class="rich-text">use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens</p></li>
+    </ul>
 
     <h2 id="width-override-classes">Width override classes</h2>
 
     <p>If you need to constrain the width of an element independently of the <a href="/service-manual/styles-components-patterns/grid">grid system</a>, you can use width override classes.</p>
 
-    <p class="rich-text">As with the spacing override classes the width override classes start with <code>nhsuk-u-</code>. The second part of the class name signifies the width on larger screen sizes. For example, <code>nhsuk-u-width-one-half</code>  will apply a width of 50% and <code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p>
+    <p class="rich-text">As with the spacing override classes, the width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
+    <p>For example:</p>
+    <ul>
+      <li><p class="rich-text"><code>nhsuk-u-width-one-half</code>  will apply a width of 50% and<p></li>
+      <li><p class="rich-text"><code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p></li>
+    </ul>
 
   </div>
 </div>
@@ -261,7 +270,7 @@
     }) }}
 
     <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: March 2019</p>
+      <p class="nhsuk-body-s">Updated: April 2019</p>
     </div>
 
   </div>
