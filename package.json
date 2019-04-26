@@ -18,9 +18,9 @@
     "basic-auth": "^2.0.1",
     "chalk": "^2.4.2",
     "express": "^4.16.4",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.1",
     "gulp-clean-css": "^3.10.0",
-    "gulp-cli": "^2.1.0",
+    "gulp-cli": "^2.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
@@ -35,11 +35,11 @@
     "highlight.js": "^9.15.6",
     "iframe-resizer": "^3.6.6",
     "js-beautify": "^1.9.1",
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.18.11",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^4.2.1",
+    "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-stream": "^1.24.1",
-    "sass-lint": "^1.12.1",
+    "sass-lint": "^1.13.1",
     "vinyl-source-stream": "^2.0.0"
   }
 }

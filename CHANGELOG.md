@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Prevent the CSS and JavaScript files being cached for too long with cache busting
+- Update package dependencies to the latest versions
 
 ## 1.4.0 - 26 April 2019
 
