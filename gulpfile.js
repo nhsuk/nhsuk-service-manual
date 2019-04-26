@@ -54,7 +54,7 @@ function minifyJS() {
   ])
     .pipe(uglify())
     .pipe(rename({
-      suffix: `-${package.version}.min`
+      suffix: `.min`
     }))
     .pipe(gulp.dest('public/js/'))
 }
@@ -82,4 +82,4 @@ gulp.task('javascript', javascript);
 gulp.task('assets', assets);
 gulp.task('minifyJS', minifyJS);
 
-gulp.task('build', gulp.parallel(['styles', 'javascript', 'minifyJS', 'assets']));
+gulp.task('build', gulp.parallel(['styles', 'javascript', 'assets']));
