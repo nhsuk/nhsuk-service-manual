@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 1.4.1 - 26 April 2019
+
+:wrench: **Fixes**
+
+- Prevent the CSS and JavaScript files being cached for too long with cache busting
+
 ## 1.4.0 - 26 April 2019
 
 :new: **New content**
