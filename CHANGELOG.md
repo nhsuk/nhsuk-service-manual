@@ -1,5 +1,20 @@
 # NHS digital service manual Changelog
 
+## 1.4.0 - 26 April 2019
+
+:new: **New content**
+
+- Example of a transactional header with service name on the header component page
+- Publish new styles: Spacing
+
+ :wrench: **Fixes**
+
+- Update package dependencies including latest version (2.1.0) of the NHS.UK frontend
+- Remove checked attribute from the radio button example
+- Fix the page width of the radio component page
+- Fix broken email anchor link
+- Fixed hyphens in modifier class names on typography page
+
 ## 1.3.0 - 5 April 2019
 
 :new: **New content**
