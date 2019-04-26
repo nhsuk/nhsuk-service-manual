@@ -13,7 +13,9 @@ const port = process.env.PORT || 3000;
 
 // Local dependencies
 const authentication = require('./middleware/authentication');
+const config = require('./app/config');
 const fileHelper = require('./middleware/file-helper.js');
+const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
 
 // Initialise applications
@@ -21,6 +23,9 @@ const app = express()
 
 // Authentication middleware
 app.use(authentication);
+
+// Use local variables
+app.use(locals(config));
 
 // Middleware to serve static assets
 app.use('/service-manual', express.static(path.join(__dirname, 'public')));

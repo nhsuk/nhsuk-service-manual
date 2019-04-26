@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream');
 var babel = require('rollup-plugin-babel');
 var resolve = require('rollup-plugin-node-resolve');
 var uglify = require('gulp-uglify');
+var package = require('./package.json');
 
 function styles() {
   return gulp.src('app/styles/**/*.scss')
@@ -15,7 +16,7 @@ function styles() {
     }))
     .pipe(cleanCSS())
     .pipe(rename({
-      suffix: '.min'
+      suffix: `-${package.version}.min`
     }))
     .pipe(gulp.dest('public/css'))
     .on('error', (err) => {
@@ -53,7 +54,7 @@ function minifyJS() {
   ])
     .pipe(uglify())
     .pipe(rename({
-      suffix: `.min`
+      suffix: `-${package.version}.min`
     }))
     .pipe(gulp.dest('public/js/'))
 }
@@ -81,4 +82,4 @@ gulp.task('javascript', javascript);
 gulp.task('assets', assets);
 gulp.task('minifyJS', minifyJS);
 
-gulp.task('build', gulp.parallel(['styles', 'javascript', 'assets']));
+gulp.task('build', gulp.parallel(['styles', 'javascript', 'minifyJS', 'assets']));
