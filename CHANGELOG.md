@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 1.4.0 - TBC
+## 1.4.0 - 26 April 2019
 
 :new: **New content**
 
