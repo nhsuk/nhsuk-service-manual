@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## 1.5.0 - Unreleased
+
+:new: **New content**
+
+- New content in the A to Z of NHS health writing
+- Content guidance on Numbers, dates, time, and measurement
+- Publish new patterns for A to Z and Mini-hub
+
 ## 1.4.1 - 26 April 2019
 
 :wrench: **Fixes**
