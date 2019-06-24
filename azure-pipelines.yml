@@ -14,11 +14,6 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
 - bash: |
     mkdir src
     find . -maxdepth 1 -not \( -name deploy -or -name 'azure-pipelines.yml' -or -name .git -or -name .gitignore -or -name README.md -or -name src -or -name . \) -exec mv '{}' './src/' \;
