@@ -11,6 +11,7 @@
 :wrench: **Fixes**
 
 - Update package dependencies to latest versions
+- Prevent the code snippets from escaping the container on mobile ([Issue 190](https://github.com/nhsuk/nhsuk-service-manual/issues/190))
 
 ## 1.4.1 - 26 April 2019
 
