@@ -12,6 +12,8 @@
 
 - Update package dependencies to latest versions
 - Prevent the code snippets from escaping the container on mobile ([Issue 190](https://github.com/nhsuk/nhsuk-service-manual/issues/190))
+- Tidy up the core application structure and configuration ([Issue 196](https://github.com/nhsuk/nhsuk-service-manual/issues/196))
+- Remove the white background from the homepage and tidy up the HTML markup
 
 ## 1.4.1 - 26 April 2019
 
