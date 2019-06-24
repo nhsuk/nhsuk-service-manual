@@ -8,6 +8,10 @@
 - Content guidance on Numbers, dates, time, and measurement
 - Publish new patterns for A to Z and Mini-hub
 
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 1.4.1 - 26 April 2019
 
 :wrench: **Fixes**
