@@ -1,10 +1,41 @@
 # NHS digital service manual Changelog
 
-## 1.4.0 - TBC
+## 1.5.0 - Unreleased
+
+:new: **New content**
+
+- New content in the A to Z of NHS health writing
+- Publish new patterns for A to Z and Mini-hub
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+- Prevent the code snippets from escaping the container on mobile ([Issue 190](https://github.com/nhsuk/nhsuk-service-manual/issues/190))
+- Tidy up the core application structure and configuration ([Issue 196](https://github.com/nhsuk/nhsuk-service-manual/issues/196))
+- Remove the white background from the homepage and tidy up the HTML markup
+- Update to version 2.2.0 of the NHS.UK frontend library - with favicon changes in layout file
+
+## 1.4.1 - 26 April 2019
+
+:wrench: **Fixes**
+
+- Prevent the CSS and JavaScript files being cached for too long with cache busting
+- Update package dependencies to the latest versions
+
+## 1.4.0 - 26 April 2019
+
+:new: **New content**
+
+- Example of a transactional header with service name on the header component page
+- Publish new styles: Spacing
 
  :wrench: **Fixes**
 
 - Update package dependencies including latest version (2.1.0) of the NHS.UK frontend
+- Remove checked attribute from the radio button example
+- Fix the page width of the radio component page
+- Fix broken email anchor link
+- Fixed hyphens in modifier class names on typography page
 
 ## 1.3.0 - 5 April 2019
 

@@ -1,9 +1,14 @@
 // NHS.UK Frontend
-@import 'nhsuk-frontend/packages/nhsuk';
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
 // App specific styles
-@import 'app/main';
+@import 'app/app';
 
 // Design examples
 @import 'design-example/design-example';
 
+// Table numeric styling
+.nhsuk-table__header--numeric,
+.nhsuk-table__cell--numeric {
+  text-align: right;
+}

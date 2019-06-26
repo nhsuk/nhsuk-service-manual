@@ -1,4 +1,5 @@
 {% from 'breadcrumb/macro.njk' import breadcrumb %}
+
 <!DOCTYPE html>
   <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
   <head>
@@ -9,18 +10,25 @@
 
     <title>{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
 
-    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
-    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
-    <link href="https://www.nhs.uk/" rel="preconnect  dns-prefetch">
-    <link href="https://assets.nhs.uk/" rel="preconnect  dns-prefetch" crossorigin>
+    <link rel="stylesheet" href="/service-manual/css/main.css">
 
-    <link rel="stylesheet" href="/service-manual/css/main.min.css">
+    <script src="/service-manual/js/main.min.js" defer></script>
 
-    <script src="/service-manual/nhsuk-frontend/nhsuk.min.js" defer></script>
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    <link href="https://www.googletagmanager.com" rel="preconnect">
+    <link href="https://www.google-analytics.com" rel="preconnect">
 
-    <!--[if IE]><link rel="shortcut icon" href="/service-manual/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
-    <link rel="apple-touch-icon" href="/service-manual/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
-    <link rel="icon" href="/service-manual/nhsuk-frontend/assets/favicons/favicon.png">
+    <link rel="shortcut icon" href="/service-manual/nhsuk-frontend/assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/service-manual/nhsuk-frontend/assets/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/service-manual/nhsuk-frontend/assets/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/service-manual/nhsuk-frontend/assets/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="/service-manual/nhsuk-frontend/assets/mediumtile-144x144.png">
+    <meta name="msapplication-TileColor" content="#005eb8">
+    <meta name="msapplication-square70x70logo" content="/service-manual/nhsuk-frontend/assets/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/service-manual/nhsuk-frontend/assets/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/service-manual/nhsuk-frontend/assets/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/service-manual/nhsuk-frontend/assets/largetile-310x310.png">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,32 +38,21 @@
     })(window,document,'script','dataLayer','GTM-W8BPX7Q');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Adobe analytics removed until we can stop it from conficting with our copy button
-    <script src="//assets.adobedtm.com/launch-ENe7f6cdd7cc05409b86547d9153429788.min.js" async></script>
-    -->
-    <script src="/service-manual/js/bundle.js" defer></script>
+    <meta property="og:url" content="{{ BASE_URL }}"/>
+    <meta property="og:site_name" content="nhs.uk"/>
+    <meta property="og:title" content="{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}"/>
+    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:image" content="{% if BASE_URL %}{{ BASE_URL }}{% endif %}/assets/open-graph.png" />
 
-    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary.html -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@nhsuk" />
-    <meta name="twitter:title" content="{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}" />
-    <meta name="twitter:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
-    <meta name="twitter:image" content="https://beta.nhs.uk/service-manual/assets/open-graph.png" />
-
-    <!-- https://developers.facebook.com/docs/sharing/webmasters/ -->
-    <meta property="og:url" content="https://beta.nhs.uk/service-manual/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{% if pageTitle %}{{pageTitle}} - NHS digital service manual{% else %}NHS digital service manual{% endif %}" />
-    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
-    <meta property="og:image" content="https://beta.nhs.uk/service-manual/assets/open-graph.png" />
-
+    <meta name="twitter:creator" content="@nhsuk" />
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8BPX7Q"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
 
     {% include 'includes/header.njk' %}
 
@@ -68,11 +65,13 @@
 
     {% block outerBody %}{% endblock %}
 
+    {% if pageLayout != 'Homepage' %}
     <div class="nhsuk-width-container">
       <main class="nhsuk-main-wrapper" id="maincontent">
         {% block body %}{% endblock %}
       </main>
     </div>
+    {% endif %}
 
     {% include 'includes/footer.njk' %}
   </body>

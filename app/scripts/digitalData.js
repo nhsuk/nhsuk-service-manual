@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export default () => {
   function getPageName(path) {
     return 'nhs:beta' + path.replace(/\/$/, '').replace(/\//g, ':');

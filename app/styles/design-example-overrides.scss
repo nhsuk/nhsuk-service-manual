@@ -25,3 +25,17 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+/*
+  Spacing examples for on divs
+*/
+.spacing-example div {
+  background: #80afdc; // sass-lint:disable-line no-color-hex no-color-literals
+}
+
+.spacing-example div:nth-of-type(odd) {
+  background: #337ec6; // sass-lint:disable-line no-color-hex no-color-literals
+}
+>>>>>>> 7568470e5fbf0a16dedec6753c76a7d3a30c4260
