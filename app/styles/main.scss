@@ -18,3 +18,29 @@
   border: 1px solid $color_nhsuk-grey-4;
   width: 100%;
 }
+
+// Lede text styling
+// Because the styling is not consistent across the site for lede text
+.nhsuk-lede-text {
+  @include nhsuk-font(24);
+  @include nhsuk-responsive-margin(7, 'bottom');
+}
+
+.nhsuk-lede-text--small {
+  @include nhsuk-font(19);
+  @include nhsuk-responsive-margin(5, 'bottom');
+}
+
+// Reduces the spacing between the page heading and the lede text
+h1 + .nhsuk-lede-text,
+h1 + .nhsuk-lede-text--small {
+  margin-top: - nhsuk-spacing(4);
+}
+
+// Apply lede text styling to p and ul within the lede (see foot pain hub)
+.nhsuk-lede-text {
+  p,
+  ul {
+    @include nhsuk-font(24);
+  }
+}
