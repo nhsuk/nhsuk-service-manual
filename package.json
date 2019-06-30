@@ -46,7 +46,7 @@
     "highlight.js": "^9.15.8",
     "iframe-resizer": "^3.6.6",
     "js-beautify": "^1.10.0",
-    "nhsuk-frontend": "^2.1.0",
+    "nhsuk-frontend": "^2.2.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "sass-lint": "^1.13.1",
