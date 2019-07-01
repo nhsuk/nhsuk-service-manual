@@ -4,7 +4,7 @@
 
 :new: **New content**
 
-- New content in the A to Z of NHS health writing
+- New content in the A to Z of NHS health writing, including cervical screening, people, patients and service users
 - Publish new patterns for A to Z and Mini-hub
 
 :wrench: **Fixes**
