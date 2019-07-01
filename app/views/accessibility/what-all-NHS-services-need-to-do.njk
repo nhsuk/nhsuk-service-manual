@@ -57,46 +57,7 @@
 
   </div>
   <aside class="nhsuk-grid-column-one-third">
-    <div class="nhsuk-related-nav">
-
-      <h2 class="nhsuk-related-nav__heading">Accessibility</h2>
-      <nav role="navigation" class="nhsuk-related-nav__nav-section">
-        <ul class="nhsuk-related-nav__list">
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">How to make digital services accessible</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Getting started</a>
-          </li>
-        </ul>
-      </nav>
-
-      <h3 class="nhsuk-related-nav__heading">Guidance for different activities</h3>
-      <nav role="navigation" class="nhsuk-related-nav__nav-section">
-        <ul class="nhsuk-related-nav__list">
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Product and delivery</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">User research</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Content</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Design</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Frontend</a>
-          </li>
-          <li class="nhsuk-related-nav__item">
-            <a class="nhsuk-related-nav__link" href="#">Testing</a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-
+    {% include './partials/related-nav.njk' %}
   </aside>
 </div>
 {% endblock %}
