@@ -1,4 +1,5 @@
 {% set pageDescription = 'Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.' %}
+{% set pageLayout = "Homepage" %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -8,88 +9,86 @@
 {% block breadcrumb %}{% endblock %}
 
 {% block outerBody %}
-{{ hero({
-  "heading": "Design and build digital services for the NHS",
-  "text": "Things you need to make consistent, usable services that put people first."
-}) }}
+<main id="maincontent">
+  {{ hero({
+    "heading": "Design and build digital services for the NHS",
+    "text": "Things you need to make consistent, usable services that put people first."
+  }) }}
 
-<section class="nhsuk-section nhsuk-section--white">
-  <div class="nhsuk-width-container nhsuk-main-wrapper">
-
-    <div class="nhsuk-grid-row nhsuk-promo-group">
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/design-principles",
-          "heading": "Design principles",
-          "headingLevel": "2",
-          "description": "These principles guide all of our design."
-        }) }}
+  <section class="nhsuk-section">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row nhsuk-promo-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/design-principles",
+            "heading": "Design principles",
+            "headingLevel": "2",
+            "description": "These principles guide all of our design."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/frontend-library",
+            "heading": "Frontend library",
+            "headingLevel": "2",
+            "description": "Production code to start building user interfaces for the NHS."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/prototyping-tools",
+            "heading": "Prototyping tools",
+            "headingLevel": "2",
+            "description": "Build prototypes or mockups quickly to show people and test with users."
+          }) }}
+        </div>
       </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/frontend-library",
-          "heading": "Frontend library",
-          "headingLevel": "2",
-          "description": "Production code to start building user interfaces for the NHS."
-        }) }}
-      </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/prototyping-tools",
-          "heading": "Prototyping tools",
-          "headingLevel": "2",
-          "description": "Build prototypes or mockups quickly to show people and test with users."
-        }) }}
+      <div class="nhsuk-grid-row nhsuk-promo-group nhsuk-u-margin-bottom-0">
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/styles-components-patterns",
+            "heading": "UI styles, components and patterns",
+            "headingLevel": "2",
+            "description": "Build consistent, accessible user interfaces."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/content",
+            "heading": "Content style guide",
+            "headingLevel": "2",
+            "description": "How to write for digital NHS services."
+          }) }}
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+          {{ promo({
+            "href": "/service-manual/practices",
+            "heading": "Practices",
+            "headingLevel": "2",
+            "description": "How we approach our working practices at NHS Digital and what we expect of teams."
+          }) }}
+        </div>
       </div>
     </div>
-
-    <div class="nhsuk-grid-row nhsuk-promo-group">
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/styles-components-patterns",
-          "heading": "UI styles, components and patterns",
-          "headingLevel": "2",
-          "description": "Build consistent, accessible user interfaces."
-        }) }}
-      </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/content",
-          "heading": "Content style guide",
-          "headingLevel": "2",
-          "description": "How to write for digital NHS services."
-        }) }}
-      </div>
-      <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-        {{ promo({
-          "href": "/service-manual/practices",
-          "heading": "Practices",
-          "headingLevel": "2",
-          "description": "How we approach our working practices at NHS Digital and what we expect of teams."
-        }) }}
+  </section>
+  <section class="nhsuk-section nhsuk-section--white">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <h2>Contribute</h2>
+          <p>The manual is a community effort. Anyone can help improve and grow it.</p>
+          <p><a href="/service-manual/contribute">Contribute to the NHS digital service manual</a></p>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <h2>Get in touch</h2>
+          <p>The service manual is maintained by the standards team. Get in touch if you have any questions or feedback.</p>
+          <ul>
+            <li>Slack: <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
+            <li>Email: <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-
-  </div>
-</section>
-{% endblock %}
-
-{% block body %}
-<section class="nhsuk-section">
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-one-half">
-      <h2>Contribute</h2>
-      <p>The manual is a community effort. Anyone can help improve and grow it.</p>
-      <p><a href="/service-manual/contribute">Contribute to the NHS digital service manual</a></p>
-    </div>
-    <div class="nhsuk-grid-column-one-half">
-      <h2>Get in touch</h2>
-      <p>The service manual is maintained by the standards team. Get in touch if you have any questions or feedback.</p>
-      <ul>
-        <li>Slack: <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-        <li>Email: <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 {% endblock %}

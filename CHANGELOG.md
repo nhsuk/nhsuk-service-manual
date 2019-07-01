@@ -1,5 +1,21 @@
 # NHS digital service manual Changelog
 
+## 1.5.0 - 1 July 2019
+
+:new: **New content**
+
+- New content in the A to Z of NHS health writing, including cervical screening, people, patients and service users
+- Publish new patterns for A to Z and Mini-hub
+- Accessibility statement
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+- Prevent the code snippets from escaping the container on mobile ([Issue 190](https://github.com/nhsuk/nhsuk-service-manual/issues/190))
+- Tidy up the core application structure and configuration ([Issue 196](https://github.com/nhsuk/nhsuk-service-manual/issues/196))
+- Swap the white background around on the homepage and tidy up the HTML markup
+- Update to version 2.2.0 of the NHS.UK frontend library - with favicon changes in layout file
+
 ## 1.4.1 - 26 April 2019
 
 :wrench: **Fixes**
