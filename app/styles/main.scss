@@ -24,6 +24,11 @@
 .nhsuk-lede-text {
   @include nhsuk-font(24);
   @include nhsuk-responsive-margin(7, 'bottom');
+  // Apply lede text styling to p and ul within the lede (see foot pain hub)
+  p,
+  ul {
+    @include nhsuk-font(24);
+  }
 }
 
 .nhsuk-lede-text--small {
@@ -35,12 +40,4 @@
 h1 + .nhsuk-lede-text,
 h1 + .nhsuk-lede-text--small {
   margin-top: - nhsuk-spacing(4);
-}
-
-// Apply lede text styling to p and ul within the lede (see foot pain hub)
-.nhsuk-lede-text {
-  p,
-  ul {
-    @include nhsuk-font(24);
-  }
 }

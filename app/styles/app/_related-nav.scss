@@ -28,7 +28,7 @@
 }
 
 .nhsuk-related-nav__sub-heading {
-  @include nhsuk-responsive-margin(2, "bottom");
-  @include nhsuk-responsive-padding(2, "top");
+  @include nhsuk-responsive-margin(2, 'bottom');
+  @include nhsuk-responsive-padding(2, 'top');
   @include nhsuk-typography-responsive(19, $override-line-height: 1.2);
 }
