@@ -1,11 +1,12 @@
 # NHS digital service manual Changelog
 
-## 1.5.0 - Unreleased
+## 1.5.0 - 1 July 2019
 
 :new: **New content**
 
 - New content in the A to Z of NHS health writing, including cervical screening, people, patients and service users
 - Publish new patterns for A to Z and Mini-hub
+- Accessibility statement
 
 :wrench: **Fixes**
 
