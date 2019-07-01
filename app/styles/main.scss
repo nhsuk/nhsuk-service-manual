@@ -12,3 +12,9 @@
 .nhsuk-table__cell--numeric {
   text-align: right;
 }
+
+// Image with border
+.nhsuk-image--border {
+  border: 1px solid $color_nhsuk-grey-4;
+  width: 100%;
+}
