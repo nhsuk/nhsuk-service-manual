@@ -90,6 +90,14 @@ app.get('/service-manual/practices', (req, res) => {
   res.redirect('/service-manual');
 });
 
+app.get('/service-manual/practices/make-your-service-accessible', (req, res) => {
+  res.redirect('/service-manual/accessibility');
+});
+
+app.get('/service-manual/content/writing-for-accessibility', (req, res) => {
+  res.redirect('/service-manual/accessibility/content');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
