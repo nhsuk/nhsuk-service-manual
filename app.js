@@ -76,6 +76,20 @@ app.get('/', (req, res) => {
   res.redirect('/service-manual');
 });
 
+// The practices pages have moved or been deleted
+// Temporary redirects incase anyone still visits /practices pages
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (req, res) => {
+  res.redirect('/service-manual/content/create-content-for-users-with-low-health-literacy');
+});
+
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
+  res.redirect('/service-manual/content/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content');
+});
+
+app.get('/service-manual/practices', (req, res) => {
+  res.redirect('/service-manual');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
