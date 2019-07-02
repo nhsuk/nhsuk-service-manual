@@ -27,6 +27,259 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
+    <div class="nhsuk-panel nhsuk-u-margin-top-0">
+      <h2>Define page structure</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>You can help people who use assistive technologies understand the structure of the page and navigate it by including "landmarks" (hidden labels for sections of the page). Landmarks also help users looking at multiple pages skip repetitive sections.</p>
+      <p>Use ARIA landmarks to identify the regions of a page.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Landmarks you need
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Make sure that you've defined these landmarks if your page includes them:</p>
+          <ul>
+            <li>banner: at the top of the page, usually contains the logo</li>
+            <li>navigation: elements that link to other pages, usually in the banner</li>
+            <li>search: the search field, usually in the banner</li>
+            <li>main: contains the main content of the page. It should be unique on each page.</li>
+            <li>contentinfo: the footer. This is shared across pages.</li>
+          </ul>
+          <p>You'll need to define headings, lists and data tables in content areas too.</p>
+          <p>Follow the <a href="/service-manual/styles-components-patterns/header">header</a> and <a href="/service-manual/styles-components-patterns/footer">footer</a> components in the service manual.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="defining-link-and-control-names">Define skip links</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Use a skip link to help keyboard-only users skip to the main content on a page.</p>
+      <p>Also add a skip link at the start of a long list of links or form fields (for example, over 20 checkboxes in a filter). This lets people who use keyboard-style access with a switch or head-wand skip to the end and avoid repetitive key-presses.</p>
+      <p>Skip links can be invisible by default, but must be very visible when focused.</p>
+      <p>Follow the <a href="/service-manual/styles-components-patterns/skip-link">skip link</a> component in the service manual.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="headings">Use headings correctly</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Everyone relies on meaningful headings to navigate the page but they are especially important for some people with access needs. Make sure your headings reflect the page structure.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Structure headings for accessibility
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>The H1 is the same as the page title. You should have only 1 H1 on a page.</p>
+          <p>Each main section of your page should start with an H2 and each sub-section of an H2 with an H3. It is possible to have sub-sub-sections which start with an H4.</p>
+          <p>With each heading, ask yourself if it's a sub-section of the previous heading. If not, it should be at the same level as (or higher than) the previous section.</p>
+          <p>Make sure that headings follow the correct "nesting" order and don't skip levels. The structure of the page is the key thing, not the size and style of the text.</p>
+          <p>You can use a web developer toolbar (<a href="https://chrome.google.com/webstore/detail/web-developer-toolbar/deeboegbjcnfgidliakhpoapnpomphji?hl=en">Chrome</a> or <a href="https://addons.mozilla.org/en-GB/firefox/addon/web-developer/">Firefox</a>) to see the overall heading structure of the page.</p>
+        </div>
+      </details>
+
+      <p>Read more about styling headings in the <a href="/service-manual/styles-components-patterns/typography">typography section</a> of the service manual.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="check-colour-contrast">Check colour contrast</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>It's easier for people to read and interact with content if you use colours that contrast well. The NHS meets at least level AA for contrast and we aim for AAA where possible.</p>
+
+      <h3>AA</h3>
+      <p>The contrast ratio should be at least:</p>
+      <ul>
+        <li>4.5:1 for small text (smaller than 24px, or 19px if bold)</li>
+        <li>3:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field) and graphic elements (like an icon)</li>
+      </ul>
+
+      <h3>AAA</h3>
+      <p>The contrast ratio should be at least:</p>
+      <ul>
+        <li>7:1 for small text (smaller than 24px, or 19px if bold)</li>
+        <li>4.5:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field) and graphic elements (like an icon)</li>
+      </ul>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Tools to test colour contrast
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Use a tool to check the colour contrast:</p>
+          <ul>
+            <li><a href="http://webaim.org/resources/contrastchecker/">Web Aim's colour contrast checker</a></li>
+            <li><a href="http://colororacle.org/">Color Oracle (free colour blindness simulator)</a></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            More about components and graphic elements
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Use a tool to calculate the ratio between the element and the adjacent colour - for example, the white arrow (foreground) and the green circle (background) in an <a href="/service-manual/styles-components-patterns/action-link">action link</a>.</p>
+          <p>If you are relying on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it doesn't have to meet the requirement but this is still recommended.</p>
+          <p>Components that are visible but not currently active (like a submit button that isn't active until you've filled in the form) are exempt from the requirement, but if you can meet the minimum contrast without it being confusing, that will help people with low vision.</p>
+        </div>
+      </details>
+
+      <p>Read more about <a href="/service-manual/styles-components-patterns/colour">the colours we use</a> in the service manual.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="define-focus-styles">Define focus styles</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a></p>
+      <p>Everyone should be able to access all interactive components with a keyboard or a similar device. It must be obvious to them which element or link is the current focus position on the page. The browser default is generally not good enough.</p>
+      <p>Make sure that the focus is clearly visible. You can do this by adding something, like an outline or icon, or changing the colour of part of the component. The change should have a good <a href="#check-colour-contrast">colour contrast</a>.</p>
+      <p>We recommend the focus style in the <a href="/service-manual/frontend-library">NHS.UK frontend library</a>.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="discuss-custom-components">Discuss any custom components</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/development">Development</a></p>
+      <p>The <a href="/service-manual/styles-components-patterns">components</a> in the service manual are well tested and ready to use. Before you design a new component, please test an existing component and show that there's a clear need for something new.</p>
+      <p>Discuss any new components with other members of your team. You need to make sure that:</p>
+      <ul>
+        <li>you have good evidence that the new component is the best way of meeting the user need</li>
+        <li>it will be accessible</li>
+        <li>you <a href="/service-manual/accessibility/testing">test it</a></li>
+        <li>you share what you've learnt</li>
+      </ul>
+      <p>Bear in mind that new components add an overhead of testing, from a technical and a usability point of view, and maintenance.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="write-good-link-and-control-names">Write good link and form control names</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Links needs to make sense out of context as some people experience them that way. Each link should clearly describe where it will take you. For example: "Find your nearest A&amp;E".</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            How to write good link and form control names
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <ul>
+            <li>Ideally link text should match the heading of the target page. If  the target page has the heading "Sleep and tiredness", that's good link text.</li>
+            <li>If the target page heading is too long, shorten it but use words from it so that users can predict where the link will take them.</li>
+            <li>Avoid ambiguous phrases such as "click here", "read more" and "find out more". It's OK to say: "Read more about <u>how to deal with stress</u>."</li>
+            <li>If links open in a new window, say this in the link phrase. For example, "Link name (opens in new window)".</li>
+            <li>If the link goes to a document, include the file type and size in the link phrase. For example: "Link name (PDF, 200KB)".</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Using the same link text for multiple links
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>You can use the same text for multiple links when they're in a good structure. The table row headings together with the link text must make the meaning clear.</p>
+          <p>Here's an example: a list of form fields in a table, with "Change" links at the end of each row.</p>
+
+          <div class="nhsuk-table-responsive">
+            <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption">Personal details</caption>
+              <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Name</td>
+                <td class="nhsuk-table__cell">Jo Smith</td>
+                <td class="nhsuk-table__cell "><a href="#">Change</a></td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Date of birth</td>
+                <td class="nhsuk-table__cell ">27 February 1982</td>
+                <td class="nhsuk-table__cell "><a href="#">Change</a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="headings">Label form fields clearly</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Make sure that every form field has a label that tells users what information they need to enter.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            More about labels
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Put the label next to the form field so that the user is clear which field it relates to.</p>
+          <p>Generally the label should be visible. (There's an example of a hidden label "Search the NHS website" on the search box in the NHS.UK header. It doesn't need a visible label because people can see the search icon and the word "Search" in the box.)</p>
+          <p>Give grouped items a "legend". You can see examples in the <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> and <a href="/service-manual/styles-components-patterns/radios">radios</a> components in the service manual.</p>
+          <p>To test the code is correct, you can usually click on the label and the field should be focused by the browser. Otherwise, check there is a "for" attribute on the label and that it matches the "id" attribute of the field.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2>Highlight errors in forms</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Make sure that error messages clearly describe what went wrong and how to fix the problem.</p>
+      <p>Include an error message wherever there's a problem with the input and check that it's visibly obvious that the message is connected to that input.</p>
+      <p>If you have an error summary at the top of a form, check that each error in the list has a link that moves the focus to the relevant form field. This helps users who rely on keyboard navigation.</p>
+      <p>Use the <a href="/service-manual/styles-components-patterns/error-message">error message</a> and <a href="/service-manual/styles-components-patterns/error-summary">error summary</a> components in the service manual. They've been tested for accessibility and contain links to useful GOV.UK guidance on writing good error messages.</p>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2 id="colour-and-location">Do not rely on colour or position alone</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Do not rely on colour to convey meaning, for example, an instruction. To communicate with people who cannot see well or distinguish colours, you may need to:</p>
+      <ul>
+        <li>word things differently</li>
+        <li>use more than one visual cue, for example, text and an icon as well as colour</li>
+      </ul>
+      <p>Do not rely on people understanding instructions that refer to the position of page elements.</p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Example
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Do not say "Press the red button on the right".</p>
+          <p>If someone is:</p>
+          <ul>
+            <li>"colour blind", they may not be able to tell the difference between red and green</li>
+            <li>zoomed in, the button may not be on the right</li>
+            <li>using a screenreader, they may not see the colour - and position, for them, is simply up or down</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="nhsuk-panel">
+      <h2>Do not include text in images</h2>
+      <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/design">Design</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+      <p>Users need as much information as possible in text format, so that they can adjust its size, spacing or formatting.</p>
+      <p>Do not include text in graphical (raster) formats like PNG, JPEG or GIF. They do not work well when users zoom in. Instead put text in HTML (styled with CSS) or use SVG.</p>
+      <p>This doesn't apply to logos.</p>
+    </div>
+
+    <h2>Get in touch</h2>
+    <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS digital service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
     <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: June 2019</p>
     </div>
