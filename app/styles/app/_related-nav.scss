@@ -17,6 +17,10 @@
   padding-top: nhsuk-spacing(3);
 }
 
+.nhsuk-related-nav__heading--small {
+  @include nhsuk-typography-responsive(19);
+}
+
 .nhsuk-related-nav__list {
   list-style: none;
   margin-bottom: nhsuk-spacing(3);
