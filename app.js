@@ -19,7 +19,7 @@ const routing = require('./middleware/routing.js');
 const app = express();
 
 // Authentication middleware
-app.use(authentication);
+// app.use(authentication);
 
 // Use local variables
 app.use(locals(config));
