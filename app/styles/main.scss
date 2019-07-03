@@ -46,3 +46,12 @@ h1 + .nhsuk-lede-text--small {
 .nhsuk-image__caption--grey {
   background-color: $color_nhsuk-grey-5;
 }
+
+// Remove top margin from the first panel on Accessibility guidance
+.nhsuk-accessibility-guidance {
+  .nhsuk-panel {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

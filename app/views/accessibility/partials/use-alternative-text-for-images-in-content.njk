@@ -1,0 +1,52 @@
+<div class="nhsuk-panel">
+  <h2 id="use-alternative-text-for-images-in-content">Use alternative text for images in content</h2>
+  <p class="nhsuk-body-s">For: <a href="/service-manual/accessibility/content">Content</a>, <a href="/service-manual/accessibility/testing">Testing</a></p>
+  <p>People who can't see a meaningful image need an alternative to understand the content. You need to add "alt-text" to explain what's in the image.</p>
+  <p>You can see what alt-text an image has by viewing it with <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Chrome's Web Developer toolbar</a>.</p>
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Informative images
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a <a href="/service-manual/accessibility/testing#use-alternative-text-for-functional-images">functional image</a> - one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
+      <p>You don't need to explain that it's an image because screenreaders usually announce that. Keep alt-text to a sentence or 2 and no longer than 250 characters.</p>
+      <p>Imagine you were reading the page out to a friend. How would you describe the image?</p>
+      <p>This is an image from the <a href="https://www.nhs.uk/conditions/bullous-pemphigoid/">NHS.UK bullous pemphigoid page</a>. It comes under a heading "Check if you have bullous pemphigoid". The alt-text is: "Lots of sore red patches with small blisters spread across white skin on a woman's chest." It explains what users can see in the picture.</p>
+
+      <figure class="nhsuk-image nhsuk-u-margin-top-6">
+        <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/S_0318_Bullous_pemphigoid_lesions_.2e16d0ba.fill-320x213.jpg" alt="Lots of sore red patches with small blisters spread across white skin on a woman's chest.">
+        <figcaption class="nhsuk-image__caption nhsuk-image__caption--grey">
+          It can affect large areas of the body or limbs.
+        </figcaption>
+      </figure>
+
+      <p>The caption underneath the image assumes that the user can either see the image or read the alt-text. It shouldn't duplicate the alt-text. Instead, use it to explain why the image is there and what you want users to conclude from it - for example, how serious their symptom is or what stage their condition has reached.</p>
+      <p>Here's another example. The alt-text is "Small red spots on white skin". The caption explains that that's how chickenpox starts.</p>
+
+      <figure class="nhsuk-image nhsuk-u-margin-top-6">
+        <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg" alt="Small red spots on white skin">
+        <figcaption class="nhsuk-image__caption nhsuk-image__caption--grey">
+          1. Chickenpox starts with red spots. They can appear anywhere on the body.
+        </figcaption>
+      </figure>
+
+      <p>If you have a complex image that you can't describe in short alt-text (such as an infographic), include a longer description in some other way. You can use <a href="/service-manual/styles-components-patterns/expander">an expander</a>, for example, underneath the infographic with a text explanation.</p>
+      <p>If your image has text which conveys its meaning, follow <a href="/service-manual/accessibility/development#use-alternative-text-for-functional-images">the guidance on functional images</a>. An example would be a link to a health app which includes a brand image and the name of the app. The app name says the same as the brand image, so the image doesn't need explaining.</p>
+    </div>
+  </details>
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Decorative images
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Decorative images are there to attract users' attention or motivate them, but they don't help users understand the topic. An example might be a bowl of fruit on a healthy eating page.</p>
+      <p>If your image is decorative, give it a null text alternative like this: (<code>alt=""</code>).</p>
+    </div>
+  </details>
+</div>
