@@ -55,3 +55,18 @@ h1 + .nhsuk-lede-text--small {
     }
   }
 }
+
+/**
+ * Hotfix for an issue with nested list spacing in
+ * the NHS.UK frontend library
+ *
+ * https://github.com/nhsuk/nhsuk-frontend/issues/430
+ */
+
+.nhsuk-u-nested-list {
+  margin-bottom: 0;
+}
+
+.nhsuk-u-nested-list > li {
+  @include nhsuk-responsive-margin(2, 'top');
+}

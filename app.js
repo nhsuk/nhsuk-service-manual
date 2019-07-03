@@ -19,7 +19,7 @@ const routing = require('./middleware/routing.js');
 const app = express();
 
 // Authentication middleware
-// app.use(authentication);
+app.use(authentication);
 
 // Use local variables
 app.use(locals(config));
@@ -103,6 +103,19 @@ app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
 });
 
+// Render sitemap.xml in XML format
+app.get('/service-manual/sitemap.xml', (req, res) => {
+  res.set({ 'Content-Type': 'application/xml' });
+  res.render('sitemap.xml');
+});
+
+// Render robots.txt in text format
+app.get('/service-manual/robots.txt', (req, res) => {
+  res.set('text/plain');
+  res.render('robots.txt');
+});
+
+// Render 404 page
 app.get('*', (req, res) => {
   res.statusCode = 404;
   res.render('page-not-found');
