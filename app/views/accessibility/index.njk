@@ -1,0 +1,43 @@
+{% set pageTitle = 'Accessibility' %}
+{% set pageDescription = 'How to make digital services in the NHS work for everyone.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>{{ pageTitle }}</h1>
+    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2>What everyone needs to know</h2>
+    <ul class="nhsuk-list">
+      <li><a href="/service-manual/accessibility/what-all-NHS-services-need-to-do">What all NHS services need to do about accessibility</a></li>
+      <li><a href="/service-manual/accessibility/how-to-make-digital-services-accessible">How to make digital services accessible</a></li>
+      <li><a href="/service-manual/accessibility/getting-started">Getting started with accessibility</a></li>
+    </ul>
+
+    <h2>Guidance for different activities</h2>
+    <p>Everyone who works on NHS digital services has a role to play in making them accessible and inclusive.</p>
+    <ul class="nhsuk-list">
+      <li><a href="/service-manual/accessibility/product-and-delivery">Product and delivery</a></li>
+      <li><a href="/service-manual/accessibility/user-research">User research</a></li>
+      <li><a href="/service-manual/accessibility/content">Content</a></li>
+      <li><a href="/service-manual/accessibility/design">Design</a></li>
+      <li><a href="/service-manual/accessibility/development">Development</a></li>
+      <li><a href="/service-manual/accessibility/testing">Testing</a></li>
+    </ul>
+
+    <h2>Get in touch</h2>
+    <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS digital service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: June 2019</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

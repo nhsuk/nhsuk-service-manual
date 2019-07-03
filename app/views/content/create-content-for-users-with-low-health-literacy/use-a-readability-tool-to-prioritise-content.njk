@@ -16,11 +16,11 @@
       text: "Home"
     },
     {
-      href: "/service-manual/practices",
-      text: "Practices"
+      href: "/service-manual/content",
+      text: "Content style guide"
     }
   ],
-    href: "/service-manual/practices/create-content-for-users-with-low-health-literacy",
+    href: "/service-manual/content/create-content-for-users-with-low-health-literacy",
     text: "Create content for users with low health literacy"
 
   }) }}
@@ -136,7 +136,7 @@
 
     {{ insetText({
       "HTML": "
-      <p>Read our page about <a href='/service-manual/practices/create-content-for-users-with-low-health-literacy' title='External website'>health literacy</a> to see why it’s important to create content that’s simple to read.</p>"
+      <p>Read our page about <a href='/service-manual/content/create-content-for-users-with-low-health-literacy' title='External website'>health literacy</a> to see why it’s important to create content that’s simple to read.</p>"
     }) }}
 
     <h2>Do not rely on readability scores alone</h2>
@@ -157,6 +157,9 @@
     </div>
 
   </div>
+  <aside class="nhsuk-grid-column-one-third">
+    {% include '../partials/related-nav.njk' %}
+  </aside>
 </div>
 
 {% endblock %}

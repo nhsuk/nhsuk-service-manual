@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 1.6.0 - Unreleased
+
+:new: **New content**
+
+- Accessibility guidances pages
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 1.5.0 - 1 July 2019
 
 :new: **New content**

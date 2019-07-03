@@ -42,3 +42,10 @@
   padding: 0;
 }
 
+.rich-text-inverted code {
+  background-color: $color_nhsuk-grey-5;
+  color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
+  font-size: 1rem;
+  padding: 4px 8px;
+  white-space: normal;
+}
