@@ -41,3 +41,8 @@ h1 + .nhsuk-lede-text,
 h1 + .nhsuk-lede-text--small {
   margin-top: - nhsuk-spacing(4);
 }
+
+// Use grey background when the image component is on white background
+.nhsuk-image__caption--grey {
+  background-color: $color_nhsuk-grey-5;
+}
