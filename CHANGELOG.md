@@ -8,6 +8,7 @@
 
 :wrench: **Fixes**
 
+- Change the format page titles with Page | Section - NHS digital service manual
 - Update package dependencies to latest versions
 
 ## 1.5.0 - 1 July 2019
