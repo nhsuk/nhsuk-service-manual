@@ -70,3 +70,26 @@ h1 + .nhsuk-lede-text--small {
 .nhsuk-u-nested-list > li {
   @include nhsuk-responsive-margin(2, 'top');
 }
+
+// Fix to give 24px to heading-l after the details component
+// This needs to be added to the frontend library
+.nhsuk-details  + %nhsuk-heading-l {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+// Fix to make the expander background grey in a white section
+// This needs to be added to the frontend library
+.nhsuk-section--white {
+  .nhsuk-expander {
+    background-color: $color_nhsuk-grey-5;
+
+    .nhsuk-details__summary {
+      background-color: $color_nhsuk-grey-5;
+    }
+  }
+  .nhsuk-expander[open] {
+    .nhsuk-details__summary {
+      border-color: $color_nhsuk-white;
+    }
+  }
+}
