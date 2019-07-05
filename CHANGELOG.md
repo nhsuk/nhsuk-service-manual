@@ -4,7 +4,7 @@
 
 :new: **New content**
 
-- Accessibility guidances pages
+- Accessibility guidance pages
 
 :wrench: **Fixes**
 
