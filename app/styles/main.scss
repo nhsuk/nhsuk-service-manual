@@ -18,3 +18,64 @@
   border: 1px solid $color_nhsuk-grey-4;
   width: 100%;
 }
+
+// Lede text styling
+// Because the styling is not consistent across the site for lede text
+.nhsuk-lede-text {
+  @include nhsuk-font(24);
+  @include nhsuk-responsive-margin(7, 'bottom');
+  // Apply lede text styling to p and ul within the lede (see foot pain hub)
+  p,
+  ul {
+    @include nhsuk-font(24);
+  }
+}
+
+.nhsuk-lede-text--small {
+  @include nhsuk-font(19);
+  @include nhsuk-responsive-margin(5, 'bottom');
+}
+
+// Reduces the spacing between the page heading and the lede text
+h1 + .nhsuk-lede-text,
+h1 + .nhsuk-lede-text--small {
+  margin-top: - nhsuk-spacing(4);
+}
+
+/**
+ * Hotfix for an issue with nested list spacing in
+ * the NHS.UK frontend library
+ *
+ * https://github.com/nhsuk/nhsuk-frontend/issues/430
+ */
+
+.nhsuk-u-nested-list {
+  margin-bottom: 0;
+}
+
+.nhsuk-u-nested-list > li {
+  @include nhsuk-responsive-margin(2, 'top');
+}
+
+// Fix to give 24px to heading-l after the details component
+// This needs to be added to the frontend library
+.nhsuk-details  + %nhsuk-heading-l {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+// Fix to make the expander background grey in a white section
+// This needs to be added to the frontend library
+.nhsuk-section--white {
+  .nhsuk-expander {
+    background-color: $color_nhsuk-grey-5;
+
+    .nhsuk-details__summary {
+      background-color: $color_nhsuk-grey-5;
+    }
+  }
+  .nhsuk-expander[open] {
+    .nhsuk-details__summary {
+      border-color: $color_nhsuk-white;
+    }
+  }
+}

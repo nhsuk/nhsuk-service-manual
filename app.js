@@ -76,11 +76,46 @@ app.get('/', (req, res) => {
   res.redirect('/service-manual');
 });
 
+// The practices pages have moved or been deleted
+// Temporary redirects incase anyone still visits /practices pages
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (req, res) => {
+  res.redirect('/service-manual/content/health-literacy');
+});
+
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
+  res.redirect('/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content');
+});
+
+app.get('/service-manual/practices', (req, res) => {
+  res.redirect('/service-manual');
+});
+
+app.get('/service-manual/practices/make-your-service-accessible', (req, res) => {
+  res.redirect('/service-manual/accessibility');
+});
+
+app.get('/service-manual/content/writing-for-accessibility', (req, res) => {
+  res.redirect('/service-manual/accessibility/content');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
 });
 
+// Render sitemap.xml in XML format
+app.get('/service-manual/sitemap.xml', (req, res) => {
+  res.set({ 'Content-Type': 'application/xml' });
+  res.render('sitemap.xml');
+});
+
+// Render robots.txt in text format
+app.get('/service-manual/robots.txt', (req, res) => {
+  res.set('text/plain');
+  res.render('robots.txt');
+});
+
+// Render 404 page
 app.get('*', (req, res) => {
   res.statusCode = 404;
   res.render('page-not-found');
