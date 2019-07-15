@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Update package dependencies to latest versions
+- Remove page section from the Open Graph meta title
 
 ## 1.6.0 - 8 July 2019
 
