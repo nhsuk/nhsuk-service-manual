@@ -5,6 +5,9 @@
 :wrench: **Fixes**
 
 - Update package dependencies to latest versions
+- Remove page section from the Open Graph meta title
+- Fix broken link to the privacy policy on the sitemap page
+- Update the link to the contribution criteria
 
 ## 1.6.0 - 8 July 2019
 
