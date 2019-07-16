@@ -42,20 +42,6 @@ h1 + .nhsuk-lede-text--small {
   margin-top: - nhsuk-spacing(4);
 }
 
-// Use grey background when the image component is on white background
-.nhsuk-image__caption--grey {
-  background-color: $color_nhsuk-grey-5;
-}
-
-// Remove top margin from the first panel on Accessibility guidance
-.nhsuk-accessibility-guidance {
-  .nhsuk-panel {
-    &:first-of-type {
-      margin-top: 0;
-    }
-  }
-}
-
 /**
  * Hotfix for an issue with nested list spacing in
  * the NHS.UK frontend library
