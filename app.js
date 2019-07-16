@@ -14,6 +14,7 @@ const config = require('./app/config');
 const fileHelper = require('./middleware/file-helper.js');
 const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
+const pageIndex = require('./middleware/page-index.js');
 
 // Initialise applications
 const app = express();
@@ -71,6 +72,16 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   // Wrap the example HTML in a basic html base template.
   res.render('includes/design-example-wrapper.njk', { body: exampleHtml });
 });
+
+app.get('/search', (req, res) => {
+  var search = req.query['search-field']
+  res.render('includes/search.njk', { query: pageIndex.search(search) })
+});
+
+app.get('/service-manual/suggestions', (req, res) => {
+  res.set({ 'Content-Type': 'application/json' })
+  res.send(JSON.stringify(pageIndex.suggestion(req.query.search)))
+})
 
 app.get('/', (req, res) => {
   res.redirect('/service-manual');
@@ -136,5 +147,7 @@ if (config.env === 'development') {
 } else {
   app.listen(config.port);
 }
+
+pageIndex.init()
 
 module.exports = app;

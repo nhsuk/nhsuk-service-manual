@@ -1,0 +1,12 @@
+{% set pageTitle = 'Search' %}
+{% set pageDescription = 'Search results.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block body %}
+  <h1>Results</h1>
+  {% for item in query %}
+    <a href="{{item.url}}"><h3>{{item.title}}</h3></a>
+    <p>{{item.description}}</p>
+  {% endfor %}
+{% endblock %}
