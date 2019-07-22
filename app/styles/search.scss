@@ -1,0 +1,23 @@
+.nhsuk-list--border li {
+  border-bottom: 1px solid #d8dde0;
+  padding: 8px 0 16px
+}
+
+.nhsuk-list--border li>:first-child {
+  margin-top: 0
+}
+
+.nhsuk-list--border li>:last-child {
+  margin-bottom: 0
+}
+
+.nhsuk-list--border li:first-of-type {
+  padding: 0 0 16px
+}
+
+@media (max-width: 48.0525em) {
+  .nhsuk-list--border li:first-of-type {
+    border-top:1px solid #d8dde0;
+    padding-top: 16px
+  }
+}
