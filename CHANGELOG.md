@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Use the latest version of the NHS.UK frontend library (v2.3.0)
+- Use the latest NHS website Open Graph assets and metadata
 
 ## 1.6.1 - 22 July 2019
 
