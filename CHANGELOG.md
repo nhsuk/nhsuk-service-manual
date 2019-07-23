@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
 
+<<<<<<< HEAD
 ## 1.6.1 - 16 July 2019
+=======
+## 1.6.1 - 22 July 2019
+>>>>>>> master
 
 :wrench: **Fixes**
 
