@@ -89,9 +89,9 @@ class PageIndex {
 
   _searchIndex(query) {
     return this.index.query(function(q) {
-      q.term(query, { usePipeline: true, boost: 100 })
+      q.term(query.toLowerCase(), { usePipeline: true, boost: 100 })
       // look for terms that match the beginning of this query and apply a medium boost
-      q.term(query + "*", { usePipeline: false, boost: 10 })
+      q.term(query.toLowerCase() + "*", { usePipeline: false, boost: 10 })
     })
   }
 
