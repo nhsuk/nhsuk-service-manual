@@ -28,7 +28,7 @@ function searchSource(query, callback) {
 
 var searchConfig = {
   onConfirm: (selected) => {
-    //window.open(`/search/?search-field=${selected}`);
+    window.open(`/search/?search-field=${selected}`);
   },
   source: searchSource,
   templates: {
