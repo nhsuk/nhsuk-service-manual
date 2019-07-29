@@ -14,7 +14,9 @@ const config = require('./app/config');
 const fileHelper = require('./middleware/file-helper.js');
 const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
-const pageIndex = require('./middleware/page-index.js');
+const PageIndex = require('./middleware/page-index.js');
+
+var pageIndex = new PageIndex(config)
 
 // Initialise applications
 const app = express();

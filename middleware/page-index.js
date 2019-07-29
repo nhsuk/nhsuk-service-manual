@@ -4,14 +4,15 @@ const lunr = require('lunr')
 const { additionalIndicies, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js')
 
 class PageIndex {
-  constructor() {
+  constructor(config) {
     this.docs = []
     this.index = null
+    this.config = config
   }
 
   init() {
     var startTime = new Date().getTime()
-    axios.get('http://localhost:3000/service-manual/sitemap')
+    axios.get(`http://localhost:${this.config.port}/service-manual/sitemap`)
     .then((response) => {
       var pages = []
       const $ = cheerio.load(response.data)
@@ -19,7 +20,7 @@ class PageIndex {
       links.each((i, el) => {
         var href = $(el).attr('href')
         if (!indexBlacklist.includes(href)) {
-          var url = `http://localhost:3000${href}`
+          var url = `http://localhost:${this.config.port}${href}`
           if (href.toLowerCase().includes('http')) {
             url = href
           }
@@ -184,4 +185,4 @@ class PageIndex {
   }
 }
 
-module.exports = new PageIndex()
+module.exports = PageIndex
