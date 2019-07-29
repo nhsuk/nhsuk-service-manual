@@ -81,7 +81,7 @@ class PageIndex {
     for (var i = 0; i < results.length; i++) {
       var data = this._getData(results[i])
       if (data) {
-        suggestions.push(data.title)
+        suggestions.push(data)
       }
     }
     return suggestions
