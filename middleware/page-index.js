@@ -10,6 +10,7 @@ class PageIndex {
   }
 
   init() {
+    var startTime = new Date().getTime()
     axios.get('http://localhost:3000/service-manual/sitemap')
     .then((response) => {
       var pages = []
@@ -41,7 +42,7 @@ class PageIndex {
             index = index.concat(altSpelling)
             this.docs.push({
               url: url,
-              title: `A to Z of NHS health writing ${title}`,
+              title: `${title} - A to Z of NHS health writing`,
               index: index.join(' '),
               description: description
             })
@@ -69,6 +70,9 @@ class PageIndex {
           builder.add(this.docs[i])
         }
       })
+      var endTime = new Date().getTime()
+      var indexTime = (endTime - startTime) / 1000
+      console.log(`Page index finished in ${indexTime}s`)
     })
     .catch((err) => {
       console.log(err)

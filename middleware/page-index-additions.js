@@ -4,7 +4,9 @@ const additionalIndicies = {
 
 
 const alternativeSpelling = {
-  'alzheimer’s': [ 'alzheimers', 'alzheimer' ]
+  'alzheimer’s': [ 'alzheimers', 'alzheimer' ],
+  'fever': [ 'temperature' ],
+  'temperature': [ 'fever' ]
 }
 
 const indexBlacklist = [

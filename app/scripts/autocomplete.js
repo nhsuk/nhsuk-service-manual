@@ -35,7 +35,8 @@ var searchConfig = {
   templates: {
     suggestion: suggestionTemplate,
   },
-  showNoOptionsFound: false
+  showNoOptionsFound: false,
+  required: true
 }
 
 autocomplete(searchConfig)
