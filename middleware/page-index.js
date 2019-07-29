@@ -37,19 +37,34 @@ class PageIndex {
       for (var response of responses) {
         const $ = cheerio.load(response.data)
         const url = response.request.path
-        var titles = this._parseTitles($)
-        var subtitles = this._parseSubtitles($, url)
         var description = this._parseDescription($)
-        this.docs.push({
-          url: url,
-          title: titles,
-          subtitle: subtitles,
-          description: description
-        })
+        if (url === '/service-manual/content/a-to-z-of-nhs-health-writing') {
+          var titles = this._parseAToZTitle($)
+          for (var title of titles) {
+            this.docs.push({
+              url: url,
+              title: `A to Z of NHS health writing ${title}`,
+              subtitle: title,
+              description: description
+            })
+          }
+        }
+        else {
+          var titles = this._parseTitles($)
+          var subtitles = this._parseSubtitles($, url)
+          var description = this._parseDescription($)
+          this.docs.push({
+            url: url,
+            title: titles,
+            subtitle: subtitles,
+            description: description
+          })
+        }
+
       }
 
       this.index = lunr((builder) => {
-        builder.ref('url')
+        builder.ref('title')
         builder.field('title')
         builder.field('subtitle')
 
@@ -97,7 +112,7 @@ class PageIndex {
 
   _getData(result) {
     for (var i = 0; i < this.docs.length; i++) {
-      if (result.ref === this.docs[i].url) {
+      if (result.ref === this.docs[i].title) {
         return this.docs[i]
       }
     }
@@ -126,6 +141,15 @@ class PageIndex {
 
   _parseDescription($) {
     return $("meta[name='description']").attr('content')
+  }
+
+  _parseAToZTitle($) {
+    var titles = []
+    var element = 'h3'
+    $(element).each((i, el) => {
+      titles.push($(el).text())
+    })
+    return titles
   }
 }
 
