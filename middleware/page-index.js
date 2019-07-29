@@ -1,12 +1,7 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
 const lunr = require('lunr')
-
-const blacklist = [
-  '/service-manual/privacy-policy',
-  '/service-manual/',
-  'https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh'
-]
+const { additionalIndicies, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js')
 
 class PageIndex {
   constructor() {
@@ -22,7 +17,7 @@ class PageIndex {
       var links = $('#maincontent').find('a')
       links.each((i, el) => {
         var href = $(el).attr('href')
-        if (!blacklist.includes(href)) {
+        if (!indexBlacklist.includes(href)) {
           var url = `http://localhost:3000${href}`
           if (href.toLowerCase().includes('http')) {
             url = href
@@ -41,22 +36,24 @@ class PageIndex {
         if (url === '/service-manual/content/a-to-z-of-nhs-health-writing') {
           var titles = this._parseAToZTitle($)
           for (var title of titles) {
+            var index = [ title ]
+            var altSpelling = this._getAltSpellings(index.join(' '))
+            index = index.concat(altSpelling)
             this.docs.push({
               url: url,
               title: `A to Z of NHS health writing ${title}`,
-              subtitle: title,
+              index: index.join(' '),
               description: description
             })
           }
         }
         else {
-          var titles = this._parseTitles($)
-          var subtitles = this._parseSubtitles($, url)
-          var description = this._parseDescription($)
+          var title = this._parseTitle($)
+          var index = this._getSearchIndex($, url)
           this.docs.push({
             url: url,
-            title: titles,
-            subtitle: subtitles,
+            title: title,
+            index: index,
             description: description
           })
         }
@@ -66,7 +63,7 @@ class PageIndex {
       this.index = lunr((builder) => {
         builder.ref('title')
         builder.field('title')
-        builder.field('subtitle')
+        builder.field('index')
 
         for (var i = 0; i < this.docs.length; i++) {
           builder.add(this.docs[i])
@@ -119,7 +116,7 @@ class PageIndex {
     return undefined
   }
 
-  _parseTitles($) {
+  _parseTitle($) {
     var titles = []
     $('#maincontent').find('h1').each((i, el) => {
       titles.push($(el).text())
@@ -127,16 +124,46 @@ class PageIndex {
     return titles.join(' ')
   }
 
-  _parseSubtitles($, url) {
-    var subtitles = []
-    var element = 'h2'
-    if (url === '/service-manual/content/a-to-z-of-nhs-health-writing') {
-      element = 'h3'
+  _getSearchIndex($, url) {
+    var pageContent = this._parsePageContent($)
+    var extraIndicies = this._getAdditionalIndicies(url)
+    var index = []
+    for (var item of pageContent.concat(extraIndicies)) {
+      if (!index.includes(item)) {
+        index.push(item)
+      }
     }
-    $(element).each((i, el) => {
-      subtitles.push($(el).text())
-    })
-    return subtitles.join(' ')
+    var altSpelling = this._getAltSpellings(index.join(' '))
+    index = index.concat(altSpelling)
+    return index.join(' ')
+  }
+
+  _getAltSpellings(index) {
+    var altSpelling = []
+    for (var word in alternativeSpelling) {
+      if (index.includes(word.toLowerCase())) {
+        altSpelling.push(alternativeSpelling[word])
+      }
+    }
+    return altSpelling
+  }
+
+  _getAdditionalIndicies(url) {
+    if (url in additionalIndicies) {
+      return additionalIndicies[url]
+    }
+    return []
+  }
+
+  _parsePageContent($) {
+    var content = []
+    const elements = ['h2', 'h3']
+    for (var element of elements) {
+      $('#maincontent').find(element).each((i, el) => {
+        content.push($(el).text().toLowerCase())
+      })
+    }
+    return content
   }
 
   _parseDescription($) {
@@ -147,7 +174,7 @@ class PageIndex {
     var titles = []
     var element = 'h3'
     $(element).each((i, el) => {
-      titles.push($(el).text())
+      titles.push($(el).text().toLowerCase())
     })
     return titles
   }
