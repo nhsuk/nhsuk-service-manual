@@ -102,7 +102,7 @@
 
 :new: **New features**
 
-- Publish new components; Back link, Contents list, Details, 
+- Publish new components; Back link, Contents list, Details,
 Expander, Images, Pagination, Review date, Skip link and Table
 - Draft first release of the service standard pages
 
