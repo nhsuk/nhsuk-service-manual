@@ -3,6 +3,7 @@ import './polyfills';
 
 // NHS.UK frontend
 import nhsuk_skipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link'; /* eslint-disable-line camelcase */
+import './autocomplete';
 import digitalData from './digitalData';
 import DesignExample from './design-example';
 import cookieConsent from './cookieConsent';
