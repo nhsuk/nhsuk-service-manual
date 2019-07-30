@@ -19,9 +19,6 @@ function searchSource(query, callback) {
     if (xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
       callback(data);
-    } else {
-      // TODO: nice error messaging here
-      // console.warn(xhr);
     }
   };
   xhr.send();
