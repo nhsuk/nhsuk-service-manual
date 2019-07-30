@@ -16,7 +16,7 @@ const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
 const PageIndex = require('./middleware/page-index.js');
 
-var pageIndex = new PageIndex(config)
+var pageIndex = new PageIndex(config);
 
 // Initialise applications
 const app = express();
@@ -81,9 +81,9 @@ app.get('/search', (req, res) => {
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
-  res.set({ 'Content-Type': 'application/json' })
-  res.send(JSON.stringify(pageIndex.suggestion(req.query.search)))
-})
+  res.set({ 'Content-Type': 'application/json' });
+  res.send(JSON.stringify(pageIndex.suggestion(req.query.search)));
+});
 
 app.get('/', (req, res) => {
   res.redirect('/service-manual');
