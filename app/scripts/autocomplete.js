@@ -1,7 +1,7 @@
-import autocomplete from '../../node_modules/nhsuk-frontend/packages/components/header/autocomplete.js';
+import autocomplete from '../../node_modules/nhsuk-frontend/packages/components/header/autocomplete';
 
 function suggestionTemplate(data) {
-  var result = data.title
+  const result = data.title;
   const truncateLength = 36;
   const dots = result.length > truncateLength ? '...' : '';
   const resultTruncated = result.substring(0, truncateLength) + dots;
@@ -12,13 +12,13 @@ function suggestionTemplate(data) {
 }
 
 function searchSource(query, callback) {
-  const url = `/service-manual/suggestions/?search=${encodeURIComponent(query)}`
+  const url = `/service-manual/suggestions/?search=${encodeURIComponent(query)}`;
   const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
-  xhr.onload = function () {
+  xhr.onload = () => {
     if (xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
-      callback(data)
+      callback(data);
     } else {
       // TODO: nice error messaging here
       // console.warn(xhr);
@@ -27,16 +27,16 @@ function searchSource(query, callback) {
   xhr.send();
 }
 
-var searchConfig = {
+const searchConfig = {
   onConfirm: (selected) => {
-    window.location.href = selected.url
+    window.location.href = selected.url;
   },
+  required: true,
+  showNoOptionsFound: false,
   source: searchSource,
   templates: {
     suggestion: suggestionTemplate,
   },
-  showNoOptionsFound: false,
-  required: true
-}
+};
 
-autocomplete(searchConfig)
+autocomplete(searchConfig);
