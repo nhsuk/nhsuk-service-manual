@@ -1,11 +1,15 @@
 # NHS digital service manual Changelog
 
-## 1.6.2 - 23 July 2019
+## 1.6.2 - 30 July 2019
 
 :wrench: **Fixes**
 
 - Use the latest version of the NHS.UK frontend library (v2.3.0)
 - Use the latest NHS website Open Graph assets and metadata
+- Update package dependencies to latest versions
+- Accessibility guidance pages grammar and content updates
+- Add 'homeless' to the A-Z of NHS health writing
+- Add external links to the links and PDF guidance pages
 
 ## 1.6.1 - 22 July 2019
 
