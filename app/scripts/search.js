@@ -1,3 +1,4 @@
+import nhsukHeader from '../../node_modules/nhsuk-frontend/packages/components/header/header';
 import autocomplete from '../../node_modules/nhsuk-frontend/packages/components/header/autocomplete';
 
 function suggestionTemplate(data) {
@@ -36,4 +37,5 @@ const searchConfig = {
   },
 };
 
+nhsukHeader();
 autocomplete(searchConfig);

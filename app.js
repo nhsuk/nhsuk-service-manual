@@ -151,7 +151,7 @@ if (config.env === 'development') {
 }
 
 setTimeout(function(){
-  pageIndex.init()
-}, 2000)
+  pageIndex.init();
+}, 2000);
 
 module.exports = app;
