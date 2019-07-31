@@ -27,9 +27,9 @@ function searchSource(query, callback) {
 
 function inputValueTemplate(selected) {
   if (selected) {
-    return selected.title
+    return selected.title;
   }
-  return ''
+  return '';
 }
 
 const searchConfig = {
