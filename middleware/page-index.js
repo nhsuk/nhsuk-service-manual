@@ -12,7 +12,8 @@ class PageIndex {
 
   init() {
     var startTime = new Date().getTime();
-    axios.get(`http://localhost:${this.config.port}/service-manual/sitemap`)
+    const baseUrl = this._getBaseUrl();
+    axios.get(`${baseUrl}/service-manual/sitemap`)
     .then((response) => {
       var pages = [];
       const $ = cheerio.load(response.data);
@@ -20,7 +21,7 @@ class PageIndex {
       links.each((i, el) => {
         var href = $(el).attr('href');
         if (!indexBlacklist.includes(href)) {
-          var url = `http://localhost:${this.config.port}${href}`;
+          var url = `${baseUrl}${href}`;
           if (href.toLowerCase().includes('http')) {
             url = href;
           }
@@ -182,6 +183,10 @@ class PageIndex {
       titles.push($(el).text().toLowerCase());
     })
     return titles;
+  }
+
+  _getBaseUrl() {
+    return 'https://beta.nhs.uk';
   }
 }
 

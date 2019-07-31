@@ -76,8 +76,8 @@ app.get('/service-manual/design-example/:example', (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-  var search = req.query['search-field']
-  res.render('includes/search.njk', { results: pageIndex.search(search), query: search })
+  var search = req.query['search-field'];
+  res.render('includes/search.njk', { results: pageIndex.search(search), query: search });
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
