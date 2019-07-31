@@ -166,7 +166,9 @@ class PageIndex {
     const elements = ['h2', 'h3'];
     for (var element of elements) {
       $('#maincontent').find(element).each((i, el) => {
-        content.push($(el).text().toLowerCase());
+        if($(el).children().length === 0) {
+          content.push($(el).text().toLowerCase());
+        }
       })
     }
     return content;
