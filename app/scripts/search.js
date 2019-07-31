@@ -1,3 +1,4 @@
+import nhsukHeader from '../../node_modules/nhsuk-frontend/packages/components/header/header';
 import autocomplete from '../../node_modules/nhsuk-frontend/packages/components/header/autocomplete';
 
 function suggestionTemplate(data) {
@@ -24,6 +25,13 @@ function searchSource(query, callback) {
   xhr.send();
 }
 
+function inputValueTemplate(selected) {
+  if (selected) {
+    return selected.title;
+  }
+  return '';
+}
+
 const searchConfig = {
   onConfirm: (selected) => {
     window.location.href = selected.url;
@@ -32,8 +40,10 @@ const searchConfig = {
   showNoOptionsFound: false,
   source: searchSource,
   templates: {
+    inputValue: inputValueTemplate,
     suggestion: suggestionTemplate,
   },
 };
 
+nhsukHeader();
 autocomplete(searchConfig);
