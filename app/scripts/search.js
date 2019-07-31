@@ -25,6 +25,13 @@ function searchSource(query, callback) {
   xhr.send();
 }
 
+function inputValueTemplate(selected) {
+  if (selected) {
+    return selected.title
+  }
+  return ''
+}
+
 const searchConfig = {
   onConfirm: (selected) => {
     window.location.href = selected.url;
@@ -33,6 +40,7 @@ const searchConfig = {
   showNoOptionsFound: false,
   source: searchSource,
   templates: {
+    inputValue: inputValueTemplate,
     suggestion: suggestionTemplate,
   },
 };

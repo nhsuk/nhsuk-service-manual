@@ -179,7 +179,7 @@ class PageIndex {
   _parseAToZTitle($) {
     var titles = [];
     var element = 'h3';
-    $(element).each((i, el) => {
+    $('#maincontent').find(element).each((i, el) => {
       titles.push($(el).text().toLowerCase());
     })
     return titles;
