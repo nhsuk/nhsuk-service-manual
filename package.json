@@ -3,6 +3,9 @@
   "version": "1.6.2",
   "description": "NHS digital service manual",
   "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "babel": "babel --presets es2015 app/scripts/main.js -o public/js/main.bundle.js",
     "build": "npm run build:css && npm run build:js && npm run build:assets",
@@ -16,7 +19,8 @@
     "nuke": "npm run clean && rm -rf node_modules/",
     "postinstall": "npm run build",
     "start": "node app",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "jest",
     "watch": "concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm run watch:assets\" \"npm start\"",
     "watch:scss": "npm run build:css && npm run build:css -- -w",
     "watch:js": "webpack -w",
@@ -48,6 +52,7 @@
     "eslint-plugin-import": "^2.18.2",
     "highlight.js": "^9.15.8",
     "iframe-resizer": "^3.6.6",
+    "jest": "^24.8.0",
     "js-beautify": "^1.10.1",
     "nhsuk-frontend": "^2.3.0",
     "node-sass": "^4.12.0",
