@@ -12,8 +12,9 @@ class PageIndex {
 
   init() {
     var startTime = new Date().getTime();
-    const baseUrl = this._getBaseUrl();
-    axios.get(`${baseUrl}/service-manual/sitemap`)
+    const baseUrl = `http://localhost:${this.config.port}`
+    const config = this._getConnectionConfig()
+    axios.get(`${baseUrl}/service-manual/sitemap`, config)
     .then((response) => {
       var pages = [];
       const $ = cheerio.load(response.data);
@@ -25,7 +26,7 @@ class PageIndex {
           if (href.toLowerCase().includes('http')) {
             url = href;
           }
-          pages.push(axios.get(url));
+          pages.push(axios.get(url, config));
         }
       })
 
@@ -36,7 +37,7 @@ class PageIndex {
         const $ = cheerio.load(response.data);
         const url = response.request.path;
         var description = this._parseDescription($);
-        if (url === '/service-manual/content/a-to-z-of-nhs-health-writing') {
+        if (this._isSpecialIndex($)) {
           var titles = this._parseAToZTitle($);
           for (var title of titles) {
             var index = [ title ];
@@ -160,7 +161,7 @@ class PageIndex {
     var altSpelling = [];
     for (var word in alternativeSpelling) {
       if (index.includes(word.toLowerCase())) {
-        altSpelling.push(alternativeSpelling[word]);
+        altSpelling.push(alternativeSpelling[word].join(' '));
       }
     }
     return altSpelling;
@@ -187,7 +188,18 @@ class PageIndex {
   }
 
   _parseDescription($) {
-    return $("meta[name='description']").attr('content');
+    return this._parseMeta($, 'description');
+  }
+
+  _isSpecialIndex($) {
+    if (this._parseMeta($, 'page-index') === 'special' ) {
+      return true;
+    }
+    return false;
+  }
+
+  _parseMeta($, name) {
+    return $(`meta[name='${name}']`).attr('content');
   }
 
   _parseAToZTitle($) {
@@ -199,8 +211,16 @@ class PageIndex {
     return titles;
   }
 
-  _getBaseUrl() {
-    return 'https://beta.nhs.uk';
+  _getConnectionConfig() {
+    if (process.env.MANUAL_USERNAME || process.env.MANUAL_PASSWORD) {
+      return {
+        auth: {
+          username: process.env.MANUAL_USERNAME,
+          password: process.env.MANUAL_PASSWORD
+        }
+      }
+    }
+    return {}
   }
 }
 
