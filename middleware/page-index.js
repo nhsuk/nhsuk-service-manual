@@ -107,6 +107,7 @@ class PageIndex {
 
   _searchIndex(query) {
     return this.index.query(function(q) {
+      // look for terms that has exact match and apply a big boost
       q.term(query.toLowerCase(), { usePipeline: true, boost: 100 });
       // look for terms that match the beginning of this query and apply a medium boost
       q.term(query.toLowerCase() + "*", { usePipeline: false, boost: 10 });
