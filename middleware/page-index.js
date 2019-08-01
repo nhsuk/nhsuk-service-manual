@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
-const { additionalIndicies, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js');
+const { additionalIndices, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js');
 
 class PageIndex {
   constructor(config) {
@@ -132,7 +132,7 @@ class PageIndex {
 
   _getSearchIndex($, url) {
     var pageContent = this._parsePageContent($);
-    var extraIndicies = this._getAdditionalIndicies(url);
+    var extraIndicies = this._getAdditionalIndices(url);
     var index = [];
     for (var item of pageContent.concat(extraIndicies)) {
       if (!index.includes(item)) {
@@ -154,9 +154,9 @@ class PageIndex {
     return altSpelling;
   }
 
-  _getAdditionalIndicies(url) {
-    if (url in additionalIndicies) {
-      return additionalIndicies[url];
+  _getAdditionalIndices(url) {
+    if (url in additionalIndices) {
+      return additionalIndices[url];
     }
     return [];
   }
