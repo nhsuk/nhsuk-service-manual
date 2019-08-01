@@ -77,7 +77,14 @@ class PageIndex {
       console.log(`Page index finished in ${indexTime}s`);
     })
     .catch((err) => {
-      console.log(err);
+      var reason = ''
+      if (err.response) {
+        reason = `${err.message} URL: ${err.response.config.url}`
+      }
+      else {
+        reason = err.message
+      }
+      console.log(`Unable to index pages. Reason: ${reason}`);
     })
   }
 
@@ -193,7 +200,7 @@ class PageIndex {
   }
 
   _getBaseUrl() {
-    return 'https://beta.nhs.uk';
+    return 'https://nhsuk-service-manual-staging.azurewebsites.net';
   }
 }
 
