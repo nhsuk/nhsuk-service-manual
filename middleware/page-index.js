@@ -200,7 +200,7 @@ class PageIndex {
   }
 
   _getBaseUrl() {
-    return 'https://nhsuk-service-manual-staging.azurewebsites.net';
+    return 'https://beta.nhs.uk';
   }
 }
 
