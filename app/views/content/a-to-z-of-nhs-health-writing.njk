@@ -4,6 +4,10 @@
 
 {% extends 'includes/layout.njk' %}
 
+{% block extraMeta %}
+<meta name="page-index" content="special">
+{% endblock %}
+
 {% from 'nav-a-z/macro.njk' import azNav %}
 
 {% block breadcrumb %}
