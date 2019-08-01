@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
-const { additionalIndicies, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js');
+const { additionalIndices, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js');
 
 class PageIndex {
   constructor(config) {
@@ -12,8 +12,9 @@ class PageIndex {
 
   init() {
     var startTime = new Date().getTime();
-    const baseUrl = this._getBaseUrl();
-    axios.get(`${baseUrl}/service-manual/sitemap`)
+    const baseUrl = `http://localhost:${this.config.port}`
+    const config = this._getConnectionConfig()
+    axios.get(`${baseUrl}/service-manual/sitemap`, config)
     .then((response) => {
       var pages = [];
       const $ = cheerio.load(response.data);
@@ -25,7 +26,7 @@ class PageIndex {
           if (href.toLowerCase().includes('http')) {
             url = href;
           }
-          pages.push(axios.get(url));
+          pages.push(axios.get(url, config));
         }
       })
 
@@ -36,7 +37,7 @@ class PageIndex {
         const $ = cheerio.load(response.data);
         const url = response.request.path;
         var description = this._parseDescription($);
-        if (url === '/service-manual/content/a-to-z-of-nhs-health-writing') {
+        if (this._isSpecialIndex($)) {
           var titles = this._parseAToZTitle($);
           for (var title of titles) {
             var index = [ title ];
@@ -77,7 +78,14 @@ class PageIndex {
       console.log(`Page index finished in ${indexTime}s`);
     })
     .catch((err) => {
-      console.log(err);
+      var reason = ''
+      if (err.response) {
+        reason = `${err.message} URL: ${err.response.config.url}`
+      }
+      else {
+        reason = err.message
+      }
+      console.log(`Unable to index pages. Reason: ${reason}`);
     })
   }
 
@@ -106,11 +114,16 @@ class PageIndex {
   }
 
   _searchIndex(query) {
-    return this.index.query(function(q) {
-      q.term(query.toLowerCase(), { usePipeline: true, boost: 100 });
-      // look for terms that match the beginning of this query and apply a medium boost
-      q.term(query.toLowerCase() + "*", { usePipeline: false, boost: 10 });
-    })
+    var results = []
+    if (query && this.index) {
+      results = this.index.query(function(q) {
+        // look for terms that has exact match and apply a big boost
+        q.term(query.toLowerCase(), { usePipeline: true, boost: 100 });
+        // look for terms that match the beginning of this query and apply a medium boost
+        q.term(query.toLowerCase() + "*", { usePipeline: false, boost: 10 });
+      })
+    }
+    return results
   }
 
   _getData(result) {
@@ -132,7 +145,7 @@ class PageIndex {
 
   _getSearchIndex($, url) {
     var pageContent = this._parsePageContent($);
-    var extraIndicies = this._getAdditionalIndicies(url);
+    var extraIndicies = this._getAdditionalIndices(url);
     var index = [];
     for (var item of pageContent.concat(extraIndicies)) {
       if (!index.includes(item)) {
@@ -148,15 +161,15 @@ class PageIndex {
     var altSpelling = [];
     for (var word in alternativeSpelling) {
       if (index.includes(word.toLowerCase())) {
-        altSpelling.push(alternativeSpelling[word]);
+        altSpelling.push(alternativeSpelling[word].join(' '));
       }
     }
     return altSpelling;
   }
 
-  _getAdditionalIndicies(url) {
-    if (url in additionalIndicies) {
-      return additionalIndicies[url];
+  _getAdditionalIndices(url) {
+    if (url in additionalIndices) {
+      return additionalIndices[url];
     }
     return [];
   }
@@ -175,7 +188,18 @@ class PageIndex {
   }
 
   _parseDescription($) {
-    return $("meta[name='description']").attr('content');
+    return this._parseMeta($, 'description');
+  }
+
+  _isSpecialIndex($) {
+    if (this._parseMeta($, 'page-index') === 'special' ) {
+      return true;
+    }
+    return false;
+  }
+
+  _parseMeta($, name) {
+    return $(`meta[name='${name}']`).attr('content');
   }
 
   _parseAToZTitle($) {
@@ -187,8 +211,16 @@ class PageIndex {
     return titles;
   }
 
-  _getBaseUrl() {
-    return 'https://beta.nhs.uk';
+  _getConnectionConfig() {
+    if (process.env.MANUAL_USERNAME || process.env.MANUAL_PASSWORD) {
+      return {
+        auth: {
+          username: process.env.MANUAL_USERNAME,
+          password: process.env.MANUAL_PASSWORD
+        }
+      }
+    }
+    return {}
   }
 }
 
