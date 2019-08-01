@@ -1,9 +1,9 @@
 const PageIndex = require('../middleware/page-index.js')
 const config = {
   serviceName: 'NHS digital service manual',
-  env: process.env.NODE_ENV || 'development',
-  baseURL: process.env.BASE_URL || 'https://beta.nhs.uk/service-manual',
-  port: process.env.PORT || 3000
+  env: 'development',
+  baseURL: 'http://localhost',
+  port: 3000
 }
 const cheerio = require('cheerio')
 
