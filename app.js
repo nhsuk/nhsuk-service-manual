@@ -76,8 +76,8 @@ app.get('/service-manual/design-example/:example', (req, res) => {
 });
 
 app.get('/service-manual/search', (req, res) => {
-  var search = req.query['search-field'] || '';
-  res.render('includes/search.njk', { results: pageIndex.search(search), query: search });
+  var query = req.query['search-field'] || '';
+  res.render('includes/search.njk', { results: pageIndex.search(query), query: query });
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
