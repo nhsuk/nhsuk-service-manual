@@ -1,4 +1,4 @@
-const additionalIndicies = {
+const additionalIndices = {
   '/service-manual/accessibility/testing': [ 'svg' ]
 };
 
@@ -15,4 +15,4 @@ const indexBlacklist = [
   'https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh'
 ];
 
-module.exports = { additionalIndicies, alternativeSpelling, indexBlacklist };
+module.exports = { additionalIndices, alternativeSpelling, indexBlacklist };
