@@ -75,7 +75,7 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   res.render('includes/design-example-wrapper.njk', { body: exampleHtml });
 });
 
-app.get('/search', (req, res) => {
+app.get('/service-manual/search', (req, res) => {
   var search = req.query['search-field'];
   res.render('includes/search.njk', { results: pageIndex.search(search), query: search });
 });
