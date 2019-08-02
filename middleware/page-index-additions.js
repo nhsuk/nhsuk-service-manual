@@ -10,7 +10,6 @@ const alternativeSpelling = {
 };
 
 const indexBlacklist = [
-  '/service-manual/privacy-policy',
   '/service-manual/',
   'https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh'
 ];
