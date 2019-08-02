@@ -40,12 +40,13 @@ class PageIndex {
         if (this._isSpecialIndex($)) {
           var titles = this._parseAToZTitle($);
           for (var title of titles) {
-            var index = [ title ];
+            var index = [ title.toLowerCase() ];
             var altSpelling = this._getAltSpellings(index.join(' '));
             index = index.concat(altSpelling);
+            var pageTitle = title.charAt(0).toUpperCase() + title.slice(1);
             this.docs.push({
               url: url,
-              title: `${title} - A to Z of NHS health writing`,
+              title: `${pageTitle} - A to Z of NHS health writing`,
               index: index.join(' '),
               description: description
             });
@@ -206,7 +207,7 @@ class PageIndex {
     var titles = [];
     var element = 'h3';
     $('#maincontent').find(element).each((i, el) => {
-      titles.push($(el).text().toLowerCase());
+      titles.push($(el).text());
     })
     return titles;
   }
