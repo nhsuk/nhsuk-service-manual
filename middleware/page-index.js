@@ -38,37 +38,19 @@ class PageIndex {
         const url = response.request.path;
         var description = this._parseDescription($);
         if (this._isSpecialIndex($)) {
-          var titles = this._parseAToZTitle($);
-          for (var title of titles) {
-            var index = [ title.toLowerCase() ];
-            var altSpelling = this._getAltSpellings(index.join(' '));
-            index = index.concat(altSpelling);
-            var pageTitle = title.charAt(0).toUpperCase() + title.slice(1);
-            this.docs.push({
-              url: url,
-              title: `${pageTitle} - A to Z of NHS health writing`,
-              index: index.join(' '),
-              description: description
-            });
-          }
+          this._indexPageSpecial($, url, description)
         }
         else {
-          var title = this._parseTitle($);
-          var index = this._getSearchIndex($, url);
-          this.docs.push({
-            url: url,
-            title: title,
-            index: index,
-            description: description
-          });
+          this._indexPageNormal($, url, description);
         }
-
       }
 
       this.index = lunr((builder) => {
         builder.ref('title');
         builder.field('title');
-        builder.field('index');
+        builder.field('h2');
+        builder.field('h3');
+        builder.field('extra');
 
         for (var i = 0; i < this.docs.length; i++) {
           builder.add(this.docs[i]);
@@ -102,26 +84,22 @@ class PageIndex {
     return output;
   }
 
-  suggestion(query) {
-    var results = this._searchIndex(query);
-    var suggestions = [];
-    for (var i = 0; i < results.length; i++) {
-      var data = this._getData(results[i]);
-      if (data) {
-        suggestions.push(data);
-      }
-    }
-    return suggestions;
-  }
-
   _searchIndex(query) {
     var results = []
     if (query && this.index) {
       results = this.index.query(function(q) {
-        // look for terms that has exact match and apply a big boost
-        q.term(query.toLowerCase(), { usePipeline: true, boost: 100 });
-        // look for terms that match the beginning of this query and apply a medium boost
-        q.term(query.toLowerCase() + "*", { usePipeline: false, boost: 10 });
+        const exactMatch = query.toLowerCase()
+        const partialMatch = query.toLowerCase() + "*"
+
+        q.term(exactMatch, { fields: [ 'title' ], boost: 100 })
+        q.term(exactMatch, { fields: [ 'h2' ], boost: 80 })
+        q.term(exactMatch, { fields: [ 'h3' ], boost: 60 })
+        q.term(exactMatch, { fields: [ 'extra' ], boost: 40 })
+
+        q.term(partialMatch, { fields: [ 'title' ], boost: 90 })
+        q.term(partialMatch, { fields: [ 'h2' ], boost: 70 })
+        q.term(partialMatch, { fields: [ 'h3' ], boost: 50 })
+        q.term(partialMatch, { fields: [ 'extra' ], boost: 30 })
       })
     }
     return results
@@ -136,36 +114,38 @@ class PageIndex {
     return undefined;
   }
 
-  _parseTitle($) {
-    var titles = [];
-    $('#maincontent').find('h1').each((i, el) => {
-      titles.push($(el).text());
-    })
-    return titles.join(' ');
+  _indexPageNormal($, url, description) {
+    var title = this._parsePageHeadings($, 'h1').join(' ');
+    var h2 = this._getIndex($, 'h2');
+    var h3 = this._getIndex($, 'h3');
+    var extra = this._getAdditionalIndices(url).join(' ');
+
+    this.docs.push({
+      url: url,
+      title: title,
+      h2: h2,
+      h3: h3,
+      extra: extra,
+      description: description
+    });
   }
 
-  _getSearchIndex($, url) {
-    var pageContent = this._parsePageContent($);
-    var extraIndicies = this._getAdditionalIndices(url);
-    var index = [];
-    for (var item of pageContent.concat(extraIndicies)) {
-      if (!index.includes(item)) {
-        index.push(item);
-      }
-    }
-    var altSpelling = this._getAltSpellings(index.join(' '));
-    index = index.concat(altSpelling);
-    return index.join(' ');
-  }
+  _indexPageSpecial($, url, description) {
+    var titles = this._parsePageHeadings($, 'h3');
+    for (var rawTitle of titles) {
+      var formattedTitle = rawTitle.charAt(0).toUpperCase() + rawTitle.slice(1);
+      var extra = this._getAdditionalIndices(url).join(' ');
+      var h3 = this._getAltList([ rawTitle ]);
 
-  _getAltSpellings(index) {
-    var altSpelling = [];
-    for (var word in alternativeSpelling) {
-      if (index.includes(word.toLowerCase())) {
-        altSpelling.push(alternativeSpelling[word].join(' '));
-      }
+      this.docs.push({
+        url: url,
+        title: `${formattedTitle} - A to Z of NHS health writing`,
+        h2: '',
+        h3: h3,
+        extra: extra,
+        description: description
+      });
     }
-    return altSpelling;
   }
 
   _getAdditionalIndices(url) {
@@ -175,17 +155,31 @@ class PageIndex {
     return [];
   }
 
-  _parsePageContent($) {
-    var content = [];
-    const elements = ['h2', 'h3'];
-    for (var element of elements) {
-      $('#maincontent').find(element).each((i, el) => {
-        if($(el).children().length === 0) {
-          content.push($(el).text().toLowerCase());
-        }
-      })
+  _parsePageHeadings($, type) {
+    var headings = [];
+    $('#maincontent').find(type).each((i, el) => {
+      if($(el).children().length === 0) {
+        headings.push($(el).text());
+      }
+    })
+    return headings;
+  }
+
+  _getIndex($, type) {
+    var headingsList = this._parsePageHeadings($, type);
+    var altList = this._getAltList(headingsList);
+    return headingsList.concat(altList).join(' ');
+  }
+
+  _getAltList(list) {
+    var listString = list.join(' ').toLowerCase();
+    var altList = [];
+    for (var key in alternativeSpelling) {
+      if (listString.includes(key.toLowerCase())) {
+        altList = altList.concat(alternativeSpelling[key]);
+      }
     }
-    return content;
+    return altList;
   }
 
   _parseDescription($) {
@@ -201,15 +195,6 @@ class PageIndex {
 
   _parseMeta($, name) {
     return $(`meta[name='${name}']`).attr('content');
-  }
-
-  _parseAToZTitle($) {
-    var titles = [];
-    var element = 'h3';
-    $('#maincontent').find(element).each((i, el) => {
-      titles.push($(el).text());
-    })
-    return titles;
   }
 
   _getConnectionConfig() {
