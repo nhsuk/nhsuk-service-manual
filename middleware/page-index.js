@@ -46,7 +46,7 @@ class PageIndex {
       }
 
       this.index = lunr((builder) => {
-        builder.ref('title');
+        builder.ref('url');
         builder.field('title');
         builder.field('h2');
         builder.field('h3');
@@ -107,7 +107,7 @@ class PageIndex {
 
   _getData(result) {
     for (var i = 0; i < this.docs.length; i++) {
-      if (result.ref === this.docs[i].title) {
+      if (result.ref === this.docs[i].url) {
         return this.docs[i];
       }
     }
@@ -136,9 +136,10 @@ class PageIndex {
       var formattedTitle = rawTitle.charAt(0).toUpperCase() + rawTitle.slice(1);
       var extra = this._getAdditionalIndices(url).join(' ');
       var h3 = this._getAltList([ rawTitle ]);
+      var formattedUrl = `${url}#${rawTitle.split(' ').join('-')}`
 
       this.docs.push({
-        url: url,
+        url: formattedUrl,
         title: `${formattedTitle} - A to Z of NHS health writing`,
         h2: '',
         h3: h3,
