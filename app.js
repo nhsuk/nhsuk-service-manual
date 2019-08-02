@@ -82,7 +82,7 @@ app.get('/service-manual/search', (req, res) => {
 
 app.get('/service-manual/suggestions', (req, res) => {
   res.set({ 'Content-Type': 'application/json' });
-  res.send(JSON.stringify(pageIndex.suggestion(req.query.search)));
+  res.send(JSON.stringify(pageIndex.search(req.query.search)));
 });
 
 app.get('/', (req, res) => {
