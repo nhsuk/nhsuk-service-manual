@@ -36,7 +36,7 @@ const searchConfig = {
   onConfirm: (selected) => {
     window.location.href = selected.url;
   },
-  required: true,
+  required: false,
   showNoOptionsFound: false,
   source: searchSource,
   templates: {
