@@ -1,0 +1,200 @@
+{% set pageTitle = 'Numbers, measurement, dates and time' %}
+{% set pageSection = 'Content style guide' %}
+{% set pageDescription = 'Content styles, including numerals, ordinals, dosage, temperature, fractions and percentages' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'inset-text/macro.njk' import insetText %}
+{% from 'tables/macro.njk' import table %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/content",
+  text: "Content style guide"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+   </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h5>In this section</h5>
+    <ul>
+      <li><a href="#numbers">Numbers</a></li>
+      <li><a href="#measurement">Measurement</a></li>
+      <li><a href="#dates">Dates</a></li>
+      <li><a href="#time">Time</a></li>
+      <li><a href="#ranges">Ranges of numbers, dates and time</a></li>
+      <li><a href="#measurement">Measurement</a></li>
+      <li><a href="#fractions-and-percentages">Fractions and percentages</a></li>
+      <li><a href="#statistics">Statistics</a></li>
+    </ul>
+
+    <h2 id="numbers">Numbers</h2>
+    <p>We use numerals for all numbers (including 1 to 9), except where it would be confusing to do so. We've found that people find numerals easier to read and they scan for them.</p>
+    <p>For numbers over 999, use a comma for clarity - for example, 1,000.</p>
+    <p>For numbers less than 1, use 0 before the decimal point - for example, 0.25.</p>
+    <p>For ranges of numbers, see Dashes in the section on Formatting and punctuation.</p>
+
+    <h3>Examples of where we use numerals</h3>
+    <ul>
+      <li>Add 1 to 2 teaspoons of honey.</li>
+      <li>It takes 1 to 3 weeks from the time you were exposed to chickenpox for the spots to start appearing.</li>
+      <li>Do this for 1 or 2 minutes.</li>
+      <li>Depression affects about 1 in 10 people at some point during their life.</li>
+    </ul>
+
+    <h4>At the start of a sentence</h4>
+    <p>It is OK to use numbers at the start of a sentence but, if it looks confusing, consider rewording your sentence.</p>
+    <p>Example: 14 units is equivalent to 6 pints of average-strength beer or 10 small glasses of low-strength wine.</p>
+
+    <h4>In headings</h4>
+    <p>Examples:</p>
+    <ul>
+      <li>8 tips for healthy eating</li>
+      <li>6-in-1 vaccine</li>
+    </ul>
+    <h4>In lists</h4>
+    <p>Example: "A portion is:</p>
+    <ul>
+      <li>80g of fresh, canned or frozen fruit and vegetables</li>
+      <li>30g of dried fruit</li>
+      <li>150ml glass of fruit juice or smoothie"</li>
+    </ul>
+    <h3>Examples of where we don't use numerals</h3>
+    <p>We find that numerals can confuse:</p>
+    <ul>
+      <li>in some medicines information about <a href="#dosage">dosage</a></li>
+    </ul>
+
+    <h2 id="measurement">Measurement</h2>
+    <h3 id="dosage">Dosage</h3>
+    <p>We do not use a space between amount and measurement.</p>
+    <p>Example: The usual dose is 250mg to 500mg.</p>
+    <p>Use your judgement when explaining medicines doses. Avoid having 2 sets of numerals next to each other.</p>
+      {{ table({
+      panel: false,
+      firstCellIsHeader: false,
+      head: [
+
+        {
+          text: "We say:"
+        },
+        {
+          text: "We do not say:"
+        }
+      ],
+      rows: [
+        [
+        {
+            text: "The usual dose is one or two 200mg tablets 3 times a day."
+          },
+          {
+            text: "The usual dose is 1 or 2 200mg tablets 3 times a day."
+          }
+        ]
+      ]
+    }) }}
+
+    <h3>Temperature</h3>
+    <p>We use Celsius for temperature.</p>
+    <p>Example: a temperature of 38C or higher.</p>
+    <p>Read more about <a href="/service-manual/content/a-to-z-of-NHS-health-writing#temperature">temperature in the A to Z of NHS health writing</a>.</p>
+
+    <h3>Metric and imperial</h3>
+    <p>We generally use metric. If it's helpful, add imperial in brackets, for example, for advice on cutting back on alcohol.</p>
+    <p>Do not use imperial for medicines dosage or infant feeding.</p>
+
+    <h2 id="dates">Dates</h2>
+    <p>We use this format: 6 August 2018.</p>
+    <p>We capitalise months.</p>
+    <p>When space is an issue - in tables, for example - we sometimes use truncated months: Jan, Feb.</p>
+
+    <h2 id="time">Time</h2>
+
+    {{ table({
+      panel: false,
+      caption: "TBD",
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "We use:"
+        },
+        {
+          text: "We do not use:"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "5.30pm"
+          },
+          {
+            text: "1730hrs"
+          }
+        ],
+        [
+          {
+            text: "midnight"
+          },
+          {
+            text: "	00:00, 12am"
+          }
+        ],
+        [
+          {
+            text: "midday"
+          },
+          {
+            text: "12 noon, 12pm"
+          }
+        ],
+        [
+          {
+            text: "6 hours 30 minutes"
+          },
+          {
+            text: "6.5hrs"
+          }
+        ]
+      ]
+    }) }}
+
+    <h2 id="ranges">Ranges of numbers, dates and time</h2>
+    <p>We use "to" for time, date and numerical ranges, not hyphens or dashes.</p>
+    <p>Examples:</p>
+    <ul>
+      <li>The surgery is open Monday to Friday, 2pm to 6pm.</li>
+      <li>A BMI of 18.5 to 24.9 means you're a healthy weight.</li>
+    </ul>
+
+    <h2 id="fractions-and-percentages">Fractions and percentages</h2>
+    <p>Spell out common fractions like two-thirds.</p>
+    <p>For percentages, use the &#37; symbol – for example, 50&#37;. However, it's often better not to use a percentage. Instead of 50&#37;, for example, you could say "1 in 2" or "half" instead. </p>
+
+    <h2 id="statistics">Statistics</h2>
+    <p>Use statistics sparingly. Consider the style of writing and your target audience. For example, readers of NHS.UK <a href="https://www.nhs.uk/news/">Behind the Headlines</a>, the <a href="https://www.nhs.uk/conditions/">Health A-Z</a> and <a href="https://www.nhs.uk/live-well/">Live Well</a> will have different needs.</p>
+    <p>Use the clearest, most meaningful format to explain what you’re illustrating. For example, use 1 in 7 people rather than 14.3% of people.</p>
+    <p>Avoid mixing different number formats. Use one or the other.</p>
+    <p>Example:</p>
+    <p>Overall, around 7 in every 10 people live at least a year after diagnosis and around 5 in 10 people live at least 10 years.</p>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: August 2019</p>
+    </div>
+  </div>
+  <aside class="nhsuk-grid-column-one-third">
+    {% include './partials/related-nav.njk' %}
+  </aside>
+</div>
+{% endblock %}
