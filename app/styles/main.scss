@@ -79,3 +79,22 @@ h1 + .nhsuk-lede-text--small {
     }
   }
 }
+
+
+// App page contents
+.app-page-contents {
+  @include nhsuk-responsive-margin(5, 'bottom');
+}
+
+.app-page-contents__heading {
+  @include nhsuk-font(19, $weight: bold);
+  @include nhsuk-responsive-margin(3, 'bottom');
+}
+
+.app-page-contents__list {
+  @include nhsuk-font(16);
+}
+
+.app-page-contents__item {
+  @include nhsuk-responsive-margin(1, 'bottom');
+}
