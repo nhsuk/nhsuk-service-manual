@@ -5,13 +5,13 @@
 :new: **New content**
 
 - Add search functionality to the service manual
-- Numbers, dates, time and measurement guidance pages
+- Add new page in content style guide with updated guidance on numbers, measurement, dates and time
+- Add new numbers terms to A to Z of health writing
 
 :wrench: **Fixes**
 
-- Update slack address and workspace name and contact details
 - Update the guidance for how we use the microgram symbol
-- Update the guidance for how we write concise words
+- Update the guidance for how we write concisely with example 
 - Update package dependencies to latest versions
 
 ## 1.6.2 - 30 July 2019
