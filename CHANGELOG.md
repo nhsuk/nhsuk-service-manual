@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## 1.7.0 - Unreleased
+
+:new: **New content**
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 1.6.2 - 30 July 2019
 
 :wrench: **Fixes**
