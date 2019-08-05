@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -50,7 +50,7 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-nhsuk": "^0.17.0",
     "eslint-plugin-import": "^2.18.2",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^9.15.9",
     "iframe-resizer": "^3.6.6",
     "jest": "^24.8.0",
     "js-beautify": "^1.10.1",
@@ -58,7 +58,7 @@
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "sass-lint": "^1.13.1",
-    "webpack": "^4.38.0",
+    "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }
 }

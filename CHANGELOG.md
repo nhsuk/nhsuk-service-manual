@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 1.7.0 - Unreleased
+
+:new: **New content**
+
+- Add search functionality to the service manual
+- Numbers, dates, time and measurement guidance pages
+
+:wrench: **Fixes**
+
+- Update slack address and workspace name and contact details
+- Update the guidance for how we use the microgram symbol
+- Update the guidance for how we write concise words
+- Update package dependencies to latest versions
+
 ## 1.6.2 - 30 July 2019
 
 :wrench: **Fixes**
