@@ -4,7 +4,6 @@
 
 :new: **New content**
 
-- Add search functionality to the service manual
 - Add new page in content style guide with updated guidance on numbers, measurement, dates and time
 - Add new numbers terms to A to Z of health writing
 
