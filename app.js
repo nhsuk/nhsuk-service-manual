@@ -22,7 +22,7 @@ var pageIndex = new PageIndex(config);
 const app = express();
 
 // Authentication middleware
-app.use(authentication);
+// app.use(authentication);
 
 // Use local variables
 app.use(locals(config));
