@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 2.0.0 - Unreleased
+
+:new: **New functionality**
+
+- Add search functionality to the service manual
+
+:wrench: **Fixes**
+
+- Remove duplicate entry from the XML sitemap
+
 ## 1.7.0 - 06 August 2019
 
 :new: **New content**
