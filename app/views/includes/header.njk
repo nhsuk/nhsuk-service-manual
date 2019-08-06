@@ -1,12 +1,27 @@
 {% from 'header/macro.njk' import header %}
 
-{{ header({
-  "homeHref": "/service-manual/",
-  "service": {
-    "name": "Digital service manual",
-    "longName": "true"
-  },
-  "showNav": "false",
-  "showSearch": "false"
-  })
-}}
+{%- if pageTitle == 'Search' %}
+  {{ header({
+    "homeHref": "/service-manual/",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "false",
+    "showSearch": "false",
+    "searchAction": "/service-manual/search/"
+    })
+  }}
+{% else %}
+  {{ header({
+    "homeHref": "/service-manual/",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "false",
+    "showSearch": "false",
+    "searchAction": "/service-manual/search/"
+    })
+  }}
+{% endif %}

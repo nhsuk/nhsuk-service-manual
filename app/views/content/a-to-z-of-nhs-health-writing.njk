@@ -4,6 +4,10 @@
 
 {% extends 'includes/layout.njk' %}
 
+{% block extraMeta %}
+<meta name="page-index" content="special">
+{% endblock %}
+
 {% from 'nav-a-z/macro.njk' import azNav %}
 
 {% block breadcrumb %}
@@ -124,35 +128,35 @@
         <h2 id="A">A</h2>
         <h3 id="A&E">A&amp;E</h3>
         <p>We use "A&amp;E". You don't need to spell out "accident and emergency".</p>
-        <h3 id="abdomen">abdomen and abdominal</h3>
+        <h3 id="abdomen-and-abdominal">abdomen and abdominal</h3>
         <p>It's OK to use "abdomen" where people are familiar with this term. For example, we know that pregnant women talk about "abdominal pain".</p>
         <p>If users may not be familiar with "abdomen" but are likely to hear their GP or another health professional use this word, we may add "abdomen" after "tummy". For example, "a dull ache in your tummy (abdomen)".</p>
-        <h3>absorb</h3>
+        <h3 id="absorb">absorb</h3>
         <p>We use "take in".</p>
-        <h3>affects</h3>
+        <h3 id="affects">affects</h3>
         <p>It’s alright to use "affects" but in some contexts, for example with medicines, it can be better to say that "something changes the way something else works". </p>
         <p>Check a dictionary if you’re not sure of the difference between "affect" and "effect".</p>
-        <h3>ageing</h3>
+        <h3 id="ageing">ageing</h3>
         <p>Not "aging".</p>
-        <h3>alternative</h3>
+        <h3 id="alternative">alternative</h3>
         <p>We generally use "different" or "other".</p>
         <p>An exception is "complementary and alternative medicines".</p>
-        <h3>Alzheimer’s disease</h3>
+        <h3 id="Alzheimer’s-disease">Alzheimer’s disease</h3>
         <p>We capitalise the names of conditions that start with a proper name, like Alzheimer’s disease. Note the apostrophe.</p>
-        <h3>ampersand (&amp;)</h3>
-        <p>Avoid using an ampersand, except in "<a href=#A&E>A&amp;E</a>". Use "and" instead.</p>
-        <h3>anonymised, anonymisation</h3>
+        <h3 id="ampersand-(&amp;)">ampersand (&amp;)</h3>
+        <p>Avoid using an ampersand, except in "<a href="#A&E">A&amp;E</a>". Use "and" instead.</p>
+        <h3 id="anonymised-anonymisation">anonymised, anonymisation</h3>
         <p>We prefer not to use these words.</p>
         <p>Instead we might explain what anonymisation means and talk about information that has personal details removed. We might give examples, like "When we share your information with another organisation, we take out all personal details, such as your name and address."</p>
         <p>Depending on your audience and the context, for example in a cookie banner, you might not need this much detail. A short, simple explanation might do.</p>
-        <h3>antenatal</h3>
+        <h3 id="antenatal">antenatal</h3>
         <p>One word without a hyphen.</p>
         <h3 id="anus">anus</h3>
         <p>We prefer "<a href="#bottom">bottom</a>" (as in "bleeding from your bottom") to "anus" or "<a href="#rectum">rectum</a>".</p>
         <p>You can add "anus" in brackets after "bottom". For example, in "enlarged blood vessels found inside or around the bottom (anus)".<p>
         <p>Or you can use "anus" on its own when you need to be more precise, for example when you're talking about anal cancer.</p>
         <p>User testing showed that people understand "bottom" better than "anus". They do search for "anus" in Google, however.</p>
-        <h3>apply</h3>
+        <h3 id="apply">apply</h3>
         <p>If we are talking about a medicine, we prefer "use", "put on" or "rub in".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -163,34 +167,34 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="B">B</h2>
-        <h3>back passage</h3>
+        <h3 id="back-passage">back passage</h3>
         <p>We do not use "back passage". Instead we use "<a href="#bottom">bottom</a>", "<a href="#anus">anus</a>" or, rarely, "<a href="#rectum">rectum</a>".</p>
-        <h3>bacteria</h3>
+        <h3 id="bacteria">bacteria</h3>
         <p>People often aren’t interested in the kind of bacteria that caused their problem. They want to know what to do about it. Only mention the name of the bacteria (full or short name) if your audience (users) need it.</p>
         <p>We do include the names of bacteria, for example, when we are writing for a more specialist audience, like when we’re explaining science news in <a href="https://www.nhs.uk/news/">Behind the Headlines</a>.</p>
         <p>If you give the full Latin name of a bacterium, capitalise the first word, for example, "Staphylococcus aureus" but put the shortened "staphylococcus" in lower case.</p>
         <p>Do not use italics.</p>
-        <h3>baseline</h3>
+        <h3 id="baseline">baseline</h3>
         <p>One word.</p>
-        <h3>bottle feeding</h3>
+        <h3 id="bottle-feeding">bottle feeding</h3>
         <p>Two words.</p>
         <h3 id="bottom">bottom</h3>
         <p>We prefer the word "bottom" (in phrases like "bleeding from your bottom") to "<a href="#anus">anus</a>" or "<a href="#rectum">rectum</a>".</p>
         <p>User testing showed that people understand "bottom" better than "anus".</p>
-        <h3>bowel movement</h3>
+        <h3 id="bowel-movement">bowel movement</h3>
         <p>See <a href="#poo">poo</a>.</p>
-        <h3>Braille</h3>
+        <h3 id="Braille">Braille</h3>
         <p>Starts with a capital letter.</p>
-        <h3>breast milk</h3>
+        <h3 id="breast-milk">breast milk</h3>
         <p>Two words.</p>
-        <h3>breastfeeding</h3>
+        <h3 id="breastfeeding">breastfeeding</h3>
         <p>One word.</p>
-        <h3>BSE</h3>
+        <h3 id="BSE">BSE</h3>
         <p>See <a href="#CJD">CJD</a>.</p>
-        <h3>bum</h3>
+        <h3 id="bum">bum</h3>
         <p>We prefer "<a href="#bottom">bottom</a>" (in phrases like "bleeding from your bottom").</p>
         <h3 id="burp">burp</h3>
-        <p> We use "burp" and "burping". We also use "<a href=#wind>wind</a>".</p>
+        <p> We use "burp" and "burping". We also use "<a href="#wind">wind</a>".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
@@ -200,13 +204,13 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="C">C</h2>
-        <h3>caesarean</h3>
+        <h3 id="caesarean">caesarean</h3>
         <p>Lower case. </p>
         <h3 id="carer">carer</h3>
         <p>We use "carer" when we’re talking about a family member or friend who cares for someone but is not paid for this.</p>
         <p>We use "paid carer" for a carer who works for social services or another agency. A paid carer can help with personal care, for example getting washed and dressed.</p>
         <p>We don’t use "care worker" because we found that it is ambiguous.</p>
-        <p>Compare "carer" and "<a href=#homehelp>home help</a>".</p>
+        <p>Compare "carer" and "<a href="#home-help">home help</a>".</p>
         <h3 id="cervical-screening">cervical screening</h3>
         <p>We prefer the term "cervical screening" to "smear test". But we add "smear test" in brackets the first time we mention cervical screening.</p>
         <p>"Smear test" is a dated term and the cervical screening programme no longer uses it. The invitation and results letters use "cervical screening" and our content reflects that.</p>
@@ -215,16 +219,16 @@
         <p>We use "CJD" – or "variant CJD (vCJD)" as the human form of BSE.</p>
         <p>Use full name "Creutzfeldt-Jakob disease" when you first mention CJD.</p>
         <p>We do not use "mad cow disease" or "BSE".</p>
-        <h3>clinical commissioning groups (CCGs) </h3>
+        <h3 id="clinical-commissioning-groups-(CCGs)">clinical commissioning groups (CCGs)</h3>
         <p>Lower case, except when you are referring to a particular CCG. For example:  Anytown Clinical Commissioning Group.</p>
-        <h3>condition</h3>
+        <h3 id="condition">condition</h3>
         <p>We use "condition", "problem" or "illness".</p>
         <p>We avoid words like "disease" and "disorder" as they can sound negative. But we do use these words in the names of specific diseases or disorders, like Alzheimer’s disease or obsessive compulsive disorder (OCD) or terms like "tropical diseases".</p>
         <p>See the section on <a href="/service-manual/content/inclusive-language">conditions in Inclusive language</a>.</p>
-        <h3>continuing healthcare</h3>
+        <h3 id="continuing-healthcare">continuing healthcare</h3>
         <p>Lower case and "healthcare" is one word.</p>
         <p>We explain <a href="https://www.nhs.uk/conditions/social-care-and-support-guide/money-work-and-benefits/nhs-continuing-healthcare/">NHS continuing healthcare</a> on the NHS website.</p>
-        <h3>CT scan </h3>
+        <h3 id="CT-scan">CT scan</h3>
         <p>You don’t need to spell it out. The abbreviation is fine.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -235,23 +239,27 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="D">D</h2>
-        <h3 id="degrees">degrees (temperature)</h3>
+        <h3 id="dates">dates</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
+        <h3 id="degrees-(temperature)">degrees (temperature)</h3>
         <p>We use C for centigrade or Celsius – for example, 38C or &minus;4C. Do not include the degree symbol (&deg;).</p>
         <p>We are no longer including references to <a href="#Fahrenheit">Fahrenheit</a>.</p>
         <p>Also see <a href="#fever">fever</a> and <a href="#temperature">temperature</a>.</p>
-        <h3>diabetic</h3>
+        <h3 id="diabetic">diabetic</h3>
         <p>We don’t talk about people as "diabetic". We say they have diabetes. See the section on <a href="/service-manual/content/inclusive-language">conditions in Inclusive language</a>.</p>
         <p>We do use "diabetic" in phrases like "diabetic eye screening".</p>
-        <h3>dietitian</h3>
+        <h3 id="dietitian">dietitian</h3>
         <p>Not dietician.</p>
-        <h3>diuretics</h3>
+        <h3 id="diuretics">diuretics</h3>
         <p>We don’t call them "water tablets". We explain that diuretics are "tablets that make you pee more".</p>
-        <h3>DNA</h3>
+        <h3 id="DNA">DNA</h3>
         <p>It’s OK to use the abbreviation.</p>
         <h3 id="doctor">doctor</h3>
         <p>We mostly use "GP". But where someone may see either a GP or another health professional, for example in hospital, we use "doctor".</p>
-        <p>Also see "<a href=#specialist>specialist</a>".</p>
-        <h3>drugs</h3>
+        <p>Also see "<a href="#specialist">specialist</a>".</p>
+        <h3 id="dosage">dosage</h3>
+        <p>See <a href="/service-manual/content/numbers-measurement-dates-time#dosage">dosage</a> in our guidance on numbers, measurement, dates and time.</p>
+        <h3 id="drugs">drugs</h3>
         <p>We use "medicines".</p>
         <p>We only use "drugs" for illegal drugs.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -263,19 +271,19 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="E">E</h2>
-        <h3>eardrop, eardrum, earlobe, earwax</h3>
+        <h3 id="eardrop-eardrum-earlobe-earwax">eardrop, eardrum, earlobe, earwax</h3>
         <p>All of them one word.</p>
-        <h3>eg</h3>
+        <h3 id="eg">eg</h3>
         <p>eg can sometimes be read aloud as "egg" by screen readers. We prefer "for example" or "such as" or "like" or "including" – whichever works best.</p>
-        <h3>epileptic</h3>
+        <h3 id="epileptic">epileptic</h3>
         <p>We don’t talk about people as "epileptics". We say they have epilepsy. See the section on <a href="/service-manual/content/inclusive-language">conditions in Inclusive language</a>.</p>
-        <h3>equivalent</h3>
+        <h3 id="equivalent">equivalent</h3>
         <p>We use "equal to".</p>
-        <h3>etc</h3>
+        <h3 id="etc">etc</h3>
         <p>Avoid etc. Try using "for example" or "such as" or "like" or "including" instead.</p>
-        <h3>exceed</h3>
+        <h3 id="exceed">exceed</h3>
         <p>We use "more than".</p>
-        <h3>excessive</h3>
+        <h3 id="excessive">excessive</h3>
         <p>We use "too much".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -286,37 +294,39 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="F">F</h2>
-        <h3>5 A Day</h3>
+        <h3 id="5-A-Day">5 A Day</h3>
         <p>Note the number and capital letters. This is the campaign which encourages people to eat 5 portions of fruit and vegetables every day. </p>
-        <h3>faeces</h3>
+        <h3 id="faeces">faeces</h3>
         <p>See <a href="#poo">poo</a>.</p>
         <h3 id="Fahrenheit">Fahrenheit</h3>
         <p>We are taking references to Fahrenheit out of our content and just using Celsius. This is because healthcare professionals in the UK use Celsius. The National Institute for Health and Care Excellence (NICE) also uses it and we refer to NICE for evidence-based guidance.</p>
         <p>Celsius has been the official <a href="#temperature">temperature</a> scale in the UK since 1965.</p>
-        <p>Giving 2 different temperatures can confuse people who may be anxious or unwell. It's easier to have just one number to tell your GP.<p/>
+        <p>Giving 2 different temperatures can confuse people who may be anxious or unwell. It's easier to have just one number to tell your GP.</p>
         <h3 id="fart">fart</h3>
-        <p>We use "fart" and "farting" when we're talking about symptoms. People understand "fart" better than "passing wind" or "<a href=#flatulence>flatulence</a>".</p>
-        <p>We use "<a href=#wind>wind</a>" for "trapped wind" or bloating.</p>
+        <p>We use "fart" and "farting" when we're talking about symptoms. People understand "fart" better than "passing wind" or "<a href="#flatulence">flatulence</a>".</p>
+        <p>We use "<a href="#wind">wind</a>" for "trapped wind" or bloating.</p>
         <h3 id="fever">fever</h3>
-        <p>We prefer the words "high <a href=#temperature>temperature</a>" to "fever", for example in a list of symptoms. Our user research shows that "fever" is not a well understood word.</p>
+        <p>We prefer the words "high <a href="#temperature">temperature</a>" to "fever", for example in a list of symptoms. Our user research shows that "fever" is not a well understood word.</p>
         <p>But we still use it when we’re writing specifically about fever or different types of fever (such as scarlet fever).</p>
         <h3 id="flatulence">flatulence</h3>
-        <p>We prefer "<a href=#fart>farting</a>" to "flatulence".</p>
-        <p>We only use "flatulence" when we need to for clinical content (for example, in a health information page about flatulence). We explain that flatulence is the same as <a href=#wind>wind</a> or farting.</p>
-        <h3>flu</h3>
+        <p>We prefer "<a href="#fart">farting</a>" to "flatulence".</p>
+        <p>We only use "flatulence" when we need to for clinical content (for example, in a health information page about flatulence). We explain that flatulence is the same as <a href="#wind">wind</a> or farting.</p>
+        <h3 id="flu">flu</h3>
         <p>Not "influenza". No apostrophe.</p>
-        <h3>flu jab or flu vaccine </h3>
+        <h3 id="flu-jab-or-flu-vaccine">flu jab or flu vaccine</h3>
         <p>We sometimes use "flu jab" for adults, because people search for this. But we use "flu vaccine" for children. (The child vaccine is a spray.)</p>
         <p>People who are looking for information about flu vaccination in pregnancy search for "jab".</p>
         <p>For the annual flu vaccination programme, we use the term "flu vaccine" as that covers children and adults.</p>
-        <h3>foot and mouth disease</h3>
+        <h3 id="foot-and-mouth-disease">foot and mouth disease</h3>
         <p>Lower case.</p>
-        <h3>formula</h3>
+        <h3 id="formula">formula</h3>
         <p>We use "formula" or "baby formula", not "infant formula".</p>
-        <h3>formulations</h3>
+        <h3 id="formulations">formulations</h3>
         <p>Rather than talking about different medicines formulations, we talk about "different types" (for example, of hydrocortisone) or "different ways" of using a medicine.</p>
-        <h3>foundation trust</h3>
+        <h3 id="foundation-trusts">foundation trust</h3>
         <p>Lower case, unless you are giving the full name of a foundation trust. For example: Anytown NHS Foundation Trust.</p>
+        <h3 id="fractions">fractions</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
@@ -326,14 +336,14 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="G">G</h2>
-        <h3>gas</h3>
-        <p>We don't use "gas". Instead we talk about "<a href=#wind>wind</a>", "<a href=#burp>burping</a>" or "<a href=#fart>farting</a>". </p>
-        <h3>GP</h3>
+        <h3 id="gas">gas</h3>
+        <p>We don't use "gas". Instead we talk about "<a href="#wind">wind</a>", "<a href="#burp">burping</a>" or "<a href="#fart">farting</a>". </p>
+        <h3 id="GP">GP</h3>
         <p>Where someone may see either a GP or another health professional, for example in hospital, use "doctor".</p>
-        <h3>GP surgery</h3>
+        <h3 id="GP-surgery">GP surgery</h3>
         <p>When we’re writing for the public, we use "GP surgery" or "surgery" rather than "practice", because our research shows us that this is the word patients are more likely to search for and use.</p><p>When we’re writing for healthcare staff, we may use the word "practice". For example, for "practice managers".</p>
         <p>Note that a GP practice can have more than 1 surgery.</p>
-        <h3>gullet</h3>
+        <h3 id="gullet">gullet</h3>
         <p>We use "food pipe".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -344,14 +354,14 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="H">H</h2>
-        <h3>haemorrhage</h3>
+        <h3 id="haemorrhage">haemorrhage</h3>
         <p>We often use the words "a very heavy bleed" instead of "haemorrhage".</p>
         <p>If you need to use the word "haemorrhage", for example, in the name of a condition like a subarachnoid haemorrhage, explain what it is.</p>
-        <h3>healthcare</h3>
+        <h3 id="healthcare">healthcare</h3>
         <p>One word.</p>
-        <h3 id="homehelp">home help</h3>
-        <p>A home help helps with domestic tasks like cleaning and doing the laundry. Compare this with a "<a href=#carer>carer</a>".</p>
-        <h3>homeless</h3>
+        <h3 id="home-help">home help</h3>
+        <p>A home help helps with domestic tasks like cleaning and doing the laundry. Compare this with a "<a href="#carer">carer</a>".</p>
+        <h3 id="homeless">homeless</h3>
         <p>We don't say "the homeless" or "homeless people". We prefer to talk about "people who are homeless".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -362,18 +372,20 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="I">I</h2>
-        <h3>ie</h3>
+        <h3 id="ie">ie</h3>
         <p>We try not to use "ie" (which means "that is" or "that means"). You can usually write your sentence in another way.</p>
         <h3 id="immunisation">immunisation</h3>
         <p>Only use "immunisation" for the Public Health England (PHE) immunisation programme or Joint Committee on Vaccination and Immunisation (JCVI).</p>
         <p>We use "<a href="#vaccination">vaccination</a>" otherwise.</p>
-        <h3>incurable</h3>
+        <h3 id="imperial-measurements">imperial measurements</h3>
+        <p>See the guidance in <a href="/service-manual/content/numbers-measurement-dates-time#metric-and-imperial">numbers, measurement, dates and time</a>.</p>
+        <h3 id="incurable">incurable</h3>
         <p>We avoid "incurable". Instead we say "cannot be cured".</p>
-        <h3>injection</h3>
+        <h3 id="injection">injection</h3>
         <p>You can use "injection" or "jab" for the injection of <a href="#vaccine">vaccine</a>.</p>
-        <h3>inpatient</h3>
+        <h3 id="inpatient">inpatient</h3>
         <p>One word. Like outpatient.</p>
-        <h3>interaction</h3>
+        <h3 id="interaction">interaction</h3>
         <p>For medicines, we say "it does not mix with". </p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -384,7 +396,7 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="J">J</h2>
-        <h3>jab</h3>
+        <h3 id="jab">jab</h3>
         <p>You can use "injection" or "jab" for the injection of <a href="#vaccine">vaccine.</a></p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -395,11 +407,11 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="L">L</h2>
-        <h3>licensed for</h3>
+        <h3 id="licensed-for">licensed for</h3>
         <p>For medicines, we say "can be used for" or is or isn’t "officially approved for".</p>
-        <h3>lifelong</h3>
+        <h3 id="lifelong">lifelong</h3>
         <p>One word.</p>
-        <h3>lip-reading</h3>
+        <h3 id="lip-reading">lip-reading</h3>
         <p>With a hyphen.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -410,24 +422,28 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="M">M</h2>
-        <h3>mad cow disease</h3>
+        <h3 id="mad-cow-disease">mad cow disease</h3>
         <p>We use "<a href="#CJD">CJD</a>".</p>
-        <h3>medication</h3>
+        <h3 id="measurement">measurement</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
+        <h3 id="medication">medication</h3>
         <p>We use "medicine".</p>
-        <h3>microgram</h3>
+        <h3 id="metric-measurements">metric measurements</h3>
+        <p>See the guidance in <a href="/service-manual/content/numbers-measurement-dates-time#metric-and-imperial">numbers, measurement, dates and time</a>.</p>
+        <h3 id="microgram">microgram</h3>
         <p>Write "microgram" in full. Do not shorten it to "mcg".</p>
         <p>It helps to explain that a microgram is 1,000 times smaller than a milligram (mg).</p>
-        <p>If people might come across the microgram symbol, for example on their medicines packet, we add the following when we first mention micrograms: "The word microgram is sometimes written with the Greek symbol μ followed by the letter g (μg)." We explain that it’s a Greek symbol so that people who use screen readers understand it when they hear an unexpected sound.</p>
+        <p>We only use the microgram symbol (μg) if people will find it helpful, for example, if they will see it on their medicines or vitamins packet. In cases like these, we add the following when we first mention micrograms: "The word microgram is sometimes written with the Greek symbol μ followed by the letter g (μg)." We explain that it’s a Greek symbol so that people who use screen readers understand it when they hear an unexpected sound.</p>
         <p>We don't use μg as an abbreviation in text that follows.</p>
-        <h3>milk</h3>
+        <h3 id="milk">milk</h3>
         <p>In "cows’ milk" and "goats’ milk", the apostrophe comes after the "s".</p>
         <p>In "sheep’s milk", the apostrophe comes before the "s", because "sheep" is plural.</p>
         <p>We write "breast milk" as two words.</p>
-        <h3>morning after pill</h3>
+        <h3 id="morning-after-pill">morning after pill</h3>
         <p>Lower case without hyphens. It can be "emergency contraception".</p>
-        <h3>MRI scan</h3>
+        <h3 id="MRI-scan">MRI scan</h3>
         <p>The abbreviation is fine.</p>
-        <h3>mucus and mucous</h3>
+        <h3 id="mucus-and-mucous">mucus and mucous</h3>
         <p>"Mucus" is a noun. "Mucous" is an adjective.</p>
         <p>Example: If you have allergic rhinitis, the inside layer of your nose (the mucous membrane) may become swollen and you may produce a lot of mucus.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -439,27 +455,29 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="N">N</h2>
-        <h3>nausea</h3>
+        <h3 id="nausea">nausea</h3>
         <p>We prefer "feeling sick". You may want to put "nausea" in brackets afterwards: feeling sick (nausea).</p>
-        <h3>NHS</h3>
+        <h3 id="NHS">NHS</h3>
         <p>We don’t usually spell out "National Health Service". It’s fine to use the abbreviation.</p>
         <p>We refer to it as "the NHS", unless we’re using NHS as an adjective, for example "NHS services".</p>
-        <h3>NHS 111 online</h3>
+        <h3 id="NHS-111-online">NHS 111 online</h3>
         <p>On the NHS website and in national digital services, say "Go to <a href="https://111.nhs.uk">111.nhs.uk</a> or call 111" if it's a call to action.</p>
         <p>In content that explains the service, for example policy or programme content, use "NHS 111 online". Include the word NHS and give online a small "o".</p>
         <p>NHS 111 online is not for children under 5. Do not direct users to 111.nhs.uk if the call to action is only about young children.</p>
-        <h3>the NHS App</h3>
+        <h3 id="the-NHS-App">the NHS App</h3>
         <p>With an upper case A. It’s the name of a specific app. <a href="https://digital.nhs.uk/services/nhs-app">Find out more.</a></p>
-        <h3>the NHS login</h3>
+        <h3 id="the-NHS-login">the NHS login</h3>
         <p>We write "login" in lower case and as one word. <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">The NHS login</a> lets people see their personal health information online.</p>
-        <h3>the NHS website</h3>
+        <h3 id="the-NHS-website">the NHS website</h3>
         <p>Lower case "website". The NHS website is the website at <a href="https://www.nhs.uk">nhs.uk</a>.</p>
-        <h3>nhs.uk and NHS.UK</h3>
+        <h3 id="nhs.uk-and-NHS.UK">nhs.uk and NHS.UK</h3>
         <p>When we’re referring to the website at <a href="https://www.nhs.uk">nhs.uk</a>, we call it "the NHS website". We give the url in lower case.</p>
         <p>If we’re talking about NHS.UK as a programme in NHS Digital, we use capital letters.</p>
-        <h3>normally</h3>
+        <h3 id="normally">normally</h3>
         <p>We use "usually".</p>
         <p>"Normally" in a health context can make people feel they aren’t "normal".</p>
+        <h3 id="numbers">numbers</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
@@ -469,24 +487,24 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="O">O</h2>
-        <h3>occur</h3>
+        <h3 id="occur">occur</h3>
         <p>Avoid "occur". Try other words, like "happen", or reword your sentence.</p>
         <p>For example: instead of "Symptoms only occur in children under the age of 2", we say: "Only children under the age of 2 get symptoms".</p>
-        <h3>OK</h3>
+        <h3 id="OK">OK</h3>
         <p>It’s OK to use OK.</p>
         <p>We've tested it on screen readers and it reads out OK.</p>
-        <h3>oral</h3>
+        <h3 id="oral">oral</h3>
         <p>We use the word "mouth". For example, we say "mouth cancer" rather than "oral cancer".</p>
         <p>If we’re talking about taking medicines, we say "by mouth" or "that you swallow".</p>
-        <h3>oral contraceptives</h3>
+        <h3 id="oral-contraceptives">oral contraceptives</h3>
         <p>We use "contraceptive pills".</p>
-        <h3>organisations</h3>
+        <h3 id="organisations">organisations</h3>
         <p>We use a singular verb for an organisation. For example: "The NHS in England deals with over 1 million patients every 36 hours." Or "The World Health Organization says …".</p>
         <p>We use the pronoun "it" for the NHS.</p>
         <p>Organisations don’t do things. The people in organisations do. So we say: "Tell hospital staff in advance if you can’t attend your appointment and they will try to arrange a new one", rather than "… the hospital will arrange a new one".</p>
-        <h3>outpatient</h3>
+        <h3 id="outpatient">outpatient</h3>
         <p>One word. Like inpatient.</p>
-        <h3>over the counter or OTC</h3>
+        <h3 id="over-the-counter-or-OTC">over the counter or OTC</h3>
         <p>We say "medicine you buy (from a pharmacy or shop)".</p>
         <p>We put pharmacies first, ahead of supermarkets and shops.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -498,9 +516,9 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="P">P</h2>
-        <h3>passing wind</h3>
+        <h3 id="passing-wind">passing wind</h3>
         <p>We don't use "passing wind". People understand "<a href="#fart">fart</a>" better.</p>
-        <h3>patients</h3>
+        <h3 id="patients">patients</h3>
         <p>See "<a href="#people-or-patients">people or patients</a>".</p>
         <h3 id="pee">pee</h3>
         <p>We use the nouns "pee" and "urine". We know that everyone can understand "pee", including people who find reading difficult. Most people also understand and search for "urine", for example in phrases like "blood in urine". </p>
@@ -511,7 +529,9 @@
         <p>If we're writing in the third person, we mostly use "people" but this varies depending on the context. "People" is a broad term which covers patients, carers, their family and friends.</p>
         <p>We prefer "people" for content aimed at the general public but we sometimes use "patients" if the word "people" might be confusing, for example, where we need to distinguish patients from the general public.</p>
         <p>"Patients" may also be more suitable in content for health professionals.</p>
-        <h3>persist</h3>
+        <h3 id="percentages">percentages</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
+        <h3 id="persist">persist</h3>
         <p>We use "carry on" or "keep going".</p>
         <h3 id="poo">poo</h3>
         <p>We mostly use "poo", rather than "stool". We know that everyone can understand "poo", including people who find reading difficult.</p>
@@ -521,14 +541,14 @@
           <li>"a sample of poo (stool sample)"</li>
           <li>"Bowel incontinence can affect people in different ways. You may have a problem if you have sudden urges to poo that you can't control."</li>
         </ul>
-        <h3>practice</h3>
+        <h3 id="practice">practice</h3>
         <p>"Practice" is the noun, as in "GP practice". "Practise" is a verb. For example: "Practise pelvic floor exercises".</p>
         <p>When we’re writing for the public, we use "surgery" rather than "practice", because our research shows us that this is the word patients are more likely to search for and use.</p>
         <p>When we’re writing for healthcare staff, we may use the word "practice". For example, for "practice managers".</p>
         <p>Note that a GP practice can have more than 1 surgery.</p>
-        <h3>pre-school</h3>
+        <h3 id="pre-school">pre-school</h3>
         <p>With a hyphen.</p>
-        <h3>prognosis</h3>
+        <h3 id="prognosis">prognosis</h3>
         <p>We prefer "outlook".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -539,16 +559,16 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="R">R</h2>
-        <h3>radiographer or radiologist</h3>
+        <h3 id="radiographer-or-radiologist">radiographer or radiologist</h3>
         <p>Radiographers take X-rays. Radiologists read them.</p>
-        <h3 id="rectum">rectum</a></h3>
-        <p>We prefer "<a href=#bottom>bottom</a>" or "<a href=#anus>anus</a>". Only use "rectum" when the other alternatives aren't clear enough, for example when talking about surgery to remove part of the rectum.</p>
+        <h3 id="rectum">rectum</h3>
+        <p>We prefer "<a href="#bottom">bottom</a>" or "<a href="#anus">anus</a>". Only use "rectum" when the other alternatives aren't clear enough, for example when talking about surgery to remove part of the rectum.</p>
         <p>We found that people don't search for "rectum" in Google as much as other terms.</p>
-        <h3>reduce pain</h3>
+        <h3 id="reduce-pain">reduce pain</h3>
         <p>We say "help with pain" or "ease the pain".</p>
-        <h3>reduced kidney function</h3>
+        <h3 id="reduced-kidney-function">reduced kidney function</h3>
         <p>We say "kidneys that don’t work well".</p>
-        <h3>risk and risk factors</h3>
+        <h3 id="risk-and-risk-factors">risk and risk factors</h3>
         <p>We prefer "chance" to "risk" when we’re writing for the public.</p>
         <p>We try not to talk about "risk factors" and instead explain them some other way.</p>
         <p>We do use "risk" and "risk factors" when we are writing for a more specialist audience, for example when we’re explaining science news in <a href="https://www.nhs.uk/news/">Behind the Headlines</a>.</p>
@@ -561,37 +581,39 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="S">S</h2>
-        <h3>safe and safer</h3>
+        <h3 id="safe-and-safer">safe and safer</h3>
         <p>Beware of saying "safe drinking" or "safe sex".</p>
         <p>It’s hard to know what is really "safe" so we talk about "safer sex" or "safer drinking". That suggests that people can lower but not necessarily get rid of the risk altogether.</p>
-        <h3>safety precaution</h3>
+        <h3 id="safety-precaution">safety precaution</h3>
         <p>We say "for safety".</p>
-        <h3>seek</h3>
+        <h3 id="seek">seek</h3>
         <p>We say "ask for".</p>
-        <h3>service user</h3>
-        <p>We prefer "<a href=#people-or-patients>people" or "patients</a>" - or in social services "people who use services".</p>
+        <h3 id="service-user">service user</h3>
+        <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" - or in social services "people who use services".</p>
         <p>We haven't seen any evidence that people think of themselves as "service users", for example when they're searching for or using mental health services.</p>
-        <h3>setting</h3>
+        <h3 id="setting">setting</h3>
         <p>We avoid the term "hospital setting". We just say "in hospital".</p>
         <p>Instead of "community setting", we mention the place, for example, "in school", "in a clinic" or "at home".</p>
         <h3 id="sexual-health-clinic">sexual health clinic</h3>
         <p>We use "sexual health clinic", not "STI clinic".</p>
         <p>Sexual health clinics can offer different services. So, when we mention them for the first time and are talking about STIs, we sometimes add that they may also be called "GUM clinics". When we are talking about contraception, we sometimes add that they may also be called "family planning or contraception clinics".</p>
         <p>Also see "<a href="#STI">STI</a>".</p>
-        <h3>sick</h3>
+        <h3 id="sick">sick</h3>
         <p>We use "feeling sick" instead of "nausea", but you may want to put "nausea" in brackets afterwards: feeling sick (nausea).</p>
         <p>We use "being sick" instead of "vomiting". Again, you may want to put "vomiting" in brackets afterwards: being sick (vomiting).</p>
         <p>We use "vomiting" in phrases like "vomiting blood".</p>
         <p>We use "vomit" as the noun. For example, "blood in your vomit".</p>
-        <h3>side effects</h3>
+        <h3 id="side-effects">side effects</h3>
         <p>Two words.</p>
         <p>We say that people may "get" or "have" side effects, not "develop" or "experience" them.</p>
         <p>Check a dictionary if you’re not sure of the difference between "affect" and "effect".</p>
-        <h3>smear test</h3>
+        <h3 id="smear-test">smear test</h3>
         <p>We prefer "<a href="#cervical-screening">cervical screening</a>".</p>
         <h3 id="specialist">specialist</h3>
         <p>We generally use the word "specialist" for consultants and other specialist medical professions. For example, we use "a heart specialist" instead of "a cardiologist".</p>
-        <p>Also see "<a href=#doctor>doctor</a>".</p>
+        <p>Also see "<a href="#doctor">doctor</a>".</p>
+        <h3 id="statistics">statistics</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
         <h3 id="STI">STI</h3>
         <p>You might want to spell out "sexually transmitted infection" the first time you mention it. Otherwise it’s fine to use the abbreviation STI.</p>
         <p>We talk about "a" sexually transmitted infection but "an" STI.</p>
@@ -599,18 +621,18 @@
         <p>Also see "<a href="#sexual-health-clinic">sexual health clinic</a>".</p>
         <h3 id="stomach">stomach</h3>
         <p>We use "stomach" for the internal organ and in some common phrases like "stomach ache" and "stomach bug".<p>
-        <p>We sometimes use "<a href=#tummy>tummy</a>" for short, for example in "tummy bug".</p>
-        <p>Also see "<a href=#abdomen>abdomen</a>".</p>
-        <h3>stool</h3>
+        <p>We sometimes use "<a href="#tummy">tummy</a>" for short, for example in "tummy bug".</p>
+        <p>Also see "<a href="#abdomen-and-abdominal">abdomen</a>".</p>
+        <h3 id="stool">stool</h3>
         <p>See <a href="#poo">poo</a>.</p>
-        <h3>suffering from</h3>
+        <h3 id="suffering-from">suffering from</h3>
         <p>We don’t use "suffering from". We talk about people having or living with a disability or condition.</p>
         <p>See the section on <a href="/service-manual/content/inclusive-language">disabilities and conditions in Inclusive language.</a></p>
-        <h3>surgery</h3>
+        <h3 id="surgery">surgery</h3>
         <p>When we’re writing for the public, we use "GP surgery" or "surgery" rather than "practice", because our research shows us that this is the word patients are more likely to search for and use.</p>
         <p>When we’re writing for healthcare staff, we may use the word "practice". For example, for "practice managers".</p>
         <p>Note that a practice can have more than 1 surgery.</p>
-        <h3>symptoms</h3>
+        <h3 id="symptoms">symptoms</h3>
         <p>We say that people may "get" or "have" symptoms, not "develop" or "experience" them.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -630,17 +652,19 @@
         <p>If we’re telling people to do something about children under 6 months old, for example in a care card, we say:</p>
         <ul><li>"if your child is under 3 months old and has a temperature of 38C or higher, or you think they have a high temperature"</li>
         <li>"if your child is 3 to 6 months old and has a temperature of 39C or higher, or you think they have a high temperature"</li></ul>
-        <p>Also see "<a href=#degrees>degrees (temperature)</a>" and "<a href=#fever>fever</a>".</p>
-        <h3>terminal</h3>
+        <p>Also see "<a href="#degrees-(temperature)">degrees (temperature)</a>" and "<a href="#fever">fever</a>".</p>
+        <h3 id="terminal">terminal</h3>
         <p>We use "terminal" when a condition or illness is likely to lead to death. We find that people with cancer, for example, often use this word.</p>
-        <h3>tranquillise and tranquilliser</h3>
+        <h3 id="time">time</h3>
+        <p>See our guidance on <a href="/service-manual/content/numbers-measurement-dates-time">numbers, measurement, dates and time</a>.</p>
+        <h3 id="tranquillise-and-tranquilliser">tranquillise and tranquilliser</h3>
         <p>Note the double "ll". We use the British spelling with "s", not "z".</p>
-        <h3>try to</h3>
+        <h3 id="try-to">try to</h3>
         <p>We prefer "try to" to "try and".</p>
         <h3 id="tummy">tummy</h3>
         <p>Some users feel that "tummy" is childish but it can work well in content about children.</p>
         <p>It can also be a good alternative to abdomen when you’re talking about the outside of the body (a broader area than the stomach).</p>
-        <p>Also see "<a href=#abdomen>abdomen</a>" and "<a href=#stomach>stomach</a>".</p>
+        <p>Also see "<a href="#abdomen-and-abdominal">abdomen</a>" and "<a href="#stomach">stomach</a>".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
@@ -650,13 +674,13 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="U">U</h2>
-        <h3>unplanned</h3>
+        <h3 id="unplanned">unplanned</h3>
         <p>Use "unplanned' rather than "unwanted" when talking about pregnancy.</p>
-        <h3>urinary tract infections</h3>
+        <h3 id="urinary-tract-infections">urinary tract infections</h3>
         <p>We use "urinary tract infections (UTIs)", not "water infections".</p>
-        <h3>urine</h3>
+        <h3 id="urine">urine</h3>
         <p>See <a href="#pee">pee</a>.</p>
-        <h3>uterus</h3>
+        <h3 id="uterus">uterus</h3>
         <p>We prefer "womb".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -675,7 +699,7 @@
         <p>We use "vaccine" for the virus, bacteria or toxin dose. For example: 6&#8209;in&#8209;1 vaccine, HPV vaccine.</p>
         <p>The exception is the "flu jab". We sometimes use "flu jab" for adults, because people search for this. But we use "flu vaccine" for children, because the child vaccine is a spray.</p>
         <p>For the annual flu vaccination programme, we use the term "flu vaccine" as that covers children and adults.</p>
-        <h3>vomiting</h3>
+        <h3 id="vomiting">vomiting</h3>
         <p>We use "being sick" instead of "vomiting". You may want to put "vomiting" in brackets afterwards: being sick (vomiting).</p>
         <p>We use "vomiting" in phrases like "vomiting blood".</p>
         <p>We use "vomit" as the noun. For example, "blood in your vomit".</p>
@@ -688,13 +712,13 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="W">W</h2>
-        <h3>walk-in centre</h3>
+        <h3 id="walk-in-centre">walk-in centre</h3>
         <p>Not walk in centre or Walk-In Centre (unless it’s the name of a particular centre).</p>
-        <h3>water infections</h3>
+        <h3 id="water-infections">water infections</h3>
         <p>We use "urinary tract infections (UTIs)" instead.</p>
-        <h3>water tablets</h3>
+        <h3 id="water-tablets">water tablets</h3>
         <p>We don’t use "water tablets". We explain that diuretics are "tablets that make you pee more".</p>
-        <h3>wellbeing</h3>
+        <h3 id="wellbeing">wellbeing</h3>
         <p>One word. </p>
         <h3 id="wind">wind</h3>
         <p>We use "wind" when we're talking about babies. For example, "bringing up wind".</p>
@@ -710,7 +734,7 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="X">X</h2>
-        <h3>X-ray</h3>
+        <h3 id="X-ray">X-ray</h3>
         <p>With a capital X.</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
           <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -721,7 +745,7 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="Y">Y</h2>
-        <h3>you and your</h3>
+        <h3 id="you-and-your">you and your</h3>
         <p>We address users as "you". See the section on <a href="/service-manual/content/voice-and-tone">voice and tone</a>.</p>
         <p>We use "your" for parts of the body, where appropriate. For example: "the cells in your liver".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -733,7 +757,7 @@
       </div>
       <div class="nhsuk-a-z-list--results-items">
         <h2 id="Z">Z</h2>
-        <h3>zimmer frame</h3>
+        <h3 id="zimmer-frame">zimmer frame</h3>
         <p>Two words, lower case. </p>
         <p>When we talk about "walking frames", we also mention "zimmer frames". We have found that older people are more likely to know them as "zimmer frames".</p>
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -748,7 +772,7 @@
       <p>Please <a href="/service-manual/contribute">get in touch</a> if you have any evidence to share or changes to suggest.</p>
 
       <div class="nhsuk-review-date">
-        <p class="nhsuk-body-s">Updated: July 2019</p>
+        <p class="nhsuk-body-s">Updated: August 2019</p>
       </div>
 
     </div>
