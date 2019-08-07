@@ -5,6 +5,7 @@
 :new: **New functionality**
 
 - Add search functionality to the service manual
+- Add entries to A to Z of NHS health writing, including health records
 
 :wrench: **Fixes**
 
