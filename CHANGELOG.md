@@ -5,6 +5,7 @@
 :new: **New functionality**
 
 - Add search functionality to the service manual
+- Add more guidance for content designers to care card page 
 - Add entries to A to Z of NHS health writing, including health records
 
 :wrench: **Fixes**
