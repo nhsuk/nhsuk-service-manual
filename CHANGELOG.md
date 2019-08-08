@@ -11,6 +11,7 @@
 :wrench: **Fixes**
 
 - Remove duplicate entry from the XML sitemap
+- Accessibility: Updated home link aria label, it now reads as "NHS digital service manual homepage"
 
 ## 1.7.0 - 06 August 2019
 
