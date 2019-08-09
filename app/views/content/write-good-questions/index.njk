@@ -1,0 +1,51 @@
+{% set pageTitle = 'Write good questions' %}
+{% set pageSection = 'Content style guide' %}
+{% set pageDescription = 'Guidance for people working on forms, questionnaires and transactional services.' %}
+
+{% extends 'includes/layout.njk' %}
+
+
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/content",
+  text: "Content style guide"
+}) }}
+{% endblock %}
+
+
+{% block body %}
+<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">Write good questions</h1>
+    <p class="nhsuk-body-l">Guidance to help content designers and teams working on forms and transactional services know which questions to write, how to write them well and how to write content around the questions.</p>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <ul class="nhsuk-list">
+      <li><a href="/service-manual/content/write-good-questions/1-start-with-discovery">1. Start with discovery</a></li>
+      <li><a href="/service-manual/content/write-good-questions/2-make-sure-you-need-each-question">2. Make sure you need each question</a></li>
+      <li><a href="/service-manual/content/write-good-questions/3-make-it-clear-and-conversational">3. Make it clear and conversational</a></li>
+
+    </ul>
+      </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h2 class="nhsuk-u-margin-top-8">Contribute</h2>
+    <p>Help us improve this guidance. Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></p>
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: August 2019</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
