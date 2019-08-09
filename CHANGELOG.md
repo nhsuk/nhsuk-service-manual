@@ -4,16 +4,13 @@
 
 :new: **New functionality**
 
-- Add search functionality to the service manual
-- Add more guidance for content designers to care card page 
-- Add entries to A to Z of NHS health writing, including health records
+- Add entries to A to Z of NHS health writing: health record and related terms
 
 :wrench: **Fixes**
 
 - Remove duplicate entry from the XML sitemap
 - Accessibility: Updated home link aria label, it now reads as "NHS digital service manual homepage"
-- Remove curly apostrophes and replace with straight apostrophes
-- Update the description of the Slack workspace from NHS.UK to service manual
+- Fix a few minor content formatting issues, like apostrophes
 
 ## 1.7.0 - 06 August 2019
 
