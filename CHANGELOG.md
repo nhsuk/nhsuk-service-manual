@@ -11,6 +11,7 @@
 - Remove duplicate entry from the XML sitemap
 - Accessibility: Updated home link aria label, it now reads as "NHS digital service manual homepage"
 - Fix a few minor content formatting issues, like apostrophes
+- Update package dependencies to latest versions
 
 ## 1.7.0 - 06 August 2019
 
