@@ -75,6 +75,7 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   res.render('includes/design-example-wrapper.njk', { body: exampleHtml });
 });
 
+/*
 app.get('/service-manual/search', (req, res) => {
   var query = req.query['search-field'] || '';
   res.render('includes/search.njk', { results: pageIndex.search(query), query: query });
@@ -84,6 +85,7 @@ app.get('/service-manual/suggestions', (req, res) => {
   res.set({ 'Content-Type': 'application/json' });
   res.send(JSON.stringify(pageIndex.search(req.query.search)));
 });
+*/
 
 app.get('/', (req, res) => {
   res.redirect('/service-manual');
