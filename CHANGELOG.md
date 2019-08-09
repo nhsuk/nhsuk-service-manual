@@ -1,8 +1,8 @@
 # NHS digital service manual Changelog
 
-## 2.0.0 - Unreleased
+## 1.8.0 - 09 August 2019
 
-:new: **New functionality**
+:new: **New content**
 
 - Add entries to A to Z of NHS health writing: health record and related terms
 
