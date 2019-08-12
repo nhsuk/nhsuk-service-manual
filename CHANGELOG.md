@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 2.0.0 - Unreleased
+
+:new: **New features**
+
+- Add search functionality to the service manual
+
+:new: **New content**
+
+- Add more guidance for content designers to care card page 	
+
 ## 1.8.0 - 09 August 2019
 
 :new: **New content**
