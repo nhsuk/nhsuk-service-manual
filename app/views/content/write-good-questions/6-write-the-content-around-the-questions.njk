@@ -1,7 +1,7 @@
 
 {% set pageTitle = '6. Write the content around the questions'%}
 {% set pageSection = 'Write good questions' %}
-{% set pageDescription = 'LEDE.' %}
+{% set pageDescription = 'As well as questions, your form or service may need an introduction, instructions, hint or help text, error messages and a thank you page.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
@@ -33,28 +33,40 @@
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-<p>It’s not just about the questions. Consider the context of the form, and write help text, hints and error messages too. Brief clear instructions.</p>
+  <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
 <h2>Before the form</h2>
-<p>Introduce and explain it: who is it for and when should they fill it in? Say what the form does in the users’ words. See the GDS guidance on naming services.
-Who’s eligible and how do you stop the wrong people filling in the form?
-Before the form
-Set expectations. For example, give them some idea what they will need in order to fill it in. Do they need any form of identity, for example their NHS number?
-
-(Bear in mind though that people often ignore text on start pages [link].)
-
-
-
-</p>
-
-<p>Follow the GDS pattern for start pages, but be aware that people often don’t read them. (Refer forward to ‘sense of control’)</p>
+<ul>
+  <li>If you haven't already done so, you might want to name your form. (See the <a href="https://www.gov.uk/service-manual/design/naming-your-service">GOV.UK guidance on naming services</a>.)</li>
+  <li>Introduce and explain the form. Who is it for and when should they fill it in? Say what the form does in the users’ words. How will you stop the wrong people filling in the form?  </li>
+  <li>Set expectations. For example, give users some idea what they will need in order to fill it in. Do they need any form of identity, such as their NHS number?</li>
+  <li>Follow the <a href="https://design-system.service.gov.uk/patterns/start-pages/">GOV.UK pattern for start pages</a>, but be aware that people often ignore text on start pages.</li>
+</ul>
 
 
 <h2>During the form</h2>
-<h3>Instructions</h3>
-<p>Users avoid looking at instructions (and start pages) and focus on the questions. Instead of initial instructions, use brief help text where users need it.
-If you’re having to explain your interface, it needs more work.
+<h3>Help text</h3>
+<p>Users generally avoid looking at instructions and focus on the questions. Rather than giving them instructions at the start, use brief help text where users need it. (And remember, if you’re having to explain your interface, it probably needs more work.)</p>
+Sometimes it’s useful to provide help text to explain things like:
 
-Do you need fuller guidance? Users don’t generally read it. Try help text first. If you find that you do need it, consider:
+legal jargon
+where to find obscure information
+what format the information should be given in
+what you’ll do with a user’s personal information
+the consequences of making one choice over another
+Only do this if you see in research that your users need it.
+
+How to add help text
+You can do this by:
+
+adding hint text inline, immediately next to the part of the page it relates to
+using the ‘details’ component to reveal expanding help text - this is useful if the text is only relevant to a subset of users
+See examples of hint text and the details component in the GOV.UK Design System.
+
+You might occasionally need to add more detailed text to help users make particularly complex or difficult decisions.
+
+But bear in mind they’re unlikely to read anything longer than 3 lines, so try to keep any text brief and action-focused.
+<h3>Longer guidance</h3>
+<p>Try help text before you consider writing fuller guidance. Users don’t generally read it.</p> Try help text first. If you find that you do need it, consider:
 layered guidance
 paper guidance with online forms and online guidance with paper forms
 Help text - and hint text
@@ -63,7 +75,7 @@ Put just enough help where the user needs it. For example, answer users’ quest
 “why do you want this information?
 “where can I find this?”
 
-GOV.UK has some good advice on adding help text where necessary</p>
+Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.</p>
 
 <h3>Error messages</h3>
 <p>You may need to write more than 1 error message for each field, so they’re as specific to the problem as possible. Focus on telling the user how to fix the problem rather than describing what’s gone wrong. There’s useful GDS guidance on writing good error messages.</p>
@@ -78,7 +90,7 @@ Signposting to other help if there’s likely to be a wait, for example to suppo
 For page titles you can use either a question or a statement. For example, ‘What is your date of birth?’ or just ‘Date of birth’.
 After the form
 Make it clear:
-that the user has completed the form successfully - see the GDS confirmation page
+that the user has completed the form successfully - see the GDS confirmation page https://design-system.service.gov.uk/patterns/confirmation-pages/
 how users can get in touch
 how they can change their form or information
 when they will get an answer if they don’t get one straightaway
