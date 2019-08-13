@@ -1,10 +1,6 @@
 # NHS digital service manual Changelog
 
-## 2.0.0 - Unreleased
-
-:new: **New features**
-
-- Add search functionality to the service manual
+## 1.9.0 - Unreleased
 
 :new: **New content**
 
