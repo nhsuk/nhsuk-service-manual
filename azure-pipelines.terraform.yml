@@ -46,7 +46,7 @@ steps:
     azureSubscription: 'www.nhs.uk (1e543650-5458-44ea-a3b1-35a6d0d92cc9)'
     scriptLocation: inlineScript
     inlineScript: |
-      access_key=$(az storage account keys list -g tfbackends -n tfbackends --subscription www.nhs.uk | jq -r '.[0].value')
+      access_key=$(az storage account keys list -g tfbackends-uks -n tfbackends --subscription www.nhs.uk | jq -r '.[0].value')
       echo "##vso[task.setvariable variable=STORAGE_ACCOUNT_KEY]$access_key"
 
 - task: AzureCLI@1
