@@ -28,29 +28,20 @@ variable "manual_password" {
   type = string
 }
 
-resource "azurerm_resource_group" "nhsuk-service-manual" {
+data "azurerm_resource_group" "nhsuk-service-manual" {
   name     = "nhsuk-service-manual"
-  location = "West Europe"
 }
 
-resource "azurerm_app_service_plan" "nhsuk-service-manual" {
+data "azurerm_app_service_plan" "nhsuk-service-manual" {
   name                = "nhsuk-service-manual"
-  location            = azurerm_resource_group.nhsuk-service-manual.location
-  resource_group_name = azurerm_resource_group.nhsuk-service-manual.name
-  kind                = "Linux"
-  reserved            = true
-
-  sku {
-    tier = "Basic"
-    size = "B1"
-  }
+  resource_group_name = data.azurerm_resource_group.nhsuk-service-manual.name
 }
 
 resource "azurerm_app_service" "nhsuk-service-manual" {
-  name                = var.app_service_names[var.environment]
-  location            = azurerm_resource_group.nhsuk-service-manual.location
-  resource_group_name = azurerm_resource_group.nhsuk-service-manual.name
-  app_service_plan_id = azurerm_app_service_plan.nhsuk-service-manual.id
+  name                = lookup(var.app_service_names, var.environment, "nhsuk-service-manual-${var.environment}")
+  location            = data.azurerm_resource_group.nhsuk-service-manual.location
+  resource_group_name = data.azurerm_resource_group.nhsuk-service-manual.name
+  app_service_plan_id = data.azurerm_app_service_plan.nhsuk-service-manual.id
   https_only          = true
 
   site_config {
@@ -59,7 +50,7 @@ resource "azurerm_app_service" "nhsuk-service-manual" {
   }
 
   app_settings = {
-    "NODE_ENV"        = var.app_service_node_env[var.environment]
+    "NODE_ENV"        = lookup(var.app_service_node_env, var.environment, "staging")
     "MANUAL_USERNAME" = var.manual_username
     "MANUAL_PASSWORD" = var.manual_password
   }
