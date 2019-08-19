@@ -1,7 +1,7 @@
 
 {% set pageTitle = '6. Write the content around the questions'%}
 {% set pageSection = 'Write good questions' %}
-{% set pageDescription = 'As well as questions, your form or service may need an introduction, instructions, hint or help text, error messages and a thank you page.' %}
+{% set pageDescription = 'As well as questions, your form or service may need an introduction, instructions or guidance, hint or help text, error messages and a confirmation or thank you page.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
@@ -36,72 +36,89 @@
   <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
 <h2>Before the form</h2>
 <ul>
-  <li>If you haven't already done so, you might want to name your form. (See the <a href="https://www.gov.uk/service-manual/design/naming-your-service">GOV.UK guidance on naming services</a>.)</li>
-  <li>Introduce and explain the form. Who is it for and when should they fill it in? Say what the form does in the users’ words. How will you stop the wrong people filling in the form?  </li>
+  <li>If you haven't already done so, name your form. (See the <a href="https://www.gov.uk/service-manual/design/naming-your-service">GOV.UK guidance on naming services</a>.)</li>
+  <li>Introduce and explain the form. Who is it for and when should they fill it in? Say what the form does in your users' words. How will you stop the wrong people filling in the form?</li>
   <li>Set expectations. For example, give users some idea what they will need in order to fill it in. Do they need any form of identity, such as their NHS number?</li>
   <li>Follow the <a href="https://design-system.service.gov.uk/patterns/start-pages/">GOV.UK pattern for start pages</a>, but be aware that people often ignore text on start pages.</li>
 </ul>
-
+<p>Start pages often have too much information. Make sure that people can quickly scan it, select an action and move on. Remember that any text under the Start button will probably be missed.</p>
+<p>If you need more than, say, 100 words at the start of your form, break it down into smaller chunks with headings. Your user may read the headings even if they skip the content, but at least they will know that there is information there if they need it.</p>
 
 <h2>During the form</h2>
 <h3>Help text</h3>
-<p>Users generally avoid looking at instructions and focus on the questions. Rather than giving them instructions at the start, use brief help text where users need it. (And remember, if you’re having to explain your interface, it probably needs more work.)</p>
-Sometimes it’s useful to provide help text to explain things like:
+<p>Users generally avoid looking at instructions and focus on the questions. Instead of giving them instructions at the start, use brief help text where they need it. Keep it as short as possible.</p>
+<p>Only add help text if you see in research that your users need it. People do not usually need to be told to "Select the answer that applies to you" with radios but they may need telling to "Select all the options that apply to you" with checkboxes.</p>
 
-legal jargon
-where to find obscure information
-what format the information should be given in
-what you’ll do with a user’s personal information
-the consequences of making one choice over another
-Only do this if you see in research that your users need it.
+<p>Put just enough help where the user needs it. Answer questions like:</p>
+<ul>
+  <li>"What's this?"</li>
+  <li>"Why do you want this information?"</li>
+  <li>"Where can I find this?"</li>
+</ul>
+<p>Use it, for example, to explain things like:</p>
+<ul>
+  <li>any necessary jargon</li>
+  <li>where to find their NHS number</li>
+  <li>what format users should give information in</li>
+  <li>what you’ll do with personal information</li>
+  <li>the consequences of making 1 choice over another</li>
+</ul>
 
-How to add help text
-You can do this by:
 
-adding hint text inline, immediately next to the part of the page it relates to
-using the ‘details’ component to reveal expanding help text - this is useful if the text is only relevant to a subset of users
-See examples of hint text and the details component in the GOV.UK Design System.
 
-You might occasionally need to add more detailed text to help users make particularly complex or difficult decisions.
+<p>Remember, if you’re having to explain your interface, it probably needs more work.</p>
 
-But bear in mind they’re unlikely to read anything longer than 3 lines, so try to keep any text brief and action-focused.
+<h4>How to add help text</h4>
+<p>You can:</p>
+<ul>
+  <li>add hint text inline, immediately next to the question it relates to, for help that's relevant to most of your users - see the <a href="/service-manual/styles-components-patterns/hint-text">Hint text component</a></li>
+  <li>use the <a href="/service-manual/styles-components-patterns/details">Details component</a> to reveal expanding help text - this is useful if the help text is only relevant for some users</li>
+</ul>
+  <p>[Note: both components use the NHS number as the example.]</p>
+
 <h3>Longer guidance</h3>
-<p>Try help text before you consider writing fuller guidance. Users don’t generally read it.</p> Try help text first. If you find that you do need it, consider:
-layered guidance
-paper guidance with online forms and online guidance with paper forms
-Help text - and hint text
-Put just enough help where the user needs it. For example, answer users’ questions about:
-“what’s this?”
-“why do you want this information?
-“where can I find this?”
+<p>You might occasionally need to add more detailed guidance to help users make particularly complex or difficult decisions. But bear in mind they probably won't read more than a few lines. Try help text before you consider writing fuller guidance and keep any text brief and action-focused.</p>
 
-Use hint for help that’s relevant to the majority of users, like how their information will be used, or where to find it.</p>
+<p>If you find that you do need fuller guidance, consider:</p>
+<ul>
+  <li>layered guidance</li>
+  <li>the format - for example, paper guidance with online forms and online guidance with paper forms</li>
+</ul>
+</p>
 
 <h3>Error messages</h3>
-<p>You may need to write more than 1 error message for each field, so they’re as specific to the problem as possible. Focus on telling the user how to fix the problem rather than describing what’s gone wrong. There’s useful GDS guidance on writing good error messages.</p>
+<p>Read more about <a href="/service-manual/styles-components-patterns/error-message">error messages</a> and <a href="/service-manual/styles-components-patterns/error-summary">error summaries</a> in the service manual.</p>
+<p>The GOV.UK design system has good <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">guidance on writing error messages</a>, including <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">error message templates for common errors</a>.</p>
+<p>You may need to write more than 1 error message for each field, so make them as specific as possible. Focus on telling the user how to fix the problem rather than describing what’s gone wrong.</p>
 
 <h2>After the form</h2>
-<p>Check your answers pages - there’s more information about these and why they work in the section on Giving users a sense of control.</p>
-<h3>Thank you pages</h3>
-<p>Information about what will happen next. When will the user hear back? How should they get in touch?
-Confirmation emails or SMS
-Signposting to other help if there’s likely to be a wait, for example to support services
+<p>The content you write at the end of the form will depend on how your form ends: for example, with a <a href="https://design-system.service.gov.uk/components/summary-list/">summary list</a> to let users check their answers.</p>
+<p>You will probably also need a confirmation or thank you page.</p>
 
-For page titles you can use either a question or a statement. For example, ‘What is your date of birth?’ or just ‘Date of birth’.
-After the form
-Make it clear:
-that the user has completed the form successfully - see the GDS confirmation page https://design-system.service.gov.uk/patterns/confirmation-pages/
-how users can get in touch
-how they can change their form or information
-when they will get an answer if they don’t get one straightaway
-how they can find out more about how you store and manage their information
-
-What if users want to print out or download form, or come back to it and change it later?
+<h3>Confirmation or thank you page</h3>
+<p>Make it clear:</p>
+<ul>
+  <li>that the user has completed the form successfully - see the <a href="https://design-system.service.gov.uk/patterns/confirmation-pages/">GOV.UK confirmation page</a>, for example</li>
+  <li>if appropriate, what will happen next and, for example, when they will get an answer if they don’t get one straightaway</li>
+  <li>if need be, how they can get in touch or where they can get other help if there's likely to be a wait, for example signpost to support services</li>
+  <li>how they can change their form or information</li>
+  <li>how they can find out more about how you store and manage their information</li>
+</ul>
+<h3>Other content</h3>
+<p>Write any confirmation emails or SMS at the same time and remember to line up your on and offline content, including call centre scripts.</p>
 
 
 
 
-Remember to line up your on and offline content, including call centre scripts.</p>
+
+
+
+
+
+
+
+
+
 
 
     <div class="nhsuk-review-date">
@@ -111,20 +128,20 @@ Remember to line up your on and offline content, including call centre scripts.<
     <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
     <ul class="nhsuk-list nhsuk-pagination__list">
     <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/service-manual/content/write-good-questions/1-start-with-discovery">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/service-manual/content/write-good-questions/5-be-careful-with-yes-no-questions">
         <span class="nhsuk-pagination__title">Previous</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">1. Start with discovery</span>
+        <span class="nhsuk-pagination__page">5. Be careful with Yes and No questions</span>
         <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
         </svg>
       </a>
     </li>
     <li class="nhsuk-pagination-item--next">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="/service-manual/content/write-good-questions/3-keep-it-clear-and-conversational">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="/service-manual/content/write-good-questions/7-test-your-questions">
         <span class="nhsuk-pagination__title">Next</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">3. Keep it clear and conversational</span>
+        <span class="nhsuk-pagination__page">7. Test your questions</span>
         <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
         </svg>
