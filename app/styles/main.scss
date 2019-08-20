@@ -98,3 +98,16 @@ h1 + .nhsuk-lede-text--small {
 .app-page-contents__item {
   @include nhsuk-responsive-margin(1, 'bottom');
 }
+
+// App contact panel
+.app-contact-panel {
+  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-responsive-margin(7, 'top');
+
+  border-top: 2px solid $color_nhsuk-blue;
+}
+
+.app-contact-panel__heading {
+  @include nhsuk-font(24, $weight: bold);
+  @include nhsuk-responsive-padding(3, 'top');
+}
