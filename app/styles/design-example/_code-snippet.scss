@@ -1,12 +1,12 @@
 // sass-lint:disable border-zero no-color-hex
 
-.code-snippet {
-  background-color: $color_nhsuk-grey-5;
-  margin-bottom: 24px;
+.design-example {
+  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-responsive-margin(3, 'top');
+}
 
-  @include mq($from: tablet) {
-    margin-bottom: 48px;
-  }
+.code-snippet {
+  background-color: $color_nhsuk-white;
 
   .js-hidden {
     display: none;
@@ -15,7 +15,7 @@
   .app-link {
 
     &--copy {
-      background-color: $color_nhsuk-grey-5;
+      background-color: $color_nhsuk-white;
       margin-bottom: 8px;
       position: static;
     }
@@ -30,6 +30,7 @@
       margin-top: 8px;
       position: static;
       right: 16px;
+      text-decoration: underline;
       z-index: 1;
 
       @include mq($from: tablet) {
@@ -49,7 +50,7 @@
 
   &__preformatted {
     align-items: flex-end;
-    border-bottom: 1px solid $color_nhsuk-grey-4;
+    border-bottom: 1px solid $nhsuk-border-color;
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -61,7 +62,7 @@
 }
 
 .app-tabs {
-  border: 1px solid $color_nhsuk-grey-4;
+  border: 1px solid $nhsuk-border-color;
   border-bottom: 0;
   $root: &;
   display: none;
@@ -78,32 +79,25 @@
       border: 0;
       font-weight: normal;
       margin: 0;
-      padding: 8px 16px;
+      padding: 16px;
+      text-decoration: underline;
 
       @include mq($from: tablet) {
-        padding: 12px 24px;
+        padding: 20px;
       }
 
       &:hover {
-        box-shadow:  0 0 0 4px $color_tint_nhsuk-warm-yellow-30;
-        outline: 0;
+        text-decoration: none;
       }
 
-      &:focus {
-        box-shadow:  0 0 0 4px $color_nhsuk-warm-yellow;
-        outline: 0;
-      }
 
     }
 
     &--current {
       a {
-        background-color: $color_nhsuk-grey-5;
-
-        @include mq($from: tablet) {
-          border-bottom: 4px solid $color_nhsuk-blue;
-        }
-
+        background-color: $color_nhsuk-white;
+        border-right: 1px solid $nhsuk-border-color;
+        text-decoration: none;
       }
     }
 
@@ -121,13 +115,13 @@
     }
 
   &__container {
-    border: 1px solid $color_nhsuk-grey-4;
+    border: 1px solid $nhsuk-border-color;
     border-bottom: 0;
     margin-top: 0;
 
     pre {
       align-self: stretch;
-      background-color: $color_nhsuk-grey-5;
+      background-color: $color_nhsuk-white;
       padding: 0;
     }
 
