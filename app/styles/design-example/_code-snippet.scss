@@ -50,7 +50,7 @@
 
   &__preformatted {
     align-items: flex-end;
-    border-bottom: 1px solid $nhsuk-border-color;
+    border-bottom: 1px solid $color_nhsuk-grey-3;
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -62,7 +62,7 @@
 }
 
 .app-tabs {
-  border: 1px solid $nhsuk-border-color;
+  border: 1px solid $color_nhsuk-grey-3;
   border-bottom: 0;
   $root: &;
   display: none;
@@ -96,7 +96,7 @@
     &--current {
       a {
         background-color: $color_nhsuk-white;
-        border-right: 1px solid $nhsuk-border-color;
+        border-right: 1px solid $color_nhsuk-grey-3;
         text-decoration: none;
       }
     }
@@ -115,7 +115,7 @@
     }
 
   &__container {
-    border: 1px solid $nhsuk-border-color;
+    border: 1px solid $color_nhsuk-grey-3;
     border-bottom: 0;
     margin-top: 0;
 

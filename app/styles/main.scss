@@ -102,7 +102,7 @@ h1 + .nhsuk-lede-text--small {
 // App contact panel
 .app-contact-panel {
   @include nhsuk-responsive-margin(4, 'bottom');
-  @include nhsuk-responsive-margin(7, 'top');
+  @include nhsuk-responsive-margin(8, 'top');
 
   border-top: 2px solid $color_nhsuk-blue;
 }
@@ -110,4 +110,50 @@ h1 + .nhsuk-lede-text--small {
 .app-contact-panel__heading {
   @include nhsuk-font(24, $weight: bold);
   @include nhsuk-responsive-padding(3, 'top');
+}
+
+// Container
+.nhsuk-width-container {
+  max-width: 1100px;
+}
+
+// App pane
+.app-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 0;
+  overflow: inherit;
+}
+
+.app-pane__side-bar {
+  width: 260px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+
+  @include mq($until: desktop) {
+    display: none;
+  }
+}
+
+// Side nav
+.app-side-nav__item--current {
+  border-left: 4px solid $color_nhsuk-blue;
+  margin-left: -12px;
+  padding-left: 8px;
+
+  .app-side-nav__link {
+    font-weight: $nhsuk-font-bold;
+  }
+}
+
+.app-side-nav__link {
+  @include nhsuk-font(16);
+  text-decoration: none;
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
 }

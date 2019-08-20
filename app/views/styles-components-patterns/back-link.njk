@@ -1,84 +1,38 @@
 {% set pageTitle = 'Back link' %}
 {% set pageSection = 'Styles, components and patterns' %}
 {% set pageDescription = 'Use back links to help users go back to the previous page in a multi-page transaction' %}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'styles-components-patterns/component-template.njk' %}
 
-{% from 'back-link/macro.njk' import backLink %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  {{ designExample({
+    type: 'back-link'
+  }) }}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Back link</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use back links to help users go back to the previous page in a multi-page transaction.</p>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2 >Code and design</h2>
-    {{ designExample({
-      type: 'back-link'
-    }) }}
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>When to use a back link</h2>
-    <p>We only use back links on transactional services or multi-page forms.</p>
-    <p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK design system</a> recommends including a back link on question pages. Read more about <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages on GOV.UK</a>.</p>
-    <p>You can include a back link on other pages in a multi-page transaction, if it makes sense to do so.</p>
-    <h2>When not to use a back link</h2>
-    <p>Do not use a back link on a content page, like a health information page.<p>
-    <p>Do not use a back link with <a href='/service-manual/styles-components-patterns/breadcrumbs'>breadcrumbs</a>.
-    <h2>How to use back links</h2>
-     <p>Make sure the text used in the link describes the action, for example "Go back". Carry out research with users to find the words that help them the most.<p>
-     <p>The link should take users back to the page they were on in the state they last saw it.</p>
-     <p>Consider where you put the back link. Do not put it close to other links or buttons where it might distract users from what they need to do.</p>
-     <p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK design system</a> says that you should put back links at the top of a page, but a couple of NHS services (<a href="https://111.nhs.uk/">NHS 111 online</a> and <a href="https://your-data-matters.service.nhs.uk">Find out why your NHS data matters</a>) found that it works better at the bottom of the page below the primary action. That's because we don't want to suggest to people who use a screen reader that they leave the page prematurely.</p>
-    <h3>Accessibility</h3>
-    <p>When you're considering where to put back link on a page, think about people who use a screen reader.</p>
-    <p>Also, make sure the text you use describes the action. Do not rely on "Go back". It might not reflect what users expect.</p>
-    <h2>Research</h2>
-    <p>During testing, <a href="https://111.nhs.uk/">NHS 111 online</a> found that some users wanted to change their answers, so they introduced a back link and labelled it to "Change my previous answer".</p>
-    <p>The <a href="http://digitalaccessibilitycentre.org/">Digital Accessibility Centre</a> recommended that <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a> place their back link below the primary action, because screen reader users were confused when they landed on a page and were immediately told to go back.</p>
+  <h2>When to use a back link</h2>
+  <p>We only use back links on transactional services or multi-page forms.</p>
+  <p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK design system</a> recommends including a back link on question pages. Read more about <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages on GOV.UK</a>.</p>
+  <p>You can include a back link on other pages in a multi-page transaction, if it makes sense to do so.</p>
 
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/32">Discuss back links on GitHub</a></p>
+  <h2>When not to use a back link</h2>
+  <p>Do not use a back link on a content page, like a health information page.<p>
+  <p>Do not use a back link with <a href='/service-manual/styles-components-patterns/breadcrumbs'>breadcrumbs</a>.
 
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
-    <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-    </ul>
+  <h2>How to use back links</h2>
+  <p>Make sure the text used in the link describes the action, for example "Go back". Carry out research with users to find the words that help them the most.<p>
+  <p>The link should take users back to the page they were on in the state they last saw it.</p>
+  <p>Consider where you put the back link. Do not put it close to other links or buttons where it might distract users from what they need to do.</p>
+  <p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK design system</a> says that you should put back links at the top of a page, but a couple of NHS services (<a href="https://111.nhs.uk/">NHS 111 online</a> and <a href="https://your-data-matters.service.nhs.uk">Find out why your NHS data matters</a>) found that it works better at the bottom of the page below the primary action. That's because we don't want to suggest to people who use a screen reader that they leave the page prematurely.</p>
 
-    <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
-    </div>
-    {{ panel({
-    "label": "Similar components",
-    "HTML": "<ul>
-                <li><a href='/service-manual/styles-components-patterns/breadcrumbs'>Breadcrumbs</a></li>
-                <li><a href='/service-manual/styles-components-patterns/contents-list'>Contents list</a></li>
-                <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
+  <h3>Accessibility</h3>
+  <p>When you're considering where to put back link on a page, think about people who use a screen reader.</p>
+  <p>Also, make sure the text you use describes the action. Do not rely on "Go back". It might not reflect what users expect.</p>
 
-            </ul>"
-    }) }}
-  </div>
-</div>
+  <h2>Research</h2>
+  <p>During testing, <a href="https://111.nhs.uk/">NHS 111 online</a> found that some users wanted to change their answers, so they introduced a back link and labelled it to "Change my previous answer".</p>
+  <p>The <a href="http://digitalaccessibilitycentre.org/">Digital Accessibility Centre</a> recommended that <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a> place their back link below the primary action, because screen reader users were confused when they landed on a page and were immediately told to go back.</p>
+
 {% endblock %}
