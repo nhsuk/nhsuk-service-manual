@@ -1,0 +1,88 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="app-pane">
+
+      <div class="app-pane__side-bar">
+        {% include 'includes/side-nav.njk' %}
+      </div>
+
+      <div class="app-pane__main-content">
+
+        <h1>
+          <span role="text">
+            <span class="nhsuk-caption-l">
+              {{pageSection}}
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+            {{pageTitle}}
+          </span>
+        </h1>
+
+        <p class="nhsuk-lede-text">{{pageDescription}}</p>
+
+        <div class="app-contributor">
+          <p class="app-contributor__heading">Contributors</p>
+          <ul class="app-contributor__list">
+            <li class="app-contributor__item">
+              <a href="https://au.linkedin.com/in/hannah-j-nicdao-78318024" class="app-contributor__avatar">
+                <img src="https://www.fillmurray.com/120/120" alt="Hannah J. Nicdao avatar picture" title="Hannah J. Nicdao">
+              </a>
+            </li>
+            <li class="app-contributor__item">
+              <a href="https://github.com/gazhands" class="app-contributor__avatar">
+                <img src="https://www.fillmurray.com/100/100" alt="Gary Broadbent avatar picture" title="Gary Broadbent">
+              </a>
+            </li>
+            <li class="app-contributor__item">
+              <a href="https://github.com/gazhands" class="app-contributor__avatar">
+                <img src="https://www.fillmurray.com/110/110" alt="Gary Broadbent avatar picture" title="Gary Broadbent">
+              </a>
+            </li>
+            <li class="app-contributor__item">
+              <a href="https://github.com/gazhands" class="app-contributor__avatar">
+                <img src="https://www.fillmurray.com/130/130" alt="Gary Broadbent avatar picture" title="Gary Broadbent">
+              </a>
+            </li>
+            <li class="app-contributor__item">
+              <a href="https://github.com/gazhands" class="app-contributor__avatar">
+                <img src="https://www.fillmurray.com/140/140" alt="Gary Broadbent avatar picture" title="Gary Broadbent">
+              </a>
+            </li>
+            <li class="app-contributor__item">
+              <button type="button" class="app-contributor__more">
+                <span class="nhsuk-u-visually-hidden">View </span> +6<span class="nhsuk-u-visually-hidden"> more contributors</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        {% block mainContent %}{% endblock %}
+
+        {% include 'includes/help-improve.njk' %}
+
+        {% include 'includes/contact-panel.njk' %}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

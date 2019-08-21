@@ -1,4 +1,14 @@
 <nav class="app-side-nav">
+  {%- if pageSection == 'Styles' %}
+  <ul class="nhsuk-list app-side-nav__list">
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/colour">Colour</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/icons">Icons</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/layout">Layout</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/spacing">Spacing</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/typography">Typography</a></li>
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Components' %}
   <ul class="nhsuk-list app-side-nav__list">
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/action-link">Action link</a></li>
     <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/back-link">Back link</a></li>
@@ -29,4 +39,11 @@
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/textarea">Textarea</a></li>
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/warning-callout">Warning callout</a></li>
   </ul>
+  {% endif %}
+  {%- if pageSection == 'Patterns' %}
+  <ul class="nhsuk-list app-side-nav__list">
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/a-to-z">A to Z</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/mini-hub">Mini-hub</a></li>
+  </ul>
+  {% endif %}
 </nav>

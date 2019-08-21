@@ -102,7 +102,7 @@ h1 + .nhsuk-lede-text--small {
 // App contact panel
 .app-contact-panel {
   @include nhsuk-responsive-margin(4, 'bottom');
-  @include nhsuk-responsive-margin(7, 'top');
+  @include nhsuk-responsive-margin(6, 'top');
 
   border-top: 2px solid $color_nhsuk-blue;
 }
@@ -153,6 +153,15 @@ h1 + .nhsuk-lede-text--small {
 }
 
 // Side nav
+.app-side-nav__heading {
+  @include nhsuk-font(19, $weight: bold);
+  @include nhsuk-responsive-margin(2, 'bottom');
+}
+
+.app-side-nav__list {
+  @include nhsuk-responsive-margin(3, 'bottom');
+}
+
 .app-side-nav__item--current {
   border-left: 4px solid $color_nhsuk-blue;
   margin-left: -12px;
@@ -169,5 +178,67 @@ h1 + .nhsuk-lede-text--small {
 
   &:visited {
     color: $color_nhsuk-blue;
+  }
+}
+
+// Lede text override
+h1+.nhsuk-lede-text,h1+.nhsuk-lede-text--small {
+  margin-top: -24px
+}
+
+// Contributors
+.app-contributor {
+  @include nhsuk-responsive-margin(7, 'bottom');
+  margin-top: -24px
+}
+
+.app-contributor__list {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.app-contributor__heading {
+  @include nhsuk-font(16);
+  color: $color_nhsuk-grey-1;
+  margin-bottom: 8px;
+}
+
+.app-contributor__item {
+  float: left;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+$contributor-size: 40px;
+
+.app-contributor__avatar {
+  display: block;
+  margin-right: 4px;
+
+  &:hover,
+  &:focus {
+    background: 0;
+    box-shadow: none;
+  }
+
+  img {
+    border-radius: 50%;
+    height: $contributor-size;
+    width: $contributor-size;
+  }
+}
+
+.app-contributor__more {
+  border: 1px solid $color_nhsuk-grey-3;
+  border-radius: 50%;
+  height: $contributor-size;
+  width: $contributor-size;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
   }
 }

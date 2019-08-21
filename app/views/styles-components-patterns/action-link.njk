@@ -1,14 +1,12 @@
 {% set pageTitle = 'Action link' %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = 'Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service.' %}
 {% set githubIssue = 'Action link URL' %}
 {% set githubFork = 'Action link URL' %}
 
-{% extends 'styles-components-patterns/component-template.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
 {% block mainContent %}
-
-  <p>They include a few simple words which tell the user what to do next, like “Find a pharmacy” or “Order a test kit”.</p>
 
   {{ designExample({
     type: 'action-link'
@@ -25,8 +23,5 @@
   <p>Keep the words on the action link short. Start with a verb, for example: "Book an appointment" or "Apply for an EHIC card".</p>
   <p>Action links usually sit in a block of text. You can also put one in a <a href="/service-manual/styles-components-patterns/care-cards">care card</a>.</p>
   <p>You can have more than one action link on a page but avoid putting them near each other.</p>
-
-  <h3>Accessibility</h3>
-  <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
 
 {% endblock %}
