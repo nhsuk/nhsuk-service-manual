@@ -5,4 +5,4 @@ else
   ENVIRONMENT=$1
 fi
 
-terraform init -backend-config="key=nhs-service-manual.$ENVIRONMENT.terraform.tfstate" -backend-config="access_key=$(az storage account keys list -g tfbackends -n tfbackends --subscription www.nhs.uk | jq -r '.[0].value')" -reconfigure
+terraform init -backend-config="key=nhs-service-manual.$ENVIRONMENT.terraform.tfstate" -backend-config="access_key=$(az storage account keys list -g tfbackends-uks -n tfbackends --subscription www.nhs.uk | jq -r '.[0].value')" -reconfigure
