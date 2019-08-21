@@ -230,8 +230,10 @@ $contributor-size: 40px;
 }
 
 .app-contributor__more {
-  border: 1px solid $color_nhsuk-grey-3;
+  @include nhsuk-font(16, $weight: bold);
+  border: 2px solid $color_nhsuk-blue;
   border-radius: 50%;
+  color: $color_nhsuk-blue;
   height: $contributor-size;
   width: $contributor-size;
 
