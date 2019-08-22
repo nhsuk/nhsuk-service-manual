@@ -27,6 +27,10 @@
 <article>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <label class="nhsuk-label">
+        Found <b>{{ results.length }}</b> matching results in {{ maxPage }} page(s).
+      </label>
+
       {% if results | length > 0 %}
       <ul class="nhsuk-list nhsuk-list--border">
         {% for item in results %}
@@ -36,15 +40,15 @@
         </li>
         {% endfor %}
       </ul>
-    
       <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
         <ul class="nhsuk-list nhsuk-pagination__list">
           {% if currentPage != 1%}
           <li class="nhsuk-pagination-item--previous">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/service-manual/search/?search-field={{query}}&page={{currentPage - 1}}">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev"
+              href="/service-manual/search/?search-field={{query}}&page={{currentPage - 1}}">
               <span class="nhsuk-pagination__title">Previous</span>
               <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">{{ currentPage - 1 }} </span>
+              <span class="nhsuk-pagination__page">{{ currentPage - 1 }} of {{ maxPage }} </span>
               <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 aria-hidden="true">
                 <path
@@ -54,13 +58,14 @@
             </a>
           </li>
           {% endif %}
-          
+
           {% if currentPage != maxPage %}
           <li class="nhsuk-pagination-item--next">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="/service-manual/search/?search-field={{query}}&page={{currentPage + 1}}">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
+              href="/service-manual/search/?search-field={{query}}&page={{currentPage + 1}}">
               <span class="nhsuk-pagination__title">Next</span>
               <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">{{ currentPage + 1}}</span>
+              <span class="nhsuk-pagination__page">{{ currentPage + 1}} of {{ maxPage }}</span>
               <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 aria-hidden="true">
                 <path
