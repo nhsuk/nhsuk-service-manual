@@ -90,7 +90,7 @@ app.get('/service-manual/search', (req, res) => {
   var startingIndex = resultsPerPage * (currentPage -1)
   var endingIndex = startingIndex + resultsPerPage
 
-  res.render('includes/search.njk', { results: results.slice(startingIndex, endingIndex), query: query, currentPage: currentPage, maxPage: maxPage,});
+  res.render('includes/search.njk', { results: results.slice(startingIndex, endingIndex), resultsLen: results.length, query: query, currentPage: currentPage, maxPage: maxPage,});
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
