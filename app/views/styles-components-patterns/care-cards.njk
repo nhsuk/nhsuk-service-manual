@@ -1,167 +1,101 @@
 {% set pageTitle = 'Care cards' %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = 'Use care cards to help users identify and understand the sort of care they need, who to contact and how quickly.' %}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'care-card/macro.njk' import careCard %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  <h2 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l">{{pageDescription}}</p>
-  </div>
-</div>
+  {{ designExample({
+    type: 'care-card-non-urgent'
+  }) }}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <p class="nhsuk-body-l">We have 3 care cards for 3 levels of urgency:</p>
-    <ul>
-      <li><a href="#non-urgent-care-card-blue">non-urgent care card (blue)</a></li>
-      <li><a href="#urgent-care-card-red">urgent care card (red)</a></li>
-      <li><a href="#emergency-care-card-red-and-black">immediate care card (red and dark grey)</a></li>
-    </ul>
-  </div>
-</div>
+  <p>Use this card when you want users to contact their GP or arrange an appointment with a health professional, like a practice nurse. You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
+  <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2 class="nhsuk-u-margin-top-8" id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
-    {{ designExample({
-      type: 'care-card-non-urgent'
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when you want users to contact their GP or arrange an appointment with a health professional, like a practice nurse. You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
-    <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
-  </div>
-</div>
+  <h2 id="urgent-care-card-red">Urgent care card (red)</h2>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2 class="nhsuk-u-margin-top-8" id="urgent-care-card-red">Urgent care card (red)</h2>
-    {{ designExample({
-      type: 'care-card-urgent'
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when you want users to call or visit a GP or hospital urgently because they need advice or care quickly. You can, for example, use it to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
-    <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.</p>
-    <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
-  </div>
-</div>
+  {{ designExample({
+    type: 'care-card-urgent'
+  }) }}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2 class="nhsuk-u-margin-top-8" id="emergency-care-card-red-and-black">Immediate care card (red and dark grey)</h2>
-    {{ designExample({
-      type: 'care-card-immediate'
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency (A&amp;E) department.</p>
-    <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital A&amp;E department</a>.</p>
-    <p>Avoid linking to more information about a condition from an emergency care card. If it's an emergency, the important thing is to dial 999 or go to A&amp;E.</p>
-    <p>Only use this card for emergencies.</p>
+  <p>Use this card when you want users to call or visit a GP or hospital urgently because they need advice or care quickly. You can, for example, use it to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
+  <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.</p>
+  <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
 
-    <h2 class="nhsuk-u-margin-top-8" id="how-to-use-care-cards">How to use care cards</h2>
-    <h3>When to use care cards</h3>
-    <p>Use care cards to tell users to take action to get medical advice or help.</p>
-    <h3>When not to use care cards</h3>
-    <p>Do not use care cards:</p>
-    <ul>
-      <li>in forms or transactions</li>
-      <li>for actions which do not help users get 1 of the 3 levels of care</li>
-    </ul>
-    <p>If you want:</p>
-    <ul>
-      <li>to signpost users to the start of a digital service, use an <a href="/service-manual/styles-components-patterns/action-link">action link</a> - for example, to find a pharmacy</li>
-      <li>to point them to another organisation, like a charity, use <a href="/service-manual/styles-components-patterns/inset-text">inset text</a> - or just link from a line of text</li>
-      <li>to warn a user about something, use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead</li>
-    </ul>
+  <h2 id="emergency-care-card-red-and-black">Immediate care card (red and dark grey)</h2>
 
-    <h2>Placing care cards on the page</h2>
-    <p>You can use more than 1 care card on a page - for example, if people need different kinds of care depending on how severe their symptoms are. You can choose where to put the cards and what order to put them in.</p>
-    <p>Avoid having more than 2 care cards on a page though. We want to give essential information and reassure people, not to scare them.</p>
-    <p>If you use more than 1 care card - or a care card and a warning callout close to each other, be aware that users often overlook text between them.</p>
+  {{ designExample({
+    type: 'care-card-immediate'
+  }) }}
 
-    <h2>Care card content</h2>
-    <h3>Give the card a short heading using "if"</h3>
-    <p>The heading should be 1 clear call to action. Use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list in the body of the card.</p>
-    <h3>Put the detail in the body of the card</h3>
-    <p>Do not overload the header. Use the space in the body of the card but keep it concise.</p>
-    <p>It's OK to use a single bullet point after the "if" in the header. It's clearer than including a stand-alone sentence in the card.</p>
-    <p>It's also OK to have 2 colons (1 in the header and 1 in the body of the card), for example:</p>
-    <div class="nhsuk-care-card nhsuk-care-card--urgent">
-      <div class="nhsuk-care-card__heading-container">
-      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>Get advice from 111 now if:</span></h3>
-      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
-      </div>
-      <div class="nhsuk-care-card__content">
-      <p>you take too much furosemide and you:
-      <ul>
-        <li>are over 65 (even if you feel well)</li>
-        <li>have kidney, heart or liver failure (even if you feel well)</li>
-      </ul>
-      </div>
+  <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency (A&amp;E) department.</p>
+  <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital A&amp;E department</a>.</p>
+  <p>Avoid linking to more information about a condition from an emergency care card. If it's an emergency, the important thing is to dial 999 or go to A&amp;E.</p>
+  <p>Only use this card for emergencies.</p>
+
+  <h2 id="how-to-use-care-cards">How to use care cards</h2>
+  <h3>When to use care cards</h3>
+  <p>Use care cards to tell users to take action to get medical advice or help.</p>
+  <h3>When not to use care cards</h3>
+  <p>Do not use care cards:</p>
+  <ul>
+    <li>in forms or transactions</li>
+    <li>for actions which do not help users get 1 of the 3 levels of care</li>
+  </ul>
+  <p>If you want:</p>
+  <ul>
+    <li>to signpost users to the start of a digital service, use an <a href="/service-manual/styles-components-patterns/action-link">action link</a> - for example, to find a pharmacy</li>
+    <li>to point them to another organisation, like a charity, use <a href="/service-manual/styles-components-patterns/inset-text">inset text</a> - or just link from a line of text</li>
+    <li>to warn a user about something, use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead</li>
+  </ul>
+
+  <h2>Placing care cards on the page</h2>
+  <p>You can use more than 1 care card on a page - for example, if people need different kinds of care depending on how severe their symptoms are. You can choose where to put the cards and what order to put them in.</p>
+  <p>Avoid having more than 2 care cards on a page though. We want to give essential information and reassure people, not to scare them.</p>
+  <p>If you use more than 1 care card - or a care card and a warning callout close to each other, be aware that users often overlook text between them.</p>
+
+  <h2>Care card content</h2>
+  <h3>Give the card a short heading using "if"</h3>
+  <p>The heading should be 1 clear call to action. Use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list in the body of the card.</p>
+  <h3>Put the detail in the body of the card</h3>
+  <p>Do not overload the header. Use the space in the body of the card but keep it concise.</p>
+  <p>It's OK to use a single bullet point after the "if" in the header. It's clearer than including a stand-alone sentence in the card.</p>
+  <p>It's also OK to have 2 colons (1 in the header and 1 in the body of the card), for example:</p>
+
+  <div class="nhsuk-care-card nhsuk-care-card--urgent">
+    <div class="nhsuk-care-card__heading-container">
+    <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>Get advice from 111 now if:</span></h3>
+    <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
     </div>
-
-    <h3>Make the care card self-contained</h3>
-    <p>Care cards should be specific and include the information the user needs. Do not say: "Contact your GP if this happens." Explain in the care card in what circumstances users should contact their GP.</p>
-    <h3>Keep signposting simple</h3>
-    <p>Ideally you should signpost to just 1 service in the header but you can signpost to 2 (the top 2 services). If you need to, add more services at the end of the body of the care card.<p>
-    <h2 id="accessibility">Accessibility</h2>
-    <p>People with visual disabilities may not be able to recognise care cards by their colour. Use clearly worded headings to help them.</p>
-    <p>We also add hidden text to the care card header to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.</p>
-    <p class="rich-text"><code>&lt;h3&gt;&lt;span class="visually-hidden"&gt;Non urgent care:</span> Speak to a GP if&lt;h3&gt;</code></p>
-    <p>If people use high contrast mode in Windows, the care card colours don't show, so people can't distinguish them. To make the cards look important, we use a border in this mode to make them stand out from the rest of the content.</p>
-
-    <h2>Research</h2>
-    <p>The care card design has tested well in long content pages. We've tested it in content in lots of labs and users scanning the page have stopped to read the cards.</p>
-    <p>We haven't tested care cards in transactional services and do not recommend using them. If you use a care card in a transactional service, please test it with users and let us know what you find.</p>
-    <p>We've tested care cards with 1 call to action, for example "Speak to a GP if:". If you use more than 1 action, please test it and share your research findings with us.</p>
-    <p>We found that users overlook text between care cards, or between care cards and warning callouts, when they are close to each other.</p>
-    <p>Accessibility testing showed up some issues around communicating the importance of the cards with hidden text, which we've dealt with. <a href="#accessibility">See the Accessibility section.</a></p>
-
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/8">Discuss care cards on GitHub</a></p>
-
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
+    <div class="nhsuk-care-card__content">
+    <p>you take too much furosemide and you:
     <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
+      <li>are over 65 (even if you feel well)</li>
+      <li>have kidney, heart or liver failure (even if you feel well)</li>
     </ul>
-
-    <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: August 2019</p>
     </div>
-
-    {{ panel({
-    "label": "Similar components",
-    "HTML": "<ul>
-              <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and Don't list</a></li>
-              <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
-              <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
-            </ul>"
-    }) }}
-
   </div>
-</div>
+
+  <h3>Make the care card self-contained</h3>
+  <p>Care cards should be specific and include the information the user needs. Do not say: "Contact your GP if this happens." Explain in the care card in what circumstances users should contact their GP.</p>
+  <h3>Keep signposting simple</h3>
+  <p>Ideally you should signpost to just 1 service in the header but you can signpost to 2 (the top 2 services). If you need to, add more services at the end of the body of the care card.<p>
+  <h2 id="accessibility">Accessibility</h2>
+  <p>People with visual disabilities may not be able to recognise care cards by their colour. Use clearly worded headings to help them.</p>
+  <p>We also add hidden text to the care card header to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.</p>
+  <p class="rich-text"><code>&lt;h3&gt;&lt;span class="visually-hidden"&gt;Non urgent care:</span> Speak to a GP if&lt;h3&gt;</code></p>
+  <p>If people use high contrast mode in Windows, the care card colours don't show, so people can't distinguish them. To make the cards look important, we use a border in this mode to make them stand out from the rest of the content.</p>
+
+  <h2>Research</h2>
+  <p>The care card design has tested well in long content pages. We've tested it in content in lots of labs and users scanning the page have stopped to read the cards.</p>
+  <p>We haven't tested care cards in transactional services and do not recommend using them. If you use a care card in a transactional service, please test it with users and let us know what you find.</p>
+  <p>We've tested care cards with 1 call to action, for example "Speak to a GP if:". If you use more than 1 action, please test it and share your research findings with us.</p>
+  <p>We found that users overlook text between care cards, or between care cards and warning callouts, when they are close to each other.</p>
+  <p>Accessibility testing showed up some issues around communicating the importance of the cards with hidden text, which we've dealt with. <a href="#accessibility">See the Accessibility section.</a></p>
+
 {% endblock %}

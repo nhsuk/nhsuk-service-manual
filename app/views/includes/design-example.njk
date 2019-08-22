@@ -63,7 +63,7 @@
           </div>
           {% endif %}
           <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              <a class="app-link--copy" href="" aria-live="assertive">Copy</a>
+              <a class="app-link--copy" href="" aria-live="assertive">Copy code</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}
               </code></pre>

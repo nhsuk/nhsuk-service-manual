@@ -1,44 +1,17 @@
 {% set pageTitle = 'Contents list' %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = 'Use contents lists to allow users to navigate between related pages, for example about a single condition.' %}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'breadcrumb/macro.njk' import breadcrumb %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  {{ designExample({
+    type: 'contents-list'
+  }) }}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
-    {{ designExample({
-      type: 'contents-list'
-    }) }}
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
   <h2>When to use a contents list</h2>
   <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
   <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
@@ -53,17 +26,12 @@
 
   <h2>How to use a contents list</h2>
   <p>Use the contents list at the top of the page together with pagination at the bottom of each page.</p>
-
   <p>Keep links short and descriptive. Links that are too long (more than 2 lines) make it difficult for users to scan the list.</p>
-
   <p>Page titles must reflect the subject of the page (for example, "Treatment"), with the overall subject of the section as the sub-header (for example, "Age-related macular degeneration (AMD)"). This is so users are clear where they have navigated to.</p>
-
 
   <h3>Accessibility</h3>
   <p class="rich-text">The list of links is surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pages in this guide</code>. Screen readers that support this attribute will read this out and that makes it clear what the list of links is.</p>
-
   <p class="rich-text">There is also a visually hidden heading title <code>Contents</code> which screen readers will read as a heading to the links.</p>
-
   <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
 
   <h2>Research</h2>
@@ -72,29 +40,4 @@
   <p>The active link formatting helped users know where they were.</p>
   <p>Some users said that the page titles helped them orientate themselves, so they knew they were in the right place. Some felt that the links helped them understand what information there was and choose what was relevant to them.</p>
 
-  <h2>Discuss</h2>
-  <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/25">Discuss contents lists on GitHub</a></p>
-
-  <h2>Get in touch</h2>
-  <p>If you have a question:</p>
-  <ul>
-    <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-    <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-  </ul>
-
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
-  </div>
-
-  {{ panel({
-  "label": "Similar components",
-  "HTML": "<ul>
-            <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
-            <li><a href='/service-manual/styles-components-patterns/review-date'>Review date</a></li>
-            <li><a href='/service-manual/styles-components-patterns/skip-link'>Skip link</a></li>
-          </ul>"
-  }) }}
-
-  </div>
-</div>
 {% endblock %}

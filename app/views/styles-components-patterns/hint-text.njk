@@ -1,78 +1,18 @@
 {% set pageTitle = "Hint text" %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = "Use hint text to help users understand a question."%}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'hint/macro.njk' import hint %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  {{ designExample({
+    type: 'hint-text'
+  }) }}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Hint text</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use hint text to help users understand a question.</p>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
-    {{ designExample({
-      type: 'hint-text'
-    }) }}
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>How to use hint text</h2>
-    <p>Use hint text that’s relevant for most of your users - like where to find information or how their data will be used.</p>
+  <h2>How to use hint text</h2>
+  <p>Use hint text that’s relevant for most of your users - like where to find information or how their data will be used.</p>
 
-    <h2>Research</h2>
-    <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your research findings</a>.</p>
-
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/17">Discuss hint text on GitHub</a></p>
-
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
-    <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-    </ul>
-
-    <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
-    </div>
-
-    {{ panel({
-    "label": "Similar components",
-    "HTML": "<ul>
-              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
-              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
-              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
-              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
-            </ul>"
-    }) }}
-
-  </div>
-</div>
 {% endblock %}

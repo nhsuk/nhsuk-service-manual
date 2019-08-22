@@ -1,108 +1,50 @@
 {% set pageTitle = "Error message" %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = "Use an error message when there is a validation error. Explain what went wrong and how to fix it." %}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'error-message/macro.njk' import errorMessage %}
-{% from 'date-input/macro.njk' import dateInput %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  {{ designExample({
+    type: 'error-message'
+  }) }}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Error message</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use an error message when there is a validation error. Explain what went wrong and how to fix it.</p>
-  </div>
-</div>
+  <h3>Error message in context</h3>
+  {{ designExample({
+    type: 'error-message-in-context'
+  }) }}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
-    <h3>Error message</h3>
-    {{ designExample({
-      type: 'error-message'
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-full">
-    <h3>Error message in context</h3>
-    {{ designExample({
-      type: 'error-message-in-context'
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>When to use error messages </h2>
-    <p>Show an error message next to the field - as well as in the <a href="patterns/error-summary/">error summary</a> - when there is a validation error.</p>
-    <p>Use standard messages for different components. <a href="https://design-system.service.gov.uk/components/error-message/">GOV.UK have some good examples</a>.</p>
-    <p>Follow GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure">advice on structuring forms</a> and design your service to be easy to use and understand so someone never sees an error message.</p>
-    <h2>When not to use error messages</h2>
-    <p>As the <a href="https://design-system.service.gov.uk/components/error-message/">GOV.UK design system</a> says, only display an error when someone tries to move to the next part of the service. Do not show error messages:</p>
-    <ul>
-      <li>when users select or tab to a field</li>
-      <li>as they are typing</li>
-      <li>when they move away from a field</li>
-    </ul>
-    <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
-    <ul>
-      <li>explains why you cannot accept the entry or selection</li>
-      <li>tells them what to do next</li>
-      <li>includes a way to leave the transaction</li>
-    </ul>
-    <h2>How to use error messages</h2>
-    <p>Read more about <a href="https://design-system.service.gov.uk/components/error-message#how-it-works">how error messages work</a> and on how to use them effectively on the GOV.UK design system.</p>
-    <h2>Research</h2>
+  <h2>When to use error messages </h2>
+  <p>Show an error message next to the field - as well as in the <a href="patterns/error-summary/">error summary</a> - when there is a validation error.</p>
+  <p>Use standard messages for different components. <a href="https://design-system.service.gov.uk/components/error-message/">GOV.UK have some good examples</a>.</p>
+  <p>Follow GOV.UK's <a href="https://www.gov.uk/service-manual/design/form-structure">advice on structuring forms</a> and design your service to be easy to use and understand so someone never sees an error message.</p>
 
-    <p>GOV.UK research on error messages showed users:</p>
-      <ul>
-        <li>understood what went wrong</li>
-        <li>knew how to fix the problem</li>
-        <li>were able to recover from the error</li>
-      </ul>
-     <p>Get in touch to <a href="/service-manual/contribute">share your research findings</a> if you've used error messages.</p>
+  <h2>When not to use error messages</h2>
+  <p>As the <a href="https://design-system.service.gov.uk/components/error-message/">GOV.UK design system</a> says, only display an error when someone tries to move to the next part of the service. Do not show error messages:</p>
+  <ul>
+    <li>when users select or tab to a field</li>
+    <li>as they are typing</li>
+    <li>when they move away from a field</li>
+  </ul>
+  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
+  <ul>
+    <li>explains why you cannot accept the entry or selection</li>
+    <li>tells them what to do next</li>
+    <li>includes a way to leave the transaction</li>
+  </ul>
 
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/12">Discuss error messages on GitHub</a></p>
+  <h2>How to use error messages</h2>
+  <p>Read more about <a href="https://design-system.service.gov.uk/components/error-message#how-it-works">how error messages work</a> and on how to use them effectively on the GOV.UK design system.</p>
 
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
-    <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-    </ul>
+  <h2>Research</h2>
+  <p>GOV.UK research on error messages showed users:</p>
+  <ul>
+    <li>understood what went wrong</li>
+    <li>knew how to fix the problem</li>
+    <li>were able to recover from the error</li>
+  </ul>
 
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: February 2019</p>
-    </div>
-
-    {{ panel({
-    "label": "Similar components",
-    "HTML": "<ul>
-              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
-              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
-              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
-              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
-              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
-            </ul>"
-    }) }}
-
-  </div>
-</div>
 {% endblock %}
