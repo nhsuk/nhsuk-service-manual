@@ -1,49 +1,67 @@
+{% set stylesNavigation = [
+  { title: "Colour", url: "/service-manual/styles-components-patterns/colour" },
+  { title: "Icons", url: "/service-manual/styles-components-patterns/icons" },
+  { title: "Layout", url: "/service-manual/styles-components-patterns/layout" },
+  { title: "Spacing", url: "/service-manual/styles-components-patterns/spacing" },
+  { title: "Typography", url: "/service-manual/styles-components-patterns/typography" }
+] %}
+
+{% set componentsNavigation = [
+  { title: "Action link", url: "/service-manual/styles-components-patterns/action-link" },
+  { title: "Back link", url: "/service-manual/styles-components-patterns/back-link" },
+  { title: "Breadcrumbs", url: "/service-manual/styles-components-patterns/breadcrumbs" },
+  { title: "Buttons", url: "/service-manual/styles-components-patterns/buttons" },
+  { title: "Care cards", url: "/service-manual/styles-components-patterns/care-cards" },
+  { title: "Checkboxes", url: "/service-manual/styles-components-patterns/checkboxes" },
+  { title: "Contents lists", url: "/service-manual/styles-components-patterns/contents-lists" },
+  { title: "Date input", url: "/service-manual/styles-components-patterns/date-input" },
+  { title: "Details", url: "/service-manual/styles-components-patterns/details" },
+  { title: "Do and Don't list", url: "/service-manual/styles-components-patterns/do-and-dont-list" },
+  { title: "Error message", url: "/service-manual/styles-components-patterns/error-message" },
+  { title: "Error summary", url: "/service-manual/styles-components-patterns/error-summary" },
+  { title: "Expander", url: "/service-manual/styles-components-patterns/expander" },
+  { title: "Fieldset", url: "/service-manual/styles-components-patterns/fieldset" },
+  { title: "Footer", url: "/service-manual/styles-components-patterns/footer" },
+  { title: "Header", url: "/service-manual/styles-components-patterns/header" },
+  { title: "Hint text", url: "/service-manual/styles-components-patterns/hint-text" },
+  { title: "Images", url: "/service-manual/styles-components-patterns/images" },
+  { title: "Inset text", url: "/service-manual/styles-components-patterns/inset-text" },
+  { title: "Pagination", url: "/service-manual/styles-components-patterns/pagination" },
+  { title: "Radios", url: "/service-manual/styles-components-patterns/radios" },
+  { title: "Review date", url: "/service-manual/styles-components-patterns/review-date" },
+  { title: "Select", url: "/service-manual/styles-components-patterns/select" },
+  { title: "Skip link", url: "/service-manual/styles-components-patterns/skip-link" },
+  { title: "Table", url: "/service-manual/styles-components-patterns/table" },
+  { title: "Text input", url: "/service-manual/styles-components-patterns/text-input" },
+  { title: "Textarea", url: "/service-manual/styles-components-patterns/textarea" },
+  { title: "Warning callout", url: "/service-manual/styles-components-patterns/warning-callout" }
+] %}
+
+{% set patternsNavigation = [
+  { title: "A to Z", url: "/service-manual/styles-components-patterns/a-to-z" },
+  { title: "Mini-hub", url: "/service-manual/styles-components-patterns/mini-hub" }
+] %}
+
 <nav class="app-side-nav">
   {%- if pageSection == 'Styles' %}
   <ul class="nhsuk-list app-side-nav__list">
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/colour">Colour</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/icons">Icons</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/layout">Layout</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/spacing">Spacing</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/typography">Typography</a></li>
+  {% for item in stylesNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
   </ul>
   {% endif %}
   {%- if pageSection == 'Components' %}
-  <ul class="nhsuk-list app-side-nav__list">
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/action-link">Action link</a></li>
-    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/back-link">Back link</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/breadcrumbs">Breadcrumbs</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/buttons">Buttons</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/care-cards">Care cards</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/checkboxes">Checkboxes</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/contents-list">Contents list</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/date-input">Date input</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/details">Details</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/do-and-dont-list">Do and Don't lists</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/error-message">Error message</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/error-summary">Error summary</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/expander">Expander</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/fieldset">Fieldset</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/footer">Footer</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/header">Header</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/hint-text">Hint text</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/images">Images</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/inset-text">Inset text</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/pagination">Pagination</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/radios">Radios</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/review-date">Review date</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/select">Select</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/skip-link">Skip link</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/table">Table</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/text-input">Text input</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/textarea">Textarea</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/warning-callout">Warning callout</a></li>
+  <ul class="nhsuk-list app-side-nav__list"></li>
+  {% for item in componentsNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
   </ul>
   {% endif %}
   {%- if pageSection == 'Patterns' %}
   <ul class="nhsuk-list app-side-nav__list">
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/a-to-z">A to Z</a></li>
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/styles-components-patterns/mini-hub">Mini-hub</a></li>
+  {% for item in patternsNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
   </ul>
   {% endif %}
 </nav>
