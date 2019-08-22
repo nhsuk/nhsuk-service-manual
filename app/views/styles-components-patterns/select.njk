@@ -1,79 +1,21 @@
 {% set pageTitle = "Select" %}
-{% set pageSection = 'Styles, components and patterns' %}
+{% set pageSection = 'Components' %}
 {% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
+{% set githubIssue = 'Back link URL' %}
+{% set githubFork = 'Back link URL' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'select/macro.njk' import select %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
-{% endblock %}
+  {{ designExample({
+    type: 'select'
+  }) }}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Select</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use select to let users choose an option from a long list but only use it as a last resort.</p>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
-    {{ designExample({
-      type: 'select'
-    }) }}
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2 id="how-it-works">How to use select</h2>
-    <p>The select component allows users to choose an option from a long list. Before using it, try other questions which will allow you to present users with fewer options. Consider using a different solution, such as <a href="/service-manual/styles-components-patterns/radios">radios</a>.</p>
+  <h2 id="how-it-works">How to use select</h2>
+  <p>The select component allows users to choose an option from a long list. Before using it, try other questions which will allow you to present users with fewer options. Consider using a different solution, such as <a href="/service-manual/styles-components-patterns/radios">radios</a>.</p>
 
-    <h2>Research</h2>
-    <p>Watch a video about how some users struggle with selects: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">Alice Barlett: Burn your select tags</a>.</p>
+  <h2>Research</h2>
+  <p>Watch a video about how some users struggle with selects: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">Alice Barlett: Burn your select tags</a>.</p>
 
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/20">Discuss select on GitHub</a></p>
-
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
-    <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-    </ul>
-
-    <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2019</p>
-    </div>
-
-    {{ panel({
-    "label": "Similar components",
-    "HTML": "<ul>
-              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
-              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
-              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
-              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
-              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
-              <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
-            </ul>"
-    }) }}
-
-  </div>
-</div>
 {% endblock %}
