@@ -2,97 +2,71 @@
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How to handle links and PDFs.' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'tables/macro.njk' import table %}
-{% from 'review-date/macro.njk' import reviewDate %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/content",
-  text: "Content style guide"
-}) }}
-{% endblock %}
-
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>Links</h2>
-    <p>Make links active, specific and concise.</p>
-    <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
-    <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
-    {{ table({
-      panel: false,
-      firstCellIsHeader: false,
-      head: [
+  <h2>Links</h2>
+  <p>Make links active, specific and concise.</p>
+  <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
+  <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
+  {{ table({
+    panel: false,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "We would use:"
+      },
+      {
+        text: "We would not use:"
+      }
+    ],
+    rows: [
+      [
         {
-          text: "We would use:"
+          text: "symptoms of asthma"
         },
         {
-          text: "We would not use:"
+          text: "symptoms"
         }
       ],
-      rows: [
-        [
-          {
-            text: "symptoms of asthma"
-          },
-          {
-            text: "symptoms"
-          }
-        ],
-        [
-          {
-            text: "more about asthma"
-          },
-          {
-            text: "more information"
-          }
-        ]
+      [
+        {
+          text: "more about asthma"
+        },
+        {
+          text: "more information"
+        }
       ]
-    }) }}
-    <h3>External links</h3>
-    <p>Avoid using links or buttons that open new windows or tabs.</p>
-    <p>There are 2 exceptions to this:</p>
-    <ul>
-      <li>for instructions or other help with filling in a form (for example, a date picker)</li>
-      <li>if a user has logged into a secure site and the link would take them away from it</li>
-    </ul>
-    <p><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">Read more about opening new windows and tabs on W3C</a>.</p>
-    <p>If links do go to a new tab or window, warn the user by saying: "Link name (opens in new window)". (Include all of this in the link text.)</p>
+    ]
+  }) }}
 
-    <h2>PDFs</h2>
-    <p>PDFs can be bad for accessibility. Often they do not work well with assistive technologies like screen readers.</p>
-    <h3>Publishing PDFs</h3>
-    <p>We avoid publishing PDFs. Wherever possible, we create content in HTML. If we do need to publish a PDF, we provide an HTML version as well.</p>
-    <p>Any PDFs must meet level AA of the <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>.</p>
-    <p>Check the GOV.UK guidance on <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">publishing accessible documents</a>.</p>
-    <h3>Linking to PDFs</h3>
-    <p>We prefer to link to an HTML page containing the PDF. That way, if the PDF is changed or updated, users can still find the latest information.<p>
-    <p>If we need to link to a PDF, we:</p>
-    <ul>
-      <li>open it in the same tab</li>
-      <li>add "PDF, [file size in MB or KB]" in brackets to the end of the link text, for example - "weight loss progress chart (PDF, 545KB)"</li>
-    </ul>
-    <p>Round up values over 1MB to 2 decimal places to keep it as accurate as possible.</p>
-    <p>Round up values under 1MB to the nearest KB. For example, round up 835.74KB to 836KB.</p>
-    <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: August 2019</p>
-    </div>
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+  <h3>External links</h3>
+  <p>Avoid using links or buttons that open new windows or tabs.</p>
+  <p>There are 2 exceptions to this:</p>
+  <ul>
+    <li>for instructions or other help with filling in a form (for example, a date picker)</li>
+    <li>if a user has logged into a secure site and the link would take them away from it</li>
+  </ul>
+  <p><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">Read more about opening new windows and tabs on W3C</a>.</p>
+  <p>If links do go to a new tab or window, warn the user by saying: "Link name (opens in new window)". (Include all of this in the link text.)</p>
+
+  <h2>PDFs</h2>
+  <p>PDFs can be bad for accessibility. Often they do not work well with assistive technologies like screen readers.</p>
+
+  <h3>Publishing PDFs</h3>
+  <p>We avoid publishing PDFs. Wherever possible, we create content in HTML. If we do need to publish a PDF, we provide an HTML version as well.</p>
+  <p>Any PDFs must meet level AA of the <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>.</p>
+  <p>Check the GOV.UK guidance on <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">publishing accessible documents</a>.</p>
+
+  <h3>Linking to PDFs</h3>
+  <p>We prefer to link to an HTML page containing the PDF. That way, if the PDF is changed or updated, users can still find the latest information.<p>
+  <p>If we need to link to a PDF, we:</p>
+  <ul>
+    <li>open it in the same tab</li>
+    <li>add "PDF, [file size in MB or KB]" in brackets to the end of the link text, for example - "weight loss progress chart (PDF, 545KB)"</li>
+  </ul>
+  <p>Round up values over 1MB to 2 decimal places to keep it as accurate as possible.</p>
+  <p>Round up values under 1MB to the nearest KB. For example, round up 835.74KB to 836KB.</p>
+
 {% endblock %}

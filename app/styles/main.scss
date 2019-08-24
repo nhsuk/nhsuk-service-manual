@@ -175,7 +175,7 @@ h1 + .nhsuk-lede-text--small {
 
   p,
   ul {
-    max-width: 39em;
+    max-width: 37em;
   }
 
 }
@@ -194,7 +194,8 @@ h1 + .nhsuk-lede-text--small {
 }
 
 .app-side-nav__item {
-  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 
 .app-side-nav__item--current {
@@ -208,7 +209,6 @@ h1 + .nhsuk-lede-text--small {
 }
 
 .app-side-nav__link {
-  @include nhsuk-responsive-margin(3, 'bottom');
   text-decoration: none;
 
   &:visited {

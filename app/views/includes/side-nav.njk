@@ -87,7 +87,6 @@
   {% for item in contentNavigation %}
     <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
   {% endfor %}
-  </ul>
   {% endif %}
   {%- if pageSection == 'Core styles' %}
   <ul class="nhsuk-list app-side-nav__list">
