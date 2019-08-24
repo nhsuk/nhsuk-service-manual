@@ -1,76 +1,46 @@
 {% set pageTitle = 'Getting started with accessibility' %}
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'Things you can do to learn about accessibility.' %}
+{% set contributors = 'False' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
-{% endblock %}
+{% block mainContent %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
-  </div>
-</div>
+  <h2 id="book-an-accessibility-training-session">Book an accessibility training session</h2>
+  <p>The Government Digital Service (GDS) runs introductions to accessibility for people who work in public sector services.</p>
+  <p><a href="https://designnotes.blog.gov.uk/events-and-training-in-the-user-centred-design-community/">Find a cross-government training event</a>. </p>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+  <h2 id="learn-on-your-own">Learn on your own</h2>
+  <p>You can learn a lot through reading blogs and watching videos. There are some good resources online.</p>
 
-    <h2 id="book-an-accessibility-training-session">Book an accessibility training session</h2>
-    <p>The Government Digital Service (GDS) runs introductions to accessibility for people who work in public sector services.</p>
-    <p><a href="https://designnotes.blog.gov.uk/events-and-training-in-the-user-centred-design-community/">Find a cross-government training event</a>. </p>
-
-    <h2 id="learn-on-your-own">Learn on your own</h2>
-    <p>You can learn a lot through reading blogs and watching videos. There are some good resources online.</p>
-
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-        Online resources
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <ul>
-          <li><a href="https://accessibility.blog.gov.uk/category/accessibility-and-me/">Accessibility and me</a> (GOV.UK blogs) - a series of interviews with people with access needs</li>
-          <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/">Dos and don'ts on designing for accessibility</a> (GOV.UK blog) with GOV.UK posters about designing inclusive services</li>
-          <li><a href="https://accessibility.blog.gov.uk/">GOV.UK accessibility blog</a></li>
-          <li><a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles">Understanding disabilities and impairments: user profiles</a> (GOV.UK) - a set of profiles highlighting common barriers users face when accessing digital services. Please share any accessibility user profiles for NHS services on <a href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">our public Slack channel</a>.</li>
-          <li><a href="https://www.w3.org/WAI/perspective-videos/">Web accessibility perspectives</a> (W3C) - a series of videos about how accessible design can help people with disabilities</li>
-        </ul>
-        </div>
-    </details>
-
-    <h2 id="book-a-session-in-an-accessibility-lab">Book a session in an accessibility lab</h2>
-    <p>An accessibility lab will give you hands-on experience of some of the technologies that people use with online services. Some labs also have goggles that simulate visual impairments and headphones to simulate hearing loss.</p>
-    <p>Public sector organisations can <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMU-SXWtBLcq9y3fdMXPNDHKIVwlcnXwveUEtJpgYw9zEOGg/viewform">book a visit to the GDS "empathy" lab</a>. NHS Digital is setting up its own accessibility lab. We'll post details here when it's ready.</p>
-
-    <h2 id="try-out-assistive-technologies">Try out assistive technologies</h2>
-    <p>Get some understanding of how different technologies work. Use a screenreader, for example, and check how your web pages or other websites perform.</p>
-    <p>If you have a Mac, <a href="https://www.apple.com/uk/accessibility/mac/vision/">try out VoiceOver</a>, or <a href="https://www.nvaccess.org/download/">download NVDA for Windows</a>.</p>
-    <p>If you're not confident about doing this, book a session in an accessibility lab first.</p>
-
-    <h2 id="talk-to-other-people-with-an-interest-in-accessibility">Talk to other people with an interest in accessibility</h2>
-    <p>Join the <a href="https://www.gov.uk/service-manual/communities/accessibility-community">GOV.UK accessibility community</a> or talk to NHS colleagues on our <a href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">public Slack workspace</a> to get advice and support, stay up to date and share examples.</p>
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+      Online resources
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <ul>
+        <li><a href="https://accessibility.blog.gov.uk/category/accessibility-and-me/">Accessibility and me</a> (GOV.UK blogs) - a series of interviews with people with access needs</li>
+        <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/">Dos and don'ts on designing for accessibility</a> (GOV.UK blog) with GOV.UK posters about designing inclusive services</li>
+        <li><a href="https://accessibility.blog.gov.uk/">GOV.UK accessibility blog</a></li>
+        <li><a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles">Understanding disabilities and impairments: user profiles</a> (GOV.UK) - a set of profiles highlighting common barriers users face when accessing digital services. Please share any accessibility user profiles for NHS services on <a href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">our public Slack channel</a>.</li>
+        <li><a href="https://www.w3.org/WAI/perspective-videos/">Web accessibility perspectives</a> (W3C) - a series of videos about how accessible design can help people with disabilities</li>
+      </ul>
     </div>
+  </details>
 
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+  <h2 id="book-a-session-in-an-accessibility-lab">Book a session in an accessibility lab</h2>
+  <p>An accessibility lab will give you hands-on experience of some of the technologies that people use with online services. Some labs also have goggles that simulate visual impairments and headphones to simulate hearing loss.</p>
+  <p>Public sector organisations can <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMU-SXWtBLcq9y3fdMXPNDHKIVwlcnXwveUEtJpgYw9zEOGg/viewform">book a visit to the GDS "empathy" lab</a>. NHS Digital is setting up its own accessibility lab. We'll post details here when it's ready.</p>
+
+  <h2 id="try-out-assistive-technologies">Try out assistive technologies</h2>
+  <p>Get some understanding of how different technologies work. Use a screenreader, for example, and check how your web pages or other websites perform.</p>
+  <p>If you have a Mac, <a href="https://www.apple.com/uk/accessibility/mac/vision/">try out VoiceOver</a>, or <a href="https://www.nvaccess.org/download/">download NVDA for Windows</a>.</p>
+  <p>If you're not confident about doing this, book a session in an accessibility lab first.</p>
+
+  <h2 id="talk-to-other-people-with-an-interest-in-accessibility">Talk to other people with an interest in accessibility</h2>
+  <p>Join the <a href="https://www.gov.uk/service-manual/communities/accessibility-community">GOV.UK accessibility community</a> or talk to NHS colleagues on our <a href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">public Slack workspace</a> to get advice and support, stay up to date and share examples.</p>
+
 {% endblock %}

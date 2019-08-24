@@ -1,3 +1,28 @@
+{% set accessibilityEveryoneNavigation = [
+  { title: "How to make digital services accessible", url: "/service-manual/accessibility/how-to-make-digital-services-accessible" },
+  { title: "Getting started with accessibility", url: "/service-manual/accessibility/getting-started" }
+] %}
+
+{% set accessibilityActivitiesNavigation = [
+  { title: "Product and delivery", url: "/service-manual/accessibility/product-and-delivery" },
+  { title: "User research", url: "/service-manual/accessibility/user-research" },
+  { title: "Content", url: "/service-manual/accessibility/content" },
+  { title: "Design", url: "/service-manual/accessibility/design" },
+  { title: "Development", url: "/service-manual/accessibility/development" },
+  { title: "Testing", url: "/service-manual/accessibility/testing" }
+] %}
+
+{% set contentNavigation = [
+  { title: "How we write", url: "/service-manual/content/how-we-write" },
+  { title: "Voice and tone", url: "/service-manual/content/voice-and-tone" },
+  { title: "Inclusive language", url: "/service-manual/content/inclusive-language" },
+  { title: "A to Z of NHS health writing", url: "/service-manual/content/a-to-z-of-NHS-health-writing" },
+  { title: "Health literacy", url: "/service-manual/content/health-literacy" },
+  { title: "Numbers, measurements, dates and time", url: "/service-manual/content/numbers-measurements-dates-time" },
+  { title: "Formatting and punctuation", url: "/service-manual/content/formatting-and-punctuation" },
+  { title: "Links and PDFs", url: "/service-manual/content/links-and-pdfs" }
+] %}
+
 {% set stylesNavigation = [
   { title: "Colour", url: "/service-manual/styles-components-patterns/colour" },
   { title: "Icons", url: "/service-manual/styles-components-patterns/icons" },
@@ -43,7 +68,28 @@
 ] %}
 
 <nav class="app-side-nav">
-  {%- if pageSection == 'Styles' %}
+  {%- if pageSection == 'Accessibility' %}
+  <h2 class="app-side-nav__heading">What everyone needs to know</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in accessibilityEveryoneNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  <h2 class="app-side-nav__heading">Guidance for different activities</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in accessibilityActivitiesNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Content style guide' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in contentNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Core styles' %}
   <ul class="nhsuk-list app-side-nav__list">
   {% for item in stylesNavigation %}
     <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>

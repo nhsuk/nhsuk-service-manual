@@ -1,53 +1,21 @@
-{% set pageTitle = 'Content: accessibility guidance' %}
+{% set pageTitle = 'Content' %}
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'What content designers, writers and editors need to do to make digital services accessible.' %}
+{% set contributors = 'False' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
-{% endblock %}
+{% block mainContent %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
-  </div>
-</div>
+  {% include './partials/write-content-thats-easy-to-understand.njk' %}
+  {% include './partials/set-page-titles.njk' %}
+  {% include './partials/use-headings-correctly.njk' %}
+  {% include './partials/write-good-link-and-form-control-names.njk' %}
+  {% include './partials/label-form-fields-clearly.njk' %}
+  {% include './partials/highlight-errors-in-forms.njk' %}
+  {% include './partials/use-alternative-text-for-images-in-content.njk' %}
+  {% include './partials/use-tables-to-show-relationships-between-data.njk' %}
+  {% include './partials/make-video-and-multimedia-accessible.njk' %}
+  {% include './partials/do-not-rely-on-colour-or-position-alone.njk' %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
-    {% include './partials/write-content-thats-easy-to-understand.njk' %}
-    {% include './partials/set-page-titles.njk' %}
-    {% include './partials/use-headings-correctly.njk' %}
-    {% include './partials/write-good-link-and-form-control-names.njk' %}
-    {% include './partials/label-form-fields-clearly.njk' %}
-    {% include './partials/highlight-errors-in-forms.njk' %}
-    {% include './partials/use-alternative-text-for-images-in-content.njk' %}
-    {% include './partials/use-tables-to-show-relationships-between-data.njk' %}
-    {% include './partials/make-video-and-multimedia-accessible.njk' %}
-    {% include './partials/do-not-rely-on-colour-or-position-alone.njk' %}
-
-    {% include './partials/get-in-touch-accessibility.njk' %}
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
 {% endblock %}

@@ -70,6 +70,7 @@
   border-bottom: 0;
   $root: &;
   display: none;
+  max-width: 100% !important;
 
   @include mq($from: tablet) {
     display: block;

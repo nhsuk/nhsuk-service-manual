@@ -1,32 +1,11 @@
 {% set pageTitle = 'What all NHS services need to do about accessibility' %}
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'The NHS is for everyone, so NHS digital services should be accessible to everyone too.' %}
+{% set contributors = 'False' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
-{% endblock %}
-
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+{% block mainContent %}
 
     <h2 id="accessibility-and-the-law">Accessibility and the law</h2>
     <p>If your service isn’t accessible to everyone who needs it, you may be breaking the <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">2010 Equality Act</a>.</p>
@@ -52,13 +31,4 @@
     <p>When you’re working on NHS services, think about how people with different needs might use what you’re making.</p>
     <p>For example, can someone with dyslexia read your content easily? Or how would someone with a broken arm interact on a mobile device?</p>
 
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
 {% endblock %}

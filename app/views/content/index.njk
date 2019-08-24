@@ -1,72 +1,22 @@
 {% set pageTitle = 'Content style guide' %}
+{% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How to write for digital NHS services.' %}
+{% set contributors = 'False' %}
+{% set landingPage = 'true' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% block body %}
-<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l">{{pageDescription}}</p>
-  </div>
-</div>
+{% block mainContent %}
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-8">
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/how-we-write">How we write</a></h2>
-    <p>Our general principles.</p>
-  </div>
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/voice-and-tone">Voice and tone</a></h2>
-    <p>The way we talk in different contexts.</p>
-  </div>
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/inclusive-language">Inclusive language</a></h2>
-    <p>Writing for everyone in a way that's inclusive and respectful.</p>
-  </div>
-</div>
+  <p>This style guide is for anyone creating content for the NHS, to help make things clear and consistent across all of our services.</p>
+  <p>It's meant as a guide, not a rulebook. You're welcome to adapt a style pattern if it does not meet your users' needs.</p>
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></h2>
-    <p>Words and phrases which make our content easy to understand.</p>
-  </div>
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/health-literacy">Health literacy</a></h2>
-    <p>Why it's important and what to do about it.</p>
-  </div>
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a></h2>
-    <p>With dosage, temperature, and statistics.</p>
-  </div>
-</div>
+  <h2>In progress</h2>
+  <p>The guide will grow and change as we learn more about the language and writing styles that work best for our users.</p>
+  <p>Join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a> to hear about and discuss changes.</p>
+  <p>Check the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK A to Z style guide</a> and <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">GOV.UK content design guide</a> for any points of style that you do not find here. If it's not there, we recommend using the Oxford Dictionary for Writers and Editors.</p>
 
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/formatting-and-punctuation">Formatting and punctuation</a></h2>
-    <p>From abbreviations to question marks.</p>
-  </div>
-  <div class="nhsuk-grid-column-one-third">
-    <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3"><a href="/service-manual/content/links-and-pdfs">Links and PDFs</a></h2>
-    <p>Writing good links and making PDFs accessible.</p>
-  </div>
-</div>
+  <h2>Contribute</h2>
+  <p>Let us know <a href="/service-manual/contribute">if you design a new content pattern or find new evidence</a> on content style.</p>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
-    <h2>Using the style guide</h2>
-    <p>This style guide is for anyone creating content for the NHS, to help make things clear and consistent across all of our services.</p>
-    <p>It's meant as a guide, not a rulebook. You're welcome to adapt a style pattern if it does not meet your users' needs.</p>
-    <h2 class="nhsuk-u-margin-top-8">In progress</h2>
-    <p>The guide will grow and change as we learn more about the language and writing styles that work best for our users.</p>
-    <p>Join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a> to hear about and discuss changes.</p>
-    <p>Check the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK A to Z style guide</a> and <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">GOV.UK content design guide</a> for any points of style that you do not find here. If it's not there, we recommend using the Oxford Dictionary for Writers and Editors.</p>
-
-    <h2 class="nhsuk-u-margin-top-8">Contribute</h2>
-    <p>Let us know <a href="/service-manual/contribute">if you design a new content pattern or find new evidence</a> on content style.</p>
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: August 2019</p>
-    </div>
-  </div>
-</div>
 {% endblock %}
