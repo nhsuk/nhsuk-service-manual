@@ -1,3 +1,9 @@
+{% set getStartedNavigation = [
+  { title: "Design principles", url: "#" },
+  { title: "Prototyping", url: "#" },
+  { title: "Production code", url: "#" }
+] %}
+
 {% set accessibilityEveryoneNavigation = [
   { title: "How to make digital services accessible", url: "/service-manual/accessibility/how-to-make-digital-services-accessible" },
   { title: "Getting started with accessibility", url: "/service-manual/accessibility/getting-started" }
@@ -67,7 +73,22 @@
   { title: "Mini-hub", url: "/service-manual/styles-components-patterns/mini-hub" }
 ] %}
 
+{% set communityNavigation = [
+  { title: "Backlog", url: "#" },
+  { title: "Propose a content change using GitHub", url: "#" },
+  { title: "Propose a component or pattern", url: "#" },
+  { title: "Develop a component or pattern", url: "#" },
+  { title: "Contribution criteria", url: "#" },
+  { title: "Working group", url: "#" }
+] %}
+
 <nav class="app-side-nav">
+  {%- if pageSection == 'Get started' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in getStartedNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  {% endif %}
   {%- if pageSection == 'Accessibility' %}
   <h2 class="app-side-nav__heading">What everyone needs to know</h2>
   <ul class="nhsuk-list app-side-nav__list">
@@ -105,6 +126,13 @@
   {%- if pageSection == 'Patterns' %}
   <ul class="nhsuk-list app-side-nav__list">
   {% for item in patternsNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Community' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in communityNavigation %}
     <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
   {% endfor %}
   </ul>
