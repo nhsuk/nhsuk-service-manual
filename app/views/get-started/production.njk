@@ -1,0 +1,34 @@
+{% set pageTitle = 'Production code' %}
+{% set pageSection = 'Get started' %}
+{% set pageDescription = 'The code you need to start building user interfaces for NHS websites and services.' %}
+{% set contributors = 'false' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  <h2>About the NHS.UK frontend library</h2>
+  <p>The frontend library contains the production code for the NHS website. We've made it public in an open code "repository" in GitHub.</p>
+
+  <h3>Why use the frontend library?</h3>
+  <p>It will help you build responsive websites with a consistent NHS look and feel. It saves you duplicating effort and should help you build services faster, saving the NHS money.</p>
+
+  <h3>What are the advantages of this code?</h3>
+  <p>The code you get is:</p>
+  <ul>
+    <li><strong>high quality</strong> - it's been checked by the <a href="https://gds.blog.gov.uk/about/">Government Digital Service</a> and industry CSS experts</li>
+    <li><strong>user centred</strong> - it's designed to meet user needs and tested with real users</li>
+    <li><strong>well designed</strong> - it reflects the NHS brand and values</li>
+    <li><strong>accessible</strong> - it meets WCAG AA standard and AAA where possible</li>
+    <li><strong>tested</strong> - across different browsers and devices</li>
+    <li><strong>modern</strong> - it's built with HTML5 semantics</li>
+    <li><strong>responsive</strong> - with a mobile-first design</li>
+    <li><strong>robust</strong> - it has browser support for earlier versions and no-js fallbacks</li>
+    <li><strong>modular</strong> - you choose the components you need</li>
+    <li><strong>versioned</strong> - you only need to upgrade when you're ready</li>
+    <li><strong>optimised</strong> - so that pages load quickly</li>
+    <li><strong>open source</strong> - we share our learning and are transparent in our decisions</li>
+    <li><strong>up-to-date and supported</strong> - it's maintained by developers working on the NHS website and continuously improved by a community of people committed to sharing quality code in the NHS</li>
+  </ul>
+
+{% endblock %}

@@ -9,6 +9,7 @@
         {% else %}
         <li class="nhsuk-breadcrumb__item">
           <a class="nhsuk-breadcrumb__link" href="
+          {%- if pageSection == 'Get started' %}/service-manual/get-started{% endif %}
           {%- if pageSection == 'Core styles' %}/service-manual/styles-components-patterns/styles{% endif %}
           {%- if pageSection == 'Components' %}/service-manual/styles-components-patterns/components{% endif %}
           {%- if pageSection == 'Patterns' %}/service-manual/styles-components-patterns/patterns{% endif %}
@@ -22,6 +23,7 @@
       <p class="nhsuk-breadcrumb__back">
         <a class="nhsuk-breadcrumb__backlink" href="
         {%- if landingPage == 'true' %}/{% else %}
+        {%- if pageSection == 'Get started' %}/service-manual/get-started{% endif %}
         {%- if pageSection == 'Core styles' %}/service-manual/styles-components-patterns/styles{% endif %}
         {%- if pageSection == 'Components' %}/service-manual/styles-components-patterns/components{% endif %}
         {%- if pageSection == 'Patterns' %}/service-manual/styles-components-patterns/patterns{% endif %}
