@@ -1,0 +1,31 @@
+{% set pageTitle = 'Review date' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Use review dates to reassure users that our information is up-to-date.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'review-date'
+  }) }}
+
+  <h2>When to use review dates</h2>
+  <p>We use 2 dates - last reviewed date and next review date - on every page of health content on the NHS website (<a href="https://www.nhs.uk">nhs.uk</a>). We do this as part of our work to meet <a href="https://www.england.nhs.uk/tis/about/the-info-standard/">NHS England's Information Standard</a>.
+
+  <h2>When not to use review dates</h2>
+  <p>We do not use review dates on our news content (<a href="https://www.nhs.uk/news/">Behind the Headlines</a>), our campaign content or in the service manual.</p>
+
+  <h2>How to use review dates</h2>
+  <p>The dates should show when we last reviewed the page and when we will review it again.</p>
+  <p>Review dates should sit close to the content they relate to. If the page includes embedded content such as a video, then the last reviewed date (usually the production date) and next review date should be included in the component that holds the content.</p>
+  <p>Generally we put review dates at the bottom of the page in smaller type. They are not a high priority for users looking for information.</p>
+
+  <h3>Accessibility</h3>
+  <p>The text currently meets AA accessibility standards with a contrast ratio of 6.99:1.</p>
+
+  <h2>Research</h2>
+  <p>We tested review dates on a health information page in 3 labs in summer 2018.</p>
+  <p>At first we tested them away from the main content, closer to the footer of the page, separated by a rule, but users didn't notice them there. So we removed the rule and brought the dates closer to the content. Users then read them and said that they were helpful.</p>
+
+{% endblock %}

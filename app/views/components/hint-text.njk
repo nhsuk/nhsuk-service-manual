@@ -1,0 +1,16 @@
+{% set pageTitle = "Hint text" %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = "Use hint text to help users understand a question."%}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'hint-text'
+  }) }}
+
+  <h2>How to use hint text</h2>
+  <p>Use hint text that’s relevant for most of your users - like where to find information or how their data will be used.</p>
+
+{% endblock %}

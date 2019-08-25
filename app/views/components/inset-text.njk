@@ -1,0 +1,36 @@
+{% set pageTitle = 'Inset text' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Use inset text to help users identify and understand important content on the page, even if they do not read the whole page.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'inset-text'
+  }) }}
+
+  <h2>When to use inset text</h2>
+  <p>Use inset text for content that needs to stand out from the rest of the page.</p>
+
+  <h2 id="when-not-to-use-inset-text">When not to use inset text</h2>
+  <p>Do not use inset text in transactional pages. We haven't tested it there yet.</p>
+  <p>Do not use inset text if you need to tell a user to contact their GP or get medical help. Use a <a href="/service-manual/styles-components-patterns/care-cards">care card</a> instead.</p>
+  <p>Some users don't notice inset text on complex pages or near to other prominent elements, so we avoid using it for very important information that users need to see. Use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead if the information:</p>
+  <ul>
+    <li>is time critical</li>
+    <li>could have a significant effect on someone's health</li>
+    <li>addresses a common or significant misconception or mistake</li>
+  </ul>
+
+  <h2 id="how-to-use-inset-text">How to use inset text</h2>
+  <p>Don't overdo inset text. Think about whether you need it and the best place to put it.</p>
+
+  <h3>Accessibility</h3>
+  <p>People with visual disabilities may not be able to see the colour that marks out inset text. Instead they may rely on hidden labels to recognise it.</p>
+  <p class="rich-text">We use <code>&lt;span class="visually-hidden"&gt;Information: &lt;/span&gt;</code> to let users with screen readers know that this is different to the body text.</p>
+
+  <h2 id="research">Research</h2>
+  <p>We've tested inset text in content pages and users understood its purpose. We haven't tested inset text in transactional pages.</p>
+
+{% endblock %}

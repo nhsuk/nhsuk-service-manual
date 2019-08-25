@@ -1,0 +1,69 @@
+{% set pageTitle = "Radios" %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = "Use radios when you want users to select only 1 option from a list." %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'radios'
+  }) }}
+
+  <h2 id="when-to-use-this-component">When to use radios</h2>
+  <p>Use radios if users can only choose 1 option from a list.</p>
+
+  <h2 id="when-not-to-use-this-component">When not to use radios</h2>
+  <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
+
+  <h2 id="how-it-works">How to use radios</h2>
+  <p class="rich-text">Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Have you changed your name?".</p>
+  <p class="rich-text">If you are asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as the GOV.UK design system recommends, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+
+  {{ designExample({
+    type: 'radios-heading'
+  }) }}
+
+  <p>Read more on the GOV.UK design system about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+  <p>Unlike with checkboxes, users can only select 1 option from a list of radios. Do not assume that users will know how many options they can select. Make it clear with a hint - for example, say: "Select 1 option".</p>
+  <p>Do not pre-select radio options as this makes it more likely that users will:</p>
+  <ul>
+    <li>not realise they’ve missed a question</li>
+    <li>submit the wrong answer</li>
+  </ul>
+  <p>Users can't go back to having no option selected once they have selected one, without refreshing their browser window. So you should include "None of these" or "I do not know" if they are valid options. </p>
+  <p>Order radio options alphabetically by default. </p>
+
+  <h3 id="inline-radios">Inline radios</h3>
+  <p>If there are only 2 options, you can either stack the radios or display them inline, like this:</p>
+
+  {{ designExample({
+    type: 'radios-inline'
+  }) }}
+
+  <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
+  <p>If 1 or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word "or".</p>
+
+  {{ designExample({
+    type: 'radios-divider'
+  }) }}
+
+  <h3 id="radio-items-with-hints">Radio items with hints</h3>
+  <p>You can add hints to radios to give more information about the options.</p>
+
+  {{ designExample({
+    type: 'radios-hints'
+  }) }}
+
+  <h3 id="error-messages">Error messages</h3>
+  <p>Style error messages like this:</p>
+
+  {{ designExample({
+    type: 'radios-error'
+  }) }}
+
+  <p>Follow:
+  <ul><li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
+  <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li></ul>
+
+{% endblock %}

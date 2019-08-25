@@ -1,0 +1,52 @@
+{% set pageTitle = 'Warning callout' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Use a warning callout to help users identify and understand warning content on the page, even if they do noticedt read the whole page.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'warning-callout'
+  }) }}
+
+  <h2>When to use a warning callout</h2>
+  <p>Use this callout for information that:</p>
+  <ul>
+      <li>is time critical</li>
+      <li>could have a significant effect on someone's health</li>
+      <li>addresses a common or significant misconception or mistake</li>
+  </ul>
+
+  <h2>When not to use a warning callout</h2>
+  <p>Don't use a warning callout</p>
+  <ul>
+    <li>in transactional pages - we haven't tested them there yet</li>
+    <li>if you need to tell a user to contact their GP or get medical help - use a <a href="/service-manual/styles-components-patterns/care-cards">care card</a> instead</li>
+    <li>if the information is not important enough for a warning callout - use <a href="/service-manual/styles-components-patterns/inset-text">inset text</a> instead</li>
+  </ul>
+
+  <h2>How to use a warning callout</h2>
+  <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+  <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
+  <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
+  <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
+  <p>If possible, put at least 1 short paragraph of text between 2 callouts or between an action link and a callout.</p>
+
+  <h3>Accessibility</h3>
+  <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
+  <p class="rich-text">We recommend adding an aria label, for example: <code>aria-label="Important"</code>. This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
+  <p>If you can help with this, please get in touch on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ"> NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+  <h2>Research</h2>
+  <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
+  <p>Our research shows that clearly worded callout headings:</p>
+  <ul>
+    <li>help users spot relevant information quickly</li>
+    <li>help users who cannot distinguish callouts by their colour</li>
+    <li>are better than <a href="/service-manual/styles-components-patterns/icons">icons</a>, like exclamation marks, which may not be accessible and can be interpreted in different ways</li>
+  </ul>
+  <p>We've tested warning callouts in pages with lots of content. We haven't yet tested them in forms or transactional content.</p>
+  <p>We haven't tested links in warning callouts. If you want to include a link, please test it and let us know.</p>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% set pageTitle = 'Header' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Use the header to show users they are on an NHS service and help them get started in finding what they need.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  <h2>NHS.UK header</h2>
+
+  {{ designExample({
+    type: 'header'
+  }) }}
+
+  <p>Use the NHS.UK header at the top of every page if your service is part of the NHS.UK website.</p>
+  <p>At the moment, we are only using the NHS.UK header for the NHS.UK website.</p>
+
+  <h2>Header for transactional and non-NHS.UK services</h2>
+  <p>This header includes a short service name and doesn't include the menu and search.</p>
+
+  {{ designExample({
+    type: 'header-transactional'
+  }) }}
+
+  <p>We are still testing this header in:</p>
+  <ul>
+    <li>some services on the NHS.UK domain, including transactional journeys</li>
+    <li>some NHS Digital sites and services, for example, the NHS App, the NHS login and the NHS digital service manual</li>
+  </ul>
+
+  <p>If you want to use the header and your service is not part of NHS.UK, please get in touch on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS.UK service manual Slack workspace</a> or email <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+{% endblock %}
