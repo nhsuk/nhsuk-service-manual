@@ -211,6 +211,12 @@ h1 + .nhsuk-lede-text--small {
 .app-side-nav__link {
   text-decoration: none;
 
+  &:hover {
+    background: 0;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
   &:visited {
     color: $color_nhsuk-blue;
   }
