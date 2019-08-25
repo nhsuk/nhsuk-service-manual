@@ -309,6 +309,38 @@ $contributor-size: 40px;
   }
 }
 
-.nhsuk-hero p {
-  max-width: 26em;
+// Button reverse
+.nhsuk-button--reverse:visited {
+  color: #212b32;
+}
+
+// Action link reverse
+.app-action-link--reverse {
+  color: $color_nhsuk-white;
+
+  &:hover,
+  &:visited,
+  &:visited {
+    background: 0;
+    box-shadow: none;
+    color: $color_nhsuk-white;
+  }
+
+  .nhsuk-icon__arrow-right-circle {
+    fill: $color_nhsuk-white;
+  }
+}
+
+// Hero
+.nhsuk-hero--service-manual {
+  .nhsuk-hero__wrapper {
+    @include nhsuk-responsive-padding(7, 'bottom');
+    @include nhsuk-responsive-padding(7, 'top');
+    @include top-and-bottom;
+  }
+}
+
+// Nav override
+.nhsuk-header__navigation-link {
+  font-size: 16px;
 }
