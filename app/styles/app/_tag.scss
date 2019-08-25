@@ -1,0 +1,28 @@
+.nhsuk-tag {
+
+  display: inline-block;
+
+  // When a user customises their colours often the background is removed,
+  // by adding a outline we ensure that the tag component still keeps it's meaning.
+  // https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+
+  color: $color_nhsuk-white;
+  background-color: $color_nhsuk-blue;
+  letter-spacing: 1px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+
+}
+
+.nhsuk-tag--inactive {
+  background-color: $color_nhsuk-grey-1;
+}
