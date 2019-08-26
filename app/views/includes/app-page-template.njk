@@ -120,7 +120,10 @@
 
         {%- if landingPage == 'true' %}
         {% else %}
-          {% include 'includes/help-improve.njk' %}
+          {%- if helpImprove == 'false' %}
+          {% else %}
+            {% include 'includes/help-improve.njk' %}
+          {% endif %}
           {% include 'includes/contact-panel.njk' %}
         {% endif %}
 

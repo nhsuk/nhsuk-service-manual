@@ -70,6 +70,26 @@
 .app-action-link--reverse {
   color: $color_nhsuk-white;
 
+  &:focus {
+    color: $color_nhsuk-black;
+
+    &:visited {
+      color: $color_nhsuk-black;
+    }
+
+    &:hover {
+      color: $color_nhsuk-white;
+
+      .nhsuk-icon__arrow-right-circle {
+        fill: $color_nhsuk-white;
+      }
+    }
+
+    .nhsuk-icon__arrow-right-circle {
+      fill: $color_nhsuk-black;
+    }
+  }
+
   &:hover,
   &:visited,
   &:visited {
