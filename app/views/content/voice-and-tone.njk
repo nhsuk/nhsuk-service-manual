@@ -6,7 +6,7 @@
 
 {% block mainContent %}
 
-  <h2>Voice</h2>
+  <h2 id="voice">Voice</h2>
   <p>Our voice is neutral and factual. It's authoritative, but also calm and reassuring.</p>
   <p>It's empowering, rather than patronising, and personal, rather than formal.</p>
   <p>We:</p>
@@ -17,13 +17,17 @@
     <li>avoid using "should" as it can sound patronising</li>
   </ul>
   <p>Using a consistent voice is similar to using the same visual style and colours throughout. It reminds users this is a trusted NHS service.</p>
-  <h2>Tone</h2>
+
+  <h2 id="tone">Tone</h2>
   <p>Tone can change depending on the context. We consider the situation and what the emotional state might be for the user.</p>
   <p>For example, we may use a direct, serious and reassuring tone when writing about a diagnosis:</p>
+
   {{ insetText({
     "HTML": "<p>If you've had a stroke or heart attack or are at high risk of a heart attack, your doctor may recommend that you take a daily low dose aspirin. This is different to taking aspirin for pain relief. Only take low dose aspirin if your doctor recommends it.</p>"
   }) }}
+
   <p>We may use an encouraging and conversational tone when writing about exercise or diet:</p>
+
   {{ insetText({
     "HTML": "<p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>"
   }) }}
