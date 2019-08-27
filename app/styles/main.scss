@@ -150,3 +150,12 @@
     color: $color_nhsuk-white;
   }
 }
+
+// Index page navigation (mobile only)
+.app-index-navigation {
+  @include nhsuk-responsive-margin(4, 'top');
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+}
