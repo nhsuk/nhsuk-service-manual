@@ -124,3 +124,14 @@
 .nhsuk-body-m {
   font-weight: 400;
 }
+
+// Table constrained
+// To make it align with content
+.nhsuk-table--constrained {
+  max-width: 44em;
+}
+
+// Table bug hot fix
+.nhsuk-table__cell.nhsuk-body-s {
+  display: table-cell;
+}
