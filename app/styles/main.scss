@@ -146,10 +146,12 @@
     color: $color_nhsuk-blue;
   }
 
-  &:hover {
+  &:hover,
+  &:focus  {
     background: $color_nhsuk-white;
     color: $color_nhsuk-blue;
   }
+
 }
 
 // Index page navigation (mobile only)
