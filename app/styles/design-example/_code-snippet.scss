@@ -70,7 +70,7 @@
   border-bottom: 0;
   $root: &;
   display: none;
-  max-width: 100% !important;
+  max-width: 100% !important; // sass-lint:disable-line no-important
 
   @include mq($from: tablet) {
     display: block;

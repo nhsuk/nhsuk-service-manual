@@ -1,7 +1,7 @@
 // Contributors
 .app-contributor {
   @include nhsuk-responsive-margin(7, 'bottom');
-  margin-top: -24px
+  margin-top: -24px;
 }
 
 .app-contributor__list {
@@ -12,7 +12,7 @@
 .app-contributor__heading {
   @include nhsuk-font(16);
   color: $color_nhsuk-grey-1;
-  margin-bottom: 8px;
+  margin-bottom: nhsuk-spacing(2);
 }
 
 .app-contributor__item {
@@ -26,7 +26,7 @@ $contributor-size: 40px;
 
 .app-contributor__avatar {
   display: block;
-  margin-right: 4px;
+  margin-right: nhsuk-spacing(1);
 
   &:hover,
   &:focus {
@@ -43,16 +43,16 @@ $contributor-size: 40px;
 
   &:focus {
     background: $color_nhsuk-yellow;
-    box-shadow: 0 -2px $color_nhsuk-yellow, 0 4px $color_nhsuk-black;
+    box-shadow: 0 -2px $color_nhsuk-yellow, 0 nhsuk-spacing(1) $color_nhsuk-black;
   }
 
   img {
     border-radius: 50%;
     display: block;
-    height: $contributor-size;
-    width: $contributor-size;
     filter: grayscale(100%);
+    height: $contributor-size;
     transition: transform .2s;
+    width: $contributor-size;
   }
 }
 
@@ -66,16 +66,16 @@ $contributor-size: 40px;
   width: $contributor-size;
 
   &:hover {
-    cursor: pointer;
     background: $color_nhsuk-blue;
     color: $color_nhsuk-white;
+    cursor: pointer;
     text-decoration: underline;
   }
   &:focus {
     background: $color_nhsuk-yellow;
     border-color: $color_nhsuk-yellow;
-    box-shadow: 0 4px 0 0 $color_nhsuk-black;
-    color: black;
+    box-shadow: 0 nhsuk-spacing(1) 0 0 $color_nhsuk-black;
+    color: $color_nhsuk-black;
     outline: 0;
   }
 }
