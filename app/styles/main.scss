@@ -135,3 +135,18 @@
 .nhsuk-table__cell.nhsuk-body-s {
   display: table-cell;
 }
+
+// Header active page section
+.nhsuk-header__navigation-link--active {
+  background-color: $color_nhsuk-white;
+  color: $color_nhsuk-blue;
+  font-weight: 600;
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  &:hover {
+    color: $color_nhsuk-white;
+  }
+}
