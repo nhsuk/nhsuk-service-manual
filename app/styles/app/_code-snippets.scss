@@ -1,4 +1,5 @@
-.rich-text code {
+.rich-text code,
+p code {
   background-color: $color_nhsuk-white;
   color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
   font-size: 1rem;
