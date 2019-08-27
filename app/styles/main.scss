@@ -147,7 +147,8 @@
   }
 
   &:hover {
-    color: $color_nhsuk-white;
+    background: $color_nhsuk-white;
+    color: $color_nhsuk-blue;
   }
 }
 
@@ -158,4 +159,5 @@
   @include mq($from: desktop) {
     display: none;
   }
+
 }
