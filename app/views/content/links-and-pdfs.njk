@@ -6,10 +6,11 @@
 
 {% block mainContent %}
 
-  <h2>Links</h2>
+  <h2 id="links">Links</h2>
   <p>Make links active, specific and concise.</p>
   <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
   <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
+
   {{ table({
     panel: false,
     firstCellIsHeader: false,
@@ -51,7 +52,7 @@
   <p><a href="https://www.w3.org/TR/WCAG20-TECHS/G200.html">Read more about opening new windows and tabs on W3C</a>.</p>
   <p>If links do go to a new tab or window, warn the user by saying: "Link name (opens in new window)". (Include all of this in the link text.)</p>
 
-  <h2>PDFs</h2>
+  <h2 id="pdfs">PDFs</h2>
   <p>PDFs can be bad for accessibility. Often they do not work well with assistive technologies like screen readers.</p>
 
   <h3>Publishing PDFs</h3>
