@@ -22,7 +22,7 @@ For example, the Accessibility page would be indexed to:
 ```js
 {
   title: 'Accessibility',
-  index: 'What everyone needs to know Guidance for different activities Get in touch',
+  index: 'What everyone needs to know Accessibility guidance for... Get in touch',
   url: '/service-manual/accessibility'
 }
 ```
