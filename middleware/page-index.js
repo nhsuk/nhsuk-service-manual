@@ -88,19 +88,19 @@ class PageIndex {
     var results = []
     if (query && this.index) {
       results = this.index.query(function(q) {
-        const exactMatch = query.toLowerCase()
-        const partialMatch = query.toLowerCase() + "*"
+        lunr.tokenizer(query).forEach(function (token) {
+          q.term(token.toString(), { fields: [ 'title' ], boost: 100 })
+          q.term(token.toString(), { fields: [ 'h2' ], boost: 80 })
+          q.term(token.toString(), { fields: [ 'h3' ], boost: 60 })
+          q.term(token.toString(), { fields: [ 'extra' ], boost: 40 })
 
-        q.term(exactMatch, { fields: [ 'title' ], boost: 100 })
-        q.term(exactMatch, { fields: [ 'h2' ], boost: 80 })
-        q.term(exactMatch, { fields: [ 'h3' ], boost: 60 })
-        q.term(exactMatch, { fields: [ 'extra' ], boost: 40 })
 
-        q.term(partialMatch, { fields: [ 'title' ], boost: 90 })
-        q.term(partialMatch, { fields: [ 'h2' ], boost: 70 })
-        q.term(partialMatch, { fields: [ 'h3' ], boost: 50 })
-        q.term(partialMatch, { fields: [ 'extra' ], boost: 30 })
+          q.term(`${token.toString()}*`, { fields: [ 'title' ], boost: 90 })
+          q.term(`${token.toString()}*`, { fields: [ 'h2' ], boost: 70 })
+          q.term(`${token.toString()}*`, { fields: [ 'h3' ], boost: 50 })
+          q.term(`${token.toString()}*`, { fields: [ 'extra' ], boost: 30 })
       })
+    })
     }
     return results
   }
