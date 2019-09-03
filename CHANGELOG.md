@@ -1,14 +1,17 @@
 # NHS digital service manual Changelog
 
-## 2.0.0 - Unreleased
-
-:new: **New features**
-
-- Add search functionality to the service manual
+## 1.9.0 - Unreleased
 
 :new: **New content**
 
-- Add more guidance for content designers to care card page 	
+- Add more guidance for content designers to the care card page
+- Add "red book" and inclusive language terms to A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Update inclusive language page in content style guide, especially guidance on sex, gender and sexuality
+- Change "measurement" to "measurements" in Numbers, measurements, dates and time - and update links to this page
+- Improve wording about ordinal numbers on Numbers, measurements, dates and time
 
 ## 1.8.0 - 09 August 2019
 
