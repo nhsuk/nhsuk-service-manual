@@ -41,9 +41,18 @@
     padding-left: nhsuk-spacing(9);
   }
 
+  h1 {
+    max-width: 14em;
+  }
+
   p,
   ul {
     max-width: 37em;
+  }
+
+  .app-example,
+  .nhsuk-table {
+    max-width: 44em;
   }
 
 }

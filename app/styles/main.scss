@@ -7,12 +7,6 @@
 // Design examples
 @import 'design-example/design-example';
 
-// Table numeric styling
-.nhsuk-table__header--numeric,
-.nhsuk-table__cell--numeric {
-  text-align: right;
-}
-
 // Image with border
 .nhsuk-image--border {
   @include nhsuk-responsive-margin(7, 'bottom');
@@ -136,8 +130,21 @@
   display: table-cell;
 }
 
-th, td {
+th,
+td {
+  padding-left: 0;
   vertical-align: top;
+}
+
+// Table numeric styling
+.nhsuk-table__header--numeric,
+.nhsuk-table__cell--numeric {
+  text-align: right;
+}
+
+// Table hot fix for removing margin top
+.nhsuk-table-responsive {
+  margin-top: 0;
 }
 
 // Header hotfix - will be fixed with org header work
@@ -176,7 +183,8 @@ th, td {
 // Example
 .app-example {
   @include top-and-bottom;
-  @include nhsuk-responsive-margin(6, 'bottom');
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(2, 'top');
   @include nhsuk-responsive-padding(5, 'bottom');
   @include nhsuk-responsive-padding(5, 'left');
   @include nhsuk-responsive-padding(5, 'right');
@@ -192,4 +200,28 @@ th, td {
   left: -1px;
   position: absolute;
   top: -1px;
+}
+
+.app-example + h2 {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.app-example + h3 {
+  @include nhsuk-responsive-padding(2, 'top');
+}
+
+// Breadcrumbs hot fixes
+.nhsuk-breadcrumb__link,
+.nhsuk-breadcrumb__backlink {
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+  &:hover {
+    color: $color_nhsuk-black;
+  }
+  &:focus {
+    &:visited {
+      color: $color_nhsuk-black;
+    }
+  }
 }

@@ -1,12 +1,13 @@
 {% set pageTitle = 'A to Z of NHS health writing' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'Words and phrases we use to make our content about health and the NHS easy to understand.' %}
-
+{% set contributors = 'false' %}
 
 {% extends 'includes/app-page-template.njk' %}
 
 {% block mainContent %}
   {{ azNav({
+    classes: "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5",
     items: [
       {
         label: "A"
