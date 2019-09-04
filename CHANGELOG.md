@@ -1,6 +1,18 @@
 # NHS digital service manual Changelog
 
-## 1.9.0 - Unreleased
+## 1.10.0 - 4 September 2019
+
+:new: **New content**
+
+- Add new entries to A to Z of NHS health writing, including: "baby", "foetus", "drowsy", "sleepy", "preconception care", "seizure or fit"
+
+:wrench: **Fixes**
+
+- Add mini-hub at top of Inclusive language page and change "baby" in section on Age
+- Update entry for summary care record in A to Z of NHS health writing
+- Update package dependencies to latest versions
+
+## 1.9.0 - 21 August 2019
 
 :new: **New content**
 
