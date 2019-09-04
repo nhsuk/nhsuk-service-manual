@@ -10,6 +10,7 @@
 
 - Add mini-hub at top of Inclusive language page and change "baby" in section on Age
 - Update entry for summary care record in A to Z of NHS health writing
+- Update package dependencies to latest versions
 
 ## 1.9.0 - 21 August 2019
 
