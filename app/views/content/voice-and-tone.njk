@@ -1,6 +1,7 @@
 {% set pageTitle = 'Voice and tone' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How we use a consistent voice and an appropriate tone.' %}
+{% set contributors = 'false' %}
 
 {% extends 'includes/app-page-template.njk' %}
 
@@ -20,16 +21,18 @@
 
   <h2 id="tone">Tone</h2>
   <p>Tone can change depending on the context. We consider the situation and what the emotional state might be for the user.</p>
-  <p>For example, we may use a direct, serious and reassuring tone when writing about a diagnosis:</p>
+  <p>We may use a direct, serious and reassuring tone when writing about a diagnosis:</p>
 
-  {{ insetText({
-    "HTML": "<p>If you've had a stroke or heart attack or are at high risk of a heart attack, your doctor may recommend that you take a daily low dose aspirin. This is different to taking aspirin for pain relief. Only take low dose aspirin if your doctor recommends it.</p>"
-  }) }}
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>If you've had a stroke or heart attack or are at high risk of a heart attack, your doctor may recommend that you take a daily low dose aspirin. This is different to taking aspirin for pain relief. Only take low dose aspirin if your doctor recommends it.</p>
+  </div>
 
   <p>We may use an encouraging and conversational tone when writing about exercise or diet:</p>
 
-  {{ insetText({
-    "HTML": "<p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>"
-  }) }}
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>
+  </div>
 
 {% endblock %}

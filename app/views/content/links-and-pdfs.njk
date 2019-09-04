@@ -1,6 +1,7 @@
 {% set pageTitle = 'Links and PDFs' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How to handle links and PDFs.' %}
+{% set contributors = 'false' %}
 
 {% extends 'includes/app-page-template.njk' %}
 
@@ -61,13 +62,18 @@
   <p>Check the GOV.UK guidance on <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">publishing accessible documents</a>.</p>
 
   <h3>Linking to PDFs</h3>
-  <p>We prefer to link to an HTML page containing the PDF. That way, if the PDF is changed or updated, users can still find the latest information.<p>
+  <p>We prefer to link to an HTML page containing the PDF. That way, if the PDF is changed or updated, users can still find the latest information.</p>
   <p>If we need to link to a PDF, we:</p>
   <ul>
     <li>open it in the same tab</li>
     <li>add "PDF, [file size in MB or KB]" in brackets to the end of the link text, for example - "weight loss progress chart (PDF, 545KB)"</li>
   </ul>
   <p>Round up values over 1MB to 2 decimal places to keep it as accurate as possible.</p>
-  <p>Round up values under 1MB to the nearest KB. For example, round up 835.74KB to 836KB.</p>
+  <p>Round up values under 1MB to the nearest KB.</p>
+
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>Round up 835.74KB to 836KB</p>
+  </div>
 
 {% endblock %}
