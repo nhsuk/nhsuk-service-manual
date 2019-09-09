@@ -36,9 +36,11 @@
   @include nhsuk-responsive-padding(4, 'top');
 }
 
+$service-manual-container-size: 1100px;
+
 // Container
 .nhsuk-width-container {
-  max-width: 1100px;
+  max-width: $service-manual-container-size;
 
   @media (min-width: 767px) and (max-width: 1164px) {
     margin: 0 32px;
@@ -46,7 +48,7 @@
 }
 
 .nhsuk-header__navigation {
-  max-width: 1100px;
+  max-width: $service-manual-container-size;
 
   @media (min-width: 990px) and (max-width: 1164px) {
     margin: 0 32px;
