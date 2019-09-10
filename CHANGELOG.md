@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 1.10.1 - Unreleased
+## 1.10.1 - 11 September 2019
 
 :wrench: **Fixes**
 
