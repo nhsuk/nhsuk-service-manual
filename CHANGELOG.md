@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 1.10.1 - Unreleased
+
+:wrench: **Fixes**
+
+- Use the latest version of the NHS.UK frontend library (v2.3.1)
+- Update package dependencies to latest versions
+
 ## 1.10.0 - 4 September 2019
 
 :new: **New content**
