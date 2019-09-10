@@ -146,7 +146,7 @@ td {
 
 // Table hot fix for removing margin top
 .nhsuk-table-responsive {
-  margin-top: 0;
+  @include nhsuk-responsive-margin(3, 'top');
 }
 
 // Header hotfix - will be fixed with org header work
