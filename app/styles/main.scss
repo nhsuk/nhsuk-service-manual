@@ -214,3 +214,64 @@ td {
     }
   }
 }
+
+
+// Promo icons
+
+.app-promo__container {
+  float: left;
+  margin-bottom: 0;
+  padding: 0 16px;
+  width: 50%;
+
+  @include mq($until: desktop) {
+    flex: none;
+  }
+
+  @include mq($from: desktop) {
+    width: (100% / 3);
+  }
+
+  @include mq($from: large-desktop) {
+    width: 25%;
+  }
+}
+
+.app-promo--icons {
+  padding: 16px 0;
+}
+
+.app-promo--icons__icon {
+  display: flex;
+  height: 110px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-promo--icons {
+
+  .nhsuk-promo__link-wrapper {
+    &:hover {
+      .nhsuk-promo__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .nhsuk-promo__content {
+    @include nhsuk-responsive-padding(3, 'bottom');
+    @include nhsuk-responsive-padding(1, 'left');
+    @include nhsuk-responsive-padding(1, 'right');
+    @include nhsuk-responsive-padding(0, 'top');
+
+    text-align: center;
+  }
+
+  .nhsuk-promo__heading {
+    @include nhsuk-font(16);
+    max-width: 100%;
+    text-decoration: none;
+  }
+
+}
