@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 1.10.2 - 16 September 2019
+
+:wrench: **Fixes**
+
+- Remove the search JavaScript until the search functionality is complete
+
 ## 1.10.1 - 11 September 2019
 
 :wrench: **Fixes**
