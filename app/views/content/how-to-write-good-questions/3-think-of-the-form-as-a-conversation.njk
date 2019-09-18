@@ -1,6 +1,6 @@
 {% set pageTitle = '3. Think of the form as a conversation'%}
 {% set pageSection = 'How to write good questions' %}
-{% set pageDescription = 'LEDE' %}
+{% set pageDescription = 'Make it easy for users to understand and answer the questions and make sure they feel supported.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
@@ -27,7 +27,7 @@
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make it easy for users to answer the questions, 1 at a time.</p>
+      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make it easy for users to understand and answer the questions and make sure they feel supported.</p>
    </div>
 </div>
 <div class="nhsuk-grid-row">
@@ -36,7 +36,7 @@
   <ul>
     <li>Don't rush things. Ask for information at the appropriate time. Read more about <a href="/service-manual/content/how-to-write-good-questions/2-make-sure-you-need-each-question#consider-the-sensitivities-around-your-questions">considering the sensitivities around your questions</a>.</li>
 
-    <li>Offer prompts and help: on the web, on phone or in person.</li>
+    <li>Offer prompts and help: on the web, on phone or in person. Use <a href="/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form#help-text-error-messages-and-guidance-in-the-form">help text, error messages and guidance in the form</a>. Help people understand their mistakes and make it easy for them to get support.</li>
   </ul>
   <h2>Use clear language that users understand</h2>
   <ul>
@@ -44,13 +44,23 @@
     <li>Do not hide behind the passive tense. Not "Your GP will be notified' but "We will let your GP know".</li>
   </ul>
   <p>Follow the service manual <a href="https://beta.nhs.uk/service-manual/content">content style guide</a> and the <a href="https://beta.nhs.uk/service-manual/accessibility/content">guidance on accessibility and content</a>.<p>
-  <p>For page titles you can use either a question or a statement. For example, "What is your date of birth?" or just "Date of birth".</p>
+
+
+
   <h2>Be less formal</h2>
   <ul>
     <li>Ask users for the information the way you would in person. Try reading the question to a colleague and listening to how they answer it.</li>
-    <li>Soften your language. Instead of "You must confirm this", ask them to "Please confirm this".</li>
-    <li>Do not ask for their "Full name", for example, if you just need their "Name" or "Contact name". But be clear whose name. For example, don't rely on a title "Next of kin" and then ask for their "Name". Say "Name of next of kin".</li>
+    <li>Soften your language. Instead of "You must confirm this", explain "Before you continue, you need to confirm this".</li>
+    <li>Do not just repeat a message if someone gets things wrong a second time. It can feel harsh. Think about how you could rephrase it.</li>
+    <li>Do not ask for their "Full name", for example, if you just need their "Name" or "Contact name". But be clear whose name you're asking for. For example, do not rely on a title "Next of kin" and then ask for their "Name". Say "Name of next of kin".</li>
   </ul>
+  <h3>But we don't recommend using "Please"</h3>
+  <p>"Please" suggests that people have a choice. Sometimes it can feel patronising. It's not usually necessary.</p>
+
+  <h2>Use "we" and "you"</h2>
+  <p>Use "you" or "your" when you're asking questions, giving instructions or describing things. For example: "Have you changed your name?"</p>
+  <p>Use "I" or "me" for things that the user will do or say, for example when they click a button or select a checkbox. For example: "Add me". But only use "I" or "me" when you need to.</p>
+
   <h2>Make it flow</h2>
 
   <ul>
@@ -58,10 +68,6 @@
     <li>Word questions or statements consistently. This helps users get into a rhythm of answering and lets them focus on the content of the questions rather than how they’re presented.</li>
     <li>It's OK to ask a follow up question. For example: "We think you mean this. Is that right?". You don't need to validate the question on the same page. Sometimes it's more effective to check it on another page.</li>
   </ul>
-  <h2>Think about users, their families and carers</h2>
-  <p>Bear in mind that the person filling in the form might be the user, or a family member, carer or some other person helping the user. (Look back at your <a href="/service-manual/content/how-to-write-good-questions/1-start-with-discovery">discovery</a>.) How might this affect your questions?</p>
-  <p>For example, if you’re offering a callback service, rather than asking for "your" phone number or "their" phone number, ask "What number do you want us to call you on?"</p>
-  <p>If someone may be filling in the form for someone else, that may change how appropriate the question is.</p>
 
   <h2>Ask questions that users can answer easily</h2>
   <p>Closed questions are usually easier than open ones. (<a href="/service-manual/content/how-to-write-good-questions/5-use-filter-questions-but-beware">Use filter questions but beware.</a>)</p>
@@ -75,28 +81,65 @@
     <li>by asking someone else - for example, arranging a witness or referee</li>
     <li>by figuring something out</li>
   </ul>
-<h4>Example of a difficult question</h4>
-<p>Users often have problems figuring things out. Here’s a difficult question:</p>
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+      Example of a difficult question
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+    <p>Users often have problems figuring things out. Here’s a difficult question:</p>
 
-<p>"What percentage of your working day do you spend doing moderate-intensity activities that make you breathe faster and raise your heart rate (such as brisk walking or housework, like vacuuming) for at least 10 minutes continuously?"</p>
+    <p>"What percentage of your working day do you spend doing moderate-intensity activities that make you breathe faster and raise your heart rate (such as brisk walking or housework, like vacuuming) for at least 10 minutes continuously?"</p>
 
-<p>To answer a question like this, research (Tourangeau et al, 2000) suggests that the user has to:</p>
-<ul>
-  <li>understand and interpret the question and any instructions</li>
-  <li>think back - or they might have to go and check something</li>
-  <li>make a judgement - or estimate (some people find calculations like percentages difficult)</li>
-  <li>choose an answer - assuming the answer they want to give is on the form</li>
-</ul>
-<p>In this example, the user will have to think about:</p>
-<ul>
-  <li>when their working day starts and ends</li>
-  <li>what a typical day is</li>
-  <li>whether they want to tell you about their typical day or a more active one</li>
-  <li>what "moderate" and "brisk" mean</li>
-  <li>what to do if their answer is 5% and the form allows 0% or 10%</li>
-</ul>
-   <p>They may guess or give up. This is bad for the user. It's also bad for your service to get unreliable data.</p>
-    <div class="nhsuk-review-date">
+    <p>To answer a question like this, research suggests that the user has to:</p>
+    <ul>
+      <li>understand and interpret the question and any instructions</li>
+      <li>think about what they know and remember - or they might have to go and check something</li>
+      <li>make a judgement - or estimate (some people find calculations like percentages difficult)</li>
+      <li>choose an answer - assuming the answer they want to give is on the form</li>
+    </ul>
+    <p>In this example, the user will have to think about:</p>
+    <ul>
+      <li>when their working day starts and ends</li>
+      <li>what a typical day is</li>
+      <li>whether they want to tell you about their typical day or a more active one</li>
+      <li>what "moderate" and "brisk" mean</li>
+      <li>what to do if their answer is 5% and the form asks them to choose 0% or 10%</li>
+    </ul>
+    <p>They may guess or give up. This is bad for the user. It's also bad if your service gets unreliable data.</p>
+   </div>
+  </details>
+
+  <h2>Focus on what you want users to do</h2>
+  <p>For page titles you can use either a question or a statement. But, if we want people to enter information, we've found that action statements work well.</p>
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+      Example
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">We say "Enter the details your GP surgery gave you", not "What are your patient registration details?" or "Tell us your patient registration details". <p>
+  <p>This makes it clear what we want people to do - to "enter the details".</p>
+  </div>
+  </details>
+  <p>Questions work well for <a href="/service-manual/styles-components-patterns/radios">radios</a> or <a href="https://beta.nhs.uk/service-manual/styles-components-patterns/checkboxes">checkboxes</a> or for a short question like "What's your name?".</p>
+
+  <h2>Think about users, their families and carers</h2>
+  <p>Bear in mind that the person filling in the form might be the user, or a family member, carer or some other person helping the user. (Look back at your <a href="/service-manual/content/how-to-write-good-questions/1-start-with-discovery">discovery</a>.) How might this affect your questions?</p>
+  <details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Example
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+  <p>If you’re offering a callback service, rather than asking for "your" phone number or "their" phone number, ask "What number do you want us to call you on?"</p>
+    </div>
+</details>
+  <p>If someone may be filling in the form for someone else, that may change how appropriate the question is.</p>
+
+   <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: September 2019</p>
     </div>
     </div>
