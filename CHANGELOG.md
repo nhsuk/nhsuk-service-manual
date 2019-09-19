@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 1.10.3 - TBC
+
+:wrench: **Fixes**
+
+- Remove redundant Adobe Analytics code
+- Anonymize IP addresses in Google Analytics
+
 ## 1.10.2 - 16 September 2019
 
 :wrench: **Fixes**
