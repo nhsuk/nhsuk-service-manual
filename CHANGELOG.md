@@ -7,7 +7,6 @@
 - Remove redundant Adobe Analytics code
 - Anonymize IP addresses in Google Analytics
 - Remove the old basic cookie consent solution
-- Implement the new cookie consent solution
 
 ## 1.10.2 - 16 September 2019
 

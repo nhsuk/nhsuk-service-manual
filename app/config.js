@@ -8,9 +8,6 @@ module.exports = {
   // Base URL
   baseURL: process.env.BASE_URL || 'https://beta.nhs.uk/service-manual',
 
-  // Cookie consent
-  cookieConsent: process.env.COOKIE_CONSENT_URL || 'https://assets-staging.nhs.uk/staging/scripts/cookie-consent.js',
-
   // Port to run local development server on
   port: process.env.PORT || 3000,
 };
