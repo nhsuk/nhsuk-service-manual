@@ -7,6 +7,8 @@
 - Remove redundant Adobe Analytics code
 - Anonymize IP addresses in Google Analytics
 - Update package dependencies to latest versions
+- Remove feedback survey from the footer
+- Use the correct class names for the typography size modifiers
 
 ## 1.10.2 - 16 September 2019
 
