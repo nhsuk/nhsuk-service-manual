@@ -6,6 +6,7 @@
 
 - Remove redundant Adobe Analytics code
 - Anonymize IP addresses in Google Analytics
+- Update package dependencies to latest versions
 
 ## 1.10.2 - 16 September 2019
 
