@@ -4,6 +4,7 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
+{% from 'radios/macro.njk' import radios %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -36,30 +37,36 @@
 
     {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
 
+    <h2>What are filter questions?</h2>
+
     <p>{{pageDescription}}</p>
+
+    <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/binary-question-long.png" alt="">
 
     <p>Filter questions ask a short question first - often a Yes No question like this, with <a href="/service-manual/styles-components-patterns/radios">radios</a>.<p>
 
-    <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend">
-          Do you live with a partner?
-        </legend>
-        <div class="nhsuk-radios">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-              Yes
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-              No
-            </label>
-          </div>
-        </div>
-      </fieldset>
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Do you live with a partner?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+      }) }}
     </div>
 
     <p>Filter questions let you:</p>
@@ -102,50 +109,54 @@
     <h2>Offer users options</h2>
     <p>Often Yes and No are all you need. This question offers 2 simple options.</p>
 
-    <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend">
-          Have you changed your name?
-        </legend>
-        <div class="nhsuk-radios">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-              Yes
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-              No
-            </label>
-          </div>
-        </div>
-      </fieldset>
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Have you changed your name?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+      }) }}
     </div>
 
     <p>But sometimes you need more than that. For example, in the NHS App, we have this question and 2 options.
 
-    <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend">
-          Do you have all 3 registration details?
-        </legend>
-        <div class="nhsuk-radios">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-              Yes
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-              No, try another way.
-            </label>
-          </div>
-        </div>
-      </fieldset>
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Do you have all 3 registration details?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No, try another way"
+          }
+        ]
+      }) }}
     </div>
 
     <p>We add the extra information to the No option to reassure users there is another way to sign up.</p>
