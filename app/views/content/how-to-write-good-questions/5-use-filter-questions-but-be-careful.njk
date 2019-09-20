@@ -1,9 +1,10 @@
-{% set pageTitle = '5. Use filter questions, but be careful'%}
+{% set pageTitle = 'Use filter questions, but be careful'%}
 {% set pageSection = 'How to write good questions' %}
 {% set pageDescription = 'Filter (or branching) questions, including Yes No questions, help you route users to the questions that apply to them.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
+{% from 'radios/macro.njk' import radios %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -26,177 +27,168 @@
 {% block body %}
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
-     <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Filter (or branching) questions, including Yes No questions, help you route users to the questions that apply to them.</p>
-   </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
-
-  <p>Filter questions ask a short question first - often a Yes No question like this, with <a href="/service-manual/styles-components-patterns/radios">radios</a>.<p>
-  <div class="nhsuk-form-group">
-
-  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-    <legend class="nhsuk-fieldset__legend">
-      Do you live with a partner?
-    </legend>
-
-    <div class="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-          Yes
-        </label>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-
-</div>
-
-  <p>Filter questions let you:</p>
-  <ul>
-    <li>get people to the questions that apply to them - use them early on</li>
-    <li>avoid optional questions, because users only answer the questions that apply to them</li>
-    <li>simplify long questions - sometimes an extra question will improve users' experience</li>
-  </ul>
-  <p>If you are offering people different routes, explain upfront any information they will need to have to hand so that they can make an informed choice. For example: "If you do this, you will need [whatever]." There is more information to help you do this in <a href=""/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form"">6. Write the supporting content for your form</a>.</p>
-  <p>You may not need to collect answers to filter questions.</p>
-  <p>Filter questions are useful but there are some things to bear in mind, especially with Yes No questions.</p>
-<h2>Ask 1 question at a time</h2>
-<p>Make sure you're asking 1 question at a time - not 2 questions in 1 (sometimes called "double-barrelled" questions).</p>
-<details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-      Examples
+     <h1>
+      <span class="nhsuk-caption-l">
+        {{pageSection}}
+        <span class="nhsuk-u-visually-hidden"> - </span>
       </span>
-    </summary>
-    <div class="nhsuk-details__text">
-<p>Here's an example of 2 questions in 1: “If you have an email address, can we contact you about research?”</p>
-<p>Here's an example of 3 questions in 1: "If this questionnaire has highlighted any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"</p>
-</div>
-</details>
+      {{pageTitle}}
+    </h1>
 
-<h2>Beware binary choices</h2>
-<p>There are often more options than you think. For example, instead of asking "Do you know your NHS number?" with a Yes No answer, it might be better to word it: "Can you find your NHS number?"</p>
-<p>And the answers might be:</p>
-<ul>
-  <li>Yes, I have my NHS number</li>
-  <li>I can find my NHS number</li>
-  <li>I have an NHS number, but I can't find it</li>
-  <li>I don't think I have an NHS number</li>
-  <li>I don't know</li>
-</ul>
-<p>Sometimes you can test this by leaving a space for people to type in.</p>
+    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
 
-<h2>Offer users options</h2>
- <p>Often Yes and No are all you need. This question offers 2 simple options.</p>
- <div class="nhsuk-form-group">
+    <h2>What are filter questions?</h2>
 
-  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-    <legend class="nhsuk-fieldset__legend">
-      Have you changed your name?
-    </legend>
+    <p>{{pageDescription}}</p>
 
-    <div class="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-          Yes
-        </label>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-          No
-        </label>
-      </div>
+    <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/binary-question-long.png" alt="">
+
+    <p>Filter questions ask a short question first - often a Yes No question like this, with <a href="/service-manual/styles-components-patterns/radios">radios</a>.<p>
+
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Do you live with a partner?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+      }) }}
     </div>
-  </fieldset>
 
-</div>
+    <p>Filter questions let you:</p>
+    <ul>
+      <li>get people to the questions that apply to them - use them early on</li>
+      <li>avoid optional questions, because users only answer the questions that apply to them</li>
+      <li>simplify long questions - sometimes an extra question will improve users' experience</li>
+    </ul>
+    <p>If you are offering people different routes, explain upfront any information they will need to have to hand so that they can make an informed choice. For example: "If you do this, you will need [whatever]." There is more information to help you do this in <a href=""/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form"">6. Write the supporting content for your form</a>.</p>
+    <p>You may not need to collect answers to filter questions.</p>
+    <p>Filter questions are useful but there are some things to bear in mind, especially with Yes No questions.</p>
 
-  <p>But sometimes you need more than that. For example, in the NHS App, we have this question and 2 options.
+    <h2>Ask 1 question at a time</h2>
+    <p>Make sure you're asking 1 question at a time - not 2 questions in 1 (sometimes called "double-barrelled" questions).</p>
 
-  <div class="nhsuk-form-group">
-
-  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-    <legend class="nhsuk-fieldset__legend">
-      Do you have all 3 registration details?
-    </legend>
-
-    <div class="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-          Yes
-        </label>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+        Examples
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Here's an example of 2 questions in 1: “If you have an email address, can we contact you about research?”</p>
+        <p>Here's an example of 3 questions in 1: "If this questionnaire has highlighted any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"</p>
       </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-          No, try another way.
-        </label>
-      </div>
+    </details>
+
+    <h2>Beware binary choices</h2>
+    <p>There are often more options than you think. For example, instead of asking "Do you know your NHS number?" with a Yes No answer, it might be better to word it: "Can you find your NHS number?"</p>
+    <p>And the answers might be:</p>
+    <ul>
+      <li>Yes, I have my NHS number</li>
+      <li>I can find my NHS number</li>
+      <li>I have an NHS number, but I can't find it</li>
+      <li>I don't think I have an NHS number</li>
+      <li>I don't know</li>
+    </ul>
+    <p>Sometimes you can test this by leaving a space for people to type in.</p>
+
+    <h2>Offer users options</h2>
+    <p>Often Yes and No are all you need. This question offers 2 simple options.</p>
+
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Have you changed your name?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+      }) }}
     </div>
-  </fieldset>
 
-</div>
+    <p>But sometimes you need more than that. For example, in the NHS App, we have this question and 2 options.
 
-  <p>We add the extra information to the No option to reassure users there is another way to sign up.</p>
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {{ radios({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "Do you have all 3 registration details?",
+            "classes": "nhsuk-fieldset__legend--m"
+          }
+        },
+        "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No, try another way"
+          }
+        ]
+      }) }}
+    </div>
 
-<p>Include options like "I don't know" or "I'm not sure".</p>
+    <p>We add the extra information to the No option to reassure users there is another way to sign up.</p>
+    <p>Include options like "I don't know" or "I'm not sure".</p>
+    <p>On the other hand, if people can't just answer "Yes" or "No", it may be a sign that you should reconsider your question. Or that you need to be clearer what "Yes" and "No" mean.</p>
 
-<p>On the other hand, if people can't just answer "Yes" or "No", it may be a sign that you should reconsider your question. Or that you need to be clearer what "Yes" and "No" mean.</p>
-
-<h2>Be clear what "Yes" and "No" mean</h2>
-
-<p>Rather than simply offering "Yes" or "No" options, be clear, for example:</p>
-<ul>
-  <li>"Yes, you can contact me by email about research"</li>
-  <li>"No, do not contact me about research"</li>
-</ul>
-<p>In a simple Yes No question, "No" could also mean:<p>
-<ul>
-  <li>"No, do not contact me by email"</li>
-  <li>"No, do not contact me at all"</li>
-</ul>
-<p>What if the user wants to say: "I only want to know about x research"?</p>
+    <h2>Be clear what "Yes" and "No" mean</h2>
+    <p>Rather than simply offering "Yes" or "No" options, be clear, for example:</p>
+    <ul>
+      <li>"Yes, you can contact me by email about research"</li>
+      <li>"No, do not contact me about research"</li>
+    </ul>
+    <p>In a simple Yes No question, "No" could also mean:<p>
+    <ul>
+      <li>"No, do not contact me by email"</li>
+      <li>"No, do not contact me at all"</li>
+    </ul>
+    <p>What if the user wants to say: "I only want to know about x research"?</p>
 
     <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: September 2019</p>
     </div>
-    </div>
-    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-    <ul class="nhsuk-list nhsuk-pagination__list">
-    <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/service-manual/content/how-to-write-good-questions/4-get-the-questions-into-order">
-        <span class="nhsuk-pagination__title">Previous</span>
-        <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">4. Get the questions into order</span>
-        <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
-        </svg>
-      </a>
-    </li>
-    <li class="nhsuk-pagination-item--next">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form">
-        <span class="nhsuk-pagination__title">Next</span>
-        <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">6. Write the supporting content for your form</span>
-        <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-        </svg>
-      </a>
-    </li>
-  </ul>
-</nav>
+
+    {% from 'pagination/macro.njk' import pagination %}
+
+    {{ pagination({
+      "previousUrl": "/service-manual/content/how-to-write-good-questions/4-get-the-questions-into-order",
+      "previousPage": "Get the questions into order",
+      "nextUrl": "/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form",
+      "nextPage": "Write the supporting content for your form"
+    }) }}
 
   </div>
+</div>
 {% endblock %}

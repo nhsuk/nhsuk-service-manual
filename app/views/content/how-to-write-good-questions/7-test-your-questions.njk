@@ -1,5 +1,5 @@
 
-{% set pageTitle = '7. Test the questions'%}
+{% set pageTitle = 'Test the questions'%}
 {% set pageSection = 'How to write good questions' %}
 {% set pageDescription = 'Test with real users and the staff who deal with the form' %}
 
@@ -27,93 +27,87 @@
 {% block body %}
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
-     <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">{{pageDescription}}</p>
-   </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-<h2>Test your forms</h2>
-<p>It's a good idea to test any existing forms as well as your new questions.</p>
-<p>Try to understand:</p>
-<ul>
-  <li>if people have the skills they need - the literacy or digital skills, for example. See how long it takes someone with poor basic skills to fill in the form.</li>
-  <li>where they misinterpret a question, for example, where they put in the wrong information or not enough information</li>
-  <li>where they get frustrated</li>
-  <li>where they drop out and why</li>
-  <li>if people need to have documents or key information (like their NHS number) when they fill in the form - and how they find them</li>
-  <li>if they expect to paste in information, for example, something they prepared earlier - for example, on a complaint form</li>
-  <li>what happens if they start online, then follow up offline, or vice versa</li>
-</ul>
-<h2>Create a simple prototype</h2>
-<p>You could:</p>
-<ul>
-  <li>start with paper to test lots of different versions quickly</li>
-  <li>build a simple prototype and let users interact with it</li>
-  <li>use a script and ask people the questions - that way you can respond flexibly and probe where appropriate</li>
-</ul>
-<p>Whichever way you choose, give yourself a chance to change your questions before you start to build the form.</p>
+     <h1>
+      <span class="nhsuk-caption-l">
+        {{pageSection}}
+        <span class="nhsuk-u-visually-hidden"> - </span>
+      </span>
+      {{pageTitle}}
+    </h1>
 
-<p>Test the questions in crits and get them in front of real users quickly. Also test them with call handlers, contact centre staff and other knowledgeable staff. Look for the same things you did when you tested your existing forms. Focus particularly on:</p>
-<ul>
-  <li>the words and questions - watch users try to answer them and listen to how they talk about them</li>
-  <li>the structure and flow</li>
-</ul>
+    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
 
-<p>Make sure you include people:</p>
-<ul>
-  <li>with access needs - read more about <a href="https://beta.nhs.uk/service-manual/accessibility/user-research">user research in our accessibility guidance</a></li>
-  <li>with varying digital skills and connectivity</li>
-  <li>with 2 addresses or no address</li>
-  <li>who need to involve their families, carers, or advocates</li>
-</ul>
+    <p>{{pageDescription}}</p>
 
-<h2>Test the answers</h2>
-<p>Test whether the answers users give make sense in the context of the service.</p>
-<p>Talk to the people who:</p>
-<ul>
-  <li>deal with the forms as they arrive - for example, postroom or reception staff</li>
-  <li>use the information in the forms</li>
-  <li>deal with enquiries about the forms</li>
-</ul>
-<p>Watch out for:</p>
-<ul>
-  <li>any mistakes on the form, especially anything which might fail validation</li>
-  <li>if anything essential is missing</li>
-  <li>if there are internal contradictions, for example where someone has completed 2 items but only 1 is allowed</li>
-  <li>if there are any notes or additional information, or accompanying documents, to explain entries on the form</li>
-</ul>
-<p>Most of all, focus on the errors.</p>
+    <h2>Test your forms</h2>
+    <p>It's a good idea to test any existing forms as well as your new questions.</p>
+    <p>Try to understand:</p>
+    <ul>
+      <li>if people have the skills they need - the literacy or digital skills, for example. See how long it takes someone with poor basic skills to fill in the form.</li>
+      <li>where they misinterpret a question, for example, where they put in the wrong information or not enough information</li>
+      <li>where they get frustrated</li>
+      <li>where they drop out and why</li>
+      <li>if people need to have documents or key information (like their NHS number) when they fill in the form - and how they find them</li>
+      <li>if they expect to paste in information, for example, something they prepared earlier - for example, on a complaint form</li>
+      <li>what happens if they start online, then follow up offline, or vice versa</li>
+    </ul>
 
-<h2>Iterate your questions</h2>
+    <h2>Create a simple prototype</h2>
+    <p>You could:</p>
+    <ul>
+      <li>start with paper to test lots of different versions quickly</li>
+      <li>build a simple prototype and let users interact with it</li>
+      <li>use a script and ask people the questions - that way you can respond flexibly and probe where appropriate</li>
+    </ul>
+    <p>Whichever way you choose, give yourself a chance to change your questions before you start to build the form.</p>
+    <p>Test the questions in crits and get them in front of real users quickly. Also test them with call handlers, contact centre staff and other knowledgeable staff. Look for the same things you did when you tested your existing forms. Focus particularly on:</p>
+    <ul>
+      <li>the words and questions - watch users try to answer them and listen to how they talk about them</li>
+      <li>the structure and flow</li>
+    </ul>
+    <p>Make sure you include people:</p>
+    <ul>
+      <li>with access needs - read more about <a href="https://beta.nhs.uk/service-manual/accessibility/user-research">user research in our accessibility guidance</a></li>
+      <li>with varying digital skills and connectivity</li>
+      <li>with 2 addresses or no address</li>
+      <li>who need to involve their families, carers, or advocates</li>
+    </ul>
 
-<p>Please share what you learn with us to make this guidance better.</p>
+    <h2>Test the answers</h2>
+    <p>Test whether the answers users give make sense in the context of the service.</p>
+    <p>Talk to the people who:</p>
+    <ul>
+      <li>deal with the forms as they arrive - for example, postroom or reception staff</li>
+      <li>use the information in the forms</li>
+      <li>deal with enquiries about the forms</li>
+    </ul>
+    <p>Watch out for:</p>
+    <ul>
+      <li>any mistakes on the form, especially anything which might fail validation</li>
+      <li>if anything essential is missing</li>
+      <li>if there are internal contradictions, for example where someone has completed 2 items but only 1 is allowed</li>
+      <li>if there are any notes or additional information, or accompanying documents, to explain entries on the form</li>
+    </ul>
+    <p>Most of all, focus on the errors.</p>
 
-<p>We're also working on some guidance on building forms, choosing and applying components and patterns.</p>
-<p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></p>
-
+    <h2>Iterate your questions</h2>
+    <p>Please share what you learn with us to make this guidance better.</p>
+    <p>We're also working on some guidance on building forms, choosing and applying components and patterns.</p>
+    <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></p>
 
     <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: September 2019</p>
     </div>
-    </div>
-    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-    <ul class="nhsuk-list nhsuk-pagination__list">
-    <li class="nhsuk-pagination-item--previous">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form">
-        <span class="nhsuk-pagination__title">Previous</span>
-        <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">6. Write the supporting content for your form</span>
-        <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
-        </svg>
-      </a>
-    </li>
 
-  </ul>
-</nav>
+    {% from 'pagination/macro.njk' import pagination %}
+
+    {{ pagination({
+      "previousUrl": "/service-manual/content/how-to-write-good-questions/6-write-the-supporting-content-for-your-form",
+      "previousPage": "Write the supporting content for your form"
+    }) }}
 
   </div>
+</div>
 {% endblock %}
 
 
