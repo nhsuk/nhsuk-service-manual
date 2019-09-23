@@ -1,6 +1,49 @@
 # NHS digital service manual Changelog
 
-## 1.9.0 - Unreleased
+## 1.10.4 - TBC
+
+:wrench: **Fixes**
+
+- Remove the old basic cookie consent solution
+- Implement the new cookie consent solution
+- Remove feedback survey from the sitemap
+
+## 1.10.3 - 19 September 2019
+
+:wrench: **Fixes**
+
+- Remove redundant Adobe Analytics code
+- Anonymize IP addresses in Google Analytics
+- Update package dependencies to latest versions
+- Remove feedback survey from the footer
+- Use the correct class names for the typography size modifiers
+
+## 1.10.2 - 16 September 2019
+
+:wrench: **Fixes**
+
+- Remove the search JavaScript until the search functionality is complete
+
+## 1.10.1 - 11 September 2019
+
+:wrench: **Fixes**
+
+- Use the latest version of the NHS.UK frontend library (v2.3.1)
+- Update package dependencies to latest versions
+
+## 1.10.0 - 4 September 2019
+
+:new: **New content**
+
+- Add new entries to A to Z of NHS health writing, including: "baby", "foetus", "drowsy", "sleepy", "preconception care", "seizure or fit"
+
+:wrench: **Fixes**
+
+- Add mini-hub at top of Inclusive language page and change "baby" in section on Age
+- Update entry for summary care record in A to Z of NHS health writing
+- Update package dependencies to latest versions
+
+## 1.9.0 - 21 August 2019
 
 :new: **New content**
 
