@@ -1,0 +1,38 @@
+{% set pageTitle = 'Expander' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Make a complex topic easier to digest by letting users reveal more detailed information only if they need it.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'expander'
+  }) }}
+
+  <h2 id="when-to-use-expanders">When to use expanders</h2>
+  <p>Expanders stand out more than the <a href="/service-manual/components/details">details component</a>. They sit in a white box and use a + and - icon to show open and closed. </p>
+  <p>We use them when users may get overwhelmed reading about life-changing health conditions such as diabetes. Expanders help break down complex information into bite size pieces which the user can "expand" at their own pace, when they're ready to do so.</p>
+  <p>Information in an expander is intended for a wide audience. Often it's the sort of information we wouldn't usually hide but if users feel overwhelmed by the amount of information on the page, an expander breaks it down which helps meet their emotional needs.</p>
+
+  <h2 id="when-not-to-use-an-expander">When not to use an expander</h2>
+  <p>Do not use an expander if only some users will need the information. Use <a href="/service-manual/components/details">details</a> instead.
+  <p>As expanders are quite prominent, they don't work well on pages with other interactive elements - such as <a href="/service-manual/components/buttons">buttons</a> or <a href="/service-manual/components/text-input">text input</a>. There's a risk that they will distract users.</p> <p>We don't put expanders in other components like <a href="/service-manual/components/care-cards">care cards</a> for the same reason.</p>
+
+  <h2 id="how-expanders-work">How expanders work</h2>
+  <p>The expander is a short link in a box that expands into more detailed text when a user clicks on it.</p>
+
+  <h3>More than 1 expander</h3>
+  <p>It can work well to have several expanders. See the example below.</p>
+
+  {{ designExample({
+    type: 'expander-group'
+  }) }}
+
+  <h3 id="write-clear-link-text">Write clear link text</h3>
+  <p>Make the link text short and descriptive so users can quickly work out if they need to click on it.</p>
+
+  <h2 id="research">Research</h2>
+  <p>We tested several expanders in our information about type 1 diabetes where users felt overwhelmed by the amount of information. They tested well. We've also tested them on other pages about health and medicines.</p>
+
+{% endblock %}

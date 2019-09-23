@@ -7,39 +7,12 @@
 // Design examples
 @import 'design-example/design-example';
 
-// Table numeric styling
-.nhsuk-table__header--numeric,
-.nhsuk-table__cell--numeric {
-  text-align: right;
-}
-
 // Image with border
 .nhsuk-image--border {
+  @include nhsuk-responsive-margin(7, 'bottom');
+
   border: 1px solid $color_nhsuk-grey-4;
   width: 100%;
-}
-
-// Lede text styling
-// Because the styling is not consistent across the site for lede text
-.nhsuk-lede-text {
-  @include nhsuk-font(24);
-  @include nhsuk-responsive-margin(7, 'bottom');
-  // Apply lede text styling to p and ul within the lede (see foot pain hub)
-  p,
-  ul {
-    @include nhsuk-font(24);
-  }
-}
-
-.nhsuk-lede-text--small {
-  @include nhsuk-font(19);
-  @include nhsuk-responsive-margin(5, 'bottom');
-}
-
-// Reduces the spacing between the page heading and the lede text
-h1 + .nhsuk-lede-text,
-h1 + .nhsuk-lede-text--small {
-  margin-top: - nhsuk-spacing(4);
 }
 
 /**
@@ -63,38 +36,285 @@ h1 + .nhsuk-lede-text--small {
   @include nhsuk-responsive-padding(4, 'top');
 }
 
-// Fix to make the expander background grey in a white section
-// This needs to be added to the frontend library
-.nhsuk-section--white {
-  .nhsuk-expander {
-    background-color: $color_nhsuk-grey-5;
+$service-manual-container-size: 1100px;
 
-    .nhsuk-details__summary {
-      background-color: $color_nhsuk-grey-5;
-    }
-  }
-  .nhsuk-expander[open] {
-    .nhsuk-details__summary {
-      border-color: $color_nhsuk-white;
-    }
+// Container
+.nhsuk-width-container {
+  max-width: $service-manual-container-size;
+
+  @media (min-width: 767px) and (max-width: 1164px) {
+    margin: 0 32px;
   }
 }
 
+.nhsuk-header__navigation {
+  max-width: $service-manual-container-size;
 
-// App page contents
-.app-page-contents {
+  @media (min-width: 990px) and (max-width: 1164px) {
+    margin: 0 32px;
+  }
+}
+
+// Button reverse
+// Bug fix for the visited link colour
+.nhsuk-button--reverse:visited {
+  color: $color_nhsuk-black;
+}
+
+// Action link reverse
+// A variant of the action link
+.app-action-link--reverse {
+  color: $color_nhsuk-white;
+
+  &:focus {
+    color: $color_nhsuk-black;
+
+    &:visited {
+      color: $color_nhsuk-black;
+    }
+
+    &:hover {
+      color: $color_nhsuk-white;
+
+      .nhsuk-icon__arrow-right-circle {
+        fill: $color_nhsuk-white;
+      }
+    }
+
+    .nhsuk-icon__arrow-right-circle {
+      fill: $color_nhsuk-black;
+    }
+  }
+
+  &:hover,
+  &:visited,
+  &:visited {
+    background: 0;
+    box-shadow: none;
+    color: $color_nhsuk-white;
+  }
+
+  .nhsuk-icon__arrow-right-circle {
+    fill: $color_nhsuk-white;
+  }
+}
+
+// Hero
+// Overrides to include the action link
+.nhsuk-hero--service-manual {
+  .nhsuk-hero__wrapper {
+    @include nhsuk-responsive-padding(7, 'bottom');
+    @include nhsuk-responsive-padding(7, 'top');
+    @include top-and-bottom;
+  }
+}
+
+// Nav override
+// This change will be a part of the org header work
+.nhsuk-header__navigation-link {
+  font-size: 16px;
+}
+
+// Frontend override
+// Should be refactored into the frontend
+.nhsuk-body-m {
+  font-weight: 400;
+}
+
+// Table constrained
+// To make it align with content
+.nhsuk-table--constrained {
+  max-width: 44em;
+}
+
+// Table bug hot fix
+.nhsuk-table__cell.nhsuk-body-s {
+  display: table-cell;
+}
+
+th,
+td {
+  padding-left: 0;
+  vertical-align: top;
+}
+
+// Table numeric styling
+.nhsuk-table__header--numeric,
+.nhsuk-table__cell--numeric {
+  text-align: right;
+}
+
+// Table hot fix for removing margin top
+.nhsuk-table-responsive {
+  @include nhsuk-responsive-margin(3, 'top');
+}
+
+// Header hotfix - will be fixed with org header work
+.nhsuk-header__service-name {
+  padding-top: 0;
+}
+
+// Header active page section
+.nhsuk-header__navigation-link--active {
+  box-shadow: inset 0 -4px $color_nhsuk-white;
+  font-weight: 600;
+}
+
+// Index page navigation (mobile only)
+.app-index-navigation {
+  @include nhsuk-responsive-margin(4, 'top');
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+
+}
+
+// Example
+.app-example {
+  @include top-and-bottom;
   @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(2, 'top');
+  @include nhsuk-responsive-padding(5, 'bottom');
+  @include nhsuk-responsive-padding(5, 'left');
+  @include nhsuk-responsive-padding(5, 'right');
+  @include nhsuk-responsive-padding(7, 'top');
+
+  border: 1px solid $color_nhsuk-grey-3;
+  padding: 48px 32px 32px;
+  position: relative;
 }
 
-.app-page-contents__heading {
-  @include nhsuk-font(19, $weight: bold);
-  @include nhsuk-responsive-margin(3, 'bottom');
+.app-example__heading {
+  left: -1px;
+  position: absolute;
+  top: -1px;
 }
 
-.app-page-contents__list {
-  @include nhsuk-font(16);
+.app-example + h2 {
+  @include nhsuk-responsive-padding(4, 'top');
 }
 
-.app-page-contents__item {
-  @include nhsuk-responsive-margin(1, 'bottom');
+.app-example + h3 {
+  @include nhsuk-responsive-padding(2, 'top');
+}
+
+// Breadcrumbs hot fixes
+.nhsuk-breadcrumb__link,
+.nhsuk-breadcrumb__backlink {
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+  &:hover {
+    color: $color_nhsuk-black;
+  }
+  &:focus {
+    &:visited {
+      color: $color_nhsuk-black;
+    }
+  }
+}
+
+
+// Promo icons
+
+.app-promo__container {
+  float: left;
+  margin-bottom: 0;
+  padding: 0 16px;
+  width: 50%;
+
+  @include mq($until: desktop) {
+    flex: none;
+  }
+
+  @include mq($from: desktop) {
+    width: (100% / 3);
+  }
+
+  @include mq($from: large-desktop) {
+    width: 25%;
+  }
+}
+
+.app-promo--icons {
+  padding: 16px 0;
+}
+
+.app-promo--icons__icon {
+  display: flex;
+  height: 110px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-promo--icons {
+
+  .nhsuk-promo__link-wrapper {
+    &:hover {
+      .nhsuk-promo__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .nhsuk-promo__content {
+    @include nhsuk-responsive-padding(3, 'bottom');
+    @include nhsuk-responsive-padding(1, 'left');
+    @include nhsuk-responsive-padding(1, 'right');
+    @include nhsuk-responsive-padding(0, 'top');
+
+    text-align: center;
+  }
+
+  .nhsuk-promo__heading {
+    @include nhsuk-font(16);
+    max-width: 100%;
+    text-decoration: none;
+  }
+
+}
+
+/* ==========================================================================
+   #TABLES
+   ========================================================================== */
+
+@include mq($until: tablet) {
+  .app-table---responsive {
+    thead {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      border-bottom: solid 2px $color_nhsuk-grey-4;
+      display: block;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    td {
+      border-bottom: 1px dotted $color_nhsuk-grey-4;
+      display: block;
+      text-align: left;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        padding-right: 20px;
+      }
+    }
+  }
 }

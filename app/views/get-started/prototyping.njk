@@ -1,0 +1,31 @@
+{% set pageTitle = 'Prototyping' %}
+{% set pageSection = 'Get started' %}
+{% set pageDescription = 'This guide explains how to create prototypes using the NHS digital service manual and NHS.UK prototype kit.' %}
+{% set contributors = 'false' %}
+{% set helpImprove = 'false' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  <h2 id="before-you-start">Before you start</h2>
+  <p>To make prototypes you will need to install the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a> which has been built to work with the service manual.</p>
+
+  <h2 id="styling-page-elements">Styling page elements</h2>
+  <p>The service manual provides lots of new CSS classes for styling page elements, so you should not need to write as much of your own Sass or CSS.</p>
+  <p>Explore the <a href="/service-manual/styles/">Styles</a> section of the service manual to see what classes are available and how to apply them.</p>
+
+  <h2 id="using-components">Using components</h2>
+  <p>Components are reusable parts of the user interface, like buttons, text inputs and checkboxes. The components in the service manual are designed to be accessible and responsive.</p>
+  <p>There are 2 ways to use components in the service manual. You can either use HTML or a Nunjucks macro.</p>
+  <p>You can copy the code from the HTML or Nunjucks tabs below any examples:</p>
+
+  {{ designExample({
+    type: 'button'
+  }) }}
+
+  <h2 id="using-nunjucks-macros">Using Nunjucks macros</h2>
+  <p>A Nunjucks macro is a simple template that generates more complex HTML. However, macros are more sensitive to mistakes than HTML, so it’s worth saving and previewing.</p>
+  <p>When using Nunjucks macros in the prototype kit leave out the first line that starts with <code>% from ...</code>.</p>
+
+{% endblock %}

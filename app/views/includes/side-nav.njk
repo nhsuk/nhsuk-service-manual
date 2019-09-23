@@ -1,0 +1,141 @@
+{% set getStartedNavigation = [
+  { title: "Design principles", url: "/service-manual/get-started/design-principles" },
+  { title: "Prototyping", url: "/service-manual/get-started/prototyping" },
+  { title: "Production code", url: "/service-manual/get-started/production" }
+] %}
+
+{% set accessibilityEveryoneNavigation = [
+  { title: "What all NHS services need to do about accessibility", url: "/service-manual/accessibility/what-all-NHS-services-need-to-do" },
+  { title: "How to make digital services accessible", url: "/service-manual/accessibility/how-to-make-digital-services-accessible" },
+  { title: "Getting started with accessibility", url: "/service-manual/accessibility/getting-started" }
+] %}
+
+{% set accessibilityActivitiesNavigation = [
+  { title: "Product and delivery", url: "/service-manual/accessibility/product-and-delivery" },
+  { title: "User research", url: "/service-manual/accessibility/user-research" },
+  { title: "Content", url: "/service-manual/accessibility/content" },
+  { title: "Design", url: "/service-manual/accessibility/design" },
+  { title: "Development", url: "/service-manual/accessibility/development" },
+  { title: "Testing", url: "/service-manual/accessibility/testing" }
+] %}
+
+{% set contentNavigation = [
+  { title: "How we write", url: "/service-manual/content/how-we-write" },
+  { title: "Voice and tone", url: "/service-manual/content/voice-and-tone" },
+  { title: "Inclusive language", url: "/service-manual/content/inclusive-language" },
+  { title: "A to Z of NHS health writing", url: "/service-manual/content/a-to-z-of-NHS-health-writing" },
+  { title: "Health literacy", url: "/service-manual/content/health-literacy" },
+  { title: "Numbers, measurements, dates and time", url: "/service-manual/content/numbers-measurements-dates-time" },
+  { title: "Formatting and punctuation", url: "/service-manual/content/formatting-and-punctuation" },
+  { title: "Links and PDFs", url: "/service-manual/content/links-and-pdfs" }
+] %}
+
+{% set stylesNavigation = [
+  { title: "Colour", url: "/service-manual/styles/colour" },
+  { title: "Icons", url: "/service-manual/styles/icons" },
+  { title: "Layout", url: "/service-manual/styles/layout" },
+  { title: "Spacing", url: "/service-manual/styles/spacing" },
+  { title: "Typography", url: "/service-manual/styles/typography" }
+] %}
+
+{% set componentsNavigation = [
+  { title: "Action link", url: "/service-manual/components/action-link" },
+  { title: "Back link", url: "/service-manual/components/back-link" },
+  { title: "Breadcrumbs", url: "/service-manual/components/breadcrumbs" },
+  { title: "Buttons", url: "/service-manual/components/buttons" },
+  { title: "Care cards", url: "/service-manual/components/care-cards" },
+  { title: "Checkboxes", url: "/service-manual/components/checkboxes" },
+  { title: "Contents list", url: "/service-manual/components/contents-list" },
+  { title: "Date input", url: "/service-manual/components/date-input" },
+  { title: "Details", url: "/service-manual/components/details" },
+  { title: "Do and Don't list", url: "/service-manual/components/do-and-dont-list" },
+  { title: "Error message", url: "/service-manual/components/error-message" },
+  { title: "Error summary", url: "/service-manual/components/error-summary" },
+  { title: "Expander", url: "/service-manual/components/expander" },
+  { title: "Fieldset", url: "/service-manual/components/fieldset" },
+  { title: "Footer", url: "/service-manual/components/footer" },
+  { title: "Header", url: "/service-manual/components/header" },
+  { title: "Hint text", url: "/service-manual/components/hint-text" },
+  { title: "Images", url: "/service-manual/components/images" },
+  { title: "Inset text", url: "/service-manual/components/inset-text" },
+  { title: "Pagination", url: "/service-manual/components/pagination" },
+  { title: "Radios", url: "/service-manual/components/radios" },
+  { title: "Review date", url: "/service-manual/components/review-date" },
+  { title: "Select", url: "/service-manual/components/select" },
+  { title: "Skip link", url: "/service-manual/components/skip-link" },
+  { title: "Table", url: "/service-manual/components/table" },
+  { title: "Text input", url: "/service-manual/components/text-input" },
+  { title: "Textarea", url: "/service-manual/components/textarea" },
+  { title: "Warning callout", url: "/service-manual/components/warning-callout" }
+] %}
+
+{% set patternsNavigation = [
+  { title: "A to Z", url: "/service-manual/patterns/a-to-z" },
+  { title: "Mini-hub", url: "/service-manual/patterns/mini-hub" }
+] %}
+
+{% set communityNavigation = [
+  { title: "Backlog", url: "/service-manual/community/backlog" },
+  { title: "Propose a content change using GitHub", url: "/service-manual/community/propose-content-change" },
+  { title: "Propose a component or pattern", url: "/service-manual/community/propose-component-pattern" },
+  { title: "Develop a component or pattern", url: "/service-manual/community/develop-component-pattern" },
+  { title: "Contribution criteria", url: "/service-manual/community/contribution-criteria" },
+  { title: "Working group", url: "/service-manual/community/working-group" }
+] %}
+
+<nav class="app-side-nav">
+  {%- if pageSection == 'Get started' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in getStartedNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  {% endif %}
+  {%- if pageSection == 'Accessibility' %}
+  <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in accessibilityEveryoneNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in accessibilityActivitiesNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Content style guide' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in contentNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  {% endif %}
+  {%- if pageSection == 'Styles' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in stylesNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Components' %}
+  <ul class="nhsuk-list app-side-nav__list"></li>
+  {% for item in componentsNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Patterns' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in patternsNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {%- if pageSection == 'Community' %}
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in communityNavigation %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+</nav>

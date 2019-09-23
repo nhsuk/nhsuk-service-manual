@@ -1,0 +1,140 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+        {%- if landingPage == 'true' %}
+        {% else %}
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="
+          {%- if pageSection == 'Get started' %}/service-manual/get-started{% endif %}
+          {%- if pageSection == 'Styles' %}/service-manual/styles{% endif %}
+          {%- if pageSection == 'Components' %}/service-manual/components{% endif %}
+          {%- if pageSection == 'Patterns' %}/service-manual/patterns{% endif %}
+          {%- if pageSection == 'Content style guide' %}/service-manual/content{% endif %}
+          {%- if pageSection == 'Accessibility' %}/service-manual/accessibility{% endif %}
+          {%- if pageSection == 'Community' %}/service-manual/community{% endif %}
+          ">{{pageSection}}</a>
+        </li>
+        {% endif %}
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="
+        {%- if landingPage == 'true' %}/{% else %}
+        {%- if pageSection == 'Get started' %}/service-manual/get-started{% endif %}
+        {%- if pageSection == 'Styles' %}/service-manual/styles{% endif %}
+        {%- if pageSection == 'Components' %}/service-manual/components{% endif %}
+        {%- if pageSection == 'Patterns' %}/service-manual/patterns{% endif %}
+        {%- if pageSection == 'Content style guide' %}/service-manual/content{% endif %}
+        {%- if pageSection == 'Accessibility' %}/service-manual/accessibility{% endif %}
+        {%- if pageSection == 'Community' %}/service-manual/community{% endif %}
+        {% endif %}
+        ">Back to {%- if landingPage == 'true' %} Home{% else %} {{pageSection}}{% endif %}</a>
+      </p>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="app-pane">
+
+      <div class="app-pane__side-bar">
+        {% include 'includes/side-nav.njk' %}
+      </div>
+
+      <div class="app-pane__main-content">
+
+        <h1>
+          <span role="text">
+            {%- if landingPage == 'true' %}
+            {% else %}
+              <span class="nhsuk-caption-l">
+                {%- if navSection %}
+                {{navSection}}
+                {% else %}
+                {{pageSection}}
+                {% endif %}
+                <span class="nhsuk-u-visually-hidden"> - </span>
+              </span>
+            {% endif %}
+            {{pageTitle}}
+          </span>
+          {%- if experimental == 'true' %}
+            <div>
+              <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
+                Experimental
+              </strong>
+              <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental because <a href="#next-steps">more research</a> is needed to validate it.</p>
+            </div>
+          {% endif %}
+        </h1>
+
+        {%- if contributors == 'false' %}
+        {% else %}
+          <div class="app-contributor">
+            <h2 class="app-contributor__heading">Contributors</h2>
+            <ul class="app-contributor__list">
+              <li class="app-contributor__item">
+                <a href="#" class="app-contributor__avatar">
+                  <img src="https://www.fillmurray.com/120/120" alt="Bill Murray avatar picture" title="Bill Murray">
+                </a>
+              </li>
+              <li class="app-contributor__item">
+                <a href="#" class="app-contributor__avatar">
+                  <img src="https://www.fillmurray.com/100/100" alt="Bill Murray avatar picture" title="Bill Murray">
+                </a>
+              </li>
+              <li class="app-contributor__item">
+                <a href="#" class="app-contributor__avatar">
+                  <img src="https://www.fillmurray.com/110/110" alt="Bill Murray avatar picture" title="Bill Murray">
+                </a>
+              </li>
+              <li class="app-contributor__item">
+                <a href="#" class="app-contributor__avatar">
+                  <img src="https://www.fillmurray.com/130/130" alt="Bill Murray avatar picture" title="Bill Murray">
+                </a>
+              </li>
+              <li class="app-contributor__item">
+                <a href="#" class="app-contributor__avatar">
+                  <img src="https://www.fillmurray.com/140/140" alt="Bill Murray avatar picture" title="Bill Murray">
+                </a>
+              </li>
+              <li class="app-contributor__item">
+                <button type="button" class="app-contributor__more">
+                  <span class="nhsuk-u-visually-hidden">View </span> +6<span class="nhsuk-u-visually-hidden"> more contributors</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+
+        <p>{{pageDescription}}</p>
+
+        {% block mainContent %}{% endblock %}
+
+        {%- if experimental == 'true' %}
+          <h3 id="next-steps">Next steps</h3>
+          {% block nextSteps %}{% endblock %}
+        {% endif %}
+
+        {%- if landingPage == 'true' %}
+        {% else %}
+          {%- if helpImprove == 'false' %}
+          {% else %}
+            {% include 'includes/help-improve.njk' %}
+          {% endif %}
+          {% include 'includes/contact-panel.njk' %}
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

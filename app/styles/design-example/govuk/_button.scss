@@ -6,12 +6,13 @@
   -webkit-font-smoothing: antialiased;
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-green;
+  border-bottom: 3px solid $color_nhsuk-green;
   color: $color_nhsuk-green;
   font-family: 'nta', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   min-width: 58px;
-  padding: 4px 10px 0;
+  padding: 4px 12px 0;
   position: absolute;
   right: 15px;
   text-align: center;
@@ -19,4 +20,9 @@
   text-transform: uppercase;
   top: 15px;
   z-index: 1;
+}
+
+.app-link--copy:active {
+  border: 2px solid $color_nhsuk-green;
+  box-shadow: none;
 }

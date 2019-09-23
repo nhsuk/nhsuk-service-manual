@@ -1,0 +1,12 @@
+<div class="nhsuk-panel-with-label nhsuk-u-margin-bottom-5">
+  <h2 class="nhsuk-panel-with-label__label">Help improve this page</h2>
+  <p>To help make sure the {{pageTitle}} page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li>
+      <a href="{{githubIssue}}">share research or feedback about {%- if pageSection == 'Content style guide' %}{% else %} the{% endif %} {{pageTitle}} {%- if pageSection == 'Styles' %} styles {% endif %}{%- if pageSection == 'Components' %} component {% endif %}{%- if pageSection == 'Patterns' %} pattern {% endif %} on GitHub</a>
+    </li>
+    <li>
+      <a href="{{githubFork}}">propose a change to this page</a> - read more about <a href="/service-manual/community/propose-content-change">how to propose changes using GitHub</a>
+    </li>
+  </ul>
+</div>

@@ -1,6 +1,30 @@
 # NHS digital service manual Changelog
 
-## 1.10.1 - Unreleased
+## 1.10.4 - TBC
+
+:wrench: **Fixes**
+
+- Remove the old basic cookie consent solution
+- Implement the new cookie consent solution
+- Remove feedback survey from the sitemap
+
+## 1.10.3 - 19 September 2019
+
+:wrench: **Fixes**
+
+- Remove redundant Adobe Analytics code
+- Anonymize IP addresses in Google Analytics
+- Update package dependencies to latest versions
+- Remove feedback survey from the footer
+- Use the correct class names for the typography size modifiers
+
+## 1.10.2 - 16 September 2019
+
+:wrench: **Fixes**
+
+- Remove the search JavaScript until the search functionality is complete
+
+## 1.10.1 - 11 September 2019
 
 :wrench: **Fixes**
 

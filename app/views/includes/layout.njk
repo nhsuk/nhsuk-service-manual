@@ -1,4 +1,41 @@
+{% from 'header/macro.njk' import header %}
+{% from 'footer/macro.njk' import footer %}
+{% from 'skip-link/macro.njk' import skipLink %}
+{% from 'action-link/macro.njk' import actionLink %}
+{% from 'nav-a-z/macro.njk' import azNav %}
 {% from 'breadcrumb/macro.njk' import breadcrumb %}
+{% from 'care-card/macro.njk' import careCard %}
+{% from 'contents-list/macro.njk' import contentsList %}
+{% from 'details/macro.njk' import details %}
+{% from 'header/macro.njk' import header %}
+{% from 'hero/macro.njk' import hero %}
+{% from 'footer/macro.njk' import footer %}
+{% from 'do-dont-list/macro.njk' import list %}
+{% from 'images/macro.njk' import image %}
+{% from 'inset-text/macro.njk' import insetText %}
+{% from 'list-panel/macro.njk' import listPanel %}
+{% from 'pagination/macro.njk' import pagination %}
+{% from 'panel/macro.njk' import panel %}
+{% from 'promo/macro.njk' import promo %}
+{% from 'review-date/macro.njk' import reviewDate %}
+{% from 'skip-link/macro.njk' import skipLink %}
+{% from 'tables/macro.njk' import table %}
+{% from 'warning-callout/macro.njk' import warningCallout %}
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'checkboxes/macro.njk' import checkboxes %}
+{% from 'date-input/macro.njk' import dateInput %}
+{% from 'error-message/macro.njk' import errorMessage %}
+{% from 'error-summary/macro.njk' import errorSummary %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'hint/macro.njk' import hint %}
+{% from 'input/macro.njk' import input %}
+{% from 'label/macro.njk' import label %}
+{% from 'radios/macro.njk' import radios %}
+{% from 'select/macro.njk' import select %}
+{% from 'summary-list/macro.njk' import summaryList %}
+{% from 'textarea/macro.njk' import textarea %}
+{% from 'includes/design-example.njk' import designExample %}
 
 <!DOCTYPE html>
   <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
@@ -31,13 +68,18 @@
     <meta name="msapplication-wide310x150logo" content="/service-manual/nhsuk-frontend/assets/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="/service-manual/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W8BPX7Q');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Cookie consent -->
+    <script src="{{ COOKIE_CONSENT_URL }}" data-policy-url="https://beta.nhs.uk/our-policies/cookies-policy/" type="text/javascript"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
+    <script data-cookieconsent="statistics" type="text/plain" >
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
+    </script>
 
     <meta property="og:url" content="{{ BASE_URL }}"/>
     <meta property="og:site_name" content="nhs.uk"/>
@@ -69,7 +111,7 @@
     {% block outerBody %}{% endblock %}
 
     {% if pageLayout != 'Homepage' %}
-    <div class="nhsuk-width-container">
+    <div class="nhsuk-width-container nhsuk-width-container">
       <main class="nhsuk-main-wrapper" id="maincontent">
         {% block body %}{% endblock %}
       </main>

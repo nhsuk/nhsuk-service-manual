@@ -1,55 +1,21 @@
-{% set pageTitle = 'User research: accessibility guidance' %}
+{% set pageTitle = 'User research' %}
 {% set pageSection = 'Accessibility' %}
+{% set navSection = 'Accessibility guidance for...' %}
 {% set pageDescription = 'What user researchers need to do to make digital services accessible.' %}
+{% set contributors = 'false' %}
+{% set helpImprove = 'false' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
-{% endblock %}
+{% block mainContent %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
-  </div>
-</div>
+  {% include './partials/identify-target-groups-and-accessibility-challenges.njk' %}
+  {% include './partials/involve-people-with-access-needs-at-every-stage.njk' %}
+  {% include './partials/recruit-people-with-access-needs.njk' %}
+  {% include './partials/for-small-or-specialist-user-groups-focus-on-testing-the-interface.njk' %}
+  {% include './partials/run-technical-tests-for-accessibility-beforehand.njk' %}
+  {% include './partials/understand-participants-needs-before-you-test.njk' %}
+  {% include './partials/make-your-research-more-accessible-on-the-day.njk' %}
+  {% include './partials/look-after-your-team.njk' %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
-    {% include './partials/identify-target-groups-and-accessibility-challenges.njk' %}
-    {% include './partials/involve-people-with-access-needs-at-every-stage.njk' %}
-    {% include './partials/recruit-people-with-access-needs.njk' %}
-    {% include './partials/for-small-or-specialist-user-groups-focus-on-testing-the-interface.njk' %}
-    {% include './partials/run-technical-tests-for-accessibility-beforehand.njk' %}
-    {% include './partials/understand-participants-needs-before-you-test.njk' %}
-    {% include './partials/make-your-research-more-accessible-on-the-day.njk' %}
-    {% include './partials/look-after-your-team.njk' %}
-    {% include './partials/share-your-research.njk' %}
-
-    <div class="nhsuk-panel">
-      <h2>Get in touch</h2>
-      <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">NHS digital service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-    </div>
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
 {% endblock %}

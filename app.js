@@ -164,8 +164,10 @@ if (config.env === 'development') {
   app.listen(config.port);
 }
 
+/*
 setTimeout(function(){
   pageIndex.init();
 }, 2000);
+*/
 
 module.exports = app;

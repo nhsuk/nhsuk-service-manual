@@ -1,0 +1,12 @@
+// App contact panel
+// Get help content at the bottom of each page
+.app-contact-panel {
+  @include nhsuk-responsive-margin(6, 'top');
+
+  border-top: 2px solid $color_nhsuk-blue;
+}
+
+.app-contact-panel__heading {
+  @include nhsuk-font(24, $weight: bold);
+  @include nhsuk-responsive-padding(3, 'top');
+}

@@ -1,0 +1,29 @@
+{% set pageTitle = 'Action link' %}
+{% set pageSection = 'Components' %}
+{% set pageDescription = 'Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+  {{ designExample({
+    type: 'action-link'
+  }) }}
+
+  <h2 id="when-to-use-action-links">When to use action links</h2>
+  <p>Use action links to signpost the start of a digital service.</p>
+
+  <h2>When not to use action links</h2>
+  <p>Do not use action links in forms. Use a <a href="/service-manual/components/buttons">button</a> instead.</p>
+  <p>We don't use action links just to link to another page or site. If you need a link to stand out, you can use <a href="/service-manual/components/inset-text">inset text</a>.</p>
+
+  <h2 id="how-to-use-action-links">How to use action links</h2>
+  <p>Keep the words on the action link short. Start with a verb.</p>
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>"Book an appointment" or "Apply for an EHIC card"</p>
+  </div>
+  <p>Action links usually sit in a block of text. You can also put one in a <a href="/service-manual/components/care-cards">care card</a>.</p>
+  <p>You can have more than one action link on a page but avoid putting them near each other.</p>
+
+{% endblock %}

@@ -1,0 +1,162 @@
+{% set pageTitle = 'Typography' %}
+{% set pageSection = 'Styles' %}
+{% set pageDescription = 'Our fonts and typographic styles, and how to apply them.' %}
+
+{% extends 'includes/app-page-template.njk' %}
+
+{% block mainContent %}
+
+    <h2 id="font">Font</h2>
+    <h3>Frutiger</h3>
+    <p>Frutiger has been the NHS brand font since 1999. We use the web font for consistency between online and offline materials.</p>
+    <p>Email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a> for the desktop font. The web font will be part of the front-end toolkit.</p>
+    <h3>Fallback font</h3>
+    <p>Default to Arial when Frutiger isn't available.</p>
+    <p class="rich-text"><code>font-family: “Frutiger W01”, Arial, sans-serif;</code></p>
+
+    <h2 id="headings">Headings</h2>
+
+    {{ designExample({
+      type: 'typography-headings',
+      htmlOnly: true
+    }) }}
+
+    <h2 id="paragraphs-and-links">Paragraphs and links</h2>
+    {{ designExample({
+      type: 'typography-paragraphs-links',
+      htmlOnly: true
+    }) }}
+
+    <h2 id="lists">Lists</h2>
+    {{ designExample({
+      type: 'typography-lists',
+      htmlOnly: true
+    }) }}
+
+    <h2 id="sizes-and-spacing">Sizes and spacing</h2>
+    <h3>Small screens</h3>
+    <table class="nhsuk-u-margin-top-0">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>font-size</th>
+          <th>line-height</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>nhsuk-heading-xl</td>
+          <td>32px</td>
+          <td>36px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-l</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-m</td>
+          <td>20px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-s</td>
+          <td>18px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-xs</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>nhs-body-l</td>
+          <td>20px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-body</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>nhs-body-s</td>
+          <td>14px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>link</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 id="large-screens">Large screens</h3>
+    <table class="nhsuk-u-margin-top-0">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>font-size</th>
+          <th>line-height</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>nhsuk-heading-xl</td>
+          <td>48px</td>
+          <td>56px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-l</td>
+          <td>32px</td>
+          <td>40px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-m</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-s</td>
+          <td>22px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-heading-xs</td>
+          <td>19px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>nhs-body-l</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>nhsuk-body</td>
+          <td>19px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>nhs-body-s</td>
+          <td>16px</td>
+          <td>28px</td>
+        </tr>
+        <tr>
+          <td>Link</td>
+          <td>19px</td>
+          <td>28px</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="weights">Weights</h2>
+    <p>Use Frutiger Regular for body text.</p>
+    <p class="rich-text"><code>font-weight: 400;</code></p>
+    <p>Use <strong>Frutiger Regular Bold</strong> for headings and emphasis.</p>
+    <p class="rich-text"><code>font-weight: 600;</code></p>
+
+    <h2 id="research">Research</h2>
+    <p>We've tested our typography with lots of users including, for example, people with dyslexia and colour blindness.</p>
+
+{% endblock %}

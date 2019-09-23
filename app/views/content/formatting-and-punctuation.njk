@@ -1,164 +1,142 @@
 {% set pageTitle = 'Formatting and punctuation' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'Abbreviations, acronyms, capitalisation and other content styles.' %}
+{% set contributors = 'false' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-page-template.njk' %}
 
-{% from 'inset-text/macro.njk' import insetText %}
-{% from 'tables/macro.njk' import table %}
+{% block mainContent %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/content",
-  text: "Content style guide"
-}) }}
-{% endblock %}
+  <h2 id="abbreviations-and-acronyms">Abbreviations and acronyms</h2>
+  <p>We explain an abbreviation or acronym in full on its first use unless it's well known, like UK, NHS, GP. Then we refer to it by initials.</p>
+  <p>Example: A body mass index (BMI) above the healthy weight range can increase your risk of serious health problems.</p>
 
-{% block body %}
-<div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-   </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <div class="app-page-contents">
-      <h2 class="app-page-contents__heading">On this page</h2>
-      <ul class="app-page-contents__list">
-        <li class="app-page-contents__item">Abbreviations and acronyms</li>
-        <li class="app-page-contents__item">Apostrophes</li>
-        <li class="app-page-contents__item">Capitalisation</li>
-        <li class="app-page-contents__item">Contractions</li>
-        <li class="app-page-contents__item">Hyphens and dashes</li>
-        <li class="app-page-contents__item">Lists</li>
-        <li class="app-page-contents__item">Quotation marks</li>
-      </ul>
-    </div>
-    <h2 id="abbreviations-and-acronyms">Abbreviations and acronyms</h2>
-    <p>We explain an abbreviation or acronym in full on its first use unless it's well known, like UK, NHS, GP. Then we refer to it by initials.</p>
-    <p>Example: A body mass index (BMI) above the healthy weight range can increase your risk of serious health problems.</p>
-    <h2 id="apostrophes">Apostrophes</h2>
-    <p>We use straight, not curly apostrophes. Take care when pasting in text.</p>
-    {{ table({
-      panel: false,
-      firstCellIsHeader: false,
-      head: [
+  <h2 id="apostrophes">Apostrophes</h2>
+  <p>We use straight, not curly apostrophes. Take care when pasting in text.</p>
+  {{ table({
+    panel: false,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Don't use"
+      },
+      {
+        text: "Use"
+      }
+    ],
+    rows: [
+      [
         {
-          text: "Don't use"
+          text: "you’ll"
         },
         {
-          text: "Use"
+          text: "you'll"
         }
-      ],
-      rows: [
-        [
-          {
-            text: "you’ll"
-          },
-          {
-            text: "you'll"
-          }
-        ]
       ]
-    }) }}
-    <h2 id="capitalisation">Capitalisation</h2>
-    <p>We do not use block capitals as they're difficult for people to read.</p>
-    <p>We always use lower case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
-    <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
-    <p>Examples:</p>
-    <ul>
-      <li>Codeine comes mixed with paracetamol (co-codamol) or with aspirin (co-codaprin) or with ibuprofen (Nurofen Plus).</li>
-      <li>Watch these <a href="http://www.healthtalk.org/">healthtalk.org</a> videos.</li>
-    </ul>
-    <p>Conditions are lower-case except where they start with a proper name.</p>
-    <p>Examples:</p>
-    <ul>
-      <li>cancer of the colon</li>
-      <li>multiple sclerosis</li>
-      <li>Parkinson's disease</li>
-      <li>Alzheimer's disease</li>
-    </ul>
-    <p>But note: caesarean section.</p>
-    <h2 id="contractions">Contractions</h2>
-    <p>We use contractions like you'll, we'll, you're and what's. Often contractions make content friendlier and easier to read.</p>
-    <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
-    <p>Also avoid negative contractions like can't and don't. When you’re telling users not to do something, use "Do not" rather than "Don't".</p>
-    {{ insetText({
-      "HTML": "<h3>Research insight</h3><p>GDS research shows that many users find negative contractions harder to read and they sometimes misread them as the opposite of what they say.</p><p>The NHS.UK medicines team observed that, when we're telling people not to do something, they find do not clearer and more emphatic than \"don't\".</p>"
-    }) }}
-    <h2 id="hyphens-and-dashes">Hyphens and dashes</h2>
-    <h3>Hyphens</h3>
-    <p>We avoid using hyphens unless it confuses people to leave them out.</p>
-    <p>We do use a hyphen for:</p>
-    <ul>
-      <li>non-alcoholic</li>
-      <li>non-drowsy</li>
-      <li>sugar-free</li>
-    </ul>
-    <p>We do not use a hyphen for:
-    <ul>
-      <li>anticoagulant</li>
-      <li>beta blockers</li>
-      <li>breastfeeding</li>
-      <li>long term and short term</li>
-      <li>straight away</li>
-    </ul>
-    <h3>Dashes</h3>
-    <p>Avoid using dashes to indicate a pause. Instead use a comma, or write shorter sentences.</p>
-    <p>We use "to" instead of a dash for <a href="/service-manual/content/numbers-measurement-dates-time#ranges">ranges of numbers, dates or time</a>.</p>
-    {{ insetText({
-      "HTML": "<h3>Research insight</h3><p>There are some accessibility concerns with dashes. Assistive technologies read them out in different ways. But <a href=\"https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/\">GOV.UK research</a> shows that commas are consistently read out with a pause.</p><p>People with poor literacy can find hyphens and dashes an obstacle to easy reading. They also find long sentences with lots of commas difficult.</p>"
-    }) }}
-    <h2 id="lists">Lists</h2>
-    <p>Use lists to make text easier to read.​</p>
-    <p>Bulleted lists should be short and snappy. If possible, limit your list to no more than 6 items.​ Each item in the list should be roughly the same length.</p>
-    <p>Use a lead-in line with a colon. The bullets should make sense running on from the lead-in line. In effect, the list is 1 continuous sentence.</p>
-    <p>Example:</p>
-    <p>"A pharmacist can recommend:</p>
-    <ul>
-      <li>creams to ease pain and irritation</li>
-      <li>antiviral creams to speed up healing time</li>
-      <li>cold sore patches to protect the skin while it heals</li>
-    </ul>
-    <p>Each bullet point starts lower case and has no punctuation at the end, including after the last point.</p>
-    <p>Do not include more than 1 sentence at each bullet point.</p>
-    <p>Avoid ending a bullet point with "and" and "or". Use the lead-in to let people know the options.</p>
-    <p>We also use bullet points in <a href="/service-manual/styles-components-patterns/care-cards">care cards</a> and <a href="/service-manual/styles-components-patterns/do-and-dont-list">Do and Don’t lists.</a></p>
-    <h3>Numbered lists</h3>
-    <p>We use numbered lists instead of bulleted ones to guide people through a process. ​ Each point starts with a capital letter and ends with a full stop, without a lead-in line.</p>
-    <p>Example:</p>
+    ]
+  }) }}
+
+  <h2 id="capitalisation">Capitalisation</h2>
+  <p>We do not use block capitals as they're difficult for people to read.</p>
+  <p>We always use lower case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
+  <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
+  <p>Examples:</p>
+  <ul>
+    <li>Codeine comes mixed with paracetamol (co-codamol) or with aspirin (co-codaprin) or with ibuprofen (Nurofen Plus).</li>
+    <li>Watch these <a href="http://www.healthtalk.org/">healthtalk.org</a> videos.</li>
+  </ul>
+  <p>Conditions are lower-case except where they start with a proper name.</p>
+  <p>Examples:</p>
+  <ul>
+    <li>cancer of the colon</li>
+    <li>multiple sclerosis</li>
+    <li>Parkinson's disease</li>
+    <li>Alzheimer's disease</li>
+  </ul>
+  <p>But note: caesarean section.</p>
+
+  <h2 id="contractions">Contractions</h2>
+  <p>We use contractions like you'll, we'll, you're and what's. Often contractions make content friendlier and easier to read.</p>
+  <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
+  <p>Also avoid negative contractions like can't and don't. When you’re telling users not to do something, use "Do not" rather than "Don't".</p>
+
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Insight</strong>
+    <p>GDS research shows that many users find negative contractions harder to read and they sometimes misread them as the opposite of what they say.</p>
+    <p>The NHS website medicines team observed that, when we're telling people not to do something, they find do not clearer and more emphatic than "don't".</p>
+  </div>
+
+  <h2 id="hyphens-and-dashes">Hyphens and dashes</h2>
+
+  <h3>Hyphens</h3>
+  <p>We avoid using hyphens unless it confuses people to leave them out.</p>
+  <p>We do use a hyphen for:</p>
+  <ul>
+    <li>non-alcoholic</li>
+    <li>non-drowsy</li>
+    <li>sugar-free</li>
+  </ul>
+  <p>We do not use a hyphen for:
+  <ul>
+    <li>anticoagulant</li>
+    <li>beta blockers</li>
+    <li>breastfeeding</li>
+    <li>long term and short term</li>
+    <li>straight away</li>
+  </ul>
+
+  <h3>Dashes</h3>
+  <p>Avoid using dashes to indicate a pause. Instead use a comma, or write shorter sentences.</p>
+  <p>We use "to" instead of a dash for <a href="/service-manual/content/numbers-measurement-dates-time#ranges">ranges of numbers, dates or time</a>.</p>
+
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Insight</strong>
+    <p>There are some accessibility concerns with dashes. Assistive technologies read them out in different ways. But <a href="https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/">GOV.UK research</a> shows that commas are consistently read out with a pause.</p>
+    <p>People with poor literacy can find hyphens and dashes an obstacle to easy reading. They also find long sentences with lots of commas difficult.</p>
+  </div>
+
+  <h2 id="lists">Lists</h2>
+  <p>Use lists to make text easier to read.​</p>
+  <p>Bulleted lists should be short and snappy. If possible, limit your list to no more than 6 items.​ Each item in the list should be roughly the same length.</p>
+  <p>Use a lead-in line with a colon. The bullets should make sense running on from the lead-in line. In effect, the list is 1 continuous sentence.</p>
+  <p>Example:</p>
+  <p>"A pharmacist can recommend:</p>
+  <ul>
+    <li>creams to ease pain and irritation</li>
+    <li>antiviral creams to speed up healing time</li>
+    <li>cold sore patches to protect the skin while it heals</li>
+  </ul>
+  <p>Each bullet point starts lower case and has no punctuation at the end, including after the last point.</p>
+  <p>Do not include more than 1 sentence at each bullet point.</p>
+  <p>Avoid ending a bullet point with "and" and "or". Use the lead-in to let people know the options.</p>
+  <p>We also use bullet points in <a href="/service-manual/components/care-cards">care cards</a> and <a href="/service-manual/components/do-and-dont-list">Do and Don’t lists.</a></p>
+
+  <h3>Numbered lists</h3>
+  <p>We use numbered lists instead of bulleted ones to guide people through a process. ​ Each point starts with a capital letter and ends with a full stop, without a lead-in line.</p>
+
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
     <h4>How to gargle with salt water:</h4>
     <ol>
       <li>Dissolve half a teaspoon of salt in a glass of warm water.</li>
       <li>Gargle with the solution then spit it out – don't swallow it.</li>
       <li>Repeat as often as you like.</li>
     </ol>
-    <h2 id="quotation-marks">Quotation marks</h2>
-    <p>We generally use straight double quotes:</p>
-    <ul>
-      <li>when quoting another source</li>
-      <li>for unusual or colloquial terms, for example: Diuretics are sometimes called "water pills" because they make you pee more.</li>
-    </ul>
-    <p>Don't overdo quotation marks though. They can be distracting and are often unnecessary.</p>
-    <p>Use single quotes for:</p>
-    <ul>
-      <li>quotes within quotes, for example: "'Helicopter parenting' linked to behavioural problems in children," reports The Independent.</li>
-      <li>headlines</li>
-      <li>captions</li>
-      <li>large-type quotes</li>
-    </ul>
-      <div class="nhsuk-review-date">
-        <p class="nhsuk-body-s">Updated: August 2019</p>
-      </div>
-    </div>
-    <aside class="nhsuk-grid-column-one-third">
-      {% include './partials/related-nav.njk' %}
-    </aside>
   </div>
+
+  <h2 id="quotation-marks">Quotation marks</h2>
+  <p>We generally use straight double quotes:</p>
+  <ul>
+    <li>when quoting another source</li>
+    <li>for unusual or colloquial terms, for example: Diuretics are sometimes called "water pills" because they make you pee more.</li>
+  </ul>
+  <p>Don't overdo quotation marks though. They can be distracting and are often unnecessary.</p>
+  <p>Use single quotes for:</p>
+  <ul>
+    <li>quotes within quotes, for example: "'Helicopter parenting' linked to behavioural problems in children," reports The Independent.</li>
+    <li>headlines</li>
+    <li>captions</li>
+    <li>large-type quotes</li>
+  </ul>
+
 {% endblock %}
