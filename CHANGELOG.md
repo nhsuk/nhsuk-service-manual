@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## 1.10.4 - TBC
+
+:wrench: **Fixes**
+
+- Remove the old basic cookie consent solution
+- Implement the new cookie consent solution
+- Remove feedback survey from the sitemap
+
 ## 1.10.3 - 19 September 2019
 
 :wrench: **Fixes**
