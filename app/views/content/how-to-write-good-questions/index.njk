@@ -1,5 +1,5 @@
-{% set pageTitle = 'How to write good questions' %}
-{% set pageSection = 'Content style guide' %}
+{% set pageTitle = 'Introduction' %}
+{% set pageSection = 'How to write good questions' %}
 {% set pageDescription = 'Guidance for people working on forms, questionnaires and transactional services.' %}
 
 {% extends 'includes/layout.njk' %}
@@ -21,7 +21,13 @@
 {% block body %}
 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>How to write good questions</h1>
+    <h1>
+      <span class="nhsuk-caption-l">
+        {{pageSection}}
+        <span class="nhsuk-u-visually-hidden"> - </span>
+      </span>
+      {{pageTitle}}
+    </h1>
     <p class="nhsuk-body-l nhsuk-u-margin-bottom-7">Guidance for NHS content designers and teams working on forms and transactional services. </p>
 
     {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
@@ -32,6 +38,20 @@
       <li>how to write them well</li>
       <li>how to write other content for your form or transaction, for example: introductions, instructions, help text, error messages and confirmation pages</li>
     </ul>
+
+    <h2>What is a form?</h2>
+    <p>It's a form if it:</p>
+    <ol>
+      <li>looks and works like a form - you need to make it easy to read and easy to use (interaction design)</li>
+      <li>asks questions and expects people to give an answer - make the questions easy to understand and answer (content design)</li>
+      <li>lets someone achieve a goal - make it easy for them to get things done and move on (service design)</li>
+    </ol>
+
+    <h2>Form design and this guidance</h2>
+    <p>Forms need to work across all 3 layers.</p>
+    <p>This guidance focuses on the questions and on content design for forms (layer 2).</p>
+    <p>Later this year, we will be working on guidance to help you build the form (interaction design - layer 1).</p>
+    <p>Think about service design (layer 3) too. The <a href="https://www.gov.uk/service-manual/design/introduction-designing-government-services">GOV.UK guidance on "Designing good government services: an introduction"</a> is a good place to start.</p>
 
     <h2>Community</h2>
     <p>A lot of people have helped us with this guidance.</p>
@@ -55,8 +75,8 @@
     {% from 'pagination/macro.njk' import pagination %}
 
     {{ pagination({
-      "nextUrl": "/service-manual/content/how-to-write-good-questions/introduction-what-is-a-form",
-      "nextPage": "Introduction - what is a form?"
+      "nextUrl": "/service-manual/content/how-to-write-good-questions/1-understand-the-problem-before-you-write-your-questions",
+      "nextPage": "Understand the problem before you write your questions"
     }) }}
 
   </div>
