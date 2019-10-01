@@ -1,0 +1,113 @@
+{% set pageTitle = 'Consider the sensitivities around your questions'%}
+{% set pageSection = 'How to write good questions' %}
+{% set pageDescription = 'People may not trust you with their personal data or they may think the question is inappropriate.' %}
+
+{% extends 'includes/layout.njk' %}
+{% from 'review-date/macro.njk' import reviewDate %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    },
+    {
+      href: "/service-manual/content",
+      text: "Content style guide"
+    }
+  ],
+    href: "/service-manual/content/how-to-write-good-questions",
+    text: "How to write good questions"
+
+  }) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      <span class="nhsuk-caption-l">
+        {{pageSection}}
+        <span class="nhsuk-u-visually-hidden"> - </span>
+      </span>
+      {{pageTitle}}
+    </h1>
+
+    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
+
+    <p>{{pageDescription}}</p>
+
+    <h2>Be aware of the topics that are especially sensitive</h2>
+
+
+        <p>These include:</p>
+        <ul>
+          <li>gender or sex</li>
+          <li>sexual orientation</li>
+          <li>whether or not the person has children or intends to have children</li>
+          <li>whether or not they are married, in a partnership, or living with someone</li>
+          <li>whether or not they have mental health problems</li>
+        </ul>
+        <p>Other questions under the Equalities Act may be sensitive.</p>
+
+        <p>Some people are reluctant to divulge:</p>
+        <ul>
+          <li>their true age</li>
+          <li>their email address</li>
+          <li>their telephone or mobile number</li>
+        </ul>
+    <p>Consider what you'll do if the user can't or won't answer the question.</p>
+    <h2>Ask a different question</h2>
+
+    <p>Another way to deal with sensitive questions is to ask a different question. For example, people may be more willing to give you their age range.</p>
+
+<h2>Explain why you're asking the question</h2>
+    <p>If you <a href="/service-manual/content/how-to-write-good-questions/2-make-sure-you-need-each-question#understand-why-you're-asking-each-question">understand why you're asking each question</a> and how you will use the answer, you can explain it to users. Tell them why how it will help you help them. (If there’s no benefit to the user, do you need to ask it?)<p>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+      Examples
+        </span>
+      </summary>
+    <div class="nhsuk-details__text">
+    <p>For example:</p>
+    <ul>
+      <li>tell users that the questions you're asking will help you know if their situation is urgent</li>
+      <li>if your service collections some information only for statistics and will anonymise it, say so</li>
+    </ul>
+    </div>
+    </details>
+
+    <h2>Read more about asking for sensitive information</h2>
+    <p>There is more guidance on asking for different kinds of information in the GOV.UK design system:</p>
+
+    <ul>
+      <li><a href="https://design-system.service.gov.uk/patterns/addresses/">addresses</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/dates/">dates</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/email-addresses/">email addresses</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/ethnic-group/">ethnic groups</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/gender-or-sex/">gender or sex</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/names/">names</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/national-insurance-numbers/">National Insurance numbers</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/passwords/">passwords</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/payment-card-details/">payment card details</a></li>
+      <li><a href="https://design-system.service.gov.uk/patterns/telephone-numbers/">telephone numbers</a></li>
+    </ul>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: October 2019</p>
+    </div>
+
+    {% from 'pagination/macro.njk' import pagination %}
+
+    {{ pagination({
+      "previousUrl": "/service-manual/content/how-to-write-good-questions/1-start-with-discovery",
+      "previousPage": "Start with discovery",
+      "nextUrl": "/service-manual/content/how-to-write-good-questions/3-think-of-the-form-as-a-conversation",
+      "nextPage": "Think of the form as a conversation"
+    }) }}
+
+  </div>
+</div>
+{% endblock %}
