@@ -7,6 +7,7 @@
 - Remove the old basic cookie consent solution
 - Implement the new cookie consent solution
 - Remove feedback survey from the sitemap
+- Update the Slack workspace URL
 
 ## 1.10.3 - 19 September 2019
 
