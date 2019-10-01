@@ -2,8 +2,14 @@
 
 ## 1.10.4 - TBC
 
+:new: **New content**
+
+- Add new entry to A to Z of NHS health writing for "PMS (premenstrual syndrome)"
+
 :wrench: **Fixes**
 
+- Amend entries for "GP surgery" and "seizure or fit" in the A to Z of NHS health writing
+- Delete mention of wizard behind the curtain from accessibility guidance
 - Remove the old basic cookie consent solution
 - Implement the new cookie consent solution
 - Remove feedback survey from the sitemap
