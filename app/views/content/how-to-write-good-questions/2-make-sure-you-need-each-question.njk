@@ -1,6 +1,6 @@
 {% set pageTitle = 'Make sure you need each question'%}
 {% set pageSection = 'How to write good questions' %}
-{% set pageDescription = 'Question your questions. Follow the "Keep, Cut, Postpone, Explain" mantra to work out which ones to include.' %}
+{% set pageDescription = 'Question your questions. Keep them to a minimum.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
@@ -37,65 +37,35 @@
     {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
 
     <p>{{pageDescription}}</p>
-
-      <h2>Keep the questions you and your users definitely need</h2>
-    <p>If you’re asking for answers that you definitely need and your users expect to give you the information, keep those questions.</p>
-    <p>For example, users are usually happy to give you:</p>
-    <ul>
-      <li>their email address to sign up for a newsletter</li>
-      <li>their postcode to find a local pharmacy</li>
-    </ul>
-
-    <h2>Cut out anything that isn't essential</h2>
-    <p>Work out if the answer is essential to deliver your service. If not, cut it out. (If you don’t know how you'll use the answer, find out or remove the question.)</p>
-
-    <h3 id="understand-why-you're-asking-each-question">Understand why you're asking each question</h3>
-    <p>Make a list of all the information you need from your users now for you to deliver the service. This process forces you to question why you're asking users for each item of information and allows you to challenge unnecessary questions. (This list is sometimes called a "question protocol".)</p>
+    <h2 id="understand-why-you're-asking-each-question">Understand why you're asking each question</h2>
+    <p>Make a list of all the information you need from your users now for you to deliver the service. Having a list forces you to question why you're asking users for each item of information. It also helps you challenge unnecessary questions. (This list is sometimes called a "question protocol".)</p>
     <p>Work out what <a href="#use-information-your-organisation-already-has">information your organisation already has (or can access)</a> and where you have information gaps. Ask the questions that let you fill the gaps.</p>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Only include a question when you know these things
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <ul>
-          <li>that you need the information to deliver the service</li>
-          <li>why you need it</li>
-          <li>who in the organisation uses the information and how</li>
-          <li>which users need to give you the information</li>
-          <li>how you'll check that the information is accurate - and your validation rules</li>
-          <li>what you'll do if the user gives you the wrong answer or no answer</li>
-          <li>how you'll keep the information up to date and secure - and get specialist advice on protecting users' confidentiality and privacy</li>
-        </ul>
-      </div>
-    </details>
+    <h2>Only ask for information you definitely need</h2>
+    <p>Only include a question when you know these things:</p>
+    <ul>
+        <li>that you need the information to deliver the service</li>
+        <li>why you need it</li>
+        <li>who in the organisation uses the information and how</li>
+        <li>which users need to give you the information</li>
+        <li>how you'll check that the information is accurate - and your validation rules</li>
+        <li>what you'll do if the user gives you the wrong answer or no answer</li>
+        <li>how you'll keep the information up to date and secure</li>
+      </ul>
+    <p>If you don't know how you'll use an answer, find out or remove the question.</p>
+    <p>All the data you capture is subject to data protection legislation, including GDPR.  Get specialist advice on protecting users' confidentiality and privacy. (That's another reason to collect as little as possible.)</p>
 
-    <h3 id="start-with-essential-questions">Start with essential questions and add optional ones later</h3>
-    <p>Only ask for information you need to provide the service. Decide if each question is essential (sometimes called "required" or "mandatory") or not. </p>
+    <h2 id="start-with-essential-questions">Start with essential questions and add optional ones later</h2>
+    <p>Decide if each question is essential (sometimes called "required" or "mandatory") or not. It is essential if the user can't get the service unless they give you this information.</p>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Ask yourself how essential the information is
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>There are 4 kinds of questions:</p>
-        <ul>
-          <li>essential questions - the user can't get the service unless they give you this information</li>
-          <li>not essential, but helpful - on a feedback form, for example, if the user wants a reply, they may give you their contact details but not if they just want to send you feedback</li>
-          <li>not essential or helpful to the organisation, but important to the user - for example, the user may want to tell you their history</li>
-          <li>neither essential nor helpful - leave these out</li>
-        </ul>
-        <p>Only add helpful (optional) questions if your users seem to need them.</p>
-      </div>
-    </details>
+    <p>People sometimes think personal data is essential. <a href="/service-manual/content/how-to-write-good-questions/3-consider-the-sensitivities-around-your-questions">Consider the sensitivities of your questions</a> and the data you really need. For example, do you need to ask someone's gender if they have a broken leg?</p>
 
-    <p>Mark optional fields with "(optional)". Do not mark essential fields with asterisks.</p>
-    <h3 id="use-information-your-organisation-already-has">Use information your organisation already has - or can access</h3>
-    <p>If you already have some data about the user, you may only need them to confirm that it's correct. Or you may be able to get some of the information you need from another NHS system.</p>
+    <p>Only add optional questions if your users seem to need them.</p>
+
+    <p>Mark optional fields with "(optional)" - in brackets. Do not mark essential fields with asterisks.</p>
+    <h2 id="use-information-your-organisation-already-has">Use information your organisation already has - or can access</h2>
+    <p>If you already have some data about the user, you may only need them to confirm that it's correct.</p>
+    <p>Investigate whether you can get some of the information you need from another NHS system.</p>
     <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
@@ -117,19 +87,8 @@
       </div>
     </details>
 
-    <h3>Be clear about signatures and declarations</h3>
-    <p>Paper forms often ask for a signature but not many organisations authenticate them. Does your service need a signature and if so, how does it check the user's identity? </p>
-
-    <p>Sometimes the value of the declaration is that it signals:</p>
-    <ul>
-      <li>that you're asking users to commit to give careful, honest answers</li>
-      <li>that they've ready to hand their information or application over to your service to take the next step</li>
-    </ul>
-    <p>Before you include a signature or declaration, find out what your users expect and understand by it.</p>
-    <p>If you have to verify and authenticate individuals, read <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">Identity verification and authentication standard for digital health and care services</a>, DCB3051 (NHS Digital).</p>
-
     <h2>Postpone questions you could ask later</h2>
-    <p>If you’re asking for answers that you don’t need right now, postpone your question. Ask for the minimum information your service needs to make a decision and consider collecting other information afterwards.</p>
+    <p>If you’re asking for answers that you don’t need right now, consider collecting the information afterwards.</p>
 
     <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
@@ -139,79 +98,14 @@
       </summary>
       <div class="nhsuk-details__text">
         <ul>
-          <li>If the person has a broken leg, you don’t need to ask their sex.</li>
           <li>On an application form, first ask the questions that let you and the user know if they're eligible, then come back to questions that determine what they will get.</li>
           <li>For psychological therapies, do not ask your users to take a clinical assessment (like a depression score sheet) as part of their self-referral form - ask them to fill it in later on.</li>
         </ul>
       </div>
     </details>
 
-    <h2>Explain why you need to ask</h2>
-    <p>There are some questions people may not want to answer, for example:</p>
-    <ul>
-      <li>if you're asking for personal data - they may not trust you or think it's relevant or appropriate</li>
-      <li>if it's something that needs research or extra thought</li>
-    </ul>
-    <p>Tell people why you need to ask and how it will help you help them. (If there’s no benefit to the user, do you need to ask it?)<p>
-
-    <h3 id="consider-the-sensitivities-around-your-questions">Consider the sensitivities around your questions</h3>
-    <p>Users may be reluctant to answer questions that ask for sensitive information or for information that seems inappropriate.  but they may be reluctant to give you their name and date of birth if they do not think it's relevant.</p>
-    <p>If you <a href="#understand-why-you're-asking-each-question">understand why you're asking each question</a> and how you will use the answer, you can explain it to the user. For example:</p>
-    <ul>
-      <li>tell users that the questions you're asking will help you know if their situation is urgent</li>
-      <li>if your service collections some information only for statistics and will anonymise it, say so</li>
-    </ul>
-
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Topics that are especially sensitive
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>These include:</p>
-        <ul>
-          <li>sex observed and noted at birth or biological sex</li>
-          <li>gender</li>
-          <li>sexual orientation</li>
-          <li>whether or not the person has children or intends to have children</li>
-          <li>whether or not they are married, in a partnership, or living with someone</li>
-          <li>whether or not they have mental health problems</li>
-        </ul>
-        <p>Other questions under the Equalities Act may be sensitive.</p>
-
-        <p>Some people are reluctant to divulge:</p>
-        <ul>
-          <li>their true age - they may have lied about it before</li>
-          <li>their email address - they may be afraid of spam</li>
-          <li>their telephone or mobile number - they may be afraid it’ll be used inappropriately</li>
-        </ul>
-      </div>
-    </details>
-
-    <p>Another way to deal with sensitive questions is to ask a different question. For example, people may be more willing to give you their age range.</p>
-    <p>Sometimes "Other" is a useful option, but be wary of using it with personal data or sensitive topics. It can make people feel that you don't care enough about their personal circumstances to be specific. Be careful too with "Other" or "Mixed" ethnicity in the context of health information. Do not use these categories to provide health information.</p>
-    <p>Consider what you'll do if the user can't or won't answer the question.</p>
-
-    <p>There is more guidance on asking users for different kinds of information in the GOV.UK design system:</p>
-
-    <ul>
-      <li><a href="https://design-system.service.gov.uk/patterns/addresses/">addresses</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/dates/">dates</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/email-addresses/">email addresses</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/ethnic-group/">ethnic groups</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/gender-or-sex/">gender or sex</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/names/">names</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/national-insurance-numbers/">National Insurance numbers</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/passwords/">passwords</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/payment-card-details/">payment card details</a></li>
-      <li><a href="https://design-system.service.gov.uk/patterns/telephone-numbers/">telephone numbers</a></li>
-    </ul>
-
-    <p>Remember, if you do not know how your service will use the answer, do not ask the question.</p>
-
     <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: September 2019</p>
+      <p class="nhsuk-body-s">Updated: October 2019</p>
     </div>
 
     {% from 'pagination/macro.njk' import pagination %}
