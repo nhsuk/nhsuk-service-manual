@@ -1,6 +1,6 @@
 
 {% set pageTitle = 'Get the questions into order'%}
-{% set pageSection = 'How to write good questions' %}
+{% set pageSection = 'How to write good questions for forms' %}
 {% set pageDescription = 'Here are some tips to get you started. Then test the order with your users.' %}
 
 {% extends 'includes/layout.njk' %}
@@ -18,8 +18,8 @@
       text: "Content style guide"
     }
   ],
-    href: "/service-manual/content/how-to-write-good-questions",
-    text: "How to write good questions"
+    href: "/service-manual/content/how-to-write-good-questions-for-forms",
+    text: "How to write good questions for forms"
 
   }) }}
 {% endblock %}
@@ -35,7 +35,7 @@
       {{pageTitle}}
     </h1>
 
-    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
+    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
 
     <p>{{pageDescription}}</p>
 
@@ -43,16 +43,16 @@
     <ul>
       <li>It may help to start with easy questions and to save more difficult or sensitive questions for later.</li>
       <li>Design for the most common scenarios first.</li>
-      <li><a href="/service-manual/content/how-to-write-good-questions/6-think-of-the-form-as-a-conversation">Think of the form as a conversation</a>. Listen for natural pauses, for example, between topics.</li>
+      <li><a href="/service-manual/content/how-to-write-good-questions-for-forms/6-think-of-the-form-as-a-conversation">Think of the form as a conversation</a>. Listen for natural pauses, for example, between topics.</li>
       <li>You could put filter questions first. For example, start with questions that let users know if they’re not eligible for the service, so you don’t waste their time.</li>
       <li>You could group questions according to where users will get the answer. For example, group contact information together and account information together. See the section on <a href="/service-manual/content/how-to-write-good-questions/6-think-of-the-form-as-a-conversation#consider-the-effort-involved-in-answering">considering the effort involved in answering</a>.</li>
-      <li>If you have similar fields, <a href="/service-manual/content/how-to-write-good-questions/2-make-sure-you-need-each-question#start-with-essential-questions">start with essential questions</a> ahead of optional ones.</li>
+      <li>If you have similar fields, <a href="/service-manual/content/how-to-write-good-questions-for-forms/2-make-sure-you-need-each-question#start-with-essential-questions">start with essential questions</a> ahead of optional ones.</li>
       <li>Do card sorting with users to understand which questions go together.</li>
       <li>Usually signatures or declarations come at the end.</li>
     </ul>
 
     <h2>Test the order</h2>
-    <p><a href="/service-manual/content/how-to-write-good-questions/8-test-your-questions">Testing your questions</a> will give you a good idea what a sensible order is. Your user research will show which questions users expect first.</p>
+    <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/8-test-your-questions">Testing your questions</a> will give you a good idea what a sensible order is. Your user research will show which questions users expect first.</p>
     <p>For example, do they expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
 
     <div class="nhsuk-review-date">
@@ -62,9 +62,9 @@
     {% from 'pagination/macro.njk' import pagination %}
 
     {{ pagination({
-      "previousUrl": "/service-manual/content/how-to-write-good-questions/4-use-yes-no-questions-but-be-careful",
+      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/4-use-yes-no-questions-but-be-careful",
       "previousPage": "Use Yes No questions, but be careful",
-      "nextUrl": "/service-manual/content/how-to-write-good-questions/6-think-of-the-form-as-a-conversation",
+      "nextUrl": "/service-manual/content/how-to-write-good-questions-for-forms/6-think-of-the-form-as-a-conversation",
       "nextPage": "Think of the form as a conversation"
     }) }}
 
