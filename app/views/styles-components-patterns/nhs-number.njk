@@ -1,0 +1,554 @@
+{% set pageTitle = 'Ask patients for their NHS number' %}
+{% set pageSection = 'Styles, components and patterns' %}
+{% set pageDescription = 'Only ask for NHS numbers if you need them from patients to use the service or if the user is more likely to succeed on the journey if they can provide it.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'action-link/macro.njk' import actionLink %}
+{% from 'panel/macro.njk' import panel %}
+{% from 'includes/design-example.njk' import designExample %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
+  </div>
+</div>
+
+   <h3>Question before a single input </h3>
+   <p>Use a question before a single input if:</p>
+   <ul>
+        <li>there is more than one way for patients to continue without an NHS number</li>
+        <li>there is more than one way for patients to continue without an NHS number</li>
+        <li>the non-NHS number route is less likely to succeed for users or is more likely to cause errors</li>
+    </ul>
+
+  
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      Do you know your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint" id="example-hint">
+      Your NHS number is a 10 digit number, like 485 777 3456
+    </span>
+    <span class="nhsuk-hint" id="example-hint">
+      You can find this on any letter sent to you by the NHS, on a prescription, or by logging in to a GP practice online service
+    </span>
+
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+          Yes, I know my NHS number
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+          No, I do not know my NHS number
+        </label>
+      </div>
+    </div>
+        <button class="nhsuk-button nhsuk-button--reverse" type="submit">
+         Continue
+        </button>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      What is your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint">
+  Your NHS number is a 10 digit number, for example 485 777 3456
+</span>
+
+    <div class="nhsuk-form-group">
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+
+   <h3>Single input</h3>
+ <p>Use a single input without logic if:</p>
+    <ul>
+        <li>you have introduced the NHS number as a requirement earlier in your service</li>
+        <li>there is no other way for patients to continue without entering their NHS number</li>
+    </ul>
+
+
+    <div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      What is your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint">
+  Your NHS number is a 10 digit number that you find on any letter sent to you by the NHS. For example, 458 777 3456
+</span>
+
+    <div class="nhsuk-form-group">
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+    <h2>When to use this pattern</h2>
+    <p>Follow this pattern whenever you need to ask for an NHS number.</p>
+
+
+    <h2>When not to use this pattern</h2>
+    <p>Only ask for NHS numbers if you need them from patients to use the service or if the user is more likely to succeed on the journey if they can provide it.</p>
+    <p>Patients do not need to know their NHS number to receive care. This means that the NHS number is not a well-known identifier.</p>
+    <p>The National Data Opt-out Programme and NHS Login team found that many users scanning the page can mistake it for their National Insurance number.</p>
+    <p>If you need to ask for the NHS number, provide another way to complete the task without it. For example, using a combination of other personal details like a patient's postcode and date of birth.</p>
+
+
+
+    <h2>How to use this pattern</h2>
+    <p>When asking for an NHS number:</p>
+    <ul>
+        <li>use a text input that allows for spaces and other characters between numbers. Some users will copy the format the NHS number is printed in (3-3-4) and include spaces.</li>
+        <li>give clear guidance on what an NHS number looks like</li>
+        <li>allow at least 12 characters in your NHS number input</li>
+        <li>add the inputmode='numeric' attribute to your input to provide mobile users with a numeric keyboard on iOS devices and mobile Chrome</li>
+        <li>validate the NHS number by using a modulus 11 algorithm to check if the number is valid</li>
+    </ul>
+
+    <h3>Questions before input</h3>
+    <p>Use a two-option radio button that asks the user if they know their NHS number. If they do, route them to a page that asks for their NHS number.</p>
+    <p>When asking for their NHS number, use a text input labelled with either "What is your NHS number?" of "Enter your NHS number".</p>
+    <p>Provide help text on both pages to help them find their NHS number and confirm they have the right format of number.</p>
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      Do you know your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint" id="example-hint">
+      Your NHS number is a 10 digit number, like 485 777 3456
+    </span>
+    <span class="nhsuk-hint" id="example-hint">
+      You can find this on any letter sent to you by the NHS, on a prescription, or by logging in to a GP practice online service
+    </span>
+
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+          Yes, I know my NHS number
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+          No, I do not know my NHS number
+        </label>
+      </div>
+    </div>
+        <button class="nhsuk-button nhsuk-button--reverse" type="submit">
+         Continue
+        </button>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      What is your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint">
+  Your NHS number is a 10 digit number, for example 485 777 3456
+</span>
+
+    <div class="nhsuk-form-group">
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+   
+    <h4>Giving users another option</h4>
+    <p>You may want to provide extra help for users who are unsure of where to find their NHS number.</p>
+    <p>You can give users an "other" example that provides extra information about their NHS number and where to find it.</p>
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      Do you know your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint" id="example-hint">
+      Your NHS number is a 10 digit number, like 485 777 3456
+    </span>
+    <span class="nhsuk-hint" id="example-hint">
+      You can find this on any letter sent to you by the NHS, on a prescription, or by logging in to a GP practice online service
+    </span>
+
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+          Yes, I know my NHS number
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+          No, I do not know my NHS number
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="uncertain">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+          I'm unsure
+        </label>
+      </div>
+    </div>
+        <button class="nhsuk-button nhsuk-button--reverse" type="submit">
+         Continue
+        </button>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+
+    <h3>Single input</h3>
+    <p>Use a single text input labelled either "what is your NHS number?" or "Enter your NHS number".</p>
+    <p>Provide help text to ensure the user can find their NHS number and confirm they have the right format.</p>
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      What is your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint">
+  Your NHS number is a 10 digit number that you find on any letter sent to you by the NHS. For example, 458 777 3456
+</span>
+
+    <div class="nhsuk-form-group">
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+
+
+    <h3>Give patients clear guidance where they can find their NHS number</h3>
+    <p>The National Data Opt-out Programme found that users were more successful the earlier you mentioned that an NHS number is required, and where to find that number.</p>
+    <p>If you need to ask for an NHS number, you should provide guidance where to find it before the user starts the service, as well as within the service itself.</p>
+    <p>Example expander advice:</p>
+
+
+    <details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      How to find your NHS number
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+    <p>You can find your NHS number by logging in to a GP online service or on any document sent to you by the NHS, such as your:</p>
+    <ul>
+        <li>prescriptions</li>
+        <li>test results</li>
+        <li>hospital referral letters</li>
+        <li>appointment letters</li>
+    </ul>
+    <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+  </div>
+</details>
+
+
+
+    <h3>Use the correct NHS number format</h3>
+    <p>The NHS number must be displayed in three groups, with a single space included as a seperator between the groups.</p>
+    <p>For example, 485 777 3456</p>
+    <p>Whenever you provide an example or display an NHS number back to the patient, you must use this format.</p>
+    <p>Make sure that:</p>
+    <ul>
+        <li>the NHS number does not break over two lines. It must be displayed on one line</li>
+        <li>you only use a space as a separator. Do not use dashes or dots</li>
+        <li>the example you provide users is not a real NHS number. Use 485 777 3456 or 123 456 7890</li>
+    </ul>
+
+
+
+
+    <h3>Write clear error messages</h3>
+    <p>Make sure you use error summaries and clear error messages when you ask patients for their NHS number.</p>
+
+
+<div class="design-example">
+
+  
+
+  <div class="code-snippet">
+      
+
+      <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
+        
+          
+          <div class="code-snippet__preformatted " data-index="ex-1">
+              <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend">
+      What is your NHS number?
+    </legend>
+
+    <span class="nhsuk-hint">
+  Your NHS number is a 10 digit number that you find on any letter sent to you by the NHS. For example, 458 777 3456
+</span>
+
+    <span class="nhsuk-error-message">
+    <span class="nhsuk-u-visually-hidden">Error:</span> Your NHS number is too long
+    </span>
+
+    <div class="nhsuk-form-group">
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+</div>
+  </fieldset>
+
+</div>
+              
+          </div>
+        
+      </div>
+  </div>
+
+</div>
+
+
+    <p>You should tell users if:</p>
+    <ul>
+        <li>they have included letters</li>
+        <li>they have submitted a number that is too short or too long (not including spaces)</li>
+    </ul>
+    <p>You should check:</p>
+    <ul>
+        <li>check if the user has submitted a National Insurance number and advise the user if they have</li>
+        <li>check their NHS number is valid against a modulus 11 algorithm</li>
+    </ul>
+
+
+
+    <h2>Research</h2>
+    <p>Research from the National Data Opt-out Programme showed that:</p>
+    <ul>
+        <li>patients did not always know what their NHS number looked like</li>
+        <li>patients did not know where they could find their NHS number</li>
+        <li>some patients thought they were being asked for their National Insurance number</li>
+        <li>telling patients where to find their NHS number before and after starting the service was more effective for users</li>
+    </ul>
+
+
+    <h3>Services that use this pattern</h3>
+    <p>This pattern is in use by:</p>
+    <h4>NHS Digital</h4>
+    <ul>
+        <li>Choose if data from your health records is shared for research and planning</li>
+        <li>NHS login</li>
+    </ul>
+
+
+
+
+
+    <h2>Discuss</h2>
+    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/109">Discuss NHS number pattern on GitHub</a></p>
+
+    <h2>Get in touch</h2>
+    <p>If you have a question:</p>
+    <ul>
+      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">NHS.UK service manual Slack workspace</a></li>
+      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
+    </ul>
+
+    <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated:</p>
+    </div>
+    {{ panel({
+    "label": "Similar components",
+    "HTML": "<ul>
+              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+              <li><a href='/service-manual/styles-components-patterns/care-cards'>Care cards</a></li>
+              <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
+            </ul>"
+    }) }}
+    </div>
+  </div>
+{% endblock %}
