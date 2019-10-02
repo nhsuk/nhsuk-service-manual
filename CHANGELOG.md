@@ -10,6 +10,7 @@
 
 - Amend entries for GP surgery and seizure or fit in the A to Z of NHS health writing
 - Delete mention of wizard behind the curtain from accessibility guidance
+- Update package dependencies to latest versions
 
 ## 1.10.4 - 24 September 2019
 
