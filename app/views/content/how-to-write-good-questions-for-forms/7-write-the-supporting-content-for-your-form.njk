@@ -1,6 +1,6 @@
 
 {% set pageTitle = 'Write the supporting content for your form'%}
-{% set pageSection = 'How to write good questions' %}
+{% set pageSection = 'How to write good questions for forms' %}
 {% set pageDescription = 'As well as questions, your form or service may need an introduction, instructions or guidance, hint or help text, error messages and a confirmation or thank you page.' %}
 
 {% extends 'includes/layout.njk' %}
@@ -18,8 +18,8 @@
       text: "Content style guide"
     }
   ],
-    href: "/service-manual/content/how-to-write-good-questions",
-    text: "How to write good questions"
+    href: "/service-manual/content/how-to-write-good-questions-for-forms",
+    text: "How to write good questions for forms"
 
   }) }}
 {% endblock %}
@@ -35,7 +35,7 @@
       {{pageTitle}}
     </h1>
 
-    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
+    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
 
     <p>{{pageDescription}}</p>
 
@@ -81,7 +81,7 @@
       <li>the consequences of making 1 choice over another</li>
     </ul>
     <p>Good help text will save having to write <a href="#error-messages">error messages</a>.</p>
-    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions/5-use-filter-questions-but-be-careful">filter question</a> will work better.</p>
+    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/5-use-filter-questions-but-be-careful">filter question</a> will work better.</p>
     <p>Remember, if you’re having to explain your interface, it needs more work.</p>
 
     <h4>How to add help text</h4>
@@ -136,9 +136,9 @@
     {% from 'pagination/macro.njk' import pagination %}
 
     {{ pagination({
-      "previousUrl": "/service-manual/content/how-to-write-good-questions/6-think-of-the-form-as-a-conversation",
+      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/6-think-of-the-form-as-a-conversation",
       "previousPage": "Think of the form as a conversation",
-      "nextUrl": "/service-manual/content/how-to-write-good-questions/8-test-your-questions",
+      "nextUrl": "/service-manual/content/how-to-write-good-questions-for-forms/8-test-your-questions",
       "nextPage": "Test your questions"
     }) }}
 

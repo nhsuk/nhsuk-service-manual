@@ -1,5 +1,5 @@
 {% set pageTitle = 'Think of the form as a conversation'%}
-{% set pageSection = 'How to write good questions' %}
+{% set pageSection = 'How to write good questions for forms' %}
 {% set pageDescription = 'Make it easy for users to understand and answer the questions and make sure they feel cared for and supported.' %}
 
 {% extends 'includes/layout.njk' %}
@@ -17,8 +17,8 @@
       text: "Content style guide"
     }
   ],
-    href: "/service-manual/content/how-to-write-good-questions",
-    text: "How to write good questions"
+    href: "/service-manual/content/how-to-write-good-questions-for-forms",
+    text: "How to write good questions for forms"
 
   }) }}
 {% endblock %}
@@ -34,16 +34,16 @@
       {{pageTitle}}
     </h1>
 
-    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
+    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
 
     <p>{{pageDescription}}</p>
 
     <h2>Build trust and give users a positive experience of care</h2>
     <ul>
       <li>Be respectful and inclusive. Read more about <a href="/service-manual/content/inclusive-language">inclusive language</a>.</li>
-      <li>Don't rush things. Ask for information at the appropriate time. <a href="/service-manual/content/how-to-write-good-questions/3-consider-the-sensitivities-around-your-questions">Consider the sensitivities around your questions.</a></li>
+      <li>Don't rush things. Ask for information at the appropriate time. <a href="/service-manual/content/how-to-write-good-questions-for-forms/3-consider-the-sensitivities-around-your-questions">Consider the sensitivities around your questions.</a></li>
       <li>Balance moving users through the task with prompts, reassurance and clear explanations. But do not try to reassure people with words like "easy" or "simple".</li>
-      <li>Offer help: on the web, on phone or in person. Use <a href="/service-manual/content/how-to-write-good-questions/7-write-the-supporting-content-for-your-form#help-text-error-messages-and-guidance-in-the-form">help text, error messages and guidance in the form</a>. Help people understand their mistakes and make it easy for them to get support.</li>
+      <li>Offer help: on the web, on phone or in person. Use <a href="/service-manual/content/how-to-write-good-questions-for-forms/7-write-the-supporting-content-for-your-form#help-text-error-messages-and-guidance-in-the-form">help text, error messages and guidance in the form</a>. Help people understand their mistakes and make it easy for them to get support.</li>
     </ul>
     <h2>Use clear language that users understand</h2>
     <ul>
@@ -72,7 +72,7 @@
 
     <h2>Make it flow</h2>
     <ul>
-      <li>Think about how the questions flow and whether they're grouped in a way that makes sense to the user. <a href="/service-manual/content/how-to-write-good-questions/5-get-the-questions-into-order">Get them into order.</a></li>
+      <li>Think about how the questions flow and whether they're grouped in a way that makes sense to the user. <a href="/service-manual/content/how-to-write-good-questions-for-forms/5-get-the-questions-into-order">Get them into order.</a></li>
       <li>Word questions or statements consistently. This helps users get into a rhythm of answering and lets them focus on the content of the questions rather than how they’re presented.</li>
       <li>It's OK to ask a follow up question. For example: "We think you mean this. Is that right?". You don't need to validate the question on the same page. Sometimes it's more effective to check it on another page.</li>
     </ul>
@@ -80,7 +80,7 @@
     <h2>Ask questions that users can answer easily</h2>
     <ul>
       <li>Think about where the user will be and how they will be feeling when they fill in the form. Will they be on their mobile in an emergency, for example?</li>
-      <li>Closed questions are usually easier than open ones. (<a href="/service-manual/content/how-to-write-good-questions/4-use-yes-no-questions-but-be-careful">Use Yes No questions, but be careful.</a>)</li>
+      <li>Closed questions are usually easier than open ones. (<a href="/service-manual/content/how-to-write-good-questions-for-forms/4-use-yes-no-questions-but-be-careful">Use Yes No questions, but be careful.</a>)</li>
     <li>Several short questions are often easier than 1 long one.</li>
 
     </ul>
@@ -140,7 +140,7 @@
     <p>Questions work well for <a href="/service-manual/styles-components-patterns/radios">radios</a> or <a href="https://beta.nhs.uk/service-manual/styles-components-patterns/checkboxes">checkboxes</a> or for a short question like "What's your name?".</p>
 
     <h2>Think about users, their families and carers</h2>
-    <p>Bear in mind that the person filling in the form might be the user, or a family member, carer or some other person helping the user. (Look back at your discovery and <a href="/service-manual/content/how-to-write-good-questions/1-understand-the-problem-before-you-write-your-questions">how you understood the problem</a>.) How might this affect your questions?</p>
+    <p>Bear in mind that the person filling in the form might be the user, or a family member, carer or some other person helping the user. (Look back at your discovery and <a href="/service-manual/content/how-to-write-good-questions-for-forms/1-understand-the-problem-before-you-write-your-questions">how you understood the problem</a>.) How might this affect your questions?</p>
 
     <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
@@ -162,9 +162,9 @@
     {% from 'pagination/macro.njk' import pagination %}
 
     {{ pagination({
-      "previousUrl": "/service-manual/content/how-to-write-good-questions/5-get-the-questions-into-order",
+      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/5-get-the-questions-into-order",
       "previousPage": "Get the questions into order",
-      "nextUrl": "/service-manual/content/how-to-write-good-questions/7-write-the-supporting-content-for-your-form",
+      "nextUrl": "/service-manual/content/how-to-write-good-questions-for-forms/7-write-the-supporting-content-for-your-form",
       "nextPage": "Write the supporting content for your form"
     }) }}
 

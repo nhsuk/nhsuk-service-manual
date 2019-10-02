@@ -1,6 +1,6 @@
 
 {% set pageTitle = 'Test your questions'%}
-{% set pageSection = 'How to write good questions' %}
+{% set pageSection = 'How to write good questions for forms' %}
 {% set pageDescription = 'Test with real users and the staff who deal with the form' %}
 
 {% extends 'includes/layout.njk' %}
@@ -18,8 +18,8 @@
       text: "Content style guide"
     }
   ],
-    href: "/service-manual/content/how-to-write-good-questions",
-    text: "How to write good questions"
+    href: "/service-manual/content/how-to-write-good-questions-for-forms",
+    text: "How to write good questions for forms"
 
   }) }}
 {% endblock %}
@@ -35,7 +35,7 @@
       {{pageTitle}}
     </h1>
 
-    {% include 'content/how-to-write-good-questions/write-good-questions-nav.njk' %}
+    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
 
     <p>{{pageDescription}}</p>
 
@@ -102,7 +102,7 @@
     {% from 'pagination/macro.njk' import pagination %}
 
     {{ pagination({
-      "previousUrl": "/service-manual/content/how-to-write-good-questions/7-write-the-supporting-content-for-your-form",
+      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/7-write-the-supporting-content-for-your-form",
       "previousPage": "Write the supporting content for your form"
     }) }}
 
