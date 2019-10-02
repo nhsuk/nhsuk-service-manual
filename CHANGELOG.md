@@ -1,6 +1,19 @@
 # NHS digital service manual Changelog
 
-## 1.10.4 - TBC
+## 1.11.0 - 2 October 2019
+
+:new: **New content**
+
+- Add new entry to A to Z of NHS health writing for "PMS (premenstrual syndrome)"
+
+:wrench: **Fixes**
+
+- Amend entries for GP surgery and seizure or fit in the A to Z of NHS health writing
+- Delete mention of wizard behind the curtain from accessibility guidance
+- Update package dependencies to latest versions
+- Update the Slack workspace URL
+
+## 1.10.4 - 24 September 2019
 
 :wrench: **Fixes**
 
