@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 1.10.4 - TBC
+## 1.11.0 - 2 October 2019
 
 :new: **New content**
 
@@ -10,6 +10,11 @@
 
 - Amend entries for GP surgery and seizure or fit in the A to Z of NHS health writing
 - Delete mention of wizard behind the curtain from accessibility guidance
+
+## 1.10.4 - 24 September 2019
+
+:wrench: **Fixes**
+
 - Remove the old basic cookie consent solution
 - Implement the new cookie consent solution
 - Remove feedback survey from the sitemap
