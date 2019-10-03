@@ -202,3 +202,30 @@ h1 + .nhsuk-lede-text--small {
 .app-example--image {
   @include nhsuk-responsive-padding(5);
 }
+
+// Panel - confirmation
+.nhsuk-panel--confirmation {
+  border: 1px solid $color_nhsuk-grey-4;
+  margin-top: 0;
+
+  @include mq($from: desktop) {
+    padding-bottom: nhsuk-spacing(8);
+    padding-top: nhsuk-spacing(8);
+  }
+}
+
+.nhsuk-panel__title {
+  @include nhsuk-responsive-margin(4, "bottom");
+
+  text-align: center;
+}
+
+.nhsuk-panel__body {
+  @include nhsuk-font(24);
+
+  text-align: center;
+
+  strong {
+    @include nhsuk-font(32, bold);
+  }
+}
