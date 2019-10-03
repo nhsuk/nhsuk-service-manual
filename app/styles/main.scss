@@ -141,3 +141,21 @@ h1 + .nhsuk-lede-text--small {
     }
   }
 }
+
+// Component page reading width, to allow for component examples
+// to be full width but content within reading width
+
+@include mq($from: desktop) {
+  .app-component-reading-width {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    span,
+    .nhsuk-panel-with-label {
+      max-width: 66.6666%;
+    }
+  }
+}

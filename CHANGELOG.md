@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 1.12.0 - Unreleased
+
+:new: **New content**
+
+- Organistional header guidance and improvements to the header component guidance
+
 ## 1.11.0 - 2 October 2019
 
 :new: **New content**
