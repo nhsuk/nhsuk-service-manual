@@ -1,0 +1,83 @@
+{% set pageTitle = 'Start page' %}
+{% set pageSection = 'Styles, components and patterns' %}
+{% set pageDescription = 'The A to Z pattern is a way of presenting links to a number of pages alphabetically.' %}
+
+{% extends 'includes/layout.njk' %}
+
+{% from 'pagination/macro.njk' import pagination %}
+{% from 'review-date/macro.njk' import reviewDate %}
+{% from 'panel/macro.njk' import panel %}
+
+{% from 'includes/design-example.njk' import designExample %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    }
+  ],
+  href: "/service-manual/styles-components-patterns",
+  text: "Styles, components and patterns"
+}) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Introduce and explain your service to users.</p>
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    {{ designExample({
+      type: 'start-page'
+    }) }}
+
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+
+    <p>Use a start page to introduce your service.</p>
+
+    <p>It helps users understand:</p>
+    <ul>
+      <li>who the service is for</li>
+      <li>what the service helps you do</li>
+      <li>what you need to do to use it</li>
+      <li>alternative channels to access it</li>
+    </ul>
+
+    <p>Rather than explaining eligibility criteria, it's often better to check eligibility as part of the form. See the <a href="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/">GOV.UK 'Check a service is suitable' pattern</a>.</p>
+
+    <h2>Research</h2>
+    <p>Our start page is based on the one in the <a href="https://design-system.service.gov.uk/patterns/start-pages/">GOV.UK Design System</a>.</p>
+    <p>User research has shown users to miss any information under the Start button.</p>
+
+    <h2>Discuss</h2>
+    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/169">Discuss the Start page pattern on GitHub</a>.</p>
+
+    <h2>Get in touch</h2>
+    <p>If you have a question:</p>
+    <ul>
+      <li>Join us on <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">the service manual Slack workspace</a></li>
+      <li>or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
+     </ul>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: October 2019</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
