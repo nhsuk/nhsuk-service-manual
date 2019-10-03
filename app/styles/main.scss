@@ -263,7 +263,6 @@ td {
 
 // Panel - confirmation
 .nhsuk-panel--confirmation {
-  border: 1px solid $color_nhsuk-grey-4;
   margin-top: 0;
 
   @include mq($from: desktop) {
