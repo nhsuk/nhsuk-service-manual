@@ -39,11 +39,9 @@
 
     <p>{{pageDescription}}</p>
 
-    <h2>What are "filter" questions?</h2>
+    <h2 id="what-are-filter-questions">What are "filter" questions?</h2>
 
-    <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/binary-question-long.png" alt="">
-
-    <p>Filter (or branching) questions ask a short question first - often a Yes No question like this, with <a href="/service-manual/styles-components-patterns/radios">radios</a>. </p>
+       <p>Filter (or branching) questions ask a short question first - often a Yes No question like this, with <a href="/service-manual/styles-components-patterns/radios">radios</a>. </p>
 
     <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
@@ -75,10 +73,12 @@
       <li>simplify long questions by breaking them up</li>
     </ul>
 
+     <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/binary-question-long.png" alt="">
+
     <p>But often you need more than a simple Yes or No.</p>
 
   <h2>Spell out what "Yes" and "No" mean</h2>
-  <p>Here's a bad example.</p>
+  <p>Sometimes you need to be clearer about what "Yes" and "No" mean.</p>
   <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
       {{ radios({
@@ -93,29 +93,25 @@
         "items": [
           {
             "value": "yes",
-            "text": "Yes"
+            "text": "Yes, you can contact me by email about research"
           },
           {
             "value": "no",
-            "text": "No"
+            "text": "No, do not contact me about research"
           }
         ]
       }) }}
     </div>
 
-    <p>Be clear, for example:
-    <ul>
-      <li>"Yes, you can contact me by email about research"</li>
-      <li>"No, do not contact me about research"</li>
-    </ul>
-    <p>In a simple Yes No question, "No" could also mean:<p>
+
+    <p>For example, "No" could also mean:<p>
     <ul>
       <li>"No, do not contact me by email"</li>
       <li>"No, do not contact me at all"</li>
     </ul>
-
+    <p>Or you may need to offer people guidance or an explanation to help them choose.</p>
     <h2>Beware binary choices</h2>
-    <p>There will often be at least 1 other option, including, for example, "I don't know" or "I'm not sure". Or you may need to offer people guidance or an explanation.</p>
+    <p>There will often be at least 1 other option besides Yes and No, including, for example, "I don't know" or "I'm not sure". </p>
 
     <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
@@ -146,19 +142,20 @@
     </div>
 
     <p>Having the 3rd option means that you can give people some extra help with finding their number.</p>
+    <p>Sometimes "Other" is a useful option, but <a href="/service-manual/content/how-to-write-good-questions-for-forms/3-consider-the-sensitivities-around-your-questions#think-before-you-use-other">be careful of using "Other" with personal or sensitive information</a>.</p>
+    <p>If you're drafting a Yes No question, it can help to test it by leaving a space for people to type in something different.</p>
 
-    <p>If you're drafting a Yes No question, it can help to test it by leaving a space for people to type something in something different.</p>
 
-    <p>On the other hand, if people can't answer "Yes" or "No", it may be a sign that you should reconsider your question.</p>
 
   <h2>Offer people other ways to do things</h2>
-     <p>If, for example, you need people to enter details to continue with their online journey and they don't have them to hand, consider whether you could add information to the "No" option to reassure them that there is an alternative.</p>
-     <p>For example,say: "No, try another way".</p>
+     <p>If you need people to enter details to continue with their online journey and they can't do this, for example, because they don't have key informaton to hand, consider whether you could add information to the "No" option to reassure them that there is an alternative.</p>
+     <p>For example: "No, try another way".</p>
 
-  <h2>Be careful with "Other"</h2>
-  <p>Sometimes "Other" is a useful option, but be wary of using it with personal data or <a href="/service-manual/content/how-to-write-good-questions-for-forms/3-consider-the-sensitivities-around-your-questions">sensitive topics</a>. It can make people feel that you don't care enough about their personal circumstances to be specific.</p>
 
-  <p>Be especially careful with "Other" or "Mixed" ethnicity in the context of health information. Do not use these categories to provide health information.</p>​
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/8-test-your-questions">Test your questions</a>. If a lot of people can't answer "Yes" or "No", reconsider your question.</p>
+</div>
 
     <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: October 2019</p>
