@@ -215,7 +215,7 @@ h1 + .nhsuk-lede-text--small {
 }
 
 .nhsuk-panel__title {
-  @include nhsuk-responsive-margin(4, "bottom");
+  @include nhsuk-responsive-margin(4, 'bottom');
 
   text-align: center;
 }
