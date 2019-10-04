@@ -1,10 +1,11 @@
 
 {% set pageTitle = 'Test your questions'%}
 {% set pageSection = 'How to write good questions for forms' %}
-{% set pageDescription = 'Test with real users and the staff who deal with the form' %}
+{% set pageDescription = 'Test with real users and the staff who deal with the form.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
+{% from 'images/macro.njk' import image %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -39,32 +40,24 @@
 
     <p>{{pageDescription}}</p>
 
-    <h2>Test your forms</h2>
     <p>It's a good idea to test any existing forms as well as your new questions.</p>
 
     <h2>Create a simple prototype</h2>
     <p>Creating a prototype will give yourself a chance to change your questions before you start to build the form.</p>
 
-    <h3>Sketching</h3>
-    <p>Start with paper to test lots of different versions quickly.</p>
-
-    <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/nhs-sketch-templates__8.png" alt="">
-
-    <h3>Prototyping using shortand</h3>
-    <p>Using shorthand makes it easy for two designers to collaborate on screens.</p>
-
-    <h3>Coded prototypes</h3>
-    <p>Prototypes built in code are the best approach if you want to test realistic interactions that a user has with your service.</p>
-
-    <h2>Test with real users</h2>
-    <p>Test the questions in crits and get them in front of real users quickly.</p>
-    <p>Also test them with call handlers, contact centre staff and other knowledgeable staff. Look for the same things you did when you tested your existing forms. Focus particularly on:</p>
+    <p>You could:</p>
     <ul>
-      <li>the words and questions - watch users try to answer them and listen to how they talk about them</li>
-      <li>the structure and flow</li>
+      <li>start with paper to test lots of different versions quickly</li>
+      <li>build a simple prototype and let users interact with it</li>
     </ul>
 
-    <h2>Be inclusive</h2>
+    <p>Find out more about <a href="https://www.gov.uk/service-manual/design/making-prototypes">making prototypes</a>.</p>
+
+    <h2>Test with real users</h2>
+    <p>For your testing to be effective, your should  must be actual or likely users of your service.</p>
+    <p>Read how to <a href="https://www.gov.uk/service-manual/user-research/find-user-research-participants">find user research participants</a>.</p>
+
+    <h3>Be inclusive</h3>
     <p>Make sure you include people:</p>
     <ul>
       <li>with access needs - read more about <a href="https://beta.nhs.uk/service-manual/accessibility/user-research">user research in our accessibility guidance</a></li>
@@ -72,6 +65,13 @@
       <li>with 2 addresses or no address</li>
       <li>who need to involve their families, carers, or advocates</li>
     </ul>
+
+    <h2>Test with staff</h2>
+    <p>Test your questions with call handlers, contact centre staff and other knowledgeable staff.</p>
+
+    <h2>Run a usability test</h2>
+    <p>Use a script and ask people the questions.</p>
+    <p>Learn about <a href="https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing">using moderated usability testing</a>.</p>
 
     <h2>What to look for when testing</h2>
     <p>Try to understand:</p>
@@ -104,9 +104,7 @@
     </ul>
 
     <h2>Iterate your questions</h2>
-    <p>Please share what you learn with us to make this guidance better.</p>
-    <p>We're also working on some guidance on building forms, choosing and applying components and patterns.</p>
-    <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ">service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></p>
+    <p>Use the findings from your testing to help iterate and improve your questions.</p>
 
     <div class="nhsuk-review-date">
       <p class="nhsuk-body-s">Updated: October 2019</p>

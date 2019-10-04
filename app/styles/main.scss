@@ -286,3 +286,8 @@ td {
     @include nhsuk-font(32, bold);
   }
 }
+
+// App example figure
+.nhsuk-image--full {
+  width: 100%;
+}
