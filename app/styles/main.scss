@@ -228,3 +228,8 @@ h1 + .nhsuk-lede-text--small {
     @include nhsuk-font(32, bold);
   }
 }
+
+// App example figure
+.nhsuk-image--full {
+  width: 100%;
+}
