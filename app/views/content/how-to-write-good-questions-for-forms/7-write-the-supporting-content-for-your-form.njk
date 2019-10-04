@@ -1,7 +1,7 @@
 
 {% set pageTitle = 'Write the supporting content for your form'%}
 {% set pageSection = 'How to write good questions for forms' %}
-{% set pageDescription = 'As well as questions, your form or service may need an introduction, instructions or guidance, hint or help text, error messages and a confirmation or thank you page.' %}
+{% set pageDescription = 'As well as questions, your form or service may need an introduction, help text, error messages and a confirmation or thank you page. Think about content across other channels too.' %}
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
@@ -39,40 +39,63 @@
 
     <p>{{pageDescription}}</p>
 
-    <p>You may need supporting content before, during and at the end of your questions.</p>
+    <h2>Name your form</h2>
+    <p>If you haven't already done so, name your form or service. (See the GOV.UK guidance on <a href="https://www.gov.uk/service-manual/design/naming-your-service">Naming your service</a>.)</p>
+    <p>Focus on the task, on what the user wants to do.</p>
 
-    <h2>Introductions, instructions and other content before the form</h2>
+    <h2>Introduce the form</h2>
+    <p>Use a <a href="/service-manual/styles-components-patterns/start-page">start page</a> to help users understand:
     <ul>
-      <li>If you haven't already done so, name your form. (See the GOV.UK guidance on <a href="https://www.gov.uk/service-manual/design/naming-your-service">Naming your service</a>.)</li>
-      <li>Introduce and explain the form. Who is it for and when should they fill it in? Say what the form does in your users' words. This is your chance to stop the wrong people filling in the form.</li>
-      <li>Think about the users who don't meet the requirements. How can you help them?</li>
-      <li>Set expectations. For example, give users some idea what they will need in order to fill it in. Do they need any form of identity, such as their NHS number? If you're going to let people check their answers at the end, let them know this early on.</li>
+      <li>who the service is for</li>
+      <li>what the service helps them do</li>
+      <li>what they need to do to use it</li>
+      <li>whether there are alternative ways to do it</li>
     </ul>
+    <p>This is your chance to stop the wrong people filling in the form and to set expectations.<p>
+    <p>Think about the users who don't meet the requirements. How can you help them?</p>
 
-    <h3>Be careful with start pages</h3>
-    <p>People usually want to get to the questions quickly. They often ignore text, including instructions, and miss any information under the Start button (and any Continue buttons).</p>
-    <p>Because of this, rather than explaining eligibility criteria, it's often better to check eligibility as part of the form.</p>
+    <p>Read more about writing content for <a href="/service-manual/styles-components-patterns/start-page">start pages</a>. Be aware that people often ignore text under the "Start" button (and any "Continue" buttons.)</p>
 
-    <p>If you have any introductory content, make sure that you:</p>
-    <ul>
-      <li>keep it brief</li>
-      <li>make it easy for users to scan the page, select an action and move on</li>
-      <li>use headings to break your content into smaller chunks - users may at least read the headings</li>
-      <li>consider instead giving users help text where they need it</li>
-    </ul>
-
-    <h2 id="help-text">Help text, error messages and guidance in the form</h2>
-    <h3>Help text</h3>
-    <p>Put just enough help text where users need it - and only if you see in research that your users need it.</p>
-    <p>For example, users do not usually need to be told to "Select the answer that applies to you" with <a href="/service-manual/styles-components-patterns/radios">radios</a> but they may need telling to "Select all the options that are relevant to you" with <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a>.</p>
-
-    <p>Answer users' questions like:</p>
+    <h2 id="help-text">Provide help in context</h2>
+    <p>If users need help or guidance with filling in a question, put just enough help text where they need it - and only if you see in research that they need it.</p>
+    <p>For example, users do not usually need to be told to "Select the answer that applies to you" with <a href="/service-manual/styles-components-patterns/radios">radios</a>, but they may need telling to "Select all the options that are relevant to you" with <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a>.</p>
+<div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    {% from 'checkboxes/macro.njk' import checkboxes %}
+{{ checkboxes({
+  "idPrefix": "contact",
+  "name": "contact",
+  "fieldset": {
+    "legend": {
+      "text": "How would you like to be contacted?"
+    }
+  },
+  "hint": {
+    "text": "Select all options that are relevant to you."
+  },
+  "items": [
+    {
+      "value": "email",
+      "text": "Email"
+    },
+    {
+      "value": "phone",
+      "text": "Phone"
+    },
+    {
+      "value": "text message",
+      "text": "Text message"
+    }
+  ]
+}) }}
+</div>
+       <p>Answer users' questions like:</p>
     <ul>
       <li>"What's this?"</li>
       <li>"Why do you want this information?"</li>
       <li>"Where can I find this?"</li>
     </ul>
-    <p>Use it, for example, to explain things like:</p>
+    <p>Use it to explain:</p>
     <ul>
       <li>any necessary jargon</li>
       <li>where to find their NHS number</li>
@@ -80,48 +103,78 @@
       <li>what you’ll do with personal information</li>
       <li>the consequences of making 1 choice over another</li>
     </ul>
-    <p>Good help text will save having to write <a href="#error-messages">error messages</a>.</p>
-    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/5-use-filter-questions-but-be-careful">filter question</a> will work better.</p>
-    <p>Remember, if you’re having to explain your interface, it needs more work.</p>
+<div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    {% from 'radios/macro.njk' import radios %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'hint/macro.njk' import hint %}
+{% call fieldset({
+  legend: {
+    "text": "Do you know your NHS number?",
+    "classes": "nhsuk-fieldset__legend--m"
+  }
+  }) %}
+  {{ hint({
+    "text": "This is a 10 digit number, like 485 777 3456.",
+    "classes": "nhsuk-u-margin-bottom-2"
+  }) }}
+  {{ hint({
+    "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
+  }) }}
+  {{ radios({
+    "idPrefix": "example-divider",
+    "name": "configStructure",
+    "items": [
+  {
+    "value": "yes",
+    "text": "Yes, I know my NHS number"
+  },
+  {
+    "value": "no",
+    "text": "No, I do not know my NHS number"
+  },
+  {
+    "value": "not sure",
+    "text": "I'm not sure"
+  }
+]
+}) }}
+{% endcall %}
+</div>
 
-    <h4>How to add help text</h4>
+    <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>
+
+    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/4-use-yes-no-questions-but-be-careful#what-are-filter-questions">filter question</a> will work better.</p>
+
+    <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>If you have to explain your interface, it needs more work.</p>
+</div>
+
+    <h3>How to add help text</h3>
     <p>We don't recommend tool tips. Instead you can:</p>
     <ul>
       <li>add <a href="/service-manual/styles-components-patterns/hint-text">hint text</a> inline, immediately next to the question it relates to, for help that's relevant to most of your users</li>
       <li>use the <a href="/service-manual/styles-components-patterns/details">details component</a> to reveal expanding help text - this is useful if the help text is only relevant for some users</li>
     </ul>
 
-    <h3 id="error-messages">Error messages</h3>
-    <ul>
-      <li>Tell the user about a problem as soon as you can (but not while they're still typing). If you start prototyping with 1 thing per page, you can deal with errors for 1 thing at a time. Treat them as a step in the conversation.</li>
-      <li>Be concise and specific. You do not need to say "please". Focus on telling the user how to fix the problem rather than describing what’s gone wrong.</li>
-      <li>Read more about <a href="/service-manual/styles-components-patterns/error-message">error messages</a> and <a href="/service-manual/styles-components-patterns/error-summary">error summaries</a> in the service manual.</li>
-      <li>The GOV.UK design system has good <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">guidance on writing error messages</a>, including <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">error message templates for common errors</a>.</li>
-    <li>You may need to write more than 1 error message for each field.</li>
-    <li>Consider whether, rather than writing an error message, you need to change your back-end processes.</li>
+    <h2 id="error-messages">Use error messages to explain what went wrong</h2>
+    <p>Think of error messages as a step in <a href="/service-manual/content/how-to-write-good-questions-for-forms/6-think-of-the-form-as-a-conversation">the conversation</a>.</p>
+    <p>Tell the user how to fix the problem as soon as you can.</p>
+    <p>If you <a href="/service-manual/content/how-to-write-good-questions-for-forms/5-get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">begin prototyping with 1 thing per page</a>, you can deal with errors for 1 thing at a time.</p>
+    <p>Read more about <a href="/service-manual/styles-components-patterns/error-message">error messages</a> in the service manual.</p>
 
-    <h3>Longer guidance</h3>
-    <p>Ooccasionally you will need to give users more detailed guidance to help them make particularly complex or difficult decisions. But most users probably won't read more than a few lines. Try help text before you write fuller guidance. Keep it brief.</p>
+    <h2>End with a confirmation or thank you page</h2>
+    <p>Use a <a href="/service-manual/styles-components-patterns/confirmation-page">confirmation page</a> or a thank you page to reassure users that they have completed the form and help them understand what to do next.</p>
 
-    <h2>Confirmation or thank you pages at the end of the form</h2>
-    <p>The content you write at the end of the form will depend on how your form ends: for example, with a <a href="https://design-system.service.gov.uk/components/summary-list/">summary list</a> to let users check their answers. </p>
-    <p>You will probably need a confirmation or thank you page.</p>
-    <p>Make it clear:</p>
-    <ul>
-      <li>that the user has completed the form successfully - see the <a href="https://design-system.service.gov.uk/patterns/confirmation-pages/">GOV.UK confirmation page</a>, for example</li>
-      <li>when they will get an answer if they don’t get one straightaway</li>
-      <li>what, if anything else, will happen next</li>
-      <li>if need be, how they can get in touch or where they can get other help if there's likely to be a wait, for example signpost to support services</li>
-      <li>how they can change their form or information</li>
-      <li>how they can find out more about how you store and manage their information</li>
-    </ul>
+    <p>You may also want to include a <a href="https://design-system.service.gov.uk/components/summary-list/">summary list</a> to let users check their answers. </p>
 
-    <h2>Other content</h2>
+    <h2>Look at your content across channels</h2>
     <p>Think beyond the form. For the user, it is likely to be a cross-channel experience. Remember to make your on and offline content consistent, including:</p>
     <ul>
       <li>paper or downloadable forms</li>
       <li>introductory emails or letters</li>
-      <li>any confirmation emails or text messages</li>
+      <li>confirmation emails or text messages</li>
       <li>call centre scripts</li>
       <li>follow up emails or letters</li>
     </ul>
