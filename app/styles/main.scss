@@ -291,3 +291,13 @@ td {
 .nhsuk-image--full {
   width: 100%;
 }
+
+// Header service name hotfix
+.nhsuk-header__service-name {
+  padding-top: 0;
+}
+
+// Breadcrumb hotfix
+.nhsuk-breadcrumb__backlink:visited {
+  color: $nhsuk-link-color;
+}

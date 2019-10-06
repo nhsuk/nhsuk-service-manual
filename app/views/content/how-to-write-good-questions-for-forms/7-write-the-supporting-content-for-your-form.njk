@@ -5,6 +5,10 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
+{% from 'radios/macro.njk' import radios %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'hint/macro.njk' import hint %}
+{% from 'checkboxes/macro.njk' import checkboxes %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -27,12 +31,13 @@
 {% block body %}
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
+
      <h1>
-      <span class="nhsuk-caption-l">
-        {{pageSection}}
-        <span class="nhsuk-u-visually-hidden"> - </span>
-      </span>
       {{pageTitle}}
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+        <span class="nhsuk-u-visually-hidden"> - </span>
+        {{pageSection}}
+      </span>
     </h1>
 
     {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
@@ -59,37 +64,37 @@
     <h2 id="help-text">Provide help in context</h2>
     <p>If users need help or guidance with filling in a question, put just enough help text where they need it - and only if you see in research that they need it.</p>
     <p>For example, users do not usually need to be told to "Select the answer that applies to you" with <a href="/service-manual/styles-components-patterns/radios">radios</a>, but they may need telling to "Select all the options that are relevant to you" with <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a>.</p>
-<div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
-    {% from 'checkboxes/macro.njk' import checkboxes %}
-{{ checkboxes({
-  "idPrefix": "contact",
-  "name": "contact",
-  "fieldset": {
-    "legend": {
-      "text": "How would you like to be contacted?"
-    }
-  },
-  "hint": {
-    "text": "Select all options that are relevant to you."
-  },
-  "items": [
-    {
-      "value": "email",
-      "text": "Email"
-    },
-    {
-      "value": "phone",
-      "text": "Phone"
-    },
-    {
-      "value": "text message",
-      "text": "Text message"
-    }
-  ]
-}) }}
-</div>
-       <p>Answer users' questions like:</p>
+      {{ checkboxes({
+        "idPrefix": "contact",
+        "name": "contact",
+        "fieldset": {
+          "legend": {
+            "text": "How would you like to be contacted?"
+          }
+        },
+        "hint": {
+          "text": "Select all options that are relevant to you."
+        },
+        "items": [
+          {
+            "value": "email",
+            "text": "Email"
+          },
+          {
+            "value": "phone",
+            "text": "Phone"
+          },
+          {
+            "value": "text message",
+            "text": "Text message"
+          }
+        ]
+      }) }}
+    </div>
+
+    <p>Answer users' questions like:</p>
     <ul>
       <li>"What's this?"</li>
       <li>"Why do you want this information?"</li>
@@ -103,53 +108,51 @@
       <li>what you’ll do with personal information</li>
       <li>the consequences of making 1 choice over another</li>
     </ul>
-<div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
-    {% from 'radios/macro.njk' import radios %}
-{% from 'fieldset/macro.njk' import fieldset %}
-{% from 'hint/macro.njk' import hint %}
-{% call fieldset({
-  legend: {
-    "text": "Do you know your NHS number?",
-    "classes": "nhsuk-fieldset__legend--m"
-  }
-  }) %}
-  {{ hint({
-    "text": "This is a 10 digit number, like 485 777 3456.",
-    "classes": "nhsuk-u-margin-bottom-2"
-  }) }}
-  {{ hint({
-    "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
-  }) }}
-  {{ radios({
-    "idPrefix": "example-divider",
-    "name": "configStructure",
-    "items": [
-  {
-    "value": "yes",
-    "text": "Yes, I know my NHS number"
-  },
-  {
-    "value": "no",
-    "text": "No, I do not know my NHS number"
-  },
-  {
-    "value": "not sure",
-    "text": "I'm not sure"
-  }
-]
-}) }}
-{% endcall %}
-</div>
+      {% call fieldset({
+        legend: {
+          "text": "Do you know your NHS number?",
+          "classes": "nhsuk-fieldset__legend--m"
+        }
+        }) %}
+        {{ hint({
+          "text": "This is a 10 digit number, like 485 777 3456.",
+          "classes": "nhsuk-u-margin-bottom-2"
+        }) }}
+        {{ hint({
+          "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
+        }) }}
+        {{ radios({
+          "idPrefix": "example-divider",
+          "name": "configStructure",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes, I know my NHS number"
+        },
+        {
+          "value": "no",
+          "text": "No, I do not know my NHS number"
+        },
+        {
+          "value": "not sure",
+          "text": "I'm not sure"
+        }
+      ]
+      }) }}
+      {% endcall %}
+    </div>
 
     <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>
 
     <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/4-use-yes-no-questions-but-be-careful#what-are-filter-questions">filter question</a> will work better.</p>
 
     <div class="nhsuk-inset-text">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>If you have to explain your interface, it needs more work.</p>
-</div>
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p>If you have to explain your interface, it needs more work.</p>
+    </div>
 
     <h3>How to add help text</h3>
     <p>We don't recommend tool tips. Instead you can:</p>

@@ -26,12 +26,13 @@
 {% block body %}
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
+
     <h1>
-      <span class="nhsuk-caption-l">
-        {{pageSection}}
-        <span class="nhsuk-u-visually-hidden"> - </span>
-      </span>
       {{pageTitle}}
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+        <span class="nhsuk-u-visually-hidden"> - </span>
+        {{pageSection}}
+      </span>
     </h1>
 
     {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
