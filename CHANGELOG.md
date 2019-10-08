@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 1.12.0 - TBC
+
+:new: **New content**
+
+- Add contribution criteria for community contribution
+
 ## 1.11.0 - 2 October 2019
 
 :new: **New content**
