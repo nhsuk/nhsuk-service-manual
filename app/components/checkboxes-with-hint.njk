@@ -1,0 +1,37 @@
+{% from 'checkboxes/macro.njk' import checkboxes %}
+
+{{ checkboxes({
+  "name": "conditions",
+  "fieldset": {
+    "legend": {
+      "text": "Have you ever had any of these conditions?",
+      "classes": "nhsuk-fieldset__legend--l",
+      isPageHeading: true
+    }
+  },
+  "hint": {
+    "text": "Select all the options that are relevant to you."
+  },
+  "items": [
+    {
+      "value": "Asthma",
+      "text": "Asthma"
+    },
+    {
+      "value": "Diabetes",
+      "text": "Diabetes"
+    },
+    {
+      "value": "Epilepsy",
+      "text": "Epilepsy"
+    },
+    {
+      "value": "Heart Disease",
+      "text": "Heart Disease"
+    },
+    {
+      "value": "Stroke or mini stroke",
+      "text": "Stroke or mini stroke"
+    }
+  ]
+}) }}
