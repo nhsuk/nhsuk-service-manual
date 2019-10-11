@@ -1,12 +1,29 @@
-.colour-item__swatch {
+.app-colour-list {
+  th,
+  td {
+    border: 0;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+.app-colour-list__swatch {
   background-color: $color_nhsuk-grey-5;
   border: 1px solid transparent;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  display: inline-block;
+  height: 40px;
+  margin-right: 8px;
+  width: 40px;
+  vertical-align: middle;
 }
 
-.colour-item__heading {
-  color: $color_nhsuk-black;
-  margin-top: 10px;
+.app-colour-list__swatch--border {
+  border: 1px solid $nhsuk-border-color;
 }
+
+.app-colour-list__column--name {
+  font-weight: normal;
+}
+
+
