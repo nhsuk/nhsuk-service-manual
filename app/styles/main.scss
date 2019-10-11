@@ -183,12 +183,12 @@ td {
 
 // <pre> and <code> tag styles
 .app-pre {
-  @include nhsuk-responsive-margin(4, "bottom");
+  @include nhsuk-responsive-margin(4, 'bottom');
 
   background: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
-  overflow: auto;
   margin-top: 0;
+  overflow: auto;
   padding: nhsuk-spacing(3);
   position: relative;
 
