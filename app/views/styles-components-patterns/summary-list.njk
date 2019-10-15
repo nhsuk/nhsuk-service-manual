@@ -5,9 +5,6 @@
 
 
 
-
-
-
 {% extends 'includes/layout.njk' %}
 
 {% from 'input/macro.njk' import input %}
@@ -39,60 +36,46 @@
 
 
 
-----------------------------------------------------------------------------------------
-NEED TO PUT A BOX EXAMPLE HERE
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
-    {{ designExample({
-      type: 'input'
-    }) }}
-  </div>
-</div>
-
-///////////////
+{{ designExample({
+    type: 'summary-list'
+}) }}
 
 
 
 
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Sarah Philips
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Date of birth
-    </dt>
-    <dd class="govuk-summary-list__value">
-      5 January 1978
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Contact information
-    </dt>
-    <dd class="govuk-summary-list__value">
-      72 Guild Street<br>London<br>SE23 6FH
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Contact details
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">07700 900457</p>
-      <p class="govuk-body">sarah.phillips@example.com</p>
-    </dd>
-  </div>
-</dl>
 
-------------------------------------------------------------
+
+
+
+      
+    </form>
+    <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
+    <script src="/javascripts/nhsuk-frontend-5a043b61d9ca00f1e1fcc0f6c6b0835c.js"></script>
+    <script src="/javascripts/example-aed4a541bd2d7a731e08f3e64294f90d.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,26 +128,35 @@ NEED TO PUT A BOX EXAMPLE HERE
 
 
     
------------------------------------------------------------------------
-  BOX EXAMPLE 2 HERE 
---------------------------------------------------------------------
+
+
+{{ designExample({
+    type: 'summary-list'
+}) }}
+
+
+
 
 
 
 <h3 id="label-text-inputs">Summary list without actions</h3>
 
- ----------------------------------------------------------------
-   BOX EXAMPLE 3 HERE
-----------------------------------------------------------------
+
+{{ designExample({
+    type: 'summary-list-without-action'
+}) }}
+
+
+
 
 
  <h3 id="label-text-inputs">Summary list without borders</h3>
-<p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the govuk-summary-list--no-border class.</p>
-
--------------BOX EXAMPLE 4 HERE------------------------
+<p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the summary-list-without-border class.</p>
 
 
-
+{{ designExample({
+    type: 'summary-list-without-border'
+}) }}
 
 
 
@@ -176,6 +168,25 @@ NEED TO PUT A BOX EXAMPLE HERE
 
 
     <h2>Research</h2>
+
+    <p>This component has been tested in the NHS in the national data opt-out service:</p>
+    <ul>
+      <li>with 20+ users in various labs</li>
+      <li>as part of remote unmoderated A/B testing with 50 users</li>
+      <li>as part of the live service since October 2018 (thousands of users etc.)</li>
+      <li>as part of three accessibility audits (with 15 people)</li>
+      <li>It has also been tested in the new frontend in the "Check your personal details" service:</li>
+    </ul>
+   
+   
+<p>It has also been tested in the new frontend in the "Check your personal details" service:</p>
+<ul>
+<li>with 2 users in a pop-up</li>
+<li>5 users in a lab</li>
+</ul>
+
+    
+    </p>
     <p>If you’ve used summary lists, please share your user research findings.</p>
 
     <h2>Discuss</h2>
@@ -189,7 +200,7 @@ NEED TO PUT A BOX EXAMPLE HERE
     </ul>
 
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
+    <p class="nhsuk-body-s">Updated: October 2019</p>
     </div>
 
     {{ panel({
