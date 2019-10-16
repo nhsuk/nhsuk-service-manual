@@ -1,45 +1,38 @@
-
-
- 
-
-
-
 {% from "summary-list/macro.njk" import summaryList %}
 
-
-          {{ summaryList({
-            rows: [
-              {
-                key: {
-                  text: "Name"
-                },
-                value: {
-                  text: "Sarah Philips"
-                }
-              },
-              {
-                key: {
-                  text: "Date of birth"
-                },
-                value: {
-                  text: "5 January 1978"
-                }
-              },
-              {
-                key: {
-                  text: "Contact information"
-                },
-                value: {
-                  html: "72 Guild Street<br>London<br>SE23 6FH"
-                }
-              },
-              {
-                key: {
-                  text: "Contact details"
-                },
-                value: {
-                  html: '<p>07700 900457</p><p>sarah.philips@example.com</p>'
-                }
-              }
-            ]
-          }) }}
+{{ summaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Sarah Philips"
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "5 January 1978"
+      }
+    },
+    {
+      key: {
+        text: "Contact information"
+      },
+      value: {
+        html: "72 Guild Street<br>London<br>SE23 6FH"
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: '<p>07700 900457</p><p>sarah.philips@example.com</p>'
+      }
+    }
+  ]
+}) }}
