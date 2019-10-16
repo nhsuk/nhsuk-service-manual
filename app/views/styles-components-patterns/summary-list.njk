@@ -110,8 +110,8 @@
 
 
     
-    <p>The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least one value.</p>
-<p>Do not use it for tabular data or a simple list of information or tasks, like a <a href="/patterns/task-list-pages">task list</a>. For those use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+    <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least one value.</p>
+<p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a <a href="/patterns/task-list-pages">task list</a>. For those use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
     
     
     
@@ -128,13 +128,15 @@
 
 
     
-
+</div> <!-- Closes two-thirds column -->
+<div class="nhsuk-grid-column-full"><! -- Open full width column -->
 
 {{ designExample({
     type: 'summary-list'
 }) }}
 
-
+</div> <!-- Closes full width column -->
+<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
 
 
 
@@ -142,11 +144,15 @@
 <h3 id="label-text-inputs">Summary list without actions</h3>
 
 
+
+</div> <!-- Closes two-thirds column -->
+<div class="nhsuk-grid-column-full"><! -- Open full width column -->
 {{ designExample({
     type: 'summary-list-without-action'
 }) }}
 
-
+</div> <!-- Closes full width column -->
+<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
 
 
 
@@ -154,9 +160,13 @@
 <p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the summary-list-without-border class.</p>
 
 
+</div> <!-- Closes two-thirds column -->
+<div class="nhsuk-grid-column-full"><! -- Open full width column -->
 {{ designExample({
     type: 'summary-list-without-border'
 }) }}
+</div> <!-- Closes full width column -->
+<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
 
 
 
