@@ -2,9 +2,6 @@
 {% set pageSection = 'Styles, components and patterns' %}
 {% set pageDescription = "Use the summary list to summarise information, for example, a user’s responses at the end of a form." %}
 
-
-
-
 {% extends 'includes/layout.njk' %}
 
 {% from 'input/macro.njk' import input %}
@@ -30,152 +27,65 @@
       <h1 class="nhsuk-u-margin-bottom-5">Summary list</h1>
       <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the summary list to summarise information, for example, a user’s responses at the end of a form.</p>
   </div>
-</div>
+  <div class="nhsuk-grid-column-full">
 
+    {{ designExample({
+        type: 'summary-list'
+    }) }}
 
-
-
-
-
-{{ designExample({
-    type: 'summary-list'
-}) }}
-
-
-
-
-
-
-
-
-      
-    </form>
-    <script src="/javascripts/vendor/iframeResizer.contentWindow.js"></script>
-    <script src="/javascripts/nhsuk-frontend-5a043b61d9ca00f1e1fcc0f6c6b0835c.js"></script>
-    <script src="/javascripts/example-aed4a541bd2d7a731e08f3e64294f90d.js"></script>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="nhsuk-grid-row">
+  </div>
   <div class="nhsuk-grid-column-two-thirds">
+
     <h2>When to use summary lists</h2>
     <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list. The key is a description or label of a piece of information, like ‘Name’, and the value is the piece of information itself, like ‘John Smith’.</p>
-<p>You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the check answers pattern.</p>    
-    
-    
+    <p>You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the check answers pattern.</p>
+
     <h2>When not to use summary lists </h2>
-
-
-    
     <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least one value.</p>
-<p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a <a href="/patterns/task-list-pages">task list</a>. For those use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
-    
-    
-    
-    
-    
+    <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a <a href="/patterns/task-list-pages">task list</a>. For those use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+
     <h2>How to use summary lists</h2>
-
     <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.</p>
-        <h3 id="label-text-inputs">Summary list with actions</h3>
 
-<p>You can add actions to a summary list, like a ‘Change’ link to let users go back and edit their answer.</p>
-<p>For sighted users, the actions get their context from the other content in the row they appear in.</p>
-<p>Assistive technology users, like those who use a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like ‘Change name’ or ‘Change date of birth’.</p>
+    <h3 id="label-text-inputs">Summary list with actions</h3>
+    <p>You can add actions to a summary list, like a ‘Change’ link to let users go back and edit their answer.</p>
+    <p>For sighted users, the actions get their context from the other content in the row they appear in.</p>
+    <p>Assistive technology users, like those who use a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like ‘Change name’ or ‘Change date of birth’.</p>
 
+  </div>
+  <div class="nhsuk-grid-column-full">
 
-    
-</div> <!-- Closes two-thirds column -->
-<div class="nhsuk-grid-column-full"><! -- Open full width column -->
+    {{ designExample({
+        type: 'summary-list'
+    }) }}
 
-{{ designExample({
-    type: 'summary-list'
-}) }}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
 
-</div> <!-- Closes full width column -->
-<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
+    <h3 id="label-text-inputs">Summary list without actions</h3>
 
+  </div>
+  <div class="nhsuk-grid-column-full">
 
+    {{ designExample({
+        type: 'summary-list-without-action'
+    }) }}
 
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
 
-<h3 id="label-text-inputs">Summary list without actions</h3>
+    <h3 id="label-text-inputs">Summary list without borders</h3>
+    <p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the summary-list-without-border class.</p>
 
+  </div>
+  <div class="nhsuk-grid-column-full">
 
+    {{ designExample({
+        type: 'summary-list-without-border'
+    }) }}
 
-</div> <!-- Closes two-thirds column -->
-<div class="nhsuk-grid-column-full"><! -- Open full width column -->
-{{ designExample({
-    type: 'summary-list-without-action'
-}) }}
-
-</div> <!-- Closes full width column -->
-<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
-
-
-
- <h3 id="label-text-inputs">Summary list without borders</h3>
-<p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the summary-list-without-border class.</p>
-
-
-</div> <!-- Closes two-thirds column -->
-<div class="nhsuk-grid-column-full"><! -- Open full width column -->
-{{ designExample({
-    type: 'summary-list-without-border'
-}) }}
-</div> <!-- Closes full width column -->
-<div class="nhsuk-grid-column-two-thirds"><!-- Open two-thirds column -->
-
-
-
-
-
-
-
-
-
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
 
     <h2>Research</h2>
 
@@ -187,16 +97,11 @@
       <li>as part of three accessibility audits (with 15 people)</li>
       <li>It has also been tested in the new frontend in the "Check your personal details" service:</li>
     </ul>
-   
-   
-<p>It has also been tested in the new frontend in the "Check your personal details" service:</p>
-<ul>
-<li>with 2 users in a pop-up</li>
-<li>5 users in a lab</li>
-</ul>
-
-    
-    </p>
+    <p>It has also been tested in the new frontend in the "Check your personal details" service:</p>
+    <ul>
+      <li>with 2 users in a pop-up</li>
+      <li>5 users in a lab</li>
+    </ul>
     <p>If you’ve used summary lists, please share your user research findings.</p>
 
     <h2>Discuss</h2>
@@ -210,7 +115,7 @@
     </ul>
 
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: October 2019</p>
+      <p class="nhsuk-body-s">Updated: October 2019</p>
     </div>
 
     {{ panel({
@@ -232,4 +137,3 @@
   </div>
 </div>
 {% endblock %}
-
