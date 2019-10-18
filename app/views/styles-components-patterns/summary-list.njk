@@ -1,4 +1,4 @@
-{% set pageTitle = "Summary list" %}
+{% set pageTitle = "Summary list (experimental)" %}
 {% set pageSection = 'Styles, components and patterns' %}
 {% set pageDescription = "Use the summary list to summarise information, for example, a user’s responses at the end of a form." %}
 
@@ -24,7 +24,7 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-u-margin-bottom-5">Summary list</h1>
+      <h1 class="nhsuk-u-margin-bottom-5">Summary list (experimental)</h1>
       <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use the summary list to summarise information, for example, a user’s responses at the end of a form.</p>
   </div>
   <div class="nhsuk-grid-column-full">
@@ -37,20 +37,24 @@
   <div class="nhsuk-grid-column-two-thirds">
 
     <h2>When to use summary lists</h2>
-    <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list. The key is a description or label of a piece of information, like ‘Name’, and the value is the piece of information itself, like ‘John Smith’.</p>
-    <p>You can use it to display metadata like ‘Last updated’ with a date like ‘22 June 2018’, or to summarise a user’s responses at the end of a form like the check answers pattern.</p>
+    <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list, where:</p>
+    <ul>
+      <li>the key is a description or label of a piece of information, like 'Name'</li>
+      <li>the value is the piece of information itself, like 'John Smith</li>
+    </ul>
+    <p>We've marked this component experimental. Think about how you can use it along with other components or patterns to give users a sense of control. You can use it, for example, to summarise a user’s responses at the end of a form, as in a check answers pattern. (GOV.UK has a <a href="https://design-system.service.gov.uk/patterns/check-answers/">check answers pattern</a>.)</p>
 
     <h2>When not to use summary lists </h2>
-    <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least one value.</p>
-    <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a <a href="/patterns/task-list-pages">task list</a>. For those use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+    <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
+    <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (You can see a <a href="https://design-system.service.gov.uk/patterns/task-list-pages/">task list page pattern on GOV.UK</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
     <h2>How to use summary lists</h2>
-    <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.</p>
+    <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using Nunjucks or the NHS.UK prototype kit, you can use the Nunjucks macro.</p>
 
     <h3 id="label-text-inputs">Summary list with actions</h3>
-    <p>You can add actions to a summary list, like a ‘Change’ link to let users go back and edit their answer.</p>
+    <p>You can add actions to a summary list, like a 'Change' link to let users go back and edit their answer.</p>
     <p>For sighted users, the actions get their context from the other content in the row they appear in.</p>
-    <p>Assistive technology users, like those who use a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like ‘Change name’ or ‘Change date of birth’.</p>
+    <p>People who use assistive technology, like a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like 'Change name' or 'Change date of birth'.</p>
 
   </div>
   <div class="nhsuk-grid-column-full">
@@ -74,7 +78,7 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
 
-    <h3 id="label-text-inputs">Summary list without borders</h3>
+    <h3 id="label-text-inputs">Summary list without actions or borders</h3>
     <p>If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the summary-list-without-border class.</p>
 
   </div>
@@ -89,19 +93,8 @@
 
     <h2>Research</h2>
 
-    <p>This component has been tested in the NHS in the national data opt-out service:</p>
-    <ul>
-      <li>with 20+ users in various labs</li>
-      <li>as part of remote unmoderated A/B testing with 50 users</li>
-      <li>as part of the live service since October 2018 (thousands of users etc.)</li>
-      <li>as part of three accessibility audits (with 15 people)</li>
-      <li>It has also been tested in the new frontend in the "Check your personal details" service:</li>
-    </ul>
-    <p>It has also been tested in the new frontend in the "Check your personal details" service:</p>
-    <ul>
-      <li>with 2 users in a pop-up</li>
-      <li>5 users in a lab</li>
-    </ul>
+    <p>We have tested this component in the NHS in labs and in live services. It has been through several accessibility audits.</p>
+
     <p>If you’ve used summary lists, please share your user research findings.</p>
 
     <h2>Discuss</h2>
