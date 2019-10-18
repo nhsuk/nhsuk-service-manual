@@ -30,13 +30,20 @@
     {{ designExample({
       type: 'header'
     }) }}
+    <p>We have 3 versions of the header for services on the NHS website (nhs.uk):</p>
+    <ul>
+      <li>the default header</li>
+      <li>the service header</li>
+      <li>the transactional header</li>
+    </ul>
+    <p>We also have an organisational header for other NHS organisations.</p>
 
     <h2 id="when-to-use-the-header">When to use the header</h2>
-    <p>Use the NHS header at the top of every page if your service is on the www.nhs.uk domain.</p>
+    <p>Use the NHS default, service or transactional header at the top of every page if your service is on the nhs.uk domain.</p>
+    <p>Use the experimental organisational header if your service is on another domain.</p>
 
     <h2 id="when-not-to-use-the-header">When not to use the header</h2>
-    <p>Do not use the header if your service is not on the www.nhs.uk domain.</p>
-    <p>We have found that the full header is too distracting to be used in transactional services and we recommend using the transactional header instead.</p>
+    <p>Do not use 1 of the nhs.uk headers if your service is on another domain.</p>
 
     <h2 id="how-to-use">How to use</h2>
 
@@ -55,15 +62,16 @@
     }) }}
 
     <h3 id="transactional-header">Transactional header</h3>
-    <p>Use the transactional header for transactional journeys on the NHS website, service names can be used to help users understand which service they are using.</p>
+    <p>Use the transactional header for transactional journeys on the NHS website. Include the service name to help users understand which service they are using.</p>
+     <p>We have found that the full header is too distracting to be used in transactional services.</p>
 
     {{ designExample({
       type: 'header-transactional'
     }) }}
 
     <h3 id="organisational-header">Organisational header (experimental)</h3>
-    <p>Use the organisational header if you are an NHS organisation, such as a NHS Clinical Commissioning Group or NHS Trust, that has a organisational logo.</p>
-    <p>You must have a Frutiger font licence to use an organisational logo. See the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">NHS England identity guidelines - Organisational logos</a> for more information on how to use organisational logos.</p>
+    <p>Use the organisational header if you are an NHS organisation and not part of the NHS website, such as an NHS clinical commissioning group or an NHS trust.</p>
+    <p>You must have a Frutiger font licence to use an organisational logo. Our guidance on <a href="/service-manual/styles-components-patterns/typography">typography</a> explains how to get hold of the webfont. Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos</a> in the NHS England identity guidelines.</p>
 
     <p>[Design example]</p>
 
@@ -71,14 +79,14 @@
 
     <p>[Design example]</p>
 
-    <p>The organisational logo is an SVG and you can change the organisation name and descriptor within code. Longer organisation names should be split onto 2 lines.</p>
+    <p>The organisational logo is an SVG and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
     <p>You can also use a static asset, such as a PNG file.</p>
 
 <pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Anyplace Anytown Anywhere NHS Foundation Trust homepage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-org-logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/path-to-assets/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
 
-    <p>The organistional header is an experimental component, we haven't tested this in a real service, so we are looking for <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/156">feedback on the organisational header on GitHub</a>.</p>
+    <p>The organistional header is an experimental component. We haven't tested this in a real service, so we are looking for <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/156">feedback on the organisational header on GitHub</a>.</p>
 
     <h2 id="discuss">Discuss</h2>
     <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/16">Discuss the header on GitHub</a></p>
