@@ -1,10 +1,14 @@
 # NHS digital service manual Changelog
 
-## 1.12.0 - TBC
+## 1.12.0 - 21 October 2019
 
 :new: **New content**
 
 - Add contribution criteria for community contribution
+
+:wrench: **Fixes**
+
+- Update the guidance around usage of Do & Don't lists on their own
 
 ## 1.11.0 - 2 October 2019
 
