@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -35,13 +35,13 @@
     "cheerio": "^1.0.0-rc.3",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "lunr": "^2.3.6",
+    "lunr": "^2.3.7",
     "nunjucks": "^3.2.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.2",
@@ -56,9 +56,9 @@
     "js-beautify": "^1.10.2",
     "nhsuk-frontend": "^2.3.2",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.3",
+    "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
-    "webpack": "^4.41.0",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   }
 }

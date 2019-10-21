@@ -141,3 +141,14 @@ h1 + .nhsuk-lede-text--small {
     }
   }
 }
+
+// Table bug hot fix
+.nhsuk-table__cell.nhsuk-body-s {
+  display: table-cell;
+}
+
+th,
+td {
+  padding-left: 0;
+  vertical-align: top;
+}
