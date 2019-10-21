@@ -9,6 +9,7 @@
 :wrench: **Fixes**
 
 - Update the guidance around usage of Do & Don't lists on their own
+- Update package dependencies to latest versions
 
 ## 1.11.0 - 2 October 2019
 
