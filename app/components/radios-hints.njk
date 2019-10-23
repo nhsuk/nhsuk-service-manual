@@ -1,28 +1,37 @@
 {% from 'radios/macro.njk' import radios %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'hint/macro.njk' import hint %}
 
-{{ radios({
-  "idPrefix": "gov",
-  "name": "gov",
-  "fieldset": {
-    "legend": {
-      "text": "How do you want to sign in?",
-      "isPageHeading": true
-    }
+{% call fieldset({
+  legend: {
+    "text": "Do you know your NHS number?",
+    "classes": "nhsuk-fieldset__legend--l",
+    "isPageHeading": true
+  }
+  }) %}
+  {{ hint({
+    "text": "This is a 10 digit number, like 485 777 3456.",
+    "classes": "nhsuk-u-margin-bottom-2"
+  }) }}
+  {{ hint({
+    "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
+  }) }}
+  {{ radios({
+    "idPrefix": "example-hints",
+    "name": "example-hints",
+    "items": [
+  {
+    "value": "yes",
+    "text": "Yes, I know my NHS number"
   },
-  "items": [
-    {
-      "value": "gateway",
-      "text": "Sign in with NHS login",
-      "hint": {
-        "text": "You'll have a user ID if you've registered for the NHS app."
-      }
-    },
-    {
-      "value": "verify",
-      "text": "Sign in with GOV.UK Verify",
-      "hint": {
-        "text": "You'll have an account if you've already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
-      }
-    }
-  ]
+  {
+    "value": "no",
+    "text": "No, I do not know my NHS number"
+  },
+  {
+    "value": "not sure",
+    "text": "I'm not sure"
+  }
+]
 }) }}
+{% endcall %}

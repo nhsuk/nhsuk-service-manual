@@ -1,14 +1,16 @@
 {% from 'radios/macro.njk' import radios %}
 
 {{ radios({
-  "idPrefix": "example",
-  "name": "example",
+  "idPrefix": "example-error",
+  "name": "example-error",
   "errorMessage": {
     "text": "Select yes if you have changed your name"
   },
   "fieldset": {
     "legend": {
-      "text": "Have you changed your name?"
+      "text": "Have you changed your name?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
     }
   },
   "hint": {

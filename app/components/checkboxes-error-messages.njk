@@ -1,36 +1,37 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "nationality",
-  name: "nationality",
-  fieldset: {
-    legend: {
-      text: "What is your nationality?",
-      isPageHeading: true,
-      classes: "nhsuk-fieldset__legend--l"
+  "idPrefix": "example-error",
+  "name": "example-error",
+  "fieldset": {
+    "legend": {
+      "text": "Have you ever had any of these conditions?",
+      "classes": "nhsuk-fieldset__legend--m",
+      isPageHeading: true
     }
   },
-  hint: {
-    text: "If you have dual nationality, select all options that are relevant to you."
+  "hint": {
+    "text": "Select all the options that are relevant to you."
   },
-  errorMessage: {
-    text: "Select if you are British, Irish or a citizen of a different country"
+  "errorMessage": {
+    "text": "Select if you have ever had any of these conditions"
   },
-  items: [
+  "items": [
     {
-      value: "british",
-      text: "British",
-      hint: {
-        text: "including English, Scottish, Welsh and Northern Irish"
-      }
+      "value": "Asthma",
+      "text": "Asthma"
     },
     {
-      value: "irish",
-      text: "Irish"
+      "value": "Diabetes",
+      "text": "Diabetes"
     },
     {
-      value: "other",
-      text: "Citizen of another country"
+      "value": "Heart Disease",
+      "text": "Heart Disease"
+    },
+    {
+      "value": "None are relevant to me",
+      "text": "None are relevant to me"
     }
   ]
 }) }}
