@@ -1,11 +1,13 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ checkboxes({
-  "idPrefix": "nationality",
-  "name": "nationality",
+  "idPrefix": "example",
+  "name": "example",
   "fieldset": {
     "legend": {
-      "text": "How would you like to be contacted?"
+      "text": "How would you like to be contacted?",
+      "classes": "nhsuk-fieldset__legend--l",
+      isPageHeading: true
     }
   },
   "hint": {
