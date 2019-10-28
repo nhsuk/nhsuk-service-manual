@@ -5,6 +5,8 @@
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
 {% from 'radios/macro.njk' import radios %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'hint/macro.njk' import hint %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -116,33 +118,39 @@
 
     <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
-      {{ radios({
-        "idPrefix": "example",
-        "name": "example",
-        "fieldset": {
-          "legend": {
-            "text": "Do you know your NHS number?",
-            "classes": "nhsuk-fieldset__legend--m"
-          }
-        },"hint": {
-          "text": "Your NHS number is a 10 digit number, like 485 777 3456.
-          You can find this on any letter sent to you by the NHS, on a prescription or by logging in to a GP practice online service."
-        ],
-        "items": [
-          {
-            "value": "yes",
-            "text": "Yes, I know my NHS number"
-          },
-          {
-            "value": "no",
-            "text": "No, I do not know my NHS number"
-          },
-          {
-            "value": "unsure",
-            "text": "I'm not sure"
-          }
-        ]
+
+      {% call fieldset({
+        legend: {
+          "text": "Do you know your NHS number?",
+          "classes": "nhsuk-fieldset__legend--m"
+        }
+        }) %}
+        {{ hint({
+          "text": "Your NHS number is a 10 digit number, like 485 777 3456.",
+          "classes": "nhsuk-u-margin-bottom-2"
+        }) }}
+        {{ hint({
+          "text": "You can find this on any letter sent to you by the NHS, on a prescription or by logging in to a GP practice online service."
+        }) }}
+        {{ radios({
+          "idPrefix": "example-divider",
+          "name": "configStructure",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes, I know my NHS number"
+        },
+        {
+          "value": "no",
+          "text": "No, I do not know my NHS number"
+        },
+        {
+          "value": "unsure",
+          "text": "I'm not sure"
+        }
+      ]
       }) }}
+      {% endcall %}
     </div>
 
     <p>Having the 3rd option means that you can give people some extra help with finding their number. (We'll be publishing on a pattern for the NHS number soon.)</p>
