@@ -29,6 +29,7 @@
 .app-colour-list__column {
   padding-left: 0;
   padding-top: 0;
+  vertical-align: middle;
 
   @include mq($until: tablet) {
     display: block;
