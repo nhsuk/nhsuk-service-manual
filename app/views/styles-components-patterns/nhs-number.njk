@@ -302,7 +302,7 @@
         <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
         <li>allow at least 12 characters in your NHS number input</li>
         <li>check that the NHS number is valid by using a modulus 11 algorithm</li>
-        <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code><span class=”nhs-u-nowrap”>123 456 7890</span></code>.</li>
+        <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <span class=”nhs-u-nowrap”>123 456 7890</span>.</li>
         <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
         <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS won't recognise any phone numbers on the page)</li>
     </ul>
