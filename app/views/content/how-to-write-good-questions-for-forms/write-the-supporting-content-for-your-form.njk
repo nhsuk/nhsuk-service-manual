@@ -49,10 +49,11 @@
     <p>Focus on the task, on what the user wants to do.</p>
 
     <h2>Introduce the form</h2>
-    <p>Use a <a href="/service-manual/styles-components-patterns/start-page">start page</a> to introduce and explain your service to users. This is your chance to stop the wrong people filling in the form and to set expectations.<p>
+    <p>Introduce and explain your service to users. This is your chance to stop the wrong people filling in the form and to set expectations.<p>
 
+    <p>You could try a start page, like the <a href="https://design-system.service.gov.uk/patterns/start-pages/">GOV.UK start page pattern</a>. (We are developing <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/169">a start page pattern for the service manual in GitHub</a>.) Be aware that users often ignore text under the start button (and any "Continue" buttons).</p>
 
-    <p>Read more about <a href="/service-manual/styles-components-patterns/start-page#how-to-use-a-start-page">how to use a start page</a>. Be aware that people often ignore text under the start button (and any "Continue" buttons.)</p>
+    <p>User journeys rarely start with the start page, however, and many services don't need a special start page. Think about how users will get to your form or service as well as how to introduce it.</p>
 
     <h2 id="give-users-help-in-context">Give users help in context</h2>
     <p>If users need help or guidance with filling in a question, put just enough help where they need it - and only if you see in research that they need it.</p>
@@ -140,7 +141,7 @@
 
     <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>
 
-    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/use-yes-no-questions-but-be-careful#what-are-filter-questions">filter question</a> will work better.</p>
+    <p>Bear in mind that users may miss the help text. Sometimes a <a href="/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#what-are-filter-questions">filter question</a> will work better.</p>
 
     <div class="nhsuk-inset-text">
       <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -148,22 +149,27 @@
     </div>
 
     <h3>How to add help text</h3>
-    <p>We don't recommend tool tips. Instead you can:</p>
+    <p>We don't recommend tool tips. They can be hard for users to see and aren't accessible.<p>
+    <p>Instead you can:</p>
     <ul>
-      <li>add <a href="/service-manual/styles-components-patterns/text-input#using-hint-text">hint text</a> inline, immediately next to the question it relates to, for help that's relevant to most of your users</li>
+      <li>add hint text as a part of other form inputs, such as <a href="/service-manual/styles-components-patterns/text-input#using-hint-text">text inputs</a>, <a href="/service-manual/styles-components-patterns/radios#radios-with-hints">radios</a> and <a href="/service-manual/styles-components-patterns/checkboxes#checkbox-items-with-hints">checkboxes</a>, for help that's relevant to most of your users</li>
       <li>use the <a href="/service-manual/styles-components-patterns/details">details component</a> to reveal expanding help text - this is useful if the help text is only relevant for some users</li>
     </ul>
 
     <h2 id="error-messages">Use error messages to explain what went wrong</h2>
-    <p>Think of error messages as a step in <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">the conversation</a>.</p>
-    <p>Tell the user how to fix the problem as soon as you can.</p>
+    <p>Think of error messages as a step in <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">the conversation</a>. Tell the user how to fix the problem as soon as you can.</p>
     <p>If you <a href="/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">begin prototyping with 1 thing per page</a>, you can deal with errors for 1 thing at a time.</p>
     <p>Read more about <a href="/service-manual/styles-components-patterns/error-message">error messages</a> in the service manual.</p>
 
     <h2>End with a confirmation or thank you page</h2>
-    <p>Use a <a href="/service-manual/styles-components-patterns/confirmation-page">confirmation page</a> or a thank you page to reassure users that they have completed the form and help them understand what to do next.</p>
+    <p>Consider how you can reassure users that they have completed the form and help them understand what to do next.</p>
 
-    <p>You may also want to include a <a href="https://design-system.service.gov.uk/components/summary-list/">summary list</a> to let users check their answers. </p>
+    <p>You could try:</p>
+    <ul>
+      <li>a confirmation page, like the <a href="https://design-system.service.gov.uk/patterns/confirmation-pages/">GOV.UK confirmation page pattern</a> (we are developing <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/144">a confirmation page pattern for the service manual in GitHub)</a></li>
+      <li>a <a href="/service-manual/styles-components-patterns/summary-list">summary list</a> to summarise users' responses and let them check their answers, as in <a href="https://design-system.service.gov.uk/patterns/check-answers/">the GOV.UK check answers pattern</a></li>
+      <li><a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation#pause-to-allow-users-to-reflect">pausing to allow users to reflect, for example, for a declaration</a> or "signature"</li>
+    </ul>
 
     <h2>Look at your content across channels</h2>
     <p>Think beyond the form. For the user, it is likely to be a cross-channel experience. Remember to make your on and offline content consistent, including:</p>
@@ -179,7 +185,7 @@
     <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
 
     <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: October 2019</p>
+      <p class="nhsuk-body-s">Updated: November 2019</p>
     </div>
 
     {% from 'pagination/macro.njk' import pagination %}
