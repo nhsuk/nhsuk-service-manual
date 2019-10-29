@@ -212,7 +212,7 @@
 
 </div>
 
-<p>Use a filter question before a single text input if there is another way for users to continue without an NHS number. (Read more about <a href="/service-manual/content/how-to-write-good-questions-for-forms/use-yes-no-questions-but-be-careful#what-are-filter-questions">filter questions</a> in the guidance on how to write good questions for forms.</p>)
+<p>Use a filter question before a single text input if there is another way for users to continue without an NHS number. (Read more about <a href="/service-manual/content/how-to-write-good-questions-for-forms/use-yes-no-questions-but-be-careful#what-are-filter-questions">filter questions</a> in the guidance on how to write good questions for forms.)</p>
 
 <p>Use a 2-option radio button that asks the user if they know their NHS number. If they do, route them to a page that asks for their NHS number. If they do not, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
 <p>On both route pages, help users find and recognise their NHS number, for example, using hint text.</p>
@@ -302,6 +302,7 @@
         <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
         <li>allow at least 12 characters in your NHS number input</li>
         <li>check that the NHS number is valid by using a modulus 11 algorithm</li>
+        <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code><span class=”nhs-u-nowrap”>123 456 7890</span></code>.</li>
         <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
         <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS won't recognise any phone numbers on the page)</li>
     </ul>
@@ -345,7 +346,6 @@
 
     <h3>Use the correct NHS number format</h3>
     <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456.</p>
-    <p>Keep the NHS number on 1 line - do not allow it to break over 2 lines.</p>
     <p>Read more about how to format <a href='/service-manual/content/a-to-z-of-NHS-health-writing#nhs-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
 
   </div>
