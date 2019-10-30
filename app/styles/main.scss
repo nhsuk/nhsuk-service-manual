@@ -254,3 +254,13 @@ td {
 .nhsuk-breadcrumb__backlink:visited {
   color: $nhsuk-link-color;
 }
+
+// Footer copyright hotfix
+.nhsuk-footer__copyright {
+  margin-bottom: nhsuk-spacing(2);
+}
+
+// Nowrap hotfix
+.nhsuk-u-nowrap {
+  white-space: nowrap;
+}

@@ -2,11 +2,6 @@
 
 .code-snippet {
   background-color: $color_nhsuk-grey-5;
-  margin-bottom: 24px;
-
-  @include mq($from: tablet) {
-    margin-bottom: 48px;
-  }
 
   .js-hidden {
     display: none;
