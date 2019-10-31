@@ -39,22 +39,21 @@
     <h2>When to use summary lists</h2>
     <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list, where:</p>
     <ul>
-      <li>the key is a description or label of a piece of information, like "Name"</li>
+      <li>the key is a label, like "Name"</li>
       <li>the value is the piece of information itself, like "John Smith"</li>
     </ul>
-    <p>Think about how you can use it along with other components or patterns to give users a sense of control. You can use it, for example, to summarise a user’s responses at the end of a form, for example as part of a check answers pattern. (GOV.UK has a <a href="https://design-system.service.gov.uk/patterns/check-answers/">check answers pattern</a>.)</p>
+    <p>Think about how you can use the summary list along with other components or patterns to give users a sense of control. You can use it to summarise a user’s responses at the end of a form, for example as part of the <a href="https://design-system.service.gov.uk/patterns/check-answers/">GOV.UK check answers</a> page.</p>
 
     <h2>When not to use summary lists </h2>
     <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
-    <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (You can see a <a href="https://design-system.service.gov.uk/patterns/task-list-pages/">task list page pattern on GOV.UK</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+    <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. If you need guidance on making a task list page use <a href="https://design-system.service.gov.uk/patterns/task-list-pages/">GOV.UK</a>'s pattern. For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
     <h2>How to use summary lists</h2>
     <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using Nunjucks or the NHS.UK prototype kit, you can use the Nunjucks macro.</p>
 
     <h3 id="label-text-inputs">Summary list with actions</h3>
     <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
-    <p>For sighted users, the actions get their context from the other content in the row they appear in.</p>
-    <p>People who use assistive technology, like a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
+    <p>People who use assistive technology, like a screen reader, may hear the action links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 
   </div>
   <div class="nhsuk-grid-column-full">
