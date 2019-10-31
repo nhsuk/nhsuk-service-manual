@@ -25,31 +25,35 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Details</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Make a page easier to scan by letting users reveal more detailed information only if they need it.</p>
+    <p class="nhsuk-body-l">Make a page easier to scan by letting users reveal more detailed information only if they need it.</p>
   </div>
-</div>
-<div class="nhsuk-grid-row">
+
   <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
+
     {{ designExample({
       type: 'details'
     }) }}
+
   </div>
-</div>
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
+
     <h2 id="when-to-use-this-component">When to use details</h2>
-    <p>Use the details component to make a page easier to scan when it contains information that only some users will need, as <a href="https://design-system.service.gov.uk/components/details/">the GOV.UK Design System</a> recommends.</p>
+    <p>Use the details component to make a page easier to scan when it contains information that only some users will need. For example, use it to <a href="/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>.</p>
+
     <h2 id="when-not-to-use-this-component">When not to use details</h2>
     <p>Do not use details to hide information that most users will need.</p>
+
     <h2 id="how-it-works">How to use details</h2>
-
-    <p>The details component is a short link that expands into more detailed help text when a user clicks on it.</p>
-
+    <p>The details component is a short link that expands to show more text when a user clicks on it.</p>
     <p>Make the link text short and descriptive so users can quickly work out if they need to click on it.</p>
+
+    <h2 id="details-and-expanders">Details and expanders</h2>
+    <p>Details and <a href="/service-manual/styles-components-patterns/expander">expanders</a> both hide sections of content which a user can choose to reveal.</p>
+    <p>The details component is less visually prominent than an expander, so tends to work better for content which is not as important to users.</p>
+    <p>Users may be reluctant to click on the details component in forms. See the <a href="#research-on-this-component">research</a>.</p>
+
     <h2 id="research-on-this-component">Research</h2>
-    <p>We tested the details component on health information pages and a "Register with a GP" transactional prototype at 5 labs in 2018. </p>
-    <p>Users understood the purpose of the component and were able to use it.</p>
+    <p>User research has shown us that users understand the purpose of the component and are able to use it.</p>
     <p>Anecdotally we've heard users being reluctant to expand the details component in user testing sessions for transactional services (forms). When asked why they wouldn't click, they explained that they thought the link text (blue underlined text) would take them to a new page and they would lose their progress.</p>
     <p>If you’ve used details, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
 
@@ -64,7 +68,7 @@
     </ul>
 
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
+    <p class="nhsuk-body-s">Updated: November 2019</p>
     </div>
 
     {{ panel({

@@ -25,59 +25,109 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
       <h1 class="nhsuk-u-margin-bottom-5">Text input</h1>
-      <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use text input to let users enter a single line of text.</p>
+      <p class="nhsuk-body-l">Use text input to let users enter a single line of text.</p>
   </div>
-</div>
-<div class="nhsuk-grid-row">
+
   <div class="nhsuk-grid-column-full">
-    <h2>Code and design</h2>
+
     {{ designExample({
       type: 'input'
     }) }}
+
   </div>
-</div>
-<div class="nhsuk-grid-row">
+
   <div class="nhsuk-grid-column-two-thirds">
+
     <h2>When to use text input</h2>
     <p>Use text input when you need users to enter text that’s no longer than a single line, such as their name or phone number.</p>
+
     <h2>When not to use text input </h2>
     <p>Do not use text input if you need users to enter longer answers that might span several lines. In this case, use <a href="/service-manual/styles-components-patterns/textarea">textarea</a>.</p>
     <h2>How to use text input</h2>
+
     <h3 id="label-text-inputs">Label text inputs</h3>
-    <p>Give text input a visible label. Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
+    <p>Give text input a visible label.</p>
+    <p>Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
     <p>Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
-    <p class="rich-text">If you’re asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as the GOV.UK Design System recommends, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+    <p class="rich-text">If you are asking just <a href="/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+
+  </div>
+  <div class="nhsuk-grid-column-full">
+
+    {{ designExample({
+      type: 'input-heading'
+    }) }}
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+
     <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
     <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
     <p>By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.</p>
     <p>If you want to make the input smaller, you can either use a fixed width input, or use the width override classes to create a smaller, fluid width input.</p>
+
     <h4 id="fixed-width-inputs">Fixed width inputs</h4>
     <p>Use fixed width inputs for content that has a specific, known length. For example, postcode inputs should be postcode-sized and telephone number inputs should be telephone number-sized.</p>
     <p>On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.</p>
+
   </div>
   <div class="nhsuk-grid-column-full">
+
     {{ designExample({
       type: 'input-fixed-width'
     }) }}
+
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <h3 id="using-hint-text" class="nhsuk-u-margin-top-8">Using hint text</h3>
-    <p>Follow our advice on <a href='/service-manual/styles-components-patterns/hint-text'>hint text</a> and this example of hint text with text input.</p>
+
+    <h4 id="fluid-width-inputs">Fluid width inputs</h4>
+    <p>Use the width override classes to reduce the width of an input in relation to its parent container, for example, to two-thirds.</p>
+    <p>Fluid width inputs will resize with the viewport.</p>
+
   </div>
   <div class="nhsuk-grid-column-full">
+
+    {{ designExample({
+      type: 'input-fluid-width'
+    }) }}
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h3 id="using-hint-text">Using hint text</h3>
+
+    <p>Use hint text to <a href="/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">provide help in context</a>, for example, tell users where to find information or how their data will be used.</p>
+
+  </div>
+  <div class="nhsuk-grid-column-full">
+
     {{ designExample({
       type: 'input-hint-text'
     }) }}
+
   </div>
   <div class="nhsuk-grid-column-two-thirds">
-    <h3 id="do-not-disable-copy-and-paste" class="nhsuk-u-margin-top-8">Do not disable copy and paste</h3>
-    <p>Users often need to copy and paste information into a text input, so do not stop them from doing this.</p>
-    <h3>Error messages</h3>
+
+    <h3 id="error-messages">Error messages</h3>
+    <p>Style error messages like this.</p>
+
+  </div>
+  <div class="nhsuk-grid-column-full">
+
+    {{ designExample({
+      type: 'input-error'
+    }) }}
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <p>Follow:</p>
     <ul>
       <li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
       <li><a href="https://design-system.service.gov.uk/components/text-input#error-messages">GOV.UK guidance on error messages for text input</a></li>
     </ul>
+
+    <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
+    <p>Users often need to copy and paste information into a text input, so do not stop them doing this.</p>
 
     <h2>Research</h2>
     <p>If you’ve used text input, please share your user research findings.</p>
@@ -93,7 +143,7 @@
     </ul>
 
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: February 2019</p>
+    <p class="nhsuk-body-s">Updated: November 2019</p>
     </div>
 
     {{ panel({
@@ -105,7 +155,6 @@
               <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
               <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
               <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
               <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
               <li><a href='/service-manual/styles-components-patterns/select'>Select</a></li>
               <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>

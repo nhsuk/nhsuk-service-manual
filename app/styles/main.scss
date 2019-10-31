@@ -200,3 +200,114 @@ td {
     @include nhsuk-responsive-padding(2, 'top');
   }
 }
+
+.nhsuk-tag {
+  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  display: inline-block;
+  letter-spacing: 1px;
+  // When a user customises their colours often the background is removed,
+  // by adding a outline we ensure that the tag component still keeps it's meaning.
+  // https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nhsuk-tag--dark-grey {
+  background-color: $color_nhsuk-grey-1;
+}
+
+// Example
+.app-example {
+  @include top-and-bottom;
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(2, 'top');
+  @include nhsuk-responsive-padding(5, 'bottom');
+  @include nhsuk-responsive-padding(5, 'left');
+  @include nhsuk-responsive-padding(5, 'right');
+  @include nhsuk-responsive-padding(7, 'top');
+
+  border: 1px solid $color_nhsuk-grey-3;
+  padding: 48px 32px 32px;
+  position: relative;
+}
+
+.app-example__heading {
+  left: -1px;
+  position: absolute;
+  top: -1px;
+}
+
+.app-example + h2 {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.app-example + h3 {
+  @include nhsuk-responsive-padding(2, 'top');
+}
+
+.app-example--white {
+  background: $color_nhsuk-white;
+}
+
+.app-example--image {
+  @include nhsuk-responsive-padding(5);
+}
+
+// Panel - confirmation
+.nhsuk-panel--confirmation {
+  margin-top: 0;
+
+  @include mq($from: desktop) {
+    padding-bottom: nhsuk-spacing(8);
+    padding-top: nhsuk-spacing(8);
+  }
+}
+
+.nhsuk-panel__title {
+  @include nhsuk-responsive-margin(4, 'bottom');
+
+  text-align: center;
+}
+
+.nhsuk-panel__body {
+  @include nhsuk-font(24);
+
+  text-align: center;
+
+  strong {
+    @include nhsuk-font(32, bold);
+  }
+}
+
+// App example figure
+.nhsuk-image--full {
+  width: 100%;
+}
+
+// Header service name hotfix
+.nhsuk-header__service-name {
+  padding-top: 0;
+}
+
+// Breadcrumb hotfix
+.nhsuk-breadcrumb__backlink:visited {
+  color: $nhsuk-link-color;
+}
+
+// Footer copyright hotfix
+.nhsuk-footer__copyright {
+  margin-bottom: nhsuk-spacing(2);
+}
+
+// Nowrap hotfix
+.nhsuk-u-nowrap {
+  white-space: nowrap;
+}

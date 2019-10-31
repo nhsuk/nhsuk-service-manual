@@ -1,15 +1,17 @@
 {% from 'date-input/macro.njk' import dateInput %}
 
 {{ dateInput({
-  "id": "dob",
-  "namePrefix": "dob",
+  "id": "example",
+  "namePrefix": "example",
   "fieldset": {
     "legend": {
-      "text": "What is your date of birth?"
+      "text": "What is your date of birth?",
+      "classes": "nhsuk-label--l",
+      "isPageHeading": true
     }
   },
   "hint": {
-    "text": "For example, 31 3 1980"
+    "text": "For example, 15 3 1984"
   },
   "items": [
     {

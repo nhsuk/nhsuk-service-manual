@@ -1,6 +1,6 @@
 {% set pageTitle = 'Checkboxes' %}
 {% set pageSection = 'Styles, components and patterns' %}
-{% set pageDescription = 'Use checkboxes to let users select one or more options on a form.' %}
+{% set pageDescription = 'Use checkboxes to let users select 1 or more options on a form.' %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -25,32 +25,63 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-u-margin-bottom-5">Checkboxes</h1>
-    <p class="nhsuk-body-l nhsuk-u-margin-bottom-8">Use checkboxes to let users select one or more options on a form.</p>
+    <p class="nhsuk-body-l">Use checkboxes to let users select 1 or more options on a form.</p>
   </div>
-</div>
-<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h2 >Code and design</h2>
+
      {{ designExample({
       type: 'checkboxes'
     }) }}
+
   </div>
   <div class="nhsuk-grid-column-two-thirds">
+
     <h2>When to use checkboxes</h2>
     <p>Use checkboxes when you need to help users:</p>
     <ul>
-        <li>select more than 1 option from a list</li>
-        <li>toggle a single option on or off</li>
+      <li>select more than 1 option from a list</li>
+      <li>toggle a single option on or off</li>
     </ul>
     <h2>When not to use checkboxes</h2>
     <p>Do not use the checkboxes component if users can only choose 1 option from a selection. In this case, use a <a href="/service-manual/styles-components-patterns/radios">radio</a>.</p>
+
     <h2>How to use checkboxes</h2>
     <p class="rich-text">Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How would you like to be contacted?".</p>
-    <p class="rich-text">If you're asking just <a href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">1 question per page</a> as GOV.UK Design System recommends, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means screen reader users will only hear the contents once.</p>
+    <p class="rich-text">If you're asking just <a href="/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means screen reader users will only hear the contents once.</p>
     <p>Read more on the GOV.UK Design System about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
-    <p>Unlike with <a href="/service-manual/styles-components-patterns/radios">radios</a>, users can select more than 1 option from a list of checkboxes. Do not assume that users will know how many options they can select. Make it clear with a hint - for example, say "Select all that apply".</p>
+
+    <h3 id="checkbox-items-with-hints">Checkbox items with hints</h3>
+    <p>Unlike with <a href="/service-manual/styles-components-patterns/radios">radios</a>, users can select more than 1 option from a list of checkboxes. Do not assume that users will know how many options they can select.</p>
+    <p>Use hint text to <a href="/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">provide help in context</a>. For example, say "Select all the options that are relevant to you".</p>
+
+  </div>
+  <div class="nhsuk-grid-column-full">
+
+    {{ designExample({
+      type: 'checkboxes-hint'
+    }) }}
+
+  </div>
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <h3 id="error-messages">Error messages</h3>
+    <p>Error messages should be styled like this:</p>
+  </div>
+
+  <div class="nhsuk-grid-column-full">
+    {{ designExample({
+      type: 'checkboxes-error-messages'
+    }) }}
+  </div>
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <p>Follow:</p>
+    <ul>
+      <li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
+      <li><a href="https://design-system.service.gov.uk/components/checkboxes#error-messages">GOV.UK Design System guidance on error messages for checkboxes</a></li>
+    </ul>
+
     <h2>Research</h2>
-    <p>We tested checkboxes on a "Register with a GP" prototype at 2 labs in 2018. Users understood what the checkboxes were for and were able to complete the set task successfully.</p>
     <p>Our checkboxes are based on the GOV.UK Design System. Read more about <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">how GOV.UK developed and tested them</a>.</p>
 
     <h2>Discuss</h2>
@@ -64,8 +95,9 @@
     </ul>
 
     <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2019</p>
+      <p class="nhsuk-body-s">Updated: November 2019</p>
     </div>
+
     {{ panel({
     "label": "Similar components",
     "HTML": "<ul>
@@ -74,7 +106,6 @@
               <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
               <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
               <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/styles-components-patterns/hint-text'>Hint text</a></li>
               <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
               <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
               <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>

@@ -1,0 +1,154 @@
+
+{% set pageTitle = 'Test your questions'%}
+{% set pageSection = 'How to write good questions for forms' %}
+{% set pageDescription = 'Test your questions and answers with real users and the staff who deal with the form.' %}
+
+{% extends 'includes/layout.njk' %}
+{% from 'review-date/macro.njk' import reviewDate %}
+{% from 'images/macro.njk' import image %}
+
+{% block breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/service-manual/",
+      text: "Home"
+    },
+    {
+      href: "/service-manual/content",
+      text: "Content style guide"
+    }
+  ],
+    href: "/service-manual/content/how-to-write-good-questions-for-forms",
+    text: "How to write good questions for forms"
+
+  }) }}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+
+     <h1>
+      <span class="nhsuk-caption-l">
+        <span class="nhsuk-u-visually-hidden"> - </span>
+        {{pageSection}}
+      </span>
+      {{pageTitle}}
+    </h1>
+
+    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
+
+    <p class="nhsuk-body-l">{{pageDescription}}</p>
+
+    <h2>Explore and test your questions in different ways</h2>
+
+    <h3>Sketch things out</h3>
+    <p>This is a good way to explore and test your initial ideas with colleagues. You can also sketch out different approaches with users. Download and print out our NHS sketch templates:</p>
+    <ul>
+      <li><a href="/service-manual/assets/nhs-sketch-template-8-page-mobile.pdf">8 page template for mobile</a> (PDF, 12KB)</li>
+      <li><a href="/service-manual/assets/nhs-sketch-template-2-page.pdf">2 page template</a> (PDF, 8KB)</li>
+      <li><a href="/service-manual/assets/nhs-sketch-template-1-page.pdf">1 page template</a> (PDF, 18KB)</li>
+    </ul>
+
+    <h3>Voice the questions</h3>
+    <p>Use a script and talk through the questions. You can do this with colleagues or with real users. It will give you a chance to check that:</p>
+    <ul>
+      <li>users understand the questions and give you appropriate replies</li>
+      <li>it sounds <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">like a conversation</a></li>
+      <li>you've <a href="/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order">got the questions in a sensible order</a></li>
+    </ul>
+    <p>It'll also help you identify anything users need more help with.</p>
+
+    <h3>Make a paper prototype</h3>
+    <p>Paper prototypes let you try out different ideas early on. Explore them with colleagues or test them with users.</p>
+    <p>You can:</p>
+    <ul>
+      <li>print them out, cut them up and move the pieces around with your team or with users, experimenting with ordering the questions in different ways</li>
+      <li>watch and listen as real users fill a paper form in</li>
+    </ul>
+
+    <p>Or you could show the "paper" form to users on a screen and see how they expect to interact with it.</p>
+
+    <h3>Create a simple code prototype</h3>
+    <p>When you build a code prototype, you'll get a better idea of the strengths and weaknesses of your form. It'll be better for user research too, because users can interact with it. It looks like the real thing and will give you more realistic results.</p>
+    <p>Use the <a href="/service-manual/prototyping-tools">NHS.UK prototype kit</a> to build your interactive prototype. Run a moderated usability test to see if users understand what they need to and can complete the task.</p>
+
+
+    <h2>Test your questions with real users</h2>
+
+    <p>Make sure you test with a range of users, including people:</p>
+    <ul>
+      <li>with access needs - read more about <a href="/service-manual/accessibility/user-research">user research in our accessibility guidance</a></li>
+      <li>with varying digital skills and connectivity</li>
+      <li>who need to involve their families, carers, or advocates</li>
+      <li>with 2 home addresses or no address</li>
+    </ul>
+
+    <h3>What to look for when testing</h3>
+    <p>Try to understand:</p>
+    <ul>
+      <li>how people's literacy or digital skills affect their ability to fill in the form</li>
+      <li>where they misinterpret a question, for example, where they put in the wrong information or not enough information</li>
+      <li>where they get frustrated or drop out and why</li>
+    </ul>
+
+    <p>Depending on your service, you may also need to consider:</p>
+    <ul>
+      <li>whether people need to have documents or key information (like their NHS number) when they fill in the form - and how they find them</li>
+      <li>whether they expect to paste in information, for example, something they prepared earlier - for example, on a complaint form</li>
+      <li>what happens if users start online, then follow up offline, or vice versa</li>
+    </ul>
+
+    <h2>Test the answers with staff and systems</h2>
+
+    <p>Talk to knowledgeable staff, like receptionists, call handlers, contact centre staff or service desk teams. Give yourself enough lead-in time to arrange this.</p>
+    <p>Test the answers with the people who:</p>
+    <ul>
+      <li>deal with the forms as they arrive</li>
+      <li>use the information or data in the forms</li>
+      <li>deal with enquiries about the forms</li>
+    </ul>
+
+    <p>The output of your form or service must be easy for staff to use in their everyday systems and processes.</p>
+
+    <p>Watch out for:</p>
+    <ul>
+      <li>any mistakes users have made, especially anything which might fail validation</li>
+      <li>any answers that don't make sense in the context of the service</li>
+      <li>if anything essential is missing</li>
+      <li>if users have included any notes or additional information in free text fields to explain entries on the form</li>
+    </ul>
+
+    <p>Most of all, focus on the errors.</p>
+
+    <p>Check your analytics to see how many people have completed the form, how many are part completed and how many fail. Where are people dropping out?</p>
+
+    <h2>Iterate your questions</h2>
+    <p>Use the findings from your testing to help iterate and improve your questions. Then iterate your iterations.</p>
+
+    <h2>Read more about prototyping and testing</h2>
+    <p>There are some good resources on GOV.UK:</p>
+    <ul>
+      <li><a href="https://www.gov.uk/service-manual/design/making-prototypes">Making prototypes</a></li>
+      <li><a href="https://www.gov.uk/service-manual/user-research">User research</a></li>
+      <li><a href="https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing">Using moderated usability testing</a></li>
+    </ul>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: November 2019</p>
+    </div>
+
+    {% from 'pagination/macro.njk' import pagination %}
+
+    {{ pagination({
+      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form",
+      "previousPage": "Write the supporting content for your form"
+    }) }}
+
+  </div>
+</div>
+{% endblock %}
+
+
+

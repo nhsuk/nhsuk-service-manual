@@ -1,15 +1,16 @@
 {% from 'radios/macro.njk' import radios %}
 
+{% from 'radios/macro.njk' import radios %}
+
 {{ radios({
   "idPrefix": "example",
   "name": "example",
   "fieldset": {
     "legend": {
-      "text": "Have you changed your name?"
+      "text": "Are you 18 or over?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
     }
-  },
-  "hint": {
-    "text": "This includes changing your last name or spelling your name differently."
   },
   "items": [
     {

@@ -1,0 +1,37 @@
+{% from 'checkboxes/macro.njk' import checkboxes %}
+
+{{ checkboxes({
+  "idPrefix": "example-error",
+  "name": "example-error",
+  "fieldset": {
+    "legend": {
+      "text": "Have you ever had any of these conditions?",
+      "classes": "nhsuk-fieldset__legend--m",
+      isPageHeading: true
+    }
+  },
+  "hint": {
+    "text": "Select all the options that are relevant to you."
+  },
+  "errorMessage": {
+    "text": "Select the conditions relevant to you."
+  },
+  "items": [
+    {
+      "value": "Asthma",
+      "text": "Asthma"
+    },
+    {
+      "value": "Diabetes",
+      "text": "Diabetes"
+    },
+    {
+      "value": "Heart disease",
+      "text": "Heart disease"
+    },
+    {
+      "value": "None are relevant to me",
+      "text": "None are relevant to me"
+    }
+  ]
+}) }}
