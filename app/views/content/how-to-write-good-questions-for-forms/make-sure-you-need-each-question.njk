@@ -4,6 +4,8 @@
 
 {% extends 'includes/layout.njk' %}
 {% from 'review-date/macro.njk' import reviewDate %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from "input/macro.njk" import input %}
 
 {% block breadcrumb %}
 {{ breadcrumb({
@@ -56,7 +58,7 @@
         <li>how you'll keep the information up to date and secure</li>
       </ul>
     <p>If you do not know how you'll use an answer, find out or remove the question.</p>
-      <details class="nhsuk-details">
+    <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
           Example: signatures
@@ -69,15 +71,42 @@
     </details>
     <p>All the data you capture is subject to data protection legislation, including GDPR.  Get specialist advice on protecting users' confidentiality and privacy from your business and information risk teams (for example, senior information risk owners and information asset owners). This is another reason to collect as little data as possible.</p>
 
-
     <h2 id="start-with-essential-questions">Start with essential questions and add optional ones later</h2>
     <p>Decide if each question is essential (sometimes called "required" or "mandatory") or not. If the user cannot get the service unless they give you this information, it is essential.</p>
-
     <p>Not all personal data is essential. <a href="/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions">Consider the sensitivities of your questions</a> and the data you really need.</p>
-
     <p>Only add optional questions if your users seem to need them.</p>
+    <p>Do not mark essential fields. Mark optional fields with "(optional)" - in brackets.</p>
 
-    <p>Do not mark essential fields. Mark optional fields with "(optional)" - in brackets. (We do not use asterisks for essential fields. Research suggests that they're not necessary and they can make users anxious and less likely to complete the form.)</p>
+    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
+      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      {% call fieldset({
+        legend: {
+          "text": "Subscribe to newsletter",
+          "classes": "nhsuk-fieldset__legend--l"
+        }
+      }) %}
+
+        {{ input({
+          label: {
+            "html": 'Name (optional)'
+          },
+          "id": "name",
+          "name": "name"
+        }) }}
+
+        {{ input({
+          label: {
+            "html": 'Email address'
+          },
+          "id": "email",
+          "name": "email"
+        }) }}
+
+      {% endcall %}
+    </div>
+
+    <p>We do not use asterisks for essential fields. Research suggests that they're not necessary and they can make users anxious and less likely to complete the form.</p>
+
     <h2 id="use-information-your-organisation-already-has">Use information your organisation already has - or can access</h2>
     <p>If you already have some data about the user, you may only need them to confirm that it's correct.</p>
     <p>Investigate whether you can get some of the information you need from another NHS system.</p>
@@ -106,10 +135,10 @@
     <p>If you do not need information right now, consider collecting it afterwards.</p>
 
     <p>For example:</p>
-      <ul>
-        <li>on an application form, first ask the questions that let you and the user know if they're eligible, then come back to questions that determine what they will get</li>
-        <li>for psychological therapies, do not ask your users to take a clinical assessment (like a depression score sheet) as part of their self-referral form - ask them to fill it in later on</li>
-      </ul>
+    <ul>
+      <li>on an application form, first ask the questions that let you and the user know if they're eligible, then come back to questions that determine what they will get</li>
+      <li>for psychological therapies, do not ask your users to take a clinical assessment (like a depression score sheet) as part of their self-referral form - ask them to fill it in later on</li>
+    </ul>
 
     <h2>Read more about collecting personal information and data protection</h2>
     <ul>
