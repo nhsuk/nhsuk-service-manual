@@ -96,7 +96,7 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
 
-    <p>If they do know their NHS number, route them to a page that asks for it.</p>
+    <p>If users do know their NHS number, route them to a page that asks for it.</p>
 
   </div>
   <div class="nhsuk-grid-column-full">
@@ -109,12 +109,12 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
 
-    <p>If they do not know their NHS number, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
+    <p>If users do not know their NHS number, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
     <p>On the filter question page and the single text input page, help users find and recognise their NHS number, for example, using hint text.</p>
 
     <h3 id="filter-question-before-input-with-3rd-option">Filter question before input with 3rd option</h3>
     <p>You may want to give users a 3rd option that provides extra information about their NHS number and where to find it.</p>
-    <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful.</p>
+    <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful. We recommend that you always try and give a 3rd option.</p>
 
   </div>
   <div class="nhsuk-grid-column-full">
@@ -127,12 +127,12 @@
   </div>
   <div class="nhsuk-grid-column-two-thirds">
 
-    <h2>How to build the NHS number pattern</h2>
+    <h3>How to build the NHS number pattern</h3>
     <p>When asking for an NHS number:</p>
     <ul>
         <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
         <li>allow at least 12 characters in your NHS number input</li>
-        <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp?shownav=1'>modulus 11 algorithm</a></li>
+        <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp?shownav=1'>modulus 11 algorithm (NHS Data Model and Dictionary)</a></li>
         <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">485 777 3456&lt;/span></code>.</li>
         <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
         <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS will not recognise any phone numbers on the page)</li>
@@ -140,9 +140,9 @@
 
     <h3>Explain where users can find their NHS number and what it looks like</h3>
     <p>Users are more likely to succeed in their journey the earlier you mention that they need an NHS number and where to find it.</p>
-    <p>Give them help before they start the service. Also give them <a href='/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context'>help in context</a> using 1 of these:</p>
+    <p>Give them help before they start the service. Also <a href='/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context'>give them help in context</a> using 1 of these:</p>
     <ul>
-        <li>hint text in form inputs (such as <a href='/service-manual/styles-components-patterns/text-input'>text inputs</a>, <a href='/service-manual/styles-components-patterns/radios'>radios</a> and <a href='/service-manual/styles-components-patterns/checkboxes'>checkboxes</a>)</li>
+        <li>hint text in form inputs (such as <a href='/service-manual/styles-components-patterns/text-input#using-hint-text'>text inputs</a>, <a href='/service-manual/styles-components-patterns/radios#radios-with-hints'>radios</a> and <a href='/service-manual/styles-components-patterns/checkboxes#checkbox-items-with-hints'>checkboxes</a>)</li>
         <li>a <a href='/service-manual/styles-components-patterns/details'>details component</a>, for example:</li>
     </ul>
 
@@ -158,7 +158,7 @@
 
     <h3>Use the correct NHS number format</h3>
     <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. This is the preferred example NHS number, but you can also use 123 456 7890. You should use the same number for all examples.</p>
-    <p>Read more about how to format <a href='/service-manual/content/a-to-z-of-NHS-health-writing#nhs-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
+    <p>Read more about how to format <a href='/service-manual/content/a-to-z-of-NHS-health-writing#NHS-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
 
     <h3>Write clear error messages</h3>
     <p>Make sure you use clear <a href='/service-manual/styles-components-patterns/error-message'>error messages</a> and <a href='/service-manual/styles-components-patterns/error-summary'>error summaries</a> when you ask users for their NHS number.</p>
@@ -182,7 +182,7 @@
     <p>You should check:</p>
     <ul>
         <li>if the user has entered a National Insurance number and tell them if they have</li>
-        <li>their NHS number is valid against a modulus 11 algorithm</li>
+        <li>if their NHS number is valid against a modulus 11 algorithm</li>
     </ul>
 
     <h2>Research</h2>

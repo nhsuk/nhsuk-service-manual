@@ -44,32 +44,7 @@
 
     <h2 id="what-are-filter-questions">What are filter questions?</h2>
 
-    <p>Filter (or branching) questions ask a short question first - often a Yes/No question, with <a href="/service-manual/styles-components-patterns/radios">radios</a>. </p>
-    <p>Here is a typical filter question.</p>
-
-    <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
-      <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
-      {{ radios({
-        "idPrefix": "example",
-        "name": "example",
-        "fieldset": {
-          "legend": {
-            "text": "Are you 18 or over?",
-            "classes": "nhsuk-fieldset__legend--m"
-          }
-        },
-        "items": [
-          {
-            "value": "yes",
-            "text": "Yes"
-          },
-          {
-            "value": "no",
-            "text": "No"
-          }
-        ]
-      }) }}
-    </div>
+    <p>Filter (or branching) questions ask a short question first - often a Yes/No question, with <a href="/service-manual/styles-components-patterns/radios">radios</a>. A typical filter question would be: "Are you 18 or over?"</p>
 
     <p>Filter questions help you:</p>
     <ul>
@@ -81,7 +56,7 @@
      <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/filter-question-example.png" alt="A filter question routing some users down a different journey">
 
     <p>But often you need more than a simple "Yes" or "No".</p>
-    <p>In the "Are you 18 or over?" example, for instance, what should users who are 17 years old do? Should you <a href="#offer-people-other-ways-to-do-things">offer them other ways to do things</a>?</p>
+    <p>In the "Are you 18 or over?" example, for instance, what should users who are 17 years old do? Think about <a href="#offer-people-other-ways-to-do-things">offering them other ways to do things</a>.</p>
 
   <h2>Spell out what "Yes" and "No" mean</h2>
   <p>Check how users react to your Yes/No question when you test it. Sometimes you will find that you need to be clearer about what "Yes" and "No" mean.</p>
@@ -118,6 +93,8 @@
     <p>You may need to offer people guidance or an explanation to help them choose.</p>
     <h2 id="beware-binary-choices">Beware binary choices</h2>
     <p>There will often be at least 1 other option besides "Yes" and "No", including, for example, "I don't know" or "I'm not sure".</p>
+    <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but you should consider them.</p>
+</p>
 
     <div class="app-example nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7">
       <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
@@ -156,12 +133,11 @@
       {% endcall %}
     </div>
 
-    <p>Having the 3rd option means that you can give people some extra information, for example, about their NHS number and where to find it. Our pattern for <a href="http://localhost:3000/service-manual/styles-components-patterns/nhs-number">asking users for their NHS number</a> explains more about this.</p>
+    <p>Having a 3rd option means that you can give people extra information, for example, about their NHS number and where to find it. Our pattern for <a href="/service-manual/styles-components-patterns/nhs-number">asking users for their NHS number</a> explains more about this.</p>
 
-    <p>Sometimes "Other" is a useful option, but <a href="/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions#think-before-you-use-other">be careful of using "Other" with personal or sensitive information</a>.</p>
-    <p>If you're drafting a Yes/No question, it can help to test it by leaving a box with hint text for people to type in something different.</p>
+    <p>"Other" can be a useful option, but <a href="/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions#think-before-you-use-other">avoid using "Other" with personal or sensitive information</a>.</p>
 
-    <p>Extra options can be challenging for the service, but you should consider them. Our research for the NHS number pattern, for example, showed that a 3rd option was often useful in discovery and alpha stages, even if services did not end up keeping it.</p>
+    <p>In your user research, find out what would help your users, for example, by leaving a box with hint text for them to type in something other than "Yes" or "No".</p>
 
     <h2 id="offer-people-other-ways-to-do-things">Offer people other ways to do things</h2>
      <p>If you need people to enter details to continue and they can't do this, for example, because they don't have key information to hand, consider whether you could add something to the "No" option to reassure them that there is an alternative.</p>
@@ -191,7 +167,7 @@
       }) }}
     </div>
      <p>The current version of the <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS login</a> does something like this. If users don't have registration details from their GP practice, they can still register by entering some personal details and uploading a photo ID and a short video they make about themselves.</p>
-     <p>Or another example: if you need to ask users for their NHS number, consider giving them another way to complete the task without it. For example, by using a combination of other personal details, like their date of birth and postcode.</p>
+     <p>Or another example: if you need to ask users for their NHS number, consider giving them another way to complete the task without it. For example, by using a combination of other personal details, like their date of birth and postcode. Read more in the <a href="/service-manual/styles-components-patterns/nhs-number">Ask users for their NHS number pattern</a>.</p>
 
     <h2>Test your questions and routing decisions</h2>
 
