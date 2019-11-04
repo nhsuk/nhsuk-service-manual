@@ -9,6 +9,7 @@
 - Summary list component
 - Asking users for their NHS number pattern
 - NHS number entry in A to Z of NHS health writing
+- Improved guidance for colour and typography
 
 :wrench: **Fixes**
 
