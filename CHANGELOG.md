@@ -4,7 +4,19 @@
 
 :new: **New content**
 
-- Organistional header guidance and improvements to the header component guidance
+- Guidance on how to write good questions in forms
+- Improvements to the Header component page with guidance on the new organisational header
+- Summary list component
+- Asking users for their NHS number pattern
+- NHS number entry in A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Capitalise GOV.UK 'Design System'
+- Tidy up the colours and typography pages with more examples and improve page design
+- Improve the guidance around use of the Frutiger font
+- Remove the hint text page and include guidance for hint text on individual component pages
+- Use the latest version of NHS.UK frontend (3.0.0) including new focus styles
 
 ## 1.12.0 - 21 October 2019
 
