@@ -6,6 +6,7 @@
 
 - Guidance on how to write good questions in forms
 - Improvements to the Header component page with guidance on the new organisational header
+- New page: Understanding focus state styles
 - Summary list component
 - Asking users for their NHS number pattern
 - NHS number entry in A to Z of NHS health writing
@@ -99,7 +100,7 @@
 - Change "measurement" to "measurements" in Numbers, measurements, dates and time - and update links to this page
 - Improve wording about ordinal numbers on Numbers, measurements, dates and time
 
-## 1.8.0 - 09 August 2019
+## 1.8.0 - 9 August 2019
 
 :new: **New content**
 
@@ -112,7 +113,7 @@
 - Fix a few minor content formatting issues, like apostrophes
 - Update package dependencies to latest versions
 
-## 1.7.0 - 06 August 2019
+## 1.7.0 - 6 August 2019
 
 :new: **New content**
 
