@@ -24,7 +24,14 @@
 {% block body %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
+      <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}
+        <div>
+          <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
+            Experimental
+          </strong>
+          <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental because <a href="#next-steps">more research</a> is needed to validate it.</p>
+        </div>
+      </h1>
       <p class="nhsuk-body-l">Use the summary list to summarise information, for example, a user’s responses at the end of a form.</p>
   </div>
   <div class="nhsuk-grid-column-full">
@@ -93,6 +100,8 @@
 
     <h2 id="research">Research</h2>
     <p>We have tested this component in the NHS in labs and in live services, with and without actions and borders. It has been through several accessibility audits.</p>
+
+    <h3 id="next-steps">Next steps</h3>
     <p>It is an established GOV.UK component but we want more NHS services to test it a health context. We are interested, for example, in how it fits into patterns like the <a href="https://design-system.service.gov.uk/patterns/check-answers/">GOV.UK Help users to check answers pattern</a>.
     <p>If you’ve used summary lists, please share your user research findings.</p>
 
