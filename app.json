@@ -1,0 +1,16 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "nhsuk-service-manual",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
