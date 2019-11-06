@@ -19,6 +19,7 @@
 - Improve the guidance around use of the Frutiger font
 - Remove the hint text page and include guidance for hint text on individual component pages
 - Use the latest version of NHS.UK frontend (3.0.0) including new focus styles
+- Fix the Nunjucks snippets for the A to Z and Mini-hub patterns
 
 ## 1.12.0 - 21 October 2019
 
