@@ -311,3 +311,9 @@ td {
 .nhsuk-u-nowrap {
   white-space: nowrap;
 }
+
+// Frontend override
+// Should be refactored into the frontend
+.nhsuk-body-m {
+  font-weight: 400;
+}
