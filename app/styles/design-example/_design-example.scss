@@ -26,22 +26,26 @@
     &:hover,
     &:focus {
       box-shadow: none;
-      color: $color_nhsuk-black;
     }
 
     &:hover {
-      background-color: $color_nhsuk-warm-yellow;
-    }
-
-    &:focus {
-      background-color: $color_nhsuk-warm-yellow;
+      color: $color_nhsuk-white;
+      text-decoration: underline;
     }
 
     &:visited {
       color: $color_nhsuk-white;
 
       &:hover {
-        color: $color_nhsuk-black;
+        color: $color_nhsuk-white;
+      }
+    }
+
+    &:focus {
+      @include nhsuk-focused-text;
+
+      &:hover {
+        color: $nhsuk-focus-text-color;
       }
     }
 
