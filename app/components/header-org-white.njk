@@ -1,0 +1,35 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "true",
+    "classes": "nhsuk-header--white",
+    "organisation": {
+      "name": "Anytown Anyplace",
+      "split": "Anywhere",
+      "descriptor": "NHS Foundation Trust"
+    },
+    "primaryLinks": [
+      {
+        "url"  : "#",
+        "label" : "Your hospital visit"
+      },
+      {
+        'url' : '#',
+        'label' : 'Wards and departments'
+      },
+      {
+        'url'  : '#',
+        'label' : 'Conditions and treatments'
+      },
+      {
+        'url'  : '#',
+        'label' : 'Our people'
+      },
+      {
+        'url' : '#',
+        'label' : 'Our research'
+      }
+    ]
+  })
+}}
