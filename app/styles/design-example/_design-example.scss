@@ -33,15 +33,19 @@
       text-decoration: underline;
     }
 
-    &:focus {
-      @include nhsuk-focused-text;
-    }
-
     &:visited {
       color: $color_nhsuk-white;
 
       &:hover {
         color: $color_nhsuk-white;
+      }
+    }
+
+    &:focus {
+      @include nhsuk-focused-text;
+
+      &:hover {
+        color: $nhsuk-focus-text-color;
       }
     }
 
