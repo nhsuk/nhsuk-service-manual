@@ -3,6 +3,9 @@
 @import 'code-snippet';
 
 .design-example {
+  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-responsive-margin(4, 'top');
+
   $root: &;
   position: relative;
   width: 100%;
@@ -23,11 +26,11 @@
     &:hover,
     &:focus {
       box-shadow: none;
-      color: $color_nhsuk-white;
+      color: $color_nhsuk-black;
     }
 
     &:hover {
-      background-color: $color_tint_nhsuk-warm-yellow-30;
+      background-color: $color_nhsuk-warm-yellow;
     }
 
     &:focus {
@@ -38,7 +41,7 @@
       color: $color_nhsuk-white;
 
       &:hover {
-        color: $color_nhsuk-white;
+        color: $color_nhsuk-black;
       }
     }
 

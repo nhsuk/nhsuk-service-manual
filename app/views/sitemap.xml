@@ -32,9 +32,6 @@
     <loc>https://beta.nhs.uk/service-manual/accessibility-statement</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/cookies</loc>
-  </url>
-  <url>
     <loc>https://beta.nhs.uk/service-manual/sitemap</loc>
   </url>
   <url>
@@ -161,9 +158,6 @@
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/header</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/hint-text</loc>
-  </url>
-  <url>
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/images</loc>
   </url>
   <url>
@@ -185,6 +179,9 @@
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/skip-link</loc>
   </url>
   <url>
+    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/summary-list</loc>
+  </url>
+  <url>
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/table</loc>
   </url>
   <url>
@@ -200,7 +197,16 @@
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/a-to-z</loc>
   </url>
   <url>
+    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/nhs-number</loc>
+  </url>
+  <url>
     <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/mini-hub</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/understanding-focus-state-styles</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/contribute/contribution-criteria</loc>
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/contribute/propose-new-thing</loc>
@@ -213,5 +219,32 @@
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form</loc>
+  </url>
+  <url>
+    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
   </url>
 </urlset>

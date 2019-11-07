@@ -1,5 +1,26 @@
 # NHS digital service manual Changelog
 
+## 1.13.0 - 7 November 2019
+
+:new: **New content**
+
+- Guidance on how to write good questions in forms
+- Improvements to the Header component page with guidance on the new organisational header
+- New page: Understanding focus state styles
+- Summary list component
+- Asking users for their NHS number pattern
+- NHS number entry in A to Z of NHS health writing
+- Improved guidance for colour and typography
+
+:wrench: **Fixes**
+
+- Capitalise GOV.UK 'Design System'
+- Tidy up the colours and typography pages with more examples and improve page design
+- Improve the guidance around use of the Frutiger font
+- Remove the hint text page and include guidance for hint text on individual component pages
+- Use the latest version of NHS.UK frontend (3.0.0) including new focus styles
+- Fix the Nunjucks snippets for the A to Z and Mini-hub patterns
+
 ## 1.12.0 - 21 October 2019
 
 :new: **New content**
@@ -80,7 +101,7 @@
 - Change "measurement" to "measurements" in Numbers, measurements, dates and time - and update links to this page
 - Improve wording about ordinal numbers on Numbers, measurements, dates and time
 
-## 1.8.0 - 09 August 2019
+## 1.8.0 - 9 August 2019
 
 :new: **New content**
 
@@ -93,7 +114,7 @@
 - Fix a few minor content formatting issues, like apostrophes
 - Update package dependencies to latest versions
 
-## 1.7.0 - 06 August 2019
+## 1.7.0 - 6 August 2019
 
 :new: **New content**
 

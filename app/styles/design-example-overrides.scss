@@ -18,7 +18,7 @@ body {
   In order to show how the grid works, we need to have an element inside the
   grid that is visible and fills the available space with a background color.
 */
-.nhsuk-grid-row > div > p {
+.nhsuk-grid-row > .spacing-example div > p {
   background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
   color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
   padding: 20px;
@@ -35,4 +35,14 @@ body {
 
 .spacing-example div:nth-of-type(odd) {
   background: #337ec6; // sass-lint:disable-line no-color-hex no-color-literals
+}
+
+/*
+  Layout examples for on divs
+*/
+[class^='nhsuk-grid-column']>p {
+  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+  color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
+  padding: 20px;
+  text-align: center;
 }

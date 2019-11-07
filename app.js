@@ -65,6 +65,7 @@ env.addFilter('highlight', (code, language) => {
 
 // Render standalone design examples
 app.get('/service-manual/design-example/:example', (req, res) => {
+  const displayFullPage = req.query.fullpage === "true";
   const example = req.params.example;
   const examplePath = path.join(__dirname, `/app/components/${example}.njk`);
 
@@ -72,7 +73,11 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   const exampleHtml = fileHelper.getHTMLCode(examplePath);
 
   // Wrap the example HTML in a basic html base template.
-  res.render('includes/design-example-wrapper.njk', { body: exampleHtml });
+  var baseTemplate = 'includes/design-example-wrapper.njk';
+  if(displayFullPage) {
+    baseTemplate = 'includes/design-example-wrapper-full.njk';
+  }
+  res.render(baseTemplate, { body: exampleHtml });
 });
 
 /*

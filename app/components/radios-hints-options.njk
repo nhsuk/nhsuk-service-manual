@@ -1,0 +1,29 @@
+{% from 'radios/macro.njk' import radios %}
+
+{{ radios({
+  "idPrefix": "example-hints",
+  "name": "example-hints",
+  "fieldset": {
+    "legend": {
+      "text": "How do you want to sign in?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
+    }
+  },
+  "items": [
+    {
+      "value": "gateway",
+      "text": "Sign in with NHS login",
+      "hint": {
+        "text": "You'll have a user ID if you've registered for the NHS App."
+      }
+    },
+    {
+      "value": "verify",
+      "text": "Sign in with GOV.UK Verify",
+      "hint": {
+        "text": "You'll have an account if you've already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
+      }
+    }
+  ]
+}) }}
