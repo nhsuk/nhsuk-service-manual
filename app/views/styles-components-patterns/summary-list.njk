@@ -12,7 +12,7 @@
 {% block bodyContent %}
 
   {{ designExample({
-      type: 'summary-list'
+    type: 'summary-list'
   }) }}
 
   <h2>When to use summary lists</h2>
@@ -27,29 +27,32 @@
   <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
   <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="https://design-system.service.gov.uk/patterns/task-list-pages/">GOV.UK task list page pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
-
   <h2>How to use summary lists</h2>
   <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a>, you can use the Nunjucks macro.</p>
+
+  {{ designExample({
+    type: 'summary-list'
+  }) }}
 
   <h3 id="label-text-inputs">Summary list with actions</h3>
   <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
   <p>People who use assistive technology, like a screen reader, may hear the action links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 
   {{ designExample({
-      type: 'summary-list'
+    type: 'summary-list'
   }) }}
 
   <h3 id="label-text-inputs">Summary list without actions</h3>
 
   {{ designExample({
-      type: 'summary-list-without-action'
+    type: 'summary-list-without-action'
   }) }}
 
   <h3 id="label-text-inputs">Summary list without actions or borders</h3>
   <p class="rich-text">If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the <code>nhsuk-summary-list--no-border</code> class.</p>
 
   {{ designExample({
-      type: 'summary-list-without-border'
+    type: 'summary-list-without-border'
   }) }}
 
   <h2 id="research">Research</h2>
