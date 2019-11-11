@@ -54,7 +54,7 @@
     "eslint-plugin-import": "^2.18.2",
     "iframe-resizer": "^3.6.6",
     "jest": "^24.9.0",
-    "nhsuk-frontend": "^3.0.1",
+    "nhsuk-frontend": "^3.0.2",
     "node-sass": "^4.13.0",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
