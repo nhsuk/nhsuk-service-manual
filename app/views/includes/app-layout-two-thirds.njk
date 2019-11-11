@@ -1,0 +1,32 @@
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1>{{pageTitle}}</h1>
+
+    {%- if hideDescription == 'true' %}
+    {% else %}
+    <p class="nhsuk-lede-text">{{pageDescription}}</p>
+    {% endif %}
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
+
+    {% block bodyContent %}
+    {% endblock %}
+
+  </div>
+
+    {% block aside %}
+    <aside class="nhsuk-grid-column-one-third">
+      {% block asideContent %}
+      {% endblock %}
+    </aside>
+    {% endblock %}
+  </div>
+{% endblock %}

@@ -2,47 +2,28 @@
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'What product and delivery managers need to do to make digital services accessible.' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout-two-thirds.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
+  {% include 'accessibility/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
+{% block bodyContent %}
+
+  {% include './partials/make-sure-everyone-knows-their-responsibilities.njk' %}
+  {% include './partials/ask-questions-at-the-start-of-the-project.njk' %}
+  {% include './partials/check-that-accessibility-is-done.njk' %}
+  {% include './partials/monitor-and-record-your-work.njk' %}
+  {% include './partials/publish-an-accessibility-statement.njk' %}
+
+  {% include './partials/get-in-touch-accessibility.njk' %}
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: July 2019</p>
   </div>
-</div>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+{% endblock %}
 
-    {% include './partials/make-sure-everyone-knows-their-responsibilities.njk' %}
-    {% include './partials/ask-questions-at-the-start-of-the-project.njk' %}
-    {% include './partials/check-that-accessibility-is-done.njk' %}
-    {% include './partials/monitor-and-record-your-work.njk' %}
-    {% include './partials/publish-an-accessibility-statement.njk' %}
-
-    {% include './partials/get-in-touch-accessibility.njk' %}
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+{% block asideContent %}
+  {% include './partials/related-nav.njk' %}
 {% endblock %}
