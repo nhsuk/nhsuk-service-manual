@@ -2,56 +2,37 @@
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'What graphic and interaction designers need to do to make digital services accessible.' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout-two-thirds.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
+  {% include 'accessibility/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
+{% block bodyContent %}
+
+  {% include './partials/define-page-structure.njk' %}
+  {% include './partials/define-skip-links.njk' %}
+  {% include './partials/use-headings-correctly.njk' %}
+  {% include './partials/check-colour-contrast.njk' %}
+  {% include './partials/define-focus-styles.njk' %}
+  {% include './partials/discuss-any-custom-components.njk' %}
+  {% include './partials/write-good-link-and-form-control-names.njk' %}
+  {% include './partials/label-form-fields-clearly.njk' %}
+  {% include './partials/highlight-errors-in-forms.njk' %}
+  {% include './partials/do-not-rely-on-colour-or-position-alone.njk' %}
+  {% include './partials/do-not-include-text-in-images.njk' %}
+  {% include './partials/use-alternative-text-for-images-in-content.njk' %}
+  {% include './partials/use-alternative-text-for-functional-images.njk' %}
+  {% include './partials/make-video-and-multimedia-accessible.njk' %}
+
+  {% include './partials/get-in-touch-accessibility.njk' %}
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: July 2019</p>
   </div>
-</div>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+{% endblock %}
 
-    {% include './partials/define-page-structure.njk' %}
-    {% include './partials/define-skip-links.njk' %}
-    {% include './partials/use-headings-correctly.njk' %}
-    {% include './partials/check-colour-contrast.njk' %}
-    {% include './partials/define-focus-styles.njk' %}
-    {% include './partials/discuss-any-custom-components.njk' %}
-    {% include './partials/write-good-link-and-form-control-names.njk' %}
-    {% include './partials/label-form-fields-clearly.njk' %}
-    {% include './partials/highlight-errors-in-forms.njk' %}
-    {% include './partials/do-not-rely-on-colour-or-position-alone.njk' %}
-    {% include './partials/do-not-include-text-in-images.njk' %}
-    {% include './partials/use-alternative-text-for-images-in-content.njk' %}
-    {% include './partials/use-alternative-text-for-functional-images.njk' %}
-    {% include './partials/make-video-and-multimedia-accessible.njk' %}
-
-    {% include './partials/get-in-touch-accessibility.njk' %}
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+{% block asideContent %}
+  {% include './partials/related-nav.njk' %}
 {% endblock %}

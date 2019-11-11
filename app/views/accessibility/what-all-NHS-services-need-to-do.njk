@@ -2,63 +2,44 @@
 {% set pageSection = 'Accessibility' %}
 {% set pageDescription = 'The NHS is for everyone, so NHS digital services should be accessible to everyone too.' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout-two-thirds.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/accessibility",
-  text: "Accessibility"
-}) }}
+  {% include 'accessibility/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1>{{ pageTitle }}</h1>
-    <p class="nhsuk-lede-text">{{ pageDescription }}</p>
+{% block bodyContent %}
+
+  <h2 id="accessibility-and-the-law">Accessibility and the law</h2>
+  <p>If your service isn’t accessible to everyone who needs it, you may be breaking the <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">2010 Equality Act</a>.</p>
+  <p>New accessibility regulations say that public sector websites must meet accessibility standards and publish an accessibility statement. You can find out <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">more about the new regulations on GOV.UK</a>.</p>
+
+  <h2 id="meeting-the-requirements">Meeting the requirements</h2>
+  <p>NHS digital services must:</p>
+  <ul>
+    <li>meet at least level AA of the Web Content Accessibility Guidelines (<a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a>) - and aim for AAA where possible</li>
+    <li>work on the most commonly used assistive technologies - including screen magnifiers </li>
+    <li>include people with access needs in user research</li>
+  </ul>
+
+  <h3 id="internal-services">Internal services</h3>
+  <p>NHS staff and civil servants are users too and the NHS is committed to equality, diversity and inclusion. Internal services need to meet the same accessibility requirements.</p>
+
+  <h3 id="suppliers-and-contractors">Suppliers and contractors</h3>
+  <p>External suppliers contracted to the NHS must also make sure their work meets the same standard.</p>
+  <p>The NHS may test the product or ask suppliers to arrange an independent accessibility test.</p>
+
+  <h2 id="why-its-important">Why it's important</h2>
+  <p>In the UK, almost 1 in 5 people have a disability of some kind. Many more have temporary or situational disabilities, like an illness or injury.</p>
+  <p>When you’re working on NHS services, think about how people with different needs might use what you’re making.</p>
+  <p>For example, can someone with dyslexia read your content easily? Or how would someone with a broken arm interact on a mobile device?</p>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: July 2019</p>
   </div>
-</div>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+{% endblock %}
 
-    <h2 id="accessibility-and-the-law">Accessibility and the law</h2>
-    <p>If your service isn’t accessible to everyone who needs it, you may be breaking the <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">2010 Equality Act</a>.</p>
-    <p>New accessibility regulations say that public sector websites must meet accessibility standards and publish an accessibility statement. You can find out <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">more about the new regulations on GOV.UK</a>.</p>
-
-    <h2 id="meeting-the-requirements">Meeting the requirements</h2>
-    <p>NHS digital services must:</p>
-    <ul>
-      <li>meet at least level AA of the Web Content Accessibility Guidelines (<a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a>) - and aim for AAA where possible</li>
-      <li>work on the most commonly used assistive technologies - including screen magnifiers </li>
-      <li>include people with access needs in user research</li>
-    </ul>
-
-    <h3 id="internal-services">Internal services</h3>
-    <p>NHS staff and civil servants are users too and the NHS is committed to equality, diversity and inclusion. Internal services need to meet the same accessibility requirements.</p>
-
-    <h3 id="suppliers-and-contractors">Suppliers and contractors</h3>
-    <p>External suppliers contracted to the NHS must also make sure their work meets the same standard.</p>
-    <p>The NHS may test the product or ask suppliers to arrange an independent accessibility test.</p>
-
-    <h2 id="why-its-important">Why it's important</h2>
-    <p>In the UK, almost 1 in 5 people have a disability of some kind. Many more have temporary or situational disabilities, like an illness or injury.</p>
-    <p>When you’re working on NHS services, think about how people with different needs might use what you’re making.</p>
-    <p>For example, can someone with dyslexia read your content easily? Or how would someone with a broken arm interact on a mobile device?</p>
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: July 2019</p>
-    </div>
-
-  </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+{% block asideContent %}
+  {% include './partials/related-nav.njk' %}
 {% endblock %}
