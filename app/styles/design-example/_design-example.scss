@@ -51,3 +51,11 @@
 
   }
 }
+
+p + .design-example {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.nhsuk-lede-text + .design-example {
+  @include nhsuk-responsive-padding(0, 'top');
+}

@@ -168,16 +168,40 @@ td {
 
 @include mq($from: desktop) {
   .app-component-reading-width {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    span,
-    .nhsuk-panel-with-label {
-      max-width: 66.6666%;
-    }
+
+      h1 {
+        max-width: 14em;
+      }
+
+      h2 {
+        max-width: 22em;
+      }
+
+      h3,
+      .nhsuk-lede-text,
+      .nhsuk-body-l {
+        max-width: 29em;
+      }
+
+      h4 {
+        max-width: 32em;
+      }
+
+      p,
+      ul {
+        max-width: 37em;
+      }
+
+      .app-example,
+      .nhsuk-table,
+      .app-colour-list {
+        max-width: 44em;
+      }
+
+      .app-tabs {
+        max-width: 100%;
+      }
+
   }
 }
 

@@ -2,224 +2,158 @@
 {% set pageSection = 'Styles, components and patterns' %}
 {% set pageDescription = 'Use this pattern to ask people for their NHS number and help them find it.' %}
 
-{% extends 'includes/layout.njk' %}
-
-{% from 'action-link/macro.njk' import actionLink %}
-{% from 'panel/macro.njk' import panel %}
-{% from 'includes/design-example.njk' import designExample %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
+  {% include 'styles-components-patterns/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l">{{pageDescription}}</p>
+{% block bodyContent %}
 
-<h2>When to use the NHS number pattern</h2>
-    <p>Follow this pattern whenever you need to ask for an NHS number.</p>
-    <p>Only ask for an NHS number if 1 of these applies:</p>
-    <ul>
-      <li>your service needs it</li>
-      <li>the user is more likely to succeed on their journey if they can give you an NHS number</li>
-    </ul>
+  <h2>When to use the NHS number pattern</h2>
+  <p>Follow this pattern whenever you need to ask for an NHS number.</p>
+  <p>Only ask for an NHS number if 1 of these applies:</p>
+  <ul>
+    <li>your service needs it</li>
+    <li>the user is more likely to succeed on their journey if they can give you an NHS number</li>
+  </ul>
 
-    <h2>When not to use the NHS number pattern</h2>
-    <p>If users are more likely to succeed by providing other details rather than the NHS number, do not use this pattern.</p>
-    <p>Users do not need to know their NHS number to get care. This means that most people do not know their number.</p>
+  <h2>When not to use the NHS number pattern</h2>
+  <p>If users are more likely to succeed by providing other details rather than the NHS number, do not use this pattern.</p>
+  <p>Users do not need to know their NHS number to get care. This means that most people do not know their number.</p>
 
-    <h2>How to use the NHS number pattern</h2>
-    <p>There are 3 ways of asking users for their NHS number:</p>
-    <ul>
-      <li>single text input</li>
-      <li>filter question before input</li>
-      <li>filter question before input with a 3rd option</li>
-    </ul>
+  <h2>How to use the NHS number pattern</h2>
+  <p>There are 3 ways of asking users for their NHS number:</p>
+  <ul>
+    <li>single text input</li>
+    <li>filter question before input</li>
+    <li>filter question before input with a 3rd option</li>
+  </ul>
 
-    <h3 id="single-text-input">Single text input</h3>
-    <p>Use a single <a href="/service-manual/styles-components-patterns/text-input">text input</a> if the only way users can get the service is by entering their NHS number.</p>
+  <h3 id="single-text-input">Single text input</h3>
+  <p>Use a single <a href="/service-manual/styles-components-patterns/text-input">text input</a> if the only way users can get the service is by entering their NHS number.</p>
 
+  <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, always try to give users an alternative way to continue with their journey, and use 1 of the other ways of asking for an NHS number on this page instead.</p>
+
+  {{ designExample({
+    type: 'nhs-number-single',
+    fullpage: true
+  }) }}
+
+  <p>If you have no other option and must use a single text input:</p>
+  <ul>
+    <li>label it "What is your NHS number?" or "Enter your NHS number"</li>
+    <li>help users recognise their NHS number and know the correct details to enter, for example, with <a href="/service-manual/styles-components-patterns/text-input#using-hint-text">hint text</a></li>
+    <li>tell users where they can find their NHS number before they start the service, as well as during the journey</li>
+  </ul>
+
+  <h3 id="filter-question-before-single-text">Filter question before single text input</h3>
+  <p>Use a <a href='/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users'>filter question</a> before a single text input if there is another way for users to continue without an NHS number.</p>
+  <p>Use a 2-option radio button that asks the user if they know their NHS number.</p>
+
+  {{ designExample({
+    type: 'nhs-number-filter',
+    fullpage: true
+  }) }}
+
+  <p>If users do know their NHS number, route them to a page that asks for it.</p>
+
+  {{ designExample({
+    type: 'nhs-number-filter-single',
+    fullpage: true
+  }) }}
+
+  <p>If users do not know their NHS number, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
+  <p>On the filter question page and the single text input page, help users find and recognise their NHS number, for example, using hint text.</p>
+
+  <h3 id="filter-question-before-input-with-3rd-option">Filter question before input with 3rd option</h3>
+  <p>You may want to give users a 3rd option that provides extra information about their NHS number and where to find it.</p>
+  <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful. We recommend that you always try and give a 3rd option.</p>
+
+  {{ designExample({
+    type: 'nhs-number-filter-third-option',
+    fullpage: true
+  }) }}
+
+  <h3>How to build the NHS number pattern</h3>
+  <p>When asking for an NHS number:</p>
+  <ul>
+      <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
+      <li>allow at least 12 characters in your NHS number input</li>
+      <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp?shownav=1'>modulus 11 algorithm (NHS Data Model and Dictionary)</a></li>
+      <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">485 777 3456&lt;/span></code>.</li>
+      <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
+      <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS will not recognise any phone numbers on the page)</li>
+  </ul>
+
+  <h3>Explain where users can find their NHS number and what it looks like</h3>
+  <p>Users are more likely to succeed in their journey the earlier you mention that they need an NHS number and where to find it.</p>
+  <p>Give them help before they start the service. Also <a href='/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context'>give them help in context</a> using 1 of these:</p>
+  <ul>
+      <li>hint text in form inputs (such as <a href='/service-manual/styles-components-patterns/text-input#using-hint-text'>text inputs</a>, <a href='/service-manual/styles-components-patterns/radios#radios-with-hints'>radios</a> and <a href='/service-manual/styles-components-patterns/checkboxes#checkbox-items-with-hints'>checkboxes</a>)</li>
+      <li>a <a href='/service-manual/styles-components-patterns/details'>details component</a>, for example:</li>
+  </ul>
+
+  {{ designExample({
+    type: 'details'
+  }) }}
+
+  <h3>Use the correct NHS number format</h3>
+  <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. This is the preferred example NHS number, but you can also use 123 456 7890. You should use the same number for all examples.</p>
+  <p>Read more about how to format <a href='/service-manual/content/a-to-z-of-NHS-health-writing#NHS-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
+
+  <h3>Write clear error messages</h3>
+  <p>Make sure you use clear <a href='/service-manual/styles-components-patterns/error-message'>error messages</a> and <a href='/service-manual/styles-components-patterns/error-summary'>error summaries</a> when you ask users for their NHS number.</p>
+
+  {{ designExample({
+    type: 'nhs-number-error',
+    fullpage: true
+  }) }}
+
+  <p>You should tell users if:</p>
+  <ul>
+    <li>they have included letters</li>
+    <li>they have entered a number that is too short or too long (not including spaces)</li>
+  </ul>
+  <p>You should check:</p>
+  <ul>
+      <li>if the user has entered a National Insurance number and tell them if they have</li>
+      <li>if their NHS number is valid against a modulus 11 algorithm</li>
+  </ul>
+
+  <h2>Research</h2>
+  <p>Our research showed that:</p>
+  <ul>
+    <li>users did not always know what their NHS number looked like</li>
+    <li>users did not know where to find their NHS number</li>
+    <li>some users thought they were being asked for their National Insurance number</li>
+    <li>users with access needs were more likely to know their NHS number because they deal with health and social care organisations more often</li>
+    <li>users are more successful the earlier you tell them where to find their NHS number before starting the service</li>
+  </ul>
+
+  <h2>Discuss</h2>
+  <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/109">Discuss NHS number pattern on GitHub</a></p>
+
+  <h2>Get in touch</h2>
+  <p>If you have a question:</p>
+  <ul>
+    <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">NHS.UK service manual Slack workspace</a></li>
+    <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
+  </ul>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: November 2019</p>
   </div>
 
-  <div class="nhsuk-grid-column-two-thirds">
+  {{ panel({
+  "label": "Related components",
+  "HTML": "<ul>
+            <li><a href='/service-manual/styles-components-patterns/details'>Details</a></li>
+            <li><a href='/service-manual/styles-components-patterns/error-message'>Error messages</a></li>
+            <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
+            <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
 
-   <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, always try to give users an alternative way to continue with their journey, and use 1 of the other ways of asking for an NHS number on this page instead.</p>
+          </ul>"
+  }) }}
 
-  </div>
-
-    <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'nhs-number-single',
-      fullpage: true
-    }) }}
-
-    </div>
-
-     <div class="nhsuk-grid-column-two-thirds">
-
-   <p>If you have no other option and must use a single text input:</p>
-   <ul>
-      <li>label it "What is your NHS number?" or "Enter your NHS number"</li>
-      <li>help users recognise their NHS number and know the correct details to enter, for example, with <a href="/service-manual/styles-components-patterns/text-input#using-hint-text">hint text</a></li>
-      <li>tell users where they can find their NHS number before they start the service, as well as during the journey</li>
-    </ul>
-
-    </div>
-
-
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <h3 id="filter-question-before-single-text">Filter question before single text input</h3>
-    <p>Use a <a href='/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users'>filter question</a> before a single text input if there is another way for users to continue without an NHS number.</p>
-    <p>Use a 2-option radio button that asks the user if they know their NHS number.</p>
-
-  </div>
-  <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'nhs-number-filter',
-      fullpage: true
-    }) }}
-
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <p>If users do know their NHS number, route them to a page that asks for it.</p>
-
-  </div>
-  <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'nhs-number-filter-single',
-      fullpage: true
-    }) }}
-
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <p>If users do not know their NHS number, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
-    <p>On the filter question page and the single text input page, help users find and recognise their NHS number, for example, using hint text.</p>
-
-    <h3 id="filter-question-before-input-with-3rd-option">Filter question before input with 3rd option</h3>
-    <p>You may want to give users a 3rd option that provides extra information about their NHS number and where to find it.</p>
-    <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful. We recommend that you always try and give a 3rd option.</p>
-
-  </div>
-  <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'nhs-number-filter-third-option',
-      fullpage: true
-    }) }}
-
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <h3>How to build the NHS number pattern</h3>
-    <p>When asking for an NHS number:</p>
-    <ul>
-        <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
-        <li>allow at least 12 characters in your NHS number input</li>
-        <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp?shownav=1'>modulus 11 algorithm (NHS Data Model and Dictionary)</a></li>
-        <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">485 777 3456&lt;/span></code>.</li>
-        <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
-        <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS will not recognise any phone numbers on the page)</li>
-    </ul>
-
-    <h3>Explain where users can find their NHS number and what it looks like</h3>
-    <p>Users are more likely to succeed in their journey the earlier you mention that they need an NHS number and where to find it.</p>
-    <p>Give them help before they start the service. Also <a href='/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context'>give them help in context</a> using 1 of these:</p>
-    <ul>
-        <li>hint text in form inputs (such as <a href='/service-manual/styles-components-patterns/text-input#using-hint-text'>text inputs</a>, <a href='/service-manual/styles-components-patterns/radios#radios-with-hints'>radios</a> and <a href='/service-manual/styles-components-patterns/checkboxes#checkbox-items-with-hints'>checkboxes</a>)</li>
-        <li>a <a href='/service-manual/styles-components-patterns/details'>details component</a>, for example:</li>
-    </ul>
-
-  </div>
-  <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'details'
-    }) }}
-
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <h3>Use the correct NHS number format</h3>
-    <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. This is the preferred example NHS number, but you can also use 123 456 7890. You should use the same number for all examples.</p>
-    <p>Read more about how to format <a href='/service-manual/content/a-to-z-of-NHS-health-writing#NHS-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
-
-    <h3>Write clear error messages</h3>
-    <p>Make sure you use clear <a href='/service-manual/styles-components-patterns/error-message'>error messages</a> and <a href='/service-manual/styles-components-patterns/error-summary'>error summaries</a> when you ask users for their NHS number.</p>
-
-  </div>
-  <div class="nhsuk-grid-column-full">
-
-    {{ designExample({
-      type: 'nhs-number-error',
-      fullpage: true
-    }) }}
-
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <p>You should tell users if:</p>
-    <ul>
-        <li>they have included letters</li>
-        <li>they have entered a number that is too short or too long (not including spaces)</li>
-    </ul>
-    <p>You should check:</p>
-    <ul>
-        <li>if the user has entered a National Insurance number and tell them if they have</li>
-        <li>if their NHS number is valid against a modulus 11 algorithm</li>
-    </ul>
-
-    <h2>Research</h2>
-    <p>Our research showed that:</p>
-    <ul>
-        <li>users did not always know what their NHS number looked like</li>
-        <li>users did not know where to find their NHS number</li>
-        <li>some users thought they were being asked for their National Insurance number</li>
-        <li>users with access needs were more likely to know their NHS number because they deal with health and social care organisations more often</li>
-        <li>users are more successful the earlier you tell them where to find their NHS number before starting the service</li>
-    </ul>
-
-    <h2>Discuss</h2>
-    <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/109">Discuss NHS number pattern on GitHub</a></p>
-
-    <h2>Get in touch</h2>
-    <p>If you have a question:</p>
-    <ul>
-      <li>join the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">NHS.UK service manual Slack workspace</a></li>
-      <li>email <a href="mailto: service-manual@nhs.net">service-manual@nhs.net</a></li>
-    </ul>
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: November 2019</p>
-    </div>
-
-    {{ panel({
-    "label": "Related components",
-    "HTML": "<ul>
-              <li><a href='/service-manual/styles-components-patterns/details'>Details</a></li>
-              <li><a href='/service-manual/styles-components-patterns/error-message'>Error messages</a></li>
-              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
-              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
-
-            </ul>"
-    }) }}
-
-    </div>
-  </div>
 {% endblock %}
