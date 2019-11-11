@@ -2,62 +2,45 @@
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How we use a consistent voice and an appropriate tone.' %}
 
-{% extends 'includes/layout.njk' %}
-
-{% from 'inset-text/macro.njk' import insetText %}
+{% extends 'includes/app-layout-two-thirds.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/content",
-  text: "Content style guide"
-}) }}
+  {% include 'content/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-  </div>
-</div>
+{% block bodyContent %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>Voice</h2>
-    <p>Our voice is neutral and factual. It's authoritative, but also calm and reassuring.</p>
-    <p>It's empowering, rather than patronising, and personal, rather than formal.</p>
-    <p>We:</p>
-    <ul>
-      <li>address the user as "you"</li>
-      <li>reassure by saying things like "Sertraline can cause side effects, but many people have no side effects or only minor ones"</li>
-      <li>empower by saying things like "talk to your doctor about..." rather than "your doctor will tell you about..."</li>
-      <li>avoid using "should" as it can sound patronising</li>
-    </ul>
-    <p>Using a consistent voice is similar to using the same visual style and colours throughout. It reminds users this is a trusted NHS service.</p>
-    <h2>Tone</h2>
-    <p>Tone can change depending on the context. We consider the situation and what the emotional state might be for the user.</p>
-    <p>For example, we may use a direct, serious and reassuring tone when writing about a diagnosis:</p>
-    {{ insetText({
-      "HTML": "<p>If you've had a stroke or heart attack or are at high risk of a heart attack, your doctor may recommend that you take a daily low dose aspirin. This is different to taking aspirin for pain relief. Only take low dose aspirin if your doctor recommends it.</p>"
-    }) }}
-    <p>We may use an encouraging and conversational tone when writing about exercise or diet:</p>
-    {{ insetText({
-      "HTML": "<p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>"
-    }) }}
-    
-    <p>You can help users understand and answer <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">questions in forms by thinking of them as a conversation</a>.</p>
-    
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: November 2019</p>
-    </div>
+  <h2>Voice</h2>
+  <p>Our voice is neutral and factual. It's authoritative, but also calm and reassuring.</p>
+  <p>It's empowering, rather than patronising, and personal, rather than formal.</p>
+  <p>We:</p>
+  <ul>
+    <li>address the user as "you"</li>
+    <li>reassure by saying things like "Sertraline can cause side effects, but many people have no side effects or only minor ones"</li>
+    <li>empower by saying things like "talk to your doctor about..." rather than "your doctor will tell you about..."</li>
+    <li>avoid using "should" as it can sound patronising</li>
+  </ul>
+  <p>Using a consistent voice is similar to using the same visual style and colours throughout. It reminds users this is a trusted NHS service.</p>
+
+  <h2>Tone</h2>
+  <p>Tone can change depending on the context. We consider the situation and what the emotional state might be for the user.</p>
+  <p>For example, we may use a direct, serious and reassuring tone when writing about a diagnosis:</p>
+  {{ insetText({
+    "HTML": "<p>If you've had a stroke or heart attack or are at high risk of a heart attack, your doctor may recommend that you take a daily low dose aspirin. This is different to taking aspirin for pain relief. Only take low dose aspirin if your doctor recommends it.</p>"
+  }) }}
+  <p>We may use an encouraging and conversational tone when writing about exercise or diet:</p>
+  {{ insetText({
+    "HTML": "<p>It's tempting to skip a session if the weather's bad. But you're less likely to use the weather as an excuse if you've arranged to exercise with a friend or if you're following a training programme.</p>"
+  }) }}
+
+  <p>You can help users understand and answer <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">questions in forms by thinking of them as a conversation</a>.</p>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: November 2019</p>
   </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include './partials/related-nav.njk' %}
 {% endblock %}
