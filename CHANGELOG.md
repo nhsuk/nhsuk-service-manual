@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 1.13.1 - 12 November 2019
+
+:wrench: **Fixes**
+
+- clarify start of project questions for product and delivery in Accessibility guidance
+- fix incorrect url on summary list component to github issue
+- clarify more questions to ask yourself
+- use latest version of the nhsuk-frontend (3.0.2)
+- Consistent HTML spacing and indenting to make the code easier to read
+- Remove unnecessary spacing override classes
+- Create 2 new page layouts (full width and two thirds) to reduce code duplication
+- Add Sass styles to constrain widths of elements when using the full width layout
+
 ## 1.13.0 - 7 November 2019
 
 :new: **New content**
