@@ -1,3 +1,5 @@
+const packageJson = require('../package.json');
+
 module.exports = {
   // Service name
   serviceName: 'NHS digital service manual',
@@ -13,4 +15,7 @@ module.exports = {
 
   // Port to run local development server on
   port: process.env.PORT || 3000,
+
+  // Project version from package.json
+  version: packageJson.version,
 };

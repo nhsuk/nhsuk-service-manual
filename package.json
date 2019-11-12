@@ -7,9 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "babel": "babel --presets es2015 app/scripts/main.js -o public/js/main.bundle.js",
     "build": "npm run build:css && npm run build:js && npm run build:assets",
-    "build:css": "node-sass --recursive --output-style compressed app/styles/ -o public/css/",
+    "build:css": "node-sass --recursive --output-style compressed app/styles/ -o public/$npm_package_version/css/",
     "build:js": "npm run webpack",
     "build:assets": "cpx 'app/assets/*' public/assets/",
     "clean": "touch public/tmp.txt && rm -rf public/*",
@@ -35,6 +34,7 @@
     "browser-sync": "^2.26.7",
     "cheerio": "^1.0.0-rc.3",
     "compression": "^1.7.4",
+    "cross-var": "^1.1.0",
     "express": "^4.17.1",
     "highlight.js": "^9.16.2",
     "js-beautify": "^1.10.2",
