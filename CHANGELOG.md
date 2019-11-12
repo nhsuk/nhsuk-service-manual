@@ -12,6 +12,7 @@
 - Remove unnecessary spacing override classes
 - Create 2 new page layouts (full width and two thirds) to reduce code duplication
 - Add Sass styles to constrain widths of elements when using the full width layout
+- cache bust CSS and JavaScript assets
 
 ## 1.13.0 - 7 November 2019
 
