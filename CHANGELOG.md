@@ -6,7 +6,6 @@
 
 - clarify start of project questions for product and delivery in Accessibility guidance
 - fix incorrect url on summary list component to github issue
-- clarify more questions to ask yourself
 - use latest version of the nhsuk-frontend (3.0.2)
 - Consistent HTML spacing and indenting to make the code easier to read
 - Remove unnecessary spacing override classes
