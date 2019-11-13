@@ -13,6 +13,7 @@
 - Create 2 new page layouts (full width and two thirds) to reduce code duplication
 - Add Sass styles to constrain widths of elements when using the full width layout
 - cache bust CSS and JavaScript assets
+- remove duplicate import for the radios nunjucks macro
 
 ## 1.13.0 - 7 November 2019
 
