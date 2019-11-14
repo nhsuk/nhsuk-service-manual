@@ -34,13 +34,6 @@
   color: $nhsuk-link-color;
 }
 
-// Footer copyright hotfix
-// For when footer has no links
-// To add correct spacing for the copyright text
-.nhsuk-footer__copyright {
-  margin-bottom: nhsuk-spacing(2);
-}
-
 // Nowrap hotfix
 .nhsuk-u-nowrap {
   white-space: nowrap;
