@@ -45,26 +45,6 @@
   }
 }
 
-// <pre> and <code> tag styles
-.app-pre {
-  @include nhsuk-responsive-margin(4, 'bottom');
-
-  background: $color_nhsuk-white;
-  border: 1px solid $nhsuk-border-color;
-  margin-top: 0;
-  overflow: auto;
-  padding: nhsuk-spacing(3);
-  position: relative;
-
-  & + h2 {
-    @include nhsuk-responsive-padding(4, 'top');
-  }
-
-  & + h3 {
-    @include nhsuk-responsive-padding(2, 'top');
-  }
-}
-
 // Breadcrumb hotfix
 // Too not have a visited state for back link
 .nhsuk-breadcrumb__backlink:visited {
