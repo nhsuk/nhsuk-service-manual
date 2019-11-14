@@ -4,15 +4,12 @@
   color: $color_nhsuk-white;
   display: inline-block;
   letter-spacing: 1px;
-  // When a user customises their colours often the background is removed,
-  // by adding a outline we ensure that the tag component still keeps it's meaning.
-  // https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/
   outline: 2px solid transparent;
   outline-offset: -2px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 5px;
+  padding-bottom: nhsuk-spacing(1);
+  padding-left: nhsuk-spacing(2);
+  padding-right: nhsuk-spacing(2);
+  padding-top: nhsuk-spacing(1);
   text-decoration: none;
   text-transform: uppercase;
 }
