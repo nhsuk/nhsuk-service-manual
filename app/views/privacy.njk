@@ -1,60 +1,51 @@
 {% set pageTitle = 'Privacy' %}
 {% set pageDescription = 'We collect certain information and data about you when you use the NHS digital service manual.' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l">This privacy policy tells you what information we collect when you use the NHS digital service manual.</p>
-    <p class="nhsuk-body-l">It also tells you:</p>
-    <ul>
-      <li>how we use your information</li>
-      <li>who we share your information with</li>
-      <li>how we keep your data secure</li>
-      <li>about your rights to see or change information held about you</li>
-    </ul>
-  </div>
-</div>
+{% block bodyContent %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-8">
+  <p>It also tells you:</p>
+  <ul>
+    <li>how we use your information</li>
+    <li>who we share your information with</li>
+    <li>how we keep your data secure</li>
+    <li>about your rights to see or change information held about you</li>
+  </ul>
 
-    <h2>Information we may collect</h2>
-    <p>You can leave feedback on most pages of the website and on a user survey. You have the option to share your email address if you want a response. Otherwise, feedback is collected anonymously</p>
-    <p>We also collect anonymous information about how you reached the website, for example details of your web browser and part of your IP address. We use page tagging and collect cookies. This is so we can improve the service for future users.</p>
+  <h2>Information we may collect</h2>
+  <p>You can leave feedback on most pages of the website and on a user survey. You have the option to share your email address if you want a response. Otherwise, feedback is collected anonymously</p>
+  <p>We also collect anonymous information about how you reached the website, for example details of your web browser and part of your IP address. We use page tagging and collect cookies. This is so we can improve the service for future users.</p>
 
-    <h2>Keeping your personal data secure</h2>
-    <p>We convert your data into secure code (encrypt it) and store it on secure servers in England. A partner organisation is providing hosting services but has no say in how the information is used. There are no legal ways for their employees to see the data, only approved people in the NHS digital service manual development team can see it.</p>
-    <p>If you shared your email with us as part of your survey answers it will be deleted after 2 years. At that point you can't be identified in the survey data.</p>
+  <h2>Keeping your personal data secure</h2>
+  <p>We convert your data into secure code (encrypt it) and store it on secure servers in England. A partner organisation is providing hosting services but has no say in how the information is used. There are no legal ways for their employees to see the data, only approved people in the NHS digital service manual development team can see it.</p>
+  <p>If you shared your email with us as part of your survey answers it will be deleted after 2 years. At that point you can't be identified in the survey data.</p>
 
-    <h2>Links to other websites</h2>
-    <p>This privacy policy only applies to this website and doesn’t cover other websites that we link to. If you go to another website from this one, read the privacy policy on that website to find out what it does with your information.</p>
+  <h2>Links to other websites</h2>
+  <p>This privacy policy only applies to this website and doesn’t cover other websites that we link to. If you go to another website from this one, read the privacy policy on that website to find out what it does with your information.</p>
 
-    <h2>Data sharing</h2>
-    <p>NHS Digital will share:</p>
-    <ul>
-      <li>anonymous information on how the service is used with the Department of Health and Social Care, NHS England, clinical commissioning groups (CCGs), and the National Clinical Governance Group</li>
-      <li>anonymous information to improve the service with 111 online suppliers, the Department of Health and Social Care, NHS England, CCGs, and the National Clinical Governance Group</li>
-      <li>results from user research and changes made to the service as a result of it with CCGs</li>
-    </ul>
-    <h3>Legal powers</h3>
-    <p>We may pass on your personal information if we’re legally obliged to do so.</p>
-    <p>If you make a claim against us, we, and other third parties such as our solicitors, may need to look at this information.</p>
-    <p>We won’t share your personal information with anyone else without your permission for any other reason.</p>
+  <h2>Data sharing</h2>
+  <p>NHS Digital will share:</p>
+  <ul>
+    <li>anonymous information on how the service is used with the Department of Health and Social Care, NHS England, clinical commissioning groups (CCGs), and the National Clinical Governance Group</li>
+    <li>anonymous information to improve the service with 111 online suppliers, the Department of Health and Social Care, NHS England, CCGs, and the National Clinical Governance Group</li>
+    <li>results from user research and changes made to the service as a result of it with CCGs</li>
+  </ul>
+  <h3>Legal powers</h3>
+  <p>We may pass on your personal information if we’re legally obliged to do so.</p>
+  <p>If you make a claim against us, we, and other third parties such as our solicitors, may need to look at this information.</p>
+  <p>We won’t share your personal information with anyone else without your permission for any other reason.</p>
 
-    <h2>Your rights</h2>
-    <p>You can:</p>
-    <ul>
-      <li>find out what information we hold about you, ask us to correct it if it’s wrong, or delete it by emailing <a href="mailto:exeter.helpdesk@nhs.net">exeter.helpdesk@nhs.net</a> (for our Data Protection Officer contact <a href="mailto:nhsdigital.dpo@nhs.net">nhsdigital.dpo@nhs.net</a>)</li>
-      <li>contact the Information Commissioner’s Office, Wycliffe House Water Lane, Wilmslow SK9 5AF <a href="https://ico.org.uk/">ico.org.uk</a> if you want to make a complaint about how we have managed your data</li>
-    </ul>
-    <p>NHS Digital, 1 Trevelyan Square, Boar Lane, Leeds, LS1 6AE is the Data Controller for NHS digital service manual under data protection legislation. We will process your data in line with data protection legislation.</p>
+  <h2>Your rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li>find out what information we hold about you, ask us to correct it if it’s wrong, or delete it by emailing <a href="mailto:exeter.helpdesk@nhs.net">exeter.helpdesk@nhs.net</a> (for our Data Protection Officer contact <a href="mailto:nhsdigital.dpo@nhs.net">nhsdigital.dpo@nhs.net</a>)</li>
+    <li>contact the Information Commissioner’s Office, Wycliffe House Water Lane, Wilmslow SK9 5AF <a href="https://ico.org.uk/">ico.org.uk</a> if you want to make a complaint about how we have managed your data</li>
+  </ul>
+  <p>NHS Digital, 1 Trevelyan Square, Boar Lane, Leeds, LS1 6AE is the Data Controller for NHS digital service manual under data protection legislation. We will process your data in line with data protection legislation.</p>
 
-    <div class="nhsuk-review-date">
+  <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: August 2018</p>
-    </div>
   </div>
-</div>
+
 {% endblock %}

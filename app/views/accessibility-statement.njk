@@ -1,28 +1,18 @@
 {% set pageTitle = 'Accessibility statement' %}
 {% set pageDescription = 'We aim to make the NHS digital service manual as accessible and easy to use as possible.' %}
+{% set hideDescription = 'true' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
-{% from 'tables/macro.njk' import table %}
-{% from 'review-date/macro.njk' import reviewDate %}
+{% block bodyContent %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">Accessibility statement</h1>
-  </div>
-</div>
+  <p>We aim to make the NHS digital service manual as accessible and easy to use as possible. We've designed our pages to meet the Web Content Accessibility Guidelines to level AA - and in some cases AAA - and we've tested them with users with access needs.</p>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <p>We aim to make the NHS digital service manual as accessible and easy to use as possible. We've designed our pages to meet the Web Content Accessibility Guidelines to level AA - and in some cases AAA - and we've tested them with users with access needs.</p>
+  <h2>How to contact us</h2>
+  <p>If you have any questions about accessibility, please email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>. We will respond within 5 working days.</p>
 
-    <h2>How to contact us</h2>
-
-    <p>If you have any questions about accessibility, please email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>. We will respond within 5 working days.</p>
-    <div class="nhsuk-review-date">
+  <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: June 2019</p>
-    </div>
   </div>
-</div>
+
 {% endblock %}

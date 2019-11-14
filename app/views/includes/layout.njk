@@ -1,19 +1,55 @@
-{% from 'breadcrumb/macro.njk' import breadcrumb %}
-
+{%- from 'header/macro.njk' import header %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+{%- from 'care-card/macro.njk' import careCard %}
+{%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'header/macro.njk' import header %}
+{%- from 'hero/macro.njk' import hero %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'images/macro.njk' import image %}
+{%- from 'inset-text/macro.njk' import insetText %}
+{%- from 'list-panel/macro.njk' import listPanel %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'panel/macro.njk' import panel %}
+{%- from 'promo/macro.njk' import promo %}
+{%- from 'review-date/macro.njk' import reviewDate %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'tables/macro.njk' import table %}
+{%- from 'warning-callout/macro.njk' import warningCallout %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'button/macro.njk' import button %}
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'select/macro.njk' import select %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+{%- from 'textarea/macro.njk' import textarea %}
+{%- from 'includes/design-example.njk' import designExample %}
 <!DOCTYPE html>
   <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
-    {% if noFollow %}<meta name="robots" content="noindex">{% endif %}
-    {% block extraMeta %}{% endblock %}
+    {%- if noFollow %}<meta name="robots" content="noindex">{% endif %}
+    {%- block extraMeta %}{% endblock %}
 
     <title>{% if pageTitle %}{{ pageTitle }} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
 
-    <link rel="stylesheet" href="/service-manual/css/main.css">
+    <link rel="stylesheet" href="/service-manual/{{VERSION}}/css/main.css">
 
-    <script src="/service-manual/js/main.min.js" defer></script>
+    <script src="/service-manual/{{VERSION}}/js/main.min.js" defer></script>
 
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>

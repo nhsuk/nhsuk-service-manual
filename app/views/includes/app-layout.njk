@@ -1,0 +1,28 @@
+{% extends 'includes/layout.njk' %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+
+    <h1>{{pageTitle}}
+      {%- if experimental == 'true' %}
+      <div>
+        <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
+          Experimental
+        </strong>
+        <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental. We need <a href="#research">more research</a> to validate it.</p>
+      </div>
+      {% endif %}
+    </h1>
+
+    {%- if hideDescription == 'true' %}
+    {% else %}
+    <p class="nhsuk-lede-text">{{pageDescription}}</p>
+    {% endif %}
+
+    {% block bodyContent %}
+    {% endblock %}
+
+    </div>
+  </div>
+{% endblock %}
