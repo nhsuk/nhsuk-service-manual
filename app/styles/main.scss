@@ -28,23 +28,6 @@
   @include nhsuk-responsive-margin(2, 'top');
 }
 
-// Fix to make the expander background grey in a white section
-// This needs to be added to the frontend library
-.nhsuk-section--white {
-  .nhsuk-expander {
-    background-color: $color_nhsuk-grey-5;
-
-    .nhsuk-details__summary {
-      background-color: $color_nhsuk-grey-5;
-    }
-  }
-  .nhsuk-expander[open] {
-    .nhsuk-details__summary {
-      border-color: $color_nhsuk-white;
-    }
-  }
-}
-
 // Breadcrumb hotfix
 // Too not have a visited state for back link
 .nhsuk-breadcrumb__backlink:visited {
