@@ -7,49 +7,10 @@
 // Design examples
 @import 'design-example/design-example';
 
-// Table numeric styling
-.nhsuk-table__header--numeric,
-.nhsuk-table__cell--numeric {
-  text-align: right;
-}
-
 // Image with border
 .nhsuk-image--border {
   border: 1px solid $color_nhsuk-grey-4;
   width: 100%;
-}
-
-// Image example
-.nhsuk-image--example {
-  @include nhsuk-responsive-margin(4, 'bottom');
-  @include nhsuk-responsive-margin(2, 'top');
-
-  & + h2 {
-    @include nhsuk-responsive-padding(4, 'top');
-  }
-}
-
-// Lede text styling
-// Because the styling is not consistent across the site for lede text
-.nhsuk-lede-text {
-  @include nhsuk-font(24);
-  @include nhsuk-responsive-margin(7, 'bottom');
-  // Apply lede text styling to p and ul within the lede (see foot pain hub)
-  p,
-  ul {
-    @include nhsuk-font(24);
-  }
-}
-
-.nhsuk-lede-text--small {
-  @include nhsuk-font(19);
-  @include nhsuk-responsive-margin(5, 'bottom');
-}
-
-// Reduces the spacing between the page heading and the lede text
-h1 + .nhsuk-lede-text,
-h1 + .nhsuk-lede-text--small {
-  margin-top: - nhsuk-spacing(4);
 }
 
 /**
@@ -67,12 +28,6 @@ h1 + .nhsuk-lede-text--small {
   @include nhsuk-responsive-margin(2, 'top');
 }
 
-// Fix to give 24px to heading-l after the details component
-// This needs to be added to the frontend library
-.nhsuk-details  + %nhsuk-heading-l {
-  @include nhsuk-responsive-padding(4, 'top');
-}
-
 // Fix to make the expander background grey in a white section
 // This needs to be added to the frontend library
 .nhsuk-section--white {
@@ -88,25 +43,6 @@ h1 + .nhsuk-lede-text--small {
       border-color: $color_nhsuk-white;
     }
   }
-}
-
-
-// App page contents
-.app-page-contents {
-  @include nhsuk-responsive-margin(5, 'bottom');
-}
-
-.app-page-contents__heading {
-  @include nhsuk-font(19, $weight: bold);
-  @include nhsuk-responsive-margin(3, 'bottom');
-}
-
-.app-page-contents__list {
-  @include nhsuk-font(16);
-}
-
-.app-page-contents__item {
-  @include nhsuk-responsive-margin(1, 'bottom');
 }
 
 /* ==========================================================================
@@ -152,61 +88,9 @@ h1 + .nhsuk-lede-text--small {
   }
 }
 
-// Table bug hot fix
+// Table fix for having small text in a cell
 .nhsuk-table__cell.nhsuk-body-s {
   display: table-cell;
-}
-
-th,
-td {
-  padding-left: 0;
-  vertical-align: top;
-}
-
-// Component page reading width, to allow for component examples
-// to be full width but content within reading width
-
-@include mq($from: desktop) {
-  .app-component-reading-width {
-
-    h1 {
-      max-width: 14em;
-    }
-
-    h2 {
-      max-width: 22em;
-    }
-
-    h3,
-    .nhsuk-lede-text,
-    .nhsuk-body-l {
-      max-width: 29em;
-    }
-
-    h4 {
-      max-width: 32em;
-    }
-
-    p,
-    ul,
-    ol {
-      max-width: 37em;
-    }
-
-    .app-example,
-    .nhsuk-table,
-    .app-colour-list,
-    .nhsuk-image--example,
-    .app-pre,
-    .nhsuk-image__img {
-      max-width: 44em;
-    }
-
-    .app-tabs {
-      max-width: 100%;
-    }
-
-  }
 }
 
 // <pre> and <code> tag styles
@@ -229,108 +113,15 @@ td {
   }
 }
 
-.nhsuk-tag {
-  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
-  background-color: $color_nhsuk-blue;
-  color: $color_nhsuk-white;
-  display: inline-block;
-  letter-spacing: 1px;
-  // When a user customises their colours often the background is removed,
-  // by adding a outline we ensure that the tag component still keeps it's meaning.
-  // https://accessibility.blog.gov.uk/2017/03/27/how-users-change-colours-on-websites/
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.nhsuk-tag--dark-grey {
-  background-color: $color_nhsuk-grey-1;
-}
-
-// Example
-.app-example {
-  @include top-and-bottom;
-  @include nhsuk-responsive-margin(5, 'bottom');
-  @include nhsuk-responsive-margin(2, 'top');
-  @include nhsuk-responsive-padding(5, 'bottom');
-  @include nhsuk-responsive-padding(5, 'left');
-  @include nhsuk-responsive-padding(5, 'right');
-  @include nhsuk-responsive-padding(7, 'top');
-
-  border: 1px solid $color_nhsuk-grey-3;
-  padding: 48px 32px 32px;
-  position: relative;
-}
-
-.app-example__heading {
-  left: -1px;
-  position: absolute;
-  top: -1px;
-}
-
-.app-example + h2 {
-  @include nhsuk-responsive-padding(4, 'top');
-}
-
-.app-example + h3 {
-  @include nhsuk-responsive-padding(2, 'top');
-}
-
-.app-example--white {
-  background: $color_nhsuk-white;
-}
-
-.app-example--image {
-  @include nhsuk-responsive-padding(5);
-}
-
-// Panel - confirmation
-.nhsuk-panel--confirmation {
-  margin-top: 0;
-
-  @include mq($from: desktop) {
-    padding-bottom: nhsuk-spacing(8);
-    padding-top: nhsuk-spacing(8);
-  }
-}
-
-.nhsuk-panel__title {
-  @include nhsuk-responsive-margin(4, 'bottom');
-
-  text-align: center;
-}
-
-.nhsuk-panel__body {
-  @include nhsuk-font(24);
-
-  text-align: center;
-
-  strong {
-    @include nhsuk-font(32, bold);
-  }
-}
-
-// App example figure
-.nhsuk-image--full {
-  width: 100%;
-}
-
-// Header service name hotfix
-.nhsuk-header__service-name {
-  padding-top: 0;
-}
-
 // Breadcrumb hotfix
+// Too not have a visited state for back link
 .nhsuk-breadcrumb__backlink:visited {
   color: $nhsuk-link-color;
 }
 
 // Footer copyright hotfix
+// For when footer has no links
+// To add correct spacing for the copyright text
 .nhsuk-footer__copyright {
   margin-bottom: nhsuk-spacing(2);
 }
@@ -342,6 +133,7 @@ td {
 
 // Frontend override
 // Should be refactored into the frontend
+// The font weight should be 400 by default
 .nhsuk-body-m {
   font-weight: 400;
 }

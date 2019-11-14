@@ -1,0 +1,45 @@
+// Component page reading width, to allow for component examples
+// to be full width but content within reading width
+
+@include mq($from: desktop) {
+  .app-component-reading-width {
+
+    h1 {
+      max-width: 14em;
+    }
+
+    h2 {
+      max-width: 22em;
+    }
+
+    h3,
+    .nhsuk-lede-text,
+    .nhsuk-body-l {
+      max-width: 29em;
+    }
+
+    h4 {
+      max-width: 32em;
+    }
+
+    p,
+    ul,
+    ol {
+      max-width: 37em;
+    }
+
+    .app-example,
+    .nhsuk-table,
+    .app-colour-list,
+    .app-example--image,
+    .app-pre,
+    .nhsuk-image__img {
+      max-width: 44em;
+    }
+
+    .app-tabs {
+      max-width: 100%;
+    }
+
+  }
+}
