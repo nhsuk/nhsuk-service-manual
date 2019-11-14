@@ -7,7 +7,7 @@
   padding-left: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@include mq($from: tablet) {
   .featured-list {
     margin: 96px 0 nhsuk-spacing(9);
   }
@@ -17,7 +17,7 @@
   margin-bottom: nhsuk-spacing(6);
 }
 
-@media only screen and (min-width: 768px) {
+@include mq($from: tablet) {
   .featured-list--item {
     display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
     display: flex; // sass-lint:disable-line no-duplicate-properties
@@ -36,7 +36,7 @@
   margin-bottom: nhsuk-spacing(3);
 }
 
-@media only screen and (min-width: 768px) {
+@include mq($from: tablet) {
   .featured-list--item__number {
     display: block;
     left: - nhsuk-spacing(9);
@@ -60,7 +60,7 @@
   position: relative;
 }
 
-@media only screen and (min-width: 768px) {
+@include mq($from: tablet) {
   .featured-list--item__heading {
     padding-top: nhsuk-spacing(5);
   }

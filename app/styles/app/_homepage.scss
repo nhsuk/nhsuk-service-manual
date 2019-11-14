@@ -1,15 +1,24 @@
 .nhsuk-section {
-  padding-bottom: 24px;
-  padding-top: 24px;
-}
+  @include nhsuk-responsive-padding(6, 'bottom');
+  @include nhsuk-responsive-padding(6, 'top');
 
-@media (min-width: 40.0625em) {
-  .nhsuk-section {
-    padding-bottom: 48px;
-    padding-top: 48px;
+  @include mq($until: desktop) {
+
+    .nhsuk-grid-column-one-half:last-child {
+      padding-top: nhsuk-spacing(3);
+    }
+
   }
 }
 
 .nhsuk-section--white {
   background-color: $color_nhsuk-white;
 }
+
+.app-hero__wrapper--s {
+  @include mq($until: tablet) {
+    padding-bottom: nhsuk-spacing(5);
+    padding-top: nhsuk-spacing(5);
+  }
+}
+
