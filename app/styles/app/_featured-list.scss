@@ -1,53 +1,55 @@
+// Featured list
+// Used for design principles
+
 .featured-list {
   list-style: none;
-  margin: 48px 0 32px;
-  max-width: 800px;
+  margin: nhsuk-spacing(7) 0 nhsuk-spacing(5);
   padding-left: 0;
 }
 
 @media only screen and (min-width: 768px) {
   .featured-list {
-    margin: 96px 0 72px;
+    margin: 96px 0 nhsuk-spacing(9);
   }
 }
 
-.featured-item {
-  margin-bottom: 40px;
+.featured-list--item {
+  margin-bottom: nhsuk-spacing(6);
 }
 
 @media only screen and (min-width: 768px) {
-  .featured-item {
+  .featured-list--item {
     display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
     display: flex; // sass-lint:disable-line no-duplicate-properties
-    margin-bottom: 72px;
-    padding-left: 80px;
+    margin-bottom: nhsuk-spacing(9);
+    padding-left: nhsuk-spacing(9);
   }
 }
 
-.featured-item__content {
+.featured-list--item__content {
   max-width: 99.99%;
 }
 
-.featured-item__number {
+.featured-list--item__number {
   display: none;
-  font-weight: 600;
+  font-weight: $nhsuk-font-bold;
   margin-bottom: nhsuk-spacing(3);
 }
 
 @media only screen and (min-width: 768px) {
-  .featured-item__number {
+  .featured-list--item__number {
     display: block;
-    left: -80px;
+    left: - nhsuk-spacing(9);
     margin: 0;
     position: absolute;
   }
 }
 
-.featured-item__number--mobile {
+.featured-list--item__number--mobile {
   display: block;
 }
 
-.featured-item__heading {
+.featured-list--item__heading {
   -ms-flex-align: center;
   align-items: center;
   border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
@@ -59,7 +61,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .featured-item__heading {
-    padding-top: 32px;
+  .featured-list--item__heading {
+    padding-top: nhsuk-spacing(5);
   }
 }
