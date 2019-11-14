@@ -38,16 +38,18 @@
       </li>
       {% endif %}
 
+        {% if pageTitle != 'PDFs' %}
+      <li class="nhsuk-related-nav__item">
+        <a href="/service-manual/content/pdfs">PDFs</a>
+      </li>
+      {% endif %}
+
       {% if pageTitle != 'Links' %}
       <li class="nhsuk-related-nav__item">
         <a href="/service-manual/content/links">Links</a>
       </li>
       {% endif %}
-       {% if pageTitle != 'PDFs' %}
-      <li class="nhsuk-related-nav__item">
-        <a href="/service-manual/content/pdfs">PDFs</a>
-      </li>
-      {% endif %}
+
     </ul>
   </nav>
 </div>

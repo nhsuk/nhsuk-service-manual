@@ -1,46 +1,22 @@
 {% set pageTitle = 'PDFs' %}
 {% set pageSection = 'Content style guide' %}
-{% set pageDescription = 'How to handle PDFs.' %}
+{% set pageDescription = 'Wherever possible, we avoid PDFs. Instead we create content as structured web pages in HTML. '%}
 
-{% extends 'includes/layout.njk' %}
-
-{% from 'tables/macro.njk' import table %}
-{% from 'review-date/macro.njk' import reviewDate %}
+{% extends 'includes/app-layout-two-thirds.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/content",
-  text: "Content style guide"
-}) }}
+  {% include 'content/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-  </div>
-</div>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
-  <h3>PDF regulations</h3>
-
-  <p>Any PDFs must meet level AA of the <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>.</p>
-  <p>Check the GOV.UK guidance on <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">publishing accessible documents</a>.</p>
+{% block bodyContent %}
 
 
-  <h3>Problems with PDFs</h3>
+  <h2>The problem with PDFs</h2>
    <p>We avoid PDFs because:</p>
    <ul>
         <li>they cannot meet the range of users' accessibility needs, for example, users cannot change colours or font size</li>
         <li>they give people a poor user experience, especially on mobile</li>
-        <li>many browsers, tools and extensions do not work with them - they often have problems with zoom, scroll, audio, image and keyboard navigation.</li>
+        <li>many browsers, tools and extensions do not work with them - they often have problems with zoom, scroll, audio, image and keyboard navigation</li>
         <li>they take users away from the website, opening in a new tab, window or software - and not all users have the right software</li>
         <li>they are hard to maintain and update, so users may get out of date and unreliable content</li>
         <li>if users find PDFs in search results, they get them without any supporting context or material</li>
@@ -48,19 +24,19 @@
         <li>it's difficult to collect data on how people use PDFs, and that makes it difficult to identify problems and improve them</li>
     </ul>
 
-    <h3>New PDFs</h3>
-    <p>Wherever possible, we avoid PDFs. Instead we create content as structured web pages in HTML.</p>
+    <h2>Publishing PDFs with an HTML version</h2>
+
     <p>In a few cases, where there is a clear, evidenced user need for it, we publish a PDF. But, as far as possible, we also make the same content available as HTML web pages.</p>
     <p>The instances where we may publish a PDF (as well as a web page) are:</p>
     <ul>
-        <li>for niche audiences, where there is a clear user need for special formats (like Easy Read of foreign language leaflets designed to be printed out)</li>
+        <li>for niche audiences, where there is a clear user need for special formats (like Easy Read or foreign language leaflets designed to be printed out)</li>
         <li>for other downloads designed for printing, such as posters</li>
         <li>downloads of reports or publications designed to be published on paper</li>
         <li>where there's a legal or regulatory requirement to have a formal, signed document</li>
     </ul>
-    <p>If you do create a new PDF, it must meet the PDF/A standard, which is more accessible. (Follow the GOV.UK guidance on publishing accessible documents.</p>
+    <p>If you do create a new PDF, it must meet the PDF/A standard, which is more accessible. (Follow the <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs">GOV.UK guidance on publishing accessible documents</a>.)</p>
 
-    <h3>Older PDFs</h3>
+    <h2>Older PDFs</h2>
     <p>Teams should make sure that:</p>
     <ul>
         <li>they keep their content up to date</li>
@@ -68,17 +44,16 @@
     </ul>
 
 
-    <h3>Linking to PDFs</h3>
-    <p>We prefer to link to HTML pages containing PDF content rather than to PDFs themselves. This helps keep information up to date and easy to find for users.</p>
-    <p>Follow our <a href="/service-manual/content/links">guidance on links and linking</a> for more information.</p>
+    <h2>Linking to PDFs</h2>
+    <p>It's better to link to HTML pages containing PDF content rather than to PDFs themselves. This makes it easier for users to find the latest information.</p>
+    <p>Read more about writing good <a href="/service-manual/content/links">links</a>, including linking to PDFs.</p>
 
-    <div class="nhsuk-review-date">
+  <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: November 2019</p>
-    </div>
   </div>
-  <aside class="nhsuk-grid-column-one-third">
-    {% include './partials/related-nav.njk' %}
-  </aside>
-</div>
 
+{% endblock %}
+
+{% block asideContent %}
+  {% include './partials/related-nav.njk' %}
 {% endblock %}
