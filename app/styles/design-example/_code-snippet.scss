@@ -11,8 +11,15 @@
 
     &--copy {
       background-color: $color_nhsuk-grey-5;
+      border-bottom-color: $nhsuk-button-shadow-color;
+      box-shadow: 0 $button-shadow-size 0 $nhsuk-button-shadow-color;
       margin-bottom: 8px;
       position: static;
+
+      &:focus {
+        @include nhsuk-focused-text;
+        border-color: $nhsuk-focus-color;
+      }
     }
 
     &--close {
@@ -26,6 +33,10 @@
       position: static;
       right: 16px;
       z-index: 1;
+
+      &:focus {
+        @include nhsuk-focused-text;
+      }
 
       @include mq($from: tablet) {
         bottom: 24px;
@@ -80,13 +91,12 @@
       }
 
       &:hover {
-        box-shadow:  0 0 0 4px $color_tint_nhsuk-warm-yellow-30;
         outline: 0;
+        text-decoration: underline;
       }
 
       &:focus {
-        box-shadow:  0 0 0 4px $color_nhsuk-warm-yellow;
-        outline: 0;
+        @include nhsuk-focused-text;
       }
 
     }
@@ -96,7 +106,7 @@
         background-color: $color_nhsuk-grey-5;
 
         @include mq($from: tablet) {
-          border-bottom: 4px solid $color_nhsuk-blue;
+          box-shadow: 0 $button-shadow-size 0 $color_nhsuk-blue;
         }
 
       }

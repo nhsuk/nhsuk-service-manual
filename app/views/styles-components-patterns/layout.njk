@@ -1,192 +1,161 @@
 {% set pageTitle = 'Layout' %}
 {% set pageSection = 'Styles, components and patterns' %}
-{% set pageDescription = 'Use this layout to make sure content and elements are laid out consistently.' %}
+{% set pageDescription = 'Structure your page content and elements.' %}
+{% set hideDescription = 'true' %}
 
-{% extends 'includes/layout.njk' %}
-
-{% from 'includes/design-example.njk' import designExample %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/styles-components-patterns",
-  text: "Styles, components and patterns"
-}) }}
+  {% include 'styles-components-patterns/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+{% block bodyContent %}
 
-    <div class="nhsuk-u-reading-width">
+  <h2 id="screen-size">Screen size</h2>
+  <p>Design for mobile first using a single-column layout and work up to wider layouts. Most visitors to the NHS website are on a mobile device, so it's our first consideration.</p>
+  <p>The default maximum page width is 960px, but you can make it wider if your content requires it. But lines of text content should be no longer than 70 to 80 characters so that it's easy to read.</p>
 
-      <h1>Layout</h1>
+  <h3>Responsive breakpoints</h3>
+  <ul>
+    <li>mobile: 320px</li>
+    <li>tablet: 641px</li>
+    <li>desktop: 769px</li>
+    <li>large desktop: 990px</li>
+  </ul>
 
-      <h2 id="screen-size">Screen size</h2>
-      <p>Design for mobile first using a single-column layout and work up to wider layouts. Most visitors to the NHS website are on a mobile device, so it's our first consideration.</p>
-      <p>The default maximum page width is 960px, but you can make it wider if your content requires it. But lines of text content should be no longer than 70 to 80 characters so that it's easy to read.</p>
+  <h2 id="containers">Containers</h2>
+  <p>To set up your layout, you will need to create 2 wrappers. The first wrapper is a container which sets the maximum width of the content but does not add any vertical margin or padding.</p>
+  <p>You can choose from a fixed-width container (960px) or a fluid-width container (which spans the entire width of the viewport).</p>
 
-      <h3>Responsive breakpoints</h3>
-      <ul>
-        <li>mobile: 320px</li>
-        <li>tablet: 641px</li>
-        <li>desktop: 769px</li>
-        <li>large desktop: 990px</li>
-      </ul>
+  <h3>Container</h3>
+  <p class="rich-text">Use <code>.nhsuk-width-container</code> for a container with a maximum width of 960px.</p>
 
-      <h2 id="containers">Containers</h2>
-      <p>To set up your layout, you will need to create 2 wrappers. The first wrapper is a container which sets the maximum width of the content but does not add any vertical margin or padding.</p>
-      <p>You can choose from a fixed-width container (960px) or a fluid-width container (which spans the entire width of the viewport).</p>
+  {{ designExample({
+    type: 'layout-container',
+    htmlOnly: true,
+    showExample: false
+  }) }}
 
-      <h3>Container</h3>
-      <p class="rich-text">Use <code>.nhsuk-width-container</code> for a container with a maximum width of 960px.</p>
+  <h3>Fluid container</h3>
+  <p class="rich-text">Use <code>.nhsuk-width-container-fluid</code> for a full width container, spanning the entire width of the viewport.</p>
 
-      {{ designExample({
-        type: 'layout-container',
-        htmlOnly: true,
-        showExample: false
-      }) }}
+  {{ designExample({
+    type: 'layout-container-fluid',
+    htmlOnly: true,
+    showExample: false
+  }) }}
 
-      <h3>Fluid container</h3>
-      <p class="rich-text">Use <code>.nhsuk-width-container-fluid</code> for a full width container, spanning the entire width of the viewport.</p>
+  <h2 id="main-content">Main content</h2>
+  <p class="rich-text">The second wrapper is a <code>main</code> element with the class <code>.nhsuk-main-wrapper</code>, which gives responsive padding to the top and bottom of the page and will be the wrapper for the main content of the page.</p>
+  <p class="rich-text">There should be only one <code>main</code> element and it should have a unique id of <code>maincontent</code>, which allows keyboard-only users to skip to the main content on a page with the <a href="/service-manual/styles-components-patterns/skip-link">skip link component</a>.</p>
 
-      {{ designExample({
-        type: 'layout-container-fluid',
-        htmlOnly: true,
-        showExample: false
-      }) }}
+  {{ designExample({
+    type: 'layout-main',
+    htmlOnly: true,
+    showExample: false
+  }) }}
 
-      <h2 id="main-content">Main content</h2>
-      <p class="rich-text">The second wrapper is a <code>main</code> element with the class <code>.nhsuk-main-wrapper</code>, which gives responsive padding to the top and bottom of the page and will be the wrapper for the main content of the page.</p>
-      <p class="rich-text">There should be only one <code>main</code> element and it should have a unique id of <code>maincontent</code>, which allows keyboard-only users to skip to the main content on a page with the <a href="/service-manual/styles-components-patterns/skip-link">skip link component</a>.</p>
+  <h2 id="grid">Grid system</h2>
+  <p class="rich-text">The grid is structured with a <code>.nhsuk-grid-row</code> wrapper which acts as a row to contain your grid columns.</p>
+  <p class="rich-text">You can add columns inside this wrapper to create your layout. To define your columns, add the class beginning with <code>.nhsuk-grid-column-</code> to a new container followed by the width, for example <code>.nhsuk-grid-column-one-third</code>, to make it the width you want.</p>
 
-      {{ designExample({
-        type: 'layout-main',
-        htmlOnly: true,
-        showExample: false
-      }) }}
 
-      <h2 id="grid">Grid system</h2>
-      <p class="rich-text">The grid is structured with a <code>.nhsuk-grid-row</code> wrapper which acts as a row to contain your grid columns.</p>
-      <p class="rich-text">You can add columns inside this wrapper to create your layout. To define your columns, add the class beginning with <code>.nhsuk-grid-column-</code> to a new container followed by the width, for example <code>.nhsuk-grid-column-one-third</code>, to make it the width you want.</p>
+  <h3>Full width</h3>
 
-    </div>
+  {{ designExample({
+    type: 'layout-full-width',
+    htmlOnly: true
+  }) }}
 
-    <h3>Full width</h3>
+  <h3>One-half</h3>
 
-    {{ designExample({
-      type: 'layout-full-width',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-one-half',
+    htmlOnly: true
+  }) }}
 
-    <h3>One-half</h3>
+  <h3>Two-thirds</h3>
 
-    {{ designExample({
-      type: 'layout-one-half',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-two-thirds',
+    htmlOnly: true
+  }) }}
 
-    <h3>Two-thirds</h3>
+  <h3>One-third</h3>
 
-    {{ designExample({
-      type: 'layout-two-thirds',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-one-third',
+    htmlOnly: true
+  }) }}
 
-    <h3>One-third</h3>
+  <h3>Three-quarters</h3>
 
-    {{ designExample({
-      type: 'layout-one-third',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-three-quarters',
+    htmlOnly: true
+  }) }}
 
-    <h3>Three-quarters</h3>
+  <h3>One-quarter</h3>
 
-    {{ designExample({
-      type: 'layout-three-quarters',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-one-quarter',
+    htmlOnly: true
+  }) }}
 
-    <h3>One-quarter</h3>
+  <h3>Nested grids</h3>
 
-    {{ designExample({
-      type: 'layout-one-quarter',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-nested',
+    htmlOnly: true
+  }) }}
 
-    <h3>Nested grids</h3>
+  <h2 id="layouts">Common layouts</h2>
 
-    {{ designExample({
-      type: 'layout-nested',
-      htmlOnly: true
-    }) }}
+  <h3 id="fixed-example">Two-thirds in a fixed-width container</h3>
 
-    <h2 id="layouts">Common layouts</h2>
+  {{ designExample({
+    type: 'layout-two-thirds-container',
+    htmlOnly: true
+  }) }}
 
-    <h3 id="fixed-example">Two-thirds in a fixed-width container</h3>
+  <h3 id="fluid-example">One-third / two-thirds in a fluid-width container</h3>
 
-    {{ designExample({
-      type: 'layout-two-thirds-container',
-      htmlOnly: true
-    }) }}
+  {{ designExample({
+    type: 'layout-one-third-container-fluid',
+    htmlOnly: true
+  }) }}
 
-    <h3 id="fluid-example">One-third / two-thirds in a fluid-width container</h3>
+  <h2 id="utility-classes">Layout utility classes</h2>
 
-    {{ designExample({
-      type: 'layout-one-third-container-fluid',
-      htmlOnly: true
-    }) }}
+  <h3>Reading width</h3>
+  <p>To make it easy to read, lines of text should be no longer than 70 to 80 characters.</p>
+  <p class="rich-text">When using the fluid-width container or wider grid columns, wrap text content with <code>.nhsuk-u-reading-width</code> to apply a maximum width and limit the number of characters per line.</p>
 
-    <div class="nhsuk-u-reading-width">
+  {{ designExample({
+    type: 'layout-reading-width',
+    htmlOnly: true
+  }) }}
 
-      <h2 id="utility-classes">Layout utility classes</h2>
+  <h3>Tablet and mobile specific grid classes</h3>
+  <p>By default, grid columns sizes will go to 100% width of the container on screen sizes below the desktop breakpoint (769px). These utility classes will enforce column widths on all screen sizes.</p>
+  <p class="rich-text">To define your column sizes, add the utility class <code>.nhsuk-u-</code> followed by the width to an existing grid column, for example <code>.nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
 
-      <h3>Reading width</h3>
-      <p>To make it easy to read, lines of text should be no longer than 70 to 80 characters.</p>
-      <p class="rich-text">When using the fluid-width container or wider grid columns, wrap text content with <code>.nhsuk-u-reading-width</code> to apply a maximum width and limit the number of characters per line.</p>
+  {{ designExample({
+    type: 'layout-grid-tablet-mobile',
+    htmlOnly: true
+  }) }}
 
-    </div>
+  <h3>Tablet specific grid classes</h3>
+  <p>These utility classes will enforce column widths on screen sizes above the mobile breakpoint (320px).</p>
+  <p class="rich-text">To define your column sizes, add the utility class <code>.nhsuk-u-</code> followed by the width and the suffix <code>-tablet</code> to an existing grid column. For example, <code>.nhsuk-u-one-third-tablet</code> will set your column width to be one-third on screen sizes tablet and above.</p>
 
-      {{ designExample({
-        type: 'layout-reading-width',
-        htmlOnly: true
-      }) }}
+  {{ designExample({
+    type: 'layout-grid-tablet',
+    htmlOnly: true
+  }) }}
 
-    <div class="nhsuk-u-reading-width">
-
-      <h3>Tablet and mobile specific grid classes</h3>
-      <p>By default, grid columns sizes will go to 100% width of the container on screen sizes below the desktop breakpoint (769px). These utility classes will enforce column widths on all screen sizes.</p>
-      <p class="rich-text">To define your column sizes, add the utility class <code>.nhsuk-u-</code> followed by the width to an existing grid column, for example <code>.nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
-
-    </div>
-
-    {{ designExample({
-      type: 'layout-grid-tablet-mobile',
-      htmlOnly: true
-    }) }}
-
-    <div class="nhsuk-u-reading-width">
-
-      <h3>Tablet specific grid classes</h3>
-      <p>These utility classes will enforce column widths on screen sizes above the mobile breakpoint (320px).</p>
-      <p class="rich-text">To define your column sizes, add the utility class <code>.nhsuk-u-</code> followed by the width and the suffix <code>-tablet</code> to an existing grid column. For example, <code>.nhsuk-u-one-third-tablet</code> will set your column width to be one-third on screen sizes tablet and above.</p>
-
-    </div>
-
-    {{ designExample({
-      type: 'layout-grid-tablet',
-      htmlOnly: true
-    }) }}
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: March 2019</p>
-    </div>
-
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: March 2019</p>
   </div>
-</div>
+
 {% endblock %}

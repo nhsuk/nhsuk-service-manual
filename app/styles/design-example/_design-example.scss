@@ -26,15 +26,11 @@
     &:hover,
     &:focus {
       box-shadow: none;
-      color: $color_nhsuk-white;
     }
 
     &:hover {
-      background-color: $color_tint_nhsuk-warm-yellow-30;
-    }
-
-    &:focus {
-      background-color: $color_nhsuk-warm-yellow;
+      color: $color_nhsuk-white;
+      text-decoration: underline;
     }
 
     &:visited {
@@ -45,5 +41,21 @@
       }
     }
 
+    &:focus {
+      @include nhsuk-focused-text;
+
+      &:hover {
+        color: $nhsuk-focus-text-color;
+      }
+    }
+
   }
+}
+
+p + .design-example {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.nhsuk-lede-text + .design-example {
+  @include nhsuk-responsive-padding(0, 'top');
 }

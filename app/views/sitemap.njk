@@ -1,10 +1,11 @@
 {% set pageTitle = 'Sitemap' %}
 {% set pageDescription = 'A list of pages on this website - with links' %}
+{% set hideDescription = 'true' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
-{% block body %}
-  <h1>{{pageTitle}}</h1>
+{% block bodyContent %}
+
   <ul>
     <li><a href="/service-manual/">Home</a></li>
     <li><a href="/service-manual/design-principles">Design principles</a></li>
@@ -106,11 +107,12 @@
       </ul>
     </li>
     <li><a href="/service-manual/accessibility">Accessibility</a></li>
-    <li><a href="/service-manual/cookies">Cookies</a></li>
     <li><a href="/service-manual/terms-and-conditions">Terms and conditions</a></li>
     <li><a href="/service-manual/privacy">Privacy</a></li>
   </ul>
+
   <div class="nhsuk-review-date">
     <p class="nhsuk-body-s">Updated: November 2019</p>
   </div>
+
 {% endblock %}

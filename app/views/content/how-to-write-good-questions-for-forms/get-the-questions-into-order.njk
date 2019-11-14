@@ -3,103 +3,66 @@
 {% set pageSection = 'How to write good questions for forms' %}
 {% set pageDescription = 'Think about how the questions flow and group them in a way that makes sense to the user.' %}
 
-{% extends 'includes/layout.njk' %}
-{% from 'review-date/macro.njk' import reviewDate %}
+{% extends 'content/how-to-write-good-questions-for-forms/_layout.njk' %}
 
-{% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    },
-    {
-      href: "/service-manual/content",
-      text: "Content style guide"
-    }
-  ],
-    href: "/service-manual/content/how-to-write-good-questions-for-forms",
-    text: "How to write good questions for forms"
+{% block bodyContent %}
 
-  }) }}
-{% endblock %}
+  <h2 id="begin-prototyping-with-1-thing-per-page">Begin prototyping with 1 thing per page</h2>
+  <p>Follow the <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK principle of each page containing just 1 thing</a>, for example:</p>
+  <ul>
+    <li>1 piece of information you're telling a user</li>
+    <li>1 decision they have to make</li>
+    <li>1 question they have to answer</li>
+  </ul>
 
-{% block body %}
-<div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-two-thirds">
+  <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
 
-     <h1>
-      <span class="nhsuk-caption-l">
-        {{pageSection}}
-        <span class="nhsuk-u-visually-hidden"> - </span>
+  <p>User research will tell you when you can merge pages together. For example, if you’re designing a service for staff who need to repeat and switch between tasks quickly.</p>
+
+  <h3 id="watch-out-for-double-barrelled-questions">Watch out for "double-barrelled" questions</h3>
+  <p>Make sure you're asking 1 question at a time - not 2 or more questions in 1.</p>
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Examples of 2 or more questions in 1
       </span>
-      {{pageTitle}}
-    </h1>
-
-    {% include 'content/how-to-write-good-questions-for-forms/write-good-questions-nav.njk' %}
-
-    <p class="nhsuk-body-l">{{pageDescription}}</p>
-
-    <h2 id="begin-prototyping-with-1-thing-per-page">Begin prototyping with 1 thing per page</h2>
-    <p>Follow the <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK principle of each page containing just 1 thing</a>, for example:</p>
-    <ul>
-      <li>1 piece of information you're telling a user</li>
-      <li>1 decision they have to make</li>
-      <li>1 question they have to answer</li>
-    </ul>
-
-    <img class="nhsuk-image__img nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-7" src="/service-manual/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
-
-    <p>User research will tell you when you can merge pages together. For example, if you’re designing a service for staff who need to repeat and switch between tasks quickly.</p>
-
-    <h3 id="watch-out-for-double-barrelled-questions">Watch out for "double-barrelled" questions</h3>
-    <p>Make sure you're asking 1 question at a time - not 2 or more questions in 1.</p>
-
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Examples of 2 or more questions in 1
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>2 questions in 1: “If you have an email address, can we contact you about research?”</p>
-        <p>4 questions in 1: "If this questionnaire has highlighted any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"</p>
-      </div>
-    </details>
-
-    <h2>Get your filter questions in early</h2>
-    <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users">Filter questions</a> help you route people to the questions that apply to them, so use them early on.</p>
-    <p>For example, start with questions that let users know if they’re not eligible for the service, so you do not waste their time.</p>
-
-    <h2>Start with essential, common, and easy questions</h2>
-    <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question#start-with-essential-questions">Start with essential questions</a> ahead of optional ones.</p>
-    <p>Design for the most common scenarios first. You should have a good idea what they are from your discovery.</p>
-    <p>It may help to start with easy questions (<a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation#consider-the-effort-involved-in-answering">consider the effort involved in answering</a>) and to save more difficult or <a href="/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions">sensitive questions</a> for later.</p>
-
-    <h2>Group similar topics</h2>
-    <p>Talk through the questions and listen for natural pauses between topics. <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">Think of the form as a conversation</a>.</p>
-    <p>Your user research will show you how best to group topics. For example, you may need to group them according to where users will get the answer. Is the information something they know well, like their date of birth, or will they have to go looking for it? It often helps to group contact details together and account details together.</p>
-
-    <h2>Test your questions to understand what order to put them in</h2>
-
-    <p>You need to understand which questions your users expect first and how they group them. One way to do this is with a <a href="/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions#do-a-card-sorting-exercise">card sorting exercise</a>. Test the order again when you prototype your form.</p>
-    <p>For example, do users expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
-
-    <div class="nhsuk-review-date">
-      <p class="nhsuk-body-s">Updated: November 2019</p>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>2 questions in 1: “If you have an email address, can we contact you about research?”</p>
+      <p>4 questions in 1: "If this questionnaire has highlighted any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"</p>
     </div>
+  </details>
 
-    {% from 'pagination/macro.njk' import pagination %}
+  <h2>Get your filter questions in early</h2>
+  <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users">Filter questions</a> help you route people to the questions that apply to them, so use them early on.</p>
+  <p>For example, start with questions that let users know if they’re not eligible for the service, so you do not waste their time.</p>
 
-    {{ pagination({
-      "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
-      "previousPage": "Use filter questions to route users",
-      "nextUrl": "/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
-      "nextPage": "Think of the form as a conversation"
-    }) }}
+  <h2>Start with essential, common, and easy questions</h2>
+  <p><a href="/service-manual/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question#start-with-essential-questions">Start with essential questions</a> ahead of optional ones.</p>
+  <p>Design for the most common scenarios first. You should have a good idea what they are from your discovery.</p>
+  <p>It may help to start with easy questions (<a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation#consider-the-effort-involved-in-answering">consider the effort involved in answering</a>) and to save more difficult or <a href="/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions">sensitive questions</a> for later.</p>
 
+  <h2>Group similar topics</h2>
+  <p>Talk through the questions and listen for natural pauses between topics. <a href="/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">Think of the form as a conversation</a>.</p>
+  <p>Your user research will show you how best to group topics. For example, you may need to group them according to where users will get the answer. Is the information something they know well, like their date of birth, or will they have to go looking for it? It often helps to group contact details together and account details together.</p>
+
+  <h2>Test your questions to understand what order to put them in</h2>
+
+  <p>You need to understand which questions your users expect first and how they group them. One way to do this is with a <a href="/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions#do-a-card-sorting-exercise">card sorting exercise</a>. Test the order again when you prototype your form.</p>
+  <p>For example, do users expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: November 2019</p>
   </div>
-</div>
+
+  {{ pagination({
+    "previousUrl": "/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
+    "previousPage": "Use filter questions to route users",
+    "nextUrl": "/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
+    "nextPage": "Think of the form as a conversation"
+  }) }}
+
 {% endblock %}
 
 

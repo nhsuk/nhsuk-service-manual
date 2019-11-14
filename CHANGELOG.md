@@ -1,6 +1,20 @@
 # NHS digital service manual Changelog
 
-## 1.13.0 - Unreleased
+## 1.13.1 - 12 November 2019
+
+:wrench: **Fixes**
+
+- clarify start of project questions for product and delivery in Accessibility guidance
+- fix incorrect url on summary list component to github issue
+- use latest version of the nhsuk-frontend (3.0.2)
+- Consistent HTML spacing and indenting to make the code easier to read
+- Remove unnecessary spacing override classes
+- Create 2 new page layouts (full width and two thirds) to reduce code duplication
+- Add Sass styles to constrain widths of elements when using the full width layout
+- cache bust CSS and JavaScript assets
+- remove duplicate import for the radios nunjucks macro
+
+## 1.13.0 - 7 November 2019
 
 :new: **New content**
 
@@ -19,6 +33,7 @@
 - Improve the guidance around use of the Frutiger font
 - Remove the hint text page and include guidance for hint text on individual component pages
 - Use the latest version of NHS.UK frontend (3.0.0) including new focus styles
+- Fix the Nunjucks snippets for the A to Z and Mini-hub patterns
 
 ## 1.12.0 - 21 October 2019
 
