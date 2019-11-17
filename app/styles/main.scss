@@ -45,20 +45,3 @@
 .nhsuk-body-m {
   font-weight: 400;
 }
-
-// Main wrapper
-//
-// Reduce main wrapper to 32px for mobile
-.app-main-wrapper {
-  @include mq($until: tablet) {
-    padding-bottom: nhsuk-spacing(5);
-    padding-top: nhsuk-spacing(5);
-
-    // Reduce h1 and lede text bottom margin to 32px for mobile
-    h1,
-    .nhsuk-lede-text {
-      margin-bottom: nhsuk-spacing(5);
-    }
-
-  }
-}
