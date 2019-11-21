@@ -14,11 +14,3 @@
 .nhsuk-section--white {
   background-color: $color_nhsuk-white;
 }
-
-.app-hero__wrapper--s {
-  @include mq($until: tablet) {
-    padding-bottom: nhsuk-spacing(5);
-    padding-top: nhsuk-spacing(5);
-  }
-}
-
