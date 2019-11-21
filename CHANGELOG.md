@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 1.13.3 - 22 November 2019
+
+- Made it clear in PDF guidance that PDFs can be used for a permanent record
+- Added an additional bullet point on PDFs being used as a permanent record.
+
 ## 1.13.2 - 18 November 2019
 
 :wrench: **Fixes**
