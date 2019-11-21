@@ -14,7 +14,7 @@
     background: $color_nhsuk-blue;
     color: $color_nhsuk-white;
     display: inline-block;
-    padding: nhsuk-spacing(2) nhsuk-spacing(3);
+    padding: nhsuk-spacing(2) + $nhsuk-box-shadow-link;
   }
 
 }
