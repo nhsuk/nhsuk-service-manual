@@ -42,7 +42,8 @@
 // Frontend override
 // Should be refactored into the frontend
 // The font weight should be 400 by default
-.nhsuk-body-m {
+.nhsuk-body-m,
+.nhsuk-body-s {
   font-weight: 400;
 }
 
@@ -52,4 +53,42 @@
   @include mq($until: desktop) {
     margin-bottom: nhsuk-spacing(3) + nhsuk-spacing(1);
   }
+}
+
+// Beta banner
+.app-beta {
+  background: $color_nhsuk-white;
+  border: 1px solid $color_nhsuk-grey-5;
+  padding: nhsuk-spacing(2) 0;
+}
+
+.app-beta__container {
+  @include mq($until: desktop) {
+    position: relative;
+  }
+}
+
+.app-beta__content {
+  display: table;
+  margin-bottom: 0;
+}
+
+.app-beta__tag {
+  margin-right: nhsuk-spacing(2);
+}
+
+.app-beta__text {
+  @include nhsuk-font($size: 16, $line-height: 1.2);
+  display: table-cell;
+  padding-top: 2px;
+  vertical-align: baseline;
+}
+
+// Lede text
+h1 + .nhsuk-lede-text {
+  margin-top: - nhsuk-spacing(3);
+}
+
+.nhsuk-lede-text + .app-lede-text {
+  margin-top: - nhsuk-spacing(4);
 }
