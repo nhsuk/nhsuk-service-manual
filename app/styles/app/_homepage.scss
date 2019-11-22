@@ -6,7 +6,7 @@
  * Custom style for the homepage
  */
 
- .nhsuk-section {
+.nhsuk-section {
   @include nhsuk-responsive-padding(6, 'bottom');
   @include nhsuk-responsive-padding(6, 'top');
 
