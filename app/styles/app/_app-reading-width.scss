@@ -10,7 +10,7 @@
   .app-component-reading-width {
 
     h1 {
-      max-width: 14em;
+      max-width: 14.5em;
     }
 
     h2 {
@@ -31,6 +31,10 @@
     ul,
     ol {
       max-width: 37em;
+    }
+
+    .nhsuk-body-s {
+      max-width: 47em;
     }
 
     .app-example,

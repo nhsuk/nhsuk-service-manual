@@ -109,6 +109,21 @@
 
     {% block outerBody %}{% endblock %}
 
+    {%- if beta == 'true' %}
+    <div class="app-beta">
+      <div class="nhsuk-width-container">
+        <p class="app-beta__content">
+          <strong class="nhsuk-tag app-beta__tag">
+            Beta
+          </strong>
+          <span class="app-beta__text">
+            It is in 'beta', which means that we think it's good enough to share but we're still testing it.
+          </span>
+        </p>
+      </div>
+    </div>
+    {% endif %}
+
     {% if pageLayout != 'Homepage' %}
     <div class="nhsuk-width-container">
       <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
