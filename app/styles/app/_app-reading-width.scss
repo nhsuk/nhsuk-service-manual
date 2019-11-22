@@ -1,5 +1,10 @@
-// Component page reading width, to allow for component examples
-// to be full width but content within reading width
+/* ==========================================================================
+   #APP READING WIDTH
+   ========================================================================== */
+
+/**
+ * Constrains text on a full width page
+ */
 
 @include mq($from: desktop) {
   .app-component-reading-width {
