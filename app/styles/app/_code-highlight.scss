@@ -1,17 +1,33 @@
-.rich-text code {
+// Highlight code within body copy
+li code,
+p code,
+td code {
   background-color: $color_nhsuk-white;
   color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
-  font-size: 1rem;
-  padding: 4px 8px;
+  padding: nhsuk-spacing(1) nhsuk-spacing(2);
 }
 
-.rich-text-code code {
-  background-color: $color_nhsuk-white;
-  color: $color_nhsuk-purple;
-  font-size: 1rem;
-  padding: 4px 8px 0 0;
+// Highlight code in a block
+.app-pre {
+  @include nhsuk-responsive-margin(4, 'bottom');
+
+  background: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+  margin-top: 0;
+  overflow: auto;
+  padding: nhsuk-spacing(3);
+  position: relative;
+
+  & + h2 {
+    @include nhsuk-responsive-padding(4, 'top');
+  }
+
+  & + h3 {
+    @include nhsuk-responsive-padding(2, 'top');
+  }
 }
 
+// Design example code snippet overrides
 .code-snippet__preformatted {
   align-items: flex-end;
   border-bottom: 1px solid $color_nhsuk-grey-4;

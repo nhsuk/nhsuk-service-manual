@@ -1,3 +1,11 @@
+/* ==========================================================================
+   #COLOUR SWATCH
+   ========================================================================== */
+
+/**
+ * Custom table for the colour palette
+ */
+
 .app-colour-list {
   margin-top: 0;
 
@@ -24,7 +32,6 @@
     width: nhsuk-spacing(4);
   }
 }
-
 
 .app-colour-list__column {
   padding-left: 0;
@@ -56,5 +63,3 @@
 .app-colour-list__swatch--border {
   border: 1px solid $nhsuk-border-color;
 }
-
-

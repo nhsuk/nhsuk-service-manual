@@ -1,41 +1,26 @@
-.nhsuk-a-z-list--results-items {
-  @include nhsuk-responsive-margin(9, 'bottom');
-}
+/* ==========================================================================
+   #HEALTH-A-Z
+   ========================================================================== */
 
-.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link {
-  display: inline-block;
-  margin-top: 16px;
-  padding-left: 12px;
-  position: relative;
-}
+/**
+ * Custom style for the content style guide
+ */
 
-@media (min-width: 40.0625em) {
-  .nhsuk-back-to-top-link {
-    font-size: 19px;
+.app-style-guide-a-z {
+
+  .nhsuk-a-z-list--results-items {
+    @include nhsuk-responsive-margin(9, 'bottom');
   }
-}
 
-.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link:visited {
-  color: $color_nhsuk-blue;
-}
+  .nhsuk-back-to-top__link {
+    margin-left: 0;
+  }
 
-.nhsuk-a-z-list--results-items .nhsuk-back-to-top-link .nhsuk-icon {
-  fill: $color_nhsuk-blue;
-  height: 19px;
-  left: -8px;
-  position: absolute;
-  top: 4px;
-  transform: rotate(270deg);
-  width: 19px;
-}
+  h2 {
+    background: $color_nhsuk-blue;
+    color: $color_nhsuk-white;
+    display: inline-block;
+    padding: nhsuk-spacing(2) + $nhsuk-box-shadow-link;
+  }
 
-.nhsuk-icon__arrow-right {
-  fill: $color_nhsuk-blue;
-}
-
-.nhsuk-a-z-list--results-items h2 {
-  background: $color_nhsuk-blue;
-  color: $color_nhsuk-white;
-  display: inline-block;
-  padding: 8px 16px;
 }
