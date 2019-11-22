@@ -4,6 +4,7 @@
 
 - Made it clear in PDF guidance that PDFs can be used for a permanent record
 - Added an additional bullet point on PDFs being used as a permanent record.
+- Refactor CSS and HTML to clean up the code base and make the spacing more consistent
 
 ## 1.13.2 - 18 November 2019
 
