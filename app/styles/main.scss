@@ -80,7 +80,6 @@
 .app-beta__text {
   @include nhsuk-font($size: 16, $line-height: 1.2);
   display: table-cell;
-  padding-top: 2px;
   vertical-align: baseline;
 }
 
@@ -89,6 +88,23 @@ h1 + .nhsuk-lede-text {
   margin-top: - nhsuk-spacing(3);
 }
 
-.nhsuk-lede-text + .app-lede-text {
-  margin-top: - nhsuk-spacing(4);
+.nhsuk-lede-text {
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(5);
+  }
+}
+
+.nhsuk-lede-text + .app-lede-text--sub {
+  margin-bottom: nhsuk-spacing(7);
+  margin-top: - nhsuk-spacing(3);
+
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(5);
+    margin-top: - nhsuk-spacing(2);
+  }
+}
+
+.app-lede-text--sub + h2,
+.app-lede-text--sub + .nhsuk-heading-l {
+  padding-top: 0;
 }
