@@ -2,16 +2,9 @@
    #BETA-BANNER
    ========================================================================== */
 
-.app-beta {
-  background: $color_nhsuk-white;
-  border: 1px solid $color_nhsuk-grey-5;
-  padding: nhsuk-spacing(2) 0;
-}
-
 .app-beta__container {
-  @include mq($until: desktop) {
-    position: relative;
-  }
+  border-bottom: 1px solid $nhsuk-border-color;
+  padding: nhsuk-spacing(2) 0;
 }
 
 .app-beta__content {
