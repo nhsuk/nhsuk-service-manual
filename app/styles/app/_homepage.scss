@@ -1,12 +1,21 @@
-.nhsuk-section {
-  padding-bottom: 24px;
-  padding-top: 24px;
-}
+/* ==========================================================================
+   #HOMEPAGE
+   ========================================================================== */
 
-@media (min-width: 40.0625em) {
-  .nhsuk-section {
-    padding-bottom: 48px;
-    padding-top: 48px;
+/**
+ * Custom style for the homepage
+ */
+
+.nhsuk-section {
+  @include nhsuk-responsive-padding(6, 'bottom');
+  @include nhsuk-responsive-padding(6, 'top');
+
+  @include mq($until: desktop) {
+
+    .nhsuk-grid-column-one-half:last-child {
+      padding-top: nhsuk-spacing(3);
+    }
+
   }
 }
 
