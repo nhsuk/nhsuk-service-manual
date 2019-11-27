@@ -81,7 +81,20 @@ app.get('/service-manual/design-example/:example', (req, res) => {
 
 app.get('/service-manual/search', (req, res) => {
   const query = req.query['search-field'] || '';
-  res.render('includes/search.njk', { query, results: pageIndex.search(query) });
+  var resultsPerPage = 10;
+  var currentPage = parseInt(req.query['page']);
+  var results = pageIndex.search(query);
+  var maxPage = Math.ceil(results.length / resultsPerPage);
+  if (!Number.isInteger(currentPage)){
+    currentPage = 1
+  } else if(currentPage > maxPage || currentPage < 1){
+    currentPage = 1
+  }
+
+  var startingIndex = resultsPerPage * (currentPage - 1)
+  var endingIndex = startingIndex + resultsPerPage
+  
+  res.render('includes/search.njk', { results: results.slice(startingIndex, endingIndex), resultsLen: results.length, query: query, currentPage: currentPage, maxPage: maxPage,});
 });
 
 app.get('/service-manual/suggestions', (req, res) => {

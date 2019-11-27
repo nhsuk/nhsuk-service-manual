@@ -21,7 +21,7 @@ export const source = (query, populateResults) => {
   xhr.onload = () => {
     if (xhr.status === 200) {
       const json = JSON.parse(xhr.responseText);
-      populateResults(json.map(({ title }) => title));
+      populateResults(json.map(({ title }) => title).filter(Boolean));
     }
   };
   xhr.send();
