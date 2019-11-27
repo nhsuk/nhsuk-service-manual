@@ -86,7 +86,8 @@ app.get('/service-manual/search', (req, res) => {
 
 app.get('/service-manual/suggestions', (req, res) => {
   res.set({ 'Content-Type': 'application/json' });
-  res.send(JSON.stringify(pageIndex.search(req.query.search)));
+  resultsLimit = (pageIndex.search(req.query.search))
+  res.send(JSON.stringify(resultsLimit.slice(0,10)));
 });
 
 app.get('/', (req, res) => {
