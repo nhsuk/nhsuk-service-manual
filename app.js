@@ -16,7 +16,7 @@ const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
 const PageIndex = require('./middleware/page-index.js');
 
-var pageIndex = new PageIndex(config);
+const pageIndex = new PageIndex(config);
 
 // Initialise applications
 const app = express();
@@ -65,7 +65,7 @@ env.addFilter('highlight', (code, language) => {
 
 // Render standalone design examples
 app.get('/service-manual/design-example/:example', (req, res) => {
-  const displayFullPage = req.query.fullpage === "true";
+  const displayFullPage = req.query.fullpage === 'true';
   const example = req.params.example;
   const examplePath = path.join(__dirname, `/app/components/${example}.njk`);
 
@@ -73,24 +73,21 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   const exampleHtml = fileHelper.getHTMLCode(examplePath);
 
   // Wrap the example HTML in a basic html base template.
-  var baseTemplate = 'includes/design-example-wrapper.njk';
-  if(displayFullPage) {
-    baseTemplate = 'includes/design-example-wrapper-full.njk';
-  }
+  const baseTemplate = displayFullPage
+    ? 'includes/design-example-wrapper.njk'
+    : 'includes/design-example-wrapper-full.njk';
   res.render(baseTemplate, { body: exampleHtml });
 });
 
-/*
 app.get('/service-manual/search', (req, res) => {
-  var query = req.query['search-field'] || '';
-  res.render('includes/search.njk', { results: pageIndex.search(query), query: query });
+  const query = req.query['search-field'] || '';
+  res.render('includes/search.njk', { query, results: pageIndex.search(query) });
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
   res.set({ 'Content-Type': 'application/json' });
   res.send(JSON.stringify(pageIndex.search(req.query.search)));
 });
-*/
 
 app.get('/', (req, res) => {
   res.redirect('/service-manual');
@@ -157,10 +154,8 @@ if (config.env === 'development') {
   app.listen(config.port);
 }
 
-/*
-setTimeout(function(){
+setTimeout(() => {
   pageIndex.init();
 }, 2000);
-*/
 
 module.exports = app;
