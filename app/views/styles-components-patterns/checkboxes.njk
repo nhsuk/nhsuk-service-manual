@@ -14,6 +14,115 @@
     type: 'checkboxes'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">fieldset</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the fieldset component (e.g. legend). See the <a href="/service-manual/styles-components-patterns/fieldset">fieldset component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the hint component (e.g. text). See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">errorMessage</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the error message component (e.g. text). See the <a href="/service-manual/styles-components-patterns/error-message">error message component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">idPrefix</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">String to prefix id for each checkbox item if no id is specified on each item. IfidPrefix is not passed, fallback to using the name attribute instead.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name attribute for each checkbox item.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Array of checkbox items objects.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.text (or) items.{}.html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML to use within each radio item label. If html is provided, the text argument will be ignored.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.id</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Specific id attribute for the checkbox item. If omitted, then idPrefix string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Specific name for the checkbox item. If omitted, then component global name string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the checkbox input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Provide optional hint to each checkbox item. See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.divider</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional divider text to separate checkbox items, for example the text "or".</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.checked</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be checked.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be disabled.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the item element.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the container.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <h2>When to use checkboxes</h2>
   <p>Use checkboxes when you need to help users:</p>
   <ul>
@@ -37,12 +146,230 @@
     type: 'checkboxes-hint'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">fieldset</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the fieldset component (e.g. legend). See the <a href="/service-manual/styles-components-patterns/fieldset">fieldset component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the hint component (e.g. text). See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">errorMessage</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the error message component (e.g. text). See the <a href="/service-manual/styles-components-patterns/error-message">error message component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">idPrefix</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">String to prefix id for each checkbox item if no id is specified on each item. IfidPrefix is not passed, fallback to using the name attribute instead.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name attribute for each checkbox item.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Array of checkbox items objects.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.text (or) items.{}.html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML to use within each radio item label. If html is provided, the text argument will be ignored.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.id</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Specific id attribute for the checkbox item. If omitted, then idPrefix string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Specific name for the checkbox item. If omitted, then component global name string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the checkbox input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Provide optional hint to each checkbox item. See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.divider</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional divider text to separate checkbox items, for example the text "or".</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.checked</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be checked.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be disabled.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the item element.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the container.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <h3 id="error-messages">Error messages</h3>
   <p>Error messages should be styled like this:</p>
 
   {{ designExample({
     type: 'checkboxes-error-messages'
   }) }}
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">fieldset</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the fieldset component (e.g. legend). See the <a href="/service-manual/styles-components-patterns/fieldset">fieldset component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the hint component (e.g. text). See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">errorMessage</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Arguments for the error message component (e.g. text). See the <a href="/service-manual/styles-components-patterns/error-message">error message component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">idPrefix</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">String to prefix id for each checkbox item if no id is specified on each item. IfidPrefix is not passed, fallback to using the name attribute instead.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name attribute for each checkbox item.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Array of checkbox items objects.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.text (or) items.{}.html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML to use within each radio item label. If html is provided, the text argument will be ignored.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.id</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Specific id attribute for the checkbox item. If omitted, then idPrefix string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Specific name for the checkbox item. If omitted, then component global name string will be applied.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the checkbox input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.hint</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Provide optional hint to each checkbox item. See the <a href="/service-manual/styles-components-patterns/fieldset">hint component</a>.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.divider</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional divider text to separate checkbox items, for example the text "or".</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.checked</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be checked.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">If true, checkbox will be disabled.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the item element.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the container.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
   <p>Follow:</p>
   <ul>

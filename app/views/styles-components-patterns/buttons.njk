@@ -22,6 +22,75 @@
     type: 'button'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">element</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Whether to use an input, button or a element to create the button. In most cases you will not need to set this as it will be configured automatically if you use href or html.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">text (or) html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML for the button or link. If html is provided, the text argument will be ignored and element will be automatically set to button unless href is also set, or it has already been defined. This argument has no effect if element is set to input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name for the input or button. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Type of input or button – button, submit or reset. Defaults to submit. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the button tag. This has no effect on a or input elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">Whether the button should be disabled. For button and input elements, disabled and aria-disabled attributes will be set automatically.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">href</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">The URL that the button should link to. If this is set, element will be automatically set to a if it has not already been defined.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <h3>When to use a primary button</h3>
   <p>Use a primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
@@ -30,6 +99,75 @@
   {{ designExample({
     type: 'button-secondary'
   }) }}
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">element</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Whether to use an input, button or a element to create the button. In most cases you will not need to set this as it will be configured automatically if you use href or html.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">text (or) html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML for the button or link. If html is provided, the text argument will be ignored and element will be automatically set to button unless href is also set, or it has already been defined. This argument has no effect if element is set to input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name for the input or button. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Type of input or button – button, submit or reset. Defaults to submit. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the button tag. This has no effect on a or input elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">Whether the button should be disabled. For button and input elements, disabled and aria-disabled attributes will be set automatically.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">href</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">The URL that the button should link to. If this is set, element will be automatically set to a if it has not already been defined.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
   <h3>When to use a secondary button</h3>
   <p>Use a secondary button on pages that have more than 1 action or when users aren't noticing standard link text.</p>
@@ -40,6 +178,75 @@
   {{ designExample({
     type: 'button-reverse'
   }) }}
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">element</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Whether to use an input, button or a element to create the button. In most cases you will not need to set this as it will be configured automatically if you use href or html.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">text (or) html</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text or HTML for the button or link. If html is provided, the text argument will be ignored and element will be automatically set to button unless href is also set, or it has already been defined. This argument has no effect if element is set to input.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">name</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Name for the input or button. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Type of input or button – button, submit or reset. Defaults to submit. This has no effect on a elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">value</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Value for the button tag. This has no effect on a or input elements.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">disabled</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">Whether the button should be disabled. For button and input elements, disabled and aria-disabled attributes will be set automatically.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">href</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">The URL that the button should link to. If this is set, element will be automatically set to a if it has not already been defined.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
   <h3>When to use a white button on solid background colour</h3>
   <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>.)</p>

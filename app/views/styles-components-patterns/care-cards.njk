@@ -22,6 +22,60 @@
     type: 'care-card-non-urgent'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Care card component variant type - non-urgent, urgent or immediate.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">heading</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Heading to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">HTML</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Content to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">headingLevel</td>
+              <td class="nhsuk-table__cell">integer</td>
+              <td class="nhsuk-table__cell">Optional heading level for the heading. Default: 3</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <p>Use this card when you want users to contact their GP or arrange an appointment with a health professional, like a practice nurse. You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
   <p><a href="#how-to-use-care-cards">More about how to use care cards.</a></p>
 
@@ -29,6 +83,60 @@
   {{ designExample({
     type: 'care-card-urgent'
   }) }}
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Care card component variant type - non-urgent, urgent or immediate.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">heading</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Heading to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">HTML</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Content to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">headingLevel</td>
+              <td class="nhsuk-table__cell">integer</td>
+              <td class="nhsuk-table__cell">Optional heading level for the heading. Default: 3</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
   <p>Use this card when you want users to call or visit a GP or hospital urgently because they need advice or care quickly. You can, for example, use it to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
   <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.</p>
@@ -38,6 +146,60 @@
   {{ designExample({
     type: 'care-card-immediate'
   }) }}
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">type</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Care card component variant type - non-urgent, urgent or immediate.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">heading</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Heading to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">HTML</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Content to be used within the care card component.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">headingLevel</td>
+              <td class="nhsuk-table__cell">integer</td>
+              <td class="nhsuk-table__cell">Optional heading level for the heading. Default: 3</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
 
   <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency (A&amp;E) department.</p>
   <p>Where appropriate, include a link to help users find their <a href="http://www.nhs.uk/service-search/Accident-and-emergency-services/LocationSearch/428">nearest hospital A&amp;E department</a>.</p>

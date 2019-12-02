@@ -14,6 +14,70 @@
     type: 'breadcrumb'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Array of breadcrumbs item objects.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.text</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text to use within the breadcrumbs item.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.href</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Link for the breadcrumbs item.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.{}.attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Any extra HTML attributes (for example data attributes) to add to the item element.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">href</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Link of the current page.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">text</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text for the current page.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the element.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <h2>When to use breadcrumbs</h2>
   <p>Use breadcrumbs to give users context and let them move back or up a level if they can't find what they want on the page.</p>
 

@@ -14,6 +14,60 @@
     type: 'contents-list'
   }) }}
 
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Nunjucks macro options
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div class="nhsuk-table-responsive">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Nunjucks macro options</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Name</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items</td>
+              <td class="nhsuk-table__cell">array</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Array of items in the contents list.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.[].href</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> href value of an item in the contents list.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">items.[].text</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell"><strong>Required.</strong> Text value of an item in the contents llst.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">current</td>
+              <td class="nhsuk-table__cell">boolean</td>
+              <td class="nhsuk-table__cell">Current active page in the contents list.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">classes</td>
+              <td class="nhsuk-table__cell">string</td>
+              <td class="nhsuk-table__cell">Optional additional classes to add to the element. Separate each class with a space.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">attributes</td>
+              <td class="nhsuk-table__cell">object</td>
+              <td class="nhsuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the container.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
   <h2>When to use a contents list</h2>
   <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
   <p>If you're using a contents list, you should also use <a href="/service-manual/styles-components-patterns/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
