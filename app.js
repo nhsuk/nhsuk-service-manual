@@ -81,51 +81,58 @@ app.get('/service-manual/design-example/:example', (req, res) => {
 
 app.get('/service-manual/search', (req, res) => {
   const query = req.query['search-field'] || '';
-  var resultsPerPage = 10;
-  var currentPage = parseInt(req.query['page']);
-  var results = pageIndex.search(query);
-  var maxPage = Math.ceil(results.length / resultsPerPage);
-  if (!Number.isInteger(currentPage)){
-    currentPage = 1
-  } else if(currentPage > maxPage || currentPage < 1){
-    currentPage = 1
+  const resultsPerPage = 10;
+  let currentPage = parseInt(req.query.page, 10);
+  const results = pageIndex.search(query);
+  const maxPage = Math.ceil(results.length / resultsPerPage);
+  if (!Number.isInteger(currentPage)) {
+    currentPage = 1;
+  } else if (currentPage > maxPage || currentPage < 1) {
+    currentPage = 1;
   }
 
-  var startingIndex = resultsPerPage * (currentPage - 1)
-  var endingIndex = startingIndex + resultsPerPage
-  
-  res.render('includes/search.njk', { results: results.slice(startingIndex, endingIndex), resultsLen: results.length, query: query, currentPage: currentPage, maxPage: maxPage,});
+  const startingIndex = resultsPerPage * (currentPage - 1);
+  const endingIndex = startingIndex + resultsPerPage;
+
+  res.render('includes/search.njk', {
+    currentPage,
+    maxPage,
+    query,
+    results: results.slice(startingIndex, endingIndex),
+    resultsLen: results.length,
+  });
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
+  const results = pageIndex.search(req.query.search);
+  const slicedResults = results.slice(0, 10);
   res.set({ 'Content-Type': 'application/json' });
-  resultsLimit = (pageIndex.search(req.query.search))
-  res.send(JSON.stringify(resultsLimit.slice(0,10)));
+  res.send(JSON.stringify(slicedResults));
 });
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.redirect('/service-manual');
 });
 
 // The practices pages have moved or been deleted
 // Temporary redirects incase anyone still visits /practices pages
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (req, res) => {
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (_, res) => {
   res.redirect('/service-manual/content/health-literacy');
 });
 
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (_, res) => {
   res.redirect('/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content');
 });
 
-app.get('/service-manual/practices', (req, res) => {
+app.get('/service-manual/practices', (_, res) => {
   res.redirect('/service-manual');
 });
 
-app.get('/service-manual/practices/make-your-service-accessible', (req, res) => {
+app.get('/service-manual/practices/make-your-service-accessible', (_, res) => {
   res.redirect('/service-manual/accessibility');
 });
 
-app.get('/service-manual/content/writing-for-accessibility', (req, res) => {
+app.get('/service-manual/content/writing-for-accessibility', (_, res) => {
   res.redirect('/service-manual/accessibility/content');
 });
 
@@ -135,19 +142,19 @@ app.get(/^([^.]+)$/, (req, res, next) => {
 });
 
 // Render sitemap.xml in XML format
-app.get('/service-manual/sitemap.xml', (req, res) => {
+app.get('/service-manual/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
 
 // Render robots.txt in text format
-app.get('/service-manual/robots.txt', (req, res) => {
+app.get('/service-manual/robots.txt', (_, res) => {
   res.set('text/plain');
   res.render('robots.txt');
 });
 
 // Render 404 page
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.statusCode = 404;
   res.render('page-not-found');
 });

@@ -5,7 +5,12 @@ import './polyfills';
 import AutoComplete from 'nhsuk-frontend/packages/components/header/autoCompleteConfig';
 import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
 import DesignExample from './design-example';
-import { source, suggestion } from './search';
+import {
+  inputValue,
+  onConfirm,
+  source,
+  suggestion,
+} from './search';
 
 // Initialise components
 SkipLink();
@@ -19,8 +24,10 @@ AutoComplete({
   containerId: 'autocomplete-container',
   formId: 'search',
   inputId: 'search-field',
+  onConfirm,
   source,
   templates: {
+    inputValue,
     suggestion,
   },
 });
