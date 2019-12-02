@@ -1,5 +1,9 @@
 # NHS digital service manual Changelog
 
+## 1.13.4 - Unreleased
+
+- Add missing Details component JavaScript polyfill
+
 ## 1.13.3 - 25 November 2019
 
 - Made it clear in PDF guidance that PDFs can be used for a permanent record
