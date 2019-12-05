@@ -2,6 +2,7 @@
 
 ## 1.13.4 - Unreleased
 
+- Add missing Details component JavaScript polyfill
 - Use https on all external links and fix broken link on the test your questions page
 - Remove the unnecessary type attribute from JavaScript resources
 
