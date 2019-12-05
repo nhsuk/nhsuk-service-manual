@@ -6,7 +6,6 @@
 - Use https on all external links and fix broken link on the test your questions page
 - Remove the unnecessary type attribute from JavaScript resources
 
-
 ## 1.13.3 - 25 November 2019
 
 - Made it clear in PDF guidance that PDFs can be used for a permanent record
