@@ -3,6 +3,7 @@ import './polyfills';
 
 // NHS.UK frontend
 import AutoComplete from 'nhsuk-frontend/packages/components/header/autoCompleteConfig';
+import Header from '../../node_modules/nhsuk-frontend/packages/components/header/header';
 import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
 import DesignExample from './design-example';
 import {
@@ -13,6 +14,7 @@ import {
 } from './search';
 
 // Initialise components
+Header();
 SkipLink();
 
 document.querySelectorAll(DesignExample.selector()).forEach((el) => {
