@@ -1,10 +1,11 @@
 # NHS digital service manual Changelog
 
-## 1.13.4 - Unreleased
+## 1.13.4 - 09 December 2019
 
 - Add missing Details component JavaScript polyfill
 - Use https on all external links and fix broken link on the test your questions page
 - Remove the unnecessary type attribute from JavaScript resources
+- Fix broken link to the PDF page on sitemap page
 
 ## 1.13.3 - 25 November 2019
 
