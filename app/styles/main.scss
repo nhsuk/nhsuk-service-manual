@@ -59,3 +59,19 @@
 .nhsuk-lede-text + .nhsuk-lede-text {
   margin-top: - nhsuk-spacing(3);
 }
+
+// Lede sub text
+.nhsuk-lede-text + .app-lede-text--sub {
+  margin-bottom: nhsuk-spacing(7);
+  margin-top: - nhsuk-spacing(3);
+
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(6);
+    margin-top: - nhsuk-spacing(3);
+  }
+}
+
+.app-lede-text--sub + h2,
+.app-lede-text--sub + .nhsuk-heading-l {
+  padding-top: 0;
+}
