@@ -91,3 +91,29 @@ $service-manual-container-size: 1100px;
 .nhsuk-header__navigation {
   max-width: $service-manual-container-size + 64px;
 }
+
+.app-latest-update {
+  padding-bottom: nhsuk-spacing(7);
+  padding-top: nhsuk-spacing(7);
+
+  @include mq($until: desktop) {
+    padding-bottom: nhsuk-spacing(6);
+    padding-top: 0;
+  }
+}
+
+.app-panel--transparent {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover,
+    &:visited {
+      color: $color_nhsuk-grey-5;
+    }
+
+  }
+}
