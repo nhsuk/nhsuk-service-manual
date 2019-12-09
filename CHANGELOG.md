@@ -1,5 +1,14 @@
 # NHS digital service manual Changelog
 
+## 1.13.4 - 09 December 2019
+
+- Add missing Details component JavaScript polyfill
+- Use https on all external links and fix broken link on the test your questions page
+- Remove the unnecessary type attribute from JavaScript resources
+- Fix broken link to the PDF page on sitemap page
+- Update accessibility footer link to accessibility statement
+- Make filter question image decorative using alt null
+
 ## 1.13.3 - 25 November 2019
 
 - Made it clear in PDF guidance that PDFs can be used for a permanent record
