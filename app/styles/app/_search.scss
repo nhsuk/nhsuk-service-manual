@@ -126,3 +126,22 @@
 .app-search-results-item::first-letter {
   text-transform: uppercase;
 }
+.autocomplete__option {
+  text-decoration: none;
+
+  &:focus {
+    .autocomplete__option-title {
+      @include nhsuk-focused-text;
+    }
+  }
+
+  &:hover, &:focus {
+    .autocomplete__option-title {
+      text-decoration: none;
+    }
+  }
+
+  &-title {
+    text-decoration: underline;
+  }
+}
