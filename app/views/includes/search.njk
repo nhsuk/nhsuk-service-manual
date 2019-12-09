@@ -22,11 +22,10 @@
   <article>
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-       <p class="nhsuk-u-margin-bottom-3">
-        {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
-       </p>
-
         {% if results | length > 0 %}
+          <p class="nhsuk-u-margin-bottom-3">
+           {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
+         </p>
           <ul class="nhsuk-list nhsuk-list--border">
             {% for item in results %}
               <li>
