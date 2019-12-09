@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #SIDE-NAV
+   ========================================================================== */
+
+.app-side-nav__heading {
+  @include nhsuk-font(19, $line-height: 1.25);
+  color: $nhsuk-secondary-text-color;
+  margin-bottom: 12px;
+  padding-top: 4px;
+}
+
+.app-side-nav__list {
+  @include nhsuk-responsive-margin(2, 'bottom');
+  @include nhsuk-font(16, $line-height: 1.5);
+}
+
+.app-side-nav__item {
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.app-side-nav__item--current {
+  border-left: 4px solid $color_nhsuk-blue;
+  margin-left: -12px;
+  padding-left: 8px;
+
+  .app-side-nav__link {
+    font-weight: $nhsuk-font-bold;
+  }
+}
+
+.app-side-nav__link {
+  text-decoration: none;
+
+  &:hover {
+    color: $color_nhsuk-blue;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  &:focus {
+    &:hover,
+    &:visited {
+      color: $nhsuk-focus-text-color;
+    }
+  }
+}
