@@ -109,6 +109,10 @@
 
     {% block outerBody %}{% endblock %}
 
+    {%- if beta == 'true' %}
+    {% include 'includes/beta-banner.njk' %}
+    {% endif %}
+
     {% if pageLayout != 'Homepage' %}
     <div class="nhsuk-width-container">
       <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">

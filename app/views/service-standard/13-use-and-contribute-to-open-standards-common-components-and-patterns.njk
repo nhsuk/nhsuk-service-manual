@@ -1,0 +1,54 @@
+{% set pageTitle = '13. Use and contribute to open standards, common components and patterns' %}
+{% set pageSection = 'NHS service standard' %}
+{% set pageDescription = 'Use tried and tested components and patterns from the NHS digital service manual or, failing that, the GOV.UK Design System.' %}
+{% set noFollow = true %}
+{% set beta = 'true' %}
+{% set hideDescription = 'true' %}
+
+{% extends 'includes/app-layout.njk' %}
+
+{% block breadcrumb %}
+  {% include 'service-standard/_breadcrumb.njk' %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p class="nhsuk-lede-text">Use tried and tested components and patterns from the <a href="/service-manual/styles-components-patterns">NHS digital service manual</a> or, failing that, the <a href="https://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
+
+  <p class="nhsuk-lede-text">Use open standards, and propose a new open standard if there is not one that already meets your needs.</p>
+
+  <h2>Why it's important</h2>
+  <p>Using common components and patterns means you do not have to solve problems that have already been solved. By using a component or pattern that’s already been extensively tested, you can provide users with a good experience in a cost effective way.</p>
+  <p>If you develop your own components or patterns, it’s important to share them so that others can benefit from your work.</p>
+
+  <h2>What you should do</h2>
+  <p>Your team should be able to show that you:</p>
+  <ul>
+    <li>build on common NHS styles, patterns and components</li>
+    <li>share details of any new components or patterns you create or adapt (for example, by contributing to the service manual)</li>
+  </ul>
+
+  <p> For more on open standards, see point <a href="/service-manual/service-standard/17-make-your-service-interoperable">17: Make your service interoperable</a>.</p>
+
+  <h2>Guidance</h2>
+  <h3>NHS service manual</h3>
+  <ul>
+    <li><a href="/service-manual/styles-components-patterns">UI styles, components and patterns</a></li>
+    <li><a href="/service-manual/contribute">Contribute to the service manual</a></li>
+  </ul>
+
+  <h3>GOV.UK resources</h3>
+  <ul>
+    <li><a href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
+  </ul>
+
+  <h3>Other help</h3>
+  <ul>
+    <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+  </ul>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: December 2019</p>
+  </div>
+
+{% endblock %}
