@@ -3,7 +3,7 @@
  * @param {string} result String containing individual result from autocomplete source function
  * @returns {string} String of HTML containing passed result
 */
-export const suggestion = ({title}) => {
+export const suggestion = ({ title }) => {
   const truncateLength = 36;
   const dots = title.length > truncateLength ? '...' : '';
   const resultTruncated = title.substring(0, truncateLength) + dots;
