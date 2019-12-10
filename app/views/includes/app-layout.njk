@@ -18,7 +18,11 @@
             {%- if landingPage == 'true' %}
             {% else %}
             <span class="nhsuk-caption-l">
+            {%- if theme %}
+              {{theme}}
+              {% else %}
               {{pageSection}}
+              {% endif %}
               <span class="nhsuk-u-visually-hidden"> - </span>
             </span>
             {% endif %}
