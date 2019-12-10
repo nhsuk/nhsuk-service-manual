@@ -73,9 +73,11 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   const exampleHtml = fileHelper.getHTMLCode(examplePath);
 
   // Wrap the example HTML in a basic html base template.
-  const baseTemplate = displayFullPage
-    ? 'includes/design-example-wrapper.njk'
-    : 'includes/design-example-wrapper-full.njk';
+  var baseTemplate = 'includes/design-example-wrapper.njk';
+  if (displayFullPage) {
+    baseTemplate = 'includes/design-example-wrapper-full.njk';
+  }
+
   res.render(baseTemplate, { body: exampleHtml });
 });
 
