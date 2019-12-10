@@ -1,0 +1,262 @@
+{% set serviceStandard = [
+  { title: "NHS service standard", url: "/service-manual/service-standard" },
+  { title: "About the NHS service standard", url: "/service-manual/service-standard/about" }
+] %}
+
+
+{% set dsPrinciples = [
+  { title: "Design principles", url: "/service-manual/design-system/design-principles" }
+] %}
+
+{% set dsCode = [
+  { title: "Prototyping", url: "/service-manual/design-system/prototyping" },
+  { title: "Production code", url: "/service-manual/design-system/production" }
+] %}
+
+{% set dsDesign = [
+  { title: "Styles", url: "/service-manual/design-system/styles" },
+  { title: "Components", url: "/service-manual/design-system/components" },
+  { title: "Patterns", url: "/service-manual/design-system/patterns" }
+] %}
+
+{% set howto = [
+  { title: "Understanding focus state styles", url: "/service-manual/get-started/understanding-focus-state-styles" }
+] %}
+
+{% set accessibilityEveryone = [
+  { title: "What all NHS services need to do about accessibility", url: "/service-manual/accessibility/what-all-NHS-services-need-to-do" },
+  { title: "How to make digital services accessible", url: "/service-manual/accessibility/how-to-make-digital-services-accessible" },
+  { title: "Getting started with accessibility", url: "/service-manual/accessibility/getting-started" }
+] %}
+
+{% set accessibilityActivities = [
+  { title: "Product and delivery", url: "/service-manual/accessibility/product-and-delivery" },
+  { title: "User research", url: "/service-manual/accessibility/user-research" },
+  { title: "Content", url: "/service-manual/accessibility/content" },
+  { title: "Design", url: "/service-manual/accessibility/design" },
+  { title: "Development", url: "/service-manual/accessibility/development" },
+  { title: "Testing", url: "/service-manual/accessibility/testing" }
+] %}
+
+{% set content = [
+  { title: "How we write", url: "/service-manual/content/how-we-write" },
+  { title: "Voice and tone", url: "/service-manual/content/voice-and-tone" },
+  { title: "Inclusive language", url: "/service-manual/content/inclusive-language" },
+  { title: "A to Z of NHS health writing", url: "/service-manual/content/a-to-z-of-NHS-health-writing" },
+  { title: "Health literacy", url: "/service-manual/content/health-literacy" },
+  { title: "How to write good questions for forms", url: "/service-manual/content/how-to-write-good-questions/" },
+  { title: "Numbers, measurements, dates and time", url: "/service-manual/content/numbers-measurements-dates-time" },
+  { title: "Formatting and punctuation", url: "/service-manual/content/formatting-and-punctuation" },
+  { title: "Links and PDFs", url: "/service-manual/content/links-and-pdfs" }
+] %}
+
+{% set writeGoodQuestions = [
+  { title: "Introduction", url: "/service-manual/content/how-to-write-good-questions/introduction" },
+  { title: "Make sure you need each question", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Consider the sensitivities around your questions", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Use Yes No questions, but be careful", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Get the questions into order", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Think of the form as a conversation", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Write the supporting content for your form", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
+  { title: "Test your questions", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" }
+] %}
+
+{% set styles = [
+  { title: "Colour", url: "/service-manual/styles/colour" },
+  { title: "Icons", url: "/service-manual/styles/icons" },
+  { title: "Layout", url: "/service-manual/styles/layout" },
+  { title: "Spacing", url: "/service-manual/styles/spacing" },
+  { title: "Typography", url: "/service-manual/styles/typography" }
+] %}
+
+{% set navigation = [
+  { title: "Action link", url: "/service-manual/components/action-link" },
+  { title: "Back link", url: "/service-manual/components/back-link" },
+  { title: "Breadcrumbs", url: "/service-manual/components/breadcrumbs" },
+  { title: "Contents list", url: "/service-manual/components/contents-list" },
+  { title: "Footer", url: "/service-manual/components/footer" },
+  { title: "Header", url: "/service-manual/components/header" },
+  { title: "Pagination", url: "/service-manual/components/pagination" },
+  { title: "Skip link", url: "/service-manual/components/skip-link" }
+] %}
+
+{% set contentPresentation = [
+  { title: "Care cards", url: "/service-manual/components/care-cards" },
+  { title: "Details", url: "/service-manual/components/details" },
+  { title: "Do and Don't lists", url: "/service-manual/components/do-and-dont-list" },
+  { title: "Expander", url: "/service-manual/components/expander" },
+  { title: "Images", url: "/service-manual/components/images" },
+  { title: "Inset text", url: "/service-manual/components/inset-text" },
+  { title: "Review date", url: "/service-manual/components/review-date" },
+  { title: "Summary list", url: "/service-manual/components/summary-list" },
+  { title: "Table", url: "/service-manual/components/table" },
+  { title: "Warning callout", url: "/service-manual/components/warning-callout" }
+] %}
+
+{% set formElements = [
+  { title: "Buttons", url: "/service-manual/components/buttons" },
+  { title: "Checkboxes", url: "/service-manual/components/checkboxes" },
+  { title: "Date input", url: "/service-manual/components/date-input" },
+  { title: "Error message", url: "/service-manual/components/error-message" },
+  { title: "Error summary", url: "/service-manual/components/error-summary" },
+  { title: "Fieldset", url: "/service-manual/components/fieldset" },
+  { title: "Radios", url: "/service-manual/components/radios" },
+  { title: "Select", url: "/service-manual/components/select" },
+  { title: "Text input", url: "/service-manual/components/text-input" },
+  { title: "Textarea", url: "/service-manual/components/textarea" }
+] %}
+
+{% set askUsers = [
+  { title: "NHS number", url: "/service-manual/patterns/nhs-number" }
+] %}
+
+{% set pages = [
+  { title: "A to Z", url: "/service-manual/patterns/a-to-z" },
+  { title: "Mini-hub", url: "/service-manual/patterns/mini-hub" }
+] %}
+
+{% set community = [
+  { title: "Backlog", url: "/service-manual/community/backlog" },
+  { title: "Propose a content change using GitHub", url: "/service-manual/community/propose-content-change" },
+  { title: "Propose a component or pattern", url: "/service-manual/community/propose-component-pattern" },
+  { title: "Develop a component or pattern", url: "/service-manual/community/develop-component-pattern" },
+  { title: "Contribution criteria", url: "/service-manual/community/contribution-criteria" },
+  { title: "Working group", url: "/service-manual/community/working-group" }
+] %}
+
+<nav class="app-side-nav">
+
+  {%- if pageSection == 'NHS service standard' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in serviceStandard %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Design system' %}
+    <h2 class="app-side-nav__heading">Principles</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsPrinciples %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Setup guides</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsCode %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Design...</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsDesign %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Accessibility' %}
+    <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in accessibilityEveryoneNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in accessibilityActivitiesNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Content style guide' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in contentNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'How to write good questions for forms' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in writeGoodQuestionsNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Styles, components and patterns' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in stylesComponentsPatternsNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Styles' %}
+    {{ backLink({
+      "href": "/service-manual/design-system",
+      "text": "Design system"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in styles %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Components' %}
+    {{ backLink({
+      "href": "/service-manual/design-system",
+      "text": "Design system"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <h2 class="app-side-nav__heading">Form elements</h2>
+    <ul class="nhsuk-list app-side-nav__list"></li>
+    {% for item in formElements %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Content presentation</h2>
+    <ul class="nhsuk-list app-side-nav__list"></li>
+    {% for item in contentPresentation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Navigation</h2>
+    <ul class="nhsuk-list app-side-nav__list"></li>
+    {% for item in navigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Patterns' %}
+    {{ backLink({
+      "href": "/service-manual/design-system",
+      "text": "Design system"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in patterns %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Community' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in communityNavigation %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

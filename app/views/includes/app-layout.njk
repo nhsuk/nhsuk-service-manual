@@ -4,28 +4,48 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full app-component-reading-width">
 
-    <h1>{{pageTitle}}
-      {%- if experimental == 'true' %}
-      <div>
-        <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
-          Experimental
-        </strong>
-        <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental. We need <a href="#research">more research</a> to validate it.</p>
+    <div class="app-pane">
+
+        <div class="app-pane__side-bar">
+          {% block sideNav %}
+            {% include './side-nav.njk' %}
+          {% endblock %}
+        </div>
+
+        <div class="app-pane__main-content">
+
+          <h1>
+            {%- if landingPage == 'true' %}
+            {% else %}
+            <span class="nhsuk-caption-l">
+              {{pageSection}}
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+            {% endif %}
+            {{pageTitle}}
+            {%- if experimental == 'true' %}
+            <div>
+              <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
+                Experimental
+              </strong>
+              <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental. We need <a href="#research">more research</a> to validate it.</p>
+            </div>
+            {% endif %}
+          </h1>
+
+          {%- if hideDescription == 'true' %}
+          {% else %}
+            <p class="nhsuk-lede-text">{{pageDescription}}</p>
+          {% endif %}
+          {%- if pageSubDescription %}
+            <p class="app-lede-text">{{pageSubDescription}}</p>
+          {% endif %}
+
+          {% block bodyContent %}
+          {% endblock %}
+
+        </div>
       </div>
-      {% endif %}
-    </h1>
-
-    {%- if hideDescription == 'true' %}
-    {% else %}
-    <p class="nhsuk-lede-text">{{pageDescription}}</p>
-    {% endif %}
-    {%- if pageSubDescription %}
-    <p class="app-lede-text">{{pageSubDescription}}</p>
-    {% endif %}
-
-    {% block bodyContent %}
-    {% endblock %}
-
     </div>
   </div>
 {% endblock %}

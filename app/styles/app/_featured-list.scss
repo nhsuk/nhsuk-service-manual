@@ -52,6 +52,10 @@
 
 .featured-list--item__number--mobile {
   display: block;
+
+  @include mq($from: tablet) {
+    display: none;
+  }
 }
 
 .featured-list--item__heading {
