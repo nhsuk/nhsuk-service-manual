@@ -4,7 +4,6 @@
 
 .design-example {
   @include nhsuk-responsive-margin(7, 'bottom');
-  @include nhsuk-responsive-margin(4, 'top');
 
   $root: &;
   position: relative;

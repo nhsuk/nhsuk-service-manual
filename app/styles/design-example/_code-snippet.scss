@@ -11,8 +11,8 @@
 
     &--copy {
       background-color: $color_nhsuk-grey-5;
-      border-bottom-color: $nhsuk-button-shadow-color;
-      box-shadow: 0 $button-shadow-size 0 $nhsuk-button-shadow-color;
+      border-bottom-color: $nhsuk-button-color;
+      box-shadow: 0 $button-shadow-size 0 $nhsuk-button-color;
       margin-bottom: 8px;
       position: static;
 
@@ -55,7 +55,7 @@
 
   &__preformatted {
     align-items: flex-end;
-    border-bottom: 1px solid $color_nhsuk-grey-4;
+    border-bottom: 1px solid $color_nhsuk-grey-3;
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -67,7 +67,7 @@
 }
 
 .app-tabs {
-  border: 1px solid $color_nhsuk-grey-4;
+  border: 1px solid $color_nhsuk-grey-3;
   border-bottom: 0;
   $root: &;
   display: none;
@@ -113,7 +113,7 @@
     }
 
     &--mobile {
-      border: 1px solid $color_nhsuk-grey-4;
+      border: 1px solid $color_nhsuk-grey-3;
       border-width: 1px 0;
       display: block;
       margin: -1px 0;
@@ -126,7 +126,7 @@
     }
 
   &__container {
-    border: 1px solid $color_nhsuk-grey-4;
+    border: 1px solid $color_nhsuk-grey-3;
     border-bottom: 0;
     margin-top: 0;
 

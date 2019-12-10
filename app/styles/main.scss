@@ -129,3 +129,7 @@ $service-manual-container-size: 1100px;
     display: none;
   }
 }
+
+.nhsuk-breadcrumb__link:visited {
+  color: $color_nhsuk-blue;
+}

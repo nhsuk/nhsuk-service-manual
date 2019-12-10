@@ -4,6 +4,10 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'community/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
   <p>The contents of the service manual must be of a high quality and meet user needs. To guarantee this, the service manual has a design working group to check that all components and patterns meet certain criteria.</p>
