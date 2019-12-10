@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -18,10 +14,10 @@
   <p>Use textarea when you want users to enter an amount of text that’s longer than a single line.</p>
 
   <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
-  <p>Users can find open-ended questions difficult to answer. It's usually better to break up 1 complex question into a series of simple ones, for example where users can select from options using <a href="/service-manual/design-system/styles-components-patterns/radios">radios</a>.</p>
+  <p>Users can find open-ended questions difficult to answer. It's usually better to break up 1 complex question into a series of simple ones, for example where users can select from options using <a href="/service-manual/styles-components-patterns/radios">radios</a>.</p>
 
   <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
-  <p>Do not use textarea if you want users to enter single line answer, such as a phone number or name. In this case, you should use <a href="/service-manual/design-system/styles-components-patterns/text-input">text input</a>.</p>
+  <p>Do not use textarea if you want users to enter single line answer, such as a phone number or name. In this case, you should use <a href="/service-manual/styles-components-patterns/text-input">text input</a>.</p>
 
   <h2 id="how-it-works">How to use textarea</h2>
   <h3 id="label-textareas">Label textareas</h3>
@@ -48,7 +44,7 @@
 
   <p>Follow:</p>
   <ul>
-    <li><a href="/service-manual/design-system/styles-components-patterns/error-message">our guidance on error messages</a>
+    <li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a>
     <li><a href="https://design-system.service.gov.uk/components/textarea/#error-messages">GOV.UK design system guidance on textarea error messages</a></li>
   </ul>
 
@@ -73,15 +69,15 @@
   {{ panel({
   "label": "Similar components",
   "HTML": "<ul>
-            <li><a href='/service-manual/design-system/styles-components-patterns/buttons'>Buttons</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/date-input'>Date input</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/error-message'>Error message</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/error-summary'>Error summary</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/fieldset'>Fieldset</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/radios'>Radios</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/select'>Select</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/text-input'>Text input</a></li>
+            <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+            <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
+            <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+            <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+            <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
+            <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
+            <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
+            <li><a href='/service-manual/styles-components-patterns/select'>Select</a></li>
+            <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
           </ul>"
   }) }}
 

@@ -62,57 +62,57 @@
 ] %}
 
 {% set styles = [
-  { title: "Colour", url: "/service-manual/styles/colour" },
-  { title: "Icons", url: "/service-manual/styles/icons" },
-  { title: "Layout", url: "/service-manual/styles/layout" },
-  { title: "Spacing", url: "/service-manual/styles/spacing" },
-  { title: "Typography", url: "/service-manual/styles/typography" }
+  { title: "Colour", url: "/service-manual/design-system/styles/colour" },
+  { title: "Icons", url: "/service-manual/design-system/styles/icons" },
+  { title: "Layout", url: "/service-manual/design-system/styles/layout" },
+  { title: "Spacing", url: "/service-manual/design-system/styles/spacing" },
+  { title: "Typography", url: "/service-manual/design-system/styles/typography" }
 ] %}
 
 {% set navigation = [
-  { title: "Action link", url: "/service-manual/components/action-link" },
-  { title: "Back link", url: "/service-manual/components/back-link" },
-  { title: "Breadcrumbs", url: "/service-manual/components/breadcrumbs" },
-  { title: "Contents list", url: "/service-manual/components/contents-list" },
-  { title: "Footer", url: "/service-manual/components/footer" },
-  { title: "Header", url: "/service-manual/components/header" },
-  { title: "Pagination", url: "/service-manual/components/pagination" },
-  { title: "Skip link", url: "/service-manual/components/skip-link" }
+  { title: "Action link", url: "/service-manual/design-system/components/action-link" },
+  { title: "Back link", url: "/service-manual/design-system/components/back-link" },
+  { title: "Breadcrumbs", url: "/service-manual/design-system/components/breadcrumbs" },
+  { title: "Contents list", url: "/service-manual/design-system/components/contents-list" },
+  { title: "Footer", url: "/service-manual/design-system/components/footer" },
+  { title: "Header", url: "/service-manual/design-system/components/header" },
+  { title: "Pagination", url: "/service-manual/design-system/components/pagination" },
+  { title: "Skip link", url: "/service-manual/design-system/components/skip-link" }
 ] %}
 
 {% set contentPresentation = [
-  { title: "Care cards", url: "/service-manual/components/care-cards" },
-  { title: "Details", url: "/service-manual/components/details" },
-  { title: "Do and Don't lists", url: "/service-manual/components/do-and-dont-list" },
-  { title: "Expander", url: "/service-manual/components/expander" },
-  { title: "Images", url: "/service-manual/components/images" },
-  { title: "Inset text", url: "/service-manual/components/inset-text" },
-  { title: "Review date", url: "/service-manual/components/review-date" },
-  { title: "Summary list", url: "/service-manual/components/summary-list" },
-  { title: "Table", url: "/service-manual/components/table" },
-  { title: "Warning callout", url: "/service-manual/components/warning-callout" }
+  { title: "Care cards", url: "/service-manual/design-system/components/care-cards" },
+  { title: "Details", url: "/service-manual/design-system/components/details" },
+  { title: "Do and Don't lists", url: "/service-manual/design-system/components/do-and-dont-list" },
+  { title: "Expander", url: "/service-manual/design-system/components/expander" },
+  { title: "Images", url: "/service-manual/design-system/components/images" },
+  { title: "Inset text", url: "/service-manual/design-system/components/inset-text" },
+  { title: "Review date", url: "/service-manual/design-system/components/review-date" },
+  { title: "Summary list", url: "/service-manual/design-system/components/summary-list" },
+  { title: "Table", url: "/service-manual/design-system/components/table" },
+  { title: "Warning callout", url: "/service-manual/design-system/components/warning-callout" }
 ] %}
 
 {% set formElements = [
-  { title: "Buttons", url: "/service-manual/components/buttons" },
-  { title: "Checkboxes", url: "/service-manual/components/checkboxes" },
-  { title: "Date input", url: "/service-manual/components/date-input" },
-  { title: "Error message", url: "/service-manual/components/error-message" },
-  { title: "Error summary", url: "/service-manual/components/error-summary" },
-  { title: "Fieldset", url: "/service-manual/components/fieldset" },
-  { title: "Radios", url: "/service-manual/components/radios" },
-  { title: "Select", url: "/service-manual/components/select" },
-  { title: "Text input", url: "/service-manual/components/text-input" },
-  { title: "Textarea", url: "/service-manual/components/textarea" }
+  { title: "Buttons", url: "/service-manual/design-system/components/buttons" },
+  { title: "Checkboxes", url: "/service-manual/design-system/components/checkboxes" },
+  { title: "Date input", url: "/service-manual/design-system/components/date-input" },
+  { title: "Error message", url: "/service-manual/design-system/components/error-message" },
+  { title: "Error summary", url: "/service-manual/design-system/components/error-summary" },
+  { title: "Fieldset", url: "/service-manual/design-system/components/fieldset" },
+  { title: "Radios", url: "/service-manual/design-system/components/radios" },
+  { title: "Select", url: "/service-manual/design-system/components/select" },
+  { title: "Text input", url: "/service-manual/design-system/components/text-input" },
+  { title: "Textarea", url: "/service-manual/design-system/components/textarea" }
 ] %}
 
 {% set askUsers = [
-  { title: "NHS number", url: "/service-manual/patterns/nhs-number" }
+  { title: "NHS number", url: "/service-manual/design-system/patterns/nhs-number" }
 ] %}
 
 {% set pages = [
-  { title: "A to Z", url: "/service-manual/patterns/a-to-z" },
-  { title: "Mini-hub", url: "/service-manual/patterns/mini-hub" }
+  { title: "A to Z", url: "/service-manual/design-system/patterns/a-to-z" },
+  { title: "Mini-hub", url: "/service-manual/design-system/patterns/mini-hub" }
 ] %}
 
 {% set community = [
@@ -245,8 +245,17 @@
       "text": "Design system"
     }) }}
     <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <h2 class="app-side-nav__heading">Ask users for…</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in patterns %}
+    {% for item in askUsers %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Pages</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in pages %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

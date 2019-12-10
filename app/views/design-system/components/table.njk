@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -18,7 +14,7 @@
   <p>Use a table to let users to compare information in rows and columns.</p>
 
   <h2 id="when-not-to-use-this-component">When not to use a table</h2>
-  <p>Do not use a table to layout content on a page. Instead, use the <a href="/service-manual/design-system/styles-components-patterns/grid">grid system</a>.</p>
+  <p>Do not use a table to layout content on a page. Instead, use the <a href="/service-manual/styles-components-patterns/grid">grid system</a>.</p>
 
   <h2 id="how-it-works">How tables work</h2>
   <h3>Accessibility</h3>
@@ -65,11 +61,11 @@
   {{ panel({
   "label": "Similar components",
   "HTML": "<ul>
-            <li><a href='/service-manual/design-system/styles-components-patterns/care-cards'>Care cards</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/do-and-dont-list'>Do and Don't lists</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/images'>Images</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/inset-text'>Inset text</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/warning-callout'>Warning callout</a></li>
+            <li><a href='/service-manual/styles-components-patterns/care-cards'>Care cards</a></li>
+            <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and Don't lists</a></li>
+            <li><a href='/service-manual/styles-components-patterns/images'>Images</a></li>
+            <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
+            <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
           </ul>"
   }) }}
 

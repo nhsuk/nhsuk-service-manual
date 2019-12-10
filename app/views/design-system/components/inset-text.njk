@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -19,8 +15,8 @@
 
   <h2 id="when-not-to-use-inset-text">When not to use inset text</h2>
   <p>Do not use inset text in transactional pages. We haven't tested it there yet.</p>
-  <p>Do not use inset text if you need to tell a user to contact their GP or get medical help. Use a <a href="/service-manual/design-system/styles-components-patterns/care-cards">care card</a> instead.</p>
-  <p>Some users don't notice inset text on complex pages or near to other prominent elements, so we avoid using it for very important information that users need to see. Use a <a href="/service-manual/design-system/styles-components-patterns/warning-callout">warning callout</a> instead if the information:</p>
+  <p>Do not use inset text if you need to tell a user to contact their GP or get medical help. Use a <a href="/service-manual/styles-components-patterns/care-cards">care card</a> instead.</p>
+  <p>Some users don't notice inset text on complex pages or near to other prominent elements, so we avoid using it for very important information that users need to see. Use a <a href="/service-manual/styles-components-patterns/warning-callout">warning callout</a> instead if the information:</p>
   <ul>
     <li>is time critical</li>
     <li>could have a significant effect on someone's health</li>
@@ -55,10 +51,10 @@
   {{ panel({
   "label": "Similar components",
   "HTML": "<ul>
-              <li><a href='/service-manual/design-system/styles-components-patterns/care-cards'>Care cards</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/do-and-dont-list'>Do and Don't lists</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/inset-text'>Inset text</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/warning-callout'>Warning callout</a></li>
+              <li><a href='/service-manual/styles-components-patterns/care-cards'>Care cards</a></li>
+              <li><a href='/service-manual/styles-components-patterns/do-and-dont-list'>Do and Don't lists</a></li>
+              <li><a href='/service-manual/styles-components-patterns/inset-text'>Inset text</a></li>
+              <li><a href='/service-manual/styles-components-patterns/warning-callout'>Warning callout</a></li>
           </ul>"
   }) }}
 

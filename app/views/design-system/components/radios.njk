@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -18,7 +14,7 @@
   <p>Use radios if users can only choose 1 option from a list.</p>
 
   <h2 id="when-not-to-use-this-component">When not to use radios</h2>
-  <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/design-system/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
+  <p>Do not use radios if users might need to select more than 1 option. Use <a href="/service-manual/styles-components-patterns/checkboxes">checkboxes</a> instead.</p>
 
   <h2 id="how-it-works">How to use radios</h2>
   <p>When you're drafting your checkbox options, <a href="/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">beware binary choices</a>. Try testing a 3rd option.</p>
@@ -72,7 +68,7 @@
 
   <p>Follow:</p>
   <ul>
-    <li><a href="/service-manual/design-system/styles-components-patterns/error-message">our guidance on error messages</a></li>
+    <li><a href="/service-manual/styles-components-patterns/error-message">our guidance on error messages</a></li>
     <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li>
   </ul>
 
@@ -93,15 +89,15 @@
   {{ panel({
   "label": "Similar components",
   "HTML": " <ul>
-              <li><a href='/service-manual/design-system/styles-components-patterns/buttons'>Buttons</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/date-input'>Date input</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/error-message'>Error message</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/error-summary'>Error summary</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/select'>Select</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/text-input'>Text input</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/textarea'>Textarea</a></li>
+              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
+              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+              <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+              <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
+              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
+              <li><a href='/service-manual/styles-components-patterns/select'>Select</a></li>
+              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
+              <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
             </ul>"
   }) }}
 

@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
     {{ designExample({
@@ -15,7 +11,7 @@
     }) }}
 
     <h2 id="when-to-use">When to use an error summary</h2>
-    <p>When a user makes a mistake, you must show an error summary at the top of the page as well as an <a href="/service-manual/design-system/styles-components-patterns/error-message">error message</a> next to each answer that contains an error.</p>
+    <p>When a user makes a mistake, you must show an error summary at the top of the page as well as an <a href="/service-manual/styles-components-patterns/error-message">error message</a> next to each answer that contains an error.</p>
     <p>Always show an error summary when there is a validation error, even if there’s only 1 mistake.</p>
 
     <h2 id="how-it-works">How to use an error summary</h2>
@@ -59,14 +55,14 @@
     {{ panel({
     "label": "Similar components",
     "HTML": "<ul>
-              <li><a href='/service-manual/design-system/styles-components-patterns/buttons'>Buttons</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/date-input'>Date input</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/error-message'>Error message</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/fieldset'>Fieldset</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/radios'>Radios</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/text-input'>Text input</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/textarea'>Textarea</a></li>
+              <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+              <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
+              <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+              <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+              <li><a href='/service-manual/styles-components-patterns/fieldset'>Fieldset</a></li>
+              <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
+              <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
+              <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
             </ul>"
     }) }}
 

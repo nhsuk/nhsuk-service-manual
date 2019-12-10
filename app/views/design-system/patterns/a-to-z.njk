@@ -1,12 +1,9 @@
 {% set pageTitle = 'A to Z' %}
-{% set pageSection = 'Components' %}
 {% set pageDescription = 'A to Z is a way of presenting a number of pages alphabetically.' %}
+{% set pageSection = 'Patterns' %}
+{% set theme = 'Pages' %}
 
 {% extends 'includes/app-layout.njk' %}
-
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
 
 {% block bodyContent %}
 
@@ -92,7 +89,7 @@
     {{ panel({
     "label": "Other patterns",
     "HTML": "<ul>
-                <li><a href='/service-manual/design-system/styles-components-patterns/mini-hub'>Mini-hub</a></li>
+                <li><a href='/service-manual/styles-components-patterns/mini-hub'>Mini-hub</a></li>
             </ul>"
     }) }}
   </div>

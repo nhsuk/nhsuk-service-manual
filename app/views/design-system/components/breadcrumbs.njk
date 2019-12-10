@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -27,7 +23,7 @@
 
   <h3>Accessibility</h3>
   <p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use screen readers know what it is.</p>
-  <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/service-manual/design-system/styles-components-patterns/icons">icons</a> to hide them from people who use screen readers.</p>
+  <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/service-manual/styles-components-patterns/icons">icons</a> to hide them from people who use screen readers.</p>
 
   <h2>Research</h2>
   <p>We tested breadcrumbs on pages with lots of content about conditions or medicines. People noticed them and appreciated the context they gave. People also used them to get back to where they came from or to get back home.</p>
@@ -51,8 +47,8 @@
   {{ panel({
     "label": "Similar components",
     "HTML": "<ul>
-                <li><a href='/service-manual/design-system/styles-components-patterns/footer'>Footer</a></li>
-                <li><a href='/service-manual/design-system/styles-components-patterns/header'>Header</a></li>
+                <li><a href='/service-manual/styles-components-patterns/footer'>Footer</a></li>
+                <li><a href='/service-manual/styles-components-patterns/header'>Header</a></li>
             </ul>"
   }) }}
 

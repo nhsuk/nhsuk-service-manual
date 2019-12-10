@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   <h2 id="when-to-use-this-component">When to use a fieldset</h2>
@@ -28,7 +24,7 @@
 
   <h3>Accessibility</h3>
   <p>On question pages containing a group of inputs, include the question as the legend as that helps screenreader users understand that the inputs are all related to that question.</p>
-  <p>Put any important general help text that cannot be written as <a href="/service-manual/design-system/styles-components-patterns/text-input#using-hint-text">hint text</a> in the legend, but try to keep it as concise as possible.</p>
+  <p>Put any important general help text that cannot be written as <a href="/service-manual/styles-components-patterns/text-input#using-hint-text">hint text</a> in the legend, but try to keep it as concise as possible.</p>
 
   <h2>Research</h2>
   <p>If you’ve used this component, get in touch to <a href="/service-manual/contribute">share your user research findings</a>.</p>
@@ -50,14 +46,14 @@
   {{ panel({
   "label": "Similar components",
   "HTML": "<ul>
-            <li><a href='/service-manual/design-system/styles-components-patterns/buttons'>Buttons</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/checkboxes'>Checkboxes</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/date-input'>Date input</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/error-message'>Error message</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/error-summary'>Error summary</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/radios'>Radios</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/text-input'>Text input</a></li>
-            <li><a href='/service-manual/design-system/styles-components-patterns/textarea'>Textarea</a></li>
+            <li><a href='/service-manual/styles-components-patterns/buttons'>Buttons</a></li>
+            <li><a href='/service-manual/styles-components-patterns/checkboxes'>Checkboxes</a></li>
+            <li><a href='/service-manual/styles-components-patterns/date-input'>Date input</a></li>
+            <li><a href='/service-manual/styles-components-patterns/error-message'>Error message</a></li>
+            <li><a href='/service-manual/styles-components-patterns/error-summary'>Error summary</a></li>
+            <li><a href='/service-manual/styles-components-patterns/radios'>Radios</a></li>
+            <li><a href='/service-manual/styles-components-patterns/text-input'>Text input</a></li>
+            <li><a href='/service-manual/styles-components-patterns/textarea'>Textarea</a></li>
           </ul>"
 
   }) }}

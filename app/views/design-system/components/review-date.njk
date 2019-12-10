@@ -4,10 +4,6 @@
 
 {% extends 'includes/app-layout.njk' %}
 
-{% block breadcrumb %}
-  {% include 'styles-components-patterns/_breadcrumb.njk' %}
-{% endblock %}
-
 {% block bodyContent %}
 
   {{ designExample({
@@ -49,9 +45,9 @@
   {{ panel({
   "label": "Similar components",
   "HTML": "<ul>
-              <li><a href='/service-manual/design-system/styles-components-patterns/contents-list'>Contents list</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/pagination'>Pagination</a></li>
-              <li><a href='/service-manual/design-system/styles-components-patterns/skip-link'>Skip link</a></li>
+              <li><a href='/service-manual/styles-components-patterns/contents-list'>Contents list</a></li>
+              <li><a href='/service-manual/styles-components-patterns/pagination'>Pagination</a></li>
+              <li><a href='/service-manual/styles-components-patterns/skip-link'>Skip link</a></li>
             </ul>"
   }) }}
 
