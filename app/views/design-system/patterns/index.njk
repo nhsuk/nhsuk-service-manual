@@ -5,10 +5,18 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'design-system/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
-<p>All of the patterns in this section are supported by written guidance and contain coded examples where possible.</p>
+  <p>All of the patterns in this section are supported by written guidance and contain coded examples where possible.</p>
 
-<p>Patterns often use one or more <a href="/service-manual/design-system/components">components</a> and explain how to adapt them to the&nbsp;context.</p>
+  <p>Patterns often use one or more <a href="/service-manual/design-system/components">components</a> and explain how to adapt them to the&nbsp;context.</p>
+
+  <div class="app-index-navigation app-hide-desktop">
+    {% include 'includes/side-nav.njk' %}
+  </div>
 
 {% endblock %}

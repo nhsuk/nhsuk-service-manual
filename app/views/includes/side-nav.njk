@@ -160,11 +160,6 @@
   {% endif %}
 
     {%- if pageSection == 'Styles' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Design system"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -173,12 +168,6 @@
   {% endif %}
 
   {%- if pageSection == 'Components' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Design system"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
     <h2 class="app-side-nav__heading">Form elements</h2>
     <ul class="nhsuk-list app-side-nav__list"></li>
     {% for item in formElements %}
@@ -202,12 +191,6 @@
   {% endif %}
 
   {%- if pageSection == 'Patterns' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Design system"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
     <h2 class="app-side-nav__heading">Ask users for…</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in askUsers %}
@@ -255,12 +238,6 @@
   {% endif %}
 
   {%- if pageSection == 'How to write good questions for forms' %}
-    {{ backLink({
-      "href": "/service-manual/content",
-      "text": "Content style guide"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
     <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
@@ -270,12 +247,6 @@
   {% endif %}
 
   {%- if pageSection == 'Health literacy' %}
-    {{ backLink({
-      "href": "/service-manual/content/health-literacy",
-      "text": "Health literacy"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in healthLiteracy %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>

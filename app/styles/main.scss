@@ -117,3 +117,15 @@ $service-manual-container-size: 1100px;
 
   }
 }
+
+.app-hide-mobile {
+  @include mq($until: desktop) {
+    display: none;
+  }
+}
+
+.app-hide-desktop {
+  @include mq($from: desktop) {
+    display: none;
+  }
+}

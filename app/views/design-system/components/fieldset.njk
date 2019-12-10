@@ -4,6 +4,10 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'design-system/components/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2 id="when-to-use-this-component">When to use a fieldset</h2>

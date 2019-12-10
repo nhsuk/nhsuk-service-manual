@@ -7,24 +7,12 @@
 
 {% block bodyContent %}
 
-  <h2>What everyone needs to know</h2>
-  <ul class="nhsuk-list">
-    <li><a href="/service-manual/accessibility/what-all-NHS-services-need-to-do">What all NHS services need to do about accessibility</a></li>
-    <li><a href="/service-manual/accessibility/how-to-make-digital-services-accessible">How to make digital services accessible</a></li>
-    <li><a href="/service-manual/accessibility/getting-started">Getting started with accessibility</a></li>
-  </ul>
+  <h2 id="accessibility-and-the-law">Accessibility and the law</h2>
+  <p>If your service isn’t accessible to everyone who needs it, you may be breaking the <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">2010 Equality Act</a>.</p>
+  <p>New accessibility regulations say that public sector websites must meet accessibility standards and publish an accessibility statement. You can find out <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">more about the new regulations on GOV.UK</a>.</p>
 
-  <h2>Guidance for different activities</h2>
-  <p>Everyone who works on NHS digital services has a role to play in making them accessible and inclusive.</p>
-  <ul class="nhsuk-list">
-    <li><a href="/service-manual/accessibility/product-and-delivery">Product and delivery</a></li>
-    <li><a href="/service-manual/accessibility/user-research">User research</a></li>
-    <li><a href="/service-manual/accessibility/content">Content</a></li>
-    <li><a href="/service-manual/accessibility/design">Design</a></li>
-    <li><a href="/service-manual/accessibility/development">Development</a></li>
-    <li><a href="/service-manual/accessibility/testing">Testing</a></li>
-  </ul>
-
-  {% include './partials/get-in-touch-accessibility.njk' %}
+  <div class="app-index-navigation app-hide-desktop">
+    {% include 'includes/side-nav.njk' %}
+  </div>
 
 {% endblock %}

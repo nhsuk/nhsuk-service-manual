@@ -5,10 +5,18 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'design-system/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
-<p>If you are using the <a href="#">NHS.UK prototype kit</a> or have <a href="">NHS.UK frontend</a> included in your build, the coded examples in the Design System will not need any additional styling.</p>
+  <p>If you are using the <a href="#">NHS.UK prototype kit</a> or have <a href="">NHS.UK frontend</a> included in your build, the coded examples in the Design System will not need any additional styling.</p>
 
-<p>If you need to apply styles manually, you should still follow existing NHS.UK conventions. For example, do not assign new meanings to colours, do not change the style of buttons or adjust the thickness of borders on form inputs.</p>
+  <p>If you need to apply styles manually, you should still follow existing NHS.UK conventions. For example, do not assign new meanings to colours, do not change the style of buttons or adjust the thickness of borders on form inputs.</p>
+
+  <div class="app-index-navigation app-hide-desktop">
+    {% include 'includes/side-nav.njk' %}
+  </div>
 
 {% endblock %}

@@ -4,6 +4,10 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'design-system/components/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
   <p>We have 3 care cards for 3 levels of urgency:</p>
