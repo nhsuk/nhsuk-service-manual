@@ -7,29 +7,24 @@
 
 {% block bodyContent %}
 
-  <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
-    <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">Download the NHS.UK prototype kit</a>
-  </h2>
-  <p>Build interactive prototypes that look like the NHS website.</p>
+  <h2 id="before-you-start">Before you start</h2>
+  <p>To make prototypes you will need to install the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a> which has been built to work with the service manual.</p>
 
-  <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-3">
-    <a href="https://github.com/nhsuk/nhsuk-sketch-file">Download the NHS.UK Sketch files on GitHub</a>
-  </h2>
-  <p>Mock up NHS services faster.</p>
+  <h2 id="styling-page-elements">Styling page elements</h2>
+  <p>The service manual provides lots of new CSS classes for styling page elements, so you should not need to write as much of your own Sass or CSS.</p>
+  <p>Explore the <a href="/service-manual/design-system/styles/">Styles</a> section of the service manual to see what classes are available and how to apply them.</p>
 
-  <h2>What is the prototype kit?</h2>
-  <p>It’s a collection of HTML files and templates that will help you build prototypes of services with an NHS look and feel. It will help you create something quickly that you can test so you can improve your ideas.</p>
-  <p>Prototyping in code will help you make realistic, accessible interactive HTML prototypes that can be accessed on multiple devices.</p>
-  <p>The <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">prototype kit</a> uses the code in the <a href="/service-manual/frontend-library">NHS.UK frontend library</a>.</p>
+  <h2 id="using-components">Using components</h2>
+  <p>Components are reusable parts of the user interface, like buttons, text inputs and checkboxes. The components in the service manual are designed to be accessible and responsive.</p>
+  <p>There are 2 ways to use components in the service manual. You can either use HTML or a Nunjucks macro.</p>
+  <p>You can copy the code from the HTML or Nunjucks tabs below any examples:</p>
 
-  <h2>Sketch file</h2>
-  <p><a href="https://www.sketchapp.com/">Sketch</a> is a design tool. You can use the <a href="https://github.com/nhsuk/nhsuk-sketch-file">NHS.UK Sketch file</a> to create static mockups to test with users.
+  {{ designExample({
+    type: 'button'
+  }) }}
 
-  <h2>Get in touch</h2>
-  <p>Join us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">NHS digital service manual Slack workspace</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
-
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2019</p>
-  </div>
+  <h2 id="using-nunjucks-macros">Using Nunjucks macros</h2>
+  <p>A Nunjucks macro is a simple template that generates more complex HTML. However, macros are more sensitive to mistakes than HTML, so it’s worth saving and previewing.</p>
+  <p>When using Nunjucks macros in the prototype kit leave out the first line that starts with <code>% from ...</code>.</p>
 
 {% endblock %}
