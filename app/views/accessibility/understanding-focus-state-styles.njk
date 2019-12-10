@@ -5,6 +5,10 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'accessibility/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2>What is a focus state?</h2>
