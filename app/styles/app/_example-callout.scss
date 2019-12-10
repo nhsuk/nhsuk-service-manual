@@ -5,7 +5,6 @@
 .app-example {
   @include top-and-bottom;
   @include nhsuk-responsive-margin(5, 'bottom');
-  @include nhsuk-responsive-margin(2, 'top');
   @include nhsuk-responsive-padding(5, 'bottom');
   @include nhsuk-responsive-padding(5, 'left');
   @include nhsuk-responsive-padding(5, 'right');
@@ -37,7 +36,6 @@
 // Image example
 .app-example--image {
   @include nhsuk-responsive-margin(4, 'bottom');
-  @include nhsuk-responsive-margin(2, 'top');
 
   & + h2 {
     @include nhsuk-responsive-padding(4, 'top');
