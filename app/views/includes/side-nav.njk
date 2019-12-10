@@ -19,10 +19,6 @@
   { title: "Patterns", url: "/service-manual/design-system/patterns" }
 ] %}
 
-{% set howto = [
-  { title: "Understanding focus state styles", url: "/service-manual/get-started/understanding-focus-state-styles" }
-] %}
-
 {% set accessibilityEveryone = [
   { title: "What all NHS services need to do about accessibility", url: "/service-manual/accessibility/what-all-NHS-services-need-to-do" },
   { title: "How to make digital services accessible", url: "/service-manual/accessibility/how-to-make-digital-services-accessible" },
@@ -36,6 +32,10 @@
   { title: "Design", url: "/service-manual/accessibility/design" },
   { title: "Development", url: "/service-manual/accessibility/development" },
   { title: "Testing", url: "/service-manual/accessibility/testing" }
+] %}
+
+{% set accessibilityGuides = [
+  { title: "Understanding focus state styles", url: "/service-manual/accessibility/understanding-focus-state-styles" }
 ] %}
 
 {% set content = [
@@ -163,60 +163,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Accessibility' %}
-    <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in accessibilityEveryone %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in accessibilityActivities %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if pageSection == 'Content style guide' %}
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in content %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if pageSection == 'How to write good questions for forms' %}
-    {{ backLink({
-      "href": "/service-manual/content",
-      "text": "Content style guide"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
-    <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in writeGoodQuestions %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if pageSection == 'Health literacy' %}
-    {{ backLink({
-      "href": "/service-manual/content/health-literacy",
-      "text": "Health literacy"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in healthLiteracy %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if pageSection == 'Styles' %}
+    {%- if pageSection == 'Styles' %}
     {{ backLink({
       "href": "/service-manual/design-system",
       "text": "Design system"
@@ -275,6 +222,66 @@
     <h2 class="app-side-nav__heading">Pages</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in pages %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Accessibility' %}
+    <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in accessibilityEveryone %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in accessibilityActivities %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">How to guides</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in accessibilityGuides %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Content style guide' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in content %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'How to write good questions for forms' %}
+    {{ backLink({
+      "href": "/service-manual/content",
+      "text": "Content style guide"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in writeGoodQuestions %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Health literacy' %}
+    {{ backLink({
+      "href": "/service-manual/content/health-literacy",
+      "text": "Health literacy"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in healthLiteracy %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
