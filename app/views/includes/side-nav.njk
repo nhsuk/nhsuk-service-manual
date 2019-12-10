@@ -160,14 +160,14 @@
   {%- if pageSection == 'Accessibility' %}
     <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in accessibilityEveryoneNavigation %}
+    {% for item in accessibilityEveryone %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
 
     <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in accessibilityActivitiesNavigation %}
+    {% for item in accessibilityActivities %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
@@ -175,7 +175,7 @@
 
   {%- if pageSection == 'Content style guide' %}
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in contentNavigation %}
+    {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
@@ -183,15 +183,7 @@
 
   {%- if pageSection == 'How to write good questions for forms' %}
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in writeGoodQuestionsNavigation %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if pageSection == 'Styles, components and patterns' %}
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in stylesComponentsPatternsNavigation %}
+    {% for item in writeGoodQuestions %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
@@ -263,7 +255,7 @@
 
   {%- if pageSection == 'Community' %}
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in communityNavigation %}
+    {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
