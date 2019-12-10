@@ -2,6 +2,7 @@
 {% set pageDescription = 'Make your service look and feel like NHS.UK.' %}
 {% set pageSection = 'Styles' %}
 {% set landingPage = 'true' %}
+{% set hideDescription = 'true' %}
 
 {% extends 'includes/app-layout.njk' %}
 
@@ -10,6 +11,8 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+  <p>{{pageDescription}}</p>
 
   <p>If you are using the <a href="#">NHS.UK prototype kit</a> or have <a href="">NHS.UK frontend</a> included in your build, the coded examples in the Design System will not need any additional styling.</p>
 
