@@ -11,12 +11,12 @@
 
 .app-side-nav__list {
   @include nhsuk-responsive-margin(2, 'bottom');
-  @include nhsuk-font(16, $line-height: 1.5);
+  @include nhsuk-font(16, $line-height: 1.3);
 }
 
 .app-side-nav__item {
-  padding-bottom: 2px;
-  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .app-side-nav__item--current {

@@ -62,6 +62,11 @@
   { title: "Test your questions", url: "/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions" }
 ] %}
 
+{% set healthLiteracy = [
+  { title: "Use a readability tool to prioritise content", url: "/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content" }
+] %}
+
+
 {% set styles = [
   { title: "Colour", url: "/service-manual/design-system/styles/colour" },
   { title: "Icons", url: "/service-manual/design-system/styles/icons" },
@@ -192,6 +197,20 @@
     <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Health literacy' %}
+    {{ backLink({
+      "href": "/service-manual/content/health-literacy",
+      "text": "Health literacy"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in healthLiteracy %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
