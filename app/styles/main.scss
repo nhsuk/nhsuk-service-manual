@@ -104,11 +104,11 @@ $service-manual-container-size: 1100px;
 
 .app-panel--transparent {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid $color_nhsuk-white;
+  color: $color_nhsuk-white;
 
   a {
-    color: white;
+    color: $color_nhsuk-white;
 
     &:hover,
     &:visited {
