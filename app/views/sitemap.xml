@@ -17,7 +17,7 @@
     <loc>https://beta.nhs.uk/service-manual/content</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components</loc>
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/frontend-library</loc>
@@ -95,115 +95,115 @@
     <loc>https://beta.nhs.uk/service-manual/content/links-and-pdfs</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/colour</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/styles/colour</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/icons</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/styles/icons</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/layout</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/styles/layout</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/spacing</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/styles/spacing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/typography</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/styles/typography</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/action-link</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/action-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/back-link</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/back-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/breadcrumbs</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/breadcrumbs</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/buttons</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/buttons</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/care-cards</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/care-cards</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/checkboxes</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/checkboxes</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/contents-list</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/contents-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/date-input</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/date-input</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/details</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/details</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/do-and-dont-list</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/do-and-dont-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/error-message</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/error-message</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/error-summary</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/error-summary</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/expander</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/expander</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/fieldset</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/fieldset</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/footer</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/footer</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/header</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/header</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/images</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/images</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/inset-text</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/inset-text</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/pagination</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/pagination</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/radios</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/radios</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/review-date</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/review-date</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/select</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/select</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/skip-link</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/skip-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/summary-list</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/summary-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/table</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/table</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/text-input</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/text-input</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/textarea</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/textarea</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/warning-callout</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/warning-callout</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/a-to-z</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/patterns/a-to-z</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/nhs-number</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/patterns/nhs-number</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/mini-hub</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/patterns/mini-hub</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/understanding-focus-state-styles</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/components/understanding-focus-state-styles</loc>
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/contribute/contribution-criteria</loc>
