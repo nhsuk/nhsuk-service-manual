@@ -44,21 +44,22 @@
   { title: "Inclusive language", url: "/service-manual/content/inclusive-language" },
   { title: "A to Z of NHS health writing", url: "/service-manual/content/a-to-z-of-NHS-health-writing" },
   { title: "Health literacy", url: "/service-manual/content/health-literacy" },
-  { title: "How to write good questions for forms", url: "/service-manual/content/how-to-write-good-questions/" },
+  { title: "How to write good questions for forms", url: "/service-manual/content/how-to-write-good-questions-for-forms" },
   { title: "Numbers, measurements, dates and time", url: "/service-manual/content/numbers-measurements-dates-time" },
   { title: "Formatting and punctuation", url: "/service-manual/content/formatting-and-punctuation" },
   { title: "Links and PDFs", url: "/service-manual/content/links-and-pdfs" }
 ] %}
 
 {% set writeGoodQuestions = [
-  { title: "Introduction", url: "/service-manual/content/how-to-write-good-questions/introduction" },
-  { title: "Make sure you need each question", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Consider the sensitivities around your questions", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Use Yes No questions, but be careful", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Get the questions into order", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Think of the form as a conversation", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Write the supporting content for your form", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" },
-  { title: "Test your questions", url: "/service-manual/content/how-to-write-good-questions/make-sure-you-need-each-question" }
+  { title: "Introduction", url: "/service-manual/content/how-to-write-good-questions-for-forms" },
+  { title: "Understand the problem before you write your questions", url: "/service-manual/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions" },
+  { title: "Make sure you need each question", url: "/service-manual/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question" },
+  { title: "Consider the sensitivities around your questions", url: "/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions" },
+  { title: "Use filter questions to route users", url: "/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users" },
+  { title: "Get the questions into order", url: "/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order" },
+  { title: "Think of the form as a conversation", url: "/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation" },
+  { title: "Write the supporting content for your form", url: "/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form" },
+  { title: "Test your questions", url: "/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions" }
 ] %}
 
 {% set styles = [
@@ -182,6 +183,13 @@
   {% endif %}
 
   {%- if pageSection == 'How to write good questions for forms' %}
+    {{ backLink({
+      "href": "/service-manual/content",
+      "text": "Content style guide"
+    }) }}
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
