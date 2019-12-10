@@ -97,7 +97,7 @@
 
     &:focus {
       background-color: $nhsuk-focus-color;
-      border-bottom: 4px solid #212b32;
+      border-bottom: 4px solid $nhsuk-text-color;
 
       .nhsuk-icon__search {
         fill: $nhsuk-focus-text-color;
@@ -136,7 +136,8 @@
     }
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .autocomplete__option-title {
       text-decoration: none;
     }
