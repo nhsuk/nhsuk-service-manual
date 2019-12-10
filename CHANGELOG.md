@@ -6,6 +6,10 @@
 
 - Add search functionality to the service manual
 
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 1.13.4 - 09 December 2019
 
 :wrench: **Fixes**
