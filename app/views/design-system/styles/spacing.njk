@@ -8,6 +8,32 @@
   {% include 'design-system/styles/_breadcrumb.njk' %}
 {% endblock %}
 
+{% block sideNav %}
+<nav class="app-side-nav">
+
+  <ul class="nhsuk-list app-side-nav__list">
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/colour">Colour</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/icons">Icons</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/layout">Layout</a></li>
+
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/design-system/styles/spacing">Spacing</a>
+      <ul class="app-side-nav__list app-side-nav__list--nested">
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-scale">The responsive spacing scale</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-override-classes">Spacing on custom components</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
+      </ul>
+    </li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/typography">Typography</a></li>
+
+  </ul>
+
+</nav>
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2 id="spacing-scale">The responsive spacing scale</h2>

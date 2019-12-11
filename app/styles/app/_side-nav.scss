@@ -48,3 +48,24 @@
     }
   }
 }
+
+.app-side-nav__list--nested {
+  @include nhsuk-responsive-margin(2, 'bottom');
+  @include nhsuk-responsive-margin(3, 'top');
+
+  .app-side-nav__item {
+    @include nhsuk-font(16, $line-height: 1.3);
+    list-style: none;
+  }
+
+  .app-side-nav__link {
+    font-weight: 400;
+  }
+}
+
+.app-side-nav__list--nested .app-side-nav__item::before {
+  content: "—";
+  color: $color_nhsuk-grey-3;
+  margin-left: -20px;
+  margin-right: 4px;
+}

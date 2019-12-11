@@ -9,6 +9,36 @@
   {% include 'design-system/styles/_breadcrumb.njk' %}
 {% endblock %}
 
+{% block sideNav %}
+<nav class="app-side-nav">
+
+  <ul class="nhsuk-list app-side-nav__list">
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/colour">Colour</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/icons">Icons</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/layout">Layout</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/spacing">Spacing</a></li>
+
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/design-system/styles/typography">Typography</a>
+      <ul class="app-side-nav__list app-side-nav__list--nested">
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#font">Font</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#headings">Headings</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#paragraphs">Paragraphs</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#font-override-classes">Font override classes</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#links">Links</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#lists">Lists</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#section-break">Section break</a></li>
+      </ul>
+    </li>
+
+  </ul>
+
+</nav>
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2 id="font">Font</h2>
@@ -79,7 +109,7 @@
     htmlOnly: true
   }) }}
 
-  <h2 id="lists">Links</h2>
+  <h2 id="links">Links</h2>
   <p>Links are blue and underlined by default with a <a href="/service-manual/design-system/components/understanding-focus-state-styles">styled focus state</a> for people who use keyboards or other devices to navigate through a page.</p>
   <p>If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.</p>
 
