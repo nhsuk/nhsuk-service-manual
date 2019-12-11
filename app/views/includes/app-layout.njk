@@ -48,6 +48,13 @@
           {% block bodyContent %}
           {% endblock %}
 
+          {% block contactPanel %}
+            {%- if landingPage == 'true' %}
+            {% else %}
+              {% include './contact-panel.njk' %}
+            {% endif %}
+          {% endblock %}
+
         </div>
       </div>
     </div>
