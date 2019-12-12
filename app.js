@@ -16,7 +16,7 @@ const locals = require('./app/locals');
 const routing = require('./middleware/routing.js');
 const PageIndex = require('./middleware/page-index.js');
 
-var pageIndex = new PageIndex(config);
+const pageIndex = new PageIndex(config);
 
 // Initialise applications
 const app = express();
@@ -65,7 +65,7 @@ env.addFilter('highlight', (code, language) => {
 
 // Render standalone design examples
 app.get('/service-manual/design-example/:example', (req, res) => {
-  const displayFullPage = req.query.fullpage === "true";
+  const displayFullPage = req.query.fullpage === 'true';
   const example = req.params.example;
   const examplePath = path.join(__dirname, `/app/components/${example}.njk`);
 
@@ -74,47 +74,67 @@ app.get('/service-manual/design-example/:example', (req, res) => {
 
   // Wrap the example HTML in a basic html base template.
   var baseTemplate = 'includes/design-example-wrapper.njk';
-  if(displayFullPage) {
+  if (displayFullPage) {
     baseTemplate = 'includes/design-example-wrapper-full.njk';
   }
+
   res.render(baseTemplate, { body: exampleHtml });
 });
 
-/*
 app.get('/service-manual/search', (req, res) => {
-  var query = req.query['search-field'] || '';
-  res.render('includes/search.njk', { results: pageIndex.search(query), query: query });
+  const query = req.query['search-field'] || '';
+  const resultsPerPage = 10;
+  let currentPage = parseInt(req.query.page, 10);
+  const results = pageIndex.search(query);
+  const maxPage = Math.ceil(results.length / resultsPerPage);
+  if (!Number.isInteger(currentPage)) {
+    currentPage = 1;
+  } else if (currentPage > maxPage || currentPage < 1) {
+    currentPage = 1;
+  }
+
+  const startingIndex = resultsPerPage * (currentPage - 1);
+  const endingIndex = startingIndex + resultsPerPage;
+
+  res.render('includes/search.njk', {
+    currentPage,
+    maxPage,
+    query,
+    results: results.slice(startingIndex, endingIndex),
+    resultsLen: results.length,
+  });
 });
 
 app.get('/service-manual/suggestions', (req, res) => {
+  const results = pageIndex.search(req.query.search);
+  const slicedResults = results.slice(0, 10);
   res.set({ 'Content-Type': 'application/json' });
-  res.send(JSON.stringify(pageIndex.search(req.query.search)));
+  res.send(JSON.stringify(slicedResults));
 });
-*/
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.redirect('/service-manual');
 });
 
 // The practices pages have moved or been deleted
 // Temporary redirects incase anyone still visits /practices pages
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (req, res) => {
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (_, res) => {
   res.redirect('/service-manual/content/health-literacy');
 });
 
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
+app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (_, res) => {
   res.redirect('/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content');
 });
 
-app.get('/service-manual/practices', (req, res) => {
+app.get('/service-manual/practices', (_, res) => {
   res.redirect('/service-manual');
 });
 
-app.get('/service-manual/practices/make-your-service-accessible', (req, res) => {
+app.get('/service-manual/practices/make-your-service-accessible', (_, res) => {
   res.redirect('/service-manual/accessibility');
 });
 
-app.get('/service-manual/content/writing-for-accessibility', (req, res) => {
+app.get('/service-manual/content/writing-for-accessibility', (_, res) => {
   res.redirect('/service-manual/accessibility/content');
 });
 
@@ -124,19 +144,19 @@ app.get(/^([^.]+)$/, (req, res, next) => {
 });
 
 // Render sitemap.xml in XML format
-app.get('/service-manual/sitemap.xml', (req, res) => {
+app.get('/service-manual/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
 
 // Render robots.txt in text format
-app.get('/service-manual/robots.txt', (req, res) => {
+app.get('/service-manual/robots.txt', (_, res) => {
   res.set('text/plain');
   res.render('robots.txt');
 });
 
 // Render 404 page
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.statusCode = 404;
   res.render('page-not-found');
 });
@@ -157,10 +177,8 @@ if (config.env === 'development') {
   app.listen(config.port);
 }
 
-/*
-setTimeout(function(){
+setTimeout(() => {
   pageIndex.init();
 }, 2000);
-*/
 
 module.exports = app;

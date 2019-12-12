@@ -1,17 +1,82 @@
+// Page specific 
 const additionalIndices = {
-  '/service-manual/accessibility/testing': [ 'svg' ]
+  '/service-manual/accessibility/testing': ['svg'],
+  '/service-manual/styles-components-patterns': ['elements'],
+  '/service-manual/styles-components-patterns/action-link': ['call to action, cta'],
+  '/service-manual/styles-components-patterns/back-link': ['return link, back button'],
+  '/service-manual/styles-components-patterns/breadcrumbs': ['navigation path, cookie crumb'],
+  '/service-manual/styles-components-patterns/care-cards': ['non-urgent care card, blue care card, red care card, immediate care card, emergency care card'],
+  '/service-manual/styles-components-patterns/checkboxes': ['check boxes, tickboxes, tick boxes'],
+  '/service-manual/styles-components-patterns/colour': ['palette'],
+  '/service-manual/styles-components-patterns/details': ['reveal, progressive disclosure, hidden text, show and hide'],
+  '/service-manual/styles-components-patterns/error-message': ['validation message'],
+  '/service-manual/styles-components-patterns/expander': ['reveal, accordion'],
+  '/service-manual/styles-components-patterns/header': ['banner'],
+  '/service-manual/styles-components-patterns/images': ['pictures, photos'],
+  '/service-manual/styles-components-patterns/inset-text': ['information, highlighted text, callout'],
+  '/service-manual/styles-components-patterns/layout': ['grid'],
+  '/service-manual/styles-components-patterns/pagination': ['previous page, next page'],
+  '/service-manual/styles-components-patterns/radios': ['radio buttons, option buttons'],
+  '/service-manual/styles-components-patterns/review-date': ['date updated'],
+  '/service-manual/styles-components-patterns/select': ['drop down menu, list box, drop down list, combo box, pop-up menu'],
+  '/service-manual/styles-components-patterns/skip-link': ['skip to body content, Skip navigation link'],
+  '/service-manual/styles-components-patterns/spacing': ['margin, padding'],
+  '/service-manual/styles-components-patterns/summary-list': ['definition list'],
+  '/service-manual/styles-components-patterns/text-input': ['text box, text field, input field, text entry box'],
+  '/service-manual/styles-components-patterns/textarea': ['big text box, multi-line text box, multi-line text field'],
+  '/service-manual/styles-components-patterns/typography': ['fonts'],
+  '/service-manual/styles-components-patterns/warning-callout': ['yellow callout, warning box, important'],
 };
 
-
+// Term specific
 const alternativeSpelling = {
-  'alzheimer’s': [ 'alzheimers', 'alzheimer' ],
-  'fever': [ 'temperature' ],
-  'temperature': [ 'fever' ]
+  'components': ['elements'],
+  'alzheimer’s': ['alzheimers', 'alzheimer'],
+  'fever': ['temperature'],
+  'temperature': ['fever'], 
+  'foetus': ['fetus'],
+  'A&E': ['accident and emergency'],
+  'ageing': ['aging'],
+  'alzheimer’s disease': ['Alzheimers disease'],
+  '&': ['ampersand'],
+  'breast milk': ['breastmilk'],
+  'dietitian': ['dietician'],
+  '5 A Day': ['Five A Day'],
+  'faeces': ['feces'],
+  'flu': ['influenza'],
+  'GP surgery': ['GP practice'],
+  'haemorrhage': ['hemorrhage'],
+  'healthcare': ['health care'],
+  'home help': ['homehelp'],
+  'ie': ['i.e.'],
+  'eg': ['e.g.'],
+  'immunisation': ['immunization'],
+  'inpatient': ['in-patient'],
+  'lip-reading ': ['lipreading'],
+  'mad cow disease': ['mad cow’s disease'],
+  'microgram': ['mcg'],
+  'OK': ['okay'],
+  'organisations': ['organizations'],
+  'outpatient': ['out-patient'],
+  'PMS (premenstrual syndrome)': ['pre-menstrual syndrome'],
+  'practice': ['practise'],
+  'preconception care': ['pre-conception care'],
+  'summary care record': ['SCR'],
+  'tranquillise': ['tranquillize'],
+  'tranquilliser': ['tranqullizer'],
+  'urinary tract infections': ['UTIs'],
+  'STI': ['STD'],
+  'walk-in centre': ['walk in centre'],
+  'wellbeing': ['well-being'],
+  'X-ray': ['xray'],
+  'zimmer frame': ['zimmerframe'],
+  'filter questions': ['branch questions, Yes and No questions'],
+  'sensitivities': ['sensitive questions'],
 };
 
 const indexBlacklist = [
   '/service-manual/',
-  'https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh'
+  'https://nhsdigital.eu.qualtrics.com/jfe/form/SV_4SKczWOHvnneiWh',
 ];
 
 module.exports = { additionalIndices, alternativeSpelling, indexBlacklist };

@@ -12,7 +12,7 @@ test('test parse page description', () => {
   var pageData = '<meta name="description" content="Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.">'
   const $ = cheerio.load(pageData)
 
-  expect(pageIndex._parseDescription($)).toBe('Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.')
+  expect(pageIndex.parseDescription($)).toBe('Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.')
 })
 
 
@@ -22,14 +22,14 @@ test('test get index', () => {
   const $ = cheerio.load(pageData)
   const expectedIndex = 'test fever temperature'
 
-  expect(pageIndex._getIndex($, 'h2')).toBe(expectedIndex)
+  expect(pageIndex.getIndex($, 'h2')).toBe(expectedIndex)
 })
 
 test('test get alt list', () => {
   var list = [ 'fever' ]
   var pageIndex = new PageIndex(config)
 
-  expect(pageIndex._getAltList(list)).toEqual([ 'temperature' ])
+  expect(pageIndex.getAltList(list)).toEqual([ 'temperature' ])
 })
 
 
@@ -38,5 +38,5 @@ test('test parse page title', () => {
   var pageData = '<h1>title</h1><div id="maincontent"><h1>title2</h1></div>'
   const $ = cheerio.load(pageData)
 
-  expect(pageIndex._parsePageHeadings($, 'h1')).toEqual(['title2'])
+  expect(pageIndex.parsePageHeadings($, 'h1')).toEqual(['title2'])
 })
