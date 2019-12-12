@@ -19,6 +19,9 @@
     {% else %}
     <p class="nhsuk-lede-text">{{pageDescription}}</p>
     {% endif %}
+    {%- if pageSubDescription %}
+    <p class="app-lede-text">{{pageSubDescription}}</p>
+    {% endif %}
 
     {% block bodyContent %}
     {% endblock %}

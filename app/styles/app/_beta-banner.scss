@@ -1,0 +1,24 @@
+/* ==========================================================================
+   #BETA-BANNER
+   ========================================================================== */
+
+.app-beta__container {
+  border-bottom: 1px solid $nhsuk-border-color;
+  padding: nhsuk-spacing(2) 0;
+}
+
+.app-beta__content {
+  display: table;
+  margin-bottom: 0;
+
+  .app-beta__tag {
+    display: block;
+    margin-right: nhsuk-spacing(2);
+  }
+}
+
+.app-beta__text {
+  @include nhsuk-font($size: 16, $line-height: 1.2);
+  display: table-cell;
+  vertical-align: baseline;
+}
