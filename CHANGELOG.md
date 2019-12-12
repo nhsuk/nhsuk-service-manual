@@ -6,6 +6,10 @@
 
 - Add search functionality to the service manual
 
+:new: **New content**
+
+- NHS service standard 
+
 :wrench: **Fixes**
 
 - Update package dependencies to latest versions
