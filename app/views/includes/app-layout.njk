@@ -55,6 +55,12 @@
             {% endif %}
           {% endblock %}
 
+          {%- if dateUpdated %}
+          <div class="nhsuk-review-date">
+            <p class="nhsuk-body-s">Updated: {{dateUpdated}}</p>
+          </div>
+          {% endif %}
+
         </div>
       </div>
     </div>
