@@ -155,11 +155,6 @@ app.get('/service-manual/robots.txt', (_, res) => {
   res.render('robots.txt');
 });
 
-// Reindex the search results
-app.get('/service-manual/scrape', (_, res) => {
-  pageIndex.init();
-});
-
 // Render 404 page
 app.get('*', (_, res) => {
   res.statusCode = 404;
