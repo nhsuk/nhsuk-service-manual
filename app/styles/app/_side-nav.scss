@@ -69,3 +69,7 @@
   margin-left: -20px;
   margin-right: 4px;
 }
+
+.app-index-navigation {
+  @include nhsuk-responsive-padding(4, 'top');
+}
