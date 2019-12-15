@@ -11,72 +11,70 @@ class PageIndex {
   }
 
   init() {
-    var startTime = new Date().getTime();
-    const baseUrl = `http://localhost:${this.config.port}`
-    const config = this._getConnectionConfig()
+    const startTime = new Date().getTime();
+    const baseUrl = `http://localhost:${this.config.port}`;
+    const config = this.getConnectionConfig();
     axios.get(`${baseUrl}/service-manual/sitemap`, config)
-    .then((response) => {
-      var pages = [];
-      const $ = cheerio.load(response.data);
-      var links = $('#maincontent').find('a');
-      links.each((i, el) => {
-        var href = $(el).attr('href');
-        if (!indexBlacklist.includes(href)) {
-          var url = `${baseUrl}${href}`;
-          if (href.toLowerCase().includes('http')) {
-            url = href;
-          }
-          pages.push(axios.get(url, config));
-        }
-      })
-
-      return axios.all(pages);
-    })
-    .then((responses) => {
-      for (var response of responses) {
+      .then((response) => {
+        const pages = [];
         const $ = cheerio.load(response.data);
-        const url = response.request.path;
-        var description = this._parseDescription($);
-        if (this._isSpecialIndex($)) {
-          this._indexPageSpecial($, url, description)
-        }
-        else {
-          this._indexPageNormal($, url, description);
-        }
-      }
+        const links = $('#maincontent').find('a');
+        links.each((i, el) => {
+          const href = $(el).attr('href');
+          if (!indexBlacklist.includes(href)) {
+            let url = `${baseUrl}${href}`;
+            if (href.toLowerCase().includes('http')) {
+              url = href;
+            }
+            pages.push(axios.get(url, config));
+          }
+        });
 
-      this.index = lunr((builder) => {
-        builder.ref('url');
-        builder.field('title');
-        builder.field('h2');
-        builder.field('h3');
-        builder.field('extra');
-
-        for (var i = 0; i < this.docs.length; i++) {
-          builder.add(this.docs[i]);
-        }
+        return axios.all(pages);
       })
-      var endTime = new Date().getTime();
-      var indexTime = (endTime - startTime) / 1000;
-      console.log(`Page index finished in ${indexTime}s`);
-    })
-    .catch((err) => {
-      var reason = ''
-      if (err.response) {
-        reason = `${err.message} URL: ${err.response.config.url}`
-      }
-      else {
-        reason = err.message
-      }
-      console.log(`Unable to index pages. Reason: ${reason}`);
-    })
+      .then((responses) => {
+        responses.forEach((response) => {
+          const $ = cheerio.load(response.data);
+          const url = response.request.path;
+          const description = this.parseDescription($);
+          if (this.isSpecialIndex($)) {
+            this.indexPageSpecial($, url, description);
+          } else {
+            this.indexPageNormal($, url, description);
+          }
+        });
+
+        this.index = lunr((builder) => {
+          builder.ref('url');
+          builder.field('title');
+          builder.field('h2');
+          builder.field('h3');
+          builder.field('extra');
+
+          for (let i = 0; i < this.docs.length; i++) {
+            builder.add(this.docs[i]);
+          }
+        });
+        const endTime = new Date().getTime();
+        const indexTime = (endTime - startTime) / 1000;
+        console.log(`Page index finished in ${indexTime}s`);
+      })
+      .catch((err) => {
+        let reason = '';
+        if (err.response) {
+          reason = `${err.message} URL: ${err.response.config.url}`;
+        } else {
+          reason = err.message;
+        }
+        console.log(`Unable to index pages. Reason: ${reason}`);
+      });
   }
 
   search(query) {
-    var results = this._searchIndex(query);
-    var output = [];
-    for (var i = 0; i < results.length; i++) {
-      var data = this._getData(results[i]);
+    const results = this.searchIndex(query);
+    const output = [];
+    for (let i = 0; i < results.length; i++) {
+      const data = this.getData(results[i]);
       if (data) {
         output.push(data);
       }
@@ -84,29 +82,28 @@ class PageIndex {
     return output;
   }
 
-  _searchIndex(query) {
-    var results = []
+  searchIndex(query) {
+    let results = [];
     if (query && this.index) {
-      results = this.index.query(function(q) {
-        const exactMatch = query.toLowerCase()
-        const partialMatch = query.toLowerCase() + "*"
+      results = this.index.query((q) => {
+        lunr.tokenizer(query).forEach((token) => {
+          q.term(token.toString(), { boost: 100, fields: ['title'] });
+          q.term(token.toString(), { boost: 80, fields: ['h2'] });
+          q.term(token.toString(), { boost: 60, fields: ['h3'] });
+          q.term(token.toString(), { boost: 40, fields: ['extra'] });
 
-        q.term(exactMatch, { fields: [ 'title' ], boost: 100 })
-        q.term(exactMatch, { fields: [ 'h2' ], boost: 80 })
-        q.term(exactMatch, { fields: [ 'h3' ], boost: 60 })
-        q.term(exactMatch, { fields: [ 'extra' ], boost: 40 })
-
-        q.term(partialMatch, { fields: [ 'title' ], boost: 90 })
-        q.term(partialMatch, { fields: [ 'h2' ], boost: 70 })
-        q.term(partialMatch, { fields: [ 'h3' ], boost: 50 })
-        q.term(partialMatch, { fields: [ 'extra' ], boost: 30 })
-      })
+          q.term(`${token.toString()}*`, { boost: 90, fields: ['title'] });
+          q.term(`${token.toString()}*`, { boost: 70, fields: ['h2'] });
+          q.term(`${token.toString()}*`, { boost: 50, fields: ['h3'] });
+          q.term(`${token.toString()}*`, { boost: 30, fields: ['extra'] });
+        });
+      });
     }
-    return results
+    return results;
   }
 
-  _getData(result) {
-    for (var i = 0; i < this.docs.length; i++) {
+  getData(result) {
+    for (let i = 0; i < this.docs.length; i++) {
       if (result.ref === this.docs[i].url) {
         return this.docs[i];
       }
@@ -114,68 +111,71 @@ class PageIndex {
     return undefined;
   }
 
-  _indexPageNormal($, url, description) {
-    var title = this._parsePageHeadings($, 'h1').join(' ');
-    var h2 = this._getIndex($, 'h2');
-    var h3 = this._getIndex($, 'h3');
-    var extra = this._getAdditionalIndices(url).join(' ');
+  indexPageNormal($, url, description) {
+    const title = this.parsePageHeadings($, 'h1').join(' ');
+    const h2 = this.getIndex($, 'h2');
+    const h3 = this.getIndex($, 'h3');
+    const extra = this.getAdditionalIndices(url).join(' ');
 
     this.docs.push({
-      url: url,
-      title: title,
-      h2: h2,
-      h3: h3,
-      extra: extra,
-      description: description
+      url,
+      title,
+      h2,
+      h3,
+      extra,
+      description,
     });
   }
 
-  _indexPageSpecial($, url, description) {
-    var titles = this._parsePageHeadings($, 'h3');
-    for (var rawTitle of titles) {
-      var formattedTitle = rawTitle.charAt(0).toUpperCase() + rawTitle.slice(1);
-      var extra = this._getAdditionalIndices(url).join(' ');
-      var h3 = this._getAltList([ rawTitle ]);
-      var formattedUrl = `${url}#${rawTitle.split(' ').join('-')}`
+  indexPageSpecial($, url, description) {
+    const titles = this.parsePageHeadings($, 'h3');
+    titles.forEach((rawTitle) => {
+      const formattedTitle = rawTitle.charAt(0).toUpperCase() + rawTitle.slice(1);
+      const extra = this.getAdditionalIndices(url).join(' ');
+      const h3 = this.getAltList([rawTitle]);
+      const formattedUrl = `${url}#${rawTitle.split(' ').join('-')}`;
 
       this.docs.push({
         url: formattedUrl,
         title: `${formattedTitle} - A to Z of NHS health writing`,
         h2: '',
-        h3: h3,
-        extra: extra,
-        description: description
+        h3,
+        extra,
+        description,
       });
-    }
+    });
   }
 
-  _getAdditionalIndices(url) {
+  getAdditionalIndices(url) {
     if (url in additionalIndices) {
       return additionalIndices[url];
     }
     return [];
   }
 
-  _parsePageHeadings($, type) {
-    var headings = [];
+  parsePageHeadings($, type) {
+    const headings = [];
     $('#maincontent').find(type).each((i, el) => {
-      if($(el).children().length === 0) {
-        headings.push($(el).text());
+      if ($(el).children().length === 0) {
+        headings.push($(el).text().trim());
+      } else {
+        const title = $('title').text();
+        headings.push(title.split(' - ')[0]);
       }
-    })
+    });
     return headings;
   }
 
-  _getIndex($, type) {
-    var headingsList = this._parsePageHeadings($, type);
-    var altList = this._getAltList(headingsList);
+  getIndex($, type) {
+    const headingsList = this.parsePageHeadings($, type);
+    const altList = this.getAltList(headingsList);
     return headingsList.concat(altList).join(' ');
   }
 
-  _getAltList(list) {
-    var listString = list.join(' ').toLowerCase();
-    var altList = [];
-    for (var key in alternativeSpelling) {
+  getAltList(list) {
+    const listString = list.join(' ').toLowerCase();
+    let altList = [];
+    for (const key in alternativeSpelling) {
       if (listString.includes(key.toLowerCase())) {
         altList = altList.concat(alternativeSpelling[key]);
       }
@@ -183,31 +183,31 @@ class PageIndex {
     return altList;
   }
 
-  _parseDescription($) {
-    return this._parseMeta($, 'description');
+  parseDescription($) {
+    return this.parseMeta($, 'description');
   }
 
-  _isSpecialIndex($) {
-    if (this._parseMeta($, 'page-index') === 'special' ) {
+  isSpecialIndex($) {
+    if (this.parseMeta($, 'page-index') === 'special') {
       return true;
     }
     return false;
   }
 
-  _parseMeta($, name) {
+  parseMeta($, name) {
     return $(`meta[name='${name}']`).attr('content');
   }
 
-  _getConnectionConfig() {
+  getConnectionConfig() {
     if (process.env.MANUAL_USERNAME || process.env.MANUAL_PASSWORD) {
       return {
         auth: {
           username: process.env.MANUAL_USERNAME,
-          password: process.env.MANUAL_PASSWORD
-        }
-      }
+          password: process.env.MANUAL_PASSWORD,
+        },
+      };
     }
-    return {}
+    return {};
   }
 }
 

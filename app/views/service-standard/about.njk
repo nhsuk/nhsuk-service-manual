@@ -1,68 +1,52 @@
 
 {% set pageTitle = 'About the NHS service standard' %}
 {% set pageSection = 'NHS service standard' %}
-{% set pageDescription = 'The NHS service standard is currently a \'prototype\' - a first version. We\'re testing it with NHS teams.' %}
-{% set noFollow = true %}
+{% set pageDescription = 'The NHS service standard is designed to help teams meet the GOV.UK service standard in the context of health and care.' %}
+{% set beta = 'true' %}
+{% set hideDescription = 'true' %}
 
-{% extends 'includes/layout.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/service-manual/",
-      text: "Home"
-    }
-  ],
-  href: "/service-manual/service-standard",
-  text: "NHS service standard"
-}) }}
+  {% include 'service-standard/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block body %}
-<div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
-  <div class="nhsuk-grid-column-two-thirds">
-    <h1 class="nhsuk-u-margin-bottom-5">{{pageTitle}}</h1>
-    <p class="nhsuk-body-l">The <a href="/service-manual/service-standard">NHS service standard</a> is currently a 'prototype' which we are testing with NHS digital teams and improving.</p>
+{% block bodyContent %}
+
+  <p class="nhsuk-lede-text">The <a href="/service-manual/service-standard">NHS service standard</a> is designed to help teams meet the GOV.UK service standard in the context of health and care.</p>
+
+  <p class="app-lede-text--sub">A few NHS teams are assessed against the <a href="https://www.gov.uk/service-manual/service-standard">GOV.UK service standard</a>. Other NHS teams follow the GOV.UK service standard because it's best practice.</p>
+
+  <h2>Why publish an NHS companion to the GOV.UK service standard?</h2>
+  <p>This NHS companion follows the GOV.UK standard point by point, but in our user research, we found that NHS digital teams also need:</p>
+  <ul>
+    <li>guidance on the different needs of health service users and the complexities of health and care</li>
+    <li><a href="/service-manual/service-standard/index#3-points-specific-to-health-and-social-care">3 extra points that address specific issues in health and care</a></li>
+    <li>links to standards and guidance that teams working in health need to know about</li>
+    <li>examples drawn from the NHS</li>
+  </ul>
+
+  <p>The NHS service standard and the guidance in the NHS digital service manual are designed to help teams build and run services that improve health outcomes, people's experience of health and care, and the efficiency of the health service.</p>
+
+  <h2>What is different about the NHS?</h2>
+  <p>There is a lot that is the same across Government and the NHS but this guidance also takes account of what's different in health.</p>
+
+  <p>For example:</p>
+  <ul>
+    <li>health "journeys" are more fragmented and multi-layered than many government services</li>
+    <li>digital services in the NHS are much more likely to need to support face to face contact</li>
+    <li>multi-disciplinary teams are not common in the NHS - by "multi-disciplinary" we mean teams made up of product and delivery managers, designers, developers, user researchers and content designers</li>
+    <li>NHS delivery teams are less likely to be practising user-centred design and agile service delivery</li>
+    <li>measuring outcomes is often more complex for health</li>
+    <li>more products and services are commissioned locally, for example in hospital trusts, and they are more likely to rely on suppliers, long-term contracts and "off the shelf" solutions</li>
+  </ul>
+  <p>In our user research, we saw evidence of the power of the NHS logo to unify teams, make the GOV.UK standard relevant and encourage people to work to it.</p>
+
+  <p>We're very interested in hearing what you think about the NHS service standard as a companion to the GOV.UK service standard and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">service manual Slack channel</a>.</p>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: December 2019</p>
   </div>
-</div>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
-    <h2>What's different in the NHS standard?</h2>
-    <p>The standard is based on the <a href="#">new Government service standard</a> (2019) but it takes account of the different needs of health service users and the complexities of health and care.</p>
-    <p>It has 16 points, 3 of them new ones for the NHS.</p>
-    <p>We've combined points 2 and 3 in the Government standard to create our <a href="/service-manual/service-standard#point2">point 2</a>.</p>
-    <p>Our 3 new points are:
-    <ul>
-      <li><a href="/service-manual/service-standard#point5">point 5</a> which deals with the NHS principle of care as it affects digital services</li>
-      <li><a href="/service-manual/service-standard#point6">point 6</a> which deals with clinical safety and effectiveness</li>
-      <li><a href="/service-manual/service-standard#point12">point 12</a> about interoperability</li>
-    </ul>
-
-    <h2>Why do we need a separate standard for the NHS?</h2>
-    <p>We see the NHS standard as a companion to the Government service standard.</p>
-    <p>This is based on evidence from research with digital teams in the NHS - starting in NHS Digital but also in some other NHS organisations. We found that some teams working in health don't see the Government service standard as applying to them. Other teams say that the Government service standard doesn't take enough account of what's different in health.</p>
-    <p>For example:</p>
-    <ul>
-      <li>health 'journeys' are more fragmented and multi-layered than many government services</li>
-      <li>digital services in the NHS are much more likely to need to support face to face contact</li>
-      <li>multi-disciplinary teams are not common in the NHS - by 'multi-disciplinary' we mean teams made up of product and delivery managers, designers, developers, user researchers and content designers</li>
-      <li>NHS delivery teams are less likely to be practising user-centred design and agile service delivery</li>
-      <li>measuring outcomes is often more complex for health</li>
-      <li>more products and services are commissioned locally, for example in hospital trusts, and they are more likely to rely on suppliers, long-term contracts and ‘off the shelf' solutions</li>
-    </ul>
-    <p>The digital teams we've talked to said they wanted a standard tailored to health with guidance and examples drawn from the NHS. We also saw evidence of the power of the NHS logo to unify teams, make the standard relevant and encourage people to work to it.</p>
-
-    <h2>How we're developing it</h2>
-    <p>The NHS service standard is currently a 'prototype' - a first version. We're testing it with NHS teams and will be improving it over the next few months. We'll be adding guidance, examples and case studies to the <a href="https://beta.nhs.uk/service-manual/">NHS digital service manual</a> to support the standard.</p>
-    <p>Both the service standard and the service manual come from the experience of the teams at NHS Digital behind the NHS website (<a href="https://www.nhs.uk/">nhs.uk</a>).</p>
-    <p>We're very interested in hearing what you think about the standard and how it might, or might not, help you develop digital services in health. <a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">service manual Slack channel</a>.</p>
-
-    <p class="nhsuk-body-s nhsuk-u-margin-top-8">Updated: March 2019</p>
-
-    </div>
-  </div>
-</div>
 {% endblock %}

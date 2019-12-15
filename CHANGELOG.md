@@ -1,6 +1,22 @@
 # NHS digital service manual Changelog
 
+## 2.0.0 - Unreleased
+
+:new: **New features**
+
+- Add search functionality to the service manual
+
+:new: **New content**
+
+- NHS service standard 
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 1.13.4 - 09 December 2019
+
+:wrench: **Fixes**
 
 - Add missing Details component JavaScript polyfill
 - Use https on all external links and fix broken link on the test your questions page
@@ -10,6 +26,8 @@
 - Make filter question image decorative using alt null
 
 ## 1.13.3 - 25 November 2019
+
+:wrench: **Fixes**
 
 - Made it clear in PDF guidance that PDFs can be used for a permanent record
 - Added an additional bullet point on PDFs being used as a permanent record.

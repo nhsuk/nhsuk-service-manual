@@ -8,25 +8,25 @@
 
 .featured-list {
   list-style: none;
-  margin: nhsuk-spacing(7) 0 nhsuk-spacing(5);
+  margin: nhsuk-spacing(4) 0 nhsuk-spacing(5);
   padding-left: 0;
 }
 
 @include mq($from: tablet) {
   .featured-list {
-    margin: 96px 0 nhsuk-spacing(9);
+    margin: nhsuk-spacing(6) 0 nhsuk-spacing(5);
   }
 }
 
 .featured-list--item {
-  margin-bottom: nhsuk-spacing(6);
+  margin-bottom: nhsuk-spacing(5);
 }
 
 @include mq($from: tablet) {
   .featured-list--item {
     display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
     display: flex; // sass-lint:disable-line no-duplicate-properties
-    margin-bottom: nhsuk-spacing(9);
+    margin-bottom: nhsuk-spacing(6);
     padding-left: nhsuk-spacing(9);
   }
 }

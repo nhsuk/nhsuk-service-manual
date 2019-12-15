@@ -1,0 +1,58 @@
+{% set pageTitle = '11. Choose the right tools and technology' %}
+{% set pageSection = 'NHS service standard' %}
+{% set pageDescription = 'Choose tools and technology that let you build a good service in an efficient, cost effective way.' %}
+{% set beta = 'true' %}
+
+{% extends 'includes/app-layout.njk' %}
+
+{% block breadcrumb %}
+  {% include 'service-standard/_breadcrumb.njk' %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p class="nhsuk-lede-text">Build a sustainable service which allows you to change direction in future.</p>
+
+  <h2>Why it's important</h2>
+  <p>When you make a decision about technology, you're making a significant investment. The choices you make will have a huge impact on your ability to create, iterate and operate the service in a flexible, sustainable way.</p>
+
+  <h2>What you should do</h2>
+  <p>When considering technical architecture, choice of programming languages, development toolchain and other technology choices, your team should be able to show that you:</p>
+  <ul>
+    <li>use appropriate tools and technologies to create and operate a good service in a cost effective way - for example, by automating things where possible</li>
+    <li>use HTML5 by default</li>
+    <li>have made good decisions about what technology to build and what to buy</li>
+    <li>understand tech decisions that have been made outside your team and challenge these decisions where it will improve the service</li>
+    <li>understand total cost of ownership of the technology and have kept the ability to make different choices in future - for example, reducing the chances of getting locked into contracts for specific tools and suppliers by using open standards</li>
+    <li>use standard NHS technology components where possible, for example the NHS login for identity assurance</li>
+    <li>have an effective approach to managing any legacy technology the service integrates with or depends on</li>
+  </ul>
+
+  <h2>Guidance</h2>
+
+  <h3>GOV.UK resources</h3>
+  <ul>
+    <li><a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement">Building a resilient frontend using progressive enhancement</a></li>
+    <li><a href="https://www.gov.uk/service-manual/technology/choosing-technology-an-introduction">Choosing technology: an introduction</a></li>
+    <li><a href="https://www.gov.uk/government/publications/technology-code-of-practice">Technology Code of Practice</a></li>
+    <li><a href="https://www.gov.uk/service-manual/technology/working-with-open-standards">Working with open standards</a></li>
+  </ul>
+
+  <h3>Read more about this</h3>
+  <ul>
+    <li><a href="https://www.gov.uk/government/publications/code-of-conduct-for-data-driven-health-and-care-technology/initial-code-of-conduct-for-data-driven-health-and-care-technology">Code of conduct for data-driven health and care technology</a> (Department of Health and Social Care)</li>
+    <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/framework/beta---service-design-technology">Enabling infrastructure</a> (NHS Digital - beta)</li>
+    <li><a href="https://developer.nhs.uk/">Health Developer Network: information and tools to help developers create software for health and social care</a> (NHS Digital)</li>
+    <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">Identity verification and authentication standard for digital health and care services</a>, DCB3051 (NHS Digital)</li>
+  </ul>
+
+  <h3>Other help</h3>
+  <ul>
+    <li>Talk to us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+  </ul>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: December 2019</p>
+  </div>
+
+{% endblock %}

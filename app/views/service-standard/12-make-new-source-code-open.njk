@@ -1,0 +1,54 @@
+{% set pageTitle = '12. Make new source code open' %}
+{% set pageSection = 'NHS service standard' %}
+{% set pageDescription = 'Make all new source code open and reusable, and publish it under appropriate licences.' %}
+{% set beta = 'true' %}
+
+{% extends 'includes/app-layout.njk' %}
+
+{% block breadcrumb %}
+  {% include 'service-standard/_breadcrumb.njk' %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Why it's important</h2>
+  <p>Public services are built with public money. So unless there's a good reason not to, the code they're based should be made available for other people to reuse and build on.</p>
+  <p>Open source code can save teams duplicating effort and help them build better services faster. And publishing source code under an open licence means that you're less likely to get locked in to working with a single supplier.</p>
+
+  <h2>What you should do</h2>
+  <p>Your team should be able to show that you:</p>
+  <ul>
+    <li>have written code in the open from the start, and publish it in an open repository - minus any sensitive information, like secret keys and credentials</li>
+    <li>keep ownership of the intellectual property of new source code that's created as part of the service, and make it available for reuse under an open licence</li>
+    </ul>
+    <p>There are a few cases when you should not publish code in the open. For example, code that relates to a sensitive government policy that hasn’t been announced yet.</p>
+
+  <h2>Guidance</h2>
+
+  <h3>NHS service manual</h3>
+  <ul>
+    <li><a href="/service-manual/frontend-library">Frontend library</a></li>
+  </ul>
+
+  <h3>GOV.UK resources</h3>
+  <ul>
+    <li><a href="https://www.gov.uk/government/publications/open-source-guidance/security-considerations-when-coding-in-the-open">Security considerations when coding in the open</a></li>
+    <li><a href="https://www.gov.uk/government/publications/open-source-guidance/when-code-should-be-open-or-closed">When code should be open or closed</a></li>
+  </ul>
+
+  <h3>Read more about this</h3>
+  <ul>
+    <li><a href="https://gds.blog.gov.uk/2017/09/04/the-benefits-of-coding-in-the-open/">The benefits of coding in the open</a> (GDS blog, 2017)</li>
+    <li><a href="https://technology.blog.gov.uk/2017/09/27/dont-be-afraid-to-code-in-the-open-heres-how-to-do-it-securely/">Don’t be afraid to code in the open: here’s how to do it securely</a> (GOV.UK blog, 2017)</li>
+  </ul>
+
+  <h3>Other help</h3>
+  <ul>
+    <li>Talk to us on the <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
+  </ul>
+
+  <div class="nhsuk-review-date">
+    <p class="nhsuk-body-s">Updated: December 2019</p>
+  </div>
+
+{% endblock %}

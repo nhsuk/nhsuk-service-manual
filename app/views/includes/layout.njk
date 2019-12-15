@@ -42,7 +42,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
-    {%- if noFollow %}<meta name="robots" content="noindex">{% endif %}
     {%- block extraMeta %}{% endblock %}
 
     <title>{% if pageTitle %}{{ pageTitle }} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
@@ -108,6 +107,10 @@
     {% endblock %}
 
     {% block outerBody %}{% endblock %}
+
+    {%- if beta == 'true' %}
+    {% include 'includes/beta-banner.njk' %}
+    {% endif %}
 
     {% if pageLayout != 'Homepage' %}
     <div class="nhsuk-width-container">
