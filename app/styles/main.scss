@@ -83,12 +83,7 @@ h1 + .nhsuk-lede-text {
 @include mq($until: desktop) {
   h1,
   .nhsuk-lede-text {
-    margin-bottom: nhsuk-spacing(4);
-  }
-
-  .nhsuk-main-wrapper {
-    padding-top: nhsuk-spacing(5);
-    padding-bottom: nhsuk-spacing(5);
+    margin-bottom: nhsuk-spacing(5);
   }
 }
 
