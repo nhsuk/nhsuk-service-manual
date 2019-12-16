@@ -10,12 +10,12 @@
         <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if pageSection === 'Components' or pageSection === 'Patterns' %}the {% endif %}{{title}}{% if pageSection === 'Components' %} component{% endif %}{% if pageSection === 'Patterns' %} pattern{% endif %} on GitHub</a>
       </li>
       <li>
-        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/edit/master/src/{{section|lower}}/{{title|lower|replace(" ", "-")}}/index.md.njk">propose a change to this page</a> - read more about <a class="app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>
+        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change to this page</a> - read more about <a class="app-contact-panel__link" href="/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>
       </li>
     </ul>
   {% else %}
       <p>
-        If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/edit/master/src/{{section|lower}}/{{title|lower|replace(" ", "-")}}/index.md.njk">propose a change</a>.
+        If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.
         </p>
         <p>If you're not sure how to do this, read guidance on <a class="app-contact-panel__link" href="/service-manual/community/propose-a-content-change-using-github/">how to propose changes in GitHub</a>.
       </p>
