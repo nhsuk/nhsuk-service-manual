@@ -4,8 +4,8 @@
 
 .app-example {
   @include top-and-bottom;
-  @include nhsuk-responsive-margin(7, 'bottom');
-  @include nhsuk-responsive-margin(5, 'top');
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(2, 'top');
   @include nhsuk-responsive-padding(5, 'bottom');
   @include nhsuk-responsive-padding(5, 'left');
   @include nhsuk-responsive-padding(5, 'right');
