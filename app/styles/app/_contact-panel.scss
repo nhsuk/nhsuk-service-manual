@@ -12,3 +12,7 @@
   @include nhsuk-font(24, $weight: bold);
   @include nhsuk-responsive-padding(3, 'top');
 }
+
+.nhsuk-pagination + .app-contact-panel {
+  margin-top: 0;
+}
