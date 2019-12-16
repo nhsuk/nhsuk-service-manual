@@ -133,3 +133,7 @@ $service-manual-container-size: 1100px;
 .nhsuk-breadcrumb__link:visited {
   color: $color_nhsuk-blue;
 }
+
+h1 + .nhsuk-lede-text {
+  margin-top: 0;
+}

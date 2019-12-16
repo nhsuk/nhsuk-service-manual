@@ -6,7 +6,9 @@
 
     <h1>{{pageTitle}}</h1>
 
-    {%- if hideDescription == 'true' %}
+
+    {%- if landingPage == 'true' %}
+    <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
     {% else %}
     <p class="nhsuk-lede-text">{{pageDescription}}</p>
     {% endif %}
