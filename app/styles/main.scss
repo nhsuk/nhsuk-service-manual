@@ -60,6 +60,10 @@
   margin-top: - nhsuk-spacing(3);
 }
 
+h1 + .nhsuk-lede-text {
+  margin-top: 0;
+}
+
 // Lede sub text
 .nhsuk-lede-text + .app-lede-text--sub {
   margin-bottom: nhsuk-spacing(7);
@@ -74,6 +78,13 @@
 .app-lede-text--sub + h2,
 .app-lede-text--sub + .nhsuk-heading-l {
   padding-top: 0;
+}
+
+@include mq($until: desktop) {
+  h1,
+  .nhsuk-lede-text {
+    margin-bottom: nhsuk-spacing(4);
+  }
 }
 
 // Container
@@ -132,8 +143,4 @@ $service-manual-container-size: 1100px;
 
 .nhsuk-breadcrumb__link:visited {
   color: $color_nhsuk-blue;
-}
-
-h1 + .nhsuk-lede-text {
-  margin-top: 0;
 }
