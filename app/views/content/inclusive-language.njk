@@ -9,18 +9,42 @@
   {% include 'content/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block bodyContent %}
+{% block sideNav %}
+<nav class="app-side-nav">
+    <ul class="nhsuk-list app-side-nav__list">
 
-  <div class="app-page-contents">
-    <h2 class="app-page-contents__heading">On this page</h2>
-    <ul class="app-page-contents__list">
-      <li class="app-page-contents__item">Disabilities and conditions</li>
-      <li class="app-page-contents__item">Mental health</li>
-      <li class="app-page-contents__item">Race, ethnicity, religion and nationality</li>
-      <li class="app-page-contents__item">Sex, gender and sexuality</li>
-      <li class="app-page-contents__item">Age</li>
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/how-we-write">How we write</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/voice-and-tone">Voice and tone</a></li>
+
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/content/inclusive-language">Inclusive language</a>
+        <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#disabilities-and-conditions">Disabilities and conditions</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#mental-health">Mental health</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#race-ethnicity-religion-nationality">Race, ethnicity, religion and nationality</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#sex-gender-sexuality">Sex, gender and sexuality</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#age">Age</a></li>
+        </ul>
+      </li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/health-literacy">Health literacy</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/how-to-write-good-questions-for-forms">How to write good questions for forms</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/pdfs">PDFs</a></li>
+
     </ul>
-  </div>
+
+</nav>
+{% endblock %}
+
+{% block bodyContent %}
 
   <h2 id="disabilities-and-conditions">Disabilities and conditions</h2>
   <p>We use positive language and don't label people when talking about disabilities and conditions.</p>

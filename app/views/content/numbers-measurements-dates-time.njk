@@ -9,20 +9,44 @@
   {% include 'content/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block bodyContent %}
+{% block sideNav %}
+<nav class="app-side-nav">
+    <ul class="nhsuk-list app-side-nav__list">
 
-  <div class="app-page-contents">
-    <h2 class="app-page-contents__heading">On this page</h2>
-    <ul class="app-page-contents__list">
-      <li class="app-page-contents__item">Numbers</li>
-      <li class="app-page-contents__item">Measurements</li>
-      <li class="app-page-contents__item">Dates</li>
-      <li class="app-page-contents__item">Time</li>
-      <li class="app-page-contents__item">Ranges of numbers, dates and time</li>
-      <li class="app-page-contents__item">Fractions and percentages</li>
-      <li class="app-page-contents__item">Statistics</li>
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/how-we-write">How we write</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/voice-and-tone">Voice and tone</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/inclusive-language">Inclusive language</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/a-to-z-of-NHS-health-writing">A to Z of NHS health writing</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/health-literacy">Health literacy</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/how-to-write-good-questions-for-forms">How to write good questions for forms</a></li>
+
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a>
+        <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#numbers">Numbers</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#measurements">Measurements</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#dates">Dates</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#time">Time</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#ranges">Ranges of numbers, dates and time</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#fractions-and-percentages">Fractions and percentages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#statistics">Statistics</a></li>
+        </ul>
+      </li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/content/pdfs">PDFs</a></li>
+
     </ul>
-  </div>
+
+</nav>
+{% endblock %}
+
+{% block bodyContent %}
 
   <h2 id="numbers">Numbers</h2>
   <h3>Numerals (1, 2, 3 and so on)</h3>
