@@ -7,11 +7,20 @@
   color: $nhsuk-secondary-text-color;
   margin-bottom: 12px;
   padding-top: 4px;
+
+  @include mq($until: desktop) {
+    @include nhsuk-font(24, $line-height: 1.25, $weight: bold);
+    color: $nhsuk-text-color;
+  }
 }
 
 .app-side-nav__list {
   @include nhsuk-responsive-margin(2, 'bottom');
   @include nhsuk-font(16, $line-height: 1.3);
+
+  @include mq($until: desktop) {
+    @include nhsuk-font(19, $line-height: 1.3);
+  }
 }
 
 .app-side-nav__item {
@@ -31,6 +40,10 @@
 
 .app-side-nav__link {
   text-decoration: none;
+
+  @include mq($until: desktop) {
+    text-decoration: underline;
+  }
 
   &:hover {
     color: $color_nhsuk-blue;
