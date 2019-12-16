@@ -32,7 +32,12 @@
       margin-top: 8px;
       position: static;
       right: 16px;
+      text-decoration: underline;
       z-index: 1;
+
+      &:hover {
+        text-decoration: none;
+      }
 
       &:focus {
         @include nhsuk-focused-text;
@@ -67,6 +72,7 @@
 }
 
 .app-tabs {
+  background: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-3;
   border-bottom: 0;
   $root: &;
@@ -85,6 +91,7 @@
       font-weight: normal;
       margin: 0;
       padding: 8px 16px;
+      text-decoration: underline;
 
       @include mq($from: tablet) {
         padding: 12px 24px;
@@ -92,7 +99,7 @@
 
       &:hover {
         outline: 0;
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       &:focus {
@@ -103,7 +110,7 @@
 
     &--current {
       a {
-        background-color: $color_nhsuk-grey-5;
+        text-decoration: none;
 
         @include mq($from: tablet) {
           box-shadow: 0 $button-shadow-size 0 $color_nhsuk-blue;
