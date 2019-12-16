@@ -17,7 +17,7 @@ class PageIndex {
     const config = this.getConnectionConfig();
     axios.get(`${baseUrl}/service-manual/sitemap`, config)
       .then((response) => {
-        const pages = [];
+        let pages = [];
         const $ = cheerio.load(response.data);
         const links = $('#maincontent').find('a');
         links.each((i, el) => {
@@ -27,7 +27,7 @@ class PageIndex {
             if (href.toLowerCase().includes('http')) {
               url = href;
             }
-            pages.push(axios.get(url, config));
+            pages = [...pages, axios.get(url, config)];
           }
         });
 
@@ -53,9 +53,7 @@ class PageIndex {
           builder.field('extra');
           builder.field('parent');
 
-          for (let i = 0; i < this.docs.length; i++) {
-            builder.add(this.docs[i]);
-          }
+          this.docs.forEach(doc => builder.add(doc));
         });
         const endTime = new Date().getTime();
         const indexTime = (endTime - startTime) / 1000;
@@ -73,44 +71,30 @@ class PageIndex {
   }
 
   search(query) {
-    const results = this.searchIndex(query);
-    const output = [];
-    for (let i = 0; i < results.length; i++) {
-      const data = this.getData(results[i]);
-      if (data) {
-        output.push(data);
-      }
-    }
-    return output;
+    return this.searchIndex(query)
+      .map(res => this.getData(res))
+      .filter(Boolean);
   }
 
   searchIndex(query) {
-    let results = [];
-    if (query && this.index) {
-      results = this.index.query((q) => {
-        lunr.tokenizer(query).forEach((token) => {
-          q.term(token.toString(), { boost: 100, fields: ['title'] });
-          q.term(token.toString(), { boost: 80, fields: ['h2'] });
-          q.term(token.toString(), { boost: 60, fields: ['h3'] });
-          q.term(token.toString(), { boost: 40, fields: ['extra'] });
+    return this.index.query((q) => {
+      lunr.tokenizer(query).forEach((token) => {
+        const tokenString = token.toString();
+        q.term(tokenString, { boost: 100, fields: ['title'] });
+        q.term(tokenString, { boost: 80, fields: ['h2'] });
+        q.term(tokenString, { boost: 60, fields: ['h3'] });
+        q.term(tokenString, { boost: 40, fields: ['extra'] });
 
-          q.term(`${token.toString()}*`, { boost: 90, fields: ['title'] });
-          q.term(`${token.toString()}*`, { boost: 70, fields: ['h2'] });
-          q.term(`${token.toString()}*`, { boost: 50, fields: ['h3'] });
-          q.term(`${token.toString()}*`, { boost: 30, fields: ['extra'] });
-        });
+        q.term(`${tokenString}*`, { boost: 90, fields: ['title'] });
+        q.term(`${tokenString}*`, { boost: 70, fields: ['h2'] });
+        q.term(`${tokenString}*`, { boost: 50, fields: ['h3'] });
+        q.term(`${tokenString}*`, { boost: 30, fields: ['extra'] });
       });
-    }
-    return results;
+    });
   }
 
-  getData(result) {
-    for (let i = 0; i < this.docs.length; i++) {
-      if (result.ref === this.docs[i].url) {
-        return this.docs[i];
-      }
-    }
-    return undefined;
+  getData({ ref }) {
+    return this.docs.find(({ url }) => url === ref);
   }
 
   indexPageNormal($, url, description) {
@@ -120,15 +104,18 @@ class PageIndex {
     const extra = this.getAdditionalIndices(url).join(' ');
     const parent = $('.nhsuk-breadcrumb__item').last().text();
 
-    this.docs.push({
-      url,
-      title,
-      h2,
-      h3,
-      extra,
-      description,
-      parent
-    });
+    this.docs = [
+      ...this.docs,
+      {
+        description,
+        extra,
+        h2,
+        h3,
+        parent,
+        title,
+        url,
+      },
+    ];
   }
 
   indexPageSpecial($, url, description) {
@@ -139,33 +126,33 @@ class PageIndex {
       const h3 = this.getAltList([rawTitle]);
       const formattedUrl = `${url}#${rawTitle.split(' ').join('-')}`;
 
-      this.docs.push({
-        url: formattedUrl,
-        title: `${formattedTitle}`,
-        h2: '',
-        h3,
-        extra,
-        description,
-        parent: 'A to Z of NHS health writing',
-      });
+      this.docs = [
+        ...this.docs,
+        {
+          description,
+          extra,
+          h2: '',
+          h3,
+          parent: 'A to Z of NHS health writing',
+          title: formattedTitle,
+          url: formattedUrl,
+        },
+      ];
     });
   }
 
   getAdditionalIndices(url) {
-    if (url in additionalIndices) {
-      return additionalIndices[url];
-    }
-    return [];
+    return additionalIndices[url] || [];
   }
 
   parsePageHeadings($, type) {
-    const headings = [];
-    $('#maincontent').find(type).each((i, el) => {
+    let headings = [];
+    $('#maincontent').find(type).each((_, el) => {
       if ($(el).children().length === 0) {
-        headings.push($(el).text().trim());
+        headings = [...headings, $(el).text().trim()];
       } else {
         const title = $('title').text();
-        headings.push(title.split(' - ')[0]);
+        headings = [...headings, title.split(' - ')[0]];
       }
     });
     return headings;
@@ -173,8 +160,10 @@ class PageIndex {
 
   getIndex($, type) {
     const headingsList = this.parsePageHeadings($, type);
-    const altList = this.getAltList(headingsList);
-    return headingsList.concat(altList).join(' ');
+    return [
+      ...headingsList,
+      ...this.getAltList(headingsList),
+    ].join(' ');
   }
 
   getAltList(list) {
@@ -192,10 +181,7 @@ class PageIndex {
   }
 
   isSpecialIndex($) {
-    if (this.parseMeta($, 'page-index') === 'special') {
-      return true;
-    }
-    return false;
+    return this.parseMeta($, 'page-index') === 'special';
   }
 
   parseMeta($, name) {
@@ -203,11 +189,12 @@ class PageIndex {
   }
 
   getConnectionConfig() {
-    if (process.env.MANUAL_USERNAME || process.env.MANUAL_PASSWORD) {
+    const { MANUAL_USERNAME, MANUAL_PASSWORD } = process.env;
+    if (MANUAL_USERNAME || MANUAL_PASSWORD) {
       return {
         auth: {
-          username: process.env.MANUAL_USERNAME,
-          password: process.env.MANUAL_PASSWORD,
+          password: MANUAL_PASSWORD,
+          username: MANUAL_USERNAME,
         },
       };
     }
