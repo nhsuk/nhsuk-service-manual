@@ -37,7 +37,8 @@
             {% endif %}
           </h1>
 
-          {%- if pageDescription %}
+          {%- if hideDescription == 'true' %}
+          {% else %}
             <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
           {% endif %}
 
