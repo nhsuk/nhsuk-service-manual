@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
@@ -50,6 +51,7 @@ class PageIndex {
           builder.field('h2');
           builder.field('h3');
           builder.field('extra');
+          builder.field('parent');
 
           for (let i = 0; i < this.docs.length; i++) {
             builder.add(this.docs[i]);
@@ -116,6 +118,7 @@ class PageIndex {
     const h2 = this.getIndex($, 'h2');
     const h3 = this.getIndex($, 'h3');
     const extra = this.getAdditionalIndices(url).join(' ');
+    const parent = $('.nhsuk-breadcrumb__item').last().text();
 
     this.docs.push({
       url,
@@ -124,6 +127,7 @@ class PageIndex {
       h3,
       extra,
       description,
+      parent
     });
   }
 
@@ -137,11 +141,12 @@ class PageIndex {
 
       this.docs.push({
         url: formattedUrl,
-        title: `${formattedTitle} - A to Z of NHS health writing`,
+        title: `${formattedTitle}`,
         h2: '',
         h3,
         extra,
         description,
+        parent: 'A to Z of NHS health writing',
       });
     });
   }
@@ -174,13 +179,12 @@ class PageIndex {
 
   getAltList(list) {
     const listString = list.join(' ').toLowerCase();
-    let altList = [];
-    for (const key in alternativeSpelling) {
+    return Object.keys(alternativeSpelling).reduce((altList, key) => {
       if (listString.includes(key.toLowerCase())) {
-        altList = altList.concat(alternativeSpelling[key]);
+        return [alternativeSpelling[key], ...altList];
       }
-    }
-    return altList;
+      return altList;
+    });
   }
 
   parseDescription($) {
