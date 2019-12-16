@@ -13,7 +13,7 @@
       background-color: $color_nhsuk-grey-5;
       border-bottom-color: $nhsuk-button-color;
       box-shadow: 0 $button-shadow-size 0 $nhsuk-button-color;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
       position: static;
 
       &:focus {
@@ -120,6 +120,7 @@
     }
 
     &--mobile {
+      background-color: $color_nhsuk-white;
       border: 1px solid $color_nhsuk-grey-3;
       border-width: 1px 0;
       display: block;
