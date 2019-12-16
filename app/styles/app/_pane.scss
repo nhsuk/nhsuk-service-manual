@@ -43,42 +43,6 @@
     padding-left: nhsuk-spacing(9);
   }
 
-  h1 {
-    max-width: 14em;
-  }
-
-  h2 {
-    max-width: 22em;
-  }
-
-  h3,
-  .nhsuk-lede-text,
-  .nhsuk-body-l {
-    max-width: 29em;
-  }
-
-  h4 {
-    max-width: 32em;
-  }
-
-  p,
-  ul {
-    max-width: 37em;
-  }
-
-  .app-example,
-  .nhsuk-table {
-    max-width: 44em;
-  }
-
-  .app-review-date {
-    @include nhsuk-responsive-margin(5, 'top');
-
-    .app-review-date__text {
-      margin-bottom: 0;
-    }
-  }
-
 }
 
 

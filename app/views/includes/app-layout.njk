@@ -14,7 +14,7 @@
 
         <div class="app-pane__main-content">
 
-          <h1>
+          <h1 class="app-page-heading">
             {%- if landingPage == 'true' %}
             {% else %}
             <span class="nhsuk-caption-l">
@@ -37,9 +37,8 @@
             {% endif %}
           </h1>
 
-          {%- if hideDescription == 'true' %}
-          {% else %}
-            <p class="nhsuk-lede-text">{{pageDescription}}</p>
+          {%- if pageDescription %}
+            <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
           {% endif %}
 
           {% block bodyContent %}

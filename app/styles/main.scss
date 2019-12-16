@@ -80,13 +80,6 @@ h1 + .nhsuk-lede-text {
   padding-top: 0;
 }
 
-@include mq($until: desktop) {
-  h1,
-  .nhsuk-lede-text {
-    margin-bottom: nhsuk-spacing(5);
-  }
-}
-
 // Container
 $service-manual-container-size: 1100px;
 
@@ -143,4 +136,19 @@ $service-manual-container-size: 1100px;
 
 .nhsuk-breadcrumb__link:visited {
   color: $color_nhsuk-blue;
+}
+
+.app-review-date {
+  @include nhsuk-responsive-margin(5, 'top');
+
+  .app-review-date__text {
+    margin-bottom: 0;
+  }
+}
+
+@include mq($until: desktop) {
+  .app-page-heading,
+  .app-lede-text {
+    margin-bottom: nhsuk-spacing(5);
+  }
 }

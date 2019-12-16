@@ -4,13 +4,11 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds app-component-reading-width">
 
-    <h1>{{pageTitle}}</h1>
+    <h1 class="app-page-heading">{{pageTitle}}</h1>
 
 
-    {%- if landingPage == 'true' %}
-    <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
-    {% else %}
-    <p class="nhsuk-lede-text">{{pageDescription}}</p>
+    {%- if pageDescription %}
+      <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
     {% endif %}
 
   </div>
@@ -27,5 +25,17 @@
       {% endblock %}
     </aside>
     {% endblock %}
+
+    {%- if dateUpdated %}
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-review-date app-review-date nhsuk-u-margin-top-6">
+        <p class="nhsuk-body-s app-review-date__text">Updated: {{dateUpdated}}</p>
+      </div>
+    </div>
+    {% endif %}
+
   </div>
+
+
+
 {% endblock %}
