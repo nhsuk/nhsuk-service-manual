@@ -9,6 +9,35 @@
   {% include 'design-system/styles/_breadcrumb.njk' %}
 {% endblock %}
 
+{% block sideNav %}
+<nav class="app-side-nav">
+
+  <ul class="nhsuk-list app-side-nav__list">
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/colour">Colour</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/icons">Icons</a></li>
+
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/service-manual/design-system/styles/layout">Layout</a>
+      <ul class="app-side-nav__list app-side-nav__list--nested">
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#screen-size">Screen size</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#containers">Containers</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#main-content">Main content</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#grid">Grid system</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#layouts">Common layouts</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#utility-classes">Layout utility classes</a></li>
+      </ul>
+    </li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/spacing">Spacing</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/service-manual/design-system/styles/typography">Typography</a></li>
+
+  </ul>
+
+</nav>
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2 id="screen-size">Screen size</h2>
