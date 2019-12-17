@@ -46,7 +46,7 @@
           {% endblock %}
 
           {% block contactPanel %}
-            {%- if landingPage == 'true' %}
+            {%- if landingPage == 'true' or theme == 'Design' or theme == 'Content style guide' %}
             {% else %}
               {% include './contact-panel.njk' %}
             {% endif %}
