@@ -161,12 +161,6 @@
   {% endif %}
 
   {%- if pageSection == 'Styles' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Back to Design system",
-      "classes": "nhsuk-u-margin-bottom-3 app-hide-mobile"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-hide-mobile">
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -175,12 +169,6 @@
   {% endif %}
 
   {%- if pageSection == 'Components' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Back to Design system",
-      "classes": "nhsuk-u-margin-bottom-3 app-hide-mobile"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-hide-mobile">
     <h2 class="app-side-nav__heading">Form elements</h2>
     <ul class="nhsuk-list app-side-nav__list"></li>
     {% for item in formElements %}
@@ -204,12 +192,6 @@
   {% endif %}
 
   {%- if pageSection == 'Patterns' %}
-    {{ backLink({
-      "href": "/service-manual/design-system",
-      "text": "Back to Design system",
-      "classes": "nhsuk-u-margin-bottom-3 app-hide-mobile"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-hide-mobile">
     <h2 class="app-side-nav__heading">Ask users for…</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in askUsers %}
@@ -257,12 +239,6 @@
   {% endif %}
 
   {%- if pageSection == 'How to write good questions for forms' %}
-    {{ backLink({
-      "href": "/service-manual/content",
-      "text": "Content style guide",
-      "classes": "nhsuk-u-margin-bottom-3 app-hide-mobile"
-    }) }}
-    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-hide-mobile">
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
