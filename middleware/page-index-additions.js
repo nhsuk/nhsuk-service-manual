@@ -26,6 +26,8 @@ const additionalIndices = {
   '/service-manual/design-system/components/textarea': ['big text box, multi-line text box, multi-line text field'],
   '/service-manual/design-system/components/typography': ['fonts'],
   '/service-manual/design-system/components/warning-callout': ['yellow callout, warning box, important'],
+  '/service-manual/updates/blog-posts': ['news, updates'],
+  '/service-manual/updates/whats-new': ['news, updates'],
 };
 
 // Term specific
