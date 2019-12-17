@@ -130,9 +130,9 @@
 // DEMO CODE FOR SEARCH CATEGORIES
 
 .app-search-results-category {
+  color: $nhsuk-secondary-text-color;
   display: block;
   font-size: 14px;
-  color: #4c6272;
 }
 
 .autocomplete__option {
@@ -144,7 +144,8 @@
     }
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .autocomplete__option-title {
       text-decoration: none;
     }
@@ -171,14 +172,13 @@
     padding: 16px 8px;
   }
 
-  &-title {
+  .autocomplete__option-title {
     text-decoration: underline;
   }
 
-  &-category {
+  .autocomplete__option-category {
+    color: $nhsuk-secondary-text-color;
     display: block;
-    padding-left: 25px;
     font-size: 14px;
-    color: #4c6272;
   }
 }
