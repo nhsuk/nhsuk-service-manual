@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 2.0.1 - 17 December 2019
+
+:wrench: **Fixes**
+
+- Correct formatting of full sentence list style on formatting and punctuation page
+
 ## 2.0.0 - 16 December 2019
 
 :new: **New features**
