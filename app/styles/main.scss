@@ -146,9 +146,14 @@ $service-manual-container-size: 1100px;
   }
 }
 
-@include mq($until: desktop) {
+@include mq($until: tablet) {
   .app-page-heading,
-  .app-lede-text {
+  .app-lede-text,
+  .app-contents-list {
     margin-bottom: nhsuk-spacing(5);
+  }
+
+  .app-contents-list .nhsuk-contents-list__list {
+    margin-bottom: 0;
   }
 }
