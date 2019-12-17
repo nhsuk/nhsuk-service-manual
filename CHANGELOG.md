@@ -5,6 +5,8 @@
 :wrench: **Fixes**
 
 - Correct formatting of full sentence list style on formatting and punctuation page
+- Remove link and clarify direction to research in details page
+- Update package dependencies to latest versions
 
 ## 2.0.0 - 16 December 2019
 
