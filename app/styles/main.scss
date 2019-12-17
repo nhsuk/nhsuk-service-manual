@@ -69,8 +69,8 @@ h1 + .nhsuk-lede-text {
   margin-bottom: nhsuk-spacing(7);
   margin-top: - nhsuk-spacing(3);
 
-  @include mq($until: desktop) {
-    margin-bottom: nhsuk-spacing(6);
+  @include mq($until: tablet) {
+    margin-bottom: nhsuk-spacing(5);
     margin-top: - nhsuk-spacing(3);
   }
 }
@@ -149,7 +149,12 @@ $service-manual-container-size: 1100px;
 @include mq($until: tablet) {
   .app-page-heading,
   .app-lede-text,
-  .app-contents-list {
+  .app-contents-list,
+  .app-lede-text--sub {
     margin-bottom: nhsuk-spacing(5);
+  }
+
+  .app-contents-list .nhsuk-contents-list__list {
+    margin-bottom: 0;
   }
 }
