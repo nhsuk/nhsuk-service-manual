@@ -8,7 +8,7 @@
     <loc>https://beta.nhs.uk/service-manual/</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/design-principles</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/design-principles</loc>
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/accessibility</loc>
@@ -20,10 +20,10 @@
     <loc>https://beta.nhs.uk/service-manual/design-system/components</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/frontend-library</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/production</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/prototyping-tools</loc>
+    <loc>https://beta.nhs.uk/service-manual/design-system/prototyping</loc>
   </url>
   <url>
     <loc>https://beta.nhs.uk/service-manual/community</loc>
