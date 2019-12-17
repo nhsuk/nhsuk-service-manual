@@ -125,7 +125,13 @@
   { title: "Propose a content change using GitHub", url: "/service-manual/community/propose-a-content-change-using-github" },
   { title: "Propose a component or pattern", url: "/service-manual/community/propose-component-pattern" },
   { title: "Develop a component or pattern", url: "/service-manual/community/develop-component-pattern" },
-  { title: "Contribution criteria", url: "/service-manual/community/contribution-criteria" }
+  { title: "Contribution criteria", url: "/service-manual/community/contribution-criteria" },
+  { title: "Support", url: "/service-manual/community/support" }
+] %}
+
+{% set updates = [
+  { title: "What\'s new", url: "/service-manual/updates/whats-new" },
+  { title: "Blog posts", url: "/service-manual/updates/blog-posts" }
 ] %}
 
 <nav class="app-side-nav">
@@ -258,6 +264,14 @@
   {%- if pageSection == 'Community' %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == 'Updates' %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in updates %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
