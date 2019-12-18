@@ -152,7 +152,7 @@
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Setup guides</h2>
+    <h2 class="app-side-nav__heading">Setup</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsCode %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
