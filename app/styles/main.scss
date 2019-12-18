@@ -166,3 +166,8 @@ $service-manual-container-size: 1100px;
 .app-breadcrumb__back {
   display: block;
 }
+
+// Table bug hot fix
+.nhsuk-table__cell.nhsuk-body-s {
+  display: table-cell;
+}
