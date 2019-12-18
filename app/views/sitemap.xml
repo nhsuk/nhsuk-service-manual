@@ -5,246 +5,246 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://beta.nhs.uk/service-manual/</loc>
+    <loc>https://beta.nhs.uk/</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/design-principles</loc>
+    <loc>https://beta.nhs.uk/design-principles</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility</loc>
+    <loc>https://beta.nhs.uk/accessibility</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content</loc>
+    <loc>https://beta.nhs.uk/content</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/frontend-library</loc>
+    <loc>https://beta.nhs.uk/frontend-library</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/prototyping-tools</loc>
+    <loc>https://beta.nhs.uk/prototyping-tools</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/contribute</loc>
+    <loc>https://beta.nhs.uk/contribute</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility-statement</loc>
+    <loc>https://beta.nhs.uk/accessibility-statement</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/sitemap</loc>
+    <loc>https://beta.nhs.uk/sitemap</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/terms-and-conditions</loc>
+    <loc>https://beta.nhs.uk/terms-and-conditions</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/privacy</loc>
+    <loc>https://beta.nhs.uk/privacy</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/assets/NHS_design_principles.pdf</loc>
+    <loc>https://beta.nhs.uk/assets/NHS_design_principles.pdf</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/what-all-NHS-services-need-to-do</loc>
+    <loc>https://beta.nhs.uk/accessibility/what-all-NHS-services-need-to-do</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/how-to-make-digital-services-accessible</loc>
+    <loc>https://beta.nhs.uk/accessibility/how-to-make-digital-services-accessible</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/getting-started</loc>
+    <loc>https://beta.nhs.uk/accessibility/getting-started</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/product-and-delivery</loc>
+    <loc>https://beta.nhs.uk/accessibility/product-and-delivery</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/user-research</loc>
+    <loc>https://beta.nhs.uk/accessibility/user-research</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/content</loc>
+    <loc>https://beta.nhs.uk/accessibility/content</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/design</loc>
+    <loc>https://beta.nhs.uk/accessibility/design</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/development</loc>
+    <loc>https://beta.nhs.uk/accessibility/development</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/accessibility/testing</loc>
+    <loc>https://beta.nhs.uk/accessibility/testing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-we-write</loc>
+    <loc>https://beta.nhs.uk/content/how-we-write</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/voice-and-tone</loc>
+    <loc>https://beta.nhs.uk/content/voice-and-tone</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/inclusive-language</loc>
+    <loc>https://beta.nhs.uk/content/inclusive-language</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/a-to-z-of-NHS-health-writing</loc>
+    <loc>https://beta.nhs.uk/content/a-to-z-of-NHS-health-writing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/health-literacy</loc>
+    <loc>https://beta.nhs.uk/content/health-literacy</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/numbers-measurement-dates-time</loc>
+    <loc>https://beta.nhs.uk/content/numbers-measurement-dates-time</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/formatting-and-punctuation</loc>
+    <loc>https://beta.nhs.uk/content/formatting-and-punctuation</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/links-and-pdfs</loc>
+    <loc>https://beta.nhs.uk/content/links-and-pdfs</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/colour</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/colour</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/icons</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/icons</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/layout</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/layout</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/spacing</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/spacing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/typography</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/typography</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/action-link</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/action-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/back-link</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/back-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/breadcrumbs</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/breadcrumbs</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/buttons</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/buttons</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/care-cards</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/care-cards</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/checkboxes</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/checkboxes</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/contents-list</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/contents-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/date-input</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/date-input</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/details</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/details</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/do-and-dont-list</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/do-and-dont-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/error-message</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/error-message</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/error-summary</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/error-summary</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/expander</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/expander</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/fieldset</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/fieldset</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/footer</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/footer</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/header</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/header</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/images</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/images</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/inset-text</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/inset-text</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/pagination</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/pagination</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/radios</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/radios</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/review-date</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/review-date</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/select</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/select</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/skip-link</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/skip-link</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/summary-list</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/summary-list</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/table</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/table</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/text-input</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/text-input</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/textarea</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/textarea</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/warning-callout</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/warning-callout</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/a-to-z</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/a-to-z</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/nhs-number</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/nhs-number</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/mini-hub</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/mini-hub</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/styles-components-patterns/understanding-focus-state-styles</loc>
+    <loc>https://beta.nhs.uk/styles-components-patterns/understanding-focus-state-styles</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/contribute/contribution-criteria</loc>
+    <loc>https://beta.nhs.uk/contribute/contribution-criteria</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/contribute/propose-new-thing</loc>
+    <loc>https://beta.nhs.uk/contribute/propose-new-thing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/contribute/work-new-thing</loc>
+    <loc>https://beta.nhs.uk/contribute/work-new-thing</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/health-literacy/</loc>
+    <loc>https://beta.nhs.uk/content/health-literacy/</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content</loc>
+    <loc>https://beta.nhs.uk/content/health-literacy/use-a-readability-tool-to-prioritise-content</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/get-the-questions-into-order</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/get-the-questions-into-order</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form</loc>
   </url>
   <url>
-    <loc>https://beta.nhs.uk/service-manual/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
+    <loc>https://beta.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
   </url>
 </urlset>
