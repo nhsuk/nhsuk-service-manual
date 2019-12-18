@@ -97,7 +97,7 @@
   <body>
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
 
-    {% include 'includes/header.njk' %}
+    {% include 'includes/_header.njk' %}
 
     {% block breadcrumb %}
       <nav class="nhsuk-breadcrumb">
@@ -112,7 +112,7 @@
     {% block outerBody %}{% endblock %}
 
     {%- if beta == 'true' %}
-    {% include 'includes/beta-banner.njk' %}
+    {% include 'includes/_beta-banner.njk' %}
     {% endif %}
 
     {% if pageLayout != 'Homepage' %}
@@ -123,7 +123,7 @@
     </div>
     {% endif %}
 
-    {% include 'includes/footer.njk' %}
+    {% include 'includes/_footer.njk' %}
   </body>
 
 </html>
