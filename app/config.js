@@ -8,7 +8,7 @@ module.exports = {
   env: process.env.NODE_ENV || 'development',
 
   // Base URL
-  baseURL: process.env.BASE_URL || 'https://beta.nhs.uk/service-manual',
+  baseURL: process.env.BASE_URL || 'https://service-manual.nhs.uk',
 
   // Cookie consent
   cookieConsent: process.env.COOKIE_CONSENT_URL || 'https://assets-staging.nhs.uk/staging/scripts/cookie-consent.js',
