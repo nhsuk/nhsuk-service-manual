@@ -1,0 +1,174 @@
+{% set pageTitle = "Choose which cookies we use" %}
+{% set pageDescription = "Let us know which cookies we can use on the NHS digital service manual." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/cookie-policy">Cookie policy</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/cookie-policy">Back to Cookie policy</a></p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-u-reading-width">
+      <h1>{{ pageTitle }}</h1>
+      <p class="nhsuk-lede-text">Let us know which cookies we can use. We'll use a cookie to save your settings.</p>
+    </div>
+
+    <div class="nhsuk-u-reading-width">
+      <h2>Cookies that measure website use</h2>
+      <p>These cookies store anonymous information about how you use our website, such as what you click on.</p>
+    </div>
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          List of cookies that measure website use
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+
+        <div class="nhsuk-table-responsive app-table-responsive--cookies">
+          <table class="nhsuk-table" role="”table”">
+            <caption class="nhsuk-table__caption">Cookie names and purposes</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row" role="row">
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Cookie name</th>
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Purpose</th>
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Expiry</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_ga</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Tells us how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">2 years</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_gid</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Sets a unique ID for your session to help tell us how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">1 day</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_gat</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Helps stop Google Analytics web servers crashing when collecting information on how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">1 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </details>
+
+    <div class="nhsuk-u-reading-width">
+
+      <fieldset class="nhsuk-fieldset" id="cookie-statistics-form" aria-describedby="cookie-statistics">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-statistics-1" name="input-statistics" type="radio" value="on">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-1">
+            Use cookies to measure my website use
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-statistics-2" name="input-statistics" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-2">
+            Do not use cookies to measure my website use
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <h2>Cookies that remember your settings</h2>
+      <p>These cookies do things like remember pop-ups you've seen, so you're not shown them again.</p>
+      <p>We do not set any cookies of this type.</p>
+
+      <fieldset class="nhsuk-fieldset" id="cookie-preferences-form" aria-describedby="cookie-preferences">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-preferences-1" name="input-preferences" type="radio" value="on">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-preferences-1">
+            Use cookies to remember pop-ups
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-preferences-2" name="input-preferences" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-preferences-2">
+            Do not use cookies to remember pop-ups
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <h2>Cookies that help with campaigns</h2>
+      <p>These cookies help us show you relevant adverts for our health campaigns on social media, such as Facebook or Twitter.</p>
+      <p>We do not set any cookies of this type.</p>
+
+      <fieldset class="nhsuk-fieldset" id="cookie-marketing-form" aria-describedby="cookie-marketing">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-marketing-1" name="input-marketing" type="radio" value="on">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-marketing-1">
+            Use cookies to help with health campaigns
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-marketing-2" name="input-marketing" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-marketing-2">
+            Do not use cookies to help with health campaigns
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <a href="/cookie-confirmation" onclick="changeConsent();" type="submit" class="nhsuk-button nhsuk-u-margin-bottom-0">
+        Save my cookie settings
+      </a>
+
+    </div>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: January 2020</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+  // Check the checkboxes based on status of cookie preferences
+  window.addEventListener("load", function checkCookie() {
+      document.getElementById("input-preferences-1").checked = NHSCookieConsent.getPreferences();
+      document.getElementById("input-preferences-2").checked = !NHSCookieConsent.getPreferences();
+
+      document.getElementById("input-statistics-1").checked = NHSCookieConsent.getStatistics();
+      document.getElementById("input-statistics-2").checked = !NHSCookieConsent.getStatistics();
+
+      document.getElementById("input-marketing-1").checked = NHSCookieConsent.getMarketing();
+      document.getElementById("input-marketing-2").checked = !NHSCookieConsent.getMarketing();
+  });
+
+  // Edit consent preferences based on checkbox input
+  function changeConsent() {
+  NHSCookieConsent.setPreferences(document.getElementById("input-preferences-1").checked);
+  NHSCookieConsent.setStatistics(document.getElementById("input-statistics-1").checked);
+  NHSCookieConsent.setMarketing(document.getElementById("input-marketing-1").checked);
+
+    if(typeof NHSCookieConsent.setConsented === "function") {
+      NHSCookieConsent.setConsented(true);
+    }
+
+  }
+</script>
+{% endblock %}
