@@ -32,10 +32,10 @@ app.use(locals(config));
 app.use(compression());
 
 // Middleware to serve static assets
-app.use('/service-manual', express.static(path.join(__dirname, 'public')));
-app.use('/service-manual/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
-app.use('/service-manual/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
-app.use('/service-manual/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
+app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
+app.use('/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')));
 
 // View engine (nunjucks)
 app.set('view engine', 'njk');
@@ -64,7 +64,7 @@ env.addFilter('highlight', (code, language) => {
 });
 
 // Render standalone design examples
-app.get('/service-manual/design-example/:example', (req, res) => {
+app.get('/design-example/:example', (req, res) => {
   const displayFullPage = req.query.fullpage === 'true';
   const example = req.params.example;
   const examplePath = path.join(__dirname, `/app/components/${example}.njk`);
@@ -81,7 +81,7 @@ app.get('/service-manual/design-example/:example', (req, res) => {
   res.render(baseTemplate, { body: exampleHtml });
 });
 
-app.get('/service-manual/search', (req, res) => {
+app.get('/search', (req, res) => {
   const query = req.query['search-field'] || '';
   const resultsPerPage = 10;
   let currentPage = parseInt(req.query.page, 10);
@@ -105,37 +105,11 @@ app.get('/service-manual/search', (req, res) => {
   });
 });
 
-app.get('/service-manual/suggestions', (req, res) => {
+app.get('/suggestions', (req, res) => {
   const results = pageIndex.search(req.query.search);
   const slicedResults = results.slice(0, 10);
   res.set({ 'Content-Type': 'application/json' });
   res.send(JSON.stringify(slicedResults));
-});
-
-app.get('/', (_, res) => {
-  res.redirect('/service-manual');
-});
-
-// The practices pages have moved or been deleted
-// Temporary redirects incase anyone still visits /practices pages
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy', (_, res) => {
-  res.redirect('/service-manual/content/health-literacy');
-});
-
-app.get('/service-manual/practices/create-content-for-users-with-low-health-literacy/use-a-readability-tool-to-prioritise-content', (_, res) => {
-  res.redirect('/service-manual/content/health-literacy/use-a-readability-tool-to-prioritise-content');
-});
-
-app.get('/service-manual/practices', (_, res) => {
-  res.redirect('/service-manual');
-});
-
-app.get('/service-manual/practices/make-your-service-accessible', (_, res) => {
-  res.redirect('/service-manual/accessibility');
-});
-
-app.get('/service-manual/content/writing-for-accessibility', (_, res) => {
-  res.redirect('/service-manual/accessibility/content');
 });
 
 // Automatically route pages
@@ -144,13 +118,13 @@ app.get(/^([^.]+)$/, (req, res, next) => {
 });
 
 // Render sitemap.xml in XML format
-app.get('/service-manual/sitemap.xml', (_, res) => {
+app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
 
 // Render robots.txt in text format
-app.get('/service-manual/robots.txt', (_, res) => {
+app.get('/robots.txt', (_, res) => {
   res.set('text/plain');
   res.render('robots.txt');
 });

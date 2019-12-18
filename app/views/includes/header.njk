@@ -2,7 +2,7 @@
 
 {%- if pageTitle == 'Search' %}
   {{ header({
-    "homeHref": "/service-manual/",
+    "homeHref": "/",
     "ariaLabel": "NHS digital service manual homepage",
     "service": {
       "name": "Digital service manual",
@@ -10,13 +10,13 @@
     },
     "showNav": "false",
     "showSearch": "false",
-    "searchAction": "/service-manual/search/",
+    "searchAction": "/search/",
     "searchInputName": "search-field"
     })
   }}
 {% else %}
   {{ header({
-    "homeHref": "/service-manual/",
+    "homeHref": "/",
     "ariaLabel": "NHS digital service manual homepage",
     "service": {
       "name": "Digital service manual",
@@ -24,7 +24,7 @@
     },
     "showNav": "false",
     "showSearch": "true",
-    "searchAction": "/service-manual/search/",
+    "searchAction": "/search/",
     "searchInputName": "search-field"
     })
   }}

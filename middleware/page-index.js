@@ -14,7 +14,7 @@ class PageIndex {
     const startTime = new Date().getTime();
     const baseUrl = `http://localhost:${this.config.port}`;
     const config = this.getConnectionConfig();
-    axios.get(`${baseUrl}/service-manual/sitemap`, config)
+    axios.get(`${baseUrl}/sitemap`, config)
       .then((response) => {
         const pages = [];
         const $ = cheerio.load(response.data);
