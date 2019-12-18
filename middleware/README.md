@@ -10,7 +10,7 @@
 - [cheerio](https://github.com/cheeriojs/cheerio) (html parser)
 
 ### How it works
-When server is started, page-indexer will retrieve the HTML of every page listed in `/service-manual/sitemaps` and index the pages in this form:
+When server is started, page-indexer will retrieve the HTML of every page listed in `/sitemap` and index the pages in this form:
 ```js
 {
   title: <all h1 element text>,
@@ -23,7 +23,7 @@ For example, the Accessibility page would be indexed to:
 {
   title: 'Accessibility',
   index: 'What everyone needs to know Guidance for different activities Get in touch',
-  url: '/service-manual/accessibility'
+  url: '/accessibility'
 }
 ```
 The page index is then fed in to **lunr** for searching.
@@ -37,7 +37,7 @@ There are three lists to add to:
 ```js
 //in this case accessibility testing page will have additional index 'svg' added
 const  additionalIndicies  = {
-  '/service-manual/accessibility/testing': [ 'svg' ]
+  '/accessibility/testing': [ 'svg' ]
 }
 ```
 
