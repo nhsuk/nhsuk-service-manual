@@ -1,4 +1,4 @@
-{% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' %}
+{% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'Updates'%}
   <h2 class="nhsuk-u-padding-top-4">Help improve this page</h2>
 
   {% if backlog_issue_id %}
@@ -21,7 +21,8 @@
       </li>
     </ul>
   {% else %}
-    <p>If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.</p>
+    <p>The manual is a community effort. Anyone can help improve and grow it.</p>
+    <p>If you spot a problem with the {{pageTitle}} {% if pageSection === 'Updates'%}page {% else %}guidance{% endif %} you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.</p>
   {% endif %}
 {% endif %}
 
