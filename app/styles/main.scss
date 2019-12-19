@@ -85,6 +85,10 @@ h1 + .nhsuk-lede-text {
   padding-top: nhsuk-spacing(0);
 }
 
+.app-lede-text + .app-index-navigation {
+  padding-top: 0;
+}
+
 // Container
 $service-manual-container-size: 1100px;
 
