@@ -1,5 +1,20 @@
 # NHS digital service manual Changelog
 
+## 3.0.0 - Unreleased
+
+:new: **New features**
+
+- The NHS digital service manual is now a live service (https://service-manual.nhs.uk)
+
+:wrench: **Fixes**
+
+- Remove the /service-manual prefix
+- Use the new domain name in the sitemap and configuration files
+- Add the cookie policy and declaration pages and logic
+- Self host the cookie banner and change content to remove Hotjar/Adobe
+- Update the XML sitemap
+- Only use Google Analytics on the production environment
+
 ## 2.0.1 - 17 December 2019
 
 :wrench: **Fixes**
