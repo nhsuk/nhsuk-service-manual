@@ -75,9 +75,11 @@ h1 + .nhsuk-lede-text {
   }
 }
 
+.app-lede-text + h2,
+.app-lede-text + .nhsuk-heading-l,
 .app-lede-text--sub + h2,
 .app-lede-text--sub + .nhsuk-heading-l {
-  padding-top: 0;
+  padding-top: nhsuk-spacing(2);
 }
 
 // Container
