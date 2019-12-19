@@ -4,6 +4,10 @@
 
 {% extends 'includes/app-layout.njk' %}
 
+{% block breadcrumb %}
+  {% include 'updates/_breadcrumb.njk' %}
+{% endblock %}
+
 {% block bodyContent %}
 
   <h2><span class="nhsuk-u-visually-hidden">Blog posts from </span>2019</h2>
