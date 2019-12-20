@@ -50,6 +50,19 @@
 
     <script src="/{{VERSION}}/js/main.min.js" defer></script>
 
+    <!-- Cookie consent -->
+    <script src="{{ COOKIE_CONSENT_URL }}" data-policy-url="/cookie-policy"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
+    <script data-cookieconsent="statistics" type="text/plain" >
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
+    </script>
+
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
     <link href="https://www.googletagmanager.com" rel="preconnect">
@@ -65,19 +78,6 @@
     <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
     <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
-
-    <!-- Cookie consent -->
-    <script src="{{ COOKIE_CONSENT_URL }}" data-policy-url="https://beta.nhs.uk/our-policies/cookies-policy/"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
-    <script data-cookieconsent="statistics" type="text/plain" >
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
-    </script>
 
     <meta property="og:url" content="{{ BASE_URL }}"/>
     <meta property="og:site_name" content="nhs.uk"/>
@@ -124,6 +124,8 @@
     {% endif %}
 
     {% include 'includes/_footer.njk' %}
+
+    {% block pageScripts %}{% endblock %}
   </body>
 
 </html>
