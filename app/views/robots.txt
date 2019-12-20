@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://beta.nhs.uk/service-manual/sitemap.xml
+Sitemap: https://beta.nhs.uk/sitemap.xml
