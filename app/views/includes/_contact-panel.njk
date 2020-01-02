@@ -1,15 +1,11 @@
-{% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'Updates'%}
+{% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'What\'s new' %}
   <h2 class="nhsuk-u-padding-top-4">Help improve this page</h2>
 
   {% if backlog_issue_id %}
     <p>The manual is a community effort. Anyone can help improve and grow it.</p>
 
-    {% if pageSection === 'Styles' %}
-    <p>To help make sure the {{pageTitle}} page is useful, relevant and up to date, you can:</p>
-    {% endif %}
-
-    {% if pageSection === 'Components' or pageSection === 'Patterns'%}
-    <p>To help make sure the {{pageTitle}} page is useful, relevant and clinically safe, you can:</p>
+    {% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' %}
+    <p>To help make sure the {{pageTitle}} guidance is useful, relevant and up to date, you can:</p>
     {% endif %}
 
     <ul class="nhsukuk-list nhsuk-list--bullet">
@@ -31,7 +27,11 @@
 {% endif %}
 
 <div class="app-contact-panel">
+  {% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'Content style guide' or pageSection === 'Accessibility' %}
   <h2 class="app-contact-panel__heading">Need help?</h2>
+  {% else %}
+  <h2 class="app-contact-panel__heading">Get in touch</h2>
+  {% endif %}
   <p class="app-contact-panel__body">If you’ve got a question about the NHS digital service manual you can contact the team:</p>
   <ul>
     <li>on <a class="app-contact-panel__link" href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLWUwOWM5MWY5MGRhYTYxZmY4ZWI0NDA1N2NhNTRiMGY3MTQxNjk5YTc3ZTAzMTA4YmE3ZDAxYmQ3MTQxNDgzOTQ" rel="nofollow">#general channel on the service manual public Slack workspace</a></li>
