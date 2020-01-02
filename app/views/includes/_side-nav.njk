@@ -128,9 +128,9 @@
   { title: "Support", url: "/community/support" }
 ] %}
 
-{% set updates = [
-  { title: "What\'s new", url: "/updates/whats-new" },
-  { title: "Blog posts", url: "/updates/blog-posts" }
+{% set whatsNew = [
+  { title: "Updates", url: "/whats-new/updates" },
+  { title: "Blog posts", url: "/whats-new/blog-posts" }
 ] %}
 
 <nav class="app-side-nav">
@@ -268,9 +268,9 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Updates' %}
+  {%- if pageSection == 'What\'s new' %}
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in updates %}
+    {% for item in whatsNew %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

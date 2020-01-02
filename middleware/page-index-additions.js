@@ -26,8 +26,8 @@ const additionalIndices = {
   '/design-system/components/textarea': ['big text box, multi-line text box, multi-line text field'],
   '/design-system/components/typography': ['fonts'],
   '/design-system/components/warning-callout': ['yellow callout, warning box, important'],
-  '/updates/blog-posts': ['news, updates'],
-  '/updates/whats-new': ['news, updates'],
+  '/whats-new/blog-posts': ['news, updates'],
+  '/whats-new/updates': ['news, latest changes'],
 };
 
 // Term specific
