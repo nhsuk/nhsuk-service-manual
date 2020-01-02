@@ -2,9 +2,13 @@
 
 ## 2.0.2 - 6 January 2020
 
+:new: **New features**
+- Add entries for "pharmacy", "chemist" and "sex assigned or registered at birth" to the A to Z of NHS health writing
+
 :wrench: **Fixes**
 
-- Add more detail about interoperability standards to section 14 of NHS service standard 
+- Add more detail about interoperability standards to section 17 of NHS service standard 
+- Amend guidance on using the number 1 in Numbers, measurements, dates and time after December Style Council meeting
 - Update inclusive language page, especially the section on sex, gender and sexuality
 - Update package dependencies to latest versions
 
