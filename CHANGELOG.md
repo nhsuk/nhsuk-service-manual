@@ -6,6 +6,7 @@
 
 - Add more detail about interoperability standards to section 14 of NHS service standard 
 - Update inclusive language page, especially the section on sex, gender and sexuality
+- Update package dependencies to latest versions
 
 ## 2.0.1 - 17 December 2019
 
