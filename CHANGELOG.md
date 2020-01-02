@@ -14,6 +14,7 @@
 - Self host the cookie banner and change content to remove Hotjar/Adobe
 - Update the XML sitemap
 - Only use Google Analytics on the production environment
+- Update the 404 page not found content and add a variable to disable search
 
 ## 2.1.0 - 6 January 2020
 
