@@ -33,10 +33,6 @@
   { title: "Testing", url: "/accessibility/testing" }
 ] %}
 
-{% set accessibilityGuides = [
-  { title: "Understanding focus state styles", url: "/accessibility/understanding-focus-state-styles" }
-] %}
-
 {% set content = [
   { title: "How we write", url: "/content/how-we-write" },
   { title: "Voice and tone", url: "/content/voice-and-tone" },
@@ -69,6 +65,7 @@
 {% set styles = [
   { title: "Colour", url: "/design-system/styles/colour" },
   { title: "Icons", url: "/design-system/styles/icons" },
+  { title: "Focus state", url: "/design-system/styles/focus-state" },
   { title: "Layout", url: "/design-system/styles/layout" },
   { title: "Spacing", url: "/design-system/styles/spacing" },
   { title: "Typography", url: "/design-system/styles/typography" }
@@ -198,7 +195,7 @@
   {% endif %}
 
   {%- if pageSection == 'Patterns' %}
-    <h2 class="app-side-nav__heading">Ask users for…</h2>
+    <h2 class="app-side-nav__heading">Ask users for:</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in askUsers %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -214,23 +211,16 @@
   {% endif %}
 
   {%- if pageSection == 'Accessibility' %}
-    <h2 class="app-side-nav__heading">Everyone needs to know...</h2>
+    <h2 class="app-side-nav__heading">Everyone needs to know:</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityEveryone %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Accessibility guidance for...</h2>
+    <h2 class="app-side-nav__heading">Accessibility guidance for:</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityActivities %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="app-side-nav__heading">How to guides</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in accessibilityGuides %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
