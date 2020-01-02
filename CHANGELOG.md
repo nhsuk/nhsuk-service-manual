@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 2.0.2 - 6 January 2020
+
+:wrench: **Fixes**
+
+- Add more detail about interoperability standards to section 14 of NHS service standard 
+- Update inclusive language page, especially the section on sex, gender and sexuality
+
 ## 2.0.1 - 17 December 2019
 
 :wrench: **Fixes**
