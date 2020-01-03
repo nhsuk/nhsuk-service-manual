@@ -102,13 +102,10 @@
     {% include 'includes/_header.njk' %}
 
     {% block breadcrumb %}
-      <nav class="nhsuk-breadcrumb">
-        <div class="nhsuk-width-container">
-          <p class="nhsuk-breadcrumb__back app-breadcrumb__back">
-            <a class="nhsuk-breadcrumb__backlink" href="/">Back to Home</a>
-          </p>
-        </div>
-      </nav>
+      {{ breadcrumb({
+        href: "/",
+        text: "Home"
+      }) }}
     {% endblock %}
 
     {% block outerBody %}{% endblock %}
