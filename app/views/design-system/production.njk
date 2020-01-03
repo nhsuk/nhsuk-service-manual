@@ -7,12 +7,12 @@
 
 {% block bodyContent %}
 
-  <h2 id="include-nhsuk-frontend-in-your-project">Include NHS.UK frontend in your project</h2>
-  <p>To start using the NHS website styles, components and patterns contained here, you’ll need to include NHS.UK frontend in your project.</p>
-  <p>There are 2 ways to include NHS.UK frontend in your project. You can either install it using node package manager (npm) or include the compiled files in your application.</p>
+  <h2 id="include-the-nhsuk-frontend-in-your-project">Include the NHS.UK frontend in your project</h2>
+  <p>To start using the NHS website styles, components and patterns, you’ll need to include the NHS.UK frontend in your project.</p>
+  <p>There are 2 ways to include the NHS.UK frontend. You can either install it using node package manager (npm) or include the compiled files in your application.</p>
 
   <h3 id="option-1-install-using-npm">Option 1: install using npm</h3>
-  <p>We recommend <a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-npm.md">installing NHS.UK frontend using npm</a>.</p>
+  <p>We recommend <a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-with-npm.md">installing the NHS.UK frontend using npm</a>.</p>
   <p>Using this option, you will be able to:</p>
   <ul>
     <li>selectively include the CSS or JavaScript for individual components</li>
@@ -22,8 +22,8 @@
   </ul>
 
   <h3 id="option-2-include-compiled-files">Option 2: include compiled files</h3>
-  <p>If your project does not use npm, or if you want to try out NHS.UK frontend in your project without installing it through npm, you can <a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-compiled.md">download and include compiled stylesheets, JavaScript and the asset files</a>.</p>
-  <p>Using this option, you will be able to include all the CSS and JavaScript of NHS.UK frontend in your project.</p>
+  <p>If your project does not use npm, or if you want to try out the NHS.UK frontend in your project without installing it through npm, you can <a href="https://github.com/nhsuk/nhsuk-frontend/blob/master/docs/installation/installing-compiled.md">download and include compiled stylesheets, JavaScript and the asset files</a>.</p>
+  <p>Using this option, you will be able to include all the CSS and JavaScript of the NHS.UK frontend in your project.</p>
   <p>You will not be able to:</p>
   <ul>
     <li>selectively include the CSS or JavaScript for individual components</li>
@@ -34,13 +34,13 @@
 
   <h2 id="styling-page-elements">Styling page elements</h2>
   <p>The service manual provides CSS classes for styling content, instead of global styles.</p>
-  <p>The class names follow the Block Element Modifier (BEM) naming convention. This can look a bit daunting at first, but it makes robust code that’s easy to maintain.</p>
+  <p>The class names follow the Block Element Modifier (BEM) naming convention. This can look a bit daunting at first, but it makes robust code that's easy to maintain.</p>
   <p>Explore the <a href="/design-system/styles/">Styles</a> section of the service manual to see what classes are available.</p>
 
   <h2 id="using-components">Using components</h2>
-  <p>The <a href="/design-system/components/">components</a> in the service manual are designed to be accessible and responsive - there are 2 ways to implement them in your application.</p>
-  <p>You can either use HTML or - if you’re using Nunjucks with node.js and you installed NHS.UK frontend using npm - you can use a Nunjucks Macro.</p>
-  <p>You can get the code from the HTML or Nunjucks tabs below any examples:</p>
+  <p>The <a href="/design-system/components/">components</a> in the service manual are designed to be accessible and responsive. There are 2 ways to implement them in your application.</p>
+  <p>You can either use HTML or, if you're using Nunjucks with node.js and you installed the NHS.UK frontend using npm, you can use a Nunjucks Macro.</p>
+  <p>You can get the code from the HTML or Nunjucks tabs below the examples on our component pages, like this example of a button.</p>
 
   {{ designExample({
     type: 'button'
@@ -55,10 +55,10 @@
   <p>For example, to use the button macro, use the import statement <code>% from 'node_modules/nhsuk-frontend/packages/components/button/macro.njk' import button %}</code>.</p>
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-5">
-    <p>If you’re using Nunjucks macros in production be aware that using  <code>html</code> arguments, or ones ending with <code>Html</code> can be a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">security risk</a>.</p>
+    <p>If you’re using Nunjucks macros in production, be aware that using  <code>html</code> arguments or ones ending with <code>html</code> can be a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">security risk</a>.</p>
   </div>
 
-  <p>There are various way to mitigate against that. One example is described in the <a href="https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning">Nunjucks documentation</a>.</p>
+  <p>There are various way to mitigate against this. An example is described in the <a href="https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning">Nunjucks documentation</a>.</p>
 
 
 {% endblock %}
