@@ -222,3 +222,14 @@ $service-manual-container-size: 1100px;
     }
   }
 }
+
+// Added meta data for a promo (date)
+.app-promo__meta {
+  @include nhsuk-font($size: 16);
+
+  color: $nhsuk-secondary-text-color;
+
+  @include mq($from: tablet) {
+    margin-bottom: nhsuk-spacing(3);
+  }
+}
