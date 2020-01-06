@@ -233,3 +233,8 @@ $service-manual-container-size: 1100px;
     margin-bottom: nhsuk-spacing(3);
   }
 }
+
+// Pagination hotfix for icon colour on focus & hover
+.nhsuk-pagination__link:visited:focus .nhsuk-icon {
+  fill: $nhsuk-focus-text-color;
+}
