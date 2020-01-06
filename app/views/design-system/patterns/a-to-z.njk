@@ -13,24 +13,15 @@
 
 {% block bodyContent %}
 
-  <figure class="nhsuk-image">
-    <img class="nhsuk-image__img" style="border: 1px solid #d8dde0;" src="/assets/a-z-desktop-example.png" alt="Medicines A to Z example on desktop">
-    <figcaption class="nhsuk-image__caption">
-      Health A to Z example on desktop
-    </figcaption>
-  </figure>
-
-  <figure class="nhsuk-image">
-    <img class="nhsuk-image__img" style="border: 1px solid #d8dde0;" src="/assets/a-z-mobile-example.png" alt="Medicines A to Z example on mobile">
-    <figcaption class="nhsuk-image__caption">
-      Health A to Z example on mobile
-    </figcaption>
-  </figure>
+  {{ designExample({
+    type: 'a-z',
+    fullpage: true
+  }) }}
 
   <p>The A to Z is made up of:</p>
   <ul>
-    <li>the A to Z navigation which sits at the top of the page</li>
-    <li>an A to Z list panel which houses all the links to pages</li>
+    <li>the <a href="a-to-z-navigation">A to Z navigation</a> which sits at the top of the page</li>
+    <li>an <a href="a-to-z-list-panel">A to Z list panel</a> which houses all the links to pages</li>
   </ul>
 
   <h2>When to use this pattern</h2>
@@ -53,7 +44,7 @@
 
   <h2>Elements of the A to Z pattern</h2>
 
-  <h3>A to Z navigation</h3>
+  <h3 id="a-to-z-navigation">A to Z navigation</h3>
 
   {{ designExample({
     type: 'a-z-nav'
@@ -61,7 +52,7 @@
 
   <p>Use the A to Z navigation at the top of the page.</p>
 
-  <h3>A to Z list panel</h3>
+  <h3 id="a-to-z-list-panel">A to Z list panel</h3>
 
   {{ designExample({
     type: 'a-z-list-panel'
