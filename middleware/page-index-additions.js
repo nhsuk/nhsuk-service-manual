@@ -1,6 +1,7 @@
 // Page specific
 const additionalIndices = {
   '/accessibility/testing': ['svg'],
+  '/community': ['contact, contact us, support, get in touch'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
   '/design-system/components/back-link': ['return link, back button'],
