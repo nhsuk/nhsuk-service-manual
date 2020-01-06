@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 2.0.2 - 6 January 2020
+## 2.1.0 - 6 January 2020
 
 :new: **New features**
 - Add entries for "pharmacy", "chemist" and "sex assigned or registered at birth" to the A to Z of NHS health writing
