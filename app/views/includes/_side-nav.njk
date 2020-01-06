@@ -131,7 +131,6 @@
 <nav class="app-side-nav">
 
   {%- if pageSection == 'NHS service standard' %}
-    <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -163,7 +162,6 @@
   {% endif %}
 
   {%- if pageSection == 'Styles' %}
-    <h2 class="app-side-nav__heading">Styles</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -227,7 +225,6 @@
   {% endif %}
 
   {%- if pageSection == 'Content style guide' %}
-    <h2 class="app-side-nav__heading">Content style guide</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -236,7 +233,6 @@
   {% endif %}
 
   {%- if pageSection == 'How to write good questions for forms' %}
-    <h2 class="app-side-nav__heading">How to write good questions for forms</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -245,7 +241,6 @@
   {% endif %}
 
   {%- if pageSection == 'Health literacy' %}
-    <h2 class="app-side-nav__heading">Health literacy</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in healthLiteracy %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -254,7 +249,6 @@
   {% endif %}
 
   {%- if pageSection == 'Community' %}
-    <h2 class="app-side-nav__heading">Community</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -263,7 +257,6 @@
   {% endif %}
 
   {%- if pageSection == 'What\'s new' %}
-    <h2 class="app-side-nav__heading">What's new</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in whatsNew %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
