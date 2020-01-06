@@ -174,16 +174,13 @@ class PageIndex {
       // Check heading doesn't contains additional HTML elements
       // This fixes issues with pages with a caption in the H1
       if ($(el).children().length === 0) {
-        console.log($(el).text().trim());
         headings = [...headings, ...[$(el).text().trim()]];
       } else {
         // If heading contains childen get the title from the title
         const title = $('title').text();
-        console.log(title.split(' - ')[0]);
         headings = [...headings, ...[title.split(' - ')[0]]];
       }
     });
-    console.log(...headings);
     return headings;
   }
 
@@ -201,10 +198,10 @@ class PageIndex {
     const listString = list.map(str => str.toLowerCase());
     return Object.keys(alternativeSpelling).reduce((altList, key) => {
       if (listString.includes(key.toLowerCase())) {
-        return [...altList, alternativeSpelling[key]];
+        return [...altList, ...alternativeSpelling[key]];
       }
       return altList;
-    });
+    }, []);
   }
 
   // Return page meta description
