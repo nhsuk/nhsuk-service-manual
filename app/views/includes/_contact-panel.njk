@@ -1,33 +1,33 @@
-{% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'What\'s new' %}
+{% if subSection === 'Styles' or subSection === 'Components' or subSection === 'Patterns' or pageSection === 'What\'s new' %}
   <h2 class="nhsuk-u-padding-top-4">Help improve this page</h2>
 
   {% if backlog_issue_id %}
     <p>The manual is a community effort. Anyone can help improve and grow it.</p>
 
-    {% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' %}
+    {% if subSection === 'Styles' or subSection === 'Components' or subSection === 'Patterns' %}
     <p>To help make sure the {{pageTitle}} guidance is useful, relevant and up to date, you can:</p>
     {% endif %}
 
     <ul class="nhsukuk-list nhsuk-list--bullet">
       <li>
-        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if pageSection === 'Components' or pageSection === 'Patterns' %}the {% endif %}{{pageTitle}}{% if pageSection === 'Components' %} component{% endif %}{% if pageSection === 'Patterns' %} pattern{% endif %} on GitHub</a>
+        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if subSection === 'Components' or subSection === 'Patterns' %}the {% endif %}{{pageTitle}}{% if subSection === 'Components' %} component{% endif %}{% if subSection === 'Patterns' %} pattern{% endif %} on GitHub</a>
       </li>
       <li>
-        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change to this page on GitHub</a>
+        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{subSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change to this page on GitHub</a>
       </li>
     </ul>
   {% else %}
     <p>The service manual is a community effort. Anyone can help improve and grow it.</p>
-    {% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' %}
-    <p>If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{pageSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.</p>
+    {% if subSection === 'Styles' or subSection === 'Components' or subSection === 'Patterns' %}
+    <p>If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/design-system/{{subSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.</p>
     {% else %}
-    <p>If you spot a problem with the {{pageTitle}} page you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/{{pageSection|lower|replace(" ", "-")|replace("'", "")}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a change</a>.</p>
+    <p>If you spot a problem with the {{pageTitle}} page you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/redesign/nav/app/views/{{subSection|lower|replace(" ", "-")|replace("'", "")}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a change</a>.</p>
     {% endif %}
   {% endif %}
 {% endif %}
 
 <div class="app-contact-panel">
-  {% if pageSection === 'Styles' or pageSection === 'Components' or pageSection === 'Patterns' or pageSection === 'Content style guide' or pageSection === 'Accessibility' %}
+  {% if subSection === 'Styles' or subSection === 'Components' or subSection === 'Patterns' or pageSection === 'Content style guide' or pageSection === 'Accessibility' %}
   <h2 class="app-contact-panel__heading">Need help?</h2>
   {% else %}
   <h2 class="app-contact-panel__heading">Get in touch</h2>

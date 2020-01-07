@@ -18,8 +18,12 @@
             {%- if landingPage == 'true' or pageTitle == 'Community' %}
             {% else %}
             <span class="nhsuk-caption-l">
-            {%- if theme %}
-              {{theme}}
+              {%- if subSection %}
+                {%- if theme %}
+                {{theme}}
+                {% else %}
+                {{subSection}}
+                {% endif %}
               {% else %}
               {{pageSection}}
               {% endif %}
