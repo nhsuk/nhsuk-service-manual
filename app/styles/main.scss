@@ -248,8 +248,20 @@ $service-manual-container-size: 1100px;
   }
 }
 
-.nhsuk-header__navigation-link {
-  &:hover {
-    background-color: transparent;
+// Remove main nav hover background colour on desktop
+@include mq($from: large-desktop) {
+  .nhsuk-header__navigation-link {
+    &:hover {
+      background-color: transparent;
+    }
   }
+}
+
+// Hotfix menu item icon colour on hover/focus
+.nhsuk-header__navigation-link:hover .nhsuk-icon__chevron-right {
+  fill: $color_nhsuk-white;
+}
+
+.nhsuk-header__navigation-link:focus .nhsuk-icon__chevron-right {
+  fill: $nhsuk-focus-text-color;
 }
