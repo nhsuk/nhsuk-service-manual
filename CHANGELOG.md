@@ -1,6 +1,27 @@
 # NHS digital service manual Changelog
 
-## 2.0.0 - Unreleased
+## 2.1.0 - 6 January 2020
+
+:new: **New features**
+- Add entries for "pharmacy", "chemist" and "sex assigned or registered at birth" to the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Add more detail about interoperability standards to section 17 of NHS service standard 
+- Amend guidance on using the number 1 in Numbers, measurements, dates and time after December Style Council meeting
+- Update inclusive language page, especially the section on sex, gender and sexuality
+- Update package dependencies to latest versions
+
+## 2.0.1 - 17 December 2019
+
+:wrench: **Fixes**
+
+- Correct formatting of full sentence list style on formatting and punctuation page
+- Remove link and clarify direction to research in details page
+- Update package dependencies to latest versions
+- Update frontend library and prototyping tools breadcrumb
+
+## 2.0.0 - 16 December 2019
 
 :new: **New features**
 
