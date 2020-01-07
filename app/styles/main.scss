@@ -7,61 +7,30 @@
 // Design examples
 @import 'design-example/design-example';
 
+/////////////////
+// CUSTOM STYLING
+/////////////////
+
+// Container
+$service-manual-container-size: 1100px;
+
+// Container
+.nhsuk-width-container {
+  max-width: $service-manual-container-size;
+
+  @media (min-width: 767px) and (max-width: 1164px) {
+    margin: 0 32px;
+  }
+}
+
+.nhsuk-header__navigation {
+  max-width: $service-manual-container-size + 64px;
+}
+
 // Image with border
 .app-image--border {
   border: 1px solid $color_nhsuk-grey-3;
   width: 100%;
-}
-
-/**
- * Hotfix for an issue with nested list spacing in
- * the NHS.UK frontend library
- *
- * https://github.com/nhsuk/nhsuk-frontend/issues/430
- */
-
-.nhsuk-u-nested-list {
-  margin-bottom: 0;
-}
-
-.nhsuk-u-nested-list > li {
-  @include nhsuk-responsive-margin(2, 'top');
-}
-
-// Breadcrumb hotfix
-// Too not have a visited state for back link
-.nhsuk-breadcrumb__backlink:visited {
-  color: $nhsuk-link-color;
-}
-
-// Nowrap hotfix
-.nhsuk-u-nowrap {
-  white-space: nowrap;
-}
-
-// Frontend override
-// Should be refactored into the frontend
-// The font weight should be 400 by default
-.nhsuk-body-m,
-.nhsuk-body-s {
-  font-weight: 400;
-}
-
-// Reduce promo bottom margin on mobile
-.nhsuk-promo-group,
-.nhsuk-promo-group__item {
-  @include mq($until: desktop) {
-    margin-bottom: nhsuk-spacing(3) + nhsuk-spacing(1);
-  }
-}
-
-// Lede text + lede text
-.nhsuk-lede-text + .nhsuk-lede-text {
-  margin-top: - nhsuk-spacing(3);
-}
-
-h1 + .nhsuk-lede-text {
-  margin-top: 0;
 }
 
 // Lede sub text
@@ -89,22 +58,7 @@ h1 + .nhsuk-lede-text {
   padding-top: 0;
 }
 
-// Container
-$service-manual-container-size: 1100px;
-
-// Container
-.nhsuk-width-container {
-  max-width: $service-manual-container-size;
-
-  @media (min-width: 767px) and (max-width: 1164px) {
-    margin: 0 32px;
-  }
-}
-
-.nhsuk-header__navigation {
-  max-width: $service-manual-container-size + 64px;
-}
-
+// The 'What's new' box in the home page hero
 .app-latest-update {
   padding-bottom: nhsuk-spacing(7);
   padding-top: nhsuk-spacing(7);
@@ -135,22 +89,21 @@ $service-manual-container-size: 1100px;
   }
 }
 
+// Utility class for hiding content on mobile
 .app-hide-mobile {
   @include mq($until: desktop) {
     display: none;
   }
 }
 
+// Utility class for hiding content on desktop
 .app-hide-desktop {
   @include mq($from: desktop) {
     display: none;
   }
 }
 
-.nhsuk-breadcrumb__link:visited {
-  color: $color_nhsuk-blue;
-}
-
+// Custom style for review date
 .app-review-date {
   @include nhsuk-responsive-margin(5, 'top');
 
@@ -159,6 +112,7 @@ $service-manual-container-size: 1100px;
   }
 }
 
+// Custom spacing for page headings
 @include mq($until: tablet) {
   .app-page-heading,
   .app-lede-text,
@@ -174,11 +128,6 @@ $service-manual-container-size: 1100px;
 
 .app-breadcrumb__back {
   display: block;
-}
-
-// Table bug hot fix
-.nhsuk-table__cell.nhsuk-body-s {
-  display: table-cell;
 }
 
 // Responsive tables
@@ -234,11 +183,6 @@ $service-manual-container-size: 1100px;
   }
 }
 
-// Pagination hotfix for icon colour on focus & hover
-.nhsuk-pagination__link:visited:focus .nhsuk-icon {
-  fill: $nhsuk-focus-text-color;
-}
-
 // Main nav active state
 .app-header__navigation-item__item--current {
   box-shadow: inset 0 -4px 0 $color_nhsuk-white;
@@ -246,6 +190,77 @@ $service-manual-container-size: 1100px;
   .nhsuk-header__navigation-link {
     font-weight: $nhsuk-font-bold;
   }
+}
+
+/////////////////
+// FRONTEND FIXES
+/////////////////
+
+/**
+ * Hotfix for an issue with nested list spacing in
+ * the NHS.UK frontend library
+ *
+ * https://github.com/nhsuk/nhsuk-frontend/issues/430
+ */
+
+ .nhsuk-u-nested-list {
+  margin-bottom: 0;
+}
+
+.nhsuk-u-nested-list > li {
+  @include nhsuk-responsive-margin(2, 'top');
+}
+
+// Nowrap hotfix
+.nhsuk-u-nowrap {
+  white-space: nowrap;
+}
+
+// Frontend override
+// Should be refactored into the frontend
+// The font weight should be 400 by default
+.nhsuk-body-m,
+.nhsuk-body-s {
+  font-weight: 400;
+}
+
+// Reduce promo bottom margin on mobile
+.nhsuk-promo-group,
+.nhsuk-promo-group__item {
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(3) + nhsuk-spacing(1);
+  }
+}
+
+// Lede text + lede text
+.nhsuk-lede-text + .nhsuk-lede-text {
+  margin-top: - nhsuk-spacing(3);
+}
+
+h1 + .nhsuk-lede-text {
+  margin-top: 0;
+}
+
+// Breadcrumb hotfix
+// To not have a visited state for back link
+.nhsuk-breadcrumb__backlink:visited {
+  color: $nhsuk-link-color;
+}
+
+// Breadcrumb hotfix
+// To not have a visited state for breadcrumb link
+.nhsuk-breadcrumb__link:visited {
+  color: $color_nhsuk-blue;
+}
+
+// Table bug hot fix
+.nhsuk-table__cell.nhsuk-body-s {
+  display: table-cell;
+}
+
+// Pagination hotfix for icon colour on focus & hover
+.nhsuk-pagination__link:visited:focus .nhsuk-icon {
+  fill: $nhsuk-focus-text-color;
 }
 
 // Remove main nav hover background colour on desktop
@@ -265,3 +280,4 @@ $service-manual-container-size: 1100px;
 .nhsuk-header__navigation-link:focus .nhsuk-icon__chevron-right {
   fill: $nhsuk-focus-text-color;
 }
+
