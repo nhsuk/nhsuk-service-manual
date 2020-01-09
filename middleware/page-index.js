@@ -76,8 +76,15 @@ class PageIndex {
     }
   }
 
-  // Return indexed data from indexed pages for passed query
+  /**
+   * Return indexed data from indexed pages for passed query
+   *
+   * @param {string} query - Query from 'search-field' param
+   * @return {object[]} - Array of indexed page objects
+   */
   search(query) {
+    // Skip running a search if there is no query
+    if (!query) return [];
     return this.searchIndex(query)
       // Map page to its indexed data
       .map(res => this.getData(res))
