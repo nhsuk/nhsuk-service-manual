@@ -6,6 +6,10 @@
 
 - Display the parent page in search results
 
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 2.1.0 - 6 January 2020
 
 :new: **New features**
