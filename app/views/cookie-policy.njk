@@ -17,12 +17,15 @@
       <p>Cookies are not viruses or computer programs. They are very small so do not take up much space.</p>
 
       <h2>How we use cookies</h2>
-      <p>We use cookies to:</p>
+      <p>We only use cookies to:</p>
       <ul>
-        <li>make our website work, for example by keeping it secure and fast</li>
-        <li>measure how you use our website, such as which pages you visit (anonymously)</li>
+        <li>make our website work</li>
+        <li>measure how you use our website, such as which links you click on (analytics cookies)</li>
       </ul>
+      <p>We do not use any other cookies, for example, cookies that remember your settings or cookies that help with health campaigns.</p>
 
+      <h2>Cookies that make our website work</h2>
+      <p>We use cookies to keep our website secure and fast.</p>
     </div>
 
     <details class="nhsuk-details">
@@ -62,23 +65,74 @@
     </details>
 
     <div class="nhsuk-u-reading-width">
+      <h2>Cookies that measure website use</h2>
+      <p>We also like to use analytics cookies. These cookies store anonymous information about how you use our website, such as which pages you visit or what you click on.</p>
+    </div>
 
-      <h2>Change your cookie settings</h2>
-      <p>Some cookies, like those used to measure how you use our website, are not needed for our website to work.</p>
-      <p>These cookies can help us make our website better, but we'll only use them if you say it's OK.</p>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          List of cookies that measure website use
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
 
-      <div class="nhsuk-action-link">
-        <a class="nhsuk-action-link__link" href="/cookie-declaration">
-          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-          </svg>
-          <span class="nhsuk-action-link__text">Choose which cookies we use</span>
-        </a>
+        <div class="nhsuk-table-responsive app-table-responsive--cookies">
+          <table class="nhsuk-table" role="”table”">
+            <caption class="nhsuk-table__caption">Cookie names and purposes</caption>
+            <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row" role="row">
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Cookie name</th>
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Purpose</th>
+                <th class="nhsuk-table__header" role="columnheader" scope="col">Expiry</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_ga</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Tells us how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">2 years</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_gid</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Sets a unique ID for your session to help tell us how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">1 day</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell" data-label="Cookie name">_gat</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Purpose">Used by Google Analytics. Helps stop Google Analytics web servers crashing when collecting information on how you use our website.</td>
+                <td class="nhsuk-table__cell" role="cell" data-label="Expiry">1 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
+    </details>
 
-      <h2>How we use the information we collect</h2>
-      <p>To find out how we collect, store and use information about you or your visit, see <a href="/privacy">our privacy policy</a>.</p>
+    <div class="nhsuk-u-reading-width">
+       <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
+
+      <h3>Tell us if we can use analytics cookies</h3>
+      <fieldset class="nhsuk-fieldset" id="cookie-statistics-form" aria-describedby="cookie-statistics">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-statistics-1" name="input-statistics" type="radio" value="on">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-1">
+            Use cookies to measure my website use
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="input-statistics-2" name="input-statistics" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-2">
+            Do not use cookies to measure my website use
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <a href="/cookie-confirmation" onclick="changeConsent();" type="submit" class="nhsuk-button nhsuk-u-margin-bottom-0">
+        Save my cookie settings
+      </a>
 
     </div>
 
