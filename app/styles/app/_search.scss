@@ -104,10 +104,6 @@
       }
     }
 
-    &:active {
-      background-color: $nhsuk-button-active-color;
-    }
-
   }
 
 }
@@ -127,7 +123,14 @@
   text-transform: uppercase;
 }
 
+.app-search-results-category {
+  color: $nhsuk-secondary-text-color;
+  display: block;
+  font-size: 14px;
+}
+
 .autocomplete__option {
+  line-height: 1.35;
   text-decoration: none;
 
   &:focus {
@@ -164,4 +167,15 @@
     padding: 16px 8px;
   }
 
+  .autocomplete__option-title {
+    text-decoration: underline;
+  }
+
+}
+
+.autocomplete__option-category {
+  color: $nhsuk-secondary-text-color;
+  display: block;
+  font-size: 14px;
+  margin-top: nhsuk-spacing(1);
 }
