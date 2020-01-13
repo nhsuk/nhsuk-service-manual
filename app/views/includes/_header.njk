@@ -1,6 +1,6 @@
 {% from 'header/macro.njk' import header %}
 
-{%- if pageTitle == 'Search' %}
+{%- if disableSearch %}
   {{ header({
     "homeHref": "/",
     "ariaLabel": "NHS digital service manual homepage",

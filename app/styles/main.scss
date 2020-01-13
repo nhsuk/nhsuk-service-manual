@@ -179,7 +179,7 @@ $service-manual-container-size: 1100px;
   color: $nhsuk-secondary-text-color;
 
   + .app-meta-data {
-      margin-top: - nhsuk-spacing(3);
+    margin-top: - nhsuk-spacing(3);
   }
 
   @include mq($from: tablet) {
