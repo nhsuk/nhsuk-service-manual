@@ -47,8 +47,8 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@babel/preset-env": "^7.8.2",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
     "concurrently": "^4.1.2",
     "cpx": "^1.5.0",
@@ -62,7 +62,7 @@
     "node-sass": "^4.13.0",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
-    "webpack": "^4.41.4",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
 }
