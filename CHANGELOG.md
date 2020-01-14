@@ -16,6 +16,28 @@
 - Only use Google Analytics on the production environment
 - Update the 404 page not found content and add a variable to disable search
 
+## 2.2.0 - 13 January 2020
+
+:new: **New features**
+
+- Display the parent page in search results
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
+## 2.1.0 - 6 January 2020
+
+:new: **New features**
+- Add entries for "pharmacy", "chemist" and "sex assigned or registered at birth" to the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Add more detail about interoperability standards to section 17 of NHS service standard 
+- Amend guidance on using the number 1 in Numbers, measurements, dates and time after December Style Council meeting
+- Update inclusive language page, especially the section on sex, gender and sexuality
+- Update package dependencies to latest versions
+
 ## 2.0.1 - 17 December 2019
 
 :wrench: **Fixes**
