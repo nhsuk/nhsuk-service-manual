@@ -1,36 +1,28 @@
----
 trigger:
   branches:
     include:
     - master
-    - develop
-  paths:
-    include:
-    - /
-    exclude:
-    - deploy/terraform/*
+    - refs/tags/v*
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'ubuntu-latest'
 
 steps:
-- bash: |
-    mkdir src
-    find . -maxdepth 1 -not \( -name deploy -or -name 'azure-pipelines.yml' -or -name .git -or -name .gitignore -or -name README.md -or -name src -or -name . \) -exec mv '{}' './src/' \;
-    npm install --prefix src && npm test --prefix src
-  displayName: 'npm install'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src'
-    includeRootFolder: false
+  - script: npm ci
+    displayName: 'Install'
 
-- task: CopyFiles@2
-  displayName: 'copy deployment scripts'
-  inputs:
-    sourceFolder: '$(Build.SourcesDirectory)/deploy'
-    targetFolder: $(Build.ArtifactStagingDirectory)/deploy
+  - script: npm run build
+    displayName: 'Build'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts: drop'
+  - script: npm test
+    displayName: 'Test'
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+      includeRootFolder: false
+    displayName: 'Create file archive to publish'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish files to Azure Pipelines'
