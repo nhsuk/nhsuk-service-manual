@@ -1,8 +1,16 @@
 trigger:
   branches:
     include:
-    - master
-    - refs/tags/v*
+    - '*'
+  tags:
+    include:
+    - '*'
+
+pr:
+  autoCancel: true
+  branches:
+    include:
+    - '*'
 
 pool:
   vmImage: 'ubuntu-latest'
