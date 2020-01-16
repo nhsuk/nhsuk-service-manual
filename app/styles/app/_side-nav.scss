@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .app-side-nav__heading {
-  @include nhsuk-font(19, $line-height: 1.25);
+  @include nhsuk-font(19, $line-height: 1.25, $weight: bold);
   color: $nhsuk-secondary-text-color;
   margin-bottom: 12px;
   padding-top: 4px;
