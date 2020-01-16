@@ -268,6 +268,12 @@ h1 + .nhsuk-lede-text {
   color: $color_nhsuk-blue;
 }
 
+// Breadcrumb hotfix
+// To not have a visited state for breadcrumb link
+.nhsuk-breadcrumb__link:hover {
+  color: $nhsuk-link-hover-color;
+}
+
 // Table bug hot fix
 .nhsuk-table__cell.nhsuk-body-s {
   display: table-cell;
