@@ -108,7 +108,7 @@
 ] %}
 
 {% set askUsers = [
-  { title: "Ask users for their NHS number", url: "/design-system/patterns/nhs-number" }
+rede  { title: "Ask users for their NHS number", url: "/design-system/patterns/nhs-number" }
 ] %}
 
 {% set pages = [
@@ -201,7 +201,7 @@
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Pages types</h2>
+    <h2 class="app-side-nav__heading">Page types</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in pages %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
