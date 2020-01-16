@@ -45,13 +45,13 @@
     text-decoration: underline;
   }
 
-  &:hover {
-    color: $color_nhsuk-blue;
-    text-decoration: underline;
-  }
-
   &:visited {
     color: $color_nhsuk-blue;
+  }
+
+  &:hover {
+    color: $nhsuk-link-hover-color;
+    text-decoration: underline;
   }
 
   &:focus {
