@@ -1,0 +1,27 @@
+// Promo video
+.app-promo--video {
+  background: $color_nhsuk-white;
+}
+
+.app-promo--video-title {
+  margin-bottom: nhsuk-spacing(3);
+}
+
+.app-embed-container {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.app-embed-container iframe,
+.app-embed-container object,
+.app-embed-container embed {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
