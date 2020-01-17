@@ -269,8 +269,14 @@ h1 + .nhsuk-lede-text {
 }
 
 // Breadcrumb hotfix
-// To not have a visited state for breadcrumb link
+// To change color on hover when visited
 .nhsuk-breadcrumb__link:hover {
+  color: $nhsuk-link-hover-color;
+}
+
+// Back link hotfix
+// To change color on hover when visited
+.nhsuk-back-link__link:hover {
   color: $nhsuk-link-hover-color;
 }
 

@@ -14,8 +14,13 @@
   }
 }
 
+.app-side-nav__back {
+  border-bottom: 1px solid $nhsuk-border-color;
+  padding-bottom: nhsuk-spacing(3);
+}
+
 .app-side-nav__list {
-  @include nhsuk-responsive-margin(2, 'bottom');
+  @include nhsuk-responsive-margin(0, 'bottom');
   @include nhsuk-font(16, $line-height: 1.3);
 
   @include mq($until: desktop) {
