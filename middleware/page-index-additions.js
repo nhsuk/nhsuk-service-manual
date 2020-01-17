@@ -13,6 +13,7 @@ const additionalIndices = {
   '/design-system/components/error-message': ['validation message'],
   '/design-system/components/expander': ['reveal, accordion'],
   '/design-system/components/header': ['banner'],
+  '/design-system/components/hint-text': ['helper text'],
   '/design-system/components/images': ['pictures, photos'],
   '/design-system/components/inset-text': ['information, highlighted text, callout'],
   '/design-system/styles/layout': ['grid'],
