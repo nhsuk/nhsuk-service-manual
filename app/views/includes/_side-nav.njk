@@ -184,21 +184,21 @@
       "classes": "app-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
     }) }}
     <h2 class="app-side-nav__heading">Form elements</h2>
-    <ul class="nhsuk-list app-side-nav__list"></li>
+    <ul class="nhsuk-list app-side-nav__list">
     {% for item in formElements %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
 
     <h2 class="app-side-nav__heading">Content presentation</h2>
-    <ul class="nhsuk-list app-side-nav__list"></li>
+    <ul class="nhsuk-list app-side-nav__list">
     {% for item in contentPresentation %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
 
     <h2 class="app-side-nav__heading">Navigation</h2>
-    <ul class="nhsuk-list app-side-nav__list"></li>
+    <ul class="nhsuk-list app-side-nav__list">
     {% for item in navigation %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
