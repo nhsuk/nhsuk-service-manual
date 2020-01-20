@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #LEDE-TEXT
+   ========================================================================== */
+
+.nhsuk-lede-text + .app-lede-text--sub {
+  margin-bottom: nhsuk-spacing(7);
+  margin-top: - nhsuk-spacing(3);
+
+  @include mq($until: tablet) {
+    margin-bottom: nhsuk-spacing(5);
+    margin-top: - nhsuk-spacing(3);
+  }
+}
+
+.app-lede-text + h2,
+.app-lede-text + .nhsuk-heading-l {
+  padding-top: nhsuk-spacing(2);
+}
+
+.app-lede-text--sub + h2,
+.app-lede-text--sub + .nhsuk-heading-l {
+  padding-top: nhsuk-spacing(0);
+}
+
+.app-lede-text + .app-index-navigation {
+  padding-top: 0;
+}

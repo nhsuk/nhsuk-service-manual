@@ -45,4 +45,16 @@
 
 }
 
+// Custom spacing for page headings
+@include mq($until: tablet) {
+  .app-page-heading,
+  .app-lede-text,
+  .app-contents-list,
+  .app-lede-text--sub {
+    margin-bottom: nhsuk-spacing(5);
+  }
 
+  .app-contents-list .nhsuk-contents-list__list {
+    margin-bottom: 0;
+  }
+}

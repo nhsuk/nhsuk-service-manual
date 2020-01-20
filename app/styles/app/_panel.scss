@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #PANEL
+   ========================================================================== */
+
+// The 'What's new' box in the home page hero
+.app-latest-update {
+  padding-bottom: nhsuk-spacing(7);
+  padding-top: nhsuk-spacing(7);
+
+  @include mq($until: desktop) {
+    padding-bottom: nhsuk-spacing(6);
+    padding-top: 0;
+  }
+}
+
+.app-panel--transparent {
+  background: transparent;
+  border: 2px solid $nhsuk-secondary-border-color;
+  color: $color_nhsuk-white;
+
+  a {
+    color: $color_nhsuk-white;
+
+    &:hover,
+    &:visited {
+      color: $color_nhsuk-grey-5;
+    }
+
+    &:focus {
+      color: $nhsuk-focus-text-color;
+    }
+
+  }
+}

@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+// Container width variable
+$service-manual-container-size: 1100px;
+
+.nhsuk-width-container {
+  max-width: $service-manual-container-size;
+
+  @media (min-width: 767px) and (max-width: 1164px) {
+    margin: 0 nhsuk-spacing(5);
+  }
+}
+
+.nhsuk-header__navigation {
+  max-width: $service-manual-container-size + nhsuk-spacing(9);
+}
