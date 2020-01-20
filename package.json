@@ -59,7 +59,7 @@
     "iframe-resizer": "^3.6.6",
     "jest": "^24.9.0",
     "nhsuk-frontend": "^3.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
     "webpack": "^4.41.5",
