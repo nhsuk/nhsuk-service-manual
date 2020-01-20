@@ -5,6 +5,7 @@ td code {
   background-color: $color_nhsuk-white;
   color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
   padding: nhsuk-spacing(1) nhsuk-spacing(2);
+  word-break: break-word;
 }
 
 // Highlight code in a block
