@@ -53,7 +53,7 @@
 }
 
 p + .design-example {
-  @include nhsuk-responsive-padding(4, 'top');
+  @include nhsuk-responsive-padding(3, 'top');
 }
 
 .nhsuk-lede-text + .design-example {
