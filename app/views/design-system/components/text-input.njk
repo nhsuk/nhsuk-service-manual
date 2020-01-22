@@ -1,21 +1,21 @@
 {% set pageTitle = "Text input" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '21' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "21" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'input'
+    type: "input"
   }) }}
 
   <h2>When to use text input</h2>
@@ -32,7 +32,7 @@
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
 
   {{ designExample({
-    type: 'input-heading'
+    type: "input-heading"
   }) }}
 
   <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
@@ -45,7 +45,7 @@
   <p>On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.</p>
 
   {{ designExample({
-    type: 'input-fixed-width'
+    type: "input-fixed-width"
   }) }}
 
   <h4 id="fluid-width-inputs">Fluid width inputs</h4>
@@ -53,21 +53,21 @@
   <p>Fluid width inputs will resize with the viewport.</p>
 
   {{ designExample({
-    type: 'input-fluid-width'
+    type: "input-fluid-width"
   }) }}
 
   <h3 id="using-hint-text">Using hint text</h3>
   <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>, for example, tell users where to find information or how you will use their data.</p>
 
   {{ designExample({
-    type: 'input-hint-text'
+    type: "input-hint-text"
   }) }}
 
   <h3 id="error-messages">Error messages</h3>
   <p>Style error messages like this.</p>
 
   {{ designExample({
-    type: 'input-error'
+    type: "input-error"
   }) }}
 
   <p>Follow:</p>

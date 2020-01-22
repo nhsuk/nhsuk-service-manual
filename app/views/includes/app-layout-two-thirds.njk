@@ -1,4 +1,4 @@
-{% extends 'includes/layout.njk' %}
+{% extends "includes/layout.njk" %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -7,7 +7,7 @@
     <h1 class="app-page-heading">{{pageTitle}}</h1>
 
 
-    {%- if hideDescription == 'true' %}
+    {%- if hideDescription == "true" %}
     {% else %}
       <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
     {% endif %}

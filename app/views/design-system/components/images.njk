@@ -1,21 +1,21 @@
-{% set pageTitle = 'Images' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use images only if there is a real user need. Avoid unnecessary decoration.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'February 2019' %}
-{% set backlog_issue_id = '28' %}
+{% set pageTitle = "Images" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use images only if there is a real user need. Avoid unnecessary decoration." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "28" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'images'
+    type: "images"
   }) }}
 
   <h2>When to use images</h2>

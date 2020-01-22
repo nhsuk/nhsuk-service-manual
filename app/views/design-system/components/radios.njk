@@ -1,21 +1,21 @@
 {% set pageTitle = "Radios" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Use radios when you want users to select only 1 option from a list." %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '19' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "19" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'radios'
+    type: "radios"
   }) }}
 
   <h2 id="when-to-use-this-component">When to use radios</h2>
@@ -43,35 +43,35 @@
   <p>If there are only 2 options, you can either stack the radios or display them inline, like this:</p>
 
   {{ designExample({
-    type: 'radios-inline'
+    type: "radios-inline"
   }) }}
 
   <h3 id="radios-with-hints">Radios with hints</h3>
   <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>.</p>
 
   {{ designExample({
-    type: 'radios-hints'
+    type: "radios-hints"
   }) }}
 
   <h3 id="radio-items-with-hints">Radio items with hints</h3>
   <p>You can add hints to radios to give more information about the options.</p>
 
   {{ designExample({
-    type: 'radios-hints-options'
+    type: "radios-hints-options"
   }) }}
 
   <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
   <p>If 1 or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word "or".</p>
 
   {{ designExample({
-    type: 'radios-divider'
+    type: "radios-divider"
   }) }}
 
   <h3 id="error-messages">Error messages</h3>
   <p>Style error messages like this:</p>
 
   {{ designExample({
-    type: 'radios-error'
+    type: "radios-error"
   }) }}
 
   <p>Follow:</p>

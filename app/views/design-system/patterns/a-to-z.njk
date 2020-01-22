@@ -1,21 +1,21 @@
-{% set pageTitle = 'A to Z page' %}
-{% set pageDescription = 'A to Z is a way of presenting a number of pages alphabetically.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Patterns' %}
-{% set theme = 'Page types' %}
-{% set dateUpdated = 'February 2019' %}
-{% set backlog_issue_id = '96' %}
+{% set pageTitle = "A to Z page" %}
+{% set pageDescription = "A to Z is a way of presenting a number of pages alphabetically." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Page types" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "96" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/patterns/_breadcrumb.njk' %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'a-z',
+    type: "a-z",
     fullpage: true
   }) }}
 
@@ -48,7 +48,7 @@
   <h3 id="a-to-z-navigation">A to Z navigation</h3>
 
   {{ designExample({
-    type: 'a-z-nav'
+    type: "a-z-nav"
   }) }}
 
   <p>Use the A to Z navigation at the top of the page.</p>
@@ -56,7 +56,7 @@
   <h3 id="a-to-z-list-panel">A to Z list panel</h3>
 
   {{ designExample({
-    type: 'a-z-list-panel'
+    type: "a-z-list-panel"
   }) }}
 
   <p>Use the A to Z list panel below the A to Z navigation to help users to navigate around a large section, for example a range of different health conditions. The example on this page is from the Health A to Z page on the NHS website.</p>

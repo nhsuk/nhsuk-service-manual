@@ -1,12 +1,12 @@
-{% set pageTitle = 'Health literacy' %}
-{% set pageSection = 'Content style guide' %}
-{% set pageDescription = 'NHS services are for everyone. But many adults in the UK have low "health literacy" skills. This means they struggle to read and understand medical content intended for the public.' %}
-{% set dateUpdated = 'July 2019' %}
+{% set pageTitle = "Health literacy" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "NHS services are for everyone. But many adults in the UK have low health literacy skills. This means they struggle to read and understand medical content intended for the public." %}
+{% set dateUpdated = "July 2019" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'content/_breadcrumb.njk' %}
+  {% include "content/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -71,5 +71,5 @@
 {% endblock %}
 
 {% block asideContent %}
-  {% include '../partials/related-nav.njk' %}
+  {% include "../partials/related-nav.njk" %}
 {% endblock %}

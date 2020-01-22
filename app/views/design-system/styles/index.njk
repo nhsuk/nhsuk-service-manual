@@ -1,13 +1,13 @@
-{% set pageTitle = 'Styles' %}
-{% set pageDescription = 'Make your service look and feel like the NHS website with these tested styles.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Styles' %}
-{% set theme = 'Design' %}
+{% set pageTitle = "Styles" %}
+{% set pageDescription = "Make your service look and feel like the NHS website with these tested styles." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set theme = "Design" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/_breadcrumb.njk' %}
+  {% include "design-system/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -15,7 +15,7 @@
   <p>If you are using the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a> or have the <a href="https://github.com/nhsuk/nhsuk-frontend">NHS.UK frontend</a> included in your build, the coded examples in the service manual do not need any additional styling.</p>
 
   <div class="app-index-navigation app-u-hide-desktop">
-    {% include 'includes/_side-nav.njk' %}
+    {% include "includes/_side-nav.njk" %}
   </div>
 
 {% endblock %}

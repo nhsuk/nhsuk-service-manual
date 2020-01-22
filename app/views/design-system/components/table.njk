@@ -1,21 +1,21 @@
-{% set pageTitle = 'Table' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use a table to make it easier for users to compare and scan information.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'April 2019' %}
-{% set backlog_issue_id = '26' %}
+{% set pageTitle = "Table" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "April 2019" %}
+{% set backlog_issue_id = "26" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'table'
+    type: "table"
   }) }}
 
   <h2 id="when-to-use-this-component">When to use a table</h2>

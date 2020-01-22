@@ -1,14 +1,14 @@
-{% set pageTitle = 'Spacing' %}
-{% set pageDescription = 'We\'ve followed the Government Design System\'s approach to spacing pages and setting the width of page elements so that they are consistent, responsive and clear. But we have adapted it for NHS-specific styles.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Styles' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '24' %}
+{% set pageTitle = "Spacing" %}
+{% set pageDescription = "We've followed the Government Design System's approach to spacing pages and setting the width of page elements so that they are consistent, responsive and clear. But we have adapted it for NHS-specific styles." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "24" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/styles/_breadcrumb.njk' %}
+  {% include "design-system/styles/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block sideNav %}
@@ -217,12 +217,12 @@
   <h3 id="spacing-examples" class="nhsuk-u-padding-top-3">Examples</h3>
 
   {{ designExample({
-    type: 'spacing',
+    type: "spacing",
     htmlOnly: true
   }) }}
 
   {{ designExample({
-    type: 'spacing-text',
+    type: "spacing-text",
     htmlOnly: true
   }) }}
 
@@ -251,7 +251,7 @@
   </ul>
 
   {{ designExample({
-    type: 'spacing-width',
+    type: "spacing-width",
     htmlOnly: true
   }) }}
 

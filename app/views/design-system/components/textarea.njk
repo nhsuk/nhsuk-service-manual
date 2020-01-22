@@ -1,21 +1,21 @@
 {% set pageTitle = "Textarea" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Use textarea to let users enter more than 1 line of text." %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'January 2020' %}
-{% set backlog_issue_id = '22' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2020" %}
+{% set backlog_issue_id = "22" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'textarea'
+    type: "textarea"
   }) }}
 
   <h2 id="when-to-use-this-component">When to use textarea</h2>
@@ -37,7 +37,7 @@
   <p class="rich-text">Make the height of a textarea proportional to the amount of text you expect users to enter. You can set the height of a textarea by specifying the <code>rows</code> attribute.</p>
 
   {{ designExample({
-    type: 'textarea-longer'
+    type: "textarea-longer"
   }) }}
   <h3>Using hint text</h3>
   <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>, for example, tell users what information to include or not to include.</p>
@@ -48,7 +48,7 @@
   <p>Style error messages like this.</p>
 
   {{ designExample({
-    type: 'textarea-error'
+    type: "textarea-error"
   }) }}
 
   <p>Follow:</p>

@@ -1,30 +1,30 @@
-{% set pageTitle = 'Development' %}
-{% set pageSection = 'Accessibility' %}
-{% set subSection = 'Accessibility' %}
-{% set pageDescription = 'What developers need to do to make digital services accessible.' %}
-{% set theme = 'Accessibility guidance for:' %}
-{% set dateUpdated = 'July 2019' %}
+{% set pageTitle = "Development" %}
+{% set pageSection = "Accessibility" %}
+{% set subSection = "Accessibility" %}
+{% set pageDescription = "What developers need to do to make digital services accessible." %}
+{% set theme = "Accessibility guidance for:" %}
+{% set dateUpdated = "July 2019" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'accessibility/_breadcrumb.njk' %}
+  {% include "accessibility/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
-  {% include './partials/check-keyboard-accessibility.njk' %}
-  {% include './partials/set-page-titles.njk' %}
-  {% include './partials/set-language.njk' %}
-  {% include './partials/use-aria-patterns.njk' %}
-  {% include './partials/discuss-any-custom-components.njk' %}
-  {% include './partials/test-that-text-sizes-and-zooms-correctly.njk' %}
-  {% include './partials/use-alternative-text-for-functional-images.njk' %}
-  {% include './partials/make-video-and-multimedia-accessible.njk' %}
+  {% include "./partials/check-keyboard-accessibility.njk" %}
+  {% include "./partials/set-page-titles.njk" %}
+  {% include "./partials/set-language.njk" %}
+  {% include "./partials/use-aria-patterns.njk" %}
+  {% include "./partials/discuss-any-custom-components.njk" %}
+  {% include "./partials/test-that-text-sizes-and-zooms-correctly.njk" %}
+  {% include "./partials/use-alternative-text-for-functional-images.njk" %}
+  {% include "./partials/make-video-and-multimedia-accessible.njk" %}
 
 {% endblock %}
 
 {% block asideContent %}
-  {% include './partials/related-nav.njk' %}
+  {% include "./partials/related-nav.njk" %}
 {% endblock %}
 

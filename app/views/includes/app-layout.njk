@@ -1,4 +1,4 @@
-{% extends 'includes/layout.njk' %}
+{% extends "includes/layout.njk" %}
 
 {% block body %}
 <div class="nhsuk-grid-row">
@@ -8,14 +8,14 @@
 
         <div class="app-pane__side-bar">
           {% block sideNav %}
-            {% include './_side-nav.njk' %}
+            {% include "./_side-nav.njk" %}
           {% endblock %}
         </div>
 
         <div class="app-pane__main-content">
 
           <h1 class="app-page-heading">
-            {%- if landingPage == 'true' or pageTitle == 'Community' or pageTitle == 'NHS service standard' %}
+            {%- if landingPage == "true" or pageTitle == "Community" or pageTitle == "NHS service standard" %}
             {% else %}
             <span class="nhsuk-caption-l">
               {%- if subSection %}
@@ -31,7 +31,7 @@
             </span>
             {% endif %}
             {{pageTitle}}
-            {%- if experimental == 'true' %}
+            {%- if experimental == "true" %}
             <div>
               <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
                 Experimental
@@ -41,7 +41,7 @@
             {% endif %}
           </h1>
 
-          {%- if hideDescription == 'true' %}
+          {%- if hideDescription == "true" %}
           {% else %}
             <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
           {% endif %}
@@ -50,9 +50,9 @@
           {% endblock %}
 
           {% block contactPanel %}
-            {%- if landingPage == 'true' or theme == 'Design' or theme == 'Content style guide' or pageTitle == 'Support' %}
+            {%- if landingPage == "true" or theme == "Design" or theme == "Content style guide" or pageTitle == "Support" %}
             {% else %}
-              {% include './_contact-panel.njk' %}
+              {% include "./_contact-panel.njk" %}
             {% endif %}
           {% endblock %}
 

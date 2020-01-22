@@ -1,21 +1,21 @@
-{% set pageTitle = 'Expander' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Make a complex topic easier to digest by letting users reveal more detailed information only if they need it.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '29' %}
+{% set pageTitle = "Expander" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Make a complex topic easier to digest by letting users reveal more detailed information only if they need it." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "29" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'expander'
+    type: "expander"
   }) }}
 
   <h2 id="when-to-use-this-component">When to use expanders</h2>
@@ -54,7 +54,7 @@
   <p>It can work well to have several expanders. See the example below.</p>
 
   {{ designExample({
-    type: 'expander-group'
+    type: "expander-group"
   }) }}
 
   <h3 id="write-clear-link-text">Write clear link text</h3>

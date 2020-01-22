@@ -1,21 +1,21 @@
-{% set pageTitle = 'Review date' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use review dates to reassure users that our information is up-to-date.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'February 2019' %}
-{% set backlog_issue_id = '31' %}
+{% set pageTitle = "Review date" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use review dates to reassure users that our information is up-to-date." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "31" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'review-date'
+    type: "review-date"
   }) }}
 
   <h2>When to use review dates</h2>
