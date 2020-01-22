@@ -19,7 +19,7 @@
     {% if subSection === 'Styles' or subSection === 'Components' or subSection === 'Patterns' %}
     <p>If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/app/views/design-system/{{subSection|lower}}/{{pageTitle|lower|replace(" ", "-")}}.njk">propose a change</a>.</p>
     {% else %}
-    <p>If you spot a problem with the {{pageTitle}} page you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/nav/app/views/{{subSection|lower|replace(" ", "-")|replace("'", "")}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a change</a>.</p>
+    <p>If you spot a problem with the {{pageTitle}} page you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/app/views/{{subSection|lower|replace(" ", "-")|replace("'", "")}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a change</a>.</p>
     {% endif %}
   {% endif %}
 {% endif %}
