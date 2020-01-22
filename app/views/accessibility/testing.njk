@@ -1,8 +1,11 @@
-{% set pageTitle = 'Testing: accessibility guidance' %}
+{% set pageTitle = 'Testing' %}
 {% set pageSection = 'Accessibility' %}
+{% set subSection = 'Accessibility' %}
 {% set pageDescription = 'What testers and quality assurers need to do to make digital services accessible.' %}
+{% set theme = 'Accessibility guidance for:' %}
+{% set dateUpdated = 'November 2019' %}
 
-{% extends 'includes/app-layout-two-thirds.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
   {% include 'accessibility/_breadcrumb.njk' %}
@@ -42,12 +45,7 @@
   {% include './partials/do-not-rely-on-touch-gestures.njk' %}
   {% include './partials/do-not-rely-on-motion-sensors.njk' %}
   {% include './partials/use-html-rather-than-pdfs.njk' %}
-  {% include './partials/get-in-touch-accessibility.njk' %}
 
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: November 2019</p>
-  </div>
-</div>
 {% endblock %}
 
 {% block asideContent %}

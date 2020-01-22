@@ -1,0 +1,41 @@
+{% set pageTitle = "Your cookie settings have been saved" %}
+{% set pageDescription = "Your cookie settings have been saved. We'll save your settings for a year." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/cookie-policy">Cookie policy</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/cookie-policy">Back to Cookie policy</a></p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-u-reading-width">
+
+      <h1>{{ pageTitle }}</h1>
+      <p>We'll save your settings for a year.</p>
+      <p>We'll ask you if you're still OK with us using cookies when either:</p>
+      <ul>
+        <li>it's been a year since you last saved your settings</li>
+        <li>we add any new cookies or change the cookies we use</li>
+      </ul>
+      <p>You can also <a href="/cookie-policy">choose which cookies we use</a> at any time.</p>
+
+    </div>
+
+    <div class="nhsuk-review-date">
+      <p class="nhsuk-body-s">Updated: January 2020</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

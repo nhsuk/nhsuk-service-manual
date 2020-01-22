@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -27,6 +27,10 @@
     "webpack": "webpack"
   },
   "author": "https://github.com/nhsuk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nhsuk/nhsuk-service-manual.git"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.1",
@@ -43,19 +47,19 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
     "concurrently": "^4.1.2",
     "cpx": "^1.5.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-nhsuk": "^0.17.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.0",
     "iframe-resizer": "^3.6.6",
     "jest": "^24.9.0",
     "nhsuk-frontend": "^3.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
     "webpack": "^4.41.5",

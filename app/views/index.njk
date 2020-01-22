@@ -1,5 +1,6 @@
 {% set pageDescription = 'Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.' %}
 {% set pageLayout = "Homepage" %}
+{% set pageSection = 'Home' %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -17,7 +18,13 @@
         <div class="nhsuk-grid-column-two-thirds">
           <div class="nhsuk-hero__wrapper">
             <h1 class="nhsuk-u-margin-bottom-3">Design and build digital services for the NHS</h1>
-            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Things you need to make consistent, usable services that put people first.</p>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Use the service manual to build consistent, usable services that put people first.​ Learn from the research and experience of other NHS teams.</p>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-third app-latest-update">
+          <div class="nhsuk-panel app-panel--transparent nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
+            <h2 class="nhsuk-heading-m"><a href="/whats-new">What's new</a></h2>
+            <p>In January 2020 we updated the <a href="/content/inclusive-language">inclusive language page</a> in the content style guide.</p>
           </div>
         </div>
       </div>
@@ -29,23 +36,23 @@
       <div class="nhsuk-grid-row nhsuk-promo-group">
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/design-principles",
-            "heading": "Design principles",
+            "href": "/service-standard",
+            "heading": "NHS service standard",
             "headingLevel": "2",
-            "description": "These principles guide all of our design."
+            "description": "Check you're working to best practice from the start."
           }) }}
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/accessibility",
-            "heading": "Accessibility",
+            "href": "/design-system",
+            "heading": "Design system",
             "headingLevel": "2",
-            "description": "Make NHS services accessible for everyone."
+            "description": "Build consistent, accessible user interfaces."
           }) }}
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/content",
+            "href": "/content",
             "heading": "Content style guide",
             "headingLevel": "2",
             "description": "How to write for digital NHS services."
@@ -55,26 +62,26 @@
       <div class="nhsuk-grid-row nhsuk-promo-group nhsuk-u-margin-bottom-0">
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/styles-components-patterns",
-            "heading": "UI styles, components and patterns",
+            "href": "/accessibility",
+            "heading": "Accessibility",
             "headingLevel": "2",
-            "description": "Build consistent, accessible user interfaces."
+            "description": "Make NHS services accessible for everyone."
           }) }}
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/frontend-library",
-            "heading": "Frontend library",
+            "href": "/design-system/design-principles",
+            "heading": "Design principles",
             "headingLevel": "2",
-            "description": "Production code to start building user interfaces for the NHS."
+            "description": "These principles guide all of our design."
           }) }}
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
           {{ promo({
-            "href": "/service-manual/prototyping-tools",
-            "heading": "Prototyping tools",
+            "href": "/community",
+            "heading": "Community",
             "headingLevel": "2",
-            "description": "Build prototypes or mockups quickly to show people and test with users."
+            "description": "Help grow and improve the service manual."
           }) }}
         </div>
       </div>
@@ -83,17 +90,12 @@
   <section class="nhsuk-section nhsuk-section--white">
     <div class="nhsuk-width-container">
       <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-one-half">
-          <h2>Contribute</h2>
-          <p>The manual is a community effort. Anyone can help improve and grow it.</p>
-          <p><a href="/service-manual/contribute">Contribute to the NHS digital service manual</a></p>
-        </div>
-        <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-grid-column-two-thirds">
           <h2>Get in touch</h2>
-          <p>The manual is maintained by the service manual team at NHS Digital. Get in touch if you have any questions or feedback.</p>
-          <ul>
-            <li>Slack: <a href="https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE">service manual public Slack workspace</a></li>
-            <li>Email: <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
+          <p>The manual is maintained by the service manual team at NHS Digital. If you've got a question or want to feedback, you can contact us:</p>
+          <ul class="nhsuk-u-margin-bottom-0">
+            <li>on <a class="app-contact-panel__link" href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE" rel="nofollow">the #general channel in the service manual public Slack workspace</a></li>
+            <li>by email at <a class="app-contact-panel__link" href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
           </ul>
         </div>
       </div>

@@ -1,8 +1,9 @@
 {% set pageTitle = 'Links' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'How to handle links, including links to PDFs' %}
+{% set dateUpdated = 'November 2019' %}
 
-{% extends 'includes/app-layout-two-thirds.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
   {% include 'content/_breadcrumb.njk' %}
@@ -10,7 +11,7 @@
 
 {% block bodyContent %}
 
-<h2>Write good links</h2>
+  <h2>Write good links</h2>
   <p>Make links active, specific and concise.</p>
   <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
   <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
@@ -57,7 +58,7 @@
   <p>If links do go to a new tab or window, warn the user by saying: "Link name (opens in new window)". (Include all of this in the link text.)</p>
 
   <h2>Avoid linking to PDFs</h2>
-  <p>Wherever possible, we avoid publishing PDFs or linking to them. Read our <a href="/service-manual/content/pdfs">guidance on PDFs</a>.</p>
+  <p>Wherever possible, we avoid publishing PDFs or linking to them. Read our <a href="/content/pdfs">guidance on PDFs</a>.</p>
 
   <p>We prefer to link to an HTML page containing the PDF. That way, if the PDF is changed or updated, users can still find the latest information.<p>
 
@@ -68,10 +69,6 @@
   </ul>
   <p>Round up values over 1MB to 2 decimal places to keep it as accurate as possible.</p>
   <p>Round up values under 1MB to the nearest KB. For example, round up 835.74KB to 836KB.</p>
-
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: November 2019</p>
-  </div>
 
 {% endblock %}
 

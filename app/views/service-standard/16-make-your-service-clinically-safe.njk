@@ -2,6 +2,7 @@
 {% set pageSection = 'NHS service standard' %}
 {% set pageDescription = 'Digital information, tools and services have the potential to cause patient harm.' %}
 {% set beta = 'true' %}
+{% set dateUpdated = 'December 2019' %}
 
 {% extends 'includes/app-layout.njk' %}
 
@@ -11,7 +12,7 @@
 
 {% block bodyContent %}
 
-  <p class="nhsuk-lede-text">Make sure that you actively manage any safety risks associated with your content, service and processes.</p>
+  <p class="nhsuk-lede-text app-lede-text">Make sure that you actively manage any safety risks associated with your content, service and processes.</p>
 
   <h2>Why it's important</h2>
   <p>Clinical risk management is key to creating safe digital services. Work with your clinical safety officer to consider what could go wrong, how serious it could be, and how likely it is, so that you can minimise the risk of harm.</p>
@@ -23,21 +24,21 @@
     <li>have qualified clinicians check your clinical information and make sure that it is accurate, evidence-based and clinically safe</li>
     <li>meet the needs of your most vulnerable users, for example, by allowing patients to request a translator or flagging safeguarding needs</li>
     <li>if appropriate, work to <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems">DCB0129</a> (the safety standard for manufacturers of health IT software) or <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems">DCB0160</a> (the standard that helps health and care organisations manage the risks of using new or changed health software), or both</li>
-      <li>have processes for developing and maintaining your service and managing live safety incidents that comply with the relevant clinical safety standard</li>
-      <li>have processes to make sure that any data you collect is up to date and error free</li>
-      <li>where appropriate, comply with NICE's <a href="https://www.nice.org.uk/about/what-we-do/our-programmes/evidence-standards-framework-for-digital-health-technologies">Evidence standards framework for digital health technologies</a></li>
-    </ul>
-    <p>If you provide online primary care services, you must register with the Care Quality Commission.</p>
-    <p>If your app is a medical device, you must follow the <a href="https://www.gov.uk/government/publications/medical-devices-software-applications-apps">guidance on medical devices from the Medicines and Healthcare products Regulatory Agency (MHRA)</a>.</p>
+    <li>have processes for developing and maintaining your service and managing live safety incidents that comply with the relevant clinical safety standard</li>
+    <li>have processes to make sure that any data you collect is up to date and error free</li>
+    <li>where appropriate, comply with NICE's <a href="https://www.nice.org.uk/about/what-we-do/our-programmes/evidence-standards-framework-for-digital-health-technologies">Evidence standards framework for digital health technologies</a></li>
+  </ul>
+  <p>If you provide online primary care services, you must register with the Care Quality Commission.</p>
+  <p>If your app is a medical device, you must follow the <a href="https://www.gov.uk/government/publications/medical-devices-software-applications-apps">guidance on medical devices from the Medicines and Healthcare products Regulatory Agency (MHRA)</a>.</p>
 
   <h2>Guidance</h2>
 
   <h3>NHS service manual</h3>
   <p>See also service standard points:</p>
   <ul>
-    <li><a href="/service-manual/service-standard/9-respect-and-protect-users-confidentiality-and-privacy">9. Respect and protect users' confidentiality and privacy</a></li>
-    <li><a href="/service-manual/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing">10. Define what success looks like and be open about how your service is performing</a> - which deals with health and other outcomes</li>
-    <li><a href="/service-manual/service-standard/15-support-a-culture-of-care">15. Support a culture of care</a></li>
+    <li><a href="/service-standard/9-respect-and-protect-users-confidentiality-and-privacy">9. Respect and protect users' confidentiality and privacy</a></li>
+    <li><a href="/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing">10. Define what success looks like and be open about how your service is performing</a> - which deals with health and other outcomes</li>
+    <li><a href="/service-standard/15-support-a-culture-of-care">15. Support a culture of care</a></li>
   </ul>
 
   <h3>GOV.UK resources</h3>
@@ -55,8 +56,11 @@
     <li>Take up NHS Digital <a href="https://digital.nhs.uk/services/solution-assurance/the-clinical-safety-team/clinical-risk-management-training">clinical risk management training</a>.</li>
   </ul>
 
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: December 2019</p>
-  </div>
+  {{ pagination({
+    "previousUrl": "/service-standard/15-support-a-culture-of-care",
+    "previousPage": "Point 15",
+    "nextUrl": "/service-standard/17-make-your-service-interoperable",
+    "nextPage": "Point 17"
+  }) }}
 
 {% endblock %}

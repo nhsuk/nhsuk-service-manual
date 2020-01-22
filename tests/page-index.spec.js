@@ -1,7 +1,6 @@
 const PageIndex = require('../middleware/page-index.js');
 
 const config = {
-  serviceName: 'NHS digital service manual',
   env: 'development',
   baseURL: 'http://localhost',
   port: 3000,

@@ -4,7 +4,6 @@
 
 .design-example {
   @include nhsuk-responsive-margin(7, 'bottom');
-  @include nhsuk-responsive-margin(4, 'top');
 
   $root: &;
   position: relative;
@@ -15,6 +14,7 @@
     background-color: $color_nhsuk-grey-1;
     color: $color_nhsuk-white;
     line-height: 32px;
+    outline: 2px solid transparent;
     padding: 0 16px;
     position: absolute;
     text-decoration: none;
@@ -53,7 +53,7 @@
 }
 
 p + .design-example {
-  @include nhsuk-responsive-padding(4, 'top');
+  @include nhsuk-responsive-padding(3, 'top');
 }
 
 .nhsuk-lede-text + .design-example {

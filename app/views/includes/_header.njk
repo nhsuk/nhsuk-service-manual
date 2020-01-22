@@ -1,0 +1,75 @@
+{% from 'header/macro.njk' import header %}
+
+{%- if disableSearch %}
+  {{ header({
+    "homeHref": "/",
+    "ariaLabel": "NHS digital service manual homepage",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "true",
+    "showSearch": "false",
+    "searchAction": "/search/",
+    "searchInputName": "search-field",
+    "primaryLinks": [
+      {
+        "url"  : "/service-standard",
+        "label" : "NHS service standard"
+      },
+      {
+        'url' : '/design-system',
+        'label' : 'Design system'
+      },
+      {
+        'url'  : '/content',
+        'label' : 'Content style guide'
+      },
+      {
+        'url'  : '/accessibility',
+        'label' : 'Accessibility'
+      },
+      {
+        'url' : '/community',
+        'label' : 'Community'
+      }
+    ]
+    })
+  }}
+{% else %}
+  {{ header({
+    "homeHref": "/",
+    "ariaLabel": "NHS digital service manual homepage",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "true",
+    "showSearch": "true",
+    "searchAction": "/search/",
+    "searchInputName": "search-field",
+    "primaryLinks": [
+      {
+        "url"  : "/service-standard",
+        "label" : "NHS service standard"
+      },
+      {
+        'url' : '/design-system',
+        'label' : 'Design system'
+      },
+      {
+        'url'  : '/content',
+        'label' : 'Content style guide'
+      },
+      {
+        'url'  : '/accessibility',
+        'label' : 'Accessibility'
+      },
+      {
+        'url' : '/community',
+        'label' : 'Community'
+      }
+    ]
+    })
+  }}
+{% endif %}

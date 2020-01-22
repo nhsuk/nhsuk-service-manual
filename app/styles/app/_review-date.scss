@@ -1,0 +1,8 @@
+// Custom style for review date
+.app-review-date {
+  @include nhsuk-responsive-margin(5, 'top');
+
+  .app-review-date__text {
+    margin-bottom: 0;
+  }
+}

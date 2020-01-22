@@ -1,0 +1,23 @@
+// Added meta data for a promo (date)
+.app-meta-data {
+  @include nhsuk-font($size: 16);
+
+  color: $nhsuk-secondary-text-color;
+
+  + .app-meta-data {
+    margin-top: - nhsuk-spacing(3);
+  }
+
+  @include mq($from: tablet) {
+    margin-bottom: nhsuk-spacing(3);
+
+    + .app-meta-data {
+      margin-top: - nhsuk-spacing(3);
+  }
+  }
+}
+
+.app-meta-data--strong {
+  color: $nhsuk-text-color;
+  font-weight: 600;
+}

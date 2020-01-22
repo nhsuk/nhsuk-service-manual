@@ -1,25 +1,53 @@
 {% set pageTitle = 'Inclusive language' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'Writing for and about people in a way that is inclusive and respectful.' %}
+{% set dateUpdated = 'January 2020' %}
 
-{% extends 'includes/app-layout-two-thirds.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
   {% include 'content/_breadcrumb.njk' %}
 {% endblock %}
 
-{% block bodyContent %}
+{% block sideNav %}
+<nav class="app-side-nav">
 
-  <div class="app-page-contents">
-    <h2 class="app-page-contents__heading">On this page</h2>
-    <ul class="app-page-contents__list">
-      <li class="app-page-contents__item">Disabilities and conditions</li>
-      <li class="app-page-contents__item">Mental health</li>
-      <li class="app-page-contents__item">Race, ethnicity, religion and nationality</li>
-      <li class="app-page-contents__item">Sex, gender and sexuality</li>
-      <li class="app-page-contents__item">Age</li>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-we-write">How we write</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/voice-and-tone">Voice and tone</a></li>
+
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/inclusive-language">Inclusive language</a>
+        <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#disabilities-and-conditions">Disabilities and conditions</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#mental-health">Mental health</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#race-ethnicity-religion-nationality">Race, ethnicity, religion and nationality</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#sex-gender-sexuality">Sex, gender and sexuality</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#age">Age</a></li>
+        </ul>
+      </li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/health-literacy">Health literacy</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-to-write-good-questions-for-forms">How to write good questions for forms</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting-and-punctuation">Formatting and punctuation</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/pdfs">PDFs</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/links">Links</a></li>
+
     </ul>
-  </div>
+
+</nav>
+{% endblock %}
+
+{% block bodyContent %}
 
   <h2 id="disabilities-and-conditions">Disabilities and conditions</h2>
   <p>We use positive language and do not label people when talking about disabilities and conditions.</p>
@@ -39,7 +67,7 @@
     <li>diabetic person</li>
     <li>sick or diseased person</li>
   </ul>
-  <p>NHS digital services should be accessible to everyone who needs them. Read <a href="/service-manual/accessibility/content">our guidance on accessibility for content designers, writers and editors</a> in the service manual.</p>
+  <p>NHS digital services should be accessible to everyone who needs them. Read <a href="/accessibility/content">our guidance on accessibility for content designers, writers and editors</a> in the digital service manual.</p>
 
   <h2 id="mental-health">Mental health</h2>
   <p>We do not describe people as mentally ill.</p>
@@ -51,10 +79,11 @@
 
   <h2 id="race-ethnicity-religion-nationality">Race, ethnicity, religion and nationality</h2>
   <p>We only refer to people's ethnic heritage or religion if it's relevant to the content.</p>
-  <p>For example:</p>
-  {{ insetText({
-    "HTML": "<p>You're more at risk of developing type 2 diabetes if you are of south Asian, Chinese, African Caribbean or black African origin (even if you were born in the UK).</p>"
-  }) }}
+
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>You're more at risk of developing type 2 diabetes if you are of south Asian, Chinese, African Caribbean or black African origin (even if you were born in the UK).</p>
+  </div>
 
   <h2 id="sex-gender-sexuality">Sex, gender and sexuality</h2>
   <p>The language around sex, gender and sexuality changes all the time and it's an area that people hold strong and differing opinions about. We try to make sure that we are in touch with the communities we are writing for and we update this guidance regularly. This section should help you get started but the best thing is to test your content and services with the people who use them.</p>
@@ -65,13 +94,10 @@
   <p>Sex is biological – male, female or <a href="#intersex">intersex</a>. It's based not only on the genes we inherit, but also on how our external and internal sex and reproductive organs work and  respond to hormones. Sex is the label that's recorded when a baby's birth is registered.</p>
   <p>We use "sex" or, better still, the body part associated with biological sex when we're writing about things like screening that is sex specific, for example, breast and cervical screening.</p>
   <h5 id="sex-assigned-or-registered-at-birth">Sex assigned or registered at birth</h5>
-
   <p>We use the phrase "sex assigned at birth" when we're talking about trans health and gender dysphoria, as this is the language our audience uses. In other cases, we use "the sex someone was registered with at birth" because user research shows that most people understand this better as it refers to an actual event.</p>
-
   <h4>Gender</h4>
   <p>Gender is more complex. It refers to our internal sense of who we are and how we see and describe ourselves.</p>
   <p>Someone may see themselves as a man, a woman or neither (non-binary). Being non-binary can mean having no gender, a different gender, or being in between genders. Gender can be fixed or fluid. Some people identify with a gender opposite to the sex they were registered with.</p>
-
   <p>We use the word "gender" when we're:​</p>
   <ul>
     <li>discussing the social idea or identity as opposed to the biological sex, for example, if we're writing about gender dysphoria or transgender​ health and social care</li>
@@ -80,33 +106,30 @@
   </ul>
   <h3>Gender neutral language</h3>
   <p>We make content gender neutral as far as possible. In general, we word our content to avoid masculine and feminine pronouns ("he" or "she"). Instead we use "you" where appropriate and sometimes "they" when we need a gender-neutral pronoun (unless this is confusing).​</p>
-  <p>For example:</p>
-  {{ insetText({
-    "HTML": "<p>You should see the GP if you have persistent symptoms of osteoarthritis so they can confirm the diagnosis and prescribe any treatment you need.</p>"
-  }) }}
-
-<p>Avoid asking users for their title, such as Mr, Miss, Mrs, or Ms.</p>
-
-<h3>Transgender</h3>
-<p>We use "trans" as an umbrella term to describe people whose current gender identity or way of expressing their gender differs from the sex they were registered with at birth. Some, but not all, trans people want to transition (change) socially or medically or both.</p>
-<p>We use "trans woman" for someone who was registered male at birth and now identifies as a woman and "trans man" for someone who was registered female at birth and now identifies as a man.</p>
-<p>We use "trans woman" or "trans man" in content about the particular health needs of trans people - for example, screening or treatments that trans people need to be aware of, like advising a trans man about cervical and breast screening.​<p>
-<p>Otherwise, we leave out the word "trans" and just refer to men and women, if relevant.</p>
-<p>Note: we use "sex assigned at birth" when we're writing for a trans audience. Read more about <a href="#sex-assigned-or-registered-at-birth">sex assigned or registered at birth</a>.</p>
-
-<h3 id="intersex">Intersex</h3>
-<p>We use "intersex" in content about people with differences in sex development (DSD). DSD involve genes, hormones and reproductive organs, including genitals. They mean a person's sex development is different to most other people's. Some adults prefer the term "differences in sex development".</p>
-<p>As always, test your language with the people who will be using your content or service.</p>
-
-<h3>Sexuality</h3>
-<p>We use language about sexuality when it's helpful to signpost or help people get the health information and access to treatment they need.​</p>
-<p>For example, when we're talking about specific sexual health services or sexual health content, we use words like:​</p>
-<ul>
+   <div class="app-example app-example--content">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>You should see the GP if you have persistent symptoms of osteoarthritis so they can confirm the diagnosis and prescribe any necessary treatment.</p>
+  </div>
+  <p>Avoid asking users for their title, such as Mr, Miss, Mrs, or Ms.</p>
+  <h3>Transgender</h3>
+  <p>We use "trans" as an umbrella term to describe people whose current gender identity or way of expressing their gender differs from the sex they were registered with at birth. Some, but not all, trans people want to transition (change) socially or medically or both.</p>
+  <p>We use "trans woman" for someone who was registered male at birth and now identifies as a woman and "trans man" for someone who was registered female at birth and now identifies as a man.</p>
+  <p>We use "trans woman" or "trans man" in content about the particular health needs of trans people - for example, screening or treatments that trans people need to be aware of, like advising a trans man about cervical and breast screening.​</p>
+  <p>Otherwise, we leave out the word "trans" and just refer to men and women, if relevant.</p>
+  <p>Note: we use "sex assigned at birth" when we're writing for a trans audience. Read more about <a href="#sex-assigned-or-registered-at-birth">sex assigned or registered at birth</a>.</p>
+  <h3 id="intersex">Intersex</h3>
+  <p>We use "intersex" in content about people with differences in sex development (DSD). DSD involve genes, hormones and reproductive organs, including genitals. They mean a person's sex development is different to most other people's. Some adults prefer the term "differences in sex development".</p>
+  <p>As always, test your language with the people who will be using your content or service.</p>
+  <h3>Sexuality</h3>
+  <p>We use language about sexuality when it's helpful to signpost or help people get the health information and access to treatment they need.​</p>
+  <p>For example, when we're talking about specific sexual health services or sexual health content, we use words like:​</p>
+  <ul>
   <li>lesbian</li>
   <li>gay</li>
   <li>bisexual</li>
   <li>men who have sex with men (MSM includes men who may not identify as gay)​</li>
-</ul>
+  </ul>
+
 
   <h2 id="age">Age</h2>
   <p>Only include age if it's relevant, for example, with vaccination, screening or testing programmes for particular age groups. An example of this is chlamydia testing as tests are free for under-25s.</p>
@@ -116,7 +139,7 @@
   <ul>
     <li>fertilised egg: from conception to 14 days</li>
     <li>embryo: from 2 to 6 weeks</li>
-    <li>baby: during pregnancy, at birth and up to 1 year. (Read more about how we use <a href="/service-manual/content/a-to-z-of-NHS-health-writing#baby">"baby" in the A to Z of NHS health writing</a>.)</li>
+    <li>baby: during pregnancy, at birth and up to 1 year. (Read more about how we use <a href="/content/a-to-z-of-nhs-health-writing#baby">"baby" in the A to Z of NHS health writing</a>.)</li>
     <li>toddler: 1 to 3 years</li>
     <li>child: 4 to 12 years</li>
     <li>teenager: 13 to 19 years</li>
@@ -124,14 +147,13 @@
     <li>adult: generally from age 18 but this may vary. Be specific, for example: "adults aged 19 to 64"
   </ul>
   <p>With babies and toddlers, we count their age in weeks up until 6 months, then months up until 2 years.</p>
-
   <h3>Older people</h3>
   <p>We prefer to specify ages: over-65s, over-75s, over-80s.</p>
   <p>In some contexts, we use "older person" or "older people", for example, where a health condition might affect people in their 60s or in their 90s.​</p>
-  <p>Example:</p>
-  {{ insetText({
-    "HTML": "<p>Anyone can have a fall, but older people are more vulnerable and likely to fall, especially if they have a long-term health condition.​</p>"
-  }) }}
+<div class="app-example app-example--content">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+    <p>Anyone can have a fall, but older people are more vulnerable and likely to fall, especially if they have a long-term health condition.</p>
+  </div>
   <p>We do not use the words:</p>
   <ul>
     <li>elderly</li>
@@ -141,9 +163,6 @@
     <li>pensioner</li>
     <li>senior</li>
   </ul>
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: January 2020</p>
-  </div>
 
 {% endblock %}
 

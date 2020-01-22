@@ -10,14 +10,14 @@
 * 3. if error other than template not found - call next with the error
 * 4. Maybe it's a folder - try to render [path]/index.html
 * 5. We got template not found both times - call next to trigger the 404 page
-* 6. Remove the first slash and the service manual site root, render won't work with it
+* 6. Remove the first slash, render won't work with it
 * 7. If it's blank, render the root index
 * */
 
 function renderPath(path, res, next) {
   res.render(path, (error, html) => { // [1] //
     if (!error) {
-      res.set({ 'Content-type': 'text/html; charset=utf-8' }) // [2] //
+      res.set({ 'Content-type': 'text/html; charset=utf-8' }); // [2] //
       res.end(html);
       return;
     }
@@ -36,7 +36,7 @@ function renderPath(path, res, next) {
 exports.matchRoutes = function (req, res, next) {
   let path = req.path;
 
-  path = path.substr(16); // [6] //
+  path = path.substr(1); // [6] //
 
   if (path === '') { // [7] //
     path = 'index';

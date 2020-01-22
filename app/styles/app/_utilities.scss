@@ -17,3 +17,17 @@
   }
 
 }
+
+// Hide content on mobile
+.app-u-hide-mobile {
+  @include mq($until: desktop) {
+    display: none;
+  }
+}
+
+// Hide content on desktop
+.app-u-hide-desktop {
+  @include mq($from: desktop) {
+    display: none;
+  }
+}

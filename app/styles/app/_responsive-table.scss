@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #RESPONSIVE TABLE
+   ========================================================================== */
+
+/**
+ * This should be used until a suitable
+ * solution is added to NHS.UK frontend
+ */
+
+@include mq($until: tablet) {
+  .app-table-responsive--cookies {
+    thead {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      border-bottom: solid 2px $color_nhsuk-grey-4;
+      display: block;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    td {
+      border-bottom: 1px dotted $color_nhsuk-grey-4;
+      display: block;
+      text-align: left;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        padding-right: 20px;
+      }
+    }
+  }
+}

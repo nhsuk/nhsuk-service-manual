@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #CONTACT-PANEL
+   ========================================================================== */
+
+.app-contact-panel {
+  @include nhsuk-responsive-margin(6, 'top');
+
+  border-top: 2px solid $color_nhsuk-blue;
+}
+
+.app-contact-panel__heading {
+  @include nhsuk-font(24, $weight: bold);
+  @include nhsuk-responsive-padding(3, 'top');
+}
+
+.nhsuk-pagination + .app-contact-panel {
+  margin-top: 0;
+}

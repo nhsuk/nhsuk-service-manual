@@ -1,8 +1,9 @@
 {% set pageTitle = 'How we write' %}
 {% set pageSection = 'Content style guide' %}
 {% set pageDescription = 'Everything we write follows these general principles.' %}
+{% set dateUpdated = 'August 2019' %}
 
-{% extends 'includes/app-layout-two-thirds.njk' %}
+{% extends 'includes/app-layout.njk' %}
 
 {% block breadcrumb %}
   {% include 'content/_breadcrumb.njk' %}
@@ -70,13 +71,12 @@
   <p>We use a plain English term first, then the medical term. Example: piles (haemorrhoids).</p>
   <p>We use the same style for specialist audiences like health professionals.</p>
 
-  {{ insetText({
-    "HTML": "
-    <h3>Research insight</h3>
-    <p>Research has shown that <a href=\"https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/\" title=\"External website\">most people prefer to read plain English</a>, and that the more specialist a person's knowledge is, the greater their preference."
-  }) }}
+  <div class="app-example">
+    <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Research insight</strong>
+    <p>Research has shown that <a href="https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/" title="External website">most people prefer to read plain English</a>, and that the more specialist a person's knowledge is, the greater their preference.</p>
+  </div>
 
-  <p>Read <a href="/service-manual/content/health-literacy">our guidance on health literacy</a> to see why it's important to create content that's simple to read.</p>
+  <p>Read <a href="/content/health-literacy">our guidance on health literacy</a> to see why it's important to create content that's simple to read.</p>
 
   <h2>Concise</h2>
   <p>We keep content to the point.</p>
@@ -84,10 +84,6 @@
   <p>We use short sentences - up to 20 words. We use short paragraphs - up to 3 sentences.</p>
   <p>We use subheadings and bulleted lists to help users find what they need.</p>
   <p>We use the active voice - "find a pharmacy" rather than "a pharmacy can be found".</p>
-
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: August 2019</p>
-  </div>
 
 {% endblock %}
 

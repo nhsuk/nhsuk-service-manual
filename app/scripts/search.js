@@ -24,7 +24,7 @@ export const inputValue = (obj) => {
 */
 export const source = (query, populateResults) => {
   // Build URL for search endpoint
-  const url = `/service-manual/suggestions/?search=${query}`;
+  const url = `/suggestions/?search=${query}`;
   const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.onload = () => {

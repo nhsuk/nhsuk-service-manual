@@ -1,0 +1,94 @@
+/* ==========================================================================
+   #SIDE-NAV
+   ========================================================================== */
+
+.app-side-nav__heading {
+  @include nhsuk-font(19, $line-height: 1.25, $weight: bold);
+  color: $nhsuk-secondary-text-color;
+  margin-bottom: 12px;
+  padding-top: 4px;
+
+  @include mq($until: desktop) {
+    @include nhsuk-font(24, $line-height: 1.25, $weight: bold);
+    color: $nhsuk-text-color;
+  }
+}
+
+.app-side-nav__back {
+  border-bottom: 1px solid $nhsuk-border-color;
+  padding-bottom: nhsuk-spacing(3);
+}
+
+.app-side-nav__list {
+  @include nhsuk-font(16, $line-height: 1.3);
+  margin-bottom: 0;
+
+  @include mq($until: desktop) {
+    @include nhsuk-font(19, $line-height: 1.3);
+    margin-bottom: nhsuk-spacing(2);
+  }
+}
+
+.app-side-nav__item {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.app-side-nav__item--current {
+  border-left: 4px solid $color_nhsuk-blue;
+  margin-left: -12px;
+  padding-left: 8px;
+
+  .app-side-nav__link {
+    font-weight: $nhsuk-font-bold;
+  }
+}
+
+.app-side-nav__link {
+  text-decoration: none;
+
+  @include mq($until: desktop) {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  &:hover {
+    color: $nhsuk-link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    &:hover,
+    &:visited {
+      color: $nhsuk-focus-text-color;
+    }
+  }
+}
+
+.app-side-nav__list--nested {
+  @include nhsuk-responsive-margin(2, 'bottom');
+  @include nhsuk-responsive-margin(3, 'top');
+
+  .app-side-nav__item {
+    @include nhsuk-font(16, $line-height: 1.3);
+    list-style: none;
+  }
+
+  .app-side-nav__link {
+    font-weight: 400;
+  }
+}
+
+.app-side-nav__list--nested .app-side-nav__item::before {
+  color: $color_nhsuk-grey-3;
+  content: '—';
+  margin-left: -20px;
+  margin-right: 4px;
+}
+
+.app-index-navigation {
+  @include nhsuk-responsive-padding(4, 'top');
+}

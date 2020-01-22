@@ -1,0 +1,25 @@
+{% set writeGoodQuestionsNav = [
+  { title: "Understand the problem before you write your questions", url: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions" },
+  { title: "Make sure you need each question", url: "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question" },
+  { title: "Consider the sensitivities around your questions", url: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions" },
+  { title: "Use filter questions to route users", url: "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users" },
+  { title: "Get the questions into order", url: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order" },
+  { title: "Think of the form as a conversation", url: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation" },
+  { title: "Write the supporting content for your form", url: "/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form" },
+  { title: "Test your questions", url: "/content/how-to-write-good-questions-for-forms/test-your-questions" }
+] %}
+
+<nav class="nhsuk-contents-list app-contents-list app-u-hide-desktop" role="navigation" aria-label="Pages in this guide">
+  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+  <ol class="nhsuk-contents-list__list">
+    {% for item in writeGoodQuestionsNav %}
+    <li class="nhsuk-contents-list__item" {% if item.title == pageTitle %} aria-current="page"{% endif %}>
+      {% if item.title == pageTitle %}
+      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
+      {% else %}
+      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

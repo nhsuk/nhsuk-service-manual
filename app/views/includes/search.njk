@@ -1,5 +1,6 @@
 {% set pageTitle = 'Search' %}
 {% set pageDescription = 'Search results.' %}
+{% set disableSearch = true %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -7,7 +8,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Search</h1>
-      <form class="nhsuk-header__search-form nhsuk-header__search-form--search-results" id="search" action="/service-manual/search/" method="get" role="search">
+      <form class="nhsuk-header__search-form nhsuk-header__search-form--search-results" id="search" action="/search/" method="get" role="search">
         <label class="nhsuk-u-visually-hidden" for="search-results-field">Search the NHS digital service manual</label>
         <input class="nhsuk-search__input" id="search-results-field" name="search-field" type="search" value="{{query}}" autocomplete="off">
         <button class="nhsuk-search__submit" type="submit">
@@ -40,7 +41,7 @@
           {% if currentPage != 1%}
           <li class="nhsuk-pagination-item--previous">
             <a class="nhsuk-pagination__link nhsuk-pagination__link--prev"
-              href="/service-manual/search/?search-field={{query}}&page={{currentPage - 1}}">
+              href="/search/?search-field={{query}}&page={{currentPage - 1}}">
               <span class="nhsuk-pagination__title">Previous</span>
               <span class="nhsuk-u-visually-hidden">:</span>
               <span class="nhsuk-pagination__page">{{ currentPage - 1 }} of {{ maxPage }} </span>
@@ -57,7 +58,7 @@
           {% if currentPage != maxPage %}
           <li class="nhsuk-pagination-item--next">
             <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-              href="/service-manual/search/?search-field={{query}}&page={{currentPage + 1}}">
+              href="/search/?search-field={{query}}&page={{currentPage + 1}}">
               <span class="nhsuk-pagination__title">Next</span>
               <span class="nhsuk-u-visually-hidden">:</span>
               <span class="nhsuk-pagination__page">{{ currentPage + 1}} of {{ maxPage }}</span>

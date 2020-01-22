@@ -2,6 +2,7 @@
 {% set pageSection = 'NHS service standard' %}
 {% set pageDescription = 'People need the NHS 24 hours a day, every day of the year. Minimise service downtime and have a plan to deal with it when it does happen.' %}
 {% set beta = 'true' %}
+{% set dateUpdated = 'December 2019' %}
 
 {% extends 'includes/app-layout.njk' %}
 
@@ -40,8 +41,11 @@
     <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
   </ul>
 
-  <div class="nhsuk-review-date">
-    <p class="nhsuk-body-s">Updated: December 2019</p>
-  </div>
+  {{ pagination({
+    "previousUrl": "/service-standard/13-use-and-contribute-to-open-standards-common-components-and-patterns",
+    "previousPage": "Point 13",
+    "nextUrl": "/service-standard/15-support-a-culture-of-care",
+    "nextPage": "Point 15"
+  }) }}
 
 {% endblock %}
