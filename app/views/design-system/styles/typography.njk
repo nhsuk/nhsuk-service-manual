@@ -1,14 +1,14 @@
-{% set pageTitle = 'Typography' %}
-{% set pageDescription = 'Our fonts and typographic styles, and how to apply them.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Styles' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '1' %}
+{% set pageTitle = "Typography" %}
+{% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "1" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/styles/_breadcrumb.njk' %}
+  {% include "design-system/styles/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block sideNav %}
@@ -70,7 +70,7 @@
   <h2 id="headings">Headings</h2>
 
   {{ designExample({
-    type: 'typography-headings',
+    type: "typography-headings",
     htmlOnly: true
   }) }}
 
@@ -80,7 +80,7 @@
   <p>The default paragraph font size is 19px on large screens and 16px on small screens.</p>
 
   {{ designExample({
-    type: 'typography-body-m',
+    type: "typography-body-m",
     htmlOnly: true
   }) }}
 
@@ -91,7 +91,7 @@
 
 
   {{ designExample({
-    type: 'typography-body-l',
+    type: "typography-body-l",
     htmlOnly: true
   }) }}
 
@@ -100,7 +100,7 @@
   <p>The majority of your body copy should use the standard 19px paragraph size.</p>
 
   {{ designExample({
-    type: 'typography-body-s',
+    type: "typography-body-s",
     htmlOnly: true
   }) }}
 
@@ -111,7 +111,7 @@
   <p>The full NHS.UK typography scale goes from 14px up to 64px on large screens. You can add these font size override classes to any other typographic class or element and they will change the font size.</p>
 
   {{ designExample({
-    type: 'typography-sizes',
+    type: "typography-sizes",
     htmlOnly: true
   }) }}
 
@@ -119,7 +119,7 @@
   <p>As with the font size, you can add a font weight override class to any other typographic class or element to change the font weight to regular or bold weight.</p>
 
   {{ designExample({
-    type: 'typography-weight',
+    type: "typography-weight",
     htmlOnly: true
   }) }}
 
@@ -129,7 +129,7 @@
 
 
   {{ designExample({
-    type: 'typography-link',
+    type: "typography-link",
     htmlOnly: true
   }) }}
 
@@ -137,7 +137,7 @@
   <p>Use lists to make blocks of text easier to read, and to break information into manageable chunks.</p>
 
   {{ designExample({
-    type: 'typography-list',
+    type: "typography-list",
     htmlOnly: true
   }) }}
 
@@ -145,7 +145,7 @@
   <p>Introduce bulleted lists with a lead-in line ending in a colon. Start each item with a lowercase letter, and do not use a full stop at the end.</p>
 
   {{ designExample({
-    type: 'typography-ul',
+    type: "typography-ul",
     htmlOnly: true
   }) }}
 
@@ -154,7 +154,7 @@
   <p>You do not need to use a lead-in line for numbered lists. Items in a numbered list should end in a full stop because each should be a complete sentence.</p>
 
   {{ designExample({
-    type: 'typography-ol',
+    type: "typography-ol",
     htmlOnly: true
   }) }}
 
@@ -163,7 +163,7 @@
   <p class="rich-text">By default <code>nhsuk-section-break</code> is only visible by its margin. You can add the <code>nhsuk-section-break--visible</code> class to make it visible with a separator line.</p>
 
   {{ designExample({
-    type: 'typography-section-breaks',
+    type: "typography-section-breaks",
     htmlOnly: true
   }) }}
 

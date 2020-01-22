@@ -53,7 +53,7 @@
     <!-- Cookie consent -->
     <script src="/{{VERSION}}/js/cookies.min.js" data-policy-url="/cookie-policy"></script>
 
-    {%- if ENVIRONMENT == 'production' %}
+    {%- if ENVIRONMENT == "production" %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
     <script data-cookieconsent="statistics" type="text/plain" >
@@ -99,7 +99,7 @@
   <body>
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
 
-    {% include 'includes/_header-prototype.njk' %}
+    {% include "includes/_header-prototype.njk" %}
 
     {% block breadcrumb %}
       {{ breadcrumb({
@@ -110,11 +110,11 @@
 
     {% block outerBody %}{% endblock %}
 
-    {%- if beta == 'true' %}
-    {% include 'includes/_beta-banner.njk' %}
+    {%- if beta %}
+    {% include "includes/_beta-banner.njk" %}
     {% endif %}
 
-    {% if pageLayout != 'Homepage' %}
+    {% if pageLayout != "Homepage" %}
     <div class="nhsuk-width-container">
       <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
         {% block body %}{% endblock %}
@@ -122,7 +122,7 @@
     </div>
     {% endif %}
 
-    {% include 'includes/_footer.njk' %}
+    {% include "includes/_footer.njk" %}
 
     {% block pageScripts %}{% endblock %}
   </body>

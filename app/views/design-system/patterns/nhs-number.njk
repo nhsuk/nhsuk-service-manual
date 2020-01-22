@@ -1,15 +1,15 @@
-{% set pageTitle = 'Ask users for their NHS number' %}
-{% set pageDescription = 'Use this pattern to ask people for their NHS number and help them find it.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Patterns' %}
-{% set theme = 'Tasks' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '109' %}
+{% set pageTitle = "Ask users for their NHS number" %}
+{% set pageDescription = "Use this pattern to ask people for their NHS number and help them find it." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Tasks" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "109" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/patterns/_breadcrumb.njk' %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -40,7 +40,7 @@
   <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, always try to give users an alternative way to continue with their journey, and use 1 of the other ways of asking for an NHS number on this page instead.</p>
 
   {{ designExample({
-    type: 'nhs-number-single',
+    type: "nhs-number-single",
     fullpage: true
   }) }}
 
@@ -56,14 +56,14 @@
   <p>Use a 2-option radio button that asks the user if they know their NHS number.</p>
 
   {{ designExample({
-    type: 'nhs-number-filter',
+    type: "nhs-number-filter",
     fullpage: true
   }) }}
 
   <p>If users do know their NHS number, route them to a page that asks for it.</p>
 
   {{ designExample({
-    type: 'nhs-number-filter-single',
+    type: "nhs-number-filter-single",
     fullpage: true
   }) }}
 
@@ -75,7 +75,7 @@
   <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful. We recommend that you always try and give a 3rd option.</p>
 
   {{ designExample({
-    type: 'nhs-number-filter-third-option',
+    type: "nhs-number-filter-third-option",
     fullpage: true
   }) }}
 
@@ -99,7 +99,7 @@
   </ul>
 
   {{ designExample({
-    type: 'details'
+    type: "details"
   }) }}
 
   <h3>Use the correct NHS number format</h3>
@@ -110,7 +110,7 @@
   <p>Make sure you use clear <a href='/design-system/components/error-message'>error messages</a> and <a href='/design-system/components/error-summary'>error summaries</a> when you ask users for their NHS number.</p>
 
   {{ designExample({
-    type: 'nhs-number-error',
+    type: "nhs-number-error",
     fullpage: true
   }) }}
 

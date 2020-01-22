@@ -1,14 +1,14 @@
-{% set pageTitle = 'Production code' %}
-{% set pageDescription = 'The code you need to start building user interfaces for NHS websites and services.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Design system' %}
-{% set theme = 'Setup' %}
-{% set dateUpdated = 'January 2020' %}
+{% set pageTitle = "Production code" %}
+{% set pageDescription = "The code you need to start building user interfaces for NHS websites and services." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Design system" %}
+{% set theme = "Setup" %}
+{% set dateUpdated = "January 2020" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/_breadcrumb.njk' %}
+  {% include "design-system/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -49,7 +49,7 @@
   <p>You can get the code from the HTML or Nunjucks tabs below the examples on our component pages, like this example of a button.</p>
 
   {{ designExample({
-    type: 'button'
+    type: "button"
   }) }}
 
   <h3 id="using-nunjucks-macros">Using Nunjucks macros</h3>

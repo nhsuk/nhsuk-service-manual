@@ -1,15 +1,15 @@
-{% set pageTitle = 'Mini-hub' %}
-{% set pageDescription = 'Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Patterns' %}
-{% set theme = 'Page types' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '86' %}
+{% set pageTitle = "Mini-hub" %}
+{% set pageDescription = "Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Page types" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "86" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/patterns/_breadcrumb.njk' %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -42,7 +42,7 @@
   <p>In this example, "What is AMD?" is the heading for the page. "Age-related macular degeneration (AMD)" is the topic.</p>
 
   {{ designExample({
-    type: 'typography-mini-hub-heading',
+    type: "typography-mini-hub-heading",
     htmlOnly: true
   }) }}
 
@@ -50,14 +50,14 @@
   <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page, underneath the heading and sub-heading, to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is from the NHS website information about AMD.</p>
 
   {{ designExample({
-    type: 'contents-list'
+    type: "contents-list"
   }) }}
 
   <h3 class="nhsuk-u-margin-top-6">Pagination</h3>
   <p>Use <a href="/design-system/components/pagination">pagination</a>  at the bottom of the page to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition.</p>
 
   {{ designExample({
-    type: 'pagination'
+    type: "pagination"
   }) }}
 
   <h2 id="research">Research on this pattern</h2>

@@ -1,21 +1,21 @@
-{% set pageTitle = 'Inset text' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use inset text to help users identify and understand important content on the page, even if they do not read the whole page.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'January 2019' %}
-{% set backlog_issue_id = '18' %}
+{% set pageTitle = "Inset text" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use inset text to help users identify and understand important content on the page, even if they do not read the whole page." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "18" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'inset-text'
+    type: "inset-text"
   }) }}
 
   <h2>When to use inset text</h2>

@@ -1,15 +1,15 @@
 {% set pageTitle = "Fieldset" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Use a fieldset to group related form inputs."%}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '14' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "14" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -18,7 +18,7 @@
   <p>Use a fieldset when you need to show a relationship between multiple form inputs. For example, you may need to group a set of text inputs into a single fieldset when asking for an address.</p>
 
   {{ designExample({
-    type: 'fieldset'
+    type: "fieldset"
   }) }}
 
   <h2 id="how-it-works">How to use a fieldset</h2>
@@ -27,7 +27,7 @@
   <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how to set legends as headings</a> on the GOV.UK Design System.</p>
 
   {{ designExample({
-    type: 'fieldset-as-heading'
+    type: "fieldset-as-heading"
   }) }}
 
   <h3>Accessibility</h3>

@@ -1,15 +1,15 @@
-{% set pageTitle = 'Buttons' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use buttons to help users carry out an action on a page like starting an application or saving their progress.'%}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'February 2019' %}
-{% set backlog_issue_id = '7' %}
+{% set pageTitle = "Buttons" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "7" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -23,7 +23,7 @@
 
   <h2 id="primary-button">Primary button</h2>
   {{ designExample({
-    type: 'button'
+    type: "button"
   }) }}
 
   <h3>When to use a primary button</h3>
@@ -32,7 +32,7 @@
 
   <h2 id="secondary-button">Secondary button</h2>
   {{ designExample({
-    type: 'button-secondary'
+    type: "button-secondary"
   }) }}
 
   <h3>When to use a secondary button</h3>
@@ -42,7 +42,7 @@
   <h2 id="reverse-button">White button on solid background colour (reverse button)</h2>
 
   {{ designExample({
-    type: 'button-reverse'
+    type: "button-reverse"
   }) }}
 
   <h3>When to use a white button on solid background colour</h3>

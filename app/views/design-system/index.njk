@@ -1,9 +1,9 @@
-{% set pageTitle = 'Design system' %}
-{% set pageDescription = 'Build consistent, accessible user interfaces. Learn from the research and experience of other NHS digital teams.' %}
-{% set pageSection = 'Design system' %}
-{% set landingPage = 'true' %}
+{% set pageTitle = "Design system" %}
+{% set pageDescription = "Build consistent, accessible user interfaces. Learn from the research and experience of other NHS digital teams." %}
+{% set pageSection = "Design system" %}
+{% set landingPage = true %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block bodyContent %}
 
@@ -12,7 +12,7 @@
   <p>The examples in the NHS digital service manual come with code to make it easy for you to use them in your project.</p>
 
   <div class="app-index-navigation app-u-hide-desktop">
-    {% include 'includes/_side-nav.njk' %}
+    {% include "includes/_side-nav.njk" %}
   </div>
 
 {% endblock %}

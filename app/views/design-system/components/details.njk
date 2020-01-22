@@ -1,21 +1,21 @@
-{% set pageTitle = 'Details' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Make a page easier to scan by letting users reveal more detailed information only if they need it.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '30' %}
+{% set pageTitle = "Details" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Make a page easier to scan by letting users reveal more detailed information only if they need it." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "30" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'details'
+    type: "details"
   }) }}
   <h2 id="when-to-use-this-component">When to use details</h2>
   <p>There are 2 ways to let users reveal more information:</p>

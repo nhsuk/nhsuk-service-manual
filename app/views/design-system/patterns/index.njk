@@ -1,13 +1,13 @@
-{% set pageTitle = 'Patterns' %}
-{% set pageDescription = 'Patterns are best practice design solutions for specific user-focused tasks and page types.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Patterns' %}
-{% set theme = 'Design' %}
+{% set pageTitle = "Patterns" %}
+{% set pageDescription = "Patterns are best practice design solutions for specific user-focused tasks and page types." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Design" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/_breadcrumb.njk' %}
+  {% include "design-system/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -16,7 +16,7 @@
    <p>They may, for example, ask users for different kinds of information or help users navigate or do something.</p>
 
   <div class="app-index-navigation app-u-hide-desktop">
-    {% include 'includes/_side-nav.njk' %}
+    {% include "includes/_side-nav.njk" %}
   </div>
 
 {% endblock %}

@@ -1,21 +1,21 @@
 {% set pageTitle = "Error summary" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '13' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "13" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
     {{ designExample({
-      type: 'error-summary'
+      type: "error-summary"
     }) }}
 
     <h2 id="when-to-use">When to use an error summary</h2>

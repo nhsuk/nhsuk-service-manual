@@ -1,12 +1,12 @@
-{% set pageTitle = 'PDFs' %}
-{% set pageSection = 'Content style guide' %}
-{% set pageDescription = 'Wherever possible, we avoid PDFs. Instead we create content as structured web pages in HTML. '%}
-{% set dateUpdated = 'November 2019' %}
+{% set pageTitle = "PDFs" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "Wherever possible, we avoid PDFs. Instead we create content as structured web pages in HTML." %}
+{% set dateUpdated = "November 2019" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'content/_breadcrumb.njk' %}
+  {% include "content/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -50,5 +50,5 @@
 {% endblock %}
 
 {% block asideContent %}
-  {% include './partials/related-nav.njk' %}
+  {% include "./partials/related-nav.njk" %}
 {% endblock %}

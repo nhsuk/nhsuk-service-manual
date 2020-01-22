@@ -1,15 +1,15 @@
-{% set pageTitle = 'Care cards' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use care cards to help users identify and understand the sort of care they need, who to contact and how quickly.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'August 2019' %}
-{% set backlog_issue_id = '8' %}
+{% set pageTitle = "Care cards" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use care cards to help users identify and understand the sort of care they need, who to contact and how quickly." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "August 2019" %}
+{% set backlog_issue_id = "8" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -23,7 +23,7 @@
 
   <h2 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h2>
   {{ designExample({
-    type: 'care-card-non-urgent'
+    type: "care-card-non-urgent"
   }) }}
 
   <p>Use this card when you want users to contact their GP or arrange an appointment with a health professional, like a practice nurse. You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
@@ -31,7 +31,7 @@
 
   <h2 id="urgent-care-card-red">Urgent care card (red)</h2>
   {{ designExample({
-    type: 'care-card-urgent'
+    type: "care-card-urgent"
   }) }}
 
   <p>Use this card when you want users to call or visit a GP or hospital urgently because they need advice or care quickly. You can, for example, use it to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
@@ -40,7 +40,7 @@
 
   <h2 id="emergency-care-card-red-and-black">Immediate care card (red and dark grey)</h2>
   {{ designExample({
-    type: 'care-card-immediate'
+    type: "care-card-immediate"
   }) }}
 
   <p>Use this card when users need to get emergency help straight away - meaning "now". Tell them to dial 999 or go to their nearest accident and emergency (A&amp;E) department.</p>

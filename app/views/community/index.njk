@@ -1,8 +1,8 @@
-{% set pageTitle = 'Community' %}
-{% set pageDescription = 'The NHS digital service manual is a community effort. Anyone can help improve and grow it.' %}
-{% set pageSection = 'Community' %}
+{% set pageTitle = "Community" %}
+{% set pageDescription = "The NHS digital service manual is a community effort. Anyone can help improve and grow it." %}
+{% set pageSection = "Community" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block bodyContent %}
 
@@ -16,7 +16,7 @@
   <p>To make sure everything in the service manual is of high quality, contributions need to meet the following <a href="/community/contribution-criteria">contribution criteria</a>.</p>
 
   <div class="app-index-navigation app-u-hide-desktop">
-    {% include 'includes/_side-nav.njk' %}
+    {% include "includes/_side-nav.njk" %}
   </div>
 
 {% endblock %}

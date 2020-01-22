@@ -1,14 +1,14 @@
-{% set pageTitle = 'Prototyping' %}
-{% set pageDescription = 'Build prototypes quickly to show people and test with users.' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Design system' %}
-{% set theme = 'Setup' %}
-{% set dateUpdated = 'January 2020' %}
+{% set pageTitle = "Prototyping" %}
+{% set pageDescription = "Build prototypes quickly to show people and test with users." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Design system" %}
+{% set theme = "Setup" %}
+{% set dateUpdated = "January 2020" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/_breadcrumb.njk' %}
+  {% include "design-system/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -26,7 +26,7 @@
   <p>You can copy the code from the HTML or Nunjucks tabs below the examples on our component pages, like this example of a button.</p>
 
   {{ designExample({
-    type: 'button'
+    type: "button"
   }) }}
 
   <h2 id="using-nunjucks-macros">Using Nunjucks macros</h2>

@@ -1,21 +1,21 @@
-{% set pageTitle = 'Date input' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use date input to help users enter a memorable date, like their date of birth.' %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'November 2019' %}
-{% set backlog_issue_id = '10' %}
+{% set pageTitle = "Date input" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use date input to help users enter a memorable date, like their date of birth." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "10" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'date-input'
+    type: "date-input"
   }) }}
 
   <h2>When to use date input</h2>
@@ -34,7 +34,7 @@
   <h2>Error messages</h2>
   <p>Style error messages like this:</p>
   {{ designExample({
-    type: 'date-input-errors'
+    type: "date-input-errors"
   }) }}
 
   <p>Follow:</p>

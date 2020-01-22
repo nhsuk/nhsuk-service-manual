@@ -1,12 +1,12 @@
-{% set pageTitle = 'Links' %}
-{% set pageSection = 'Content style guide' %}
-{% set pageDescription = 'How to handle links, including links to PDFs' %}
-{% set dateUpdated = 'November 2019' %}
+{% set pageTitle = "Links" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "How to handle links, including links to PDFs" %}
+{% set dateUpdated = "November 2019" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'content/_breadcrumb.njk' %}
+  {% include "content/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -73,6 +73,6 @@
 {% endblock %}
 
 {% block asideContent %}
-  {% include './partials/related-nav.njk' %}
+  {% include "./partials/related-nav.njk" %}
 {% endblock %}
 

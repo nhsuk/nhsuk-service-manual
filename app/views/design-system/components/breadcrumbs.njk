@@ -1,21 +1,21 @@
-{% set pageTitle = 'Breadcrumbs' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use breadcrumbs to help users understand where they are in the website.' %}
-{% set theme = 'Navigation' %}
-{% set dateUpdated = 'January 2019' %}
-{% set backlog_issue_id = '6' %}
+{% set pageTitle = "Breadcrumbs" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use breadcrumbs to help users understand where they are in the website." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "6" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'breadcrumb'
+    type: "breadcrumb"
   }) }}
 
   <h2>When to use breadcrumbs</h2>

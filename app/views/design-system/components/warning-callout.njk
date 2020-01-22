@@ -1,21 +1,21 @@
-{% set pageTitle = 'Warning callout' %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
-{% set pageDescription = 'Use a warning callout to help users identify and understand warning content on the page, even if they do noticedt read the whole page.' %}
-{% set theme = 'Content presentation' %}
-{% set dateUpdated = 'January 2019' %}
-{% set backlog_issue_id = '23' %}
+{% set pageTitle = "Warning callout" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a warning callout to help users identify and understand warning content on the page, even if they do noticedt read the whole page." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "23" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'warning-callout'
+    type: "warning-callout"
   }) }}
 
   <h2>When to use a warning callout</h2>

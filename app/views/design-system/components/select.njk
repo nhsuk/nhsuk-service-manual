@@ -1,21 +1,21 @@
 {% set pageTitle = "Select" %}
-{% set pageSection = 'Design system' %}
-{% set subSection = 'Components' %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
 {% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
-{% set theme = 'Form elements' %}
-{% set dateUpdated = 'January 2019' %}
-{% set backlog_issue_id = '20' %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "20" %}
 
-{% extends 'includes/app-layout.njk' %}
+{% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include 'design-system/components/_breadcrumb.njk' %}
+  {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
 
   {{ designExample({
-    type: 'select'
+    type: "select"
   }) }}
 
   <h2 id="how-it-works">How to use select</h2>

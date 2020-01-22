@@ -132,7 +132,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == 'NHS service standard' %}
+  {%- if pageSection == "NHS service standard" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -140,7 +140,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Design system' and subSection != 'Styles' and subSection != 'Components' and subSection != 'Patterns' %}
+  {%- if pageSection == "Design system" and subSection != "Styles" and subSection != "Components" and subSection != "Patterns" %}
     <h2 class="app-side-nav__heading">Principles</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsPrinciples %}
@@ -163,7 +163,7 @@
     </ul>
   {% endif %}
 
-  {%- if subSection == 'Styles' %}
+  {%- if subSection == "Styles" %}
     {{ backLink({
       "href": "/design-system",
       "text": "Design system",
@@ -177,7 +177,7 @@
     </ul>
   {% endif %}
 
-  {%- if subSection == 'Components' %}
+  {%- if subSection == "Components" %}
     {{ backLink({
       "href": "/design-system",
       "text": "Design system",
@@ -205,7 +205,7 @@
     </ul>
   {% endif %}
 
-  {%- if subSection == 'Patterns' %}
+  {%- if subSection == "Patterns" %}
     {{ backLink({
       "href": "/design-system",
       "text": "Design system",
@@ -226,7 +226,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Accessibility' %}
+  {%- if pageSection == "Accessibility" %}
     <h2 class="app-side-nav__heading">Everyone needs to know</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityEveryone %}
@@ -242,7 +242,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Content style guide' and subSection != 'Health literacy' and subSection != 'How to write good questions for forms'  %}
+  {%- if pageSection == "Content style guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms"  %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -250,7 +250,7 @@
     </ul>
   {% endif %}
 
-  {%- if subSection == 'How to write good questions for forms' %}
+  {%- if subSection == "How to write good questions for forms" %}
     {{ backLink({
       "href": "/content",
       "text": "Content style guide",
@@ -264,7 +264,7 @@
     </ul>
   {% endif %}
 
-  {%- if subSection == 'Health literacy' %}
+  {%- if subSection == "Health literacy" %}
     {{ backLink({
       "href": "/content/health-literacy",
       "text": "Health literacy",
@@ -278,7 +278,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'Community' %}
+  {%- if pageSection == "Community" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -286,7 +286,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == 'What\'s new' %}
+  {%- if pageSection == "What's new" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in whatsNew %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
