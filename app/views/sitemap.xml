@@ -4,343 +4,247 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://service-manual.nhs.uk/</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/community</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/whats-new</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/inclusive-language</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/design-principles</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility-statement</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/cookie-policy</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/sitemap</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/terms-and-conditions</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/your-privacy</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/about</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/1-understand-users-and-their-needs-context-health-and-care</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/4-make-the-service-simple-to-use</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/5-make-sure-everyone-can-use-the-service</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/7-use-agile-ways-of-working</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/8-iterate-and-improve-frequently</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/9-respect-and-protect-users-confidentiality-and-privacy</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/11-choose-the-right-tools-and-technology</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/12-make-new-source-code-open</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/patterns/</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/13-use-and-contribute-to-open-standards-common-components-and-patterns</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/14-operate-a-reliable-service</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/15-support-a-culture-of-care</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/16-make-your-service-clinically-safe</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/service-standard/17-make-your-service-interoperable</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/prototyping</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/production</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/patterns</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-we-write</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/voice-and-tone</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/a-to-z-of-nhs-health-writing</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/health-literacy</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/numbers-measurements-dates-time</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/formatting-and-punctuation</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/pdfs</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/links</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/what-all-NHS-services-need-to-do</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/how-to-make-digital-services-accessible</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/getting-started</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/product-and-delivery</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/user-research</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/content</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/design</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/development</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/accessibility/testing</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/community/backlog-of-components-and-patterns</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/community/propose-component-pattern</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/community/develop-component-pattern</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/community/contribution-criteria</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/whats-new/updates</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/whats-new/blog-posts</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/whats-new/show-and-tells</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/hint-text</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/cookie-confirmation</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/colour</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/icons</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/layout</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/spacing</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/typography</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/action-link</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/back-link</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/breadcrumbs</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/buttons</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/checkboxes</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/contents-list</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/date-input</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/details</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/do-and-dont-list</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/error-message</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/error-summary</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/expander</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/fieldset</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/footer</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/header</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/images</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/inset-text</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/pagination</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/radios</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/review-date</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/select</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/skip-link</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/summary-list</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/table</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/text-input</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/textarea</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/warning-callout</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/patterns/nhs-number</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/patterns/a-to-z</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/health-literacy/use-a-readability-tool-to-prioritise-content</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/get-the-questions-into-order</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/content/health-literacy/</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/styles/</loc>
-</url>
-<url>
-  <loc>https://service-manual.nhs.uk/design-system/components/</loc>
-</url>
+  <url>
+    <loc>https://service-manual.nhs.uk/</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/design-principles</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/production</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/prototyping</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility-statement</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/sitemap</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/terms-and-conditions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/privacy</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/assets/NHS_design_principles.pdf</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/what-all-NHS-services-need-to-do</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/how-to-make-digital-services-accessible</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/getting-started</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/product-and-delivery</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/user-research</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/content</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/design</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/development</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/testing</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-we-write</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/voice-and-tone</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-language</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/a-to-z-of-nhs-health-writing</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/health-literacy</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/numbers-measurement-dates-time</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/formatting-and-punctuation</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/links-and-pdfs</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/colour</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/icons</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/layout</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/spacing</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/typography</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/action-link</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/back-link</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/breadcrumbs</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/buttons</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/checkboxes</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/contents-list</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/date-input</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/details</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/do-and-dont-lists</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/error-message</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/error-summary</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/expander</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/fieldset</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/footer</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/header</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/images</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/inset-text</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/pagination</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/radios</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/review-date</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/select</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/skip-link</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/summary-list</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/table</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/text-input</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/textarea</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/warning-callout</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/a-to-z</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/ask-users-for-their-nhs-number</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community/contribution-criteria</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community/propose-component-pattern</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community/develop-component-pattern</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/health-literacy/</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/health-literacy/use-a-readability-tool-to-prioritise-content</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/get-the-questions-into-order</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
+  </url>
 </urlset>
