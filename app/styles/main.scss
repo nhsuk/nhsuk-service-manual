@@ -125,3 +125,9 @@ h1 + .nhsuk-lede-text {
     font-weight: $nhsuk-font-bold;
   }
 }
+
+// Removal of table cell element top and bottom margins
+// Remove bottom margin from a <p>
+.nhsuk-table__cell {
+  @include top-and-bottom;
+}
