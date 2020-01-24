@@ -131,3 +131,8 @@ h1 + .nhsuk-lede-text {
 .nhsuk-table__cell {
   @include top-and-bottom;
 }
+
+// Header menu button alignment for Safari
+.nhsuk-header__menu-toggle {
+  margin-top: 0;
+}
