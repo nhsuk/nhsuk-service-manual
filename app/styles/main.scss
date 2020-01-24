@@ -134,5 +134,7 @@ h1 + .nhsuk-lede-text {
 
 // Header menu button alignment for Safari
 .nhsuk-header__menu-toggle {
-  margin-top: 0;
+  @include mq($from: tablet, $until: large-desktop) {
+    margin-top: 0;
+  }
 }
