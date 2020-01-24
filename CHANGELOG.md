@@ -6,21 +6,24 @@
 
 - The NHS digital service manual is now a live service (https://service-manual.nhs.uk)
 - Add main navigation to the service manual
-- Add side navigation to the different sections within the service manual
-- Add in-page navigation to longer pages within the service manual
+- Add side navigation to the different sections in the service manual
+- Add in-page navigation to longer pages in the service manual
 
 :new: **New content**
 
 - Add a hint text page to components after user research showed users did not find hint text under text input and similar components
 - Add new page: Backlog of components and patterns
 - Add new section - 'What's new' with updates and blog pages
-- Update the inclusive language page with revised guidance on "sex, gender and sexuality", "race, ethnicity, religion and nationality" and "age"
+- Update the Inclusive language page with revised guidance on "sex, gender and sexuality", "race, ethnicity, religion and nationality" and "age"
 - Add new entries for "chronic", "acute", "renal" and "kidney" to the A to Z of NHS health writing
 - Update the A to Z of NHS health writing with entries on "pharmacy", "chemist" and "sex assigned or registered at birth"
 - Made it easier for people to understand negative contractions. Added "can't or cannot" and "don't or do not" to the A to Z of NHS health writing
-- Amend the guidance on using the number 1 on the numbers, measurements, dates and time page
+- Amend the guidance on using the number 1 on the Numbers, measurements, dates and time page
 - Amend index page and side navigation of How to write good questions to improve search results
+- Amend NHS service standard page and About the NHS service standard page to make it clear that teams working to the GOV.UK service standard must meet all 14 points
+- Updated section 17 of the NHS service standard with more detail about interoperability standards
 - Add 'Need help?' or 'Get in touch' details to pages across the site
+- Amend wording on Prototyping page and Production code page
 - Update cookies page to reflect current cookies practice and let people opt in
 - Update Terms and conditions page to make it clear the service manual is covered by the Open Government Licence
 - Amend Your privacy page to reflect service manual policy and practice
