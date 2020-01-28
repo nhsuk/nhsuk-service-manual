@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.0.1 - 28 January 2020
+
+:wrench: **Fixes**
+
+- use the new open graph images for each section
+
 ## 3.0.0 - 28 January 2020
 
 :new: **New features**
