@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 3.0.2 - 29 January 2020
+
+:wrench: **Fixes**
+
+- Add temporary meta data to verify domain with Google
+- Update package dependencies to latest versions
+
 ## 3.0.1 - 28 January 2020
 
 :wrench: **Fixes**
