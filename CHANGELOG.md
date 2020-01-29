@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Add temporary meta data to verify domain with Google
+- Update package dependencies to latest versions
 
 ## 3.0.1 - 28 January 2020
 
