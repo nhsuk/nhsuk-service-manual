@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.0.3 - 30 January 2020
+
+:wrench: **Fixes**
+
+- Remove old CSS/JS caching techniques as this is now covered on the server side
+
 ## 3.0.2 - 29 January 2020
 
 :wrench: **Fixes**

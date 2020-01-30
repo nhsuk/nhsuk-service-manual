@@ -46,12 +46,12 @@
 
     <title>{% if pageTitle %}{{ pageTitle }} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
 
-    <link rel="stylesheet" href="/{{VERSION}}/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-    <script src="/{{VERSION}}/js/main.min.js" defer></script>
+    <script src="/js/main.min.js" defer></script>
 
     <!-- Cookie consent -->
-    <script src="/{{VERSION}}/js/cookies.min.js" data-policy-url="/cookie-policy"></script>
+    <script src="/js/cookies.min.js" data-policy-url="/cookie-policy"></script>
 
     {%- if ENVIRONMENT == "production" %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -64,8 +64,8 @@
       gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
     </script>
     {%- endif %}
-    
-    <!-- Temporary meta data to verify domain with Google -->
+
+    <!-- Verify domain with Google -->
     <meta name="google-site-verification" content="Prj4LS7KX0amTkqVrOlnEyldVIjzJqbnXgPL1zbHocM" />
 
     <link href="https://www.nhs.uk/" rel="preconnect">

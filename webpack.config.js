@@ -1,5 +1,4 @@
 const path = require('path');
-const packageJson = require('./package.json');
 
 module.exports = {
   entry: {
@@ -20,7 +19,7 @@ module.exports = {
   },
   output: {
     filename: '[name].min.js',
-    path: path.resolve(__dirname, `public/${packageJson.version}/js/`),
+    path: path.resolve(__dirname, 'public/js/'),
   },
   watchOptions: {
     ignored: /node_modules/,
