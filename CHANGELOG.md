@@ -5,6 +5,8 @@
 :wrench: **Fixes**
 
 - Remove old CSS/JS caching techniques as this is now covered on the server side
+- Clarify guidance on temperature, and edit examples on numbers and measurements page
+- Fix a typo on the Warning callout page
 
 ## 3.0.2 - 29 January 2020
 
