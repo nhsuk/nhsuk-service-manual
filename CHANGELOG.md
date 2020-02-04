@@ -1,10 +1,13 @@
 # NHS digital service manual Changelog
 
-## 3.0.3 - 30 January 2020
+## 3.0.3 - 4 February 2020
 
 :wrench: **Fixes**
 
 - Remove old CSS/JS caching techniques as this is now covered on the server side
+- Clarify guidance on temperature, and edit examples on numbers and measurements page
+- Fix a typo on the Warning callout page
+- Update package dependencies to latest versions
 
 ## 3.0.2 - 29 January 2020
 
