@@ -11,13 +11,12 @@
 
   &__pop-out {
     @include nhsuk-font(16);
-    background-color: $color_nhsuk-grey-1;
-    color: $color_nhsuk-white;
+    border-bottom: 1px solid $color_nhsuk-grey-3;
     line-height: 32px;
     outline: 2px solid transparent;
     padding: 0 16px;
     position: absolute;
-    text-decoration: none;
+    width: 100%;
 
     @include mq($from: tablet) {
       padding: 8px 16px;
@@ -28,21 +27,9 @@
       box-shadow: none;
     }
 
-    &:hover {
-      color: $color_nhsuk-white;
-      text-decoration: underline;
-    }
-
-    &:visited {
-      color: $color_nhsuk-white;
-
-      &:hover {
-        color: $color_nhsuk-white;
-      }
-    }
-
     &:focus {
       @include nhsuk-focused-text;
+      border: 0;
 
       &:hover {
         color: $nhsuk-focus-text-color;
