@@ -39,11 +39,16 @@
       z-index: 1;
 
       &:hover {
+        color: $nhsuk-link-hover-color;
         text-decoration: none;
       }
 
       &:focus {
         @include nhsuk-focused-text;
+
+        &:hover {
+          color: $nhsuk-focus-text-color;
+        }
       }
 
       @include mq($from: tablet) {
@@ -101,6 +106,7 @@
       }
 
       &:hover {
+        color: $nhsuk-link-hover-color;
         outline: 0;
         text-decoration: none;
       }
@@ -117,6 +123,16 @@
 
         @include mq($from: tablet) {
           box-shadow: 0 $button-shadow-size 0 $color_nhsuk-blue;
+        }
+
+        &:hover {
+          color: $nhsuk-link-color;
+        }
+
+        &:focus {
+          &:hover {
+            color: $nhsuk-focus-text-color;
+          }
         }
 
       }
