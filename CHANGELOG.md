@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.0.4 - TBC
+
+:wrench: **Fixes**
+
+- Fix design example 'Open in new window' link accessibility issue ([Issue 548](https://github.com/nhsuk/nhsuk-service-manual/issues/548))
+
 ## 3.0.3 - 4 February 2020
 
 :wrench: **Fixes**
