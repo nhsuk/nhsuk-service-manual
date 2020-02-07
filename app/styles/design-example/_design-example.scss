@@ -10,7 +10,7 @@
   width: 100%;
 
   &__pop-out {
-    @include nhsuk-font(14);
+    @include nhsuk-font(16);
     border-bottom: 1px solid $color_nhsuk-grey-3;
     outline: 2px solid transparent;
     padding: 8px 16px;
