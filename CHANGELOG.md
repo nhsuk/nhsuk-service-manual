@@ -9,6 +9,7 @@
 :new: **New content**
 
 - Update guidance on "sex" and "intersex" on the Inclusive language page. 
+- Update What's new section with latest changes.
 
 ## 3.0.3 - 4 February 2020
 
