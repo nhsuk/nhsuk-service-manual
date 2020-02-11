@@ -6,6 +6,10 @@
 
 - Fix design example 'Open in new window' link accessibility issue ([Issue 548](https://github.com/nhsuk/nhsuk-service-manual/issues/548))
 
+:new: **New content**
+
+- Update guidance on "sex" and "intersex" on the Inclusive language page. 
+
 ## 3.0.3 - 4 February 2020
 
 :wrench: **Fixes**
