@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 3.0.5 - 19 February 2020
+
+:new: **New content**
+
+- Add new entry in A to Z of NHS health writing for "GP" 
+- Add explanation about using months up to 2 years on Inclusive language page
+- Add new guidance on telephone numbers to A to Z of NHS health writing, based on GOV.UK guidance
+
+:wrench: **Fixes**
+- Update entry in A to Z of NHS health writing for "doctor"
+- Improve guidance on ordinal numbers on Numbers, measurements, dates and time page
+- Remove reference to the Oxford Dictionary for Writers and Editors on content style guide hub page and include contact details instead
+
 ## 3.0.4 - 12 February 2020
 
 :new: **New content**
