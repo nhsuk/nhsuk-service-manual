@@ -14,64 +14,63 @@
 {% endblock %}
 
 {% block content %}
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <form action="/form-handler" method="post" novalidate>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form>
 
-          {{ errorSummary({
-            "titleText": "There is a problem",
-            "errorList": [
-              {
-                "text": "Select if you have 1 of these conditions",
-                "href": "#conditions"
-              }
-            ]
-          }) }}
+        {{ errorSummary({
+          "titleText": "There is a problem",
+          "errorList": [
+            {
+              "text": "Select if you have 1 of these conditions",
+              "href": "#conditions"
+            }
+          ]
+        }) }}
 
-          {{ checkboxes({
-            "idPrefix": "example-error",
-            "name": "example-error",
-            "fieldset": {
-              "legend": {
-                "text": "Have you ever had any of these conditions?",
-                "classes": "nhsuk-fieldset__legend--l",
-                isPageHeading: true
-              }
+        {{ checkboxes({
+          "idPrefix": "example-error",
+          "name": "example-error",
+          "fieldset": {
+            "legend": {
+              "text": "Have you ever had any of these conditions?",
+              "classes": "nhsuk-fieldset__legend--l",
+              isPageHeading: true
+            }
+          },
+          "hint": {
+            "text": "Select all the options that are relevant to you."
+          },
+          "errorMessage": {
+            "text": "Select if you have 1 of these conditions"
+          },
+          "items": [
+            {
+              "value": "Asthma",
+              "text": "Asthma",
+              id: "conditions"
             },
-            "hint": {
-              "text": "Select all the options that are relevant to you."
+            {
+              "value": "Diabetes",
+              "text": "Diabetes"
             },
-            "errorMessage": {
-              "text": "Select if you have 1 of these conditions"
+            {
+              "value": "Heart disease",
+              "text": "Heart disease"
             },
-            "items": [
-              {
-                "value": "Asthma",
-                "text": "Asthma",
-                id: "conditions"
-              },
-              {
-                "value": "Diabetes",
-                "text": "Diabetes"
-              },
-              {
-                "value": "Heart disease",
-                "text": "Heart disease"
-              },
-              {
-                "value": "None are relevant to me",
-                "text": "None are relevant to me"
-              }
-            ]
-          }) }}
+            {
+              "value": "None are relevant to me",
+              "text": "None are relevant to me"
+            }
+          ]
+        }) }}
 
-          {{ button({
-            "text": "Continue"
-          }) }}
+        {{ button({
+          "text": "Continue"
+        }) }}
 
-        </form>
-      </div>
+      </form>
     </div>
-  </main>
+  </div>
 {% endblock %}
 
