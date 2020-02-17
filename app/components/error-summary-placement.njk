@@ -1,61 +1,77 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
 {% from 'back-link/macro.njk' import backLink %}
 {% from 'button/macro.njk' import button %}
 {% from 'error-summary/macro.njk' import errorSummary %}
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
-{{ backLink({
-  "href": "#",
-  "text": "Go back"
-}) }}
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Go back",
+    "classes": "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
+  }) }}
+{% endblock %}
 
-{{ errorSummary({
-  "titleText": "There is a problem",
-  "errorList": [
-    {
-      "text": "Select if you have 1 of these conditions",
-      "href": "#conditions"
-    }
-  ]
-}) }}
+{% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <form action="/form-handler" method="post" novalidate>
 
-{{ checkboxes({
-  "idPrefix": "example-error",
-  "name": "example-error",
-  "fieldset": {
-    "legend": {
-      "text": "Have you ever had any of these conditions?",
-      "classes": "nhsuk-fieldset__legend--l",
-      isPageHeading: true
-    }
-  },
-  "hint": {
-    "text": "Select all the options that are relevant to you."
-  },
-  "errorMessage": {
-    "text": "Select if you have 1 of these conditions"
-  },
-  "items": [
-    {
-      "value": "Asthma",
-      "text": "Asthma",
-      id: "conditions"
-    },
-    {
-      "value": "Diabetes",
-      "text": "Diabetes"
-    },
-    {
-      "value": "Heart disease",
-      "text": "Heart disease"
-    },
-    {
-      "value": "None are relevant to me",
-      "text": "None are relevant to me"
-    }
-  ]
-}) }}
+          {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+              {
+                "text": "Select if you have 1 of these conditions",
+                "href": "#conditions"
+              }
+            ]
+          }) }}
 
-{{ button({
-  "text": "Continue"
-}) }}
+          {{ checkboxes({
+            "idPrefix": "example-error",
+            "name": "example-error",
+            "fieldset": {
+              "legend": {
+                "text": "Have you ever had any of these conditions?",
+                "classes": "nhsuk-fieldset__legend--l",
+                isPageHeading: true
+              }
+            },
+            "hint": {
+              "text": "Select all the options that are relevant to you."
+            },
+            "errorMessage": {
+              "text": "Select if you have 1 of these conditions"
+            },
+            "items": [
+              {
+                "value": "Asthma",
+                "text": "Asthma",
+                id: "conditions"
+              },
+              {
+                "value": "Diabetes",
+                "text": "Diabetes"
+              },
+              {
+                "value": "Heart disease",
+                "text": "Heart disease"
+              },
+              {
+                "value": "None are relevant to me",
+                "text": "None are relevant to me"
+              }
+            ]
+          }) }}
+
+          {{ button({
+            "text": "Continue"
+          }) }}
+
+        </form>
+      </div>
+    </div>
+  </main>
+{% endblock %}
 
