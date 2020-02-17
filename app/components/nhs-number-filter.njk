@@ -1,36 +1,46 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
 {% from 'button/macro.njk' import button %}
 {% from 'hint/macro.njk' import hint %}
 {% from 'fieldset/macro.njk' import fieldset %}
 {% from 'radios/macro.njk' import radios %}
 
-{% call fieldset({
-  legend: {
-    "text": "Do you know your NHS number?",
-    "classes": "nhsuk-fieldset__legend--l"
-  }
-  }) %}
-  {{ hint({
-    "html": "Your NHS number is a 10 digit number, like <span class=\"nhsuk-u-nowrap\">485 777 3456</span>.",
-    "classes": "nhsuk-u-margin-bottom-2"
-  }) }}
-  {{ hint({
-    "text": "You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service."
-  }) }}
-  {{ radios({
-    "idPrefix": "nhs-number",
-    "name": "nhs-number",
-    "items": [
-    {
-      "value": "yes",
-      "text": "Yes, I know my NHS number"
-    },
-    {
-      "value": "no",
-      "text": "No, I do not know my NHS number"
-    }
-  ]
-  }) }}
-  {{ button({
-    "text": "Continue"
-  }) }}
-{% endcall %}
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% call fieldset({
+        legend: {
+          "text": "Do you know your NHS number?",
+          "classes": "nhsuk-fieldset__legend--l"
+        }
+        }) %}
+        {{ hint({
+          "html": "Your NHS number is a 10 digit number, like <span class=\"nhsuk-u-nowrap\">485 777 3456</span>.",
+          "classes": "nhsuk-u-margin-bottom-2"
+        }) }}
+        {{ hint({
+          "text": "You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service."
+        }) }}
+        {{ radios({
+          "idPrefix": "nhs-number",
+          "name": "nhs-number",
+          "items": [
+          {
+            "value": "yes",
+            "text": "Yes, I know my NHS number"
+          },
+          {
+            "value": "no",
+            "text": "No, I do not know my NHS number"
+          }
+        ]
+        }) }}
+        {{ button({
+          "text": "Continue"
+        }) }}
+      {% endcall %}
+
+    </div>
+  </div>
+{% endblock %}
