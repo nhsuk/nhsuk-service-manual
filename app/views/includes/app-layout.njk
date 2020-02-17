@@ -56,6 +56,8 @@
             {% endif %}
           {% endblock %}
 
+          {% include "./_feedback-banner.njk" %}
+
           {%- if dateUpdated %}
           <div class="nhsuk-review-date app-review-date">
             <p class="nhsuk-body-s app-review-date__text">Updated: {{dateUpdated}}</p>
