@@ -2,8 +2,8 @@
 
 {% from 'back-link/macro.njk' import backLink %}
 {% from 'button/macro.njk' import button %}
+{% from 'date-input/macro.njk' import dateInput %}
 {% from 'error-summary/macro.njk' import errorSummary %}
-{% from 'checkboxes/macro.njk' import checkboxes %}
 
 {% block beforeContent %}
   {{ backLink({
@@ -22,45 +22,41 @@
           "titleText": "There is a problem",
           "errorList": [
             {
-              "text": "Select if you have 1 of these conditions",
-              "href": "#conditions"
+              "text": "Date of birth must include a year",
+              "href": "#dob-errors-year"
             }
           ]
         }) }}
 
-        {{ checkboxes({
-          "idPrefix": "example-error",
-          "name": "example-error",
+        {{ dateInput({
+          "id": "dob-errors",
           "fieldset": {
             "legend": {
-              "text": "Have you ever had any of these conditions?",
+              "text": "What is your date of birth?",
               "classes": "nhsuk-fieldset__legend--l",
-              isPageHeading: true
+              "isPageHeading": true
             }
           },
           "hint": {
-            "text": "Select all the options that are relevant to you."
+            "text": "For example, 15 3 1984"
           },
           "errorMessage": {
-            "text": "Select if you have 1 of these conditions"
+            "text": "Date of birth must include a year"
           },
           "items": [
             {
-              "value": "Asthma",
-              "text": "Asthma",
-              id: "conditions"
+              "name": "day",
+              "classes": "nhsuk-input--width-2",
+              value: 15
             },
             {
-              "value": "Diabetes",
-              "text": "Diabetes"
+              "name": "month",
+              "classes": "nhsuk-input--width-2",
+              value: 3
             },
             {
-              "value": "Heart disease",
-              "text": "Heart disease"
-            },
-            {
-              "value": "None are relevant to me",
-              "text": "None are relevant to me"
+              "name": "year",
+              "classes": "nhsuk-input--width-4 nhsuk-input--error"
             }
           ]
         }) }}
