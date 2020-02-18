@@ -9,9 +9,11 @@
 - Add new guidance on telephone numbers to A to Z of NHS health writing, based on GOV.UK guidance
 
 :wrench: **Fixes**
+
 - Update entry in A to Z of NHS health writing for "doctor"
 - Improve guidance on ordinal numbers on Numbers, measurements, dates and time page
 - Remove reference to the Oxford Dictionary for Writers and Editors on content style guide hub page and include contact details instead
+- Use the latest version of the NHS.UK frontend library (3.0.3)
 
 ## 3.0.4 - 12 February 2020
 
