@@ -17,6 +17,7 @@
 - Remove reference to the Oxford Dictionary for Writers and Editors on content style guide hub page and include contact details instead
 - Use the latest version of the NHS.UK frontend library (3.0.3)
 - Use the no cookie version of YouTube video embedding
+- Remove unused cookie (ARRAffinity) from the cookie policy page as we no longer set this cookie
 
 ## 3.0.4 - 12 February 2020
 
