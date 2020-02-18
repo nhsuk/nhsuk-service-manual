@@ -11,7 +11,15 @@ html {
 
 /* Component examples need a bit of space around them */
 body {
-  margin: 64px 16px 32px;
+  padding: 32px;
+
+  @media only screen and (max-width: 641px) {
+    padding: 16px;
+  }
+}
+
+.app-example-wrapper--full-page {
+  padding: 0;
 }
 
 /*

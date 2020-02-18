@@ -6,7 +6,9 @@
       "namePrefix": "dob-day-error",
       "fieldset": {
           "legend": {
-          "text": "What is your date of birth?"
+          "text": "What is your date of birth?",
+          "classes": "nhsuk-fieldset__legend--l",
+          "isPageHeading": true
           }
       },
       "hint": {
@@ -18,15 +20,18 @@
       "items": [
           {
           "name": "day",
-          "classes": "nhsuk-input--width-2 nhsuk-input--error"
+          "classes": "nhsuk-input--width-2 nhsuk-input--error",
+          value: 15
           },
           {
           "name": "month",
-          "classes": "nhsuk-input--width-2"
+          "classes": "nhsuk-input--width-2 nhsuk-input--error",
+          value: 3
           },
           {
           "name": "year",
-          "classes": "nhsuk-input--width-4"
+          "classes": "nhsuk-input--width-4 nhsuk-input--error",
+          value: 2084
           }
       ]
       }) }}

@@ -1,4 +1,15 @@
+{% from 'error-summary/macro.njk' import errorSummary %}
 {% from 'checkboxes/macro.njk' import checkboxes %}
+
+{{ errorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "Select how you like to be contacted",
+      "href": "#contact"
+    }
+  ]
+}) }}
 
 {{ checkboxes({
   "idPrefix": "contact",

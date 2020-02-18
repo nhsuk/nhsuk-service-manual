@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -57,7 +57,7 @@
     "eslint-plugin-import": "^2.20.1",
     "iframe-resizer": "^3.6.6",
     "jest": "^24.9.0",
-    "nhsuk-frontend": "^3.0.2",
+    "nhsuk-frontend": "^3.0.3",
     "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",

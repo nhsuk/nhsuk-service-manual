@@ -1,0 +1,45 @@
+{% from 'error-summary/macro.njk' import errorSummary %}
+{% from 'date-input/macro.njk' import dateInput %}
+
+{{ errorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "Date of birth must include a year",
+      "href": "#dob-errors-year"
+    }
+  ]
+}) }}
+
+{{ dateInput({
+  "id": "dob-errors",
+  "fieldset": {
+    "legend": {
+      "text": "What is your date of birth?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
+    }
+  },
+  "hint": {
+    "text": "For example, 15 3 1984"
+  },
+  "errorMessage": {
+    "text": "Date of birth must include a year"
+  },
+  "items": [
+    {
+      "name": "day",
+      "classes": "nhsuk-input--width-2",
+      value: 15
+    },
+    {
+      "name": "month",
+      "classes": "nhsuk-input--width-2",
+      value: 3
+    },
+    {
+      "name": "year",
+      "classes": "nhsuk-input--width-4 nhsuk-input--error"
+    }
+  ]
+}) }}

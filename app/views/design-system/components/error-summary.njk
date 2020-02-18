@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "February 2020" %}
 {% set backlog_issue_id = "13" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -37,6 +37,35 @@
       <li><a href="https://design-system.service.gov.uk/components/error-summary/">error summaries</a> </li>
       <li><a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a></li>
     </ul>
+
+    <h3 id="linking-from-the-error-summary-to-each-answer">Linking from the error summary to each answer</h3>
+    <p>You must link the errors in the error summary to the answer they relate to.</p>
+    <p>For questions that require a user to answer using a single field, like a file upload, select, textarea, text input or character count, link to the field.</p>
+
+    {{ designExample({
+      type: "error-summary-link-input"
+    }) }}
+
+    <p>When a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the 1st field that contains an error.</p>
+    <p>If you do not know which field contains an error, link to the 1st field.</p>
+
+    {{ designExample({
+      type: "error-summary-link-multiple-input"
+    }) }}
+
+    <p>For questions that require a user to select one or more options from a list using radios or checkboxes, link to the 1st radio or checkbox.</p>
+
+    {{ designExample({
+      type: "error-summary-link-options"
+    }) }}
+
+    <h3 id="where-to-put-the-error-summary">Where to put the error summary</h3>
+    <p>Put the error summary at the top of the <code>main</code> container. If your page includes breadcrumbs or a back link, place it below these, but above the <code>&lt;h1&gt;</code>.</p>
+
+    {{ designExample({
+      type: "error-summary-placement",
+      fullpage: true
+    }) }}
 
     <h2>Research</h2>
     <p>GOV.UK research on error summaries showed users:</p>

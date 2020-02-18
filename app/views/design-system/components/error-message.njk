@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use an error message when there is a validation error. Explain what went wrong and how to fix it." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "February 2020" %}
 {% set backlog_issue_id = "12" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -14,12 +14,6 @@
 
 {% block bodyContent %}
 
-  <h3>Error message</h3>
-  {{ designExample({
-    type: "error-message"
-  }) }}
-
-  <h3>Error message in context</h3>
   {{ designExample({
     type: "error-message-in-context"
   }) }}

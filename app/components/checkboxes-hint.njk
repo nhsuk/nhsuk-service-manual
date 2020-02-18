@@ -1,34 +1,31 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ checkboxes({
-  "idPrefix": "example-hint",
-  "name": "example-hint",
+  "idPrefix": "contact",
+  "name": "contact",
   "fieldset": {
     "legend": {
-      "text": "Have you ever had any of these conditions?",
-      "classes": "nhsuk-fieldset__legend--m",
+      "text": "How would you like to be contacted?",
+      "classes": "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
   },
   "hint": {
-    "text": "Select all the options that are relevant to you."
+    "text": "Select all options that are relevant to you."
   },
   "items": [
     {
-      "value": "Asthma",
-      "text": "Asthma"
+      "value": "email",
+      "text": "Email",
+      id: "contact"
     },
     {
-      "value": "Diabetes",
-      "text": "Diabetes"
+      "value": "phone",
+      "text": "Phone"
     },
     {
-      "value": "Heart disease",
-      "text": "Heart disease"
-    },
-    {
-      "value": "None are relevant to me",
-      "text": "None are relevant to me"
+      "value": "text message",
+      "text": "Text message"
     }
   ]
 }) }}

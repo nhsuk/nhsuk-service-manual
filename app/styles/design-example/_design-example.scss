@@ -11,10 +11,12 @@
 
   &__pop-out {
     @include nhsuk-font(16);
-    border-bottom: 1px solid $color_nhsuk-grey-3;
+    border: 1px solid $color_nhsuk-grey-3;
+    border-bottom: 0;
+    display: block;
     outline: 2px solid transparent;
     padding: 8px 16px;
-    position: absolute;
+    position: relative;
     width: 100%;
 
     &:hover,
