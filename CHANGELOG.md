@@ -16,6 +16,7 @@
 - Improve guidance on ordinal numbers on Numbers, measurements, dates and time page
 - Remove reference to the Oxford Dictionary for Writers and Editors on content style guide hub page and include contact details instead
 - Use the latest version of the NHS.UK frontend library (3.0.3)
+- Use the no cookie version of YouTube video embedding
 
 ## 3.0.4 - 12 February 2020
 
