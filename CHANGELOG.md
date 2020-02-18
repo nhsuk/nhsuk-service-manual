@@ -7,6 +7,7 @@
 - Add new entry in A to Z of NHS health writing for "GP" 
 - Add explanation about using months up to 2 years on Inclusive language page
 - Add new guidance on telephone numbers to A to Z of NHS health writing, based on GOV.UK guidance
+- Add new guidance and examples of an error summary and an error message working together ([Community backlog Issue 189](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/189))
 
 :wrench: **Fixes**
 
