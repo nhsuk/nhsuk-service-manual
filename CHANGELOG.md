@@ -1,6 +1,11 @@
 # NHS digital service manual Changelog
 
-## 3.0.5 - 19 February 2020
+## 3.0.6 - 19 February 2020
+
+- Use the no cookie version of YouTube video embedding
+- Remove unused cookie (ARRAffinity) from the cookie policy page as we no longer set this cookie
+
+## 3.0.5 - 18 February 2020
 
 :new: **New content**
 
@@ -16,8 +21,6 @@
 - Improve guidance on ordinal numbers on Numbers, measurements, dates and time page
 - Remove reference to the Oxford Dictionary for Writers and Editors on content style guide hub page and include contact details instead
 - Use the latest version of the NHS.UK frontend library (3.0.3)
-- Use the no cookie version of YouTube video embedding
-- Remove unused cookie (ARRAffinity) from the cookie policy page as we no longer set this cookie
 
 ## 3.0.4 - 12 February 2020
 
