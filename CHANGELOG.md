@@ -1,6 +1,11 @@
 # NHS digital service manual Changelog
 
-## 3.0.5 - 19 February 2020
+## 3.0.6 - 19 February 2020
+
+- Use the no cookie version of YouTube video embedding
+- Remove unused cookie (ARRAffinity) from the cookie policy page as we no longer set this cookie
+
+## 3.0.5 - 18 February 2020
 
 :new: **New content**
 
