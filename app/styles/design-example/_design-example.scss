@@ -3,11 +3,14 @@
 @import 'code-snippet';
 
 .design-example {
-  @include nhsuk-responsive-margin(7, 'bottom');
-
   $root: &;
+  margin-bottom: nhsuk-spacing(7);
   position: relative;
   width: 100%;
+
+  @include mq($until: tablet) {
+    margin-bottom: nhsuk-spacing(5);
+  }
 
   &__pop-out {
     @include nhsuk-font(16);
@@ -37,7 +40,7 @@
 }
 
 p + .design-example {
-  @include nhsuk-responsive-padding(3, 'top');
+  @include nhsuk-responsive-padding(4, 'top');
 }
 
 .nhsuk-lede-text + .design-example {
