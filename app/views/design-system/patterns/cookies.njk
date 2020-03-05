@@ -1,0 +1,49 @@
+{% set pageTitle = "Cookies" %}
+{% set pageDescription = "Explain, in one line, how the pattern helps users" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Tasks" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "92" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>[show a live example - if this is not possible because the pattern is bigger than one screen (eg Ask users for their NHS number), you can use an appropriate illustration or screenshot and/or link to a prototyped example]</p>
+
+  <h2>When to use this cookie pattern</h2>
+  <p>Describe when to use this pattern. When is it appropriate to use and what need does it help you meet?</p>
+
+  <h2>When not to use this cookie pattern</h2>
+  <p>If necessary, use this section to highlight any exceptions or known scenarios where the pattern does not work. If you include this section, explain what to use instead (with a relevant link if we’re suggesting an alternative pattern or component).</p>
+
+  <h2>How to use this cookie pattern</h2>
+  <p>Use this section to explain how the pattern works.</p>
+  <p>This should include:</p>
+  <ul>
+    <li>(if the pattern is too complex to have been fully described in the overview) a full description of how the pattern works (for users)
+  rules/instructions on how to implement it</li>
+    <li>steps to follow</li>
+  </ul>
+  <p>It can also include:</p>
+  <ul>
+    <li>coded examples</li>
+    <li>things to avoid</li>
+    <li>why it works</li>
+  </ul>
+  <p>If this section is quite long, break it into smaller sections with H3s.</p>
+
+  <h2>Research on this cookie pattern</h2>
+  <p>Use this section to summarise the research that supports this component or pattern. If the component or pattern is experimental, summarise the research it’s based on.</p>
+  <p>Describe the research context, for example, whether it was tested in isolation, or as part of a prototype or a live service types of users tested with, for example, users with disabilities, users with low digital literacy</p>
+  <p>If possible, finish this section with a link to more detailed research notes. It must be documented somewhere that’s open and publicly-accessible, ideally a blog post.</p>
+
+  <h3>Known issues and gaps</h3>
+  <p>Use this section to describe any known issues with the component or pattern, or any gaps in the research.</p>
+
+{% endblock %}
