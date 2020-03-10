@@ -40,4 +40,8 @@
   & + h2 {
     @include nhsuk-responsive-padding(4, 'top');
   }
+
+  & + h3 {
+    @include nhsuk-responsive-padding(2, 'top');
+  }
 }
