@@ -109,8 +109,8 @@
 ] %}
 
 {% set askUsers = [
-  { title: "Cookie consent", url: "/design-system/patterns/ask-users-for-cookie-consent" },
-  { title: "Their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" }
+  { title: "Ask users for their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" },
+  { title: "Help users manage cookies", url: "/design-system/patterns/help-users-manage-cookies" }
 ] %}
 
 {% set pages = [
@@ -212,7 +212,7 @@
       "text": "Design system",
       "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
     }) }}
-    <h2 class="app-side-nav__heading">Ask users for</h2>
+    <h2 class="app-side-nav__heading">Tasks</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in askUsers %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
