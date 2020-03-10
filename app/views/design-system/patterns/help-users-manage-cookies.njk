@@ -14,18 +14,41 @@
 
 {% block bodyContent %}
 
-  <img class="app-image--border app-example--image" src="/assets/cookie-pattern/cookies-diagram.png" alt="">
+  <img class="app-image--border app-example--image" src="/assets/cookies-diagram.png" alt="">
 
-  <h2>When to use this cookie pattern</h2>
+  <h2>When to use this pattern</h2>
 
-  <h2>When not to use this cookie pattern</h2>
+  <h2>When not to use this pattern</h2>
 
-  <h2>How the cookie pattern works</h2>
+  <h2>How it works</h2>
   <h3>Ask users for consent</h3>
   <p>A cookie banner is displayed the first time a service is used and persists until the user updates their settings.</p>
-  <img class="app-image--border app-example--image" src="/assets/cookie-pattern/cookie-banner.png" alt="">
+  <img class="app-image--border app-example--image" src="/assets/cookie-banner.png" alt="">
 
-  <h2>Research on this cookie pattern</h2>
+  <h3>Allow users to change preferences</h3>
+  <img class="app-image--border app-example--image" src="/assets/cookie-banner-confirm.png" alt="">
+
+  <h3>Provide information on cookies used</h3>
+  <img class="app-image--border app-example--image" src="/assets/cookie-info.png" alt="">
+
+  <h3>Allow users to set preferences</h3>
+  <img class="app-image--border app-example--image" src="/assets/cookie-settings.png" alt="">
+
+  <h3>Inform users of any changes</h3>
+
+  {{ designExample({
+    type: "cookie-saved",
+    fullpage: true
+  }) }}
+
+  <h3>Allow users to change preferences</h3>
+  <p>Include a 'cookies' link in the footer so users can access the cookies information page from every page in the service.</p>
+
+  {{ designExample({
+    type: "footer"
+  }) }}
+
+  <h2>Research on this pattern</h2>
 
   <h3>Known issues and gaps</h3>
 
