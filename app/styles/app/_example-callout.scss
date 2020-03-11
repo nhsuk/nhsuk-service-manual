@@ -35,7 +35,8 @@
 
 // Image example
 .app-example--image {
-  @include nhsuk-responsive-margin(4, 'bottom');
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(2, 'top');
 
   & + h2 {
     @include nhsuk-responsive-padding(4, 'top');
