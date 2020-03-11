@@ -38,4 +38,12 @@
   @include nhsuk-responsive-margin(5, 'bottom');
   @include nhsuk-responsive-margin(3, 'top');
   @include nhsuk-responsive-padding(3);
+
+  & + h2 {
+    @include nhsuk-responsive-padding(3, 'top');
+  }
+
+  & + h3 {
+    @include nhsuk-responsive-padding(2, 'top');
+  }
 }
