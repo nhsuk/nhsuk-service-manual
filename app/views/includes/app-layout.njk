@@ -13,56 +13,57 @@
         </div>
 
         <div class="app-pane__main-content">
+          <div class="app-pane__main-content-wrapper">
 
-          <h1 class="app-page-heading">
-            {%- if landingPage or pageTitle == "Community" or pageTitle == "NHS service standard" %}
-            {% else %}
-            <span class="nhsuk-caption-l">
-              {%- if subSection %}
-                {%- if theme %}
-                {{theme}}
-                {% else %}
-                {{subSection}}
-                {% endif %}
+            <h1 class="app-page-heading">
+              {%- if landingPage or pageTitle == "Community" or pageTitle == "NHS service standard" %}
               {% else %}
-              {{pageSection}}
+              <span class="nhsuk-caption-l">
+                {%- if subSection %}
+                  {%- if theme %}
+                  {{theme}}
+                  {% else %}
+                  {{subSection}}
+                  {% endif %}
+                {% else %}
+                {{pageSection}}
+                {% endif %}
+                <span class="nhsuk-u-visually-hidden"> - </span>
+              </span>
               {% endif %}
-              <span class="nhsuk-u-visually-hidden"> - </span>
-            </span>
+              {{pageTitle}}
+              {%- if experimental %}
+              <div>
+                <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
+                  Experimental
+                </strong>
+                <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental which means that we're looking for teams to test it and feedback.</p>
+              </div>
+              {% endif %}
+            </h1>
+
+            {%- if hideDescription %}
+            {% else %}
+              <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
             {% endif %}
-            {{pageTitle}}
-            {%- if experimental %}
-            <div>
-              <strong class="nhsuk-tag nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
-                Experimental
-              </strong>
-              <p class="nhsuk-body-m nhsuk-u-margin-bottom-0">This component is currently experimental which means that we're looking for teams to test it and feedback.</p>
+
+            {% block bodyContent %}
+            {% endblock %}
+
+            {% block contactPanel %}
+              {%- if landingPage or theme == "Design" or theme == "Content style guide" or pageTitle == "Support" %}
+              {% else %}
+                {% include "./_contact-panel.njk" %}
+              {% endif %}
+            {% endblock %}
+
+            {% include "./_feedback-banner.njk" %}
+
+            {%- if dateUpdated %}
+            <div class="nhsuk-review-date app-review-date">
+              <p class="nhsuk-body-s app-review-date__text">Updated: {{dateUpdated}}</p>
             </div>
             {% endif %}
-          </h1>
-
-          {%- if hideDescription %}
-          {% else %}
-            <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
-          {% endif %}
-
-          {% block bodyContent %}
-          {% endblock %}
-
-          {% block contactPanel %}
-            {%- if landingPage or theme == "Design" or theme == "Content style guide" or pageTitle == "Support" %}
-            {% else %}
-              {% include "./_contact-panel.njk" %}
-            {% endif %}
-          {% endblock %}
-
-          {% include "./_feedback-banner.njk" %}
-
-          {%- if dateUpdated %}
-          <div class="nhsuk-review-date app-review-date">
-            <p class="nhsuk-body-s app-review-date__text">Updated: {{dateUpdated}}</p>
-          </div>
-          {% endif %}
 
         </div>
       </div>

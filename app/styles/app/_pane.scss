@@ -45,6 +45,10 @@
 
 }
 
+.app-pane__main-content-wrapper {
+  display: block;
+}
+
 // Custom spacing for page headings
 @include mq($until: tablet) {
   .app-page-heading,
