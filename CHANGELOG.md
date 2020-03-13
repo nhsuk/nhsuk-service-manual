@@ -4,7 +4,7 @@
 
 :new: **New content**
 
-- Add latest show and tell and recent Radio 4 interview to content style guide
+- Add recent Radio 4 interview to content style guide
 
 :wrench: **Fixes**
 
