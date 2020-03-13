@@ -1,5 +1,9 @@
 # NHS digital service manual Changelog
 
+## 3.0.7 - TBD
+
+- Add error summary to NHS number pattern with errors example
+
 ## 3.0.6 - 19 February 2020
 
 - Use the no cookie version of YouTube video embedding

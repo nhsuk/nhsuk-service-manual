@@ -2,10 +2,21 @@
 
 {% from 'input/macro.njk' import input %}
 {% from 'button/macro.njk' import button %}
+{% from 'error-summary/macro.njk' import errorSummary %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+
+      {{ errorSummary({
+        "titleText": "There is a problem",
+        "errorList": [
+          {
+            "text": "Your NHS number is too long",
+            "href": "#nhs-number"
+          }
+        ]
+      }) }}
 
       {{ input({
         label: {
@@ -17,7 +28,7 @@
           html: "Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, <span class=\"nhsuk-u-nowrap\">485 777 3456</span>."
         },
         errorMessage: {
-          "text": "Your NHS number is too long."
+          "text": "Your NHS number is too long"
         },
         id: "nhs-number",
         name: "nhs-number",
