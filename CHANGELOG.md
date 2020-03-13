@@ -2,6 +2,10 @@
 
 ## 3.0.7 - TBD
 
+:new: **New content**
+
+- Add latest show and tell and recent Radio 4 interview to content style guide
+
 :wrench: **Fixes**
 
 - Add error summary to NHS number pattern with errors example
