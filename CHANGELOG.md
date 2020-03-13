@@ -4,12 +4,13 @@
 
 :new: **New content**
 
-- Add latest show and tell and recent Radio 4 interview to content style guide
+- Add recent Radio 4 interview to content style guide
 
 :wrench: **Fixes**
 
 - Add error summary to NHS number pattern with errors example
 - Fix design example spacing
+- Change "services" to "a service" for Google Analytics in the cookie-consent.js
 
 ## 3.0.6 - 19 February 2020
 
