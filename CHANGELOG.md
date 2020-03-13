@@ -2,7 +2,10 @@
 
 ## 3.0.7 - TBD
 
+:wrench: **Fixes**
+
 - Add error summary to NHS number pattern with errors example
+- Fix design example spacing
 
 ## 3.0.6 - 19 February 2020
 
