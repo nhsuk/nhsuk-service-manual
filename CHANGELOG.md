@@ -5,6 +5,7 @@
 :new: **New content**
 
 - Add recent Radio 4 interview to content style guide
+- Update Patterns index page with new wording after testing
 
 :wrench: **Fixes**
 
