@@ -1,6 +1,6 @@
 module.exports = {
   // Azure Application Insights key
-  appInsightsKey: process.env.APPINSIGHTS_INSTRUMENTATIONKEY,
+  appInsightsKey: process.env.APPINSIGHTS_INSTRUMENTATIONKEY || '',
 
   // Base URL
   baseURL: process.env.BASE_URL || 'https://service-manual.nhs.uk',

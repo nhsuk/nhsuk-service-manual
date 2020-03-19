@@ -23,8 +23,10 @@ const pageIndex = new PageIndex(config);
 const app = express();
 
 // Initialise Azure Application Insights
-appInsights.setup(config.appInsightsKey);
-appInsights.start();
+if (config.env !== 'development') {
+  appInsights.setup(config.appInsightsKey);
+  appInsights.start();
+}
 
 // Authentication middleware
 app.use(authentication);
@@ -119,7 +121,7 @@ app.get('/suggestions', (req, res) => {
 
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
-  if (req.method === 'GET') {
+  if (config.env !== 'development' && req.method === 'GET') {
     appInsights.defaultClient.trackNodeHttpRequest({ request: req, response: res });
   }
   routing.matchRoutes(req, res, next);
