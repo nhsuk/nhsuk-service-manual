@@ -5,6 +5,10 @@
 :new: **New content**
 
 - Add recent Radio 4 interview to content style guide
+- Update Patterns index page with new wording after testing
+- Add feedback survey to help improve the service manual
+- Update cookie policy with information about other organisations' cookies
+- Update Your privacy page with information about other organisations' cookies and a section on social media
 
 :wrench: **Fixes**
 
