@@ -1,0 +1,64 @@
+{% set pageTitle = "Page templates" %}
+{% set pageDescription = "Use these templates to keep your pages consistent with other NHS services." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set dateUpdated = "March 2019" %}
+{% set backlog_issue_id = "200" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/styles/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block sideNav %}
+<nav class="app-side-nav">
+
+  <ul class="nhsuk-list app-side-nav__list">
+
+    <div class="nhsuk-back-link app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4">
+      <a class="nhsuk-back-link__link" href="/design-system">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Design system</a>
+    </div>
+
+    <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/colour">Colour</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/focus-state">Focus state</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/icons">Icons</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/layout">Layout</a></li>
+
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/page-templates">Page templates</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/spacing">Spacing</a></li>
+
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/typography">Typography</a></li>
+
+  </ul>
+
+</nav>
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Default</h2>
+
+  {{ designExample({
+    type: "default-page-template",
+    fullpage: true
+  }) }}
+
+  <h2>Transactional</h2>
+
+  {{ designExample({
+    type: "nhs-number-single",
+    fullpage: true
+  }) }}
+
+{% endblock %}
