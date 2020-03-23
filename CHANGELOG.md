@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.0.7 - TBD
+## 3.0.7 - 23 March 2020
 
 :new: **New content**
 
@@ -9,6 +9,7 @@
 - Add feedback survey to help improve the service manual
 - Update cookie policy with information about other organisations' cookies
 - Update Your privacy page with information about other organisations' cookies and a section on social media
+- Update package dependencies to latest versions
 
 :wrench: **Fixes**
 
