@@ -5,6 +5,7 @@
 :new: **New content**
 
 - Add new video of our public show and tell on YouTube
+- Update home page What's new promo box to point to latest blog post
 
 :wrench: **Fixes**
 
