@@ -2,6 +2,10 @@
 
 ## 3.0.8 - Unreleased
 
+:new: **New content**
+
+- Add new video of our public show and tell on YouTube
+
 :wrench: **Fixes**
 
 - Install latest version of NHS.UK frontend (3.0.4)
