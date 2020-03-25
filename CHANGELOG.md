@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 3.0.8 - Unreleased
+
+:wrench: **Fixes**
+
+- Install latest version of NHS.UK frontend (3.0.4)
+- Update package dependencies to latest versions
+
 ## 3.0.7 - 23 March 2020
 
 :new: **New content**
