@@ -33,7 +33,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "applicationinsights": "^1.7.3",
     "axios": "^0.19.2",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.26.7",

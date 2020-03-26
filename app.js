@@ -2,7 +2,6 @@
 const path = require('path');
 
 // External dependencies
-const appInsights = require('applicationinsights');
 const browserSync = require('browser-sync');
 const compression = require('compression');
 const express = require('express');
@@ -21,12 +20,6 @@ const pageIndex = new PageIndex(config);
 
 // Initialise applications
 const app = express();
-
-// Initialise Azure Application Insights
-if (config.appInsightsKey) {
-  appInsights.setup(config.appInsightsKey);
-  appInsights.start();
-}
 
 // Authentication middleware
 app.use(authentication);
@@ -121,9 +114,6 @@ app.get('/suggestions', (req, res) => {
 
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
-  if (config.appInsightsKey && req.method === 'GET') {
-    appInsights.defaultClient.trackNodeHttpRequest({ request: req, response: res });
-  }
   routing.matchRoutes(req, res, next);
 });
 
