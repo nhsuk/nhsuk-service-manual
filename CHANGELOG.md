@@ -1,16 +1,23 @@
 # NHS digital service manual Changelog
 
-## 3.0.8 - Unreleased
+## 3.1.0 - 31 March 2020
 
 :new: **New content**
 
 - Add new video of our public show and tell on YouTube
 - Update home page What's new promo box to point to latest blog post
+- Add new entries for calories, Deaf people, hearing loss, death and trimesters to A to Z of NHS health writing
+- Add a new section on calories to the Numbers, measurements, dates and time page
+- Mention social model of disability in the section on disabilities and conditions on the Inclusive language page
+- Change memorable number example under telephone numbers in the A to Z of NHS writing and explain that we use "call" or "phone"
+- Remove "straight away" from our guidance on hyphens
+- Standardise links in the A to Z of NHS health writing
 
 :wrench: **Fixes**
 
 - Install latest version of NHS.UK frontend (3.0.4)
 - Update package dependencies to latest versions
+- Reword entry for coronavirus (COVID-19) in A to Z of NHS health writing to make it clearer
 
 ## 3.0.7 - 23 March 2020
 
