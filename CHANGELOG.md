@@ -7,6 +7,7 @@
 - Add new video of our public show and tell on YouTube
 - Update home page What's new promo box to point to latest blog post
 - Add new entries for calories, Deaf people, hearing loss, death and trimesters to A to Z of NHS health writing
+- Add a reference from "disease" to "condition" in the A to Z of NHS health writing
 - Add a new section on calories to the Numbers, measurements, dates and time page
 - Mention social model of disability in the section on disabilities and conditions on the Inclusive language page
 - Change memorable number example under telephone numbers in the A to Z of NHS writing and explain that we use "call" or "phone"
