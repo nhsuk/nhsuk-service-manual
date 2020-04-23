@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.1.1 - Unreleased
+## 3.2.0 - Unreleased
 
 :new: **New features**
 
