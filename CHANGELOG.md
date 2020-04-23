@@ -2,6 +2,10 @@
 
 ## 3.1.1 - Unreleased
 
+:new: **New features**
+
+- Add conditional reveal for radios and checkboxes ([Community backlog Issue 173](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/173))
+
 :new: **New content**
 
 - Update community backlog page

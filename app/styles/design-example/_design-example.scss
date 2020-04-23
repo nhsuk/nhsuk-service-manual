@@ -4,7 +4,7 @@
 
 .design-example {
   $root: &;
-  margin-bottom: nhsuk-spacing(7);
+  margin-bottom: nhsuk-spacing(6);
   position: relative;
   width: 100%;
 
@@ -40,7 +40,7 @@
 }
 
 p + .design-example {
-  @include nhsuk-responsive-padding(4, 'top');
+  @include nhsuk-responsive-padding(3, 'top');
 }
 
 .nhsuk-lede-text + .design-example {

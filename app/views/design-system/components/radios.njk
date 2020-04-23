@@ -69,8 +69,14 @@
 
   <h3 id="conditionally-revealing-content">Conditionally revealing content</h3>
   <p>You can add conditionally revealing content to radios, so users only see content when it’s relevant to them.</p>
+  <p>For example, you could reveal an email address input only when a user chooses to be contacted by email.</p>
 
-  [DesignExample]
+  {{ designExample({
+    type: "radios-conditional-reveal"
+  }) }}
+
+  <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
+  <p>Do not use this component to add conditionally revealing content to inline radios.</p>
 
   <h3 id="error-messages">Error messages</h3>
   <p>Style error messages like this:</p>
