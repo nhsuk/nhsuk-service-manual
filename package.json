@@ -56,12 +56,12 @@
     "eslint-config-nhsuk": "^0.17.0",
     "eslint-plugin-import": "^2.20.2",
     "iframe-resizer": "^3.6.6",
-    "jest": "^25.2.4",
+    "jest": "^25.4.0",
     "nhsuk-frontend": "^3.0.4",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.0",
     "nodemon": "^1.19.4",
     "sass-lint": "^1.13.1",
-    "webpack": "^4.42.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
 }

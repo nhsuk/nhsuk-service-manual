@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.2.0 - Unreleased
+## 3.2.0 - 24 April 2020
 
 :new: **New features**
 
@@ -9,6 +9,10 @@
 :new: **New content**
 
 - Update community backlog page
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
 
 ## 3.1.0 - 31 March 2020
 
