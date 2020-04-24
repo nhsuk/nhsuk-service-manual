@@ -26,6 +26,8 @@
   </head>
 
   <body>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
     {{ body | safe }}
 
     <script src="/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
