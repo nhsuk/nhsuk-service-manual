@@ -1,31 +1,33 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ checkboxes({
-  "fieldset": {
-    "legend": {
-      "text": "How do you want to sign in?",
-      "classes": "nhsuk-fieldset__legend--m",
-      "isPageHeading": true
+  idPrefix: "nationality",
+  name: "nationality",
+  fieldset: {
+    legend: {
+      text: "What is your nationality?",
+      isPageHeading: true,
+      classes: "nhsuk-fieldset__legend--l"
     }
   },
-  "items": [
+  hint: {
+    text: "If you have dual nationality, select all options that are relevant to you."
+  },
+  items: [
     {
-      "name": "gateway",
-      "id": "government-gateway",
-      "value": "gov-gateway",
-      "text": "Sign in with Government Gateway",
-      "hint": {
-        "text": "You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before."
+      value: "british",
+      text: "British",
+      hint: {
+        text: "including English, Scottish, Welsh and Northern Irish"
       }
     },
     {
-      "name": "verify",
-      "id": "nhsuk-login",
-      "value": "nhsuk-verify",
-      "text": "Sign in with NHS.UK login",
-      "hint": {
-        "text": "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
-      }
+      value: "irish",
+      text: "Irish"
+    },
+    {
+      value: "other",
+      text: "Citizen of another country"
     }
   ]
 }) }}
