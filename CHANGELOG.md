@@ -1,10 +1,18 @@
 # NHS digital service manual Changelog
 
-## 3.1.1 - Unreleased
+## 3.2.0 - 24 April 2020
+
+:new: **New features**
+
+- Add conditional reveal for radios and checkboxes ([Community backlog Issue 173](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/173))
 
 :new: **New content**
 
 - Update community backlog page
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
 
 ## 3.1.0 - 31 March 2020
 
