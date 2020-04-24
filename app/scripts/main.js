@@ -6,6 +6,12 @@ import AutoComplete from 'nhsuk-frontend/packages/components/header/autoComplete
 import Header from '../../node_modules/nhsuk-frontend/packages/components/header/header';
 import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
 import Details from '../../node_modules/nhsuk-frontend/packages/components/details/details';
+import Checkboxes from '../../node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
+import Radios from '../../node_modules/nhsuk-frontend/packages/components/radios/radios';
+
+// Polyfills
+import '../../node_modules/nhsuk-frontend/packages/polyfills';
+
 import DesignExample from './design-example';
 import {
   inputValue,
@@ -18,6 +24,8 @@ import {
 Header();
 Details();
 SkipLink();
+Checkboxes();
+Radios();
 
 document.querySelectorAll(DesignExample.selector()).forEach((el) => {
   new DesignExample(el);
