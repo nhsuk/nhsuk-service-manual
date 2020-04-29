@@ -2,6 +2,12 @@
 
 ## 3.2.0 - 27 April 2020
 
+:new: **New content**
+
+- Update community backlog page
+
+## 3.2.0 - 27 April 2020
+
 :new: **New features**
 
 - Add conditional reveal for radios and checkboxes ([Community backlog Issue 173](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/173))
