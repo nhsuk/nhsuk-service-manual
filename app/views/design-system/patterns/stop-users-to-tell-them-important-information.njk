@@ -1,0 +1,60 @@
+{% set pageTitle = "Stop users to tell them important information" %}
+{% set pageDescription = "Use this pattern to stop users in a journey to tell them important information before continuing" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Tasks" %}
+{% set dateUpdated = "May 2020" %}
+{% set backlog_issue_id = "241" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>When to use this pattern</h2>
+  <p>In a transactional journey when you need to tell them something important.</p>
+  <p>Use this pattern when:</p>
+  <ul>
+    <li>you need users to understand something so they are more successful using your service</li>
+    <li>you have evidence that providing information before a journey or in a normal page does not work on it’s own</li>
+  </ul>
+  <p>If you need users to understand two or three things. Try providing information just ahead of when a user needs it or use several pages in a row.</p>
+
+  <h2>When not to use this pattern</h2>
+  <p>Do not use this pattern:</p>
+  <ul>
+    <li>outside of transactional journeys</li>
+    <li>when you need to include large amounts of content</li>
+    <li>when you need a user to make a choice between two or more options. In these scenarios, use a radio button instead</li>
+    <li>when you need a user to actively confirm something before an action takes place. For example, when deleting an account or cancelling an appointment</li>
+    <li>alongside other content or data items which may mean the interruption is less visually distinct or easily missed</li>
+  </ul>
+
+  <h2>How to use this pattern</h2>
+  <p>To use this pattern:</p>
+  <ul>
+    <li>use a page that is visually distinct from other pages in a journey</li>
+    <li>use a clear heading that tells the user the most important thing they need to do</li>
+    <li>include a button with “Continue” or “I understand”</li>
+  </ul>
+
+  <h2>Research</h2>
+  <p>The “Choose if data from your health records can be used for research and planning“ team found that:</p>
+  <ul>
+    <li>users can mistake images and other graphical elements [for example, dots] for things they can click</li>
+    <li>users were more likely to stop and read content in an interruption card compared to a page styled like other pages</li>
+    <li>users did not always read anything other than the heading</li>
+    <li>not all users will slow down. There is no pattern that will work for all users</li>
+  </ul>
+  <p>111 Online team found that users were more likely to complete a transaction when told that more questions meant a less serious diagnosis.</p>
+  <p>111 Online saw a 10% increase in completed journeys after using a page to interrupt users.</p>
+  <p>Outside of the NHS:</p>
+  <ul>
+    <li>the passport service found interrupting users’ flow with this pattern has increased understanding and retention of important information</li>
+    <li>the department for Education found that most users will now stop and read the content</li>
+  </ul>
+
+{% endblock %}

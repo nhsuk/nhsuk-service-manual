@@ -108,8 +108,9 @@
   { title: "Textarea", url: "/design-system/components/textarea" }
 ] %}
 
-{% set askUsers = [
-  { title: "Ask users for their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" }
+{% set tasks = [
+  { title: "Ask users for their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" },
+  { title: "Stop users to tell them important information", url: "/design-system/patterns/stop-users-to-tell-them-important-information" }
 ] %}
 
 {% set pages = [
@@ -213,7 +214,7 @@
     }) }}
     <h2 class="app-side-nav__heading">Tasks</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in askUsers %}
+    {% for item in tasks %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
