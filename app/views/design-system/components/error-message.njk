@@ -20,34 +20,33 @@
 
   <h2>When to use error messages </h2>
   <p>Show an error message next to the field - as well as in the <a href="/design-system/components/error-summary">error summary</a> - when there is a validation error.</p>
-  <p>Follow our guidance on <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a> and make them easy to use so that users never see an error message. If you're still getting errors, consider instead whether you need to change your back-end processes.</p>
+  <p>Follow our guidance on <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a> and make them easy to use so that users never see an error message.</p>
 
   <h2>When not to use error messages</h2>
-  <p>As the GOV.UK Design System says, only display an error when someone tries to move to the next part of the service. Do not show error messages:</p>
-  <ul>
-    <li>when users select or tab to a field</li>
-    <li>as they are typing</li>
-    <li>when they move away from a field</li>
-  </ul>
-  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
-  <ul>
-    <li>explains why you cannot accept the entry or selection</li>
-    <li>tells them what to do next</li>
-    <li>includes a way to leave the transaction</li>
-  </ul>
+  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.</p>
+
   <h2>How to use error messages</h2>
+  <p>For each error:</p>
+  <ul>
+    <li>put the message in red after the question text and hint text</li>
+    <li>use a red border to visually connect the message and the question it belongs to</li>
+    <li>if the error relates to specific text fields within the question, give these a red border as well</li>
+  </ul>
+  <p>To help screen reader users, the error message component includes a hidden ‘Error:’ before the error message. These users will hear, for example, “Error: The date your passport was issued must be in the past”.</p>
+
+  <p>[example]</p>
+
+  <p>Summarise all errors at the top of the page the user is on using an <a href="/design-system/components/error-summary/">error summary</a>.</p>
+
+  <h3>How to write error messages</h3>
   <p>Focus on telling users how to fix the problem rather than describing what's gone wrong. You may need to write more than 1 error message for each field. Read more about <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a> on GOV.UK.</p>
   <p>Use standard messages for different components. The GOV.UK Design System has some good <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">error message templates for common errors</a>.</p>
 
-  <p>The GOV.UK Design System also has more information about <a href="https://design-system.service.gov.uk/components/error-message/#how-it-works">how error messages work</a>.
-
   <h2>Research</h2>
   <p>GOV.UK research on error messages showed users:</p>
-    <ul>
-      <li>understood what went wrong</li>
-      <li>knew how to fix the problem</li>
-      <li>were able to recover from the error</li>
-    </ul>
-    <p>Get in touch to <a href="/community">share your research findings</a> if you've used error messages.</p>
-
+  <ul>
+    <li>understood what went wrong</li>
+    <li>knew how to fix the problem</li>
+    <li>were able to recover from the error</li>
+  </ul>
 {% endblock %}
