@@ -6,6 +6,7 @@
 
 - Update community backlog page
 - Add guidance for the `<main>` wrapper vertical spacing modifier classes ([Community backlog Issue 221](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/221))
+- Update footer guidance
 
 ## 3.2.0 - 27 April 2020
 
