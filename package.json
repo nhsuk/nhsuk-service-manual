@@ -13,7 +13,7 @@
     "build:assets": "cpx 'app/assets/*' public/assets/",
     "clean": "touch public/tmp.txt && rm -rf public/*",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint app/scripts/**",
+    "lint:js": "eslint . --ignore-pattern '/public'",
     "lint:css": "sass-lint 'app/styles/**/*.scss' -v -q",
     "nuke": "npm run clean && rm -rf node_modules/",
     "postinstall": "npm run build",

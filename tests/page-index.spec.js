@@ -1,11 +1,11 @@
+const cheerio = require('cheerio');
 const PageIndex = require('../middleware/page-index.js');
 
 const config = {
-  env: 'development',
   baseURL: 'http://localhost',
+  env: 'development',
   port: 3000,
 };
-const cheerio = require('cheerio');
 
 test('test parse page description', () => {
   const pageIndex = new PageIndex(config);

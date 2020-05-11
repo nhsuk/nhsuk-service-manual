@@ -10,6 +10,7 @@ function getFileContents(path) {
     fileContents = fs.readFileSync(path);
   } catch (err) {
     if (err.code === 'ENOENT') {
+      // eslint-disable-next-line no-console
       console.log(err.message);
     } else {
       throw err;
@@ -36,7 +37,7 @@ exports.getNunjucksCode = (path) => {
 
 // This helper function takes a path of a *.md.njk file and
 // returns the HTML rendered by Nunjucks without markdown data
-exports.getHTMLCode = function (path) {
+exports.getHTMLCode = (path) => {
   const fileContents = getFileContents(path);
 
   let html;
@@ -44,7 +45,8 @@ exports.getHTMLCode = function (path) {
     html = nunjucks.renderString(fileContents);
   } catch (err) {
     if (err) {
-      console.log(`Could not get HTML code from ${  path}`);
+      // eslint-disable-next-line no-console
+      console.log(`Could not get HTML code from ${path}`);
     }
   }
 

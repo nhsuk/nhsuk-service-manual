@@ -69,9 +69,11 @@ class PageIndex {
       // Time to index logging
       const endTime = new Date().getTime();
       const indexTime = (endTime - startTime) / 1000;
+      // eslint-disable-next-line no-console
       console.log(`Page index finished in ${indexTime}s`);
     } catch (err) {
       const reason = err.response ? `${err.message} URL: ${err.response.config.url}` : err.message;
+      // eslint-disable-next-line no-console
       console.log(`Unable to index pages. Reason: ${reason}`);
     }
   }
