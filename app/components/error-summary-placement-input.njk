@@ -1,0 +1,52 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'error-summary/macro.njk' import errorSummary %}
+{% from 'input/macro.njk' import input %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Go back",
+    "classes": "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form>
+
+        {{ errorSummary({
+          "titleText": "There is a problem",
+          "errorList": [
+            {
+              "text": "Enter your full name",
+              "href": "#name"
+            }
+          ]
+        }) }}
+
+        <h1 class="nhsuk-heading-l">Your details</h1>
+
+        {{ input({
+          "label": {
+            "text": "Full name"
+          },
+          "id": "name",
+          "name": "name",
+          "errorMessage": {
+            "text": "Enter your full name"
+          }
+        }) }}
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
+

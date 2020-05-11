@@ -23,7 +23,18 @@
   <p>Follow our guidance on <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a> and make them easy to use so that users never see an error message.</p>
 
   <h2>When not to use error messages</h2>
-  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a page which tells them they’re not eligible and gives them useful information about what to do next.</p>
+  <p>Only display an error when someone tries to move to the next part of the service. Do not show error messages:</p>
+  <ul>
+    <li>when users select or tab to a field</li>
+    <li>as they are typing</li>
+    <li>when they move away from a field</li>
+  </ul>
+  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
+  <ul>
+    <li>explains why you cannot accept the entry or selection</li>
+    <li>tells them what to do next</li>
+    <li>includes a way to leave the transaction</li>
+  </ul>
 
   <h2>How to use error messages</h2>
   <p>For each error:</p>
@@ -34,9 +45,30 @@
   </ul>
   <p>To help screen reader users, the error message component includes a hidden "Error:" before the error message. These users will hear, for example, "Error: The date your passport was issued must be in the past".</p>
 
-  <p>[example]</p>
+  {{ designExample({
+    type: "error-message",
+    htmlOnly: true,
+    showExample: false
+  }) }}
 
-  <p>Summarise all errors at the top of the page the user is on using an <a href="/design-system/components/error-summary/">error summary</a>.</p>
+  <h3 id="legend">Legend</h3>
+
+  {{ designExample({
+    type: "radios-error"
+  }) }}
+
+  <h3 id="label">Label</h3>
+
+  {{ designExample({
+    type: "input-error"
+  }) }}
+
+  <p>Summarise all errors at the top of the page the user is on using an <a href="/design-system/components/error-summary/">error summary</a>. For example:</p>
+
+  {{ designExample({
+    type: "error-summary-placement-input",
+    fullpage: true
+  }) }}
 
   <h3>How to write error messages</h3>
   <p>Focus on telling users how to fix the problem rather than describing what's gone wrong. You may need to write more than 1 error message for each field. Read more about <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a> on GOV.UK.</p>
