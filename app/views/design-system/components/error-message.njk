@@ -43,7 +43,7 @@
   <h2>How to use error messages</h2>
   <p>For each error:</p>
   <ul>
-    <li>put the message in the <a href="/design-system/components/error-summary">error summary</a> — <a href="/design-system/components/error-summary#linking-from-the-error-summary-to-each-answer">linking to the answer</a> that has the validation error</li>
+    <li>put the message in an <a href="/design-system/components/error-summary">error summary</a> at the top of the page the user is on using an — <a href="/design-system/components/error-summary#linking-from-the-error-summary-to-each-answer">linking to the answer</a> that has the validation error</li>
     <li>put the message in red after the question text and hint text</li>
     <li>use a red border to visually connect the message and the question it belongs to</li>
     <li>if the error relates to specific text fields in the question, give these a red border as well</li>
@@ -70,6 +70,8 @@
     type: "input-error"
   }) }}
 
+  <h3 id="error-summary">Using an error summary</h3>
+
   <p>Summarise all errors at the top of the page the user is on using an <a href="/design-system/components/error-summary">error summary</a>. For example:</p>
 
   {{ designExample({
@@ -81,8 +83,6 @@
     type: "error-summary-placement-input",
     fullpage: true
   }) }}
-
-  <p>For multiple errors, add each error message to the error summary — <a href="/design-system/components/error-summary#linking-from-the-error-summary-to-each-answer">linking to the answer</a> that has the validation error. For example:</p>
 
   {{ designExample({
     type: "error-summary-placement-multiple",
