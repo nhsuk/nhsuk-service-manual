@@ -1,10 +1,14 @@
 # NHS digital service manual Changelog
 
-## 3.2.2 - unreleased
+## 3.3.0 - Unreleased
 
 :new: **New content**
 
 - Update guidance and add more examples for the error message component ([Community backlog Issue 222](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/222))
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
 
 ## 3.2.1 - 18 May 2020
 
