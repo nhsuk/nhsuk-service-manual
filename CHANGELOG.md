@@ -5,6 +5,8 @@
 :wrench: **Fixes**
 
 - Updated first paragraph for "Organisational header"
+- Update package dependencies to latest versions
+- Use `noopener` and `noreferrer` on links that open in a new window
 
 ## 3.3.0 - 9 June 2020
 
