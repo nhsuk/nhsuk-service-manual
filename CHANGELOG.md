@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.3.1 - Unreleased
+
+:wrench: **Fixes**
+
+- Updated first paragraph for "Organisational header"
+
 ## 3.3.0 - 9 June 2020
 
 :new: **New content**
@@ -82,7 +88,7 @@
 
 :new: **New content**
 
-- Add new entry in A to Z of NHS health writing for "GP" 
+- Add new entry in A to Z of NHS health writing for "GP"
 - Add explanation about using months up to 2 years on Inclusive language page
 - Add new guidance on telephone numbers to A to Z of NHS health writing, based on GOV.UK guidance
 - Add new guidance and examples of an error summary and an error message working together ([Community backlog Issue 189](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/189))
@@ -99,7 +105,7 @@
 
 :new: **New content**
 
-- Update guidance on "sex" and "intersex" on the Inclusive language page. 
+- Update guidance on "sex" and "intersex" on the Inclusive language page.
 - Update What's new section with latest changes.
 
 :wrench: **Fixes**
@@ -180,7 +186,7 @@
 
 :wrench: **Fixes**
 
-- Add more detail about interoperability standards to section 17 of NHS service standard 
+- Add more detail about interoperability standards to section 17 of NHS service standard
 - Amend guidance on using the number 1 in Numbers, measurements, dates and time after December Style Council meeting
 - Update inclusive language page, especially the section on sex, gender and sexuality
 - Update package dependencies to latest versions
@@ -202,7 +208,7 @@
 
 :new: **New content**
 
-- NHS service standard 
+- NHS service standard
 
 :wrench: **Fixes**
 
@@ -371,7 +377,7 @@
 :wrench: **Fixes**
 
 - Update the guidance for how we use the microgram symbol
-- Update the guidance for how we write concisely with example 
+- Update the guidance for how we write concisely with example
 - Update package dependencies to latest versions
 
 ## 1.6.2 - 30 July 2019
