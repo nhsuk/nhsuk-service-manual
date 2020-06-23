@@ -1,10 +1,13 @@
 # NHS digital service manual Changelog
 
-## 3.3.1 - Unreleased
+## 3.3.1 - 23 June 2020
 
 :wrench: **Fixes**
 
 - Updated first paragraph for "Organisational header"
+- Update package dependencies to latest versions
+- Use `noopener` and `noreferrer` on links that open in a new window
+- Defer the cookie consent to stop the script render blocking the page
 
 ## 3.3.0 - 9 June 2020
 
