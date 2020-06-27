@@ -1,7 +1,8 @@
 /* eslint-disable no-new */
 // NHS.UK frontend components
 import AutoComplete from 'nhsuk-frontend/packages/components/header/autoCompleteConfig';
-import Header from '../../node_modules/nhsuk-frontend/packages/components/header/header';
+import MenuToggle from 'nhsuk-frontend/packages/components/header/menuToggle';
+import SearchToggle from 'nhsuk-frontend/packages/components/header/searchToggle';
 import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip-link/skip-link';
 import Details from '../../node_modules/nhsuk-frontend/packages/components/details/details';
 import Checkboxes from '../../node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
@@ -23,20 +24,6 @@ import {
 import './polyfills';
 
 // Initialise NHS.UK frontend components
-Header();
-Details();
-SkipLink();
-Checkboxes();
-Radios();
-
-// Initialise NHS digital service manual components
-
-// Design examples
-document.querySelectorAll(DesignExample.selector()).forEach((el) => {
-  new DesignExample(el);
-});
-
-// Header autocomplete
 AutoComplete({
   containerId: 'autocomplete-container',
   formId: 'search',
@@ -47,4 +34,17 @@ AutoComplete({
     inputValue,
     suggestion,
   },
+});
+MenuToggle();
+SearchToggle();
+Details();
+SkipLink();
+Checkboxes();
+Radios();
+
+// Initialise NHS digital service manual components
+
+// Design examples
+document.querySelectorAll(DesignExample.selector()).forEach((el) => {
+  new DesignExample(el);
 });
