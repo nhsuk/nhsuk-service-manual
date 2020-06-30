@@ -6,6 +6,7 @@
 
 - Prevent the autocomplete from being initialised twice
 - Add `role="main"` to `<main>` container for consistency and accessibility fixes
+- Update package dependencies to latest versions
 
 ## 3.3.1 - 23 June 2020
 
