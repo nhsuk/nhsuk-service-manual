@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 3.3.3 - 14 July 2020
+
+:wrench: **Fixes**
+
+- Remove the splunk logging function code to prevent console errors within the cookie banner
+- Use DOMContentLoaded event instead of load for performance benefits with the cookie banner
+
 ## 3.3.2 - 30 June 2020
 
 :wrench: **Fixes**
