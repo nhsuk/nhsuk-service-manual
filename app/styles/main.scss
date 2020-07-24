@@ -137,8 +137,8 @@ h1 + .nhsuk-lede-text {
 
 // The 'What's new' box in the home page hero
 .app-latest-update {
-  padding-bottom: nhsuk-spacing(7);
-  padding-top: nhsuk-spacing(7);
+  padding-bottom: nhsuk-spacing(8);
+  padding-top: nhsuk-spacing(8);
 
   @include mq($until: desktop) {
     padding-bottom: nhsuk-spacing(6);
