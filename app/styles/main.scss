@@ -165,3 +165,10 @@ h1 + .nhsuk-lede-text {
 
   }
 }
+
+.app-hero__wrapper {
+  @include mq($until: desktop) {
+    padding-bottom: nhsuk-spacing(5);
+    padding-top: nhsuk-spacing(5);
+  }
+}
