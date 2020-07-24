@@ -2,7 +2,6 @@
 // Page specific
 const additionalIndices = {
   '/accessibility/testing': ['svg'],
-  '/community': ['contact, contact us, support, get in touch'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
   '/design-system/components/back-link': ['return link, back button'],
@@ -29,6 +28,7 @@ const additionalIndices = {
   '/design-system/styles/colour': ['palette'],
   '/design-system/styles/layout': ['grid'],
   '/design-system/styles/spacing': ['margin, padding'],
+  '/get-in-touch': ['contact, contact us, support, get in touch'],
   '/whats-new/blog-posts': ['news, updates'],
   '/whats-new/updates': ['news, latest changes'],
 };
