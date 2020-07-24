@@ -146,6 +146,7 @@ h1 + .nhsuk-lede-text {
   }
 }
 
+// Custom style for home page hero card
 .app-card--transparent {
   background: transparent;
   border: 2px solid $nhsuk-secondary-border-color;
@@ -166,6 +167,8 @@ h1 + .nhsuk-lede-text {
   }
 }
 
+// Custom style for the home page hero
+// Reducing the padding on smaller screens
 .app-hero__wrapper {
   @include mq($until: desktop) {
     padding-bottom: nhsuk-spacing(5);
