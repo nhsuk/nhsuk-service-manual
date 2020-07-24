@@ -112,6 +112,10 @@ app.get('/suggestions', (req, res) => {
   res.send(JSON.stringify(slicedResults));
 });
 
+app.get('/assets/NHS_design_principles.pdf', (req, res) => {
+  res.redirect('/assets/nhs-design-principles.pdf');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
