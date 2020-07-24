@@ -1,0 +1,321 @@
+/* ==========================================================================
+   COMPONENTS / #CARD
+   ========================================================================== */
+
+$card-border-width: 1px;
+$card-border-bottom-width: nhsuk-spacing(1);
+$card-border-color: $color_nhsuk-grey-4;
+$card-border-hover-color: $color_nhsuk-grey-3;
+
+.nhsuk-card {
+  @include nhsuk-responsive-margin(5, 'bottom');
+
+  background: $color_nhsuk-white;
+  border: $card-border-width solid $card-border-color;
+  position: relative;
+  width: 100%;
+}
+
+.nhsuk-card__img {
+  @include print-hide();
+
+  display: block;
+  width: 100%;
+}
+
+.nhsuk-card__content {
+  @include top-and-bottom();
+  @include nhsuk-responsive-padding(5);
+
+  position: relative;
+}
+
+.nhsuk-card__heading,
+.nhsuk-card__metadata,
+.nhsuk-card__description {
+  @include nhsuk-responsive-margin(4, 'bottom');
+}
+
+/* Clickable card
+   ========================================================================== */
+
+.nhsuk-card--clickable {
+  border-bottom-width: $card-border-bottom-width;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+
+    .nhsuk-card__heading a,
+    .nhsuk-card__link {
+      color: $nhsuk-link-hover-color;
+      text-decoration: none;
+
+      &:focus {
+        color: $nhsuk-focus-text-color;
+      }
+    }
+
+  }
+
+  &:hover {
+    border-color: $card-border-hover-color;
+  }
+
+  &:active {
+    border-color: $card-border-hover-color;
+    bottom: - $card-border-width;
+  }
+}
+
+/* Card video
+  ========================================================================== */
+
+.nhsuk-card__video {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe,
+  object,
+  embed {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Card feature
+   ========================================================================== */
+
+.nhsuk-card--feature {
+  @include nhsuk-responsive-margin(7, 'top');
+
+  + .nhsuk-card--feature {
+    @include nhsuk-responsive-margin(6, 'top');
+  }
+}
+
+.nhsuk-card__heading--feature {
+  @include nhsuk-font($size: 24, $weight: bold);
+
+  background: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  display: inline-block;
+  left: - $card-border-width;
+  padding: nhsuk-spacing(2) nhsuk-spacing(3);
+  position: absolute;
+  top: - nhsuk-spacing(3);
+
+  @include mq($from: desktop) {
+    padding: nhsuk-spacing(2) nhsuk-spacing(4);
+  }
+}
+
+.nhsuk-card__content--feature {
+  @include nhsuk-responsive-padding(7, 'top');
+}
+
+/* Card group
+   ========================================================================== */
+
+/**
+ * Card group allows you to have a row of cards.
+ *
+ * Flexbox is used to make each card in a row the same height.
+ */
+
+.nhsuk-card-group {
+  @include flex();
+
+  margin-bottom: nhsuk-spacing(2);
+  padding: 0;
+
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(6);
+  }
+}
+
+.nhsuk-card-group__item {
+  @include flex-item();
+
+  margin-bottom: 0;
+  list-style-type: none;
+
+  .nhsuk-card {
+    margin-bottom: nhsuk-spacing(5);
+  }
+
+  @include mq($until: desktop) {
+
+    .nhsuk-card {
+      margin-bottom: nhsuk-spacing(3);
+    }
+
+    &:last-child .nhsuk-card {
+      margin-bottom: 0;
+    }
+  }
+
+  .nhsuk-card--feature {
+    margin-top: 0;
+  }
+}
+
+.nhsuk-card-group--list {
+  .nhsuk-card-group__item {
+    &:not(:last-child){
+      .nhsuk-card {
+        border-bottom-width: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* Card full width
+   ========================================================================== */
+
+.nhsuk-card-full-width {
+  @include mq($until: desktop) {
+    margin-left: - $nhsuk-gutter-half;
+    margin-right: - $nhsuk-gutter-half;
+
+    .nhsuk-card-group__item {
+      padding: 0;
+    }
+
+    .nhsuk-card {
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+  }
+}
+
+/* Card app
+   ========================================================================== */
+
+.nhsuk-card--app{
+  border-bottom-width: $card-border-width;
+
+  .nhsuk-card__content {
+    @include top-and-bottom();
+    @include nhsuk-responsive-padding(4);
+  }
+
+  .nhsuk-card__heading {
+    @include nhsuk-responsive-margin(3, 'bottom');
+  }
+}
+
+/* With icon
+   ========================================================================== */
+
+   .nhsuk-card--icon {
+    background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23768692' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    background-position: right 8px top 50%;
+    background-repeat: no-repeat;
+
+    @include mq($until: desktop) {
+      background-position: right 4px top 50%;
+    }
+
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%237C2855' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .nhsuk-card__content {
+      @include nhsuk-responsive-padding(8, 'right');
+    }
+
+    &.nhsuk-card--clickable {
+      &:hover,
+      &:active {
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+/* Colour variations
+   ========================================================================== */
+
+.nhsuk-card--grey {
+  background-color: $color_nhsuk-grey-5;
+}
+
+.nhsuk-card--green {
+  background-color: shade($color_nhsuk-green, 10%);
+  border-color: shade($color_nhsuk-green, 50%);
+
+  &.nhsuk-card--clickable {
+    &:hover{
+      background-color: shade($color_nhsuk-green, 30%);
+      border-color: shade($color_nhsuk-green, 80%);
+
+      a {
+        color: $color_nhsuk-white;
+      }
+    }
+  }
+}
+
+.nhsuk-card--blue {
+  background-color: shade($color_nhsuk-blue, 10%);
+  border-color: shade($color_nhsuk-blue, 50%);
+
+  &.nhsuk-card--clickable {
+    &:hover{
+      background-color: shade($color_nhsuk-blue, 30%);
+      border-color: shade($color_nhsuk-blue, 80%);
+
+      a {
+        color: $color_nhsuk-white;
+      }
+    }
+  }
+}
+
+.nhsuk-card--green,
+.nhsuk-card--blue {
+  color: $color_nhsuk-white;
+
+  .nhsuk-card__caption {
+    color: $color_nhsuk-white;
+  }
+
+  &.nhsuk-card--clickable a,
+  a {
+      @include nhsuk-link-style-white;
+  }
+
+  &.nhsuk-card--icon,
+  &.nhsuk-card--icon:hover {
+    background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  }
+}
+
+/* No border
+   ========================================================================== */
+
+.nhsuk-card--no-border {
+  border: 0;
+}
