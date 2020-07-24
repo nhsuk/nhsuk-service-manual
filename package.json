@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -35,7 +35,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "basic-auth": "^2.0.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "cheerio": "^1.0.0-rc.3",
     "compression": "^1.7.4",
     "express": "^4.17.1",
