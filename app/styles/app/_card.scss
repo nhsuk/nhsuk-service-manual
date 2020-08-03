@@ -144,8 +144,8 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 .nhsuk-card-group__item {
   @include flex-item();
 
-  margin-bottom: 0;
   list-style-type: none;
+  margin-bottom: 0;
 
   .nhsuk-card {
     margin-bottom: nhsuk-spacing(5);
@@ -169,7 +169,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card-group--list {
   .nhsuk-card-group__item {
-    &:not(:last-child){
+    &:not(:last-child) {
       .nhsuk-card {
         border-bottom-width: 0;
         margin-bottom: 0;
@@ -200,7 +200,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 /* Card app
    ========================================================================== */
 
-.nhsuk-card--app{
+.nhsuk-card--app {
   border-bottom-width: $card-border-width;
 
   .nhsuk-card__content {
@@ -216,44 +216,44 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 /* With icon
    ========================================================================== */
 
-   .nhsuk-card--icon {
-    background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23768692' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
-    background-position: right 8px top 50%;
-    background-repeat: no-repeat;
+.nhsuk-card--icon {
+  background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23768692' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  background-position: right 8px top 50%;
+  background-repeat: no-repeat;
 
-    @include mq($until: desktop) {
-      background-position: right 4px top 50%;
-    }
+  @include mq($until: desktop) {
+    background-position: right 4px top 50%;
+  }
 
-    &:hover {
-      background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%237C2855' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
-    }
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%237C2855' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    .nhsuk-card__content {
-      @include nhsuk-responsive-padding(8, 'right');
-    }
+  .nhsuk-card__content {
+    @include nhsuk-responsive-padding(8, 'right');
+  }
 
-    &.nhsuk-card--clickable {
-      &:hover,
-      &:active {
-        a {
+  &.nhsuk-card--clickable {
+    &:hover,
+    &:active {
+      a {
+        text-decoration: underline;
+
+        &:hover {
           text-decoration: underline;
+        }
 
-          &:hover {
-            text-decoration: underline;
-          }
-
-          &:focus {
-            text-decoration: none;
-          }
+        &:focus {
+          text-decoration: none;
         }
       }
     }
   }
+}
 
 /* Colour variations
    ========================================================================== */
@@ -267,7 +267,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   border-color: shade($color_nhsuk-green, 50%);
 
   &.nhsuk-card--clickable {
-    &:hover{
+    &:hover {
       background-color: shade($color_nhsuk-green, 30%);
       border-color: shade($color_nhsuk-green, 80%);
 
@@ -283,7 +283,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   border-color: shade($color_nhsuk-blue, 50%);
 
   &.nhsuk-card--clickable {
-    &:hover{
+    &:hover {
       background-color: shade($color_nhsuk-blue, 30%);
       border-color: shade($color_nhsuk-blue, 80%);
 
@@ -304,7 +304,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
   &.nhsuk-card--clickable a,
   a {
-      @include nhsuk-link-style-white;
+    @include nhsuk-link-style-white;
   }
 
   &.nhsuk-card--icon,
