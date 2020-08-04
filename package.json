@@ -35,33 +35,32 @@
   "dependencies": {
     "axios": "^0.19.2",
     "basic-auth": "^2.0.1",
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "cheerio": "^1.0.0-rc.3",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^9.18.3",
     "js-beautify": "^1.11.0",
     "lunr": "^2.3.8",
-    "nunjucks": "^3.2.1",
-    "path": "^0.12.7"
+    "nunjucks": "^3.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
     "cpx": "^1.5.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-nhsuk": "^0.17.0",
     "eslint-plugin-import": "^2.22.0",
     "iframe-resizer": "^3.6.6",
     "jest": "^25.5.4",
     "nhsuk-frontend": "^3.1.0",
     "node-sass": "^4.14.1",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.4",
     "sass-lint": "^1.13.1",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
 }
