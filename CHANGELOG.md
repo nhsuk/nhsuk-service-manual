@@ -5,6 +5,7 @@
 :new: **New content**
 
 - Added accessibility posters
+- Added a new entry for NHS Test and Trace to A to Z of NHS health writing
 
 ## 3.3.3 - 14 July 2020
 
