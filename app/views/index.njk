@@ -3,9 +3,6 @@
 
 {% extends "includes/layout.njk" %}
 
-{% from "hero/macro.njk" import hero %}
-{% from "promo/macro.njk" import promo %}
-
 {% block breadcrumb %}{% endblock %}
 
 {% block outerBody %}
@@ -16,15 +13,17 @@
     <div class="nhsuk-width-container nhsuk-hero--border">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-          <div class="nhsuk-hero__wrapper">
-            <h1 class="nhsuk-u-margin-bottom-3">Design and build digital services for the NHS</h1>
-            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Use the service manual to build consistent, usable services that put people first.​ Learn from the research and experience of other NHS teams.</p>
+          <div class="nhsuk-hero__wrapper app-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-4">Design and build digital services for the NHS</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">Use the service manual to build consistent, usable services that put people first.​ Learn from the research and experience of other NHS teams.</p>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-third app-latest-update">
-          <div class="nhsuk-panel app-panel--transparent nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
-            <h2 class="nhsuk-heading-m"><a href="/whats-new">What's new</a></h2>
-            <p>In July 2020 we added the <a href="/accessibility">NHS digital accessibility posters</a>.</p>
+          <div class="nhsuk-card app-card--transparent nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/whats-new">What's new</a></h2>
+              <p class="nhsuk-card__description">In July 2020 we added the <a href="/accessibility">NHS digital accessibility posters</a>.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -33,70 +32,61 @@
 
   <section class="nhsuk-section">
     <div class="nhsuk-width-container">
-      <div class="nhsuk-grid-row nhsuk-promo-group">
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/service-standard",
-            "heading": "NHS service standard",
-            "headingLevel": "2",
-            "description": "Check you're working to best practice from the start."
-          }) }}
+      <div class="nhsuk-grid-row nhsuk-card-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/service-standard">NHS service standard</a></h2>
+              <p class="nhsuk-card__description">Check you're working to best practice from the start.</p>
+            </div>
+          </div>
         </div>
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/design-system",
-            "heading": "Design system",
-            "headingLevel": "2",
-            "description": "Build consistent, accessible user interfaces."
-          }) }}
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/design-system">Design system</a></h2>
+              <p class="nhsuk-card__description">Build consistent, accessible user interfaces.</p>
+            </div>
+          </div>
         </div>
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/content",
-            "heading": "Content style guide",
-            "headingLevel": "2",
-            "description": "How to write for digital NHS services."
-          }) }}
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/content">Content style guide</a></h2>
+              <p class="nhsuk-card__description">How to write for digital NHS services.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="nhsuk-grid-row nhsuk-promo-group nhsuk-u-margin-bottom-0">
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/accessibility",
-            "heading": "Accessibility",
-            "headingLevel": "2",
-            "description": "Make NHS services accessible for everyone."
-          }) }}
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/accessibility">Accessibility</a></h2>
+              <p class="nhsuk-card__description">Make NHS services accessible for everyone.</p>
+            </div>
+          </div>
         </div>
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/design-system/design-principles",
-            "heading": "Design principles",
-            "headingLevel": "2",
-            "description": "These principles guide all of our design."
-          }) }}
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/design-system/design-principles">Design principles</a></h2>
+              <p class="nhsuk-card__description">These principles guide all of our design.</p>
+            </div>
+          </div>
         </div>
-        <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
-          {{ promo({
-            "href": "/community",
-            "heading": "Community",
-            "headingLevel": "2",
-            "description": "Help grow and improve the service manual."
-          }) }}
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/community">Community</a></h2>
+              <p class="nhsuk-card__description">Help grow and improve the service manual.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="nhsuk-section nhsuk-section--white">
-    <div class="nhsuk-width-container">
+      <hr class="nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-6">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-          <h2>Get in touch</h2>
-          <p>The manual is maintained by the service manual team at NHS Digital. If you've got a question or want to feedback, you can contact us:</p>
-          <ul class="nhsuk-u-margin-bottom-0">
-            <li>on <a class="app-contact-panel__link" href="https://nhs-service-manual.slack.com/join/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE" rel="nofollow">the #general channel in the service manual public Slack workspace</a></li>
-            <li>by email at <a class="app-contact-panel__link" href="mailto:service-manual@nhs.net">service-manual@nhs.net</a></li>
-          </ul>
+          <h2>Support</h2>
+          <p>The manual is maintained by the service manual team at NHS Digital. If you've got a question or want to feedback, you can <a href="/get-in-touch">get in touch</a>.</p>
         </div>
       </div>
     </div>

@@ -73,14 +73,6 @@
   font-weight: 400;
 }
 
-// Reduce promo bottom margin on mobile
-.nhsuk-promo-group,
-.nhsuk-promo-group__item {
-  @include mq($until: desktop) {
-    margin-bottom: nhsuk-spacing(3) + nhsuk-spacing(1);
-  }
-}
-
 // Lede text + lede text
 .nhsuk-lede-text + .nhsuk-lede-text {
   margin-top: - nhsuk-spacing(3);
@@ -139,6 +131,43 @@ h1 + .nhsuk-lede-text {
   }
 }
 
-.app-feedback__heading {
-  margin-bottom: nhsuk-spacing(3);
+// The 'What's new' box in the home page hero
+.app-latest-update {
+  padding-bottom: nhsuk-spacing(8);
+  padding-top: nhsuk-spacing(8);
+
+  @include mq($until: desktop) {
+    padding-bottom: nhsuk-spacing(6);
+    padding-top: 0;
+  }
+}
+
+// Custom style for home page hero card
+.app-card--transparent {
+  background: transparent;
+  border: 2px solid $nhsuk-secondary-border-color;
+  color: $color_nhsuk-white;
+
+  a {
+    color: $color_nhsuk-white;
+
+    &:hover,
+    &:visited {
+      color: $color_nhsuk-grey-5;
+    }
+
+    &:focus {
+      color: $nhsuk-focus-text-color;
+    }
+
+  }
+}
+
+// Custom style for the home page hero
+// Reducing the padding on smaller screens
+.app-hero__wrapper {
+  @include mq($until: desktop) {
+    padding-bottom: nhsuk-spacing(5);
+    padding-top: nhsuk-spacing(5);
+  }
 }

@@ -4,7 +4,9 @@
 
 :new: **New content**
 
-- Added accessibility posters
+- Add accessibility posters
+- Add new 'Get in touch' page
+- Remove feedback survey
 
 ## 3.3.3 - 14 July 2020
 
