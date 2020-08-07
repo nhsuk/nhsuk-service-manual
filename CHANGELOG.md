@@ -6,6 +6,7 @@
 
 - Add accessibility posters
 - Add new 'Get in touch' page
+- Add entry for NHS Test and Trace to A to Z of NHS health writing
 - Remove feedback survey
 
 ## 3.3.3 - 14 July 2020
