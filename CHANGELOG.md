@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.3.4 - Unreleased
+## 3.3.4 - 7 August 2020
 
 :new: **New content**
 
