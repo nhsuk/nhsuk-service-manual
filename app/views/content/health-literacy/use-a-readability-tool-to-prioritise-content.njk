@@ -14,20 +14,9 @@
 
   <p>It cannot tell you how easy your content is to understand. But it can show if the language might be too complex for many people.</p>
 
-  <h2>Use the SMOG calculator</h2>
-  <p>We use a tool called the SMOG calculator to measure readability.</p>
-  <p>This uses the number of sentences and complex words (3 or more syllables) to give a readability score.</p>
-  <p>Before using the SMOG calculator:</p>
-  <ul>
-    <li>add full stops to the end of every heading and bullet point</li>
-    <li>if the title of the content includes a word with 3 or more syllables (for example, "paracetamol"), remove this word from the text</li>
-  </ul>
-  <p>This will help you get more accurate scores when comparing content.</p>
-
-  {{ actionLink({
-    "text": "Use the SMOG calculator",
-    "href": "https://www.learningandwork.org.uk/SMOG-calculator/smogcalc.php"
-  }) }}
+  <h2>Use a SMOG calculator</h2>
+  <p>We use a tool called a SMOG (or SMOG Index) calculator to measure readability. SMOG works better than other tools for health information. It uses the number of sentences and complex words (3 or more syllables) to give a readability score.</p>
+  <p> The <a href="https://www.webfx.com/tools/read-able/">readability test tool on WebFX</a>, for example, includes a SMOG calculator. Enter the url of the page you want to test and check the SMOG score.</p>
 
   <h2>Prioritise content with a score over 14</h2>
   <p>The lower the score, the fewer complex words you're using.</p>
@@ -35,22 +24,27 @@
 
   {{ table({
     panel: false,
-    caption: "What SMOG readability scores mean",
+    caption: "What SMOG scores mean",
     firstCellIsHeader: false,
     head: [
       {
-        text: "SMOG readability score"
+        text: "SMOG score"
+      },
+      {
+        text: "Approximate reading age"
       },
       {
         text: "UK adults at this level"
-      }
-      ,
+      },
       {
         text: "Typical literacy skills at this level"
       }
     ],
     rows: [
       [
+        {
+          text: "2 to 4"
+        },
         {
           text: "7 to 9"
         },
@@ -63,6 +57,9 @@
       ],
       [
         {
+          text: "5 to 6"
+        },
+        {
           text: "10 to 11"
         },
         {
@@ -73,6 +70,9 @@
         }
       ],
       [
+        {
+          text: "7 to 8"
+        },
         {
           text: "12 to 13"
         },
@@ -85,6 +85,9 @@
       ],
       [
         {
+          text: "9 to 11"
+        },
+        {
           text: "14 to 16"
         },
         {
@@ -95,6 +98,9 @@
         }
       ],
       [
+        {
+          text: "12 or more"
+        },
         {
           text: "17 or more"
         },
