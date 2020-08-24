@@ -5,6 +5,7 @@
 :new: **New content**
 
 - Remove experimental tag from organisational header and summary list component
+- Add prototype kit how to guides link to the prototyping page
 
 :wrench: **Fixes**
 
