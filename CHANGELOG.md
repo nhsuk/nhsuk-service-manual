@@ -10,6 +10,8 @@
 :wrench: **Fixes**
 
 - Fix design example link focus style
+- Fix duplicated content under service user on A to Z of NHS health writing
+- Update package dependencies to latest versions
 
 ## 3.3.4 - 7 August 2020
 
