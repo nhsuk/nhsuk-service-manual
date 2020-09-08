@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 3.4.1 - 10 September 2020
+
+:wrench: **Fixes**
+
+- Fix incorrect icon file name for chevron left on the Icons guidance page
+- Update package dependencies to latest versions
+
 ## 3.4.0 - 4 September 2020
 
 :new: **New content**
