@@ -6,6 +6,7 @@
 
 - Fix incorrect icon file name for chevron left on the Icons guidance page
 - Replace "telephone" entry in A to Z with a "phone" entry and link from "telephone and telephone numbers" to "phone and phone numbers"
+- Replace "telephone" with "phone" in forms guidance
 - Update package dependencies to latest versions
 
 ## 3.4.0 - 4 September 2020
