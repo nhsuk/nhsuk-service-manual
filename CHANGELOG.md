@@ -6,6 +6,10 @@
 
 - Create new route to act short URL to join our public Slack instance
 
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 3.4.1 - 16 September 2020
 
 :wrench: **Fixes**
