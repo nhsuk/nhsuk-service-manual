@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.5.0 - Unreleased
+
+:new: **New features**
+
+- Create new route to act short URL to join our public Slack instance
+
 ## 3.4.1 - 16 September 2020
 
 :wrench: **Fixes**
