@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Create new route to act short URL to join our public Slack instance
+- Use the Slack link across the website
 
 :wrench: **Fixes**
 
