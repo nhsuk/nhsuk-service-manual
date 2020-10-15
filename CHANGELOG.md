@@ -4,6 +4,16 @@
 
 :new: **New features**
 
+- Add card component
+- Add tag component
+- Add responsive table component
+- Add `nhsuk-link--no-visited-state` style for links in typography
+- Update warning callout with a custom heading example for improved accessibility
+
+## 3.5.0 - 29 September 2020
+
+:new: **New features**
+
 - Create new route to act short URL to join our public Slack instance
 - Use the Slack link across the website
 

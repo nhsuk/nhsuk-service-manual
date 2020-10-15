@@ -2,7 +2,7 @@
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "October 2020" %}
 {% set backlog_issue_id = "1" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -89,7 +89,6 @@
   <h3 id="lead-paragraph">Lead paragraph</h3>
   <p>A lead paragraph is an introductory paragraph that you can use at the top of a page to summarise the content. Lead paragraphs use 24px type on desktop and should only be used once per page if needed.</p>
 
-
   {{ designExample({
     type: "typography-body-l",
     htmlOnly: true
@@ -127,9 +126,15 @@
   <p>Links are blue and underlined by default with a <a href="/design-system/styles/focus-state">styled focus state</a> for people who use keyboards or other devices to navigate through a page.</p>
   <p>If your link is at the end of a sentence or paragraph, make sure that the linked text does not include the full stop.</p>
 
-
   {{ designExample({
     type: "typography-link",
+    htmlOnly: true
+  }) }}
+
+  <p>Use the <code>nhsuk-link--no-visited-state</code> modifier class where it is not helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.</p>
+
+  {{ designExample({
+    type: "typography-link-unvisited",
     htmlOnly: true
   }) }}
 

@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a warning callout to help users identify and understand warning content on the page, even if they do not read the whole page." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2019" %}
+{% set dateUpdated = "October 2020" %}
 {% set backlog_issue_id = "23" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -21,9 +21,9 @@
   <h2>When to use a warning callout</h2>
   <p>Use this callout for information that:</p>
   <ul>
-      <li>is time critical</li>
-      <li>could have a significant effect on someone's health</li>
-      <li>addresses a common or significant misconception or mistake</li>
+    <li>is time critical</li>
+    <li>could have a significant effect on someone's health</li>
+    <li>addresses a common or significant misconception or mistake</li>
   </ul>
 
   <h2>When not to use a warning callout</h2>
@@ -43,8 +43,13 @@
 
   <h3>Accessibility</h3>
   <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
-  <p class="rich-text">We recommend adding an aria label, for example: <code>aria-label="Important"</code>. This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
-  <p>If you can help with this, please get in touch on the <a href="/slack"> NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+  <h4>Custom headings</h4>
+  <p>When using a custom heading, prefix the heading with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
+
+  {{ designExample({
+    type: "warning-callout-custom-heading"
+  }) }}
 
   <h2>Research</h2>
   <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>

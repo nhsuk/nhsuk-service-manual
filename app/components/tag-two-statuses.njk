@@ -1,0 +1,86 @@
+{% from 'tag/macro.njk' import tag %}
+
+<table class="nhsuk-table">
+  <thead class="nhsuk-table__head">
+    <tr class="nhsuk-table__row">
+      <th class="nhsuk-table__header" scope="col"> Name of user </th>
+      <th class="nhsuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Kevin Francis
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Inactive",
+          classes: "nhsuk-tag--grey"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Naomi Edwards
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Inactive",
+          classes: "nhsuk-tag--grey"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Kevin Cooper
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Active"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Michelle Flynn
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Active"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Ian Moore
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Inactive",
+          classes: "nhsuk-tag--grey"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Lisa Todd
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Active"
+        })}}
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">
+        Luis Cavaco
+      </td>
+      <td class="nhsuk-table__cell">
+        {{ tag({
+          text: "Inactive",
+          classes: "nhsuk-tag--grey"
+        })}}
+      </td>
+    </tr>
+  </tbody>
+</table>
