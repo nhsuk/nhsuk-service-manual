@@ -2,9 +2,10 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a card to give users a brief summary of content or a task, often with a link to more detail. You can display a card alongside other cards to group related content or tasks." %}
-{% set theme = "Content presentation" %}
+{% set theme = "Navigation" %}
 {% set dateUpdated = "October 2020" %}
 {% set backlog_issue_id = "159" %}
+{% set hideDescription = "true" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,9 +15,13 @@
 
 {% block bodyContent %}
 
+  <h2 id="when-to-use">When to use a card</h2>
+  <p>Use a card to give users a brief summary of content or a task, often with a link to more detail. You can display a card alongside other cards to group related content or tasks.</p>
+
   <h2 id="how-it-works">How it works</h2>
   <p>Cards should be easy to scan for relevant and actionable information. They can contain multiple elements, such as an image, title, text and links.</p>
   <p>Cards are different from <a href="design-system/components/care-cards">care cards</a>. Care cards help users identify and understand the sort of care they need.</p>
+
   <h3 id="basic-card">Basic card</h3>
 
   <h3 id="clickable-card">Clickable card</h3>
@@ -43,6 +48,10 @@
   <p>Here's an example of using an <code>h2</code> with an <code>nhsuk-heading-s</code> class to reduce the size of the heading:</p>
 
   <h2 id="research">Research</h2>
-
+  <p>We have tested cards on the NHS website, Summary Care Record and NHS login help centre. We found that they helped users:</p>
+  <ul>
+    <li>scan for relevant information</li>
+    <li>decide where to go next</li>
+  </ul>
 
 {% endblock %}

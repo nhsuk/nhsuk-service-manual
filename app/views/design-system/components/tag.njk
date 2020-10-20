@@ -5,6 +5,7 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "October 2020" %}
 {% set backlog_issue_id = "174" %}
+{% set hideDescription = "true" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +14,9 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+  <h2 id="when-to-use">When to use a tag</h2>
+  <p>Use the tag component when it's possible for something to have more than 1 status and it's useful for the user to know about that status. For example, you can use a tag to show whether an item in a task list has been "completed".</p>
 
   <h2 id="how-it-works">How it works</h2>
   <p>Tags are just used to indicate a status. Do not add links. Use adjectives rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.</p>
