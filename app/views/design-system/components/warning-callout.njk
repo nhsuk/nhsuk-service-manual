@@ -15,7 +15,7 @@
 {% block bodyContent %}
 
   {{ designExample({
-    type: "warning-callout"
+    type: "warning-callout-custom-heading"
   }) }}
 
   <h2>When to use a warning callout</h2>
@@ -35,10 +35,8 @@
   </ul>
 
   <h2>How to use a warning callout</h2>
-  <p>Try to give the callout a short, clearly worded custom heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
-   {{ designExample({
-    type: "warning-callout-custom-heading"
-  }) }}
+  <p>Try to give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+
 
   <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
   <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
@@ -48,8 +46,14 @@
   <h3>Accessibility</h3>
   <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
 
-  <h4>Custom headings</h4>
-  <p>When you use a custom heading, prefix the heading with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
+  <h4>Headings</h4>
+  <p>The callout should have a specific heading, for example "School, nursery or work", prefixed with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
+
+  <p>If the heading is simply the word "Important" or it includes the word "important", you don't need to use visually hidden text.</p>
+
+  {{ designExample({
+    type: "warning-callout"
+  }) }}
 
   <h2>Research</h2>
   <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
