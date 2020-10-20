@@ -35,7 +35,11 @@
   </ul>
 
   <h2>How to use a warning callout</h2>
-  <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+  <p>Try to give the callout a short, clearly worded custom heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+   {{ designExample({
+    type: "warning-callout-custom-heading"
+  }) }}
+
   <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
   <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
   <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
@@ -45,11 +49,7 @@
   <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
 
   <h4>Custom headings</h4>
-  <p>When using a custom heading, prefix the heading with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
-
-  {{ designExample({
-    type: "warning-callout-custom-heading"
-  }) }}
+  <p>When you use a custom heading, prefix the heading with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
 
   <h2>Research</h2>
   <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>
