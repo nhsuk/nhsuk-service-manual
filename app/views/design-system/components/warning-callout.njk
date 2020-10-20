@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a warning callout to help users identify and understand warning content on the page, even if they do not read the whole page." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2019" %}
+{% set dateUpdated = "October 2020" %}
 {% set backlog_issue_id = "23" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -15,15 +15,15 @@
 {% block bodyContent %}
 
   {{ designExample({
-    type: "warning-callout"
+    type: "warning-callout-custom-heading"
   }) }}
 
   <h2>When to use a warning callout</h2>
   <p>Use this callout for information that:</p>
   <ul>
-      <li>is time critical</li>
-      <li>could have a significant effect on someone's health</li>
-      <li>addresses a common or significant misconception or mistake</li>
+    <li>is time critical</li>
+    <li>could have a significant effect on someone's health</li>
+    <li>addresses a common or significant misconception or mistake</li>
   </ul>
 
   <h2>When not to use a warning callout</h2>
@@ -35,7 +35,9 @@
   </ul>
 
   <h2>How to use a warning callout</h2>
-  <p>Give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+  <p>Try to give the callout a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+
+
   <p>Make the callout concise, specific and self-contained. For example, don't introduce a callout with the words "If this happens...". Explain the circumstances.</p>
   <p>Don't break the flow with a callout. Think about whether you need it and the best place to put it.</p>
   <p>Don't overdo callouts. Avoid having more than 2 on a page. We want to reassure people, not to scare them.</p>
@@ -43,8 +45,15 @@
 
   <h3>Accessibility</h3>
   <p>The heading and background contrast ratio is 11.92:1 and the content and background contrast ratio is 13.69:1. These go beyond AAA guidelines.</p>
-  <p class="rich-text">We recommend adding an aria label, for example: <code>aria-label="Important"</code>. This will help users with screen readers understand that the information is important. We still need to test this with users with access needs.</p>
-  <p>If you can help with this, please get in touch on the <a href="/slack"> NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
+
+  <h4>Headings</h4>
+  <p>The callout should have a specific heading, for example "School, nursery or work", prefixed with the visually hidden text <code>Important:</code>. This will help users with screen readers understand that the information is important.</p>
+
+  <p>If the heading is simply the word "Important" or it includes the word "important", you don't need to use visually hidden text.</p>
+
+  {{ designExample({
+    type: "warning-callout"
+  }) }}
 
   <h2>Research</h2>
   <p>In testing, users noticed the yellow callouts and understood them as a warning.</p>

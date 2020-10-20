@@ -122,6 +122,9 @@
     <loc>https://service-manual.nhs.uk/design-system/components/buttons</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/card</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
   </url>
   <url>
@@ -183,6 +186,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/table</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/tag</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/text-input</loc>
