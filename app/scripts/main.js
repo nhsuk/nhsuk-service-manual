@@ -7,6 +7,7 @@ import SkipLink from '../../node_modules/nhsuk-frontend/packages/components/skip
 import Details from '../../node_modules/nhsuk-frontend/packages/components/details/details';
 import Checkboxes from '../../node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
 import Radios from '../../node_modules/nhsuk-frontend/packages/components/radios/radios';
+import Card from '../../node_modules/nhsuk-frontend/packages/components/card/card';
 
 // NHS.UK frontend polyfills
 import '../../node_modules/nhsuk-frontend/packages/polyfills';
@@ -41,6 +42,7 @@ Details();
 SkipLink();
 Checkboxes();
 Radios();
+Card();
 
 // Initialise NHS digital service manual components
 
@@ -48,16 +50,3 @@ Radios();
 document.querySelectorAll(DesignExample.selector()).forEach((el) => {
   new DesignExample(el);
 });
-
-// card.js
-// Loops through dom and finds all elements with nhsuk-card--clickable class
-document.querySelectorAll('.nhsuk-card--clickable').forEach((panel) => {
-  // Check if panel has a link within it
-  if (panel.querySelector('a') !== null) {
-    // Clicks the link within the heading to navigate to desired page
-    panel.addEventListener('click', () => {
-      panel.querySelector('a').click();
-    });
-  }
-});
-
