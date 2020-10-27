@@ -24,11 +24,23 @@
 
   <h3 id="basic-card">Basic card</h3>
 
+  {{ designExample({
+    type: "card-basic"
+  }) }}
+
   <h3 id="clickable-card">Clickable card</h3>
   <p>If the card contains a single link, you can make the hit area for the link wrap the entire card.</p>
   <p>We avoid wrapping an entire card in an anchor tag as this can be a difficult experience for screen reader users.</p>
 
+  {{ designExample({
+    type: "card-clickable"
+  }) }}
+
   <h3 id="card-with-an-image">Card with an image</h3>
+
+  {{ designExample({
+    type: "card-with-image"
+  }) }}
 
   <p>The card image is set as a decorative image by default, with the <a href="/accessibility/content#use-alternative-text-for-images-in-content">alternative text</a> being null.</p>
 
@@ -36,16 +48,37 @@
   <p>You can group multiple cards to show a collection of related topics. Prioritise the cards so the content users need most comes first.</p>
   <p>We define the width of the cards using the <a href="/design-system/styles/layout#grid">grid system</a>. For example,  <code>nhsuk-grid-column-one-half</code> is used to make the cards half width:</p>
 
+  {{ designExample({
+    type: "card-group-half"
+  }) }}
+
   <p>For thirds, use <code>nhsuk-grid-column-one-third</code>:</p>
+
+  {{ designExample({
+    type: "card-group-third"
+  }) }}
+
   <p>For quarters, use <code>nhsuk-grid-column-one-quarter</code>:</p>
+
+  {{ designExample({
+    type: "card-group-quarter"
+  }) }}
 
   <h2 id="accessibility">Accessibility</h2>
   <h3 id="heading-level-and-size">Heading level and size</h3>
   <p><a href="/accessibility/design#use-headings-correctly">Use headings correctly</a> to reflect the page structure. If you need to, change the level of the heading.</p>
   <p>Here's an example of replacing the default <code>h2</code> heading with an <code>h3</code>:</p>
 
+  {{ designExample({
+    type: "card-heading-level"
+  }) }}
+
   <p>You can change the size of the heading using <a href="/design-system/styles/typography#headings">heading typography styles</a>.</p>
   <p>Here's an example of using an <code>h2</code> with an <code>nhsuk-heading-s</code> class to reduce the size of the heading:</p>
+
+  {{ designExample({
+    type: "card-heading-size"
+  }) }}
 
   <h2 id="research">Research</h2>
   <p>We have tested cards on the NHS website, Summary Care Record and NHS login help centre. We found that they helped users:</p>
