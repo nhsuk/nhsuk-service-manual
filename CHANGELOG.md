@@ -8,7 +8,7 @@
 - Add tag component
 - Add responsive table component
 - Add `nhsuk-link--no-visited-state` style for links in typography
-- Update warning callout with a custom heading example for improved accessibility
+- Update warning callout guidance with a section on making headings accessible
 
 ## 3.5.0 - 29 September 2020
 
