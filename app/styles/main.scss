@@ -163,6 +163,27 @@ h1 + .nhsuk-lede-text {
   }
 }
 
+// Card video
+
+.app-card__video {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe,
+  object,
+  embed {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
 // Custom style for the home page hero
 // Reducing the padding on smaller screens
 .app-hero__wrapper {
