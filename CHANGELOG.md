@@ -1,5 +1,9 @@
 # NHS digital service manual Changelog
 
+## 3.6.1 - TBC
+:wrench: **Fixes**
+- Amend typo in NHS service standard point 9
+
 ## 3.6.0 - 27 October 2020
 
 :new: **New features**
