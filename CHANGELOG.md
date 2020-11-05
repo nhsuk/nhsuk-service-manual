@@ -1,9 +1,11 @@
 # NHS digital service manual Changelog
 
-## 3.6.1 - Unreleased
+## 3.6.1 - 6 November 2020
 
 :wrench: **Fixes**
 
+- Amend typo in NHS service standard point 9
+- Hide caption in table about time in content style guide
 - Fix typo on the Skip links component page [Issue 330](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/330)
 - Update package dependencies to latest versions
 
