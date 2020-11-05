@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 3.6.1 - Unreleased
+
+:wrench: **Fixes**
+
+- Fix typo on the Skip links component page [Issue 330](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/330)
+- Update package dependencies to latest versions
+
 ## 3.6.0 - 27 October 2020
 
 :new: **New features**
