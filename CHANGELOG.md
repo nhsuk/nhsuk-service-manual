@@ -7,6 +7,7 @@
 - Amend typo in NHS service standard point 9
 - Hide caption in table about time in content style guide
 - Fix typo on the Skip links component page [Issue 330](https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/330)
+- Update contact panel to make it clearer which links are for code changes
 - Update package dependencies to latest versions
 
 ## 3.6.0 - 27 October 2020
