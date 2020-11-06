@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.6.2 - Unreleased
+
+:wrench: **Fixes**
+
+- Use Helmet to help secure app by setting various HTTP headers
+
 ## 3.6.1 - 6 November 2020
 
 :wrench: **Fixes**

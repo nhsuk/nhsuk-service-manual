@@ -5,6 +5,7 @@ const path = require('path');
 const browserSync = require('browser-sync');
 const compression = require('compression');
 const express = require('express');
+const helmet = require('helmet');
 const highlightjs = require('highlight.js');
 const nunjucks = require('nunjucks');
 
@@ -30,6 +31,10 @@ app.use(locals(config));
 // Use gzip compression to decrease the size of
 // the response body and increase the speed of web app
 app.use(compression());
+
+// Use helmet to help secure the application
+// by setting http headers
+app.use(helmet());
 
 // Middleware to serve static assets
 app.use(express.static(path.join(__dirname, 'public')));
