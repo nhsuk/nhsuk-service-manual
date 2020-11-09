@@ -125,6 +125,10 @@ app.get('/slack', (req, res) => {
   res.redirect('https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE');
 });
 
+app.get('/community/contribution-survey', (req, res) => {
+  res.redirect('https://nhsdigital.eu.qualtrics.com/jfe/form/SV_5szVfoxZIW7Kr1b');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
