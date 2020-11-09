@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Use Helmet to help secure app by setting various HTTP headers
+- Create a new route to act as a short URL for the contribution survey
 
 ## 3.6.1 - 6 November 2020
 
