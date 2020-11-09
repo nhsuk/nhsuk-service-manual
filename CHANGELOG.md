@@ -1,11 +1,12 @@
 # NHS digital service manual Changelog
 
-## 3.6.2 - Unreleased
+## 3.6.2 - 9 November 2020
 
 :wrench: **Fixes**
 
 - Use Helmet to help secure app by setting various HTTP headers
 - Create a new route to act as a short URL for the contribution survey
+- Update package dependencies to latest versions
 
 ## 3.6.1 - 6 November 2020
 
