@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.6.3 - 11 November 2020
+
+:wrench: **Fixes**
+
+- Fix an issue with the CSP not executing inline scripts
+
 ## 3.6.2 - 9 November 2020
 
 :wrench: **Fixes**
