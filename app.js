@@ -34,7 +34,11 @@ app.use(compression());
 
 // Use helmet to help secure the application
 // by setting http headers
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 
 // Middleware to serve static assets
 app.use(express.static(path.join(__dirname, 'public')));
