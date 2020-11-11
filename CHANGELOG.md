@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Fix an issue with the CSP not executing inline scripts
+- Update package dependencies to latest versions
 
 ## 3.6.2 - 9 November 2020
 
