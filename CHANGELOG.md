@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 3.7.0 - Unreleased
+
+:new: **New features**
+
+- Add link to the new 10 ways the NHS digital service manual can help you blog post
 ## 3.6.3 - 11 November 2020
 
 :wrench: **Fixes**
