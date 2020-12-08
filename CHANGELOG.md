@@ -5,6 +5,13 @@
 :new: **New features**
 
 - Add link to the new 10 ways the NHS digital service manual can help you blog post
+- Add new and updated guidance on using bold, contractions in URLs and page titles, full stops and quotation marks to the content style guide
+- Add new entry on vial to the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Remove full stops from the card component and other cards to align with content style guide
+
 ## 3.6.3 - 11 November 2020
 
 :wrench: **Fixes**
