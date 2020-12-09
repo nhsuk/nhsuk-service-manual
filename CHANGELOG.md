@@ -1,12 +1,13 @@
 # NHS digital service manual Changelog
 
-## 3.7.0 - Unreleased
+## 3.7.0 - 9 December 2020
 
 :new: **New features**
 
 - Add link to the new 10 ways the NHS digital service manual can help you blog post
 - Add new and updated guidance on using bold, contractions in URLs and page titles, full stops and quotation marks to the content style guide
 - Add new entry on vial to the A to Z of NHS health writing
+- Update package dependencies to latest versions
 
 :wrench: **Fixes**
 
