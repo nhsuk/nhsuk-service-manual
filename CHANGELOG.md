@@ -1,10 +1,11 @@
 # NHS digital service manual Changelog
 
-## TBC
+## 3.7.1 - Unreleased
 
 :wrench: **Fixes**
 
 - Add quotation marks to contractions section in style guide to make it clearer
+- Update typography list to use real examples
 
 ## 3.7.0 - 9 December 2020
 
