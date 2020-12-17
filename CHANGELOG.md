@@ -2,10 +2,15 @@
 
 ## 3.7.1 - Unreleased
 
+:new: **New features**
+- Add new entry for GUM clinic to A to Z of NHS health writing
+
 :wrench: **Fixes**
 
 - Add quotation marks to contractions section in style guide to make it clearer
 - Update typography list to use real examples
+- Correct date on images component page
+- Remove readability tool page with broken link to SMOG calculator from content style guide - to be discussed further at January Content Style Council meeting
 
 ## 3.7.0 - 9 December 2020
 
