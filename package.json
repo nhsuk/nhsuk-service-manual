@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.26.13",
     "cheerio": "^1.0.0-rc.3",
