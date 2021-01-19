@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 3.8.1 - January 2021 TBC
+
+:new: **New features**
+
+- Add more examples to the section on capitalisation in the content style guide
+- Add a new entry for "site map" in the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Update the guidance on dates in the content style guide
+- Update the entry for the NHS App in the A to Z of NHS health writing
+- Add more links between the A to Z of NHS health writing and the rest of the content style guide
+
 ## 3.8.0 - 18 December 2020
 
 :new: **New features**
