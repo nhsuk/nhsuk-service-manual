@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.8.1 - January 2021 TBC
+## 3.9.0 - 19 January 2021
 
 :new: **New features**
 
