@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "September 2020" %}
+{% set dateUpdated = "January 2020" %}
 {% set backlog_issue_id = "21" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -62,6 +62,21 @@
   {{ designExample({
     type: "input-hint-text"
   }) }}
+
+  <h3 id="asking-for-whole-numbers">Asking for whole numbers</h3>
+  <p>If you’re asking the user to enter a whole number and you want to bring up the numeric keypad on a mobile device, set the <code>inputmode</code> attribute to <code>numeric</code> and the <code>pattern</code> attribute to <code>[0-9]*</code>. See how to do this in the HTML and Nunjucks tabs in the following example.</p>
+
+  {{ designExample({
+    type: "input-number"
+  }) }}
+
+  <p>You should also follow the GOV.UK Design System guidance and <a href="https://design-system.service.gov.uk/patterns/validation/#turn-off-html5-validation">turn off HTML5 validation</a> to prevent browsers from validating the <code>pattern</code> attribute.</p>
+
+  <p>The GOV.UK Design System has specific guidance on how to ask for:</p>
+  <ul>
+    <li><a href="https://design-system.service.gov.uk/patterns/dates/">dates</a></li>
+    <li><a href="https://design-system.service.gov.uk/patterns/telephone-numbers/">telephone numbers</a></li>
+  </ul>
 
   <h3 id="error-messages">Error messages</h3>
   <p>Style error messages like this.</p>

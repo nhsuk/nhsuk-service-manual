@@ -5,6 +5,8 @@
 :new: **New features**
 
 - Install [NHS.UK frontend v4.1.0](https://github.com/nhsuk/nhsuk-frontend/blob/master/CHANGELOG.md#410---21-january-2021)
+- Add guidance for asking for whole numbers using the text input component
+- Update code examples with inputmode numeric for the ask users for their NHS number pattern and date input component
 
 :wrench: **Fixes**
 
