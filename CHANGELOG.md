@@ -1,5 +1,17 @@
 # NHS digital service manual Changelog
 
+## 3.10.0 - 21 January 2021
+
+:new: **New features**
+
+- Install [NHS.UK frontend v4.1.0](https://github.com/nhsuk/nhsuk-frontend/blob/master/CHANGELOG.md#410---21-january-2021)
+- Add guidance for asking for whole numbers using the text input component
+- Update code examples with inputmode numeric for the ask users for their NHS number pattern and date input component
+
+:wrench: **Fixes**
+
+- Update package dependencies to latest versions
+
 ## 3.9.0 - 19 January 2021
 
 :new: **New features**
