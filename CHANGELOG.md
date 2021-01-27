@@ -6,6 +6,7 @@
 
 - Update package dependencies to latest versions
 - Remove the `pattern="[0-9]*"` attribute from NHS number examples to allow for spaces
+- Update code example for the font weight normal override class
 
 ## 3.10.0 - 21 January 2021
 
