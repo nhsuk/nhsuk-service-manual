@@ -2,14 +2,20 @@
    #BETA-BANNER
    ========================================================================== */
 
-.app-beta__container {
-  border-bottom: 1px solid $nhsuk-border-color;
-  padding: nhsuk-spacing(2) 0;
-}
-
 .app-beta__content {
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-padding(2, 'bottom');
+  @include nhsuk-responsive-padding(2, 'top');
+
+  border-bottom: 1px solid $nhsuk-border-color;
+  border-top: 1px solid $nhsuk-border-color;
+  margin-top: -24px;
   display: table;
-  margin-bottom: 0;
+  width: auto;
+
+  @include mq($until: desktop) {
+    margin-top: -8px;
+  }
 
   .app-beta__tag {
     display: block;

@@ -135,6 +135,7 @@
 <nav class="app-side-nav">
 
   {%- if pageSection == "NHS service standard" %}
+    <h2 class="app-side-nav__heading">NHS service standard <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -166,11 +167,6 @@
   {% endif %}
 
   {%- if subSection == "Styles" %}
-    {{ backLink({
-      "href": "/design-system",
-      "text": "Design system",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
@@ -180,11 +176,6 @@
   {% endif %}
 
   {%- if subSection == "Components" %}
-    {{ backLink({
-      "href": "/design-system",
-      "text": "Design system",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">Form elements</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in formElements %}
@@ -208,11 +199,6 @@
   {% endif %}
 
   {%- if subSection == "Patterns" %}
-    {{ backLink({
-      "href": "/design-system",
-      "text": "Design system",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">Tasks</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in askUsers %}
@@ -245,6 +231,7 @@
   {% endif %}
 
   {%- if pageSection == "Content style guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms"  %}
+    <h2 class="app-side-nav__heading">Content style guide <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -253,11 +240,6 @@
   {% endif %}
 
   {%- if subSection == "How to write good questions for forms" %}
-    {{ backLink({
-      "href": "/content",
-      "text": "Content style guide",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">How to write good questions for forms <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
@@ -267,11 +249,6 @@
   {% endif %}
 
   {%- if subSection == "Health literacy" %}
-    {{ backLink({
-      "href": "/content/health-literacy",
-      "text": "Health literacy",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">Health literacy <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in healthLiteracy %}
@@ -281,6 +258,7 @@
   {% endif %}
 
   {%- if pageSection == "Community" %}
+    <h2 class="app-side-nav__heading">Community <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -289,6 +267,7 @@
   {% endif %}
 
   {%- if pageSection == "What's new" %}
+    <h2 class="app-side-nav__heading">What's new <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in whatsNew %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>

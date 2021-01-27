@@ -15,23 +15,12 @@
         <div class="app-pane__main-content">
 
           <h1 class="app-page-heading">
-            {%- if landingPage or pageTitle == "Community" or pageTitle == "NHS service standard" %}
-            {% else %}
-            <span class="nhsuk-caption-l">
-              {%- if subSection %}
-                {%- if theme %}
-                {{theme}}
-                {% else %}
-                {{subSection}}
-                {% endif %}
-              {% else %}
-              {{pageSection}}
-              {% endif %}
-              <span class="nhsuk-u-visually-hidden"> - </span>
-            </span>
-            {% endif %}
             {{pageTitle}}
           </h1>
+
+          {%- if beta %}
+            {% include "includes/_beta-banner.njk" %}
+          {% endif %}
 
           {%- if hideDescription %}
           {% else %}
