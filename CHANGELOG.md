@@ -1,5 +1,9 @@
 # NHS digital service manual Changelog
 
+## 3.10.1 - 28 January 2021
+
+- Remove the `pattern="[0-9]*"` attribute from NHS number examples to allow for spaces
+
 ## 3.10.0 - 21 January 2021
 
 :new: **New features**
