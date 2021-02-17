@@ -56,22 +56,35 @@
 
   <h2>Default</h2>
 
-  <p>You can customise the page template by using the <a href="/design-system/components/header#service-header">service header</a> or <a href="/design-system/components/header#organisational-header">organisational header</a>.</p>
+  <p>This example shows the minimum required for a NHS.UK page.</p>
 
   {{ designExample({
-    type: "default-page-template",
+    type: "page-template-default",
     blankpage: true
   }) }}
 
-  <h2>Transactional</h2>
+  <h2>Customised page template</h2>
 
-  <p>The transactional template example uses the <a href="/design-system/components/header#transactional-header">transactional header</a> and <a href="/design-system/components/back-link">back link</a> components.</p>
+  <p>You can customise the page template, for example, by adding a service name and navigation or adding a block before the main container to include a <a href="/design-system/components/back-link">back link</a> or <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
+
+  <h3>Transactional page template</h3>
+
+  <p>The transactional page template example uses the <a href="/design-system/components/header#transactional-header">transactional header</a> and a <a href="/design-system/components/back-link">back link</a>.</p>
 
   {{ designExample({
-    type: "customised-page-template-transactional",
+    type: "page-template-transactional",
     blankpage: true
   }) }}
 
   <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. It is also recommended to use smaller heading sizes, using the <a href="/design-system/styles/typography#headings">typography headings</a> classes.</p>
+
+  <h3>Content page template</h3>
+
+  <p>The content page template example includes a main navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
+
+  {{ designExample({
+    type: "page-template-content",
+    blankpage: true
+  }) }}
 
 {% endblock %}
