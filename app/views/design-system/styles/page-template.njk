@@ -1,5 +1,5 @@
-{% set pageTitle = "Page templates" %}
-{% set pageDescription = "Use these templates to keep your pages consistent with other NHS services." %}
+{% set pageTitle = "Page template" %}
+{% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set dateUpdated = "June 2020" %}
@@ -34,7 +34,7 @@
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/layout">Layout</a></li>
 
-    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/page-templates">Page templates</a></li>
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/page-template">Page template</a></li>
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/spacing">Spacing</a></li>
 
@@ -47,16 +47,20 @@
 
 {% block bodyContent %}
 
-  <p>These page templates combine boilerplate markup and <a href="/design-system/components">components</a> needed for a content page and a transactional page. This includes:</p>
+  <p>This page template combines boilerplate markup and <a href="/design-system/components">components</a> needed for a content page and a transactional page. This includes:</p>
   <ul>
     <li>JavaScript that adds a <code>.js-enabled</code> class, which is required by components with JavaScript behaviour</li>
     <li>the <a href="/design-system/components/skip-link">skip link</a>, <a href="/design-system/components/header">header</a> and <a href="/design-system/components/footer">footer</a> components</li>
     <li>favicons, and other page metadata</li>
   </ul>
 
+  <p>In the examples provided, we show both HTML and Nunjucks.</p>
+
+  <p>You can use the HTML examples if you are not able to use Nunjucks. If you use HTML you’ll need to update it manually when new versions are released.</p>
+
   <h2>Default</h2>
 
-  <p>This example shows the minimum required for a NHS.UK page.</p>
+  <p>This example shows the minimum required for a NHS service.</p>
 
   {{ designExample({
     type: "page-template-default",
@@ -65,52 +69,57 @@
 
   <h2>Customised page template</h2>
 
-  <p>You can customise the page template, for example, by adding a service name and navigation or adding a block before the main container to include a <a href="/design-system/components/back-link">back link</a> or <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
-
-  <h3>Transactional page template</h3>
-
-  <p>The transactional page template example uses the <a href="/design-system/components/header#transactional-header">transactional header</a> and a <a href="/design-system/components/back-link">back link</a>.</p>
-
-  {{ designExample({
-    type: "page-template-transactional",
-    blankpage: true
-  }) }}
-
-  <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. It is also recommended to use smaller heading sizes, using the <a href="/design-system/styles/typography#headings">typography headings</a> classes.</p>
+  <p>You can customise the page template, for example, <a href="/design-system/styles/layout">structuring your page layout</a> or adding a block before the main container to include a <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
 
   <h3>Content page template</h3>
 
-  <p>The content page template example includes a main navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
+  <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
 
   {{ designExample({
     type: "page-template-content",
     blankpage: true
   }) }}
 
+  <h3>Transactional page template</h3>
+
+  <p>The transactional page template example uses the <a href="/design-system/components/header#transactional-header">transactional header</a> and a <a href="/design-system/components/back-link">back link</a> component.</p>
+
+  {{ designExample({
+    type: "page-template-transactional",
+    blankpage: true
+  }) }}
+
+  <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. It is also recommended to use a smaller page heading size using the <code>.nhsuk-heading-l</code> modifier class.</p>
+
   <h2 id="changing-template-content">Changing template content</h2>
 
   <p>If you’re using Nunjucks, you can change the template’s content using options.</p>
   <p>How you set an option depends on whether it’s a ‘variable’ option or a ‘block’ option.</p>
-  <p>To set a ‘variable’ option, use <code>set</code> to pass in a single value or string. For example, to add a class to the <code>&lt;body&gt;</code> element using the <code>bodyClasses</code> option:</p>
+  <p>To set a ‘variable’ option, use <code>set</code> to pass in a single value or string. For example, to add a class to the <code>&lt;main&gt;</code> element using the <code>mainClasses</code> option:</p>
 
-  <pre>
-    <code class="lang-javascript">
-    </code>
-  </pre>
+  <pre class="app-pre"><code class="language-javascript">
+  {% set mainClasses = "nhsuk-main-wrapper--s" %}
+  </code></pre>
 
   <p>To set a ‘block’ option, use <code>block</code> to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing  element in the page template using the <code>bodyEnd</code> option:</p>
 
-  <pre>
-    <code class="lang-javascript">
-    </code>
-  </pre>
+  <pre class="app-pre"><code class="language-javascript">
+  {% block bodyEnd %}
+    <div>
+      <p>Example text</p>
+    </div>
+  {% endblock %}
+  </code></pre>
 
   <p>To change the components that are included in the page template by default, set their equivalent blocks. For example:</p>
 
-  <pre>
-    <code class="lang-javascript">
-    </code>
-  </pre>
+  <pre><code class="lang-javascript">
+  {% block header %}
+    {{ header ({
+      showSearch: true
+    }) }}
+  {% endblock %}
+  </code></pre>
 
   <h3 id="options">Options</h3>
 
@@ -126,27 +135,12 @@
     <tbody class="nhsuk-table__body">
 
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">assetPath</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">
-          Specify a path to the <a href="https://frontend.design-system.service.gov.uk/importing-css-assets-and-javascript/#font-and-image-assets">GOV.UK Frontend assets</a> (icons, images, font files).
-        </td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">assetUrl</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">Set the domain for the Open Graph meta tag image asset. If you need to use both your own domain and your own image path and filename, add <code>&lt;meta property="og:image" content="YOUR-ABSOLUTE-URL"&gt;</code> inside the <code>head</code> <a href="#blocks">block</a> instead of using `assetUrl`.</td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">beforeContent</td>
         <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
-          Add content that needs to appear outside <code>&lt;main&gt;</code> element.
+          Add content that needs to appear outside <code>&lt;main&gt;</code> element and <code>&lt;nhsuk-width-container&gt;</code>.
           <br>
-          For example: The <a class="govuk-link" href="../../components/back-link/">back link</a> component,
-          <a class="govuk-link" href="../../components/phase-banner/">phase banner</a> component.
+          For example: The <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.
         </td>
       </tr>
 
@@ -176,8 +170,6 @@
         <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
           Add content after the opening <code>&lt;body&gt;</code> element.
-          <br>
-          For example: The <a class="govuk-link" href="../../components/cookie-banner/">cookie banner</a> component.
         </td>
       </tr>
 
@@ -199,7 +191,7 @@
         <td class="nhsuk-table__cell">footer</td>
         <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
-          Override the default <a class="govuk-link" href="../../components/footer/">footer</a> component.
+          Override the default <a class="govuk-link" href="/design-system/components/footer">footer</a> component.
         </td>
       </tr>
 
@@ -217,7 +209,7 @@
         <td class="nhsuk-table__cell">header</td>
         <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
-          Override the default <a class="govuk-link" href="../../components/header/">header</a> component.
+          Override the default <a class="govuk-link" href="/design-system/components/header">header</a> component.
         </td>
       </tr>
 
@@ -229,18 +221,6 @@
           <br>
           For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
         </td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">htmlClasses</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">Add a class to the <code>&lt;html&gt;</code> element.</td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">htmlLang</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.</td>
       </tr>
 
       <tr class="nhsuk-table__row">
@@ -258,10 +238,12 @@
       </tr>
 
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">mainLang</td>
-        <td class="nhsuk-table__cell">Variable</td>
+        <td class="nhsuk-table__cell">outerContent</td>
+        <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
-          Set the language of the <code>&lt;main&gt;</code> element if it's different to <code>htmlLang</code>.
+          Add content that needs to appear outside <code>&lt;main&gt;</code> element but inside the <code>&lt;nhsuk-width-container&gt;</code>.
+          <br>
+          For example: The <a href="/design-system/components/back-link">back link</a> component.
         </td>
       </tr>
 
@@ -274,26 +256,10 @@
       </tr>
 
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">pageTitleLang</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">
-          Set the language of the <code>&lt;title&gt;</code> element if it's different to <code>htmlLang</code>.
-        </td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">skipLink</td>
         <td class="nhsuk-table__cell">Block</td>
         <td class="nhsuk-table__cell">
-          Override the default <a class="govuk-link" href="../../components/skip-link/">skip link</a> component.
-        </td>
-      </tr>
-
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">themeColor</td>
-        <td class="nhsuk-table__cell">Variable</td>
-        <td class="nhsuk-table__cell">
-          Set the <a href="https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android">toolbar colour on some devices</a>.
+          Override the default <a class="govuk-link" href="/design-system/components/skip-link">skip link</a> component.
         </td>
       </tr>
 

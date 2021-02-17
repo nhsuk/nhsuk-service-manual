@@ -6,9 +6,6 @@
 {# `showExample` is true, unless explicitly turned off with params #}
 {% set showExample = params.showExample !== false %}
 
-{# `showCode` is true, unless explicitly turned off with params #}
-{% set showCode = params.showCode !== false %}
-
 {% set html %}
   {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
 {% endset %}
@@ -43,7 +40,6 @@
     </div>
   {% endif %}
 
-  {% if showCode %}
   <div class="code-snippet">
       {% if snippets|length >= 1 %}
           <ul class="app-tabs" role="tablist">
@@ -80,7 +76,6 @@
         {% endfor %}
       </div>
   </div>
-  {% endif %}
 
 </div>
 {% endmacro %}
