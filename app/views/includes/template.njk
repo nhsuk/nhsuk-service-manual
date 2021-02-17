@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
 
-    <title>{% block pageTitle %}NHS.UK prototype kit{% endblock %}</title>
+    <title>{% block pageTitle %}The NHS website - NHS{% endblock %}</title>
 
     <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" type="font/woff2" crossorigin>
@@ -55,8 +55,9 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container">
-          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+        <div class="nhsuk-width-container {{ containerClasses }}">
+          {% block beforeMain %}{% endblock %}
+          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
             {% block content %}{% endblock %}
           </main>
         </div>
