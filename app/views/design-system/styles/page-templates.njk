@@ -114,7 +114,7 @@
 
   <h3 id="options">Options</h3>
 
-  <table class="nhsuk-table app-table--constrained">
+  <table class="nhsuk-table">
     <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Options that you can use with the page template</caption>
     <thead class="nhsuk-table__head">
       <tr class="nhsuk-table__row">
@@ -297,14 +297,15 @@
         </td>
       </tr>
 
-      <h4 id="exploded-view-of-the-page-template-block-areas">Exploded view of the page template block areas</h4>
-
-      {{ designExample({
-        type: "page-template-annotated",
-        blankpage: true
-      }) }}
-
     </tbody>
   </table>
+
+  <h4 id="exploded-view-of-the-page-template-block-areas">Exploded view of the page template block areas</h4>
+
+  {{ designExample({
+    type: "page-template-annotated",
+    blankpage: true,
+    showCode: false
+  }) }}
 
 {% endblock %}

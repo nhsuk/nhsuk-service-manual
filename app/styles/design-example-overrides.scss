@@ -54,23 +54,3 @@ body {
   padding: 20px;
   text-align: center;
 }
-
-// Page template annotation
-
-.app-annotate-block {
-  position: relative;
-  margin-bottom: 24px;
-  padding: 16px;
-  padding-top: 3em;
-  outline: 2px dashed #768692;
-}
-
-.app-annotate-block__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: .25em .5em;
-  border-right: 2px dashed #768692;
-  border-bottom: 2px dashed #768692;
-  background: #fff;
-}

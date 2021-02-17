@@ -212,3 +212,8 @@ h1 + .nhsuk-lede-text {
   border-bottom: 2px dashed #768692;
   background: #fff;
 }
+
+.app-annotate-block + .nhsuk-main-wrapper {
+  padding-bottom: 0;
+  padding-top: 0;
+}

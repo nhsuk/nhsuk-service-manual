@@ -36,9 +36,9 @@
   </div>
 {%- endblock %}
 
-{% block beforeMain-%}
+{% block outerContent-%}
   <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: beforeMain</span>
+    <span class="app-annotate-block__label">block: outerContent</span>
     {{ super() }}
     {% from 'back-link/macro.njk' import backLink %}
 
@@ -53,7 +53,7 @@
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: content</span>
     {{ super() }}
-    <h1>NHS.UK page template</h1>
+    <h1>Page template</h1>
   </div>
 {%- endblock %}
 
