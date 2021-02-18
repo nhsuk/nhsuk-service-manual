@@ -97,29 +97,27 @@
   <p>How you set an option depends on whether it’s a ‘variable’ option or a ‘block’ option.</p>
   <p>To set a ‘variable’ option, use <code>set</code> to pass in a single value or string. For example, to add a class to the <code>&lt;main&gt;</code> element using the <code>mainClasses</code> option:</p>
 
-  <pre class="app-pre"><code class="language-javascript">
-  {% set mainClasses = "nhsuk-main-wrapper--s" %}
-  </code></pre>
+  {{ designExample({
+    type: "page-template-set",
+    nunjucksOnly: true,
+    showExample: false
+  }) }}
 
   <p>To set a ‘block’ option, use <code>block</code> to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing  element in the page template using the <code>bodyEnd</code> option:</p>
 
-  <pre class="app-pre"><code class="language-javascript">
-  {% block bodyEnd %}
-    <div>
-      <p>Example text</p>
-    </div>
-  {% endblock %}
-  </code></pre>
+  {{ designExample({
+    type: "page-template-block",
+    nunjucksOnly: true,
+    showExample: false
+  }) }}
 
   <p>To change the components that are included in the page template by default, set their equivalent blocks. For example:</p>
 
-  <pre><code class="lang-javascript">
-  {% block header %}
-    {{ header ({
-      showSearch: true
-    }) }}
-  {% endblock %}
-  </code></pre>
+  {{ designExample({
+    type: "page-template-component",
+    nunjucksOnly: true,
+    showExample: false
+  }) }}
 
   <h3 id="options">Options</h3>
 
