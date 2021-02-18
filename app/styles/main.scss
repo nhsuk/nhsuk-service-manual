@@ -197,20 +197,19 @@ h1 + .nhsuk-lede-text {
 
 .app-annotate-block {
   position: relative;
-  margin-bottom: 24px;
-  padding: 16px;
-  padding-top: 3em;
-  outline: 2px dashed #768692;
+  margin-bottom: nhsuk-spacing(4);
+  padding: nhsuk-spacing(3);
+  padding-top: nhsuk-spacing(7);
+  outline: 2px dashed $color_nhsuk-grey-1;
 }
 
 .app-annotate-block__label {
   position: absolute;
   top: 0;
   left: 0;
-  padding: .25em .5em;
-  border-right: 2px dashed #768692;
-  border-bottom: 2px dashed #768692;
-  background: #fff;
+  padding: nhsuk-spacing(1) nhsuk-spacing(2);
+  border-right: 2px dashed $color_nhsuk-grey-1;
+  border-bottom: 2px dashed $color_nhsuk-grey-1;
 }
 
 .app-annotate-block + .nhsuk-main-wrapper {
