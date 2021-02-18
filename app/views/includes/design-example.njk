@@ -3,8 +3,9 @@
 {% set examplePath = "app/components/" + params.type + ".njk" %}
 {% set standaloneURL = "/design-example/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
 
-{# `showExample` is true, unless explicitly turned off with params #}
+{# `showExample` and `showCode` is true, unless explicitly turned off with params #}
 {% set showExample = params.showExample !== false %}
+{% set showCode = params.showCode !== false %}
 
 {% set html %}
   {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
@@ -27,6 +28,8 @@
 {% set nunjucksDefinition = { name: 'Nunjucks', code: nunjucks } %}
 {% if params.htmlOnly %}
   {% set snippets = [htmlDefinition] %}
+{% elif params.nunjucksOnly %}
+  {% set snippets = [nunjucksDefinition] %}
 {% else %}
   {% set snippets = [htmlDefinition, nunjucksDefinition] %}
 {% endif %}
@@ -40,8 +43,9 @@
     </div>
   {% endif %}
 
+  {% if showCode %}
   <div class="code-snippet">
-      {% if snippets|length >= 1 %}
+      {% if snippets|length > 1 %}
           <ul class="app-tabs" role="tablist">
               {% for snippet in snippets %}
               <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
@@ -55,19 +59,19 @@
 
       <div class="app-tabs__container js-tabs__container" id="example-default-open-html" role="tabpanel">
         {% for snippet in snippets %}
-          {% if snippets|length >= 1 %}
+          {% if snippets|length > 1 %}
           <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-{{ loop.index }}">
               <a href="" role="tab" aria-controls="example-default-open-html" data-track="tab-html" aria-selected="true">
                 {{ snippet.name }}
               </a>
           </div>
           {% endif %}
-          <div class="code-snippet__preformatted {% if snippets|length >= 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
+          <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
               <a class="app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}
               </code></pre>
-              {% if snippets|length >= 1 %}
+              {% if snippets|length > 1 %}
               <button class="app-link--close" href="#close" aria-live="assertive">
                 Close
               </button>
@@ -76,6 +80,7 @@
         {% endfor %}
       </div>
   </div>
+  {% endif %}
 
 </div>
 {% endmacro %}
