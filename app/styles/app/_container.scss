@@ -5,7 +5,8 @@
 // Container width variable
 $service-manual-container-size: 1100px;
 
-.nhsuk-width-container {
+.app-width-container,
+.app-breadcrumb .nhsuk-width-container {
   max-width: $service-manual-container-size;
 
   @media (min-width: 767px) and (max-width: 1164px) {
@@ -13,6 +14,7 @@ $service-manual-container-size: 1100px;
   }
 }
 
-.nhsuk-header__navigation {
+.app-header__navigation {
   max-width: $service-manual-container-size + nhsuk-spacing(9);
 }
+

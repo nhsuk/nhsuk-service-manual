@@ -1,0 +1,103 @@
+{% extends "includes/template.njk" %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{% block pageTitle %}
+  Content page template
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Level one"
+      },
+      {
+        href: "#",
+        text: "Level two"
+      }
+    ],
+    href: "#",
+    text: "Level three"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  {{ header({
+      "showNav": "true",
+      "showSearch": "true",
+      "primaryLinks": [
+        {
+          "url"  : "#",
+          "label" : "Health A-Z"
+        },
+        {
+          'url' : '#',
+          'label' : 'Live Well'
+        },
+        {
+          'url'  : '#',
+          'label' : 'Care and support'
+        },
+        {
+          'url'  : '#',
+          'label' : 'Pregnancy'
+        },
+        {
+          'url' : '#',
+          'label' : 'NHS services'
+        }
+      ]
+    })
+}}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Content page template
+      </h1>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "#",
+        "label": "NHS sites"
+      },
+      {
+        "URL": "#",
+        "label": "About us"
+      },
+      {
+        "URL": "#",
+        "label": "Contact us"
+      },
+      {
+        "URL": "#",
+        "label": "Profile editor login"
+      },
+      {
+        "URL": "#",
+        "label": "Site map"
+      },
+      {
+        "URL": "#",
+        "label": "Accessibility statement"
+      },
+      {
+        "URL": "#",
+        "label": "Our policies"
+      },
+      {
+        "URL": "#",
+        "label": "Cookies"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -107,7 +107,8 @@
     {% block breadcrumb %}
       {{ breadcrumb({
         href: "/",
-        text: "Home"
+        text: "Home",
+        classes: "app-breadcrumb"
       }) }}
     {% endblock %}
 
@@ -118,7 +119,7 @@
     {% endif %}
 
     {% if pageLayout != "Homepage" %}
-    <div class="nhsuk-width-container">
+    <div class="nhsuk-width-container app-width-container">
       <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
         {% block body %}{% endblock %}
       </main>

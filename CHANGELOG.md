@@ -1,8 +1,9 @@
 # NHS digital service manual Changelog
 
-## 3.10.2 - TBC February 2021
+## 3.11.0 - TBC February 2021
 
 :new: **New features**
+- Add page template guidance to the design system
 - Update guidance on PDFs and other non-HTML documents 
 - Add explanation and more examples to the section on hyphens and dashes
 

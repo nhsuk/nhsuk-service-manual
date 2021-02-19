@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
 
-    <title>{% block pageTitle %}NHS.UK prototype kit{% endblock %}</title>
+    <title>{% block pageTitle %}The NHS website - NHS{% endblock %}</title>
 
     <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" type="font/woff2" crossorigin>
@@ -33,13 +33,14 @@
     <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
     {% endblock %}
+
+    {% block head %}{% endblock %}
+
   </head>
 
   <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}{% endblock %}
-
-    <div id="wrap">
 
       {% block skipLink %}
         {{ skipLink({
@@ -55,8 +56,9 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container">
-          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+        <div class="nhsuk-width-container {{ containerClasses }}">
+          {% block outerContent %}{% endblock %}
+          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
             {% block content %}{% endblock %}
           </main>
         </div>
@@ -66,6 +68,6 @@
         {{ footer({
         })}}
       {% endblock %}
-    </div>
+
     {% block bodyEnd %}{% endblock %}
 </html>

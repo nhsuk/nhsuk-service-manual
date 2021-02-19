@@ -1,0 +1,66 @@
+{% extends "includes/template.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Transactional page template
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  {{ header({
+    "transactionalService": {
+        "name": "Service name here",
+        "href": "#"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Transactional page template
+      </h1>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "#",
+        "label": "Accessibility statement"
+      },
+      {
+        "URL": "#",
+        "label": "Contact us"
+      },
+      {
+        "URL": "#",
+        "label": "Cookies"
+      },
+      {
+        "URL": "#",
+        "label": "Privacy policy"
+      },
+      {
+        "URL": "#",
+        "label": "Terms and conditions"
+      }
+    ]
+  })}}
+{% endblock %}

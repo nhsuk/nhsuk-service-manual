@@ -1,0 +1,71 @@
+{% extends "includes/template.njk" %}
+
+{% block bodyStart -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyStart</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block skipLink -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: skipLink</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block header -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: header</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block beforeContent-%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: beforeContent</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block main -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: main</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block outerContent-%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: outerContent</span>
+    {{ super() }}
+    {% from 'back-link/macro.njk' import backLink %}
+
+    {{ backLink({
+      href: "/",
+      text: "Back"
+    }) }}
+  </div>
+{%- endblock %}
+
+{% block content -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: content</span>
+    {{ super() }}
+    <h1>Page template</h1>
+  </div>
+{%- endblock %}
+
+{% block footer -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: footer</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
+
+{% block bodyEnd -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: bodyEnd</span>
+    {{ super() }}
+  </div>
+{%- endblock %}
