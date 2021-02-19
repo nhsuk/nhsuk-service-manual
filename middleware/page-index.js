@@ -18,7 +18,7 @@ class PageIndex {
 
     try {
       // Make request to get sitemap
-      const { data } = await axios.get(`${baseUrl}/sitemap`, config);
+      const { data } = await axios.get(`${baseUrl}/site-map`, config);
       // Assign jQuery style DOM of page to $
       let $ = cheerio.load(data);
       // jQuery array of jQuery link objects
