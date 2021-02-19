@@ -137,6 +137,12 @@ app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content',
   res.redirect(302, '/page-not-found');
 });
 
+// PDF page redirect
+// https://github.com/nhsuk/nhsuk-service-manual/pull/965
+app.get('/content/pdfs', (req, res) => {
+  res.redirect('/content/pdfs-and-other-non-html-documents');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);
