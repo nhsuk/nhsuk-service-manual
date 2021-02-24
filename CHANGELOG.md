@@ -12,6 +12,7 @@
 - Remove 2 broken links from health literacy page
 - Amend the site map page to bring it into line with the site map entry in the style guide
 - Remove negative contraction (can't) on Page not found page 
+- Remove all code related to the readability tool page
 
 ## 3.10.1 - 28 January 2021
 
