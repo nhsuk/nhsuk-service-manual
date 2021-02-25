@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.11.0 - TBC February 2021
+## 3.11.0 - 25 February 2021
 
 :new: **New features**
 - Add page template guidance to the design system
