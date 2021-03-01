@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 3.11.1 - 1 March 2021
+
+:wrench: **Fixes**
+- Replaced broken chrome link for accessibility page web developer tool
+
 ## 3.11.0 - 25 February 2021
 
 :new: **New features**
