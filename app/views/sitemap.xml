@@ -179,9 +179,6 @@
     <loc>https://service-manual.nhs.uk/design-system/components/radios</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/design-system/components/review-date</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/select</loc>
   </url>
   <url>
@@ -213,6 +210,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
+  </url>
+    <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/reassure-users-that-information-is-up-to-date</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
