@@ -4,7 +4,7 @@
 
 :wrench: **Fixes**
 
-- Replaced broken chrome link for accessibility page web developer tool
+- Replace broken Chrome link for accessibility page web developer tool
 
 ## 3.11.0 - 25 February 2021
 
