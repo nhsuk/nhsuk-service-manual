@@ -137,6 +137,30 @@ app.get('/community/contribution-survey', (req, res) => {
   res.redirect('https://nhsdigital.eu.qualtrics.com/jfe/form/SV_5szVfoxZIW7Kr1b');
 });
 
+// Add the code redirects for community-and-contribution pages
+
+app.get('/community/backlog-of-components-and-patterns', (req, res) => {
+  res.redirect('');
+});
+
+app.get('/community/contribution-criteria', (req, res) => {
+  res.redirect('');
+});
+
+app.get('/community/develop-component-pattern', (req, res) => {
+  res.redirect('');
+});
+
+app.get('/community/index', (req, res) => {
+  res.redirect('');
+});
+
+app.get('/community/propose-component-pattern', (req, res) => {
+  res.redirect('');
+});
+
+// Redirects stop here
+
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
   res.redirect(302, '/page-not-found');
 });
