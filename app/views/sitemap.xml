@@ -26,7 +26,7 @@
     <loc>https://service-manual.nhs.uk/design-system/prototyping</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/community</loc>
+    <loc>https://service-manual.nhs.uk/community-and-contribution</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/accessibility-statement</loc>
@@ -218,13 +218,13 @@
     <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/community/contribution-criteria</loc>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/contribution-criteria</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/community/propose-component-pattern</loc>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/propose-component-pattern</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/community/develop-component-pattern</loc>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/develop-component-pattern</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/health-literacy/</loc>
