@@ -133,33 +133,33 @@ app.get('/slack', (req, res) => {
   res.redirect('https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE');
 });
 
+// Add the code redirects for community-and-contribution pages
+
 app.get('/community/contribution-survey', (req, res) => {
   res.redirect('https://nhsdigital.eu.qualtrics.com/jfe/form/SV_5szVfoxZIW7Kr1b');
 });
 
-// Add the code redirects for community-and-contribution pages
-
 app.get('/community/backlog-of-components-and-patterns', (req, res) => {
-  res.redirect('');
+  res.redirect('/community-and-contribution/backlog-of-components-and-patterns');
 });
 
 app.get('/community/contribution-criteria', (req, res) => {
-  res.redirect('');
+  res.redirect('/community-and-contribution/contribution-criteria');
 });
 
 app.get('/community/develop-component-pattern', (req, res) => {
-  res.redirect('');
+  res.redirect('/community-and-contribution/develop-component-pattern');
 });
 
 app.get('/community/index', (req, res) => {
-  res.redirect('');
+  res.redirect('/community-and-contribution/index');
 });
 
 app.get('/community/propose-component-pattern', (req, res) => {
-  res.redirect('');
+  res.redirect('/community-and-contribution/propose-component-pattern');
 });
 
-// Redirects stop here
+// REDIRECT STOPS HERE
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
   res.redirect(302, '/page-not-found');
