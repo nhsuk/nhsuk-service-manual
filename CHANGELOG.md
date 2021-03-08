@@ -1,6 +1,9 @@
 # NHS digital service manual Changelog
 
-## 3.11.1 - Unreleased
+## 3.12.0 - Unreleased
+
+:new: **New features**
+- Changed the name of the contribution section to community and contribution
 
 :wrench: **Fixes**
 

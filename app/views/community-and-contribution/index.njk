@@ -1,0 +1,23 @@
+{% set pageTitle = "Community and contribution" %}
+{% set pageDescription = "The NHS digital service manual is a community effort. Anyone can help improve and grow it." %}
+{% set pageSection = "Community and contribution" %}
+{% set landingPage = true %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block bodyContent %}
+
+  <p>Find out:</p>
+  <ul>
+    <li>how to <a href="/community-and-contribution/propose-component-pattern">propose a new component or pattern</a></li>
+    <li>how to <a href="/community-and-contribution/develop-component-pattern">develop a new component or pattern</a></li>
+    <li>what people have proposed or are working on in the <a href="/community-and-contribution/backlog-of-components-and-patterns">backlog of components and patterns</a></li>
+  </ul>
+
+  <p>To make sure everything in the service manual is of high quality, contributions need to meet the following <a href="/community-and-contribution/contribution-criteria">contribution criteria</a>.</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}

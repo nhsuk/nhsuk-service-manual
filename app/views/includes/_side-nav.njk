@@ -117,10 +117,10 @@
 ] %}
 
 {% set community = [
-  { title: "Backlog of components and patterns", url: "/community/backlog-of-components-and-patterns" },
-  { title: "Propose a component or pattern", url: "/community/propose-component-pattern" },
-  { title: "Develop a component or pattern", url: "/community/develop-component-pattern" },
-  { title: "Contribution criteria", url: "/community/contribution-criteria" }
+  { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
+  { title: "Propose a component or pattern", url: "/community-and-contribution/propose-component-pattern" },
+  { title: "Develop a component or pattern", url: "/community-and-contribution/develop-component-pattern" },
+  { title: "Contribution criteria", url: "/community-and-contribution/contribution-criteria" }
 ] %}
 
 {% set whatsNew = [
@@ -277,7 +277,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Community" %}
+  {%- if pageSection == "Community and contribution" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
