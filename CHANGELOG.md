@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.12.0 - Unreleased
+## 3.12.0 - 08 March 2021
 
 :new: **New features**
 - Changed the name of the contribution section to community and contribution
