@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 3.12.1 - 08 March 2021
+:wrench: **Fixes**
+
+- Update `app.js` redirect URL for `/community`
+
 ## 3.12.0 - 08 March 2021
 
 :new: **New features**

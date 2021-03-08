@@ -151,8 +151,8 @@ app.get('/community/develop-component-pattern', (req, res) => {
   res.redirect('/community-and-contribution/develop-component-pattern');
 });
 
-app.get('/community/index', (req, res) => {
-  res.redirect('/community-and-contribution/index');
+app.get('/community', (req, res) => {
+  res.redirect('/community-and-contribution');
 });
 
 app.get('/community/propose-component-pattern', (req, res) => {
