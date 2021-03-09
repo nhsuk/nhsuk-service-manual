@@ -25,3 +25,24 @@
   }
 
 }
+
+.app-footer__list {
+  margin-bottom: nhsuk-spacing(2);
+
+  @include mq($from: desktop) {
+    margin-bottom: nhsuk-spacing(4);
+  }
+}
+
+.app-footer__text {
+  @include nhsuk-font(16);
+
+  color: $nhsuk-secondary-text-color;
+  float: left;
+  width: 100%;
+
+  @include mq($from: desktop) {
+    margin-bottom: 0;
+    width: 75%;
+  }
+}
