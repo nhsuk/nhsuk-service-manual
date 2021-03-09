@@ -27,7 +27,7 @@
 }
 
 .app-footer__list {
-  margin-bottom: nhsuk-spacing(2);
+  margin-bottom: nhsuk-spacing(1);
 
   @include mq($from: desktop) {
     margin-bottom: nhsuk-spacing(4);
