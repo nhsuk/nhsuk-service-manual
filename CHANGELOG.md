@@ -1,10 +1,15 @@
 # NHS digital service manual Changelog
 
+## 3.12.2 - 09 March 2021
+:wrench: **Fixes**
+
+- Update `site-map.njk` 'community' to 'community and contribution'
+
 ## 3.12.1 - 08 March 2021
 :wrench: **Fixes**
 
 - Update `app.js` redirect URL for `/community`
-- Update `site-map.njk` 'community' to 'community and contribution'
+
 
 ## 3.12.0 - 08 March 2021
 
