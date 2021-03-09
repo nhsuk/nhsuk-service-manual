@@ -4,6 +4,7 @@
 :wrench: **Fixes**
 
 - Update `app.js` redirect URL for `/community`
+- Update `site-map.njk` 'community' to 'community and contribution'
 
 ## 3.12.0 - 08 March 2021
 
