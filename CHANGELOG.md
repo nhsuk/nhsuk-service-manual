@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.13.0 - Unreleased
+## 3.13.0 - 11 March 2021
 
 :new: **New features**
 - Add service manual team page
