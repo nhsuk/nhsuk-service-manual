@@ -5,10 +5,15 @@
 :new: **New features**
 - Add service manual team page
 
+:wrench: **Fixes**
+
+- Update `site-map.njk` 'community' to 'community and contribution'
+
 ## 3.12.1 - 08 March 2021
 :wrench: **Fixes**
 
 - Update `app.js` redirect URL for `/community`
+
 
 ## 3.12.0 - 08 March 2021
 
