@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
 
-## 3.12.2 - 09 March 2021
+## 3.13.0 - Unreleased
+
+:new: **New features**
+- Add service manual team page
+
 :wrench: **Fixes**
 
 - Update `site-map.njk` 'community' to 'community and contribution'
@@ -14,7 +18,7 @@
 ## 3.12.0 - 08 March 2021
 
 :new: **New features**
-- Changed the name of the contribution section to community and contribution
+- Change name of the contribution section to community and contribution
 
 :wrench: **Fixes**
 
