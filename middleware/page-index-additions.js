@@ -27,7 +27,7 @@ const additionalIndices = {
   '/design-system/components/textarea': ['big text box, multi-line text box, multi-line text field'],
   '/design-system/components/typography': ['fonts'],
   '/design-system/components/warning-callout': ['yellow callout, warning box, important'],
-  '/design-system/patterns/reassure-users-that-information-is-up-to-date': ['review date, date updated'],
+  '/design-system/patterns/reassure-users-that-a-page-is-up-to-date': ['review date, date updated'],
   '/design-system/styles/colour': ['palette'],
   '/design-system/styles/layout': ['grid'],
   '/design-system/styles/spacing': ['margin, padding'],
