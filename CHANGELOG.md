@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 3.14.0 - Unreleased
+
+:new: **New features**
+- Remove the review date component and replaced it with the "Reassure users that a page is up to date" pattern
+
 ## 3.13.0 - 11 March 2021
 
 :new: **New features**
