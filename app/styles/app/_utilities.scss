@@ -31,3 +31,9 @@
     display: none;
   }
 }
+
+// Make content full width of its parent container
+.app-u-full-width {
+  max-width: 100% !important; // sass-lint:disable-line no-important */
+  width: 100% !important; // sass-lint:disable-line no-important */
+}
