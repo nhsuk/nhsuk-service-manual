@@ -1,12 +1,17 @@
 # NHS digital service manual Changelog
 
+## 3.14.1 - 16 March 2021
+
+:wrench: **Fixes**
+
+- remove role and focusable attributes from the logo
 ## 3.14.0 - 16 March 2021
 
 :new: **New features**
 
 - Remove the review date component and replace it with the "Reassure users that a page is up to date" pattern
 
-:wrench **Fixes**
+:wrench: **Fixes**
 
 - use maincontent as the ID for the main element across the NHS digital service manual and examples for consistency and to match the Skip link anchor (https://github.com/nhsuk/nhsuk-frontend/issues/716)
 - use the latest version of NHS.UK frontend (v5.0.0)
