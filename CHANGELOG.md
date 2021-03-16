@@ -9,6 +9,7 @@
 :wrench **Fixes**
 
 - use maincontent as the ID for the main element across the NHS digital service manual and examples for consistency and to match the Skip link anchor (https://github.com/nhsuk/nhsuk-frontend/issues/716)
+- use the latest version of NHS.UK frontend (v5.0.0)
 - update dependencies to the latest versions
 
 ## 3.13.0 - 11 March 2021
