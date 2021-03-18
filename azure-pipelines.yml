@@ -3,10 +3,14 @@ trigger:
     include:
     - master
     - refs/tags/v*
-  paths:
-    exclude:
-    - CHANGELOG.md
-    - README.md
+  pr:
+    branches:
+      include:
+      - master
+    paths:
+      exclude:
+      - CHANGELOG.md
+      - README.md
 
 pool:
   vmImage: 'ubuntu-latest'
