@@ -9,7 +9,7 @@
 
 :new: **New features**
 
-- Remove the review date component and replace it with the "Reassure users that a page is up to date" pattern
+- Remove the review date component and replace it with the "Reassure users that a page is up to date" pattern.
 
 :wrench: **Fixes**
 
