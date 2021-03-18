@@ -1,10 +1,12 @@
 # NHS digital service manual Changelog
 
-## 3.14.1 - 16 March 2021
+## 3.14.1 - 18 March 2021
 
-:wrench: **Fixes**
+:new: **New features**
 
-- remove role and focusable attributes from the logo
+- Improve content of the publish an accessibility statement
+- Ensure date updated date is correct on the product and delivery pages
+- Update the NHS digital service manual team members
 ## 3.14.0 - 16 March 2021
 
 :new: **New features**
