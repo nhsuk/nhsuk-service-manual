@@ -1,6 +1,13 @@
 trigger:
-- master
-- refs/tags/v*
+  branches:
+    include:
+    - master
+    - review
+    - refs/tags/v*
+  paths:
+    exclude:
+    - CHANGELOG.md
+    - README.md
 
 pool:
   vmImage: 'ubuntu-latest'
