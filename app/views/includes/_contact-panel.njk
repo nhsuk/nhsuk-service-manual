@@ -26,9 +26,23 @@
 
 <div class="app-contact-panel">
   {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageTitle === "Production code" or pageTitle === "Prototyping" %}
-  <h2 class="app-contact-panel__heading">Need help?</h2>
+  <!--<h2 class="app-contact-panel__heading">Need help?</h2>-->
+  <h2 class="app-contact-panel__heading">Have you tested this?</h2>
   {% else %}
   <h2 class="app-contact-panel__heading">Get in touch</h2>
   {% endif %}
-  <p class="app-contact-panel__body">If you’ve got a question about the NHS digital service manual or want to feedback, <a href="/get-in-touch">get in touch</a>.</p>
+  <!--<p class="app-contact-panel__body">If you’ve got a question about the NHS digital service manual or want to feedback, <a href="/get-in-touch">get in touch</a>.</p>-->
+
+  <p class="app-contact-panel__body">We would appreciate you sharing your research findings on how this has worked for you. This will help us improve and help others.</p>
+
+  <p class="app-contact-panel__body">Before you start, you might need a <a href="https://github.com/login" target="_blank">GitHub account</a>, it's an open forum where we collect feedback.</p>
+
+  {% from 'action-link/macro.njk' import actionLink %}
+
+{{ actionLink({
+  "text": "Share your research findings",
+  "href": "https://"
+}) }}
+
+  <p class="app-contact-panel__body">If you just want to ask questions, you can reach out to our community forum which is hosted on <a href="https://service-manual.nhs.uk/slack">Slack</a>.</p>
 </div>
