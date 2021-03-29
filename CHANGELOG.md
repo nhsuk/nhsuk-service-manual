@@ -11,6 +11,7 @@
 - Add contribution links to pages across the service manual [Issue 1000](https://github.com/nhsuk/nhsuk-service-manual/issues/1000)
 - Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
 - Fix HTML validation issues with the code examples and OGL footer logo
+- Update dependencies to the latest versions
 
 ## 3.14.2 - 18 March 2021
 
