@@ -139,7 +139,13 @@
   <p><a href="/content/how-to-write-good-questions-for-forms/test-your-questions">Read more about testing your questions</a>.</p>
   <p>If a lot of people cannot answer "Yes" or "No", reconsider your question.</p>
 
-  {{ pagination({
+  
+
+{% endblock %}
+
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
     "previousPage": "Consider the sensitivities around your questions",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",

@@ -1,11 +1,16 @@
+{% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" %}
+<h2 class="nhsuk-u-padding-top-4">Have you tested{% if subSection === "Styles" %} these styles{% endif %}{% if subSection === "Components" %} this component{% endif %}{% if subSection === "Patterns" %} this pattern{% endif %}{% if pageSection === "Content style guide" %} this guidance{% endif %}?</h2>
 {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" %}
-  <h2 class="nhsuk-u-padding-top-4">Have you tested {% if subSection === "Styles" %} these styles{% endif %}{% if subSection === "Components" %} this component{% endif %}{% if subSection === "Patterns" %} this pattern{% endif %}?</h2>
 
-  <p> If so, please share your research findings and let us know how it has worked for you. This will help us improve it and help others.</p>
+<p> If so, please share your research findings and let us know how it has worked for you. This will help us improve it and help others.</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>, It's an open forum where we collect feedback</p>
+{% endif %}
+{% if pageSection === "Content style guide" %}
 
-  <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>, It's an open forum where we collect feedback</p>
-
-  <div class="nhsuk-action-link">
+<p> Please let us know how this has worked for you. This will help us improve it for everyone.</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>, It's an open forum where we collect feedback</p>
+{% endif %}
+<div class="nhsuk-action-link">
   <a class="nhsuk-action-link__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M0 0h24v24H0z" fill="none"></path>
@@ -14,7 +19,6 @@
     <span class="nhsuk-action-link__text">Share your research findings </span>
   </a>
 </div>
-
- <p>If you have questions about {% if subSection === "Styles" %} these styles{% endif %}{% if subSection === "Components" %} this component{% endif %}{% if subSection === "Patterns" %} this pattern{% endif %}, you can reach out to our <a href="https://service-manual.nhs.uk/slack">community forum on Slack</a> or <a href="mailto:service-manual@nhs.net">contact us via email</a>.
+<p>If you have questions about this, you can reach out to our <a href="https://service-manual.nhs.uk/slack">community forum on Slack</a> or <a href="mailto:service-manual@nhs.net">contact us via email</a>.
 </p>
 {% endif %}
