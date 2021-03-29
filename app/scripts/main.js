@@ -21,9 +21,6 @@ import {
   suggestion,
 } from './search';
 
-// NHS digital service manual polyfills
-import './polyfills';
-
 // Initialise NHS.UK frontend components
 AutoComplete({
   containerId: 'autocomplete-container',
