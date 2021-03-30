@@ -5,7 +5,7 @@
 :wrench: **Fixes**
 
 - Update `includes/_contact-panel.njk` to host new contextual contribution links
-- Update context links within `includes/app-layout.njk`
+- Refactor context links within `includes/app-layout.njk`
 - Fix context links within `content/how-to-write-good-questions-for-forms`
 - Update all context links within `app/views/content`
 - Update all context links within `app/views/design-system`
