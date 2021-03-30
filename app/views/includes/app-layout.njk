@@ -42,9 +42,11 @@
           {% endblock %}
 
           {% block contactPanel %}
-            {%- if landingPage or theme == "Design" or theme == "Content style guide" or pageTitle == "Support" %}
-            {% else %}
-              {% include "./_contact-panel.njk" %}
+            {% if hideContact != "true" %}
+              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" %}
+                {% include "./_contact-panel.njk" %}
+              {% endif %}
+              {% else %}
             {% endif %}
           {% endblock %}
 
