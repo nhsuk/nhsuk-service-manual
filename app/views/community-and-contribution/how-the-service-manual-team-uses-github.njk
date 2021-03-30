@@ -1,0 +1,88 @@
+{% set pageTitle = "How the service manual team uses GitHub" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "We use GitHub to manage service manual work. GitHub is a free, open service for storing code and managing projects." %}
+{% set dateUpdated = "April 2021" %}
+{% set hideDescription = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p class="nhsuk-lede-text">We use <a href="#">GitHub</a> to manage service manual work. GitHub is a free, open service for storing code and managing projects.</p>
+
+<h2 id="working-in-the-open">Working in the open</h2>
+<p>We work in the open where everyone can see and we encourage anyone to raise issues, fix bugs, comment and suggest improvements. All you need is a <a href="#">public GitHub account</a> to contribute.</p>
+
+<h2 id="github-repositiries">GitHub repositories</h2>
+
+<p>Each repository (or "repo") contains a project's folders and files and their revision history.</p>
+
+<p>We have 5 GitHub repositories:</p>
+
+<ul class="nhsuk-list">
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Service manual community backlog</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">A place for the community to share feedback and research to help develop components, patterns and content style guide items for the service manual.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Service manual</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">A place to manage all updates to the service manual.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">NHS.UK frontend</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">A place to manage all of the code and documentation for the frontend library.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">NHS.UK prototype kit</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">A place to manage all of the code and guidance for the prototype kit.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Design system testing</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-0">A place to test new design styles, components and patterns.</span>
+  </li>
+</ul>
+
+<h2 id="github-issues">GitHub issues</h2>
+
+<p>Issues are used to track ideas, enhancements, tasks, or bugs for work on each GitHub repository.</p>
+
+<p>The service manual team monitors all new issues and comments in the #service-manual-operations channel on the NHS.UK Slack. We label new issues (and issues with new comments) with an  ‘awaiting-triage’ label and triage them at our fortnightly planning session.</p>
+
+<h2 id="project-boards">Project boards</h2>
+
+<p>Project boards on GitHub are <a href="#">Kanban boards</a> made up of issues from our GitHub repositories. They help us organise and prioritise the work.</p>
+
+<p>We have 4 project boards:</p>
+
+<ul class="nhsuk-list">
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Service manual roadmap</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">Overview of what the service manual team is working over the next 12 months.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Service manual sprint board</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">Overview of what the service manual team is working on this sprint.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Community backlog: Design system</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-4">Overview of the design styles, components and patterns that the community has proposed or published in the service manual.</span>
+  </li>
+
+  <li>
+    <span class="nhsuk-body-m nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1"><a href="#">Community backlog: Content style guide</a></span>
+    <span class="nhsuk-body-m nhsuk-u-margin-bottom-0">Overview of the content style guide items that the community has proposed or published in the service manual.</span>
+  </li>
+</ul>
+
+
+{% endblock %}
