@@ -153,7 +153,13 @@
   <h2>Read more about writing content for transactions</h2>
   <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
 
-  {{ pagination({
+  
+
+{% endblock %}
+
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
     "previousPage": "Think of the form as a conversation",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/test-your-questions",

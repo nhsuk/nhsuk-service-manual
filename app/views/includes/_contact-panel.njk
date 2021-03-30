@@ -1,34 +1,24 @@
+{% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" %}
+<h2 class="nhsuk-u-padding-top-4">Have you tested{% if subSection === "Styles" %} these styles{% endif %}{% if subSection === "Components" %} this component{% endif %}{% if subSection === "Patterns" %} this pattern{% endif %}{% if pageSection === "Content style guide" %} this guidance{% endif %}?</h2>
 {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" %}
-  <h2 class="nhsuk-u-padding-top-4">Help improve this page</h2>
 
-  {% if backlog_issue_id %}
-    <p>The manual is a community effort. Anyone can help improve and grow it.</p>
-
-    <p>To help make sure the {{pageTitle}} guidance is useful, relevant and up to date, you can:</p>
-
-    <ul class="nhsukuk-list nhsuk-list--bullet">
-      <li>
-        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">share research or feedback about {% if subSection === "Components" or subSection === "Patterns" %}the {% endif %}{{pageTitle}}{% if subSection === "Components" %} component{% endif %}{% if subSection === "Patterns" %} pattern{% endif %} on GitHub</a>
-      </li>
-      <li>
-        <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/app/views/design-system/{{subSection|lower}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a code change to this page on GitHub</a>
-      </li>
-    </ul>
-  {% else %}
-    <p>The service manual is a community effort. Anyone can help improve and grow it.</p>
-    {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" %}
-    <p>If you spot a problem with the {{pageTitle}} guidance you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/app/views/design-system/{{subSection|lower}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a code change</a>.</p>
-    {% else %}
-    <p>If you spot a problem with the {{pageTitle}} page you can <a class="app-contact-panel__link" href="https://github.com/nhsuk/nhsuk-service-manual/blob/master/app/views/{{subSection|lower|replace(" ", "-")|replace("'", "")}}/{{pageTitle|lower|replace(" ", "-")|replace("'", "")}}.njk">propose a code change</a>.</p>
-    {% endif %}
-  {% endif %}
+<p> If so, please share your research findings and let us know how it has worked for you. This will help us improve it and help others.</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>, It's an open forum where we collect feedback</p>
 {% endif %}
+{% if pageSection === "Content style guide" %}
 
-<div class="app-contact-panel">
-  {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageTitle === "Production code" or pageTitle === "Prototyping" %}
-  <h2 class="app-contact-panel__heading">Need help?</h2>
-  {% else %}
-  <h2 class="app-contact-panel__heading">Get in touch</h2>
-  {% endif %}
-  <p class="app-contact-panel__body">If you’ve got a question about the NHS digital service manual or want to feedback, <a href="/get-in-touch">get in touch</a>.</p>
+<p> Please let us know how this has worked for you. This will help us improve it for everyone.</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
+{% endif %}
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">Share your research findings </span>
+  </a>
 </div>
+<p>If you have any questions, you can <a href="https://service-manual.nhs.uk/slack">reach out to our community forum on Slack</a> or <a href="mailto:service-manual@nhs.net">contact us by email</a>.
+</p>
+{% endif %}
