@@ -1,9 +1,8 @@
-{% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" %}
 <h2 class="nhsuk-u-padding-top-4">Have you{% if subSection === "Styles" %} tested these styles{% endif %}{% if subSection === "Components" %} tested this component{% endif %}{% if subSection === "Patterns" %} tested this pattern{% endif %}{% if pageSection === "Content style guide" %} used this guidance{% endif %}?</h2>
 {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" %}
 
 <p> If so, please share your research findings and let us know how it has worked for you. This will help us improve it for everyone.</p>
-<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>, It's an open forum where we collect feedback</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
 {% endif %}
 {% if pageSection === "Content style guide" %}
 
@@ -21,4 +20,3 @@
 </div>
 <p>If you have any questions, you can <a href="https://service-manual.nhs.uk/slack">reach out to our community forum on Slack</a> or <a href="mailto:service-manual@nhs.net">contact us by email</a>.
 </p>
-{% endif %}

@@ -4,9 +4,11 @@
 
 :wrench: **Fixes**
 
-- Redesigned `includes/contact-panel.njk` to host new contextual contribution links
-- Fixed context links within `includes/app-layout.njk`
-- Fixed context links within `content/how-to-write-good-questions-for-forms`
+- Update `includes/_contact-panel.njk` to host new contextual contribution links
+- Refactor context links within `includes/app-layout.njk`
+- Fix context links within `content/how-to-write-good-questions-for-forms`
+- Update all context links within `app/views/content`
+- Update all context links within `app/views/design-system`
 
 
 ## 3.14.2 - 18 March 2021
