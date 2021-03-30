@@ -1,5 +1,14 @@
 # NHS digital service manual Changelog
 
+## 3.14.3 - 30 March 2021
+
+:wrench: **Fixes**
+
+- Redesigned `contact-panel.njk` to host new contextual contribution links
+- Fixed context links within `app-layout.njk`
+- Fixed context links within `/how-to-write-good-questions-for-forms`
+
+
 ## 3.14.2 - 18 March 2021
 
 :wrench: **Fixes**
