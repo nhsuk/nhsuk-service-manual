@@ -15,15 +15,15 @@
 
 :wrench: **Fixes**
 
-- Improve content of the publish an accessibility statement
-- Ensure date updated date is correct on the product and delivery pages
+- Improve content about publishing an accessibility statement
+- Make sure "Updated" date is correct on the product and delivery pages in accessibility guidance
 - Update the NHS digital service manual team members
 
 ## 3.14.1 - 16 March 2021
 
 :wrench: **Fixes**
 
-- remove role and focusable attributes from the logo
+- Remove role and focusable attributes from the logo
 
 ## 3.14.0 - 16 March 2021
 
@@ -33,9 +33,9 @@
 
 :wrench: **Fixes**
 
-- use maincontent as the ID for the main element across the NHS digital service manual and examples for consistency and to match the Skip link anchor (https://github.com/nhsuk/nhsuk-frontend/issues/716)
-- use the latest version of NHS.UK frontend (v5.0.0)
-- update dependencies to the latest versions
+- Use maincontent as the ID for the main element across the NHS digital service manual and examples for consistency and to match the Skip link anchor (https://github.com/nhsuk/nhsuk-frontend/issues/716)
+- Use the latest version of NHS.UK frontend (v5.0.0)
+- Update dependencies to the latest versions
 
 ## 3.13.0 - 11 March 2021
 
