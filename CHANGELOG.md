@@ -9,6 +9,7 @@
 - Fix context links within `content/how-to-write-good-questions-for-forms`
 - Update all context links within `app/views/content`
 - Update all context links within `app/views/design-system`
+- Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
 
 
 ## 3.14.2 - 18 March 2021
