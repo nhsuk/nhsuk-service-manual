@@ -12,6 +12,8 @@
 - Update all context links within `app/views/accessibility`
 - Update all context links within `app/views/service-standard`
 - Remove 'other help' contact section under 'guidance' on all service standard guidance pages `app/views/service-standard`
+- Remove 'id="talk-to-other-people-with-an-interest-in-accessibility' in `app/views/accessibility/getting-started.njk`
+- Remove ./partials/share-your-research.njk in `app/views/accessibility/user-research.njk`
 - Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
 
 
