@@ -1,14 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.14.4 - 01 April 2021
-
-:wrench: **Fixes**
-
-- Update `includes/_contact-panel.njk` to host new contextual contribution links on the service standard section
-- Refactor context links within `includes/app-layout.njk` to show on the service standard section
-- Update all context links within `app/views/service-standard`
-
-## 3.14.3 - 30 March 2021
+## 3.14.3 - 01 April 2021
 
 :wrench: **Fixes**
 
@@ -18,6 +10,7 @@
 - Update all context links within `app/views/content`
 - Update all context links within `app/views/design-system`
 - Update all context links within `app/views/accessibility`
+- Update all context links within `app/views/service-standard`
 - Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
 
 
