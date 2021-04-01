@@ -60,7 +60,13 @@
     <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
   </ul>
 
-  {{ pagination({
+
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
     "previousUrl": "/service-standard/1-understand-users-and-their-needs-context-health-and-care",
     "previousPage": "Point 1",
     "nextUrl": "/service-standard/4-make-the-service-simple-to-use",
