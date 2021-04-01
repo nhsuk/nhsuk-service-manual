@@ -57,16 +57,16 @@
   <ul>
     <li>The sections on <a href="https://www.cqc.org.uk/guidance-providers/healthcare/kindness-respect-compassion-healthcare-services">Kindness, respect and compassion</a>, <a href="https://www.cqc.org.uk/guidance-providers/healthcare/involving-people-decisions-about-their-care-healthcare-services">Involving people in decisions about their care</a>, and <a href="https://www.cqc.org.uk/guidance-providers/healthcare/privacy-dignity-healthcare-services">Privacy and dignity</a> in Key lines of enquiry for healthcare services (Care Quality Commission)</li>
   </ul>
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
 
-  {{ pagination({
+{% endblock %}
+
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/14-operate-a-reliable-service",
     "previousPage": "Point 14",
     "nextUrl": "/service-standard/16-make-your-service-clinically-safe",
     "nextPage": "Point 16"
   }) }}
 
-{% endblock %}
+  {% endblock %}

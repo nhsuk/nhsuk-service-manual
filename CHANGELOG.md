@@ -11,6 +11,7 @@
 - Update all context links within `app/views/design-system`
 - Update all context links within `app/views/accessibility`
 - Update all context links within `app/views/service-standard`
+- Remove 'other help' contact section under 'guidance' on all service standard guidance pages `app/views/service-standard`
 - Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
 
 

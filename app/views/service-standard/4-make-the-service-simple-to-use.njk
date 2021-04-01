@@ -40,16 +40,15 @@
     <li><a href="https://www.gov.uk/service-manual/user-research">User research</a></li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
     "previousPage": "Points 2 and 3",
     "nextUrl": "/service-standard/5-make-sure-everyone-can-use-the-service",
     "nextPage": "Point 5"
   }) }}
 
-{% endblock %}
+  {% endblock %}

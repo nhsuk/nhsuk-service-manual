@@ -49,16 +49,15 @@
     <li><a href="https://www.england.nhs.uk/ourwork/patient-participation/self-care/patient-activation/">Patient activation</a> (NHS England)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/9-respect-and-protect-users-confidentiality-and-privacy",
     "previousPage": "Point 9",
     "nextUrl": "/service-standard/11-choose-the-right-tools-and-technology",
     "nextPage": "Point 11"
   }) }}
 
-{% endblock %}
+  {% endblock %}

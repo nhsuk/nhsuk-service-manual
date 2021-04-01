@@ -43,10 +43,9 @@
     <li><a href="https://defradigital.blog.gov.uk/2017/09/19/lets-fund-teams-not-projects/">Let's fund teams, not projects</a> (Defra digital blog, 2017)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
+
+{% block afterContact %}
 
   {{ pagination({
     "previousUrl": "/service-standard/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
@@ -55,4 +54,4 @@
     "nextPage": "Point 8"
   }) }}
 
-{% endblock %}
+  {% endblock %}

@@ -43,10 +43,9 @@
     <li><a href="https://design-system.service.gov.uk/">GOV.UK Design System</a></li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="#">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
+
+{% block afterContact %}
 
   {{ pagination({
     "previousUrl": "/service-standard/12-make-new-source-code-open",
@@ -55,4 +54,4 @@
     "nextPage": "Point 14"
   }) }}
 
-{% endblock %}
+  {% endblock %}

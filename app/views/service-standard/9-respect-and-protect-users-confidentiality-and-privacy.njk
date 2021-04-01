@@ -52,16 +52,15 @@
     <li><a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS login</a></li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/8-iterate-and-improve-frequently",
     "previousPage": "Point 8",
     "nextUrl": "/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
     "nextPage": "Point 10"
   }) }}
 
-{% endblock %}
+  {% endblock %}

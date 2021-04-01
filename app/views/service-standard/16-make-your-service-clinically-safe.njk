@@ -50,18 +50,16 @@
     <li><a href="https://www.cqc.org.uk/guidance-providers/online/online-primary-care-services">Online primary care services</a> (Care Quality Commission) and <a href="https://www.cqc.org.uk/guidance-providers/online/how-we-monitor-inspect-regulate-online-primary-care">how the CQC monitors, inspects and regulates them</a></li>
     <li><a href="https://www.england.nhs.uk/safeguarding/">Safeguarding</a> (NHS England)</li>
   </ul>
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-    <li>Contact the NHS Digital Clinical Safety team at <a href="mailto:assurance@nhs.net">assurance@nhs.net</a> or on 0300 303 5678.</li>
-    <li>Take up NHS Digital <a href="https://digital.nhs.uk/services/solution-assurance/the-clinical-safety-team/clinical-risk-management-training">clinical risk management training</a>.</li>
-  </ul>
 
-  {{ pagination({
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
     "previousUrl": "/service-standard/15-support-a-culture-of-care",
     "previousPage": "Point 15",
     "nextUrl": "/service-standard/17-make-your-service-interoperable",
     "nextPage": "Point 17"
   }) }}
 
-{% endblock %}
+  {% endblock %}

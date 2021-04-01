@@ -48,10 +48,9 @@
     <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">Identity verification and authentication standard for digital health and care services</a>, DCB3051 (NHS Digital)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
+
+{% block afterContact %}
 
   {{ pagination({
     "previousUrl": "/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
@@ -60,4 +59,5 @@
     "nextPage": "Point 12"
   }) }}
 
-{% endblock %}
+
+  {% endblock %}
