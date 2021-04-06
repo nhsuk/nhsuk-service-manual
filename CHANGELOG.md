@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.14.3 - 01 April 2021
+## 3.14.3 - 06 April 2021
 
 :wrench: **Fixes**
 
