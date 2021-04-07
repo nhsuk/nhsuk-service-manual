@@ -49,3 +49,7 @@ p + .design-example {
 .nhsuk-lede-text + .design-example {
   @include nhsuk-responsive-padding(0, 'top');
 }
+
+.design-example-frame {
+  border: 0;
+}
