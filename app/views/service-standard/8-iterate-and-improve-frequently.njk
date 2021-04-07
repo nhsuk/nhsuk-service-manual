@@ -3,6 +3,7 @@
 {% set pageDescription = "Make sure you have the capacity, resources and technical flexibility to iterate and improve the service frequently." %}
 {% set beta = true %}
 {% set dateUpdated = "December 2019" %}
+{% set backlog_issue_id = "342" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -39,16 +40,16 @@
     <li><a href="https://gds.blog.gov.uk/2015/03/06/gov-uk-isnt-finished/">GOV.UK isn't finished</a> (GOV.UK blog, 2015)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
 
-  {{ pagination({
+{% endblock %}
+
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/7-use-agile-ways-of-working",
     "previousPage": "Point 7",
     "nextUrl": "/service-standard/9-respect-and-protect-users-confidentiality-and-privacy",
     "nextPage": "Point 9"
   }) }}
 
-{% endblock %}
+  {% endblock %}

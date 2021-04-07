@@ -3,6 +3,7 @@
 {% set pageDescription = "Make all new source code open and reusable, and publish it under appropriate licences." %}
 {% set beta = true %}
 {% set dateUpdated = "December 2019" %}
+{% set backlog_issue_id = "355" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -43,16 +44,16 @@
     <li><a href="https://technology.blog.gov.uk/2017/09/27/dont-be-afraid-to-code-in-the-open-heres-how-to-do-it-securely/">Don’t be afraid to code in the open: here’s how to do it securely</a> (GOV.UK blog, 2017)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+    {{ pagination({
     "previousUrl": "/service-standard/11-choose-the-right-tools-and-technology",
     "previousPage": "Point 11",
     "nextUrl": "/service-standard/13-use-and-contribute-to-open-standards-common-components-and-patterns",
     "nextPage": "Point 13"
   }) }}
 
-{% endblock %}
+
+  {% endblock %}
