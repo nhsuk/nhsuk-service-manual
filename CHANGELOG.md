@@ -1,21 +1,15 @@
 # NHS digital service manual Changelog
 
-## 3.14.3 - 07 April 2021
+## 3.14.3 - Unreleased
+
+:new: **New features**
+
+- Update A to Z of NHS health writing with a link to new GOV.UK coronavirus (COVID-19) A to Z
 
 :wrench: **Fixes**
 
-- Update `includes/_contact-panel.njk` to host new contextual contribution links
-- Refactor context links within `includes/app-layout.njk`
-- Fix context links within `content/how-to-write-good-questions-for-forms`
-- Update all context links within `app/views/content`
-- Update all context links within `app/views/design-system`
-- Update all context links within `app/views/accessibility`
-- Update all context links within `app/views/service-standard`
-- Remove 'other help' contact section under 'guidance' on all service standard guidance pages `app/views/service-standard`
-- Remove 'id="talk-to-other-people-with-an-interest-in-accessibility' in `app/views/accessibility/getting-started.njk`
-- Remove ./partials/share-your-research.njk in `app/views/accessibility/user-research.njk`
+- Add contribution links to pages across the service manual [Issue 1000](https://github.com/nhsuk/nhsuk-service-manual/issues/1000)
 - Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
-
 
 ## 3.14.2 - 18 March 2021
 
