@@ -49,12 +49,11 @@
 
     <!-- Cookie consent -->
     <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
-    
-    <!-- Data Layer -->
-    {% include "includes/_digital-data.njk" %}
         
     <!-- Adobe Analytics -->
     {% if adobeTrackingUrl %}
+      <!-- Data Layer -->
+      {% include "includes/_digital-data.njk" %}
       <script src="{{ adobeTrackingUrl }}" type="text/plain" data-cookieconsent="statistics" async></script>
     {% endif %}
 
