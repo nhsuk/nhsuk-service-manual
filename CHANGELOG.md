@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Update A to Z of NHS health writing with a link to new GOV.UK coronavirus (COVID-19) A to Z
+- Replace Google Analytics with Adobe Analytics and update the cookie policy to include the new cookies [Issue 1101](https://github.com/nhsuk/nhsuk-service-manual/issues/1101)
 
 :wrench: **Fixes**
 

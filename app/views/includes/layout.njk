@@ -49,27 +49,20 @@
 
     <!-- Cookie consent -->
     <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
-
-    {%- if ENVIRONMENT == "production" %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
-    <script data-cookieconsent="statistics" type="text/plain" >
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
-    </script>
-    {%- endif %}
+        
+    <!-- Adobe Analytics -->
+    {% if adobeTrackingUrl %}
+      <!-- Data Layer -->
+      {% include "includes/_digital-data.njk" %}
+      <script src="{{ adobeTrackingUrl }}" type="text/plain" data-cookieconsent="statistics" async></script>
+    {% endif %}
 
     <!-- Verify domain with Google -->
     <meta name="google-site-verification" content="Prj4LS7KX0amTkqVrOlnEyldVIjzJqbnXgPL1zbHocM" />
 
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
-    <link href="https://www.googletagmanager.com" rel="preconnect">
-    <link href="https://www.google-analytics.com" rel="preconnect">
-
+  
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
     <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
