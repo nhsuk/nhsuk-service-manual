@@ -3,6 +3,7 @@
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "Writing good questions starts with a discovery phase." %}
 {% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "325" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -47,7 +48,13 @@
   <h2>Read more about the discovery phase</h2>
   <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works">how the discovery phase works</a>.</p>
 
-  {{ pagination({
+  
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/index",
     "previousPage": "How to write good questions for forms home page",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question",

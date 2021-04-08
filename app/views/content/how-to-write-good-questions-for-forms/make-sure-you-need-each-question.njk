@@ -3,6 +3,7 @@
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "Question your questions. Keep them to a minimum." %}
 {% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "326" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -16,7 +17,7 @@
 
   <h2 id="understand-why-you're-asking-each-question">Understand why you're asking each question</h2>
   <p>Make a list of all the information you need from your users now for you to deliver the service.</p>
-  <p> Having a list forces you to question why you're asking users for each item of information. It also helps you challenge unnecessary questions. (This list is sometimes called a "question protocol".)</p>
+  <p>Having a list forces you to question why you're asking users for each item of information. It also helps you challenge unnecessary questions. (This list is sometimes called a "question protocol".)</p>
   <p>Work out what <a href="#use-information-your-organisation-already-has">information your organisation already has (or can access)</a> and where you have information gaps. Ask the questions that let you fill the gaps.</p>
 
   <h2>Only ask for information you definitely need</h2>
@@ -119,7 +120,13 @@
     <li><a href="https://www.gov.uk/service-manual/design/collecting-personal-information-from-users">Collecting personal information from users</a> (GOV.UK)</li>
   </ul>
 
-  {{ pagination({
+
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions",
     "previousPage": "Understand the problem before you write your questions",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",

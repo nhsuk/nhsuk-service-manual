@@ -3,7 +3,7 @@
 {% from 'skip-link/macro.njk' import skipLink %}
 
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
+  <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
 
       {% block skipLink %}
         {{ skipLink({
-          href: '#main-content',
+          href: '#maincontent',
           text: 'Skip to main content'
         }) }}
       {% endblock %}

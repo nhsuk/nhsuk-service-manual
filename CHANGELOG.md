@@ -1,6 +1,70 @@
 # NHS digital service manual Changelog
 
-## 3.11.0 - TBC February 2021
+## 3.14.3 - Unreleased
+
+:new: **New features**
+
+- Update A to Z of NHS health writing with a link to new GOV.UK coronavirus (COVID-19) A to Z
+
+:wrench: **Fixes**
+
+- Add contribution links to pages across the service manual [Issue 1000](https://github.com/nhsuk/nhsuk-service-manual/issues/1000)
+- Find and replace all non-closing `<p>` tags - [Issue 1092](https://github.com/nhsuk/nhsuk-service-manual/issues/1092)
+- Fix HTML validation issues with the code examples and OGL footer logo
+- Remove duplicate IE11 polyfills
+- Update dependencies to the latest versions
+
+## 3.14.2 - 18 March 2021
+
+:wrench: **Fixes**
+
+- Improve content about publishing an accessibility statement
+- Make sure "Updated" date is correct on the product and delivery pages in accessibility guidance
+- Update the NHS digital service manual team members
+
+## 3.14.1 - 16 March 2021
+
+:wrench: **Fixes**
+
+- Remove role and focusable attributes from the logo
+
+## 3.14.0 - 16 March 2021
+
+:new: **New features**
+
+- Remove the review date component and replace it with the "Reassure users that a page is up to date" pattern.
+
+:wrench: **Fixes**
+
+- Use maincontent as the ID for the main element across the NHS digital service manual and examples for consistency and to match the Skip link anchor (https://github.com/nhsuk/nhsuk-frontend/issues/716)
+- Use the latest version of NHS.UK frontend (v5.0.0)
+- Update dependencies to the latest versions
+
+## 3.13.0 - 11 March 2021
+
+:new: **New features**
+- Add service manual team page
+
+:wrench: **Fixes**
+
+- Update `site-map.njk` 'community' to 'community and contribution'
+
+## 3.12.1 - 08 March 2021
+:wrench: **Fixes**
+
+- Update `app.js` redirect URL for `/community`
+
+
+## 3.12.0 - 08 March 2021
+
+:new: **New features**
+- Change name of the contribution section to community and contribution
+
+:wrench: **Fixes**
+
+- Replace broken Chrome link for accessibility page web developer tool
+
+## 3.11.0 - 25 February 2021
 
 :new: **New features**
 - Add page template guidance to the design system
@@ -12,6 +76,7 @@
 - Remove 2 broken links from health literacy page
 - Amend the site map page to bring it into line with the site map entry in the style guide
 - Remove negative contraction (can't) on Page not found page 
+- Remove all code related to the readability tool page
 
 ## 3.10.1 - 28 January 2021
 

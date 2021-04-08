@@ -4,6 +4,7 @@
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "As well as questions, your form or service may need an introduction, help text, error messages and a confirmation or thank you page. Think about content across other channels too." %}
 {% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "331" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -118,7 +119,7 @@
   </div>
 
   <h3 id="how-to-add-help-text">How to add help text</h3>
-  <p>We do not recommend tool tips. They can be hard for users to see and are not accessible.<p>
+  <p>We do not recommend tool tips. They can be hard for users to see and are not accessible.</p>
   <p>Instead you can:</p>
   <ul>
     <li>add <a href="/design-system/components/hint-text">hint text</a> as a part of other form inputs, such as <a href="/design-system/components/text-input#using-hint-text">text inputs</a>, <a href="/design-system/components/radios#radios-with-hints">radios</a> and <a href="/design-system/components/checkboxes#checkboxes-with-hint-text">checkboxes</a>, for help that's relevant to most of your users</li>
@@ -153,7 +154,13 @@
   <h2>Read more about writing content for transactions</h2>
   <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
 
-  {{ pagination({
+
+
+{% endblock %}
+
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
     "previousPage": "Think of the form as a conversation",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/test-your-questions",

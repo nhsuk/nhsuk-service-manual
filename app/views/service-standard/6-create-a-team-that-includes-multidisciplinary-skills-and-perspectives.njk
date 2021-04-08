@@ -3,6 +3,7 @@
 {% set pageDescription = "Make sure you have the right - and diverse - skills and roles to build and operate the service." %}
 {% set beta = true %}
 {% set dateUpdated = "December 2019" %}
+{% set backlog_issue_id = "340" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -41,16 +42,15 @@
     <li><a href="https://www.gov.uk/service-manual/the-team/working-contractors-third-parties">Working with contractors or third parties</a></li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+   {{ pagination({
     "previousUrl": "/service-standard/5-make-sure-everyone-can-use-the-service",
     "previousPage": "Point 5",
     "nextUrl": "/service-standard/7-use-agile-ways-of-working",
     "nextPage": "Point 7"
   }) }}
 
-{% endblock %}
+  {% endblock %}

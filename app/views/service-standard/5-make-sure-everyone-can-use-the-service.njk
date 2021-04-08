@@ -3,6 +3,7 @@
 {% set pageDescription = "Make sure people with different physical, mental health, social, cultural or learning needs can use your service, whether it's for the public or staff." %}
 {% set beta = true %}
 {% set dateUpdated = "December 2019" %}
+{% set backlog_issue_id = "339" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -50,10 +51,9 @@
     <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/digital-inclusion">Digital inclusion for health and social care</a> (NHS Digital, 2018)</li>
   </ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
+
+{% block afterContact %}
 
   {{ pagination({
     "previousUrl": "/service-standard/4-make-the-service-simple-to-use",
@@ -62,4 +62,4 @@
     "nextPage": "Point 6"
   }) }}
 
-{% endblock %}
+  {% endblock %}

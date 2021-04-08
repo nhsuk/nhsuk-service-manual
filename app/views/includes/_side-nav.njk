@@ -57,10 +57,6 @@
   { title: "Test your questions", url: "/content/how-to-write-good-questions-for-forms/test-your-questions" }
 ] %}
 
-{% set healthLiteracy = [
-  { title: "Use a readability tool to prioritise content", url: "/content/health-literacy/use-a-readability-tool-to-prioritise-content" }
-] %}
-
 {% set styles = [
   { title: "Colour", url: "/design-system/styles/colour" },
   { title: "Focus state", url: "/design-system/styles/focus-state" },
@@ -90,7 +86,6 @@
   { title: "Expander", url: "/design-system/components/expander" },
   { title: "Images", url: "/design-system/components/images" },
   { title: "Inset text", url: "/design-system/components/inset-text" },
-  { title: "Review date", url: "/design-system/components/review-date" },
   { title: "Summary list", url: "/design-system/components/summary-list" },
   { title: "Table", url: "/design-system/components/table" },
   { title: "Tag", url: "/design-system/components/tag" },
@@ -112,7 +107,8 @@
 ] %}
 
 {% set askUsers = [
-  { title: "Ask users for their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" }
+  { title: "Ask users for their NHS number", url: "/design-system/patterns/ask-users-for-their-nhs-number" },
+  { title: "Reassure users that a page is up to date", url: "/design-system/patterns/reassure-users-that-a-page-is-up-to-date" }
 ] %}
 
 {% set pages = [
@@ -121,10 +117,10 @@
 ] %}
 
 {% set community = [
-  { title: "Backlog of components and patterns", url: "/community/backlog-of-components-and-patterns" },
-  { title: "Propose a component or pattern", url: "/community/propose-component-pattern" },
-  { title: "Develop a component or pattern", url: "/community/develop-component-pattern" },
-  { title: "Contribution criteria", url: "/community/contribution-criteria" }
+  { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
+  { title: "Propose a component or pattern", url: "/community-and-contribution/propose-component-pattern" },
+  { title: "Develop a component or pattern", url: "/community-and-contribution/develop-component-pattern" },
+  { title: "Contribution criteria", url: "/community-and-contribution/contribution-criteria" }
 ] %}
 
 {% set whatsNew = [
@@ -281,7 +277,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Community" %}
+  {%- if pageSection == "Community and contribution" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>

@@ -3,6 +3,7 @@
 {% set pageDescription = "In an organisation as diverse and complex as the NHS, we need systems and services which talk to each other. Build for interoperability to share patient records and get data quickly from one place to another." %}
 {% set beta = true %}
 {% set dateUpdated = "January 2020" %}
+{% set backlog_issue_id = "360" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -55,14 +56,13 @@
     <li><a href="https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct">SNOMED CD</a> - a structured clinical vocabulary for use in an electronic health record (NHS Digital)</li>
     <li><a href="https://digital.nhs.uk/about-nhs-digital/our-work/nhs-digital-data-and-technology-standards/framework/beta---use-of-fhir-based-apis">Use of FHIR-based APIs</a> (NHS Digital - beta)</li></ul>
 
-  <h3>Other help</h3>
-  <ul>
-    <li>Talk to us on the <a href="/slack">service manual Slack channel</a> or email the standards team at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</li>
-  </ul>
+{% endblock %}
 
-  {{ pagination({
+{% block afterContact %}
+
+ {{ pagination({
     "previousUrl": "/service-standard/16-make-your-service-clinically-safe",
     "previousPage": "Point 16"
   }) }}
 
-{% endblock %}
+  {% endblock %}

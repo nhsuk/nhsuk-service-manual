@@ -4,6 +4,7 @@
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "Think about how the questions flow and group them in a way that makes sense to the user." %}
 {% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "329" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -56,7 +57,13 @@
   <p>You need to understand which questions your users expect first and how they group them. One way to do this is with a <a href="/content/how-to-write-good-questions-for-forms/test-your-questions#do-a-card-sorting-exercise">card sorting exercise</a>. Test the order again when you prototype your form.</p>
   <p>For example, do users expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
 
-  {{ pagination({
+  
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
     "previousUrl": "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
     "previousPage": "Use filter questions to route users",
     "nextUrl": "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
