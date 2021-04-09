@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 3.15.1 - TBC
+
+:wrench: **Fixes**
+
+- Fix GitHub issue number for PDF page in content style guide
+
 ## 3.15.0 - 09 April 2021
 
 :new: **New features**
