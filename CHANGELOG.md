@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 3.14.3 - Unreleased
+## 3.15.0 - 09 April 2021
 
 :new: **New features**
 
