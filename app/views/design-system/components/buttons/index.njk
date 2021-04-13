@@ -1,0 +1,96 @@
+{% set pageTitle = "Buttons" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "7" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>We have 3 buttons</p>
+  <ul>
+    <li><a href="#primary-button">primary button</a></li>
+    <li><a href="#secondary-button">secondary button</a></li>
+    <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
+  </ul>
+
+  <h2 id="primary-button">Primary button</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "default"
+  }) }}
+
+  <h3>When to use a primary button</h3>
+  <p>Use a primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
+  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
+
+  <h2 id="secondary-button">Secondary button</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "secondary"
+  }) }}
+
+  <h3>When to use a secondary button</h3>
+  <p>Use a secondary button on pages that have more than 1 action or when users aren't noticing standard link text.</p>
+  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
+
+  <h2 id="reverse-button">White button on solid background colour (reverse button)</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "reverse"
+  }) }}
+
+  <h3>When to use a white button on solid background colour</h3>
+  <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>.)</p>
+  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
+
+  <h2 id="when-to-use-buttons">When to use buttons</h2>
+  <p>Use buttons to start or save transactional journeys.</p>
+
+  <h2  id="when-not-to-use-buttons">When not to use buttons</h2>
+  <p>Do not use buttons as links:
+  <ul>
+    <li>to pages which aren't part of your user journey</li>
+    <li>from 1 flat content page to another</li>
+    <li>to external websites</li>
+  </ul>
+  <p>Try not to have multiple buttons on 1 page. Follow GOV.UK guidance on <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">One thing per page</a>.</p>
+
+  <h2 id="how-to-use-buttons">How to use buttons</h2>
+  <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK Design System</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
+  <p>Write button text in sentence case and describe the action the button performs. For example "Save and continue" or "Start now".</p>
+  <p>Align the primary action button to the left edge of your form.</p>
+
+  <h3>Disabled buttons</h3>
+  <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
+  <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest disabled button code</a> in the NHS.UK frontend library in GitHub.</p>
+
+  <h3>Accessibility</h3>
+  <p>Make sure the text you use describes the action.</p>
+  <p>All 3 active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
+  <ul>
+    <li>primary button 5.12:1</li>
+    <li>secondary button 7.75:1</li>
+    <li>white button on solid background colour  14.42:1</li>
+  </ul>
+  <p>Please note that the disabled versions of the 3 buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
+
+  <h2 id="research">Research</h2>
+  <p>We based our buttons on the GOV.UK designs. But because our logo is a blue rectangle and a number of our components (including panel headings) have squared edges, we decided that GOV.UK buttons didn’t stand out enough. The square buttons didn't look clickable next to the other square components.</p>
+  <p>We made the buttons more "buttony" by rounding the corners (adding corner radiuses). There is research to suggest that rounded corners make things more clickable.</p>
+  <p>Our testing confirmed this. Users were able to complete tasks using buttons and they didn’t confuse them with non-clickable components.</p>
+
+{% endblock %}

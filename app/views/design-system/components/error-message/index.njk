@@ -1,0 +1,117 @@
+{% set pageTitle = "Error message" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use an error message when there is a validation error. Explain what went wrong and how to fix it." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "June 2020" %}
+{% set backlog_issue_id = "12" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "in-context"
+  }) }}
+
+  <h2>When to use error messages </h2>
+  <p>Use the error message component when there is a validation error. For example when:</p>
+  <ul>
+    <li>you need to tell the user to choose an option before continuing</li>
+    <li>you need the user to correct or change their input to match what your system can accept</li>
+  </ul>
+  <p>Follow our guidance on <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a> and make them easy to use so that users never see an error message.</p>
+
+  <h2>When not to use error messages</h2>
+  <p>Only display an error when someone tries to move to the next part of the service. Do not show error messages:</p>
+  <ul>
+    <li>when users select or tab to a field</li>
+    <li>as they are typing</li>
+    <li>when they move away from a field</li>
+  </ul>
+  <p>Do not use error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:</p>
+  <ul>
+    <li>explains why you cannot accept the entry or selection</li>
+    <li>tells them what to do next</li>
+    <li>includes a way to leave the transaction</li>
+  </ul>
+
+  <h2>How to use error messages</h2>
+  <p>For each error:</p>
+  <ul>
+    <li>put the message in an <a href="/design-system/components/error-summary">error summary</a> at the top of the page the user is on  — <a href="/design-system/components/error-summary#linking-from-the-error-summary-to-each-answer">linking to the answer</a> that has the validation error</li>
+    <li>put the message in red after the question text and hint text</li>
+    <li>use a red border to visually connect the message and the question it belongs to</li>
+    <li>if the error relates to specific text fields in the question, give these a red border as well</li>
+  </ul>
+  <p>To help screen reader users, the error message component includes a hidden "Error:" before the error message. These users will hear, for example, "Error: Date of birth must be in the past".</p>
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "default",
+    htmlOnly: true,
+    showExample: false
+  }) }}
+
+  <h3 id="legend">If you're using a legend</h3>
+  <p>This is how we use an error message with a <a href="/design-system/components/fieldset#how-it-works">legend</a>, for example with <a href="/design-system/components/radios">radios</a> or <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "radios"
+  }) }}
+
+  <h3 id="label">If you're using a label</h3>
+  <p>This is how we use an error message with a label, for example, with <a href="/design-system/components/text-input">text input</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "input"
+  }) }}
+
+  <h3 id="error-summary">Using an error summary</h3>
+
+  <p>Summarise all errors at the top of the page the user is on using an <a href="/design-system/components/error-summary">error summary</a>. For example:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "error-summary-placement",
+    fullpage: true
+  }) }}
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "error-summary-placement-input",
+    fullpage: true
+  }) }}
+
+  {{ designExample({
+    group: "components",
+    item: "error-message",
+    type: "error-summary-placement-multiple",
+    fullpage: true
+  }) }}
+
+  <h3>How to write error messages</h3>
+  <p>Focus on telling users how to fix the problem rather than describing what's gone wrong. You may need to write more than 1 error message for each field. Read more about <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a> on GOV.UK.</p>
+  <p>Use standard messages for different components. The GOV.UK Design System has some good <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">error message templates for common errors</a>.</p>
+
+  <h2>Research</h2>
+  <p>Research on error messages showed users:</p>
+  <ul>
+    <li>understood what went wrong</li>
+    <li>knew how to fix the problem</li>
+    <li>were able to recover from the error</li>
+  </ul>
+{% endblock %}

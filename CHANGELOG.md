@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
+## 4.0.0 - Unreleased
 
-## 3.15.1 - TBC
+:new: **New features**
+
+- Restructure the design examples folder to allow for Nunjucks macro options
+- Add Nunjucks macro options to design examples
 
 :new: **New features**
 

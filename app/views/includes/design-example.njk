@@ -1,7 +1,6 @@
 {% macro designExample(params) %}
-
-  {% set examplePath = "app/components/" + params.type + ".njk" %}
-  {% set standaloneURL = "/design-example/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
+  {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
+  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
@@ -22,7 +21,7 @@
 
   Code definitions should be an object with a `name` and the raw `code` to
   render onto the page with the `|safe` filter.
-#}
+  #}
   {% set htmlDefinition = {
     name: 'HTML',
     code: html
@@ -79,6 +78,20 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
+              <div class="app-code-snippet__macro">
+              {% if snippet.name === 'Nunjucks' %}
+                <details class="nhsuk-details">
+                  <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                      Nunjucks macro options<span class="nhsuk-u-visually-hidden"> for {{ exampleTitle }}</span>
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+                    <p>Something</p>
+                  </div>
+                </details>
+              {% endif %}
+              </div>
               <a class="app-link--copy" href="" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}

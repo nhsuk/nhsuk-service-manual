@@ -1,0 +1,70 @@
+{% set pageTitle = "Tag" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use the tag component when it's possible for something to have more than 1 status and it's useful for the user to know about that status. For example, you can use a tag to show whether an item in a task list has been \"completed\"." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "October 2020" %}
+{% set backlog_issue_id = "174" %}
+{% set hideDescription = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="when-to-use">When to use a tag</h2>
+  <p>Use the tag component when it's possible for something to have more than 1 status and it's useful for the user to know about that status. For example, you can use a tag to show whether an item in a task list has been "completed".</p>
+
+  <h2 id="how-it-works">How it works</h2>
+  <p>Tags are just used to indicate a status. Do not add links. Use adjectives rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.</p>
+
+  <h3 id="showing-1-or-2-statuses">Showing 1 or 2 statuses</h3>
+  <p>Sometimes a single status is enough. For example, if you need to tell users which parts of an application they've finished and which they have not, you may only need a "Completed" tag. Because the user understands that if something does not have a tag, that means it's incomplete.</p>
+  <p>Or it can make sense to have 2 statuses. For example, you may find that you need 1 tag for "Active" users and 1 for "Inactive" users.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "tag",
+    type: "default"
+  }) }}
+
+  <h3 id="showing-multiple-statuses">Showing multiple statuses</h3>
+  <p>Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there's a need for them.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "tag",
+    type: "multiple"
+  }) }}
+
+  <h3 id="using-colour-with-tags">Using colour with tags</h3>
+  <p>You can use colour to help distinguish between different tags – or to help draw the user's attention to a tag if it's especially important. For example, it makes sense to use  <code>nhsuk-tag--red</code> for a tag that reads "Urgent".</p>
+  <p><a href="/accessibility/design#do-not-rely-on-colour-or-position-alone">Do not rely on colour alone</a> to convey information because it's not accessible. If you use the same tag in more than 1 place, make sure you keep the colour consistent.</p>
+  <p>Because tags with solid colours tend to stand out more, it's usually best to avoid mixing solid colours and tints: use one or the other. This matters less if you're only using 2 colours. For example, it's okay to use the tint <code>nhsuk-tag--grey</code> and solid blue tags together if you only need 2 statuses.</p>
+  <p>We use a border of the same colour as the tag text to stand out against the NHS page background colour.</p>
+
+  <h3 id="additional-colours">Additional colours</h3>
+  <p>If you need more tag colours, you can use the following tints.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "tag",
+    type: "colours"
+  }) }}
+
+  <h2 id="accessibility">Accessibility</h2>
+  <p>All contrasts between text and background meet level AAA of WCAG 2.0. Read more about <a href="/design-system/styles/colour#accessibility">accessibility and colour</a>.</p>
+
+  <h2 id="research">Research</h2>
+  <p>We have tested tags in the NHS e-referral service, the "Submit your electronic declaration" service and the NHS App prescriptions service. We found that they helped users:</p>
+  <ul>
+    <li>make a decision about whether or not to proceed with their journey</li>
+    <li>understand their progress or the status of an order</li>
+    <li>save time as they could see the information they needed quickly</li>
+  </ul>
+  <p>We also found that it helped to use sentence case rather than block capitals for readability.</p>
+
+{% endblock %}

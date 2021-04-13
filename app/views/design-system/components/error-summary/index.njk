@@ -1,0 +1,84 @@
+{% set pageTitle = "Error summary" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "June 2020" %}
+{% set backlog_issue_id = "13" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    {{ designExample({
+      group: "components",
+      item: "error-summary",
+      type: "default"
+    }) }}
+
+    <h2 id="when-to-use">When to use an error summary</h2>
+    <p>When a user makes a mistake, you must show an error summary at the top of the page as well as an <a href="/design-system/components/error-message">error message</a> next to each answer that contains an error.</p>
+    <p>Always show an error summary when there is a validation error, even if there’s only 1 mistake.</p>
+
+    <h2 id="how-it-works">How to use an error summary</h2>
+    <p>You must:</p>
+    <ul>
+      <li class="rich-text">add "Error: " to the beginning of the <code>&lt;title&gt;</code> so screen readers read it out as soon as possible</li>
+      <li>show an error summary at the top of a page</li>
+      <li>move the keyboard focus to the error summary</li>
+      <li>include the heading "There is a problem"</li>
+      <li>link to each of the answers that have validation errors</li>
+      <li>show the same error messages next to the inputs with errors</li>
+    </ul>
+    <p>Follow GOV.UK Design System guidance on <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a>.</p>
+
+    <h3 id="linking-from-the-error-summary-to-each-answer">Linking from the error summary to each answer</h3>
+    <p>You must link the errors in the error summary to the answer they relate to.</p>
+    <p>For questions that require a user to answer using a single field, like a select, textarea or text input, link to the field.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "error-summary",
+      type: "link-input"
+    }) }}
+
+    <p>When a user has to enter their answer into multiple fields, such as the day, month and year fields in the date input component, link to the 1st field that contains an error.</p>
+    <p>If you do not know which field contains an error, link to the 1st field.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "error-summary",
+      type: "link-multiple-input"
+    }) }}
+
+    <p>For questions that require a user to select one or more options from a list using radios or checkboxes, link to the 1st radio or checkbox.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "error-summary",
+      type: "link-options"
+    }) }}
+
+    <h3 id="where-to-put-the-error-summary">Where to put the error summary</h3>
+    <p>Put the error summary at the top of the <code>main</code> container. If your page includes breadcrumbs or a back link, place it below these, but above the <code>&lt;h1&gt;</code>.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "error-summary",
+      type: "placement",
+      fullpage: true
+    }) }}
+
+    <h2>Research</h2>
+    <p>GOV.UK research on error summaries showed users:</p>
+    <ul>
+      <li>understood what went wrong</li>
+      <li>knew how to fix the problem</li>
+      <li>were able to recover from the error</li>
+    </ul>
+
+{% endblock %}
