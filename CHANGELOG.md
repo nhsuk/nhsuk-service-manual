@@ -2,6 +2,10 @@
 
 ## 3.15.1 - TBC
 
+:new: **New features**
+
+- Update service manual team page with new members
+
 :wrench: **Fixes**
 
 - Fix GitHub issue number for PDF page in content style guide
