@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Add new entry to A to Z of NHS health writing for GP system supplier names and patient-facing services
 - Update service manual team page with new members
 
 :wrench: **Fixes**
