@@ -3,7 +3,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Page types" %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "April 2021" %}
 {% set backlog_issue_id = "86" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -14,7 +14,13 @@
 
 {% block bodyContent %}
 
-  <img class="app-image--border nhsuk-u-margin-bottom-8" src="/assets/mini-hub-amd.png" alt="Mini-hub example on desktop"/>
+  {{ designExample({
+    group: "patterns",
+    item: "mini-hub",
+    type: "example",
+    fullpage: true
+  }) }}
+
   <p>The mini-hub is made up of:</p>
   <ul>
     <li>a <a href="/design-system/styles/typography#headings">heading and sub-heading</a> which sit at the top of the page</li>

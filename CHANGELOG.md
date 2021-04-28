@@ -1,10 +1,12 @@
 # NHS digital service manual Changelog
+
 ## 4.0.0 - Unreleased
 
 :new: **New features**
 
 - Restructure the design examples folder to allow for Nunjucks macro options
 - Add Nunjucks macro options to design examples
+- Replace Mini-hub pattern example image with full page code snippet
 
 :new: **New features**
 

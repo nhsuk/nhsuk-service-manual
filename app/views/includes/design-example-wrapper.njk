@@ -25,7 +25,7 @@
     <script src="/js/main.min.js" defer></script>
   </head>
 
-  <body>
+  <body class="app-example-{{item}}-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     {{ body | safe }}

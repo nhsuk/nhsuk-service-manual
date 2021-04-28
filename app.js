@@ -93,7 +93,7 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
     baseTemplate = 'includes/design-example-wrapper-blank.njk';
   }
 
-  res.render(baseTemplate, { body: exampleHtml });
+  res.render(baseTemplate, { body: exampleHtml, item });
 });
 
 app.get('/search', (req, res) => {

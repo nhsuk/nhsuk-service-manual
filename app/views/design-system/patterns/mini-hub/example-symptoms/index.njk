@@ -1,0 +1,114 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+{% from 'care-card/macro.njk' import careCard %}
+{% from 'images/macro.njk' import image %}
+{% from 'inset-text/macro.njk' import insetText %}
+{% from 'pagination/macro.njk' import pagination %}
+
+{% block outerContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/conditions",
+        text: "Health A to Z"
+      }
+    ],
+    href: "/conditions/age-related-macular-degeneration-amd/",
+    text: "Age-related macular degeneration (AMD)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span role="text">
+          Symptoms
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+            <span class="nhsuk-u-visually-hidden">
+            -
+            </span>
+              Age-related macular degeneration (AMD)
+          </span>
+        </span>
+      </h1>
+
+      <p>AMD affects the middle part of your vision, not the edges (peripheral vision).</p>
+      <p>You can get it in one eye or both.</p>
+
+      {{ image({
+        "src": "https://assets.nhs.uk/nhsuk-cms/images/NHSC_0218_AMD_Version2.width-320.jpg",
+        "sizes": "(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw",
+        "srcset": "https://assets.nhs.uk/nhsuk-cms/images/NHSC_0218_AMD_Version2.width-640.jpg 640w, https://assets.nhs.uk/nhsuk-cms/images/NHSC_0218_AMD_Version2.width-640.jpg 640w",
+        "alt": "Blurred book showing what vision is like for a person with early AMD",
+        "caption": "The first symptom is often a blurred or distorted area in your vision"
+      }) }}
+
+      {{ image({
+        "src": "https://assets.nhs.uk/nhsuk-cms/images/S_0218_AMD_C0037144.width-320.jpg",
+        "sizes": "(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw",
+        "srcset": "https://assets.nhs.uk/nhsuk-cms/images/S_0218_AMD_C0037144.width-640.jpg 640w, https://assets.nhs.uk/nhsuk-cms/images/S_0218_AMD_C0037144.width-767.jpg 767w",
+        "alt": "A dark patch in the vision of someone with AMD",
+        "caption": "If it gets worse, you might struggle to see anything in the middle of your vision"
+      }) }}
+
+      <p>AMD can make things like reading, watching TV, driving or recognising faces difficult.</p>
+
+      <p>Other symptoms include:</p>
+      <ul>
+        <li>seeing straight lines as wavy or crooked</li>
+        <li>objects looking smaller than normal</li>
+        <li>colours seeming less bright than they used to</li>
+        <li>seeing things that aren't there (hallucinations)</li>
+      </ul>
+      <p>AMD isn't painful and doesn't affect the appearance of your eyes.</p>
+
+      {{ insetText({
+        "HTML": "<p>Sometimes AMD may be found during a routine eye test before you have symptoms.</p>"
+      }) }}
+
+      {{ careCard({
+        "type": "non-urgent",
+        "heading": "See an optician if you're worried about your vision",
+        "HTML": "
+        <p>If you have a problem with your eyes, early diagnosis and treatment may help stop your vision getting worse.</p>
+        <p><a href=\"https://www.nhs.uk/service-search/Opticians/LocationSearch/9\">Find an opticians</a></p>
+        "
+      }) }}
+
+      {{ careCard({
+        "type": "urgent",
+        "heading": "Ask for an urgent GP appointment if:",
+        "HTML": "
+        <ul>
+          <li>your vision gets suddenly worse </li>
+          <li>you have a dark \"curtain\" or shadow moving across your vision</li>
+        <li>your eye is red and painful</li>
+        </ul>
+        <p>These aren't symptoms of AMD but can be signs of other eye problems that need to be treated immediately.</p>
+        <p><strong>Go to A&amp;E or call 111 straight away if you can't get an urgent appointment.</strong></p>
+        <p><a href=\"https://www.nhs.uk/service-search/accident-and-emergency-services/locationsearch/428\">Find an A&amp;E department</a></p>
+        "
+      }) }}
+
+      <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-color">
+        Page last reviewed: 27 March 2018<br>
+        Next review due: 27 March 2021
+      </p>
+
+      {{ pagination({
+        "previousUrl": "/design-example/patterns/mini-hub/example?fullpage=true",
+        "previousPage": "Age-related macular degeneration (AMD)",
+        "nextUrl": "#",
+        "nextPage": "Getting diagnosed"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
