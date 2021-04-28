@@ -8,6 +8,8 @@
 - Add Nunjucks macro options to design examples
 - Replace Mini-hub pattern example image with full page code snippet
 
+## 3.15.1 - 27 April 2021
+
 :new: **New features**
 
 - Add new entry to A to Z of NHS health writing for GP system supplier names and patient-facing services
@@ -16,7 +18,6 @@
 :wrench: **Fixes**
 
 - Fix GitHub issue number for PDF page in content style guide
-
 ## 3.15.0 - 09 April 2021
 
 :new: **New features**
