@@ -8,6 +8,10 @@
 - Add Nunjucks macro options to design examples
 - Replace Mini-hub pattern example image with full page code snippet
 
+:wrench: **Fixes**
+
+- Update dependencies to the latest versions
+
 ## 3.15.1 - 27 April 2021
 
 :new: **New features**
