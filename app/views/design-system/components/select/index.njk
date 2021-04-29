@@ -1,0 +1,29 @@
+{% set pageTitle = "Select" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "20" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "select",
+    type: "default"
+  }) }}
+
+  <h2 id="how-it-works">How to use select</h2>
+  <p>The select component allows users to choose an option from a long list. Before using it, try other questions which will allow you to present users with fewer options. Consider using a different solution, such as <a href="/design-system/components/radios">radios</a>.</p>
+
+  <h2>Research</h2>
+  <p>Watch a video about how some users struggle with selects: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">Alice Barlett: Burn your select tags</a>.</p>
+
+{% endblock %}

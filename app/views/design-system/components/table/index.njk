@@ -1,0 +1,74 @@
+{% set pageTitle = "Table" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "October 2020" %}
+{% set backlog_issue_id = "26" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="2-column-table">2 column table</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "default"
+  }) }}
+
+  <h3 id="when-not-to-use-a-2-column-table">When not to use a 2 column table</h3>
+  <p>Do not use a 2 column table:</p>
+  <ul>
+    <li>to layout content on a page, use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
+    <li>if you have more than 2 columns, use the <a href="#3-or-more-column-table">3 or more column table</a> instead</li>
+  </ul>
+
+  <h2 id="3-or-more-column-table">3 or more column table</h2>
+  <p>On large screens this table looks like a 2 column table. However, on smaller screens it collapses.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "responsive"
+  }) }}
+
+  <h3 id="when-not-to-use-a-3-or-more-column-table">When not to use a 3 or more column table</h3>
+  <p>Do not use a 3 or more column table:</p>
+  <ul>
+    <li>to layout content on a page, use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
+    <li>if you have 2 columns, use the <a href="#2-column-table">2 column table</a> instead</li>
+  </ul>
+
+  <h2 id="how-it-works">How tables work</h2>
+  <h3>Accessibility</h3>
+  <p>Follow <a href="https://webaim.org/techniques/tables/data">WebAIM's guidance for tables</a> and</p>
+  <ul>
+    <li>give tables captions</li>
+    <li>use the scope attribute to associate the data cells with the appropriate headers</li>
+    <li>let the browser window determine the width of the table whenever possible, to reduce horizontal scrolling</li>
+  </ul>
+
+  <h3 id="table-captions">Table captions</h3>
+  <p class="rich-text">Use the <code>&lt;caption&gt;</code> element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.</p>
+
+  <h3 id="table-headers">Table headers</h3>
+  <p>Use table headers to tell users what the rows and columns represent.</p>
+
+  <h2 id="reseach">Research</h2>
+  <h3>2 column table</h3>
+  <p>This table tested well with users of health information on the NHS website.</p>
+
+  <h3>3 or more column table</h3>
+  <p>This table was tested at HM Revenue &amp; Customs.</p>
+
+  <h3>Table with panel</h3>
+  <p>We have also designed a table with a panel. You can see <a href="https://nhsuk.github.io/nhsuk-frontend/components/tables/tables-panel.html">an example in the frontend library</a>. We haven't included it in this list of components yet because it needs more testing.</p>
+  <p>If you’ve used tables, get in touch to <a href="/community-and-contribution">share your user research findings</a>.</p>
+
+{% endblock %}

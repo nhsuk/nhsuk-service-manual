@@ -1,0 +1,108 @@
+{% set pageTitle = "Radios" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use radios when you want users to select only 1 option from a list." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "September 2020" %}
+{% set backlog_issue_id = "19" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use-this-component">When to use radios</h2>
+  <p>Use radios if users can only choose 1 option from a list.</p>
+
+  <h2 id="when-not-to-use-this-component">When not to use radios</h2>
+  <p>Do not use radios if users might need to select more than 1 option. Use <a href="/design-system/components/checkboxes">checkboxes</a> instead.</p>
+
+  <h2 id="how-it-works">How to use radios</h2>
+  <p>When you're drafting your radio options, <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">beware binary choices</a>. Try testing a 3rd option.</p>
+  <p>Order radio options alphabetically by default. </p>
+  <p class="rich-text">Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Are you 18 or over?".</p>
+  <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+  <p>Read more on the GOV.UK Design System about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+  <p>Unlike with checkboxes, users can only select 1 option from a list of radios. Do not assume that users will know how many options they can select.</p>
+
+  <p>Do not pre-select radio options as this makes it more likely that users will:</p>
+  <ul>
+    <li>not realise they’ve missed a question</li>
+    <li>submit the wrong answer</li>
+  </ul>
+  <p>Users can't go back to having no option selected once they have selected an option, without refreshing their browser window. So you should include "None of these" or "I do not know" if they are valid options. </p>
+
+  <h3 id="inline-radios">Inline radios</h3>
+  <p>If there are only 2 options, you can either stack the radios or display them inline, like this:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "inline"
+  }) }}
+
+  <h3 id="radios-with-hints">Radios with hints</h3>
+  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "with-hints"
+  }) }}
+
+  <h3 id="radio-items-with-hints">Radio items with hints</h3>
+  <p>You can add hints to radios to give more information about the options.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "with-hints-options"
+  }) }}
+
+  <h3 id="radio-items-with-a-text-divider">Radio items with a text divider</h3>
+  <p>If 1 or more of your radio options is different from the others, it can help users if you separate them using a text divider. The text is usually the word "or".</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "items-with-a-text-divider"
+  }) }}
+
+  <h3 id="conditionally-revealing-content">Conditionally revealing content</h3>
+  <p>You can add conditionally revealing content to radios, so users only see content when it’s relevant to them.</p>
+  <p>For example, you could reveal an email address input only when a user chooses to be contacted by email.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "conditional"
+  }) }}
+
+  <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
+  <p>Do not use this component to add conditionally revealing content to inline radios.</p>
+
+  <h3 id="error-messages">Error messages</h3>
+  <p>Style error messages like this:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "error-message"
+  }) }}
+
+  <p>Follow:</p>
+  <ul>
+    <li><a href="/design-system/components/error-message">our guidance on error messages</a></li>
+    <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK guidance on error messages for radios</a></li>
+  </ul>
+
+{% endblock %}

@@ -48,7 +48,7 @@ body {
 /*
   Layout examples for on divs
 */
-[class^='nhsuk-grid-column']>p {
+.app-example-layout-page [class^='nhsuk-grid-column']>p {
   background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
   color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
   padding: 20px;

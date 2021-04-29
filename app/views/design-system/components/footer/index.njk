@@ -1,0 +1,39 @@
+{% set pageTitle = "Footer" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use the footer to show users they are on an NHS service and to help them find links they expect at the bottom of our pages." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "May 2020" %}
+{% set backlog_issue_id = "15" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "footer",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use-the-footer">When to use the footer</h2>
+  <p>Use the footer at the bottom of every page of your service.</p>
+
+  <h2 id="how-to-use-the-footer">How to use the footer</h2>
+
+  <p>Add links to meta information about your service, such as:
+  <ul>
+    <li>accessibility</li>
+    <li>contact details</li>
+    <li>cookies</li>
+    <li>privacy policy</li>
+    <li>terms and conditions</li>
+  </ul>
+
+  <p>Avoid adding lots of links. Keep them to a minimum.</p>
+
+{% endblock %}

@@ -1,6 +1,21 @@
 # NHS digital service manual Changelog
 
-## 3.15.1 - TBC
+## 4.0.0 - Unreleased
+
+:new: **New features**
+
+- Restructure the design examples folder to allow for Nunjucks macro options
+
+:new: **New content**
+
+- Replace Mini-hub pattern example image with full page code snippet
+
+:wrench: **Fixes**
+
+- Update the error summary example to match the NHS.UK frontend example and only include 1 error
+- Update dependencies to the latest versions
+
+## 3.15.1 - 27 April 2021
 
 :new: **New features**
 
@@ -10,7 +25,6 @@
 :wrench: **Fixes**
 
 - Fix GitHub issue number for PDF page in content style guide
-
 ## 3.15.0 - 09 April 2021
 
 :new: **New features**

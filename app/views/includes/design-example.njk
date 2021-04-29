@@ -1,7 +1,6 @@
 {% macro designExample(params) %}
-
-  {% set examplePath = "app/components/" + params.type + ".njk" %}
-  {% set standaloneURL = "/design-example/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
+  {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
+  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
@@ -22,7 +21,7 @@
 
   Code definitions should be an object with a `name` and the raw `code` to
   render onto the page with the `|safe` filter.
-#}
+  #}
   {% set htmlDefinition = {
     name: 'HTML',
     code: html
@@ -46,10 +45,8 @@
 
     {% if showExample %}
       <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
-      Open this
-      <span class="nhsuk-u-visually-hidden">{{ exampleTitle  }}</span>
-      example in new window
-    </a>
+        Open this<span class="nhsuk-u-visually-hidden">{{ exampleTitle }}</span> example in new window
+      </a>
       <div class="code-embed">
         <iframe title="{{ params.type }}" src="{{ standaloneURL }}" class="design-example-frame"></iframe>
       </div>
@@ -61,7 +58,7 @@
           <ul class="app-tabs" role="tablist">
             {% for snippet in snippets %}
               <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
-                <a href="" role="tab" aria-controls="{{ exampleId }}" data-track="tab-html" aria-selected="true">
+                <a href="javascript:void(0);" role="tab" aria-controls="{{ exampleId }}" data-track="tab-html" aria-selected="true">
                   {{ snippet.name }}
                 </a>
               </li>
@@ -79,7 +76,8 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              <a class="app-link--copy" href="" aria-live="assertive">Copy</a>
+              <div class="app-code-snippet__macro"></div>
+              <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy</a>
               <pre><code class="{{ snippet.language }}">
                 {{- snippet.code | safe -}}
               </code></pre>

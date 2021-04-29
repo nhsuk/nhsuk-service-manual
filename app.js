@@ -73,11 +73,13 @@ env.addFilter('highlight', (code, language) => {
 });
 
 // Render standalone design examples
-app.get('/design-example/:example', (req, res) => {
+app.get('/design-example/:group/:item/:type', (req, res) => {
   const displayFullPage = req.query.fullpage === 'true';
   const blankPage = req.query.blankpage === 'true';
-  const example = req.params.example;
-  const examplePath = path.join(__dirname, `/app/components/${example}.njk`);
+  const group = req.params.group;
+  const item = req.params.item;
+  const type = req.params.type;
+  const examplePath = path.join(__dirname, `app/views/design-system/${group}/${item}/${type}/index.njk`);
 
   // Get the given example as HTML.
   const exampleHtml = fileHelper.getHTMLCode(examplePath);
@@ -91,7 +93,7 @@ app.get('/design-example/:example', (req, res) => {
     baseTemplate = 'includes/design-example-wrapper-blank.njk';
   }
 
-  res.render(baseTemplate, { body: exampleHtml });
+  res.render(baseTemplate, { body: exampleHtml, item });
 });
 
 app.get('/search', (req, res) => {

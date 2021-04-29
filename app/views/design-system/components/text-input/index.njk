@@ -1,0 +1,118 @@
+{% set pageTitle = "Text input" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use text input to let users enter a single line of text." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2020" %}
+{% set backlog_issue_id = "21" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "default"
+  }) }}
+
+  <h2>When to use text input</h2>
+  <p>Use text input when you need users to enter text that’s no longer than a single line, such as their name or phone number.</p>
+
+  <h2>When not to use text input </h2>
+  <p>Do not use text input if you need users to enter longer answers that might span several lines. In this case, use <a href="/design-system/components/textarea">textarea</a>.</p>
+  <h2>How to use text input</h2>
+
+  <h3 id="label-text-inputs">Label text inputs</h3>
+  <p>Give text input a visible label.</p>
+  <p>Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
+  <p>Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+  <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "heading"
+  }) }}
+
+  <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
+  <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
+  <p>By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.</p>
+  <p>If you want to make the input smaller, you can either use a fixed width input, or use the width override classes to create a smaller, fluid width input.</p>
+
+  <h4 id="fixed-width-inputs">Fixed width inputs</h4>
+  <p>Use fixed width inputs for content that has a specific, known length. For example, postcode inputs should be postcode-sized and phone number inputs should be phone number-sized.</p>
+  <p>On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "fixed-width"
+  }) }}
+
+  <h4 id="fluid-width-inputs">Fluid width inputs</h4>
+  <p>Use the width override classes to reduce the width of an input in relation to its parent container, for example, to two-thirds.</p>
+  <p>Fluid width inputs will resize with the viewport.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "fluid-width"
+  }) }}
+
+  <h3 id="using-hint-text">Using hint text</h3>
+  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>, for example, tell users where to find information or how you will use their data.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "hint-text"
+  }) }}
+
+  <h3 id="asking-for-numbers">Asking for numbers</h3>
+  <h4 id="whole-numbers">Whole numbers</h4>
+  <p>If you’re asking the user to enter a whole number and you want to bring up the numeric keypad on a mobile device, set the <code>inputmode</code> attribute to <code>numeric</code> and the <code>pattern</code> attribute to <code>[0-9]*</code>. See how to do this in the HTML and Nunjucks tabs in the following example.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "number"
+  }) }}
+
+  <p>You should also follow the GOV.UK Design System guidance and <a href="https://design-system.service.gov.uk/patterns/validation/#turn-off-html5-validation">turn off HTML5 validation</a> to prevent browsers from validating the <code>pattern</code> attribute.</p>
+
+  <p>The GOV.UK Design System has specific guidance on how to ask for:</p>
+  <ul>
+    <li><a href="https://design-system.service.gov.uk/patterns/dates/">dates</a></li>
+    <li><a href="https://design-system.service.gov.uk/patterns/telephone-numbers/">telephone numbers</a></li>
+  </ul>
+  <h4 id="decimal-numbers">Decimal numbers</h4>
+  <p>The GOV.UK Design System has guidance on <a href="https://design-system.service.gov.uk/components/text-input/#asking-for-decimal-numbers">asking for decimal numbers</a>.</p>
+
+  <h3 id="error-messages">Error messages</h3>
+  <p>Style error messages like this.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "error"
+  }) }}
+
+  <p>Follow:</p>
+  <ul>
+    <li><a href="/design-system/components/error-message">our guidance on error messages</a>
+    <li><a href="https://design-system.service.gov.uk/components/text-input#error-messages">GOV.UK guidance on error messages for text input</a></li>
+  </ul>
+
+  <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
+  <p>Users often need to copy and paste information into a text input, so do not stop them doing this.</p>
+
+  <h2>Research</h2>
+  <p>If you’ve used text input, please share your user research findings.</p>
+
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% set pageTitle = "Summary list" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use the summary list to summarise information, for example, a user’s responses at the end of a form." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "August 2020" %}
+{% set backlog_issue_id = "36" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "default"
+  }) }}
+
+  <h2>When to use summary lists</h2>
+  <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list, where:</p>
+  <ul>
+    <li>the key is a label, like "Name"</li>
+    <li>the value is the piece of information itself, like "John Smith"</li>
+  </ul>
+  <p>Think about how you can use the summary list along with other components or patterns to give users a sense of control. You can use it to summarise a user’s responses at the end of a form, for example as part of the <a href="https://design-system.service.gov.uk/patterns/check-answers/">GOV.UK check answers pattern</a>.</p>
+
+  <h2>When not to use summary lists </h2>
+  <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
+  <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="https://design-system.service.gov.uk/patterns/task-list-pages/">GOV.UK task list page pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+
+  <h2>How to use summary lists</h2>
+  <p>There are 2 ways to use the summary list component. You can use HTML or, if you’re using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a>, you can use the Nunjucks macro.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "default"
+  }) }}
+
+  <h3 id="label-text-inputs">Summary list with actions</h3>
+  <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
+  <p>People who use assistive technology, like a screen reader, may hear the action links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "default"
+  }) }}
+
+  <h3 id="label-text-inputs">Summary list without actions</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "without-action"
+  }) }}
+
+  <h3 id="label-text-inputs">Summary list without actions or borders</h3>
+  <p class="rich-text">If you do not include actions in your summary list and it would be better for your design to remove the separating borders, use the <code>nhsuk-summary-list--no-border</code> class.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "without-border"
+  }) }}
+
+{% endblock %}
