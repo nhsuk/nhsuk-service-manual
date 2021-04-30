@@ -13,6 +13,7 @@
 :wrench: **Fixes**
 
 - Update the error summary example to match the NHS.UK frontend example and only include 1 error
+- Give the design examples HTML, Nunjucks and Copy functionality titles for Adobe analytics
 - Update dependencies to the latest versions
 
 ## 3.15.1 - 27 April 2021
