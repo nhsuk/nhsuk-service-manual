@@ -1,0 +1,12 @@
+{% from 'textarea/macro.njk' import textarea %}
+
+{{ textarea({
+  "name": "example",
+  "id": "example",
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Do not include personal or financial information, for example, your National Insurance number or credit card details."
+  }
+}) }}

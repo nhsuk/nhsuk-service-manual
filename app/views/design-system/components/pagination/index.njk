@@ -1,0 +1,49 @@
+{% set pageTitle = "Pagination" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use pagination to allow users to navigate between related pages, for example about a single condition." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "February 2019" %}
+{% set backlog_issue_id = "27" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "default"
+  }) }}
+
+  <h2>When to use pagination</h2>
+  <p>Use pagination at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.</p>
+  <p>If you're using pagination, you should also use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page. The 2 components make up the multi-page navigation pattern.</p>
+
+  <h2>When not to use pagination</h2>
+  <p>Do not use pagination on pages which aren't grouped together or "related" as this is likely to confuse users.</p>
+  <p>Do not use pagination in a transactional service or a form. We use other components instead, including:</p>
+  <ul>
+    <li><a href="/design-system/components/buttons">buttons</a> to move forward
+    <li><a href="/design-system/components/back-link">back link</a> to navigate back</li>
+  </ul>
+
+  <h2>How to use pagination</h2>
+  <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page together with pagination at the bottom of each page.</p>
+  <p>Use the word "Previous" with an arrow left and a link to the previous page. Use the word Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
+
+  <h3>Accessibility</h3>
+  <p class="rich-text">The pagination components are surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pagination</code>. Screen readers that support this attribute will read this.</p>
+  <p class="rich-text">There is also a visually hidden heading title <code>pagination</code> which will be read by screen readers as a heading to the links. </p>
+  <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
+
+  <h2>Research</h2>
+  <p>We tested pagination in grouped information pages in 3 labs in summer 2018. We haven't tested it in forms.</p>
+  <p>In a user research lab, 4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
+  <p>Users found that the pagination reflected the way they read content and their mental model of the structure of the content. </p>
+
+{% endblock %}

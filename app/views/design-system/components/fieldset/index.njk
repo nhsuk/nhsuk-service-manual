@@ -1,0 +1,44 @@
+{% set pageTitle = "Fieldset" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a fieldset to group related form inputs."%}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2019" %}
+{% set backlog_issue_id = "14" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="when-to-use-this-component">When to use a fieldset</h2>
+  <p>Use a fieldset when you need to show a relationship between multiple form inputs. For example, you may need to group a set of text inputs into a single fieldset when asking for an address.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "fieldset",
+    type: "default"
+  }) }}
+
+  <h2 id="how-it-works">How to use a fieldset</h2>
+  <p class="rich-text">The 1st element in a fieldset must be a <code>legend</code> which describes the group of inputs. This could be a question, such as "What is your address?" or a statement like "Personal details".</p>
+  <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. You can see an example below. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+  <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">why and how to set legends as headings</a> on the GOV.UK Design System.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "fieldset",
+    type: "as-heading"
+  }) }}
+
+  <h3>Accessibility</h3>
+  <p>On question pages containing a group of inputs, include the question as the legend as that helps screenreader users understand that the inputs are all related to that question.</p>
+  <p>Put any important general help text that cannot be written as <a href="/design-system/components/text-input#using-hint-text">hint text</a> in the legend, but try to keep it as concise as possible.</p>
+
+  <h2>Research</h2>
+  <p>If you’ve used this component, get in touch to <a href="/community-and-contribution">share your user research findings</a>.</p>
+
+{% endblock %}

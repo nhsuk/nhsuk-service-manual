@@ -1,0 +1,45 @@
+{% set pageTitle = "Do and Don't lists" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use Do and Don't lists to help users understand more easily what they should and shouldn't do." %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "11" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "do-and-dont-lists",
+    type: "default"
+  }) }}
+
+  <h2>When to use Do and Don't lists</h2>
+  <p>Use a Do and Don't list to give users clear and simple advice, for example about treating a problem themselves.</p>
+
+  <h2 id="when-not-to-use-do-and-dont-lists">When not to use Do and Don't lists</h2>
+  <p>If you only have 1 Do - or 1 Don't, consider using <a href="/design-system/components/inset-text">inset text</a> or a <a href="/design-system/components/warning-callout">warning callout</a> instead. </p>
+
+  <h2 id="how-to-use-do-and-dont-lists">How to use Do and Don't lists</h2>
+  <p>Keep your points as brief as possible.</p>
+  <p>Dos normally come before Don'ts.</p>
+  <p>It is alright to just have Don'ts if there aren't any Dos and just Dos if there aren't any Don'ts.</p>
+  <p>Treat the heading as a lead-in and the items under the heading as part of 1 long sentence. Start each bullet point lower case. With Dos, just write the action. With Don'ts, include "do not" at the beginning of each bullet point.</p>
+
+  <h2 id="research">Research</h2>
+  <p>Users recognised and understood the meaning of the ticks and crosses. They saw the green ticks as a positive "do" action and the red as a warning.</p>
+  <p>We've tested the Do and Don't lists in pages with lots of content. We aren't using them in forms or transactional content and haven't tested them there.</p>
+  <p>The Do and Don't lists stack on desktop and mobile, rather than sitting side by side on the page. We found that users read down the page, not across it. Also, when we tried the lists side by side, the number of characters in each line was too short which made reading difficult.</p>
+
+  <h3>Accessibility</h3>
+  <p>People with a visual disability may not be able to see the ticks and crosses. We use aria labels to hide them from screen reader users, so we don't confuse them.</p>
+  <p>People with a visual disability may rely on the words. With the Don't lists, we found that screen reader users need "do not" repeated at the beginning of every line. If we leave out "do not", there is a risk they will hear the command as a positive one, which could be dangerous. This could also apply to other user groups, like people with a learning disability or people who are very stressed. Users could also scroll down and miss the "Don't" heading. So we include "do not" at the start of every bullet point.</p>
+  <p>We don't say "do" at the start of every line in a Do list. People found this unnecessary and annoying.</p>
+
+{% endblock %}

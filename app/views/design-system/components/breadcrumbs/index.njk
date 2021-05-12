@@ -1,0 +1,43 @@
+{% set pageTitle = "Breadcrumbs" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use breadcrumbs to help users understand where they are in the website." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "January 2019" %}
+{% set backlog_issue_id = "6" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "breadcrumbs",
+    type: "default"
+  }) }}
+
+  <h2>When to use breadcrumbs</h2>
+  <p>Use breadcrumbs to give users context and let them move back or up a level if they can't find what they want on the page.</p>
+
+  <h2>When not to use breadcrumbs</h2>
+  <p>Don’t use breadcrumbs in transactional journeys as they can get in the way of the user completing the task.</p>
+
+  <h2>How to use breadcrumbs</h2>
+  <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if it doesn't fit the line.</p>
+  <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
+  <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
+
+  <h3>Accessibility</h3>
+  <p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use screen readers know what it is.</p>
+  <p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/design-system/styles/icons">icons</a> to hide them from people who use screen readers.</p>
+
+  <h2>Research</h2>
+  <p>We tested breadcrumbs on pages with lots of content about conditions or medicines. People noticed them and appreciated the context they gave. People also used them to get back to where they came from or to get back home.</p>
+  <p>We took out the breadcrumb links when we tested our pages in transactional journeys (in more than 3 labs). We thought that having extra links would distract users and that fewer people would complete the journey. As we expected, we found that users didn’t miss the links because they were focused on the task.</p>
+  <p><a href="/community-and-contribution">Get in touch to share your research findings</a> about this pattern.</p>
+
+{% endblock %}

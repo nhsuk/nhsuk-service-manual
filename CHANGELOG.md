@@ -1,10 +1,37 @@
 # NHS digital service manual Changelog
 
-## 3.14.3 - Unreleased
+## 4.0.0 - 05 May 2021
+
+:new: **New features**
+
+- Restructure the design examples folder to allow for Nunjucks macro options
+
+:new: **New content**
+
+- Replace Mini-hub pattern example image with full page code snippet
+
+:wrench: **Fixes**
+
+- Update the error summary example to match the NHS.UK frontend example and only include 1 error
+- Give the design examples HTML, Nunjucks and Copy functionality titles for Adobe analytics
+- Update dependencies to the latest versions
+
+## 3.15.1 - 27 April 2021
+
+:new: **New features**
+
+- Add new entry to A to Z of NHS health writing for GP system supplier names and patient-facing services
+- Update service manual team page with new members
+
+:wrench: **Fixes**
+
+- Fix GitHub issue number for PDF page in content style guide
+## 3.15.0 - 09 April 2021
 
 :new: **New features**
 
 - Update A to Z of NHS health writing with a link to new GOV.UK coronavirus (COVID-19) A to Z
+- Replace Google Analytics with Adobe Analytics and update the cookie policy to include the new cookies [Issue 1101](https://github.com/nhsuk/nhsuk-service-manual/issues/1101)
 
 :wrench: **Fixes**
 

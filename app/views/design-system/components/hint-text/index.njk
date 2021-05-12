@@ -1,0 +1,68 @@
+{% set pageTitle = "Hint text" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use hint text to help users understand a question." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2020" %}
+{% set backlog_issue_id = "17" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "checkboxes"
+  }) }}
+
+  <h2>How to use hint text</h2>
+  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a> - like where to find information or how their data will be used.</p>
+
+  <h3 id="using-hint-text">Text input with hint text</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "input"
+  }) }}
+
+  <h3 id="radios-with-hint-text">Radios with hint text</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "radios"
+  }) }}
+
+  <h3 id="radio-items-with-hints">Radio items with hints</h3>
+  <p>You can add hints to radios to give more information about the options.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "radio-item-with-hints"
+  }) }}
+
+  <h3 id="checkboxes-with-hint-text">Checkboxes with hint text</h3>
+  <p>Unlike with <a href="/design-system/components/radios">radios</a>, users can select more than 1 option from a list of <a href="/design-system/components/checkboxes">checkboxes</a>. Do not assume that users will know how many options they can select.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "checkboxes"
+  }) }}
+
+  <h3 id="textarea-with-hint-text">Textarea with hint text</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "hint-text",
+    type: "textarea"
+  }) }}
+
+{% endblock %}
