@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New content**
+
+- Update guidance on making video and other multimedia content accessible
+
 ## 4.0.0 - 05 May 2021
 
 :new: **New features**
