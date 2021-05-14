@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Fixes**
+
+- Correct jump links to video section of accessibility guidance on 3 pages
+
 ## 4.1.0 - 14 May 2021
 
 :new: **New content**
