@@ -1,10 +1,15 @@
 # NHS digital service manual Changelog
 
-## TBC
+## 4.1.0 - 14 May 2021
 
 :new: **New content**
 
 - Update guidance on making video and other multimedia content accessible
+
+:wrench: **Fixes**
+
+- Use the latest version of NHS.UK frontend (v5.1.0)
+- Update dependencies to the latest versions
 
 ## 4.0.0 - 05 May 2021
 
