@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 4.1.1 - 14 May 2021
+
+:wrench: **Fixes**
+
+- Fix broken link in What's new updates
+
 ## 4.1.0 - 14 May 2021
 
 :new: **New content**
