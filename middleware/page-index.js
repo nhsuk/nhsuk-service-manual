@@ -63,7 +63,7 @@ class PageIndex {
         builder.field('extra');
         builder.field('parent');
         // Add each indexed page from above to lunr
-        this.docs.forEach((doc) => builder.add(doc));
+        this.docs.forEach((doc) => builder.add(doc)); // eslint-disable-line arrow-parens
       });
 
       // Time to index logging
@@ -89,7 +89,7 @@ class PageIndex {
     if (!query) return [];
     return this.searchIndex(query)
       // Map page to its indexed data
-      .map((res) => this.getData(res))
+      .map((res) => this.getData(res)) // eslint-disable-line arrow-parens
       // Filter pages which may be missing indexed data
       .filter(Boolean);
   }
@@ -204,7 +204,7 @@ class PageIndex {
 
   // Get list of synonyms
   getAltList(list) {
-    const listString = list.map((str) => str.toLowerCase());
+    const listString = list.map((str) => str.toLowerCase()); // eslint-disable-line arrow-parens
     return Object.keys(alternativeSpelling).reduce((altList, key) => {
       if (listString.includes(key.toLowerCase())) {
         return [...altList, ...alternativeSpelling[key]];
