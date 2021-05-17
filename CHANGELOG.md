@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 4.1.2 - 15 May 2021
+
+:wrench: **Fixes**
+
+- Fix incorrect example for Lead text typography
+
 ## 4.1.1 - 14 May 2021
 
 :wrench: **Fixes**
