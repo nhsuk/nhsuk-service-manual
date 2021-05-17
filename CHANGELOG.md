@@ -1,10 +1,11 @@
 # NHS digital service manual Changelog
 
-## 4.1.3 - Unreleased
+## 4.1.3 - 7 June 2021
 
 :wrench: **Fixes**
 
 - Update content style guide example and research insight callout boxes
+- Fix typo in video and other multimedia content accessibility guidance
 
 ## 4.1.2 - 15 May 2021
 
