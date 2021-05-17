@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Fix incorrect example for Lead text typography
+- Update dependencies to the latest versions
 
 ## 4.1.1 - 14 May 2021
 
