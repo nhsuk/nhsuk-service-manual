@@ -22,7 +22,7 @@
       "name": "ariaLabel",
       "type": "string",
       "required": "No",
-      "description": "Aria label for the logo href. Defaults to \"NHS homepage\"./"
+      "description": "Aria label for the logo href. Defaults to \"NHS homepage\"."
     },
     {
       "name": "organisation",
@@ -106,7 +106,7 @@
       "name": "searchAction",
       "type": "string",
       "required": "No",
-      "description": "The search action endpoint. Defaults to \"https://www.nhs.uk/search/\""
+      "description": "Custom search action endpoint."
     },
     {
       "name": "searchInputName",

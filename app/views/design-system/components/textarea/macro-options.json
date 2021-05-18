@@ -55,7 +55,7 @@
       "name": "autocomplete",
       "type": "string",
       "required": false,
-      "description": "Attribute to [identify input purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html), for instance \"postal-code\" or \"username\". See [autofill](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill) for full list of attributes that can be used."
+      "description": "autocomplete attribute to identify input purpose, for instance \"postal-code\" or \"username\"."
     },
     {
       "name": "classes",
