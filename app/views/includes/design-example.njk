@@ -1,10 +1,12 @@
 {% macro designExample(params) %}
   {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
+  {% set exampleArguments = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.item + ".json" %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
   {% set showCode = params.showCode !== false %}
+  {% set showArguments = params.showArguments !== false %}
 
   {% set html %}
   {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
@@ -78,6 +80,63 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
+              {% if snippet.name == "Nunjucks" and showArguments %}
+                {% set nunjucksArguments = getJSONCode(exampleArguments) %}
+
+                <div class="code-snippet__macro">
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        Nunjucks macro options
+                      </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
+                      <p>Some options are required for the macro to work; these are marked as "Required" in the option description.</p>
+                      <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
+
+                      <table role="table" class="nhsuk-table-responsive">
+                        <caption class="nhsuk-table__caption">Nunjucks arguments for {{ exampleTitle }}</caption>
+                        <thead role="rowgroup" class="nhsuk-table__head">
+                          <tr role="row">
+                            <th role="columnheader" class="" scope="col">
+                              Name
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                              Type
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                              Required
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                              Description
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                          {% for option in nunjucksArguments.params %}
+                          <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Name </span>{{ option.name }}
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Type </span>{{ option.type }}
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Required </span>{{ option.required }}
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Description </span>{{ option.description }}
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </details>
+                </div>
+              {% endif %}
               <div class="app-code-snippet__macro"></div>
               <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy<span class="nhsuk-u-visually-hidden"> {{ exampleTitle }} code</span></a>
               <pre><code class="{{ snippet.language }}">

@@ -66,7 +66,8 @@
     group: "styles",
     item: "page-template",
     type: "default",
-    blankpage: true
+    blankpage: true,
+    showArguments: false
   }) }}
 
   <h2>Customised page template</h2>
@@ -81,7 +82,8 @@
     group: "styles",
     item: "page-template",
     type: "content",
-    blankpage: true
+    blankpage: true,
+    showArguments: false
   }) }}
 
   <h3>Transactional page template</h3>
@@ -92,7 +94,8 @@
     group: "styles",
     item: "page-template",
     type: "transactional",
-    blankpage: true
+    blankpage: true,
+    showArguments: false
   }) }}
 
   <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. We also recommended you use a smaller page heading size using the <code>.nhsuk-heading-l</code> modifier class.</p>
@@ -108,7 +111,8 @@
     item: "page-template",
     type: "set-content",
     nunjucksOnly: true,
-    showExample: false
+    showExample: false,
+    showArguments: false
   }) }}
 
   <p>To set a 'block' option, use <code>block</code> to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing element in the page template using the <code>bodyEnd</code> option:</p>
@@ -118,7 +122,8 @@
     item: "page-template",
     type: "block",
     nunjucksOnly: true,
-    showExample: false
+    showExample: false,
+    showArguments: false
   }) }}
 
   <p>To change the components that are included in the page template by default, set their equivalent blocks. For example:</p>
@@ -128,7 +133,8 @@
     item: "page-template",
     type: "component",
     nunjucksOnly: true,
-    showExample: false
+    showExample: false,
+    showArguments: false
   }) }}
 
   <h3 id="options">Options</h3>
@@ -283,7 +289,8 @@
     item: "page-template",
     type: "annotated",
     blankpage: true,
-    showCode: false
+    showCode: false,
+    showArguments: false
   }) }}
 
 {% endblock %}
