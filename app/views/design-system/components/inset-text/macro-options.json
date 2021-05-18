@@ -1,11 +1,11 @@
 {
-	"params": [
+  "params": [
     {
-			"name": "html",
-			"type": "string",
-			"required": true,
-			"description": "HTML content to be used within the inset text component."
-		},
+      "name": "html",
+      "type": "string",
+      "required": true,
+      "description": "HTML content to be used within the inset text component."
+    },
     {
       "name": "classes",
       "type": "string",

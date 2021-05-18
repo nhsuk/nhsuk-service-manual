@@ -1,5 +1,5 @@
 {
-	"params": [
+  "params": [
     {
       "name": "links",
       "type": "array",
@@ -21,22 +21,22 @@
       ]
     },
     {
-			"name": "copyright",
-			"type": "string",
-			"required": false,
-			"description": "Optional text for the copyright notice in the footer."
-		},
+      "name": "copyright",
+      "type": "string",
+      "required": false,
+      "description": "Optional text for the copyright notice in the footer."
+    },
     {
-			"name": "classes",
-			"type": "string",
-			"required": false,
-			"description": "Classes to add to the footer container."
-		},
-		{
-			"name": "attributes",
-			"type": "object",
-			"required": false,
-			"description": "HTML attributes (for example data attributes) to add to the footer container."
-		}
+      "name": "classes",
+      "type": "string",
+      "required": false,
+      "description": "Classes to add to the footer container."
+    },
+    {
+      "name": "attributes",
+      "type": "object",
+      "required": false,
+      "description": "HTML attributes (for example data attributes) to add to the footer container."
+    }
   ]
 }
