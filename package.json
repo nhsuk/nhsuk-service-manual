@@ -41,7 +41,7 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "highlight.js": "^9.18.3",
+    "highlight.js": "^10.7.2",
     "js-beautify": "^1.13.5",
     "lunr": "^2.3.9",
     "nunjucks": "^3.2.3"
