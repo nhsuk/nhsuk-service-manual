@@ -8,15 +8,29 @@ Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">
 
 ## Running the application
 
-Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhsuk-service-manual` and whilst in the project directory `cd nhsuk-service-manual`, install the required npm packages with: `npm install`
+Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhsuk-service-manual` and while in the project directory `cd nhsuk-service-manual`, install the required npm packages with: `npm install`.
 
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
 
-## Releasing the application
+## Release lifecycle
 
-- [Review](https://nhsuk-service-manual-pr.azurewebsites.net/) - code pushed to the `review` branch will deploy to the Review environment (optional environment for content review)
+### Environments
+
+- [Review](https://nhsuk-service-manual-pr.azurewebsites.net/) - code pushed to the `review` branch will deploy to the Review environment (optional environment for content review and development)
 - [Staging](https://nhsuk-service-manual-dev-uks.azurewebsites.net/) - code pushed to the `master` branch will deploy to the Staging environment
-- [Live](https://service-manual.nhs.uk/) - git tags created using SEMVER format `v0.0.0` will deploy to the Live environment (Note: Live is behind a server side cache which results in changes not appearing immediately)
+- [Live](https://service-manual.nhs.uk/) - git tags created using SEMVER format `v0.0.0` will deploy to the Live environment. (Note: Live is behind a server side cache which results in changes not appearing immediately.)
+
+### Release to live 
+
+1. Visit the [GitHub releases page](https://github.com/nhsuk/nhsuk-service-manual/releases) and [draft a new release](https://github.com/nhsuk/nhsuk-service-manual/releases/new)
+2. The tag version should be the version in the [CHANGELOG](https://github.com/nhsuk/nhsuk-service-manual/blob/master/CHANGELOG.md) and [package.json](https://github.com/nhsuk/nhsuk-service-manual/blob/master/package.json#L3) files, prefixed with a `v`. For example `v13.15.1`
+3. The `master` branch should be preselected, this remains the same
+4. The release title should be the same as the tag version
+5. The release description should be the [CHANGELOG](https://github.com/nhsuk/nhsuk-service-manual/blob/master/package.json#L3) entry for this version's release; you can find examples of other release descriptions on the [GitHub releases page](https://github.com/nhsuk/nhsuk-service-manual/releases)
+6. Pre-release should be unticked
+7. Create a discussion for this release should be unticked
+8. Then click the Publish release button
+9. After a couple of minutes the [Azure Pipeline](https://dev.azure.com/nhsuk/NHS%20digital%20service%20manual/_build?definitionId=386) will complete and the release will start
 
 ## Get in touch
 
