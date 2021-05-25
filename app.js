@@ -145,6 +145,10 @@ app.get('/community/backlog-of-components-and-patterns', (req, res) => {
   res.redirect('/community-and-contribution/backlog-of-components-and-patterns');
 });
 
+app.get('/community-and-contribution/backlog-of-components-and-patterns', (req, res) => {
+  res.redirect('/community-and-contribution/community-backlog');
+});
+
 app.get('/community/contribution-criteria', (req, res) => {
   res.redirect('/community-and-contribution/contribution-criteria');
 });

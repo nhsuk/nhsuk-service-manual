@@ -1,0 +1,56 @@
+{% set pageTitle = "Community backlog" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "A place for digital teams in the NHS to work together and develop the NHS digital service manual." %}
+{% set dateUpdated = "June 2021" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<img class="app-image--border app-example--image" src="/assets/community-backlog-screenshot.png" alt="A screenshot of the design system community backlog">
+
+<h2 id="working-in-the-open">Working in the open</h2>
+<p>The community backlog lives on GitHub, in the open where everyone can see and get involved.</p>
+
+<p>It's grouped into 3 areas:</p>
+<ul>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">Design system (components and patterns) backlog</a></li>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/2">Content style guide backlog</a></li>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/3">Practices and ways of working backlog</a></li>
+</ul>
+
+<h2 id="ways-contribute">Ways to contribute</h2>
+<p>Anyone can contribute to the community backlog. All you need is a <a href="https://github.com/join">public GitHub account</a> to get started. Most contributions begin with a GitHub issue using one of these templates:</p>
+<ul>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/new?assignees=&amp;labels=type%3A+question+%E2%9D%93&amp;template=question.md&amp;title=">Ask a question</a></li>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/new?assignees=&amp;labels=type%3A+bug+%F0%9F%90%9B&amp;template=bug-report.md&amp;title=">Report an issue</a></li>
+  <li><a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/new?assignees=&amp;labels=type%3A+enhancement+%F0%9F%92%A1&amp;template=new-feature.md&amp;title=">Propose a new idea</a></li>
+</ul>
+
+<h3 id="feedback-or-share-insights">Feedback or share insights</h3>
+<p>To feedback or share insights on something that already exists:</p>
+<ol>
+  <li>Find the issue in the community backlog - in the <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues">issues list</a> or <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/projects">project boards</a></li>
+  <li>Add a comment to that issue</li>
+</ol>
+
+<div class="nhsuk-inset-text nhsuk-u-margin-top-3">
+  <p>Regardless of how you choose to contribute, we encourage you to open an issue or feedback as early as possible in the process.</p>
+</div>
+
+<h2 id="maintaining-the-backlog">Maintaining the backlog</h2>
+<p>The community backlog is maintained by <a href="service-manual-team" rel="nofollow">the service manual team</a> who label, close, and manage all GitHub issues.</p>
+
+<h2 id="support">Support</h2>
+<p>If you have any questions, you can:</p>
+<ul>
+  <li>use the <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/new?assignees=&amp;labels=type%3A+question+%E2%9D%93&amp;template=question.md&amp;title=">GitHub issue template</a></li>
+  <li><a href="mailto:service-manual@nhs.net">email the service manual team</a></li>
+  <li>or <a href="https://nhs-service-manual.slack.com/messages/CF6CNGB7E" rel="nofollow">talk to us on Slack</a></li>
+</ul>
+
+{% endblock %}
