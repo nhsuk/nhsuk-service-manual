@@ -10,9 +10,49 @@
   {% include "content/_breadcrumb.njk" %}
 {% endblock %}
 
+
+{% block sideNav %}
+<nav class="app-side-nav">
+
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-we-write">How we write</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/voice-and-tone">Voice and tone</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/inclusive-language">Inclusive language</a></li>
+
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/make-content-about-skin-symptoms-more-inclusive">Make content about skin symptoms more inclusive</a>
+        <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#how-to-make-written-content-about-skin-symptoms-more-inclusive">How to make written content about skin symptoms more inclusive</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#how-to-make-images-of-skin-symptoms-more-inclusive">How to make images of skin symptoms more inclusive</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#research-insights">Research insights</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#medical-sources-for-symptoms-on-various-skin-tones">Medical sources for symptoms on various skin tones</a></li>
+        </ul>
+      </li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/health-literacy">Health literacy</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-to-write-good-questions-for-forms">How to write good questions for forms</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting-and-punctuation">Formatting and punctuation</a>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/pdfs-and-other-non-html-documents">PDFs and other non-HTML documents</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/links">Links</a></li>
+
+    </ul>
+
+</nav>
+{% endblock %}
+
 {% block bodyContent %}
 
-  <h2>How to make written content about skin symptoms more inclusive</h2>
+  <h2 id="how-to-make-written-content-about-skin-symptoms-more-inclusive">How to make written content about skin symptoms more inclusive</h2>
   <p>On the NHS website, skin symptoms are mostly described in terms of how they appear on white skin.</p>
   <p>While some skin symptoms (such as itchiness) are the same for everyone, other symptoms may differ depending on people's skin tones.</p>
   <p>When a person's skin tone is not represented in our content, they do not have the same opportunity to recognise symptoms and understand what they need to do next.</p>
@@ -37,53 +77,22 @@
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     <p>Impetigo starts with red sores or blisters, but the redness may be harder to see on brown and black skin.</p>
   </div>
-  <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Research insight</strong>
-    <p>NHS.UK research found people with brown or black skin appreciated content that clearly stated that a symptom may appear differently on various skin tones.</p>
     <p>If possible, be specific about how a symptom may appear differently on a range of skin tones. We recognise this can be difficult because of a lack of medical sources on which to base this information.</p>
-    <p>See our list of <a href="#medical-sources-for-symptoms-in-various-skin-tones">medical sources for symptoms on various skin tones</a> – on this page.</p>
-  </div>
+    <p>See our list of <a href="#medical-sources-for-symptoms-in-various-skin-tones">medical sources for symptoms on various skin tones</a>.</p>
+    <p>Read the <a href="#research-insights">research insights</a> on this page.</p>
 
   <h3>Describe skin tone as white, brown and black</h3>
   <p>The NHS.UK team working on skin symptom content has been researching and testing different terms for skin tones.</p>
   <p>From the research done so far, we’ve found "brown and black skin" and "white skin" tested better than "dark skin", "darker skin" or "light skin" as a way to describe skin tones.</p>
   <p>Based on these learnings, we've started using the term "brown and black skin" instead of "dark skin" or "darker skin", but we're keen to hear from other teams working on skin symptom content.</p>
-  <div class="app-example">
-  <strong class="nhsuk-tag app-example__heading">Research insights</strong>
-  <h4>1-to-1 interviews</h4>
-  <p>The NHS.UK team asked 6 people with brown or black skin which of these 2 versions they preferred (in content about chickenpox):</p>
-  <ul>
-    <li>"the spots can be hard to see on brown and black skin"</li>
-    <li>"the spots can be hard to see on dark skin"</li>
-  </ul>
-  <p>5 out of the 6 people preferred the term "brown and black skin" instead of "dark skin" saying it's more:</p>
-  <ul>
-    <li>helpful</li>
-    <li>direct</li>
-    <li>specific</li>
-    <li>useful in capturing a range of skin tones</li>
-  </ul>
-  <p>They said "dark skin" was:</p>
-  <ul>
-    <li>vague</li>
-    <li>subjective</li>
-    <li>unclear</li>
-  </ul>
-  <h4>Survey findings</h4>
-  <p>The NHS.UK team found people with brown or black skin preferred the terms "light brown", "medium brown" and "dark brown" to describe skin tones, rather than less specific terms such as "light skin", "dark skin" or "darker skin".</p>
-  <p>We use the terms “light brown”, “medium brown” and “dark brown” to describe skin tone in alt-text only. See the section on describing skin tone in alt-text on this page.</p>
-  </div>
-
+  <p>Read the <a href="#research-insights">research insights</a> on this page.</p>
   <h3>Include descriptions of how skin feels, if possible</h3>
   <p>Non-visual symptoms are especially useful for people who have a visual impairment.</p>
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     <p>The scarlet fever rash feels like sandpaper and starts on the chest and tummy.</p>
   </div>
-  <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Research insight</strong>
-    <p>NHS.UK research found people who have a visual impairment find it particularly useful when we include descriptions of how skin feels when you touch it, as this helps them know what to feel for on their own skin or someone else’s skin.</p>
-  </div>
+  <p>Read the <a href="#research-insights">research insights</a> on this page.</p>
 
   <h2>How to make images of skin symptoms more inclusive</h2>
   <p>Images on the NHS website mostly show skin symptoms on white skin, but some symptoms can look different on various skin tones.</p>
@@ -114,13 +123,46 @@
   <p>Long descriptions are designed to be used with complex images where short alt-text cannot convey all the information in the image.</p>
   <p>We’re still testing the use of long descriptions in content about skin symptoms.</p>
 
-  <h2>Research</h2>
+  <h2 id="research-insights">Research insights</h2>
+  <h3>Explaining when a symptom may look different on different skin tones</h3>
+  <p>NHS.UK research found people with brown or black skin appreciated content that clearly stated that a symptom may appear differently on various skin tones.</p>
+
+  <h3>Describing skin tone as white, brown and black</h3>
+  <h4>1-to-1 interviews</h4>
+  <p>The NHS.UK team asked 6 people with brown or black skin which of these 2 versions they preferred (in content about chickenpox):</p>
+  <ul>
+    <li>"the spots can be hard to see on brown and black skin"</li>
+    <li>"the spots can be hard to see on dark skin"</li>
+  </ul>
+  <p>5 out of the 6 people preferred the term "brown and black skin" instead of "dark skin" saying it's more:</p>
+  <ul>
+    <li>helpful</li>
+    <li>direct</li>
+    <li>specific</li>
+    <li>useful in capturing a range of skin tones</li>
+  </ul>
+  <p>They said "dark skin" was:</p>
+  <ul>
+    <li>vague</li>
+    <li>subjective</li>
+    <li>unclear</li>
+  </ul>
+
+
+  <h4>Survey findings</h4>
+  <p>The NHS.UK team found people with brown or black skin preferred the terms "light brown", "medium brown" and "dark brown" to describe skin tones, rather than less specific terms such as "light skin", "dark skin" or "darker skin".</p>
+  <p>We use the terms “light brown”, “medium brown” and “dark brown” to describe skin tone in alt-text only. See the section on describing skin tone in alt-text on this page.</p>
+
+  <h3>Including descriptions of how skin feels</h3>
+  <p>NHS.UK research found people who have a visual impairment find it particularly useful when we include descriptions of how skin feels when you touch it, as this helps them know what to feel for on their own skin or someone else’s skin.</p>
+
+  <h3>Next steps</h3>
   <p>We’re still looking into issues related to describing skin symptoms on various skin tones, including:</p>
   <ul>
     <li>if we’re describing how skin symptoms appear on various skin tones, which skin tone to mention first</li>
     <li>if a skin symptom about a change to skin colour looks the same on all skin tones, should we say this explicitly?</li>
   </ul>
-  <h2 id="medical-sources-for-symptoms-in-various-skin-tones">Medical sources for symptoms in various skin tones</h2>
+  <h2 id="medical-sources-for-symptoms-on-various-skin-tones">Medical sources for symptoms on various skin tones</h2>
   <ul>
     <li><a href="https://www.blackandbrownskin.co.uk/mindthegap">Mind the Gap</a>: UK clinical handbook of signs and symptoms in black and brown skin published in 2020</li>
     <li><a href="https://dftbskindeep.com/">Skin Deep</a>: international website with images of skin conditions in children shown on a range of skin tones</li>
@@ -129,10 +171,6 @@
     <li><a href="https://www.bad.org.uk/healthcare-professionals/inclusivity-and-representation/erythema-in-skin-of-colour">The British Association of Dermatologists (BAD): statement on describing redness (erythema) in skin of colour</a></li>
   </ul>
 
- <h2>Related guidance</h2>
-  <ul>
-    <li><a href="https://service-manual.nhs.uk/accessibility/content#use-alternative-text-for-images-in-content">Accessibility guidance: use alternative text for images in content</a></li>
-  </ul>
 {% endblock %}
 
 {% block asideContent %}
