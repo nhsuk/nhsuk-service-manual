@@ -1,0 +1,33 @@
+{% set pageTitle = "Work on something" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "Anyone can work on something in the NHS digital service manual community backlog." %}
+{% set dateUpdated = "June 2021" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>1. Tell us you want to work on a thing</h2>
+  <p>Anyone can work on items marked as "To do" in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog">community backlog</a>.</p>
+  <p>If you see something you'd like to work on, contact the <a href="/service-manual-team">service manual team</a>.</p>
+  <p>If you have an idea for something that's not in the backlog, you can <a href="/community-and-contribution/propose-a-new-thing">propose a new thing</a>.</p>
+
+  <h2>2. Plan your work with us</h2>
+  <p>After you've contacted the team, a member of the team will get in touch to arrange a kick-off chat.</p>
+  <p>The team will help you scope and plan your contribution. You'll also be able to discuss any support you might need.</p>
+  <p>If you're happy to go ahead, the team will assign the issue to you in the community backlog.</p>
+
+  <h2>3. Research and develop your contribution</h2>
+  <p>While you're working on your contribution, you can contact the <a href="/service-manual-team">service manual team</a> if you need any help.</p>
+
+  <h2>4. Send your contribution for review</h2>
+  <p>All work must meet the <a href="/community-and-contribution/contribution-criteria">contribution criteria</a> before it can be published. The service manual team will use the criteria to review your contribution.</p>
+  <p>To arrange a review, tell the team your contribution is ready.</p>
+  <p>If there's anything else to do, the team will share some recommendations.</p>
+  <p>If the work is ready to be published, the service manual team will help you get it live.</p>
+
+{% endblock %}
