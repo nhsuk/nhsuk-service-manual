@@ -1,30 +1,23 @@
-<h2 class="nhsuk-u-padding-top-4">{% if subSection === "Styles" %}Have you tested these styles{% endif %}{% if subSection === "Components" %}Have you tested this component{% endif %}{% if subSection === "Patterns" %}Have you tested this pattern{% endif %}{% if pageSection === "Content style guide" or pageSection === "Accessibility" %}Would you like to contribute to this guidance{% endif %}{% if pageSection === "NHS service standard" %}Would you like to contribute to the NHS service standard{% endif %}?</h2>
-{% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" %}
-
-<p>If so, please share your research findings and let us know how it has worked for you. This will help us improve it for everyone.</p>
-<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
-{% endif %}
-{% if pageSection === "Content style guide" or pageSection === "Accessibility" %}
-
-<p>Please let us know how this has worked for you and, in particular, if you have research findings to share. This will help us improve it for everyone.</p>
-<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
+<h2 class="nhsuk-u-padding-top-4">Feedback or share insights</h2>
+{% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" or pageSection === "Accessibility" %}
+<p>Please feedback or share insights to help us improve this guidance for everyone.</p>
 {% endif %}
 
 {% if pageSection === "NHS service standard"%}
-<p>Please let us know how this has worked for you and, in particular, if you have gone through a GDS or NHSX service assessment or peer review. This will help us improve it for everyone.</p>
-<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
+<p>Please feedback or share insights, in particular, if you have gone through a GDS or NHSX service assessment or peer review. This will help us improve it for everyone.</p>
 {% endif %}
 
-<div class="nhsuk-action-link">
+<p>All you need is a <a href="https://github.com/join?source=login">public GitHub account</a> to contribute.</p>
+
+<div class="nhsuk-action-link nhsuk-u-margin-top-1">
   <a class="nhsuk-action-link__link" href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/{{backlog_issue_id}}">
     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
     </svg>
-    <span class="nhsuk-action-link__text">Share your findings on GitHub</span>
+    <span class="nhsuk-action-link__text">Feedback or share insights on GitHub</span>
   </a>
 </div>
-<p>If you have any questions, you can <a href="https://service-manual.nhs.uk/slack">message us on Slack</a>. You will need a Slack account if you do not have one. Or you can <a href="mailto:service-manual@nhs.net">contact us by email</a>.
 
-</p>
+<p>If you have any questions, <a href="/get-in-touch">get in touch</a> with the service manual team.</p>
 
