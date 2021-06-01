@@ -2,7 +2,33 @@
    #IMAGES
    ========================================================================== */
 
-.app-image--border {
-  border: 1px solid $color_nhsuk-grey-3;
+  .app-image {
+  @include nhsuk-responsive-margin(4, 'bottom');
+
+  margin-top: 0;
+  width: 100%;
+
+  & + h2 {
+    @include nhsuk-responsive-padding(4, 'top');
+  }
+}
+
+.app-image__img {
   width: 100%;
 }
+
+.app-component-reading-width .app-image__img {
+  max-width: 100%;
+}
+
+.app-image--border {
+  border: 1px solid $color_nhsuk-grey-4;
+  border-bottom-width: 2px;
+  width: 100%;
+
+  .app-image__caption {
+    border-top: 1px solid $color_nhsuk-grey-4;
+  }
+}
+
+
