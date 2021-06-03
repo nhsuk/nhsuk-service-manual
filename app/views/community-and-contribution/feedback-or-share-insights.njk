@@ -1,0 +1,43 @@
+{% set pageTitle = "Feedback or share insights" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "Feedback or share insights on something to help us improve things for everyone." %}
+{% set dateUpdated = "June 2021" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2 class="nhsuk-u-margin-bottom-3">1. Find the thing in the backlog</h2>
+<p>Select one of the <a href="#working-in-the-open">project boards</a> and use the search to quickly find the thing.</p>
+<figure class="nhsuk-image app-image app-image--border nhsuk-u-margin-top-1 nhsuk-u-margin-bottom-5">
+  <img class="nhsuk-image__img app-image__img" src="/assets/community-backlog-search-screenshot.png" alt="A screenshot of the design system community backlog">
+</figure>
+
+<h2 class="nhsuk-u-margin-bottom-3">2. Leave a comment</h2>
+<p>Use the textbox at the bottom of the page to give your feedback or share insights.</p>
+<figure class="nhsuk-image app-image app-image--border nhsuk-u-margin-top-1">
+  <img class="nhsuk-image__img app-image__img" src="/assets/community-backlog-issue-comment-screenshot.png" alt="A screenshot of the design system community backlog">
+</figure>
+<p><strong>Note:</strong> If you are not signed into GitHub, you will see a message instead of the textbox, prompting you to 'sign in to comment'.</p>
+<figure class="nhsuk-image app-image app-image--border nhsuk-u-margin-top-1 nhsuk-u-margin-bottom-5">
+  <img class="nhsuk-image__img app-image__img" src="/assets/community-backlog-issue-comment-signin-screenshot.png" alt="A screenshot of the design system community backlog">
+</figure>
+
+<h2 class="nhsuk-u-margin-bottom-3">3. Service manual team review</h2>
+<p>After you have submitted your comment, the service manual team will:</p>
+<ul>
+  <li>receive a notification</li>
+  <li>add an ‘awaiting-triage’ label to the issue</li>
+  <li>review the issue at the teams next fortnightly planning session</li>
+  <li>update you on what action is to be taken</li>
+</ul>
+
+<div class="nhsuk-inset-text nhsuk-u-margin-top-3">
+  <p>Regardless of how you choose to contribute, we encourage you to open an issue or feedback as early as possible in the process.</p>
+</div>
+
+{% endblock %}
