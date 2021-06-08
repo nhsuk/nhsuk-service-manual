@@ -12,10 +12,10 @@ const nunjucks = require('nunjucks');
 // Local dependencies
 const authentication = require('./middleware/authentication');
 const config = require('./app/config');
-const fileHelper = require('./middleware/file-helper.js');
+const fileHelper = require('./middleware/file-helper');
 const locals = require('./app/locals');
-const routing = require('./middleware/routing.js');
-const PageIndex = require('./middleware/page-index.js');
+const routing = require('./middleware/routing');
+const PageIndex = require('./middleware/page-index');
 
 const pageIndex = new PageIndex(config);
 

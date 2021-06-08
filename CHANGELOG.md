@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 4.1.3 - 7 June 2021
+## 4.1.3 - 8 June 2021
 
 :wrench: **Fixes**
 
