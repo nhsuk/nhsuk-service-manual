@@ -2,7 +2,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
-const { additionalIndices, alternativeSpelling, indexBlacklist } = require('./page-index-additions.js');
+const { additionalIndices, alternativeSpelling, indexBlacklist } = require('./page-index-additions');
 
 class PageIndex {
   constructor(config) {

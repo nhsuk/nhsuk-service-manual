@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const PageIndex = require('../middleware/page-index.js');
+const PageIndex = require('../middleware/page-index');
 
 const config = {
   baseURL: 'http://localhost',
