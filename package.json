@@ -1,6 +1,7 @@
 {
   "name": "nhsuk-service-manual",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "4.2.0",
 =======
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
   "version": "5.0.0",
 >>>>>>> populate CHANGELOG for nunjucks macro options and bump version
 >>>>>>> populate CHANGELOG for nunjucks macro options and bump version
+=======
+  "version": "5.0.0",
+>>>>>>> update dependencies to latest versions
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {

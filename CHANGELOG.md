@@ -10,6 +10,7 @@
 
 - Update dependencies to the latest versions
 
+<<<<<<< HEAD
 ## 4.2.0 - 10 June 2021
 
 :new: **New content**
@@ -25,12 +26,16 @@
 
 - Fix broken health literacy link on the service standard pages [Issue 1136](https://github.com/nhsuk/nhsuk-service-manual/issues/1136)
 
+=======
+>>>>>>> update dependencies to latest versions
 ## 4.1.3 - 8 June 2021
 
 :wrench: **Fixes**
 
 - Update content style guide example and research insight callout boxes
 - Fix typo in video and other multimedia content accessibility guidance
+- Update dependencies to the latest versions
+
 ## 4.1.2 - 15 May 2021
 
 :wrench: **Fixes**
