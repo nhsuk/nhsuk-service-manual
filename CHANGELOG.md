@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 4.1.4 - Unreleased
+
+:wrench: **Fixes**
+
+- Fix broken health literacy link on the service standard pages [Issue 1136](https://github.com/nhsuk/nhsuk-service-manual/issues/1136)
+
 ## 4.1.3 - 8 June 2021
 
 :wrench: **Fixes**
