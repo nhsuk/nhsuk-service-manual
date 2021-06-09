@@ -2,6 +2,15 @@
 
 ## 4.1.4 - Unreleased
 
+:new: **New content**
+
+- Update accessibility guidance - change length of alt-text for images 
+- Add new section on making content about skin symptoms more inclusive to content style guide
+- Add new entries in the A to Z of NHS health writing for: black skin, brown skin, redness, skin colour changes, white skin, GP online services and ID
+- Update entries for immunisation, jab, vaccination, and vaccine
+- Add guidance on writing about skin colour on the Inclusive language page
+- Add link to blog post on community and contribution in What's new
+
 :wrench: **Fixes**
 
 - Fix broken health literacy link on the service standard pages [Issue 1136](https://github.com/nhsuk/nhsuk-service-manual/issues/1136)
