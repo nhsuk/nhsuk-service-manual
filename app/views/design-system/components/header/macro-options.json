@@ -80,7 +80,7 @@
       "name": "transactionalService",
       "type": "object",
       "required": false,
-      "description": "Settings for transactional service header",
+      "description": "Settings for transactional service header.",
       "params": [
         {
           "name": "name",

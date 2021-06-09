@@ -22,25 +22,25 @@
       "name": "headingLevel",
       "type": "integer",
       "required": false,
-      "description": "Classes to add to the card heading."
+      "description": "Optional heading level for the card heading. Default: 2"
     },
     {
       "name": "href",
       "type": "string",
-      "required": true,
+      "required": false,
       "description": "The value of the card link href attribute."
     },
     {
       "name": "clickable",
       "type": "boolean",
       "required": false,
-      "description": "If set to true, then the class `nhsuk-card--clickable` will be applied."
+      "description": "If set to true, then the whole Card will become a clickable Card variant."
     },
     {
       "name": "feature",
       "type": "boolean",
       "required": false,
-      "description": "If set to true, then the class `nhsuk-card__heading--feature` and `nhsuk-card__content--feature` will be applied."
+      "description": "If set to true, then the Card will become a feature Card variant."
     },
     {
       "name": "imgURL",

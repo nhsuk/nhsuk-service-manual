@@ -34,13 +34,13 @@
       "name": "classes",
       "type": "string",
       "required": false,
-      "description": "Classes to add to the button component."
+      "description": "Classes to add to the image container."
     },
     {
       "name": "attributes",
       "type": "object",
       "required": false,
-      "description": "HTML attributes (for example data attributes) to add to the button component."
+      "description": "HTML attributes (for example data attributes) to add to the image container."
     }
   ]
 }

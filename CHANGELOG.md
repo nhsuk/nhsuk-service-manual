@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.0.0 - Unreleased
+## 5.0.0 - 14 June 2021
 
 :new: **New features**
 
@@ -10,7 +10,6 @@
 
 - Update dependencies to the latest versions
 
-<<<<<<< HEAD
 ## 4.2.0 - 10 June 2021
 
 :new: **New content**
@@ -26,8 +25,6 @@
 
 - Fix broken health literacy link on the service standard pages [Issue 1136](https://github.com/nhsuk/nhsuk-service-manual/issues/1136)
 
-=======
->>>>>>> update dependencies to latest versions
 ## 4.1.3 - 8 June 2021
 
 :wrench: **Fixes**

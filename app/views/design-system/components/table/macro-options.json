@@ -92,7 +92,7 @@
       "name": "caption",
       "type": "string",
       "required": false,
-      "description": "Caption text"
+      "description": "Caption text."
     },
     {
       "name": "captionClasses",

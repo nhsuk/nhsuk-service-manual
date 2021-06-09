@@ -16,7 +16,7 @@
 					"name": "href",
 					"type": "string",
 					"required": false,
-					"description": "Link for the breadcrumbs item."
+					"description": "The value of the breadcrumb item link href attribute."
 				},
 				{
 					"name": "attributes",

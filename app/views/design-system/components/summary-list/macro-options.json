@@ -10,7 +10,7 @@
           "name": "classes",
           "type": "string",
           "required": false,
-          "description": "Classes to add to the row `div`"
+          "description": "Classes to add to the row `div`."
         },
         {
           "name": "key.text",
@@ -27,7 +27,7 @@
           "name": "key.classes",
           "type": "string",
           "required": false,
-          "description": "Classes to add to the key wrapper"
+          "description": "Classes to add to the key wrapper."
         },
         {
           "name": "value.text",
@@ -45,25 +45,25 @@
           "name": "value.classes",
           "type": "string",
           "required": false,
-          "description": "Classes to add to the value wrapper"
+          "description": "Classes to add to the value wrapper."
         },
         {
           "name": "actions.classes",
           "type": "string",
           "required": false,
-          "description": "Classes to add to the actions wrapper"
+          "description": "Classes to add to the actions wrapper."
         },
         {
           "name": "actions.items",
           "type": "array",
           "required": false,
-          "description": "Array of action item objects",
+          "description": "Array of action item objects.",
           "params": [
             {
               "name": "href",
               "type": "string",
               "required": true,
-              "description": "The value of the link href attribute for an action item"
+              "description": "The value of the link href attribute for an action item."
             },
             {
               "name": "text",
@@ -91,13 +91,13 @@
       "name": "classes",
       "type": "string",
       "required": false,
-      "description": "Classes to add to the container."
+      "description": "Classes to add to the summary list container."
     },
     {
       "name": "attributes",
       "type": "object",
       "required": false,
-      "description": "HTML attributes (for example data attributes) to add to the container."
+      "description": "HTML attributes (for example data attributes) to add to the summary list container."
     }
   ]
 }

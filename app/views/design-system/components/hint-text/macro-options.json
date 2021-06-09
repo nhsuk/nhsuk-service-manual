@@ -16,7 +16,7 @@
       "name": "id",
       "type": "string",
       "required": false,
-      "description": "Optional id attribute to add to the hint."
+      "description": "Id attribute to add to the hint."
     },
     {
       "name": "classes",

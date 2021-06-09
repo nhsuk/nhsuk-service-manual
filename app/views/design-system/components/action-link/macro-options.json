@@ -16,7 +16,7 @@
       "name": "openInNewWindow",
       "type": "boolean",
       "required": false,
-      "description": "If set to true, then the link will open in a new window"
+      "description": "If set to true, then the link will open in a new window."
     },
     {
       "name": "classes",

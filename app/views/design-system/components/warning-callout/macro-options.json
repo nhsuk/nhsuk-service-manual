@@ -4,7 +4,13 @@
       "name": "heading",
       "type": "string",
       "required": true,
-      "description": "Heading to be used within the warning callout."
+      "description": "Heading to be used on the warning callout."
+    },
+    {
+      "name": "headingLevel",
+      "type": "integer",
+      "required": false,
+      "description": "Optional heading level for the heading. Default: 3"
     },
     {
       "name": "html",

@@ -4,25 +4,25 @@
       "name": "title",
       "type": "string",
       "required": true,
-      "description": "Title to be displayed on the do and don't list component.."
+      "description": "Title to be displayed on the do and don't list component."
     },
     {
       "name": "type",
       "type": "string",
       "required": true,
-      "description": "Type of do and don't list component, \"cross\", \"tick\""
+      "description": "Type of do and don't list component, \"cross\", \"tick\"."
     },
     {
       "name": "items",
       "type": "array",
       "required": true,
-      "description": "Array of do and dont items objects.",
+      "description": "Array of do and don't items objects.",
       "params": [
         {
           "name": "item",
           "type": "string",
           "required": true,
-          "description": "Text to use within each do and dont item label."
+          "description": "Text to use within each do and don't item label."
         }
       ]
     },
@@ -30,7 +30,7 @@
       "name": "hidePrefix",
       "type": "boolean",
       "required": false,
-      "description": "If set to true when type is \"cross\", then removes the default \"do not\" text prefix to each item"
+      "description": "If set to true when type is \"cross\", then removes the default \"do not\" text prefix to each item."
     },
     {
       "name": "headingLevel",
@@ -42,13 +42,13 @@
       "name": "classes",
       "type": "string",
       "required": false,
-      "description": "Classes to add to the details element."
+      "description": "Classes to add to the do and don't list container."
     },
     {
       "name": "attributes",
       "type": "object",
       "required": false,
-      "description": "HTML attributes (for example data attributes) to add to the details element."
+      "description": "HTML attributes (for example data attributes) to add to the do and don't list container."
     }
   ]
 }
