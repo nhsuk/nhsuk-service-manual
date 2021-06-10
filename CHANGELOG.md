@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 4.1.4 - Unreleased
+## 4.2.0 - 10 June 2021
 
 :new: **New content**
 
