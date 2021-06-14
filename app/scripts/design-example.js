@@ -75,7 +75,7 @@ class DesignExample {
         document.execCommand('copy');
         document.body.removeChild(el);
         e.target.innerText = 'Copied';
-        setTimeout(() => e.target.innerText = 'Copy', 2500);
+        setTimeout(() => e.target.innerText = 'Copy code', 2500);
     }
 
     showEl(el) {

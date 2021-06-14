@@ -57,3 +57,15 @@ p + .design-example {
 .app-code-snippet__macro {
   width: 100%;
 }
+
+.app-tabs__container pre {
+  background-color: $color_nhsuk-grey-5;
+}
+
+.app-code-snippet__container {
+  background-color: $color_nhsuk-grey-5;
+  padding: nhsuk-spacing(3);
+  padding-top: nhsuk-spacing(8);
+  position: relative;
+  width: 100%;
+}

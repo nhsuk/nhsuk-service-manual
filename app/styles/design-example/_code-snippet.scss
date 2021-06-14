@@ -11,9 +11,13 @@
 
     &--copy {
       border-bottom-color: $nhsuk-button-color;
-      box-shadow: 0 $button-shadow-size 0 $nhsuk-button-color;
+      box-shadow: 0 2px 0 $nhsuk-button-color;
       margin-bottom: 16px;
-      position: static;
+      padding: 2px 8px;
+      position: absolute;
+      right: 16px;
+      text-transform: none;
+      top: 16px;
 
       &:hover {
         background-color: $color_nhsuk-grey-5;
@@ -32,7 +36,7 @@
       color: $color_nhsuk-blue;
       cursor: pointer;
       font-size: 16px;
-      margin-top: 8px;
+      margin-top: 16px;
       position: static;
       right: 16px;
       text-decoration: underline;

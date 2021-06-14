@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 5.0.0 - 14 June 2021
+
+:new: **New features**
+
+- Display Nunjucks macro options with the Nunjucks code examples
+
+:wrench: **Fixes**
+
+- Update dependencies to the latest versions
+
 ## 4.2.0 - 10 June 2021
 
 :new: **New content**
