@@ -118,14 +118,16 @@
 ] %}
 
 {% set community = [
-  { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
-  { title: "Propose a component or pattern", url: "/community-and-contribution/propose-component-pattern" },
-  { title: "Develop a component or pattern", url: "/community-and-contribution/develop-component-pattern" },
+  { title: "Community on Slack", url: "/community-and-contribution/community-on-slack" },
+  { title: "Community backlog", url: "/community-and-contribution/community-backlog" },
+  { title: "Feedback or share insights", url: "/community-and-contribution/feedback-or-share-insights" },
+  { title: "Propose a new feature", url: "/community-and-contribution/propose-a-new-thing" },
+  { title: "Work on something", url: "/community-and-contribution/work-on-something" },
   { title: "Contribution criteria", url: "/community-and-contribution/contribution-criteria" }
 ] %}
 
 {% set whatsNew = [
-    { title: "Updates", url: "/whats-new/updates" },
+  { title: "Updates", url: "/whats-new/updates" },
   { title: "Blog posts", url: "/whats-new/blog-posts" },
   { title: "Show and tells", url: "/whats-new/show-and-tells" }
 ] %}
@@ -203,6 +205,7 @@
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
   {% endif %}
 
   {%- if subSection == "Patterns" %}

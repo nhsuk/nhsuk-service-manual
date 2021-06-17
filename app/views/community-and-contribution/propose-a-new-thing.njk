@@ -1,0 +1,24 @@
+{% set pageTitle = "Propose a new feature" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "Anyone can propose a new thing for the NHS digital service manual." %}
+{% set dateUpdated = "June 2021" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="check-the-community-backlog">Check the community backlog</h2>
+  <p>Before proposing a new feature - check to see if it's already in the <a href="/community-and-contribution/community-backlog">community backlog</a>. If you find it in the community backlog, then you can <a href="/community-and-contribution/feedback-or-share-insights">feedback or share insights</a>.</p>
+
+  <h2 id="if-it-has-been-proposed">How to propose a new feature</h2>
+  <p>You can <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/new">propose a new thing using a GitHub template</a>.</p>
+  <p>At this stage, you just need to present your idea and evidence of user needs.</p>
+  <p>The service manual team will review your proposal and see if it meets the <a href="/community-and-contribution/contribution-criteria">contribution criteria</a>.</p>
+  <p>Once the proposal is ready to be worked on, it will be marked as "To do" in the backlog.</p>
+  <p>You can choose to <a href="/community-and-contribution/work-on-something">work on the thing</a> yourself, or leave it for someone else.</p>
+
+{% endblock %}
