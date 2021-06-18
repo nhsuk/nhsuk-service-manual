@@ -30,24 +30,33 @@
   <p>Images should flow with the text content, not appear too prominent or isolated.</p>
   <p>We recommend stacking images. We've found that gallery views (images side by side) confuse users.</p>
   <h3>Captions</h3>
-  <p>The image component is made up of 2 elements - the image and caption - in a white box.</p>
+  <p>The image component is made up of 2 elements - the image and a caption underneath it in a white box.</p>
   <p>Not all images need captions. If you use them:</p>
   <ul>
     <li>write a full sentence ending with a full stop</li>
-    <li>do not duplicate alt-text</li>
-    <li>use the caption to explain why the image is there and what you want users to conclude from the image</li>
+    <li>do not duplicate alt-text (<a href="#alternative-text">alternative text</a>)</li>
   </ul>
-  <p>Read more about captions in the guidance on <a href="/accessibility/content#use-alternative-text-for-images-in-content">alt-text for images in content</a>.</p>
+  <p>The caption assumes that the user can either see the image or read the alt-text. Use it to explain what you want users to conclude from it - for example, how serious their symptom is or what stage their condition has reached.</p>
+  <p>Here's an example. The alt-text is "Small red spots on white skin". The caption explains that that's how chickenpox starts.</p>
 
+    <figure class="nhsuk-image nhsuk-u-margin-top-6">
+      <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg" alt="Small red spots on white skin">
+      <figcaption class="nhsuk-image__caption">
+        1. Chickenpox starts with red spots. They can appear anywhere on the body.
+      </figcaption>
+    </figure>
 
   <h3>Accessibility</h3>
-  <p><a href="/accessibility/content#use-alternative-text-for-images-in-content">Follow our guidance on making images accessible</a>. Images must have text alternatives that describe the information or function they represent. This makes sure that people with disabilities can understand them.</p>
-  <p>When using an image (or the img element), specify a text alternative with the alt attribute. Alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off.</p>
   <p>Do not use images that have words in them, because screen readers will not be able to read the words.</p>
+  <h4 id="alternative-text">Alternative text (alt-text)</h4>
+  <p>Images must have text alternatives that describe the information or function they represent. This makes sure that people with disabilities can understand them.</p>
+  <p>When using an image (or the img element), specify a text alternative with the alt attribute.</p>
+  <p>Alt-text is not usually visible but is read out by screen readers or displayed if an image does not load or if images have been switched off.</p>
+  <p>Read more about alt-text in the guidance on <a href="/accessibility/content#use-alternative-text-for-images-in-content">using alt-text for images in content</a>.</p>
 
   <h2>Research</h2>
   <p>In testing we found gallery views (images side by side) confused users. Users either missed the images in the right hand column or they didn't know how to interpret the sequence. To get around this we recommend stacking images.</p>
   <p>We also found that users clicked images in gallery views, expecting them to appear larger in a pop-up modal. When we increased the size of the images and stacked them in 1 column (not 2), we didn't see anyone clicking on them to expand them.</p>
-  <p>We tested images on the <a href="https://www.nhs.uk/conditions/chickenpox/">chickenpox</a> page on nhs.uk in 2018. They tested well and all users said that the images helped them understand the symptoms.</p>
+  <p>We tested images on the <a href="https://www.nhs.uk/conditions/chickenpox/">chickenpox</a> page on the NHS website in 2018. They tested well and all users said that the images helped them understand the symptoms.</p>
 
 {% endblock %}
