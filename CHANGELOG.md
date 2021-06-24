@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.0.1 - TBC
+
+:wrench: **Fixes**
+
+- 	Add real error message example to date input component
+
 ## 5.0.0 - 14 June 2021
 
 :new: **New features**
