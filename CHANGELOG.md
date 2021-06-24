@@ -4,7 +4,8 @@
 
 :wrench: **Fixes**
 
-- 	Add real error message example to date input component
+- Add real error message example to date input component
+- Update dependencies to the latest versions
 
 ## 5.0.0 - 14 June 2021
 
