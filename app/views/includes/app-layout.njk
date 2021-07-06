@@ -53,10 +53,6 @@
           {% block afterContact %}
           {% endblock %}
 
-          {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" %}
-            {% include "includes/_cant-find-something.njk" %}
-          {% endif %}
-
           {%- if dateUpdated %}
             <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: {{dateUpdated}}</p>
           {% endif %}

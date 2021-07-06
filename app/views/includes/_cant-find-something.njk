@@ -1,6 +1,11 @@
+{%- if pageTitle == "Search" %}
 <div class="nhsuk-card nhsuk-u-margin-top-4">
   <div class="nhsuk-card__content">
     <h2 id="cant-find-something" class="nhsuk-card__heading nhsuk-heading-m">Can't find something?</h2>
     <p>If you can't find something, check the <a href="/community-and-contribution/community-backlog">community backlog</a>.</p>
   </div>
 </div>
+{% else %}
+<h2 id="cant-find-something" class="app-side-nav__heading">Can't find something?</h2>
+<p class="app-side-nav__text">If you can't find something, check the <a href="/community-and-contribution/community-backlog">community backlog</a>.</p>
+{% endif %}

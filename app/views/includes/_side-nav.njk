@@ -176,6 +176,9 @@
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
+    {% include "includes/_cant-find-something.njk" %}
+
   {% endif %}
 
   {%- if subSection == "Components" %}
@@ -205,6 +208,8 @@
     {% endfor %}
     </ul>
 
+    {% include "includes/_cant-find-something.njk" %}
+
   {% endif %}
 
   {%- if subSection == "Patterns" %}
@@ -226,6 +231,9 @@
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
+    {% include "includes/_cant-find-something.njk" %}
+
   {% endif %}
 
   {%- if pageSection == "Accessibility" %}
@@ -250,6 +258,9 @@
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
+    {% include "includes/_cant-find-something.njk" %}
+
   {% endif %}
 
   {%- if subSection == "How to write good questions for forms" %}
