@@ -1,0 +1,42 @@
+{
+  "params": [
+    {
+      "name": "links",
+      "type": "array",
+      "required": false,
+      "description": "Contains an array of footer link items.",
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Href attribute for the footer link item."
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": true,
+          "description": "The label of for the footer link item."
+        }
+      ]
+    },
+    {
+      "name": "copyright",
+      "type": "string",
+      "required": false,
+      "description": "Optional text for the copyright notice in the footer."
+    },
+    {
+      "name": "classes",
+      "type": "string",
+      "required": false,
+      "description": "Classes to add to the footer container."
+    },
+    {
+      "name": "attributes",
+      "type": "object",
+      "required": false,
+      "description": "HTML attributes (for example data attributes) to add to the footer container."
+    }
+  ]
+}
