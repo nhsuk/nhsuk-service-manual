@@ -1,5 +1,16 @@
 # NHS digital service manual Changelog
 
+## 5.0.2 - 8 July 2021
+
+:new: **New features**
+
+- Make minor changes to the NHS service standard, including explaining what we mean by inclusion and accessibility
+- Bring all guidance on captions together in the images component and add more detail
+
+:wrench: **Fixes**
+
+- Update dependencies to the latest versions
+
 ## 5.0.1 - 28 June 2021
 
 :wrench: **Fixes**
