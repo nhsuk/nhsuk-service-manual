@@ -9,7 +9,7 @@
 
 :wrench: **Fixes**
 
-- Add real error message example to date input example
+- Update dependencies to the latest versions
 
 ## 5.0.1 - 28 June 2021
 
