@@ -9,6 +9,7 @@
 :wrench: **Fixes**
 
 - Fix typo in NHS service standard point 5
+- Update dependencies to the latest versions
 
 ## 5.0.2 - 8 July 2021
 
