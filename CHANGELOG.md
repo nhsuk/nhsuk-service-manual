@@ -2,6 +2,10 @@
 
 ## 5.0.3 - TBC
 
+:new: **New features**
+
+- Add Qualtrics feedback survey to footer, home page and Get in touch
+
 :wrench: **Fixes**
 
 - Fix typo in NHS service standard point 5
