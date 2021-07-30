@@ -10,6 +10,7 @@
 
 - Fix typo in NHS service standard point 5
 - Update dependencies to the latest versions
+- Updates to team members
 
 ## 5.0.2 - 8 July 2021
 
