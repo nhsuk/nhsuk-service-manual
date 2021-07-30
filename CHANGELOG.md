@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.0.4 - TBC
+
+:wrench: **Fixes**
+
+- Updates to team members
+
 ## 5.0.3 - 22 July 2021
 
 :new: **New features**
@@ -10,7 +16,6 @@
 
 - Fix typo in NHS service standard point 5
 - Update dependencies to the latest versions
-- Updates to team members
 
 ## 5.0.2 - 8 July 2021
 
