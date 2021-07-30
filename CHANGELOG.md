@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.0.4 - TBC
+## 5.0.4 - 30 July 2021
 
 :wrench: **Fixes**
 
