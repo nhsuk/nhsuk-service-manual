@@ -12,6 +12,10 @@ Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhs
 
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
 
+## Development environment
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
+
 ## Release lifecycle
 
 ### Environments
