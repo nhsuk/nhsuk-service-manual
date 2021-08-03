@@ -14,7 +14,11 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 ## Development environment
 
+To access our online development environmnet click on the button below.
+Using your own Github credentials you can change, commit and push to branches via our Gitpod.
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
+
+More information on <a href="https://www.gitpod.io/docs">Gitpod</a>.
 
 ## Release lifecycle
 
