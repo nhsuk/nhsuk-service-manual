@@ -2,20 +2,22 @@
 
 Guidance for designing and building digital services for the NHS. Things you need to make consistent, usable services that put people first.
 
-## Prerequisite
+## Running the application locally
+
+### Prerequisite
 
 Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes NPM.
 
-## Running the application
+### Cloning and running the application
 
 Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhsuk-service-manual` and while in the project directory `cd nhsuk-service-manual`, install the required npm packages with: `npm install`.
 
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
 
-## Development environment
+## Running the application via the browser
 
 To access our online development environmnet click on the button below.
-Using your own Github credentials you can change, commit and push to branches via our Gitpod.
+Using your own Github credentials you can change, commit and push to branches via our Gitpod container.
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
 
