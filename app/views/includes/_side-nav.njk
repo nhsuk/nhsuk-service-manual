@@ -130,6 +130,34 @@
   { title: "Show and tells", url: "/whats-new/show-and-tells" }
 ] %}
 
+{% set understandingIA = [
+  { title: "About IA", url: "/ia-guidance/about-ia/" },
+  { title: "Understanding users", url: "/ia-guidance/understanding-users" }
+] %}
+
+{% set iaInstructions = [
+  { title: "Core IA process", url: "/whats-new/updates" },
+  { title: "Process by scenario", url: "/whats-new/blog-posts" },
+  { title: "Adapting the process", url: "/whats-new/blog-posts" }
+] %}
+
+{% set componetsAndPageTypes = [
+  { title: "Navigation", url: "/whats-new/updates" },
+  { title: "Linking components", url: "/whats-new/blog-posts" },
+  { title: "Page types", url: "/whats-new/blog-posts" }
+] %}
+
+{% set aboutIA = [
+  { title: "What is IA", url: "/ia-guidance/about-ia/what-is-ia" },
+  { title: "Why IA is important", url: "/ia-guidance/about-ia/why-ia-is-important" },
+  { title: "Getting started with IA", url: "/ia-guidance/about-ia/getting-started-with-ia" },
+  { title: "How to consider IA for your digital product", url: "/ia-guidance/about-ia/how-to-consider-ia-for-your-digital-product" },
+  { title: "Your topic in the wider IA", url: "/ia-guidance/about-ia/your-topic-in-the-wider-ia" },
+  { title: "IA checklist", url: "/ia-guidance/about-ia/ia-checklist" },
+  { title: "Tools for IA", url: "/ia-guidance/about-ia/tools-for-ia" },
+  { title: "IA design principles", url: "/ia-guidance/about-ia/ia-design-principles" }
+] %}
+
 <nav class="app-side-nav">
 
   {%- if pageSection == "NHS service standard" %}
@@ -293,4 +321,45 @@
     {% endfor %}
     </ul>
   {% endif %}
+
+  {%- if pageSection == "IA guidance" and subSection != "Understanding IA" and subSection != "IA Instructions" and subSection != "Components and page types" %}
+    <h2 class="app-side-nav__heading">Understanding IA</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in understandingIA %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">IA Instructions</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in iaInstructions %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Components and page types</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in componetsAndPageTypes %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>    
+
+  {% endif %}
+
+  {%- if subSection == "Understanding IA" %}
+    {{ backLink({
+      "href": "/ia-guidance",
+      "text": "IA guidance",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <h2 class="app-side-nav__heading">About IA <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in aboutIA %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+
+
 </nav>
