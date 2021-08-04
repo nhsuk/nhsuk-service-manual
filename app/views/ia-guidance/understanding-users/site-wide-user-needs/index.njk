@@ -1,0 +1,66 @@
+{% set pageTitle = "Focus state" %}
+{% set pageDescription = "Use these focus state styles to let users know which element they’re on and that they can interact with it." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set dateUpdated = "October 2019" %}
+{% set backlog_issue_id = "193" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/styles/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>What is a focus state?</h2>
+  <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they’re currently on and that it's ready for them to interact with.</p>
+
+  <h2>Our focus state styles</h2>
+  <p>We've followed the <a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK Design System's approach to focus state styles</a>.</p>
+  <p>Like GOV.UK, we use a combination of yellow and black to make sure we meet the <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Web Content Accessibility Guidelines (WCAG) 2.1 level AA non-text contrast</a> on any background <a href="/design-system/styles/colour">colour on the NHS website</a>.</p>
+  <p>The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.</p>
+
+  <h2 id="link-focus-state-style">Link focus state style</h2>
+  <p>When links are focused, they have a yellow background with a black bottom border. This helps the focused link stand out from the rest of the content on the page.</p>
+  <img class="app-image--border app-example--image" src="/assets/focus-example-backgrounds.png" alt="A focused link against different NHS.UK background colours">
+
+  <h2 id="form-input-focus-state-style">Form input focus state style</h2>
+  <p>When form inputs are focused, they have a yellow outline and a thick black border. If the element already has a border, the border gets thicker.</p>
+  <img class="app-image--border app-example--image" src="/assets/focus-example-input.png" alt="A text input labelled &quot;What is your name?&quot;. The example shows the text input both unfocused and focused.">
+  <p><a href="/design-system/components/radios">Radios</a> and <a href="/design-system/components/checkboxes">checkboxes</a> use the same style.</p>
+  <img class="app-image--border app-example--image" src="/assets/focus-example-radios.png" alt="Yes and no radio options to answer the question &quot;Do you know your NHS number?&quot;. In this example, the &quot;No&quot; option is focused.">
+
+  <h2 id="making-focus-states-accessible-for-extended-and-modified-components">Making focus states accessible for extended and modified components</h2>
+  <p>If you’ve extended or modified components in the NHS digital service manual, you can use service manual styles to make the focus states of these components accessible.</p>
+  <p>How you make focus states accessible depends on whether the component is:</p>
+  <ul>
+    <li>focusable text without a background colour or border</li>
+    <li>another focusable element with a background colour or border</li>
+  </ul>
+
+  <h3 id="make-focusable-text-accessible">Make focusable text accessible</h3>
+  <p class="rich-text">If you use Sass, you should include the <code>nhsuk-focused-text</code> mixin in your component's <code>:focus</code> selector if that component is focusable text. For example, if the component is a link in body text, or the details component:</p>
+<pre class="app-pre"><code><span class="hljs-selector-class">.app-component</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-variable">@include</span> nhsuk-focused-text;
+}</code></pre>
+
+  <h3 id="make-other-focusable-elements-accessible">Make other focusable elements accessible</h3>
+  <p>If you use Sass, you can use 3 NHS.UK frontend variables if your component has a background colour or border. For example, a text input or checkbox.</p>
+  <p>The 3 Sass variables are:</p>
+  <ul>
+    <li class="rich-text"><code>$nhsuk-focus-color</code> - yellow background</li>
+    <li class="rich-text"><code>$nhsuk-focus-text-color</code> - black text</li>
+    <li class="rich-text"><code>$nhsuk-focus-width</code> - for consistent width</li>
+  </ul>
+
+  <p>Use these variables in your components instead of numeric values for the background, text and widths.</p>
+
+  <h2 id="if-you-do-not-use-sass">If you do not use Sass</h2>
+  <p>To make a component’s focus state accessible without using Sass, you can:</p>
+  <ul>
+    <li class="rich-text">see how the <code>nhsuk-focused-text</code> mixin works from the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/core/tools/_focused.scss#L12-L23">NHS.UK frontend source code</a></li>
+    <li class="rich-text">get the values for <code>$nhsuk-focus-color</code> and <code>$nhsuk-focus-text-color</code> from the <a href="/design-system/styles/colour">colour page</a></li>
+  </ul>
+
+{% endblock %}
