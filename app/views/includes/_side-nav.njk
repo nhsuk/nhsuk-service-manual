@@ -136,9 +136,9 @@
 ] %}
 
 {% set iaInstructions = [
-  { title: "Core IA process", url: "/whats-new/updates" },
-  { title: "Process by scenario", url: "/whats-new/blog-posts" },
-  { title: "Adapting the process", url: "/whats-new/blog-posts" }
+  { title: "Core IA process", url: "/ia-guidance/core-ia-process" },
+  { title: "Process by scenario", url: "/ia-guidance/process-by-scenario" },
+  { title: "Adapting the process", url: "/ia-guidance/adapting-the-process" }
 ] %}
 
 {% set componetsAndPageTypes = [
@@ -156,6 +156,19 @@
   { title: "IA checklist", url: "/ia-guidance/about-ia/ia-checklist" },
   { title: "Tools for IA", url: "/ia-guidance/about-ia/tools-for-ia" },
   { title: "IA design principles", url: "/ia-guidance/about-ia/ia-design-principles" }
+] %}
+
+{% set understandingUsers = [
+  { title: "Information seeking modes", url: "/ia-guidance/understanding-users/information-seeking-modes" },
+  { title: "Site wide user needs", url: "/ia-guidance/understanding-users/site-wide-user-needs" },
+  { title: "Understanding users mental models", url: "/ia-guidance/understanding-users/understanding-users-mental-models" }
+] %}
+
+{% set coreIaProcess = [
+  { title: "Understanding", url: "/ia-guidance/core-ia-process/understanding" },
+  { title: "Ideation", url: "/ia-guidance/core-ia-process/ideation" },
+  { title: "Application", url: "/ia-guidance/core-ia-process/application" },
+  { title: "Live", url: "/ia-guidance/core-ia-process/live" }
 ] %}
 
 <nav class="app-side-nav">
@@ -322,7 +335,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "IA guidance" and subSection != "About IA" and subSection != "IA Instructions" and subSection != "Components and page types" %}
+  {%- if pageSection == "IA guidance" and subSection != "About IA" and subSection != "Understanding users" and subSection != "Core IA process" %}
     <h2 class="app-side-nav__heading">Understanding IA</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in understandingIA %}
@@ -360,6 +373,33 @@
     </ul>
   {% endif %}
 
+  {%- if subSection == "Understanding users" %}
+    {{ backLink({
+      "href": "/ia-guidance",
+      "text": "IA guidance",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <h2 class="app-side-nav__heading">Understanding users <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in understandingUsers %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if subSection == "Core IA process" %}
+    {{ backLink({
+      "href": "/ia-guidance",
+      "text": "IA guidance",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <h2 class="app-side-nav__heading">Core IA process <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in coreIaProcess %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
 
 
 </nav>
