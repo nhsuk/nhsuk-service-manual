@@ -1,0 +1,22 @@
+{% set pageTitle = "Navigation" %}
+{% set pageDescription = "Understand IA" %}
+{% set pageSection = "Navigation" %}
+{% set subSection = "Navigation" %}
+{% set theme = "Design" %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>If you are using the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit</a> or have the <a href="https://github.com/nhsuk/nhsuk-frontend">NHS.UK frontend library</a> included in your build, the coded examples in the service manual do not need any additional styling.</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}
