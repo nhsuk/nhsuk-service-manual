@@ -13,21 +13,409 @@
 
 {% block bodyContent %}
 
-  <h2>What are the information seeking modes?/h2>
+  <h2>What are the information seeking modes?</h2>
   <p>Internet users display different behaviours according to which 'information seeking mode' they are in. These modes are applicable across different medical conditions and clinical needs, and are therefore a way of abstracting information architecture and design needs from topic-specific content needs. We have evidence that there are a small number of modes that are relevant to the NHS website. We can apply different design patterns to the different modes to best meet user needs.</p>
   <p>Any one individual user of the NHS website may well be in a different mode on each visit, depending on their relationship with their medical condition and specific information need at the time. The different modes inevitably blur together at the edges, and we will often see users moving from one mode to another as they learn and their conditions change.</p>
   <p>Our IA work has sought to provide navigation structures and page templates that support users regardless of which information seeking mode they are in on any given visit to NHS.UK.</p>
 
   <h3>Discovering</h3>
+  <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Description</dt>
+    <dd class="nhsuk-summary-list__value">
+      Getting up-to-speed with a complex (and possibly distressing) new topic. Often associated with a new diagnosis.
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Example</dt>
+    <dd class="nhsuk-summary-list__value">
+      “I’ve just been diagnosed with Type 1 Diabetes and I can’t remember everything they just told me!”
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Information needs
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Need <b>introductory information</b>, <b>actionable</b> in the short term
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Behaviours
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Often happens in a crisis, eg after a new diagnosis</li>
+        <li>Don’t know what they need to know</li>
+        <li>Seeking clarification and explanation after a medical consultation / diagnosis: What did they say/mean? What's going to happen next? How do I self-manage between appointments? What choices might I need to make? How will this condition/treatment affect my daily life?</li>
+        <li>May be looking for a quick solution (target-seeking behaviour) and unaware they need to build understanding or trial options before they can successfully progress. Expecting something to have a quick fix where none exist. Possibly avoiding thinking about long-term implications. May be in denial.</li>
+        <li>Potential double-whammy of users in a very blinkered 'target-seeking' mode (trying to find short-term fixes to a long-term problem) and resulting 'blindness' to introductory information that doesn't immediately seem relevant</li>
+        <li>Hearing a large quantity of new, possibly conflicting, information from multiple sources in a short space of time - need to find a trusted source of foundational information.</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design principles
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Ensure that introductory information is easy-to-find</li>
+        <li>Keep the introductory information concise and easy-to-digest</li>
+        <li>Allow users to discover content they didn’t know they needed</li>
+        <li>Show that a full range of information on the topic is available when they are ready for it</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design patterns
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Provide introductory information grouped together and labelled appropriately</li>
+        <li>Use lists and clear sub-headings to provide concise, easy-to-scan introductory information</li>
+        <li>Present links to introductory information high up on topic landing pages (eg as the first link on a hub page, or pulled out as a top task, as appropriate)</li>
+        <li>Use hub pages to display all the information on a given topic and cross-link to relevant content elsewhere (on NHS.UK and reputable external sites). This allows users to discover more when they are ready</li>
+        <li>Include common topic synonyms within the Health A-Z and on-site search – research can be problematic for people discovering a new topic, due to the inability of user to articulate what they need or construct appropriate search terms</li>
+        <li>Use consistent navigation structures to support re-finding information - later on this visit or on subsequent visits</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Outcomes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Stressed or overwhelmed users are able to easily find and digest introductory information on their topic of interest. (Where appropriate: not all topics will merit information targeted at users rapidly getting up-to-speed)</li>
+        <li>Users are able to recognise that more information is available when they are ready to come back to it. (And find that information when they want it.)</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Notes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>A mode only seen in specific, serious clinical situations.</li>
+        <li>Expect these users to move into different modes over time - eg Target-seeking to answer specific questions, Evaluating to make treatment choices and Exploring a long-term condition over time</li>
+      </ul>
+    </dd>
+  </div>
+
+  </dl>
 
 
 
   <h3>Target-seeking</h3>
 
+  <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Description</dt>
+    <dd class="nhsuk-summary-list__value">
+      Looking for specific information, usually the answer to a question
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Example</dt>
+    <dd class="nhsuk-summary-list__value">
+      "Can I drink alcohol with this medicine?"
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Information needs
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Need easy to find, <b>actionable</b> information
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Behaviours
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Will typically Google the question. The NHS is highly trusted to answer it - users will seek out NHS websites in the search results</li>
+        <li>A known-item search. (Although users may not always know the clinical or technical term.)</li>
+        <li>Users know when they’ve found the answer</li>
+        <li>Task-focussed, “Just show me the thing!” Will latch onto items they see as providing a strong information scent for their needs.</li>
+        <li>Likely 'blindness' to content not immediately seen as relevant - which makes these users bad at correcting themselves if they’ve chosen the wrong initial route through content</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design principles
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Ensure that there are multiple routes in to individual topics, allowing for variations in users' vocabularies and mental models.</li>
+        <li>Ensure that topic content is grouped and labelled to match users’ mental models (eg is grouped as users expect it to be and labelled with words they use) This will provide a strong information scent for users to follow</li>
+        <li>Provide answers to common user questions within the topic, in context. Do not pull them out into “Frequently asked” or “Common” questions sections, as users do not know if their question is common or not, so that label provides a poor information scent</li>
+        <li>Consider providing shortcuts to content that answers common questions if it would otherwise be ‘buried’ in the topic IA.</li>
+        <li>Allow users to easily scan the sub-topics within their topic of interest, so they can quickly follow the information scent to the answer they need</li>
+        <li>Allow users to easily scan the content of pages to find the answer they need. They won’t have tolerance for exploration, distraction or interruption</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design patterns
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Include common vocabulary and synonyms within the Health A-Z and on-site search to provide a strong information scent for the topic</li>
+        <li>Use hub pages to allow users to easily scan the topic and subtopics</li>
+        <li>Use ‘Top tasks’ modules on hub pages to provide a small number of shortcuts to information needed by high volumes of users</li>
+        <li>Use cross linking across content groups and types to provide a strong information scent for users with different mental models</li>
+        <li>Use lists and clear subheadings to allow users to easily scan page content </li>
+        <li>Provide simple, concise answers and try to make the content provided actionable (dos, don’ts, how to, when to, etc)</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Outcomes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Users are able to find the answer to their question whether they Google, use on-site search or browse from elsewhere on NHS.UK to their topic of interest.</li>
+        <li>Users are able to find the answer to their question despite variances in vocabulary and mental models.</li>
+        <li>Users are able to understand if they are in the right place to answer their question or not. (And correct themselves, if not.)</li>
+      </ul>
+    </dd>
+  </div>
+
+  </dl>
+
   <h3>Exploring</h3>
+  <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Description</dt>
+    <dd class="nhsuk-summary-list__value">
+      Iteratively adding to understanding of a topic (building a mental model). Often associated with a long-term condition.
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Example</dt>
+    <dd class="nhsuk-summary-list__value">
+      “I’m researching treatment options for my hypothyroidism”
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Information needs
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Need to <b>identify information</b> that is useful and trustworthy
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Behaviours
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Know what subject they’re interested in. (Although may not always use the clinical or technical terms.)</li>
+        <li>Iterative & ongoing: information needs change as they learn. Expertise grows over time.</li>
+        <li>Will likely move back and forth between exploring a topic, target seeking to answer new questions and evaluating to make choices as they learn.</li>
+        <li>Skimming many pages for relevance and moving on quickly. Stopping to digest only information of interest.</li>
+        <li>People with lower confidence reading may struggle to skim-read pages and thus read through everything, whether or not it is relevant to them</li>
+        <li>Consulting many potentially conflicting sources of information. (eg friends/family, Facebook groups, Google, US medical websites, social media of celebrities known to have similar conditions, etc). NHS.UK is seen as a trusted baseline.</li>
+        <li>Mental health issues can be associated with long-term conditions. Support can be vital.</li>
+        <li>Expect non-linear journeys, sometimes with no natural endpoint</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design principles
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Ensure people can discover the full range of content on their topic of interest</li>
+        <li>Allow exploration of ‘nearby’ content - for example, associated conditions, treatments, or lifestyle improvements. No dead ends!</li>
+        <li>Support users ‘scanning’ content for items of interest. Don’t expect people to read everything.</li>
+        <li>Users with lower reading confidence are more likely to read everything, so brevity matters</li>
+        <li>Signpost other reputable sources of information, news and support</li>
+        <li>Support re-finding information on subsequent visits</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design patterns
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Include common vocabulary and synonyms within the Health A-Z and on-site search to provide a strong information scent for the topic</li>
+        <li>Hub pages displaying all the subtopics within a given topic allow users to scan and explore the full range of content on their topic of interest</li>
+        <li>Hub and content pages cross-linking to relevant content elsewhere on NHS.UK allows users to explore the full range of content on their topic of interest</li>
+        <li>Hub and content pages linking to relevant content on external sites allows users to explore a range of reputable information sources and organisations offering support</li>
+        <li>Use lists and clear sub-headings to provide concise, easy-to-scan information that allows people to quickly find information they want to spend time reading, or move on if needs be</li>
+        <li>Use consistent navigation structures to support re-finding information - later this visit or on subsequent visits</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Outcomes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Users are able to find their topic of interest whether they Google, use on-site search or browse from elsewhere on NHS.UK.</li>
+        <li>Users are able to find their topic of interest despite variances in vocabulary and mental models.</li>
+        <li>Users are able to discover a range of information about their topic of interest (including information they didn't know they needed).</li>
+        <li>Users are able to navigate back and forth through a range of information about their topic of interest from across NHS.UK and reputable outside sources.</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Notes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>If a condition becomes long-term, users may move into Exploring from initial Target seeking</li>
+        <li>Exploring is divergent seeking - a widening of understanding. People will move to convergent target seeking and evaluating - narrowing down options - when they have identified next steps. For long-term issues, they will then likely move back to exploring when they're ready. For long-term conditions, people may well self-manage for long periods of time, then something will trigger a return to Exploring and seeking medical help (eg the condition worsens, a significant life event, etc)</li>
+      </ul>
+    </dd>
+  </div>
+
+  </dl>
 
 
   <h3>Evaluating</h3>
+
+  <dl class="nhsuk-summary-list">
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Description</dt>
+    <dd class="nhsuk-summary-list__value">
+      Iteratively adding to understanding of a topic (building a mental model). Often associated with a long-term condition.
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">Example</dt>
+    <dd class="nhsuk-summary-list__value">
+      “I’m researching treatment options for my hypothyroidism”
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Information needs
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Need to <b>identify information</b> that is useful and trustworthy
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Behaviours
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Know what subject they’re interested in. (Although may not always use the clinical or technical terms.)</li>
+        <li>Iterative & ongoing: information needs change as they learn. Expertise grows over time.</li>
+        <li>Will likely move back and forth between exploring a topic, target seeking to answer new questions and evaluating to make choices as they learn.</li>
+        <li>Skimming many pages for relevance and moving on quickly. Stopping to digest only information of interest.</li>
+        <li>People with lower confidence reading may struggle to skim-read pages and thus read through everything, whether or not it is relevant to them</li>
+        <li>Consulting many potentially conflicting sources of information. (eg friends/family, Facebook groups, Google, US medical websites, social media of celebrities known to have similar conditions, etc). NHS.UK is seen as a trusted baseline.</li>
+        <li>Mental health issues can be associated with long-term conditions. Support can be vital.</li>
+        <li>Expect non-linear journeys, sometimes with no natural endpoint</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design principles
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Ensure people can discover the full range of content on their topic of interest</li>
+        <li>Allow exploration of ‘nearby’ content - for example, associated conditions, treatments, or lifestyle improvements. No dead ends!</li>
+        <li>Support users ‘scanning’ content for items of interest. Don’t expect people to read everything.</li>
+        <li>Users with lower reading confidence are more likely to read everything, so brevity matters</li>
+        <li>Signpost other reputable sources of information, news and support</li>
+        <li>Support re-finding information on subsequent visits</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Design patterns
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Include common vocabulary and synonyms within the Health A-Z and on-site search to provide a strong information scent for the topic</li>
+        <li>Hub pages displaying all the subtopics within a given topic allow users to scan and explore the full range of content on their topic of interest</li>
+        <li>Hub and content pages cross-linking to relevant content elsewhere on NHS.UK allows users to explore the full range of content on their topic of interest</li>
+        <li>Hub and content pages linking to relevant content on external sites allows users to explore a range of reputable information sources and organisations offering support</li>
+        <li>Use lists and clear sub-headings to provide concise, easy-to-scan information that allows people to quickly find information they want to spend time reading, or move on if needs be</li>
+        <li>Use consistent navigation structures to support re-finding information - later this visit or on subsequent visits</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Outcomes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Users are able to find their topic of interest whether they Google, use on-site search or browse from elsewhere on NHS.UK.</li>
+        <li>Users are able to find their topic of interest despite variances in vocabulary and mental models.</li>
+        <li>Users are able to discover a range of information about their topic of interest (including information they didn't know they needed).</li>
+        <li>Users are able to navigate back and forth through a range of information about their topic of interest from across NHS.UK and reputable outside sources.</li>
+      </ul>
+    </dd>
+  </div>
+
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Notes
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>If a condition becomes long-term, users may move into Exploring from initial Target seeking</li>
+        <li>Exploring is divergent seeking - a widening of understanding. People will move to convergent target seeking and evaluating - narrowing down options - when they have identified next steps. For long-term issues, they will then likely move back to exploring when they're ready. For long-term conditions, people may well self-manage for long periods of time, then something will trigger a return to Exploring and seeking medical help (eg the condition worsens, a significant life event, etc)</li>
+      </ul>
+    </dd>
+  </div>
+
+  </dl>
 
 
   <h3>Keeping up-to-date</h3>
@@ -50,5 +438,5 @@
 
   <h4>Related reading</h4>
   <p><a href="https://emotionfirst.co.uk/f/emotion-first-design-in-3-parts">https://emotionfirst.co.uk/f/emotion-first-design-in-3-parts</a></p>
-  
+
 {% endblock %}
