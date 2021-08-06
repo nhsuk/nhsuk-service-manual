@@ -16,6 +16,8 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 ## Running the application via the browser
 
+Prior to running Gitpod you must install Gitpod on your Github account <a href="https://github.com/apps/gitpod-io/installations/new">Install Gitpod application</a>
+
 To access our online development environmnet click on the button below.
 Using your own Github credentials you can change, commit and push to branches via our Gitpod container.
 
