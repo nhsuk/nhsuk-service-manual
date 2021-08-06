@@ -16,9 +16,10 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 ## Running the application via the browser
 
-Prior to running Gitpod you must install Gitpod on your Github account <a href="https://github.com/apps/gitpod-io/installations/new">Install Gitpod application</a>
+Prior to running Gitpod you must install the <a href="https://github.com/apps/gitpod-io/installations/new">Gitpod application</a> on your Github account. 
 
 To access our online development environmnet click on the button below.
+
 Using your own Github credentials you can change, commit and push to branches via our Gitpod container.
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
