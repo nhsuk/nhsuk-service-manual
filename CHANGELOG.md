@@ -1,10 +1,21 @@
 # NHS digital service manual Changelog
 
-## 5.0.3 - TBC
+## 5.0.4 - 30 July 2021
+
+:wrench: **Fixes**
+
+- Updates to team members
+
+## 5.0.3 - 22 July 2021
+
+:new: **New features**
+
+- Add Qualtrics feedback survey to footer, home page and Get in touch
 
 :wrench: **Fixes**
 
 - Fix typo in NHS service standard point 5
+- Update dependencies to the latest versions
 
 ## 5.0.2 - 8 July 2021
 
