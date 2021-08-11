@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Updated links on the header component examples to match the current NHS website and NHS digital service manual website
+- Update dependencies to the latest versions
 
 ## 5.0.4 - 30 July 2021
 
@@ -55,7 +56,7 @@
 
 :new: **New content**
 
-- Update accessibility guidance - change length of alt-text for images 
+- Update accessibility guidance - change length of alt-text for images
 - Add new section on making content about skin symptoms more inclusive to content style guide
 - Add new entries in the A to Z of NHS health writing for: black skin, brown skin, redness, skin colour changes, white skin, GP online services and ID
 - Update entries for immunisation, jab, vaccination, and vaccine
@@ -193,14 +194,14 @@
 
 :new: **New features**
 - Add page template guidance to the design system
-- Update guidance on PDFs and other non-HTML documents 
+- Update guidance on PDFs and other non-HTML documents
 - Add explanation and more examples to the section on hyphens and dashes
 
 :wrench: **Fixes**
 - Remove readability tools page and explain that we do not recommend them on our health literacy page
 - Remove 2 broken links from health literacy page
 - Amend the site map page to bring it into line with the site map entry in the style guide
-- Remove negative contraction (can't) on Page not found page 
+- Remove negative contraction (can't) on Page not found page
 - Remove all code related to the readability tool page
 
 ## 3.10.1 - 28 January 2021
