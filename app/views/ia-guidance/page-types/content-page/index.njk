@@ -1,5 +1,5 @@
 {% set pageTitle = "Content page" %}
-{% set pageDescription = "About IA." %}
+{% set pageDescription = "At level 1 you'll have the main topic page which routes users to subtopics (level 2) then down to content pages that offer users access to the specific information they were looking for." %}
 {% set pageSection = "Page types" %}
 {% set subSection = "Page types" %}
 {% set dateUpdated = "August 2021" %}
@@ -13,7 +13,15 @@
 
 {% block bodyContent %}
 
-  <h2>Title</h2>
-  <p>Content</p>
+  <h2>Content pages</h2>
+  <p>In a well-structured website, you'll have a defined hierarchy (parent and children pages) with pages organised at various levels.</p>
+  <p>We've been testing visual representations of this structure with users and found a need for consistent structure on content pages - to help support a wider navigation strategy.</p>
+  <p>Content pages need to:</p>
+  <ul>
+    <li>give users the context of where they are on the website; if they need to go up a level (homepage) using breadcrumbs</li>
+    <li>introduce what the page of information is about using a heading</li>
+    <li>display a review date to reassure users that a page is up to date</li>
+    <li>allow users to move sideways - across all pages at the same level in the topic area using the sideways navigation</li>
+  </ul>
 
 {% endblock %}
