@@ -1,11 +1,12 @@
 # NHS digital service manual Changelog
 
-## 5.0.5 - Unreleased
+## 5.0.5 - 17 August 2021
 
 :wrench: **Fixes**
 
 - Updated links on the header component examples to match the current NHS website and NHS digital service manual website
 - Update dependencies to the latest versions
+- Updates to team members
 
 ## 5.0.4 - 30 July 2021
 
