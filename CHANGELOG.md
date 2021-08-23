@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.0.6 - 23 August 2021
+
+:wrench: **Fixes**
+
+- Import and initialise the Error Summary JavaScript so the component example works as expected [NHS.UK frontend issue #766](https://github.com/nhsuk/nhsuk-frontend/issues/766)
+
 ## 5.0.5 - 17 August 2021
 
 :wrench: **Fixes**

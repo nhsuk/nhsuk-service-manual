@@ -8,6 +8,7 @@ import Details from '../../node_modules/nhsuk-frontend/packages/components/detai
 import Checkboxes from '../../node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
 import Radios from '../../node_modules/nhsuk-frontend/packages/components/radios/radios';
 import Card from '../../node_modules/nhsuk-frontend/packages/components/card/card';
+import ErrorSummary from '../../node_modules/nhsuk-frontend/packages/components/error-summary/error-summary';
 
 // NHS.UK frontend polyfills
 import '../../node_modules/nhsuk-frontend/packages/polyfills';
@@ -40,6 +41,7 @@ SkipLink();
 Checkboxes();
 Radios();
 Card();
+ErrorSummary();
 
 // Initialise NHS digital service manual components
 
