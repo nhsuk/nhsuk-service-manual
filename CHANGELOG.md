@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.0.6 - Unreleased
+
+:wrench: **Fixes**
+
+- Use the correct Service Header example on the Header components page
+
 ## 5.0.5 - 17 August 2021
 
 :wrench: **Fixes**
