@@ -1,0 +1,60 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+{% from 'contents-list/macro.njk' import contentsList %}
+{% from 'pagination/macro.njk' import pagination %}
+{% from 'button/macro.njk' import button %}
+
+{% block outerContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home - section"
+      }
+    ],
+    href: "/",
+    text: "Subsection"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span role="text">
+          Service name goes here
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+            <span class="nhsuk-u-visually-hidden">
+            -
+            </span>
+              Use this service to do something [briefly explain the service].
+          </span>
+        </span>
+      </h1>
+
+      <p>You can use this service if:</p>
+      <ul>
+        <li>you live in England</li>
+        <li>you need ...</li>
+      </ul>
+
+      <p>[Explain what will happen.]</p>
+
+      <h2 class="nhsuk-u-margin-top-6">Before you start</h2>
+
+      <p>You will need to have this information to hand: ...</p>
+      <p>You can also apply by phone on 011 111 111.</p>
+      <p>The online service is also available in <a href=#welsh>Welsh (Cymraeg)</a>.</p>
+      <p>Find out more about <a href=#this_service>this service</a> [for example, related policy information.]<p>
+        
+      {{ button({
+        "text": "Start now"
+      }) }}
+      
+      <p>By using this service you are agreeing to our <a href=#terms_of_use>terms of use </a>and <a href=#privacy_policy>privacy policy</a>.</p>
+
+    </div>
+  </div>
+{% endblock %}
