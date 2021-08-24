@@ -1,0 +1,71 @@
+{% set pageTitle = "Start page" %}
+{% set pageDescription = "Use this pattern to help users get started in a service." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Page types" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "999" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  {{ designExample({
+    group: "patterns",
+    item: "start-page",
+    type: "example",
+    fullpage: true,
+    showArguments: false
+  }) }}
+
+  <h2>When to use a start page</h2>
+
+  <p>At the start of a service which involves the user inputting information in order to get something. For example, at the start of an application form.</p>
+
+  <p>To get a start page on the NHS website, contact the NHS website information architecture team through the <a href="https://service-manual.nhs.uk/slack">service manual public Slack workspace</a>.</p>
+
+  <h2>How to use a start page</h2>
+
+  <h3>Put your start page in the right place</h3>
+
+  </p>Start pages include 4 main elements. These are:</p>
+  <ol>
+    <li>he service name: this helps people understand what your service does and whether they need to use it (read about <a href="https://www.gov.uk/service-manual/design/naming-your-service">naming your service on GOV.UK</a>)</li>
+    <li>a short introduction to list things most users need to know, for example, what your service is, what will happen, what users will get or how much it’ll cost</li>
+    <li>he “Start now” call-to-action button</li>
+    <li>a list of other ways to access the service</li>  
+  </ol>
+
+  </p></p>
+  </p></p>
+  </p></p>
+
+  <h3>Set a helpful URL</h3>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+
+  <h3>Make it easy to update your start page</h3>
+  <p></p>
+  <p></p>
+
+  <h3>Check your start page includes the correct links</h3>
+  <p></p>
+  <p></p>
+
+  <h3>What not to include on a start page</h3>
+  <p></p>
+  <p></p>
+  <p></p>
+
+  <h2>Accessibility</h2>
+
+  <h2>Research</h2>
+
+
+
+{% endblock %}
