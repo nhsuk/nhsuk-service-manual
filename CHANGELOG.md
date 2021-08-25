@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.1.0 - 25 August 2020
+## 5.1.0 - 25 August 2021
 
 :new: **New features**
 
