@@ -1,18 +1,26 @@
 # NHS digital service manual Changelog
 
-## 5.0.6 - Unreleased
+## 5.1.0 - 25 August 2020
+
+:new: **New features**
+
+- Add link to week notes from the NHS additional language support discovery 
+- Add new entries on NHS England and NHS Improvement (NHSEI) and NHSX to the A to Z of NHS health writing
+- Add 2 more bullet points to the guidance on image captions in the image component
 
 :wrench: **Fixes**
 
-- Use the correct Service Header example on the Header components page
+- Use the correct service header example on the Header components page
+- Update team members
+- Update dependencies to the latest versions
 
 ## 5.0.5 - 17 August 2021
 
 :wrench: **Fixes**
 
-- Updated links on the header component examples to match the current NHS website and NHS digital service manual website
+- Update links on the header component examples to match the current NHS website and NHS digital service manual website
 - Update dependencies to the latest versions
-- Updates to team members
+- Update team members
 
 ## 5.0.4 - 30 July 2021
 
