@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.0.6 - Unreleased
+## 5.1.0 - 25 August 2020
 
 :new: **New features**
 
@@ -12,6 +12,7 @@
 
 - Use the correct service header example on the Header components page
 - Update team members
+- Update dependencies to the latest versions
 
 ## 5.0.5 - 17 August 2021
 
