@@ -1,0 +1,27 @@
+{% set pageTitle = "About IA" %}
+{% set pageDescription = "Understand IA and how the guidance has been created." %}
+{% set pageSection = "Information architecture guidance" %}
+{% set subSection = "About IA" %}
+{% set theme = "Understanding IA" %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "ia-guidance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <h2>The basics of IA</h2>
+  <p>Information architecture (IA) is the structural design of information. It is about organising labelling websites and other digital products to help users find and use content and services.</p>
+  <p>IA is both structure and interface.</p>
+
+  <h3>IA as structure</h3>
+  <p>IA underpins the structure and data that powers a website. Essentially, it is the foundations of how data is organised, stored and presented to a user.</p>
+  <h3>IA as the interface</h3>
+  <p>IA is also the visual representation of the structure of the website.</p>
+  <p>It includes the components and page templates that visually organise content to help users navigate across the site and find what they need.</p>
+
+
+
+{% endblock %}
