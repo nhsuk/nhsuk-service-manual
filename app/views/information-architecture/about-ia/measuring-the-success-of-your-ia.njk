@@ -1,8 +1,8 @@
-{% set pageTitle = "Measuring the sucess of your IA" %}
-{% set pageDescription = "A guide for knowing when your IA work is complete and has been successful." %}
+{% set pageTitle = "Measuring the success of your IA" %}
+{% set pageDescription = "Explains what success looks like and how you'll know when your work is complete." %}
 {% set pageSection = "Information architecture" %}
 {% set subSection = "About IA" %}
-{% set dateUpdated = "August 2021" %}
+{% set dateUpdated = "September 2021" %}
 {% set backlog_issue_id = "1" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -13,41 +13,27 @@
 
 {% block bodyContent %}
 
-  <h2>Measuring success</h2>
-  <h3>Analytics</h3>
-  <p>Benchmark as-is IA and content performance during Discovery in order to measure improvements in Beta and Live. Ensure you understand your users’ priority tasks for your content. Can you get more people to the information they need more easily?</p>
+  <h2>Definition of "done"</h2>
+  <p>To meet user and organisational needs, If you can demonstrate the following for any new or transformed content, you will know that your topic IA meets user and organisational needs.</p>
+  <h3>Your topic fits into your wider site IA</h3>
   <ul>
-    <li>Improved IA improves the findability of content (known-item access). Tree tests are one way of measuring findability.</li>
-    <li>Improved IA improves the discoverability of content (unknown-item access). Site analytics can measure journeys through content.</li>
-    <li>Optimised site search improves findability. Site search logs measure successful searches.</li>
+    <li>You're clear about any larger content group it belongs to.</li>
+    <li>The labels you use sit meaningfully alongside existing content.</li>
+    <li>Users can browse to all your content - no "orphan" content.</li>
+    <li>Your URLs conform to the URL policy in the service manual (likely to be published at the end of 2021).</li>
   </ul>
-  <p>Improved IA and search should mean:</p>
+  <h3>You give users a good information scent to follow</h3>
+   <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
+    <h4 id="information-scent">Information scent</h4>
+    <p>Users pick up visual and textual cues about the content a website contains, for example, from its information architecture and link labels. These help them estimate the value of following a link.</p>
+    <p>Users pick up an information scent from what they see, but they also rely on what they already know.</p>
+  </div>
   <ul>
-    <li>More people navigate to your content</li>
-    <li>More people find your content having entered a relevant on-site search term</li>
-    <li>More people go on longer journeys around your content (not just single-page visits)</li>
-    <li>More people start a relevant transactional journey</li>
-    <li>More people visit high priority content (eg that helps them accomplish the most common tasks - Top Tasks)</li>
+    <li>Users looking for your topic find it when they start from elsewhere on the website.</li>
+    <li>The way you've grouped your content and the labels you've used leads users to content they're interested in.</li>
+    <li>You include links and synonyms in visible indexes, like the <a href="https://www.nhs.uk/conditions/">Health A to Z on the NHS website</a>.</li>
   </ul>
-  <h3>SEO</h3>
-  <p>Changes to page structures affect SEO, but we should remember that NHS.UK has huge authority so it is difficult to harm our Google rankings.</p>
-  <p>Technical SEO is concerned with making a website easy for search engines to crawl, removing barriers such as crawl errors. Content and CMS activities contribute to technical SEO on live content. The IA page templates help search engines understand the relationship between content and importance of pages by providing a clear structure.</p>
-  <h3>Definitions of done</h3>
-  <p>When you create new content (or transform old content) it needs to:</p>
   <ul>
-    <li>Fit into the NHS.UK IA</li>
-      <ul>
-        <li>Which larger content group does it belong in?</li>
-        <li>Do the labels sit meaningfully alongside existing content?</li>
-        <li>No ‘orphan’ content with no way to browse to it</li>
-        <li>Conform to URL policy</li>
-      </ul>
-    <li>Provide a good ‘information scent’ for users looking for content on your topic</li>
-      <ul>
-        <li>Will users looking for your topic find it if they start from elsewhere on the website?</li>
-        <li>Do the groups you've made and the labels you've used create an information scent or trail users can follow to any piece of content they might be interested in?</li>
-        <li>Which links and synonyms should go in the Health A to Z?</li>
-      </ul>
     <li>Have links to and from related content on NHS.UK</li>
       <ul>
         <li>Consider users’ journeys around the wider topic - are there associated conditions, treatments, lifestyle improvements or services they might need to discover?</li>
@@ -58,9 +44,6 @@
         <li>How should on-site search results be prioritised for your topic?</li>
       </ul>
   </ul>
-
-  <h2>Definition of done</h2>
-  <p>Your topic information architecture will meet user and organisational needs if...</p>
   <ul>
     <li>A content inventory exists and documents all related content from across NHS.UK</li>
     <li>The topic IA (site map) has been designed, tested and iterated based on user research</li>
@@ -81,6 +64,32 @@
       </ul>
     <li>A measurement framework is in place that measures users’ ability to find and discover the content they need</li>
   </ul>
+
+
+
+
+  <h2>Measuring success</h2>
+  <h3>Analytics</h3>
+  <p>Benchmark as-is IA and content performance during Discovery in order to measure improvements in Beta and Live. Ensure you understand your users’ priority tasks for your content. Can you get more people to the information they need more easily?</p>
+  <ul>
+    <li>Improved IA improves the findability of content (known-item access). Tree tests are one way of measuring findability.</li>
+    <li>Improved IA improves the discoverability of content (unknown-item access). Site analytics can measure journeys through content.</li>
+    <li>Optimised site search improves findability. Site search logs measure successful searches.</li>
+  </ul>
+  <p>Improved IA and search should mean:</p>
+  <ul>
+    <li>More people navigate to your content</li>
+    <li>More people find your content having entered a relevant on-site search term</li>
+    <li>More people go on longer journeys around your content (not just single-page visits)</li>
+    <li>More people start a relevant transactional journey</li>
+    <li>More people visit high priority content (eg that helps them accomplish the most common tasks - Top Tasks)</li>
+  </ul>
+  <h3>SEO</h3>
+  <p>Changes to page structures affect SEO, but we should remember that NHS.UK has huge authority so it is difficult to harm our Google rankings.</p>
+  <p>Technical SEO is concerned with making a website easy for search engines to crawl, removing barriers such as crawl errors. Content and CMS activities contribute to technical SEO on live content. The IA page templates help search engines understand the relationship between content and importance of pages by providing a clear structure.</p>
+
+
+
 
 
 
