@@ -217,11 +217,8 @@ h1 + .nhsuk-lede-text {
   padding-top: 0;
 }
 
-.key-links{
-  padding:1.125em 0;
-  margin:0;
-  li{
-    list-style-type:none;
-    @extend h4;
-  }
+.app-key-links {
+  list-style: none;
+  margin: 0;
+  padding: nhsuk-spacing(3) 0;
 }
