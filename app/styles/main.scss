@@ -191,6 +191,10 @@ h1 + .nhsuk-lede-text {
     padding-bottom: nhsuk-spacing(5);
     padding-top: nhsuk-spacing(5);
   }
+
+  a {
+    color: $color_nhsuk-white;
+  }
 }
 
 // Page template annotation
@@ -221,10 +225,4 @@ h1 + .nhsuk-lede-text {
   list-style: none;
   margin: 0;
   padding: nhsuk-spacing(3) 0;
-}
-
-.app-hero__wrapper {
-  a {
-    color: $color_nhsuk-white;
-  }
 }

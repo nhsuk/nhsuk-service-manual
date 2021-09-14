@@ -7,6 +7,20 @@
 
 {% extends "includes/app-layout.njk" %}
 
+{% block breadcrumb %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/guidance-by-topic",
+    text: "Guidance by topic",
+    classes: "app-breadcrumb"
+  }) }}
+{% endblock %}
+
 {% block bodyContent %}
 
   <p>Your service must be accessible to everyone who needs it. If it is not, you may be breaking the law.</p>
