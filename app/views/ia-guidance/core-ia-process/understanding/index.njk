@@ -1,11 +1,6 @@
 {% set pageTitle = "Understanding" %}
-<<<<<<< HEAD:app/views/ia-guidance/core-ia-process/understanding/index.njk
 {% set pageDescription = "The first stage in the process of transforming information architecture is about understanding your users and what content already exists." %}
 {% set pageSection = "IA guidance" %}
-=======
-{% set pageDescription = "About IA." %}
-{% set pageSection = "Information architecture" %}
->>>>>>> 07bddbe2db1bc7811a5adaa6a70d8d86e2279e01:app/views/information-architecture/core-ia-process/understanding/index.njk
 {% set subSection = "Core IA process" %}
 {% set dateUpdated = "August 2021" %}
 {% set backlog_issue_id = "1" %}
@@ -13,7 +8,7 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "../_breadcrumb.njk" %}
+  {% include "ia-guidance/about-ia/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}

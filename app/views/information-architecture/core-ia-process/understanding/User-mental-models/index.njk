@@ -1,0 +1,80 @@
+{% set pageTitle = "Learn about your users' mental models" %}
+{% set pageDescription = "The first stage in the process of transforming information architecture is about understanding your users and what content already exists." %}
+{% set pageSection = "IA guidance" %}
+{% set subSection = "Core IA process" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "ia-guidance/about-ia/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Step 3: Learn about your users' mental models</h2>
+  <h3>Open card sorts</h3>
+  <p>An open card sort is when you give users a series of 'cards' or pieces of information, and ask them to group them into meaningful sets and name those groups. This is different from a closed card sort, where you ask users to sort 'cards' into pre-decided categories.</p>
+  <p>Open card sorts will show you what words are used in conjunction with your topic. It will also generate ideas for how to structure and label content. Therefore, open card sorts are invaluable when you need to completely restructure information. They are less useful when you only intend to make small changes or already have a good understanding of your users’ mental models.</p>
+  <p>We can use the results of a card sort as the basis for our topic site map. Reflect the groups you see in the card sort in the sub-topics in your site map. Use the common labels from your card sort to label your sub-topics.</p>
+  <h4>Insights to look for in an open card sort</h4>
+  <ul>
+    <li>how people understand your information</li>
+    <li>patterns in people's understanding</li>
+    <li>where people expect to find information</li>
+    <li>ideas for how to structure and label your website information</li>
+    <li>if different user groups think in different ways about your information</li>
+  </ul>
+  <h4>Setting up an open card sort</h4>
+  <ul>
+    <li>A typical range of cards to give users to sort would be between 30 and 60</li>
+    <li>Cards should represent a single page of information. However, if you are doing a card sort for a smaller section of content, the cards could represent the sub sections within a single page.</li>
+    <li>Aim for 30-50 participants to be sure you’re spotting patterns, without getting overwhelmed by data</li>
+  </ul>
+  <h4>Considerations</h4>
+  <ul>
+    <li>If you user base is mobile-centric, bear in mind that online card sorting tools can be difficult to use on a mobile device. This may limit how representative your results are.</li>
+    <li>Card sorting is an involved task that takes some time, so might need incentivising. Especially if you need to recruit participants from specific segments.</li>
+  </ul>
+  <h3>Conduct user interviews</h3>
+  <p>At this stage of the IA process, user interviews should be used to understand users’ mental models and the words they use when thinking about your topic. Interviews are vital for larger topics and for entirely new topics or for topics that are currently underperforming.</p>
+  <h4>Insight to look for</h4>
+  <ul>
+    <li>How users engage with any existing content on the topic – both on your website and elsewhere</li>
+    <li>What information users need at different stages of their journey</li>
+    <li>What tasks are users trying to complete? What words do they use to describe their tasks?</li>
+    <li>How do they expect content to be grouped? Which labels and sub-topic groupings make sense to users and which don’t?</li>
+    <li>What are users’ strategies for finding information? Do these strategies change over the course of their relationship with the topic? Do users’ strategies conform to any of the NHS.UK-wide information-seeking modes?</li>
+    <li>How well do different sites support users’ information-seeking behaviours? What works and what doesn’t?</li>
+  </ul>
+  <p>Conducting interviews at this stage can also help to understand how current content is performing. It is a good point at which to gather qualitative evidence as to how your users are struggling and what else they need from the content.</p>
+  <h3>Use search logs and analytics</h3>
+  <p>Search logs and analytics will be very useful statistics to have to hand throughout an IA transformation. At this stage, they should be used to understand the words people use in relation to your topic as it will help to build a picture of a typical user's mental model.</p>
+  <p>You should be looking for:</p>
+  <ul>
+    <li>the vocabulary people use when performing searches that result in a visit to your topic</li>
+    <li>common searches related to your topic for which no good content exists - this could represent unmet user needs</li>
+    <li>differences between users’ expressed needs (in the form of the search term they use) and their actual needs (the pages they visit)</li>
+    <li>how people are accessing the topic for example, are they browsing to it via menus and/or using on-site search and/or using Google to get to it and/or coming to it from a related topic?</li>
+    <li>if there are high bounce rates to any pages (People arriving at the page and leaving immediately - which can imply that the content does not meet their expectations. Although remember that if someone simply wants the answer to a question and finds the answer at the top of the page, then they have had a successful interaction, despite it looking like a negative bounce in analytics.)</li>
+    <li>whether people are going on journeys through the content, or only looking at a single page</li>
+    <li>where people are leaving your pages in favour of searching</li>
+    <li>the links most interacted with on each page</li>
+  </ul>
+  <p>Consider using common search terms to inform the grouping and labelling of your content. These terms can be compared against those garnered from your card sort findings. </p>
+  <p>However, it is important to remember that search logs and analytics may not tell you the whole picture, especially when current IA and content does not effectively meet user needs.</p>
+
+  <h3>Understand competitor approaches</h3>
+  <p>Another way to understand how your users think about your topic is to look at competitor sites and how they arrange information. If your users are familiar with these sites and how to navigate through them, then it can be a good indication as to how they think about the topic.</p>
+  <p>The following questions can help you to understand how other sites arrange their information architecture:</p>
+  <ul>
+    <li>What information architectures do they present to their users? Documenting or visualising their sitemaps can be helpful here.</li>
+    <li>What information needs or user tasks do they prioritise with their designs?</li>
+    <li>What vocabulary do they use?</li>
+    <li>Ask your researcher to evaluate which competitor approaches are performing well for users</li>
+  </ul>
+  <p>Plus, if you understand how well ‘competitor’ information architectures are performing, you can think about how to incorporate the best bits in your designs and remain consistent with your users' mental models.</p>
+
+
+{% endblock %}

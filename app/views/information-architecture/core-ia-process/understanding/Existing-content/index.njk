@@ -1,0 +1,53 @@
+{% set pageTitle = "Understand your existing content" %}
+{% set pageDescription = "Understand and document existing content." %}
+{% set pageSection = "IA guidance" %}
+{% set subSection = "Core IA process" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "ia-guidance/about-ia/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Understanding existing content</h2>
+  <p>Before you can think about updating the information architecture of your topic or content, it is important to know what already exists. If you are creating an entirely new section of content, look at the guidance for this scenario.</p>
+  <p>This will help you to create a baseline of the existing IA, as well as a benchmark against which improvements can be measured.</p>
+  <p>There are two key activities you can do to understand the content that exists:</p>
+  <ol>
+    <li>Do a content audit</li>
+    <li>Visualise the current site-map</li>
+  </ol>
+  
+  <h3>Content audit</h3>
+  <p>To understand the current content situation, you need to catalogue existing content and assess its performance. Conduct a content audit and produce a content inventory - usually in the form of a spreadsheet. </p>
+  <ul>
+    <li>List the content that already exists that is related to your topic</li>
+    <ul>
+      <li>What other content exists on your site that people interested in your topic might also care about?</li>
+      <li>Are there different types of information on your topic?</li>
+      <li>What external links are provided?</li>
+    </ul>
+    <li>Does any content need to be updated or culled?</li>
+    <li>Is anything obviously missing?</li>
+  </ul>
+  <p>Once you have completed your audit, your researcher will need the content inventory in order to run some activities, including card sorts and benchmark tree tests.</p>
+
+  <h3>Visualise the current site-map</h3>
+  <p>Once you have your content inventory spreadsheet, it is often useful to visualise it in a sitemap. Visual sitemaps help the whole team understand page hierarchies to inform design.</p>
+  <ul>
+    <li>How is the sitemap structured? Is it narrow and deep, or perhaps wide and shallow?</li>
+    <ul>
+      <li>Narrow, deep sitemaps can provide a poor information scent because it’s impossible for users to predict content buried deep in a hierarchy</li>
+      <li>Narrow, deep sitemaps can cause UI design problems because it’s difficult to allow movement through the hierarchy via a coherent navigation system</li>
+      <li>Wide, shallow sitemaps can cause users to struggle to make a choice from too many options</li>
+      <li>Wide, shallow sitemaps can cause UI design problems in the form of confusing pages and overlong menus</li>
+    </ul>
+    <li>Does the sitemap represent a good information scent for every piece of content?</li>
+    <li>Are there any pages you cannot navigate to?</li>
+  </ul>
+
+{% endblock %}

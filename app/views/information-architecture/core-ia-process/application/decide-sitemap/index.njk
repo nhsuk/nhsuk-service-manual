@@ -1,0 +1,41 @@
+{% set pageTitle = "Application" %}
+{% set pageDescription = "Create the final versions of your new site map and designs." %}
+{% set pageSection = "IA guidance" %}
+{% set subSection = "Core IA process" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "ia-guidance/about-ia/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Decide the final site-map</h2>
+  <h3>Sitemap design & iteration</h3>
+  <p>In the previous phase (ideation) the steps for creating a site-map were outlined.</p>
+  <p>When you reach the stage of wanting to decide a final to-be sitemap, you should:</p>
+  <ul>
+    <li>apply what you have learned from your previous tree tests to iterate the site-map</li>
+    <li>run a final tree test</li>
+    <li>analyse results from the first tree test to your final tree test to ensure there have been improvements</li>
+    <li>identify any areas where you have less confidence</li>
+    <li>compile data and research findings to support your approach</li>
+  </ul>
+  <p>Make sure that all content that needs to be included is reflected at a high level, and that labelling is consistent.</p>
+  <h3>Tree test the final site-map</h3>
+  <p>When you have decided your final site-map, perform a final tree test to measure how much the structure has been improved.</p>
+  <p>Be mindful of:</p>
+  <ul>
+    <li>Do the labels make sense to people?</li>
+    <li>Is the content grouped logically to people?</li>
+    <li>Can people find the information they want easily and quickly? If not, what's stopping them? Where do they go when they take the 'wrong' path?</li>
+    <li>See overall success rates for each task. Can most users complete most of your task using your IA? If you ran a benchmark tree test previously, does your new IA perform better than the old one?</li>
+    <li>See where people clicked first - which links have the strongest information scent for each task?</li>
+    <li>See a breakdown of the different places people went in your hierarchy to try to complete the tasks. So you can see how the information scent performs, and where people go when they go “wrong”.</li>
+  </ul>
+  
+
+{% endblock %}

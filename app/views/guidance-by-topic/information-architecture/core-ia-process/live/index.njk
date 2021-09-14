@@ -1,5 +1,5 @@
 {% set pageTitle = "Live" %}
-{% set pageDescription = "About IA." %}
+{% set pageDescription = "Continuous monitoring and improvement of your new IA." %}
 {% set pageSection = "IA guidance" %}
 {% set subSection = "Core IA process" %}
 {% set dateUpdated = "August 2021" %}
@@ -13,7 +13,62 @@
 
 {% block bodyContent %}
 
-  <h2>Title</h2>
-  <p>Content</p>
+  <h2>Step 13: Add the topic to your site's content management system (CMS)</h2>
+  <h3>Things to consider before the creation of pages on Wagtail</h3>
+  <ul>
+    <li>Highlight pages that need to be within the Health A-Z and let IA team know</li>
+    <li>Highlight pages that are moving under a Hub (new URL: e.g. nhs.uk/mental-health) and pages that will remain to their original location and let the IA team know</li>
+    <li>Draft old and new URLs in a spreadsheet</li>
+    <li>Then work with Infra to set up the redirects</li>
+    <li>Think about the legacy URLs - pages that were on SharePoint and that have been redirected</li>
+  </ul>
+  <h3>To build a page:</h3>
+  <ol>
+    <li>Have spreadsheet with old and new URLs open</li>
+    <li>Click add a child page in wagtail</li>
+    <li>In first tab called 'Content' copy and paste content into new article page</li>
+    <li>Click + to add each component/section of the page - remember to add a new section for each H2</li>
+    <li>You can either copy content from the live version as it appears on the website (the old URL version) or from the current page in wagtail.</li>
+    <li>Be aware that if a page has a [draft] status next to it someone is working on it/updating it already.</li>
+    <li>When that's completed move to the 'Promote tab' - check the slug matches what has been decided as the new URL.</li>
+    <li>NB, URLs get autopopulated from the title but the autopopulation leaves out small words like "a", "the" and "to" - make sure to check for this.</li>
+    <li>You also need to check 'Show in menus'.</li>
+    <li>Alt text - need to decide what we will add in.</li>
+    <li>Then move to the 'Settings' tab.</li>
+    <li>On settings tab under Privacy click 'Set page privacy' and select 'Private, accessible to logged-in users'</li>
+    <li>Update the last reviewed and next review due dates - you can find this on the live version on the website.</li>
+    <li>To be decided - save it as a draft for someone to 2i?</li>
+    <li>To be decided - when a page has been 2i'd it can be published - make sure it is private.</li>
+    <li>If you're not sure on anything ask!</li>
+  </ol>
+
+  <h3>Consider SEO</h3>
+  <ul>
+    <li>Links</li>
+      <ul>
+        <li>The main priority for links is that they are useful for the user</li>
+        <li>For UX, internal links should replicate the H1 as closely as possible, so that users understand what information is on the next page. For SEO, the link text just needs to contain the primary keyword of the page you’re linking to.</li>
+        <li>Links should not be broken</li>
+        <li>Remove redirect chains</li>
+        <li>No orphan pages</li>
+      </ul>
+    <li>Content structures</li>
+      <ul>
+        <li>Interlinking between related topics is good for SEO</li>
+        <li>Google understands the content of the page in the context of the wider page set, and can display child pages as part of an enhanced search result.</li>
+      </ul>
+    <li>Create machine- and human-readable URLs</li>
+      <ul>
+        <li>Page sets with a clear URL structure (parent and child pages), with links to child pages from the parent page, can generate sitelinks (enhanced results) in search results.</li>
+      </ul>
+    <li>Duplicate content is generally negative for SEO</li>
+    <li>Technical SEO</li>
+      <ul>
+        <li>Improve page load speed</li>
+        <li>Optimisation of robots.txt settings</li>
+        <li>XML and HTML sitemaps - should contain every 200 Live page you want to be indexed</li>
+        <li>Fixing crawl errors will improve crawlability and Google’s crawl budget. Ideally every page should be 200 OK page</li>
+      </ul>
+  </ul>
 
 {% endblock %}

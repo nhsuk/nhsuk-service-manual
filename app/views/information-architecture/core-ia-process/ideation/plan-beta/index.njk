@@ -1,0 +1,34 @@
+{% set pageTitle = "Ideation" %}
+{% set pageDescription = "Applying your initial findings to candidate IA improvements." %}
+{% set pageSection = "IA guidance" %}
+{% set subSection = "Core IA process" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "ia-guidance/about-ia/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Step 8: Plan how to move into Beta</h2>
+  <p>Throughout the ideation phase and the steps within, it is likely you have iterated and had more than one viable option for how to progress the work. This step is about reflecting on and applying your learnings to define how the team progresses with the work and effectively selects one way forwards.</p>
+  <h3>UI design and iteration<h3>
+  <p>Decide the most viable designs and conduct the following research methods:</p>
+  <ol>
+    <li>Tree test</li>
+    <li>First click tests</li>
+  </ol>
+  <p>This will tell you how the designs need to be changed and whether they meet your users' mental models and top tasks.</p>
+  <p>It may be useful at this point to have a full working prototype of your proposed IA and navigation changes.</p>
+
+  <h2>Moving to the next stage: Application</h2>
+  <p>In the next phase of the IA process, there is a focus on applying everything you have learned to the content and structures you are working on.</p>
+
+
+
+
+
+{% endblock %}

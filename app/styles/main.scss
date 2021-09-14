@@ -217,6 +217,12 @@ h1 + .nhsuk-lede-text {
   padding-top: 0;
 }
 
+.app-key-links {
+  list-style: none;
+  margin: 0;
+  padding: nhsuk-spacing(3) 0;
+}
+
 .app-hero__wrapper {
   a {
     color: $color_nhsuk-white;
