@@ -1,0 +1,138 @@
+{% set pageTitle = "Why IA is important" %}
+{% set pageDescription = "A good IA helps you create a better user experience and maintain your website over time." %}
+{% set pageSection = "Information architecture" %}
+{% set subSection = "About IA" %}
+{% set dateUpdated = "September 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "./_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Well-structured information and navigation systems create and maintain better websites</h2>
+  <p>Websites grow and evolve over time. By structuring your content and representing that structure to users in the navigation, you will:</p>
+  <ul>
+    <li>help more users find good healthcare information</li>
+    <li>increase the number of people who successfully self-serve</li>
+    <li>make it easier and less time-consuming for editors to manage, maintain and reference content</li>
+    <li>create a more sustainable publishing platform, better prepared for future innovations</li>
+  </ul>
+
+  <h3>Structuring content</h3>
+  <p>You need a high-level "content model" or map of your content, showing the different content types, their attributes and how they relate to each other.</p>
+  <p>You also need to understand and document the hierarchies and the relationships between your content.</p>
+    <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    <p>Documenting hierarchies helps you understand a condition and order content correctly, for example: symptoms, diagnosis, treatment and complications. This helps users understand the steps they may go through.</p>
+    <p>Documenting relationships helps you see wider connections between, for example:</p>
+    <ul>
+      <li>chemotherapy and cancer</li>
+      <li>antihistamines and hay fever</li>
+    </ul>
+    <p>These are in different content groups, with their own hierarchies, but they are related to one another.</p>
+  </div>
+  <p>Search engines need to understand the hierarchy of content to display the best results. For example, when a user searches for "COVID symptoms", should they see the top level <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">Coronavirus (COVID-19) page</a> or <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/">Symptoms of coronavirus (COVID-19)</a>?</p>
+
+  <h2 id="give-users-context">A good IA gives users context and underpins user experience</h2>
+
+  <p>It helps users with:</p>
+  <ul>
+    <li>placemaking</li>
+    <li>orientation</li>
+    <li>navigation</li>
+    <li>search</li>
+  </ul>
+
+  <h3>Placemaking</h3>
+  <p>Placemaking is about users understanding what the website is for and what it offers. The way you group, name and display content helps people understand the scope of the website and how useful it will be to them.</p>
+
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+   <p>On the <a href="https://www.nhs.uk/">NHS website</a>, the global navigation, in the main navigation bar, works hardest to communicate this to users.</p>
+
+   <figure class="nhsuk-image nhsuk-u-margin-top-6">
+      <img class="nhsuk-image__img" src="" alt="">
+      <figcaption class="nhsuk-image__caption">
+        Placeholder for an image of the main nav from the NHS website
+      </figcaption>
+    </figure>
+  </div>
+
+
+  <h3>Orientation</h3>
+  <p>Orientation is about users understanding where they are and where else they could go. Your IA lets them know if they're in the right place and what else might be of interest to them.</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+   <p>On the NHS website, global and local navigation structures help users orient themselves, including</p>
+   <ul>
+    <li>hub pages</li>
+    <li>breadcrumbs</li>
+    <li>page titles</li>
+    <li>headings</li>
+  </ul>
+
+   <figure class="nhsuk-image nhsuk-u-margin-top-6">
+      <img class="nhsuk-image__img" src="" alt="">
+      <figcaption class="nhsuk-image__caption">
+        Placeholder for an image of hub pages, breadcrumbs and headings
+      </figcaption>
+    </figure>
+  </div>
+
+  <h3>Navigation</h3>
+  <p>Your IA helps users get to where they need to go. It gives users a good information scent to follow to find the content they need.</p>
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
+    <h4 id="information-scent">Information scent</h4>
+    <p>Users pick up visual and textual cues about the content a website contains, for example, from its information architecture and link labels. These help them estimate the value of following a link.</p>
+    <p>Users follow an information scent from what they see, but they also rely on what they already know.</p>
+  </div>
+   <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+   <p>On the NHS website, global and local navigation structures help users browse to their destination, including:</p>
+   <ul>
+    <li>the main navigation bar</li>
+    <li>hub pages</li>
+    <li>page-to-page navigation</li>
+  </ul>
+
+   <figure class="nhsuk-image nhsuk-u-margin-top-6">
+      <img class="nhsuk-image__img" src="" alt="">
+      <figcaption class="nhsuk-image__caption">
+        Placeholder for an image of nav structures that support navigation
+      </figcaption>
+    </figure>
+  </div>
+
+  <h3>Search</h3>
+  <p>Search helps users locate things that are more difficult to find and to look for things in other ways.</p>
+  <p>Organising your content and making it easy to navigate is vital for on-site search and helps Google understand it.</p>
+     <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+   <p>The work done to document hierarchies and the relationships between content on the NHS website underpin the site search engine and CMS.</p>
+   <figure class="nhsuk-image nhsuk-u-margin-top-6">
+      <img class="nhsuk-image__img" src="" alt="">
+      <figcaption class="nhsuk-image__caption">
+        Placeholder for an image
+      </figcaption>
+    </figure>
+  </div>
+
+  <h3>Placemaking, orientation, navigation and search rely on consistent navigation systems</h3>
+  <p>Consistency builds trust. It's also to vital for accessibility.</p>
+  <p>Hub pages, breadcrumbs and menus must work together to provide a consistent navigation system across every page of your website. That way all users have access to the structures that allow them to find what they need, wherever they are on the site.</p>
+  <p>Different users use different navigation methods at different times. Your IA needs to give users multiple ways to do the same thing. For example, to go "up" a level, they might use:</p>
+  <ul>
+    <li>a breadcrumb</li>
+    <li>page-to-page navigation</li>
+    <li>the back button</li>
+  </ul>
+    <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+   <p>The NHS website's CMS has templates for navigational hubs and content pages with page-to-page navigation. Teams use the same components and patterns consistently across the website.</p>
+  </div>
+
+{% endblock %}

@@ -216,3 +216,9 @@ h1 + .nhsuk-lede-text {
   padding-bottom: 0;
   padding-top: 0;
 }
+
+.app-hero__wrapper {
+  a {
+    color: $color_nhsuk-white;
+  }
+}

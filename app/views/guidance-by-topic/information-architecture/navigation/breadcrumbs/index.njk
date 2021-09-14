@@ -1,0 +1,30 @@
+{% set pageTitle = "Breadcrumbs" %}
+{% set pageDescription = "Breadcrumbs are an important navigational element that supports wayfinding — making users aware of their current location within the hierarchical structure of a website." %}
+{% set pageSection = "Navigation" %}
+{% set subSection = "Navigation" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>What is a breadcrumb?</h2>
+  <p>A breadcrumb is a part of a website's navigation. Usually presented as a list, they display the current page a user is on and the “ancestors” of that page (parent page, grandparent page, and so on). Breadcrumbs on NHS.UK should show the user the journey all the way back to the homepage.</p>
+  <h3>Problems with the previous breadcrumb</h3>
+  <p>The breadcrumbs on NHS.UK used to sit within a white banner, but it was found in multiple rounds of research that this made them too detached from the page the user was on, meaning users were not finding them useful.</p>
+  <p>Plus, as many websites now do, we have several banners displayed to a user (a cookie banner, the main navigation and in recent times, the persistent COVID-19 emergency banner). This meant sticking with a banner style breadcrumb put the navigation element in even more risk of not being seen or used. </p>
+
+  <h2>The new breadcrumbs</h2>
+  <p>After several rounds of user research and iteration, the breadcrumb has been designed to support a wider IA navigational system.</p>
+  <p>The white banner has been removed, bringing the breadcrumb link closer to the page heading that it relates to. This gives the heading, and therefore the page, better context of where it sits within the site.</p>
+  <p>As the heading is close to the end of the breadcrumb string, we do not repeat the page the user is on at the end of the breadcrumb. We have substantial evidence from user research to support this.</p>
+  <p>IMAGE</p>
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% set pageTitle = "Top tasks shortcut links" %}
+{% set pageDescription = "A top task allows users quick access to popular journeys within each topic." %}
+{% set pageSection = "Linking components" %}
+{% set subSection = "Linking components" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Rationale</h2>
+  <p>On hub (routing) pages we found users needed a short cut to their top tasks; 'doing a thing (service)' or getting specific information about a topic area, rather than leaving them to navigate through a topic hierarchy - give them what they want, fast.</p>
+  <h3>How top tasks help</h3>
+  <p>The majority of users enter the NHS website through a google search. Depending on how specific their google search term is, results in how deep they go into our structure.</p>
+  <p>Searching google for "Diabetes" would give them the 'level 1' hub page on the NHS website https://www.nhs.uk/conditions/diabetes/ which routes them to information we have on type 1 and type 2 diabetes (level 2 hub pages).</p>
+  <p>If, for example; through analytics, we know the majority of users want to know about "food you can eat when diagnosed with type 2 diabetes" but their search team is "diabetes" - they would land on the diabetes level 1 page, then have to navigate through Diabetes > Type 2 diabetes > Food and keeping active.</p>
+  <p>So it makes sense to give the majority of visitors to the main diabetes hub a short cut to the specific information about the food you can eat to support their task.</p>
+  <p>In the context of a hub page; which is essentially a page of links that filter/route users through varying sized topic areas - The order of links is important, along with users being able to visually distinguish between types of links.</p>
+  <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>Example of proposed 'top task' link:</p>
+  <p><b>Definition</b></p>
+  <p>To be used for shortcuts to content within the topic area that is popular with users or meets a business need (to drive traffic to a specific piece of content within the topic area). Maximum 3 top tasks, but less the better.<br>
+    <br>Link text: Mirroring the heading of the linked page (h1)</p>
+</div>
+
+{% endblock %}

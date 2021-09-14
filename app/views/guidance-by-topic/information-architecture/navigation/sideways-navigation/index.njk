@@ -1,0 +1,43 @@
+{% set pageTitle = "Sideways navigation" %}
+{% set pageDescription = "Sideways navigation is a way of allowing users to navigate through a number of content pages (child pages) which all sit beneath one single subject." %}
+{% set pageSection = "Navigation" %}
+{% set subSection = "Navigation" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>The navigation component</h2>
+  <p>The navigation component contains:</p>
+  <ol>
+    <li>An h2 heading of "More in [parent heading]" to show users what subject area they are currently in, and how to go 'up' a level</li>
+    <li>A list of hyperlinked pages, to display what other, related information is within the same subject</li>
+    <li>An indication as to page a user is currently on. This is achieved by removing the hyperlink (so text colour is same as body text) and a black pipe highlights the page - on the left-hand side</li>
+  </ol>
+  <p>The navigation sits at the bottom of a page of content, to allow the users to read the content first - before giving them options to move on.</p>
+
+  <h3>Rationale</h3>
+  <p>Through user testing, we've found sideways navigation alongside hub (routing) pages to be good at breaking down big topic areas such as pregnancy, cancer of COVID-19 into navigable content.</p>
+  <p>The design is similar to a component used in the NHS Digital service manual. The service manual navigation is different because:
+  <ul>
+    <li>it doesn't have a heading</li>
+    <li>the page links aren't underlined</li>
+    <li>the page you're on is still an active link and the left-hand piping is blue</li>
+    <li>it's in a left-hand column at the top of the page</li>
+    <li>it only appears on desktop screens</li>
+  </ul>
+  <h4>Why the sideways navigation is different</h4>
+  <ul>
+    <li>The heading provides context for which the pages sit, and linking the heading to the parent page (upwards) gives them another way to navigate complex topic areas</li>
+    <li>We've found issues with placing links to other pages at the top of a page before the users get to read the content</li>
+    <li>We've found users with low digital literacy don't see/use links which aren't underlined (as per web convention; link = underlined blue text)</li>
+    <li>The <a href="https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide">British dyslexia association</a> recommends that hyperlinks look different from headings and normal text
+    <li>As the navigation sits at the bottom of the page, a user might not realise which page they're on and the piping to indicate what page your on is subtle - so we've removed the link (for the page your on) to stop users mistaking clicking, reloading the page, reading the content (again)</li>
+  </ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% set pageTitle = "Navigation menu" %}
+{% set pageDescription = "The NHS website's navigation menu sits on the top of every page and provides easy access to content." %}
+{% set pageSection = "Navigation" %}
+{% set subSection = "Navigation" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Key aspects of the navigation menu</h2>
+  <p>The NHS website has a navigation menu that sits on the top of every page which:</p>
+  <ol>
+    <li>Has the NHS lozenge (logo) - showing users the website contains trusted information</li>
+    <li>Search (input on desktop, icon and input on mobile)</li>
+    <li>5 links to the main areas of the site:</li>
+      <ul>
+        <li>Health A-Z</li>
+        <li>Live Well</li>
+        <li>Care and support</li>
+        <li>Health news</li>
+        <li>Services near you</li>
+      </ul>
+  </ol>
+  <h3>Context</h3>
+  <ul>
+    <li>around 80% of NHS.UK users are on mobile devices - where the navigation menu is hidden behind a menu button</li>
+    <li>very few clicks to current ‘menu’ button (on mobile) 1% on conditions pages, 3% on homepage suggests, if people don't see it - they don't use it</li>
+    <li>Main source of traffic is from google searches</li>
+    <li>We have evidence that suggests our users have multiple information-seeking behaviours - not just google in, bounce out</li>
+    <li>Search; currently hidden behind an icon -very low conversion rate; 2% interact and go to results page/click result, search conversion rate across other websites is around 50%</li>
+    <li>menu links; validated with user testing especially in big topic areas which go 8 levels deep; users use links in the navigation menu to reset - get back to the top (of a topic structure) when seeking more information</li>
+    <li>menu items have also been proven (through user research) to be a good way to advertise what kinds of content we have on the site - not shown on mobile, large % of traffic don't know what else they can find on the site, likely to bounce off back to google to find more information</li>
+  </ul>
+  <h4>Other things to consider:</h4>
+  <ul>
+    <li>The cookie banner</li>
+    <li>emergency banner</li>
+  </ul>
+
+{% endblock %}

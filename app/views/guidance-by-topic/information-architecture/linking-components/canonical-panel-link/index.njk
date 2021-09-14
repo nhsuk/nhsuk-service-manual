@@ -1,0 +1,50 @@
+{% set pageTitle = "Canonical panel link" %}
+{% set pageDescription = "The purpose of a canonical panel link is to be used on a mian topic hub and visually have high affordance, helping users to predict the level of information below the link." %}
+{% set pageSection = "Linking components" %}
+{% set subSection = "Linking components" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Navigating large topics</h2>
+  <p>We know hub (routing) pages are good at breaking down big topic areas into navigable content.</p>
+  <p>hub pages are essentially a page of links. Within hub pages there is a need link to different types of things; in-canon hub links, related (off-canon) links, top task/shortcut links, links to external charities etc.</p>
+  <p>To help users visually understand the new architecture we needed to introduce a visual hierarchy to links, trying to give users a flavour of what lies beneath.</p>
+
+  <h3>Purpose of the canonical panel link</h3>
+  <p>The NHS.UK site has multiple, big topic areas such as 'Pregnancy', or 'Cancer', 'Diabetes'.</p>
+  <p>Pages within these big topic areas are referred to as being 'canonical', meaning they're a subset of the main topic area.</p>
+  <p>Within these canonical topic areas, there are multiple categories; Diabetes, for example, you'll have a separation of content between type 1 and type 2 diabetes. And within these areas, you'll have a further breakdown for information on diagnosis, treatment, support etc. This all spreads out like the branches of a tree, through various levels.<p>
+
+  <h3>Classification</h3>
+  <p>For a link to be considered a canonical panel link, it must:</p>
+  <ul>
+    <li>visually represent the the multiple levels/ depth of information to be found beneath a simple text link</li>
+    <li>allow users to quickly find out important information or quickly access key tasks associated with the topic</li>
+  </ul>
+
+  <h3>Visual treatment</h3>
+  <p>The proposed 'canonical link' component should share similar visual attributes to the promo card component.</p>
+  <p>This link must:</p>
+  <ul>
+    <li>have an underlined, bold heading within the card</li>
+    <li>include a summary sentence, giving users a flavour of the information beneath</li>
+    <li>include an arrow icon at the right hand side of the card</li>
+  </ul>
+  <h4>Affordance</h4>
+  <p>Affordance is a concept that can be summarised as the extent to which something that can be clicked, looks like it can be clicked.</p>
+  <For the canonical panel link, a high affordance (achieved by including the arrow icon) is key due to the wealth of information the link is taking the user to.</p>
+
+  <br>
+  <h2>Meeting user needs</h2>
+  <p>The hubs help users navigate through large topics (up and down, side-to-side), with the links being key to enable users to travel through the content in the way that meets their expectations.</p>
+  <p>The canonical panel links on a hub page allow users to find information, as well as reorient within a topic.</p>
+
+{% endblock %}

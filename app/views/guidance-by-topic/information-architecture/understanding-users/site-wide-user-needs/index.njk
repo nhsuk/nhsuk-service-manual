@@ -1,0 +1,110 @@
+{% set pageTitle = "Site wide user needs" %}
+{% set pageDescription = "Users perceive the NHS website as a coherent whole, not silo’d products, so it's impotant to consider the user needs that cover the whole website." %}
+{% set pageSection = "IA guidance" %}
+{% set subSection = "Understanding users" %}
+{% set dateUpdated = "August 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "../_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>Evaluating IA in usability research</h2>
+  <p>Testing IA is weird in that you can’t really expect (non-IA-geek) people to notice or comment on page furniture or navigation structures. We can’t ask them to tell us ‘where they are’ in the website as that may be a meaningless question to them. We can’t ask them to tell us whether, for example, they noticed the breadcrumbs.</p>
+  <p>Instead we need to set them tasks that they will be able to do if the nav structures are doing their job, albeit invisibly. So - tasks that ask them to move down, up and sideways in our information structures.</p>
+  <p>It’s OK if they don’t interact with the breadcrumbs (or other structures we choose to build) or always use the ‘back’ button. As long as they are successfully navigating the information - finding what they need, correcting their errors, not getting lost too often, re-finding something they looked at previously.</p>
+
+  <h2>Headlines</h2>
+  <ul>
+    <li>Users perceive the NHS website as a coherent whole, not silo’d products</li>
+    <li>Placemaking: to understand what the NHS website is for and what it offers</li>
+    <li>Orientation: to understand where I am within the NHS website and where else I might go</li>
+    <li>Navigation: to get to my destination</li>
+    <li>Search: use on-site search to find the information I need</li>
+  </ul>
+
+  <h2>As an NHS.UK user...</h2>
+
+  <table class="nhsuk-table">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+
+      </th>
+      <th role="columnheader" class="" scope="col">
+        I need / want / expect to
+      </th>
+      <th role="columnheader" class="" scope="col">
+        So that / because
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Comment
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Evidence
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>1</b></td>
+      <td class="nhsuk-table__cell ">To understand what the NHS website is for and what it offers</td>
+      <td class="nhsuk-table__cell ">I can make the most of the information and functionality provided (on this visit or on subsequent visits)</td>
+      <td class="nhsuk-table__cell ">Main navigation and the home page are the key communicators of this.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>2</b></td>
+      <td class="nhsuk-table__cell ">To understand where I am within the NHS website</td>
+      <td class="nhsuk-table__cell ">I know if I’m in the right place</td>
+      <td class="nhsuk-table__cell ">Selected navigation, hub pages, breadcrumbs and page headings communicate this to users.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>3</b></td>
+      <td class="nhsuk-table__cell ">To understand where I am within the NHS website</td>
+      <td class="nhsuk-table__cell ">I know if the information I’m looking for is here</td>
+      <td class="nhsuk-table__cell ">Selected navigation, hub pages, breadcrumbs and page headings and subheadings communicate this to users.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>4</b></td>
+      <td class="nhsuk-table__cell ">To understand where else I might go</td>
+      <td class="nhsuk-table__cell ">I can correct myself if I am in the wrong place</td>
+      <td class="nhsuk-table__cell ">Selected navigation, hub pages, breadcrumbs and page headings communicate this to users.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>5</b></td>
+      <td class="nhsuk-table__cell ">To understand where else I might go</td>
+      <td class="nhsuk-table__cell ">I can discover content I didn’t know I needed. I can discover all the content the NHS website offers on the topic that interests me.</td>
+      <td class="nhsuk-table__cell ">Navigation, hub pages and breadcrumbs and cross-links communicate this to users.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>6</b></td>
+      <td class="nhsuk-table__cell ">To be able to browse to any page on the site from any other page on the site</td>
+      <td class="nhsuk-table__cell ">I can get to my destination. (I shouldn’t have to use site search if I don’t want to)</td>
+      <td class="nhsuk-table__cell ">Our consistent global and local navigation structures allow users to browse to their destination. No dead-ends or orphan pages.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>7</b></td>
+      <td class="nhsuk-table__cell ">To be able to navigate from broader to narrower topics of interest</td>
+      <td class="nhsuk-table__cell ">I can find what I’m looking for wherever Google lands me within the site.</td>
+      <td class="nhsuk-table__cell ">Hub pages and local navigation allow users to navigate from their expressed need (such as Googling “diabetes”) to their unexpressed need (eg answering a specific type 2 diabetes-related question.)</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>8</b></td>
+      <td class="nhsuk-table__cell ">To be able to navigate to any page on the site from any page on the site</td>
+      <td class="nhsuk-table__cell ">I can re-find something interesting I saw previously</td>
+      <td class="nhsuk-table__cell ">Our consistent global and local navigation structures allow users to browse to their destination and learn how our site is structured.</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><b>9</b></td>
+      <td class="nhsuk-table__cell ">To be able to follow a strong information scent to the content I need</td>
+      <td class="nhsuk-table__cell ">So that I can quickly find my topic of interest and answer my question</td>
+      <td class="nhsuk-table__cell ">If we group and label our content to match users’ mental models, we can provide a strong information scent. Users are typically interested in specific health topics, rather than content types.</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
