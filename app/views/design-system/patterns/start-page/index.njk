@@ -3,7 +3,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Page types" %}
-{% set dateUpdated = "August 2021" %}
+{% set dateUpdated = "September 2021" %}
 {% set backlog_issue_id = "169" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -28,10 +28,10 @@
   <h2>How to use a start page</h2>
   <p>Start pages include 4 main elements. These are:</p>
   <ol>
-    <li>the service name: this helps people understand what your service does and whether they need to use it (read about <a href="https://www.gov.uk/service-manual/design/naming-your-service">naming your service on GOV.UK</a>)</li>
-    <li>a list things most users need to know – for example, what your service is, what will happen, what users will get or how much it'll cost</li>
+    <li>the service name: this helps people understand what your service does and whether they need to use it, like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number</a> – read more about <a href="https://www.gov.uk/service-manual/design/naming-your-service">naming your service on GOV.UK</a></li>
+    <li>a list of things most users need to know: for example, what your service is, what will happen, what users will get or how much it'll cost</li>
     <li>the "Start now" call-to-action <a href="/design-system/components/buttons">button</a></li>
-    <li>a list of other ways to access the service</li>
+    <li>a list of other ways to access the service: for example, phone or text relay</li>
   </ol>
   <p>Keep your start page focused on helping users get started and successfully complete the service.</p>
   <p>A good start page:</p>
@@ -39,7 +39,7 @@
     <li>lets users know they're in the right place</li>
     <li>sets expectations: users know what to expect before clicking anything, including whether they're eligible and what the outcome will be</li>
     <li>helps users succeed by telling them what information they must give or documents they need to have</li>
-    <li>gives users other options if the service is not for them, because it is connected to a wider topic</li>
+    <li>gives users options if the service is not for them, because it's connected to a wider topic</li>
     <li>is easy to find and ranks highly in search engines, because it uses the language of its users</li>
   </ul>
   <p>Read more about <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how content and transactions work together on GOV.UK</a>.</p>
@@ -51,21 +51,28 @@
     <li>know if the service is for them and that they're eligible</li>
     <li>avoid dead ends, if they're in the wrong place, and find what they need through surrounding navigation elements</li>
   </ul>
-  <p>If the user needs more information to understand the service, consider placing the start of the transaction in a guide.</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>The <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/book-coronavirus-vaccination/">Book or manage your coronavirus (COVID-19) vaccination service on the NHS website</a> is in the section about coronavirus (COVID-19).</p>
+    <p>The start page links to other information people want to know about COVID-19 vaccines.</p>
+  </div>
   <p>If possible:</p>
   <ul>
     <li>run an open card sort to see how users group and label pages around your start page, including the start page</li>
     <li>run tree tests to check users find the start page in your proposed structure</li>
     <li>follow up with usability testing</li>
   </ul>
-
+  <h3>Keep important information above the button</h3>
+  <p>Many users do not look at information below the start button.</p>
+  <p>If information applies to everyone and they need it to complete the service, put it above the button.</p>
+  <p>Sometimes it's necessary to put information that only some users need below the button to stop the page getting too long for the majority of users.</p>
   <h3>Set a helpful URL</h3>
   <p>Set up a URL that embeds your start page in the wider service, topic or website. Use a verb that reflects the name of the task or service.</p>
   <p>Here is a good example: <a href="https://www.nhs.uk/nhs-services/hospitals/book-an-appointment ">https://www.nhs.uk/nhs-services/hospitals/book-an-appointment</a>. It's the URL for booking an appointment using the NHS e-Referral service. It shows the start page's relationship to the wider topic and the website it sits in: book an appointment, for hospitals that are part of NHS services.</p>
   <p>If you need to, create a short vanity URL to promote the service in letters or other offline activities which direct people to the service start page. For example, this is the vanity URL for e-Referral service bookings: <a href="https://www.nhs.uk/referrals">https://www.nhs.uk/referrals</a>.</p>
 
   <h3>Make it easy to update your start page</h3>
-  <p>We know from our experience with the NHS website that start pages need to be updated regularly, sometimes at short notice.</p>
+  <p>Some start pages need to be updated regularly, sometimes at short notice.</p>
   <p>If possible, put your start page in a content management system (CMS) so it's easy for a number of people to amend. It can be difficult to manage if you have it in a separate application and rely on a developer to make changes.</p>
 
   <h3>Check your start page includes the correct links</h3>
@@ -74,18 +81,20 @@
 
   <h3>What not to include on a start page</h3>
   <p>Avoid telling people all about the service on the start page. Too much information will distract them.</p>
-  <p>Bear in mind that many users will not look at information below the start button.</p>
   <p>If you can, check eligibility as part of the service to avoid overloading the start page with criteria.</p>
 
   <h2>Accessibility</h2>
-  <p>It is particularly important to keep your start page brief for users with access needs. Consider:</p>
+  <p>It's particularly important to keep your start page brief for users with access needs. Consider:</p>
   <ul>
     <li>how a screen reader will read out the content</li>
     <li>how much time it takes for the user to get to the main call to action</li>
     <li>how much information they have to process</li>
   </ul>
-  <p>Lots of people miss information below the start button, especially people who zoom in or magnify content on the page and people with screen readers who navigate the page by headings and interactive elements (such as buttons).</p>
-
+  <p>Lots of people miss information below the start button, especially:</p>
+  <ul>
+    <li>people who zoom in or magnify content on the page</li>
+    <li>people with screen readers who navigate the page by headings and interactive elements (such as buttons)</li>
+  </ul>
   <h2>Research</h2>
   <p>This pattern is based on <a href="https://design-system.service.gov.uk/patterns/start-pages/">Start pages – GOV.UK Design System</a>, which has been tested over a number of years in a wide range of contexts.</p>
 
@@ -99,6 +108,6 @@
 
   <h3>Known issues and gaps</h3>
 
-  <p>We do not yet have sufficient information about start pages within applications, such as services in the NHS App that appear after a user has signed in.</p>
+  <p>We do not yet have enough information about start pages in applications, such as services in the NHS App that appear after a user has signed in.</p>
   <p>We also need to know more about services where the user needs to read content as part of the journey, as well as filling in a form.</p>
 {% endblock %}
