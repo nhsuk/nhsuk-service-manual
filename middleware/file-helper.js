@@ -63,4 +63,4 @@ exports.getHTMLCode = (path) => {
 
 // This helper function takes json data from a file path and returns it as an object
 // to be rendered in a Nunjucks template
-exports.getJSONCode = path => JSON.parse(getFileContents(path));
+exports.getJSONCode = (path) => JSON.parse(getFileContents(path));
