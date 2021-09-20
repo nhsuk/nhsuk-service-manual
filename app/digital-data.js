@@ -8,7 +8,7 @@ function getCategories(path) {
 }
 
 function digitalData(req) {
-  const path = req.path;
+  const { path } = req;
   const categories = getCategories(path);
 
   return {
