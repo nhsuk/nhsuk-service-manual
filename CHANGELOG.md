@@ -5,6 +5,7 @@
 :wrench: **Fixes**
 
 - Update dependencies to the latest versions
+- Update team members
 
 ## 5.1.0 - 25 August 2021
 
