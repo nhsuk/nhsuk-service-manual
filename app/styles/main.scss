@@ -216,3 +216,26 @@ h1 + .nhsuk-lede-text {
   padding-bottom: 0;
   padding-top: 0;
 }
+
+// Team pictures used for lists
+
+.team-pictures-list{
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    height: 40px;
+    border-radius: 30px;
+    display: inline-block;
+    border: 2px solid transparent;
+    line-height: 1;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+}
