@@ -2,6 +2,13 @@
 
 ## 5.1.1 - Unreleased
 
+:new: **New features**
+
+- Update Inclusive language page section on ethnicity, religion and nationality
+- Add entries for "BAME", "Black or black", "BME", "ethnic minorities", "ethnicity", "race" and "White or white" to the A to Z of NHS health writing
+- Add note about "Black or black" and "White or white" to the section on capitalisation on the Formatting and punctuation page
+- Add entry for "positive" to the A to Z of NHS health writing
+
 :wrench: **Fixes**
 
 - Update dependencies to the latest versions
