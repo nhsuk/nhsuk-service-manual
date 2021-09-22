@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.1.1 - Unreleased
+## 5.2.0 - 22 September 2021
 
 :new: **New features**
 
@@ -11,6 +11,7 @@
 
 :wrench: **Fixes**
 
+- Install latest version of NHS.UK frontend (5.2.0)
 - Update dependencies to the latest versions
 - Update team members
 
