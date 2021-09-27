@@ -1,37 +1,37 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "countries",
-  name: "countries",
+  idPrefix: "symptoms",
+  name: "symptoms",
   fieldset: {
     legend: {
-      text: "Will you be travelling to any of these countries?",
+      text: "Do you have any of these symptoms?",
       isPageHeading: true,
       classes: "nhsuk-fieldset__legend--l"
     }
   },
   hint: {
-    text: "Select all countries that apply"
+    text: "Select all the symptoms you have."
   },
   items: [
     {
-      value: "france",
-      text: "France"
+      value: "sorethroat",
+      text: "Sore throat"
     },
     {
-      value: "portugal",
-      text: "Portugal"
+      value: "runnynose",
+      text: "Runny nose"
     },
     {
-      value: "spain",
-      text: "Spain"
+      value: "muscleorjointpain",
+      text: "Muscle or joint pain"
     },
     {
-      divider: "or"
+      divider: "Or"
     },
     {
       value: "none",
-      text: "No, I will not be travelling to any of these countries",
+      text: "No, I do not have any of these symptoms",
       behaviour: "exclusive"
     }
   ]
