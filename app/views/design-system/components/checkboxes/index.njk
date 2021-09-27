@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use checkboxes to let users select 1 or more options on a form." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "April 2020" %}
+{% set dateUpdated = "September 2021" %}
 {% set backlog_issue_id = "9" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -55,7 +55,7 @@
   }) }}
 
   <h3 id="conditionally-revealing-content">Conditionally revealing content</h3>
-  <p>You can add conditionally revealing content to checkboxes, so users only see content when it’s relevant to them.</p>
+  <p>You can add conditionally revealing content to checkboxes, so users only see content when it's relevant to them.</p>
   <p>For example, you could reveal a phone number input only when a user chooses to be contacted by phone.</p>
 
   {{ designExample({
@@ -64,15 +64,16 @@
     type: "conditional"
   }) }}
 
-  <p>Keep it simple - if you need to add a lot of content, consider showing it on the next page in the process instead.</p>
+  <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
 
-  <h3 id="none-option">Add an option for ‘none’</h3>
-  <p>When ‘none’ would be a valid answer, give users the option to check a box to say none of the other options apply to them — without this option, users would have to leave all of the boxes unchecked. Giving users this option also makes sure they do not skip the question by accident.</p>
-  <p>Remember to start by asking one question per page. You might be able to remove the need for a ‘none’ option by asking the user a better question or filtering them out with a ‘filter question’ beforehand following the guidance in <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a>.</p>
-  <p>Show the ‘none’ option last. Separate it from the other options using a divider. The text is usually the word ‘or’.</p>
+  <h3 id="none-option">Add an option for "none"</h3>
+  <p>When "none" would be a valid answer, give users the option to check a box to say none of the other options apply to them.</p>
+  <p>Without this option, users would have to leave all of the boxes unchecked. Giving users this option also makes sure they do not skip the question by accident.</p>
+  <p>Remember to start by asking 1 question per page. You might be able to remove the need for a "none" option by asking the user a better question or filtering them out with a "filter question" beforehand following the guidance in <a href="/content/how-to-write-good-questions-for-forms">how to write good questions for forms</a>.</p>
+  <p>Show the "none" option last. Separate it from the other options using a divider. The text is usually the word "or".</p>
   <p>Write a label that repeats the key part of the question.</p>
-  <p>For example, for the question ‘Will you be travelling to any of these countries?’, say ‘No, I will not be travelling to any of these countries’.</p>
-  <p>To enable some JavaScript that unchecks all other checkboxes when the user clicks ‘None’, add the <code>exclusive</code> behaviour to the ‘none’ checkbox.</p>
+  <p>For example, for the question "Will you be travelling to any of these countries?", say "No, I will not be travelling to any of these countries".</p>
+  <p>To enable some JavaScript that unchecks all other checkboxes when the user clicks "None", add the <code>exclusive</code> behaviour to the "none" checkbox.</p>
 
   {{ designExample({
     group: "components",
@@ -80,7 +81,7 @@
     type: "none-option"
   }) }}
 
-   <p>If JavaScript is unavailable, and a user selects both the ‘none’ checkbox and another checkbox, display an error message.</p>
+   <p>If JavaScript is unavailable, and a user selects both the "none" checkbox and another checkbox, display an error message.</p>
 
   <h3 id="error-messages">Error messages</h3>
   <p>Error messages should be styled like this:</p>
