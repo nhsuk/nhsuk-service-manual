@@ -1,33 +1,35 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
-{{ checkboxes({
-  idPrefix: "nationality",
-  name: "nationality",
-  fieldset: {
-    legend: {
-      text: "What is your nationality?",
-      isPageHeading: true,
-      classes: "nhsuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "If you have dual nationality, select all options that are relevant to you."
-  },
-  items: [
-    {
-      value: "british",
-      text: "British",
-      hint: {
-        text: "including English, Scottish, Welsh and Northern Irish"
+<form>
+  {{ checkboxes({
+    idPrefix: "nationality",
+    name: "nationality",
+    fieldset: {
+      legend: {
+        text: "What is your nationality?",
+        isPageHeading: true,
+        classes: "nhsuk-fieldset__legend--l"
       }
     },
-    {
-      value: "irish",
-      text: "Irish"
+    hint: {
+      text: "If you have dual nationality, select all options that are relevant to you."
     },
-    {
-      value: "other",
-      text: "Citizen of another country"
-    }
-  ]
-}) }}
+    items: [
+      {
+        value: "british",
+        text: "British",
+        hint: {
+          text: "including English, Scottish, Welsh and Northern Irish"
+        }
+      },
+      {
+        value: "irish",
+        text: "Irish"
+      },
+      {
+        value: "other",
+        text: "Citizen of another country"
+      }
+    ]
+  }) }}
+</form>
