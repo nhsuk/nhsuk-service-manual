@@ -1,30 +1,32 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
-{{ checkboxes({
-  "idPrefix": "example",
-  "name": "example",
-  "fieldset": {
-    "legend": {
-      "text": "How would you like to be contacted?",
-      "classes": "nhsuk-fieldset__legend--l",
-      isPageHeading: true
-    }
-  },
-  "hint": {
-    "text": "Select all options that are relevant to you."
-  },
-  "items": [
-    {
-      "value": "email",
-      "text": "Email"
+<form>
+  {{ checkboxes({
+    "idPrefix": "example",
+    "name": "example",
+    "fieldset": {
+      "legend": {
+        "text": "How would you like to be contacted?",
+        "classes": "nhsuk-fieldset__legend--l",
+        isPageHeading: true
+      }
     },
-    {
-      "value": "phone",
-      "text": "Phone"
+    "hint": {
+      "text": "Select all options that are relevant to you."
     },
-    {
-      "value": "text message",
-      "text": "Text message"
-    }
-  ]
-}) }}
+    "items": [
+      {
+        "value": "email",
+        "text": "Email"
+      },
+      {
+        "value": "phone",
+        "text": "Phone"
+      },
+      {
+        "value": "text message",
+        "text": "Text message"
+      }
+    ]
+  }) }}
+</form>
