@@ -16,15 +16,18 @@
   items: [
     {
       value: "sorethroat",
-      text: "Sore throat"
+      text: "Sore throat",
+      exclusiveGroup: "symptoms-list"
     },
     {
       value: "runnynose",
-      text: "Runny nose"
+      text: "Runny nose",
+      exclusiveGroup: "symptoms-list"
     },
     {
       value: "muscleorjointpain",
-      text: "Muscle or joint pain"
+      text: "Muscle or joint pain",
+      exclusiveGroup: "symptoms-list"
     },
     {
       divider: "Or"
@@ -32,7 +35,8 @@
     {
       value: "none",
       text: "No, I do not have any of these symptoms",
-      behaviour: "exclusive"
+      exclusive: true,
+      exclusiveGroup: "symptoms-list"
     }
   ]
 }) }}

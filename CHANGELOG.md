@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Checkboxes Add an option for ‘none’ example and guidance
+
 ## 5.2.0 - 22 September 2021
 
 :new: **New features**
