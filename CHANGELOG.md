@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Checkboxes Add an option for ‘none’ example and guidance
+- Add satisfaction survey to Design system, style, components and content style guide hub pages
 
 ## 5.2.0 - 22 September 2021
 
