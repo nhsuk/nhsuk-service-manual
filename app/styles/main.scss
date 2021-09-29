@@ -220,20 +220,21 @@ h1 + .nhsuk-lede-text {
 // Team pictures used for lists
 
 .app-team-pictures-list {
+  @include nhsuk-responsive-padding(0, 'left');
+
   img {
+    @include nhsuk-responsive-margin(3, 'right');
+
     border: 2px solid transparent;
     border-radius: 30px;
     display: inline-block;
     height: 40px;
-    @include nhsuk-responsive-margin(3, "right");
     line-height: 1;
     overflow: hidden;
     vertical-align: middle;
     width: 40px;
   }
-  
-  @include nhsuk-responsive-padding(0, "left");
-  
+
   li {
     list-style: none;
   }
