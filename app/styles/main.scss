@@ -219,23 +219,23 @@ h1 + .nhsuk-lede-text {
 
 // Team pictures used for lists
 
-.team-pictures-list{
-  padding-left: 0;
-
-  li {
-    list-style: none;
-  }
-
+.app-team-pictures-list {
   img {
-    height: 40px;
+    border: 2px solid transparent;
     border-radius: 30px;
     display: inline-block;
-    border: 2px solid transparent;
+    height: 40px;
+    @include nhsuk-responsive-margin(3, "right");
     line-height: 1;
     overflow: hidden;
     vertical-align: middle;
     width: 40px;
-    margin-right: 10px;
+  }
+  
+  @include nhsuk-responsive-padding(0, "left");
+  
+  li {
+    list-style: none;
   }
 
 }
