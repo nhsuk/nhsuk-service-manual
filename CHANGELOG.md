@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.3.0 - Unreleased
+## 5.3.0 - 30 September 2021
 
 :new: **New features**
 
