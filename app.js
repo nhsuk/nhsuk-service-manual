@@ -179,6 +179,11 @@ app.get('/design-system/components/review-date', (req, res) => {
   res.redirect('/design-system/patterns/reassure-users-that-a-page-is-up-to-date');
 });
 
+// Care card redirect
+app.get('/design-system/components/care-cards', (req, res) => {
+  res.redirect('/design-system/patterns/help-users-get-the-care-they-need');
+});
+
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {
   routing.matchRoutes(req, res, next);

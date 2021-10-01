@@ -131,9 +131,6 @@
     <loc>https://service-manual.nhs.uk/design-system/components/card</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/checkboxes</loc>
   </url>
   <url>
@@ -165,6 +162,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/header</loc>
+  </url>
+    <url>
+    <loc>/design-system/patterns/help-users-get-the-care-they-need</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/images</loc>
