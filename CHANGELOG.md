@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## TBC — 8 October 2021
+## TBC — 15 October 2021
 
 :new: **New features**
 
