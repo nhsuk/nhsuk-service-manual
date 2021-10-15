@@ -2,6 +2,10 @@
 
 ## TBC — 8 October 2021
 
+:new: **New features**
+
+- Add guidance for creating start pages
+
 :wrench: **Fixes**
 
 - Change case of word "or" in "none" option for checkboxes
