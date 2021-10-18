@@ -1,0 +1,68 @@
+{% set pageTitle = "About IA" %}
+{% set pageDescription = "What IA is and how to find out more about it." %}
+{% set pageSection = "Guidance by topic" %}
+{% set subSection = "Information architecture" %}
+{% set theme = "Information architecture" %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "guidance-by-topic/information-architecture/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <h2>What IA is</h2>
+  <p>Information architecture (IA) is the structural design of information. It's about organising and labelling websites and other digital products to help users find and use content and services.</p>
+
+  <h3>IA is structure and interface</h3>
+  <h4>Structure</h4>
+  <p>IA underpins the structure and data that powers a website. It is how information is organised, stored and presented to a user.</p>
+  <p>Well-structured, tagged content is easier to navigate, search and manage.</p>
+   <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    <p>It involves thinking about hierarchies and relationships to help users understand the steps they may go through or what else is available to them.</p>
+    <p>For example, you might break down a health condition into:</p>
+    <ul>
+      <li>symptoms</li>
+      <li>diagnosis</li>
+      <li>treatment</li>
+      <li>complications</li>
+    </ul>
+
+    <p>You might connect topics, such as</p>
+    <ul>
+      <li>chemotherapy and cancer</li>
+      <li>antihistamines and hay fever</li>
+    </ul>
+  </div>
+
+  <h4>Interface</h4>
+  <p>IA is also the visual representation of the structure of the website.</p>
+  <p>It includes the components and page templates that visually organise content to help users navigate across the site and find what they need.</p>
+
+  <h2>Read about the work we're doing on IA on the NHS website</h2>
+  <p>NHS.UK teams are transforming the IA of the NHS website to help users find the content they need. Some of our teams have written blog posts about how they've used this guidance.</p>
+
+  <h3><a href="javascript:void(0);">Mental health: blog post</a></h3>
+  <p class="app-meta-data app-meta-data--strong"><span class="nhsuk-u-visually-hidden">Published on: </span>Date 2021</p>
+  <p class="app-meta-data nhsuk-u-margin-bottom-2">Channel where the post is published</p>
+  <p>A summary of the blog post</p>
+
+  <h3><a href="javascript:void(0);">Pregnancy: blog post</a></h3>
+  <p class="app-meta-data app-meta-data--strong"><span class="nhsuk-u-visually-hidden">Published on: </span>Date 2021</p>
+  <p class="app-meta-data nhsuk-u-margin-bottom-2">Channel where the post is published</p>
+  <p>A summary of the blog post</p>
+
+  <h3><a href="javascript:void(0);">Medicines: blog post</a></h3>
+  <p class="app-meta-data app-meta-data--strong"><span class="nhsuk-u-visually-hidden">Published on: </span>Date 2021</p>
+  <p class="app-meta-data nhsuk-u-margin-bottom-2">Channel where the post is published</p>
+  <p>A summary of the blog post</p>
+
+
+
+  <h2>Get help from the IA team</h2>
+  <p>If you're working on information architecture for a product or service for the NHS website, the NHS.UK IA team can support you.</p>
+  <p><a href="javascript:void(0);">Get in touch</a></p>
+
+{% endblock %}

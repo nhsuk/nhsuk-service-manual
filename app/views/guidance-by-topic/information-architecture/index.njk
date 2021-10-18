@@ -1,0 +1,31 @@
+{% set pageTitle = "Information architecture" %}
+{% set pageDescription = "Improve the information architecture (IA) of your content and services" %}
+{% set pageSection = "Guidance by topic" %}
+{% set subSection = "Information architecture" %}
+{% set landingPage = true %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "guidance-by-topic/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2>What is information architecture?</h2>
+  <p>Information architecture (IA) is about organising and labelling information in digital products to help users find and use content and services.</p>
+
+  <h3>Get started</h3>
+  <p>Read more <a href="/guidance-by-topic/information-architecture/about-ia">about IA</a>, what it is and why it's important.</p>
+
+<hr>
+<h2>Get in touch</h2>
+<p>Content to be decided</p>
+
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}

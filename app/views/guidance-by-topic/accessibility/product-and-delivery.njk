@@ -1,0 +1,27 @@
+{% set pageTitle = "Product and delivery" %}
+{% set pageSection = "Guidance by topic" %}
+{% set subSection = "Accessibility" %}
+{% set pageDescription = "What product and delivery managers need to do to make digital services accessible." %}
+{% set theme = "Accessibility guidance for:" %}
+{% set dateUpdated = "March 2021" %}
+{% set backlog_issue_id = "345" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "guidance-by-topic/accessibility/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {% include "./partials/make-sure-everyone-knows-their-responsibilities.njk" %}
+  {% include "./partials/ask-questions-at-the-start-of-the-project.njk" %}
+  {% include "./partials/check-that-accessibility-is-done.njk" %}
+  {% include "./partials/monitor-and-record-your-work.njk" %}
+  {% include "./partials/publish-an-accessibility-statement.njk" %}
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}

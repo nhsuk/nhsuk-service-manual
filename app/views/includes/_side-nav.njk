@@ -18,19 +18,24 @@
   { title: "Patterns", url: "/design-system/patterns" }
 ] %}
 
+{% set guidanceByTopic = [
+  { title: "Accessibility", url: "/guidance-by-topic/accessibility" },
+  { title: "Information architecture", url: "/guidance-by-topic/information-architecture" }
+] %}
+
 {% set accessibilityEveryone = [
-  { title: "What all NHS services need to do about accessibility", url: "/accessibility/what-all-NHS-services-need-to-do" },
-  { title: "How to make digital services accessible", url: "/accessibility/how-to-make-digital-services-accessible" },
-  { title: "Getting started with accessibility", url: "/accessibility/getting-started" }
+  { title: "What all NHS services need to do about accessibility", url: "/guidance-by-topic/accessibility/what-all-NHS-services-need-to-do" },
+  { title: "How to make digital services accessible", url: "/guidance-by-topic/accessibility/how-to-make-digital-services-accessible" },
+  { title: "Getting started with accessibility", url: "/guidance-by-topic/accessibility/getting-started" }
 ] %}
 
 {% set accessibilityActivities = [
-  { title: "Product and delivery", url: "/accessibility/product-and-delivery" },
-  { title: "User research", url: "/accessibility/user-research" },
-  { title: "Content", url: "/accessibility/content" },
-  { title: "Design", url: "/accessibility/design" },
-  { title: "Development", url: "/accessibility/development" },
-  { title: "Testing", url: "/accessibility/testing" }
+  { title: "Product and delivery", url: "/guidance-by-topic/accessibility/product-and-delivery" },
+  { title: "User research", url: "/guidance-by-topic/accessibility/user-research" },
+  { title: "Content", url: "/guidance-by-topic/accessibility/content" },
+  { title: "Design", url: "/guidance-by-topic/accessibility/design" },
+  { title: "Development", url: "/guidance-by-topic/accessibility/development" },
+  { title: "Testing", url: "/guidance-by-topic/accessibility/testing" }
 ] %}
 
 {% set content = [
@@ -148,10 +153,11 @@
 ] %}
 
 {% set aboutIA = [
-  { title: "Why IA is important", url: "/information-architecture/about-ia/why-ia-is-important" },
-  { title: "IA principles", url: "/information-architecture/about-ia/ia-principles" },
-  { title: "Your topic in a wider website IA", url: "/information-architecture/about-ia/your-topic-in-a-wider-website-ia" },
-  { title: "Measure the success of your IA", url: "/information-architecture/about-ia/measure-the-success-of-your-ia" }
+  { title: "About IA", url: "/guidance-by-topic/information-architecture/about-ia" },
+  { title: "Why IA is important", url: "/guidance-by-topic/information-architecture/why-ia-is-important" },
+  { title: "IA principles", url: "/guidance-by-topic/information-architecture/ia-principles" },
+  { title: "Your topic in a wider website IA", url: "/guidance-by-topic/information-architecture/your-topic-in-a-wider-website-ia" },
+  { title: "Measure the success of your IA", url: "/guidance-by-topic/information-architecture/measure-the-success-of-your-ia" }
 ] %}
 
 {% set understandingUsers = [
@@ -288,7 +294,20 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Accessibility" %}
+  {%- if pageSection == "Guidance by topic" and subSection != "Accessibility" and subSection != "Information architecture" %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in guidanceByTopic %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if subSection == "Accessibility" %}
+    {{ backLink({
+      "href": "/guidance-by-topic",
+      "text": "Guidance by topic",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
     <h2 class="app-side-nav__heading">Everyone needs to know</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityEveryone %}
@@ -299,6 +318,19 @@
     <h2 class="app-side-nav__heading">Accessibility guidance for:</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in accessibilityActivities %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if subSection == "Information architecture" %}
+    {{ backLink({
+      "href": "/guidance-by-topic",
+      "text": "Guidance by topic",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in aboutIA %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
@@ -355,129 +387,5 @@
     {% endfor %}
     </ul>
   {% endif %}
-
-  {%- if pageSection == "Information architecture" and subSection != "About IA" and subSection != "Understanding users" and subSection != "Core IA process" and subSection != "Page types" and subSection != "Linking components" %}
-    <h2 class="app-side-nav__heading">Understanding IA</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in understandingIA %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="app-side-nav__heading">How to do IA</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in iaInstructions %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="app-side-nav__heading">Components and page types</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in componetsAndPageTypes %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-  {% endif %}
-
-  {%- if subSection == "About IA" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">About IA <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in aboutIA %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Understanding users" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Understanding users <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in understandingUsers %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Core IA process" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Core IA process <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in coreIaProcess %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Adapting the process" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Adapting the process <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in adaptingTheProcess %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Navigation" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Navigation <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in iaNavigation %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Linking components" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Linking components <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in iaLinkingComponents %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {%- if subSection == "Page types" %}
-    {{ backLink({
-      "href": "/information-architecture",
-      "text": "Information architecture",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
-    <h2 class="app-side-nav__heading">Page types <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in iaPageTypes %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-
 
 </nav>

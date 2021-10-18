@@ -1,0 +1,75 @@
+{% set pageTitle = "Your topic in a wider website IA" %}
+{% set pageDescription = 'Define your topic and work out how it fits with other content.' %}
+{% set pageSection = "Guidance by topic" %}
+{% set subSection = "Information architecture" %}
+{% set theme = "Information architecture" %}
+{% set dateUpdated = "September 2021" %}
+{% set backlog_issue_id = "1" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "guidance-by-topic/information-architecture/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+
+  <h2>Start with the IA principles</h2>
+  <p>Familiarise yourself with the <a href="ia-principles">IA principles</a>. This will help you to meet the needs of your specific users, as well as those of the wider website your content will be published on.</p>
+
+  <h2>Talk with your IA team</h2>
+  <p>If your website has someone responsible for its IA, get in touch with them early on.</p>
+  <p>If your service or topic will be published on the <a href="https://www.nhs.uk">NHS website</a>, contact the NHS.UK IA team to discuss where your topic might fit and how it might affect the website IA.</p>
+  <p>Contact them on the <a class="app-contact-panel__link" href="javascript:void(0);">service manual public Slack workspace</a> on the #information-architecture channel.</p>
+
+  <h2>Define and label your topic</h2>
+  <p>If you're adding a new page, decide if it's a new topic or part of an existing one.</p>
+  <p>If you're producing a new section of content, think about how to group it into sub-topics.</p>
+  <p>Label your topic in a way that helps users:</p>
+  <ul>
+    <li>find it</li>
+    <li>understand its relationship to other information</li>
+  </ul>
+  <p>Match your users' mental models as well as the words they use. Read more about <a href="javascript:void(0);">understanding your users and the content that already exists</a>.</p>
+
+
+  <h2>Consider where your topic belongs</h2>
+  <p>Find out where your users expect to find your topic.</p>
+  <p>Decide on the best place for it in the site's main navigation. What other information is similar or should be "nearby"?</p>
+  <p>Understand what "canon" or group of information your topic belongs to.</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    <p>On the NHS website:
+    <ul>
+      <li>health conditions and treatments live in the <a href="https://www.nhs.uk/conditions/">Health A to Z</a></li>
+      <li>health services live in the <a href="https://www.nhs.uk/nhs-services/">NHS services</a> group</li>
+    </ul>
+  </div>
+
+
+  <h2>Give users multiple routes to content</h2>
+  <p>Allow users to find content, not only through navigation patterns, but also through:</p>
+  <ul>
+    <li>indexes</li>
+    <li>search</li>
+    <li>synonyms</li>
+  </ul>
+  <h4>Give it an entry in an index</h4>
+  <p>If you are adding information to a site with a visible index (like the <a href="https://www.nhs.uk/conditions/">NHS website's Health A to Z</a>), consider giving an entry, whether or not it lives there canonically.</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    <p>On the NHS website:
+    <ul>
+      <li>we list tests like cervical screening in the <a href="https://www.nhs.uk/conditions/">Health A to Z</a></li>
+      <li>we do not add services or contact information to the Health A to Z</li>
+    </ul>
+  </div>
+
+  <h4>Identify synomyms</h4>
+  <p>Find out what other language your users search for.</p>
+  <p>If you add your topic to an index, add extra entries for synonyms.</p>
+  <p>You may be able to add a wider list of synonyms and related terms to the site search, if you have one. Think about how users may spell difficult terms, or any colloquial names for your content.</p>
+
+
+{% endblock %}
