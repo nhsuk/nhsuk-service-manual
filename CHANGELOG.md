@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.4.1 - Unreleased
+
+:wrench: **Fixes**
+
+- Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
+
 ## 5.4.0 — 19 October 2021
 
 :new: **New features**
