@@ -4,7 +4,7 @@
 
 :new: **New features**
 
-- Add guidance for creating start pages
+- Add start page pattern and guidance
 
 :wrench: **Fixes**
 
