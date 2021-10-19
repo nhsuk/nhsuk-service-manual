@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## TBC — 15 October 2021
+## 5.4.0 — 19 October 2021
 
 :new: **New features**
 
@@ -9,7 +9,6 @@
 :wrench: **Fixes**
 
 - Change case of word "or" in "none" option for checkboxes
-
 
 ## 5.3.0 - 30 September 2021
 
