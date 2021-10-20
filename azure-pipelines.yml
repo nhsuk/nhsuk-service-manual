@@ -2,7 +2,7 @@ trigger:
   branches:
     include:
     - master
-    - review*/*
+    - review/*
     - ia-site
     - refs/tags/v*
   paths:
