@@ -1,7 +1,6 @@
 /* eslint-disable quote-props */
 // Page specific
 const additionalIndices = {
-  '/accessibility/testing': ['svg'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
   '/design-system/components/back-link': ['return link, back button'],
@@ -32,6 +31,7 @@ const additionalIndices = {
   '/design-system/styles/layout': ['grid'],
   '/design-system/styles/spacing': ['margin, padding'],
   '/get-in-touch': ['contact, contact us, support, get in touch'],
+  '/guidance-by-topic/accessibility/testing': ['svg'],
   '/whats-new/blog-posts': ['news, updates'],
   '/whats-new/updates': ['news, latest changes'],
 };
