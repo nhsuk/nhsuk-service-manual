@@ -11,9 +11,6 @@
     <loc>https://service-manual.nhs.uk/design-system/design-principles</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/accessibility</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/content</loc>
   </url>
   <url>
@@ -42,33 +39,6 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/assets/NHS_design_principles.pdf</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/what-all-NHS-services-need-to-do</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/how-to-make-digital-services-accessible</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/getting-started</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/product-and-delivery</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/user-research</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/content</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/design</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/development</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/accessibility/testing</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/how-we-write</loc>
@@ -255,6 +225,57 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/what-all-NHS-services-need-to-do</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/how-to-make-digital-services-accessible</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/getting-started</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/product-and-delivery</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/user-research</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/content</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/design</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/development</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/accessibility/testing</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture/about-information-architecture</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture/why-information-architecture-is-important</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture/principles-of-information-architecture</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture/your-topic-in-a-wider-information-architecture</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/guidance-by-topic/information-architecture/measure-the-success-of-your-information-architecture</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/get-in-touch</loc>
