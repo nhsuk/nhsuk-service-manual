@@ -30,8 +30,8 @@ const additionalIndices = {
   '/design-system/styles/colour': ['palette'],
   '/design-system/styles/layout': ['grid'],
   '/design-system/styles/spacing': ['margin, padding'],
-  '/guidance-by-topic/accessibility/testing': ['svg'],
   '/get-in-touch': ['contact, contact us, support, get in touch'],
+  '/guidance-by-topic/accessibility/testing': ['svg'],
   '/whats-new/blog-posts': ['news, updates'],
   '/whats-new/updates': ['news, latest changes'],
 };
