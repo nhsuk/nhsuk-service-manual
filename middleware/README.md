@@ -23,7 +23,7 @@ For example, the Accessibility page would be indexed to:
 {
   title: 'Accessibility',
   index: 'What everyone needs to know Guidance for different activities Get in touch',
-  url: '/accessibility'
+  url: '/guidance-by-topic/accessibility'
 }
 ```
 The page index is then fed in to **lunr** for searching.

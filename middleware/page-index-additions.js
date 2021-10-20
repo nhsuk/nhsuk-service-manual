@@ -1,7 +1,7 @@
 /* eslint-disable quote-props */
 // Page specific
 const additionalIndices = {
-  '/accessibility/testing': ['svg'],
+  '/guidance-by-topic/accessibility/testing': ['svg'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
   '/design-system/components/back-link': ['return link, back button'],
