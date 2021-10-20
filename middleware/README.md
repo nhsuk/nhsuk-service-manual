@@ -37,7 +37,7 @@ There are three lists to add to:
 ```js
 //in this case accessibility testing page will have additional index 'svg' added
 const  additionalIndicies  = {
-  '/accessibility/testing': [ 'svg' ]
+  '/guidance-by-topic/accessibility/testing': [ 'svg' ]
 }
 ```
 
