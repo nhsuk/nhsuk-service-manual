@@ -18,7 +18,7 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 ## Release lifecycle
 
-### Environments
+### Environments - Update
 
 - [Review](https://nhsuk-service-manual-pr.azurewebsites.net/) - code pushed to the `review` branch will deploy to the Review environment (optional environment for content review and development)
 - [Staging](https://nhsuk-service-manual-dev-uks.azurewebsites.net/) - code pushed to the `master` branch will deploy to the Staging environment
