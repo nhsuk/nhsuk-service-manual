@@ -72,11 +72,23 @@
   <p>Find out what other language your users search for.</p>
   <p>If you add your topic to an index, add extra entries for synonyms.</p>
   <p>You may be able to add a wider list of synonyms and related terms to the site search, if you have one. Think about how users may spell difficult terms, or any colloquial names for your content.</p>
+
   <div class="app-example app-example--content">
     <strong class="nhsuk-tag app-example__heading">Examples</strong>
     <p>"Amnesia" is a synonym for "memory loss".</p>
     <p>"Diarrea" is a misspelling of "diarrhoea".</p>
     <p>"Belly" is a colloquial word for "stomach" or "abdomen".</p>
   </div>
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
+    "previousUrl": "/guidance-by-topic/information-architecture/principles-of-information-architecture",
+    "previousPage": "Principles of information architecture",
+    "nextUrl": "/guidance-by-topic/information-architecture/measure-the-success-of-your-information-architecture",
+    "nextPage": "Measure the success of your information architecture"
+  }) }}
 
 {% endblock %}
