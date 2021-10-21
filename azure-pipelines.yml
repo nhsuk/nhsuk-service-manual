@@ -1,10 +1,11 @@
+
 trigger:
   branches:
     include:
     - master
-    - review
     - ia-site
     - refs/tags/v*
+    - refs/heads/review/*
   paths:
     exclude:
     - CHANGELOG.md
