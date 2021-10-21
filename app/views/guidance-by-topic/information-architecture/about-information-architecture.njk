@@ -13,7 +13,9 @@
   {% include "guidance-by-topic/information-architecture/_breadcrumb.njk" %}
 {% endblock %}
 
+
 {% block bodyContent %}
+
   <p>Information architecture (IA) is the structural design of information. It's about organising and labelling websites and other digital products to help users find and use content and services.</p>
 
   <h2>IA is structure</h2>
@@ -61,4 +63,16 @@
 <h2>Get in touch</h2>
 <p>You can talk to other people about IA matters on the #information-architecture channel in the <a href="https://service-manual.nhs.uk/slack">service manual public Slack workspace</a>.</p>
 <p>If you're working on information architecture for a product or service for the NHS website, please talk with the NHS.UK IA team. You can contact them via the #information-architecture channel on Slack.</p>
+
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
+    "previousUrl": "/guidance-by-topic/information-architecture",
+    "previousPage": "Information architecture home page",
+    "nextUrl": "/guidance-by-topic/information-architecture/why-information-architecture-is-important",
+    "nextPage": "Why information architecture is important"
+  }) }}
+
 {% endblock %}
