@@ -119,3 +119,14 @@
   </div>
 
 {% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
+    "previousUrl": "/guidance-by-topic/information-architecture/about-information-architecture",
+    "previousPage": "About information architecture",
+    "nextUrl": "/guidance-by-topic/information-architecture/principles-of-information-architecture",
+    "nextPage": "Principles of information architecture"
+  }) }}
+
+{% endblock %}

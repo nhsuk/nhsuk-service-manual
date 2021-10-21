@@ -74,5 +74,15 @@
   <p>If you add your topic to an index, add extra entries for synonyms.</p>
   <p>You may be able to add a wider list of synonyms and related terms to the site search, if you have one. Think about how users may spell difficult terms, or any colloquial names for your content.</p>
 
+{% endblock %}
+
+{% block afterContact %}
+
+{{ pagination({
+    "previousUrl": "/guidance-by-topic/information-architecture/principles-of-information-architecture",
+    "previousPage": "Principles of information architecture",
+    "nextUrl": "/guidance-by-topic/information-architecture/measure-the-success-of-your-information-architecture",
+    "nextPage": "Measure the success of your information architecture"
+  }) }}
 
 {% endblock %}
