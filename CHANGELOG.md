@@ -1,5 +1,66 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Fixes**
+
+- Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
+
+## 5.4.0 — 19 October 2021
+
+:new: **New features**
+
+- Add start page pattern and guidance
+
+:wrench: **Fixes**
+
+- Change case of word "or" in "none" option for checkboxes
+
+## 5.3.0 - 30 September 2021
+
+:new: **New features**
+
+- Add to checkboxes component - an option for "none" example and guidance
+- Add satisfaction survey to design system, style, components and content style guide hub pages
+- Update layout of the service manual team page
+
+## 5.2.0 - 22 September 2021
+
+:new: **New features**
+
+- Update Inclusive language page section on ethnicity, religion and nationality
+- Add entries for "BAME", "Black or black", "BME", "ethnic minorities", "ethnicity", "race" and "White or white" to the A to Z of NHS health writing
+- Add note about "Black or black" and "White or white" to the section on capitalisation on the Formatting and punctuation page
+- Add entry for "positive" to the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Install latest version of NHS.UK frontend (5.2.0)
+- Update dependencies to the latest versions
+- Update team members
+
+## 5.1.0 - 25 August 2021
+
+:new: **New features**
+
+- Add link to week notes from the NHS additional language support discovery
+- Add new entries on NHS England and NHS Improvement (NHSEI) and NHSX to the A to Z of NHS health writing
+- Add 2 more bullet points to the guidance on image captions in the image component
+
+:wrench: **Fixes**
+
+- Use the correct service header example on the Header components page
+- Update team members
+- Update dependencies to the latest versions
+
+## 5.0.5 - 17 August 2021
+
+:wrench: **Fixes**
+
+- Update links on the header component examples to match the current NHS website and NHS digital service manual website
+- Update dependencies to the latest versions
+- Update team members
+
 ## 5.0.4 - 30 July 2021
 
 :wrench: **Fixes**
@@ -49,7 +110,7 @@
 
 :new: **New content**
 
-- Update accessibility guidance - change length of alt-text for images 
+- Update accessibility guidance - change length of alt-text for images
 - Add new section on making content about skin symptoms more inclusive to content style guide
 - Add new entries in the A to Z of NHS health writing for: black skin, brown skin, redness, skin colour changes, white skin, GP online services and ID
 - Update entries for immunisation, jab, vaccination, and vaccine
@@ -187,14 +248,14 @@
 
 :new: **New features**
 - Add page template guidance to the design system
-- Update guidance on PDFs and other non-HTML documents 
+- Update guidance on PDFs and other non-HTML documents
 - Add explanation and more examples to the section on hyphens and dashes
 
 :wrench: **Fixes**
 - Remove readability tools page and explain that we do not recommend them on our health literacy page
 - Remove 2 broken links from health literacy page
 - Amend the site map page to bring it into line with the site map entry in the style guide
-- Remove negative contraction (can't) on Page not found page 
+- Remove negative contraction (can't) on Page not found page
 - Remove all code related to the readability tool page
 
 ## 3.10.1 - 28 January 2021

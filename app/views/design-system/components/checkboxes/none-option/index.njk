@@ -1,0 +1,44 @@
+{% from 'checkboxes/macro.njk' import checkboxes %}
+
+<form>
+  {{ checkboxes({
+    idPrefix: "symptoms",
+    name: "symptoms",
+    fieldset: {
+      legend: {
+        text: "Do you have any of these symptoms?",
+        isPageHeading: true,
+        classes: "nhsuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: "Select all the symptoms you have."
+    },
+    items: [
+      {
+        value: "sorethroat",
+        text: "Sore throat",
+        exclusiveGroup: "symptoms-list"
+      },
+      {
+        value: "runnynose",
+        text: "Runny nose",
+        exclusiveGroup: "symptoms-list"
+      },
+      {
+        value: "muscleorjointpain",
+        text: "Muscle or joint pain",
+        exclusiveGroup: "symptoms-list"
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "No, I do not have any of these symptoms",
+        exclusive: true,
+        exclusiveGroup: "symptoms-list"
+      }
+    ]
+  }) }}
+</form>
