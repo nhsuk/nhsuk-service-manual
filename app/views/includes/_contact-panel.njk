@@ -1,4 +1,4 @@
-<h2 class="nhsuk-u-padding-top-4">{% if subSection === "Styles" %}Have you tested these styles{% endif %}{% if subSection === "Components" %}Have you tested this component{% endif %}{% if subSection === "Patterns" %}Have you tested this pattern{% endif %}{% if pageSection === "Content style guide" or pageSection === "Accessibility" or subSection === "Information architecture" %}Would you like to contribute to this guidance{% endif %}{% if pageSection === "NHS service standard" %}Would you like to contribute to the NHS service standard{% endif %}?</h2>
+<h2 class="nhsuk-u-padding-top-4">{% if subSection === "Styles" %}Have you tested these styles{% endif %}{% if subSection === "Components" %}Have you tested this component{% endif %}{% if subSection === "Patterns" %}Have you tested this pattern{% endif %}{% if pageSection === "Content style guide" or pageSection === "Accessibility" or subSection === "Information architecture" %}Would you like to contribute to this guidance{% endif %}{% if subSection === "Design principles" %}Would you like to contribute to these principles{% endif %}{% if pageSection === "NHS service standard" %}Would you like to contribute to the NHS service standard{% endif %}?</h2>
 {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns"or pageSection === "Accessibility" %}
 
 <p>If so, please share your research findings and let us know how it has worked for you. This will help us improve it for everyone.</p>
@@ -13,6 +13,12 @@
 {% if subSection === "Information architecture" %}
 
 <p>Please let us know how you found this page and if you have any experience of information architecture or research findings to share. This will help us improve it for everyone.</p>
+<p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
+{% endif %}
+
+{% if subSection === "Design principles" %}
+
+<p>Please let us know how the design principles have worked for you or if you have any experience of design principles to share. This will help us improve them for everyone.</p>
 <p>Before you start, you will need a <a href="https://github.com/join?source=login">GitHub account</a>. It's an open forum where we collect feedback.</p>
 {% endif %}
 
