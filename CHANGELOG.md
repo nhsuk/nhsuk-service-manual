@@ -5,7 +5,7 @@
 :wrench: **Fixes**
 
 - Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
-- Update to make alt-text more findable
+- Update to make alt-text more findable in the search field
 
 ## 5.4.0 — 19 October 2021
 
