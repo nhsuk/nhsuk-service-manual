@@ -1,6 +1,7 @@
 /* eslint-disable quote-props */
 // Page specific
 const additionalIndices = {
+  '/accessibility/content': ['alt-text, alternative'],
   '/accessibility/testing': ['svg'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
