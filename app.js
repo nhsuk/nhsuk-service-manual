@@ -204,7 +204,7 @@ app.get('/accessibility/testing', (req, res) => {
   res.redirect('/guidance-by-topic/accessibility/testing');
 });
 
-// REDIRECTS STOP HERE 
+// REDIRECTS STOP HERE
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
   res.redirect(302, '/page-not-found');
