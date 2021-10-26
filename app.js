@@ -162,7 +162,49 @@ app.get('/community/propose-component-pattern', (req, res) => {
   res.redirect('/community-and-contribution/propose-component-pattern');
 });
 
-// REDIRECT STOPS HERE
+// Add the code redirects for accessibility pages
+
+app.get('/accessibility', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility');
+});
+
+app.get('/accessibility/what-all-NHS-services-need-to-do', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/what-all-NHS-services-need-to-do');
+});
+
+app.get('/accessibility/how-to-make-digital-services-accessible', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/how-to-make-digital-services-accessible');
+});
+
+app.get('/accessibility/getting-started', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/getting-started');
+});
+
+app.get('/accessibility/product-and-delivery', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/product-and-delivery');
+});
+
+app.get('/accessibility/user-research', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/user-research');
+});
+
+app.get('/accessibility/content', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/content');
+});
+
+app.get('/accessibility/design', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/design');
+});
+
+app.get('/accessibility/development', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/development');
+});
+
+app.get('/accessibility/testing', (req, res) => {
+  res.redirect('/guidance-by-topic/accessibility/testing');
+});
+
+// REDIRECTS STOP HERE 
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
   res.redirect(302, '/page-not-found');
