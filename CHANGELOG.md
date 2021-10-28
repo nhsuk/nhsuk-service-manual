@@ -6,6 +6,7 @@
 
 - Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
 - Update to make alt-text more findable in the search field
+- Update service manual team page. Remove old members and add new members
 
 ## 5.4.0 — 19 October 2021
 
