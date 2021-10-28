@@ -1,12 +1,13 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 5.4.1 - 28 October 2021
 
 :wrench: **Fixes**
 
 - Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
 - Update to make alt-text more findable in the search field
 - Update service manual team page. Remove old members and add new members
+- Install latest version of NHS.UK frontend (5.2.1)
 
 ## 5.4.0 — 19 October 2021
 
