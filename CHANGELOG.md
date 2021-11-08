@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Fixes**
+
+- Update service manual team page. Remove old members.
+
 ## 5.4.1 - 28 October 2021
 
 :wrench: **Fixes**
