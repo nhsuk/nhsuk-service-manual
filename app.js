@@ -77,9 +77,9 @@ env.addFilter('highlight', (code, language) => {
 app.get('/design-example/:group/:item/:type', (req, res) => {
   const displayFullPage = req.query.fullpage === 'true';
   const blankPage = req.query.blankpage === 'true';
-  const group = req.params.group;
-  const item = req.params.item;
-  const type = req.params.type;
+  const { group } = req.params;
+  const { item } = req.params;
+  const { type } = req.params;
   const examplePath = path.join(__dirname, `app/views/design-system/${group}/${item}/${type}/index.njk`);
 
   // Get the given example as HTML.

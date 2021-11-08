@@ -34,7 +34,7 @@ function renderPath(path, res, next) {
 }
 
 exports.matchRoutes = (req, res, next) => {
-  let path = req.path;
+  let { path } = req;
 
   path = path.substr(1); // [6] //
 

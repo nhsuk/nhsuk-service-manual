@@ -1,10 +1,58 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Fixes**
+
+- Update service manual team page. Remove old members.
+
+## 5.4.1 - 28 October 2021
+
+:wrench: **Fixes**
+
+- Remove static `aria-label` attribute on header menu toggle. Replace with descriptive `aria-expanded="false"` on page load.
+- Update to make alt-text more findable in the search field
+- Update service manual team page. Remove old members and add new members
+- Install latest version of NHS.UK frontend (5.2.1)
+
+## 5.4.0 — 19 October 2021
+
+:new: **New features**
+
+- Add start page pattern and guidance
+
+:wrench: **Fixes**
+
+- Change case of word "or" in "none" option for checkboxes
+
+## 5.3.0 - 30 September 2021
+
+:new: **New features**
+
+- Add to checkboxes component - an option for "none" example and guidance
+- Add satisfaction survey to design system, style, components and content style guide hub pages
+- Update layout of the service manual team page
+
+## 5.2.0 - 22 September 2021
+
+:new: **New features**
+
+- Update Inclusive language page section on ethnicity, religion and nationality
+- Add entries for "BAME", "Black or black", "BME", "ethnic minorities", "ethnicity", "race" and "White or white" to the A to Z of NHS health writing
+- Add note about "Black or black" and "White or white" to the section on capitalisation on the Formatting and punctuation page
+- Add entry for "positive" to the A to Z of NHS health writing
+
+:wrench: **Fixes**
+
+- Install latest version of NHS.UK frontend (5.2.0)
+- Update dependencies to the latest versions
+- Update team members
+
 ## 5.1.0 - 25 August 2021
 
 :new: **New features**
 
-- Add link to week notes from the NHS additional language support discovery 
+- Add link to week notes from the NHS additional language support discovery
 - Add new entries on NHS England and NHS Improvement (NHSEI) and NHSX to the A to Z of NHS health writing
 - Add 2 more bullet points to the guidance on image captions in the image component
 
