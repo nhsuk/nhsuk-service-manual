@@ -130,7 +130,7 @@
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/card</loc>
   </url>
-  <url>
+    <url>
     <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
   </url>
   <url>
@@ -178,6 +178,9 @@
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/radios</loc>
   </url>
+   <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/review-date</loc>
+  </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/select</loc>
   </url>
@@ -209,9 +212,15 @@
     <loc>https://service-manual.nhs.uk/design-system/patterns/ask-users-for-their-nhs-number</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
   </url>
-    <url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/start-page</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/reassure-users-that-a-page-is-up-to-date</loc>
   </url>
   <url>

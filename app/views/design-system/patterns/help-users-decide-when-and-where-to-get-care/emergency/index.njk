@@ -1,0 +1,14 @@
+{% from 'care-card/macro.njk' import careCard %}
+
+{{ careCard({
+  "type": "immediate",
+  "heading": "Call 999 or go to A&E now if:",
+  "HTML": "
+  <ul>
+    <li>you or someone you know needs immediate help</li>
+    <li>you have seriously harmed yourself – for example, by taking a drug overdose</li>
+  </ul>
+  <p>A mental health emergency should be taken as seriously as a medical emergency.</p>
+  <p><a href=\"https://www.nhs.uk/service-search/other-services/Accident-and-emergency-services/LocationSearch/428\">Find your nearest A&E</a></p>
+  "
+}) }}
