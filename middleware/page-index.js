@@ -16,6 +16,9 @@ class PageIndex {
     const baseUrl = `http://localhost:${this.config.port}`;
     const config = this.getConnectionConfig();
 
+    // Set Lunr to only split searches on spaces rather than spaces and hyphens
+    lunr.tokenizer.separator = /\s+/;
+
     try {
       // Make request to get sitemap
       const { data } = await axios.get(`${baseUrl}/site-map`, config);
