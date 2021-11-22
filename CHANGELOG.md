@@ -14,7 +14,7 @@
 
 - Update service manual team page. Remove old members.
 - Update site map with new pattern
-- Search improvements the inclusion of - no longer treats the secondary word as a new search. E.g. `x-ra` now returns `x-ray` instead of `Radios`
+- Improve search so it no longer treats word after hyphen as a new search, e.g. `x-ra` now returns `x-ray` instead of `Radios`
 
 ## 5.4.1 - 28 October 2021
 
