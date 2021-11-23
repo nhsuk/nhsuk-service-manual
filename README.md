@@ -20,7 +20,7 @@ Prior to running Gitpod you must install the <a href="https://github.com/apps/gi
 
 Gitpod also requires access to public repositories this can be enabled <a href="https://gitpod.io/integrations">here</a>.
 
-Using your own Github credentials you can create, change, commit and push to branches via our Gitpod container via the button below.
+Using your own Github credentials you can create, change, commit and push to branches on our Gitpod container via the button below.
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
 
