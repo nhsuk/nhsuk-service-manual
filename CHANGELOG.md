@@ -15,7 +15,7 @@
 - Update service manual team page. Remove old members.
 - Update site map with new pattern
 - Improve search so it no longer treats word after hyphen as a new search, e.g. `x-ra` now returns `x-ray` instead of `Radios`
-- Install latest version of NHS.UK frontend (6.0.0)
+- Install latest version of NHS.UK frontend (6.0.1)
 
 ## 5.4.1 - 28 October 2021
 
