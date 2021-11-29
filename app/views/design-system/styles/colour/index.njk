@@ -2,7 +2,7 @@
 {% set pageDescription = "Our colours, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "November 2021" %}
+{% set dateUpdated = "December 2021" %}
 {% set backlog_issue_id = "2" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -23,6 +23,7 @@
 
   <h2 id="colour-contrast">Colour contrast</h2>
   <p>Our text and background colours are designed to meet accessibility needs. We meet at least level AA for contrast and aim for level AAA as far as possible. Read more about <a href="/design-system/styles/colour#accessibility">accessibility and colour on this page</a>.</p>
+
 
   <h2 id="main-colours">Main colours</h2>
   <p class="rich-text">If you are using <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-color</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
@@ -359,19 +360,41 @@
 
   <h2 id="extended-colours">Extended colours</h2>
   <p>The NHS Identity Guidelines have an <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/">extended colour palette</a>. We haven't tested these colours yet for digital use.</p>
-  <h2 id="accessibility">Accessibility</h2>
-  <p>Our text and background colours have contrast ratios that meet level <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">AA of the Web Content Accessibility Guidelines (WCAG 2.0)</a>. We aim for AAA as far as possible.</p>
-  <p>This helps people with <a href="https://www.nhs.uk/conditions/colour-vision-deficiency/">colour vision deficiency (colour blindness)</a> who find it difficult to distinguish between certain colours, often shades of red, yellow and green. About 1 in 12 men and 1 in 200 women have this condition.</p>
 
-  <h3>Designing with colour</h3>
-  <p>When you're designing with colour, make sure:</p>
+  <h2 id="accessibility">Accessibility</h2>
+  <p> Make sure that what the colour is "saying" is available in other ways. Read "<a href="/accessibility/design#do-not-rely-on-colour-or-position-alone">Do not rely on colour or position alone</a>" in our accessibility guidance.</p>
+  <h3>Colour contrast</h3>
+  <p>Text and components, like buttons, must have contrast ratios that meet level <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">AA of the Web Content Accessibility Guidelines (WCAG 2.0)</a>. We aim for AAA as far as possible.</p>
+  <p>This helps people with <a href="https://www.nhs.uk/conditions/colour-vision-deficiency/">colour vision deficiency (colour blindness)</a> who find it difficult to distinguish between certain colours, often shades of red, yellow and green.</p>
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+      More about contrast in components and graphic elements
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Use a tool to calculate the ratio between the element and the adjacent colour, for example, the white arrow (foreground) and the green circle (background) in an <a href="/design-system/components/action-link">action link</a>.</p>
+      <p>If you rely on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it does not have to meet the requirement but this is still recommended.</p>
+      <p>Components that are visible but not currently active (like a submit button that is not active until the user has filled in the form) do not have to meet the requirement. But if you can meet the minimum contrast without it being confusing, it will help people with low vision.</p>
+    </div>
+  </details>
+
+  <h4>AA</h4>
+  <p>The contrast ratio should be at least:</p>
   <ul>
-    <li>contrasts between text and background meet level AA of WCAG 2.0 - or better still AAA</li>
-    <li>elements like buttons are recognisable against backgrounds</li>
-    <li>what the colour is "saying" is available in other ways</li>
+    <li>4.5:1 for small text (smaller than 24px, or 19px if bold)</li>
+    <li>3:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
   </ul>
 
-  <h3>Testing tools</h3>
+  <h4>AAA</h4>
+  <p>The contrast ratio should be at least:</p>
+  <ul>
+    <li>7:1 for small text (smaller than 24px, or 19px if bold)</li>
+    <li>4.5:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
+  </ul>
+
+  <h4>Testing tools</h4>
   <p>Use tools like these to check contrast:</p>
   <ul>
     <li><a href="https://webaim.org/resources/contrastchecker/">Web Aim's colour contrast checker</a></li>
