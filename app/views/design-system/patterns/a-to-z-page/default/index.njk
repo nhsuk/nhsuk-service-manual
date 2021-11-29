@@ -1,7 +1,6 @@
 {% extends "includes/design-example-wrapper-full-layout.njk" %}
 
-{% from 'nav-a-z/macro.njk' import azNav %}
-{% from 'list-panel/macro.njk' import listPanel %}
+{% from 'card/macro.njk' import card %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -9,121 +8,129 @@
 
       <h1>Health A to Z</h1>
 
-      {{ azNav({
-        "items": [
-          {
-            "label": "A"
-          },
-          {
-            "disable": "true",
-            "label": "B"
-          },
-          {
-            "label": "C"
-          },
-          {
-            "label": "D"
-          },
-          {
-            "label": "E"
-          },
-          {
-            "label": "F"
-          },
-          {
-            "label": "G"
-          },
-          {
-            "label": "H"
-          },
-          {
-            "label": "I"
-          },
-          {
-            "label": "J"
-          },
-          {
-            "label": "K"
-          },
-          {
-            "label": "L"
-          },
-          {
-            "label": "M"
-          },
-          {
-            "label": "N"
-          },
-          {
-            "label": "O"
-          },
-          {
-            "label": "P"
-          },
-          {
-            "label": "Q"
-          },
-          {
-            "label": "R"
-          },
-          {
-            "label": "S"
-          },
-          {
-            "label": "T"
-          },
-          {
-            "label": "U"
-          },
-          {
-            "label": "V"
-          },
-          {
-            "label": "W"
-          },
-          {
-            "label": "X"
-          },
-          {
-            "label": "Y"
-          },
-          {
-            "label": "Z"
-          }
-        ]
-      }) }}
+      <nav class="nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
+        <ol class="nhsuk-list nhsuk-u-clear nhsuk-u-margin-0" role="list">
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#A">A</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <span class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block nhsuk-u-secondary-text-color">B</span>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#C">C</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#D">D</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#E">E</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#F">F</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#G">G</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#H">H</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#I">I</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#J">J</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#K">K</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#L">L</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#M">M</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#N">N</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#O">O</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#P">P</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#Q">Q</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#R">R</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#S">S</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#T">T</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#U">U</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#V">V</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#W">W</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#X">X</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#Y">Y</a>
+          </li>
+          <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
+            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#Z">Z</a>
+          </li>
+        </ol>
+      </nav>
 
-      {{ listPanel({
-        "label": "A",
-        "id": "A",
-        "backToTop": "true",
-        "backToTopLink": "#nhsuk-nav-a-z",
-        "items": [
-          {
-            "URL": "/conditions/abdominal-aortic-aneurysm/",
-            "link": "AAA"
-          },
-          {
-            "URL": "/conditions/abdominal-aortic-aneurysm/",
-            "link": "Abdominal aortic aneurysm"
-          },
-          {
-            "URL": "/conditions/abscess/",
-            "link": "Abscess"
-          }
-        ]
-      }) }}
+      {{ card({
+          "feature": "true",
+          "heading": "A",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/abdominal-aortic-aneurysm/'>AAA</a></li>
+          <li><a href='/conditions/abdominal-aortic-aneurysm/'>Abdominal aortic aneurysm</a></li>
+          <li><a href='/conditions/abscess/'>Abscess</a></li> 
+        </ul>"
+        }) }}
 
-      {{ listPanel({
+      {{ card({
+          "feature": "true",
+          "heading": "B",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li>There are currently no conditions listed</li>
+        </ul>"
+        }) }}  
+
+      {# {{ listPanel({
         "label": "B",
         "id": "B",
         "disable": "true",
         "backToTop": "true",
         "backToTopLink": "#nhsuk-nav-a-z",
         "message": "There are currently no conditions listed"
-      }) }}
+      }) }} #}
 
-      {{ listPanel({
+      {{ card({
+          "feature": "true",
+          "heading": "C",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/chest-pain/'>Chest pain</a></li>
+          <li><a href='/conditions/cold-sores/'>Cold sore</a></li>
+        </ul>"
+        }) }}
+
+      {# {{ listPanel({
         "label": "C",
         "id": "C",
         "backToTop": "true",
@@ -138,9 +145,20 @@
             "link": "Cold sore"
           }
         ]
-      }) }}
+      }) }} #}
 
-      {{ listPanel({
+      {{ card({
+          "feature": "true",
+          "heading": "D",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/dandruff/'>Dandruff</a></li>
+          <li><a href='/conditions/dementia/'>Dementia</a></li>
+          <li><a href='/conditions/toothache/'>Dental pain</a></li> 
+        </ul>"
+        }) }}
+
+      {# {{ listPanel({
         "label": "D",
         "id": "D",
         "backToTop": "true",
@@ -159,7 +177,7 @@
             "link": "Dental pain"
           }
         ]
-      }) }}
+      }) }} #}
 
     </div>
   </div>
