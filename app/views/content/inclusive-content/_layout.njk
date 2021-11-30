@@ -1,0 +1,45 @@
+{% extends "includes/layout.njk" %}
+
+{% block breadcrumb %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/content",
+        text: "Content style guide"
+      }
+    ],
+    href: "/content/inclusive-content",
+    text: "Inclusive content"
+  }) }}
+{% endblock %}
+
+{% block body %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full app-component-reading-width">
+
+      <h1>
+        {%- if pageSection %}
+        <span class="nhsuk-caption-l">
+          {{pageSection}}
+          <span class="nhsuk-u-visually-hidden"> - </span>
+        </span>
+        {% else %}
+        {% endif %}
+        {{pageTitle}}
+      </h1>
+      {% include "content/inclusive content/age.njk" %}
+
+      <p class="nhsuk-body-l">{{pageDescription}}</p>
+
+      {% block bodyContent %}
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
