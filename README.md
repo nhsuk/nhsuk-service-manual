@@ -20,9 +20,26 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 ### Environments
 
-- Review - used to review content, design, development and research changes. Code pushed to a branch starting with `review/0-` will deploy on the [review/0 environment](https://nhsuk-service-manual-pr.azurewebsites.net/). Code pushed to a branch starting with `review/1-` will deploy on the [review/1 environment](http://nhsuk-service-manual-pr-nhsuk-service-manual-r1.azurewebsites.net/).
-- [Staging] - used for very final checks before changes are pushed to the live website. Code pushed to the `master` branch will deploy to the [Staging environment](https://nhsuk-service-manual-dev-uks.azurewebsites.net/).
-- [Live] - the live NHS digital service manual website, accessible to the public. Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environment](https://service-manual.nhs.uk/). (Note: Live is behind a server side cache which results in changes not appearing immediately.)
+
+#### Review
+
+Used to review content, design, development and research changes.
+
+Code pushed to a branch starting with `review/0-` will deploy on the [review/0 environment](https://nhsuk-service-manual-pr.azurewebsites.net/).
+
+Code pushed to a branch starting with `review/1-` will deploy on the [review/1 environment](http://nhsuk-service-manual-pr-nhsuk-service-manual-r1.azurewebsites.net/).
+
+#### Staging
+
+Used for very final checks before changes are pushed to the live website.
+
+Code pushed to the `master` branch will deploy to the [Staging environment](https://nhsuk-service-manual-dev-uks.azurewebsites.net/).
+
+#### Live
+
+The live NHS digital service manual website, accessible to the public.
+
+Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environment](https://service-manual.nhs.uk/). (Note: Live is behind a server side cache which results in changes not appearing immediately.)
 
 ### Release to live 
 
