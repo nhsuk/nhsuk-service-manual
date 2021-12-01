@@ -47,6 +47,7 @@
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#links">Links</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#lists">Lists</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#section-break">Section break</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-alignment">Text alignment</a></li>
       </ul>
     </li>
 
@@ -195,6 +196,20 @@
     group: "styles",
     item: "typography",
     type: "section-breaks",
+    htmlOnly: true
+  }) }}
+
+  <h2 id="text-alignment">Text alignment</h2>
+  <p>Left-align text in English. Text is left-aligned by default.</p>
+
+  <h3 id="text-alignment-override-classes">Text alignment override classes</h3>
+  <p>For translations into languages that run right to left (like Arabic), right-align instead. You need to use the text alignment override class in your HTML to right-align text.</p>
+  <p>Here is an example of Arabic.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "text-alignment",
     htmlOnly: true
   }) }}
 
