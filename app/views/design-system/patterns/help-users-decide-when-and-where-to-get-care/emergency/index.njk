@@ -1,9 +1,9 @@
-{% from 'care-card/macro.njk' import careCard %}
+{% from 'card/macro.njk' import card %}
 
-{{ careCard({
-  "type": "immediate",
+{{ card({
+  "type": "emergency",
   "heading": "Call 999 or go to A&E now if:",
-  "HTML": "
+  "descriptionHtml": "
   <ul>
     <li>you or someone you know needs immediate help</li>
     <li>you have seriously harmed yourself – for example, by taking a drug overdose</li>

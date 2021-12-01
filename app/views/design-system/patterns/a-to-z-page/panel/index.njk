@@ -1,69 +1,42 @@
-{% from 'list-panel/macro.njk' import listPanel %}
+{% from 'card/macro.njk' import card %}
 
-{{ listPanel({
-  "label": "A",
-  "id": "A",
-  "backToTop": "true",
-  "backToTopLink": "#nhsuk-nav-a-z",
-  "items": [
-    {
-      "URL": "/conditions/abdominal-aortic-aneurysm/",
-      "link": "AAA"
-    },
-    {
-      "URL": "/conditions/abdominal-aortic-aneurysm/",
-      "link": "Abdominal aortic aneurysm"
-    },
-    {
-      "URL": "/conditions/abscess/",
-      "link": "Abscess"
-    }
-  ]
-}) }}
+{{ card({
+          "feature": "true",
+          "heading": "A",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/abdominal-aortic-aneurysm/'>AAA</a></li>
+          <li><a href='/conditions/abdominal-aortic-aneurysm/'>Abdominal aortic aneurysm</a></li>
+          <li><a href='/conditions/abscess/'>Abscess</a></li> 
+        </ul>"
+        }) }}
 
-{{ listPanel({
-  "label": "B",
-  "id": "B",
-  "disable": "true",
-  "backToTop": "true",
-  "backToTopLink": "#nhsuk-nav-a-z",
-  "message": "There are currently no conditions listed"
-}) }}
+{{ card({
+          "feature": "true",
+          "heading": "B",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li>There are currently no conditions listed</li>
+        </ul>"
+        }) }}
 
-{{ listPanel({
-  "label": "C",
-  "id": "C",
-  "backToTop": "true",
-  "backToTopLink": "#nhsuk-nav-a-z",
-  "items": [
-    {
-      "URL": "/conditions/chest-pain/",
-      "link": "Chest pain"
-    },
-    {
-      "URL": "/conditions/cold-sores/",
-      "link": "Cold sore"
-    }
-  ]
-}) }}
+{{ card({
+          "feature": "true",
+          "heading": "C",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/chest-pain/'>Chest pain</a></li>
+          <li><a href='/conditions/cold-sores/'>Cold sore</a></li>
+        </ul>"
+        }) }}
 
-{{ listPanel({
-  "label": "D",
-  "id": "D",
-  "backToTop": "true",
-  "backToTopLink": "#nhsuk-nav-a-z",
-  "items": [
-    {
-      "URL": "/conditions/dandruff/",
-      "link": "Dandruff"
-    },
-    {
-      "URL": "/conditions/dementia/",
-      "link": "Dementia"
-    },
-    {
-      "URL": "/conditions/toothache/",
-      "link": "Dental pain"
-    }
-  ]
-}) }}
+{{ card({
+          "feature": "true",
+          "heading": "D",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='/conditions/dandruff/'>Dandruff</a></li>
+          <li><a href='/conditions/dementia/'>Dementia</a></li>
+          <li><a href='/conditions/toothache/'>Dental pain</a></li> 
+        </ul>"
+        }) }}

@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 5.5.0 - 29 November 2021
 
 :new: **New features**
 
@@ -14,6 +14,8 @@
 
 - Update service manual team page. Remove old members.
 - Update site map with new pattern
+- Improve search so it no longer treats word after hyphen as a new search, e.g. `x-ra` now returns `x-ray` instead of `Radios`
+- Install latest version of NHS.UK frontend (6.0.1)
 
 ## 5.4.1 - 28 October 2021
 
