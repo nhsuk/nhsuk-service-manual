@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.5.1 - TBC December 2021
+## 5.6.0 - 2 December 2021
 
 :new: **New features**
 
