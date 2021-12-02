@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 5.6.0 - 2 December 2021
+
+:new: **New features**
+
+- Add new page for downloading accessibility posters
+
+:wrench: **Fixes**
+
+- Fix arrow in A to Z of NHS health writing
+
 ## 5.5.0 - 29 November 2021
 
 :new: **New features**
