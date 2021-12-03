@@ -1,0 +1,116 @@
+{% set pageTitle = "Help users decide when and where to get care (care cards)" %}
+{% set pageDescription = "Care cards help users identify and understand the care they need, who to contact and how quickly." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Tasks" %}
+{% set dateUpdated = "November 2021" %}
+{% set backlog_issue_id = "8" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+  <p>Use this pattern if you need to tell users to take action to get medical advice or help.</p>
+
+  <h2 id="when-not-to-use-this-pattern">When not to use this pattern</h2>
+  <p>Do not use this pattern:</p>
+  <ul>
+    <li>for information which is not about helping users understand the care they need now</li>
+    <li>in question pages in a transactional journey</li>
+    <li>to warn users about something – use a <a href="/design-system/components/warning-callout">warning callout</a></li>
+    <li>to stop users in a journey, unless it is to tell them to get medical help now – consider using an interruption card instead</li>
+    <li>to signpost users to the start of a digital service – use an <a href="/design-system/components/action-link">action link</a>, for example, to find a pharmacy</li>
+    <li>to point users to another organisation, like a charity – use <a href="/design-system/components/inset-text">inset text</a> or just link from a line of text</li>
+    <li>to give users a brief summary of content or a task, often with a link to more detail – use a <a href="/design-system/components/card">card</a></li>
+  </ul>
+
+  <h2 id="how-it-works">How it works</h2>
+
+  <p>We have 3 care cards for 3 levels of care:</p>
+  <ul>
+    <li><a href="#non-urgent-care-card-blue">non-urgent care card (blue)</a></li>
+    <li><a href="#urgent-care-card-red">urgent care card (red)</a></li>
+    <li><a href="#emergency-care-card-red-and-black">emergency care card (red and dark grey)</a></li>
+  </ul>
+
+  <p>You can use more than 1 care card on a page – for example, if people need different kinds of care depending on how severe their symptoms are. You can choose where to put the cards and what order to put them in.</p>
+  <p>Avoid having too many care cards on the page. We want to give essential information and reassure people, not to scare them. Only include more than 1 of each type if you can show a clear clinical or user need. For example, where you need to tell users about 2 different medical emergencies on 1 page.</p>
+  <p>If you use more than 1 care card – or a care card and a <a href="/design-system/components/warning-callout">warning callout</a> close to each other – be aware that users often overlook text between them.</p>
+  <p>Make sure any text below a care card has its own heading so that screen reader users know it's not part of the care card.</p>
+
+  <h3 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h3>
+  <p>Use the non-urgent care card when you want users to get in touch with a health professional such as a practice nurse or their GP.</p>
+  <p>You can also use it to tell people to get advice from a pharmacist or to go to a clinic, for example for a chlamydia test.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "help-users-decide-when-and-where-to-get-care",
+    type: "non-urgent",
+    showArguments: false
+  }) }}
+
+  <h3 id="urgent-care-card-red">Urgent care card (red)</h3>
+  <p>Use the urgent care card if you want users to call or visit a GP or hospital quickly.</p>
+  <p>You can, for example, use the urgent care card to tell people to contact 111 or to go to a walk-in centre or minor injuries centre.</p>
+  <p>If appropriate, tell users to ask for an urgent appointment when they ring their GP practice. It can help make sure they see someone quickly.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "help-users-decide-when-and-where-to-get-care",
+    type: "urgent",
+    showArguments: false
+  }) }}
+
+  <h3 id="emergency-care-card-red-and-black">Emergency care card (red and dark grey)</h3>
+  <p>If users need to get emergency help straight away (meaning "now"), use the emergency care card. Tell them to dial 999 or go to their nearest A&E department.</p>
+  <p>Where appropriate, include a link to help users find their nearest hospital A&E department.</p>
+  <p>If it's an emergency, the user must dial 999 or go to A&E now, so avoid linking to more information about a condition from an emergency care card.</p>
+  <p>Only use this card for emergencies.</p>
+  <p>Here is a mental health example.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "help-users-decide-when-and-where-to-get-care",
+    type: "emergency",
+    showArguments: false
+  }) }}
+
+  <h2 id="care-card-content">Care card content</h2>
+
+  <h3 id="use-clearly-worded-headings">Use clearly worded headings</h3>
+  <p>People with visual disabilities may not be able to recognise care cards by their colour. Use clearly worded headings to tell them what they need to do. This will also help people who are stressed or need to act quickly.</p>
+
+  <h3 id="short-heading">Give the card a short heading using "if"</h3>
+  <p>The heading should be 1 clear call to action. Use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list in the body of the card.</p>
+
+  <h3 id="self-contained">Make the card self-contained</h3>
+  <p>Care cards should be specific and include the information the user needs. Do not say: "Contact your GP if this happens." Explain in the care card in what circumstances users should contact their GP.</p>
+
+  <h3 id="detail-in-body">Put the detail in the body of the card</h3>
+  <p>Do not overload the header. Use the space in the body of the card, but keep it short.</p>
+  <p>It's OK to use a single bullet point after the "if:" in the header. It's clearer than including a stand-alone sentence in the card.</p>
+  <p>It's also OK to have 2 colons, 1 in the header and 1 in the body of the card, as in this example.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "help-users-decide-when-and-where-to-get-care",
+    type: "two-colons",
+    showArguments: false
+  }) }}
+
+  <h3 id="keep-signposting-simple">Keep signposting simple</h3>
+  <p>Ideally you should signpost to just 1 service in the header but you can signpost to 2 (the top 2 services). If you need to, add more services at the end of the body of the care card.</p>
+
+  <h2 id="accessibility">Accessibility</h2>
+  <p>Each care card includes hidden text to make the level of urgency clear to people who use screen readers. This also helps people who use headings to navigate the page as the text is part of the heading.</p>
+  <p class="rich-text"><code>&lt;h3&gt;&lt;span class="visually-hidden"&gt;Non-urgent care&lt;/span&gt; Speak to a GP if:&lt;h3&gt;</code></p>
+
+  <h2 id="research">Research</h2>
+  <p>We've tested care cards on long content pages with 1 call to action, for example "Speak to a GP if:". We found that users scanning the page stopped to read the care cards and understood what action to take.</p>
+
+{% endblock %}

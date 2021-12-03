@@ -1,0 +1,14 @@
+{% from 'card/macro.njk' import card %}
+
+{{ card({
+  "type": "emergency",
+  "heading": "Call 999 or go to A&E now if:",
+  "descriptionHtml": "
+  <ul>
+    <li>you or someone you know needs immediate help</li>
+    <li>you have seriously harmed yourself – for example, by taking a drug overdose</li>
+  </ul>
+  <p>A mental health emergency should be taken as seriously as a medical emergency.</p>
+  <p><a href=\"\">Find your nearest A&E</a></p>
+  "
+}) }}

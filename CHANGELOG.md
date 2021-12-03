@@ -1,10 +1,31 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 5.6.0 - 2 December 2021
+
+:new: **New features**
+
+- Add new page for downloading accessibility posters
+
+:wrench: **Fixes**
+
+- Fix arrow in A to Z of NHS health writing
+
+## 5.5.0 - 29 November 2021
+
+:new: **New features**
+
+- Rework care card component as a pattern to help users decide when and where to get care
+- Update links to point to the new pattern from the colour page and from 5 components: action link, card, expander, inset text, warning callout
+- Amend the care cards component page to direct people to the new pattern and add a review date component page to direct people to the pattern for reassuring users that a page is up to date 
+- Update links to point to the new pattern from 2 content style guide pages: the A to Z of NHS health writing and the Formatting and punctuation page
+- Add the word "reuse" alongside "build" and "buy" in the guidance on NHS service standard 11
 
 :wrench: **Fixes**
 
 - Update service manual team page. Remove old members.
+- Update site map with new pattern
+- Improve search so it no longer treats word after hyphen as a new search, e.g. `x-ra` now returns `x-ray` instead of `Radios`
+- Install latest version of NHS.UK frontend (6.0.1)
 
 ## 5.4.1 - 28 October 2021
 

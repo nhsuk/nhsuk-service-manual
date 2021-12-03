@@ -1,0 +1,41 @@
+{
+    "params": [
+      {
+        "name": "type",
+        "type": "string",
+        "required": true,
+        "description": "Care card component variant type - non-urgent, urgent or immediate"
+      },
+      {
+        "name": "heading",
+        "type": "string",
+        "required": true,
+        "description": "Heading to be used within the care card component."
+      },
+      {
+        "name": "headingLevel",
+        "type": "integer",
+        "required": false,
+        "description": "Optional heading level for the heading. Default: 3"
+      },
+      {
+        "name": "HTML",
+        "type": "string",
+        "required": true,
+        "description": "Content to be used within the care card component."
+      },
+      {
+        "name": "classes",
+        "type": "string",
+        "required": false,
+        "description": "Classes to add to the care card."
+      },
+      {
+        "name": "attributes",
+        "type": "object",
+        "required": false,
+        "description": "HTML attributes (for example data attributes) to add to the care card."
+      }
+    ]
+  }
+  

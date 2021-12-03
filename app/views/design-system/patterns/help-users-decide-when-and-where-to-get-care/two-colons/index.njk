@@ -1,9 +1,10 @@
-{% from 'care-card/macro.njk' import careCard %}
+{% from 'card/macro.njk' import card %}
 
-{{ careCard({
-  "type": "immediate",
-  "heading": "Call 999 if you have sudden chest pain that:",
-  "HTML": "
+{{ card({
+  "type": "emergency",
+  "heading": "Call 999 if:",
+  "descriptionHtml": "
+  <p>You have sudden chest pain that:</p>
   <ul>
     <li>spreads to your arms, back, neck or jaw</li>
     <li>makes your chest feel tight or heavy</li>
