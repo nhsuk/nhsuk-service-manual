@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 5.6.1 - Unreleased
+
+:wrench: **Fixes**
+
+- Update service manual team page. Remove old members and add new member.
+- Added "Would you like to contribute to this guidance?" section at the bottom of the accessibility posters page.
+
 ## 5.6.0 - 2 December 2021
 
 :new: **New features**
