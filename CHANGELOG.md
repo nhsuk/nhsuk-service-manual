@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.6.1 - Unreleased
+## 5.6.1 - 8 December 2021
 
 :wrench: **Fixes**
 
