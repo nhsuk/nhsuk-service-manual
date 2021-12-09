@@ -6,7 +6,7 @@ Guidance for designing and building digital services for the NHS. Things you nee
 
 ### Prerequisite
 
-Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes NPM.
+Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes npm.
 
 ### Cloning and running the application
 
@@ -14,17 +14,17 @@ Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhs
 
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
 
-## Running the application via the browser
+## Running the application via the browser with Gitpod
 
-Prior to running Gitpod you must install the <a href="https://github.com/apps/gitpod-io/installations/new">Gitpod application</a> on your Github account.
+Before running Gitpod, you must <a href="https://github.com/apps/gitpod-io/installations/new">install the Gitpod.io application on your GitHub account</a>.
 
-Gitpod also requires access to public repositories this can be enabled <a href="https://gitpod.io/integrations">here</a>.
+Gitpod also requires access to public repositories. Enable this via <a href="https://gitpod.io/integrations">Gitpod integrations</a>. (Click on the 3 dots to edit permissions for your GitHub account. Gitpod may pre-select permissions. You need read/write access to code in the repos.)
 
-Using your own Github credentials you can create, change, commit and push to branches on our Gitpod container via the button below.
+Using your own Github credentials you can create, change, commit and push to branches on our Gitpod container via the "ready to code" button below.
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
 
-More information on <a href="https://www.gitpod.io/docs">Gitpod</a>.
+Read an <a href="https://www.gitpod.io/docs">introduction to Gitpod (on Gitpod's website)</a>.
 
 ## Release lifecycle
 
@@ -48,7 +48,7 @@ More information on <a href="https://www.gitpod.io/docs">Gitpod</a>.
 
 ## Get in touch
 
-The NHS digital service manual is maintained by NHS Digital. [Email us](mailto:service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-service-manual/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://service-manual.nhs.uk/slack).
+The NHS digital service manual is maintained by NHS Digital. [Email the service manual team](mailto:service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-service-manual/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://service-manual.nhs.uk/slack).
 
 ## Licence
 
