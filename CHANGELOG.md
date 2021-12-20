@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 5.6.2 - 16 December 2021
+
+:wrench: **Fixes**
+
+- Update service manual team page. Remove old members and add new member.
+- Bug fix on A to Z of NHS health writing page [#1677](https://github.com/nhsuk/nhsuk-service-manual/pull/1677)
+
+## 5.6.1 - 8 December 2021
+
+:wrench: **Fixes**
+
+- Update service manual team page. Remove old members and add new member.
+- Added "Would you like to contribute to this guidance?" section at the bottom of the accessibility posters page.
+
 ## 5.6.0 - 2 December 2021
 
 :new: **New features**
