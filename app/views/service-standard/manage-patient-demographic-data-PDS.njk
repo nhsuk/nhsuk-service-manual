@@ -1,0 +1,65 @@
+
+{% set pageTitle = "Manage patient demographic data: Personal Demographics Service (PDS)" %}
+{% set pageSection = "NHS service standard" %}
+{% set pageDescription = "Technology services and frameworks developed or commissioned by the NHS nationally must use the PDS service." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "February 2022" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "service-standard/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <h2>What is PDS?</h2>
+  <p>PDS is a national database of NHS patient details such as:</p>
+  <ul>
+    <li>name</li>
+    <li>address</li>
+    <li>date of birth</li>
+    <li>related people</li>
+    <li>registered GP</li>
+    <li>NHS number</li>
+  </ul>
+  <p>It helps healthcare professionals identify patients and match them to their health records. It also allows them to contact and communicate with patients.</p>
+
+  <h2>When to use PDS</h2>
+  <p>Use the PDS API to:</p>
+  <ul>
+    <li>search for patients</li>
+    <li>get patient details</li>
+    <li>update patient details</li>
+    <li>check an NHS number for a patient</li>
+  </ul>
+  <p>You must use the PDS service to check the NHS number of an individual in England and to manage and maintain demographic data about them. This supports information standard <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">ISB 0149 NHS Number (on NHS Digital's website)</a>.</p>
+
+  <h2>When not to use PDS</h2>
+  <p>You cannot currently use the PDS API to:</p>
+  <ul>
+    <li>create a new record for a birth</li>
+    <li>receive birth notifications</li>
+    <li>create a record for a new patient</li>
+    <li>register a new patient at a GP practice</li>
+  </ul>
+
+<h2>Why it's important</h2>
+<p>The PDS service:</p>
+<ul>
+  <li>creates a consistent user experience with demographic information updated in 1 place</li>
+  <li>accurately links patients to their health record</li>
+  <li>enables patient information to be shared safely within and across organisational boundaries including for referrals, prescriptions and social care</li>
+  <li>reduces the amount of patient data held in local systems which supports the information governance principle of data minimisation</li>
+  <li>has a range of features to maintain and manage data and establishing these data management tools in local services can be expensive and resource-intensive</li>
+</ul>
+
+<h2>Find out more about PDS</h2>
+<ul>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">Personal Demographics Service – FHIR API (on NHS Digital's website)</a>, includes overview and onboarding sections</li>
+  <li><a href="https://digital.nhs.uk/services/demographics">Demographics and PDS (on NHS Digital's website)</a></li>
+</ul>
+  <p>We're very interested in hearing what you think about the NHS service standard and these tech standards and how they might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}
