@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "5.5.0",
+  "version": "5.6.3",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -34,7 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "accessible-autocomplete": "^2.0.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.27.5",
     "cheerio": "^1.0.0-rc.10",

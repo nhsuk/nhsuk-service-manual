@@ -1,0 +1,71 @@
+{% set pageTitle = "Download accessibility posters" %}
+{% set pageSection = "Accessibility" %}
+{% set subSection = "Accessibility" %}
+{% set pageDescription = "Here are 6 accessibility posters for you to download and print out for different professions in a user-centred, multi-disciplinary team." %}
+{% set theme = "Everyone needs to know" %}
+{% set dateUpdated = "December 2021" %}
+{% set backlog_issue_id = "405" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "accessibility/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p><a href="/assets/nhs-digital-accessibility-posters.pdf">Download all 6 accessibility posters (PDF, 88KB)</a></p>
+<p>These posters contain some basic principles of accessibility on a coloured background. Display them in your workplace to encourage your team to think about accessibility and to find out more.</p>
+
+<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="/assets/accessibility-posters-grid.jpg" alt="3x2 grid view of all 6 accessibility posters">
+  <figcaption class="nhsuk-image__caption">
+    Preview of all 6 accessibility posters
+  </figcaption>
+</figure>
+
+<h2>What the posters say</h2>
+
+<h3>Product and delivery</h3>
+<p>Make sure everyone knows their responsibilities.</p>
+<p>If a team member does not have a basic understanding already, help them get started with accessibility.</p>
+<p>(On a blue background, with an icon showing 2 hands holding a phone.)</p>
+<p><a href="/assets/nhs-digital-product-delivery-accessibility-poster.pdf">Download poster for product and delivery (PDF, 44KB)</a></p>
+
+<h3>User research</h3>
+<p>Involve people with access needs at every stage.</p>
+<p>Understand participants' needs beforehand and make your sessions accessible on the day.</p>
+<p>(On a yellow background, with an icon showing research notes.)</p>
+<p><a href="/assets/nhs-digital-user-research-accessibility-poster.pdf">Download poster for user research (PDF, 44KB)</a></p>
+
+<h3>Content</h3>
+<p>Write content that's inclusive and easy to understand.</p>
+<p>Use alternative text for images in content – and use captions to complement alt-text.</p>
+<p>(On a pink background, with an icon showing a phone with text and a video on it.)</p>
+<p><a href="/assets/nhs-digital-content-accessibility-poster.pdf">Download poster for content (PDF, 44KB)</a><p>
+
+<h3>Development</h3>
+<p>Check keyboard accessibility – start with the correct HTML for links, buttons and form controls.</p>
+<p>Use ARIA patterns to let people who use assistive tech know what's going on.</p>
+<p>(On a purple background, with an icon showing an HTML tag.)</p>
+<p><a href="/assets/nhs-digital-development-accessibility-poster.pdf">Download poster for development (PDF, 44KB)</a></p>
+
+<h3>Design</h3>
+<p>Use headings correctly, define focus styles, and build with tested, accessible components.</p>
+<p>Check colour contrast meets at least level AA and aim for AAA where possible.</p>
+<p>(On an orange background, with an icon showing 2 hands framing a square.)</p>
+<p><a href="/assets/nhs-digital-design-accessibility-poster.pdf">Download poster for design (PDF, 44KB)</a></p>
+
+<h3>Testing</h3>
+<p>Learn about accessibility before you start.</p>
+<p>Do 3 kinds of tests: test with people with access needs, do automated tests, and manual testing with guidelines.</p>
+<p>(On a green background, with an icon showing a clipboard with a tick on it.)</p>
+<p><a href="/assets/nhs-digital-testing-accessibility-poster.pdf">Download poster for testing (PDF, 44KB)</a></p>
+
+
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}
