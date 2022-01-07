@@ -42,7 +42,7 @@ Code pushed to a branch starting with `review/2-` will deploy on the [review/2 e
 
 Used for User Testing conducted within the service manual team.
 
-Code pushed to a branch starting with `user-testing/` will deploy on the [user-testing environment](https://nhsuk-service-manual-user-testing-wa-dev-uks.azurewebsites.net/).
+Code pushed to a branch starting with `usertesting/` will deploy on the [usertesting environment](https://nhsuk-service-manual-usertesting-wa-dev-uks.azurewebsites.net/).
 
 #### Staging
 
