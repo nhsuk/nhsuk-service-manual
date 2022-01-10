@@ -66,5 +66,8 @@
     "sass-lint": "^1.13.1",
     "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0"
+  },
+  "volta": {
+    "node": "14.18.2"
   }
 }
