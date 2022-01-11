@@ -1,5 +1,20 @@
 # NHS digital service manual Changelog
 
+## 5.6.3 - 6 January 2022
+
+:new: **New features**
+
+- Update closed captions section in accessibility guidance 
+- Add more detail about colour contrast and accessibility in design system
+- Add sentence about not using "none of the above" to the checkboxes component "none" option
+- Link to Involving people and communities in digital services (NHSX's website) from NHS service standards 1 and 5
+
+:wrench: **Fixes**
+
+- Update link to WC3 WCAG2.1 on Links page
+- Update link to modulus 11 algorithm information in the pattern for asking users for their NHS number
+- Update service manual team page
+
 ## 5.6.2 - 16 December 2021
 
 :wrench: **Fixes**

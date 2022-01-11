@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use checkboxes to let users select 1 or more options on a form." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "October 2021" %}
+{% set dateUpdated = "January 2022" %}
 {% set backlog_issue_id = "9" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -71,7 +71,7 @@
   <p>This option means users need to actively select "none" rather than leave all the boxes unchecked, which makes sure they do not skip the question by accident.</p>
   <p>Remember to start by asking 1 question per page. You might be able to remove the need for a "none" option by asking the user a better question or by <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users">using filter questions</a> to filter users out beforehand.</p>
   <p>Show the "none" option last. Separate it from the other options using a divider, normally the word "or".</p>
-  <p>Write a label that repeats the key part of the question. For example, for the question "Do you have any of these symptoms?", say "No, I do not have any of these symptoms".</p>
+  <p>Write a label that repeats the key part of the question. For example, for the question "Do you have any of these symptoms?", say "No, I do not have any of these symptoms". Avoid phrases like "none of the above" because this is a visual reference and might be hard for people who use screen readers to understand.</p>
   <p>To enable some JavaScript that unchecks all other checkboxes when the user clicks "none", add the <code>data-checkbox-exclusive</code> behaviour to the "none" checkbox.</p>
 
   {{ designExample({
