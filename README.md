@@ -28,7 +28,7 @@ Read an <a href="https://www.gitpod.io/docs">introduction to Gitpod (on Gitpod's
 
 ## Release lifecycle
 
-### Environments`
+### Environments
 
 #### Review
 

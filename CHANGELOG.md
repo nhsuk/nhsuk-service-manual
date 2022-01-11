@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 5.6.4 - 11 January 2022
+
+:wrench: **Maintenance**
+
+- Removed [NHSUK ESLint config](https://www.npmjs.com/package/eslint-config-nhsuk) as a dependency and replaced with [AirBnB base configuration](https://www.npmjs.com/package/eslint-config-airbnb-base)
+- Added [Volta](https://volta.sh/) setting to the `package.json` file so anyone with Volta installed will automatically use a version of Node that is known to be compatible with the current version of the service manual
+
 ## 5.6.3 - 6 January 2022
 
 :new: **New features**
