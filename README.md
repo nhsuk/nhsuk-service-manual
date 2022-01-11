@@ -30,7 +30,6 @@ Read an <a href="https://www.gitpod.io/docs">introduction to Gitpod (on Gitpod's
 
 ### Environments
 
-
 #### Review
 
 Used to review content, design, development and research changes.
