@@ -32,11 +32,17 @@ Read an <a href="https://www.gitpod.io/docs">introduction to Gitpod (on Gitpod's
 
 #### Review
 
-Used to review content, design, development and research changes.
+Code pushed to a branch starting with `review/1-` will deploy on the [review/1 environment](https://nhsuk-service-manual-review-wa-1-dev-uks.azurewebsites.net/).
 
-Code pushed to a branch starting with `review/0-` will deploy on the [review/0 environment](https://nhsuk-service-manual-pr.azurewebsites.net/).
+Code pushed to a branch starting with `review/2-` will deploy on the [review/2 environment](https://nhsuk-service-manual-review-wa-2-dev-uks.azurewebsites.net/).
 
-Code pushed to a branch starting with `review/1-` will deploy on the [review/1 environment](http://nhsuk-service-manual-pr-nhsuk-service-manual-r1.azurewebsites.net/).
+#### Development
+
+Code pushed to a branch starting with `dev/` will deploy on the [development environment](https://nhsuk-service-manual-wa-dev-uks.azurewebsites.net/).
+
+#### User Testing
+
+Code pushed to a branch starting with `user/` will deploy on the [user testing environment](https://nhsuk-service-manual-usertesting-wa-dev-uks.azurewebsites.net/).
 
 #### Staging
 
