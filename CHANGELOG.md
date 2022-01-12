@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 5.6.5 - 12 January 2022
+
+:new: **New features**
+
+- Add new entry for "booster" to the A to Z of NHS health writing
+- Add word "only" to guidance on avoiding linking to PDFs on Links page
+
 ## 5.6.4 - 11 January 2022
 
 :wrench: **Maintenance**
