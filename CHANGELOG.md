@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 5.6.5 - 12 January 2022
+## 5.6.5 - 13 January 2022
 
 :new: **New features**
 
