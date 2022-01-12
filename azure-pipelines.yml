@@ -6,7 +6,7 @@ trigger:
     - refs/tags/v*
     - refs/heads/review/*
     - refs/heads/dev/*
-    - refs/heads/user-testing/*
+    - refs/heads/user/*
   paths:
     exclude:
     - CHANGELOG.md
