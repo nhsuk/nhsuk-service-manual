@@ -44,7 +44,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
-    "nhsuk-frontend": "^6.0.1",
+    "nhsuk-frontend": "^6.1.0",
     "nunjucks": "^3.2.3"
   },
   "devDependencies": {
