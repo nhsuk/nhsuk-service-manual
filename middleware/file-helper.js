@@ -29,7 +29,7 @@ exports.getNunjucksCode = (path) => {
   // include this in the code we expect others to copy.
   const content = fileContents.replace(
     /{%\s*extends\s*\S*\s*%}\s+/,
-    ''
+    '',
   );
 
   return content;
