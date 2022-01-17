@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 5.7.0 - 17 January 2022
+
+:new: **New features**
+
+- Add new section on aligning text on formatting and punctuation page
+- Add new section on text alignment on typography page
+
 ## 5.6.5 - 13 January 2022
 
 :new: **New features**
