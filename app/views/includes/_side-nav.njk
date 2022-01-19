@@ -1,6 +1,11 @@
 {% set serviceStandard = [
-  { title: "NHS service standard", url: "/service-standard" },
-  { title: "About the NHS service standard", url: "/service-standard/about" }
+  { title: "NHS service standard", url: "/standards/service-standard" },
+  { title: "About the NHS service standard", url: "/standards/about-the-service-standard" }
+] %}
+
+{% set otherStandards = [
+  { title: "Authenticate identity: NHS login", url: "/standards/other-standards/authenticate-identity-NHS-login" },
+  { title: "Manage patient demographic data: Personal Demographics Service (PDS)", url: "/standards/other-standards/manage-patient-demographic-data-PDS" }
 ] %}
 
 {% set dsPrinciples = [
@@ -16,6 +21,25 @@
   { title: "Styles", url: "/design-system/styles" },
   { title: "Components", url: "/design-system/components" },
   { title: "Patterns", url: "/design-system/patterns" }
+] %}
+
+{% set ssPoints = [
+  { title: "1. Understand users and their needs in the context of health and care", url: "/standards/service-standard-points/1-understand-users-and-their-needs-context-health-and-care" },
+  { title: "2. and 3. Work towards solving a whole problem for users and provide a joined up experience across all channels", url: "/standards/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience" },
+  { title: "4. Make the service simple to use", url: "/standards/service-standard-points/4-make-the-service-simple-to-use" },
+  { title: "5. Make sure everyone can use the service", url: "/standards/service-standard-points/5-make-sure-everyone-can-use-the-service" },
+  { title: "6. Create a team that includes multidisciplinary skills and perspectives", url: "/standards/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives" },
+  { title: "7. Use agile ways of working", url: "/standards/service-standard-points/7-use-agile-ways-of-working" },
+  { title: "8. Iterate and improve frequently", url: "/standards/service-standard-points/8-iterate-and-improve-frequently" },
+  { title: "9. Respect and protect users’ confidentiality and privacy", url: "/standards/service-standard-points/9-respect-and-protect-users-confidentiality-and-privacy" },
+  { title: "10. Define what success looks like and be open about how your service is performing", url: "/standards/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing" },
+  { title: "11. Choose the right tools and technology", url: "/standards/service-standard-points/11-choose-the-right-tools-and-technology" },
+  { title: "12. Make new source code open", url: "/standards/service-standard-points/12-make-new-source-code-open" },
+  { title: "13. Use and contribute to open standards, common components and patterns", url: "/standards/service-standard-points/13-use-and-contribute-to-open-standards-common-components-and-patterns" },
+  { title: "14. Operate a reliable service", url: "/standards/service-standard-points/14-operate-a-reliable-service" },
+  { title: "15. Support a culture of care", url: "/standards/service-standard-points/15-support-a-culture-of-care" },
+  { title: "16. Make your service clinically safe", url: "/standards/service-standard-points/16-make-your-service-clinically-safe" },
+  { title: "17. Make your service interoperable", url: "/standards/service-standard-points/17-make-your-service-interoperable" }
 ] %}
 
 {% set accessibilityEveryone = [
@@ -136,9 +160,32 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "NHS service standard" %}
+  {%- if pageSection == "NHS standards" and subSection != "NHS service standard" %}
+    <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Other standards</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in otherStandards %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+  {% endif %}
+
+  {%- if subSection == "NHS service standard" %}
+    {{ backLink({
+      "href": "/standards/service-standard",
+      "text": "NHS service standard",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <h2 class="app-side-nav__heading">NHS service standard points <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in ssPoints %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

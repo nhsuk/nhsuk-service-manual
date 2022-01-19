@@ -1,14 +1,15 @@
 {% set pageTitle = "11. Choose the right tools and technology" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageSection = "NHS standards" %}
+{% set subSection = "NHS service standard" %}
 {% set pageDescription = "Choose tools and technology that let you build a good service in an efficient, cost effective way." %}
 {% set beta = true %}
-{% set dateUpdated = "November 2021" %}
+{% set dateUpdated = "February 2022" %}
 {% set backlog_issue_id = "354" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -26,7 +27,7 @@
     <li>have made good decisions about what technology to reuse or build and what to buy</li>
     <li>understand tech decisions that have been made outside your team and challenge these decisions where it will improve the service</li>
     <li>understand total cost of ownership of the technology and have kept the ability to make different choices in future - for example, reducing the chances of getting locked into contracts for specific tools and suppliers by using open standards</li>
-    <li>use standard NHS technology components where possible, for example: the <a href="/service-standard/authenticate-identity-NHS-login">NHS login to authenticate identity</a> and the <a href="/service-standard/manage-patient-demographic-data-PDS">Personal Demographics Service (PDS) to manage patient demographic data</a></li>
+    <li>use standard NHS technology components where possible, for example: the <a href="/standards/other-standards/authenticate-identity-NHS-login">NHS login to authenticate identity</a> and the <a href="/standards/other-standards/manage-patient-demographic-data-PDS">Personal Demographics Service (PDS) to manage patient demographic data</a></li>
     <li>have an effective approach to managing any legacy technology the service integrates with or depends on</li>
   </ul>
 
@@ -34,8 +35,8 @@
 
   <h3>NHS service manual</h3>
   <ul>
-    <li><a href="/service-standard/authenticate-identity-NHS-login">Authenticate identity: NHS login</a></li>
-    <li><a href="/service-standard/manage-patient-demographic-data-PDS">Manage patient demographic data: Personal Demographics Service (PDS)</a></li>
+    <li><a href="/standards/other-standards/authenticate-identity-NHS-login">Authenticate identity: NHS login</a></li>
+    <li><a href="/standards/other-standards/manage-patient-demographic-data-PDS">Manage patient demographic data: Personal Demographics Service (PDS)</a></li>
   </ul>
   <h3>GOV.UK resources</h3>
   <ul>
@@ -58,9 +59,9 @@
 {% block afterContact %}
 
   {{ pagination({
-    "previousUrl": "/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
+    "previousUrl": "/standards/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
     "previousPage": "Point 10",
-    "nextUrl": "/service-standard/12-make-new-source-code-open",
+    "nextUrl": "/standards/service-standard-points/12-make-new-source-code-open",
     "nextPage": "Point 12"
   }) }}
 

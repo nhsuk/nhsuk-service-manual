@@ -1,5 +1,6 @@
 {% set pageTitle = "7. Use agile ways of working" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageSection = "NHS standards" %}
+{% set subSection = "NHS service standard" %}
 {% set pageDescription = "Make sure that the team can deliver quickly and adapt to meet users' needs." %}
 {% set beta = true %}
 {% set dateUpdated = "July 2021" %}
@@ -8,7 +9,7 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -30,7 +31,7 @@
 
   <h2>Guidance</h2>
   <h3>NHS service manual</h3>
-  <p>See also service standard point <a href="/service-standard/8-iterate-and-improve-frequently">8. Iterate and improve frequently</a>.</p>
+  <p>See also service standard point <a href="/standards/service-standard-points/8-iterate-and-improve-frequently">8. Iterate and improve frequently</a>.</p>
 
   <h3>GOV.UK resources</h3>
     <ul>
@@ -48,9 +49,9 @@
 {% block afterContact %}
 
   {{ pagination({
-    "previousUrl": "/service-standard/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
+    "previousUrl": "/standards/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
     "previousPage": "Point 6",
-    "nextUrl": "/service-standard/8-iterate-and-improve-frequently",
+    "nextUrl": "/standards/service-standard-points/8-iterate-and-improve-frequently",
     "nextPage": "Point 8"
   }) }}
 

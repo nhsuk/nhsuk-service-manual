@@ -1,0 +1,21 @@
+{% set pageTitle = "NHS standards" %}
+{% set pageDescription = "Find out how to meet NHS digital service and technology standards." %}
+{% set pageSection = "NHS standards" %}
+{% set landingPage = true %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block bodyContent %}
+
+  <p>Use the NHS service standard to help you meet the GOV.UK service standard and check that you're working to best practice from the start.</p>
+
+  <p>Follow other key NHS technology standards to build efficient, cost-effective services.</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+  <h2>Feedback</h2>
+  <p>Let us know about your visit to the service manual today by filling in <a href="https://feedback.digital.nhs.uk/jfe/form/SV_9GIQAEkm6gfFCWp">our survey on the Qualtrics website</a>.</p>
+
+{% endblock %}

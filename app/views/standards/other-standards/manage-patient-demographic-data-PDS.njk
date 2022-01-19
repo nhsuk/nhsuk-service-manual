@@ -1,6 +1,7 @@
 
 {% set pageTitle = "Manage patient demographic data: Personal Demographics Service (PDS)" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageSection = "NHS standards" %}
+{% set subSection = "Other standards" %}
 {% set pageDescription = "Technology services and frameworks developed or commissioned by the NHS nationally must use the PDS service." %}
 {% set beta = true %}
 {% set hideContact = "true" %}
@@ -9,8 +10,9 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
+
 
 {% block bodyContent %}
   <h2>What is PDS?</h2>
