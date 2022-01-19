@@ -2,7 +2,7 @@
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "January 2021" %}
+{% set dateUpdated = "January 2022" %}
 {% set backlog_issue_id = "1" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -47,6 +47,7 @@
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#links">Links</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#lists">Lists</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#section-break">Section break</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-alignment">Text alignment</a></li>
       </ul>
     </li>
 
@@ -195,6 +196,23 @@
     group: "styles",
     item: "typography",
     type: "section-breaks",
+    htmlOnly: true
+  }) }}
+
+  <h2 id="text-alignment">Text alignment</h2>
+  <p>Left-align text in English. Text is left-aligned by default.</p>
+  <p>The straight edge of left-aligned text helps people who use screen magnifiers. It saves them having to search around the screen for the next line or item. People who use magnifiers may miss things that are not left-aligned.</p>
+  <p>Some people with cognitive differences have difficulty with blocks of text that are justified (aligned to left and right margins).</p>
+  <p>Only centre-align or fully justify text if you can show a clear clinical or user need.</p>
+
+  <h3 id="text-alignment-override-classes">Text alignment override classes</h3>
+  <p>For translations into languages that run right to left (like Arabic), right-align instead. You need to use the text alignment override class in your HTML to right-align text.</p>
+  <p>Here is an example of Arabic.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "text-alignment",
     htmlOnly: true
   }) }}
 

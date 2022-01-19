@@ -1,5 +1,41 @@
 # NHS digital service manual Changelog
 
+## 5.7.0 - 17 January 2022
+
+:new: **New features**
+
+- Add new section on aligning text on formatting and punctuation page
+- Add new section on text alignment on typography page
+
+## 5.6.5 - 13 January 2022
+
+:new: **New features**
+
+- Add new entry for "booster" to the A to Z of NHS health writing
+- Add word "only" to guidance on avoiding linking to PDFs on Links page
+
+## 5.6.4 - 11 January 2022
+
+:wrench: **Maintenance**
+
+- Removed [NHSUK ESLint config](https://www.npmjs.com/package/eslint-config-nhsuk) as a dependency and replaced with [AirBnB base configuration](https://www.npmjs.com/package/eslint-config-airbnb-base)
+- Added [Volta](https://volta.sh/) setting to the `package.json` file so anyone with Volta installed will automatically use a version of Node that is known to be compatible with the current version of the service manual
+
+## 5.6.3 - 6 January 2022
+
+:new: **New features**
+
+- Update closed captions section in accessibility guidance 
+- Add more detail about colour contrast and accessibility in design system
+- Add sentence about not using "none of the above" to the checkboxes component "none" option
+- Link to Involving people and communities in digital services (NHSX's website) from NHS service standards 1 and 5
+
+:wrench: **Fixes**
+
+- Update link to WC3 WCAG2.1 on Links page
+- Update link to modulus 11 algorithm information in the pattern for asking users for their NHS number
+- Update service manual team page
+
 ## 5.6.2 - 16 December 2021
 
 :wrench: **Fixes**
