@@ -160,7 +160,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "NHS standards" and subSection != "NHS service standard" %}
+  {%- if pageSection == "NHS standards" %}
     <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
@@ -177,7 +177,7 @@
 
   {% endif %}
 
-  {%- if subSection == "NHS service standard" %}
+  {%- if subSection == "NHS service standard points" %}
     {{ backLink({
       "href": "/standards/service-standard",
       "text": "NHS service standard",
