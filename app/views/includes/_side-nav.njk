@@ -1,11 +1,12 @@
 {% set serviceStandard = [
-  { title: "NHS service standard", url: "/standards/service-standard" },
-  { title: "About the NHS service standard", url: "/standards/about-the-service-standard" }
+  { title: "NHS service standard", url: "/standards-and-technical-policy/service-standard" },
+  { title: "About the NHS service standard", url: "/standards-and-technical-policy/about-the-service-standard" }
 ] %}
 
-{% set otherStandards = [
-  { title: "Authenticate identity: NHS login", url: "/standards/other-standards/authenticate-identity-NHS-login" },
-  { title: "Manage patient demographic data: Personal Demographics Service (PDS)", url: "/standards/other-standards/manage-patient-demographic-data-PDS" }
+{% set technicalPolicy = [
+  { title: "About technical policy", url: "/standards-and-technical-policy/technical-policy/about-technical-policy" },
+  { title: "Authenticate identity: NHS login", url: "/standards-and-technical-policy/technical-policy/authenticate-identity-NHS-login" },
+  { title: "Manage patient demographic data: Personal Demographics Service (PDS)", url: "/standards-and-technical-policy/technical-policy/manage-patient-demographic-data-PDS" }
 ] %}
 
 {% set dsPrinciples = [
@@ -141,7 +142,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "NHS standards" %}
+  {%- if pageSection == "NHS standards and technical policy" %}
     <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
@@ -149,9 +150,9 @@
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Other standards</h2>
+    <h2 class="app-side-nav__heading">Technical policy</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in otherStandards %}
+    {% for item in technicalPolicy %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

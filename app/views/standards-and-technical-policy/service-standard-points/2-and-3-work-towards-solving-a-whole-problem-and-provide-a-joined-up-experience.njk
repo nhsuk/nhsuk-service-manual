@@ -1,6 +1,6 @@
 
 {% set pageTitle = "2. and 3. Work towards solving a whole problem for users and provide a joined up experience across all channels" %}
-{% set pageSection = "NHS standards" %}
+{% set pageSection = "NHS standards and technical policy" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Consider where your service fits in your users' healthcare journey and whether you can solve a whole problem or influence a wider solution." %}
 {% set beta = true %}
@@ -10,7 +10,7 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards/service-standard-points/_breadcrumb.njk" %}
+  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -61,9 +61,9 @@
 {% block afterContact %}
 
 {{ pagination({
-    "previousUrl": "/standards/service-standard-points/1-understand-users-and-their-needs-context-health-and-care",
+    "previousUrl": "/standards-and-technical-policy/service-standard-points/1-understand-users-and-their-needs-context-health-and-care",
     "previousPage": "Point 1",
-    "nextUrl": "/standards/service-standard-points/4-make-the-service-simple-to-use",
+    "nextUrl": "/standards-and-technical-policy/service-standard-points/4-make-the-service-simple-to-use",
     "nextPage": "Point 4"
   }) }}
 

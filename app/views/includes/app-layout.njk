@@ -15,7 +15,7 @@
         <div class="app-pane__main-content">
 
           <h1 class="app-page-heading">
-            {%- if landingPage or pageTitle == "Community" or pageTitle == "NHS service standard" %}
+            {%- if landingPage or pageTitle == "Community" or pageTitle == "NHS standards and technical policy" %}
             {% else %}
             <span class="nhsuk-caption-l">
               {%- if subSection %}
@@ -43,7 +43,7 @@
 
           {% block contactPanel %}
             {% if hideContact != "true" %}
-              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" or pageSection === "Accessibility" or pageSection === "NHS service standard" %}
+              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" or pageSection === "Accessibility" or pageSection === "NHS standards and technical policy" %}
                 {% include "./_contact-panel.njk" %}
               {% endif %}
               {% else %}

@@ -1,5 +1,5 @@
 {% set pageTitle = "17. Make your service interoperable" %}
-{% set pageSection = "NHS standards" %}
+{% set pageSection = "NHS standards and technical policy" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "In an organisation as diverse and complex as the NHS, we need systems and services which talk to each other. Build for interoperability to share patient records and get data quickly from one place to another." %}
 {% set beta = true %}
@@ -9,7 +9,7 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "standards/service-standard-points/_breadcrumb.njk" %}
+  {% include "standards-and-technical-policy/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -62,7 +62,7 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/standards/service-standard-points/16-make-your-service-clinically-safe",
+    "previousUrl": "/standards-and-technical-policy/service-standard-points/16-make-your-service-clinically-safe",
     "previousPage": "Point 16"
   }) }}
 
