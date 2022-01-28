@@ -1,12 +1,12 @@
 {% set serviceStandard = [
-  { title: "NHS service standard", url: "/standards-and-technical-policy/service-standard" },
-  { title: "About the NHS service standard", url: "/standards-and-technical-policy/about-the-service-standard" }
+  { title: "NHS service standard", url: "/standards-and-technical-specifications/service-standard" },
+  { title: "About the NHS service standard", url: "/standards-and-technical-specifications/about-the-service-standard" }
 ] %}
 
-{% set technicalPolicy = [
-  { title: "About technical policy", url: "/standards-and-technical-policy/technical-policy/about-technical-policy" },
-  { title: "Authenticate identity: NHS login", url: "/standards-and-technical-policy/technical-policy/authenticate-identity-NHS-login" },
-  { title: "Manage patient demographic data: Personal Demographics Service (PDS)", url: "/standards-and-technical-policy/technical-policy/manage-patient-demographic-data-PDS" }
+{% set technicalSpecifications = [
+  { title: "About technical specifications", url: "/standards-and-technical-specifications/technical-specifications/about-technical-specifications" },
+  { title: "Authenticate identity: NHS login", url: "/standards-and-technical-specifications/technical-specifications/authenticate-identity-NHS-login" },
+  { title: "Manage patient demographic data: Personal Demographics Service (PDS)", url: "/standards-and-technical-specifications/technical-specifications/manage-patient-demographic-data-PDS" }
 ] %}
 
 {% set dsPrinciples = [
@@ -142,7 +142,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "NHS standards and technical policy" %}
+  {%- if pageSection == "Standards and technical specifications" %}
     <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
@@ -150,9 +150,9 @@
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Technical policy</h2>
+    <h2 class="app-side-nav__heading">Technical specifications</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in technicalPolicy %}
+    {% for item in technicalSpecifications %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
