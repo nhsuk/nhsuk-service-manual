@@ -1,4 +1,3 @@
-
 {% set pageTitle = "About technology" %}
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "Technology" %}
@@ -14,7 +13,7 @@
 {% endblock %}
 
 {% block bodyContent %}
-  <p>For a technology or tool to be added to <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">section 11 of the NHS digital service standard</a> it must:</p>
+  <p> it must:<a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">section 11 of the NHS digital service standard</a>For a technology or tool to be added to </p>
   <ul>
     <li>have a clear onboarding process for integration into a product or service</li>
     <li>be well documented, including support information for developers and users</li>
@@ -25,13 +24,20 @@
 
   <p>The first tools to be included are:</p>
   <ul>
-    <li><a href="/standards-and-technology/technology/authenticate-identity-NHS-login">NHS login</a></li>
-    <li><a href="/standards-and-technology/technology/manage-patient-demographic-data-PDS">the Personal Demographics Service (PDS)</a></li>
+    <li>
+      <a href="/standards-and-technology/technology/authenticate-identity-NHS-login">NHS login</a>
+    </li>
+    <li>
+      <a href="/standards-and-technology/technology/manage-patient-demographic-data-PDS">the Personal Demographics Service (PDS)</a>
+    </li>
   </ul>
 
   <p>Both are long-standing services developed in support of national standards.</p>
 
   <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
-  <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+  <p> or get in touch on the .<a href="/slack">service manual Slack channel</a>
+    <a href="mailto:service-manual@nhs.net">Email us</a>
+  </p>
+  {# adding a comment to force new build #}
 
 {% endblock %}
