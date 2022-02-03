@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## 5.7.1 - 3 February 2022
+
+:wrench: **Maintenance**
+
+- Remove beta banner from NHS service standard pages
+- Small content tweaks on Formatting and punctuation page
+- Update service manual team page
+
 ## 5.7.0 - 17 January 2022
 
 :new: **New features**
