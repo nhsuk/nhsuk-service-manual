@@ -37,7 +37,7 @@ app.use(compression());
 app.use(
   helmet({
     contentSecurityPolicy: false,
-  })
+  }),
 );
 
 // Middleware to serve static assets

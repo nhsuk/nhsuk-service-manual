@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "5.5.0",
+  "version": "5.7.1",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -34,7 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "accessible-autocomplete": "^2.0.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.27.5",
     "cheerio": "^1.0.0-rc.10",
@@ -44,6 +44,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
+    "nhsuk-frontend": "^6.1.0",
     "nunjucks": "^3.2.3"
   },
   "devDependencies": {
@@ -53,18 +54,19 @@
     "concurrently": "^6.2.1",
     "cpx": "^1.5.0",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-nhsuk": "^1.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-mocha": "^9.0.0",
     "iframe-resizer": "^4.3.2",
     "jest": "^27.1.0",
-    "nhsuk-frontend": "^6.0.1",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12",
     "sass-lint": "^1.13.1",
     "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0"
+  },
+  "volta": {
+    "node": "14.18.3"
   }
 }
