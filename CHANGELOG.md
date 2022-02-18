@@ -15,6 +15,7 @@
 - Update entry for NHSX and fix inconsistencies in A to Z of NHS health writing
 - Remove mentions of Behind the Headlines from the A to Z
 - Update site map
+- Added `browserslist` config to `package.json` for Webpack build to fully support Internet Explorer 11
 
 ## 5.7.1 - 3 February 2022
 
