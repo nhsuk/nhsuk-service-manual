@@ -1,0 +1,39 @@
+{% set pageTitle = "Ethnicity, religion and nationality" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "When and how to refer to ethnicity, religion or nationality and when to use capital letters." %}
+{% set subSection = "Inclusive content" %}
+{% set dateUpdated = "September 2021" %}
+{% set backlog_issue_id = "295" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/inclusive-content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Only refer to people's ethnic heritage or religion if it's relevant to the content.</p>
+   <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>You're more at risk of developing type 2 diabetes if you are of south Asian, Chinese, African Caribbean or Black African origin (even if you were born in the UK).</p>
+  </div>
+
+  <p>We refer to skin colour in our content when we need to tell users that a skin symptom may look different on various skin tones. Follow our guidance on <a href="/content/inclusive-content/skin-symptoms">skin symptoms</a>.</p>
+  <h2>Writing about ethnicity</h2>
+  <p>Follow the guidance on <a href="https://www.ethnicity-facts-figures.service.gov.uk/style-guide/writing-about-ethnicity">writing about ethnicity from the Race Disparity Unit on GOV.UK</a>. Be as specific as you can.</p>
+  <p>Use "ethnicity", not "race".</p>
+  <p>Use "ethnic minorities", not "BAME" or "BME".</p>
+  <h3>Capitalisation</h3>
+  <p>Use a capital letter when you're writing about ethnicity or when you're asking users for their ethnic group.</p>
+    <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    <p>"Black, Asian, African, Black British or Caribbean" or "people from a White British background"</p>
+  </div>
+    <p>Use lower-case when you're writing about skin colour and <a href="/content/inclusive-content/skin-symptoms">skin symptoms</a>.</p>
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}
