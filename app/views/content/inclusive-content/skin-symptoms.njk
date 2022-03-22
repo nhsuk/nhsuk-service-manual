@@ -1,0 +1,134 @@
+{% set pageTitle = "Skin symptoms" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "Make written content and imagery of skin symptoms inclusive for people with various skin tones and people with sight loss." %}
+{% set subSection = "Inclusive content" %}
+{% set dateUpdated = "February 2022" %}
+{% set backlog_issue_id = "181" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/inclusive-content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 id="why-make-skin-symptoms-content-inclusive">Why make skin symptoms content inclusive</h2>
+  <p>In the past, the NHS website mostly described skin symptoms as they appear on white skin. The NHS website team is now updating content to reflect a variety of skin tones.</p>
+  <p>While some skin symptoms (such as itchiness) are the same for everyone, other symptoms may differ depending on people's skin tones.</p>
+  <p>When a person's skin tone is not represented in our content, they do not have the same opportunity to recognise symptoms and understand what they need to do next.</p>
+  <p>It's also important to make sure people with sight loss get as much information as possible.</p>
+  <p>This page explains:</p>
+  <ul>
+    <li><a href="#how-to-make-written-content-about-skin-symptoms-more-inclusive">how to make written content about skin symptoms more inclusive</a></li>
+    <li><a href="#how-to-make-images-of-skin-symptoms-more-inclusive">how to make images of skin symptoms more inclusive</a></li>
+  </ul>
+  <p>It also includes:</p>
+  <ul>
+    <li><a href="#medical-sources-for-symptoms-on-black-and-brown-skin">medical sources for symptoms on black and brown skin</a></li>
+    <li><a href="#details-of-NHS-website-user-research">details of NHS website user research</a></li>
+  </ul>
+  <h2 id="how-to-make-written-content-about-skin-symptoms-more-inclusive">How to make written content about skin symptoms more inclusive</h2>
+  <h3>Prioritise symptoms that affect everyone equally</h3>
+  <p>When you list symptoms, start with the ones that affect everyone equally. Depending on the condition these might be:</p>
+  <ul>
+    <li>shape and size (of a rash, spot, or affected area)</li>
+    <li>if or how it spreads on the body</li>
+    <li>texture (for example, smooth, blisters, rough or scabs)</li>
+    <li>location on the body</li>
+    <li>how it feels (for example, itchy, hot or painful)</li>
+    <li>other symptoms (such as a high temperature)</li>
+    <li>skin colour changes</li>
+  </ul>
+
+  <h3>Explain when a symptom may look different on various skin tones</h3>
+  <p>A key symptom that's likely to differ on various skin tones is a change in skin colour.</p>
+  <p>For example, a rash that looks red when it appears on white skin may not look red on skin that's brown or black.</p>
+  <p>If a change in skin colour does not affect everyone equally, make this clear.</p>
+  <div class="app-example">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>On white skin the rash can appear red, but on brown and black skin the rash may be harder to see.</p>
+  </div>
+  <p>If possible, be specific about how a symptom may appear differently on a range of skin tones. This can be difficult because of a lack of medical sources on which to base this information. See the <a href="#medical-sources-for-symptoms-on-black-and-brown-skin">medical sources for symptoms on black and brown skin (on this page)</a>.</p>
+
+  <h3>Describe skin tone as white, brown and black in main content</h3>
+  <p>In main content, use "brown and black skin" and "white skin", not "dark skin", "darker skin" or "light skin".</p>
+  <h3>Include descriptions of how skin feels, if possible</h3>
+  <p>Non-visual symptoms are especially useful for people with sight loss.</p>
+  <div class="app-example">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>The scarlet fever rash feels like sandpaper and starts on the chest and tummy.</p>
+  </div>
+
+  <h2 id="how-to-make-images-of-skin-symptoms-more-inclusive">How to make images of skin symptoms more inclusive</h2>
+
+  <h3>Include images of symptoms on a variety of skin tones, if possible</h3>
+  <p>Research done on the NHS website showed that people find multiple images of the same symptom on different skin tones useful.</p>
+  <p>The NHS website team is still testing the best way to display multiple images that's accessible for both sighted people and people with sight loss.</p>
+
+  <h3 id="describe-skin-tone-in-alt-text">Describe skin tone in alt-text</h3>
+  <p>Alt-text is a short text description of an image for people who cannot see the image.</p>
+  <p>Use the terms "light brown", "medium brown" and "dark brown" or "white" to describe skin tone in alt-text, rather than just saying "brown", "black" or "white".</p>
+  <div class="app-example">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>Yellowing of the white part of the eye and the skin under the person's eyebrows. Shown on dark brown skin.</p>
+    <p>(Alt-text example from <a href="https://www.nhs.uk/conditions/jaundice/">NHS website jaundice page</a>)</p>
+  </div>
+  <p>Read more about how to <a href="/accessibility/content#use-alternative-text-for-images-in-content">use alternative text for images in content</a> in our accessibility guidance.</p>
+
+  <h3 id="provide-a-long-description">Provide a long description too</h3>
+  <p>If you can, also add a long description for images of skin symptoms because short alt-text cannot convey all the information in the image.</p>
+  <p>With complex images, like images of skin symptoms, long descriptions help people who face barriers due to sight loss. They can give these users the same level of detail that sighted users can see in the image.</p>
+  <p>The NHS website team is experimenting with using the <a href="/design-system/components/details">details component</a> to reveal a long description under an image. That means everyone, not just screen reader users, can access the information if it they want to. Please feed back if you are exploring other ways to present long descriptions.</p>
+    <div class="app-example">
+    <strong class="nhsuk-tag app-example__heading">Example of a long description for an image of chickenpox</strong>
+    <p>This is a close-up image of chickenpox spots on white skin. You cannot tell what part of the body is shown.</p>
+    <p>There are about 10 spots that vary in size from about 1mm to 1cm. Some spots are close together.</p>
+    <p>Some of the bigger spots are raised and have scabs over them. The scabs are yellow and pink and the skin around the scab is pink. Some scabs look soft and seem to be filled with fluid.</p>
+    <p>The smaller spots look like tiny pink blisters.</p>
+  </div>
+  <p>This example includes:</p>
+  <ul>
+    <li>the size of the spots</li>
+    <li>the colour of the spots</li>
+    <li>the shape of the spots</li>
+    <li>the texture of the spots</li>
+    <li>the number of spots</li>
+    <li>the pattern of the rash</li>
+  </ul>
+  <p>Also include the location on the body if it's easy to identify in the image. If the image does not clearly identify the location on the body, explain that you cannot tell what part of the body is shown.</p>
+  <p>It's difficult to capture all these characteristics in the alt-text character limit.</p>
+
+  <h2 id="medical-sources-for-symptoms-on-black-and-brown-skin">Medical sources for symptoms on black and brown skin</h2>
+  <ul>
+    <li><a href="https://www.blackandbrownskin.co.uk/mindthegap">Mind the Gap</a>: UK clinical handbook of signs and symptoms in black and brown skin published in 2020</li>
+    <li><a href="https://dftbskindeep.com/">Skin Deep</a>: international website with images of skin conditions in children shown on a range of skin tones</li>
+    <li><a href="https://skinofcolorsociety.org/patient-dermatology-education/">Skin of Color Society: patient dermatology education for patients</a>: US website with information on a range of skin conditions</li>
+    <li><a href="https://www.bad.org.uk/healthcare-professionals/inclusivity-and-representation/descriptors-in-dermatolog">The British Association of Dermatologists (BAD) and minority ethnic group inclusivity</a>: information on what BAD is doing to improve descriptions of skin symptoms across a range of skin tones</li>
+    <li><a href="https://www.bad.org.uk/healthcare-professionals/inclusivity-and-representation/erythema-in-skin-of-colour">The British Association of Dermatologists (BAD): statement on describing redness (erythema) in skin of colour</a> (2021)</li>
+    <li><a href="https://dermnetnz.org/">DermNet NZ</a>: a free resource on skin conditions, supported by dermatologists on behalf of the New Zealand Dermatological Society</li>
+  </ul>
+
+  <h2 id="details-of-NHS-website-user-research">Details of NHS website user research</h2>
+  <p>The NHS website team surveyed 500 people, 100 of whom were people of colour. They also carried out a card sorting exercise with around 50 people, most of whom did not identify as having white skin. They did 14 in-depth 1&#8209;to&#8209;1 interviews with people with brown or black skin and conducted research with 12 people with sight loss.</p>
+  <p>In their research, they found that people with brown or black skin:</p>
+  <ul>
+    <li>appreciated content that clearly stated that a symptom may appear differently on various skin tones</li>
+    <li>preferred the terms "light brown", "medium brown" and "dark brown" to less specific terms such as "light skin", "dark skin" or "darker skin"</li>
+  </ul>
+
+  <p>The NHS website team also found it helps people with sight loss if you:</p>
+  <ul>
+    <li>include descriptions of how skin feels when you touch it, so that people know what to feel for on their own skin or someone else's skin</li>
+    <li>are specific about the skin tone shown in an image, for example, "light brown" or "medium brown"</li>
+    <li>provide a long description for complex images when short alt-text cannot convey all the information users need</li>
+  </ul>
+  <p>Long descriptions tested well with screen reader users but the team is still testing them in content about skin symptoms.</p>
+
+
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}

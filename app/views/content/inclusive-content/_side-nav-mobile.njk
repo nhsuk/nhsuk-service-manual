@@ -1,0 +1,22 @@
+{% set inclusiveContentNav = [
+  { title: "Age", url: "/content/inclusive-content/age" },
+  { title: "Disabilities and conditions", url: "/content/inclusive-content/disabilities-and-conditions" },
+  { title: "Ethnicity, religion and nationality", url: "/content/inclusive-content/ethnicity-religion-and-nationality" },
+  { title: "Sex, gender and sexualithy", url: "/content/inclusive-content/sex-gender-and-sexuality" },
+  { title: "Skin symptoms", url: "/content/inclusive-content/skin symptoms" }
+] %}
+
+<nav class="nhsuk-contents-list app-contents-list app-u-hide-desktop" role="navigation" aria-label="Pages in this guide">
+  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+  <ol class="nhsuk-contents-list__list">
+    {% for item in inclusiveContentNav %}
+    <li class="nhsuk-contents-list__item" {% if item.title == pageTitle %} aria-current="page"{% endif %}>
+      {% if item.title == pageTitle %}
+      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
+      {% else %}
+      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

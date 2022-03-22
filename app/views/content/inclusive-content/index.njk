@@ -1,0 +1,26 @@
+{% set pageTitle = "Inclusive content" %}
+{% set pageSection = "Content style guide" %}
+{% set subSection = "Inclusive content" %}
+{% set pageDescription = "Create content for and about people in a way that is inclusive and respectful" %}
+{% set dateUpdated = "February 2022" %}
+{% set theme = "Content style guide" %}
+{% set backlog_issue_id = "317" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+<p>This guidance will help you understand:</p>
+<ul>
+  <li>how to create content for different audiences</li>
+  <li>some of the things that can alienate the people you're creating content for</li>
+</ul>
+<p>Check with your users how they want to be described and test your content with them.</p>
+
+{% include "content/inclusive-content/_side-nav-mobile.njk" %}
+
+
+{% endblock %}

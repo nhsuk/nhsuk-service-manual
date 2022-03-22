@@ -1,0 +1,55 @@
+{% set pageTitle = "Age" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "How to talk about different age groups and stages of life." %}
+{% set subSection = "Inclusive content" %}
+{% set dateUpdated = "September 2021" %}
+{% set backlog_issue_id = "142" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/inclusive-content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Only include age if it's relevant, for example, with vaccination, screening or testing programmes for particular age groups. An example of this is chlamydia testing as tests are free for under-25s.</p>
+  <h2>Stages of life</h2>
+  <p>Here are some of the terms we use for different stages of life with some guidance about the ages they relate to.</p>
+  <p>When you need to be more specific, for example if you're writing about medicines dosage, give the actual age. For example, "teenagers aged 16 and over".</p>
+  <p>We use:</p>
+  <ul>
+    <li>fertilised egg: from conception to 14 days</li>
+    <li>embryo: from 2 to 6 weeks</li>
+    <li>baby: during pregnancy, at birth and up to 1 year. (Read more about how we use <a href="/content/a-to-z-of-nhs-health-writing#baby">"baby" in the A to Z of NHS health writing</a>.)</li>
+    <li>toddler: 1 to 3 years</li>
+    <li>child: 4 to 12 years</li>
+    <li>teenager: 13 to 19 years</li>
+    <li>young people: 16 to 24 years</li>
+    <li>adult: generally from age 18 but this may vary. Be specific, for example: "adults aged 19 to 64"
+  </ul>
+  <h3>Babies and toddlers</h2>
+  <p>With babies and toddlers, we count their age in weeks up until 6 months, then months up until 2 years.</p>
+  <p>Our research shows that this is how people talk about their child's age. Healthcare professionals also use weeks and months in this way. It means we can be consistent and accurate when writing about a baby's milestones, vaccinations and development reviews. </p>
+  <h3>Older people</h3>
+  <p>We prefer to specify ages: over-65s, over-75s, over-80s.</p>
+  <p>In some contexts, we use "older person" or "older people", for example, where a health condition might affect people in their 60s or in their 90s.​</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <p>Anyone can have a fall, but older people are more vulnerable and likely to fall, especially if they have a long-term health condition.</p>
+  </div>
+  <p>We do not use the words:</p>
+  <ul>
+    <li>elderly</li>
+    <li>middle aged</li>
+    <li>OAP</li>
+    <li>old age pensioner</li>
+    <li>pensioner</li>
+    <li>senior</li>
+  </ul>
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}

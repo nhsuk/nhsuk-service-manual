@@ -80,9 +80,6 @@
     <loc>https://service-manual.nhs.uk/content/voice-and-tone</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/content/inclusive-language</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/content/a-to-z-of-nhs-health-writing</loc>
   </url>
   <url>
@@ -240,6 +237,24 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/health-literacy/</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/age</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/disabilities-and-conditions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/ethnicity-religion-and-nationality</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/sex-gender-and-sexuality</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/skin-symptoms</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms</loc>

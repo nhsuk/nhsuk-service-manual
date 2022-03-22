@@ -1,5 +1,30 @@
 # NHS digital service manual Changelog
 
+## 5.7.2 - 21 February 2022
+
+:new: **New features**
+
+- Turn inclusive language page into inclusive content section 
+- Iterate skin symptoms guidance in inclusive content section, adding information about long descriptions
+- Mention long descriptions in images component and accessibility guidance
+- Update wording about Open Document Formats (with a link) in guidance on PDFs and other non-HTML documents
+- Update A to Z of NHS health writing to reflect changes to inclusive content and skin symptoms pages
+
+:wrench: **Maintenance**
+
+- Update entry for NHSX and fix inconsistencies in A to Z of NHS health writing
+- Remove mentions of Behind the Headlines from the A to Z
+- Update site map
+- Added `browserslist` config to `package.json` for Webpack build to fully support Internet Explorer 11
+
+## 5.7.1 - 3 February 2022
+
+:wrench: **Maintenance**
+
+- Remove beta banner from NHS service standard pages
+- Small content tweaks on Formatting and punctuation page
+- Update service manual team page
+
 ## 5.7.0 - 17 January 2022
 
 :new: **New features**

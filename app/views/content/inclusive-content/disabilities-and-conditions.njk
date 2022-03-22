@@ -1,0 +1,51 @@
+{% set pageTitle = "Disabilities and conditions" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "Use positive language and do not label people with disabilities and conditions." %}
+{% set subSection = "Inclusive content" %}
+{% set dateUpdated = "September 2021" %}
+{% set backlog_issue_id = "422" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/inclusive-content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Content designers should be familiar with the social model of disability. Find out more about <a href="https://www.scope.org.uk/about-us/social-model-of-disability/">the social model on Scope's website</a>.</p>
+  <p>We do say things like:</p>
+  <ul>
+    <li>people living with a disability, or disabled person</li>
+    <li>people with diabetes</li>
+    <li>wheelchair user</li>
+  </ul>
+  <p>We do not say:</p>
+  <ul>
+    <li>afflicted by</li>
+    <li>suffering from</li>
+    <li>victim of</li>
+    <li>confined to a wheelchair</li>
+    <li>handicapped</li>
+    <li>diabetic person</li>
+    <li>mentally ill</li>
+    <li>sick or diseased person</li>
+  </ul>
+
+  <h2 id="mental-health">Mental health</h2>
+  <p>We do not describe people as mentally ill.</p>
+  <p>We do say:</p>
+  <ul>
+    <li>mental health condition</li>
+    <li>mental health problems</li>
+  </ul>
+
+  <h2>Accessibility</h2>
+  <p>NHS digital services should be accessible to everyone who needs them. Follow <a href="/accessibility/content">our guidance on accessibility for content designers, writers and editors</a> in the digital service manual.</p>
+
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}
