@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 5.7.3 - 30 March 2022
+
+:new: **New features**
+
+- Expand the NHS service standard section to include a new technology section
+- Add 2 new pages about NHS login and the Personal Demographics Service (PDS)
+- Add links from NHS service standard 11 to the NHS login and PDS pages
+- Add new posts by Tero Väänänen and Kathryn Grace to the blog posts page
+- Link to Tero Väänänen's blog post from service standard points 1, 2 and 6
+
+:wrench: **Maintenance**
+
+- Update site map
+
 ## 5.7.2 - 21 February 2022
 
 :new: **New features**
