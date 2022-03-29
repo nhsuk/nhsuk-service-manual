@@ -1,0 +1,62 @@
+{% set pageTitle = "About technology" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Technology" %}
+{% set pageDescription = "The technology section gives more detail about the common tools teams building health and care products must consider, in line with section 11 of the NHS service standard." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "March 2022" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "standards-and-technology/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Using common tools and technologies across health and care will help:</p>
+  <ul>
+    <li>improve user journeys</li>
+    <li>make sure services comply with national standards</li>
+    <li>reduce the cost of building new products and services</li>
+  </ul>
+
+  <h2>Common tools and their uses</h2>
+  <table class="nhsuk-table" aria-label="Tools and their uses">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Tool
+      </th>
+      <th role="columnheader" class="" scope="col">
+        What to use it for
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><a href="/standards-and-technology/technology/NHS-login">NHS login</a></td>
+      <td class="nhsuk-table__cell ">To authenticate identity</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></td>
+      <td class="nhsuk-table__cell ">To manage patient demographic data</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <h2>Approval of common tools</h2>
+  <p>The System Design Authority (SDA) approves inclusion of common tools in the service manual. It has approved the above tools so far.</p>
+
+  <p>For a technology or tool to be added to <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">section 11 of the NHS digital service standard</a> it must:</p>
+  <ul>
+    <li>have a clear onboarding process for integration into a product or service</li>
+    <li>be well documented, including support information for developers and users</li>
+    <li>have a transparent and robust assurance process</li>
+    <li>support national standards</li>
+  </ul>
+
+  <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}

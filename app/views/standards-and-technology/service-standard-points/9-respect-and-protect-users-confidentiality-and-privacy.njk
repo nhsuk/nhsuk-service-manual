@@ -1,5 +1,6 @@
-{% set pageTitle = "9. Respect and protect users' confidentiality and privacy" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageTitle = "9. Respect and protect users’ confidentiality and privacy" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "NHS service standard" %}
 {% set pageDescription = "Evaluate what data and information your service will be collecting, storing and providing." %}
 {% set dateUpdated = "July 2021" %}
 {% set backlog_issue_id = "343" %}
@@ -7,7 +8,7 @@
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -59,9 +60,9 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/service-standard/8-iterate-and-improve-frequently",
+    "previousUrl": "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently",
     "previousPage": "Point 8",
-    "nextUrl": "/service-standard/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
+    "nextUrl": "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
     "nextPage": "Point 10"
   }) }}
 
