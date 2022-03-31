@@ -1,6 +1,12 @@
 {% set serviceStandard = [
-  { title: "NHS service standard", url: "/service-standard" },
-  { title: "About the NHS service standard", url: "/service-standard/about" }
+  { title: "NHS service standard", url: "/standards-and-technology/service-standard" },
+  { title: "About the NHS service standard", url: "/standards-and-technology/about-the-service-standard" }
+] %}
+
+{% set technicalSpecifications = [
+  { title: "About technology", url: "/standards-and-technology/technology/about-technology" },
+  { title: "NHS login", url: "/standards-and-technology/technology/NHS-login" },
+  { title: "Personal Demographics Service (PDS)", url: "/standards-and-technology/technology/personal-demographics-service-PDS" }
 ] %}
 
 {% set dsPrinciples = [
@@ -144,13 +150,23 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "NHS service standard" %}
+  {%- if pageSection == "Standards and technology" %}
+    <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
+    <h2 class="app-side-nav__heading">Technology</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in technicalSpecifications %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
   {% endif %}
+
 
   {%- if pageSection == "Design system" and subSection != "Styles" and subSection != "Components" and subSection != "Patterns" %}
     <h2 class="app-side-nav__heading">Principles</h2>

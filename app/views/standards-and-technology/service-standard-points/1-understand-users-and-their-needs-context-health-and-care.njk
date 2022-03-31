@@ -1,13 +1,14 @@
 {% set pageTitle = "1. Understand users and their needs in the context of health and care" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "NHS service standard" %}
 {% set pageDescription = "Take time to understand your users' clinical, practical and emotional needs - and their abilities - and the problem you're trying to solve for them." %}
-{% set dateUpdated = "January 2022" %}
+{% set dateUpdated = "March 2022" %}
 {% set backlog_issue_id = "335" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -52,6 +53,7 @@
   <ul>
     <li><a href="https://digital.nhs.uk/blog/transformation-blog/2018/do-you-know-what-your-users-need%E2%80%A6and-who-they-all-are/">Do you know what your users need ... and who they all are?</a> (NHS Digital blog, 2018)</li>
     <li><a href="https://gds.blog.gov.uk/2014/08/12/helping-government-find-user-needs-with-analytics/">Helping government find user needs with analytics</a> (GDS blog, 2014)</li>
+    <li><a href="https://digital.nhs.uk/blog/design-matters/2022/how-a-20-year-old-standard-is-still-relevant-today">How a 20-year-old standard is still relevant today</a> (NHS Digital blog, 2022)</li>
     <li>How we do user-centred design for citizen-facing services - <a href="https://digital.nhs.uk/blog/transformation-blog/2017/how-we-do-user-centred-design-for-citizen-facing-services---part-1/">part 1</a>, <a href="https://digital.nhs.uk/blog/transformation-blog/2017/how-we-do-user-centred-design-for-citizen-facing-services---part-2/">part 2</a> and <a href="https://digital.nhs.uk/blog/transformation-blog/2017/how-we-do-user-centred-design-for-citizen-facing-services---part-three">part 3</a> (NHS Digital blog, 2017)</li>
     <li><a href="https://www.nhsx.nhs.uk/key-tools-and-info/involving-people-and-communities-in-digital-services/">Involving people and communities in digital services</a> (NHSX, 2021)</li>
     <li><a href="https://digital.nhs.uk/blog/transformation-blog/2019/a-single-identity-for-health---how-user-research-influences-the-design-of-the-nhs-login">A single identity for health – how user research influences the design of the NHS login</a> (NHS Digital blog, 2019)</li>
@@ -63,7 +65,7 @@
 {% block afterContact %}
 
 {{ pagination({
-    "nextUrl": "/service-standard/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
+    "nextUrl": "/standards-and-technology/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
     "nextPage": "Points 2 and 3"
   }) }}
 

@@ -1,0 +1,71 @@
+
+{% set pageTitle = "Personal Demographics Service (PDS)" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Technology" %}
+{% set pageDescription = "You must use PDS if you're building products and services and need to access or manage patient demographic data." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "March 2022" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "standards-and-technology/_breadcrumb.njk" %}
+{% endblock %}
+
+
+{% block bodyContent %}
+<h2>What is PDS?</h2>
+<p>The Personal Demographics Service (PDS) is a national database of NHS patient details such as:</p>
+<ul>
+  <li>NHS number</li>
+  <li>name</li>
+  <li>address</li>
+  <li>date of birth</li>
+  <li>related people</li>
+  <li>registered GP</li>
+</ul>
+<p>It helps healthcare professionals identify patients and match them to their health records. It also allows them to contact and communicate with patients. It supports information standard <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">ISB 0149 NHS number (on NHS Digital's website)</a>.</p>
+
+<h2>When to use PDS</h2>
+
+<p>Use PDS when you need to know the NHS number of a patient, and to find and use personal demographic details, for example to contact them. To use this data there are 2 APIs available:</p>
+<ul>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">PDS FHIR API (NHS Digital)</a>: the preferred API which meets the latest standards</li>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3">PDS HL7 V3 API (NHS Digital)</a>: use it to create new records or register a birth</li>
+</ul>
+<p>Note: the <a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp">PDS Spine Mini Service Provider (SMSP) API (NHS Digital)</a> is now deprecated. <a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp#api-status">Read more about this API's status on the SMSP page.</a></p>
+
+<h2>When not to use PDS</h2>
+<p>You cannot use the PDS FHIR API to:</p>
+<ul>
+  <li>create a new record for a birth</li>
+  <li>register a birth</li>
+  <li>create a record for a new patient</li>
+  <li>register a new patient at a GP practice: use <a href="https://digital.nhs.uk/developer/api-catalogue/nhais-gp-links">National Health Application and Infrastructure Services (NHAIS) (NHS Digital)</a></li>
+</ul>
+
+<p>Keep up to date with product developments through <a href="https://nhs-digital-api-management.featureupvote.com/?order=popular&filter=allexceptdone&tag=pds-fhir-api">NHS Digital's API roadmap and interactive backlog for PDS FHIR API</a>.</p>
+
+<h2>Why it's important</h2>
+<p>The PDS service:</p>
+<ul>
+  <li>provides a consistent service by updating demographic information in one place</li>
+  <li>lets health professionals identify and match patients to their health records and check the accuracy of patient data held locally</li>
+  <li>enables patient information to be shared safely within and across organisational boundaries including for referrals, prescriptions and social care</li>
+  <li>reduces the amount of patient data held locally, which supports the information governance principle of data minimisation, and improves data quality</li>
+  <li>has a range of features to maintain and manage data, saving establishing expensive and resource intensive data management tools locally</li>
+</ul>
+
+<h2>Find out more about PDS</h2>
+<ul>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">PDS FHIR API (NHS Digital)</a>, includes overview and onboarding sections</li>
+  <li><a href="https://digital.nhs.uk/services/demographics">Demographics and PDS (NHS Digital)</a></li>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3">PDS HL7 V3 API (NHS Digital)</a></li>
+  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp">PDS Spine Mini Service Provider (SMSP) API (NHS Digital)</a>: simplified ways to connect to Spine, deprecated</li>
+  <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">Information standard ISB 0149 NHS number (NHS Digital)</a>, which PDS supports</li>
+</ul>
+  <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}

@@ -1,14 +1,15 @@
 
-{% set pageTitle = "Work towards solving a whole problem for users and provide a joined up experience across all channels (2. and 3.)" %}
-{% set pageSection = "NHS service standard" %}
+{% set pageTitle = "2. and 3. Work towards solving a whole problem for users and provide a joined up experience across all channels" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "NHS service standard" %}
 {% set pageDescription = "Consider where your service fits in your users' healthcare journey and whether you can solve a whole problem or influence a wider solution." %}
-{% set dateUpdated = "December 2019" %}
+{% set dateUpdated = "March 2022" %}
 {% set backlog_issue_id = "337" %}
 
 {% extends "includes/app-layout.njk" %}
 
 {% block breadcrumb %}
-  {% include "service-standard/_breadcrumb.njk" %}
+  {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
@@ -50,6 +51,7 @@
 
   <h3>Read more about this</h3>
   <ul>
+    <li><a href="https://digital.nhs.uk/blog/design-matters/2022/how-a-20-year-old-standard-is-still-relevant-today">How a 20-year-old standard is still relevant today</a> (NHS Digital blog, 2022)</li>
     <li><a href="https://digital.nhs.uk/blog/transformation-blog/2019/how-to-design-a-login-for-the-modern-nhs">How to design a login for the modern NHS</a> (NHS Digital blog, 2019)</li>
     <li><a href="https://gds.blog.gov.uk/2019/01/28/what-service-communities-are-achieving-across-government/">What service communities are achieving across government</a> (GDS blog, 2019)</li>
   </ul>
@@ -59,9 +61,9 @@
 {% block afterContact %}
 
 {{ pagination({
-    "previousUrl": "/service-standard/1-understand-users-and-their-needs-context-health-and-care",
+    "previousUrl": "/standards-and-technology/service-standard-points/1-understand-users-and-their-needs-context-health-and-care",
     "previousPage": "Point 1",
-    "nextUrl": "/service-standard/4-make-the-service-simple-to-use",
+    "nextUrl": "/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use",
     "nextPage": "Point 4"
   }) }}
 

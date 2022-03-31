@@ -1,0 +1,60 @@
+
+{% set pageTitle = "NHS login" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Technology" %}
+{% set pageDescription = "You must use NHS login if you're building products and services and need to digitally authenticate members of the public logging into them." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "March 2022" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "standards-and-technology/_breadcrumb.njk" %}
+{% endblock %}
+
+
+{% block bodyContent %}
+<h2>What is NHS login?</h2>
+<p>NHS login gives members of the public a simple, secure and reusable way to access multiple digital health and care services with one set of login details.</p>
+
+<h2>When to use NHS login</h2>
+<p>Any NHS or non-NHS organisation that lets  members of the public authenticate themselves when they access online digital health or care services must include the option to use NHS login.</p>
+
+<h2>When not to use NHS login</h2>
+<p>Do not use NHS login to authenticate the identity of health and care staff. There are other services for digitally identifying health and care staff such as <a href="https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2">NHS Care Identity Service 2 (NHS CIS2, on NHS Digital's website)</a>.</p>
+
+<h2>Why it's important</h2>
+<p>NHS login:</p>
+<ul>
+  <li>gives people a consistent and reusable way to digitally identify themselves to the NHS</li>
+  <li>gives people one login they can use to access multiple health and care services so they do not have to create multiple logins and prove who they are for each service</li>
+  <li>is a safe, secure and trusted tool used in many NHS and non-NHS digital services in health and care, with millions of registered users across England and more services adopting it</li>
+  <li>lets patients access sensitive information such as their health records, test results or existing prescriptions</li>
+  <li>is compliant with the DCB3051 standard, which describes why and how people should prove their identity to access digital health and care services</li>
+  <li>makes it easier for people to prove who they are online, which reduces the need to do this in person</li>
+  <li>allows people who have a high level of proofing (P9) to access and manage their own NHS-held data (find out about P9 and other proofing levels in the <a href="https://nhsconnect.github.io/nhslogin/vectors-of-trust/">introduction to vectors of trust in the NHS login developer documentation</a>)</li>
+</ul>
+
+<h2>How to integrate NHS login</h2>
+<p><a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit">The NHS login toolkit (NHS Digital)</a> explains how to integrate your service with it, including supplier performance requirements. (<a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/integrate#complete-the-supplier-conformance-assessment-list-scal-">See the Supplier Conformance Assessment List (SCAL) section on the Integrate page on NHS Digital's website</a>.)</p>
+
+<h2>Find out more about NHS login</h2>
+<h3>For developers</h3>
+<ul>
+  <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">Information standard DCB3051: the identity verification and authentication standard for digital health and care services (NHS Digital)</a></li>
+  <li><a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers">NHS login: guidance for partners and developers (NHS Digital)</a></li>
+  <li><a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-health-and-care/getting-patients-started-with-nhs-login">Getting patients started with NHS login (NHS Digital)</a></li>
+  <li><a href="https://help.login.nhs.uk/">NHS login help centre</a></li>
+  <li><a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit">NHS login integration toolkit (NHS Digital)</a></li>
+</ul>
+
+<h3>For the public</h3>
+<ul>
+  <li><a href="https://www.nhs.uk/nhs-services/online-services/nhs-log-in/">About NHS login (NHS website)</a></li>
+  <li><a href="https://www.nhs.uk/nhs-services/online-services/nhs-log-in/websites-and-apps-you-can-access-with-nhs-login/">Websites and apps you can access with NHS login (NHS website)</a></li>
+</ul>
+<p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+<p><a href="mailto:service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}
