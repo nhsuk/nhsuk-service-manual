@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.7.4 - 4 April 2022
+
+:wrench: **Maintenance**
+
+- Add 301 redirects from old to new service standards content location (Fixes #1749)
+
 ## 5.7.3 - 30 March 2022
 
 :new: **New features**
