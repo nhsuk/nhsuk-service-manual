@@ -94,7 +94,10 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
     baseTemplate = 'includes/design-example-wrapper-blank.njk';
   }
 
-  res.render(baseTemplate, { body: exampleHtml, item });
+  res.render(baseTemplate, {
+    body: exampleHtml,
+    item,
+  });
 });
 
 app.get('/search', (req, res) => {
@@ -160,6 +163,20 @@ app.get('/community', (req, res) => {
 
 app.get('/community/propose-component-pattern', (req, res) => {
   res.redirect('/community-and-contribution/propose-component-pattern');
+});
+
+// Redirects for new service standards URLs
+
+app.get('/service-standard', (req, res) => {
+  res.redirect(301, '/standards-and-technology/service-standard');
+});
+
+app.get('/service-standard/about', (req, res) => {
+  res.redirect(301, '/standards-and-technology/about-the-service-standard');
+});
+
+app.get('/service-standard/:page', (req, res) => {
+  res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
 });
 
 // REDIRECT STOPS HERE
