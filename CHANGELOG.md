@@ -11,6 +11,7 @@
 - Add a link to Hemingway Editor from the How we write page
 - Remove a broken link from the Numbers, measurements, dates and time page
 - Update service manual team page and site map
+- Remove feedback survey from home page, footer and several other pages
 
 ## 5.7.4 - 4 April 2022
 
