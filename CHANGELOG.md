@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 5.7.6 - 16 May 2022
+
+:wrench: **Maintenance**
+
+- Make minor tweaks to new standard for creating health content based on feedback 
+- Remove old blog posts from point 1 in NHS service standard and add recent posts
+
 ## 5.7.5 - 9 May 2022
 
 :new: **New features**
