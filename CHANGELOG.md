@@ -13,6 +13,7 @@
 - Remove link from the standard for creating health content and add a sentence 
 - Remove a date from the design principles
 - Replace a link on review date pattern (Reassure users that a page is up to date) 
+- Remove a link and fix another in skin symptoms guidance
 
 ## 5.7.6 - 16 May 2022
 
