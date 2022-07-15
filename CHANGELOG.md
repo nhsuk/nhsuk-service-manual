@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 5.7.7 - 15 July 2022
+
+:new: **New features**
+
+- Add a new entry for integrated care boards (ICBs), in the A to Z of NHS health content
+- Add 2 new blog posts to What's new
+
+:wrench: **Maintenance**
+
+- Remove link from the standard for creating health content and add a sentence 
+- Remove a date from the design principles
+- Replace a link on review date pattern (Reassure users that a page is up to date) 
+- Remove a link and fix another in skin symptoms guidance
+
 ## 5.7.6 - 16 May 2022
 
 :wrench: **Maintenance**

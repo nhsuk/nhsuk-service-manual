@@ -43,7 +43,7 @@
 
           {% block contactPanel %}
             {% if hideContact != "true" %}
-              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" or pageSection === "Accessibility" or pageSection === "Standards and technology" %}
+              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content style guide" or pageSection === "Accessibility" or pageSection === "Standards and technology" or pageTitle === "Design principles" %}
                 {% include "./_contact-panel.njk" %}
               {% endif %}
               {% else %}
