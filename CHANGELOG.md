@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.7.8 - 1 August 2022
+
+:wrench: **Maintenance**
+
+- Fixed a broken link in the mobile nav on the inclusive content page
+
 ## 5.7.7 - 15 July 2022
 
 :new: **New features**
