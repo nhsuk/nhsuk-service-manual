@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.7.9 - 1 August 2022
+
+:wrench: **Maintenance**
+
+- Remove two resources from "Read more about this" section on point 17 of the NHS service standard page
+
 ## 5.7.8 - 1 August 2022
 
 :wrench: **Maintenance**
