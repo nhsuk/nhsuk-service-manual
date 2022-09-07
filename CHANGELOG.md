@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 5.7.10 - 7 September 2022
+
+:new: **New features**
+
+- Add new entries for negative, specialty and opticians to the A to Z of NHS health writing
+- Add maximum length to section on alt text in skin symptoms guidance
+
+:wrench: **Maintenance**
+
+- Amend entry for positive in the A to Z of NHS health writing
+- Fix link in coronavirus entry in the A to Z
+- Update and fix links in point 17 of the NHS service standard
+- Update timescales on service manual team page
+
 ## 5.7.9 - 1 August 2022
 
 :wrench: **Maintenance**
