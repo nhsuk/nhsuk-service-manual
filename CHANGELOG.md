@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.7.11 - 18 October 2022
+
+:wrench: **Maintenance**
+
+- Adding IDs to A-Z cards to fix the link reference
+
 ## 5.7.10 - 7 September 2022
 
 :new: **New features**
@@ -35,16 +41,16 @@
 
 :wrench: **Maintenance**
 
-- Remove link from the standard for creating health content and add a sentence 
+- Remove link from the standard for creating health content and add a sentence
 - Remove a date from the design principles
-- Replace a link on review date pattern (Reassure users that a page is up to date) 
+- Replace a link on review date pattern (Reassure users that a page is up to date)
 - Remove a link and fix another in skin symptoms guidance
 
 ## 5.7.6 - 16 May 2022
 
 :wrench: **Maintenance**
 
-- Make minor tweaks to new standard for creating health content based on feedback 
+- Make minor tweaks to new standard for creating health content based on feedback
 - Remove old blog posts from point 1 in NHS service standard and add recent posts
 
 ## 5.7.5 - 9 May 2022
@@ -84,7 +90,7 @@
 
 :new: **New features**
 
-- Turn inclusive language page into inclusive content section 
+- Turn inclusive language page into inclusive content section
 - Iterate skin symptoms guidance in inclusive content section, adding information about long descriptions
 - Mention long descriptions in images component and accessibility guidance
 - Update wording about Open Document Formats (with a link) in guidance on PDFs and other non-HTML documents
@@ -130,7 +136,7 @@
 
 :new: **New features**
 
-- Update closed captions section in accessibility guidance 
+- Update closed captions section in accessibility guidance
 - Add more detail about colour contrast and accessibility in design system
 - Add sentence about not using "none of the above" to the checkboxes component "none" option
 - Link to Involving people and communities in digital services (NHSX's website) from NHS service standards 1 and 5
@@ -171,7 +177,7 @@
 
 - Rework care card component as a pattern to help users decide when and where to get care
 - Update links to point to the new pattern from the colour page and from 5 components: action link, card, expander, inset text, warning callout
-- Amend the care cards component page to direct people to the new pattern and add a review date component page to direct people to the pattern for reassuring users that a page is up to date 
+- Amend the care cards component page to direct people to the new pattern and add a review date component page to direct people to the pattern for reassuring users that a page is up to date
 - Update links to point to the new pattern from 2 content style guide pages: the A to Z of NHS health writing and the Formatting and punctuation page
 - Add the word "reuse" alongside "build" and "buy" in the guidance on NHS service standard 11
 
@@ -364,6 +370,7 @@
 :wrench: **Fixes**
 
 - Fix GitHub issue number for PDF page in content style guide
+
 ## 3.15.0 - 09 April 2021
 
 :new: **New features**
@@ -408,6 +415,7 @@
 ## 3.13.0 - 11 March 2021
 
 :new: **New features**
+
 - Add service manual team page
 
 :wrench: **Fixes**
@@ -415,14 +423,15 @@
 - Update `site-map.njk` 'community' to 'community and contribution'
 
 ## 3.12.1 - 08 March 2021
+
 :wrench: **Fixes**
 
 - Update `app.js` redirect URL for `/community`
 
-
 ## 3.12.0 - 08 March 2021
 
 :new: **New features**
+
 - Change name of the contribution section to community and contribution
 
 :wrench: **Fixes**
@@ -432,11 +441,13 @@
 ## 3.11.0 - 25 February 2021
 
 :new: **New features**
+
 - Add page template guidance to the design system
 - Update guidance on PDFs and other non-HTML documents
 - Add explanation and more examples to the section on hyphens and dashes
 
 :wrench: **Fixes**
+
 - Remove readability tools page and explain that we do not recommend them on our health literacy page
 - Remove 2 broken links from health literacy page
 - Amend the site map page to bring it into line with the site map entry in the style guide
@@ -780,6 +791,7 @@
 ## 2.1.0 - 6 January 2020
 
 :new: **New features**
+
 - Add entries for "pharmacy", "chemist" and "sex assigned or registered at birth" to the A to Z of NHS health writing
 
 :wrench: **Fixes**
@@ -1038,7 +1050,7 @@
 - Example of a transactional header with service name on the header component page
 - Publish new styles: Spacing
 
- :wrench: **Fixes**
+:wrench: **Fixes**
 
 - Update package dependencies including latest version (2.1.0) of the NHS.UK frontend
 - Remove checked attribute from the radio button example
@@ -1081,7 +1093,7 @@
 :new: **New features**
 
 - Publish new components; Back link, Contents list, Details,
-Expander, Images, Pagination, Review date, Skip link and Table
+  Expander, Images, Pagination, Review date, Skip link and Table
 - Draft first release of the service standard pages
 
 :wrench: **Fixes**
