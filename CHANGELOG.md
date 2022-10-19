@@ -1,10 +1,11 @@
 # NHS digital service manual Changelog
 
-## 5.7.11 - 18 October 2022
+## 5.7.11 - 19 October 2022
 
 :wrench: **Maintenance**
 
 - Adding IDs to A-Z cards to fix the link reference
+- Phrasing change on Expander - When not to use
 
 ## 5.7.10 - 7 September 2022
 
