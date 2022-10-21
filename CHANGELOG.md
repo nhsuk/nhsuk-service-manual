@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 5.7.12 - 21 October 2022
+
+:wrench: **Maintenance**
+- Update example phone number to standard
+
 ## 5.7.11 - 19 October 2022
 
 :wrench: **Maintenance**
