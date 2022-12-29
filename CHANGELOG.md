@@ -4,6 +4,7 @@
 :new: **New features**
 
 - Add example for back links rendered as buttons
+- Linked to NHS data standards directory from point 17 of NHS service standard
 
 ## 5.7.12 - 21 October 2022
 
