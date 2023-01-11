@@ -5,6 +5,11 @@
 
 - Add example for back links rendered as buttons
 
+## 5.7.12 - 22 December 2022
+
+:wrench: **Maintenance**
+- Increased unit testing code coverage
+
 ## 5.7.12 - 21 October 2022
 
 :wrench: **Maintenance**
