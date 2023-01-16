@@ -4,11 +4,18 @@
 :new: **New features**
 
 - Add example for back links rendered as buttons
+- Add double click prevention example to buttons component
 - Linked to NHS data standards directory from point 17 of NHS service standard
+
+:wrench: **Maintenance**
+
+- Update service manual team page
+- Update info on future guidance in images component
 
 ## 5.7.12 - 21 October 2022
 
 :wrench: **Maintenance**
+
 - Update example phone number to standard
 
 ## 5.7.11 - 19 October 2022
