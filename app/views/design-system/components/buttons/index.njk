@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "February 2019" %}
+{% set dateUpdated = "January 2023" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -54,13 +54,13 @@
   }) }}
 
   <h3>When to use a white button on solid background colour</h3>
-  <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">Find out why your NHS data matters</a>.)</p>
+  <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">the Your data matters service</a>.)</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start or save transactional journeys.</p>
 
-  <h2  id="when-not-to-use-buttons">When not to use buttons</h2>
+  <h2 id="when-not-to-use-buttons">When not to use buttons</h2>
   <p>Do not use buttons as links:
   <ul>
     <li>to pages which aren't part of your user journey</li>
@@ -88,9 +88,30 @@
   </ul>
   <p>Please note that the disabled versions of the 3 buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
 
+  <h3 id="stop-users-from-accidentally-sending-information-more-than-once">Stop users from accidentally sending information more than once</h3>
+  <p>Sometimes, users double click buttons because they:</p>
+  <ul>
+    <li>have used operating systems where they have to double click items to make them work</li>
+    <li>are experiencing a slow connection which means they are not given feedback on their action quickly enough</li>
+    <li>have motor impairments such as hand tremors which cause them to click the button involuntarily</li>
+  </ul>
+  <p>In some cases, this can mean their information is sent twice.</p>
+  <p>For example, the GOV.UK Notify team discovered that a number of users were receiving invitations twice, because the person sending them was double clicking the "send" button.</p>
+  <p>If your research shows that users are frequently sending information twice, you can configure the button to ignore the 2nd click.</p>
+  <p>To do this, set the <code>data-prevent-double-click</code> attribute to <code>true</code>. You can do this directly in the HTML or, if you're using Nunjucks, you can use the Nunjucks macro as shown in this example.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "buttons",
+      type: "prevent-double-click"
+    }) }}
+
+  <p>This feature will prevent double clicks for users that have JavaScript enabled. However, you should also think about the issue server-side to protect against attacks.</p>
+  <p>In the case of slow connections, aim to give the user information about what's happening, for example, by showing a loading spinner or a modal, before using <code>data-prevent-double-click</code>.</p>
+
   <h2 id="research">Research</h2>
   <p>We based our buttons on the GOV.UK designs. But because our logo is a blue rectangle and a number of our components (including panel headings) have squared edges, we decided that GOV.UK buttons didn’t stand out enough. The square buttons didn't look clickable next to the other square components.</p>
   <p>We made the buttons more "buttony" by rounding the corners (adding corner radiuses). There is research to suggest that rounded corners make things more clickable.</p>
-  <p>Our testing confirmed this. Users were able to complete tasks using buttons and they didn’t confuse them with non-clickable components.</p>
+  <p>Our testing confirmed this. Users were able to complete tasks using buttons and they didn't confuse them with non-clickable components.</p>
 
 {% endblock %}

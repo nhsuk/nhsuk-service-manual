@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use back links to help users go back to the previous page in a multi-page transaction" %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "February 2019" %}
+{% set dateUpdated = "January 2023" %}
 {% set backlog_issue_id = "32" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -34,6 +34,15 @@
   <p>The link should take users back to the page they were on in the state they last saw it.</p>
   <p>Consider where you put the back link. Do not put it close to other links or buttons where it might distract users from what they need to do.</p>
   <p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK Design System</a> says that you should put back links at the top of a page, but a couple of NHS services (<a href="https://111.nhs.uk/">NHS 111 online</a> and <a href="https://your-data-matters.service.nhs.uk">Find out why your NHS data matters</a>) found that it works better at the bottom of the page below the primary action. That's because we don't want to suggest to people who use a screen reader that they leave the page prematurely.</p>
+
+  <h3 id="back-link-as-a-button">Back link as a button</h3>
+  <p class="rich-text">You can render the back link as a <code>button</code> element if necessary in order to post form data back to the previous page.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "back-link",
+    type: "button"
+  }) }}
 
   <h3>Accessibility</h3>
   <p>When you're considering where to put back link on a page, think about people who use a screen reader.</p>
