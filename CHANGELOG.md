@@ -10,9 +10,14 @@
 - Update service manual team page
 - Increase unit testing code coverage
 
+:wrench: **Maintenance**
+
+- Update info on future guidance in images component
+
 ## 5.7.12 - 21 October 2022
 
 :wrench: **Maintenance**
+
 - Update example phone number to standard
 
 ## 5.7.11 - 19 October 2022
