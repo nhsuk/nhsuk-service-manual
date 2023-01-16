@@ -5,13 +5,11 @@
 
 - Add example for back links rendered as buttons
 - Add double click prevention example to buttons component
+- Linked to NHS data standards directory from point 17 of NHS service standard
 
 :wrench: **Maintenance**
+
 - Update service manual team page
-- Increase unit testing code coverage
-
-:wrench: **Maintenance**
-
 - Update info on future guidance in images component
 
 ## 5.7.12 - 21 October 2022
