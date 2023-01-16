@@ -14,6 +14,8 @@ Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhs
 
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
 
+Run automated tests locally with `npm run test`.
+
 ## Running the application via the browser with Gitpod
 
 Before running Gitpod, you must <a href="https://github.com/apps/gitpod-io/installations/new">install the Gitpod.io application on your GitHub account</a>.

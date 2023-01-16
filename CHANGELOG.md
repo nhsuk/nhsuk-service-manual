@@ -4,6 +4,11 @@
 :new: **New features**
 
 - Add example for back links rendered as buttons
+- Add double click prevention example to buttons component
+
+:wrench: **Maintenance**
+- Update service manual team page
+- Increase unit testing code coverage
 
 :wrench: **Maintenance**
 
