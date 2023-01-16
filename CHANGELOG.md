@@ -5,7 +5,8 @@
 
 - Add example for back links rendered as buttons
 - Add double click prevention example to buttons component
-- Linked to NHS data standards directory from point 17 of NHS service standard
+- Add entries to content style guide A to Z after October Style Council meeting
+- Link to NHS data standards directory from point 17 of NHS service standard
 
 :wrench: **Maintenance**
 
