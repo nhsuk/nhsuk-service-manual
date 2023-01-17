@@ -1,6 +1,7 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 5.8.0 - 17 January 2023
+
 :new: **New features**
 
 - Add example for back links rendered as buttons
@@ -12,6 +13,10 @@
 
 - Update service manual team page
 - Update info on future guidance in images component
+
+:wrench: **Fixes**
+
+- Install latest version of NHS.UK frontend (6.2.0)
 
 ## 5.7.12 - 21 October 2022
 
