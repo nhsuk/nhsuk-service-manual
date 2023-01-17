@@ -1,13 +1,24 @@
 # NHS digital service manual Changelog
 
-## 5.7.12 - 22 December 2022
+## 5.8.0 - 17 January 2023
+
+:new: **New features**
+
+- Add example for back links rendered as buttons
+- Add double click prevention example to buttons component
+- Add entries to content style guide A to Z after October Style Council meeting
+- Link to NHS data standards directory from point 17 of NHS service standard
 
 :wrench: **Maintenance**
-- Increased unit testing code coverage
+
+- Update service manual team page
+- Update info on future guidance in images component
+- Install latest version of NHS.UK frontend (6.2.0)
 
 ## 5.7.12 - 21 October 2022
 
 :wrench: **Maintenance**
+
 - Update example phone number to standard
 
 ## 5.7.11 - 19 October 2022
