@@ -12,7 +12,7 @@
 :wrench: **Maintenance**
 
 - Update service manual team page
-- Update info on future guidance in images component
+- Update info on future guidance in images component BARB
 - Install latest version of NHS.UK frontend (6.2.0)
 
 ## 5.7.12 - 21 October 2022
