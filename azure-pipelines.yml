@@ -24,7 +24,7 @@ steps:
   - task: SonarQubePrepare@5
     displayName: 'Prepare analysis on SonarQube'
     inputs:
-      SonarQube: 'service-manual'
+      SonarQube: 'nhsuk-service-manual'
       scannerMode: 'CLI'
       configMode: 'manual'
       cliProjectKey: 'service-manual'
