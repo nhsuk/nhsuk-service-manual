@@ -6,7 +6,7 @@ Guidance for designing and building digital services for the NHS. Things you nee
 
 ### Prerequisite
 
-Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes npm.
+Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a> **version 12**, which includes npm.
 
 ### Cloning and running the application
 
@@ -69,6 +69,10 @@ Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environme
 7. Leave "Create a discussion for this release" unticked.
 8. Then click the Publish release button.
 9. After a couple of minutes the Azure Pipeline will complete and the release will start.
+
+### Code Analysis
+
+Code analysis results can be found in [SonarQube](https://sonar.nhswebsite.nhs.uk/dashboard?id=service-manual).
 
 ## Get in touch
 

@@ -21,11 +21,27 @@ steps:
   - script: npm ci
     displayName: 'Install'
 
+  - task: SonarQubePrepare@5
+    displayName: 'Prepare analysis on SonarQube'
+    inputs:
+      SonarQube: 'service-manual'
+      scannerMode: 'CLI'
+      configMode: 'manual'
+      cliProjectKey: 'service-manual'
+
   - script: npm run build
     displayName: 'Build'
 
   - script: npm test
     displayName: 'Test'
+  
+  - task: SonarQubeAnalyze@5
+    displayName: 'Run code analysis' 
+
+  - task: SonarQubePublish@5
+    displayName: 'Publish quality gate result'
+    inputs:
+      pollingTimeoutSec: '300'
 
   - task: ArchiveFiles@2
     inputs:

@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 5.8.0 - 19 January 2023
+
+:wrench: **Maintenance**
+- Added SonarQube analysis to pipeline
+
 ## 5.8.0 - 17 January 2023
 
 :new: **New features**
@@ -12,7 +17,7 @@
 :wrench: **Maintenance**
 
 - Update service manual team page
-- Update info on future guidance in images component BARB
+- Update info on future guidance in images component
 - Install latest version of NHS.UK frontend (6.2.0)
 
 ## 5.7.12 - 21 October 2022
