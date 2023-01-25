@@ -28,6 +28,9 @@ steps:
       scannerMode: 'CLI'
       configMode: 'manual'
       cliProjectKey: 'service-manual'
+      extraProperties: |
+        sonar.javascript.lcov.reportPaths=coverage/lcov.info
+        sonar.coverage.exclusions=**/*.config.js,**/coverage/**,**/integration-tests/**,**/tests/example/**,**/*.test.*,__mocks__/**,*test-environment.*
 
   - script: npm run build
     displayName: 'Build'
