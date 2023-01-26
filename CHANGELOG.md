@@ -1,10 +1,5 @@
 # NHS digital service manual Changelog
 
-## 5.8.0 - 19 January 2023
-
-:wrench: **Maintenance**
-- Added SonarQube analysis to pipeline
-
 ## 5.8.0 - 17 January 2023
 
 :new: **New features**

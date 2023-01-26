@@ -6,7 +6,7 @@ Guidance for designing and building digital services for the NHS. Things you nee
 
 ### Prerequisite
 
-Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a> **version 12**, which includes npm.
+Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes npm.
 
 ### Cloning and running the application
 
