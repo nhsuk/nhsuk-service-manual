@@ -70,6 +70,10 @@ Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environme
 8. Then click the Publish release button.
 9. After a couple of minutes the Azure Pipeline will complete and the release will start.
 
+### Code Analysis
+
+Code analysis results can be found in [SonarQube](https://sonar.nhswebsite.nhs.uk/dashboard?id=service-manual).
+
 ## Get in touch
 
 The NHS digital service manual is maintained by NHS Digital. [Email the service manual team](mailto:service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-service-manual/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://service-manual.nhs.uk/slack).
