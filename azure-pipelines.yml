@@ -28,11 +28,14 @@ steps:
       scannerMode: 'CLI'
       configMode: 'manual'
       cliProjectKey: 'service-manual'
+      extraProperties: |
+        sonar.javascript.lcov.reportPaths=coverage/lcov.info
+        sonar.coverage.exclusions=**/*.config.js,**/coverage/**
 
   - script: npm run build
     displayName: 'Build'
 
-  - script: npm test
+  - script: npm run test
     displayName: 'Test'
   
   - task: SonarQubeAnalyze@5
