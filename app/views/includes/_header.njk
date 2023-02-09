@@ -2,73 +2,73 @@
 
 {%- if disableSearch %}
   {{ header({
-    "homeHref": "/",
-    "ariaLabel": "NHS digital service manual homepage",
-    "classes": "nhsuk-header--white",
-    "service": {
-      "name": "Digital service manual",
-      "longName": "true"
+    homeHref: "/",
+    ariaLabel: "NHS digital service manual homepage",
+    classes: "nhsuk-header--white",
+    service: {
+      name: "Digital service manual",
+      longName: "true"
     },
-    "showNav": "true",
-    "showSearch": "false",
-    "searchAction": "/search/",
-    "searchInputName": "search-field",
-    "primaryLinks": [
+    showNav: "true",
+    showSearch: "false",
+    searchAction: "/search/",
+    searchInputName: "search-field",
+    primaryLinks: [
       {
-        "url"  : "/service-standard",
-        "label" : "NHS service standard"
+        url: "/service-standard",
+        label: "NHS service standard"
       },
       {
-        'url' : '/design-system',
-        'label' : 'Design system'
+        url: '/design-system',
+        label: 'Design system'
       },
       {
-        'url'  : '/content',
-        'label' : 'Content style guide'
+        url: '/content',
+        label: 'Content style guide'
       },
       {
-        'url'  : '/accessibility',
-        'label' : 'Accessibility'
+        url: '/accessibility',
+        label: 'Accessibility'
       },
       {
-        'url' : '/community-and-contribution',
-        'label' : 'Community and contribution'
+        url: '/community-and-contribution',
+        label: 'Community and contribution'
       }
     ]
     })
   }}
 {% else %}
   {{ header({
-    "homeHref": "/",
-    "ariaLabel": "NHS digital service manual homepage",
-    "service": {
-      "name": "Digital service manual",
-      "longName": "true"
+    homeHref: "/",
+    ariaLabel: "NHS digital service manual homepage",
+    service: {
+      name: "Digital service manual",
+      longName: "true"
     },
-    "showNav": "true",
-    "showSearch": "true",
-    "searchAction": "/search/",
-    "searchInputName": "search-field",
-    "primaryLinks": [
+    showNav: "true",
+    showSearch: "true",
+    searchAction: "/search/",
+    searchInputName: "search-field",
+    primaryLinks: [
       {
-        "url"  : "/service-standard",
-        "label" : "NHS service standard"
+        url: "/service-standard",
+        label: "NHS service standard"
       },
       {
-        'url' : '/design-system',
-        'label' : 'Design system'
+        url: '/design-system',
+        label: 'Design system'
       },
       {
-        'url'  : '/content',
-        'label' : 'Content style guide'
+        url: '/content',
+        label: 'Content style guide'
       },
       {
-        'url'  : '/accessibility',
-        'label' : 'Accessibility'
+        url: '/accessibility',
+        label: 'Accessibility'
       },
       {
-        'url' : '/community-and-contribution',
-        'label' : 'Community and contribution'
+        url: '/community-and-contribution',
+        label: 'Community and contribution'
       }
     ]
     })

@@ -7,9 +7,9 @@
 
 {% block beforeContent %}
   {{ backLink({
-    "href": "#",
-    "text": "Go back",
-    "classes": "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
+    href: "#",
+    text: "Go back",
+    classes: "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
   }) }}
 {% endblock %}
 
@@ -19,11 +19,11 @@
       <form>
 
         {{ errorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
+          titleText: "There is a problem",
+          errorList: [
             {
-              "text": "Enter your full name",
-              "href": "#name"
+              text: "Enter your full name",
+              href: "#name"
             }
           ]
         }) }}
@@ -31,22 +31,21 @@
         <h1 class="nhsuk-heading-l">Your details</h1>
 
         {{ input({
-          "label": {
-            "text": "Full name"
+          label: {
+            text: "Full name"
           },
-          "id": "name",
-          "name": "name",
-          "errorMessage": {
-            "text": "Enter your full name"
+          id: "name",
+          name: "name",
+          errorMessage: {
+            text: "Enter your full name"
           }
         }) }}
 
         {{ button({
-          "text": "Continue"
+          text: "Continue"
         }) }}
 
       </form>
     </div>
   </div>
 {% endblock %}
-

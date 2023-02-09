@@ -4,33 +4,33 @@
 
 {% call fieldset({
   legend: {
-    "text": "Do you know your NHS number?",
-    "classes": "nhsuk-fieldset__legend--l",
-    "isPageHeading": true
+    text: "Do you know your NHS number?",
+    classes: "nhsuk-fieldset__legend--l",
+    isPageHeading: true
   }
   }) %}
   {{ hint({
-    "text": "This is a 10 digit number, like 485 777 3456.",
-    "classes": "nhsuk-u-margin-bottom-2"
+    text: "This is a 10 digit number, like 485 777 3456.",
+    classes: "nhsuk-u-margin-bottom-2"
   }) }}
   {{ hint({
-    "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
+    text: "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
   }) }}
   {{ radios({
-    "idPrefix": "example-hints",
-    "name": "example-hints",
-    "items": [
+    idPrefix: "example-hints",
+    name: "example-hints",
+    items: [
   {
-    "value": "yes",
-    "text": "Yes, I know my NHS number"
+    value: "yes",
+    text: "Yes, I know my NHS number"
   },
   {
-    "value": "no",
-    "text": "No, I do not know my NHS number"
+    value: "no",
+    text: "No, I do not know my NHS number"
   },
   {
-    "value": "not sure",
-    "text": "I'm not sure"
+    value: "not sure",
+    text: "I'm not sure"
   }
 ]
 }) }}

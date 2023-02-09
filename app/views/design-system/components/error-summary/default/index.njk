@@ -1,12 +1,12 @@
 {% from 'error-summary/macro.njk' import errorSummary %}
 
 {{ errorSummary({
-  "titleText": "There is a problem",
+  titleText: "There is a problem",
   "descriptionText": "Describe the errors and how to correct them",
-  "errorList": [
+  errorList: [
     {
-      "text": "Date of birth must be in the past",
-      "href": "#example-error-1"
+      text: "Date of birth must be in the past",
+      href: "#example-error-1"
     }
   ]
 }) }}
