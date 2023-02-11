@@ -1,0 +1,33 @@
+{% set pageTitle = "Character count" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a card to give users a brief summary of content or a task, often with a link to more detail. You can display a card alongside other cards to group related content or tasks." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2021" %}
+{% set backlog_issue_id = "159" %}
+{% set hideDescription = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Help users know how much text they can enter when there is a limit on the number of characters.</p>
+
+  <h2 id="when-to-use">When to use this component</h2>
+  <p>Always test your service without a character count first.</p>
+  <p>Only use the character count component when there is a good reason for limiting the number of characters users can enter. For example, if there is:</p>
+  <ul>
+    <li>evidence that users are likely to enter more information than they need to</li>
+    <li>a legal or technical reason that means an entry must be no more than a certain number of characters</li>
+  </ul>
+
+  <h2 id="when-not-to-use">When not to use this component</h2>
+  <p>If your users keep hitting the character limit imposed by the backend of your service then try to increase the limit rather than use a character count.</p>
+
+  <h2 id="how-it-works">How it works</h2>
+
+{% endblock %}
