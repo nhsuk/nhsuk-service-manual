@@ -1,0 +1,36 @@
+{% set pageTitle = "Tabs" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "" %}
+{% set theme = "Content presentation" %}
+{% set dateUpdated = "November 2021" %}
+{% set backlog_issue_id = "159" %}
+{% set hideDescription = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>This component is currently experimental because more research is needed to validate it.</p>
+  <p>The tabs component lets users navigate between related sections of content, displaying one section at a time.</p>
+
+  <h2 id="when-to-use">When to use this component</h2>
+  <p>Tabs can be a helpful way of letting users quickly switch between related information if:</p>
+  <ul>
+    <li>your content can be usefully separated into clearly labelled sections</li>
+    <li>the first section is more relevant than the others for most users</li>
+    <li>users will not need to view all the sections at once</li>
+  </ul>
+  <p>Tabs can work well for people who use a service regularly, for example, users of a caseworking system. Their need to perform tasks quickly may be greater than their need for simplicity of first-time use.</p>
+
+  <h2 id="when-not-to-use">When not to use this component</h2>
+  <p>Do not use the tabs component if the total amount of content the tabs contain will make the page slow to load. For this reason, do not use the tabs component as a form of page navigation.</p>
+  <p>Tabs hide content from users and not everyone will notice them or understand how they work.</p>
+
+  <h2 id="how-it-works">How it works</h2>
+
+{% endblock %}
