@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 5.9.0 - TBC
+
+:new: **New features**
+
+ - Add 2 new experimental components to design system: character count and tabs
+
 ## 5.8.0 - 17 January 2023
 
 :new: **New features**
