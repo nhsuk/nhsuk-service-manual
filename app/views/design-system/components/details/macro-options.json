@@ -13,6 +13,12 @@
       "description": "HTML content to be displayed within the details component."
     },
     {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "description": "If true, details element will be expanded."
+    },
+    {
       "name": "classes",
       "type": "string",
       "required": false,
