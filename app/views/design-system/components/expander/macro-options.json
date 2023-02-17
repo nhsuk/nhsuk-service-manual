@@ -13,12 +13,6 @@
       "description": "HTML content to be displayed within the details component."
     },
     {
-      "name": "id",
-      "type": "string",
-      "required": false,
-      "description": "Id to add to the details element."
-    },
-    {
       "name": "open",
       "type": "boolean",
       "required": false,
