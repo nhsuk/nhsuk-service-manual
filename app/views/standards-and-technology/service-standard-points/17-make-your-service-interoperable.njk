@@ -2,7 +2,7 @@
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "In an organisation as diverse and complex as the NHS, we need systems and services which talk to each other. Build for interoperability to share patient records and get data quickly from one place to another." %}
-{% set dateUpdated = "January 2023" %}
+{% set dateUpdated = "February 2023" %}
 {% set backlog_issue_id = "360" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -21,11 +21,11 @@
   <ul>
     <li>you work to open standards and the Technology Code of Practice</li>
     <li>you have checked the <a href="https://data.standards.nhs.uk/">NHS data standards directory</a> for relevant standards</li>
-    <li>you maximise flexibility and make content, tools and services available through well-designed APIs to reach more people</li>
+    <li>you maximise flexibility and make content, tools and services available to more people through well-designed APIs, following the <a href="https://digital.nhs.uk/developer/guides-and-documentation/api-policies-and-best-practice">API policies and best practice (NHS Digital)</a></li>
     <li>you use agreed <a href="https://digital.nhs.uk/developer/api-catalogue?filter=fhir">FHIR-based APIs (from NHS Digital's API catalogue, filtered by FHIR)</a> to join up care for patients</li>
     <li>where appropriate, you use the <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">NHS number (NHS Digital)</a> and NHS data registers and comply with NHS clinical information standards</li>
     <li>for disease information in mortality and morbidity statistics, you use <a href="https://icd.who.int/browse10/2016/en">ICD-10 (the World Health Organization's International Classification of Diseases, version 10)</a></li>
-    <li>for electronic care records, you use the structured clinical vocabulary <a href="https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct">SNOMED CT (on NHS Digital's website)</a></li>
+    <li>for electronic care records, you use the structured clinical vocabulary <a href="https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct">SNOMED CT (NHS Digital)</a></li>
     <li>if you create any data sets that could be useful to others, you publish them in an open machine-readable format, under an <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a>, unless they contain personally identifiable information, sensitive information, or where publishing the data would infringe the intellectual property rights of someone outside the NHS or government</li>
     <li>if you use barcodes or similar identifiers, you comply with the <a href="https://www.gs1.org/standards/barcodes">GS1 barcodes standard</a> as set out in <a href="https://www.scan4safety.nhs.uk/">Scan4Safety</a></li>
     <li>where relevant, you comply with the <a href="https://www.gov.uk/government/publications/open-standards-for-government">standards published by the Open Standards Board on GOV.UK</a></li>
@@ -47,15 +47,16 @@
   <h3>Read more about this</h3>
   <ul>
     <li><a href="https://developer.nhs.uk/apis">The API catalogue (NHS Digital)</a></li>
-    <li><a href="https://www.gov.uk/government/publications/code-of-conduct-for-data-driven-health-and-care-technology/initial-code-of-conduct-for-data-driven-health-and-care-technology">A guide to good practice for digital and data-driven health technologies (on GOV.UK)</a></li>
-    <li><a href="https://digital.nhs.uk/services/data-registers-service">Data registers service (NHS Digital)</a> </li>
+    <li><a href="https://digital.nhs.uk/developer/guides-and-documentation/api-policies-and-best-practice">API policies and best practice (NHS Digital)</li>
+    <li><a href="https://www.gov.uk/government/publications/code-of-conduct-for-data-driven-health-and-care-technology/initial-code-of-conduct-for-data-driven-health-and-care-technology">A guide to good practice for digital and data-driven health technologies (GOV.UK)</a></li>
+    <li><a href="https://digital.nhs.uk/services/data-registers-service">Data registers service (NHS Digital)</a></li>
     <li><a href="https://digital.nhs.uk/services/fhir-apis">FHIR (Fast Healthcare Interoperability Resources, NHS Digital)</a></li>
-    <li><a href="https://icd.who.int/browse10/2016/en">ICD-10, version: 2016</a> - the World Health Organization's International Classification of Diseases (WHO)</li>
-    <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">ISB 0149 NHS number (NHS Digital)</a> - this information standard sets out the scope and use of the NHS number</li>
-    <li><a href="https://data.standards.nhs.uk/">NHS data standards directory</a> - nationally recognised standards that support interoperability in health and adult social care, including the NHS number, SNOMED CT and FHIR-based APIs</li>
+    <li><a href="https://icd.who.int/browse10/2016/en">ICD-10, version: 2016</a> – the World Health Organization's International Classification of Diseases (WHO)</li>
+    <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">ISB 0149 NHS number (NHS Digital)</a> – the information standard for the NHS number</li>
+    <li><a href="https://data.standards.nhs.uk/">NHS data standards directory</a> – nationally recognised standards that support interoperability in health and adult social care, including the NHS number, SNOMED CT and FHIR-based APIs</li>
     <li><a href="https://developer.api.nhs.uk/">NHS website developer portal (NHS.UK)</a></li>
-    <li><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> (The National Archives)</li>
-    <li><a href="https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct">SNOMED CT (on NHS Digital's website)</a> - a structured clinical vocabulary for use in an electronic health record</li>
+    <li><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence (The National Archives)</a></li>
+    <li><a href="https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct">SNOMED CT (NHS Digital)</a> – a structured clinical vocabulary for use in an electronic health record</li>
   </ul>
 
 {% endblock %}

@@ -3,7 +3,7 @@
 {% set subSection = "Accessibility" %}
 {% set pageDescription = "What graphic and interaction designers need to do to make digital services accessible." %}
 {% set theme = "Accessibility guidance for:" %}
-{% set dateUpdated = "February 2022" %}
+{% set dateUpdated = "February 2023" %}
 {% set backlog_issue_id = "349" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -14,6 +14,9 @@
 
 {% block bodyContent %}
 
+  <p>For a full list of WCAG 2.1 success criteria and guidance for levels A and AA and some level AAA success criteria and best practice, <a href="https://nhsdigital.github.io/accessibility-checklist/">use the NHS accessibility checklist</a>.</p>
+
+  {% include "./partials/do-not-use-accessibility-overlays-or-widgets.njk" %}
   {% include "./partials/define-page-structure.njk" %}
   {% include "./partials/define-skip-links.njk" %}
   {% include "./partials/use-headings-correctly.njk" %}
