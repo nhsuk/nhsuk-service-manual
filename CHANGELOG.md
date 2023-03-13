@@ -5,6 +5,16 @@
 :new: **New features**
 
  - Add 2 new experimental components to design system: character count and tabs
+ - Add new section on widgets and overlays to accessibility guidance
+ - Add new section to accessibility guidance for teams working to short deadlines
+
+ :wrench: **Maintenance**
+
+ - Update breadcrumbs styling
+ - Add links to accessibility checklist from accessibility guidance
+ - Add links to NHS Constitution from information about the NHS service standard and service standard 5
+ - Add links to NHS Digital's API policies and best practice from service standard 17
+ - Change "NHS Digital" to "NHS England"
 
 ## 5.8.0 - 17 January 2023
 
