@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:assets",
-    "build:css": "node-sass --recursive --output-style compressed app/styles/ -o public/css/",
+    "build:css": "sass --style=compressed app/styles/ public/css/",
     "build:js": "npm run webpack",
     "build:assets": "cpx 'app/assets/*' public/assets/",
     "clean": "touch public/tmp.txt && rm -rf public/*",
@@ -50,7 +50,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
-    "nhsuk-frontend": "^6.2.0",
+    "nhsuk-frontend": "^7.0.0",
     "nunjucks": "^3.2.3"
   },
   "devDependencies": {
@@ -68,6 +68,7 @@
     "jest": "^27.1.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.19",
+    "sass": "^1.60.0",
     "sass-lint": "^1.13.1",
     "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0"
