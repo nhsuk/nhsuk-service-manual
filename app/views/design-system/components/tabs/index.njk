@@ -1,6 +1,7 @@
 {% set pageTitle = "Tabs" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
+{% set experimental = true %}
 {% set pageDescription = "The tabs component lets users navigate between related sections of content, displaying 1 section at a time." %}
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "February 2023" %}
@@ -15,6 +16,12 @@
 {% block bodyContent %}
 
   <p>NEEDS EXAMPLE AND EXPERIMENTAL TAG</p>
+
+  {{ designExample({
+    group: "components",
+    item: "tabs",
+    type: "default"
+  }) }}
 
   <h2 id="when-to-use">When to use tabs</h2>
   <p>Tabs can be a helpful way of letting users quickly switch between related information if:</p>
