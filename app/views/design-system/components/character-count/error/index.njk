@@ -1,0 +1,16 @@
+{% from 'character-count/macro.njk' import characterCount %}
+
+{{ characterCount({
+  "name": "exceeding-characters",
+  "id": "exceeding",
+  "maxlength": 200,
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+  },
+  errorMessage: {
+    text: "Job description must be 350 characters or less"
+  }
+}) }}

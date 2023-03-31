@@ -1,0 +1,15 @@
+{% from 'character-count/macro.njk' import characterCount %}
+
+{{ characterCount({
+  "name": "threshold",
+  "id": "threshold",
+  "maxlength": 112,
+  "threshold": 75,
+  "value": "Type another letter into this field after this message to see the threshold feature",
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+  }
+}) }}

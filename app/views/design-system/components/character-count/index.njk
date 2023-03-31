@@ -1,5 +1,6 @@
 {% set pageTitle = "Character count" %}
 {% set pageSection = "Design system" %}
+{% set experimental = true %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users know how much text they can enter when there is a limit on the number of characters." %}
 {% set theme = "Form elements" %}
@@ -12,8 +13,14 @@
   {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
+
 {% block bodyContent %}
-  <p>NEEDS EXAMPLE PLUS EXPERIMENTAL LABEL</p>
+
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "default"
+  }) }}
 
   <h2 id="when-to-use">When to use character count</h2>
   <p>Always test your service without a character count first.</p>
@@ -42,27 +49,47 @@
   </ul>
   <p>This component uses JavaScript. If JavaScript is not available, users will see a static message in place of the count message, telling them how many characters they can enter.</p>
   <p>There are 2 ways to use the character count component. You can use HTML or, if you're using Nunjucks or the NHS.UK Prototype Kit, you can use the Nunjucks macro.</p>
-  <p>NEEDS EXAMPLE</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "default"
+  }) }}
 
   <h3>If you're asking more than 1 question on the page</h3>
   <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Follow the guidance on asking multiple questions on <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages in the GOV.UK design system</a>.</p>
-  <p>NEEDS EXAMPLE</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "without-heading"
+  }) }}
 
   <h3>Consider if a word count is more helpful</h3>
   <p>In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.</p>
   <p>Do this by setting <code>data-maxwords</code> in the component markup. For example, <code>data-maxwords="150"</code> will set a word limit of 150.</p>
-  <p>NEEDS EXAMPLE</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "word-count"
+  }) }}
 
   <h3>Avoid narrow limits</h3>
   <p>When using a character count, try to set the limit higher than most users will need. Find out what this is by doing user research and data analysis.</p>
   <p>If the limit is much higher than most users are likely to reach, you can choose to only display the message after a user has entered a certain amount.</p>
   <p>To do this, set a threshold in the component markup. For example, <code>data-threshold="75"</code> will show the count message only when users have entered 75% of the limit.</p>
   <p>Screen reader users will hear the character limit when they first interact with a textarea using the threshold option. Sighted users will not see anything until the count message is shown, though you might choose to include the character limit in the hint text.</p>
-  <p>NEEDS EXAMPLE</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "threshold"
+  }) }}
 
   <h3>Error messages</h3>
   <p>Error messages should be styled like this.</p>
-  <p>NEEDS EXAMPLE</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "error"
+  }) }}
 
   <p>If a user tries to send their response with too many characters, you must show an error message above the field as well as the count message below it.</p>
   <p>The error message tells users what went wrong and how to fix it. The count message provides live feedback and updates as a user types.</p>

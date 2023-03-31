@@ -1,0 +1,15 @@
+{% from 'character-count/macro.njk' import characterCount %}
+
+{{ characterCount({
+  "name": "more-detail",
+  "id": "more-detail",
+  "maxlength": 200,
+  "label": {
+    "text": "Can you provide more detail?",
+    "classes": "nhsuk-heading-l",
+     "isPageHeading": "true"
+  },
+  "hint": {
+    "text": "Don't include personal or financial information, eg your National Insurance number or credit card details."
+  }
+}) }}
