@@ -5,6 +5,7 @@
 :new: **New features**
 
  - Add 2 new experimental components to design system: character count and tabs
+ - Add new sustainability principle to design principles
  - Add new section on widgets and overlays to accessibility guidance
  - Add new section to accessibility guidance for teams working to short deadlines
 
