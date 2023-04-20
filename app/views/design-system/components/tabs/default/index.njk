@@ -188,5 +188,67 @@
       ]
     ]
   }) }} 
+{% endset -%} {% set tabFourContent %}
+  {{ table({
+    responsive: true,
+    panel: false,
+    caption: "Past year",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened"
+      },
+      {
+        text: "Cases closed"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Case manager",
+          text: "David Francis"
+        },
+        {
+          header: "Cases opened",
+          text: "98"
+        },
+        {
+          header: "Cases closed",
+          text: "95"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Paul Farmer"
+        },
+        {
+          header: "Cases opened",
+          text: "122"
+        },
+        {
+          header: "Cases closed",
+          text: "131"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Rita Patel"
+        },
+        {
+          header: "Cases opened",
+          text: "126"
+        },
+        {
+          header: "Cases closed",
+          text: "142"
+        }
+      ]
+    ]
+  }) }}   
 {% endset -%} {{ tabs({ items: [ { label: "Past day", id: "past-day", panel: { html: pastDayContent } }, { label: "Past week", id: "past-week", panel: { html: pastWeekContent } }, { label: "Past month", id: "past-month", panel: { html:
-pastMonthContent } } ] }) }}
+pastMonthContent } },  { label: "Past year", id: "past-year", panel: { html: pastYearContent } } ] }) }}
