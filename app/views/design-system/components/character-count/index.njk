@@ -4,7 +4,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users know how much text they can enter when there is a limit on the number of characters." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "February 2023" %}
+{% set dateUpdated = "April 2023" %}
 {% set backlog_issue_id = "172" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -24,7 +24,7 @@
 
   <h2 id="when-to-use">When to use character count</h2>
   <p>Always test your service without a character count first.</p>
-  <p>Only use the character count component when there is a good reason for limiting the number of characters users can enter. For example, if there is:</p>
+  <p>Do not use the character count component unless there is a good reason for limiting the number of characters users can enter. For example, if there is:</p>
   <ul>
     <li>evidence that users are likely to enter more information than they need to</li>
     <li>a legal or technical reason that means an entry must be no more than a certain number of characters</li>
@@ -48,7 +48,7 @@
     <li>if it's below the visible screen area, users will still see it again when they scroll down to send their response</li>
   </ul>
   <p>This component uses JavaScript. If JavaScript is not available, users will see a static message in place of the count message, telling them how many characters they can enter.</p>
-  <p>There are 2 ways to use the character count component. You can use HTML or, if you're using Nunjucks or the NHS.UK Prototype Kit, you can use the Nunjucks macro.</p>
+  <p>There are 2 ways to use the character count component. You can use HTML or, if you're using Nunjucks or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
   {{ designExample({
     group: "components",
     item: "character-count",
@@ -108,4 +108,8 @@
   <p>This component is experimental because we do not yet have enough research with users to be sure of it.</p>
   <p>The Government Digital Service (GDS) developed and tested the character count component. Several NHS services are using a character count but we need to know more about how it tests with users.</p>
 
+  <h3>Known issues and gaps</h3>
+  <p>In Internet Explorer 11, JAWS will ignore any set threshold and announce the character count, even if the user entered less than the threshold.</p>
+  <p>In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a known <a href="https://github.com/FreedomScientific/VFO-standards-support/issues/201">issue for the developer of JAWS (GitHub issue)</a>.</p>
+  <p>Also, this component <a href="https://github.com/alphagov/govuk-frontend/issues/1104">counts some characters as multiple characters (GitHub issue)</a>. For example, emojis and some non-Latin characters.</p>
 {% endblock %}

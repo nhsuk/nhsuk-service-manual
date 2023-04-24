@@ -16,6 +16,9 @@
  - Add links to NHS Constitution from information about the NHS service standard and service standard 5
  - Add links to NHS Digital's API policies and best practice from service standard 17
  - Change "NHS Digital" to "NHS England"
+ - Remove mention of GDS empathy lab - now closed
+ - Make minor updates to guidance on meeting accessibility requirements
+
 
 ## 5.8.0 - 17 January 2023
 
