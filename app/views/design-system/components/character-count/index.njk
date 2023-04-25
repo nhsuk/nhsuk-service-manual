@@ -31,7 +31,7 @@
   </ul>
 
   <h2 id="when-not-to-use">When not to use character count</h2>
-  <p>If your users keep hitting the character limit imposed by the backend of your service then try to increase the limit rather than use a character count.</p>
+  <p>If your users keep hitting the character limit imposed by the backend of your service, try to increase the limit rather than use a character count.</p>
 
   <h2 id="how-to-use">How to use character count</h2>
   <h3>How it works</h3>
@@ -49,19 +49,6 @@
   </ul>
   <p>This component uses JavaScript. If JavaScript is not available, users will see a static message in place of the count message, telling them how many characters they can enter.</p>
   <p>There are 2 ways to use the character count component. You can use HTML or, if you're using Nunjucks or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
-  {{ designExample({
-    group: "components",
-    item: "character-count",
-    type: "default"
-  }) }}
-
-  <h3>If you're asking more than 1 question on the page</h3>
-  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Follow the guidance on asking multiple questions on <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages in the GOV.UK design system</a>.</p>
-  {{ designExample({
-    group: "components",
-    item: "character-count",
-    type: "without-heading"
-  }) }}
 
   <h3>Consider if a word count is more helpful</h3>
   <p>In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.</p>
@@ -81,6 +68,14 @@
     group: "components",
     item: "character-count",
     type: "threshold"
+  }) }}
+
+  <h3>If you're asking more than 1 question on the page</h3>
+  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Follow the guidance on asking multiple questions on <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages in the GOV.UK design system</a>.</p>
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "without-heading"
   }) }}
 
   <h3>Error messages</h3>
@@ -110,6 +105,6 @@
 
   <h3>Known issues and gaps</h3>
   <p>In Internet Explorer 11, JAWS will ignore any set threshold and announce the character count, even if the user entered less than the threshold.</p>
-  <p>In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a known <a href="https://github.com/FreedomScientific/VFO-standards-support/issues/201">issue for the developer of JAWS (GitHub issue)</a>.</p>
-  <p>Also, this component <a href="https://github.com/alphagov/govuk-frontend/issues/1104">counts some characters as multiple characters (GitHub issue)</a>. For example, emojis and some non-Latin characters.</p>
+  <p>In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a known <a href="https://github.com/FreedomScientific/VFO-standards-support/issues/201">issue for the developer of JAWS (FreedomScientific GitHub issue)</a>.</p>
+  <p>Also, this component <a href="https://github.com/alphagov/govuk-frontend/issues/1104">counts some characters as multiple characters (GOV.UK GitHub issue)</a>. For example, emojis and some non-Latin characters.</p>
 {% endblock %}
