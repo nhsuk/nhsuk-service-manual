@@ -30,14 +30,6 @@
   </ul>
   <p>Tabs can work well for people who use a service regularly, for example, staff using a patient record system. Their need to perform tasks quickly may be greater than their need for simplicity of first-time use.</p>
 
-  <h2 id="when-not-to-use">When not to use tabs</h2>
-  <p>Do not use the tabs component if the total amount of content the tabs contain will make the page slow to load. For this reason, do not use the tabs component as a form of page navigation.</p>
-  <p>Tabs hide content from users and not everyone will notice them or understand how they work.</p>
-  <p>Do not use tabs if your users might need to:</p>
-  <ul>
-    <li>read through all of the content in order, for example, to understand a step-by-step process</li>
-    <li>compare information in different tabs, because having to memorise information and switch backwards and forwards can be difficult</li>
-  </ul>
   <p>Test your content without tabs first. Consider if it's better to:</p>
   <ul>
     <li>simplify and reduce the amount of content</li>
@@ -46,20 +38,28 @@
     <li>use a table of contents to let users navigate quickly to specific sections of content</li>
   </ul>
 
-  <h2>Decide between using tabs, expanders and details</h2>
-  <p>[CHECK - the GOV.UK page deals with tabs, accordion and details. Is this content correct if we replace accordion with expanders?]</p>
+  <h2 id="when-not-to-use">When not to use tabs</h2>
+  <p>Do not use the tabs component if the total amount of content the tabs contain will make the page slow to load. For this reason, do not use the tabs component as a form of page navigation.</p>
+  <p>Tabs hide content from users and not everyone will notice them or understand how they work.</p>
+  <p>Do not use tabs if your users might need to:</p>
+  <ul>
+    <li>read through all of the content in order, for example, to understand a step-by-step process</li>
+    <li>compare information in different tabs, because having to memorise information and switch backwards and forwards can be difficult</li>
+  </ul>
+
+  <h2>Decide between using tabs, expanders and the details component</h2>
   <p>Tabs, <a href="/design-system/components/expander">expanders</a>, and <a href="/design-system/components/details">details</a> all hide sections of content which a user can choose to reveal.</p>
   <p>If you decide to use 1 of these components, consider if:</p>
   <ul>
     <li>the user needs to view more than 1 section at a time – if not, use tabs</li>
     <li>the user needs to switch quickly between sections – tabs can show content without pushing other sections down the page, unlike expanders</li>
-    <li>there are many pieces of content – tabs can fit fewer sections as they're arranged horizontally, unlike expanders which are arranged vertically</li>
-    <li>there are only 1 or 2 pieces of short, less important content – the details component is more suitable as it's visually smaller and less prominent than an expander or tabs</li>
+    <li>you have 7 or more sections of content – tabs are arranged horizontally, so may not work well, while expanders which are arranged vertically</li>
+    <li>there are only 1 or 2 sections of short, less important content – the details component is more suitable as it's visually smaller and less prominent than an expander or tabs</li>
   </ul>
 
   <h2 id="how-to-use-tabs">How to use tabs</h2>
   <p>There are 2 ways to use the tabs component. You can use HTML or, if you're using Nunjucks or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
-  
+
   <p>The tabs component uses JavaScript. When JavaScript is not available, users will see the tabbed content on a single page, in order from 1st to last, with a table of contents that links to each of the sections.</p>
   <p>This is also how the component currently behaves on small screens, but more research is needed on this.</p>
 
