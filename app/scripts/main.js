@@ -1,7 +1,6 @@
 /* eslint-disable no-new */
 // NHS.UK frontend components
 import SearchToggle from 'nhsuk-frontend/packages/components/header/searchToggle';
-// import Card from 'nhsuk-frontend/packages/components/card/card';
 import MenuToggle from 'nhsuk-frontend/packages/components/header/menuToggle';
 import SkipLink from 'nhsuk-frontend/packages/components/skip-link/skip-link';
 import Details from 'nhsuk-frontend/packages/components/details/details';
@@ -44,7 +43,6 @@ Checkboxes();
 Radios();
 Tabs();
 CharacterCount();
-// Card();
 
 // Initialise NHS digital service manual components
 
