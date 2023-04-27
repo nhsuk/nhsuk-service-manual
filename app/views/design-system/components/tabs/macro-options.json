@@ -19,43 +19,43 @@
       "description": "Array of tab items.",
       "params": [
         {
-          "id": "id",
+          "name": "id",
           "type": "string",
           "required": true,
           "description": "Specific id attribute for the tab item. If omitted, then idPrefix string is required instead."
         },
         {
-          "id": "label",
+          "name": "label",
           "type": "string",
           "required": true,
           "description": "The text label of a tab item."
         },
         {
-          "id": "attributes",
+          "name": "attributes",
           "type": "object",
           "required": false,
           "description": "HTML attributes (for example data attributes) to add to the tab."
         },
         {
-          "id": "panel",
+          "name": "panel",
           "type": "object",
           "required": true,
           "description": "Content for the panel",
           "params": [
             {
-              "id": "text",
+              "name": "text",
               "type": "string",
               "required": true,
               "description": "Specific id attribute for the tab item. If omitted, then idPrefix string is required instead."
             },
             {
-              "id": "html",
+              "name": "html",
               "type": "string",
               "required": true,
               "description": "The title of the panel."
             },
             {
-              "id": "attributes",
+              "name": "attributes",
               "type": "object",
               "required": false,
               "description": "The body of the panel."
