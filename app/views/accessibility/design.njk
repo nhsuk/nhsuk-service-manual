@@ -3,7 +3,7 @@
 {% set subSection = "Accessibility" %}
 {% set pageDescription = "What graphic and interaction designers need to do to make digital services accessible." %}
 {% set theme = "Accessibility guidance for:" %}
-{% set dateUpdated = "February 2022" %}
+{% set dateUpdated = "April 2023" %}
 {% set backlog_issue_id = "349" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -14,6 +14,13 @@
 
 {% block bodyContent %}
 
+  <p><a href="https://nhsdigital.github.io/accessibility-checklist/">Use the NHS accessibility checklist</a> for:</p>
+  <ul>
+    <li>a fuller list of WCAG 2.1 success criteria and guidance for levels A and AA</li>
+    <li>some success criteria and best practice for level AAA</li>
+  </ul>
+
+  {% include "./partials/avoid-accessibility-overlays-or-widgets.njk" %}
   {% include "./partials/define-page-structure.njk" %}
   {% include "./partials/define-skip-links.njk" %}
   {% include "./partials/use-headings-correctly.njk" %}
@@ -23,6 +30,7 @@
   {% include "./partials/write-good-link-and-form-control-names.njk" %}
   {% include "./partials/label-form-fields-clearly.njk" %}
   {% include "./partials/highlight-errors-in-forms.njk" %}
+  {% include "./partials/give-users-time-to-read-and-act.njk" %}
   {% include "./partials/do-not-rely-on-colour-or-position-alone.njk" %}
   {% include "./partials/do-not-include-text-in-images.njk" %}
   {% include "./partials/use-alternative-text-for-images-in-content.njk" %}

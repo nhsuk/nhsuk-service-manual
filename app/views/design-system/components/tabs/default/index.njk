@@ -1,0 +1,285 @@
+{% from 'tabs/macro.njk' import tabs %} 
+{% from 'tables/macro.njk' import table %}
+
+
+{% set pastDayContent %}  
+  {{ table({
+    responsive: true,
+    panel: false,
+    caption: "Past day",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened"
+      },
+      {
+        text: "Cases closed"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Case manager",
+          text: "David Francis"
+        },
+        {
+          header: "Cases opened",
+          text: "3"
+        },
+        {
+          header: "Cases closed",
+          text: "0"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Paul Farmer"
+        },
+        {
+          header: "Cases opened",
+          text: "1"
+        },
+        {
+          header: "Cases closed",
+          text: "0"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Rita Patel"
+        },
+        {
+          header: "Cases opened",
+          text: "2"
+        },
+        {
+          header: "Cases closed",
+          text: "0"
+        }
+      ]
+    ]
+  }) }} 
+{% endset -%} {% set pastWeekContent %}
+  {{ table({
+    responsive: true,
+    panel: false,
+    caption: "Past week",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened"
+      },
+      {
+        text: "Cases closed"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Case manager",
+          text: "David Francis"
+        },
+        {
+          header: "Cases opened",
+          text: "24"
+        },
+        {
+          header: "Cases closed",
+          text: "18"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Paul Farmer"
+        },
+        {
+          header: "Cases opened",
+          text: "16"
+        },
+        {
+          header: "Cases closed",
+          text: "20"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Rita Patel"
+        },
+        {
+          header: "Cases opened",
+          text: "24"
+        },
+        {
+          header: "Cases closed",
+          text: "27"
+        }
+      ]
+    ]
+  }) }} 
+{% endset -%} {% set pastMonthContent %}
+  {{ table({
+    responsive: true,
+    panel: false,
+    caption: "Past month",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened"
+      },
+      {
+        text: "Cases closed"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Case manager",
+          text: "David Francis"
+        },
+        {
+          header: "Cases opened",
+          text: "98"
+        },
+        {
+          header: "Cases closed",
+          text: "95"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Paul Farmer"
+        },
+        {
+          header: "Cases opened",
+          text: "122"
+        },
+        {
+          header: "Cases closed",
+          text: "131"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Rita Patel"
+        },
+        {
+          header: "Cases opened",
+          text: "126"
+        },
+        {
+          header: "Cases closed",
+          text: "142"
+        }
+      ]
+    ]
+  }) }} 
+{% endset -%} {% set pastYearContent %}
+  {{ table({
+    responsive: true,
+    panel: false,
+    caption: "Past year",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened"
+      },
+      {
+        text: "Cases closed"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Case manager",
+          text: "David Francis"
+        },
+        {
+          header: "Cases opened",
+          text: "1380"
+        },
+        {
+          header: "Cases closed",
+          text: "1472"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Paul Farmer"
+        },
+        {
+          header: "Cases opened",
+          text: "1129"
+        },
+        {
+          header: "Cases closed",
+          text: "1083"
+        }
+      ],
+      [
+        {
+          header: "Case manager",
+          text: "Rita Patel"
+        },
+        {
+          header: "Cases opened",
+          text: "1539"
+        },
+        {
+          header: "Cases closed",
+          text: "1265"
+        }
+      ]
+    ]
+  }) }}   
+{% endset -%} 
+{{ tabs({ 
+  items: [ 
+  { 
+    label: "Past day", 
+    id: "past-day", 
+    panel: { 
+      html: pastDayContent 
+      } 
+    }, 
+    { 
+      label: "Past week", 
+      id: "past-week", 
+      panel: { 
+        html: pastWeekContent 
+      } 
+    }, 
+    { 
+      label: "Past month", 
+      id: "past-month", 
+      panel: { 
+        html: pastMonthContent 
+      } 
+    },  
+    { 
+      label: "Past year", 
+      id: "past-year", 
+      panel: { 
+        html: pastYearContent 
+      } 
+    } 
+  ] 
+}) }}
