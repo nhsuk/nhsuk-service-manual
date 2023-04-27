@@ -250,5 +250,36 @@
       ]
     ]
   }) }}   
-{% endset -%} {{ tabs({ items: [ { label: "Past day", id: "past-day", panel: { html: pastDayContent } }, { label: "Past week", id: "past-week", panel: { html: pastWeekContent } }, { label: "Past month", id: "past-month", panel: { html:
-pastMonthContent } },  { label: "Past year", id: "past-year", panel: { html: pastYearContent } } ] }) }}
+{% endset -%} 
+{{ tabs({ 
+  items: [ 
+  { 
+    label: "Past day", 
+    id: "past-day", 
+    panel: { 
+      html: pastDayContent 
+      } 
+    }, 
+    { 
+      label: "Past week", 
+      id: "past-week", 
+      panel: { 
+        html: pastWeekContent 
+      } 
+    }, 
+    { 
+      label: "Past month", 
+      id: "past-month", 
+      panel: { 
+        html: pastMonthContent 
+      } 
+    },  
+    { 
+      label: "Past year", 
+      id: "past-year", 
+      panel: { 
+        html: pastYearContent 
+      } 
+    } 
+  ] 
+}) }}
