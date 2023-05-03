@@ -1,28 +1,31 @@
 # NHS digital service manual Changelog
 
 ## 5.9.1 - 3 May 2023
-:spanner: **Maintenance**
+
+:wrench: **Maintenance**
+
 - Fix design principle 10 in mobile view
+
 
 ## 5.9.0 - 27 April 2023
 
 :new: **New features**
 
- - Add 2 new experimental components to design system: character count and tabs
- - Add new sustainability principle to design principles
- - Add new section on widgets and overlays to accessibility guidance
- - Add new section to accessibility guidance for teams working to short deadlines
+- Add 2 new experimental components to design system: character count and tabs
+- Add new sustainability principle to design principles
+- Add new section on widgets and overlays to accessibility guidance
+- Add new section to accessibility guidance for teams working to short deadlines
 
- :wrench: **Maintenance**
+:wrench: **Maintenance**
 
- - Update breadcrumbs styling
- - Add links to accessibility checklist from accessibility guidance
- - Add links to NHS Constitution from information about the NHS service standard and service standard 5
- - Add links to NHS Digital's API policies and best practice from service standard 17
- - Remove mention of GDS empathy lab - now closed
- - Make minor updates to guidance on meeting accessibility requirements
- - Duplicate accessibility guidance for testers on giving users time to act on devs and designers pages
- - Change "NHS Digital" to "NHS England"
+- Update breadcrumbs styling
+- Add links to accessibility checklist from accessibility guidance
+- Add links to NHS Constitution from information about the NHS service standard and service standard 5
+- Add links to NHS Digital's API policies and best practice from service standard 17
+- Remove mention of GDS empathy lab - now closed
+- Make minor updates to guidance on meeting accessibility requirements
+- Duplicate accessibility guidance for testers on giving users time to act on devs and designers pages
+- Change "NHS Digital" to "NHS England"
 
 
 ## 5.8.0 - 17 January 2023
