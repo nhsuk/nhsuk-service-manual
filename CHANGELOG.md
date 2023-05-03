@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
 
-## 5.9.0 - TBC
+## 5.9.1 - 3 May 2023
+:spanner: **Maintenance**
+- Fix design principle 10 in mobile view
+
+## 5.9.0 - 27 April 2023
 
 :new: **New features**
 
