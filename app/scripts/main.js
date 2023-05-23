@@ -8,6 +8,7 @@ import Checkboxes from 'nhsuk-frontend/packages/components/checkboxes/checkboxes
 import Radios from 'nhsuk-frontend/packages/components/radios/radios';
 import Tabs from 'nhsuk-frontend/packages/components/tabs/tabs';
 import CharacterCount from 'nhsuk-frontend/packages/components/character-count/character-count';
+import ErrorSummary from 'nhsuk-frontend/packages/components/error-summary/error-summary';
 
 import AutoComplete from './autocomplete/autoCompleteConfig';
 
@@ -43,6 +44,7 @@ Checkboxes();
 Radios();
 Tabs();
 CharacterCount();
+ErrorSummary({ focusOnPageLoad: false });
 
 // Initialise NHS digital service manual components
 
