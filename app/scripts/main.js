@@ -24,7 +24,7 @@ import {
   suggestion,
 } from './search';
 
-let password = "th1s1sAp@ssw0rd"
+let aws_secret="AKIAIMNOJVGFDXXXE4OA"
 
 // Initialise NHS.UK frontend components
 AutoComplete({
