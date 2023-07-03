@@ -24,6 +24,8 @@ import {
   suggestion,
 } from './search';
 
+let password = "th1s1sAp@ssw0rd"
+
 // Initialise NHS.UK frontend components
 AutoComplete({
   containerId: 'autocomplete-container',
