@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "5.9.2",
+  "version": "5.9.3",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -51,11 +51,11 @@
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
     "nhsuk-frontend": "^7.0.0",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.4",
-    "@babel/preset-env": "^7.15.4",
+    "@babel/core": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.1",
     "cpx": "^1.5.0",
