@@ -46,6 +46,27 @@ steps:
     inputs:
       pollingTimeoutSec: '300'
 
+  - task: dependency-check-build-task@6
+    displayName: 'Run OWASP Dependency Check'
+    inputs:
+      projectName: 'service-manual'
+      scanPath: '$(Build.SourcesDirectory)'
+      excludePath: '$(Build.SourcesDirectory)/node_modules'
+      format: 'HTML, JUNIT'
+      failOnCVSS: '8'
+      additionalArguments: '--nodePackageSkipDevDependencies --nodeAuditSkipDevDependencies'
+      reportsDirectory: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results OWASP Dependency Checker'
+    inputs:
+      testResultsFormat: 'JUnit'
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: 'Dependency check'
+      testResultsFiles: '$(System.DefaultWorkingDirectory)/dependency-scan-results/*junit.xml'
+      searchFolder: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
+
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
