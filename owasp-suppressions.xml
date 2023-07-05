@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!-- Ignored Vulnerabilities -->
+	<suppress>
+		<!-- semver: ReDos related -->
+		<notes><![CDATA[file name: semver:5.7.1]]></notes>
+		<packageUrl regex="true">^pkg:npm/semver@.*$</packageUrl>
+		<vulnerabilityName>CVE-2022-25883</vulnerabilityName>
+		<vulnerabilityName>GHSA-c2qf-rxjj-qqgw</vulnerabilityName>
+	</suppress>
+</suppressions>
