@@ -53,7 +53,8 @@ steps:
       scanPath: '$(Build.SourcesDirectory)'
       excludePath: '$(Build.SourcesDirectory)/node_modules'
       format: 'HTML, JUNIT'
-      failOnCVSS: '8'
+      failOnCVSS: '7'
+      suppressionPath: '$(System.DefaultWorkingDirectory)/owasp-suppressions.xml'
       additionalArguments: '--nodePackageSkipDevDependencies --nodeAuditSkipDevDependencies'
       reportsDirectory: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
 
