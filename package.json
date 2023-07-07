@@ -29,7 +29,8 @@
     "watch:scss": "npm run build:css && npm run build:css -- -w",
     "watch:js": "webpack -w",
     "watch:assets": "cpx 'app/assets/*' public/assets/ --watch",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "prepare": "husky install"
   },
   "author": "https://github.com/nhsuk",
   "repository": {
@@ -65,6 +66,7 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-mocha": "^9.0.0",
     "iframe-resizer": "^4.3.2",
+    "husky": "^8.0.3",
     "jest": "^27.1.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.19",
