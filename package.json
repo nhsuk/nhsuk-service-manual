@@ -68,7 +68,7 @@
     "iframe-resizer": "^4.3.2",
     "husky": "^8.0.3",
     "jest": "^27.1.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "^9.0.0",
     "nodemon": "^2.0.19",
     "sass": "^1.60.0",
     "sass-lint": "^1.13.1",
