@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 5.10.0 - TBC
+
+:new: **New features**
+
+- Add new card components variants, replacing older cards
+- Add updated design principles PDF
+
+:wrench: **Maintenance**
+
+- Fix typos in previous release
+- Add "Next" to bottom of first page in How to write good questions for froms 
+- Update spacing around design principle 10
+
 ## 5.9.1 - 3 May 2023
 
 :wrench: **Maintenance**
