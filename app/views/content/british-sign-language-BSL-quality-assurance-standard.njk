@@ -1,0 +1,62 @@
+{% set pageTitle = "British Sign Language (BSL) quality assurance standard" %}
+{% set pageSection = "Content style guide" %}
+{% set pageDescription = "This standard outlines the clinical assurance process for creating BSL versions of pre-recorded videos for the NHS. It also sets out BSL video production standards.rquality health content." %}
+{% set beta = true %}
+{% set dateUpdated = "September 2023" %}
+{% set backlog_issue_id = "459" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <p>Before you create a BSL version, make sure your original video follows the <a href="/content/standard-for-creating-health-content">Standard for creating health content</a>. This includes getting clinicians or other relevant subject matter experts to review and approve your content.</p>
+    <h2>Quality assuring the translation</h2>
+    <h3>Get independent assurance</h3>
+    <p>You must get BSL videos independently assured by a Deaf-led BSL supplier.</p>
+    <h3>Choose a supplier with appropriately qualified translators</h3>
+    <p>Your supplier must have 2 sign language translators who are registered with the <a href="https://www.nrcpd.org.uk/index.php">National Registers of Communications Professionals Working with Deaf and Deafblind People (the NRCPD)</a>.
+    <p>If this is not possible, they must use 2 NRCPD registered sign language interpreters, or 1 registered translator and 1 registered interpreter.</p>
+    <p>The translators or interpreters should be trained in medical translation and have experience in the healthcare field.</p>
+    <h3>Get the video peer reviewed</h3>
+    <p>The 2 translators (or interpreters) must peer review the video. One translates the video and the other assures its quality.</p>
+    <h3>Document what you have done</h3>
+    <p>Record the details of both NRCPD registered sign language translators or interpreters including their:</p>
+    <ul>
+        <li>names</li>
+        <li>registration numbers</li>
+        <li>evidence of current registration</li>
+    </ul>
+    <p>Note which translator or interpreter translated the content and which peer reviewed it.</p>
+
+    <h2>Video production standards</h2>
+    <ul>
+        <li>Use a diverse and representative selection of translators.</li>
+        <li>There are regional variations of BSL but try to cater for a nationwide Deaf audience.</li>
+        <li>Talk with the translator to understand if there is anything in the script that would benefit from a graphic ("transliteration") on screen to help users understand it.</li>
+        <li>Synchronise the BSL video with the main video content.</li>
+        <li>Think about the timing of the video content. It can take longer to communicate in sign language.</li>
+        <li>Place the translator or interpreter in the bottom right-hand corner of the video. The BSL presenter size should be at least 1/6th of the screen.</li>
+        <li>Do not hide any key content. Make sure BSL users can see the presenter at the same time as any graphics, text or other visual elements.</li>
+        <li>Make sure the video is culturally sensitive by working with the BSL community, testing it, or getting feedback.</li>
+    </ul>
+    <p><a href="https://service-manual.nhs.uk/accessibility/content#make-video-and-other-multimedia-content-accessible">Follow NHS accessibility guidance on making videos and other multimedia content accessible.</a><p>
+    
+    <h2>Developing this standard</h2>
+    <p>This standard was created by the NHS website team in collaboration with:</p>
+    <ul>
+        <li>the British Deaf Association</li>
+        <li>NHS Inform (Scotland)</li>
+        <li>the RNID (Royal National Institute for Deaf People)</li>
+        <li>SignHealth</li>
+    </ul>
+    <p>It follows the process used for approving videos for the NHS website and NHS YouTube channel. It also aligns with the <a href="https://www.england.nhs.uk/publication/accessible-information-standard-implementation-guidance/">Accessible Information Standard implementation guidance (NHS England)</a>.</p>
+    <p>The standard is new and we're still testing it. Please feed back.</p>
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}
