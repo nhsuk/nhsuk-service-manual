@@ -6,12 +6,14 @@
 
 - Add new card components variants, replacing older cards
 - Add updated design principles PDF
+- Add and amend entries in content style guide after June Style Council meeting - see What's new for detail
 
 :wrench: **Maintenance**
 
 - Fix typos in previous release
 - Add "Next" to bottom of first page in How to write good questions for froms 
 - Update spacing around design principle 10
+- Update site map with Character count and Tabs
 
 ## 5.9.1 - 3 May 2023
 
