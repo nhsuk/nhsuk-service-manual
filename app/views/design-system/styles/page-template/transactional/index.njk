@@ -10,20 +10,20 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "#",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+    href: "#",
+    text: "Back",
+    classes: "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
 {% endblock %}
 
 {% block header %}
   {{ header({
-    "transactionalService": {
-        "name": "Service name here",
-        "href": "#"
+    transactionalService: {
+        name: "Service name here",
+        href: "#"
       },
-      "showNav": "false",
-      "showSearch": "false"
+      showNav: "false",
+      showSearch: "false"
     })
   }}
 {% endblock %}
@@ -40,26 +40,26 @@
 
 {% block footer %}
   {{ footer({
-    "links": [
+    links: [
       {
-        "URL": "#",
-        "label": "Accessibility statement"
+        URL: "#",
+        label: "Accessibility statement"
       },
       {
-        "URL": "#",
-        "label": "Contact us"
+        URL: "#",
+        label: "Contact us"
       },
       {
-        "URL": "#",
-        "label": "Cookies"
+        URL: "#",
+        label: "Cookies"
       },
       {
-        "URL": "#",
-        "label": "Privacy policy"
+        URL: "#",
+        label: "Privacy policy"
       },
       {
-        "URL": "#",
-        "label": "Terms and conditions"
+        URL: "#",
+        label: "Terms and conditions"
       }
     ]
   })}}

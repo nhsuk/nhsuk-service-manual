@@ -1,32 +1,30 @@
 {% from 'radios/macro.njk' import radios %}
 
 {{ radios({
-  "idPrefix": "example-divider",
-  "name": "example-divider",
-  "fieldset": {
-    "legend": {
-      "text": "How do you want to sign in?",
-      "classes": "nhsuk-fieldset__legend--l",
-      "isPageHeading": true
+  idPrefix: "example-divider",
+  name: "example-divider",
+  fieldset: {
+    legend: {
+      text: "How do you want to sign in?",
+      classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: true
     }
   },
-  "items": [
+  items: [
     {
-      "value": "nhsuk-login",
-      "text": "Use NHS login"
+      value: "nhsuk-login",
+      text: "Use NHS login"
     },
         {
-      "value": "government-verify",
-      "text": "Use GOV.UK Verify"
+      value: "government-verify",
+      text: "Use GOV.UK Verify"
     },
     {
-      "divider": "or"
+      divider: "or"
     },
     {
-      "value": "create-account",
-      "text": "Create an account"
+      value: "create-account",
+      text: "Create an account"
     }
   ]
 }) }}
-
-
