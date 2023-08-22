@@ -1,0 +1,17 @@
+{% from 'input/macro.njk' import input %}
+
+{{ input({
+  "label": {
+    "text": "What is the cost per item, in pounds?"
+  },
+  "hint": {
+    "text": "Divide the total cost, in pounds, by the number of items."
+  },
+  "id": "example",
+  "name": "example",
+  "prefix": "£",
+  "suffix": "per item",
+  "errorMessage": {
+    "text": "Error message goes here"
+  }
+}) }}

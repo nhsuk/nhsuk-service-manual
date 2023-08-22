@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "January 2020" %}
+{% set dateUpdated = "August 2023" %}
 {% set backlog_issue_id = "21" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -93,6 +93,36 @@
   <h4 id="decimal-numbers">Decimal numbers</h4>
   <p>The GOV.UK Design System has guidance on <a href="https://design-system.service.gov.uk/components/text-input/#asking-for-decimal-numbers">asking for decimal numbers</a>.</p>
 
+  <h3 id="prefixes-and-suffixes">Prefixes and suffixes</h3>
+  <p>Use prefixes and suffixes to help users enter things like age, currencies and measurements.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "prefix-and-suffix" 
+  }) }}
+
+  <p>Prefixes and suffixes are useful when there’s a commonly understood symbol or abbreviation for the type of information you’re asking for. Do not rely on prefixes or suffixes alone, because screen readers will not read them out.</p>
+  <p>If you need a specific type of information, say so in the input label or hint text as well. For example, put ‘Cost, in pounds’ in the input label and use the ‘£’ symbol in the prefix.</p>
+  <p>Position prefixes and suffixes so that they’re outside of their input. This is to avoid interfering with some browsers that might insert an icon into the input (for example to show or generate a password).</p>
+  <p>Some users may miss that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.</p>
+
+  <h4 id="text-inputs-with-a-prefix">Text inputs with a prefix</h4>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "prefix" 
+  }) }}
+
+  <h4 id="text-inputs-with-a-suffix">Text inputs with a suffix</h4>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "suffix" 
+  }) }}
+
   <h3 id="error-messages">Error messages</h3>
   <p>Style error messages like this.</p>
 
@@ -100,6 +130,14 @@
     group: "components",
     item: "text-input",
     type: "error"
+  }) }}
+
+  <h4 id="if-the-input-has-a-prefix-or-a-suffix">If the input has a prefix or a suffix</h4>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "error-and-prefix-and-suffix" 
   }) }}
 
   <p>Follow:</p>
