@@ -75,7 +75,7 @@
 
 // Lede text + lede text
 .nhsuk-lede-text + .nhsuk-lede-text {
-  margin-top: - nhsuk-spacing(3);
+  margin-top: -nhsuk-spacing(3);
 }
 
 h1 + .nhsuk-lede-text {
@@ -159,7 +159,6 @@ h1 + .nhsuk-lede-text {
     &:focus {
       color: $nhsuk-focus-text-color;
     }
-
   }
 }
 
@@ -238,5 +237,39 @@ h1 + .nhsuk-lede-text {
   li {
     list-style: none;
   }
+}
 
+/* Back to top link */
+
+.nhsuk-back-to-top__link {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  position: relative;
+
+  @include mq($from: tablet) {
+    font-size: 1.1875rem;
+    line-height: 1.47368;
+  }
+
+  @media print {
+    display: none;
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+
+  &:visited {
+    color: #330072; // sass-lint:disable-line no-color-hex no-color-literals
+  }
+
+  &:hover,
+  &:focus {
+    color: #7c2855; // sass-lint:disable-line no-color-hex no-color-literals
+    text-decoration: none;
+
+    .nhsuk-icon {
+      fill: #212b32; // sass-lint:disable-line no-color-hex no-color-literals
+    }
+  }
 }
