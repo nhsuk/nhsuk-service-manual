@@ -15,6 +15,12 @@
 - Update spacing around design principle 10
 - Update site map with Character count and Tabs
 
+## 5.9.2 -  TBC 22 May 2023
+
+:wrench: **Fixes**
+
+- Import and initialise the Error Summary JavaScript, and set focusOnPageLoad to false, so the component example works as expected [NHS.UK frontend issue #766](https://github.com/nhsuk/nhsuk-frontend/issues/766)
+
 ## 5.9.1 - 3 May 2023
 
 :wrench: **Maintenance**
