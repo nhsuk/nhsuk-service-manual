@@ -1,7 +1,7 @@
 {% set pageTitle = "Numbers, measurements, dates and time" %}
 {% set pageSection = "Content style guide" %}
 {% set pageDescription = "Content styles, including numerals, ordinals, dosage, temperature, fractions and percentages" %}
-{% set dateUpdated = "January 2021" %}
+{% set dateUpdated = "August 2023" %}
 {% set backlog_issue_id = "321" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -29,6 +29,7 @@
 
       <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a>
         <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#designing-content-for-people-who-struggle-with-number">Designing content for people who struggle with numbers</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#numbers">Numbers</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#measurements">Measurements</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#dates">Dates</a></li>
@@ -52,11 +53,34 @@
 
 {% block bodyContent %}
 
+  <h2>Designing content for people who struggle with numbers</h2>
+  <p>Half of working-age adults in the UK have low numeracy. Around 1 in 20 people have dyscalculia, which is a specific and persistent difficulty in understanding numbers.</p> 
+  <p>People who struggle with numbers may have problems with:</p>
+  <ul>
+      <li>entering numbers, like their NHS number</li>
+      <li>reference numbers and not knowing what to do with them</li>
+      <li>distinguishing the number 0 and letter O</li>
+      <li>numbers in tables and charts</li>
+  </ul>
+  <p>Try putting numbers into context in sentences.</p>
+  <p>If you're communicating statistics or treatment risks and benefits, you could consider visual aids. However, we do not yet have enough research to recommend them. If you explore using visual aids, please feedback your user research findings on the <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/436">GitHub issue for data visualisation (helping users understand data)</a>.</p>
+  <p>Find out more about presenting numbers clearly on:</p>
+  <ul>
+    <li><a href="https://accessiblenumbers.com/">the Accessible numbers website</a></li>
+    <li><a href="https://htmlpreview.github.io/?https://github.com/abbott567/dyscalculia-poster/blob/main/dist/dyscalculia-poster.html">the GOV.UK poster on designing for users with dyscalculia or low numeracy</a></li>
+  </ul>
+
   <h2 id="numbers">Numbers</h2>
   <h3>Numerals (1, 2, 3 and so on)</h3>
   <p>We use numerals for numbers (including 1 and 2), for example when we're talking about statistics, time, measurements, lists, points or steps. People find numerals easier to read and they scan for them.</p>
-  <p>For numbers over 999, use a comma for clarity - for example, 1,000.</p>
-  <p>For numbers less than 1, use 0 before the decimal point - for example, 0.25.</p>
+  <p>For numbers over 999, use a comma for clarity –  for example, 1,000.</p>
+  <p>Avoid decimal points. Round up numbers to the nearest whole number, except for: 
+  <ul>
+    <li>money</li>
+    <li>medicines dosage, for example: 0.5mg</li>
+    <li>medical tests or measurements, for example: a BMI of 18.5</li>
+  </ul>
+  <p>If you need to use numbers less than 1, use 0 before the decimal point – for example, 0.25.</p>
 
 <div class="app-example app-example--content">
     <strong class="nhsuk-tag app-example__heading">Examples</strong>
@@ -113,6 +137,7 @@
   <p>We do not use numerals in some medicines information about dosage because we've found they can be confusing. Read more about numbers and <a href="#dosage">dosage</a>.</p>
 <h3 id="ordinal-numbers">Ordinal numbers (1st, 2nd, 3rd and so on)</h3>
 <p>We use numerals with letter suffixes for ordinal numbers (including 1st and 2nd), for example, when we're talking about dates, quantities and things in a list or sequence.</p>
+<p>The letters should be the same size as the numbers. Do not use superscript, for example 1<sup>st</sup>, as it does not always read out correctly on screen readers and could confuse people.</p>
  <div class="app-example app-example--content">
     <strong class="nhsuk-tag app-example__heading">Examples</strong>
     <ul>
@@ -130,8 +155,6 @@
   <li>secondhand smoke</li>
   <li>second opinion</li>
 </ul>
-
-<p>Do not use superscript. It does not always read out correctly on screen readers and could confuse people. </p>
 
 <h2 id="measurements">Measurements</h2>
 <h3 id="calories">Calories</h3>
@@ -191,7 +214,7 @@
 
   {{ table({
     panel: false,
-    caption: "TBD",
+    caption: "",
     captionClasses: "nhsuk-u-visually-hidden",
     firstCellIsHeader: false,
     head: [
@@ -205,10 +228,18 @@
     rows: [
       [
         {
-          text: "5.30pm"
+          text: "5pm"
         },
         {
-          text: "1730hrs"
+          text: "5.00pm or 1700hrs"
+        }
+      ],
+      [
+        {
+          text: "5:30pm"
+        },
+        {
+          text: "5.30pm or 1730hrs"
         }
       ],
       [

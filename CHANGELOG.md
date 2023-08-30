@@ -1,18 +1,31 @@
 # NHS digital service manual Changelog
 
-## 5.9.2 -  TBC 22 May 2023
+## 5.10.0 - 30 August 2023
+
+:new: **New features**
+
+- Add new card components variants, replacing older cards
+- Add updated design principles PDF
+- Add and amend entries in content style guide after June Style Council meeting - see What's new for detail
+
+:wrench: **Maintenance**
+
+- Fix typos in previous release
+- Add "Next" to bottom of first page in How to write good questions for froms
+- Update spacing around design principle 10
+- Update site map with Character count and Tabs
+
+## 5.9.2 - 22 May 2023
 
 :wrench: **Fixes**
 
 - Import and initialise the Error Summary JavaScript, and set focusOnPageLoad to false, so the component example works as expected [NHS.UK frontend issue #766](https://github.com/nhsuk/nhsuk-frontend/issues/766)
-
 
 ## 5.9.1 - 3 May 2023
 
 :wrench: **Maintenance**
 
 - Fix design principle 10 in mobile view
-
 
 ## 5.9.0 - 27 April 2023
 
@@ -33,7 +46,6 @@
 - Make minor updates to guidance on meeting accessibility requirements
 - Duplicate accessibility guidance for testers on giving users time to act on devs and designers pages
 - Change "NHS Digital" to "NHS England"
-
 
 ## 5.8.0 - 17 January 2023
 
