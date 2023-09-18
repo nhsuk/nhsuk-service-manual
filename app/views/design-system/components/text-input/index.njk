@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "August 2023" %}
+{% set dateUpdated = "October 2023" %}
 {% set backlog_issue_id = "21" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -21,7 +21,7 @@
   }) }}
 
   <h2>When to use text input</h2>
-  <p>Use text input when you need users to enter text that’s no longer than a single line, such as their name or phone number.</p>
+  <p>Use text input when you need users to enter text that's no longer than a single line, such as their name or phone number.</p>
 
   <h2>When not to use text input </h2>
   <p>Do not use text input if you need users to enter longer answers that might span several lines. In this case, use <a href="/design-system/components/textarea">textarea</a>.</p>
@@ -94,7 +94,7 @@
   <p>The GOV.UK Design System has guidance on <a href="https://design-system.service.gov.uk/components/text-input/#asking-for-decimal-numbers">asking for decimal numbers</a>.</p>
 
   <h3 id="prefixes-and-suffixes">Prefixes and suffixes</h3>
-  <p>Use prefixes and suffixes to help users enter things like age, currencies and measurements.</p>
+  <p>Use prefixes and suffixes to help users enter things like currencies and measurements.</p>
 
   {{ designExample({
     group: "components",
@@ -102,9 +102,9 @@
     type: "prefix-and-suffix" 
   }) }}
 
-  <p>Prefixes and suffixes are useful when there’s a commonly understood symbol or abbreviation for the type of information you’re asking for. Do not rely on prefixes or suffixes alone, because screen readers will not read them out.</p>
-  <p>If you need a specific type of information, say so in the input label or hint text as well. For example, put ‘Cost, in pounds’ in the input label and use the ‘£’ symbol in the prefix.</p>
-  <p>Position prefixes and suffixes so that they’re outside of their input. This is to avoid interfering with some browsers that might insert an icon into the input (for example to show or generate a password).</p>
+  <p>Prefixes and suffixes are useful when there's a commonly understood symbol or abbreviation for the type of information you're asking for. Do not rely on prefixes or suffixes alone, because screen readers will not read them out.</p>
+  <p>If you need a specific type of information, say so in the input label or hint text as well. For example, put 'Cost, in pounds' in the input label and use the '£' symbol in the prefix.</p>
+  <p>Position prefixes and suffixes so that they're outside of their input. This is to avoid interfering with some browsers that might insert an icon into the input (for example to show or generate a password).</p>
   <p>Some users may miss that the input already has a suffix or prefix, and enter a prefix or suffix into the input. Allow for this in your validation and do not show an error.</p>
 
   <h4 id="text-inputs-with-a-prefix">Text inputs with a prefix</h4>
