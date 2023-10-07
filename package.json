@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "5.9.4",
+  "version": "5.10.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -51,7 +51,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
-    "nhsuk-frontend": "^7.0.0",
+    "nhsuk-frontend": "^7.1.0",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
