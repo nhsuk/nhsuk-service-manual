@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the footer to show users they are on an NHS service and to help them find links they expect at the bottom of our pages." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "May 2020" %}
+{% set dateUpdated = "October 2023" %}
 {% set backlog_issue_id = "15" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -50,7 +50,12 @@
   <p>The <a href="https://www.nhs.uk/">NHS website</a> has 4 columns of links, with key policy links in the last column.</p>  
   <p>The navigation links give users another route to the most visited content on the site. They act as a safety net for users who have not found content through the main navigation.</p> 
 
-  <p>ADD NHS WEBSITE EXAMPLE</p>
+    {{ designExample({
+    group: "components",
+    item: "footer",
+    type: "columns"
+  }) }}
+
   <p>On tablets or smaller devices, there is a white line above the key policy links.</p>
 
   <h2>Accessibility</h2>
