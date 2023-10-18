@@ -1,5 +1,17 @@
 # NHS digital service manual Changelog
 
+## 6.0.0 - Date TBC
+
+:new: **New features**
+
+- Update header and footer components
+- Add prefix and suffix options to text input components
+
+:wrench: **Maintenance**
+
+- Update link in health literacy toolkit in content style guide
+- Change "heritage" to "background" in guidance on ethnicity, religion and nationality in content style guide
+
 ## 5.10.0 - 30 August 2023
 
 :new: **New features**

@@ -9,8 +9,7 @@
 		<vulnerabilityName>GHSA-c2qf-rxjj-qqgw</vulnerabilityName>
 	</suppress>
 	<suppress>
-		<!-- semver: ReDos related -->
-		<notes><![CDATA[file name: pkg:npm/axios@0.21.4]]></notes>
+		<notes><![CDATA[file name: axios:0.21.4]]></notes>
 		<packageUrl regex="true">^pkg:npm/axios@.*$</packageUrl>
 	</suppress>
 </suppressions>
