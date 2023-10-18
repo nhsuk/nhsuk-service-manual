@@ -5,8 +5,8 @@
 		<!-- semver: ReDos related -->
 		<notes><![CDATA[file name: semver:5.7.1]]></notes>
 		<packageUrl regex="true">^pkg:npm/semver@.*$</packageUrl>
+		<packageUrl>pkg:npm/axios@0.21.4</packageUrl>
 		<vulnerabilityName>CVE-2022-25883</vulnerabilityName>
 		<vulnerabilityName>GHSA-c2qf-rxjj-qqgw</vulnerabilityName>
-		<vulnerabilityName>pkg:npm/axios@0.21.4</vulnerabilityName>
 	</suppress>
 </suppressions>
