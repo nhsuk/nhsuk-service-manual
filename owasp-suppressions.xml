@@ -7,5 +7,6 @@
 		<packageUrl regex="true">^pkg:npm/semver@.*$</packageUrl>
 		<vulnerabilityName>CVE-2022-25883</vulnerabilityName>
 		<vulnerabilityName>GHSA-c2qf-rxjj-qqgw</vulnerabilityName>
+		<vulnerabilityName>pkg:npm/axios@0.21.4</vulnerabilityName>
 	</suppress>
 </suppressions>
