@@ -40,7 +40,7 @@
   "license": "MIT",
   "dependencies": {
     "accessible-autocomplete": "^2.0.3",
-    "axios": "^0.21.4",
+    "axios": "^1.5.1",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.27.10",
     "cheerio": "^1.0.0-rc.10",
@@ -65,8 +65,8 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-mocha": "^9.0.0",
-    "iframe-resizer": "^4.3.2",
     "husky": "^8.0.3",
+    "iframe-resizer": "^4.3.2",
     "jest": "^27.1.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.19",
