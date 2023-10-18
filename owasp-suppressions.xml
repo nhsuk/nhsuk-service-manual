@@ -9,7 +9,8 @@
 		<vulnerabilityName>GHSA-c2qf-rxjj-qqgw</vulnerabilityName>
 	</suppress>
 	<suppress>
-		<notes><![CDATA[file name: axios:0.21.4]]></notes>
-		<packageUrl regex="true">^pkg:npm/axios@.*$</packageUrl>
+	<notes><![CDATA[file name: axios:0.21.4]]></notes>
+	<packageUrl regex="true">^pkg:npm/axios@.*$</packageUrl>
+	<vulnerabilityName>CVE-2023-45857</vulnerabilityName>
 	</suppress>
 </suppressions>
