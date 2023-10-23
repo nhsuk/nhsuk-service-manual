@@ -1,7 +1,7 @@
 {% set pageTitle = "Header" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use the header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
+{% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
 {% set dateUpdated = "October 2023" %}
 {% set backlog_issue_id = "16" %}
@@ -20,15 +20,17 @@
     type: "top-of-page"
   }) }}
 
-  <h2 id="when-to-use-the-NHS-header">When to use the NHS header</h2>
+  <h2 id="NHS-header">NHS header</h2>
+
+  <h3 id="when-to-use-the-NHS-header">When to use the NHS header</h3>
   <p>Use the NHS header if your service is a national NHS service in England on the nhs.uk domain.</p>
 
-  <h2 id="when-not-to-use-the-NHS-header">When not to use the NHS header</h2>
+  <h3 id="when-not-to-use-the-NHS-header">When not to use the NHS header</h3>
   <p>Do not use the NHS header if your service is hosted on another domain (not nhs.uk).</p>
   <p>Use the <a href="#organisational-header">organisational header</a> instead.</p>
   <p>For information about supplier and partnership branding, see the <a href="https://www.england.nhs.uk/nhsidentity/">NHS identity guidelines</a>.</p>
 
-  <h2 id="how-to-use-the-NHS-header">How to use the NHS header</h2>
+  <h3 id="how-to-use-the-NHS-header">How to use the NHS header</h3>
   <p>The NHS header is made up of 3 elements:</p>
   <ul>
     <li>the NHS logo, which may be accompanied by the service name</li>
@@ -36,15 +38,15 @@
     <li>a search bar</li>
   </ul>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
-  <p>For example, transactional services (like the <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number service on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
+  <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
 
-  <h3 id="search">Search</h3>
+  <h4 id="search">Search</h4>
   <p>The NHS header can include a search bar.</p>
   <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality contract.</p> 
   <p>If your service is on the nhs.uk domain but not part of the NHS website or is on another domain, you will have to arrange your own search functionality, if you need it.</p>
   
-  <h3 id="examples">Examples</h3>
-  <h4 id="NHS-default-header">NHS default header</h4>
+  <h4 id="examples">Examples</h4>
+  <h5 id="NHS-default-header">NHS default header</h5>
   <p>The <a href="https://www.nhs.uk/">NHS website</a> has the default header with logo, navigation links and search.</p>
 
   {{ designExample({
@@ -53,7 +55,7 @@
     type: "default"
   }) }}
 
-  <h4 id="NHS-header-with-service-name">NHS header with service name</h4>
+  <h5 id="NHS-header-with-service-name">NHS header with service name</h5>
   <p>The <a href="https://service-manual.nhs.uk/">NHS digital service manual</a> includes the logo, service name, navigation links and search.  </p>
 
   {{ designExample({
@@ -62,8 +64,8 @@
     type: "service"
   }) }}
 
-  <h4 id="NHS-transactional-service-header">NHS transactional service header</h4>
-  <p>The <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number service (on the NHS website)</a> is a transactional service and includes the logo and service name only.</p>
+  <h5 id="NHS-transactional-service-header">NHS transactional service header</h5>
+  <p><a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number (on the NHS website)</a> is a transactional service and includes the logo and service name only.</p>
 
   {{ designExample({
     group: "components",
@@ -80,7 +82,7 @@
   <p>There are 3 variants of the organisational header:</p>
   <ul>
     <li>blue background</li>
-    <li>white background</li>
+    <li>white background with blue nav</li>
     <li>white background with white nav</li>
   </ul>
   
@@ -92,7 +94,7 @@
     type: "organisational"
   }) }}
 
-  <h3>White background organisational header</h3>
+  <h3>White background organisational header with blue nav</h3>
 
   {{ designExample({
     group: "components",
@@ -108,11 +110,11 @@
     type: "organisational-white-with-nav"
   }) }}
 
-  <p>You must have a Frutiger font licence to use an organisational logo. Our guidance on <a href="/design-system/styles/typography">typography</a> explains how to get hold of the webfont.</p>
+  <p>You must have a Frutiger font licence to use an NHS organisational logo. Our guidance on <a href="/design-system/styles/typography">typography</a> explains how to get hold of the Frutiger webfont.</p>
   
   <h3>Organisational logos</h3>  
   <p>Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos in the NHS England identity guidelines</a>.</p>
-  <p>The organisational logo is an SVG and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
+  <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>
  
 

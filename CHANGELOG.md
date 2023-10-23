@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 6.0.0 - Date TBC
+## 6.0.0 - 23 October 2023
 
 :new: **New features**
 

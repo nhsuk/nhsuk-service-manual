@@ -21,10 +21,17 @@
   }) }}
 
   <h2 id="when-to-use-the-footer">When to use the footer</h2>
-  <p>Use the footer at the bottom of every page of your website or service, but not on a mobile app.</p>
+  <p>Use the footer at the bottom of every page of your website or service but not on a mobile app.</p>
 
   <h2 id="how-to-use-the-footer">How to use the footer</h2>
-  <h3 id="footer-with-key-links">Footer with key links</h3>
+  <h3 id="footer-with-key-links">Footer with key links only</h3>
+
+      {{ designExample({
+    group: "components",
+    item: "footer",
+    type: "default"
+  }) }}
+
   <p>Add links to policies and other meta information about your service, such as:
   <ul>
     <li>accessibility</li>
@@ -34,29 +41,20 @@
     <li>terms and conditions</li>
   </ul>
 
-    {{ designExample({
-    group: "components",
-    item: "footer",
-    type: "default"
-  }) }}
-
   <p>Keep links to a minimum, especially in a transactional journey. Too many links can distract users. Link to specific policies for the transaction, if appropriate.</p>
-  <p>If your total number of links is less than 7, arrange them in a line.</p>
+  <p>If your total number of links is less than 7, arrange them horizontally in lines.</p>
   
   <h3 id="footer-with-navigation-links">Footer with navigation links</h3>
-
-  <p>If your users need lots of footer links to help them navigate a complex information architecture, arrange them in columns.</p>  
-  <h4>Example</h4>
-  <p>The <a href="https://www.nhs.uk/">NHS website</a> has 4 columns of links, with key policy links in the last column.</p>  
+  <p>If your users need lots of footer links to help them navigate a complex information architecture, include navigation links and arrange the links in columns.</p>  
+  <p>For example, the <a href="https://www.nhs.uk/">NHS website</a> has 4 columns of links, with key policy links in the last column.</p>  
   <p>The navigation links give users another route to the most visited content on the site. They act as a safety net for users who have not found content through the main navigation.</p> 
+  <p>On tablets or smaller devices, there is a white line above the key policy links.</p>
 
-    {{ designExample({
+      {{ designExample({
     group: "components",
     item: "footer",
     type: "columns"
   }) }}
-
-  <p>On tablets or smaller devices, there is a white line above the key policy links.</p>
 
   <h2>Accessibility</h2>
   <p>In 2023, we updated the NHS footer colours to improve accessibility with:</p>
