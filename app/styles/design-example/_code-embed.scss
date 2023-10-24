@@ -7,6 +7,10 @@
     width: 100%;
   }
 
+  [src*='components/header'] {
+    width: 99%;
+  }
+
   + .code-snippet {
     margin-top: -1px;
   }

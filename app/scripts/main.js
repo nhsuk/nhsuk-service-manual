@@ -1,7 +1,6 @@
 /* eslint-disable no-new */
 // NHS.UK frontend components
-import SearchToggle from 'nhsuk-frontend/packages/components/header/searchToggle';
-import MenuToggle from 'nhsuk-frontend/packages/components/header/menuToggle';
+import Header from 'nhsuk-frontend/packages/components/header/header';
 import SkipLink from 'nhsuk-frontend/packages/components/skip-link/skip-link';
 import Details from 'nhsuk-frontend/packages/components/details/details';
 import Checkboxes from 'nhsuk-frontend/packages/components/checkboxes/checkboxes';
@@ -36,8 +35,7 @@ AutoComplete({
     suggestion,
   },
 });
-MenuToggle();
-SearchToggle();
+Header();
 Details();
 SkipLink();
 Checkboxes();
