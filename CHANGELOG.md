@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 6.0.0 - 23 October 2023
+## 6.0.0 - 24 October 2023
 
 :new: **New features**
 
