@@ -1,5 +1,16 @@
 # NHS digital service manual Changelog
 
+## 6.1.0 - TBC January 2024 
+
+:new: **New features**
+
+- Add links to the AI and Digital Regulations Service for health and social care from sections 8, 11 and 16 of the NHS service standard
+
+:wrench: **Maintenance**
+
+- Clarify content about font on typography page in the design system
+- Explain about headings below Do and Don't list and warning callout components in design system
+
 ## 6.0.0 - 24 October 2023
 
 :new: **New features**
