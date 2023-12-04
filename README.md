@@ -61,7 +61,7 @@ Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environme
 ### Release to live
 
 1. Visit the [GitHub releases page](https://github.com/nhsuk/nhsuk-service-manual/releases) and [draft a new release](https://github.com/nhsuk/nhsuk-service-manual/releases/new).
-2. Enter the tag version, using the same version as in the [CHANGELOG](https://github.com/nhsuk/nhsuk-service-manual/blob/\/CHANGELOG.md) and [package.json](https://github.com/nhsuk/nhsuk-service-manual/blob/main/package.json#L3) files, prefixed with a `v`. For example `v13.15.1`.
+2. Enter the tag version, using the same version as in the [CHANGELOG](https://github.com/nhsuk/nhsuk-service-manual/blob/main/CHANGELOG.md) and [package.json](https://github.com/nhsuk/nhsuk-service-manual/blob/main/package.json#L3) files, prefixed with a `v`. For example `v13.15.1`.
 3. The `main` branch should be preselected. Leave it as it is.
 4. Enter the same tag version in the release title box. For example, `v13.15.1`.
 5. Enter the [CHANGELOG](https://github.com/nhsuk/nhsuk-service-manual/blob/main/CHANGELOG.md) entry for this version's release in the release description box. You can find examples of other release descriptions on the [GitHub releases page](https://github.com/nhsuk/nhsuk-service-manual/releases).
