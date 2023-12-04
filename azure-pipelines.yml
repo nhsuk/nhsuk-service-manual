@@ -55,7 +55,7 @@ steps:
       format: 'HTML, JUNIT'
       failOnCVSS: '7'
       suppressionPath: '$(System.DefaultWorkingDirectory)/owasp-suppressions.xml'
-      additionalArguments: '--nodePackageSkipDevDependencies --nodeAuditSkipDevDependencies'
+      additionalArguments: '--nodePackageSkipDevDependencies --nodeAuditSkipDevDependencies  --nvdApiKey $(OWASP_TOKEN)'
       reportsDirectory: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
 
   - task: PublishTestResults@2
