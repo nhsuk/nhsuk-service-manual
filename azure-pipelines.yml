@@ -21,30 +21,25 @@ steps:
   - script: npm ci
     displayName: 'Install'
 
-  - task: SonarQubePrepare@5
-    displayName: 'Prepare analysis on SonarQube'
+  - task: SonarCloudPrepare@1
+    displayName: 'Prepare analysis on SonarCloud'
     inputs:
-      SonarQube: 'nhsuk-service-manual'
-      scannerMode: 'CLI'
-      configMode: 'manual'
-      cliProjectKey: 'service-manual'
+      SonarCloud: 'SonarCloud'
+      organization: 'nhsdigital'
+      scannerMode: 'MSBuild'
+      projectKey: 'nhsuk-service-manual'
       extraProperties: |
+        sonar.exclusions=$(System.DefaultWorkingDirectory)/dependency-scan-results/**
         sonar.javascript.lcov.reportPaths=coverage/lcov.info
         sonar.coverage.exclusions=**/*.config.js,**/coverage/**
+        sonar.dependencyCheck.htmlReportPath=$(System.DefaultWorkingDirectory)/dependency-scan-results/dependency-check-report.html
+        sonar.language=js
 
   - script: npm run build
     displayName: 'Build'
 
   - script: npm run test
     displayName: 'Test'
-  
-  - task: SonarQubeAnalyze@5
-    displayName: 'Run code analysis' 
-
-  - task: SonarQubePublish@5
-    displayName: 'Publish quality gate result'
-    inputs:
-      pollingTimeoutSec: '300'
 
   - task: dependency-check-build-task@6
     displayName: 'Run OWASP Dependency Check'
@@ -67,6 +62,20 @@ steps:
       testRunTitle: 'Dependency check'
       testResultsFiles: '$(System.DefaultWorkingDirectory)/dependency-scan-results/*junit.xml'
       searchFolder: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
+
+  - task: SonarCloudAnalyze@1
+    displayName: 'Run SonarCloud Code Analysis'
+
+  - task: SonarCloudPublish@1
+    displayName: 'Publish Quality Gate Result'
+    inputs:
+      pollingTimeoutSec: '300'
+
+  - task: sonarcloud-buildbreaker@2
+    displayName: "Break the build if the quality gate fails"
+    inputs:
+      SonarCloud: 'SonarCloud'
+      organization: 'nhsdigital'
 
   - task: ArchiveFiles@2
     inputs:
