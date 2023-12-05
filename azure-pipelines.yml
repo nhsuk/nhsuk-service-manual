@@ -27,8 +27,8 @@ steps:
       SonarCloud: 'SonarCloud'
       organization: 'nhsdigital'
       scannerMode: 'CLI'
-      projectKey: 'nhsuk-service-manual'
       extraProperties: |
+        sonar.projectKey=nhsuk-service-manual
         sonar.exclusions=$(System.DefaultWorkingDirectory)/dependency-scan-results/**
         sonar.javascript.lcov.reportPaths=coverage/lcov.info
         sonar.coverage.exclusions=**/*.config.js,**/coverage/**
