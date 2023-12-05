@@ -26,7 +26,7 @@ steps:
     inputs:
       SonarCloud: 'SonarCloud'
       organization: 'nhsdigital'
-      scannerMode: 'MSBuild'
+      scannerMode: 'CLI'
       projectKey: 'nhsuk-service-manual'
       extraProperties: |
         sonar.exclusions=$(System.DefaultWorkingDirectory)/dependency-scan-results/**
