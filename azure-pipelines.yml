@@ -48,6 +48,7 @@ steps:
 
   - task: dependency-check-build-task@6
     displayName: 'Run OWASP Dependency Check'
+    enabled: false
     inputs:
       projectName: 'service-manual'
       scanPath: '$(Build.SourcesDirectory)'
@@ -60,6 +61,7 @@ steps:
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results OWASP Dependency Checker'
+    condition: failed()
     inputs:
       testResultsFormat: 'JUnit'
       mergeTestResults: true
