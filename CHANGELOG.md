@@ -4,12 +4,20 @@
 
 :new: **New features**
 
+- Add new British Sign Language (BSL) quality assurance standard
 - Add links to the AI and Digital Regulations Service for health and social care from sections 8, 11 and 16 of the NHS service standard
+- Add mention of convulsions to entry on "seizure or fit" in A to Z of NHS health writing
+- Add section on copyright to footer component in design system
 
 :wrench: **Maintenance**
 
+- Rename Content style guide across site
 - Clarify content about font on typography page in the design system
 - Explain about headings below Do and Don't list and warning callout components in design system
+- Amend entry for "NHS 111 online" in the A to Z of NHS health writing
+- Reword care card component
+- Update site map
+- Update service manual footer
 
 ## 6.0.0 - 24 October 2023
 
