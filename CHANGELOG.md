@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Introduce WCAG 2.2 in accessibility guidance
 - Add new British Sign Language (BSL) quality assurance standard
 - Add links to the AI and Digital Regulations Service for health and social care from sections 8, 11 and 16 of the NHS service standard
 - Add mention of convulsions to entry on "seizure or fit" in A to Z of NHS health writing
