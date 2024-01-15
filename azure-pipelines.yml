@@ -91,21 +91,6 @@ steps:
 
   - task: sonarcloud-buildbreaker@2
     displayName: "Break the build if the quality gate fails"
-
-    inputs:
-      SonarCloud: 'SonarCloud'
-      organization: 'nhsdigital'
-
-  - task: SonarCloudAnalyze@1
-    displayName: 'Run SonarCloud Code Analysis'
-
-  - task: SonarCloudPublish@1
-    displayName: 'Publish Quality Gate Result'
-    inputs:
-      pollingTimeoutSec: '300'
-
-  - task: sonarcloud-buildbreaker@2
-    displayName: "Break the build if the quality gate fails"
     inputs:
       SonarCloud: 'SonarCloud'
       organization: 'nhsdigital'
