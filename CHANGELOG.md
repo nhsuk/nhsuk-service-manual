@@ -4,18 +4,25 @@
 
 :new: **New features**
 
-- Introduce WCAG 2.2 in accessibility guidance
+- Introduce WCAG 2.2 in accessibility guidance and on design system home page
+- Update NHS accessibility checklist to WCAG 2.2
 - Add new British Sign Language (BSL) quality assurance standard
-- Add links to the AI and Digital Regulations Service for health and social care from sections 8, 11 and 16 of the NHS service standard
+- Add section on AI and digital healthcare technologies to standard 8 in the NHS service standard
+- Add section about the AI and Digital Regulations Service (AIDRS) to section 16 of the NHS service standard
+- Add links to the AIDRS from section 11 of the NHS service standard
 - Add mention of convulsions to entry on "seizure or fit" in A to Z of NHS health writing
 - Add section on copyright to footer component in design system
 
 :wrench: **Maintenance**
 
-- Rename Content style guide across site
+- Rename "Content style guide" "Content guide"
 - Clarify content about font on typography page in the design system
 - Explain about headings below Do and Don't list and warning callout components in design system
 - Amend entry for "NHS 111 online" in the A to Z of NHS health writing
+- Update the standard for creating health content to refer to WCAG 2.2
+- Update service standard 5 to refer to WCAG 2.2
+- Change example of radio items with hints
+- Fix link on start page pattern
 - Reword care card component
 - Update site map
 - Update service manual footer
