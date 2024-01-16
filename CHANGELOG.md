@@ -22,7 +22,7 @@
 - Update the standard for creating health content to refer to WCAG 2.2
 - Update service standard 5 to refer to WCAG 2.2
 - Change example of radio items with hints
-- Fix link on start page pattern
+- Remove link on start page pattern
 - Reword care card component
 - Update site map
 - Update service manual footer
