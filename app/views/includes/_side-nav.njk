@@ -51,7 +51,8 @@
   { title: "Numbers, measurements, dates and time", url: "/content/numbers-measurements-dates-time" },
   { title: "Formatting and punctuation", url: "/content/formatting-and-punctuation" },
   { title: "PDFs and other non-HTML documents", url: "/content/pdfs-and-other-non-html-documents" },
-  { title: "Links", url: "/content/links" }
+  { title: "Links", url: "/content/links" },
+  { title: "British Sign Language (BSL) quality assurance standard", url: "/content/british-sign-language-BSL-quality-assurance-standard"}
 ] %}
 
 {% set inclusiveContent = [
@@ -272,7 +273,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Content style guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms" and subSection != "Inclusive content" %}
+  {%- if pageSection == "Content guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms" and subSection != "Inclusive content" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -283,7 +284,7 @@
     {%- if subSection == "Inclusive content" %}
     {{ backLink({
       "href": "/content",
-      "text": "Content style guide",
+      "text": "Content guide",
       "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
     }) }}
     <h2 class="app-side-nav__heading">Inclusive content <span class="nhsuk-u-visually-hidden">navigation</span></h2>
@@ -297,7 +298,7 @@
   {%- if subSection == "How to write good questions for forms" %}
     {{ backLink({
       "href": "/content",
-      "text": "Content style guide",
+      "text": "Content guide",
       "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
     }) }}
     <h2 class="app-side-nav__heading">How to write good questions for forms <span class="nhsuk-u-visually-hidden">navigation</span></h2>
