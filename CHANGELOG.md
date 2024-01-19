@@ -1,6 +1,12 @@
 # NHS digital service manual Changelog
 
-## 6.1.0 - TBC January 2024 
+## Unreleased - TBC
+
+:wrench: **Maintenance**
+
+- Rename "Content style guide" asset file to "Content guide"
+
+## 6.1.0 - 18 January 2024 
 
 :new: **New features**
 
