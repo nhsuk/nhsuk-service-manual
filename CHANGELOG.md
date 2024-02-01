@@ -6,6 +6,7 @@
 
 - Rename "Content style guide" asset file to "Content guide"
 - Add side nav link for "Standard for creating health content" to "Numbers, measurements, dates and time" page
+- Tweaked the regex from file-helper.js to avoid DoS attacks and backtracking. 
 
 ## 6.1.0 - 18 January 2024 
 
