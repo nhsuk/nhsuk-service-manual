@@ -28,7 +28,7 @@ exports.getNunjucksCode = (path) => {
   // templates that only exist within the Design System – it's not useful to
   // include this in the code we expect others to copy.
   const content = fileContents.replace(
-    /{%\s*extends\s*\S*\s*%}\s+/,
+    /^{%\s*extends\s*\S+\s*%}\s+/gm,
     '',
   );
 
