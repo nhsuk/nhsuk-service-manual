@@ -15,7 +15,6 @@ import AutoComplete from './autocomplete/autoCompleteConfig';
 import 'nhsuk-frontend/packages/polyfills';
 
 // NHS digital service manual components
-import DesignExample from './design-example';
 import {
   inputValue,
   onConfirm,
@@ -46,7 +45,3 @@ ErrorSummary({ focusOnPageLoad: false });
 
 // Initialise NHS digital service manual components
 
-// Design examples
-document.querySelectorAll(DesignExample.selector()).forEach((el) => {
-  new DesignExample(el);
-});
