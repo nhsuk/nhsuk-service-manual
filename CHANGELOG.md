@@ -6,6 +6,7 @@
 
 - Rename "Content style guide" asset file to "Content guide"
 - Add side nav link for "Standard for creating health content" to "Numbers, measurements, dates and time" page
+- Added minimum width limit to "A to Z" navigation links
 
 ## 6.1.0 - 18 January 2024 
 

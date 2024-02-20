@@ -43,9 +43,9 @@
   fill: $nhsuk-focus-text-color;
 }
 
-// A to Z hotfix
-// To ensure minimum target size is 24px as per WCAG AA
-.nhsuk-mintarget {
+// A to Z target size
+// Ensures minimum target size is 24px, as per WCAG AA
+.nhsuk-a-to-z-min-width {
   min-width: 24px;
   text-align: center;
 }
