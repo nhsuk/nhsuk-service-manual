@@ -1,0 +1,52 @@
+{% set pageTitle = "Web Content Accessibility Guidelines (WCAG) 2.2" %}
+{% set pageSection = "Accessibility" %}
+{% set subSection = "Accessibility" %}
+{% set pageDescription = "Review the guidance and ensure that your service meets these updates by October 2024." %}
+{% set theme = "Everyone needs to know" %}
+{% set dateUpdated = "[Month] 2024" %}
+{% set hideContact = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+{% include "accessibility/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>W3C owns and manages the <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a>.</p>
+<p>WCAG 2.2 was published in October 2023. You’ll need to comply with the new criteria no later than October 2024. See more about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag">Meeting government accessibility requirements</a> in the GOV.UK Service Manual.</p>
+
+<table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Updates to our components, patterns and styles</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Page
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Changes
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><a href="design-system/components/back-link">Back link</a></td>
+      <td class="nhsuk-table__cell ">Guidance for positioning and retaining user data</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><a href="design-system/components/breadcrumbs">Breadcrumbs</a></td>
+      <td class="nhsuk-table__cell ">Guidance for positioning</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td class="nhsuk-table__cell"><a href="design-system/components/buttons">Buttons</a></td>
+      <td class="nhsuk-table__cell ">Guidance for target size minimum</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
+
+{% block asideContent %}
+{% include "./partials/related-nav.njk" %}
+{% endblock %}
