@@ -43,6 +43,13 @@
   fill: $nhsuk-focus-text-color;
 }
 
+// A to Z target size
+// Ensures minimum target size is 24px, as per WCAG AA
+.nhsuk-a-to-z-min-width {
+  min-width: 24px;
+  text-align: center;
+}
+
 // Removal of table cell element top and bottom margins
 // Remove bottom margin from a <p>
 .nhsuk-table__cell {
