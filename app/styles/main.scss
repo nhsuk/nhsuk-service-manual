@@ -198,3 +198,26 @@
     }
   }
 }
+
+// Styling for WCAG 2.2 guidance blocks. 
+// Margin-top to avoid excessive spacing between guidance block and design examples. 
+// Border colour altered to match tag colour. 
+.app-wcag-inset-text {
+  @include nhsuk-responsive-margin(3, 'top');
+  border-left-color: shade($color_nhsuk-blue, 10%);
+}
+
+// Slightly more margin top to maintain visual rhythm of page content
+// margin bottom placed on container and stripped from final p element for :target box styling
+.app-wcag-22 {
+  @include nhsuk-responsive-margin(2, 'top');
+  @include nhsuk-responsive-margin(4, 'bottom');
+}
+.app-wcag-22 p:last-child {
+  margin-bottom: 0;
+}
+// highlights the section of content that has been jumped to via the links within the guidance block
+.app-wcag-22:target {
+  outline: 4px solid shade($color_nhsuk-blue, 10%);
+  outline-offset: 6px;
+}
