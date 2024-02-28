@@ -14,6 +14,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>  To use the ‘Footer’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-consistent-links">find help links in a consistent place on each page</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   {{ designExample({
     group: "components",
     item: "footer",
@@ -40,6 +53,14 @@
     <li>privacy policy</li>
     <li>terms and conditions</li>
   </ul>
+
+  <div class="app-wcag-22" id="wcag-consistent-links" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+  
+    <p>If you include links to ‘help’ pages within a footer, make sure to place those links consistently within the footer content. Also make sure that ‘help’ links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+  </div>
 
   <p>Keep links to a minimum, especially in a transactional journey. Too many links can distract users. Link to specific policies for the transaction, if appropriate.</p>
   <p>If your total number of links is less than 7, arrange them horizontally in lines.</p>
