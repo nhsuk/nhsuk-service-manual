@@ -14,6 +14,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>  To use the ‘Button’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-interact-button">interact with buttons</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   <p>We have 3 buttons</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
@@ -73,6 +86,11 @@
   <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK Design System</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
   <p>Write button text in sentence case and describe the action the button performs. For example "Save and continue" or "Start now".</p>
   <p>Align the primary action button to the left edge of your form.</p>
+
+  <div class="app-wcag-22" id="wcag-interact-button" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  </div>
 
   <h3>Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
