@@ -14,6 +14,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>  To use the ‘Error message’ and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-clear-answers-error">edit information they’ve previously given, so that they can correct an error</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   {{ designExample({
     group: "components",
     item: "error-message",
@@ -50,6 +63,22 @@
     <li>use a red border to visually connect the message and the question it belongs to</li>
     <li>if the error relates to specific text fields in the question, give these a red border as well</li>
   </ul>
+
+  <div class="app-wcag-22" id="wcag-clear-answers-error" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+      WCAG 2.2
+    </strong>
+  
+    <p>Do not clear any form fields when adding error messages. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  </div>
+
+  <p>Keeping information that caused errors helps users to:</p>
+  <ul>
+    <li>see what went wrong</li>
+    <li>edit their previous answer</li>
+    <li>avoid re-entering information</li>
+  </ul>
+
   <p>To help screen reader users, the error message component includes a hidden "Error:" before the error message. These users will hear, for example, "Error: Date of birth must be in the past".</p>
 
   {{ designExample({
