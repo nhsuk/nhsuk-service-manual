@@ -14,12 +14,6 @@
 
 {% block bodyContent %}
 
-{{ designExample({
-group: "components",
-item: "back-link",
-type: "default"
-}) }}
-
 <div class="nhsuk-inset-text app-wcag-inset-text">
   <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
     WCAG 2.2
@@ -34,9 +28,14 @@ type: "default"
         given when they go back to a page</a></li>
     <li><a href="#wcag-interact-back-links">interact with back links</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">components and patterns
-      affected by WCAG 2.2</a>.</p>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
 </div>
+
+{{ designExample({
+group: "components",
+item: "back-link",
+type: "default"
+}) }}
 
 <h2>When to use a back link</h2>
 <p>We only use back links on transactional services or multi-page forms.</p>
