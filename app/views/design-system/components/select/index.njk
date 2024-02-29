@@ -14,6 +14,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>  To use the 'Select' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-avoid-dragging-multiple-options">use the select without relying on 'click and drag' movements (if you choose to add functionality to select multiple options)</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   {{ designExample({
     group: "components",
     item: "select",
@@ -22,6 +35,14 @@
 
   <h2 id="how-it-works">How to use select</h2>
   <p>The select component allows users to choose an option from a long list. Before using it, try other questions which will allow you to present users with fewer options. Consider using a different solution, such as <a href="/design-system/components/radios">radios</a>.</p>
+  
+  <div class="app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+  
+  <p>Any input that's designed to let a user select multiple options must offer a way to do so without relying on 'click and drag' movements or keyboard and mouse combination actions. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
+</div>
 
   <h2>Research</h2>
   <p>Watch a video about how some users struggle with selects: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">Alice Barlett: Burn your select tags</a>.</p>
