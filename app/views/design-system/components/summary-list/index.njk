@@ -14,6 +14,20 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>  To use 'Summary list' and comply with new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-interact-row-actions">interact with row actions</a></li>
+    <li><a href="#wcag-change-answers">change information they've previously given in an answer</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   {{ designExample({
     group: "components",
     item: "summary-list",
@@ -43,6 +57,22 @@
 
   <h3 id="label-text-inputs">Summary list with actions</h3>
   <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
+  <div class="app-wcag-22" id="wcag-interact-row-actions" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+  
+    <p>Make sure any 'action links' are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+  </div>
+
+  <div class="app-wcag-22" id="wcag-change-answers" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+  
+    <p>If a user decides to go back to a previous answer through a card or row action, make sure information they have already entered is pre-populated.</p>
+    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>.</p>
+  </div>
   <p>People who use assistive technology, like a screen reader, may hear the action links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 
   {{ designExample({
