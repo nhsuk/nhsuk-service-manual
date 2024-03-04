@@ -213,13 +213,7 @@
 .app-wcag-22 {
   @include nhsuk-responsive-margin(1, 'top');
   @include nhsuk-responsive-margin(4, 'bottom');
-  max-width: fit-content;
 }
 .app-wcag-22 p:last-child {
   margin-bottom: 0;
-}
-// highlights the section of content that has been jumped to via the links within the guidance block
-.app-wcag-22:target {
-  outline: 4px solid shade($color_nhsuk-blue, 10%);
-  outline-offset: 6px;
 }
