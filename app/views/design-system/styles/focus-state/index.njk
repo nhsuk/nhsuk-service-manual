@@ -13,13 +13,34 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-style">New WCAG 2.2 criteria affects these styles</h3>
+  <p>To use the 'Focus state' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed and ensure focus is not hidden</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   <h2>What is a focus state?</h2>
   <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they’re currently on and that it's ready for them to interact with.</p>
 
   <h2>Our focus state styles</h2>
   <p>We've followed the <a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK Design System's approach to focus state styles</a>.</p>
-  <p>Like GOV.UK, we use a combination of yellow and black to make sure we meet the <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Web Content Accessibility Guidelines (WCAG) 2.1 level AA non-text contrast</a> on any background <a href="/design-system/styles/colour">colour on the NHS website</a>.</p>
+  <p>Like GOV.UK, we use a combination of yellow and black to make sure we meet the <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">Web Content Accessibility Guidelines (WCAG) 2.2 level AA non-text contrast</a> on any background <a href="/design-system/styles/colour">colour on the NHS website</a>.</p>
   <p>The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.</p>
+
+  <div class="app-wcag-22" id="wcag-tag-do-not-cover-focus" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+      WCAG 2.2
+    </strong>
+  
+    <p>Do not let user interface elements hide or obscure any content which has a focus applied. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not Obscured (minimum)</a>.</p>
+  </div>
 
   <h2 id="link-focus-state-style">Link focus state style</h2>
   <p>When links are focused, they have a yellow background with a black bottom border. This helps the focused link stand out from the rest of the content on the page.</p>
@@ -30,7 +51,7 @@
   <img class="app-image--border app-example--image" src="/assets/focus-example-input.png" alt="A text input labelled &quot;What is your name?&quot;. The example shows the text input both unfocused and focused.">
   <p><a href="/design-system/components/radios">Radios</a> and <a href="/design-system/components/checkboxes">checkboxes</a> use the same style.</p>
   <img class="app-image--border app-example--image" src="/assets/focus-example-radios.png" alt="Yes and no radio options to answer the question &quot;Do you know your NHS number?&quot;. In this example, the &quot;No&quot; option is focused.">
-
+  
   <h2 id="making-focus-states-accessible-for-extended-and-modified-components">Making focus states accessible for extended and modified components</h2>
   <p>If you’ve extended or modified components in the NHS digital service manual, you can use service manual styles to make the focus states of these components accessible.</p>
   <p>How you make focus states accessible depends on whether the component is:</p>
@@ -46,7 +67,7 @@
 }</code></pre>
 
   <h3 id="make-other-focusable-elements-accessible">Make other focusable elements accessible</h3>
-  <p>If you use Sass, you can use 3 NHS.UK frontend variables if your component has a background colour or border. For example, a text input or checkbox.</p>
+  <p>If you use Sass, you can use 3 NHS.UK frontend variables if your component has a background colour or border. For example, a text input, checkbox or icons and images used as links.</p>
   <p>The 3 Sass variables are:</p>
   <ul>
     <li class="rich-text"><code>$nhsuk-focus-color</code> - yellow background</li>
