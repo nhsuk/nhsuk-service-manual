@@ -15,6 +15,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="new-wcag-22-criteria-affects-this-component">New WCAG 2.2 criteria affects this component</h3>
+  <p>To use the 'Tag' and meet the new Web Content Accessibility Guidelines (WCAG) 2.2 criteria, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-tag-no-dragging-reorder">interact with tags without relying on 'click and drag' movements (if you choose to add functionality to reorder tags)</a></li>
+  </ul>
+  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+</div>
+
   <h2 id="when-to-use">When to use a tag</h2>
   <p>Use the tag component when it's possible for something to have more than 1 status and it's useful for the user to know about that status. For example, you can use a tag to show whether an item in a task list has been "completed".</p>
 
@@ -39,6 +52,14 @@
     item: "tag",
     type: "multiple"
   }) }}
+
+  <div class="app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+  
+    <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on 'click and drag' movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging Movements</a>.</p>
+  </div>
 
   <h3 id="using-colour-with-tags">Using colour with tags</h3>
   <p>You can use colour to help distinguish between different tags – or to help draw the user's attention to a tag if it's especially important. For example, it makes sense to use  <code>nhsuk-tag--red</code> for a tag that reads "Urgent".</p>
