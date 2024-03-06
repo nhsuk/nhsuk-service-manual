@@ -2,7 +2,7 @@
 {% set pageDescription = "Use this small set of icons that we know our users need and understand to help them identify and navigate content more quickly." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "February 2019" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "4" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -18,12 +18,12 @@
     WCAG 2.2
   </strong>
 
-  <h3 id="new-wcag-22-criteria-affects-this-style">WCAG 2.2 criteria affects these styles</h3>
-  <p>To meet new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <h3 id="wcag-22-affects-this-style">WCAG 2.2 affects these styles</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-icon-focus">make sure any icons used as buttons meet the minimum target size</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+  <p>See the full list of <a href="/accessibility/wcag2-2">WCAG 2.2 design system updates</a>.</p>
 </div>
 
   <table>
@@ -153,7 +153,7 @@
     </tbody>
   </table>
 
-  <p>You can find the all the SVG icons code in the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/assets/icons">NHS.UK frontend library on GitHub</a>.</p>
+  <p>You can find all the SVG icons code in the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/assets/icons">NHS.UK frontend library on GitHub</a>.</p>
 
   <h2 id="when-to-use-these-icons">When to use these icons</h2>
   <p>Use these icons to mark important parts of the page and highlight things you want users to do.</p>
@@ -167,8 +167,8 @@
       WCAG 2.2
     </strong>
   
-    <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action, for example: an 'X' icon to close, supported by a labelled 'close' button.</p>
-    <p>This is to make sure users can easily interact with them. This relates to WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
+    <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: an "X" icon to close, supported by a labelled "Close" button.</p>
+    <p>This is to make sure users can easily interact with them. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (minimum)</a>.</p>
   </div>
 
   <h3>Using text with icons</h3>
@@ -181,26 +181,25 @@
   </ul>
   <p>Other icons needs an explanation. They include:</p>
   <ul>
-    <li><a href="/design-system/components/action-link">action links</a> - tell the user what the link will help them do, for example: "Find a pharmacy"</li>
-    <li>right and left arrows for <a href="/design-system/components/pagination">pagination</a> - add "Previous" or "Next"</li>
-    <li>cross and tick - use the words Do and Don't at the top of <a href="/design-system/components/do-and-dont-lists">Do and Don't lists</a></li>
+    <li><a href="/design-system/components/action-link">action links</a> – tell the user what the link will help them do, for example: "Find a pharmacy"</li>
+    <li>right and left arrows for <a href="/design-system/components/pagination">pagination</a> – add "Previous" or "Next"</li>
+    <li>cross and tick – use the words Do and Don't at the top of <a href="/design-system/components/do-and-dont-lists">Do and Don't lists</a></li>
   </ul>
 
   <h3>Using SVG classes for icons</h3>
   <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
-  <p>SVG icons are sharp, flexible, and load quickly - and you can control how they appear, for example their colour, with style sheets (CSS).</p>
+  <p>SVG icons are sharp, flexible, and load quickly. You can control how they appear, for example their colour, with style sheets (CSS).</p>
   <p class="rich-text">If you're using a server side or templating language, you can include the icons with <code>include 'partials/icons/icon-search.svg'</code>.</p>
   <p class="rich-text">SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon__search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
   <p class="rich-text">Some older browsers like Internet Explorer 8 can't display SVG. So every SVG icon has a PNG fallback. The fallback images have a class, such as <code>.nhsuk-icon__search—fallback</code>, which you can use to modify their sizing and spacing.</p>
 
   <h3>Accessibility</h3>
   <p>SVG icons must be accessible. For example, they need to meet accessible colour contrast standards. Our recommended tool to test colour combinations is the <a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a>. Read more about <a href="https://css-tricks.com/accessible-svgs/">accessible SVGs on CSS Tricks website</a>.</p>
-  <p>If you have any research or experience to share, please get in touch on the <a href="/slack">NHS.UK service manual Slack workspace</a> or email us at <a href="mailto:service-manual@nhs.net">service-manual@nhs.net</a>.</p>
 
   <h2 id="research">Research</h2>
-  <p>These icons seem to be universally recognisable. When we tested them, we found that people understood them. We tested them in context - not on their own, but in components on a full page.</p>
-  <p>Get in touch to <a href="/community-and-contribution">share your research findings</a> if you've used these icons or want to explore other icons.</p>
-  <p>Read more about the benefits of SVG icons:</p>
+  <p>These icons seem to be universally recognisable. When we tested them, we found that people understood them. We tested them in context – not on their own, but in components on a full page.</p>
+  <p>Read <a href="https://digital.nhs.uk/blog/transformation-blog/2019/icons-avoid-temptation-and-start-with-user-needs">Icons: avoid temptation and start with user needs (NHS England)</a>.</p>
+  <p>Find out more about the benefits of SVG icons:</p>
   <ul>
     <li><a href="https://css-tricks.com/pretty-good-svg-icon-system/">CSS Tricks - a pretty good SVG icon system</a></li>
     <li><a href="https://css-tricks.com/a-complete-guide-to-svg-fallbacks/">CSS Tricks - a complete guide to SVG fallbacks</a></li>

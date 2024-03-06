@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the footer to show users they are on an NHS service and to help them find links they expect at the bottom of our pages." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "January 2024" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "15" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -19,12 +19,12 @@
     WCAG 2.2
   </strong>
 
-  <h3 id="new-wcag-22-criteria-affects-this-component">WCAG 2.2 criteria affects this component</h3>
-  <p>To meet new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-consistent-links">find help links in a consistent place on each page</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+  <p>See the full list of <a href="/accessibility/wcag2-2">WCAG 2.2 design system updates</a>.</p>
 </div>
 
   {{ designExample({
@@ -60,7 +60,7 @@
     WCAG 2.2
   </strong>
   
-    <p>If you include links to 'help' pages within a footer, make sure to place those links consistently within the footer content. Also make sure that 'help' links always function in a similar way across each page. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+    <p>If you include links to "help" pages in a footer, make sure to place those links consistently in the footer content. Also make sure that "help" links always work in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help</a>.</p>
   </div>
 
   <p>Keep links to a minimum, especially in a transactional journey. Too many links can distract users. Link to specific policies for the transaction, if appropriate.</p>
@@ -82,11 +82,5 @@
   <p>Your copyright statement must reflect the ownership of your website or service. The <a href="https://www.nhs.uk/">NHS website</a> is (c) Crown copyright but the NHS generally does not have Crown status. The service manual footer, for example, says (c) NHS England.</p>
   <p>Include a reference to the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> if your organisation or service encourages people to reuse and adapt its information under the licence.</p>
   <p>Contact your legal team for advice.</p>
-  <h2>Accessibility</h2>
-  <p>In 2023, we updated the NHS footer colours to improve accessibility with:</p>
-  <ul>
-    <li>dark blue links that turn dark pink on hover</li>
-    <li>the copyright statement in dark grey</li>
-  </ul>
 
 {% endblock %}

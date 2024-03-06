@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "October 2023" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "16" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -19,13 +19,13 @@
     WCAG 2.2
   </strong>
 
-  <h3 id="new-wcag-22-criteria-affects-this-component">WCAG 2.2 criteria affects this component</h3>
-  <p>To meet new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a></li>
     <li><a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+  <p>See the full list of <a href="/accessibility/wcag2-2">WCAG 2.2 design system updates</a>.</p>
 </div>
 
   {{ designExample({
@@ -60,8 +60,8 @@
       WCAG 2.2
     </strong>
   
-    <p>Do not make header elements, like "More" dropdown menu, 'sticky' to the top of the page by using <code>position: fixed</code> or any other method. In other words, avoid any implementations that cause menus to sit on top of page content.</p>
-    <p>This is to make sure it does not hide or obscure any content which has a focus applied and comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not Obscured (minimum)</a>.</p>
+    <p>Do not make header elements, like the "More" dropdown menu, "sticky" to the top of the page by using <code>position: fixed</code> or any other method. In other words, avoid anything that makes the menu sit on top of page content.</p>
+    <p>This is to make sure it does not hide or obscure any content which has a focus applied. This complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not Obscured (minimum)</a>.</p>
   </div>
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-consistent-help-links" role="note">
@@ -70,8 +70,8 @@
      WCAG 2.2
     </strong>
   
-    <p>You can add a link to a 'help' page in your service's header. If you do, the link must be positioned consistently within the header, and must always link to the same place.</p>
-    <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+    <p>You can add a link to a "help" page in your service's header. If you do, the link must be positioned consistently in the header, and must always link to the same place.</p>
+    <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help</a>.</p>
   </div>
 
   <h4 id="search">Search</h4>

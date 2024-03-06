@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use breadcrumbs to help users understand where they are in the website." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "April 2023" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "6" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -19,12 +19,12 @@
     WCAG 2.2
   </strong>
 
-  <h3 id="new-wcag-22-criteria-affects-this-component">WCAG 2.2 criteria affects this component</h3>
-  <p>To meet new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-interact-breadcrumbs">interact with breadcrumbs</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+  <p>See the full list of <a href="/accessibility/wcag2-2">WCAG 2.2 design system updates</a>.</p>
 </div>
 
 {{ designExample({
@@ -50,7 +50,7 @@ type: "default"
     WCAG 2.2
   </strong>
   <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily
-    interact with the breadcrumbs. This relates to WCAG 2.2 success criterion <a
+    interact with the breadcrumbs. This is to comply with WCAG 2.2 success criterion <a
       href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (minimum)</a>.</p>
 </div>
 
@@ -69,7 +69,6 @@ type: "default"
   back to where they came from or to get back home.</p>
 <p>We took out the breadcrumb links when we tested our pages in transactional journeys (in more than 3 labs). We thought
   that having extra links would distract users and that fewer people would complete the journey. As we expected, we
-  found that users didn’t miss the links because they were focused on the task.</p>
-<p><a href="/community-and-contribution">Get in touch to share your research findings</a> about this pattern.</p>
+  found that users didn't miss the links because they were focused on the task.</p>
 
 {% endblock %}
