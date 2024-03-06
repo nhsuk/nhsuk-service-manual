@@ -2,7 +2,7 @@
 {% set pageDescription = "Use these focus state styles to let users know which element they’re on and that they can interact with it." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "October 2019" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "193" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -18,16 +18,16 @@
     WCAG 2.2
   </strong>
 
-  <h3 id="new-wcag-22-criteria-affects-this-style">WCAG 2.2 criteria affects these styles</h3>
-  <p>To meet new success criteria introduced in Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <h3 id="wcag-22-affects-this-style">WCAG 2.2 affects these styles</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
-    <li><a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed and ensure focus is not hidden</a></li>
+    <li><a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed and make sure focus is not hidden</a></li>
   </ul>
-  <p> See the full list of <a href="/accessibility/wcag2-2">changes made to comply with WCAG 2.2</a>.</p>
+  <p>See the full list of <a href="/accessibility/wcag2-2">WCAG 2.2 design system updates</a>.</p>
 </div>
 
   <h2>What is a focus state?</h2>
-  <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they’re currently on and that it's ready for them to interact with.</p>
+  <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they're currently on and that it's ready for them to interact with.</p>
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-do-not-cover-focus" role="note">
     <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -35,12 +35,12 @@
       WCAG 2.2
     </strong>
   
-    <p>Do not let user interface elements hide or obscure any content which has a focus applied, for example: 'sticky' headers or overlaid cookie banners. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not Obscured (minimum)</a>.</p>
+    <p>Do not let user interface elements hide or obscure any content which has a focus applied, for example: "sticky" headers or overlaid cookie banners. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not Obscured (minimum)</a>.</p>
   </div>
 
   <h2>Our focus state styles</h2>
-  <p>We've followed the <a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK Design System's approach to focus state styles</a>.</p>
-  <p>Like GOV.UK, we use a combination of yellow and black to make sure we meet the <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">Web Content Accessibility Guidelines (WCAG) 2.2 level AA non-text contrast</a> on any background <a href="/design-system/styles/colour">colour on the NHS website</a>.</p>
+  <p>We've followed the <a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK design system's approach to focus state styles</a>.</p>
+  <p>Like GOV.UK, we use a combination of yellow and black to make sure we meet the <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">Web Content Accessibility Guidelines (WCAG) 2.2 level AA non-text contrast</a> on any background <a href="/design-system/styles/colour">colour</a> on the NHS website.</p>
   <p>The yellow has a high contrast with dark backgrounds and the thick black border has a high contrast against light backgrounds.</p>
 
   <h2 id="link-focus-state-style">Link focus state style</h2>
@@ -54,7 +54,7 @@
   <img class="app-image--border app-example--image" src="/assets/focus-example-radios.png" alt="Yes and no radio options to answer the question &quot;Do you know your NHS number?&quot;. In this example, the &quot;No&quot; option is focused.">
   
   <h2 id="making-focus-states-accessible-for-extended-and-modified-components">Making focus states accessible for extended and modified components</h2>
-  <p>If you’ve extended or modified components in the NHS digital service manual, you can use service manual styles to make the focus states of these components accessible.</p>
+  <p>If you've extended or modified components in the NHS digital service manual, you can use service manual styles to make the focus states of these components accessible.</p>
   <p>How you make focus states accessible depends on whether the component is:</p>
   <ul>
     <li>focusable text without a background colour or border</li>
@@ -79,7 +79,7 @@
   <p>Use these variables in your components instead of numeric values for the background, text and widths.</p>
 
   <h2 id="if-you-do-not-use-sass">If you do not use Sass</h2>
-  <p>To make a component’s focus state accessible without using Sass, you can:</p>
+  <p>To make a component's focus state accessible without using Sass, you can:</p>
   <ul>
     <li class="rich-text">see how the <code>nhsuk-focused-text</code> mixin works from the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/core/tools/_focused.scss#L12-L23">NHS.UK frontend source code</a></li>
     <li class="rich-text">get the values for <code>$nhsuk-focus-color</code> and <code>$nhsuk-focus-text-color</code> from the <a href="/design-system/styles/colour">colour page</a></li>
