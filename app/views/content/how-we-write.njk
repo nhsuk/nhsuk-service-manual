@@ -1,7 +1,7 @@
 {% set pageTitle = "How we write" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Everything we write follows these general principles." %}
-{% set dateUpdated = "August 2019" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "315" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -66,10 +66,10 @@
   }) }}
 
   <h2>Clear</h2>
-  <p>We use language that our users understand. We use plain English and do research to find out which words work best for them.</p>
+  <p>We use language that our users understand. That means using plain English and direct, action-oriented language. We do research to find out what words work best for our users.</p>
+  <h3>Plain English</h3>
   <p>We aim for a reading age of 9 to 11 years old. But we recognise that, with some medical information, it's not easy to achieve this. In this case, try to make sure that an 11 to 14-year old will understand.</p>
-  <p>We avoid medical jargon and technical terms. We do use medical terms to help with understanding and search, but explain them when they're not commonly known.</p>
-  <p>We use a plain English term first, then the medical term. Example: piles (haemorrhoids).</p>
+  <p>We avoid medical jargon and technical terms. We do use medical terms to help with understanding and search, but explain them when they're not commonly known. We use a plain English term first, then the medical term. Example: piles (haemorrhoids).</p>
   <p>We use the same style for specialist audiences like health professionals.</p>
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
@@ -77,8 +77,82 @@
     <p>Research has shown that <a href="https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/" title="External website">most people prefer to read plain English</a>, and that the more specialist a person's knowledge is, the greater their preference.</p>
   </div>
 
-  <p>Read <a href="/content/health-literacy">our guidance on health literacy</a> to see why it's important to create content that's simple to read.</p>
-  <p>You can use a tool like the <a href="https://hemingwayapp.com/">Hemingway Editor</a> to help you write clearer, more usable content.</p>
+  <p>Read <a href="/content/health-literacy">our guidance on health literacy</a> to see why it's important to create content that's simple to read. You can use a tool like the <a href="https://hemingwayapp.com/">Hemingway Editor</a> to help you write clearer, more usable content.</p>
+  <h3>Direct, action-oriented language</h3>
+  <p>Stress and trauma change the way people understand words and sentences. Directive, unambiguous content is easier for people experiencing trauma or high stress to understand.</p>
+  <p>We use a clear action word at the beginning of the sentence.<p>
+      {{ table({
+    panel: false,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "We would say:"
+      },
+      {
+        text: "We would not say:"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Ask your pharmacist about painkillers"
+        },
+        {
+          text: "Your pharmacist can give advice about 
+painkillers"
+        }
+      ],
+      [
+        {
+          text: "Tell the doctor or nurse if you have an allergy"
+        },
+        {
+          text: "Let the doctor or nurse know if you have 
+an allergy "
+        }
+      ]
+    ]
+  }) }}
+
+<p>Leave no room for misunderstanding. If your users may be experiencing trauma or high stress and there is a correct or best course of action, do not ask them to decide. Tell them what to do and use clear key words. 
+      {{ table({
+    panel: false,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "We would say:"
+      },
+      {
+        text: "We would not say:"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Describe your breathing on an average day"
+        },
+        {
+          text: "Describe your breathing"
+        }
+      ],
+      [
+        {
+          text: "Get help with this task"
+        },
+        {
+          text: "Help section"
+        }
+      ],
+      [
+        {
+          text: "Do not smoke"
+        },
+        {
+          text: "It is harmful to smoke"
+        }
+      ]
+    ]
+  }) }}
 
   <h2>Concise</h2>
   <p>We keep content to the point.</p>
