@@ -1,0 +1,21 @@
+{% set messagingPatientsNav = [
+  { title: "Communication channels for messages", url: "/content/messaging-patients/communication-channels-for-messages" },
+  { title: "Send accessible and inclusive messages", url: "/content/messaging-patients/send-accessible-messages" },
+  { title: "Send messages that are appropriate and relevant", url: "/content/messaging-patients/send-messages-that-are-appropriate-and-relevant" },
+  { title: "Send messages that patients trust", url: "/content/messaging-patients/send-messages-that-patients-trust" }
+] %}
+
+<nav class="nhsuk-contents-list app-contents-list app-u-hide-desktop" role="navigation" aria-label="Pages in this guide">
+  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+  <ol class="nhsuk-contents-list__list">
+    {% for item in messagingPatientsNav %}
+    <li class="nhsuk-contents-list__item" {% if item.title == pageTitle %} aria-current="page"{% endif %}>
+      {% if item.title == pageTitle %}
+      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
+      {% else %}
+      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

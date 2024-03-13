@@ -45,6 +45,7 @@
   { title: "How we write", url: "/content/how-we-write" },
   { title: "Voice and tone", url: "/content/voice-and-tone" },
   { title: "Inclusive content", url: "/content/inclusive-content" },
+  { title: "Messaging patients", url: "/content/messaging-patients" },
   { title: "A to Z of NHS health writing", url: "/content/a-to-z-of-nhs-health-writing" },
   { title: "Health literacy", url: "/content/health-literacy" },
   { title: "How to write good questions for forms", url: "/content/how-to-write-good-questions-for-forms" },
@@ -61,6 +62,13 @@
   { title: "Ethnicity, religion and nationality", url: "/content/inclusive-content/ethnicity-religion-and-nationality" },
   { title: "Sex, gender and sexuality", url: "/content/inclusive-content/sex-gender-and-sexuality" },
   { title: "Skin symptoms", url: "/content/inclusive-content/skin-symptoms" }
+] %}
+
+{% set messagingPatients = [
+  { title: "Communication channels for messages", url: "/content/messaging-patients/communication-channels-for-messages" },
+  { title: "Send accessible and inclusive messages", url: "/content/messaging-patients/send-accessible-messages" },
+  { title: "Send messages that are appropriate and relevant", url: "/content/messaging-patients/send-messages-that-are-appropriate-and-relevant" },
+  { title: "Send messages that patients trust", url: "/content/messaging-patients/send-messages-that-patients-trust" }
 ] %}
 
 {% set writeGoodQuestions = [
@@ -273,7 +281,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "Content guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms" and subSection != "Inclusive content" %}
+  {%- if pageSection == "Content guide" and subSection != "Health literacy" and subSection != "How to write good questions for forms" and subSection != "Inclusive content" and subSection != "Messaging patients" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in content %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -281,7 +289,7 @@
     </ul>
   {% endif %}
 
-    {%- if subSection == "Inclusive content" %}
+  {%- if subSection == "Inclusive content" %}
     {{ backLink({
       "href": "/content",
       "text": "Content guide",
@@ -290,6 +298,20 @@
     <h2 class="app-side-nav__heading">Inclusive content <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in inclusiveContent %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if subSection == "Messaging patients" %}
+    {{ backLink({
+      "href": "/content",
+      "text": "Content guide",
+      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+    }) }}
+    <h2 class="app-side-nav__heading">Messaging patients <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in messagingPatients %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
