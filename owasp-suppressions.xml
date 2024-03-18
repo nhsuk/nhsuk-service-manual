@@ -26,6 +26,11 @@
 		<cve>CVE-2022-25844</cve>
 	</suppress>
 	<suppress>
+		<notes><![CDATA[file name: app.js]]></notes>
+		<packageUrl regex="true">^pkg:javascript/angularjs@.*$</packageUrl>
+		<cve>CVE-2024-21490</cve>
+	</suppress>
+	<suppress>
 		<notes><![CDATA[file name: helper.js]]></notes>
 		<packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
 		<cve>CVE-2019-10744</cve>

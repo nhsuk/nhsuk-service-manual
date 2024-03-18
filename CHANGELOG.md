@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 6.2.0 - March 2024
+## 6.2.0 - 19 March 2024
 
 :new: **New features**
 	
@@ -18,6 +18,8 @@
 - Fix target size issue on A to Z navigation page
 - Comment out outdated table of components on Backlog of components page
 - Update site map
+- Remove redundant back link in content guide
+- Remove embedded link from contents list design example
 
 ## 6.1.0 - 18 January 2024 
 
