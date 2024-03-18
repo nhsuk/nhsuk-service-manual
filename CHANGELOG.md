@@ -1,12 +1,23 @@
 # NHS digital service manual Changelog
 
-## Unreleased - TBC
+## 6.2.0 - 19 March 2024
+
+:new: **New features**
+	
+- Add new page "Feedback or share insights" in Community and contribution section
+- Update "Help us improve this guidance" section at bottom of pages across site
 
 :wrench: **Maintenance**
 
+- Update COVID-19 entries in the A to Z of NHS health writing
+- Delete entry for NHS COVID Pass 
+- Fix styling of numbered headings in Content guide
 - Rename "Content style guide" asset file to "Content guide"
 - Add side nav link for "Standard for creating health content" to "Numbers, measurements, dates and time" page
-- Added minimum width limit to "A to Z" navigation links
+- Right align copyright statement in footer component
+- Fix target size issue on A to Z navigation page
+- Comment out outdated table of components on Backlog of components page
+- Update site map
 - Remove redundant back link in content guide
 - Remove embedded link from contents list design example
 
