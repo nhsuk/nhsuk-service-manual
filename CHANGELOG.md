@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 6.2.0 - 19 March 2024
+## 6.2.0 - 25 March 2024
 
 :new: **New features**
 	
@@ -20,6 +20,7 @@
 - Update site map
 - Remove redundant back link in content guide
 - Remove embedded link from contents list design example
+- Fix link in section on link text in accessibility guidance
 
 ## 6.1.0 - 18 January 2024 
 
