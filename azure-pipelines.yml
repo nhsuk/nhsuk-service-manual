@@ -48,7 +48,7 @@ steps:
         "https://dev.azure.com/nhsuk/nhsuk.utilities/_apis/build/latest/1395?branchName=main&resultFilter=succeeded&statusFilter=completed&api-version=7.1-preview.1" | jq '.id')
       
       echo "azBuildId" $azBuildId
-      echo $pat | az devops login --org "https://dev.azure.com/nhsuk/"
+      echo $pat | az devops login --organization https://dev.azure.com/nhsuk/
 
       az pipelines runs artifact download \
         --artifact-name owasp \
@@ -57,7 +57,7 @@ steps:
         --org "https://dev.azure.com/nhsuk/" \
         --project nhsuk.utilities
       
-      find $(Pipeline.Workspace)/owasp/ -type f -iname "*.sh" -exec chmod +x {} \;
+      find $(Pipeline.Workspace)/owasp -type f -iname "*.sh" -exec chmod +x {} \;
     displayName: 'Install & Login Azure DevOps Extension'
 
   - task: Bash@3
