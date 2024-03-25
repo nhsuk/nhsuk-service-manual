@@ -12,4 +12,3 @@
 - [ ] Version number has been increased in `package.json` (using [SEMVER](https://semver.org/))
 - [ ] CHANGELOG entry
 - [ ] [Whats new page](https://service-manual.nhs.uk/whats-new) entry
-- [ ] Page updated date
