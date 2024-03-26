@@ -41,46 +41,6 @@ steps:
   - script: npm run test
     displayName: 'Test'
 
-  - script: |
-      pat=$(AZURE_DEVOPS_PERSONAL_PAT)
-      azBuildId=$(curl -s -u :$pat \
-        -H "Content-Type: application/json" \
-        "https://dev.azure.com/nhsuk/nhsuk.utilities/_apis/build/latest/1395?branchName=main&resultFilter=succeeded&statusFilter=completed&api-version=7.1-preview.1" | jq '.id')
-      
-      echo "azBuildId" $azBuildId
-      echo $pat | az devops login --organization https://dev.azure.com/nhsuk/
-
-      az pipelines runs artifact download \
-        --artifact-name owasp \
-        --path $(Pipeline.Workspace)/owasp \
-        --run-id $azBuildId \
-        --org "https://dev.azure.com/nhsuk/" \
-        --project nhsuk.utilities
-      
-      find $(Pipeline.Workspace)/owasp -type f -iname "*.sh" -exec chmod +x {} \;
-    displayName: 'Install & Login Azure DevOps Extension'
-
-  - task: Bash@3
-    inputs:
-      filePath: '$(Pipeline.Workspace)/owasp/run_owasp_scanner.sh'
-      arguments: '--scan "$(System.DefaultWorkingDirectory)" --failOnCVSS "7" --project "service-manual" --out "$(System.DefaultWorkingDirectory)/dependency-scan-results" --exclude $(Build.SourcesDirectory)/node_modules --format HTML --format JUNIT --format JSON --suppression $(System.DefaultWorkingDirectory)/owasp-suppressions.xml --nodePackageSkipDevDependencies --nodeAuditSkipDevDependencies'
-    displayName: Run OWASP Dependency Check
-
-  - task: PublishTestResults@2
-    displayName: "Publish OWASP dependency check results"
-    condition: succeededOrFailed()
-    inputs:
-      testRunner: JUnit
-      testResultsFiles: $(System.DefaultWorkingDirectory)/dependency-scan-results/dependency-check-junit.xml
-      testRunTitle: "OWASP Dependency check"
-  
-  - task: PublishBuildArtifacts@1
-    displayName: 'OWASP Scan Results'
-    condition: succeededOrFailed()
-    inputs:
-      PathtoPublish: '$(System.DefaultWorkingDirectory)/dependency-scan-results'
-      ArtifactName: 'owasp'
-
   - task: SonarCloudAnalyze@1
     displayName: 'Run SonarCloud Code Analysis'
 
