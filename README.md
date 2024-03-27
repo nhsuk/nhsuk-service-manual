@@ -38,6 +38,8 @@ Code pushed to a branch starting with `review/1-` will deploy on the [review/1 e
 
 Code pushed to a branch starting with `review/2-` will deploy on the [review/2 environment](https://nhsuk-service-manual-review-wa-2-dev-uks.azurewebsites.net/).
 
+Code pushed to a branch starting with `review/3-` will deploy on the [review/3 environment](https://nhsuk-service-manual-review-wa-3-dev-uks.azurewebsites.net/).
+
 #### Development
 
 Code pushed to a branch starting with `dev/` will deploy on the [development environment](https://nhsuk-service-manual-wa-dev-uks.azurewebsites.net/).

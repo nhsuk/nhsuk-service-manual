@@ -1,7 +1,7 @@
 {% set pageTitle = "Backlog of components and patterns" %}
 {% set pageSection = "Community and contribution" %}
 {% set pageDescription = "The service manual is built on the research and experience of many digital teams in the NHS. We have a shared backlog and encourage people to contribute." %}
-{% set dateUpdated = "April 2020" %}
+{% set dateUpdated = "March 2024" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -11,17 +11,22 @@
 
 {% block bodyContent %}
 
-  <p>Anyone can propose, develop or contribute to new components or patterns, or suggest improvements to ones that already exist.</p>
-
-  <p>Here is a list of the components, patterns and updates currently on the service manual community backlog. They can be:</p>
-
+  <p>Anyone can:</p>
   <ul>
-    <li><strong>proposed</strong> - someone has suggested a new component or pattern</li>
-    <li><strong>to do</strong> - the proposed component or pattern has been agreed and is ready to work on</li>
-    <li><strong>in progress</strong> - someone is actively working on the component or pattern</li>
+    <li>propose, develop or contribute to new components or patterns</li>
+    <li>suggest improvements to anything in the design system or other parts of the service manual</li>
   </ul>
-  <p>You can see <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">the full backlog in GitHub</a>. You’ll need a GitHub account to view the backlog or any of the entries on this page.</p>
 
+  <p>You can see <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog">the full community backlog in GitHub</a>.
+  <p>Issues in the backlog can be:</p>
+  <ul>
+    <li><strong>proposed</strong> – someone has suggested a new component or pattern</li>
+    <li><strong>to do</strong> – the proposed component or pattern has been agreed and is ready to work on</li>
+    <li><strong>in progress</strong> – someone is actively working on the component or pattern</li>
+    <li><strong>published</strong></li>
+  </ul>
+
+<!--
   <table class="nhsuk-table nhsuk-table--constrained nhsuk-u-margin-top-0">
     <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Service manual community backlog</caption>
     <thead class="nhsuk-table__head">
@@ -173,5 +178,6 @@
       </tr>
     </tbody>
   </table>
+-->
 
 {% endblock %}
