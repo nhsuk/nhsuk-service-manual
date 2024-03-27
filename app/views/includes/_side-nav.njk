@@ -291,6 +291,15 @@
     </ul>
   {% endif %}
 
+  {%- if subSection == "How to write good questions for forms" %}
+    <h2 class="app-side-nav__heading">How to write good questions for forms <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in writeGoodQuestions %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
   {%- if subSection == "Health literacy" %}
     {{ backLink({
       "href": "/content/health-literacy",
