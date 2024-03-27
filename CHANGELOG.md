@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 6.2.1 - 27 March 2024
+
+:wrench: **Maintenance**
+
+- Remove "Messaging patients" section in Content guide
+
 ## 6.2.0 - 26 March 2024
 
 :new: **New features**
