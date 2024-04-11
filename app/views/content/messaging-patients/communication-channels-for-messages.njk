@@ -15,7 +15,7 @@
   {{ backLink({
   "href": "/content",
   "text": "Content guide",
-  "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
+  "classes": "app-u-hide-desktop app-side-nav__back nhsuk-u-margin-bottom-4"
   }) }}
   <h2 class="app-side-nav__heading">Messaging patients</h2>
   <ul class="nhsuk-list app-side-nav__list">
@@ -53,9 +53,11 @@
 
 {% block bodyContent %}
 <!-- Add your content here -->
+
+{% include "content/messaging-patients/_side-nav-mobile.njk" %}
+
 <p class="nhsuk-body">Most messaging service suppliers will not let you choose the channel for a batch message to multiple patients.</p>
 <p class="nhsuk-body">Avoid sending the same message using more than one channel at the same time. This can overwhelm patients. It also increases costs for the NHS.</p>
-{% include "content/messaging-patients/_side-nav-mobile.njk" %}
 
 <h2>Send messages that patients can understand</h2>
 <p class="nhsuk-body">Some patients will have a recorded communication need. This could be related to a disability, impairment or sensory loss. You must send them messages in a format they can access.</p>
