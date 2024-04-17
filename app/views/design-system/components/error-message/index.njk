@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use an error message when there is a validation error. Explain what went wrong and how to fix it." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "June 2020" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "12" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -13,6 +13,19 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-clear-answers-error">edit information they've previously given, so that they can correct an error</a></li>
+  </ul>
+  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+</div>
 
   {{ designExample({
     group: "components",
@@ -50,6 +63,23 @@
     <li>use a red border to visually connect the message and the question it belongs to</li>
     <li>if the error relates to specific text fields in the question, give these a red border as well</li>
   </ul>
+
+  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-clear-answers-error" role="note">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+      WCAG 2.2
+    </strong>
+  
+    <p>Do not clear any form fields when adding error messages. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
+  </div>
+
+  <p>Keeping information that caused errors helps users to:</p>
+  <ul>
+    <li>see what went wrong</li>
+    <li>edit their previous answer</li>
+    <li>avoid re-entering information</li>
+  </ul>
+
   <p>To help screen reader users, the error message component includes a hidden "Error:" before the error message. These users will hear, for example, "Error: Date of birth must be in the past".</p>
 
   {{ designExample({
@@ -104,8 +134,8 @@
   }) }}
 
   <h3>How to write error messages</h3>
-  <p>Focus on telling users how to fix the problem rather than describing what's gone wrong. You may need to write more than 1 error message for each field. Read more about <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">writing good error messages</a> on GOV.UK.</p>
-  <p>Use standard messages for different components. The GOV.UK Design System has some good <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">error message templates for common errors</a>.</p>
+  <p>Focus on telling users how to fix the problem rather than describing what's gone wrong. You may need to write more than 1 error message for each field. See the <a href="https://design-system.service.gov.uk/components/error-message/#be-clear-and-concise">GOV.UK error message component for more guidance on writing good error messages</a>.</p>
+  <p>Use standard messages for different components. <a href="https://design-system.service.gov.uk/components/error-message/#use-error-message-templates">The GOV.UK error message component also includes error message templates for common errors</a>.</p>
 
   <h2>Research</h2>
   <p>Research on error messages showed users:</p>

@@ -1,0 +1,71 @@
+{% set pageTitle = "New accessibility requirements: WCAG 2.2" %}
+{% set pageSection = "Accessibility" %}
+{% set subSection = "Accessibility" %}
+{% set pageDescription = "Your service must meet these requirements." %}
+{% set theme = "Everyone needs to know" %}
+{% set dateUpdated = "April 2024" %}
+{% set backlog_issue_id = "512" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+{% include "accessibility/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>The Web Content Accessibility Guidelines, known as WCAG, have been updated to version 2.2. As a public sector organisation, by law we must meet these guidelines to level AA for all patient and staff-facing services.</p>
+
+<h2>What you need to do</h3>
+
+<ol>
+  <li>Read this page to understand the new criteria you must comply with.</li>
+  <li>Review the list of <a href="/design-system">NHS design system</a> changes.</li>
+  <li>Assess your service to see what updates you need to make.</li>
+  <li>Plan and implement your updates.</li>
+</ol>
+
+<p>The Government Digital Service, Department of Health and Social Care and NHS England will start monitoring accessibility to WCAG 2.2 from October&nbsp;2024.</p>
+
+<h2 id="new-criteria-in-wcag-2-2">The new criteria</h2>
+<p>
+  <strong class="nhsuk-tag">
+      WCAG 2.2
+  </strong>
+</p>
+<p>The update adds 9 new success criteria for improving web accessibility. 6 of the new criteria are graded at the A and AA level, which means they're a requirement for websites and mobile apps in the NHS.</p>
+
+<p>These are the 6 new criteria you'll need to meet, as a minimum.</p>
+
+<h3>Focus not obscured (minimum)</h3>
+<p>Some websites have sticky or fixed headers or footers that remain at the top or bottom of the page when users scroll. This can make it difficult for users navigating with a keyboard to identify which components are focused. <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">Learn more about focus not obscured (W3C website)</a>.</p>
+
+<h3>Dragging movements</h3>
+<p>If there is interactive content that users can move by dragging, they must be able to do it with a "single pointer". For example, to reorder items in a list that can be dragged, an alternative can be to have up and down arrows to reorder them. Clicking and dragging is impossible for some users. <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">Learn more about dragging movements (W3C website)</a>.</p>
+
+<h3>Target size (minimum)</h3>
+<p>Interactive content must have a minimum size of 24 by 24 CSS pixels. This does not apply to interactive content that is a part of text such as links. <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">Learn more about target size (W3C website)</a>.</p>
+
+<h3>Redundant entry</h3>
+<p>A user should not have to enter the same information more than once on a single journey, unless it is required for security purposes, for example passwords. <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">Learn more about redundant entry (W3C website)</a>.</p>
+
+<h3>Accessible authentication (minimum)</h3>
+<p>A user should not have to perform a cognitive function test, such as solving a puzzle or "Enter the 3rd, 4th, and 6th character of your password". If you need the user to enter a password, they should be able to copy and paste it. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">Learn more about accessible authentication (W3C website)</a>.</p>
+
+<h3>Consistent help</h3>
+<p>If your service provides help options such as contact details or live chat, they should be presented consistently across pages, to make sure users can find and interact with them easily. <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">Learn more about consistent help (W3C website)</a>.</p>
+
+
+<h2>Further reading</h2>
+<ul>
+  <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">What's new in WCAG 2.2 (W3C website)</a></li>
+  <li><a href="https://www.w3.org/TR/WCAG22/">The full WCAG 2.2 guidelines (W3C website)</a></li>
+  <li><a href="https://accessibility.blog.gov.uk/2024/03/13/wcag-2-2-detective-skills/">GOV.UK blog post to help you to detect WCAG 2.2 issues</a></li>
+  <li><a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction">GOV.UK guidance on making your service accessible</a>, which explains what to do in alpha, beta and live phases</li>
+</ul>
+
+{% endblock %}
+
+{% block asideContent %}
+{% include "./partials/related-nav.njk" %}
+{% endblock %}

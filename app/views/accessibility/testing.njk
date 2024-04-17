@@ -3,7 +3,7 @@
 {% set subSection = "Accessibility" %}
 {% set pageDescription = "What testers and quality assurers need to do to make digital services accessible." %}
 {% set theme = "Accessibility guidance for:" %}
-{% set dateUpdated = "January 2024" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "350" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -21,6 +21,7 @@
   </ul>
 
 
+  {% include "./partials/make-sure-your-service-meets-wcag-2-2.njk" %}
   {% include "./partials/understand-types-of-testing.njk" %}
   {% include "./partials/check-orientation-is-not-locked.njk" %}
   {% include "./partials/make-sure-navigation-is-consistent.njk" %}
