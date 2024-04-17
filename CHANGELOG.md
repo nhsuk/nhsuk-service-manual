@@ -1,5 +1,26 @@
 # NHS digital service manual Changelog
 
+## 6.3.0 – 17 April 2024
+:new: **New features**
+- Add page on new accessibility requirements: WCAG 2.2
+- Add sections on making sure your service meets WCAG 2.2 for: Product and delivery and Design, Development and Testing
+- Add list of changes to meet new accessibility requirements to design system index page
+- Update components and styles for WCAG 2.2:
+    - Back link: guidance on positioning and keeping data the user has entered
+    - Breadcrumbs: guidance on positioning
+    - Buttons: guidance on minimum target size
+    - Error message: guidance on not clearing data the user has entered
+    - Footer: guidance on placing help links
+    - Header: guidance on placing help links and not hiding content that has a focus applied
+    - Select: guidance on avoiding click and drag
+    - Summary list: guidance on action link target size and keeping data the user has entered
+    - Tag: guidance on avoiding click and drag
+    - Focus state: guidance on not hiding content that has a focus applied
+    - Icons: guidance on minimum target size
+
+:wrench: **Maintenance**
+- Update site map
+
 ## 6.2.2 - 27 March 2024
 
 :wrench: **Maintenance**
