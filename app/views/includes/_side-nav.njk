@@ -45,8 +45,8 @@
   { title: "Standard for creating health content", url: "/content/standard-for-creating-health-content" },
   { title: "How we write", url: "/content/how-we-write" },
   { title: "Voice and tone", url: "/content/voice-and-tone" },
-  { title: "Inclusive content", url: "/content/inclusive-content" },
   { title: "A to Z of NHS health writing", url: "/content/a-to-z-of-nhs-health-writing" },
+  { title: "Inclusive content", url: "/content/inclusive-content" },
   { title: "Health literacy", url: "/content/health-literacy" },
   { title: "How to write good questions for forms", url: "/content/how-to-write-good-questions-for-forms" },
   { title: "Numbers, measurements, dates and time", url: "/content/numbers-measurements-dates-time" },
@@ -141,6 +141,7 @@
 
 {% set community = [
   { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
+  { title: "Feedback or share insights", url: "/community-and-contribution/feedback-or-share-insights" },
   { title: "Propose a component or pattern", url: "/community-and-contribution/propose-component-pattern" },
   { title: "Develop a component or pattern", url: "/community-and-contribution/develop-component-pattern" },
   { title: "Contribution criteria", url: "/community-and-contribution/contribution-criteria" }
@@ -282,12 +283,7 @@
     </ul>
   {% endif %}
 
-    {%- if subSection == "Inclusive content" %}
-    {{ backLink({
-      "href": "/content",
-      "text": "Content guide",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
+  {%- if subSection == "Inclusive content" %}
     <h2 class="app-side-nav__heading">Inclusive content <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in inclusiveContent %}
@@ -297,11 +293,6 @@
   {% endif %}
 
   {%- if subSection == "How to write good questions for forms" %}
-    {{ backLink({
-      "href": "/content",
-      "text": "Content guide",
-      "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
-    }) }}
     <h2 class="app-side-nav__heading">How to write good questions for forms <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in writeGoodQuestions %}
