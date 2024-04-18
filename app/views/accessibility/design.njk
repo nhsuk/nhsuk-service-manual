@@ -3,7 +3,7 @@
 {% set subSection = "Accessibility" %}
 {% set pageDescription = "What graphic and interaction designers need to do to make digital services accessible." %}
 {% set theme = "Accessibility guidance for:" %}
-{% set dateUpdated = "January 2024" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "349" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -20,6 +20,7 @@
     <li>some success criteria and best practice for level AAA</li>
   </ul>
 
+  {% include "./partials/make-sure-your-service-meets-wcag-2-2.njk" %}
   {% include "./partials/avoid-accessibility-overlays-or-widgets.njk" %}
   {% include "./partials/define-page-structure.njk" %}
   {% include "./partials/define-skip-links.njk" %}

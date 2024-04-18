@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "January 2023" %}
+{% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -13,6 +13,19 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-interact-button">interact with buttons</a></li>
+  </ul>
+  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+</div>
 
   <p>We have 3 buttons</p>
   <ul>
@@ -67,19 +80,25 @@
     <li>from 1 flat content page to another</li>
     <li>to external websites</li>
   </ul>
-  <p>Try not to have multiple buttons on 1 page. Follow GOV.UK guidance on <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">One thing per page</a>.</p>
+  <p>Try not to have multiple buttons on 1 page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
 
   <h2 id="how-to-use-buttons">How to use buttons</h2>
-  <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK Design System</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
+  <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK design system</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
   <p>Write button text in sentence case and describe the action the button performs. For example "Save and continue" or "Start now".</p>
   <p>Align the primary action button to the left edge of your form.</p>
+
+
+  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-button" role="note">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
+  </div>
 
   <h3>Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
   <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/button">get the latest disabled button code</a> in the NHS.UK frontend library in GitHub.</p>
 
-  <h3>Accessibility</h3>
-  <p>Make sure the text you use describes the action.</p>
+  <h3>Colour contrast</h3>
   <p>All 3 active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
   <ul>
     <li>primary button 5.12:1</li>
