@@ -8,7 +8,7 @@
 
 .hljs-comment,
 .hljs-quote {
-  color: #998; // sass-lint:disable-line no-color-hex no-color-literals
+  color: tint($color_nhsuk-grey-1, 10%); // sass-lint:disable-line no-color-hex no-color-literals
   font-style: italic;
 }
 
@@ -24,12 +24,12 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #007F80; // sass-lint:disable-line no-color-hex no-color-literals
+  color: $color_nhsuk-green; // sass-lint:disable-line no-color-hex no-color-literals
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
+  color: $color_nhsuk-red; // sass-lint:disable-line no-color-hex no-color-literals
 }
 
 .hljs-title,
