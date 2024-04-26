@@ -31,6 +31,7 @@ const additionalIndices = {
   '/design-system/patterns/reassure-users-that-a-page-is-up-to-date': ['review date, date updated'],
   '/design-system/styles/colour': ['palette'],
   '/design-system/styles/layout': ['grid'],
+  '/design-system/styles/section-break': ['divider line'],
   '/design-system/styles/spacing': ['margin, padding'],
   '/get-in-touch': ['contact, contact us, support, get in touch'],
   '/whats-new/blog-posts': ['news, updates'],
