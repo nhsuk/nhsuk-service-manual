@@ -1,0 +1,27 @@
+{% set pageTitle = "Section break" %}
+{% set pageDescription = "You can use the section break to create a thematic break between sections of content." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set dateUpdated = "April 2024" %}
+{% set backlog_issue_id = "2" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/styles/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>The section break has class-based modifiers for different size margins.</p>
+
+<p>By default <code>nhsuk-section-break</code> is only visible by its margin. You can add the <code>nhsuk-section-break--visible</code> class to make it visible with a separator line.</p>
+
+{{ designExample({
+  group: "styles",
+  item: "section-break",
+  type: "default",
+  htmlOnly: true
+}) }}
+
+{% endblock %}
