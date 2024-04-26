@@ -1,8 +1,11 @@
 # NHS digital service manual Changelog
 
-## 6.3.0 – 17 April 2024
+## 6.4.0 – 26 April 2024
 :new: **New features**
 - Add section break to design system styles
+
+## 6.3.0 – 17 April 2024
+:new: **New features**
 - Add page on new accessibility requirements: WCAG 2.2
 - Add sections on making sure your service meets WCAG 2.2 for: Product and delivery and Design, Development and Testing
 - Add list of changes to meet new accessibility requirements to design system index page
