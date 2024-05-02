@@ -66,6 +66,11 @@
   }
 }
 
+// helper to make table full width of parent (instead of 'reading-width') for wide tables
+.nhsuk-table.nhsuk-table--full-width {
+  max-width: 100%;
+}
+
 // Header menu button alignment for Safari
 .nhsuk-header__menu-toggle {
   @include mq($from: tablet, $until: large-desktop) {
