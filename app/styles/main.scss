@@ -60,8 +60,13 @@
 .nhsuk-table__cell--break-all {
   word-break: break-all;
 }
-.nhsuk-table__cell--break-all--mobile {
+.nhsuk-table__cell--break-all--tablet {
   @include mq($until: tablet) {
+    word-break: break-all;
+  }
+}
+.nhsuk-table__cell--break-all--desktop {
+  @include mq($until: large-desktop) {
     word-break: break-all;
   }
 }
