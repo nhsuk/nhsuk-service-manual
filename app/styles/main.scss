@@ -56,6 +56,16 @@
   @include top-and-bottom;
 }
 
+// Helper to break long words/URLs in tables
+.nhsuk-table__cell--break-all {
+  word-break: break-all;
+}
+.nhsuk-table__cell--break-all--mobile {
+  @include mq($until: tablet) {
+    word-break: break-all;
+  }
+}
+
 // Header menu button alignment for Safari
 .nhsuk-header__menu-toggle {
   @include mq($from: tablet, $until: large-desktop) {
