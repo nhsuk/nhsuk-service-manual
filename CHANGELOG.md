@@ -1,5 +1,9 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+:wrench: **Maintenance**
+- Removed duplicate links in design system side navigation
+
 ## 6.3.0 – 17 April 2024
 :new: **New features**
 - Add page on new accessibility requirements: WCAG 2.2
