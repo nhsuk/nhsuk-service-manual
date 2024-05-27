@@ -72,12 +72,28 @@
 
   <h2 id="headings">Headings</h2>
 
+  <p>Use heading tags, such as <code>{{ "<h1>" | escape }}</code>, <code>{{ "<h2>" | escape }}</code> and so on, to tag the headings on a page. Apply a heading class, such as <code>nhsuk-heading-l</code>, to style them visually. Style headings consistently to create a clear content structure throughout your service.</p>
+
+  <p>For a question page, or pages with long headings, follow the usual hierarchy of heading levels and styles associated with them. For example, <code>nhsuk-heading-l</code> for an <code>h1</code>, followed by <code>nhsuk-heading-m</code> for an <code>h2</code> and so on. In rare cases, you might want to alter how you use the headings hierarchy to achieve a better visual balance. An example of this is in <a href="https://design-system.service.gov.uk/components/notification-banner/success/">the GOV.UK design system’s notification banner</a>, which uses heading levels in a different order to emphasise the most important information. If you do change the heading hierarchy in a similar way, it needs to go through accessibility testing before use.</p>
+
+  <p>Write all headings in sentence case.</p>
+
   {{ designExample({
     group: "styles",
     item: "typography",
-    type: "headings",
+    type: "headings-l",
     htmlOnly: true
   }) }}
+
+  <p>If your page has lots of long form content, start with <code>nhsuk-heading-xl</code> for an <code>{{ "<h1>" | escape }}</code>, <code>nhsuk-heading-l</code> for an <code>{{ "<h2>" | escape }}</code>, and so on.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "headings-xl",
+    htmlOnly: true
+  }) }}
+
 
   <h2 id="paragraphs">Paragraphs</h2>
 
