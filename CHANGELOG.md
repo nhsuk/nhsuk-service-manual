@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+:wrench: **Maintenance**
+- Add guidance for using headings with captions
+
+
 ## 6.3.0 – 17 April 2024
 :new: **New features**
 - Add page on new accessibility requirements: WCAG 2.2
