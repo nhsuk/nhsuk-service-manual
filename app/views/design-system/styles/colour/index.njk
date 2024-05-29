@@ -205,12 +205,6 @@
     <li>components with important information, like callouts, stand out</li>
   </ul>
   <p class="rich-text"><code>$color_nhsuk-white</code> is used to make important information stand out and for alternating backgrounds, for example on <a href="https://www.nhs.uk/">the NHS website home page</a>.</p>
-  <p class="rich-text">Note that  and  have low contrast on the page background. Do not use them alone for interactive components or to convey meaning.</p>
-  <p class="rich-text">Do not use the following colours alone for interactive components or to convey meaning because they have low contrast on the page background:</p>
-  <ul>
-    <li><code>$nhsuk-focus-color</code></li>
-    <li><code>$nhsuk-border-color</code></li>
-  </ul>
 
   <h2 id="colour-palette">Colour palette</h2>
   <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-color</code> Sass variable rather than <code>$color_nhsuk-red</code>.</p>
@@ -361,17 +355,6 @@
     </tbody>
   </table>
 
-  <p class="rich-text">Do not use the following colours alone for interactive components or to convey meaning because they have low contrast on the page background:</p>
-  <ul>
-    <li><code>$color_nhsuk-yellow</code></li>
-    <li><code>$color_nhsuk-warm-yellow</code></li>
-    <li><code>$color_nhsuk-grey-3</code></li>
-    <li><code>$color_nhsuk-grey-4</code></li>
-    <li><code>$color_nhsuk-grey-5</code></li>
-    <li><code>$color_nhsuk-white</code></li>
-    <li><code>$color_nhsuk-pale-yellow</code></li>
-  </ul>
-
   <h2 id="extended-colours">Extended colours</h2>
   <p><a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/">The NHS Identity Guidelines have an extended colour palette</a>. We haven't tested these colours yet for digital use.</p>
 
@@ -380,6 +363,7 @@
   <h3>Colour contrast</h3>
   <p>Text, interface components (like buttons) and graphic elements must have contrast ratios that meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">the contrast minimum for AA of the Web Content Accessibility Guidelines (WCAG 2.2)</a>. We aim for AAA as far as possible.</p>
   <p>This helps people with low vision and colour vision deficiency (colour blindness) who find it difficult to distinguish between certain colours, often shades of red, yellow and green.</p>
+  <p>Not all combinations from our colour palette meet the minimum contrast, for example: <code>$nhsuk-border-color</code> has low contrast on our page background.</p>
 
   <details class="nhsuk-details">
     <summary class="nhsuk-details__summary">
