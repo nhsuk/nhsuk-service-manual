@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+import * as iframeResize from 'iframe-resizer/js/iframeResizer'
+
 class DesignExample {
 
     static selector() {
