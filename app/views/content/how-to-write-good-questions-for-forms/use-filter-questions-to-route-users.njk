@@ -68,23 +68,25 @@
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
 
-    {% call fieldset({
-      legend: {
-        "text": "Do you know your NHS number?",
-        "classes": "nhsuk-fieldset__legend--m"
-      }
-      }) %}
-      {{ hint({
-        "text": "Your NHS number is a 10 digit number, like 485 777 3456.",
-        "classes": "nhsuk-u-margin-bottom-2"
-      }) }}
-      {{ hint({
-        "text": "You can find this on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
-      }) }}
-      {{ radios({
-        "idPrefix": "example-divider",
-        "name": "configStructure",
-        "items": [
+    {% set hintHtml -%}
+      <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456.</p>
+      <p>You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service.</p>
+    {%- endset %}
+
+    {{ radios({
+      "idPrefix": "example-hints",
+      "name": "example-hints",
+      "fieldset": {
+        "legend": {
+          "text": "Do you know your NHS number?",
+          "classes": "nhsuk-fieldset__legend--l",
+          "isPageHeading": true
+        }
+      },
+      "hint": {
+        "html": hintHtml
+      },
+      "items": [
       {
         "value": "yes",
         "text": "Yes, I know my NHS number"
@@ -94,12 +96,11 @@
         "text": "No, I do not know my NHS number"
       },
       {
-        "value": "unsure",
+        "value": "not sure",
         "text": "I'm not sure"
       }
     ]
     }) }}
-    {% endcall %}
   </div>
 
   <p>Having a 3rd option means that you can give people extra information, for example, about their NHS number and where to find it. Our pattern for <a href="/design-system/patterns/ask-users-for-their-nhs-number">asking users for their NHS number</a> explains more about this.</p>

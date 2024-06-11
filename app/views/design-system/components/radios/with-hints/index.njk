@@ -2,24 +2,25 @@
 {% from 'fieldset/macro.njk' import fieldset %}
 {% from 'hint/macro.njk' import hint %}
 
-{% call fieldset({
-  legend: {
-    "text": "Do you know your NHS number?",
-    "classes": "nhsuk-fieldset__legend--l",
-    "isPageHeading": true
-  }
-  }) %}
-  {{ hint({
-    "text": "This is a 10 digit number, like 485 777 3456.",
-    "classes": "nhsuk-u-margin-bottom-2"
-  }) }}
-  {{ hint({
-    "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
-  }) }}
-  {{ radios({
-    "idPrefix": "example-hints",
-    "name": "example-hints",
-    "items": [
+{% set hintHtml -%}
+  <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456.</p>
+  <p>You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service.</p>
+{%- endset %}
+
+{{ radios({
+  "idPrefix": "example-hints",
+  "name": "example-hints",
+  "fieldset": {
+    "legend": {
+      "text": "Do you know your NHS number?",
+      "classes": "nhsuk-fieldset__legend--l",
+      "isPageHeading": true
+    }
+  },
+  "hint": {
+    "html": hintHtml
+  },
+  "items": [
   {
     "value": "yes",
     "text": "Yes, I know my NHS number"
@@ -34,4 +35,3 @@
   }
 ]
 }) }}
-{% endcall %}
