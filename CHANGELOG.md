@@ -1,11 +1,20 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 6.4.0 – 19 June 2024
+
+:new: **New features**
+
+- Add guidance for using headings with captions 
 
 :wrench: **Maintenance**
 
-- Removed duplicate links in design system side navigation
-- Add guidance for using headings with captions
+- Update guidance on links from 'opens in new window' to 'opens in a new tab'
+- Update colours used in code examples to improve contrast 
+- Update breadcrumb nunjucks macro options descriptions
+- Update radio with hint example nunjucks code
+- Replace links used in examples with hash (#)
+- Add guidance for error summary focus on page load
+- Remove duplicate links in design system side navigation
 
 ## 6.3.0 – 17 April 2024
 
