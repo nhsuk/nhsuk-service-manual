@@ -15,6 +15,7 @@
 - Replace links used in examples with hash (#)
 - Add guidance for error summary focus on page load
 - Remove duplicate links in design system side navigation
+- Fix API catalogue link in service standard point 17
 
 ## 6.3.0 – 17 April 2024
 
