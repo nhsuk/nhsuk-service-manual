@@ -8,10 +8,10 @@
 
 :wrench: **Maintenance**
 
-- Update guidance on links from 'opens in new window' to 'opens in a new tab'
+- Update guidance on links from "opens in new window" to "opens in new tab"
 - Update colours used in code examples to improve contrast 
-- Update breadcrumb nunjucks macro options descriptions
-- Update radio with hint example nunjucks code
+- Update breadcrumb Nunjucks macro options descriptions
+- Update radio with hint example Nunjucks code
 - Replace links used in examples with hash (#)
 - Add guidance for error summary focus on page load
 - Remove duplicate links in design system side navigation
