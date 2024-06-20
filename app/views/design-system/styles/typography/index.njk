@@ -2,7 +2,7 @@
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "January 2024" %}
+{% set dateUpdated = "June 2024" %}
 {% set backlog_issue_id = "1" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -15,14 +15,6 @@
 <nav class="app-side-nav">
 
   <ul class="nhsuk-list app-side-nav__list">
-
-    <div class="nhsuk-back-link app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4">
-      <a class="nhsuk-back-link__link" href="/design-system">
-      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="34" width="34">
-        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-      </svg>
-      Design system</a>
-    </div>
 
     <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
 
@@ -76,6 +68,26 @@
     group: "styles",
     item: "typography",
     type: "headings",
+    htmlOnly: true
+  }) }}
+
+  <h3 id="headings-with-captions">Headings with captions</h3>
+
+  <p>Sometimes you may need to make it clear that a page is part of a larger section or group. To do this, you can use a heading with a caption above or below it.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "headings-with-caption",
+    htmlOnly: true
+  }) }}
+
+  <p>If the caption should be considered part of the page heading, you can also nest the caption within the <code>{{ "<h1>" | escape }}</code>, using the appropriate heading and caption classes.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "headings-with-caption-inside",
     htmlOnly: true
   }) }}
 

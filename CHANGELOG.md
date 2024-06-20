@@ -1,7 +1,26 @@
 # NHS digital service manual Changelog
 
-## 6.3.0 – 17 April 2024
+## 6.4.0 – 19 June 2024
+
 :new: **New features**
+
+- Add guidance for using headings with captions 
+
+:wrench: **Maintenance**
+
+- Update guidance on links from "opens in new window" to "opens in new tab"
+- Update colours used in code examples to improve contrast 
+- Update breadcrumb Nunjucks macro options descriptions
+- Update radio with hint example Nunjucks code
+- Replace links used in examples with hash (#)
+- Add guidance for error summary focus on page load
+- Remove duplicate links in design system side navigation
+- Fix API catalogue link in service standard point 17
+
+## 6.3.0 – 17 April 2024
+
+:new: **New features**
+
 - Add page on new accessibility requirements: WCAG 2.2
 - Add sections on making sure your service meets WCAG 2.2 for: Product and delivery and Design, Development and Testing
 - Add list of changes to meet new accessibility requirements to design system index page
@@ -19,6 +38,7 @@
     - Icons: guidance on minimum target size
 
 :wrench: **Maintenance**
+
 - Update site map
 
 ## 6.2.2 - 27 March 2024
@@ -629,7 +649,7 @@
 
 :new: **New features**
 
-- Install [NHS.UK frontend v4.1.0](https://github.com/nhsuk/nhsuk-frontend/blob/master/CHANGELOG.md#410---21-january-2021)
+- Install [NHS.UK frontend v4.1.0](https://github.com/nhsuk/nhsuk-frontend/blob/main/CHANGELOG.md#410---21-january-2021)
 - Add guidance for asking for whole numbers using the text input component
 - Update code examples with inputmode numeric for the ask users for their NHS number pattern and date input component
 
