@@ -2,7 +2,7 @@
 {% set pageDescription = "Our colours, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "May 2024" %}
+{% set dateUpdated = "July 2024" %}
 {% set backlog_issue_id = "2" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -24,7 +24,7 @@
 
   <h2 id="main-colours">Main colours</h2>
   <p class="rich-text">If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-color</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
-  <p class="rich-text">Only use the variables in the context they’re designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>$color_nhsuk-red</code> rather than <code>$nhsuk-error-color</code>.</p>
+  <p class="rich-text">Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>$color_nhsuk-red</code> rather than <code>$nhsuk-error-color</code>.</p>
 
   <table class="app-colour-list" summary="Table of main colours">
     <tbody>
@@ -201,7 +201,7 @@
   <p class="rich-text">We use <code>$color_nhsuk-grey-5</code> as a background tint. This is because:</p>
   <ul>
     <li>it reduces overall page glare</li>
-    <li>the <a href="https://www.bdadyslexia.org.uk/employer/dyslexia-style-guide-2018-creating-dyslexia-friendly-content">British Dyslexia Association</a> recommends dark text on a light, but not white, background</li>
+    <li>the <a href="https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide">British Dyslexia Association's style guide</a> recommends dark text on a light, but not white, background</li>
     <li>components with important information, like callouts, stand out</li>
   </ul>
   <p class="rich-text"><code>$color_nhsuk-white</code> is used to make important information stand out and for alternating backgrounds, for example on <a href="https://www.nhs.uk/">the NHS website home page</a>.</p>
@@ -382,14 +382,14 @@
   <p>The contrast ratio should be at least:</p>
   <ul>
     <li>4.5:1 for small text (smaller than 24px, or 19px if bold)</li>
-    <li>3:1 for large text (24px or over, or 19px or over, if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
+    <li>3:1 for large text (24px or over, or 19px or over if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
   </ul>
 
   <h4>AAA</h4>
   <p>The contrast ratio should be at least:</p>
   <ul>
     <li>7:1 for small text (smaller than 24px, or 19px if bold)</li>
-    <li>4.5:1 for large text (24px or over, or 19px or over, if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
+    <li>4.5:1 for large text (24px or over, or 19px or over if bold) and components (like a text input field or button) and graphic elements (like an icon)</li>
   </ul>
 
   <h4>Testing tools</h4>
