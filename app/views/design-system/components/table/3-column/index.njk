@@ -1,0 +1,75 @@
+{% from 'tables/macro.njk' import table %}
+
+{{ table({
+  responsive: false,
+  panel: false,
+  caption: "Drinks and units",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Drink type"
+    },
+    {
+      text: "Alcohol content (ABV%)",
+      format: "numeric"
+    },
+    {
+      text: "Units",
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Spirits 25ml shot"
+      },
+      {
+        text: "40",
+        format: "numeric"
+      },
+      {
+        text: "1",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Alcopop 275ml bottle"
+      },
+      {
+        text: "5.5",
+        format: "numeric"
+      },
+      {
+        text: "1.5",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Wine 125ml small glass"
+      },
+      {
+        text: "12",
+        format: "numeric"
+      },
+      {
+        text: "3",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "Beer or cider 440ml can"
+      },
+      {
+        text: "4",
+        format: "numeric"
+      },
+      {
+        text: "2.5",
+        format: "numeric"
+      }
+    ]
+  ]
+}) }}

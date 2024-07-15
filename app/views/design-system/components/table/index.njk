@@ -14,7 +14,7 @@
 
 {% block bodyContent %}
 
-  <h2 id="2-column-table">Basic table</h2>
+  <h2 id="2-column-table">2 column table</h2>
 
   {{ designExample({
     group: "components",
@@ -22,16 +22,32 @@
     type: "default"
   }) }}
 
-  <h3 id="when-not-to-use-a-2-column-table">When not to use a basic table</h3>
-  <p>Do not use a basic table:</p>
+  <!-- <h3 id="when-not-to-use-a-2-column-table">When not to use a 2 column table</h3>
+  <p>Do not use a 2 column table:</p>
   <ul>
     <li>to lay out content on a page, use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
+    <li>if you have more than 2 columns, use the <a href="#3-or-more-column-table">3 or more column table</a> instead</li>
+  </ul> -->
+
+  <h2 id="3-or-more-column-table">3 or more column table</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "3-column"
+  }) }}
+
+  <h3 id="when-not-to-use-a-3-or-more-column-table">When not to use a 2, 3 or more column table</h3>
+  <p>Do not use a 2, 3 or more column table:</p>
+  <ul>
+    <li>to layout content on a page, use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
+    <!-- <li>if you have 2 columns, use the <a href="#2-column-table">2 column table</a> instead</li> -->
     <li>if your table content becomes squashed and hard to read on small screens, use a <a href="#responsive-table">responsive table</a> instead</li>
   </ul>
 
   <h2 id="responsive-table">Responsive table</h2>
-  <p>This table has a responsive layout, on large screens this table displays as a 3 column table. However, on smaller screens it stacks.</p>
-  <p>Use a responsive table when your table becomes squashed and hard to read on smaller screens.</p>
+  <p>This table has a responsive layout, on large screens this table displays as a 3 column table. However, on small screens it stacks vertically.</p>
+  <p>Use a responsive table when your table becomes squashed and hard to read on small screens.</p>
 
   {{ designExample({
     group: "components",
@@ -40,10 +56,10 @@
   }) }}
 
   <h3 id="when-not-to-use-a-responsive-table">When not to use a responsive table</h3>
-  <p>Responsive table</p>
+  <p>Do not use a responsive table:</p>
   <ul>
     <li>to lay out content on a page, use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
-    <li>if on a small screen your table contents is easier to read as a standard horizontal table</li>
+    <li>if your content is easier to read and undertsand on a small screen in a non-responsive layout, use the <a href="#3-or-more-column-table">3 or more column table</a> instead</li>
   </ul>
 
   <h2 id="how-it-works">How tables work</h2>
