@@ -27,11 +27,12 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <p>We have 3 buttons</p>
+  <p>We have 4 buttons:</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
     <li><a href="#secondary-button">secondary button</a></li>
     <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
+    <li><a href="#warning-button">warning button</a></li>
   </ul>
 
   <h2 id="primary-button">Primary button</h2>
@@ -69,6 +70,24 @@
   <h3>When to use a white button on solid background colour</h3>
   <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">the Your data matters service</a>.)</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
+
+  <h2 id="warning-button">Warning button</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "warning"
+  }) }}
+
+  <p>Warning buttons are designed to make users think carefully before they use them. They only work if used very sparingly. Most services should not need one.</p>
+
+  <p>Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account.</p>
+
+  <p>When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it.</p>
+
+  <p>In this instance, use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
+
+  <p>Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it signifies. Make sure the context and button text make clear what will happen if the user selects it.</p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start or save transactional journeys.</p>
