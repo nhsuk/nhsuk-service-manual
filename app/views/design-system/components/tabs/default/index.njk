@@ -4,7 +4,7 @@
 
 {% set pastDayContent %}  
   {{ table({
-    responsive: true,
+    responsive: false,
     panel: false,
     caption: "Past day",
     firstCellIsHeader: false,
@@ -13,60 +13,59 @@
         text: "Case manager"
       },
       {
-        text: "Cases opened"
+        text: "Cases opened",
+        format: "numeric"
       },
       {
-        text: "Cases closed"
+        text: "Cases closed",
+        format: "numeric"
       }
     ],
     rows: [
       [
         {
-          header: "Case manager",
           text: "David Francis"
         },
         {
-          header: "Cases opened",
-          text: "3"
+          text: "3",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "0"
+          text: "0",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Paul Farmer"
         },
         {
-          header: "Cases opened",
-          text: "1"
+          text: "1",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "0"
+          text: "0",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Rita Patel"
         },
         {
-          header: "Cases opened",
-          text: "2"
+          text: "2",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "0"
+          text: "0",
+          format: "numeric"
         }
       ]
     ]
   }) }} 
 {% endset -%} {% set pastWeekContent %}
   {{ table({
-    responsive: true,
+    responsive: false,
     panel: false,
     caption: "Past week",
     firstCellIsHeader: false,
@@ -75,60 +74,59 @@
         text: "Case manager"
       },
       {
-        text: "Cases opened"
+        text: "Cases opened",
+        format: "numeric"
       },
       {
-        text: "Cases closed"
+        text: "Cases closed",
+        format: "numeric"
       }
     ],
     rows: [
       [
         {
-          header: "Case manager",
           text: "David Francis"
         },
         {
-          header: "Cases opened",
-          text: "24"
+          text: "24",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "18"
+          text: "18",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Paul Farmer"
         },
         {
-          header: "Cases opened",
-          text: "16"
+          text: "16",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "20"
+          text: "20",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Rita Patel"
         },
         {
-          header: "Cases opened",
-          text: "24"
+          text: "24",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "27"
+          text: "27",
+          format: "numeric"
         }
       ]
     ]
   }) }} 
 {% endset -%} {% set pastMonthContent %}
   {{ table({
-    responsive: true,
+    responsive: false,
     panel: false,
     caption: "Past month",
     firstCellIsHeader: false,
@@ -137,60 +135,59 @@
         text: "Case manager"
       },
       {
-        text: "Cases opened"
+        text: "Cases opened",
+        format: "numeric"
       },
       {
-        text: "Cases closed"
+        text: "Cases closed",
+        format: "numeric"
       }
     ],
     rows: [
       [
         {
-          header: "Case manager",
           text: "David Francis"
         },
         {
-          header: "Cases opened",
-          text: "98"
+          text: "98",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "95"
+          text: "95",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Paul Farmer"
         },
         {
-          header: "Cases opened",
-          text: "122"
+          text: "122",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "131"
+          text: "131",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Rita Patel"
         },
         {
-          header: "Cases opened",
-          text: "126"
+          text: "126",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "142"
+          text: "142",
+          format: "numeric"
         }
       ]
     ]
   }) }} 
 {% endset -%} {% set pastYearContent %}
   {{ table({
-    responsive: true,
+    responsive: false,
     panel: false,
     caption: "Past year",
     firstCellIsHeader: false,
@@ -199,53 +196,52 @@
         text: "Case manager"
       },
       {
-        text: "Cases opened"
+        text: "Cases opened",
+        format: "numeric"
       },
       {
-        text: "Cases closed"
+        text: "Cases closed",
+        format: "numeric"
       }
     ],
     rows: [
       [
         {
-          header: "Case manager",
           text: "David Francis"
         },
         {
-          header: "Cases opened",
-          text: "1380"
+          text: "1380",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "1472"
+          text: "1472",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Paul Farmer"
         },
         {
-          header: "Cases opened",
-          text: "1129"
+          text: "1129",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "1083"
+          text: "1083",
+          format: "numeric"
         }
       ],
       [
         {
-          header: "Case manager",
           text: "Rita Patel"
         },
         {
-          header: "Cases opened",
-          text: "1539"
+          text: "1539",
+          format: "numeric"
         },
         {
-          header: "Cases closed",
-          text: "1265"
+          text: "1265",
+          format: "numeric"
         }
       ]
     ]
