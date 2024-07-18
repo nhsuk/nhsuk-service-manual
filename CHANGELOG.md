@@ -10,9 +10,12 @@
 
 - Update table component guidance with information about responsive tables
 - Fix alignment between header, footer and main content in page template examples
+- Update Nunjucks macro options for primaryLinks in header component
 - Improve fieldset component guidance to better explain their use and importance for accessibility
 - Improve tabs component guidance to explain how they should work for accessibility
 - Improve guidance on contrast and accessibility on colour page
+- Fix missing black colour, added to colour palette on colour page
+- Fix display and layout of some tables
 
 ## 6.4.0 – 19 June 2024
 
