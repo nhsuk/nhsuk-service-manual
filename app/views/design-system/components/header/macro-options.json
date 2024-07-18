@@ -67,6 +67,18 @@
           "type": "string",
           "required": false,
           "description": "The label of a navigation item in the header."
+        },
+        {
+          "name": "classes",
+          "type": "string",
+          "required": false,
+          "description": "Classes to add to the list item containing the link."
+        },
+        {
+          "name": "attributes",
+          "type": "object",
+          "required": false,
+          "description": "HTML attributes (for example data attributes) to add to the list item containing the link."
         }
       ]
     },
