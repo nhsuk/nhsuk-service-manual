@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 6.5.0 - TBC
+
+:new: **New features**
+
+- Add new warning button to buttons component
+
+:wrench: **Maintenance**
+
+- Update table component guidance with information about responsive tables
+- Fix alignment between header, footer and main content in page template examples
+- Improve fieldset component guidance to better explain their use and importance for accessibility
+- Improve tabs component guidance to explain how they should work for accessibility
+- Improve guidance on contrast and accessibility on colour page
+
 ## 6.4.0 – 19 June 2024
 
 :new: **New features**
