@@ -17,6 +17,7 @@
 - Fix missing black colour, added to colour palette on colour page
 - Fix display and layout of some tables
 - Remove 'experimental' tag from tabs and character count components 
+- Reformat links section in accessibility guidance to make content clearer
 
 ## 6.4.0 – 19 June 2024
 

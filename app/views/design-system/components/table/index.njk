@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block bodyContent %}
-  <h2 id="standard-tables">Standard tables</h2>
+  <h2 id="basic-tables">Basic tables</h2>
   <h3 id="2-column-table">2 column table</h3>
 
   {{ designExample({
@@ -30,8 +30,8 @@
     type: "3-column"
   }) }}
 
-  <h3 id="when-not-to-use-a-standard-table">When not to use a standard table</h3>
-  <p>Do not use a standard table:</p>
+  <h3 id="when-not-to-use-a-basic-table">When not to use a basic table</h3>
+  <p>Do not use a basic table:</p>
   <ul>
     <li>to layout content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
     <li>if your table content becomes squashed and hard to read on small screens – use a <a href="#responsive-table">responsive table</a> instead</li>
@@ -51,7 +51,7 @@
   <p>Do not use a responsive table:</p>
   <ul>
     <li>to layout content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
-    <li>if your content is easier to read and understand on a small screen in a non-responsive layout – use a <a href="#standard-tables">standard table</a> instead</li>
+    <li>if your content is easier to read and understand on a small screen in a non-responsive layout – use a <a href="#basic-tables">basic table</a> instead</li>
   </ul>
 
   <h2 id="how-it-works">How tables work</h2>
@@ -69,8 +69,8 @@
   <h3 id="table-headers">Table headers</h3>
   <p>Use table headers to tell users what the rows and columns represent.</p>
 
-  <h2 id="reseach">Research</h2>
-  <h3>Standard tables</h3>
+  <h2 id="research">Research</h2>
+  <h3>Basic tables</h3>
   <p>These tables tested well with users of health information on the NHS website.</p>
 
   <h3>Responsive table</h3>
@@ -78,6 +78,5 @@
 
   <h3>Table with panel</h3>
   <p>We have also designed a table with a panel. You can see <a href="https://nhsuk.github.io/nhsuk-frontend/components/tables/tables-panel.html">an example in the frontend library</a>. We have not included it in this list of components yet because it needs more testing.</p>
-  <p>If you have used tables, get in touch to <a href="/community-and-contribution">share your user research findings</a>.</p>
 
 {% endblock %}
