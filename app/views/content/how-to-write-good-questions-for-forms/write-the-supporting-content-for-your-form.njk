@@ -76,23 +76,26 @@
 
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
-    {% call fieldset({
-      legend: {
-        "text": "Do you know your NHS number?",
-        "classes": "nhsuk-fieldset__legend--m"
-      }
-      }) %}
-      {{ hint({
-        "text": "This is a 10 digit number, like 485 777 3456.",
-        "classes": "nhsuk-u-margin-bottom-2"
-      }) }}
-      {{ hint({
-        "text": "You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service."
-      }) }}
-      {{ radios({
-        "idPrefix": "example-divider",
-        "name": "configStructure",
-        "items": [
+
+    {% set hintHtml -%}
+      <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456.</p>
+      <p>You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service.</p>
+    {%- endset %}
+
+    {{ radios({
+      "idPrefix": "example-hints",
+      "name": "example-hints",
+      "fieldset": {
+        "legend": {
+          "text": "Do you know your NHS number?",
+          "classes": "nhsuk-fieldset__legend--l",
+          "isPageHeading": true
+        }
+      },
+      "hint": {
+        "html": hintHtml
+      },
+      "items": [
       {
         "value": "yes",
         "text": "Yes, I know my NHS number"
@@ -107,7 +110,6 @@
       }
     ]
     }) }}
-    {% endcall %}
   </div>
 
   <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>

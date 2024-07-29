@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Include an error summary at the top of a page to summarise any mistakes a user has made." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "June 2020" %}
+{% set dateUpdated = "June 2024" %}
 {% set backlog_issue_id = "13" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -29,7 +29,7 @@
     <ul>
       <li class="rich-text">add "Error: " to the beginning of the <code>&lt;title&gt;</code> so screen readers read it out as soon as possible</li>
       <li>show an error summary at the top of a page</li>
-      <li>move the keyboard focus to the error summary</li>
+      <li>move the keyboard focus to the error summary (the NHS.UK frontend JavaScript will do this for you)</li>
       <li>include the heading "There is a problem"</li>
       <li>link to each of the answers that have validation errors</li>
       <li>show the same error messages next to the inputs with errors</li>
