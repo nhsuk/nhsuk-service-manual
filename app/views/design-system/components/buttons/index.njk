@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "April 2024" %}
+{% set dateUpdated = "July 2024" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -27,11 +27,12 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <p>We have 3 buttons</p>
+  <p>We have 4 buttons:</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
     <li><a href="#secondary-button">secondary button</a></li>
     <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
+    <li><a href="#warning-button">warning button</a></li>
   </ul>
 
   <h2 id="primary-button">Primary button</h2>
@@ -55,7 +56,7 @@
   }) }}
 
   <h3>When to use a secondary button</h3>
-  <p>Use a secondary button on pages that have more than 1 action or when users aren't noticing standard link text.</p>
+  <p>Use a secondary button on pages that have more than 1 action or when users are not noticing standard link text.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
   <h2 id="reverse-button">White button on solid background colour (reverse button)</h2>
@@ -70,13 +71,31 @@
   <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost. (There's an example on <a href="https://your-data-matters.service.nhs.uk/">the Your data matters service</a>.)</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
+  <h2 id="warning-button">Warning button</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "warning"
+  }) }}
+
+  <p>Warning buttons are designed to make users think carefully before they use them. They are only effective if used very sparingly. Most services should not need one.</p>
+
+  <p>Only use warning buttons for actions with serious destructive consequences that a user cannot easily undo. For example, permanently deleting an account.</p>
+
+  <p>When letting users carry out an action like this, it's a good idea to include an additional step which asks them to confirm it.</p>
+
+  <p>In this instance, use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
+
+  <p>Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it means. Make sure the context and button text make clear what will happen if the user selects it.</p>
+
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start or save transactional journeys.</p>
 
   <h2 id="when-not-to-use-buttons">When not to use buttons</h2>
   <p>Do not use buttons as links:
   <ul>
-    <li>to pages which aren't part of your user journey</li>
+    <li>to pages which are not part of your user journey</li>
     <li>from 1 flat content page to another</li>
     <li>to external websites</li>
   </ul>
@@ -96,16 +115,10 @@
 
   <h3>Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
-  <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/components/button">get the latest disabled button code</a> in the NHS.UK frontend library in GitHub.</p>
+  <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/components/button">get the latest disabled button code in the NHS.UK frontend library in GitHub</a>.</p>
 
   <h3>Colour contrast</h3>
-  <p>All 3 active buttons pass AAA guidelines for colour contrast. The colour contrast ratio between text and background colour is as follows:</p>
-  <ul>
-    <li>primary button 5.12:1</li>
-    <li>secondary button 7.75:1</li>
-    <li>white button on solid background colour  14.42:1</li>
-  </ul>
-  <p>Please note that the disabled versions of the 3 buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
+  <p>All 4 buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
 
   <h3 id="stop-users-from-accidentally-sending-information-more-than-once">Stop users from accidentally sending information more than once</h3>
   <p>Sometimes, users double click buttons because they:</p>
@@ -129,8 +142,8 @@
   <p>In the case of slow connections, aim to give the user information about what's happening, for example, by showing a loading spinner or a modal, before using <code>data-prevent-double-click</code>.</p>
 
   <h2 id="research">Research</h2>
-  <p>We based our buttons on the GOV.UK designs. But because our logo is a blue rectangle and a number of our components (including panel headings) have squared edges, we decided that GOV.UK buttons didn’t stand out enough. The square buttons didn't look clickable next to the other square components.</p>
+  <p>We based our buttons on the GOV.UK designs. But because our logo is a blue rectangle and a number of our components (including panel headings) have squared edges, we decided that GOV.UK buttons did not stand out enough. The square buttons did not look clickable next to the other square components.</p>
   <p>We made the buttons more "buttony" by rounding the corners (adding corner radiuses). There is research to suggest that rounded corners make things more clickable.</p>
-  <p>Our testing confirmed this. Users were able to complete tasks using buttons and they didn't confuse them with non-clickable components.</p>
+  <p>Our testing confirmed this. Users were able to complete tasks using buttons and they did not confuse them with non-clickable components.</p>
 
 {% endblock %}
