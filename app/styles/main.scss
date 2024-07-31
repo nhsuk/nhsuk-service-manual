@@ -56,6 +56,26 @@
   @include top-and-bottom;
 }
 
+// Helper to break long words/URLs in tables
+.nhsuk-table__cell--break-all {
+  word-break: break-all;
+}
+.nhsuk-table__cell--break-all--tablet {
+  @include mq($until: tablet) {
+    word-break: break-all;
+  }
+}
+.nhsuk-table__cell--break-all--desktop {
+  @include mq($until: large-desktop) {
+    word-break: break-all;
+  }
+}
+
+// helper to make table full width of parent (instead of 'reading-width') for wide tables
+.nhsuk-table.nhsuk-table--full-width {
+  max-width: 100%;
+}
+
 // Header menu button alignment for Safari
 .nhsuk-header__menu-toggle {
   @include mq($from: tablet, $until: large-desktop) {
