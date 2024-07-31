@@ -3,6 +3,7 @@
 
 :wrench: **Maintenance**
 - Add guidance for heading classes
+- Update page template examples to make the default example size l and inside the grid system
 
 ## 6.4.0 – 19 June 2024
 
@@ -20,10 +21,6 @@
 - Add guidance for error summary focus on page load
 - Remove duplicate links in design system side navigation
 - Fix API catalogue link in service standard point 17
-
-## Unreleased
-:wrench: **Maintenance**
-- Update page template examples to make the default example size l and inside the grid system
 
 ## 6.3.0 – 17 April 2024
 
