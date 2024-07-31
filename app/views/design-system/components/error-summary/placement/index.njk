@@ -7,9 +7,9 @@
 
 {% block beforeContent %}
   {{ backLink({
-    "href": "#",
-    "text": "Go back",
-    "classes": "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
+    href: "#",
+    text: "Go back",
+    classes: "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
   }) }}
 {% endblock %}
 
@@ -19,50 +19,50 @@
       <form>
 
         {{ errorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
+          titleText: "There is a problem",
+          errorList: [
             {
-              "text": "Date of birth must include a year",
-              "href": "#dob-errors-year"
+              text: "Date of birth must include a year",
+              href: "#dob-errors-year"
             }
           ]
         }) }}
 
         {{ dateInput({
-          "id": "dob-errors",
-          "fieldset": {
-            "legend": {
-              "text": "What is your date of birth?",
-              "classes": "nhsuk-fieldset__legend--l",
-              "isPageHeading": true
+          id: "dob-errors",
+          fieldset: {
+            legend: {
+              text: "What is your date of birth?",
+              classes: "nhsuk-fieldset__legend--l",
+              isPageHeading: true
             }
           },
-          "hint": {
-            "text": "For example, 15 3 1984"
+          hint: {
+            text: "For example, 15 3 1984"
           },
-          "errorMessage": {
-            "text": "Date of birth must include a year"
+          errorMessage: {
+            text: "Date of birth must include a year"
           },
-          "items": [
+          items: [
             {
-              "name": "day",
-              "classes": "nhsuk-input--width-2",
+              name: "day",
+              classes: "nhsuk-input--width-2",
               value: 15
             },
             {
-              "name": "month",
-              "classes": "nhsuk-input--width-2",
+              name: "month",
+              classes: "nhsuk-input--width-2",
               value: 3
             },
             {
-              "name": "year",
-              "classes": "nhsuk-input--width-4 nhsuk-input--error"
+              name: "year",
+              classes: "nhsuk-input--width-4 nhsuk-input--error"
             }
           ]
         }) }}
 
         {{ button({
-          "text": "Continue"
+          text: "Continue"
         }) }}
 
       </form>
