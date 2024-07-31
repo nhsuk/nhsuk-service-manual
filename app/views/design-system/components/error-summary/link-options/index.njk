@@ -2,44 +2,44 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
 {{ errorSummary({
-  "titleText": "There is a problem",
-  "errorList": [
+  titleText: "There is a problem",
+  errorList: [
     {
-      "text": "Select how you like to be contacted",
-      "href": "#contact"
+      text: "Select how you like to be contacted",
+      href: "#contact"
     }
   ]
 }) }}
 
 {{ checkboxes({
-  "idPrefix": "contact",
-  "name": "contact",
-  "fieldset": {
-    "legend": {
-      "text": "How would you like to be contacted?",
-      "classes": "nhsuk-fieldset__legend--l",
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "How would you like to be contacted?",
+      classes: "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
   },
-  "hint": {
-    "text": "Select all options that are relevant to you."
+  hint: {
+    text: "Select all options that are relevant to you."
   },
-  "errorMessage": {
-    "text": "Select how you like to be contacted"
+  errorMessage: {
+    text: "Select how you like to be contacted"
   },
-  "items": [
+  items: [
     {
-      "value": "email",
-      "text": "Email",
+      value: "email",
+      text: "Email",
       id: "contact"
     },
     {
-      "value": "phone",
-      "text": "Phone"
+      value: "phone",
+      text: "Phone"
     },
     {
-      "value": "text message",
-      "text": "Text message"
+      value: "text message",
+      text: "Text message"
     }
   ]
 }) }}

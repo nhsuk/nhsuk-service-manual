@@ -33,22 +33,22 @@
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     {{ radios({
-      "idPrefix": "example-research",
-      "name": "example-research",
-      "fieldset": {
-        "legend": {
-          "text": "Can we email you about research?",
-          "classes": "nhsuk-fieldset__legend--m"
+      idPrefix: "example-research",
+      name: "example-research",
+      fieldset: {
+        legend: {
+          text: "Can we email you about research?",
+          classes: "nhsuk-fieldset__legend--m"
         }
       },
-      "items": [
+      items: [
         {
-          "value": "yes",
-          "text": "Yes, you can contact me by email about research"
+          value: "yes",
+          text: "Yes, you can contact me by email about research"
         },
         {
-          "value": "no",
-          "text": "No, do not contact me about research"
+          value: "no",
+          text: "No, do not contact me about research"
         }
       ]
     }) }}
@@ -74,30 +74,30 @@
     {%- endset %}
 
     {{ radios({
-      "idPrefix": "example-hints",
-      "name": "example-hints",
-      "fieldset": {
-        "legend": {
-          "text": "Do you know your NHS number?",
-          "classes": "nhsuk-fieldset__legend--l",
-          "isPageHeading": true
+      idPrefix: "example-hints",
+      name: "example-hints",
+      fieldset: {
+        legend: {
+          text: "Do you know your NHS number?",
+          classes: "nhsuk-fieldset__legend--l",
+          isPageHeading: true
         }
       },
-      "hint": {
-        "html": hintHtml
+      hint: {
+        html: hintHtml
       },
-      "items": [
+      items: [
       {
-        "value": "yes",
-        "text": "Yes, I know my NHS number"
-      },
-      {
-        "value": "no",
-        "text": "No, I do not know my NHS number"
+        value: "yes",
+        text: "Yes, I know my NHS number"
       },
       {
-        "value": "not sure",
-        "text": "I'm not sure"
+        value: "no",
+        text: "No, I do not know my NHS number"
+      },
+      {
+        value: "not sure",
+        text: "I'm not sure"
       }
     ]
     }) }}
@@ -113,22 +113,22 @@
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     {{ radios({
-      "idPrefix": "example-registration-details",
-      "name": "example-registration-details",
-      "fieldset": {
-        "legend": {
-          "text": "Do you have your registration details?",
-          "classes": "nhsuk-fieldset__legend--m"
+      idPrefix: "example-registration-details",
+      name: "example-registration-details",
+      fieldset: {
+        legend: {
+          text: "Do you have your registration details?",
+          classes: "nhsuk-fieldset__legend--m"
         }
       },
-      "items": [
+      items: [
         {
-          "value": "yes",
-          "text": "Yes"
+          value: "yes",
+          text: "Yes"
         },
         {
-          "value": "no",
-          "text": "No, try another way"
+          value: "no",
+          text: "No, try another way"
         }
       ]
     }) }}
@@ -148,10 +148,10 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
-    "previousPage": "Consider the sensitivities around your questions",
-    "nextUrl": "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",
-    "nextPage": "Get the questions into order"
+    previousUrl: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
+    previousPage: "Consider the sensitivities around your questions",
+    nextUrl: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",
+    nextPage: "Get the questions into order"
   }) }}
 
 {% endblock %}

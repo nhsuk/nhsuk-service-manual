@@ -35,38 +35,38 @@
 {% endset -%}
 
 {{ radios({
-  "idPrefix": "contact",
-  "name": "contact",
-  "fieldset": {
-    "legend": {
-      "text": "How would you prefer to be contacted?",
-      "classes": "nhsuk-fieldset__legend--l",
-      "isPageHeading": "true"
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "How would you prefer to be contacted?",
+      classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: "true"
     }
   },
-  "hint": {
-    "text": "Select one option"
+  hint: {
+    text: "Select one option"
   },
-  "items": [
+  items: [
     {
-      "value": "email",
-      "text": "Email",
-      "conditional": {
-        "html": emailHtml
+      value: "email",
+      text: "Email",
+      conditional: {
+        html: emailHtml
       }
     },
     {
-      "value": "phone",
-      "text": "Phone",
-      "conditional": {
-        "html": phoneHtml
+      value: "phone",
+      text: "Phone",
+      conditional: {
+        html: phoneHtml
       }
     },
     {
-      "value": "text",
-      "text": "Text message",
-      "conditional": {
-        "html": mobileHtml
+      value: text,
+      text: "Text message",
+      conditional: {
+        html: mobileHtml
       }
     }
   ]

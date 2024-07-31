@@ -7,9 +7,9 @@
 
 {% block beforeContent %}
   {{ backLink({
-    "href": "#",
-    "text": "Go back",
-    "classes": "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
+    href: "#",
+    text: "Go back",
+    classes: "nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4"
   }) }}
 {% endblock %}
 
@@ -19,15 +19,15 @@
       <form>
 
         {{ errorSummary({
-          "titleText": "There is a problem",
-          "errorList": [
+          titleText: "There is a problem",
+          errorList: [
             {
-              "text": "Enter your first  name",
-              "href": "#first-name"
+              text: "Enter your first  name",
+              href: "#first-name"
             },
             {
-              "text": "Enter your last name",
-              "href": "#last-name"
+              text: "Enter your last name",
+              href: "#last-name"
             }
           ]
         }) }}
@@ -35,29 +35,29 @@
         <h1 class="nhsuk-heading-l">Your details</h1>
 
         {{ input({
-          "label": {
-            "text": "First name"
+          label: {
+            text: "First name"
           },
-          "id": "first-name",
-          "name": "first-name",
-          "errorMessage": {
-            "text": "Enter your first name"
+          id: "first-name",
+          name: "first-name",
+          errorMessage: {
+            text: "Enter your first name"
           }
         }) }}
 
         {{ input({
-          "label": {
-            "text": "Last name"
+          label: {
+            text: "Last name"
           },
-          "id": "last-name",
-          "name": "last-name",
-          "errorMessage": {
-            "text": "Enter your last name"
+          id: "last-name",
+          name: "last-name",
+          errorMessage: {
+            text: "Enter your last name"
           }
         }) }}
 
         {{ button({
-          "text": "Continue"
+          text: "Continue"
         }) }}
 
       </form>

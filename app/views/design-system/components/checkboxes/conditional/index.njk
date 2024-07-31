@@ -36,22 +36,22 @@
 
 <form>
   {{ checkboxes({
-    "idPrefix": "contact",
-    "name": "contact",
-    "fieldset": {
-      "legend": {
-        "text": "How would you prefer to be contacted?",
-        "classes": "nhsuk-fieldset__legend--l",
-        "isPageHeading": "true"
+    idPrefix: "contact",
+    name: "contact",
+    fieldset: {
+      legend: {
+        text: "How would you prefer to be contacted?",
+        classes: "nhsuk-fieldset__legend--l",
+        isPageHeading: "true"
       }
     },
-    "hint": {
-      "text": "Select all options that are relevant to you."
+    hint: {
+      text: "Select all options that are relevant to you."
     },
-    "items": [
+    items: [
       {
-        "value": "email",
-        "text": "Email",
+        value: "email",
+        text: "Email",
         "conditional": {
           "html": emailHtml
         }

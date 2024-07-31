@@ -31,29 +31,29 @@
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     {{ checkboxes({
-      "idPrefix": "contact",
-      "name": "contact",
-      "fieldset": {
-        "legend": {
-          "text": "How would you like to be contacted?",
-          "classes": "nhsuk-fieldset__legend--m"
+      idPrefix: "contact",
+      name: "contact",
+      fieldset: {
+        legend: {
+          text: "How would you like to be contacted?",
+          classes: "nhsuk-fieldset__legend--m"
         }
       },
-      "hint": {
-        "text": "Select all options that are relevant to you."
+      hint: {
+        text: "Select all options that are relevant to you."
       },
-      "items": [
+      items: [
         {
-          "value": "email",
-          "text": "Email"
+          value: "email",
+          text: "Email"
         },
         {
-          "value": "phone",
-          "text": "Phone"
+          value: "phone",
+          text: "Phone"
         },
         {
-          "value": "text message",
-          "text": "Text message"
+          value: "text message",
+          text: "Text message"
         }
       ]
     }) }}
@@ -83,30 +83,30 @@
     {%- endset %}
 
     {{ radios({
-      "idPrefix": "example-hints",
-      "name": "example-hints",
-      "fieldset": {
-        "legend": {
-          "text": "Do you know your NHS number?",
-          "classes": "nhsuk-fieldset__legend--l",
-          "isPageHeading": true
+      idPrefix: "example-hints",
+      name: "example-hints",
+      fieldset: {
+        legend: {
+          text: "Do you know your NHS number?",
+          classes: "nhsuk-fieldset__legend--l",
+          isPageHeading: true
         }
       },
-      "hint": {
-        "html": hintHtml
+      hint: {
+        html: hintHtml
       },
-      "items": [
+      items: [
       {
-        "value": "yes",
-        "text": "Yes, I know my NHS number"
-      },
-      {
-        "value": "no",
-        "text": "No, I do not know my NHS number"
+        value: "yes",
+        text: "Yes, I know my NHS number"
       },
       {
-        "value": "not sure",
-        "text": "I'm not sure"
+        value: "no",
+        text: "No, I do not know my NHS number"
+      },
+      {
+        value: "not sure",
+        text: "I'm not sure"
       }
     ]
     }) }}
@@ -163,13 +163,10 @@
 {% block afterContact %}
 
  {{ pagination({
-    "previousUrl": "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
-    "previousPage": "Think of the form as a conversation",
-    "nextUrl": "/content/how-to-write-good-questions-for-forms/test-your-questions",
-    "nextPage": "Test your questions"
+    previousUrl: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
+    previousPage: "Think of the form as a conversation",
+    nextUrl: "/content/how-to-write-good-questions-for-forms/test-your-questions",
+    nextPage: "Test your questions"
   }) }}
 
 {% endblock %}
-
-
-
