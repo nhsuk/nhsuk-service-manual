@@ -1,4 +1,8 @@
 # NHS digital service manual Changelog
+## Unreleased
+
+:wrench: **Maintenance**
+- Add guidance for heading classes
 
 ## 6.4.0 – 19 June 2024
 
