@@ -70,6 +70,8 @@
 
   <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
 
+  <p>We recommend you use a larger <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-xl</code> modifier class. Content pages may need more heading levels and the larger size makes the heading hierarchy clearer.
+
   {{ designExample({
     group: "styles",
     item: "page-template",
@@ -90,7 +92,8 @@
     showArguments: false
   }) }}
 
-  <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. We also recommended you use a smaller page heading size using the <code>.nhsuk-heading-l</code> modifier class.</p>
+  <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class.
+  We also recommend you use a smaller <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-l</code> modifier class.
 
   <h2 id="changing-template-content">Changing template content</h2>
 

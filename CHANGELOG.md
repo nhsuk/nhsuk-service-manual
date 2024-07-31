@@ -21,6 +21,10 @@
 - Remove duplicate links in design system side navigation
 - Fix API catalogue link in service standard point 17
 
+## Unreleased
+:wrench: **Maintenance**
+- Update page template examples to make the default example size l and inside the grid system
+
 ## 6.3.0 – 17 April 2024
 
 :new: **New features**
