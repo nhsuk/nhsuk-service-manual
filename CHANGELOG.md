@@ -3,7 +3,7 @@
 
 :wrench: **Maintenance**
 - Add guidance for heading classes
-- Update page template examples to make the default example size l and inside the grid system
+- Update page template examples to make the default example size `l` and inside the grid system
 
 ## 6.4.0 – 19 June 2024
 
