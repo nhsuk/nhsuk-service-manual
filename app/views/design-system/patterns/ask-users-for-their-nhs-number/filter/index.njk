@@ -15,30 +15,30 @@
       {%- endset %}
 
       {{ radios({
-        "idPrefix": "example-hints",
-        "name": "example-hints",
-        "fieldset": {
-          "legend": {
-            "text": "Do you know your NHS number?",
-            "classes": "nhsuk-fieldset__legend--l",
-            "isPageHeading": true
+        idPrefix: "example-hints",
+        name: "example-hints",
+        fieldset: {
+          legend: {
+            text: "Do you know your NHS number?",
+            classes: "nhsuk-fieldset__legend--l",
+            isPageHeading: true
           }
         },
-        "hint": {
-          "html": hintHtml
+        hint: {
+          html: hintHtml
         },
-        "items": [
+        items: [
         {
-          "value": "yes",
-          "text": "Yes, I know my NHS number"
-        },
-        {
-          "value": "no",
-          "text": "No, I do not know my NHS number"
+          value: "yes",
+          text: "Yes, I know my NHS number"
         },
         {
-          "value": "not sure",
-          "text": "I'm not sure"
+          value: "no",
+          text: "No, I do not know my NHS number"
+        },
+        {
+          value: "not sure",
+          text: "I'm not sure"
         }
       ]
       }) }}

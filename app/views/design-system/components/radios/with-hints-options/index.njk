@@ -1,28 +1,28 @@
 {% from 'radios/macro.njk' import radios %}
 
 {{ radios({
-  "idPrefix": "example-hints",
-  "name": "example-hints",
-  "fieldset": {
-    "legend": {
-      "text": "Do you have a mobile phone with signal?",
-        "classes": "nhsuk-fieldset__legend--l",
-      "isPageHeading": true
+  idPrefix: "example-hints",
+  name: "example-hints",
+  fieldset: {
+    legend: {
+      text: "Do you have a mobile phone with signal?",
+        classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: true
     }
   },
-  "items": [
+  items: [
     {
-      "value": "mobile",
-      "text": "Yes, I have a mobile phone with signal",
-      "hint": {
-        "text": "We will text you a 6 digit security code"
+      value: "mobile",
+      text: "Yes, I have a mobile phone with signal",
+      hint: {
+        text: "We will text you a 6 digit security code"
       }
     },
     {
-      "value": "landline",
-      "text": "No, I want to use my landline",
-      "hint": {
-        "text": "We will call you to give you a 6 digit security code"
+      value: "landline",
+      text: "No, I want to use my landline",
+      hint: {
+        text: "We will call you to give you a 6 digit security code"
       }
     }
   ]
