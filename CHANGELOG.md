@@ -1,4 +1,9 @@
 # NHS digital service manual Changelog
+## Unreleased
+
+:wrench: **Maintenance**
+- Add guidance for heading classes
+- Update page template examples to make the default example size `l` and inside the grid system
 
 ## 6.5.0 - 31 July 2024
 
