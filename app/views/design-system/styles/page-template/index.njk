@@ -27,6 +27,12 @@
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/layout">Layout</a></li>
 
     <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/page-template">Page template</a></li>
+    <ul class="app-side-nav__list app-side-nav__list--nested">
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#page-title">Page title</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#default-page-template">Default page template</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#customised-page-template">Customised page template</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#changing-template-content">Changing template content</a></li>
+      </ul>
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/spacing">Spacing</a></li>
 
@@ -50,7 +56,42 @@
 
   <p>You can use the HTML examples if you are not able to use Nunjucks. If you use HTML you’ll need to update it manually when new versions are released.</p>
 
-  <h2>Default</h2>
+  <h2 id="page-title">Page title</h2>
+
+  <p>The page title (<code>&lt;title&gt;</code>) is the text displayed in the browser tab and as link text in search results. Use a unique page title on every page.</p>
+  <p>A basic title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the site name. For example: <code>&lt;title&gt;</code>Flu – NHS<code>&lt;/title&gt;</code>.</p> 
+    <details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+       More examples of page titles
+    </span>
+  </summary>
+    <div class="nhsuk-details__text">
+    <p>Examples include:</p>
+    <ul>
+      <li>Type 2 diabetes – Symptoms – NHS</li>
+      <li>Messaging – NHS App</li>
+      <li>Do you know your NHS number? – Add or correct your contact details – NHS</li>
+    </ul>
+    </div>
+  </details>
+
+  <details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+       Personally identifiable information
+    </span>
+  </summary>
+    <div class="nhsuk-details__text">
+      <p>If there is personally identifiable information in the <code>&lt;h1&gt;</code>, for example, in a transactional journey, you must make sure it is not recorded in your analytics package.</p>
+      <p>For example, if the <code>&lt;h1&gt;</code> is "What is Gordon's date of birth?", record "What is their date of birth?".</p>
+      <p>To do this you could change the page title to use "their" but keep "Gordon" in the <code>&lt;h1&gt;</code>. Or you could keep "Gordon" in the page title and send a different page title to your analytics package.</p>
+    </div>
+  </details>
+
+  <p>Find out more about writing good <a href="/content/formatting-and-punctuation#headings">headings and page titles, in the content guide</a>.</p>
+  
+  <h2 id="default-page-template">Default page template</h2>
 
   <p>This example shows the minimum required for an NHS service.</p>
 
@@ -62,23 +103,9 @@
     showArguments: false
   }) }}
 
-  <h2>Customised page template</h2>
+  <h2 id="customised-page-template">Customised page template</h2>
 
   <p>You can customise the page template, for example, by <a href="/design-system/styles/layout">structuring your page layout</a>, using the <a href="/design-system/components/header#organisational-header">organisational header</a> or adding a block before the main container to include a <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
-
-  <h3>Content page template</h3>
-
-  <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
-
-  <p>We recommend you use a larger <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-xl</code> modifier class. Content pages may need more heading levels and the larger size makes the heading hierarchy clearer.
-
-  {{ designExample({
-    group: "styles",
-    item: "page-template",
-    type: "content",
-    blankpage: true,
-    showArguments: false
-  }) }}
 
   <h3>Transactional page template</h3>
 
@@ -94,6 +121,20 @@
 
   <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class.
   We also recommend you use a smaller <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-l</code> modifier class.
+
+  <h3>Content page template</h3>
+
+  <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
+
+  <p>We recommend you use a larger <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-xl</code> modifier class. Content pages may need more heading levels and the larger size makes the heading hierarchy clearer.
+
+  {{ designExample({
+    group: "styles",
+    item: "page-template",
+    type: "content",
+    blankpage: true,
+    showArguments: false
+  }) }}
 
   <h2 id="changing-template-content">Changing template content</h2>
 
