@@ -5,7 +5,7 @@ Guidance for designing and building digital services for the NHS. Things you nee
 ## Running the application locally
 
 ### Prerequisite
-test
+
 Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes npm.
 
 ### Cloning and running the application
