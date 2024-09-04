@@ -1,9 +1,17 @@
 # NHS digital service manual Changelog
 ## Unreleased
 
+:new: **New features**
+- Add entries on Down's syndrome, fit note and period products to the A to Z of NHS health writing
+
 :wrench: **Maintenance**
 - Add guidance for heading classes
 - Update page template examples to make the default example size `l` and inside the grid system
+- Make our guidance on age clearer
+- Update entries on fetus, microgram and NHS in the A to Z
+- Update links guidance to recommend avoiding "see"
+- Update content section on capitalisation to mention geographical names
+- Update service manual team page and email address
 
 ## 6.5.0 - 31 July 2024
 
