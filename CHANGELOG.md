@@ -14,6 +14,7 @@
 - Update service manual team page and email address
 - Update Nunjucks macro options for date input component, adding values for day, month and year
 – Update Nunjucks macro options for table component, detailling the `captionClasses`
+- Update type scale to increase font size of `m` and `l` headings, updates font size overrides to align with new sizes
 
 ## 6.5.0 - 31 July 2024
 
