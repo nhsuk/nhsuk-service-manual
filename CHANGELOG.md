@@ -13,6 +13,7 @@
 - Update content section on capitalisation to mention geographical names
 - Update service manual team page and email address
 - Update Nunjucks macro options for date input component, adding values for day, month and year
+– Update Nunjucks macro options for table component, detailling the `captionClasses`
 
 ## 6.5.0 - 31 July 2024
 
