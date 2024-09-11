@@ -1,0 +1,39 @@
+{% from "summary-list/macro.njk" import summaryList %}
+
+{{ summaryList({
+  classes: 'nhsuk-summary-list--no-border',
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Karen Francis"
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "15 March 1984"
+      }
+    },
+    {
+      key: {
+        text: "Contact information"
+      },
+      value: {
+        html: "73 Roman Rd<br>Leeds<br> LS2 5ZN"
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: '<p>07700 900362</p><p>karen.francis@example.com</p>'
+      }
+    }
+  ]
+}) }}
