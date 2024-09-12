@@ -13,6 +13,7 @@
 - Update content section on capitalisation to mention geographical names
 - Update service manual team page and email address
 - Update page about the NHS service standard
+- Delete outdated references to NHSX
 - Update Nunjucks macro options for date input component, adding values for day, month and year
 – Update Nunjucks macro options for table component, detailling the `captionClasses`
 - Update type scale to increase font size of `m` and `l` headings, updates font size overrides to align with new sizes
