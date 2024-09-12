@@ -24,6 +24,7 @@ const additionalIndices = {
   '/design-system/components/summary-list': ['definition list'],
   '/design-system/components/table': ['responsive table'],
   '/design-system/components/tag': ['chip, badge, flag, token'],
+  '/design-system/components/task-list': ['tasks', 'section', 'todo', 'to-do'],
   '/design-system/components/text-input': ['text box, text field, input field, text entry box'],
   '/design-system/components/textarea': ['big text box, multi-line text box, multi-line text field'],
   '/design-system/components/typography': ['fonts'],
