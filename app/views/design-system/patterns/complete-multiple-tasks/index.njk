@@ -17,8 +17,6 @@
 <p>Task lists help users understand tasks involved in completing a transaction, the order they should complete tasks in and when they have completed tasks</p>
 
 {# {% from "_example.njk" import example %} #}
-{# {% from "_wcag-callout.njk" import wcagCallout %} #}
-{# {% from "_wcag-note.njk" import wcagNote %} #}
 
 <p>Help users understand:</p>
 
@@ -28,21 +26,19 @@
   <li>when they’ve completed tasks</li>
 </ul>
 
-{# {{ wcagCallout({
-  type: "pattern",
-  introAction: "help users to",
-  name: "Complete multiple tasks",
-  criteria: [
-    {
-      text: "interact with tasks without relying on ‘click and drag’ movements (if you choose to add functionality to reorder tasks)",
-      anchor: "wcag-interact-without-click-drag-task"
-    },
-    {
-      text: "edit information they’ve given when going back to a previous task",
-      anchor: "wcag-edit-information-previous-task"
-    }
-  ]
-}) }} #}
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-interact-without-click-drag-task">interact with tasks without relying on ‘click and drag’ movements (if you choose to add functionality to reorder tasks)</a></li>
+    <li><a href="#wcag-edit-information-previous-task">edit information they’ve given when going back to a previous task</a></li>
+  </ul>
+  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+</div>
 
 {# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }} #}
 
@@ -83,10 +79,11 @@
   <li>start with verbs, for example, ‘check’, ‘declare’, ‘report’</li>
 </ul>
 
-{# {% call wcagNote({id: "wcag-interact-without-click-drag-task"}) %}
-
-<p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
-{% endcall %} #}
+<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+</div>
 
 <h3 id="show-the-status-of-the-tasks">Show the status of the tasks</h3>
 
@@ -164,12 +161,13 @@
 <p>If the user selects ‘No, I’ll come back to it later’, mark the task as ‘Incomplete’ or ‘In progress’.</p>
 
 <p>If the user selects ‘Yes, I’ve completed this section’, mark the task as ‘Completed’.</p>
-{# 
-{% call wcagNote({id: "wcag-edit-information-previous-task"}) %}
 
-<p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
+<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-edit-information-previous-task" role="note">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
 <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
-{% endcall %} #}
+</div>
 
 {# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }} #}
 
