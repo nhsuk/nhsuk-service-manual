@@ -7,6 +7,7 @@
 
 :wrench: **Maintenance**
 - Update page template examples to make the default example size `l` and inside the grid system
+- Update page template nunjucks options, to remove `outerContent` block
 - Make our guidance on age clearer
 - Update entries on fetus, microgram and NHS in the A to Z
 - Update links guidance to recommend avoiding "see"
@@ -17,6 +18,7 @@
 - Update Nunjucks macro options for date input component, adding values for day, month and year
 – Update Nunjucks macro options for table component, detailling the `captionClasses`
 - Update type scale to increase font size of `m` and `l` headings, updates font size overrides to align with new sizes
+- Change spacing around the back links and breadcrumbs components
 
 ## 6.5.0 - 31 July 2024
 
