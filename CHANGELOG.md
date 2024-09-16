@@ -5,6 +5,8 @@
 :new: **New features**
 
 - Add new warning button to buttons component
+- Add new Task list component
+- Add new Complete multiple tasks pattern
 
 :wrench: **Maintenance**
 
@@ -94,7 +96,7 @@
 - Remove embedded link from contents list design example
 - Fix link in section on link text in accessibility guidance
 
-## 6.1.0 - 18 January 2024 
+## 6.1.0 - 18 January 2024
 
 :new: **New features**
 
