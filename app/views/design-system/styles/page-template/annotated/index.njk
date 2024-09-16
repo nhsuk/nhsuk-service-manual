@@ -35,19 +35,6 @@
   </div>
 {%- endblock %}
 
-{% block outerContent-%}
-  <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: outerContent</span>
-    {{ super() }}
-    {% from 'back-link/macro.njk' import backLink %}
-
-    {{ backLink({
-      href: "/",
-      text: "Back"
-    }) }}
-  </div>
-{%- endblock %}
-
 {% block content -%}
   <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: content</span>
