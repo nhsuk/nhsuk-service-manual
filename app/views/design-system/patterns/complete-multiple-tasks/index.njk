@@ -16,8 +16,6 @@
 
 <p>Task lists help users understand tasks involved in completing a transaction, the order they should complete tasks in and when they have completed tasks</p>
 
-{# {% from "_example.njk" import example %} #}
-
 <p>Help users understand:</p>
 
 <ul>
@@ -40,7 +38,13 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-{# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "default", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "example",
+  fullpage: true,
+  showArguments: false
+}) }}
 
 <p>Complete multiple tasks pages use a <a href="/design-system/components/task-list">task list component</a> for each group of tasks on the page.</p>
 
@@ -89,7 +93,13 @@
 
 <p>Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using statuses.</p>
 
-{# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "task-list-statuses", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "task-list-statuses",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <p>Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example ‘Completed’ and ‘Incomplete’, then add more if your user research shows there’s a need for them.</p>
 
@@ -101,15 +111,27 @@
 
 <p>In this instance, instead of ‘Incomplete’, you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.</p>
 
-<p>‘Not yet started’ uses a blue background, and ‘In progress’ uses a light blue background.</p>
+<p>‘Not yet started’ uses a light blue background, and ‘In progress’ uses a white background.</p>
 
-{# {{ example({ group: "components", item: "task-list", example: "in-progress", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "in-progress",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="tasks-that-cannot-yet-be-started">Tasks that cannot yet be started</h4>
 
 <p>If the user cannot start the task yet, for example because another task must be completed first, use the ‘Cannot start yet’ status. This should be grey text with no background colour, and the ‘task row’ should not be linked.</p>
 
-{# {{ example({ group: "components", item: "task-list", example: "cannot-start-yet", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "cannot-start-yet",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="tasks-containing-an-error">Tasks containing an error</h4>
 
@@ -119,7 +141,13 @@
 
 <p>Do not use the red background colour for any status text except errors.</p>
 
-{# {{ example({ group: "components", item: "task-list", example: "error", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "error",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="status-text">Status text</h4>
 
@@ -131,7 +159,13 @@
 
 <p>If your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.</p>
 
-{# {{ example({ group: "components", item: "task-list", example: "all-colours", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "all-colours",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h3 id="group-tasks-into-steps">Group tasks into steps</h3>
 
@@ -169,7 +203,13 @@
 <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
-{# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "have-you-completed-this-section",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <p>Always allow users to go back into a task to change their answer.</p>
 
@@ -177,7 +217,13 @@
 
 <p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: ‘Select whether you’ve completed this section’.</p>
 
-{# {{ example({ group: "patterns", item: "complete-multiple-tasks", example: "have-you-completed-this-section-error", html: true, nunjucks: true, open: false }) }} #}
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "have-you-completed-this-section-error",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h2 id="research-on-this-pattern">Research on this pattern</h2>
 

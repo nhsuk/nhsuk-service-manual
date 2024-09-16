@@ -1,45 +1,107 @@
 {% extends "includes/design-example-wrapper-full-layout.njk" %}
 
-{% from 'breadcrumb/macro.njk' import breadcrumb %}
 {% from 'button/macro.njk' import button %}
+{% from 'task-list/macro.njk' import taskList %}
 
-{% block outerContent %}
-  {{ breadcrumb({
-    items: [
-      {
-        href: "#",
-        text: "Home"
-      },
-      {
-        href: "#",
-        text: "Section"
-      }
-    ],
-    href: "#",
-    text: "Subsection"
-  }) }}
-{% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>Service name goes here</h1>
-      <p>Use this service to do something.</p>
-      <p>You can use this service if you:</p>
-      <ul>
-        <li>live in England</li>
-        <li>need to get a thing</li>
-        <li>need to change a thing</li>
-      </ul>
+      <h1 class="nhsuk-heading-l">Service name</h1>
 
-      <h2>Before you start</h2>
+      <h2 class="nhsuk-heading-m">Check before you start</h2>
 
-      <p>We'll ask you for: ...</p>
+      {{ taskList({
+        idPrefix: "check-before-you-start",
+        items: [
+          {
+            title: {
+              text: "Check eligibility"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Read declaration"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
 
-      <a class="nhsuk-button" href="#" role="button" draggable="false">Start now</a>
-
-      <p>By using this service you are agreeing to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>.</p>
+      <h2 class="nhsuk-heading-m">Health questionnaire</h2>
+      {{ taskList({
+        idPrefix: "your-health",
+        items: [
+          {
+            title: {
+              text: "Physical activity"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Smoking history"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Not yet started",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Vaccination history"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Alcohol consumption"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Not yet started",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Body measurements"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Not yet started",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
 
     </div>
   </div>
