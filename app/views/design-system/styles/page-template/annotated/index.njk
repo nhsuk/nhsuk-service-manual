@@ -22,9 +22,15 @@
 {%- endblock %}
 
 {% block beforeContent-%}
-  <div class="app-annotate-block">
+    <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: beforeContent</span>
     {{ super() }}
+    {% from 'back-link/macro.njk' import backLink %}
+
+    {{ backLink({
+      href: "/",
+      text: "Back"
+    }) }}
   </div>
 {%- endblock %}
 

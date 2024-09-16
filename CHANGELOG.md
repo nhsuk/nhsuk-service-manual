@@ -1,4 +1,24 @@
 # NHS digital service manual Changelog
+## Unreleased
+
+:new: **New features**
+- Add entries on Down's syndrome, fit note and period products to the A to Z of NHS health writing
+- Add guidance for heading classes
+
+:wrench: **Maintenance**
+- Update page template examples to make the default example size `l` and inside the grid system
+- Update page template nunjucks options, to remove `outerContent` block
+- Make our guidance on age clearer
+- Update entries on fetus, microgram and NHS in the A to Z
+- Update links guidance to recommend avoiding "see"
+- Update content section on capitalisation to mention geographical names
+- Update service manual team page and email address
+- Update page about the NHS service standard
+- Delete outdated references to NHSX
+- Update Nunjucks macro options for date input component, adding values for day, month and year
+– Update Nunjucks macro options for table component, detailling the `captionClasses`
+- Update type scale to increase font size of `m` and `l` headings, updates font size overrides to align with new sizes
+- Change spacing around the back links and breadcrumbs components
 
 ## 6.5.0 - 31 July 2024
 

@@ -8,13 +8,6 @@
   Transactional page template
 {% endblock %}
 
-{% block beforeContent %}
-  {{ backLink({
-    href: "#",
-    text: "Back"
-  }) }}
-{% endblock %}
-
 {% block header %}
   {{ header({
     transactionalService: {
@@ -25,6 +18,13 @@
       showSearch: "false"
     })
   }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
 {% endblock %}
 
 {% block content %}
