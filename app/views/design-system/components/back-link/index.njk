@@ -61,8 +61,9 @@ type: "default"
   <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
 </div>
 
-<p>Consider where you put the back link. Do not put it close to other links or buttons where it might distract users
-  from what they need to do. Also think about people who use a screen reader. </p>
+<p>Generally, the back link should go at the top left of the page. Within the HTML it should appear before the <code>&lt;main&gt;</code> tag. This is so that <a href="/design-system/components/skip-link">skip link</a> skips past the back link to the main content.</p>
+
+<p>If you put the back link in a different position, do not put it close to other links or buttons where it might distract users from what they need to do. Also think about people who use a screen reader.</p>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-back-links" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -75,11 +76,6 @@ type: "default"
       href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
 </div>
 
-<p>The <a href="https://design-system.service.gov.uk/components/back-link/">GOV.UK design system</a> says that you
-  should put back links at the top of a page, but a couple of NHS services (<a href="https://111.nhs.uk/">NHS 111
-    online</a> and <a href="https://your-data-matters.service.nhs.uk">Find out why your NHS data matters</a>) found that
-  it works better at the bottom of the page below the primary action. That's because we don't want to suggest to people
-  who use a screen reader that they leave the page prematurely.</p>
 
 <h3 id="back-link-as-a-button">Back link as a button</h3>
 <p class="rich-text">You can render the back link as a <code>button</code> element if necessary in order to post form
