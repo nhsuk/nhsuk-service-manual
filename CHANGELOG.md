@@ -19,6 +19,7 @@
 – Update Nunjucks macro options for table component, detailling the `captionClasses`
 - Update type scale to increase font size of `m` and `l` headings, updates font size overrides to align with new sizes
 - Change spacing around the back links and breadcrumbs components
+- Update guidance on back links to recommend putting them top of page
 
 ## 6.5.0 - 31 July 2024
 
