@@ -144,7 +144,6 @@
       </tr>
     </thead>
     <tbody class="nhsuk-table__body">
-
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>bodyAttributes</td>
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Variable</td>
@@ -170,7 +169,7 @@
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
           <span>
-            Add content that needs to appear outside <code>&lt;main&gt;</code> element.
+            Add content that needs to appear within the  <code>&lt;div class="nhsuk-width-container"&gt;</code> container but outside the <code>&lt;main&gt;</code> element.
           <br>
           For example: the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component and the <a href="/design-system/components/back-link">back link</a>.
           </span>
@@ -257,6 +256,16 @@
             Override the default icons used for NHS.UK branded pages.
             <br>
             For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>main</td>
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+          <span>
+            Override the main section of the page, which by default wraps the <code>beforeContent</code> block, the <code>&lt;main&gt;</code> element,  and <code>content</code> block.
           </span>
         </td>
       </tr>
