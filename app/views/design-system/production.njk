@@ -58,7 +58,7 @@
   <p>A Nunjucks macro is a simple template that generates more complex HTML.</p>
   <p>Nunjucks macros save you time by managing repetitive or error-prone tasks, like linking form labels to their controls.</p>
   <p>Nunjucks macros also make it easier to keep your application up to date. You can run a command to update component code instead of having to manually update your HTML.</p>
-  <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend components, which is <code>node_modules/nhsuk-frontend/packages/components/</code>. From <code>nhsuk-frontend version 9.0.0</code> and onwards, you will also have to point the Nunjucks view to the NHS.UK frontend macros, which is <code>/node_modules/nhsuk-frontend/packages/macros</code>.</p>
+  <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend components, which is <code>node_modules/nhsuk-frontend/packages/components/</code>. From <code>nhsuk-frontend version 9.0.0</code> and onwards, you will also have to add the path to the helper macros, which is <code>/node_modules/nhsuk-frontend/packages/macros</code>.</p>
   <p>To include a specific component macro in your page template, you need to import the macro.</p>
   <p>For example, to use the button macro, use the import statement <code>% from 'node_modules/nhsuk-frontend/packages/components/button/macro.njk' import button %}</code>.</p>
 
