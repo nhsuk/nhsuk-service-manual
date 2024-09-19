@@ -1,5 +1,6 @@
 # NHS digital service manual Changelog
-## Unreleased
+
+## 7.0.0 - 19 September 2024
 
 :new: **New features**
 - Add entries on Down's syndrome, fit note and period products to the A to Z of NHS health writing
