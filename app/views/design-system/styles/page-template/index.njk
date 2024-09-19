@@ -2,7 +2,7 @@
 {% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "February 2021" %}
+{% set dateUpdated = "September 2024" %}
 {% set backlog_issue_id = "200" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -41,7 +41,7 @@
 
   <p>This page template combines boilerplate markup and <a href="/design-system/components">components</a> needed for a content page and a transactional page. This includes:</p>
   <ul>
-    <li>JavaScript that adds a <code>.js-enabled</code> class, which components with JavaScript behaviour need</li>
+    <li>JavaScript that adds a <code>js-enabled</code> class, which components with JavaScript behaviour need</li>
     <li>the <a href="/design-system/components/skip-link">skip link</a>, <a href="/design-system/components/header">header</a> and <a href="/design-system/components/footer">footer</a> components</li>
     <li>favicons, and other page metadata</li>
   </ul>
@@ -68,7 +68,9 @@
 
   <h3>Content page template</h3>
 
-  <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
+  <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
+
+  <p>We recommend you use a larger <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-xl</code> modifier class. Content pages may need more heading levels and the larger size makes the heading hierarchy clearer.</p>
 
   {{ designExample({
     group: "styles",
@@ -80,7 +82,7 @@
 
   <h3>Transactional page template</h3>
 
-  <p>The transactional page template example uses the <a href="/design-system/components/header#transactional-header">transactional header</a> and a <a href="/design-system/components/back-link">back link</a> component.</p>
+  <p>The transactional page template example uses the <a href="/design-system/components/header#NHS-transactional-service-header">transactional service header</a> and a <a href="/design-system/components/back-link">back link</a> component.</p>
 
   {{ designExample({
     group: "styles",
@@ -90,7 +92,8 @@
     showArguments: false
   }) }}
 
-  <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class. We also recommended you use a smaller page heading size using the <code>.nhsuk-heading-l</code> modifier class.</p>
+  <p>Vertical padding is reduced on transactional services using the <code>nhsuk-main-wrapper--s</code> modifier class.
+  We also recommend you use a smaller <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-l</code> modifier class.
 
   <h2 id="changing-template-content">Changing template content</h2>
 
@@ -141,19 +144,6 @@
       </tr>
     </thead>
     <tbody class="nhsuk-table__body">
-
-      <tr class="nhsuk-table__row" role="row">
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>beforeContent</td>
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
-          <span>
-            Add content that needs to appear outside <code>&lt;main&gt;</code> element and <code>&lt;div class="nhsuk-width-container"&gt;</code>.
-          <br>
-          For example: the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.
-          </span>
-        </td>
-      </tr>
-
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>bodyAttributes</td>
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Variable</td>
@@ -174,6 +164,17 @@
         </td>
       </tr>
 
+      <tr class="nhsuk-table__row" role="row">
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>beforeContent</td>
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
+        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+          <span>
+            Add content that needs to appear within the  <code>&lt;div class="nhsuk-width-container"&gt;</code> container but outside the <code>&lt;main&gt;</code> element.
+          <br>
+          For example: the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component and the <a href="/design-system/components/back-link">back link</a>.
+          </span>
+        </td>
+      </tr>
 
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>bodyEnd</td>
@@ -264,7 +265,7 @@
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
         <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
           <span>
-            Override the main section of the page, which by default wraps the <code>&lt;main&gt;</code> element, <code>outerContent</code> block and <code>content</code> block.
+            Override the main section of the page, which by default wraps the <code>beforeContent</code> block, the <code>&lt;main&gt;</code> element,  and <code>content</code> block.
           </span>
         </td>
       </tr>
@@ -276,18 +277,6 @@
           <span>
             Add a class to the <code>&lt;main&gt;</code> element. </td>
           </span>
-      </tr>
-
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option name </span>outerContent</td>
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Option type </span>Block</td>
-        <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
-          <span>
-            Add content that needs to appear outside <code>&lt;main&gt;</code> element but inside the <code>&lt;div class="nhsuk-width-container"&gt;</code>.
-            <br>
-            For example: the <a href="/design-system/components/back-link">back link</a> component.
-          </span>
-        </td>
       </tr>
 
       <tr class="nhsuk-table__row">

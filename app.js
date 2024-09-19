@@ -53,6 +53,7 @@ app.set('view engine', 'njk');
 const appViews = [
   path.join(__dirname, '/app/views/'),
   path.join(__dirname, '/node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/macros'),
 ];
 
 const env = nunjucks.configure(appViews, {

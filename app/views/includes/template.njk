@@ -53,11 +53,9 @@
         {{ header({}) }}
       {% endblock %}
 
-      {% block beforeContent %}{% endblock %}
-
       {% block main %}
         <div class="nhsuk-width-container {{ containerClasses }}">
-          {% block outerContent %}{% endblock %}
+          {% block beforeContent %}{% endblock %}
           <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
             {% block content %}{% endblock %}
           </main>
