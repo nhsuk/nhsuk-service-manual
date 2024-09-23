@@ -1,0 +1,36 @@
+{% set pageTitle = "Panel" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "The panel component is a visible container used on confirmation or results pages to highlight important content." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "September 2024" %}
+{% set backlog_issue_id = "0" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  [add example here]
+
+  <h2 id="when-to-use">When to use a panel</h2>
+  <p>Use the panel component to display important information when a transaction has been  completed.
+  <p>In most cases, the panel component is used on <a href="/design-system/patterns/confirmation-pages">confirmation pages</a>, to tell the user they have successfully completed the transaction.</p>
+
+  <h2 id="when-not-to-use">When not to use a panel</h2>
+  <p>Never use the panel component to highlight important information within body content.</p>
+
+  <h2 id="how-to-use">How to use a panel</h2>
+  <p>There are 2 ways to use the panel component. You can use HTML or, if you are using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS prototype kit</a>, you can use the Nunjucks macro.</p>
+
+  [add example here]
+
+  <h3 id="how-to-write-panel-text">How to write panel text</h3>
+  <p>Keep your panel text brief, as it's only meant for a high-level explanation of what has happened. For example, 'Application complete'.</p>
+  <p>Aim to use short words and phrases to make sure highlighted information is easy to read at different screen sizes. For example, shorter amounts of information is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.</p>
+  <p>If you need to give detailed information, or more context, use the description text under the heading text.</p>
+
+{% endblock %}
