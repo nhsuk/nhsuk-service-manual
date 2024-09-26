@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the task list to give users more control over how they complete long, complex services." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "September 2024" %}
+{% set dateUpdated = "October 2024" %}
 {% set backlog_issue_id = "304" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -16,171 +16,78 @@
 
 <p>The task list component displays all the tasks a user needs to do, and allows users to easily identify which ones are done and which they still need to do.</p>
 
-{{ designExample({
-  group: "components",
-  item: "task-list",
-  type: "default"
-}) }}
+<p>ADD EXAMPLE</p>
 
-<h2 id="when-to-use">When to use this component</h2>
+<h2 id="when-to-use-the-task-list">When to use the task list</h2>
 
-<p>
-  Use the task list to give users more control over how they complete long, complex services.
-</p>
-
-<p>
-  Only use the task list if there’s evidence that users:
-</p>
-
+<p>Use the task list to give users more control over how they complete long, complex services.</p>
+<p>Only use the task list if there's evidence that users:</p>
 <ul>
   <li>do not want to, or cannot, complete all the tasks in one sitting</li>
   <li>need to be able to choose the order they complete the tasks in</li>
 </ul>
 
-<h2 id="when-not-to-use-this-component">When not to use this component</h2>
+<h2 id="when-not-to-use-the-task-list">When not to use the task list</h2>
+<p>Try to simplify the service before you use a task list. If you're able to reduce the number of tasks or steps involved, you might not need one.</p>
+<p>Do not use the task list for a long service that needs to be completed in a specific order. If it needs to be completed over multiple sessions, consider allowing users to save their progress, and then to continue where they left off when they return. Use the start page to explain what users will be expected to do during the service.</p>
+<p>The task list should not be used as a way of showing users their answers. For this, you should use a <a href="/design-system/components/summary-list/">summary list</a> instead.</p>
 
-<p>
-  Try to simplify the service before you use a task list. If you’re able to reduce the number of tasks or steps involved, you might not need one.
-</p>
+<h2 id="how-the-task-list-works">How the task list works</h2>
 
-<p>
-  Do not use the task list for a long service that needs to be completed in a specific order. If it needs to be completed over multiple sessions, consider allowing users to save their progress, and then to continue where they left off when they return. Use the start page to explain what users will be expected to do during the service.
-</p>
-
-<p>
-The task list should not be used as a way of showing users their answers. For this, you should use a <a href="/design-system/components/summary-list/">summary-list</a> instead.
-</p>
-
-<h2 id="how-it-works">How it works</h2>
-
-<p>
-  There are 2 ways to use the task list component. You can use HTML or, if you’re using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://nhsuk-prototype-kit.azurewebsites.net/docs">NHS prototype kit</a>, you can use the Nunjucks macro.
-</p>
-
-{{ designExample({
-  group: "components",
-  item: "task-list",
-  type: "default"
-}) }}
-
-<p>Users should be able to complete tasks in whatever order they like.
-</p>
-
-<p>The status alongside the task indicates whether they can start it. Users can select a task to start completing it. Once they have completed it and returned to the task list, the status for that task will have changed to ‘Completed’.</p>
-
-<p>
-  Users can only move on from the task list when all tasks are shown as ‘Completed’.
-</p>
-
-<p>
-  Read the <a href="/design-system/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a> for more information on how to use the task list within a service.
-</p>
+<p>Users should be able to complete tasks in whatever order they like.</p>
+<p>The status alongside the task indicates whether they can start it. Users can select a task to start completing it. Once they have completed it and returned to the task list, the status for that task will have changed to "Completed".</p>
+<p>Users can only move on from the task list when all tasks are shown as "Completed".</p>
+<p>Find more information about how to use the task list within a service in the <a href="/design-system/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a>.</p>
 
 <h3 id="tasks">Tasks</h3>
 
-<p>
-  Tasks are usually actions that the user needs to take to complete a service. In a task list, the user should be able to choose to complete tasks in any order that works for them.
-</p>
-
-<p>
-  Each task within a task list includes a task name and a status. It can also include hint text if you decide this is needed.
-</p>
-
-<p>
-  The whole row is linked, allowing users to select anywhere within it to start the task.
-</p>
+<p>Tasks are usually actions that the user needs to take to complete a service. In a task list, the user should be able to choose to complete tasks in any order that works for them.</p>
+<p>Each task within a task list includes a task name and a status. It can also include hint text if you decide this is needed.</p>
+<p>The whole row is linked, allowing users to select anywhere within it to start the task.</p>
 
 <h4>Write clear task descriptions</h4>
-
-<p>
-  The task name gives users a reasonable expectation of what that task is about. For example, ‘Your contact details’ or ‘Upload evidence’. Use sentence case, and keep it short. Users of screen readers might find it difficult to navigate the task list if the task names are too long.
-</p>
-
-<p>
-  If you’re finding it difficult to come up with a clear and concise task name, it might be because the task itself is too complex and may need to be separated into smaller tasks. Group questions and actions into tasks in a way that makes sense to users, based on their needs.
-</p>
+<p>The task name gives users a reasonable expectation of what that task is about. For example, "Your contact details" or "Upload evidence". Use sentence case, and keep it short. Users of screen readers might find it difficult to navigate the task list if the task names are too long.</p>
+<p>If you're finding it difficult to come up with a clear and concise task name, it might be because the task itself is too complex and may need to be separated into smaller tasks. Group questions and actions into tasks in a way that makes sense to users, based on their needs.</p>
 
 <h4>Adding hint text</h4>
-
-<p>
-  Only use hint text if there is evidence that the user needs more information about what the task will include.
-</p>
-
-<p>
-  Keep hint text to a single, short sentence. Screen readers read out the entire text when users interact with the task link. This could frustrate users if the text is long.
-</p>
-
-<p>
-  Do not include links within the hint text. The whole task row links users to the task itself, so any links within the hint text will not work.
-</p>
+<p>Only use hint text if there is evidence that the user needs more information about what the task will include.</p>
+<p>Keep hint text to a single, short sentence. Screen readers read out the entire text when users interact with the task link. This could frustrate users if the text is long.</p>
+<p>Do not include links within the hint text. The whole task row links users to the task itself, so any links within the hint text will not work.</p>
 
 <h4>Grouping tasks</h4>
-
-<p>
-  If there are a lot of tasks to complete, you might find that grouping them makes it easier for users to understand and plan what they need to do. Tasks can be grouped into separate task lists on a page. Give each task list a short heading that clearly explains the grouping.
-</p>
-
-<p>
-  Read the <a href="service-manual/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a> for more information on grouping tasks.
-</p>
+<p>If there are a lot of tasks to complete, you might find that grouping them makes it easier for users to understand and plan what they need to do. Tasks can be grouped into separate task lists on a page. Give each task list a short heading that clearly explains the grouping.</p>
+<p>Find more information on grouping tasks in the <a href="service-manual/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a>.</p>
 
 <h3 id="statuses">Statuses</h3>
+<p>Statuses use colour and a short descriptor to give users a quick overview of how much of the task list they have completed, and how much is left to do.</p>
+<p>Find more information on status colours and text in the <a href="service-manual/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a></p>
 
-<p>
-  Statuses use colour and a short descriptor to give users a quick overview of how much of the task list they have completed, and how much is left to do.
-</p>
-
-<p>
-  Read the <a href="service-manual/patterns/complete-multiple-tasks/">complete multiple tasks pattern guidance</a> for more information on status colours and text.
-</p>
-
-<h2 id="research-on-this-component">Research on this component</h2>
-
-<p>
-  This component was created by a cross-government group using research from the previous task list pattern.
-</p>
+<h2 id="research-on-the-task-list">Research on the task list</h2>
+<p>This component was created by a cross-government group using research from the previous task list pattern.</p>
 
 <h3 id="linking-the-whole-task-row-to-the-task">Linking the whole task row to the task</h3>
 
-<p>
-  User feedback from the task list pattern has shown that some users currently try to select task statuses, thinking they are buttons or links. The statuses have been redesigned to look less like buttons, and now the whole task row is linked so that users can select anywhere within it to enter and begin the task.
-</p>
+<p>User feedback from the task list pattern has shown that some users currently try to select task statuses, thinking they are buttons or links. The statuses have been redesigned to look less like buttons, and now the whole task row is linked so that users can select anywhere within it to enter and begin the task.</p>
 
 <h3 id="formatting-of-statuses">Formatting of statuses</h3>
 
-<p>
-  The use of uppercase in task statuses makes them harder to read. User research has also shown that once a few tasks have been completed, it is harder for users to scan the page and spot incomplete tasks.
-</p>
+<p>The use of uppercase in task statuses makes them harder to read. User research has also shown that once a few tasks have been completed, it is harder for users to scan the page and spot incomplete tasks.</p>
 
-<p>
-  Statuses are now written in sentence case to make them easier to read. The ‘Completed’ task now uses black text with no background colour, which will draw more attention to tasks that require action.
-</p>
+<p>Statuses are now written in sentence case to make them easier to read. The "Completed" task now uses black text with no background colour, which will draw more attention to tasks that require action.</p>
 
-<p>
-  We have also introduced a new colour palette for statuses, using colour contrasts that meet accessibility guidance.
-</p>
+<p>We have also introduced a new colour palette for statuses, using colour contrasts that meet accessibility guidance.</p>
 
 <h3 id="known-issues-and-gaps">Known issues and gaps</h3>
 
-<p>
-  While this new component is based on user research from the task list pattern, we still need to carry out user testing with this new component. In particular, we would like to test the following assumptions:
-</p>
+<p>While this new component is based on user research from the task list pattern, we still need to carry out user testing with this new component. In particular, we would like to test the following assumptions:</p>
 
 <ul>
-  <li>
-    the benefits of linking the whole task row outweigh the risks of accidental clicking
-  </li>
-  <li>
-    the contrast of the statuses is sufficient
-  </li>
-  <li>
-    the suggested wording of the statuses make the most sense to users
-  </li>
+  <li>the benefits of linking the whole task row outweigh the risks of accidental clicking</li>
+  <li>the contrast of the statuses is sufficient</li>
+  <li>the suggested wording of the statuses makes the most sense to users</li>
 </ul>
 
-<p>
-  If you are using this component in a service, we would like to hear about any user research so that we can identify any potential issues.
-</p>
+<p>If you are using this component in a service, we would like to hear about any user research so that we can identify any potential issues.</p>
 
 
 

@@ -2,9 +2,9 @@
 {% set pageDescription = "Use this pattern to give users more control over how they complete long, complex services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
-{% set theme = "Page types" %}
-{% set dateUpdated = "September 2024" %}
-{% set backlog_issue_id = "304" %}
+{% set theme = "Tasks" %}
+{% set dateUpdated = "October 2024" %}
+{% set backlog_issue_id = "539" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,14 +14,11 @@
 
 {% block bodyContent %}
 
-<p>Task lists help users understand tasks involved in completing a transaction, the order they should complete tasks in and when they have completed tasks</p>
-
 <p>Help users understand:</p>
-
 <ul>
   <li>the tasks involved in completing a transaction</li>
   <li>the order they should complete tasks in</li>
-  <li>when they’ve completed tasks</li>
+  <li>when they've completed tasks</li>
 </ul>
 
 <div class="nhsuk-inset-text app-wcag-inset-text">
@@ -32,106 +29,69 @@
   <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
   <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
   <ul>
-    <li><a href="#wcag-interact-without-click-drag-task">interact with tasks without relying on ‘click and drag’ movements (if you choose to add functionality to reorder tasks)</a></li>
-    <li><a href="#wcag-edit-information-previous-task">edit information they’ve given when going back to a previous task</a></li>
+    <li><a href="#wcag-interact-without-click-drag-task">interact with tasks without relying on click and drag movements (if you choose to add functionality to reorder tasks)</a></li>
+    <li><a href="#wcag-edit-information-previous-task">edit information they have given when going back to a previous task</a></li>
   </ul>
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "example",
-  fullpage: true,
-  showArguments: false
-}) }}
+<p>ADD complete-multiple-tasks type example</p>
 
-<p>Complete multiple tasks pages use a <a href="/design-system/components/task-list">task list component</a> for each group of tasks on the page.</p>
+<p>This pattern uses a <a href="/design-system/components/task-list">task list component</a> for each group of tasks on the page.</p>
 
 <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
-
 <p>Only use a complete multiple tasks page for longer transactions involving multiple tasks that users may need to complete over a number of sessions.</p>
+<p>Try to simplify the transaction before you use a complete multiple tasks page. If you're able to reduce the number of tasks or steps involved, you might not need one.</p>
 
-<p>Try to simplify the transaction before you use a complete multiple tasks page. If you’re able to reduce the number of tasks or steps involved, you might not need one.</p>
-
-<h2 id="how-it-works">How it works</h2>
-
+<h2 id="how-it-works">How this pattern works</h2>
 <p>You should show a complete multiple tasks page:</p>
-
 <ul>
   <li>at the start of the transaction</li>
   <li>at the start of each returning session</li>
 </ul>
-
 <p>If you use a complete multiple tasks page in your service, you’ll need to:</p>
-
 <ul>
   <li>group related actions into tasks</li>
   <li>show the status of the tasks</li>
 </ul>
-
 <p>If there are lots of tasks to complete, you might also need to group them further into steps.</p>
 
 <h3 id="show-related-actions-as-a-task">Show related actions as a task</h3>
-
-<p>Summarise a set of related activities and questions into a task, for example, ‘Provide financial evidence’ and ‘Give medical information’. This will help users understand and plan what they need to do.</p>
-
+<p>Summarise a set of related activities and questions into a task, for example, "Give medical information". This will help users understand and plan what they need to do.</p>
 <p>Where possible, task names should:</p>
-
 <ul>
   <li>describe what the task or activity will involve</li>
-  <li>start with verbs, for example, ‘check’, ‘declare’, ‘report’</li>
+  <li>start with verbs, for example, "check", "declare", "report"</li>
 </ul>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
-  <p>Any task list that allows the user to rearrange the order that tasks are shown must offer a way to do so without relying on ‘click and drag’ movements. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">2.5.7 Dragging movements</a>.</p>
+  <p>Any task list that lets the user reorder the tasks must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
 </div>
 
 <h3 id="show-the-status-of-the-tasks">Show the status of the tasks</h3>
+<p>Make it clear to users which tasks they have completed and which still need their attention, by labelling them using statuses.</p>
 
-<p>Make it clear to users which tasks they’ve completed and which still need their attention, by labelling them using statuses.</p>
+<p>ADD EXAMPLE complete multiple tasks - type task list statuses</p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "task-list-statuses",
-  fullpage: false,
-  showArguments: false
-}) }}
-
-<p>Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example ‘Completed’ and ‘Incomplete’, then add more if your user research shows there’s a need for them.</p>
-
-<p>Once the user has completed the task, the status should show as ‘Completed’ and be black text with no background colour. This will draw more attention to tasks that require action.</p>
+<p>Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example "Completed" and "Incomplete", then add more if your user research shows there's a need for them.</p>
+<p>Once the user has completed the task, the status should show as "Completed" and be black text with no background colour. This will draw more attention to tasks that require action.</p>
 
 <h4 id="tasks-that-are-in-progress">Tasks that are in progress</h4>
-
 <p>You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they haven’t started at all, and those they’ve started but not completed.</p>
-
-<p>In this instance, instead of ‘Incomplete’, you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.</p>
+<p>In this instance, instead of "Incomplete", you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.</p>
 
 <p>‘Not yet started’ uses a light blue background, and ‘In progress’ uses a white background.</p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "in-progress",
-  fullpage: false,
-  showArguments: false
-}) }}
+<p>ADD EXAMPLE - complete multiple tasks - type in progress</p>
+
 
 <h4 id="tasks-that-cannot-yet-be-started">Tasks that cannot yet be started</h4>
 
 <p>If the user cannot start the task yet, for example because another task must be completed first, use the ‘Cannot start yet’ status. This should be grey text with no background colour, and the ‘task row’ should not be linked.</p>
+<p>ADD EXAMPLE complete multiple tasks - type cannont start yet<p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "cannot-start-yet",
-  fullpage: false,
-  showArguments: false
-}) }}
 
 <h4 id="tasks-containing-an-error">Tasks containing an error</h4>
 
@@ -140,14 +100,8 @@
 <p>If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.</p>
 
 <p>Do not use the red background colour for any status text except errors.</p>
+<p>ADD EXAMPLE complete multiple tasks - type error</p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "error",
-  fullpage: false,
-  showArguments: false
-}) }}
 
 <h4 id="status-text">Status text</h4>
 
@@ -158,14 +112,8 @@
 <h4 id="additional-statuses">Additional statuses</h4>
 
 <p>If your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.</p>
+<p>ADD EXAMPLE - type all-colours</p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "all-colours",
-  fullpage: false,
-  showArguments: false
-}) }}
 
 <h3 id="group-tasks-into-steps">Group tasks into steps</h3>
 
@@ -203,27 +151,16 @@
 <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
 </div>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "have-you-completed-this-section",
-  fullpage: false,
-  showArguments: false
-}) }}
+<p>ADD EXAMPLE - have you completed this section</p>
+
 
 <p>Always allow users to go back into a task to change their answer.</p>
 
 <h4 id="error-messages">Error messages</h4>
 
 <p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: ‘Select whether you’ve completed this section’.</p>
+<p>ADD EXAMPLE have you completed this section error</p>
 
-{{ designExample({
-  group: "patterns",
-  item: "complete-multiple-tasks",
-  type: "have-you-completed-this-section-error",
-  fullpage: false,
-  showArguments: false
-}) }}
 
 <h2 id="research-on-this-pattern">Research on this pattern</h2>
 
