@@ -35,7 +35,13 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-<p>ADD complete-multiple-tasks type example</p>
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "example",
+  fullpage: true,
+  showArguments: false
+}) }}
 
 <p>This pattern uses a <a href="/design-system/components/task-list">task list component</a> for each group of tasks on the page.</p>
 
@@ -49,7 +55,7 @@
   <li>at the start of the transaction</li>
   <li>at the start of each returning session</li>
 </ul>
-<p>If you use a complete multiple tasks page in your service, you’ll need to:</p>
+<p>If you use a complete multiple tasks page in your service, you'll need to:</p>
 <ul>
   <li>group related actions into tasks</li>
   <li>show the status of the tasks</li>
@@ -73,35 +79,58 @@
 <h3 id="show-the-status-of-the-tasks">Show the status of the tasks</h3>
 <p>Make it clear to users which tasks they have completed and which still need their attention, by labelling them using statuses.</p>
 
-<p>ADD EXAMPLE complete multiple tasks - type task list statuses</p>
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "task-list-statuses",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <p>Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example "Completed" and "Incomplete", then add more if your user research shows there's a need for them.</p>
 <p>Once the user has completed the task, the status should show as "Completed" and be black text with no background colour. This will draw more attention to tasks that require action.</p>
 
 <h4 id="tasks-that-are-in-progress">Tasks that are in progress</h4>
-<p>You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they haven’t started at all, and those they’ve started but not completed.</p>
-<p>In this instance, instead of "Incomplete", you may want to use ‘Not yet started’ to show which tasks they are yet to start. You should then use ‘In progress’ for tasks they have started but are yet to complete.</p>
+<p>You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they have not started at all, and those they've started but not completed.</p>
+<p>In this instance, instead of "Incomplete", you may want to use "Not yet started" to show which tasks they are yet to start. You should then use "In progress" for tasks they have started but are yet to complete.</p>
 
-<p>‘Not yet started’ uses a light blue background, and ‘In progress’ uses a white background.</p>
+<p>"Not yet started" uses a light blue background, and "In progress" uses a white background.</p>
 
-<p>ADD EXAMPLE - complete multiple tasks - type in progress</p>
-
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "in-progress",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="tasks-that-cannot-yet-be-started">Tasks that cannot yet be started</h4>
 
-<p>If the user cannot start the task yet, for example because another task must be completed first, use the ‘Cannot start yet’ status. This should be grey text with no background colour, and the ‘task row’ should not be linked.</p>
-<p>ADD EXAMPLE complete multiple tasks - type cannont start yet<p>
+<p>If the user cannot start the task yet, for example because another task must be completed first, use the "Cannot start yet" status. This should be grey text with no background colour, and the "task row" should not be linked.</p>
 
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "cannot-start-yet",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="tasks-containing-an-error">Tasks containing an error</h4>
 
 <p>You should avoid tasks having an error status by using the <a href="/design-system/components/error-summary/">error summary</a> and <a href="/design-system/components/error-message/">error messages</a> displayed at the point that the error is made, so that the user can fix it straight away.</p>
 
-<p>If it is unavoidable that a task may end up saved but containing an error, use the status text ‘There is a problem’ and a red background.</p>
+<p>If it is unavoidable that a task may end up saved but containing an error, use the status text "There is a problem" and a red background.</p>
 
 <p>Do not use the red background colour for any status text except errors.</p>
-<p>ADD EXAMPLE complete multiple tasks - type error</p>
 
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "error",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h4 id="status-text">Status text</h4>
 
@@ -112,20 +141,26 @@
 <h4 id="additional-statuses">Additional statuses</h4>
 
 <p>If your user research shows that there is a need for additional status tags, you can use other colours to help distinguish between them.</p>
-<p>ADD EXAMPLE - type all-colours</p>
 
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "all-colours",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h3 id="group-tasks-into-steps">Group tasks into steps</h3>
 
 <p>If your transaction involves lots of tasks, make it manageable by splitting it up into steps that represent stages in the process.</p>
 
-<p>For example, you could group all tasks which help users find out if your service is right for them in a step called ‘Check before you start’.</p>
+<p>For example, you could group all tasks which help users find out if your service is right for them in a step called "Check before you start".</p>
 
 <p>Where possible, allow users to complete tasks in any order. This will help them plan their time and complete sections as and when they can.</p>
 
 <h3 id="marking-tasks-as-completed">Marking tasks as completed</h3>
 
-<p>Sometimes, it’s better to let the user decide when a task is completed.</p>
+<p>Sometimes, it's better to let the user decide when a task is completed.</p>
 
 <p>This can be helpful when a task involves:</p>
 
@@ -136,37 +171,51 @@
   <li>answers that need to be checked carefully with someone else</li>
 </ul>
 
-<p>Do this by asking a radio question at the end of the task – either as the last question (if the task is a single page) or on the <a href="/design-system/patterns/check-answers/">‘Check answers’ page</a> (if the task uses multiple <a href="/design-system/patterns/question-pages/">question pages</a>).</p>
+<p>Do this by asking a radio question at the end of the task. If the task is on:</p>
+<ul>
+  <li>a single page, do it as the last question</li>
+  <li>on multiple question pages, do it on a "Check answers" page</li>
+</ul>
+<p>(<a href="https://design-system.service.gov.uk/patterns/check-answers/">GOV.UK has a Check answers pattern</a> and more guidance on <a href="https://design-system.service.gov.uk/patterns/question-pages/">question pages</a>.)</p>
 
-<p>Ask ‘Have you completed this section?’ with the radio options ‘Yes, I’ve completed this section’ or ‘No, I’ll come back later’.</p>
+<p>Ask "Have you completed this section?" with the radio options "Yes, I've completed this section" or "No, I'll come back later".</p>
 
-<p>If the user selects ‘No, I’ll come back to it later’, mark the task as ‘Incomplete’ or ‘In progress’.</p>
+<p>If the user selects "No, I'll come back to it later", mark the task as "Incomplete" or "In progress".</p>
 
-<p>If the user selects ‘Yes, I’ve completed this section’, mark the task as ‘Completed’.</p>
+<p>If the user selects "Yes, I've completed this section", mark the task as "Completed".</p>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-edit-information-previous-task" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
   <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with WCAG 2.2 success criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant entry</a>.</p>
+<p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
 </div>
 
-<p>ADD EXAMPLE - have you completed this section</p>
-
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "have-you-completed-this-section",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <p>Always allow users to go back into a task to change their answer.</p>
 
 <h4 id="error-messages">Error messages</h4>
 
-<p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: ‘Select whether you’ve completed this section’.</p>
-<p>ADD EXAMPLE have you completed this section error</p>
+<p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: "Select whether you have completed this section".</p>
 
+{{ designExample({
+  group: "patterns",
+  item: "complete-multiple-tasks",
+  type: "have-you-completed-this-section-error",
+  fullpage: false,
+  showArguments: false
+}) }}
 
 <h2 id="research-on-this-pattern">Research on this pattern</h2>
 
-<p>This pattern was previously named ‘Task list’ and was <a href="https://designnotes.blog.gov.uk/2017/04/04/weve-published-the-task-list-pattern/">developed by a team at the Government Digital Service (GDS)</a>.</p>
+<p>This pattern is based on the pattern in the GOV.UK design system.</p>
 
-<p>It was then iterated by a cross-government collaboration and published as a new <a href="/design-system/components/task-list/">task list component</a> with updated guidance and research.</p>
-
-<p>See the <a href="/design-system/components/task-list#research-on-this-component">research on the new task list component</a> for details of research done, and known issues and gaps.</p> 
+<p>Find out about the <a href="/design-system/components/task-list#research-on-the-task-list">GOV.UK research on the task list component page</a>, including known issues and gaps.</p> 
 {% endblock %}
