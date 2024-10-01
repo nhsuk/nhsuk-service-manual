@@ -92,14 +92,6 @@
 
     {% include "includes/_header.njk" %}
 
-    {% block breadcrumb %}
-      {{ breadcrumb({
-        href: "/",
-        text: "Home",
-        classes: "app-breadcrumb"
-      }) }}
-    {% endblock %}
-
     {% block outerBody %}{% endblock %}
 
     {%- if beta %}
@@ -108,7 +100,14 @@
 
     {% if pageLayout != "Homepage" %}
     <div class="nhsuk-width-container app-width-container">
-      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
+      {% block breadcrumb %}
+        {{ breadcrumb({
+          href: "/",
+          text: "Home",
+          classes: "app-breadcrumb"
+        }) }}
+      {% endblock %}
+      <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s app-main-wrapper" id="maincontent" role="main">
         {% block body %}{% endblock %}
       </main>
     </div>

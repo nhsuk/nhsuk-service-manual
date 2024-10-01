@@ -76,6 +76,30 @@
       "type": "object",
       "required": false,
       "description": "HTML attributes (for example data attributes) to add to the date-input container."
+    },
+    {
+      "name": "values",
+      "type": "object",
+      "required": false,
+      "description": "An optional object use to specify value attributes for the date parts without setting rows."
+    },
+    {
+      "name": "values.day",
+      "type": "string",
+      "required": false,
+      "description": "Value attribute for the day input."
+    },
+    {
+      "name": "values.month",
+      "type": "string",
+      "required": false,
+      "description": "Value attribute for the month input."
+    },
+    {
+      "name": "values.year",
+      "type": "string",
+      "required": false,
+      "description": "Value attribute for the year input."
     }
   ]
 }
