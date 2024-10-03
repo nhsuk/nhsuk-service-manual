@@ -1,0 +1,108 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'task-list/macro.njk' import taskList %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">Service name</h1>
+
+      <h2 class="nhsuk-heading-m">Check before you start</h2>
+
+      {{ taskList({
+        idPrefix: "check-before-you-start",
+        items: [
+          {
+            title: {
+              text: "Check eligibility"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Read declaration"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="nhsuk-heading-m">Health questionnaire</h2>
+      {{ taskList({
+        idPrefix: "your-health",
+        items: [
+          {
+            title: {
+              text: "Physical activity"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Smoking history"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Vaccination history"
+            },
+            href: "#",
+            status: {
+              text: "Completed",
+              classes: "nhsuk-task-list__status--completed"
+            }
+          },
+          {
+            title: {
+              text: "Alcohol use"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Body measurements"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Incomplete",
+                classes: "nhsuk-tag--blue"
+              }
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

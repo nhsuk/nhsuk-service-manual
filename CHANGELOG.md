@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+
+## Unreleased
+
+- Add new Task list component
+- Add new Complete multiple tasks pattern
+
 ## 7.0.0 - 19 September 2024
 
 :new: **New features**
@@ -116,7 +122,7 @@
 - Remove embedded link from contents list design example
 - Fix link in section on link text in accessibility guidance
 
-## 6.1.0 - 18 January 2024 
+## 6.1.0 - 18 January 2024
 
 :new: **New features**
 
