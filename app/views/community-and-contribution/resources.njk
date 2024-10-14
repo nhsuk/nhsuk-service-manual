@@ -1,0 +1,37 @@
+{% set pageTitle = "Resources" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "Community created and maintained resources that provide additional ways to use the NHS design system." %}
+{% set dateUpdated = "November 2024" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>You can use these community resources to help you use the NHS design system in your design tool or development environment.</p>
+  <p>The NHS service manual team is not responsible for these resources and tools and we cannot support you with using them. Please contact the owner if you need help or you want to request a feature.</p>
+
+  <h2 class="nhsuk-heading-l">Create flow diagrams</h2>
+  <ul>
+    <li><a href="https://app.mural.co/template/fb5c0896-ad0c-433e-83ea-6ec948f223b2/64d4db24-f361-4f80-be3c-9de04a8b4374">Create NHS flow diagrams in Mural</a></li>
+    <li><a href="#">Create NHS flow diagrams in Figma</a></li>
+  </ul>
+
+  <h2 class="nhsuk-heading-l">Design prototypes and wireframes</h2>
+  <ul>
+    <li><a href="https://www.figma.com/community/file/1217465175363344449/nhs-figma-design-system">Design NHS interfaces and prototypes in Figma</a></li>
+    <!-- <li><a href="https://www.figma.com/design/6f2CbcZ7cnpNrtKEcfQp8X/NHS-App-Design-System?node-id=4273-2990&node-type=canvas&t=2NbS70n2ZhCVfar6-0">Design NHS App interfaces and prototypes in Figma</a></li> -->
+  </ul>
+
+  <h2 class="nhsuk-heading-l">Build front ends</h2>
+  <ul>
+    <li><a href="https://github.com/NHSDigital/nhsuk-react-components">NHS React components</a></li>
+    <li><a href="https://wordpress.org/themes/nightingale/">WordPress Nightingale theme</a></li>
+    <!-- <li>Wagtail components?</li> -->
+    <li><a href="https://design-system.nhsapp.service.nhs.uk/">NHS App components</a></li>
+  </ul>
+
+{% endblock %}
