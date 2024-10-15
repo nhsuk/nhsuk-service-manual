@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 7.1.0 - 15 October 2024
+
+:new: **New features**
+- Update accessibility guidance to say that WCAG 2.2 includes WCAG 2.1 and teams are now monitored to WCAG 2.2
+
 ## 7.0.0 - 19 September 2024
 
 :new: **New features**
