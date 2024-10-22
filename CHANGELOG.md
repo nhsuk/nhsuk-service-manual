@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+:new: **New features**
 - Add new Task list component
 - Add new Complete multiple tasks pattern
 

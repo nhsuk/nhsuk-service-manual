@@ -49,10 +49,10 @@
 
 <h2 id="when-not-to-use-the-task-list">When not to use this pattern</h2>
 <p>Try to simplify the service before you use a complete multiple tasks page. If you're able to reduce the number of tasks or steps involved, you might not need one.</p>
-<p>The complete multiple tasks page should not be used as a way of showing users their answers. For this, you should use a <a href="/design-system/components/summary-list/">summary list</a> instead.</p>
+<p>Do not use the complete multiple tasks page as a way of showing users their answers. For this, use a <a href="/design-system/components/summary-list/">summary list</a> instead.</p>
 
 <h2 id="how-it-works">How this pattern works</h2>
-<p>You should show a complete multiple tasks page:</p>
+<p>Show a complete multiple tasks page:</p>
 <ul>
   <li>at the start of the transaction</li>
   <li>at the start of each returning session</li>
@@ -89,12 +89,12 @@
   showArguments: false
 }) }}
 
-<p>Statuses should be helpful to users. The more you add, the harder it is for users to remember them. Start with the smallest number of different statuses you think might work, for example "Completed" and "Incomplete", then add more if your user research shows there's a need for them.</p>
-<p>Once the user has completed the task, the status should show as "Completed" and be black text with no background colour. This will draw more attention to tasks that require action.</p>
+<p>Start with the smallest number of different statuses you think might work, for example "Completed" and "Incomplete", then add more if your user research shows there's a need for them. The more you add, the harder it is for users to remember them.</p>
+<p>Once the user has completed the task, show the status as "Completed" in black text with no background colour. This will draw more attention to tasks that require action.</p>
 
 <h4 id="tasks-that-are-in-progress">Tasks that are in progress</h4>
 <p>You may find you need additional statuses if your user research shows that users want to be able to distinguish between the tasks they have not started at all, and those they've started but not completed.</p>
-<p>In this instance, instead of "Incomplete", you may want to use "Not yet started" to show which tasks they are yet to start. You should then use "In progress" for tasks they have started but are yet to complete.</p>
+<p>In this instance, instead of "Incomplete", you may want to use "Not yet started" to show which tasks they are yet to start. Use "In progress" for tasks they have started but are yet to complete.</p>
 
 <p>"Not yet started" uses a light blue background, and "In progress" uses a white background.</p>
 
@@ -108,7 +108,7 @@
 
 <h4 id="tasks-that-cannot-yet-be-started">Tasks that cannot yet be started</h4>
 
-<p>If the user cannot start the task yet, for example because another task must be completed first, use the "Cannot start yet" status. This should be grey text with no background colour, and the "task row" should not be linked.</p>
+<p>If the user cannot start the task yet, for example because another task must be completed first, use the "Cannot start yet" status. Use grey text with no background colour, and do not link the "task row".</p>
 
 {{ designExample({
   group: "patterns",
@@ -120,7 +120,7 @@
 
 <h4 id="tasks-containing-an-error">Tasks containing an error</h4>
 
-<p>You should avoid tasks having an error status by using the <a href="/design-system/components/error-summary/">error summary</a> and <a href="/design-system/components/error-message/">error messages</a> displayed at the point that the error is made, so that the user can fix it straight away.</p>
+<p>Avoid tasks having an error status by using the <a href="/design-system/components/error-summary/">error summary</a> and <a href="/design-system/components/error-message/">error messages</a> displayed at the point that the error is made, so that the user can fix it straight away.</p>
 
 <p>If it is unavoidable that a task may end up saved but containing an error, use the status text "There is a problem" and a red background.</p>
 
@@ -205,7 +205,7 @@
 
 <h4 id="error-messages">Error messages</h4>
 
-<p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: "Select whether you have completed this section".</p>
+<p>If the user does not select an option, show an <a href="/design-system/components/error-message/">error message</a> to say: "Select whether you've completed this section".</p>
 
 {{ designExample({
   group: "patterns",
@@ -219,5 +219,5 @@
 
 <p>This pattern is based on the pattern in the GOV.UK design system.</p>
 
-<p>Find out about the <a href="/design-system/components/task-list#research-on-the-task-list">GOV.UK research on the task list component page</a>, including known issues and gaps.</p> 
+<p>Find out about the <a href="https://design-system.service.gov.uk/components/task-list/">GOV.UK research on the task list component page</a>, including known issues and gaps.</p> 
 {% endblock %}
