@@ -180,6 +180,16 @@ app.get('/service-standard/:page', (req, res) => {
   res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
 });
 
+// Redirects for design system patterns
+
+app.get('/design-system/patterns/ask-users-for-their-nhs-number', (req, res) => {
+  res.redirect('/design-system/patterns/ask-for-nhs-numbers');
+});
+
+app.get('/design-system/patterns/reassure-users-that-a-page-is-up-to-date', (req, res) => {
+  res.redirect('/design-system/patterns/know-that-a-page-is-up-to-date');
+});
+
 // REDIRECT STOPS HERE
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
