@@ -6,6 +6,9 @@
 - Add new Task list component
 - Add new Complete multiple tasks pattern
 
+:wrench: **Maintenance**
+- Rename and reorganise pattern subsection headings in the design system
+
 ## 7.1.0 - 15 October 2024
 
 :new: **New features**
