@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+- Rename and reorganise pattern subsection headings in the design system
+
 ## 7.0.0 - 19 September 2024
 
 :new: **New features**
