@@ -12,38 +12,41 @@
 {% block bodyContent %}
 
   <p>You can use these community resources to help you use the NHS design system in your design tool or development environment.</p>
-  <p>The NHS service manual team is not responsible for these resources and tools and we cannot support you with using them. Please contact the owner if you need help or you want to request a feature.</p>
 
   <h2 class="nhsuk-heading-l">Create flow diagrams</h2>
-  <ul class="nhsuk-list">
+  <ul class="nhsuk-list nhsuk-u-margin-bottom-0">
     <li>
       <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="https://app.mural.co/template/fb5c0896-ad0c-433e-83ea-6ec948f223b2/64d4db24-f361-4f80-be3c-9de04a8b4374">Mural flow diagrams</a></h3>
-      <p>Create NHS flow diagrams in Mural</p>
+      <p>Create NHS styled user flow diagrams in Mural.</p>
     </li>
     <!-- <li>
       <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="#">Figma flow diagrams</a></h3>
       <p>Create NHS flow diagrams in Figma</p>
     </li> -->
+    <li>
+      <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="https://github.com/nhsuk/nhsuk-service-manual/tree/main/app/assets/sketch-templates">Paper sketching templates</a></h3>
+      <p>Print NHS styled paper sketches for in-person workshops.</p>
+    </li>
   </ul>
 
   <h2 class="nhsuk-heading-l">Design prototypes and wireframes</h2>
-  <ul class="nhsuk-list">
+  <ul class="nhsuk-list nhsuk-u-margin-bottom-0">
     <li>
       <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="https://www.figma.com/community/file/1217465175363344449/nhs-figma-design-system">Figma design library</a></h3>
-      <p>Use NHS design system components in Figma</p>
+      <p>Use NHS design system components in Figma for rapid wireframing and basic prototyping. Use the <a href="/design-system/prototyping">prototype kit</a> to build prototypes for usability testing.</p>
     </li>
     <!-- <li><a href="https://www.figma.com/design/6f2CbcZ7cnpNrtKEcfQp8X/NHS-App-Design-System?node-id=4273-2990&node-type=canvas&t=2NbS70n2ZhCVfar6-0">Design NHS App interfaces and prototypes in Figma</a></li> -->
   </ul>
 
   <h2 class="nhsuk-heading-l">Build front ends</h2>
-  <ul class="nhsuk-list">
+  <ul class="nhsuk-list nhsuk-u-margin-bottom-0">
     <li>
       <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="https://github.com/NHSDigital/nhsuk-react-components">React components</a></h3>
-      <p>Use NHS design system components in React apps</p>
+      <p>Use NHS design system components in React apps.</p>
     </li>
     <li>
       <h3 class="nhsuk-heading-s nhsuk-u-margin-bottom-2"><a href="https://digital.leadershipacademy.nhs.uk/digital-capabilities/websites/nightingale-theme-user-guide">WordPress theme</a></h3>
-      <p>Theme WordPress websites with NHS styling</p>
+      <p>Theme WordPress websites with NHS styling.</p>
     </li>
     <!-- <li>Wagtail components?</li> -->
     <!-- <li>
@@ -56,7 +59,24 @@
     </li> -->
   </ul>
 
+  <h2 class="nhsuk-heading-m nhsuk-u-padding-top-4">Support for these resources</h2>
+  <p>The NHS service manual team is not responsible for these resources and we cannot support you with using them.</p>
+  {{ details({
+    text: "Get support with these resources",
+    HTML: "
+    <p>Join our free Slack workspace to access dedicated channels where you can ask questions and discuss issues and ideas:</p>
+    <ul>
+        <li><a href=\"#\">#mural-flow-diagrams</a></li>
+        <li><a href=\"#\">#paper-sketching-templates</a></li>
+        <li><a href=\"#\">#figma-design-library</a></li>
+        <li><a href=\"#\">#nhs-react-components</a></li>
+        <li><a href=\"#\">#nhs-wordpress-theme</a></li>
+    </ul>
+    "
+  }) }}
+
   <h2 class="nhsuk-heading-m">Suggest a new resource</h2>
   <p>To suggest a new resource, <a href="/get-in-touch">get in touch</a> with the service manual team.</p>
+  <p>You can also use <a href=\"https://design-system.service.gov.uk/community/resources-and-tools\">GOV.UK Design System resources</a> but you will need to adapt them for NHS.</p>
 
 {% endblock %}
