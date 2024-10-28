@@ -180,6 +180,12 @@ app.get('/service-standard/:page', (req, res) => {
   res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
 });
 
+// Redirects for accessibility URLs
+
+app.get('/accessibility/new-accessibility-requirements-wcag-2-2', (req, res) => {
+  res.redirect('/accessibility/new-criteria-in-wcag-2-2');
+});
+
 // Redirects for design system patterns
 
 app.get('/design-system/patterns/ask-users-for-their-nhs-number', (req, res) => {
