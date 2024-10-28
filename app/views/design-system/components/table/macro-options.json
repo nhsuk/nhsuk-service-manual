@@ -98,7 +98,7 @@
       "name": "captionClasses",
       "type": "string",
       "required": false,
-      "description": "Classes for caption text size. Classes should correspond to the available typography heading classes."
+      "description": "Classes for caption text size. Classes to add to the table caption, for example `nhsuk-table__caption--l`."
     },
     {
       "name": "firstCellIsHeader",

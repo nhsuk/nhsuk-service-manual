@@ -53,6 +53,7 @@ app.set('view engine', 'njk');
 const appViews = [
   path.join(__dirname, '/app/views/'),
   path.join(__dirname, '/node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/macros'),
 ];
 
 const env = nunjucks.configure(appViews, {
@@ -177,6 +178,12 @@ app.get('/service-standard/about', (req, res) => {
 
 app.get('/service-standard/:page', (req, res) => {
   res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
+});
+
+// Redirects for accessibility URLs
+
+app.get('/accessibility/new-accessibility-requirements-wcag-2-2', (req, res) => {
+  res.redirect('/accessibility/new-criteria-in-wcag-2-2');
 });
 
 // REDIRECT STOPS HERE

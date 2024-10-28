@@ -6,23 +6,6 @@
   Content page template
 {% endblock %}
 
-{% block beforeContent %}
-  {{ breadcrumb({
-    items: [
-      {
-        href: "#",
-        text: "Level one"
-      },
-      {
-        href: "#",
-        text: "Level two"
-      }
-    ],
-    href: "#",
-    text: "Level three"
-  }) }}
-{% endblock %}
-
 {% block header %}
   {{ header({
       showNav: "true",
@@ -51,6 +34,23 @@
       ]
     })
 }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Level one"
+      },
+      {
+        href: "#",
+        text: "Level two"
+      }
+    ],
+    href: "#",
+    text: "Level three"
+  }) }}
 {% endblock %}
 
 {% block content %}
