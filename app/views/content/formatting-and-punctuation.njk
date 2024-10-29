@@ -129,7 +129,7 @@
 
   <h2 id="capitalisation">Capitalisation</h2>
   <p>We do not use block capitals as they're difficult for people to read.</p>
-  <p>We always use sentence case, including page titles. The exception is proper nouns and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list.</a></p>
+  <p>We always use sentence case, including for page titles. This means we only capitalise the first word and any proper nouns. (See examples below and examples in the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide capitalisation list</a>.)</p>
   <p>Generic drug names start lower case. Brand names get an initial capital letter, except where the brand uses lower case itself.</p>
 
   <p>Examples:</p>
@@ -178,31 +178,41 @@
   <p>We do not use full stops in <a href="/design-system/components/card">cards</a>, where the card contains a single sentence and acts as a brief link to another page.</p>
 
   <h2 id="headings">Headings</h2>
-  <h3>Main heading  <code>&lt;h1&gt;</code></h3>
-  <p>Give your content a unique and informative main heading, which will be heading level 1: <code>&lt;h1&gt;</code>. You should only have 1 <code>&lt;h1&gt;</code> per page.</p>
-  <p>Keep your <code>&lt;h1&gt;</code>  concise, ideally 65 characters or less.</p>
-  <p>The <code>&lt;h1&gt;</code> will usually be the same as the page title (<code>&lt;title&gt;</code>). It is the <code>&lt;title&gt;</code> that shows in the browser tab and acts as the link in search results. Your content management system (CMS) may create the <code>&lt;title&gt;</code> automatically from your <code>&lt;h1&gt;</code>.</p>
-  <p>Find more information about setting up <a href="/design-system/styles/page-template#page-title">page titles in the Page template section of the design system</a>, including examples of different text in the <code>&lt;h1&gt;</code> and <code>&lt;title&gt;</code>.</p>
-  
-  <h3>"Nest" headings</h3>
-  <p>Make sure that headings follow the correct "nesting" order. The structure of the page is the key thing, not the size and style of the text.</p>
-  <p>Use heading levels (subheadings, starting with <code>&lt;h2&gt;</code> and going down to <code>&lt;h4&gt;</code>) to break up your content and give it a sensible structure. With each heading, ask yourself if it's a sub-section of the previous heading, the same level or higher.</p> 
-  <p>We avoid using <code>&lt;h5&gt;</code> headings. If you need 5 heading levels, your content is probably too complex.</p>
-  <p>You can use a web developer toolbar (<a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Chrome</a> or <a href="https://addons.mozilla.org/en-GB/firefox/addon/web-developer/">Firefox</a>) to see the overall heading structure of the page.</p>
+  <p>Headings help users understand what the page covers and find the information they need. Use them to break up and structure text.</p>
   <h3>Write good headings</h3>
-  <p>Make sure your headings are:</p>
+  <p>Make sure your headings:</p>
   <ul>
-    <li>written in sentence case</li>
-    <li>clear and concise</li>
-    <li>good descriptions of the content that follows</li>
-    <li>front-loaded with keywords if possible</li>
-    <li>action-oriented, if appropriate</li>
-    <li>not written as questions, unless you are working on a survey or transactional service</li>
+    <li>are written in sentence case (see <a href="#capitalisation">capitalisation</a>)</li>
+    <li>are clear and concise</li>
+    <li>describe the content that follows</li>
+    <li>start with keywords, if possible</li>
+    <li>are action-oriented, if possible, for example, "View your GP health record"</li>
+    <li>are not written as questions, except in forms, for example, "What is your address?"</li>
   </ul>
-  <h3>More about headings</h3>
+
+  <h3>Main heading  <code>&lt;h1&gt;</code></h3>
+  <p>Give your content a unique and informative main heading, which will be heading level 1: h1. You should only have 1 h1 per page.</p>
+  <p>Keep your h1 concise, ideally 65 characters or less, including spaces.</p>
+  <h4>Main headings and page titles</h4>
+  <p>The page title in the page metadata (<code>&lt;title&gt;</code> tag) usually includes the h1 together with the site name. A simple example is "Flu – NHS". The title shows in the browser tab and acts as the link in search results.</p>
+  <p>If you use a content management system (CMS), it may create the title from your h1 automatically.</p>
+  <p>Find more information about setting up <a href="/design-system/styles/page-template#page-title">page titles in the Page template section of the design system</a>, including examples of different text in the h1 and title.</p>
+  
+  <h3>Structure content with headings</h3>
+  <p>Use heading levels (subheadings, starting with h2 and going down to h4) to break up your content and give it a sensible structure. With each heading, ask yourself if it's a sub-section of the previous heading, the same level or higher.</p>
+  <p>Make sure that headings follow the correct "nesting" order, without skipping a level.</p>
+  <ul style="list-style-type:none;">
+		<li>&lt;h1&gt;</li>
+			<li>&emsp;&lt;h2&gt;</li>
+					<li>&emsp;&emsp;&lt;h3&gt;</li>
+							<li>&emsp;&emsp;&emsp;&lt;h4&gt;</li>
+	</ul> 
+  <p>Avoid using h5 headings. If you need 5 heading levels, your content is probably too complex.</p>
+
+  <h3>More information in the service manual</h3>
   <p>Find out about:</p>
   <ul>
-      <li><a href="/design-system/styles/page-template#page-title">setting up page titles, in the Page template section of the design system</a></li>
+      <li><a href="/design-system/styles/page-template#page-title">setting up page titles, in the page template section of the design system</a></li>
       <li><a href="/accessibility/content#use-headings-correctly">using headings correctly, in the accessibility guidance</a></li>
       <li><a href="/design-system/styles/typography#headings">styling headings, in the typography section of the design system</a></li>
   </ul>
