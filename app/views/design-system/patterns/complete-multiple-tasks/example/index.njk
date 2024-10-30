@@ -10,14 +10,14 @@
 
       <h1 class="nhsuk-heading-l">Service name</h1>
 
-      <h2 class="nhsuk-heading-m">Check before you start</h2>
+      <h2 class="nhsuk-heading-m">Your details</h2>
 
       {{ taskList({
-        idPrefix: "check-before-you-start",
+        idPrefix: "your-details",
         items: [
           {
             title: {
-              text: "Check eligibility"
+              text: "Name"
             },
             href: "#",
             status: {
@@ -27,7 +27,7 @@
           },
           {
             title: {
-              text: "Read declaration"
+              text: "Contact details"
             },
             href: "#",
             status: {
@@ -40,7 +40,7 @@
         ]
       }) }}
 
-      <h2 class="nhsuk-heading-m">Health questionnaire</h2>
+      <h2 class="nhsuk-heading-m">Your health</h2>
       {{ taskList({
         idPrefix: "your-health",
         items: [
@@ -101,6 +101,10 @@
             }
           }
         ]
+      }) }}
+
+      {{ button({
+        text: "Send"
       }) }}
 
     </div>
