@@ -186,6 +186,16 @@ app.get('/accessibility/new-accessibility-requirements-wcag-2-2', (req, res) => 
   res.redirect('/accessibility/new-criteria-in-wcag-2-2');
 });
 
+// Redirects for design system patterns
+
+app.get('/design-system/patterns/ask-users-for-their-nhs-number', (req, res) => {
+  res.redirect('/design-system/patterns/ask-for-nhs-numbers');
+});
+
+app.get('/design-system/patterns/reassure-users-that-a-page-is-up-to-date', (req, res) => {
+  res.redirect('/design-system/patterns/know-that-a-page-is-up-to-date');
+});
+
 // REDIRECT STOPS HERE
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
