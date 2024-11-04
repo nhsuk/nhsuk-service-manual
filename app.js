@@ -180,6 +180,12 @@ app.get('/service-standard/:page', (req, res) => {
   res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
 });
 
+// Redirects for accessibility URLs
+
+app.get('/accessibility/new-accessibility-requirements-wcag-2-2', (req, res) => {
+  res.redirect('/accessibility/new-criteria-in-wcag-2-2');
+});
+
 // REDIRECT STOPS HERE
 
 app.get('/content/health-literacy/use-a-readability-tool-to-prioritise-content', (req, res) => {
