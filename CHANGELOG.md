@@ -5,6 +5,7 @@
 :new: **New features**
 - Add new Task list component
 - Add new Complete multiple tasks pattern
+- Add a resources page to the community and contribution section
 
 :wrench: **Maintenance**
 - Rename and reorganise pattern subsection headings in the design system

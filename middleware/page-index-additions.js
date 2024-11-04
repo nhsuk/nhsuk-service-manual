@@ -3,6 +3,7 @@
 const additionalIndices = {
   '/accessibility/content': ['alt-text, alt text, alternative'],
   '/accessibility/testing': ['svg'],
+  '/community-and-contribution/community-resources': ['figma, mural, react, wordpress'],
   '/design-system/components': ['elements'],
   '/design-system/components/action-link': ['call to action, cta'],
   '/design-system/components/back-link': ['return link, back button'],
