@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+- Add a resources page to the community and contribution section
+
 ## 7.1.0 - 15 October 2024
 
 :new: **New features**
