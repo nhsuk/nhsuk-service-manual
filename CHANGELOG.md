@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 7.2.0 - 6 November 2024
 
 :new: **New features**
 - Add new Task list component
