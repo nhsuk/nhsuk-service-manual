@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## 7.2.0 - 6 November 2024
+
+:new: **New features**
+- Add new Task list component
+- Add new Complete multiple tasks pattern
+- Add a resources page to the community and contribution section
+
+:wrench: **Maintenance**
+- Rename and reorganise pattern subsection headings in the design system
+
 ## 7.1.0 - 15 October 2024
 
 :new: **New features**
@@ -121,7 +131,7 @@
 - Remove embedded link from contents list design example
 - Fix link in section on link text in accessibility guidance
 
-## 6.1.0 - 18 January 2024 
+## 6.1.0 - 18 January 2024
 
 :new: **New features**
 
