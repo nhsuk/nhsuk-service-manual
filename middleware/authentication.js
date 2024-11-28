@@ -22,7 +22,7 @@ module.exports = (req, res, next) => {
   const username = process.env.MANUAL_USERNAME;
   const password = process.env.MANUAL_PASSWORD;
 
-  if (env === 'staging') {
+  if (env === 'production' || env === 'staging') {
     if (!username || !password) {
       // eslint-disable-next-line no-console
       console.error('Username or password is not set in environment variables.');
