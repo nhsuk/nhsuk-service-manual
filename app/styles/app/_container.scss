@@ -25,6 +25,10 @@ $service-manual-container-size: 1100px;
   .nhsuk-header__navigation-list {
     max-width: $service-manual-container-size;
   }
+
+  @media (min-width: 1024px) and (max-width: 1164px) {
+    padding: 0 nhsuk-spacing(5);
+  }
 }
 
 .app-footer__container {
