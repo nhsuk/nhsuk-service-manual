@@ -27,12 +27,13 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <p>We have 4 buttons:</p>
+  <p>We have 5 buttons:</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
     <li><a href="#secondary-button">secondary button</a></li>
     <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
     <li><a href="#warning-button">warning button</a></li>
+    <li><a href="#login-button">login button</a></li>
   </ul>
 
   <h2 id="primary-button">Primary button</h2>
@@ -88,6 +89,28 @@
   <p>In this instance, use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
 
   <p>Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it means. Make sure the context and button text make clear what will happen if the user selects it.</p>
+
+  <h2 id="login-button">Login button</h2>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "login"
+  }) }}
+
+  <h3>When to use a login button</h3>
+
+  <p>Use the login button to direct users to a login journey on an NHS service.</p>
+  <p>You must use NHS login if you're building products and services and need to digitally authenticate members of the public. <a href="/standards-and-technology/technology/NHS-login">Learn more about NHS login</a>.</p>
+  <p>This button is also being tested by other services that digitally authenticate health and care staff, such as <a href="https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2">NHS Care Identity Service 2 (NHS CIS2, on NHS Digital's website)</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "login-reverse"
+  }) }}
+
+  <p>Use the NHS login reverse button when placing the button on a dark background.</p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start or save transactional journeys.</p>
