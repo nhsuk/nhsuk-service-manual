@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 7.3.0 - TBC December 2024
+
+:wrench: **Maintenance**
+- Update image, caption and alt text in image component
+
 ## 7.2.0 - 6 November 2024
 
 :new: **New features**
