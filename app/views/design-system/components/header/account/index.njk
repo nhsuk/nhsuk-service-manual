@@ -1,0 +1,46 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+    account: {
+      items: [
+        {
+          text: "Florence Nightingale",
+          icon: true
+        },
+        {
+          href: "#",
+          text: "Log out"
+        }
+      ]
+    },
+    service: {
+      name: "Service name"
+    },
+    search: true,
+    primaryLinks: [
+      {
+        url: "#",
+        label: "NHS service standard"
+      },
+      {
+        url: "#",
+        label: "Design system"
+      },
+      {
+        url: "#",
+        label: "Design principles"
+      },
+      {
+        url: "#",
+        label: "Content guide"
+      },
+      {
+        url: "#",
+        label: "Accessibility"
+      },
+      {
+        url: "#",
+        label: "Community and contribution"
+      }
+    ]
+  }) }}
