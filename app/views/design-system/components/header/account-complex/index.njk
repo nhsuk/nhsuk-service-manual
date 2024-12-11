@@ -1,0 +1,38 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+  showNav: "true",
+  account: {
+    items: [
+      {
+        href: "#",
+        text: "Florence Nightingale",
+        icon: true
+      },
+      {
+        html: '<span>Regional Manager, Anytown NHS Trust</span> <a class="nhsuk-header__account-link" href="#">Change role</a>'
+      },
+      {
+        href: "#",
+        text: "Log out"
+      }
+    ]
+  },
+  service: {
+    name: "Manage patients"
+  },
+  primaryLinks: [
+    {
+      url: "#",
+      label: "Home"
+    },
+    {
+      url: "#",
+      label: "Create user"
+    },
+    {
+      url: "#",
+      label: "Find user"
+    }
+  ]
+}) }}
