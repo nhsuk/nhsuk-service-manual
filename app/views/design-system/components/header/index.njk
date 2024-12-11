@@ -45,14 +45,21 @@
   <p>For information about supplier and partnership branding, see the <a href="https://www.england.nhs.uk/nhsidentity/">NHS identity guidelines</a>.</p>
 
   <h3 id="how-to-use-the-NHS-header">How to use the NHS header</h3>
-  <p>The NHS header is made up of 3 elements:</p>
-  <ul>
+  <p>The NHS header is made up of 4 elements:</p>
+  <ol>
     <li>the NHS logo, which may be accompanied by the service name</li>
-    <li>navigation, with exposed links and a drop-down "More" button</li>
     <li>a search bar</li>
-  </ul>
+    <li>account information and links</li>
+    <li>navigation, with exposed links and a drop-down "More" button</li>
+  </ol>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "header-anatomy"
+  }) }}
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-do-not-cover-content" role="note">
       <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -106,13 +113,41 @@
     type: "transactional"
   }) }}
 
-  <h3 id="NHS-header-with-account">NHS header with account links</h3>
-  <p>Guidance</p>
+  <h2 id="account-header">Account information and links</h2>
 
   {{ designExample({
     group: "components",
     item: "header",
-    type: "account"
+    type: "account-basic"
+  }) }}
+
+  <h3>When to use</h3>
+  <p>Use on services for staff when users have an account. The header can display a log out link and other account-related information and links.</p>
+  <p>It has been designed for staff systems. If you want to use it on a public-facing service, you must test it first and feed back your findings.</p>
+
+  <h3>How to use</h3>
+  <p>Account information and links can be used with the other header features, for example service name and search. However, keep the number of items in the header to a minimum.</p>
+  <p>When allowing users to log in to your service, make sure you have a visible service name, so that they know which system they are logging in to.</p>
+
+  <h3>Using account information and links</h3>
+  <p>A log out link should remain visible and be placed last in the account links list. Place it top right on desktop screens and last in the list on small screens.</p>
+  <p>You can add multiple items to the account information and links section, such as the logged in user’s name and role. Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and placing them on a separate page. For example, an account settings page could include actions like change role, reset password and change username.</p>
+
+  <h3>User information</h3>
+  <p>Consider whether you need to show the user information about the account they have logged into. This may depend on whether:</p>
+  <ul class="nhsuk-list nhsuk-list--bullet">
+    <li>the computer they are likely to use is shared</li>
+    <li>they are likely to have multiple accounts or roles</li>
+  </ul>
+  <p>When showing the user their account, you can highlight this with the user profile icon. Your user research will inform how best to display the user’s account information, for example, whether to show their full name or their email address.</p>
+
+  <h3>Header with complex account information and links</h3>
+  <p>An example showing account information and multiple links, along with a service name and navigation.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "account-complex"
   }) }}
 
   <h2 id="organisational-header">Organisational header</h2>
