@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use images only if there is a real user need. Avoid unnecessary decoration." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2023" %}
+{% set dateUpdated = "December 2024" %}
 {% set backlog_issue_id = "28" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -21,16 +21,19 @@
   }) }}
 
   <h2>When to use images</h2>
-  <p>Informative images that meet real user needs can be very important on health services - especially where they help users identify specific health problems and get the treatment they need.</p>
-  <p>We've also found users with some access needs (such as dyslexia) navigate health information (conditions and treatment) pages through images. Images help them orient themselves and they separate out the content.</p>
+  <p>Informative images that meet real user needs can be very important on health services, especially where they help users identify specific health problems and get the treatment they need.</p>
+  <p>We've also found users with some access needs (such as dyslexia) navigate health information through images. Images help them orient themselves and they separate out the content.</p>
   <p>But having unnecessary or decorative images can frustrate users, especially on information pages or transactional journeys.</p>
-  <p>The NHS.UK team is working on more guidance about when and how to use images.</p>
 
   <h2>How to use images</h2>
   <p>Images should flow with the text content, not appear too prominent or isolated.</p>
   <p>We recommend stacking images. We've found that gallery views (images side by side) confuse users.</p>
   <h3>Captions</h3>
-  <p>The image component is made up of 2 elements - the image and a caption underneath it in a white box.</p>
+  <p>The image component is made up of 2 elements:</p>
+  <ul>
+    <li>the image</li>
+    <li>a caption underneath it in a white box</li>
+  </ul>
   <p>Not all images need captions. If you use them:</p>
   <ul>
     <li>write a full sentence ending with a full stop</li>
@@ -38,15 +41,8 @@
     <li>start the caption with a number if the images show a sequence</li>
     <li>do not duplicate alt-text (<a href="#alternative-text">alternative text</a>)</li>
   </ul>
-  <p>The caption assumes that the user can either see the image or read the alt-text. Use it to explain what you want users to conclude from it - for example, how serious their symptom is or what stage their condition has reached.</p>
-  <p>Here's an example. The alt-text is "Small red spots on white skin". The caption explains that that's how chickenpox starts.</p>
-
-    <figure class="nhsuk-image nhsuk-u-margin-top-6">
-      <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/ABF9YH_GDGeL2X.2e16d0ba.fill-320x213.jpg" alt="Small red spots on white skin">
-      <figcaption class="nhsuk-image__caption">
-        1. Chickenpox starts with red spots. They can appear anywhere on the body.
-      </figcaption>
-    </figure>
+  <p>The caption assumes that the user can either see the image or read the alt-text. Use it to explain what you want users to conclude from it, for example, how serious their symptom is or what stage their condition has reached.</p>
+  <p>In the above example, the alt-text is "Close-up of a person's tummy showing a number of creases in the skin under their belly button. Shown on light brown skin." The caption explains that stretch marks can be different colours and fade over time.</p>
 
   <h3>Accessibility</h3>
   <p>Do not use images that have words in them, because screen readers will not be able to read the words.</p>
@@ -61,6 +57,5 @@
   <h2>Research</h2>
   <p>In testing we found gallery views (images side by side) confused users. Users either missed the images in the right hand column or they didn't know how to interpret the sequence. To get around this we recommend stacking images.</p>
   <p>We also found that users clicked images in gallery views, expecting them to appear larger in a pop-up modal. When we increased the size of the images and stacked them in 1 column (not 2), we didn't see anyone clicking on them to expand them.</p>
-  <p>We tested images on the <a href="https://www.nhs.uk/conditions/chickenpox/">chickenpox</a> page on the NHS website in 2018. They tested well and all users said that the images helped them understand the symptoms.</p>
 
 {% endblock %}
