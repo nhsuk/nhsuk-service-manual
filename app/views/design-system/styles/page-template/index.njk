@@ -2,7 +2,7 @@
 {% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "September 2024" %}
+{% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "200" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -54,12 +54,12 @@
 
   <p>The examples we give show both HTML and Nunjucks.</p>
 
-  <p>You can use the HTML examples if you are not able to use Nunjucks. If you use HTML you’ll need to update it manually when new versions are released.</p>
+  <p>You can use the HTML examples if you are not able to use Nunjucks. If you use HTML you'll need to update it manually when new versions are released.</p>
 
   <h2 id="page-title">Page title</h2>
 
-  <p>The page title (<code>&lt;title&gt;</code>) is in the page metadata, in the <code>&lt;head&gt;</code> section. It is displayed in the browser tab and as link text in search results.</p>
-  <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by a dash. For example: <code>&lt;title&gt;</code>Flu – NHS<code>&lt;/title&gt;</code>. (This is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>.) Use a unique and descriptive title on every page.</p> 
+  <p>The page title (<code>&lt;title&gt;</code>) is in the HTML metadata, in the <code>&lt;head&gt;</code> section. It is displayed in the browser tab and as link text in search results.</p>
+  <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by a dash. For example: <code>&lt;title&gt;</code>Flu – NHS<code>&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p> 
 
     <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
@@ -82,7 +82,9 @@
     </ul>
     <p>This is an example from HMRC:</br>
    Do you live in the UK? – Your details – Manage your tax credits – GOV.UK</p>
+    <p>If the user makes an error, add "Error: " to the beginning of the title so screen readers read it out as soon as possible.</p>
     </div>
+   
   </details>
 
   <details class="nhsuk-details">
@@ -98,7 +100,7 @@
     </div>
   </details>
 
-  <p>Find out more about writing good <a href="/content/formatting#headings">headings and page titles, in the content guide</a>.</p>
+  <p>Find out more about writing good <a href="/content/formatting#headings">headings in the content guide</a>.</p>
   
   <h2 id="default-page-template">Default page template</h2>
 
