@@ -1,9 +1,9 @@
 {% set pageTitle = "Confirmation pages" %}
-{% set pageDescription = "Use this pattern to let users know they've completed a transaction." %}
+{% set pageDescription = "Use a confirmation page to show users they have completed a task." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Page types" %}
-{% set dateUpdated = "September 2024" %}
+{% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "144" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -16,10 +16,45 @@
 
   [add example here]
 
-  <h2 id="when-to-use">When to use this pattern</h2>
+  <h2 id="when-to-use">When to use a confirmation page</h2>
+  <p>You should use a confirmation page at the end of a transactional journey.</p>
 
-  <h2 id="how-it-works">How it works</h2>
+  <h2 id="how-to-use">How to use a confirmation page</h2>
+  <p>Confirmation pages must include:</p>
+  <ul>
+	  <li>a green confirmation panel, with a heading that confirms what the user has done</li>
+	  <li>an application or reference number, if there is one</li>
+    <li>details about what will happen next and when</li>
+  </ul>
+  <p>You may also find a need to include:</p>
+  <ul>
+    <li>instructions about other steps the user needs to take</li>
+    <li>a summary of the details they have submitted</li>
+    <li>a way to give feedback about the service</li>
+    <li>links to more information or related services that may be helpful</li>
+  </ul>
 
-  <h2 id="research">Research on this pattern</h2>
+  <h2>How not to use a confirmation page</h2>
+  <p>Avoid including too many different components on a confirmation page. Research suggests they can overwhelm people.</p>
+ 
+  <h2>Accessibility</h2>
+  <p>If you add any interactive elements, make sure the panel or focus state are still accessible.</p>
 
+  <h2 id="research">Research</h2>
+  <p>In our research, people found the green panel at the top of the confirmation page to be reassuring. They quickly understood the key message. The left-aligned heading text tested well with people who had visual impairments and used screen readers.</p>
+  <p>We have also tested the green panel with participants who had colour blindness. They were able to read the text clearly. They understood what the colour is intended to signal.</p>
+  <p>Some people became confused about the next step when presented with several different components on a confirmation page. This was especially the case for people who used screen readers.</p>
+
+  <h3>Known gaps</h3>
+  <p>We need more evidence to understand whether people:</p>
+  <ul>
+    <li>find it helpful to save the information on confirmation pages</li>
+    <li>try to return to confirmation pages after completing their transaction</li>
+  </ul>
+  <p>In our testing, some participants said they would take a screenshot of the confirmation page on their phone. GOV.UK have found that some users bookmark and return to error pages.</p> 
+  <p>We are also looking for more evidence about the green confirmation panel at the top of confirmation pages. Particularly:</p>
+  <ul>
+    <li>any issues with colour contrast</li>
+    <li>suitability for people who use reverse colours or are sensitive to light</li>
+  </ul>
 {% endblock %}
