@@ -22,22 +22,8 @@
 {%- endblock %}
 
 {% block beforeContent-%}
-  <div class="app-annotate-block">
+    <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: beforeContent</span>
-    {{ super() }}
-  </div>
-{%- endblock %}
-
-{% block main -%}
-  <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: main</span>
-    {{ super() }}
-  </div>
-{%- endblock %}
-
-{% block outerContent-%}
-  <div class="app-annotate-block">
-    <span class="app-annotate-block__label">block: outerContent</span>
     {{ super() }}
     {% from 'back-link/macro.njk' import backLink %}
 
@@ -45,6 +31,13 @@
       href: "/",
       text: "Back"
     }) }}
+  </div>
+{%- endblock %}
+
+{% block main -%}
+  <div class="app-annotate-block">
+    <span class="app-annotate-block__label">block: main</span>
+    {{ super() }}
   </div>
 {%- endblock %}
 

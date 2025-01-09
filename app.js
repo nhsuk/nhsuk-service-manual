@@ -53,6 +53,7 @@ app.set('view engine', 'njk');
 const appViews = [
   path.join(__dirname, '/app/views/'),
   path.join(__dirname, '/node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/macros'),
 ];
 
 const env = nunjucks.configure(appViews, {
@@ -177,6 +178,22 @@ app.get('/service-standard/about', (req, res) => {
 
 app.get('/service-standard/:page', (req, res) => {
   res.redirect(301, `/standards-and-technology/service-standard-points/${req.params.page}`);
+});
+
+// Redirects for accessibility URLs
+
+app.get('/accessibility/new-accessibility-requirements-wcag-2-2', (req, res) => {
+  res.redirect('/accessibility/new-criteria-in-wcag-2-2');
+});
+
+// Redirects for design system patterns
+
+app.get('/design-system/patterns/ask-users-for-their-nhs-number', (req, res) => {
+  res.redirect('/design-system/patterns/ask-for-nhs-numbers');
+});
+
+app.get('/design-system/patterns/reassure-users-that-a-page-is-up-to-date', (req, res) => {
+  res.redirect('/design-system/patterns/know-that-a-page-is-up-to-date');
 });
 
 // REDIRECT STOPS HERE
