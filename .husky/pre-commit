@@ -1,4 +1,11 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/usr/bin/env sh	#!/usr/bin/env sh
+set -e	. "$(dirname -- "$0")/_/husky.sh"
 
-npm test
+
+if ! command -v gitleaks # &> /dev/null 	npm test
+then	
+    printf "\nGitleaks could not be found, please follow instructions in .husky/gitleaks/config/README-gitleaks.md\n\n"	
+    exit 1	
+else	
+    gitleaks protect --source . --verbose --config .husky/gitleaks/config/gitleaks.toml --staged
+fi
