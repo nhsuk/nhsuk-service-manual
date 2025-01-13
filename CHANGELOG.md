@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+- Update example code in image component
+
 ## 7.3.0 - 17 December 2024
 
 :wrench: **Maintenance**
