@@ -171,20 +171,6 @@
   padding-top: 0;
 }
 
-// Page annotations in header
-
-.nhsuk-header .app-annotate-block {
-  border: 2px dashed $color_nhsuk-white;
-  margin: 2px;
-}
-
-.nhsuk-header .app-annotate-block__label {
-  font-size: $nhsuk-base-font-size;
-  color: $color_nhsuk-white;
-  border-bottom: 2px dashed $color_nhsuk-white;
-  border-right: 2px dashed $color_nhsuk-white;
-}
-
 // Team pictures used for lists
 
 .app-team-pictures-list {
