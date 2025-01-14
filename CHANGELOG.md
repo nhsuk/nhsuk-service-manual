@@ -3,7 +3,7 @@
 ## Unreleased
 
 :wrench: **Maintenance**
-- Remove same page profession links from accessibility section
+- Remove same-page profession links from accessibility section
 
 ## 7.3.0 - 17 December 2024
 
