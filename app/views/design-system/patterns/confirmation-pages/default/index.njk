@@ -1,1 +1,22 @@
 {% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'panel/macro.njk' import panel %}
+
+{% block content %}
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+            {{ panel({
+                titleText: "Application complete",
+                html: "Your reference number<br><strong>HDJ2123F</strong>"
+            }) }}
+            
+            <p>We have sent you a confirmation email.</p>
+            <h2 class="nhsuk-heading-m">What happens next</h2>
+            <p>We've sent your application to your chosen GP.</p>
+            <p>They will contact you either to confirm your registration, or to ask for more information.</p>
+            <p><a href="#" class="nhsuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
+
+        </div>
+    </div>
+{% endblock %}

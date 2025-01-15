@@ -14,7 +14,13 @@
 
 {% block bodyContent %}
 
-  [add example here]
+  {{ designExample({
+    group: "patterns",
+    item: "confirmation-pages",
+    type: "default",
+    fullpage: true,
+    showArguments: false
+  }) }}
 
   <h2 id="when-to-use">When to use a confirmation page</h2>
   <p>You should use a confirmation page at the end of a transactional journey.</p>
