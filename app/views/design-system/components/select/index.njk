@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "April 2024" %}
+{% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "20" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -46,6 +46,15 @@
 </div>
 
   <h2>Research</h2>
-  <p>Watch a video about how some users struggle with selects: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">Alice Bartlett: Burn your select tags</a>.</p>
+  <p>User research shows that some users struggle with the select component, especially people who use a keyboard to navigate and people with motor difficulties. The dropdown feature makes users work hard to see and understand their options and click the option they want.</p>
+  <h3>Known issues and gaps</h3>
+  <p>Research shows that users can struggle with selects, particularly when users have:</p>
+  <ul>
+    <li>been unable to close the select</li>
+    <li>tried to type into the select</li>
+    <li>confused focused items with selected items</li>
+    <li>tried to pinch zoom select options on smaller devices</li>
+    <li>not understood that they can scroll down to see more items, or how to</li>
+  </ul>
 
 {% endblock %}
