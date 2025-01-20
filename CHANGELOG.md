@@ -1,6 +1,9 @@
 # NHS digital service manual Changelog
 
-## 7.2.0 - 6 November 2024
+## Unreleased
+
+:wrench: **Maintenance**
+- Removed an outdated link on the button component page
 
 :new: **New features**
 - Add new Task list component
