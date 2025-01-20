@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 7.4.0 - TBC
+## 7.4.0 - 21 January 2025
 
 :wrench: **Maintenance**
 - Removed an outdated link on the button component page
