@@ -3,6 +3,7 @@
 ## Unreleased
 
 :wrench: **Maintenance**
+- Removed an outdated link on the button component page
 - Update example code in image component
 - Remove same-page profession links from accessibility section
 
