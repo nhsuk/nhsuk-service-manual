@@ -4,6 +4,15 @@
 
 :wrench: **Maintenance**
 - Removed an outdated link on the button component page
+- Update example code in image component
+- Remove same-page profession links from accessibility section
+
+## 7.3.0 - 17 December 2024
+
+:wrench: **Maintenance**
+- Update image, caption and alt text in image component
+
+## 7.2.0 - 6 November 2024
 
 :new: **New features**
 - Add new Task list component
