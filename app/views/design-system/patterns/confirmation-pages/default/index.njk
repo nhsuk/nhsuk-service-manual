@@ -1,21 +1,44 @@
 {% extends "includes/design-example-wrapper-full-layout.njk" %}
 
 {% from 'panel/macro.njk' import panel %}
+{% from "summary-list/macro.njk" import summaryList %}
 
 {% block content %}
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
 
             {{ panel({
-                titleText: "Application complete",
-                html: "Your reference number<br><strong>HDJ2123F</strong>"
+                titleText: "Booking complete",
+                html: "Your reference number<br><strong>1583033</strong>"
             }) }}
             
-            <p>We have sent you a confirmation email.</p>
-            <h2 class="nhsuk-heading-m">What happens next</h2>
-            <p>We've sent your application to your chosen GP.</p>
-            <p>They will contact you either to confirm your registration, or to ask for more information.</p>
-            <p><a href="#" class="nhsuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
+            <p>Make a note of your booking reference number. You may need this if you need to cancel or reschedule your appointment.</p>
+            <h2 class="nhsuk-heading-m">Your appointment details</h2>
+
+                {{ summaryList({
+                classes: 'nhsuk-summary-list--no-border',
+                rows: [
+                    {
+                        key: {
+                            text: "Site location"
+                        },
+                        value: {
+                            html: "St Georges Pharmacy<br>46 St George's Rd,<br>Elephant and Castle,<br>London<br>SE1 6ET<br>
+                            <a href='#'>Map and directions (opens in a new tab)</a>"
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Date and time"
+                        },
+                        value: {
+                            text: "Thursday 15 June at 9:10am"
+                        }
+                    }
+                ]
+                }) }}
+
+            <p><a href="#" class="nhsuk-link">Tell us about your experience using this service (open in a new tab)</a></p>
 
         </div>
     </div>
