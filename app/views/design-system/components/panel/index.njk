@@ -2,7 +2,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "The panel component is a visible container used on confirmation or results pages to highlight important content." %}
-{% set theme = "Navigation" %}
+{% set theme = "Content presentation" %}
 {% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "537" %}
 
@@ -21,14 +21,23 @@
   }) }}
 
   <h2 id="when-to-use">When to use a panel</h2>
-  <p>Use the panel component to display important information when a transaction has been  completed.
+  <p>Use the panel component to display important information when a transaction has been completed.
   <p>In most cases, the panel component is used on <a href="/design-system/patterns/confirmation-pages">confirmation pages</a>, to tell the user they have successfully completed the transaction.</p>
 
   <h2 id="when-not-to-use">When not to use a panel</h2>
-  <p>Never use the panel component to highlight important information within body content.</p>
+  <p>Never use the panel component to highlight important information in body content. Instead consider using:</p>
+  <ul>
+    <li><a href="/design-system/components/inset-text">inset text</a></li>
+    <li><a href="/design-system/components/warning-callout">warning callout</a></li>
+    <li><a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">the pattern to help users decide when and where to get care (care cards)</a></li>
+  </ul>
 
   <h2 id="how-to-use">How to use a panel</h2>
-  <p>(Some info about heading and descriptive text?)</p>
+  <p>A panel is made up of:</p>
+  <ul>
+    <li>a heading that confirms what has happened</li>
+    <li>description text, which is optional</li>
+  </ul>
 
   <h3 id="how-to-write-panel-text">How to write panel text</h3>
   <p>Keep your panel text brief, as it's only meant for a high-level explanation of what has happened. For example, "Application complete".</p>
