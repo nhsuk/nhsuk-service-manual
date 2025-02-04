@@ -16,16 +16,6 @@
 - Change jump link IDs on A to Z page pattern and A to Z of NHS health writing to lower case
 - Remove broken link on Select component page and add new research section 
 
-## 7.4.0 - 21 January 2025
-
-:wrench: **Maintenance**
-- Removed an outdated link on the button component page
-- Update example code in image component
-- Remove same-page profession links from accessibility guidance
-- Update page on Getting started with accessibility
-- Change jump link IDs on A to Z page pattern and A to Z of NHS health writing to lower case
-- Remove broken link on Select component page and add new research section 
-
 ## 7.3.0 - 17 December 2024
 
 :wrench: **Maintenance**
