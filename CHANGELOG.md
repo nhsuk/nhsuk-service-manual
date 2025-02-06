@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+- Add NHS login button variant
+
 ## 7.4.0 - 21 January 2025
 
 :wrench: **Maintenance**
