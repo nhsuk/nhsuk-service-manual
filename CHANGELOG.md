@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 7.5.0 - TBC February 2025
+
+:new: **New features**
+- Add new panel component and confirmation page pattern
+- Update mention of WCAG 2.2 in guidance about PDFs
+
 ## 7.4.0 - 21 January 2025
 
 :wrench: **Maintenance**
