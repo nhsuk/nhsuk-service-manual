@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 7.5.0 - 12 February 2025
+## 7.5.0 - 13 February 2025
 
 :new: **New features**
 - Add new panel component and confirmation page pattern
