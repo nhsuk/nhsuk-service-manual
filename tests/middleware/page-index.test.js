@@ -180,7 +180,7 @@ test('test init', async () => {
         <li>
           <a href="/accessibility">Accessibility</a>
           <ul class="nhsuk-u-nested-list">
-            <li><a href="/accessibility/what-all-NHS-services-need-to-do">What all NHS services need to do about accessibility</a></li>
+            <li><a href="/accessibility/what-all-nhs-services-need-to-do">What all NHS services need to do about accessibility</a></li>
             <li><a href="/accessibility/how-to-make-digital-services-accessible">How to make digital services accessible</a></li>
             <li><a href="/accessibility/getting-started">Getting started with accessibility</a></li>
             <li><a href="/accessibility/download-accessibility-posters">Download accessibility posters</a></li>
