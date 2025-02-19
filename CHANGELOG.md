@@ -1,9 +1,17 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 7.6.0 - TBC
+
+:new: **New features**
+- Add new headings and page title guidance, to accessibility guidance, content guide and design system
+- Add new entries for ear drop, eye drop, incontinence products and log in and log out to content guide
 
 :wrench: **Maintenance**
-- updates to titles and headings guidance
+- Split up Formatting and Punctuation sections in content guide
+- Move links guidance to Formatting section
+- Tweak panel wording in panel component and confirmation page
+- Update service manual team page
+- Remove old entries from What's new
 
 ## 7.5.0 - 13 February 2025
 
