@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 7.6.0 - TBC
+## 7.6.0 - 26 February 2025
 
 :new: **New features**
 - Add new headings and page title guidance, to accessibility guidance, content guide and design system
