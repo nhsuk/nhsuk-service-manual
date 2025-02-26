@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## 7.6.0 - 26 February 2025
+
+:new: **New features**
+- Add new headings and page title guidance, to accessibility guidance, content guide and design system
+- Add new entries for ear drop, eye drop, incontinence products and log in and log out to content guide
+
+:wrench: **Maintenance**
+- Split up Formatting and Punctuation sections in content guide
+- Move links guidance to Formatting section
+- Tweak panel wording in panel component and confirmation page
+- Update service manual team page
+- Remove old entries from What's new
+
 ## 7.5.0 - 13 February 2025
 
 :new: **New features**
