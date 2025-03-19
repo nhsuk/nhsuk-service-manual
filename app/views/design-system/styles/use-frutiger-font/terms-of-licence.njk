@@ -1,241 +1,217 @@
-{% set pageTitle = "Terms of the licence" %}
-{% set pageDescription = "This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font." %}
-{% set pageSection = "Design system" %}
-{% set subSection = "Styles" %}
-{% set dateUpdated = "March 2025" %}
-{% set hideContact = "true" %}
+{% from 'action-link/macro.njk' import actionLink %}
+{% from 'back-link/macro.njk' import backLink %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "includes/template.njk" %}
 
-{% block breadcrumb %}
-  {% include "design-system/styles/_breadcrumb.njk" %}
+{% block pageTitle %}
+  Terms of NHS Frutiger licence
 {% endblock %}
 
-{% block sideNav %}
-<nav class="app-side-nav">
-
-  <ul class="nhsuk-list app-side-nav__list">
-
-    <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/colour">Colour</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/focus-state">Focus state</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/icons">Icons</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/layout">Layout</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/page-template">Page template</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/spacing">Spacing</a></li>
-
-    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/typography">Typography</a></li>
-
-    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/use-frutiger-font">Use the NHS Frutiger font</a></li>
-
-  </ul>
-  </nav>
+{% block beforeContent %}
+  {{ backLink({
+    href: "/design-system/styles/use-frutiger-font/index",
+    text: "Use the NHS Frutiger font"
+  }) }}
 {% endblock %}
 
-{% block bodyContent %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    
+    <h1>Terms of the licence</h1>
 
-<p>Before you can download and use the Frutiger font under NHS England's licence, you must read and agree to these terms.</p>
-<p>NHS England has a licence for 3 weights of the Frutiger font, which is the brand font for the NHS. Monotype owns the font software and other elements of the font which are protected by intellectual property rights. We call these the "font" for short in these terms.</p>
-<h2>Who can register for a licence</h2>
-<p>NHS organisations in England can register to use the font for free under this licence.</p>
-<p>You do not need to register if your team is part of NHS England.</p>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-     Legal effects of these terms for different NHS organisations
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-  <p>The legal effects of the terms of the licence depend on what type of organisation you are.</p>
-  <p>If your organisation is an NHS organisation covered by section 9 of the <a href="https://www.legislation.gov.uk/ukpga/2006/41/section/9">National Health Service Act 2006</a>, such as an NHS trust or an integrated care board (ICB), this agreement is an "NHS contract" as defined by that section. But this licence should still be treated as seriousnessly as if it were legally binding.</p>
-  <p>For other NHS organisations, such as foundation trusts, this licence is legally binding.</p>
-  </div>
-</details>
+    <p class="nhsuk-lede-text">This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font.</p>
+    <p>Before you can download and use the Frutiger font under NHS England's licence, you must read and agree to these terms.</p>
+    <p>NHS England has a licence for 3 weights of the Frutiger font, which is the brand font for the NHS. Monotype owns the font software and other elements of the font which are protected by intellectual property rights. We call these the "font" for short in these terms.</p>
+    <h2>Who can register for a licence</h2>
+    <p>NHS organisations in England can register to use the font for free under this licence.</p>
+    <p>You do not need to register if your team is part of NHS England.</p>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+        Legal effects of these terms for different NHS organisations
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+      <p>The legal effects of the terms of the licence depend on what type of organisation you are.</p>
+      <p>If your organisation is an NHS organisation covered by section 9 of the <a href="https://www.legislation.gov.uk/ukpga/2006/41/section/9">National Health Service Act 2006</a>, such as an NHS trust or an integrated care board (ICB), this agreement is an "NHS contract" as defined by that section. But this licence should still be treated as seriousnessly as if it were legally binding.</p>
+      <p>For other NHS organisations, such as foundation trusts, this licence is legally binding.</p>
+      </div>
+    </details>
 
-<h2>The fonts covered by this licence</h2>
-<p>The licence covers Frutiger in 3 weights:</p>
-<ul>
-  <li>Frutiger 65 Bold</li>
-  <li>Frutiger 55 Roman</li>
-  <li>Frutiger 45 Light, but the licence does not cover using this weight in an app</li>
-</ul>
-<p>This licence covers the font version and format that NHS England bought in December 2024. It does not cover any newer versions of the font.</p>
-<p>You are allowed to use the font as described in this licence alongside other organisations we licence to.</p>
-
-<h3>Other Frutiger fonts</h3>
-<p>You must buy your own licence if you want to use:</p>
-<ul>
-  <li>any other font or font weight, such as Frutiger Italic</li>
-  <li>Frutiger 45 Light in a mobile downloadable app</li>
-  <li>Frutiger in a way that is not covered in this licence</li>
-</ul>
-<p>If you have a licence for other Frutiger fonts, you must follow the terms of those licences.</p>
-
-
-<h2>What you can and cannot do with this licence</h2>
-<p>You must:</p>
-<ul>
-  <li>manage access to the font and only let people in your organisation or your suppliers use it for your organisation's purposes</li>
-  <li>make sure everyone you allow to use the font is aware of and agrees to comply with these terms</li>
-  <li>only use the font for the specific purposes and use cases set out in these terms</li>
-</ul>
-<p>You are responsible for:</p>
-  <ul>
-    <li>your users' and suppliers' use of the fonts and compliance with this licence</li>
-    <li>any unauthorised access to the font on your or their systems</li>
-    <li>any claims by Monotype (the owner of the font) for your, your users' and your suppliers' misuse of the font</li>
-  </ul>
-<p>You must not license, assign or transfer the font to another organisation or give anyone outside your organisation access to it, with the exception of suppliers who are using it for your organisation's purposes. They must not grant any further licences.</p>
-<p>NHS England is not responsible for any losses, claims or liabilities arising out of your, your users' or suppliers' use of the font on your or their systems.</p>
-<p>You cannot use Monotype's font platform or its app to get these fonts. You can only get them by registering here.</p>
-<h3>Suppliers</h3>
-<p>You can give your suppliers access to the font to produce NHS branded goods or services for you.</p>
-<p>You must make sure that they:</p>
-<ul>
-  <li>agree to these terms</li>
-  <li>only use the font to provide goods or services to you (and not for their own use)</li>
-  <li>do not allow anyone else to use the font</li>
-  <li>delete any font files you have given them at the end of the job</li>
-</ul>
-<h3>The font files</h3>
-<p>You must not:</p>
-<ul>
-  <li>change the font or use it to make other fonts</li>
-  <li>embed the font software code in open source software in a way that makes it publicly available</li>
-  <li>take out or change the font metadata</li>
-  <li>transfer or use the font outside the UK</li>
-</ul>
-
-<h3>Using the font in different products, systems and services</h3>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Online services, including websites
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can use the font to write text and create forms on websites you control.</p>
-    <p>You must make sure people cannot download, reformat or use the font code.</p> 
-  </div>
-</details>
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Apps
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can include the font as an integrated part of software-only apps (for example, apps which are not part of any specific equipment).</p>
-    <p>You must not use the font software in apps or equipment that you sell or profit from.</p>
-    <p>If you want to use Frutiger Light in an app, you must buy your own licence. This licence does not cover it.</p>
-  </div>
-</details>
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Desktop applications, including creating documents or other materials
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can install the software on servers that you control or servers that a third party controls for you.</p>
-    <p>You can:</p>
+    <h2>The fonts covered by this licence</h2>
+    <p>The licence covers Frutiger in 3 weights:</p>
     <ul>
-      <li>use the font to create, edit and distribute documents or other NHS materials</li>
-      <li>embed the font into electronic documents (note: digital marketing communications are covered below)</li>
-      <li>create internal-only back-ups</li>
+      <li>Frutiger 65 Bold</li>
+      <li>Frutiger 55 Roman</li>
+      <li>Frutiger 45 Light, but the licence does not cover using this weight in an app</li>
     </ul>
-    <p>You must make sure that materials you create:</p>
+    <p>This licence covers the font version and format that NHS England bought in December 2024. It does not cover any newer versions of the font.</p>
+    <p>You are allowed to use the font as described in this licence alongside other organisations we licence to.</p>
+
+    <h3>Other Frutiger fonts</h3>
+    <p>You must buy your own licence if you want to use:</p>
     <ul>
-      <li>do not allow any part of the font software code to be taken out</li>
-      <li>only have images of the font that cannot be edited (note: Word documents are covered below)</li>
+      <li>any other font or font weight, such as Frutiger Italic</li>
+      <li>Frutiger 45 Light in a mobile downloadable app</li>
+      <li>Frutiger in a way that is not covered in this licence</li>
     </ul>
-    <p>If you use the font, font software or materials in a collaborative cloud environment, you can let users view and edit the document but not otherwise use the font.</p>
+    <p>If you have a licence for other Frutiger fonts, you must follow the terms of those licences.</p>
+
+    <h2>What you can and cannot do with this licence</h2>
+    <p>You must:</p>
+    <ul>
+      <li>manage access to the font and only let people in your organisation or your suppliers use it for your organisation's purposes</li>
+      <li>make sure everyone you allow to use the font is aware of and agrees to comply with these terms</li>
+      <li>only use the font for the specific purposes and use cases set out in these terms</li>
+    </ul>
+    <p>You are responsible for:</p>
+      <ul>
+        <li>your users' and suppliers' use of the fonts and compliance with this licence</li>
+        <li>any unauthorised access to the font on your or their systems</li>
+        <li>any claims by Monotype (the owner of the font) for your, your users' and your suppliers' misuse of the font</li>
+      </ul>
+    <p>You must not license, assign or transfer the font to another organisation or give anyone outside your organisation access to it, with the exception of suppliers who are using it for your organisation's purposes. They must not grant any further licences.</p>
+    <p>NHS England is not responsible for any losses, claims or liabilities arising out of your, your users' or suppliers' use of the font on your or their systems.</p>
+    <p>You cannot use Monotype's font platform or its app to get these fonts. You can only get them by registering here.</p>
+    <h3>Suppliers</h3>
+    <p>You can give your suppliers access to the font to produce NHS branded goods or services for you.</p>
+    <p>You must make sure that they:</p>
+    <ul>
+      <li>agree to these terms</li>
+      <li>only use the font to provide goods or services to you (and not for their own use)</li>
+      <li>do not allow anyone else to use the font</li>
+      <li>delete any font files you have given them at the end of the job</li>
+    </ul>
+    <h3>The font files</h3>
+    <p>You must not:</p>
+    <ul>
+      <li>change the font or use it to make other fonts</li>
+      <li>embed the font software code in open source software in a way that makes it publicly available</li>
+      <li>take out or change the font metadata</li>
+      <li>transfer or use the font outside the UK</li>
+    </ul>
+
+    <h3>Using the font in different products, systems and services</h3>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Online services, including websites
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>You can use the font to write text and create forms on websites you control.</p>
+        <p>You must make sure people cannot download, reformat or use the font code.</p> 
+      </div>
+    </details>
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Apps
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>You can include the font as an integrated part of software-only apps (for example, apps which are not part of any specific equipment).</p>
+        <p>You must not use the font software in apps or equipment that you sell or profit from.</p>
+        <p>If you want to use Frutiger Light in an app, you must buy your own licence. This licence does not cover it.</p>
+      </div>
+    </details>
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Desktop applications, including creating documents or other materials
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>You can install the software on servers that you control or servers that a third party controls for you.</p>
+        <p>You can:</p>
+        <ul>
+          <li>use the font to create, edit and distribute documents or other NHS materials</li>
+          <li>embed the font into electronic documents (note: digital marketing communications are covered below)</li>
+          <li>create internal-only back-ups</li>
+        </ul>
+        <p>You must make sure that materials you create:</p>
+        <ul>
+          <li>do not allow any part of the font software code to be taken out</li>
+          <li>only have images of the font that cannot be edited (note: Word documents are covered below)</li>
+        </ul>
+        <p>If you use the font, font software or materials in a collaborative cloud environment, you can let users view and edit the document but not otherwise use the font.</p>
+      </div>
+    </details>
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Digital marketing communications
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Digital marketing communications include, for example, sending marketing emails out to consumers or displaying an advertisement on websites you control.</p>
+        <p>You can embed the font into digital marketing communications and use the font in editable documents, like Word.</p>
+        <p>You must make sure your content does not allow people to download, reformat or reuse the font code.</p> 
+      </div>
+    </details>
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Print and other physical items
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>You can use the font to create, edit, print, and produce printed and other physical items.</p>
+      </div>
+    </details>
+                
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Logos and marks
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>You can use the font as part of your logos.</p>
+        <p>The use of the NHS lozenge is subject to the NHS trade mark licence.</p>
+      </div>
+    </details>
+
+    <h2>Issues or claims about the font</h2>
+    <p>The font is provided on an "as is" basis and without warranties in respect of its suitability or availability.</p>
+    <p>If you have any issues with the font covered by these licence terms, contact <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>. Do not contact Monotype. You cannot make a claim against Monotype directly.</p>
+
+    <h2>Breaches of the licence and claims by Monotype</h2>
+    <p>You must let us know immediately if you breach your licence. Contact <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>.</p>
+    <p>You must fix any breaches you can within 60 days.</p>
+    <p>NHS England or Monotype can end your licence and rights to use the font if you breach its terms.</p>
+    <p>You agree to compensate NHS England for any losses, claims or liabilities that arise if you or anyone you allow to use the font:</p>
+    <ul>
+      <li>misuse the font</li>
+      <li>use it without being unauthorised</li>
+      <li>breach the licence terms</li>
+      <li>act in a way that causes NHS England to breach its contract with Monotype</li>
+    </ul>
+    <p>If Monotype makes a claim about your, your users' or your suppliers' use of the font, you must help us and give us any reasonable information we ask for. This may include providing a list of font users and details of how you use the font.</p> 
+
+    <h2>Trade marks and intellectual property</h2>
+    <p>The font is proprietary to Monotype and protected by UK, US and other intellectual property laws.</p>
+    <p>You must not use any Monotype trade marks publicly, including the words "FRUTIGER" and "MONOTYPE", unless you have separate written consent from Monotype.</p>
+
+    <h2>Updating the licence</h2>
+    <p>NHS England has the right to review and update these terms (no more than once a year). If you register, we will email you about any changes at least 30 days before they take effect. After that, if you continue to use the font, it's treated as you having accepted the changes.</p>
+
+    <h2>Next step</h2>
+
+    {{ actionLink({
+      text: "Complete the registration form (MS Forms)",
+      href: "https://forms.office.com/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO40EyX7apFihMsAHZLYEqsb5UNU9RTEZWSzM3MVVHVUVVMFk1MlFPSkg0Wi4u"
+    }) }}
+
+    <p>You must use an nhs.net email to access the form.</p>
+    <p>If you have problems registering via the form, contact: <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>.</p>
+
   </div>
-</details>
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Digital marketing communications
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Digital marketing communications include, for example, sending marketing emails out to consumers or displaying an advertisement on websites you control.</p>
-    <p>You can embed the font into digital marketing communications and use the font in editable documents, like Word.</p>
-    <p>You must make sure your content does not allow people to download, reformat or reuse the font code.</p> 
-  </div>
-</details>
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Print and other physical items
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can use the font to create, edit, print, and produce printed and other physical items.</p>
-  </div>
-</details>
-             
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Logos and marks
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can use the font as part of your logos.</p>
-    <p>The use of the NHS lozenge is subject to the NHS trade mark licence.</p>
-  </div>
-</details>
-
-<h2>Issues or claims about the font</h2>
-<p>The font is provided on an "as is" basis and without warranties in respect of its suitability or availability.</p>
-<p>If you have any issues with the font covered by these licence terms, contact <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>. Do not contact Monotype. You cannot make a claim against Monotype directly.</p>
-
-<h2>Breaches of the licence and claims by Monotype</h2>
-<p>You must let us know immediately if you breach your licence. Contact <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>.</p>
-<p>You must fix any breaches you can within 60 days.</p>
-<p>NHS England or Monotype can end your licence and rights to use the font if you breach its terms.</p>
-<p>You agree to compensate NHS England for any losses, claims or liabilities that arise if you or anyone you allow to use the font:</p>
-<ul>
-  <li>misuse the font</li>
-  <li>use it without being unauthorised</li>
-  <li>breach the licence terms</li>
-  <li>act in a way that causes NHS England to breach its contract with Monotype</li>
-</ul>
-<p>If Monotype makes a claim about your, your users' or your suppliers' use of the font, you must help us and give us any reasonable information we ask for. This may include providing a list of font users and details of how you use the font.</p> 
-
-<h2>Trade marks and intellectual property</h2>
-<p>The font is proprietary to Monotype and protected by UK, US and other intellectual property laws.</p>
-<p>You must not use any Monotype trade marks publicly, including the words "FRUTIGER" and "MONOTYPE", unless you have separate written consent from Monotype.</p>
-
-<h2>Updating the licence</h2>
-<p>NHS England has the right to review and update these terms (no more than once a year). If you register, we will email you about any changes at least 30 days before they take effect. After that, if you continue to use the font, it's treated as you having accepted the changes.</p>
-
-<h2>Next step</h2>
-
-{{ actionLink({
-  text: "Complete the registration form (MS Forms)",
-  href: "https://forms.office.com/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO40EyX7apFihMsAHZLYEqsb5UNU9RTEZWSzM3MVVHVUVVMFk1MlFPSkg0Wi4u"
-}) }}
-
-<p>You must use an nhs.net email to access the form.</p>
-<p>If you have problems registering via the form, contact: <a href="mailto:england.font@nhs.net">england.font@nhs.net</a>.</p>
-
-  
-  <div class="app-index-navigation app-u-hide-desktop">
-    {% include "includes/_side-nav.njk" %}
-  </div>
-
-  
+</div>
 
 {% endblock %}
