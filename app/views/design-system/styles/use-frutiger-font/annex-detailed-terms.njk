@@ -1,0 +1,31 @@
+{% from 'action-link/macro.njk' import actionLink %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% extends "includes/template.njk" %}
+
+{% block pageTitle %}
+  Annex: detailed terms
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "/design-system/styles/use-frutiger-font/terms-of-licence",
+    text: "Terms of the licence"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1>Annex: detailed terms</h1>
+    <p>Dummy text</p>
+
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}
