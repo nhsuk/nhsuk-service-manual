@@ -1,17 +1,12 @@
-{% from 'action-link/macro.njk' import actionLink %}
-{% from 'back-link/macro.njk' import backLink %}
 
 {% extends "includes/template.njk" %}
 
-{% block pageTitle %}
-  Annex – Detailed Terms
+{% block head %}
+  <meta name="robots" content="noindex" />
 {% endblock %}
 
-{% block beforeContent %}
-  {{ backLink({
-    href: "/design-system/styles/use-frutiger-font/terms-of-licence",
-    text: "Terms of licence"
-  }) }}
+{% block pageTitle %}
+  Annex – Detailed Terms
 {% endblock %}
 
 {% block content %}
@@ -20,7 +15,7 @@
     
     <h1>Annex: Detailed Terms</h1>
 
-    <p>Capitalised terms used in this Annex shall have the meaning set forth in <a href="#table-caption-definitions">Section 1</a> and <a href="#attachment-1">Attachment 1</a> on this page.</p>
+    <p>Capitalised terms used in this Annex shall have the meaning set forth in Section 1 and Attachment 1 to these detailed terms.</p>
 
     <h2>Key Terms Form</h2>
 
@@ -38,10 +33,10 @@
       </tr>
       <tr>
           <td>Company Desktop Licence (including Desktop Use)</td>
-          <td><p>Included. Licensed Desktop Users (maximum): Unlimited</p>
+          <td><p>Included.<br> Licensed Desktop Users (maximum): Unlimited</p>
             <p>This licence includes unlimited:</p>
             <ol style="list-style-type: lower-latin;">
-              <li>Desktop Use (as set out in Section 2A); and</li>
+              <li>Desktop Use (as set out in Section 2(A)); and</li>
               <li>in respect of all digital informational content, all other Use</li>
             </ol></td>
       </tr>
@@ -75,7 +70,7 @@
             <td>Binding Obligation</td>
             <td>
                 <p>You, the organisation which accepts the "<a href="/design-system/styles/use-frutiger-font/terms-of-licence">Terms of the licence</a>" which precede this Annex, accept this Annex with NHS England on the Effective Date.</p>
-                <p>In addition to the sublicence rights set forth in Section 2D of the Fonts Licence Terms, you are only entitled to sublicense the rights granted herein, with the exception of this sublicence right to a Sublicensee under the conditions that:</p>
+                <p>In addition to the sublicence rights set forth in Section 2.D of the Fonts Licence Terms, you are only entitled to sublicense the rights granted herein, with the exception of this sublicence right to a Sublicensee under the conditions that:</p>
                 <ol style="list-style-type: lower-latin;">
                     <li>the Sublicensee is made aware of the relevant licence restrictions contained in this Agreement; and</li>
                     <li>you shall be fully responsible for a breach of these terms by a Sublicensee</li>
@@ -92,7 +87,7 @@
     <table aria-labelledby="table-caption-definitions">
         <tr>
             <td><strong>Affiliate</strong></td>
-            <td>(1) An entity that controls, is controlled by or is under common control with a party to this Agreement at any time during the term of this Agreement, where control means a 50% or greater ownership interest in such entity; or (2) where a party is a public body, the controlling organisation (including ministers and government departments) and other bodies, agencies, persons, commissions or agencies from time to time carrying out functions on its behalf.</td>
+            <td>(1) An entity that controls, is controlled by or is under common control with a party to this Agreement at any time during the term of this Agreement, where control means a 50% or greater ownership interest in such entity; or (2) where a party is a public body, the controlling organisation (including ministers and government departments) and other bodies, persons, commissions or agencies from time to time carrying out functions on its behalf.</td>
         </tr>
         <tr>
             <td><strong>Agreement</strong></td>
@@ -100,7 +95,7 @@
         </tr>
         <tr>
             <td><strong>Application</strong></td>
-            <td>A product that is distributed as software only (and, subject to Section 3B is not embedded into OEM equipment which is sold either for monetary consideration or for the purposes of making a profit for the NHS Partner) made available by the NHS Partner to end users either directly or through a distributor. A version of an Application that does not have unique functionality beyond the scope of a previously released Application and is not licensed or marketed under a new name shall not be considered a new Application.</td>
+            <td>A product that is distributed as software only (and, subject to Section 3.B is not embedded into OEM (Original Equipment Manufacturer) equipment which is sold either for monetary consideration or for the purposes of making a profit for the NHS Partner) made available by the NHS Partner to end users either directly or through a distributor. A version of an Application that does not have unique functionality beyond the scope of a previously released Application and is not licensed or marketed under a new name shall not be considered a new Application.</td>
         </tr>
         <tr>
             <td><strong>Confidential Information</strong></td>
@@ -124,7 +119,7 @@
         </tr>
         <tr>
             <td><strong>Electronic Document</strong></td>
-            <td>Any electronic document or data file, for example a PDF manual or an e-book, but which is not a Digital Marketing Communication.</td>
+            <td>Any electronic document or data file, for example a .pdf manual or an e-book, but which is not a Digital Marketing Communication.</td>
         </tr>
         <tr>
             <td><strong>FOIA</strong></td>
@@ -200,7 +195,7 @@
                     <ol style="list-style-type: lower-roman;">
                         <li>be disclosed or distributed in source code form</li>
                         <li>be Licensed for the purpose of making Derivative Works, or</li>
-                        <li>be redistributable at no charge</li>
+                        <li>be redistributable at no charge.</li>
                     </ol>
                 </li>
             </ol>
@@ -208,7 +203,7 @@
         </tr>
         <tr>
             <td><strong>Requests for Information</strong></td>
-            <td>A request for information regarding use of the Font and Font Software or otherwise relating to the Agreement from a member of the public pursuant to FOIA or EIRs.</td>
+            <td>means a request for information regarding use of the Font and Font Software or otherwise relating to the Agreement from a member of the public pursuant to FOIA or EIRs.</td>
         </tr>
         <tr>
           <td><strong>Server</strong></td>
@@ -248,7 +243,7 @@
     <h3>2. LICENCE GRANTS</h3>
 
     <p>You are licensing the Font and Font Software. You agree that you have the rights expressly set forth in this Agreement and no other.  All rights not expressly granted in this Agreement are reserved to NHSE and/or Monotype.</p>
-    <p>The rights set forth in the Key Terms Form, this Section 2 and Attachment 1 may be exercised on your behalf by you, your Sublicensees and Licensed Desktop Users, as applicable, and you are responsible for compliance with the terms of this Agreement by all such users as well as any other parties who access the Font or Font Software with your permission. You are hereby granted, subject to all terms and conditions set forth herein, a worldwide (subject to Section 7A), non-exclusive, non-transferable (except that you can sublicense to Sublicensees as expressly set out in this Agreement), perpetual licence and (including the right to sublicense in accordance with the "Binding Obligation" section of the above Key Terms Form) to allow their users to do the following as well as the rights granted under the Key Terms Form and Attachment 1.</p>
+    <p>The rights set forth in the Key Terms Form, this Section 2 and Attachment 1 may be exercised on your behalf by you, your Sublicensees and Licensed Desktop Users, as applicable, and you are responsible for compliance with the terms of this Agreement by all such users as well as any other parties who access the Font or Font Software with your permission. You are hereby granted, subject to all terms and conditions set forth herein, a worldwide (subject to Section 7.A), non-exclusive, non-transferable (except that you can sublicense to Sublicensees as expressly set out in this Agreement, with no right for Sublicensees to grant sublicences), perpetual licence and (including the right to sublicense in accordance with the "Binding Obligation" section of the above Key Terms Form) to allow its users to do the following as well as the rights granted under the Key Terms Form and Attachment 1.</p>
 
     <ol style="list-style-type: upper-latin;">
       <li>
@@ -262,17 +257,17 @@
                       <li>Install the Production Fonts onto any Server.</li>
                       <li>Use the Font and Production Fonts on such Workstations or via such Server to:
                           <ol style="list-style-type: lower-roman;">
-                              <li>create, edit, view, print and distribute materials (provided that, if you distribute such materials to the wider public: (a) the materials do not contain the Font Software in a way that allows the underlying code of the Font Software to be extracted, reformatted and reused from such materials; and (b) where those materials include a static graphic image of the Font created using the Font Software, such image should remain static (i.e. such image should be provided in a non-editable format that does not permit such image from being broken down into its constituent Font Software parts, such as glyphs) (although they can contain the Font)). This does not prevent the use of the Font and Font Software in editable content formats such as Word;</li>
+                              <li>create, edit, view, print and distribute materials (provided that, if you distribute such materials to the wider public: (a) the materials do not contain the Font Software in a way that allows the underlying code of the Font Software cannot be extracted, reformatted and reused from such materials; and (b) where those materials include a static graphic image of the Font created using the Font Software, such image should remain static (i.e. such image should be provided in a non-editable format that does not permit such image from being broken down into its constituent Font Software parts, such as glyphs) (although they can contain the Font)). This does not prevent the use of the Font and Font Software in editable content formats such as Word;</li>
                               <li>embed and Use the Font and Font Software in Electronic Documents and duplicate the Font and Font Software as an integrated part of any such Electronic Document, provided that Electronic Documents with embedded Font Software may only be distributed to the wider public if the underlying code of the Font Software cannot be extracted, reformatted, and reused from such Electronic Documents. This does not prevent the use of the Font and Font Software in editable content formats such as Word.</li>
                           </ol>
                       </li>
                       <li>Make backup copies of the Production Fonts, provided that such copies are for your internal backup purposes only and remain in your exclusive control (or that of the Sublicensees).</li>
-                      <li><strong>Informational content</strong>: to Use the Font and Font Software in, and in connection with, all digital informational content and communications (which are not Digital Marketing Communications that are licensed in accordance with Section 2B(iv) below) in all other ways. Where such content and communications are made available to the wider public, they should be provided in a format that does not permit the underlying code of the Font Software to be downloaded, reformatted, and reused from such communications and content. This does not prevent the use of the Font and Font Software in editable content formats such as Word.</li>
+                      <li><strong>Informational content</strong>: to Use the Font and Font Software in, and in connection with, all digital informational content and communications (which are not Digital Marketing Communications that are licensed in accordance with Section 2.B(iv) below) in all other ways. Where such content and communications are made available to the wider public, they should be provided in a format that does not permit the underlying code of the Font Software to be downloaded, reformatted, and reused from such communications and content. This does not prevent the use of the Font and Font Software in editable content formats such as Word.</li>
                   </ol>
               </li>
               <li>
                   <strong>Company Desktop Licence</strong>:
-                  If you have a Company Desktop Licence as set out in the Key Terms Form, in addition to the rights listed above in Section 2A(i), your Licensed Desktop Users may use the Font and Production Fonts to create Electronic Documents and distribute the Font and Production Fonts embedded into such Electronic Documents in a collaborative cloud authoring environment to individuals who are not Licensed Desktop Users, provided that such individuals may only use a Production Font for the purpose of viewing and editing the Electronic Document with which it was distributed.
+                  If you have a Company Desktop Licence as set out in the Key Terms Form, in addition to the rights listed above in Section 2.A.i., your Licensed Desktop Users may use the Font and Production Fonts to create Electronic Documents and distribute the Font and Production Fonts embedded into such Electronic Documents in a collaborative cloud authoring environment to individuals who are not Licensed Desktop Users, provided that such individuals may only use a Production Font for the purpose of viewing and editing the Electronic Document with which it was distributed.
               </li>
           </ol>
       </li>
@@ -292,7 +287,7 @@
                   <strong>Servers:</strong>
                   <ol style="list-style-type: lower-alpha;">
                       <li>Install the Production Font(s), or a web server application into which the Production Font(s) has been incorporated, and Use the Font and Font Software, on Licensed Servers.</li>
-                      <li>Allow internal or external users to Use the Font and Production Font(s) on such Licensed Servers in the manners set forth in Section 2A(i)(c), in relation to the Servers described in the Key Terms Form.</li>
+                      <li>Allow internal or external users to Use the Font and Production Font(s) on such Licensed Servers in the manners set forth in Section 2.A.i.c, in relation to the Servers described in the Key Terms Form.</li>
                   </ol>
               </li>
               <li>
@@ -346,13 +341,14 @@
           <strong>You may not</strong>:
           <ul>
               <li>except as otherwise provided in this Agreement, transfer your licence rights in the Font Software.</li>
-              <li>except as otherwise provided in this Agreement, modify the Font Software in any way, including to create, directly or indirectly, Derivative Works from the Font Software or any portion thereof (except as otherwise specifically set forth herein). Embed the Font Software in open source software which has the direct or indirect effect of causing the Font Software to become Publicly Available Software or otherwise be subject to a Publicly Available Software agreement.</li>
+              <li>except as otherwise provided in this Agreement, modify the Font Software in any way, including to create, directly or indirectly, Derivative Works from the Font Software or any portion thereof (except as otherwise specifically set forth herein)</li>
+              <li>embed the Font Software in open source software which has the direct or indirect effect of causing the Font Software to become Publicly Available Software or otherwise be subject to a Publicly Available Software agreement.</li>
           </ul>
       </li>
       <li>
           <p>Nothing in this Section 3 or the rest of the Agreement restricts or prevents you (or any other Sublicensees on your behalf) from using the Font and Font Software as you require to:</p>
           <ol style="list-style-type: lower-alpha;">
-              <li>maintain, and ensure perpetual use of, the Font and Font Software by the NHS Partner (and any other Sublicensees on their behalf);</li>
+              <li>maintain, and ensure use of, the Font and Font Software by the NHS Partner (and any other Sublicensees on its behalf);</li>
               <li>create and edit digital or non-digital content using the Font and Font Software;</li>
               <li>embed the Font and Font Software within:
                   <ol style="list-style-type: lower-roman;">
@@ -407,7 +403,7 @@
         <p>For the purposes of Section 4B above, references to disclosure on a confidential basis mean disclosure under a confidentiality agreement or arrangement including terms as strict as those required in this Section 4.</p>
     </li>
     <li>
-        <p>NHSE is subject to the requirements of the FOIA and the EIRs. Monotype has acknowledged in its licence with NHSE that NHSE and NHS Partners may be required under the FOIA and EIRs to disclose information (including confidential information) without consulting or obtaining consent from Monotype, and that NHSE shall take reasonable steps to notify Monotype of a Request for Information (in accordance with the Secretary of State's section 45 Code of Practice on the Discharge of the Functions of Public Authorities under Part 1 of the FOIA) to the extent that it is permissible and reasonably practical for it to do so. The NHS Partner must notify NHSE of, and cooperate and assist NHSE in respect of, any Request for Information relating to Monotype's Confidential Information, as set out in Section 4E or 4F, as applicable.</p>
+        <p>NHSE is subject to the requirements of the FOIA and the EIRs. Monotype has acknowledged in its licence with NHSE that NHSE and NHS Partners may be required under the FOIA and EIRs to disclose information (including confidential information) without consulting or obtaining consent from Monotype, and that NHSE shall take reasonable steps to notify Monotype of a Request for Information (in accordance with the Secretary of State's section 45 Code of Practice on the Discharge of the Functions of Public Authorities under Part 1 of the FOIA) to the extent that it is permissible and reasonably practical for it to do so. The NHS Partner must assist NHSE in meeting this obligation, and shall notify NHSE of, and cooperate and assist NHSE in respect of, any Request for Information relating to Monotype's Confidential Information, including as set out in Section 4E or 4F, as applicable.</p>
     </li>
     <li>
         <p>Where the NHS Partner <strong>is</strong> subject to the requirements of the FOIA and the EIRs, the Parties shall cooperate and assist one another so as to enable them to meet their respective obligations under the FOIA and the EIRs. Without prejudice to the generality of the foregoing, where a party (the "<strong>Recipient</strong>") receives a request for information which is covered by the FOIA and the EIRs and which relates to the other party's or Monotype's information ("<strong>Requested Information</strong>"), the parties shall comply with the following procedures:</p>
@@ -422,10 +418,11 @@
         <p>Where the NHS Partner <strong>is not</strong> subject to the requirements of the FOIA and the EIRs, the NHS Partner shall:</p>
         <ol style="list-style-type: lower-roman;">
             <li>provide all necessary assistance and cooperation as reasonably requested by NHSE to enable NHSE to comply with its obligations under the FOIA and EIRs; and</li>
-            <li>not respond directly to a Request for Information addressed to an NHS Partner unless authorised in writing to do so by NHSE</li>
-            <li>the NHS Partner acknowledges that NHSE may be required under the FOIA and EIRs to disclose information (including confidential information) without consulting or obtaining the NHS Partner's consent, NHSE shall take reasonable steps to notify the NHS Partner of a Request for Information (in accordance with the Secretary of State's section 45 Code of Practice on the Discharge of the Functions of Public Authorities under Part 1 of the FOIA) to the extent that it is permissible and reasonably practical for it to do so but (notwithstanding any other provision in this Agreement) NHSE shall be responsible for determining in its absolute discretion whether any confidential information or any other information is exempt from disclosure in accordance with the FOIA and EIRs.</li>
+            <li>not respond directly to a Request for Information addressed to an NHS Partner unless authorised in writing to do so by NHSE.</li>
         </ol>
+       <p>The NHS Partner acknowledges that NHSE may be required under the FOIA and EIRs to disclose information (including confidential information) without consulting or obtaining the NHS Partner's consent, NHSE shall take reasonable steps to notify the NHS Partner of a Request for Information (in accordance with the Secretary of State's section 45 Code of Practice on the Discharge of the Functions of Public Authorities under Part 1 of the FOIA) to the extent that it is permissible and reasonably practical for it to do so but (notwithstanding any other provision in this Agreement) NHSE shall be responsible for determining in its absolute discretion whether any confidential information or any other information is exempt from disclosure in accordance with the FOIA and EIRs.</p>
     </li>
+    <li>Subject to Sections 4B(i), 4B(vi) to 4B(xii), 4D, 4E and 4F, the NHS Partner must not share or disclose the link to this Annex or the terms of this Annex without NHSE's prior written consent.</li>
   </ol>
 
   <h3>5. TERMINATION</h3>
@@ -442,8 +439,8 @@
       <li>result in reputational damage to NHSE; or</li>
       <li>result in a claim being brought against NHSE by Monotype,</li>
   </ul>
-  <p>NHSE may suspend, revoke, and/or terminate this licence and any or all rights granted to you under this Agreement.</p>
-  <p>In the event of termination, revocation, or suspension, all rights and licences granted under or in connection with this Agreement to the NHS Partner (including any rights or licences granted to the Sublicensees) shall automatically terminate (or, respectively, be revoked or suspended).</p>
+  <p>NHSE may suspend, revoke, and/or terminate this licence and any or all rights granted under this Agreement.</p>
+  <p>In the event of termination, revocation, or suspension, all rights and licences granted under or in connection with this Agreement to the NHS Partner (including any rights or licences granted by NHSE or the NHS Partner to the Sublicensees) shall automatically terminate (or, respectively, be revoked or suspended).</p>
   <p>The termination of this Agreement shall not preclude NHSE from pursuing (to the extent permitted by law) the NHS Partner for damages of any breach of the Agreement.</p>
 
   <h3>6. WARRANTIES AND LIMITATION OF LIABILITY</h3>
@@ -465,7 +462,7 @@
         <p>Except in the event of gross negligence or wilful misconduct, NHSE will not be responsible for:</p>
         <ul>
             <li>incidental, indirect, consequential, or punitive damages, including without limitation, lost profits, business interruption, regardless of the form of the action whether in contract, tort (including negligence), strict product liability, or otherwise, even if such party has been advised of the possibility of such damages, in each case to the extent permitted by law; or</li>
-            <li>any damages caused by the NHS Partner's failure to adhere to this Agreement</li>
+            <li>any damages caused by the NHS Partner's or Sublicensees' failure to adhere to this Agreement</li>
         </ul>
     </li>
   </ol>
@@ -482,17 +479,17 @@
         <ul class="nhsuk-u-margin-bottom-4">
             <li>You agree that the Font Software is protected by the copyright law or other intellectual and industrial property rights of the United States and its various States, by the copyright law and other intellectual and industrial property rights of other nations, and by international treaties.</li>
             <li>You agree that Monotype and/or its licensors own all right, title, and interest in and to the Font Software, its structure, organisation, code, and related files, including all intellectual and industrial property rights therein such as copyright, design, and trademarks rights.</li>
-            <li>You agree that the Font Software, its structure, organisation, code, and related files are valuable property of Monotype and/or its licensors, and that any intentional or negligent use of the Monotype Fonts Platform, the Font Software not expressly permitted by the Agreement constitutes an infringement of intellectual and industrial property rights.</li>
+            <li>You agree that the Font Software, its structure, organisation, code, and related files are valuable property of Monotype and/or its licensors, and that any intentional or negligent Use of the Font Software not expressly permitted by the Agreement constitutes an infringement of intellectual and industrial property rights.</li>
             <li>All rights in and to the Font Software, including unpublished rights, are reserved under the copyright laws of the United States and other jurisdictions.</li>
         </ul>
     </li>
     <li>
         <h4>ENTIRE AGREEMENT; PARTIAL NULLITY; GOOD FAITH OBLIGATIONS</h4>
-        <p>This Agreement, including all attachments hereto, constitutes the entire agreement between the parties hereto with respect to license of the Font Software and, if applicable, the Additional Professional Services. In the event that any provision of this Agreement is unenforceable or invalid, such unenforceability or invalidity shall not render the Agreement unenforceable or invalid as a whole, and, in such event, such provision shall be changed and interpreted so as to best accomplish the objectives of such unenforceable or invalid provision within the limits of applicable law or court decisions. You and NHSE each owe a duty to cooperate in order to give full effect to this Agreement.</p>
+        <p>This Agreement, including all attachments hereto, constitutes the entire agreement between the parties hereto with respect to license of the Font Software. In the event that any provision of this Agreement is unenforceable or invalid, such unenforceability or invalidity shall not render the Agreement unenforceable or invalid as a whole, and, in such event, such provision shall be changed and interpreted so as to best accomplish the objectives of such unenforceable or invalid provision within the limits of applicable law or court decisions. You and NHSE each owe a duty to cooperate in order to give full effect to this Agreement.</p>
     </li>
     <li>
         <h4>GOVERNING LAW; JURISDICTION</h4>
-        <p>This Agreement is governed by the laws of England and Wales (without regard to applicable conflict of laws provisions). The courts of London, England, shall be the exclusive forum for any disputes arising out of or related to this Agreement. Both you and NHSE agree to the personal jurisdiction and venue of these courts in any action related to this Agreement. The Parties acknowledge and agree that this Agreement has been entered into for the benefit of the NHS Partner. Except as otherwise set out in this Agreement, a person who is not a party to this Agreement has no right under the Contracts (Rights of Third Parties) Act 1999 to enforce any of the terms and conditions in this Agreement. This Agreement will not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is expressly excluded.</p>
+        <p>This Agreement is governed by the laws of England and Wales (without regard to applicable conflict of laws provisions). The courts of London, England, shall be the exclusive forum for any disputes arising out of or related to this Agreement. Both you and NHSE agree to the personal jurisdiction and venue of these courts in any action related to this Agreement. Except as otherwise set out in this Agreement, a person who is not a party to this Agreement has no right under the Contracts (Rights of Third Parties) Act 1999 to enforce any of the terms and conditions in this Agreement. This Agreement will not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is expressly excluded.</p>
     </li>
   </ol>
 
@@ -528,5 +525,9 @@
           </ol>
       </li>
   </ol>
+
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+  Updated: March 2025<br>
+    </p>
 
 {% endblock %}
