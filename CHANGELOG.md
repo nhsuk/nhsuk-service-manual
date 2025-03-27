@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## 7.7.0 - 27 March 2025
+
+:new: **New features**
+- New guidance on registering to use Frutiger font, with terms of licence
+
+:wrench: **Maintenance**
+- Update fonts page
+
 ## 7.6.0 - 26 February 2025
 
 :new: **New features**
