@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+- New styling and guidance for secondary buttons
+
 ## 7.7.0 - 27 March 2025
 
 :new: **New features**
