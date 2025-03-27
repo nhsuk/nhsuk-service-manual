@@ -1,6 +1,10 @@
 {% from 'button/macro.njk' import button %}
 
-{% set htmlClasses = "app-example--background-dark" %}
+{% block body %}
+  <style>
+    body {background-color: #d8dde0;}
+  </style>
+{% endblock %}
 
 {{ button({
   text: "Find my location",

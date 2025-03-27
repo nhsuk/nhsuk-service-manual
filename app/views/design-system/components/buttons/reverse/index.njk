@@ -1,5 +1,11 @@
 {% from 'button/macro.njk' import button %}
 
+{% block body %}
+  <style>
+    body {background-color: #005eb8;}
+  </style>
+{% endblock %}
+
 {{ button({
   text: "Save and continue",
   classes: "nhsuk-button--reverse"
