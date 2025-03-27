@@ -31,6 +31,12 @@
       "description": "Name attribute for all checkbox items."
     },
     {
+      "name": "values",
+      "type": "array",
+      "required": false,
+      "description": "Array of values for checkboxes which should be checked when the page loads. Use this as an alternative to setting the checked option on each individual item."
+    },
+    {
       "name": "items",
       "type": "array",
       "required": true,

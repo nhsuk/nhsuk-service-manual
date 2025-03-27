@@ -34,6 +34,12 @@
       "description": "Name attribute for each radio item."
     },
     {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "description": "The value for the radio which should be checked when the page loads. Use this as an alternative to setting the checked option on each individual item."
+    },
+    {
       "name": "items",
       "type": "array",
       "required": true,
