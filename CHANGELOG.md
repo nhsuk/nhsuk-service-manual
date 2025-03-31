@@ -1,5 +1,47 @@
 # NHS digital service manual Changelog
 
+## 7.7.0 - 27 March 2025
+
+:new: **New features**
+- New guidance on registering to use Frutiger font, with terms of licence
+
+:wrench: **Maintenance**
+- Update fonts page
+
+## 7.6.0 - 26 February 2025
+
+:new: **New features**
+- Add new headings and page title guidance, to accessibility guidance, content guide and design system
+- Add new entries for ear drop, eye drop, incontinence products and log in and log out to content guide
+
+:wrench: **Maintenance**
+- Split up Formatting and Punctuation sections in content guide
+- Move links guidance to Formatting section
+- Tweak panel wording in panel component and confirmation page
+- Update service manual team page
+- Remove old entries from What's new
+
+## 7.5.0 - 13 February 2025
+
+:new: **New features**
+- Add new panel component and confirmation page pattern
+- Update mention of WCAG 2.2 in guidance about PDFs
+
+## 7.4.0 - 21 January 2025
+
+:wrench: **Maintenance**
+- Removed an outdated link on the button component page
+- Update example code in image component
+- Remove same-page profession links from accessibility guidance
+- Update page on Getting started with accessibility
+- Change jump link IDs on A to Z page pattern and A to Z of NHS health writing to lower case
+- Remove broken link on Select component page and add new research section 
+
+## 7.3.0 - 17 December 2024
+
+:wrench: **Maintenance**
+- Update image, caption and alt text in image component
+
 ## 7.2.0 - 6 November 2024
 
 :new: **New features**

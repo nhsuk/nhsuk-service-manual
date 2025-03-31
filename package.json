@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "7.2.0",
+  "version": "7.7.0",
   "description": "NHS digital service manual",
   "main": "app.js",
   "directories": {
@@ -51,13 +51,13 @@
     "cheerio": "^1.0.0-rc.10",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "helmet": "^4.6.0",
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
-    "nhsuk-frontend": "^9.1.0",
-    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#pull/1063/head",
+    "nhsuk-frontend": "^9.3.0",
+    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#pull/1058/head",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {

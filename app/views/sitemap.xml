@@ -110,7 +110,7 @@
     <loc>https://service-manual.nhs.uk/assets/NHS_design_principles.pdf</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/accessibility/what-all-NHS-services-need-to-do</loc>
+    <loc>https://service-manual.nhs.uk/accessibility/what-all-nhs-services-need-to-do</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/accessibility/how-to-make-digital-services-accessible</loc>
@@ -149,22 +149,25 @@
     <loc>https://service-manual.nhs.uk/content/voice-and-tone</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/content/health-literacy</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/content/a-to-z-of-nhs-health-writing</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/content/health-literacy</loc>
+    <loc>https://service-manual.nhs.uk/content/formatting</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/punctuation</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/numbers-measurement-dates-time</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/content/formatting-and-punctuation</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents</loc>
   </url>
-    <url>
-    <loc>https://service-manual.nhs.uk/content/links</loc>
+  <url>
+    <loc>https://service-manual.nhs.uk/content/british-sign-language-BSL-quality-assurance-standard</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/colour</loc>
@@ -183,6 +186,12 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/typography</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/use-frutiger-font</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/use-frutiger-font/terms-of-licence</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/action-link</loc>
