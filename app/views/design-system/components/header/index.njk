@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "April 2024" %}
+{% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "16" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -111,8 +111,9 @@
   <p>When allowing users to log in to your service, make sure you have a visible service name, so that they know which system they are logging in to.</p>
 
   <h4>Using account information and links</h4>
-  <p>A log out link should remain visible and be placed last in the account links list. Place it top right on desktop screens and last in the list on small screens.</p>
-  <p>You can add multiple items to the account information and links section, such as the logged in user’s name and role. Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and placing them on a separate page. For example, an account settings page could include actions like change role, reset password and change username.</p>
+  <p>You can add multiple items to the account information and links section, such as the logged in user’s name and role. Items can be links or just plain text information.</p>
+  <p>Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and placing them on a separate page. For example, an account settings page could include actions like change name, change role and reset password. Testing with users should inform which combination of items will best meet their needs.</p>
+  <p>If showing a log out link, place it last in the list, showing top right on desktop screens and last on small screens. If placing log out and other account actions on a dedicated page, it's link should be shown last.</p>
 
   <h4>User information</h4>
   <p>Consider whether you need to show the user information about the account they have logged into. This may depend on whether:</p>
