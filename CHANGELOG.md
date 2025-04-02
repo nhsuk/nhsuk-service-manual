@@ -6,6 +6,27 @@
 - Add new bullet point about use of resources to service standard 11
 - Make minor changes to NHS service standard points 9, 15 and 16 to help teams consider risks of tech abuse
 
+## 7.7.0 - 27 March 2025
+
+:new: **New features**
+- New guidance on registering to use Frutiger font, with terms of licence
+
+:wrench: **Maintenance**
+- Update fonts page
+
+## 7.6.0 - 26 February 2025
+
+:new: **New features**
+- Add new headings and page title guidance, to accessibility guidance, content guide and design system
+- Add new entries for ear drop, eye drop, incontinence products and log in and log out to content guide
+
+:wrench: **Maintenance**
+- Split up Formatting and Punctuation sections in content guide
+- Move links guidance to Formatting section
+- Tweak panel wording in panel component and confirmation page
+- Update service manual team page
+- Remove old entries from What's new
+
 ## 7.5.0 - 13 February 2025
 
 :new: **New features**
