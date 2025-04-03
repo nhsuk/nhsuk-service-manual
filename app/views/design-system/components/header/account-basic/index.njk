@@ -1,0 +1,19 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+    account: {
+      items: [
+        {
+          text: "Florence Nightingale",
+          icon: true
+        },
+        {
+          href: "#",
+          text: "Log out"
+        }
+      ]
+    },
+    service: {
+      name: "Manage patients"
+    }
+  }) }}
