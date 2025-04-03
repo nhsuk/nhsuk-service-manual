@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+- Added guidance on using the Check answers pattern
+
 ## 7.7.0 - 27 March 2025
 
 :new: **New features**
