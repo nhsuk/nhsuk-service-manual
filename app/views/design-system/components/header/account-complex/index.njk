@@ -1,16 +1,23 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-  showNav: "true",
+    service: {
+      text: "Manage patients",
+      href: "#"
+    },
+    search: {
+      placeholder: "Search patients",
+      visuallyHiddenLabel: "Search for a patient"
+    },
   account: {
     items: [
       {
-        href: "#",
-        text: "Florence Nightingale",
+        text: "Florence Nightingale (Regional Manager)",
         icon: true
       },
       {
-        html: '<span>Regional Manager, NHS Trust</span> <a class="nhsuk-header__account-link" href="#">Change role</a>'
+        href: "#",
+        text: "Change role"
       },
       {
         href: "#",
@@ -18,21 +25,18 @@
       }
     ]
   },
-  service: {
-    name: "Manage patients"
-  },
   primaryLinks: [
     {
-      url: "#",
-      label: "Home"
+      href: "#",
+      text: "Home"
     },
     {
-      url: "#",
-      label: "Create user"
+      href: "#",
+      text: "Add new patient"
     },
     {
-      url: "#",
-      label: "Find user"
+      href: "#",
+      text: "Find a patient"
     }
   ]
 }) }}
