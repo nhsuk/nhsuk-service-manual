@@ -1,6 +1,10 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
+    service: {
+      text: "Manage patients",
+      href: "#"
+    },
     account: {
       items: [
         {
@@ -12,8 +16,5 @@
           text: "Log out"
         }
       ]
-    },
-    service: {
-      name: "Manage patients"
     }
   }) }}

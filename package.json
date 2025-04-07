@@ -56,8 +56,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
-    "nhsuk-frontend": "^9.3.0",
-    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#pull/1058/head",
+    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#header-breaking-changes",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
