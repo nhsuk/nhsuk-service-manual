@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+- Add guidance for text to use on buttons
+
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
