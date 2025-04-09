@@ -2,76 +2,78 @@
 
 {%- if disableSearch %}
   {{ header({
-    homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
-    service: {
-      name: "Digital service manual",
-      longName: "true"
-    },
-    classes: "app-header__container",
-    showNav: "true",
-    showSearch: "false",
-    searchAction: "/search/",
-    searchInputName: "search-field",
-    primaryLinks: [
-      {
-        url  : "/service-standard",
-        label : "NHS service standard"
+      classes: "app-header__container",
+      logo: {
+        href: "/",
+        ariaLabel: "NHS digital service manual homepage"
       },
-      {
-        url : '/design-system',
-        label : 'Design system'
+      service: {
+        text: "Digital service manual",
+        href: "/"
       },
-      {
-        url  : '/content',
-        label : 'Content guide'
-      },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
-      }
-    ]
+      primaryLinks: [
+        {
+          href: "/service-standard",
+          text: "NHS service standard"
+        },
+        {
+          href: "/design-system",
+          text: "Design system"
+        },
+        {
+          href: "/content",
+          text: "Content guide"
+        },
+        {
+          href: "/accessibility",
+          text: "Accessibility"
+        },
+        {
+          href: "/community-and-contribution",
+          text: "Community and contribution"
+        }
+      ]
     })
   }}
 {% else %}
   {{ header({
-    homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
-    service: {
-      name: "Digital service manual",
-      longName: "true"
-    },
-    classes: "app-header__container",
-    showNav: "true",
-    showSearch: "true",
-    searchAction: "/search/",
-    searchInputName: "search-field",
-    primaryLinks: [
-      {
-        url  : "/service-standard",
-        label : "NHS service standard"
+      classes: "app-header__container",
+      logo: {
+        href: "/",
+        ariaLabel: "NHS digital service manual homepage"
       },
-      {
-        url : '/design-system',
-        label : 'Design system'
+      service: {
+        text: "Digital service manual",
+        href: "/"
       },
-      {
-        url  : '/content',
-        label : 'Content guide'
+      search: {
+        action: "/search/",
+        name: "search-field",
+        placeholder: "Search",
+        visuallyHiddenLabel: "Search the NHS digital service manual"
       },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
-      }
-    ]
+      primaryLinks: [
+          {
+            href: "/service-standard",
+            text: "NHS service standard"
+          },
+          {
+            href: "/design-system",
+            text: "Design system"
+          },
+          {
+            href: "/content",
+            text: "Content guide"
+          },
+          {
+            href: "/accessibility",
+            text: "Accessibility"
+          },
+          {
+            href: "/community-and-contribution",
+            text: "Community and contribution"
+          }
+        ]
     })
   }}
 {% endif %}
