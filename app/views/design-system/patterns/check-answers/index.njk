@@ -14,6 +14,19 @@
 
 {% block bodyContent %}
 
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this pattern</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-change-answers">change information they've previously given in an answer</a></li>
+  </ul>
+ <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+</div>
+
   {{ designExample({
     group: "patterns",
     item: "check-answers",
@@ -28,60 +41,60 @@
 
   <p>Show a single check answers page immediately before the confirmation screen for small to medium-sized transactions.</p>
 
-  <p>When designing a very large transaction with multiple sections, it may help to include a check answers pages at the end of each section.</p>
+  <p>When designing a very large transaction with multiple sections, it may help to include a check answers page at the end of each section.</p>
 
-  <p>This can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it’s helpful.</p>
+  <p>This can be valuable for services where different users might be completing each section. You should test this approach with your users to find out if it's helpful.</p>
 
   <h2 id="how-it-works">How this pattern works</h2>
 
   <p>Check answers pages help to:</p>
 
   <ul class="nhsuk-list nhsuk-list--bullet">
-    <li>increase users’ confidence as they can clearly see that they have completed all the sections and that their data has been captured</li>
+    <li>increase users' confidence as they can clearly see that they have completed all the sections and that their data has been captured</li>
     <li>reduce error rates as users are given a second chance to notice and correct errors before submitting data</li>
   </ul>
 
   <h3>Choose the right layout for the page</h3>
 
-  <p>Many services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the ‘Check your answers before submitting your application’ page included in this guidance.</p>
+  <p>Many services ask users for short answers, which are suitable for a layout that takes up two-thirds of the screen on desktop devices. For example, the "Check your answers before sending your application" page included in this guidance.</p>
 
-  <p>Using a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see <a href="/design-system/styles/layout">‘Layout’</a>. It also means the action links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.</p>
+  <p>Using a two-thirds layout stops lines of text getting so long that the page becomes difficult to read. To learn more about line length, see "<a href="/design-system/styles/layout">Layout</a>". It also means the links are closer to the other content on the page. Users with screen magnifiers are less likely to miss them.</p>
 
   <p>However, if your service asks users for longer or more detailed answers, a full width layout may be more suitable.</p>
 
   <h3>Make the page easy to understand</h3>
 
-  <p>Use the page title to tell the user what they need to do – otherwise, they might miss the ‘submit’ button at the end of the page.</p>
+  <p>Use the page title to tell the user what they need to do – otherwise, they might miss the "submit" button at the end of the page.</p>
 
   <p>On the page, you should also:</p>
 
   <ul class="nhsuk-list nhsuk-list--bullet">
     <li>make it clear the transaction will not be complete until a user confirms their information is correct</li>
     <li>break the content up into sections when you can</li>
-    <li>only show sections that are relevant to users – for example, if they’ve said they’re from the UK, do not show sections for questions they have not answered about locations outside of the UK</li>
+    <li>only show sections that are relevant to users – for example, if they've said they're from the UK, do not show sections for questions they have not answered about locations outside of the UK</li>
     <li>rephrase questions if you need to – for example, you do not need to label every individual line of an address, and you can rewrite long questions as shorter statements</li>
-    <li>make sure the ‘submit’ button clearly shows the action it performs – for example, ‘Update my details’ or ‘Send application’</li>
+    <li>make sure the "submit" button clearly shows the action it performs – for example, "Update my details" or "Send application"</li>
   </ul>
 
   <h3>Let users go back and change their answers</h3>
 
-  <p>You should provide a ‘Change’ link next to each section on your check answers page so that users can add or change the information. ‘Change’ links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each ‘change’ link is for.</p>
+  <p>You should provide a "Change" link next to each section on your check answers page so that users can add or change the information. "Change" links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each "Change" link is for.</p>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
+  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-change-answers" role="note">
     <span class="nhsuk-u-visually-hidden">Information: </span>
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
-    <p>If a user decides to go back to a previous answer, make sure information they’ve already entered is pre-populated.</p>
+    <p>If a user decides to go back to a previous answer through a link, make sure information they've previously entered is pre-populated.</p>
 
-    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry</a>.</p>
+    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
   </div>
 
     <p>The answers pages should look the same way they did when the user last used them.</p>
 
-    <p>When they’ve finished, the ‘Continue’ button should return them to the check answers page. They should not need to go through the rest of the transaction again.</p>
+    <p>When they've finished, the "Continue" button should return them to the check answers page. They should not need to go through the rest of the transaction again.</p>
 
     <p>If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.</p>
 
-    <p>If you have questions that are optional, let users know that they’ve skipped it without giving an answer by showing their response as ‘Not provided’.</p>
+    <p>If you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as "Not provided".</p>
 
 
 {% endblock %}
