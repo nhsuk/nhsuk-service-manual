@@ -1,10 +1,11 @@
 # NHS digital service manual Changelog
-## Unreleased
+
+## 7.8.0 - 09 April 2025
 
 :new: **New features**
 - Update NHS service standard 9 to reflect updates to GOV.UK service standard 9
 - Add new bullet point about use of resources to service standard 11
-- Make minor changes to NHS service standard points 9, 15 and 16 to help teams consider risks of tech abuse
+- Make minor changes to NHS service standard points 9, 15 and 16 to help teams consider misuse of tech for domestic abuse
 
 :wrench: **Maintenance**
 - Update contact us message on Frutiger terms of licence page
