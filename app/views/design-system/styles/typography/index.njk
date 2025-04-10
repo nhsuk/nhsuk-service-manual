@@ -184,18 +184,25 @@
   <h4>Break with hyphen</h4>
   <p>Insert the <code>&amp;shy;&shy;</code> HTML tag into the word at all the points where it's OK to break it up. It will add a hyphen where it breaks and will move the rest of the word to the next line.</p>
   <p>Only use <code>&amp;shy;&shy;</code> for long words. Do not use it for email addresses, for example, as it will insert a hyphen which users may mistake for part of the email address.</p>
-  [Insert example: hyper&shy;para&shy;thyroidism]
-  <h4>Break without hyphen</h4>
-  <p>Insert the <code>wbr</code> HTML tag</a> into your word at all the points where it's OK to break it up and add a line break. This is useful for long email addresses.</p>
 
   {{ designExample({
     group: "styles",
     item: "typography",
-    type: "word-break",
+    type: "word-break-shy",
     htmlOnly: true
   }) }}
 
-  <p>There is also an example of <a href="/design-system/components/table#word-breaks-table">breaking long email addresses in the table component</a>.</p>.
+  <h4>Break without hyphen</h4>
+  <p>Insert the <code>&lt;wbr&gt;</code> HTML tag</a> into your word at all the points where it's OK to break it up and add a line break. This is useful for long email addresses.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "word-break-wbr",
+    htmlOnly: true
+  }) }}
+
+  <p>There is also an example of <a href="/design-system/components/table#word-breaks-table">breaking long email addresses in the table component</a>.</p>
 
   <h2 id="links">Links</h2>
   <p>Links are blue and underlined by default with a <a href="/design-system/styles/focus-state">styled focus state</a> for people who use keyboards or other devices to navigate through a page.</p>
