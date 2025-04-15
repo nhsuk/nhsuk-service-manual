@@ -4,6 +4,10 @@
 :new: **New features**
 - Add guidance on word breaks to typography section, table component, and hyphens section in content guide
 
+:wrench: **Maintenance**
+- Update word "efficient" to "effective" in accessibility testing page re manual testing
+- Update date on cookie policy - cookies are up-to-date
+
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
