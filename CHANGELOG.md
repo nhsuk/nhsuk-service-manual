@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+- Add classes to set column widths on responsive table example
+
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
