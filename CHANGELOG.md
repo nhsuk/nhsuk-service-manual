@@ -3,7 +3,7 @@
 ## TBC
 
 :new: **New features**
-- Add new Nunjucks Options to Page template and update the examples to use the new template.njk from frontend ([PR 1186](https://github.com/nhsuk/nhsuk-frontend/pull/1186))
+- Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
 
 ## 7.8.0 - 09 April 2025
 
