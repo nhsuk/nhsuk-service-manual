@@ -1,17 +1,17 @@
 {% extends "template.njk" %}
 
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+
+{% set assetPath = "/nhsuk-frontend/assets" %}
+
 {% block head %}
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/main.min.js" defer></script>
-{% endblock %}
+{%- endblock %}
 
-{% set assetPath = "/nhsuk-frontend/assets/" %}
-
-{% from 'breadcrumb/macro.njk' import breadcrumb %}
-
-{% block pageTitle %}
+{% block pageTitle -%}
   Content page template
-{% endblock %}
+{%- endblock %}
 
 {% block header %}
   {{ header({

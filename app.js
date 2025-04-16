@@ -62,6 +62,8 @@ const env = nunjucks.configure(appViews, {
   express: app,
   noCache: true,
   watch: true,
+  trimBlocks: true,
+  lstripBlocks: true
 });
 
 /*

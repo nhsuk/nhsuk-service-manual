@@ -1,15 +1,15 @@
 {% extends "template.njk" %}
 
+{% set assetPath = "/nhsuk-frontend/assets" %}
+
 {% block head %}
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/main.min.js" defer></script>
-{% endblock %}
+{%- endblock %}
 
-{% set assetPath = "/nhsuk-frontend/assets/" %}
-
-{% block pageTitle %}
+{% block pageTitle -%}
   Default page template
-{% endblock %}
+{%- endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">

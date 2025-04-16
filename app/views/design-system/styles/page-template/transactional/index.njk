@@ -1,19 +1,18 @@
 {% extends "template.njk" %}
 
+{% from "back-link/macro.njk" import backLink %}
+
+{% set assetPath = "/nhsuk-frontend/assets" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block head %}
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/main.min.js" defer></script>
-{% endblock %}
+{%- endblock %}
 
-{% set assetPath = "/nhsuk-frontend/assets/" %}
-
-{% from 'back-link/macro.njk' import backLink %}
-
-{% set mainClasses = "nhsuk-main-wrapper--s" %}
-
-{% block pageTitle %}
+{% block pageTitle -%}
   Transactional page template
-{% endblock %}
+{%- endblock %}
 
 {% block header %}
   {{ header({
