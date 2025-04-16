@@ -1,5 +1,14 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+- Add new question page pattern to design system
+- Update guidance on questions on page template and hint text and in parts of the forms guidance
+
+:wrench: **Maintenance**
+- Remove beta label from BSL standard and from technology pages
+
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
