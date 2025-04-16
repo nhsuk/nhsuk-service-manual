@@ -1,8 +1,10 @@
 # NHS digital service manual Changelog
 
-## TBC
+## Unreleased
+
 :new: **New features**
 - Add guidance on word breaks to typography section, table component, and hyphens section in content guide
+- Added guidance on using the Check answers pattern
 
 :wrench: **Maintenance**
 - Update word "efficient" to "effective" in accessibility testing page re manual testing
