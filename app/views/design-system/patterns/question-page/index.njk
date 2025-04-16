@@ -1,0 +1,87 @@
+{% set pageTitle = "Question page" %}
+{% set pageDescription = "This pattern explains when to use question pages and what elements they need to include." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "April 2025" %}
+{% set backlog_issue_id = "242" %}
+
+{% extends "layouts/app-layout.njk" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<div class="nhsuk-inset-text app-wcag-inset-text">
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+    WCAG 2.2
+  </strong>
+
+  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this pattern</h3>
+  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <ul>
+    <li><a href="#wcag-avoid-information-reentry">avoid re-entering information they've given in a previous answer</a></li>
+    <li><a href="#wcag-interact-without-click-drag-task">select an answer without relying on click and drag movements</a></li>
+  </ul>
+  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+</div>
+<p>PUT DESIGN EXAMPLE HERE</p>
+
+<h2 id="when-to-use">When to use a question page</h2>
+<p>Follow this pattern whenever you need to ask users questions within your service.</p>
+<p>You should make sure you know why you're asking every question and only ask users for information you really need.</p>
+<p>To help you work out what to ask, you can carry out a question protocol.</p>
+<p>If you ask for optional information:</p>
+<ul>
+    <li>in most contexts, add "(optional)" to the labels of optional fields</li>
+    <li>for <a href="/design-system/components/radios">radios components</a> and <a href="/design-system/components/checkboxes">checkboxes components</a>, add "(optional)" to the legend</li>
+</ul>
+<p>Never mark mandatory fields with asterisks.</p>
+
+<p>On every question page you should:</p>
+<ul>
+    <li>make sure it's clear to users why you're asking each question</li>
+    <li>allow users to answer "I do not know" or "I'm not sure" if they are valid responses</li>
+</ul>
+<p>Read more about:</p>
+<ul>
+    <li><a href="/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question">making sure you need each question (in our guidance on How to write good questions for forms)</a></li>
+    <li><a href="https://www.gov.uk/service-manual/design/designing-good-questions">designing good questions (GOV.UK service manual)</a></li>
+    <li><a href="https://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php">question protocols (UX matters article by Caroline Jarrett)</a></li>
+</ul>
+
+<h2 id="how-to-use">How to use a question page</h2>
+<p>Question pages must include a:</p>
+<ul>
+  <li>back link</li>
+  <li>page heading</li>
+  <li>continue button</li>
+</ul>
+
+<p>If research shows it's helpful for users, you can also <a href="#use-progress-indicator">use a progress indicator</a>.</p>
+
+<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-information-reentry" role="note">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they've already provided. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
+<p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
+<ul>
+  <li>pre-populating the relevant fields</li>
+  <li>showing carried-forward responses as an option for the user to select</li>
+</ul>
+</div>
+
+<h3>Back link</h3>
+<p>Some users do not trust browser back buttons when they're entering data.</p>
+<p>Always include a <a href="/design-system/components/back-link">back link component</a> at the top of question pages to reassure them it's possible to go back and change previous answers.</p>
+<p>However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.</p>
+<p>An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.</p>
+
+  <h2>Accessibility</h2>
+
+
+  <h2 id="research">Research</h2>
+
+{% endblock %}
