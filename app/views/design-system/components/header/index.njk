@@ -47,8 +47,8 @@
   <ul class="nhsuk-list nhsuk-list--bullet">
     <li>the NHS logo, which may be accompanied by the service name</li>
     <li>a search bar</li>
-    <li>account information and links</li>
     <li>navigation, with exposed links and a drop-down "More" button</li>
+    <li>account information and links</li>
   </ul>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
@@ -91,6 +91,18 @@
     group: "components",
     item: "header",
     type: "search"
+  }) }}
+
+  <h3 id="navigation">Navigation</h3>
+  <p>Help users find what they need quickly by providing consistent navigation.</p>
+  <p>If your service is a linear end-to-end journey, you probably do not need navigation links. You can use the <a href="/design-system/patterns/complete-multiple-tasks">Complete multiple tasks pattern</a>.</p>
+  <p>Place links to your most important top-level sections first. When there is not enough space to show all links, they will be moved into the "More" drop-down list.</p>
+  <p>You can highlight the section the user is currently in.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "navigation"
   }) }}
 
   <h3 id="account-header">Account information and links</h3>
