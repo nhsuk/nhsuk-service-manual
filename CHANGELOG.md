@@ -3,7 +3,7 @@
 ## Unreleased
 
 :new: **New features**
-- Added guidance on using the Check answers pattern
+- Add guidance on using the Check answers pattern
 - Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
 - Add guidance on word breaks to typography section, table component, and hyphens section in content guide
 - Add classes to set column widths on responsive table example
