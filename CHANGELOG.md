@@ -3,8 +3,9 @@
 ## Unreleased
 
 :new: **New features**
-- Add guidance on word breaks to typography section, table component, and hyphens section in content guide
 - Added guidance on using the Check answers pattern
+- Add guidance on word breaks to typography section, table component, and hyphens section in content guide
+- Add classes to set column widths on responsive table example
 
 :wrench: **Maintenance**
 - Update word "efficient" to "effective" in accessibility testing page re manual testing
