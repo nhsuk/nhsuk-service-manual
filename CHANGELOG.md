@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+:new: **New features**
+- Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
+
 :wrench: **Maintenance**
 - Remove mention of SVG fallbacks from Icons guidance
 
