@@ -11,6 +11,7 @@
 :wrench: **Maintenance**
 - Update word "efficient" to "effective" in accessibility testing page re manual testing
 - Update date on cookie policy - cookies are up-to-date
+- Remove mention of SVG fallbacks from Icons guidance
 
 ## 7.8.0 - 09 April 2025
 
