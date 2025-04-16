@@ -4,6 +4,8 @@
 
 :new: **New features**
 
+- Add new question page pattern to design system
+- Update guidance on questions on page template and hint text and in parts of the forms guidance
 - Add new account information and links variant of header component
 - Update design of header to include:
   - new feature to highlight current page in the navigation menu
@@ -11,8 +13,8 @@
   - removing home link from header that was automatically added on small screens
   - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
   - left-aligning navigation items by default
-- Add guidance on how to use hint text and update hint text examples
 - Add new profile icon to icons page
+- Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
 :wrench: **Maintenance**

@@ -79,6 +79,47 @@
 <p>However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.</p>
 <p>An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.</p>
 
+<h3 id="page-headings">Page headings</h3>
+<p>Page headings can be questions or statements.</p>
+
+<h4>Start by asking 1 question per page</h4>
+<p>Asking just 1 question per question page helps users understand what you're asking them to do, and focus on the specific question and its answer.</p>
+<p>To help you follow this approach, you can set the contents of a <code><legend></code> or <code><label></code> for a page's input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+<p>Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">make labels and legends headings (on GOV.UK)</a> or see examples below.</p>
+
+<p>A question page with a legend as the page heading:</p>
+<p>ADD EXAMPLE</p>
+<p>A question page with a label as the page heading:</p>
+<p>ADD ANOTHER EXAMPLE</p>
+<p>Do not use the same page heading across multiple pages.</p>
+<p>The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
+<p>If you need to show the high-level section, you can use an nhsuk-caption style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions</a>. (CHECK PLEASE)</p>
+<p>For example, "About you":</p>
+<p>ADD EXAMPLE</p>
+<p>Read about <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order">beginning prototyping with 1 thing per page in our guidance on getting questions into order</a>.</p>
+<h4 id="hint-text">Hint text</h4>
+<p>Use <a href="/design-system/components/hint-text">hint text</a> to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.</p>
+<p>Keep each hint to a single short sentence, without any full stops.(CHECK - NEEDS DECISION)</p>
+<p>If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.</P>
+<P>Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.</p>
+
+<h4>Asking complex questions without using hint text</h4>
+<p>If you're asking a question that needs a detailed explanation, use:</p>
+<ul>
+  <li>an <code>&lt;h1&gt;</code> heading that's a statement (for example, "Interview needs") rather than a question</li>
+  <li>whatever mix of text, paragraphs, lists and examples best explains your question to users</li>
+  <li>a label, above the form input, that asks users a specific question – for example, "Do you have any interview needs?"</li>
+</ul>
+<p>ADD EXAMPLE</p>
+<h4>Asking multiple questions on a page</h4>
+<p>Sometimes it makes sense to group a number of related questions on the same page.</p>
+
+User research will tell you when you can group pages together. For example, if you’re designing an internal service for government users who need to repeat and switch between tasks quickly.
+
+If you need to ask for multiple related things on a page, use a statement as the heading.
+
+You can style each <label> or <legend> to make the questions easier to scan. Read more about why and how to style labels and legends.
+  
   <h2>Accessibility</h2>
 
 
