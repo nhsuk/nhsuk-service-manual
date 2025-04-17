@@ -27,7 +27,7 @@
   </ul>
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
-<p>PUT DESIGN EXAMPLE HERE</p>
+<p>PUT DESIGN EXAMPLE HERE - WHERE DO YOU LIVE IS OK</p>
 
 <h2 id="when-to-use">When to use a question page</h2>
 <p>Follow this pattern whenever you need to ask users questions within your service.</p>
@@ -60,20 +60,20 @@
   <li>continue button</li>
 </ul>
 
-<p>If research shows it's helpful for users, you can also <a href="#use-progress-indicator">use a progress indicator</a>.</p>
+<p>If research shows it's helpful for users, you can also <a href="#using-progress-indicators">use a progress indicator</a>.</p>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-information-reentry" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
   <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they've already provided. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
-<p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
-<ul>
-  <li>pre-populating the relevant fields</li>
-  <li>showing carried-forward responses as an option for the user to select</li>
-</ul>
+  <p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
+  <ul>
+    <li>pre-populating the relevant fields</li>
+    <li>showing carried-forward responses as an option for the user to select</li>
+  </ul>
 </div>
 
-<h3>Back link</h3>
+<h3 id="back-link">Back link</h3>
 <p>Some users do not trust browser back buttons when they're entering data.</p>
 <p>Always include a <a href="/design-system/components/back-link">back link component</a> at the top of question pages to reassure them it's possible to go back and change previous answers.</p>
 <p>However, do not break the browser back button. Make sure it takes users to the previous page they were on, in the state they last saw it.</p>
@@ -82,47 +82,87 @@
 <h3 id="page-headings">Page headings</h3>
 <p>Page headings can be questions or statements.</p>
 
-<h4>Start by asking 1 question per page</h4>
+<h4 id="start-by-asking-1-question-per-page">Start by asking 1 question per page</h4>
 <p>Asking just 1 question per question page helps users understand what you're asking them to do, and focus on the specific question and its answer.</p>
-<p>To help you follow this approach, you can set the contents of a <code><legend></code> or <code><label></code> for a page's input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
+<p>To help you follow this approach, you can set the contents of a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> for a page's input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
 <p>Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">make labels and legends headings (on GOV.UK)</a> or see examples below.</p>
 
 <p>A question page with a legend as the page heading:</p>
-<p>ADD EXAMPLE</p>
+<p>ADD EXAMPLE - WHAT IS YOUR DATE OF BIRTH IS OK</p>
 <p>A question page with a label as the page heading:</p>
-<p>ADD ANOTHER EXAMPLE</p>
+<p>ADD ANOTHER EXAMPLE - HOME POSTCODE IS OK</p>
 <p>Do not use the same page heading across multiple pages.</p>
 <p>The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
-<p>If you need to show the high-level section, you can use an nhsuk-caption style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions</a>. (CHECK PLEASE)</p>
+<p>If you need to show the high-level section, you can use an <code>nhsuk-caption</code> style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions</a>. (CHECK PLEASE)</p>
 <p>For example, "About you":</p>
-<p>ADD EXAMPLE</p>
+<p>ADD EXAMPLE - HOME ADDRESS IS OK</p>
 <p>Read about <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order">beginning prototyping with 1 thing per page in our guidance on getting questions into order</a>.</p>
+
 <h4 id="hint-text">Hint text</h4>
 <p>Use <a href="/design-system/components/hint-text">hint text</a> to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.</p>
-<p>Keep each hint to a single short sentence, without any full stops.(CHECK - NEEDS DECISION)</p>
+<p>Keep each hint to a single short sentence, without any full stops.(CHECK - SEE GITHUB ISSUE #2070)</p>
 <p>If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.</P>
 <P>Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.</p>
 
-<h4>Asking complex questions without using hint text</h4>
+<h4 id="asking-complex-questions-without-using-hint-text">Asking complex questions without using hint text</h4>
 <p>If you're asking a question that needs a detailed explanation, use:</p>
 <ul>
   <li>an <code>&lt;h1&gt;</code> heading that's a statement (for example, "Interview needs") rather than a question</li>
   <li>whatever mix of text, paragraphs, lists and examples best explains your question to users</li>
   <li>a label, above the form input, that asks users a specific question – for example, "Do you have any interview needs?"</li>
 </ul>
-<p>ADD EXAMPLE</p>
-<h4>Asking multiple questions on a page</h4>
+<p>ADD EXAMPLE - USE PAULROBERTLLOYD'S EXAMPLE IN SLACK</p>
+
+<h4 id="asking-multiple-questions-on-a-page">Asking multiple questions on a page</h4>
 <p>Sometimes it makes sense to group a number of related questions on the same page.</p>
+<p>User research will tell you when you can group pages together. For example, if you're designing an internal service for government users who need to repeat and switch between tasks quickly.</p>
+<p>If you need to ask for multiple related things on a page, use a statement as the heading.</p>
+<p>You can style each <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> to make the questions easier to scan. Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/#styling-options-for-labels-and-legends">style labels and legends headings (on GOV.UK)</a>. [UNLESS WE HAVE NHS EQUIV.]</p>
+<p>ADD EXAMPLE - WHAT WOULD BE A GOOD NHS EXAMPLE?</p>
 
-User research will tell you when you can group pages together. For example, if you’re designing an internal service for government users who need to repeat and switch between tasks quickly.
+<h3 id="continue-button">Continue button</h3>
+<p>Make sure your "Continue" button is:</p>
+<ul>
+  <li>labelled "Continue", not "Next"</li>
+  <li>aligned to the left so users do not miss it</li>
+</ul>
 
-If you need to ask for multiple related things on a page, use a statement as the heading.
+<h3 id="using-progress-indicators">Using progress indicators</h3>
+<p>Start by testing your form without a progress indicator to see if it's simple enough that users do not need one.</p>
+<p>Try improving the order, type or number of questions before adding a progress indicator. If people still have difficulty, try adding a simple step or question indicator like this one.</p>
+<p>ADD EXAMPLE - GOV ONE IS OK</p>
+<p>Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.</p>
+<p>Do not use progress indicators that do all of the following:</p>
+<ul>
+  <li>show all questions at once</li>
+  <li>allow navigation to previous questions</li>
+  <li>show the current question</li>
+</ul>
+<p>An example of this looks like:</p>
+<p>ADD EXAMPLE - WOULD WE USE THIS ONE?</p>
+<p>These can be problematic because they:</p>
+<ul>
+  <li>are often not noticed</li>
+  <li>take up lots of space</li>
+  <li>do not scale well on small screens</li>
+  <li>can distract and confuse some users</li>
+  <li>make it hard to write good labels for the steps</li>
+  <li>make it hard to handle conditional sections</li>
+</ul>
+<p>A number of GOV.UK services have removed this style of progress indicator without any negative effects. [I'VE LEFT OUT LINK TO DATED BLOG.]</p>
 
-You can style each <label> or <legend> to make the questions easier to scan. Read more about why and how to style labels and legends.
+<h3>Using range sliders</h3>
+<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  <p>Avoid using range slider questions [I'VE LEFT OUT LINK], where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
+  <p>If you do use a range slider, you must provide a method for selecting an answer that doesn't rely on click and drag movements. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html">WCAG success criterion 2.5.1 Pointer Gestures (W3C)</a>.</p>
+  <p>[NOTE: WE DON'T REFER TO POINTER GESTURES ELSEWHERE IN OUR WCAG 2.2 GUIDANCE. SHOULD THIS JUST REFER TO CLICK AND DRAG, LIKE ON COMPLETE MULTIPLE TASKS PAGE?</p>
+</div>
+<h2 id="accessibility">Accessibility</h2>
+<p>ANYTHING TO SAY OVER AND ABOVE WCAG 2.2?</p>
   
-  <h2>Accessibility</h2>
-
-
-  <h2 id="research">Research</h2>
+<h2 id="research">Research</h2>
+<p>ANYTHING TO SAY ABOUT THIS?<p>
 
 {% endblock %}
