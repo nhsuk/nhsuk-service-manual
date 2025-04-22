@@ -5,6 +5,9 @@
 :new: **New features**
 - Added guidance on using the Check answers pattern
 
+:wrench: **Maintenance**
+- Remove mention of SVG fallbacks from Icons guidance
+
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
