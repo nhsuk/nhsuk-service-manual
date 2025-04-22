@@ -4,6 +4,7 @@
 
 :new: **New features**
 - Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
+- Added guidance on using the Check answers pattern
 
 :wrench: **Maintenance**
 - Remove mention of SVG fallbacks from Icons guidance
