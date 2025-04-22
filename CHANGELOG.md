@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+:new: **New features**
+- Added guidance on using the Check answers pattern
+
 :wrench: **Maintenance**
 - Remove mention of SVG fallbacks from Icons guidance
 
