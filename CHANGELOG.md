@@ -6,9 +6,12 @@
 - Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
 - Added guidance on using the Check answers pattern
 - Add classes to set column widths on responsive table example
+- Add guidance on word breaks to typography section, table component, and hyphens section in content guide
 
 :wrench: **Maintenance**
 - Remove mention of SVG fallbacks from Icons guidance
+- Update word "efficient" to "effective" in accessibility testing page re manual testing
+- Update date on cookie policy - cookies are up-to-date
 
 ## 7.8.0 - 09 April 2025
 
