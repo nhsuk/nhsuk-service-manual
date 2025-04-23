@@ -5,6 +5,7 @@
 :new: **New features**
 - Add new Nunjucks Options to Page template and update the examples to use template.njk from frontend
 - Added guidance on using the Check answers pattern
+- Add classes to set column widths on responsive table example
 
 :wrench: **Maintenance**
 - Remove mention of SVG fallbacks from Icons guidance
