@@ -2,7 +2,7 @@
 {% set pageDescription = "Use this small set of icons that we know our users need and understand to help them identify and navigate content more quickly." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "April 2024" %}
+{% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "4" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -26,7 +26,7 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <table class="nhsuk-table nhsuk-table--full-width nhsuk-table-responsive nhsuk-u-margin-bottom-6">
+  <table class="nhsuk-table nhsuk-table--full-width nhsuk-table-responsive">
     <caption class="nhsuk-table__caption">Icon you can use</caption>
     <thead>
       <tr>
@@ -203,7 +203,6 @@
   <p>SVG icons are sharp, flexible, and load quickly. You can control how they appear, for example their colour, with style sheets (CSS).</p>
   <p class="rich-text">If you're using a server side or templating language, you can include the icons with <code>include 'partials/icons/icon-search.svg'</code>.</p>
   <p class="rich-text">SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon__search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
-  <p class="rich-text">Some older browsers like Internet Explorer 8 can't display SVG. So every SVG icon has a PNG fallback. The fallback images have a class, such as <code>.nhsuk-icon__search—fallback</code>, which you can use to modify their sizing and spacing.</p>
 
   <h3>Accessibility</h3>
   <p>SVG icons must be accessible. For example, they need to meet accessible colour contrast standards. Our recommended tool to test colour combinations is the <a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a>. Read more about <a href="https://css-tricks.com/accessible-svgs/">accessible SVGs on CSS Tricks website</a>.</p>
