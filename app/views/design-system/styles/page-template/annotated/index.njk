@@ -1,4 +1,11 @@
-{% extends "includes/template.njk" %}
+{% extends "template.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.min.js" defer></script>
+{% endblock %}
+
+{% set assetPath = "/nhsuk-frontend/assets/" %}
 
 {% block bodyStart -%}
   <div class="app-annotate-block">
