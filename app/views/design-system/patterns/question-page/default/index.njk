@@ -1,0 +1,49 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'radios/macro.njk' import radios %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{{ radios({
+    name: "whereDoYouLive",
+    fieldset: {
+    legend: {
+        text: "Where do you live?",
+        isPageHeading: true,
+        classes: "nhsuk-fieldset__legend--l"
+    }
+    },
+    items: [
+        {
+            value: "england",
+            text: "England"
+        },
+        {
+            value: "scotland",
+            text: "Scotland"
+        },
+        {
+            value: "wales",
+            text: "Wales"
+        },
+        {
+            value: "northern-ireland",
+            text: "Northern Ireland"
+        }
+    ]
+}) }}
+
+{{ button({
+  text: "Continue"
+}) }}
+
+{% endblock %}
