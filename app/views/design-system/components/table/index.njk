@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "July 2024" %}
+{% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "26" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -54,6 +54,16 @@
     <li>to lay out content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
     <li>if your content is easier to read and understand on a small screen in a non-responsive layout – use a <a href="#basic-tables">basic table</a> instead</li>
   </ul>
+
+  <h2 id="word-breaks-table">Using word-breaks in a table</h2>
+  <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "word-break"
+  }) }}
+  <p>Find out more about word-breaks, with or without a hyphen, in <a href="/design-system/styles/typography#breaking-up-long-words">breaking up long words in the typography section</a>.</p>
 
   <h2 id="how-it-works">How tables work</h2>
   <h3>Accessibility</h3>

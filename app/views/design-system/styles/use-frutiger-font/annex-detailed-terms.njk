@@ -1,7 +1,10 @@
+{% extends "template.njk" %}
 
-{% extends "includes/template.njk" %}
+{% set assetPath = "/nhsuk-frontend/assets" %}
 
 {% block head %}
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.min.js" defer></script>
   <meta name="robots" content="noindex" />
 {% endblock %}
 

@@ -1,7 +1,14 @@
 {% from 'action-link/macro.njk' import actionLink %}
 {% from 'back-link/macro.njk' import backLink %}
 
-{% extends "includes/template.njk" %}
+{% extends "template.njk" %}
+
+{% set assetPath = "/nhsuk-frontend/assets" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.min.js" defer></script>
+{%- endblock %}
 
 {% block pageTitle %}
   Terms of NHS Frutiger licence
