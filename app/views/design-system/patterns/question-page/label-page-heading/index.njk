@@ -1,0 +1,32 @@
+{% extends "includes/design-example-wrapper-full-layout.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'input/macro.njk' import input %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{{ input({
+  label: {
+    text: "What is your home postcode?",
+    isPageHeading: true,
+    classes: "nhsuk-label--l"
+  },
+  classes: "nhsuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  autocomplete: "postal-code"
+}) }}
+
+{{ button({
+  text: "Continue"
+}) }}
+
+{% endblock %}
