@@ -4,6 +4,8 @@
 {% from 'button/macro.njk' import button %}
 {% from 'input/macro.njk' import input %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block beforeContent %}
   {{ backLink({
     href: "#",
@@ -13,20 +15,26 @@
 
 {% block content %}
 
-{{ input({
-  label: {
-    text: "What is your home postcode?",
-    isPageHeading: true,
-    classes: "nhsuk-label--l"
-  },
-  classes: "nhsuk-input--width-10",
-  id: "postcode",
-  name: "postcode",
-  autocomplete: "postal-code"
-}) }}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
-{{ button({
-  text: "Continue"
-}) }}
+  {{ input({
+    label: {
+      text: "What is your home postcode?",
+      isPageHeading: true,
+      classes: "nhsuk-label--l"
+    },
+    classes: "nhsuk-input--width-10",
+    id: "postcode",
+    name: "postcode",
+    autocomplete: "postal-code"
+  }) }}
+
+  {{ button({
+    text: "Continue"
+  }) }}
+
+  </div>
+</div>
 
 {% endblock %}

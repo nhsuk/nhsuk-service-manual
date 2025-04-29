@@ -4,6 +4,8 @@
 {% from 'button/macro.njk' import button %}
 {% from 'radios/macro.njk' import radios %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block beforeContent %}
   {{ backLink({
     href: "#",
@@ -13,37 +15,43 @@
 
 {% block content %}
 
-{{ radios({
-    name: "whereDoYouLive",
-    fieldset: {
-    legend: {
-        text: "Where do you live?",
-        isPageHeading: true,
-        classes: "nhsuk-fieldset__legend--l"
-    }
-    },
-    items: [
-        {
-            value: "england",
-            text: "England"
-        },
-        {
-            value: "scotland",
-            text: "Scotland"
-        },
-        {
-            value: "wales",
-            text: "Wales"
-        },
-        {
-            value: "northern-ireland",
-            text: "Northern Ireland"
-        }
-    ]
-}) }}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
-{{ button({
-  text: "Continue"
-}) }}
+    {{ radios({
+        name: "whereDoYouLive",
+        fieldset: {
+        legend: {
+            text: "Where do you live?",
+            isPageHeading: true,
+            classes: "nhsuk-fieldset__legend--l"
+        }
+        },
+        items: [
+            {
+                value: "england",
+                text: "England"
+            },
+            {
+                value: "scotland",
+                text: "Scotland"
+            },
+            {
+                value: "wales",
+                text: "Wales"
+            },
+            {
+                value: "northern-ireland",
+                text: "Northern Ireland"
+            }
+        ]
+    }) }}
+
+    {{ button({
+    text: "Continue"
+    }) }}
+
+    </div>
+</div>    
 
 {% endblock %}
