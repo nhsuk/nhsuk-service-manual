@@ -1,0 +1,78 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'input/macro.njk' import input %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-l">
+            Your details
+        </h1>
+        <p>You've told us you are the carer, we need your details.</p>
+
+        {{ input({
+          label: {
+            text: "First name",
+            classes: "nhsuk-label--s"
+          },
+          id: "example",
+          name: "example"
+        }) }}
+
+        {{ input({
+          label: {
+            text: "Last name",
+            classes: "nhsuk-label--s"
+          },
+          id: "example1",
+          name: "example1"
+        }) }}
+
+        {{ input({
+          label: {
+            text: "Relationship to the person being registered",
+            classes: "nhsuk-label--s"
+          },
+          hint: {
+            text: "For example, a family member or friend"
+          },
+          id: "example2",
+          name: "example2"
+        }) }}
+
+        {{ input({
+          label: {
+            text: "Contact phone number",
+            classes: "nhsuk-label--s"
+          },
+          id: "example3",
+          name: "example3",
+          type: "tel",
+          autocomplete: "tel",
+          classes: "nhsuk-input--width-20"
+        }) }}
+
+        {{ button({
+        text: "Continue"
+        }) }}
+
+    </div>
+</div>
+
+{% endblock %}
