@@ -40,11 +40,11 @@
     <li>the key is a label, like "Name"</li>
     <li>the value is the piece of information itself, like "John Smith"</li>
   </ul>
-  <p>Think about how you can use the summary list along with other components or patterns to give users a sense of control. You can use it to summarise a user's responses at the end of a form, for example as part of the <a href="https://design-system.service.gov.uk/patterns/check-answers/">GOV.UK check answers pattern</a>.</p>
+  <p>Think about how you can use the summary list along with other components or patterns to give users a sense of control. You can use it to summarise a user's responses at the end of a form, for example as part of the <a href="/design-system/patterns/check-answers">check answers pattern</a>.</p>
 
   <h2>When not to use summary lists </h2>
   <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
-  <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="https://design-system.service.gov.uk/patterns/complete-multiple-tasks/">GOV.UK complete multiple tasks pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
+  <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="/design-system/patterns/complete-multiple-tasks">complete multiple tasks pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
   <h2>How to use summary lists</h2>
   <p>There are 2 ways to use the summary list component. You can use HTML or, if you're using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK prototype kit</a>, you can use the Nunjucks macro.</p>
@@ -73,9 +73,10 @@
     WCAG 2.2
   </strong>
   
-    <p>If a user decides to go back to a previous answer through an action link, make sure information they have already entered is pre-populated.</p>
+    <p>If a user decides to go back to a previous answer through a link, make sure information they have already entered is pre-populated.</p>
     <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
   </div>
+  
   <p>People who use assistive technology, like a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 
   {{ designExample({

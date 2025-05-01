@@ -1,7 +1,14 @@
 {% from 'action-link/macro.njk' import actionLink %}
 {% from 'back-link/macro.njk' import backLink %}
 
-{% extends "includes/template.njk" %}
+{% extends "template.njk" %}
+
+{% set assetPath = "/nhsuk-frontend/assets" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.min.js" defer></script>
+{%- endblock %}
 
 {% block pageTitle %}
   Terms of NHS Frutiger licence
@@ -140,7 +147,7 @@
         <ul>
           <li>use the font to create, edit and distribute documents or other NHS materials</li>
           <li>embed the font into electronic documents (note: digital marketing communications are covered below)</li>
-          <li>create internal-only back-ups</li>
+          <li>create internal-only backups</li>
         </ul>
         <p>You must make sure that materials you create:</p>
         <ul>
@@ -160,7 +167,7 @@
       <div class="nhsuk-details__text">
         <p>Digital marketing communications include, for example, sending marketing emails out or displaying an advertisement on websites you control.</p>
         <p>You can embed the font into digital marketing communications and use the font in editable documents, like Word.</p>
-        <p>You must make sure your content does not allow people to download, reformat or reuse the font code.</p> 
+        <p>You must make sure your content does not allow people to download, reformat or re-use the font code.</p> 
       </div>
     </details>
 
@@ -217,13 +224,16 @@
 
     <h2>Next step</h2>
 
+    <h3 class="nhsuk-heading-xs">If you have an nhs.net email account</h3>
+
     {{ actionLink({
       text: "Complete the registration form (Microsoft Forms)",
       href: "https://forms.office.com/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO40EyX7apFihMsAHZLYEqsb5UNU9RTEZWSzM3MVVHVUVVMFk1MlFPSkg0Wi4u"
     }) }}
 
-    <p>You must use an nhs.net email to access the form.</p>
-    <p>If you do not have an nhs.net email account or have problems registering via the form, contact: <a href="mailto:england.font@nhs.net?subject=Problem registering via the form">england.font@nhs.net</a>.</p>
+    <h3 class="nhsuk-heading-xs">For different email accounts or problems registering</h3>
+
+    <p>If you do not have an nhs.net email account (for example, you use an nhs.uk email account), contact: <a href="mailto:england.font@nhs.net?subject=Problem registering via the form">england.font@nhs.net</a>.</p>
 
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
       Updated: March 2025<br>

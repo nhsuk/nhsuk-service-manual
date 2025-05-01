@@ -1,5 +1,28 @@
 # NHS digital service manual Changelog
 
+## 7.9.0 - 23 April 2025
+
+:new: **New features**
+- Add guidance on using the Check answers pattern
+- Add new Nunjucks options to Page template and update the examples to use template.njk from frontend
+- Add guidance on word breaks to typography section, table component, and hyphens section in content guide
+- Add classes to set column widths on responsive table example
+
+:wrench: **Maintenance**
+- Update word "efficient" to "effective" in accessibility testing page re manual testing
+- Update date on cookie policy - cookies are up-to-date
+- Remove mention of SVG fallbacks from icons guidance
+
+## 7.8.0 - 09 April 2025
+
+:new: **New features**
+- Update NHS service standard 9 to reflect updates to GOV.UK service standard 9
+- Add new bullet point about use of resources to service standard 11
+- Make minor changes to NHS service standard points 9, 15 and 16 to help teams consider misuse of tech for domestic abuse
+
+:wrench: **Maintenance**
+- Update contact us message on Frutiger terms of licence page
+
 ## 7.7.0 - 27 March 2025
 
 :new: **New features**
