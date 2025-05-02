@@ -62,7 +62,7 @@
   <h2 id="page-title">Page title</h2>
 
   <p>The page title (<code>&lt;title&gt;</code>) is in the HTML metadata, in the <code>&lt;head&gt;</code> section. It is displayed in the browser tab.</p>
-  <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by a dash. For example: <code>&lt;title&gt;</code>Flu – NHS<code>&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p> 
+  <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by a dash. For example: <code>&lt;title&gt;</code>Flu – NHS<code>&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p>
 
     <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
@@ -87,7 +87,7 @@
    Do you live in the UK? – Your details – Manage your tax credits – GOV.UK</p>
     <p>If the user makes an error, add "Error: " to the beginning of the title so screen readers read it out as soon as possible.</p>
     </div>
-   
+
   </details>
 
   <details class="nhsuk-details">
@@ -104,7 +104,7 @@
   </details>
 
   <p>Find out more about writing good <a href="/content/formatting#headings">headings in the content guide</a>.</p>
-  
+
   <h2 id="default-page-template">Default page template</h2>
 
   <p>This example shows the minimum required for an NHS service.</p>
@@ -113,8 +113,7 @@
     group: "styles",
     item: "page-template",
     type: "default",
-    blankpage: true,
-    showArguments: false
+    blankpage: true
   }) }}
 
   <h2 id="customised-page-template">Customised page template</h2>
@@ -129,8 +128,7 @@
     group: "styles",
     item: "page-template",
     type: "transactional",
-    blankpage: true,
-    showArguments: false
+    blankpage: true
   }) }}
 
   <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class.
@@ -146,8 +144,7 @@
     group: "styles",
     item: "page-template",
     type: "content",
-    blankpage: true,
-    showArguments: false
+    blankpage: true
   }) }}
 
   <h2 id="changing-template-content">Changing template content</h2>
@@ -161,8 +158,7 @@
     item: "page-template",
     type: "set-content",
     nunjucksOnly: true,
-    showExample: false,
-    showArguments: false
+    showExample: false
   }) }}
 
   <p>To set a 'block' option, use <code>block</code> to pass in a multiline value or HTML markup. For example, to add a block of HTML before the closing element in the page template using the <code>bodyEnd</code> option:</p>
@@ -172,8 +168,7 @@
     item: "page-template",
     type: "block",
     nunjucksOnly: true,
-    showExample: false,
-    showArguments: false
+    showExample: false
   }) }}
 
   <p>To change the components that are included in the page template by default, set their equivalent blocks. For example:</p>
@@ -183,8 +178,7 @@
     item: "page-template",
     type: "component",
     nunjucksOnly: true,
-    showExample: false,
-    showArguments: false
+    showExample: false
   }) }}
 
   <h3 id="options">Options</h3>
@@ -395,8 +389,7 @@
     item: "page-template",
     type: "annotated",
     blankpage: true,
-    showCode: false,
-    showArguments: false
+    showCode: false
   }) }}
 
 {% endblock %}

@@ -71,7 +71,7 @@ const env = nunjucks.configure(appViews, {
  */
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode);
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode);
-env.addGlobal('getJSONCode', fileHelper.getJSONCode);
+env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams);
 env.addFilter('highlight', (code, language) => {
   const languages = language ? [language] : false;
   return highlightjs.highlightAuto(code.trim(), languages).value;
