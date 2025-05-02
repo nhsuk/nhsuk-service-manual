@@ -1,4 +1,4 @@
-const { readFileSync } = require('fs');
+const { existsSync, readFileSync } = require('fs');
 const beautify = require('js-beautify').html;
 const nunjucks = require('nunjucks');
 
@@ -23,6 +23,27 @@ function getFileContents(path) {
 
   return fileContents;
 }
+
+/**
+ * Get Nunjucks macro options JSON by file path
+ *
+ * @param {string} path
+ * @returns {object[]}
+ */
+exports.getNunjucksParams = (path) => {
+  let options = { params: [] };
+
+  if (existsSync(path)) {
+    try {
+      options = JSON.parse(getFileContents(path));
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(`Could not get Nunjucks params for '${path}'`);
+    }
+  }
+
+  return options.params;
+};
 
 // This helper function takes a path of a *.md.njk file and
 // returns the Nunjucks syntax inside that file without markdown data and imports
@@ -65,7 +86,3 @@ exports.getHTMLCode = (path) => {
     unformatted: ['code', 'pre', 'em', 'strong'],
   });
 };
-
-// This helper function takes json data from a file path and returns it as an object
-// to be rendered in a Nunjucks template
-exports.getJSONCode = (path) => JSON.parse(getFileContents(path));

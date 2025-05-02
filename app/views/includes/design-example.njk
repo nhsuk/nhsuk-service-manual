@@ -6,7 +6,6 @@
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
   {% set showCode = params.showCode !== false %}
-  {% set showArguments = params.showArguments !== false %}
 
   {% set html %}
   {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
@@ -80,9 +79,9 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              {% if snippet.name == "Nunjucks" and showArguments %}
-                {% set nunjucksArguments = getJSONCode(exampleArguments) %}
+              {% set nunjucksParams = getNunjucksParams(exampleArguments) if snippet.name == "Nunjucks" else [] %}
 
+              {% if nunjucksParams | length %}
                 <div class="code-snippet__macro">
                   <details class="nhsuk-details">
                     <summary class="nhsuk-details__summary">
@@ -114,7 +113,7 @@
                           </tr>
                         </thead>
                         <tbody class="nhsuk-table__body">
-                          {% for option in nunjucksArguments.params %}
+                          {% for option in nunjucksParams %}
                             <tr role="row" class="nhsuk-table__row">
                               <td role="cell" class="nhsuk-table__cell">
                                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
