@@ -6,16 +6,16 @@ const browserSync = require('browser-sync');
 const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
-const highlightjs = require('highlight.js');
 const nunjucks = require('nunjucks');
 
 // Local dependencies
 const authentication = require('./middleware/authentication');
 const config = require('./app/config');
-const fileHelper = require('./middleware/file-helper');
+const fileHelper = require('./lib/file-helper');
+const filters = require('./lib/filters');
 const locals = require('./app/locals');
 const routing = require('./middleware/routing');
-const PageIndex = require('./middleware/page-index');
+const PageIndex = require('./lib/page-index');
 
 const pageIndex = new PageIndex(config);
 
@@ -72,10 +72,7 @@ const env = nunjucks.configure(appViews, {
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode);
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode);
 env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams);
-env.addFilter('highlight', (code, language) => {
-  const languages = language ? [language] : false;
-  return highlightjs.highlightAuto(code.trim(), languages).value;
-});
+env.addFilter('highlight', filters.highlight);
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res) => {

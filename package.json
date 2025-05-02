@@ -3,9 +3,6 @@
   "version": "7.10.0",
   "description": "NHS digital service manual",
   "main": "app.js",
-  "directories": {
-    "test": "tests"
-  },
   "browserslist": [
     "> 0.25%",
     "not dead",
