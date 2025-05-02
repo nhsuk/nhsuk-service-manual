@@ -1,13 +1,17 @@
-const fs = require('fs');
+const { readFileSync } = require('fs');
 const beautify = require('js-beautify').html;
 const nunjucks = require('nunjucks');
 
-// This helper function takes a path of a file and
-// returns the contents as string
+/**
+ * Get file contents by path
+ *
+ * @param {string} path
+ */
 function getFileContents(path) {
-  let fileContents;
+  let fileContents = '';
+
   try {
-    fileContents = fs.readFileSync(path);
+    fileContents = readFileSync(path, 'utf8');
   } catch (err) {
     if (err.code === 'ENOENT') {
       // eslint-disable-next-line no-console
@@ -16,7 +20,8 @@ function getFileContents(path) {
       throw err;
     }
   }
-  return fileContents.toString();
+
+  return fileContents;
 }
 
 // This helper function takes a path of a *.md.njk file and
