@@ -86,10 +86,9 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   const { group } = req.params;
   const { item } = req.params;
   const { type } = req.params;
-  const examplePath = path.join(__dirname, `app/views/design-system/${group}/${item}/${type}/index.njk`);
 
   // Get the given example as HTML.
-  const exampleHtml = fileHelper.getHTMLCode(examplePath);
+  const exampleHtml = fileHelper.getHTMLCode(group, item, type);
 
   // Wrap the example HTML in a basic html base template.
   let baseTemplate = 'includes/design-example-wrapper.njk';

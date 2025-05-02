@@ -25,30 +25,49 @@ function getFileContents(path) {
 }
 
 /**
- * Get Nunjucks macro options JSON by file path
+ * Get Nunjucks macro options JSON
  *
- * @param {string} path
+ * @param {string} group
+ * @param {string} item
  * @returns {object[]}
  */
-exports.getNunjucksParams = (path) => {
+exports.getNunjucksParams = (group, item) => {
   let options = { params: [] };
+
+  // Path to Nunjucks macro options JSON
+  const path = `app/views/design-system/${group}/${item}/macro-options.json`;
 
   if (existsSync(path)) {
     try {
       options = JSON.parse(getFileContents(path));
     } catch (err) {
       // eslint-disable-next-line no-console
-      console.log(`Could not get Nunjucks params for '${path}'`);
+      console.log(`Could not get Nunjucks params for ${item} ${group}`);
     }
   }
 
   return options.params;
 };
 
-// This helper function takes a path of a *.md.njk file and
-// returns the Nunjucks syntax inside that file without markdown data and imports
-exports.getNunjucksCode = (path) => {
-  const fileContents = getFileContents(path);
+/**
+ * Get Nunjucks code for an example without extends tags
+ *
+ * @param {string} group
+ * @param {string} item
+ * @param {string} type
+ */
+exports.getNunjucksCode = (group, item, type) => {
+  let fileContents = '';
+
+  // Path to Nunjucks example template
+  const path = `app/views/design-system/${group}/${item}/${type}/index.njk`;
+
+  try {
+    fileContents = getFileContents(path);
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log(`Could not get Nunjucks code for ${item} ${group}: ${type}`);
+  }
 
   // Omit any `{% extends "foo.njk" %}` nunjucks code, because we extend
   // templates that only exist within the Design System – it's not useful to
@@ -61,19 +80,24 @@ exports.getNunjucksCode = (path) => {
   return content;
 };
 
-// This helper function takes a path of a *.md.njk file and
-// returns the HTML rendered by Nunjucks without markdown data
-exports.getHTMLCode = (path) => {
-  const fileContents = getFileContents(path);
-
+/**
+ * Get HTML code for an example
+ *
+ * @param {string} group
+ * @param {string} item
+ * @param {string} type
+ */
+exports.getHTMLCode = (group, item, type) => {
   let html = '';
+
+  // Path to Nunjucks example template
+  const path = `app/views/design-system/${group}/${item}/${type}/index.njk`;
+
   try {
-    html = nunjucks.renderString(fileContents);
+    html = nunjucks.renderString(getFileContents(path));
   } catch (err) {
-    if (err) {
-      // eslint-disable-next-line no-console
-      console.log(`Could not get HTML code from ${path}`);
-    }
+    // eslint-disable-next-line no-console
+    console.log(`Could not get HTML code for ${item} ${group}: ${type}`);
   }
 
   return beautify(html.trim(), {

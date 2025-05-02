@@ -1,6 +1,4 @@
 {% macro designExample(params) %}
-  {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
-  {% set exampleArguments = "app/views/design-system/" + params.group + "/" + params.item + "/" + "macro-options.json" %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage + "&background=" + params.background %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
@@ -8,11 +6,11 @@
   {% set showCode = params.showCode !== false %}
 
   {% set html %}
-  {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
+  {{- getHTMLCode(params.group, params.item, params.type) | highlight('html') | safe -}}
   {% endset %}
 
   {% set nunjucks %}
-  {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+  {{- getNunjucksCode(params.group, params.item, params.type) | highlight('js') | safe -}}
   {% endset %}
 
   {#
@@ -79,7 +77,7 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              {% set nunjucksParams = getNunjucksParams(exampleArguments) if snippet.name == "Nunjucks" else [] %}
+              {% set nunjucksParams = getNunjucksParams(params.group, params.item) if snippet.name == "Nunjucks" else [] %}
 
               {% if nunjucksParams | length %}
                 <div class="code-snippet__macro">
