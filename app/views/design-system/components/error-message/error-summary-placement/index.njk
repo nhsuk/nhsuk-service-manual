@@ -15,7 +15,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form>
+      <form method="post" novalidate>
 
         {{ errorSummary({
           titleText: "There is a problem",
@@ -68,4 +68,3 @@
     </div>
   </div>
 {% endblock %}
-
