@@ -5,6 +5,9 @@
 :new: **New features**
 - New styling and guidance for secondary buttons
 
+:wrench: **Maintenance**
+- Add guidance for text to use on buttons
+
 ## 7.9.0 - 23 April 2025
 
 :new: **New features**
