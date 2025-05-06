@@ -2,6 +2,9 @@
   {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
   {% set exampleArguments = "app/views/design-system/" + params.group + "/" + params.item + "/" + "macro-options.json" %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage %}
+  {% if params.background %}
+    {% set standaloneURL = standaloneURL + "&background=" + params.background %}
+  {% endif %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}

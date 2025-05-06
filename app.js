@@ -81,6 +81,8 @@ env.addFilter('highlight', (code, language) => {
 app.get('/design-example/:group/:item/:type', (req, res) => {
   const displayFullPage = req.query.fullpage === 'true';
   const blankPage = req.query.blankpage === 'true';
+  const backgroundColours = ['blue'];
+  const background = backgroundColours.includes(req.query.background) ? req.query.background : null;
   const { group } = req.params;
   const { item } = req.params;
   const { type } = req.params;
@@ -101,6 +103,7 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   res.render(baseTemplate, {
     body: exampleHtml,
     item,
+    background,
   });
 });
 
