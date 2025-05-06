@@ -24,7 +24,7 @@ body {
 
 /* Component examples on a blue background */
 .app-example-background-blue {
-  background-color: #005eb8;
+  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
 }
 
 /*
