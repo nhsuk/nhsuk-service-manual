@@ -27,6 +27,11 @@ body {
   background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
 }
 
+/* Component examples on a grey-4 background */
+.app-example-background-grey-4 {
+  background-color: #d8dde0; // sass-lint:disable-line no-color-hex no-color-literals
+}
+
 /*
   In order to show how the grid works, we need to have an element inside the
   grid that is visible and fills the available space with a background color.
