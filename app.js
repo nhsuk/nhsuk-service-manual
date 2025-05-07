@@ -73,6 +73,7 @@ env.addGlobal('getHTMLCode', fileHelper.getHTMLCode);
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode);
 env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams);
 env.addFilter('highlight', filters.highlight);
+env.addFilter('markdown', filters.markdown);
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res) => {
