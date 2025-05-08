@@ -1,12 +1,14 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## Unreleased 7.10.0 - TBC May 2025
 
 :new: **New features**
-- New styling and guidance for secondary buttons
+- Add styling and guidance for secondary buttons
+- Add examples of text to use on buttons
+- Add reverse link style
 
 :wrench: **Maintenance**
-- Add guidance for text to use on buttons
+- Update links to information standard DAPB3051
 
 ## 7.9.0 - 23 April 2025
 
