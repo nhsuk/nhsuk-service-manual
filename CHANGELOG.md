@@ -8,6 +8,8 @@
 - Add reverse link style
 
 :wrench: **Maintenance**
+- Restructure buttons guidance
+- Update lead para to 26px
 - Update links to information standard DAPB3051
 
 ## 7.9.0 - 23 April 2025
