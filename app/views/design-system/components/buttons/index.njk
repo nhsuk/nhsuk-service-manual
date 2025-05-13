@@ -27,15 +27,15 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <p>We have 4 buttons:</p>
+  <p>We have 3 buttons:</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
     <li><a href="#secondary-button">secondary button</a></li>
-    <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
     <li><a href="#warning-button">warning button</a></li>
   </ul>
 
   <h2 id="primary-button">Primary button</h2>
+  <p>There are 2 versions of the primary button: the default version and the reverse version.</p>
 
   {{ designExample({
     group: "components",
@@ -43,20 +43,31 @@
     type: "default"
   }) }}
 
+  <p>Use the reverse version on dark backgrounds.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "reverse",
+    background: "blue"
+  }) }}
+
   <h3>When to use a primary button</h3>
   <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
   <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
+
   <h2 id="secondary-button">Secondary button</h2>
+  <p>There are 2 versions of the secondary button.</p>
+  <p>By default, the secondary button is transparent and has no colour. Use it on the page background colour (<code>$color_nhsuk-grey-5</code>).</p>
 
   {{ designExample({
     group: "components",
     item: "buttons",
     type: "secondary"
   }) }}
-
-  <h3>Secondary button on white background</h3>
+  <p>You can make the button white when you use it on darker backgrounds. Use the <code>.nhsuk-button--secondary-solid</code> class to maintain colour contrast.</p>
 
   {{ designExample({
     group: "components",
@@ -65,7 +76,7 @@
     background: "grey-4"
   }) }}
 
-  <p>The secondary button has a transparent background. When used on darker backgrounds you can add a white background, using the <code>.nhsuk-button--secondary-white-background</code> class, to maintain colour contrast.</p>
+  
   
   <h3>When to use a secondary button</h3>
   <p>Use a secondary button either:</p>
@@ -75,19 +86,6 @@
   </ul>
 
   <p>Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.</p>
-  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
-
-  <h2 id="reverse-button">White button on solid background colour (reverse button)</h2>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "reverse",
-    background: "blue"
-  }) }}
-
-  <h3>When to use a white button on solid background colour</h3>
-  <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
   <h2 id="warning-button">Warning button</h2>
@@ -114,15 +112,15 @@
     <li>from 1 flat content page to another</li>
     <li>to external websites</li>
   </ul>
-  <p>Try not to have multiple buttons on 1 page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
+  <p>Try not to have multiple buttons on a page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
 
   <h2 id="how-to-use-buttons">How to use buttons</h2>
   <p>Write button text in sentence case, describing the action it performs. For example:</p>
   <ul>
     <li>"Start now" on the <a href="/design-system/patterns/start-page/">start page</a> of your service</li>
     <li>"Log in" to an account a user has already created</li>
-    <li>"Continue" when the service saves a user's information, unless you find that your users need "Save and continue"</li>
-    <li>"Continue" when the service does not save a user's information</li>
+    <li>"Continue" whether the service saves or does not save a user's information</li>
+    <li>"Save and continue" when the service saves a user's information but your research shows you need to reassure them that it does</li>
     <li>"Save and come back later" when a user can save their information and come back later</li>
     <li>"Add another" to add another item to a list or group</li>
     <li>"Pay" to make a payment</li>
