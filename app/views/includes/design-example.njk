@@ -77,7 +77,7 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              {% set nunjucksParams = getNunjucksParams(params.group, params.item) if snippet.name == "Nunjucks" else [] %}
+              {% set nunjucksParams = getNunjucksParams(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
 
               {% if nunjucksParams | length %}
                 <div class="code-snippet__macro">
