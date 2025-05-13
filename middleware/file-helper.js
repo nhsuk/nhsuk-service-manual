@@ -27,26 +27,45 @@ function getFileContents(path) {
 /**
  * Get Nunjucks macro options JSON
  *
- * @param {string} group
  * @param {string} item
  * @returns {object[]}
  */
-exports.getNunjucksParams = (group, item) => {
-  let options = { params: [] };
+exports.getNunjucksParams = (item) => {
+  let params = [];
+
+  // Items with different component names
+  const renamed = new Map([
+    ['breadcrumbs', 'breadcrumb'],
+    ['buttons', 'button'],
+    ['care-cards', 'card'],
+    ['do-and-dont-lists', 'do-dont-list'],
+    ['expander', 'details'],
+    ['hint-text', 'hint'],
+    ['table', 'tables'],
+    ['text-input', 'input'],
+  ]);
 
   // Path to Nunjucks macro options JSON
-  const path = `app/views/design-system/${group}/${item}/macro-options.json`;
+  const component = renamed.get(item) || item;
+  const path = `node_modules/nhsuk-frontend/packages/components/${component}/macro-options.json`;
 
   if (existsSync(path)) {
     try {
-      options = JSON.parse(getFileContents(path));
+      params = JSON.parse(getFileContents(path));
     } catch (err) {
       // eslint-disable-next-line no-console
-      console.log(`Could not get Nunjucks params for ${item} ${group}`);
+      console.log(`Could not get Nunjucks params for ${component} component`);
     }
+  } else {
+    // eslint-disable-next-line no-console
+    console.log('Not found:', {
+      item,
+      component,
+      path,
+    });
   }
 
-  return options.params;
+  return params;
 };
 
 /**
