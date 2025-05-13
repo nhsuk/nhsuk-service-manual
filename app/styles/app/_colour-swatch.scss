@@ -27,7 +27,7 @@
   vertical-align: middle;
   width: nhsuk-spacing(6);
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     height: nhsuk-spacing(4);
     left: 0;
     position: absolute;
@@ -40,7 +40,7 @@
   padding-top: 0;
   vertical-align: middle;
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     display: block;
     padding-left: nhsuk-spacing(5);
     position: relative;
@@ -50,14 +50,14 @@
 .app-colour-list__column--name {
   font-weight: normal;
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     padding-bottom: nhsuk-spacing(1);
     padding-top: nhsuk-spacing(2);
   }
 }
 
 .app-colour-list__column--colour {
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     padding-bottom: nhsuk-spacing(1);
   }
 }

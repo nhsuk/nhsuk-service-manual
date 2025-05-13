@@ -10,7 +10,7 @@
   position: relative;
   width: 100%;
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     margin-bottom: nhsuk-spacing(5);
   }
 

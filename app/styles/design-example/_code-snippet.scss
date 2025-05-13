@@ -57,7 +57,7 @@
         }
       }
 
-      @include mq($from: tablet) {
+      @include nhsuk-media-query($from: tablet) {
         bottom: 24px;
         right: 24px;
       }
@@ -79,7 +79,7 @@
     flex-direction: column;
     padding: 16px;
 
-    @include mq($from: tablet) {
+    @include nhsuk-media-query($from: tablet) {
       padding: 24px;
     }
   }
@@ -92,7 +92,7 @@
   $root: &;
   display: none;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     display: block;
   }
 
@@ -107,7 +107,7 @@
       padding: 8px 16px;
       text-decoration: underline;
 
-      @include mq($from: tablet) {
+      @include nhsuk-media-query($from: tablet) {
         padding: 12px 24px;
       }
 
@@ -131,7 +131,7 @@
       a {
         text-decoration: none;
 
-        @include mq($from: tablet) {
+        @include nhsuk-media-query($from: tablet) {
           box-shadow: 0 $button-shadow-size 0 $color_nhsuk-blue;
         }
 
@@ -155,7 +155,7 @@
       display: block;
       margin: -1px 0;
 
-      @include mq($from: tablet) {
+      @include nhsuk-media-query($from: tablet) {
         display: none;
       }
 
@@ -192,12 +192,12 @@ $color-syntax--selector: #330072;
   overflow-x: scroll;
   padding: 0;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     // Fixes issue with overflowing <code> el. 71.5vw = width of column. 121px = total width of padding/borders.
     max-width: calc(71.5vw - 121px);
   }
 
-  @include mq($from: 1024px) {
+  @include nhsuk-media-query($from: 1024px) {
     max-width: 586px;
   }
 

@@ -22,14 +22,14 @@
 
 // Hide content on mobile
 .app-u-hide-mobile {
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     display: none;
   }
 }
 
 // Hide content on desktop
 .app-u-hide-desktop {
-  @include mq($from: desktop) {
+  @include nhsuk-media-query($from: desktop) {
     display: none;
   }
 }

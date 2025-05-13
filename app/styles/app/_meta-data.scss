@@ -10,7 +10,7 @@
     margin-top: - nhsuk-spacing(3);
   }
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     margin-bottom: nhsuk-spacing(3);
 
     + .app-meta-data {

@@ -8,7 +8,7 @@
  * Constrains text on a full width page
  */
 
-@include mq($from: desktop) {
+@include nhsuk-media-query($from: desktop) {
   .app-component-reading-width {
 
     h1 {

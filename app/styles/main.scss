@@ -62,12 +62,12 @@
   word-break: break-all;
 }
 .nhsuk-table__cell--break-all--tablet {
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     word-break: break-all;
   }
 }
 .nhsuk-table__cell--break-all--desktop {
-  @include mq($until: large-desktop) {
+  @include nhsuk-media-query($until: large-desktop) {
     word-break: break-all;
   }
 }
@@ -79,7 +79,7 @@
 
 // Header menu button alignment for Safari
 .nhsuk-header__menu-toggle {
-  @include mq($from: tablet, $until: large-desktop) {
+  @include nhsuk-media-query($from: tablet, $until: large-desktop) {
     margin-top: 0;
   }
 }
@@ -89,7 +89,7 @@
   padding-bottom: nhsuk-spacing(8);
   padding-top: nhsuk-spacing(8);
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     padding-bottom: nhsuk-spacing(6);
     padding-top: 0;
   }
@@ -139,7 +139,7 @@
 // Custom style for the home page hero
 // Reducing the padding on smaller screens
 .app-hero__wrapper {
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     padding-bottom: nhsuk-spacing(5);
     padding-top: nhsuk-spacing(5);
   }
@@ -201,7 +201,7 @@
   margin-top: 0;
   position: relative;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     font-size: 1.1875rem;
     line-height: 1.47368;
   }
@@ -227,9 +227,9 @@
   }
 }
 
-// Styling for WCAG 2.2 guidance blocks. 
-// Margin-top to avoid excessive spacing between guidance block and design examples. 
-// Border colour altered to match tag colour. 
+// Styling for WCAG 2.2 guidance blocks.
+// Margin-top to avoid excessive spacing between guidance block and design examples.
+// Border colour altered to match tag colour.
 .app-wcag-inset-text {
   @include nhsuk-responsive-margin(0, 'top');
   border-left-color: shade($color_nhsuk-blue, 10%);

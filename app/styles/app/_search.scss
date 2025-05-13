@@ -111,7 +111,7 @@
 }
 
 .app-search-results-item {
-  @include nhsuk-typography-responsive(22);
+  @include nhsuk-font-size(22);
 
   font-weight: $nhsuk-font-bold;
   text-decoration: none;
@@ -159,7 +159,7 @@
   margin: 2px 4px 2px 0;
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
 
   .autocomplete__option:last-child {
     padding-bottom: 0;

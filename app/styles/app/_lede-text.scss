@@ -8,7 +8,7 @@
   margin-bottom: nhsuk-spacing(7);
   margin-top: - nhsuk-spacing(3);
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     margin-bottom: nhsuk-spacing(5);
     margin-top: - nhsuk-spacing(3);
   }

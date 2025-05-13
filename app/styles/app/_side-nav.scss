@@ -10,8 +10,8 @@
   margin-bottom: 12px;
   padding-top: 4px;
 
-  @include mq($until: desktop) {
-    @include nhsuk-font(24, $line-height: 1.25, $weight: bold);
+  @include nhsuk-media-query($until: desktop) {
+    @include nhsuk-font(26, $line-height: 1.25, $weight: bold);
     color: $nhsuk-text-color;
   }
 }
@@ -20,7 +20,7 @@
   @include nhsuk-font(16, $line-height: 1.3);
   margin-bottom: 0;
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     @include nhsuk-font(19, $line-height: 1.3);
     margin-bottom: nhsuk-spacing(2);
   }
@@ -44,7 +44,7 @@
 .app-side-nav__link {
   text-decoration: none;
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     text-decoration: underline;
   }
 

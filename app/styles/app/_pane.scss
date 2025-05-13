@@ -19,11 +19,11 @@
   flex: 0 0 auto;
   width: 220px;
 
-  @include mq($until: large-desktop) {
+  @include nhsuk-media-query($until: large-desktop) {
     width: 200px;
   }
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     display: none;
   }
 }
@@ -41,14 +41,14 @@
   flex-direction: column;
   min-width: 0;
 
-  @include mq($from: desktop) {
+  @include nhsuk-media-query($from: desktop) {
     padding-left: nhsuk-spacing(9);
   }
 
 }
 
 // Custom spacing for page headings
-@include mq($until: tablet) {
+@include nhsuk-media-query($until: tablet) {
   .app-page-heading,
   .app-lede-text,
   .app-contents-list,
