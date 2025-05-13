@@ -1,6 +1,8 @@
-@import 'govuk/main';
-@import 'code-embed';
-@import 'code-snippet';
+@use '../vendor/nhsuk-frontend' as *;
+
+@forward 'govuk/main';
+@forward 'code-embed';
+@forward 'code-snippet';
 
 .design-example {
   $root: &;

@@ -1,11 +1,12 @@
 // NHS.UK Frontend
-@import '../../node_modules/nhsuk-frontend/packages/nhsuk';
+@use 'vendor/nhsuk-frontend' as *;
+@forward 'vendor/nhsuk-frontend';
 
 // App specific styles
-@import 'app/app';
+@forward 'app/app';
 
 // Design examples
-@import 'design-example/design-example';
+@forward 'design-example/design-example';
 
 /////////////////
 // FRONTEND FIXES + UPDATES
