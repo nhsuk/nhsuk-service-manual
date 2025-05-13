@@ -73,9 +73,8 @@
     "husky": "^8.0.3",
     "iframe-resizer": "^4.3.2",
     "jest": "^27.1.0",
-    "node-sass": "^9.0.0",
     "nodemon": "^2.0.19",
-    "sass": "^1.60.0",
+    "sass-embedded": "^1.88.0",
     "sass-lint": "^1.13.1",
     "webpack": "^5.95.0",
     "webpack-cli": "^4.8.0"
