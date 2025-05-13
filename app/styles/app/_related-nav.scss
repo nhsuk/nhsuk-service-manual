@@ -13,10 +13,10 @@
 }
 
 .nhsuk-related-nav__heading {
-  @include nhsuk-font-size(26, $line-height: 1.2);
-
   margin-bottom: nhsuk-spacing(3);
   padding-top: nhsuk-spacing(3);
+
+  @include nhsuk-font-size(26, $line-height: 1.2);
 }
 
 .nhsuk-related-nav__heading--small {

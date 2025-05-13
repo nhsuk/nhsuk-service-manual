@@ -175,8 +175,6 @@
   @include nhsuk-responsive-padding(0, 'left');
 
   img {
-    @include nhsuk-responsive-margin(3, 'right');
-
     border: 2px solid transparent;
     border-radius: 30px;
     display: inline-block;
@@ -185,6 +183,8 @@
     overflow: hidden;
     vertical-align: middle;
     width: 40px;
+
+    @include nhsuk-responsive-margin(3, 'right');
   }
 
   li {
@@ -231,8 +231,8 @@
 // Margin-top to avoid excessive spacing between guidance block and design examples.
 // Border colour altered to match tag colour.
 .app-wcag-inset-text {
-  @include nhsuk-responsive-margin(0, 'top');
   border-left-color: shade($color_nhsuk-blue, 10%);
+  @include nhsuk-responsive-margin(0, 'top');
 }
 
 // Slightly more margin top to maintain visual rhythm of page content

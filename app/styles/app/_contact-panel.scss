@@ -5,9 +5,9 @@
    ========================================================================== */
 
 .app-contact-panel {
-  @include nhsuk-responsive-margin(6, 'top');
-
   border-top: 2px solid $color_nhsuk-blue;
+
+  @include nhsuk-responsive-margin(6, 'top');
 }
 
 .app-contact-panel__heading {

@@ -26,8 +26,8 @@
       }
 
       &:focus {
-        @include nhsuk-focused-text;
         border-color: $nhsuk-focus-color;
+        @include nhsuk-focused-text;
       }
     }
 

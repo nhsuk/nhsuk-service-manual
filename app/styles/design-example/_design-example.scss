@@ -15,7 +15,6 @@
   }
 
   &__pop-out {
-    @include nhsuk-font(16);
     border: 1px solid $color_nhsuk-grey-3;
     border-bottom: 0;
     display: block;
@@ -23,6 +22,7 @@
     padding: 8px 16px;
     position: relative;
     width: 100%;
+    @include nhsuk-font(16);
 
     &:hover,
     &:focus {

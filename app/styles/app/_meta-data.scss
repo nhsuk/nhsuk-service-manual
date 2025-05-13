@@ -2,9 +2,9 @@
 
 // Added meta data for a promo (date)
 .app-meta-data {
-  @include nhsuk-font($size: 16);
-
   color: $nhsuk-secondary-text-color;
+
+  @include nhsuk-font($size: 16);
 
   + .app-meta-data {
     margin-top: - nhsuk-spacing(3);
