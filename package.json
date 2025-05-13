@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:assets",
-    "build:css": "sass --pkg-importer node --style compressed app/styles/:public/css/",
+    "build:css": "sass --embed-sources --pkg-importer node --style compressed app/styles/:public/css/",
     "build:js": "npm run webpack",
     "build:assets": "cpx 'app/assets/*' public/assets/",
     "clean": "touch public/tmp.txt && rm -rf public/*",
