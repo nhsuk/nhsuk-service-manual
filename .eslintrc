@@ -4,5 +4,11 @@
     "browser": true,
     "es6": true,
     "jest": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.config.*", "**/*.test.*"] }
+    ]
   }
 }
