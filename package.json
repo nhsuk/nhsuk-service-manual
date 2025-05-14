@@ -6,11 +6,6 @@
     "node": "^20.9.0 || ^22.11.0"
   },
   "main": "app.js",
-  "browserslist": [
-    "> 0.25%",
-    "not dead",
-    "IE 11"
-  ],
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:assets",
     "build:css": "sass --embed-sources --pkg-importer node --style compressed app/styles/:public/css/",
