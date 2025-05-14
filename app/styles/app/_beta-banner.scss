@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #BETA-BANNER
    ========================================================================== */
@@ -18,7 +20,7 @@
 }
 
 .app-beta__text {
-  @include nhsuk-font($size: 16, $line-height: 1.2);
   display: table-cell;
   vertical-align: baseline;
+  @include nhsuk-font($size: 16, $line-height: 1.2);
 }

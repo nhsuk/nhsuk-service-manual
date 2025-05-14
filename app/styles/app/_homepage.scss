@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #HOMEPAGE
    ========================================================================== */
@@ -10,7 +12,7 @@
   @include nhsuk-responsive-padding(6, 'bottom');
   @include nhsuk-responsive-padding(6, 'top');
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
 
     .nhsuk-grid-column-one-half:last-child {
       padding-top: nhsuk-spacing(3);

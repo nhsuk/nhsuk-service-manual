@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #SEARCH
    ========================================================================== */
@@ -21,13 +23,13 @@
 }
 
 .nhsuk-header__search-form--search-results {
-  @include nhsuk-responsive-margin(7, 'bottom');
-
   background-color: transparent;
   display: -ms-flexbox; /* [14] */
   display: flex; // sass-lint:disable-line no-duplicate-properties
   padding: 0;
   width: 100%;
+
+  @include nhsuk-responsive-margin(7, 'bottom');
 
   .autocomplete-container {
     width: 100%;
@@ -109,10 +111,9 @@
 }
 
 .app-search-results-item {
-  @include nhsuk-typography-responsive(22);
-
-  font-weight: $nhsuk-font-bold;
   text-decoration: none;
+
+  @include nhsuk-font(22, $weight: bold);
 
   &:hover {
     text-decoration: underline;
@@ -157,7 +158,7 @@
   margin: 2px 4px 2px 0;
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
 
   .autocomplete__option:last-child {
     padding-bottom: 0;

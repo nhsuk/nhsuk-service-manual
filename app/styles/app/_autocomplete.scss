@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    COMPONENTS / #HEADER / #AUTOCOMPLETE
    ========================================================================== */
@@ -19,13 +21,13 @@
   display: inline-block;
   z-index: 1; /* [9] */
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     display: inline;
     width: 100%;
   }
 }
 
-@include mq($until: tablet) {
+@include nhsuk-media-query($until: tablet) {
   /* duplicate of .nhsuk-search__input in _header.scss, for non javascript version */
   .autocomplete__input {
     -ms-flex-positive: 2; /* [1] */
@@ -56,7 +58,7 @@
   }
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
   /* duplicate of .nhsuk-search__input in _header.scss, for non javascript version */
   .autocomplete__input {
     -webkit-appearance: listbox; // sass-lint:disable-line prefixes /* [2] */
@@ -86,7 +88,7 @@
   }
 }
 
-@include mq($from: desktop) {
+@include nhsuk-media-query($from: desktop) {
   .autocomplete__input {
     width: 235px;
   }
@@ -113,7 +115,7 @@
   width: 100%;
   z-index: 1; /* [7] */
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     border: 0;
     box-shadow: none;
     margin: 0;
@@ -162,7 +164,7 @@
     }
   }
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     &:last-child {
       border-bottom: 0;
     }
@@ -179,7 +181,7 @@
   text-align: left;
   text-decoration: none;
 
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     padding: nhsuk-spacing(3) 0;
   }
 }

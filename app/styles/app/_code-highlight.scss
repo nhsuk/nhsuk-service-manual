@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 // Highlight code within body copy
 li code,
 p code,
@@ -10,14 +12,14 @@ td code {
 
 // Highlight code in a block
 .app-pre {
-  @include nhsuk-responsive-margin(4, 'bottom');
-
   background: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
   margin-top: 0;
   overflow: auto;
   padding: nhsuk-spacing(3);
   position: relative;
+
+  @include nhsuk-responsive-margin(4, 'bottom');
 
   & + h2 {
     @include nhsuk-responsive-padding(4, 'top');
