@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased 7.10.0 - TBC May 2025
+## 7.10.0 - 14 May 2025
 
 :new: **New features**
 - Add styling and guidance for secondary buttons
@@ -70,7 +70,7 @@
 - Remove same-page profession links from accessibility guidance
 - Update page on Getting started with accessibility
 - Change jump link IDs on A to Z page pattern and A to Z of NHS health writing to lower case
-- Remove broken link on Select component page and add new research section 
+- Remove broken link on Select component page and add new research section
 
 ## 7.3.0 - 17 December 2024
 
@@ -130,19 +130,19 @@
 - Improve guidance on contrast and accessibility on colour page
 - Fix missing black colour, added to colour palette on colour page
 - Fix display and layout of some tables
-- Remove 'experimental' tag from tabs and character count components 
+- Remove 'experimental' tag from tabs and character count components
 - Reformat links section in accessibility guidance to make content clearer
 
 ## 6.4.0 – 19 June 2024
 
 :new: **New features**
 
-- Add guidance for using headings with captions 
+- Add guidance for using headings with captions
 
 :wrench: **Maintenance**
 
 - Update guidance on links from "opens in new window" to "opens in new tab"
-- Update colours used in code examples to improve contrast 
+- Update colours used in code examples to improve contrast
 - Update breadcrumb Nunjucks macro options descriptions
 - Update radio with hint example Nunjucks code
 - Replace links used in examples with hash (#)
@@ -189,14 +189,14 @@
 ## 6.2.0 - 26 March 2024
 
 :new: **New features**
-	
+
 - Add new page "Feedback or share insights" in Community and contribution section
 - Update "Help us improve this guidance" section at bottom of pages across site
 
 :wrench: **Maintenance**
 
 - Update COVID-19 entries in the A to Z of NHS health writing
-- Delete entry for NHS COVID Pass 
+- Delete entry for NHS COVID Pass
 - Fix styling of numbered headings in Content guide
 - Rename "Content style guide" asset file to "Content guide"
 - Add side nav link for "Standard for creating health content" to "Numbers, measurements, dates and time" page
