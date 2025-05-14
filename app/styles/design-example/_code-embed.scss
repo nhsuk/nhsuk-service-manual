@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 .code-embed {
   background-color: $color_nhsuk-grey-5;
   border: 1px solid $color_nhsuk-grey-3;

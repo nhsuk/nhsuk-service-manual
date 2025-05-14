@@ -1,3 +1,5 @@
+@use 'vendor/nhsuk-frontend' as *;
+
 /*
  * WARNING: This file is intended for adding extra styles to the code snippet
  * examples and standalone examples.
@@ -6,14 +8,14 @@
  */
 
 html {
-  background-color: #f0f4f5; // sass-lint:disable-line no-color-hex no-color-literals
+  background-color: $color_nhsuk-grey-5;
 }
 
 /* Component examples need a bit of space around them */
 body {
   padding: 32px;
 
-  @media only screen and (max-width: 641px) {
+  @include nhsuk-media-query($until: tablet) {
     padding: 16px;
   }
 }
@@ -37,8 +39,8 @@ body {
   grid that is visible and fills the available space with a background color.
 */
 .nhsuk-grid-row > .spacing-example div > p {
-  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
-  color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
   padding: 20px;
   text-align: center;
 }
@@ -59,8 +61,8 @@ body {
   Layout examples for on divs
 */
 .app-example-layout-page [class^='nhsuk-grid-column']>p {
-  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
-  color: #ffffff; // sass-lint:disable-line no-color-hex no-color-literals
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
   padding: 20px;
   text-align: center;
 }

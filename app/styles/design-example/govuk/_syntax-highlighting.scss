@@ -1,3 +1,5 @@
+@use '../../vendor/nhsuk-frontend' as *;
+
 .hljs {
   background: #f8f8f8; // sass-lint:disable-line no-color-hex no-color-literals
   color: #333; // sass-lint:disable-line no-color-hex no-color-literals
