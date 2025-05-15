@@ -1,5 +1,5 @@
 // Core dependencies
-const path = require('path');
+const { join } = require('path');
 
 // External dependencies
 const browserSync = require('browser-sync');
@@ -41,20 +41,20 @@ app.use(
 );
 
 // Middleware to serve static assets
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
-app.use('/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')));
+app.use(express.static(config.publicPath));
+app.use('/nhsuk-frontend', express.static(join(config.modulePath, 'nhsuk-frontend/dist')));
+app.use('/nhsuk-frontend', express.static(join(config.modulePath, 'nhsuk-frontend/packages')));
+app.use('/iframe-resizer', express.static(join(config.modulePath, 'iframe-resizer')));
 
 // View engine (nunjucks)
 app.set('view engine', 'njk');
 
 // Nunjucks configuration
 const appViews = [
-  path.join(__dirname, '/app/views/'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/components'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/macros'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages'),
+  join(config.sourcePath, 'views'),
+  join(config.modulePath, 'nhsuk-frontend/packages/components'),
+  join(config.modulePath, 'nhsuk-frontend/packages/macros'),
+  join(config.modulePath, 'nhsuk-frontend/packages'),
 ];
 
 const env = nunjucks.configure(appViews, {
@@ -238,7 +238,10 @@ app.get('*', (_, res) => {
 if (config.env === 'development') {
   app.listen(config.port - 50, () => {
     browserSync({
-      files: ['app/views/**/*.*', 'public/**/*.*'],
+      files: [
+        join(config.sourcePath, 'views/**'),
+        join(config.publicPath, '**'),
+      ],
       notify: true,
       open: false,
       port: config.port,
