@@ -53,7 +53,7 @@ module.exports = {
           publicPath: '/stylesheets',
           filename:
             NODE_ENV === 'production'
-              ? 'stylesheets/[name].min.css'
+              ? 'stylesheets/[name].[contenthash:7].min.css'
               : 'stylesheets/[name].css',
         },
         use: ['postcss-loader', 'sass-loader'],
@@ -68,7 +68,7 @@ module.exports = {
 
   output: {
     filename: NODE_ENV === 'production'
-      ? 'javascripts/[name].min.js'
+      ? 'javascripts/[name].[contenthash:7].min.js'
       : 'javascripts/[name].js',
     path: join(__dirname, 'public'),
     publicPath: '/',
