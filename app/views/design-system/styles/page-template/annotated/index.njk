@@ -1,8 +1,8 @@
 {% extends "template.njk" %}
 
 {% block head %}
-  <link rel="stylesheet" href="/stylesheets/main.css">
-  <script src="/javascripts/main.min.js" defer></script>
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
+  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {% endblock %}
 
 {% set assetPath = "/nhsuk-frontend/assets/" %}

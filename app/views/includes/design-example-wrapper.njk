@@ -19,10 +19,10 @@
     <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="stylesheet" href="/stylesheets/design-example-overrides.css">
+    <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
+    <link rel="stylesheet" href="{{ getAssetPath("stylesheets/design-example-overrides.scss") }}">
 
-    <script src="/javascripts/main.min.js" defer></script>
+    <script src="{{ getAssetPath("main.js") }}" defer></script>
   </head>
 
   <body class="app-example-{{item}}-page{% if background %} app-example-background--{{ background }}{% endif %}">

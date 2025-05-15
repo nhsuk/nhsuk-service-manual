@@ -3,8 +3,8 @@
 {% set assetPath = "/nhsuk-frontend/assets" %}
 
 {% block head %}
-  <link rel="stylesheet" href="/stylesheets/main.css">
-  <script src="/javascripts/main.min.js" defer></script>
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
+  <script src="{{ getAssetPath("main.js") }}" defer></script>
   <meta name="robots" content="noindex" />
 {% endblock %}
 
@@ -15,7 +15,7 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    
+
     <h1>Annex: Detailed Terms</h1>
 
     <p>Capitalised terms used in this Annex shall have the meaning set forth in Section 1 and Attachment 1 to these detailed terms.</p>
