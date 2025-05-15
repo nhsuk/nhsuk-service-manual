@@ -2,6 +2,9 @@
   "name": "nhsuk-service-manual",
   "version": "7.10.0",
   "description": "NHS digital service manual",
+  "engines": {
+    "node": "^20.9.0 || ^22.11.0"
+  },
   "main": "app.js",
   "browserslist": [
     "> 0.25%",
