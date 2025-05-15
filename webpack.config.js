@@ -51,15 +51,25 @@ module.exports = {
         generator: {
           binary: false,
           publicPath: '/stylesheets',
-          filename: 'stylesheets/[name].css',
+          filename:
+            NODE_ENV === 'production'
+              ? 'stylesheets/[name].min.css'
+              : 'stylesheets/[name].css',
         },
         use: ['postcss-loader', 'sass-loader'],
       },
     ],
   },
 
+  // Only minify in production
+  optimization: {
+    minimize: NODE_ENV === 'production',
+  },
+
   output: {
-    filename: 'javascripts/[name].js',
+    filename: NODE_ENV === 'production'
+      ? 'javascripts/[name].min.js'
+      : 'javascripts/[name].js',
     path: join(__dirname, 'public'),
     publicPath: '/',
   },
