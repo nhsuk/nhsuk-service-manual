@@ -53,7 +53,7 @@ module.exports = {
           publicPath: '/stylesheets',
           filename: 'stylesheets/[name].css',
         },
-        use: ['sass-loader'],
+        use: ['postcss-loader', 'sass-loader'],
       },
     ],
   },
