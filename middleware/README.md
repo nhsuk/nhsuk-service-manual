@@ -29,7 +29,7 @@ For example, the Accessibility page would be indexed to:
 The page index is then fed in to **lunr** for searching.
 
 ### Page Index Configuration
-All additional configurations are in `middleware/page-index-additions.js`
+All additional configurations are in `lib/page-index-additions.js`
 There are three lists to add to:
 `indexBlacklist` is a list of pages that the indexer should ignore. (please use the exact same url used in the links on sitemap)
 

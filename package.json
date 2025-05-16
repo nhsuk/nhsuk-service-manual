@@ -3,9 +3,6 @@
   "version": "7.10.0",
   "description": "NHS digital service manual",
   "main": "app.js",
-  "directories": {
-    "test": "tests"
-  },
   "browserslist": [
     "> 0.25%",
     "not dead",
@@ -56,6 +53,7 @@
     "highlight.js": "^11.2.0",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
+    "marked": "^15.0.11",
     "nhsuk-frontend": "^9.5.1",
     "nunjucks": "^3.2.4"
   },
