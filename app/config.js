@@ -1,15 +1,31 @@
+const { join, resolve } = require('path');
+
+const {
+  ADOBE_TRACKING_URL = '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
+  BASE_URL = 'https://service-manual.nhs.uk',
+  NODE_ENV = 'production',
+  PORT = '3000',
+} = process.env;
+
+const rootPath = resolve(__dirname, '..');
+
 module.exports = {
   // Adobe analytics
-  adobeTrackingUrl:
-    process.env.ADOBE_TRACKING_URL
-    || '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
+  adobeTrackingUrl: ADOBE_TRACKING_URL,
+
+  // Common paths
+  sourcePath: join(rootPath, 'app'),
+  modulePath: join(rootPath, 'node_modules'),
+  publicPath: NODE_ENV === 'test'
+    ? join(rootPath, 'test/fixtures')
+    : join(rootPath, 'public'),
 
   // Base URL
-  baseURL: process.env.BASE_URL || 'https://service-manual.nhs.uk',
+  baseURL: BASE_URL,
 
   // Environment
-  env: process.env.NODE_ENV || 'production',
+  env: NODE_ENV,
 
   // Port to run local development server on
-  port: process.env.PORT || 3000,
+  port: parseInt(PORT, 10),
 };
