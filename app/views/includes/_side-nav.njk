@@ -9,6 +9,12 @@
   { title: "Personal Demographics Service (PDS)", url: "/standards-and-technology/technology/personal-demographics-service-PDS" }
 ] %}
 
+{% set dsArchitecture = [
+  { title: "Solution Architecture Framework", url: "/standards-and-technology/architecture/solution-architecture-framework" },
+  { title: "Core Dimensions", url: "/standards-and-technology/architecture/Core-dimensions" },
+ { title: "Requirements", url: "/standards-and-technology/architecture/Requirements" }
+] %}
+
 {% set dsPrinciples = [
   { title: "Design principles", url: "/design-system/design-principles" }
 ] %}
@@ -177,6 +183,13 @@
     <h2 class="app-side-nav__heading">Technology</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in technicalSpecifications %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Architecture</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsArchitecture %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

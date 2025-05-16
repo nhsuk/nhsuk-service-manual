@@ -1,0 +1,715 @@
+{% set pageTitle = "Solution Architecture Framework - Requirements" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Architecture" %}
+{% set pageDescription = "The SAF is broken down into seven dimensions, the following requirements make up each dimension." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "standards-and-technology/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h3>Strategic Alignment, Vision, and roadmap</h3>
+  <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirements</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>S01</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The solution should be aligned to stated strategy approved at an executive level &nbsp;e.g. TD Design Authority, P&amp;P DA etc.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>S02</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>We should be able to demonstrate which capabilities from the NHSE Business Capability Model the solution is realising, and any potential duplication identified</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>S03</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>A well-formed and maintained product vision &amp; roadmap should exist with appropriate detail around architecture elements</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>S04</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The solution design should be able to meet the stated user needs and overall business objectives/drivers</p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Decision Making &amp; Governance</h3>
+
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+<tbody>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirements</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM01</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Where a solution or part of solution is seen as tactical, short term or introduces / persist tech &amp; architecture debt, remediations plans should be in place and agreed with the relevant stakeholders and governance groups.</p>
+
+<p>Architecture Debt should be identified with implications, rationale and future mitigations plans (recorded in a Architecture Debt Register)</p>
+
+<p>Plans should be realistic and funded.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM02</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Spend control (GATS) and associated Government Digital Services &amp; Service Design related guidance should be followed whilst developing the solution and &nbsp;&nbsp;be evidenced for service design &amp; spend control reviews</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM03</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Architecture risks and issues should be managed effectively with the appropriate level of visibility and ownership</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM04</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>There should be effective and commensurate stakeholder involvement with respects to solution design and architecture decisions.</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM05</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The solution design and architecture decisions should be managed effectively through local programme design authorities and TRG at the appropriate stages of the lifecycle.</p>
+
+<p>The relevant Lead Architects and SMEs are engaged and are supportive</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM06</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The overall approach to architecture governance should be appropriate and commensurate with the nature of the solution</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM07</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>All Architecture decisions should be documented with a lightweight Architecture Decision Record with options and clear rationale.</p>
+
+<p>E.g. <a href="https://github.com/NHSDigital/software-engineering-quality-framework/blob/main/any-decision-record-template.md">software-engineering-quality-framework/any-decision-record-template.md at main &middot; NHSDigital/software-engineering-quality-framework &middot; GitHub</a></p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>DM08</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>All decision-making should be structured i.e. identify key strategic drivers, user need assess options against drivers, present rationale, clarity on trade-offs, dependencies, risks and issues understood etc.</p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Solution Design &amp; Methods</h3>
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+
+<td class="nhsuk-table__cell">
+
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirement</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD01</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>An appropriate design methodology should be followed e.g. Domain Driven Design and should include NHS/CDDO Service Design and Secure By Design principles &amp; methods</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD02</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The solution should be compliant with NHS England principles, policy, patterns and best practice</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD03</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The solution should be compliant with relevant standards</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD04</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Solution design should follow good practice design principles e.g.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Separation of concerns</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Encapsulation / Modularisation</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Loose coupling</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; High cohesion / single responsibility</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Design for flexibility/change</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Etc.</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD05</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Solutions should focus on commodity products and services where possible/sensible.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD06</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>An API First design methodology should be followed, where APIs are at the fore front of the design process, functionality and data is exposed via APIs and the needs of the API consumer have been considered.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD07</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>We should treat internal (NHS England) and external consumers equally.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD08</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>We should select the correct patterns for the use case, and any trade-offs justified and agreed.&nbsp;</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD09</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>We should adopt the right standards for API development, supported by user, consumer, and market / supplier engagement.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD10</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The API follows the lifecycle policy best practice as set out within <a href="https://nhsd-confluence.digital.nhs.uk/display/APM/Sunsetting+%28deprecation+and+retirement%29+phases">Sunsetting (deprecation and retirement)</a> policy</p>
+<p>This should include any enforcement arrangements.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD11</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Solutions should adhere to (Aalto needs updating with full list)</p>
+<ol>
+<li>Government "Secure by Design" policy <a href="https://www.security.gov.uk/guidance/secure-by-design/">Link</a></li>
+<li>NCSC CAF &nbsp;<a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework">Link</a></li>
+<li>Access Control Guidelines <a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework/caf-objective-b/principle-b2-identity-and-access-control">Link</a></li>
+<li>Policy - Strong Auth/MFA <a href="https://www.ncsc.gov.uk/guidance/authentication-methods-choosing-the-right-type">Link</a></li>
+<li>Storage and Processing of Data Outside of the UK - Information Governance Policy <a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/nhs-and-social-care-data-off-shoring-and-the-use-of-public-cloud-services/guidance">Link</a></li>
+<li>NHS England&rsquo;s API strategy &amp; policy statements e.g. API Landscape policy document (<a href="https://aalto.digital.nhs.uk/#/document/viewer/b61e0f92-b168-4173-8344-353360f4250e?library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">Word - API Landscape policy v1.0 (digital.nhs.uk)</a></li>
+<li>(Note there are overlaps with the Engineering red lines, ensure a consistent response and do not repeat assessments)</p>
+</ol>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>SD12</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>The relevant cloud &ldquo;Well Architected Frameworks&rdquo; should be followed, and the solutions assessed against</p>
+<p>(Note there are overlaps with the Engineering Software Quality Framework, ensure a consistent response and do not repeat assessments)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3><a name="_Toc197613146"></a>Technology Choices</h3>
+
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirements</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>T1</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Technology choices should be made in line with the NHS England Technology Radar, corporate direction and wider industry trends using the associated processes to &nbsp;support decision making . <a href="https://radar.engineering.england.nhs.uk/index.html">Tech Radar</a></p>
+<p>(Note there are overlaps with the Engineering red lines, ensure a consistent response and do not repeat assessments)</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>T2</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Technology choices should be appropriate to the problem and non-functional needs i.e. we are as equally aware of over engineering as we are to under engineering.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>T3</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>An appraisal should be made of any vendor lock considerations and associated risks, and these are understood and accepted/mitigated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Non-Functional Profile</h3>
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirement</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>NF1</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Solutions should incorporate workload observability and understand service health</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>NF2</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Reliability &amp; Resilience needs <strong>&nbsp;</strong>should<strong> &nbsp;</strong>be defined (in terms of standard NHS England service levels) and solution mechanisms to meet these needs are defined including metrics such as RTO, RPO etc.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>NF3</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>An overall volume and performance model should exist and includes business-realistic exceptional scenarios.</p>
+
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>NF4</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Methods to measure sustainability to establish baseline and show improvement should &nbsp;<strong>&nbsp;</strong>be defined.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>NF5</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Audit &amp; logging requirements should be defined, and the solution can support them</p>
+<p><a href="https://www.ncsc.gov.uk/collection/device-security-guidance/managing-deployed-devices/logging-and-protective-monitoring">https://www.ncsc.gov.uk/collection/device-security-guidance/managing-deployed-devices/logging-and-protective-monitoring</a></p>
+<p><a href="https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles/principle-13-audit-information-and-alerting-for-customers">https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles/principle-13-audit-information-and-alerting-for-customers</a></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>NF6</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Disaster Recovery &amp; Business Continuity</strong></p>
+<p>There should be clear requirements (commensurate with service levels) around DR &amp; BC (and a pragmatic approach taken with regards DR/BC events planned for)</p>
+<p>Continuity plans and supporting documentation should reflect the requirements, technical &amp; architecture constraints etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Re Use Principles and Development of Shared Services</h3>
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Dimension
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirements</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>RU1</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>If reusing existing capabilities, we should have confidence that any additional functionality required can be sensibly and cost effectively added to the existing service i.e we are not bending something out of shape</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>RU2</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>For new capabilities we should identify/recognise the potential re use opportunities which may drive design decisions, benefits etc.</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>RU3</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>We should reuse capabilities as defined below:-</p>
+</td>
+</tr>
+</tbody>
+</table>
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Capability
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Reuse
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Cohorting</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>CaaS</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Citizen Messaging</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>NHS Notify</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Staff Messaging</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>GOV.Notify and nhs.connect</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Application Messaging</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>MESH or alternative as required</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Demographics/MPI</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>PDS</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Eventing</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>MNS</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>API Management</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>NHSE API Management Platform (which uses Apigee underneath)</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Identity</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>CIS2 Auth/NHS Mail SSO/NHS login</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Logging &amp; Monitoring</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Splunk/Sentinel/Cribl/Grafana (tbc &ndash; pending ODIN)</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Data Analytics</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>FDP/CDP/DPS - FDP First</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Public facing web presence</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>NHS.uk</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Patient Flags</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Flags service</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Organisational Data</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>ODS</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table width="699">
+<tbody>
+ <tr role="row" class="nhsuk-table__row">
+<td colspan="2" width="699">
+<p><strong>Shared Services</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>Capability</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Re Use</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Auditing</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Standard Audit tools/PARS (when live)</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Cyber Security Monitoring</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>CSOC</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>Service Management &amp; Support</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>ServiceNow</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Documentation</h3>
+<table width="699">
+<tbody>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td class="nhsuk-table__cell">
+<p><strong>Requirement</strong></p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>D01</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>All architecture documentation should be maintained (with supporting processes and change control) within the appropriate NHS England knowledge store(s) e.g. Aalto, SharePoint, Confluence</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>D02</p>
+</td>
+<td class="nhsuk-table__cell">
+<p>Documentation should be published &ldquo;open by default&rdquo; and exceptions handled according to policy i.e. sensitivity etc</p>
+</td>
+</tr>
+ <tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell">
+<p>D03</p>
+
+</td>
+<td class="nhsuk-table__cell">
+<p>The architecture documentation should be appropriate in scope and quality for the solution covering (but not exclusively) :-</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Vision</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Roadmap</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Layer Diagrams</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capability Model and Solution Mapping</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non functional requirements</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conceptual Architecture</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Logical Architecture</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Physical (including network, infrastructure etc.)</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solution Architecture Overview (SDO)</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key Architecture Decisions (KADs)</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data Models</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data Flows</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API Specifications</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Volume and Performance Models</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Decision Records</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assumption, Risks, Issues and Dependencies</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cyber Assessment Framework compliance</p>
+<p><strong>&nbsp;</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+  <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:england.service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}
