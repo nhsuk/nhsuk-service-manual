@@ -3,9 +3,6 @@
   "version": "7.10.0",
   "description": "NHS digital service manual",
   "main": "app.js",
-  "directories": {
-    "test": "tests"
-  },
   "browserslist": [
     "> 0.25%",
     "not dead",
@@ -54,8 +51,10 @@
     "express": "^4.21.2",
     "helmet": "^4.6.0",
     "highlight.js": "^11.2.0",
+    "iframe-resizer": "^4.3.2",
     "js-beautify": "^1.14.0",
     "lunr": "^2.3.9",
+    "marked": "^15.0.11",
     "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#header-breaking-changes",
     "nunjucks": "^3.2.4"
   },
@@ -71,7 +70,6 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-mocha": "^9.0.0",
     "husky": "^8.0.3",
-    "iframe-resizer": "^4.3.2",
     "jest": "^27.1.0",
     "nodemon": "^2.0.19",
     "sass-embedded": "^1.89.0",

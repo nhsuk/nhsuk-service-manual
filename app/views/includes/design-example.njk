@@ -1,19 +1,16 @@
 {% macro designExample(params) %}
-  {% set examplePath = "app/views/design-system/" + params.group + "/" + params.item + "/" + params.type + "/index.njk" %}
-  {% set exampleArguments = "app/views/design-system/" + params.group + "/" + params.item + "/" + "macro-options.json" %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage + "&background=" + params.background %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
   {% set showCode = params.showCode !== false %}
-  {% set showArguments = params.showArguments !== false %}
 
   {% set html %}
-  {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
+  {{- getHTMLCode(params.group, params.item, params.type) | highlight('html') | safe -}}
   {% endset %}
 
   {% set nunjucks %}
-  {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+  {{- getNunjucksCode(params.group, params.item, params.type) | highlight('js') | safe -}}
   {% endset %}
 
   {#
@@ -80,9 +77,9 @@
               </div>
             {% endif %}
             <div class="code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              {% if snippet.name == "Nunjucks" and showArguments %}
-                {% set nunjucksArguments = getJSONCode(exampleArguments) %}
+              {% set nunjucksParams = getNunjucksParams(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
 
+              {% if nunjucksParams | length %}
                 <div class="code-snippet__macro">
                   <details class="nhsuk-details">
                     <summary class="nhsuk-details__summary">
@@ -114,7 +111,7 @@
                           </tr>
                         </thead>
                         <tbody class="nhsuk-table__body">
-                          {% for option in nunjucksArguments.params %}
+                          {% for option in nunjucksParams %}
                             <tr role="row" class="nhsuk-table__row">
                               <td role="cell" class="nhsuk-table__cell">
                                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
@@ -127,7 +124,7 @@
                                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ option.required }}
                               </td>
                               <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ option.description }}
+                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ option.description | markdown }}
                               </td>
                             </tr>
                             {% if option.params %}
@@ -144,7 +141,7 @@
                                     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subOption.required }}
                                   </td>
                                   <td role="cell" class="nhsuk-table__cell">
-                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subOption.description }}
+                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subOption.description | markdown }}
                                   </td>
                                 </tr>
                                 {% if subOption.params %}
@@ -161,7 +158,7 @@
                                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subSubOption.required }}
                                     </td>
                                     <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subSubOption.description }}
+                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subSubOption.description | markdown }}
                                     </td>
                                   </tr>
                                   {% endfor %}
