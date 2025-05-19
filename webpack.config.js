@@ -9,12 +9,9 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js$/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-        },
-      },
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+      options: { rootMode: 'upward' },
     }],
   },
   output: {
