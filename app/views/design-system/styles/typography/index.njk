@@ -2,7 +2,7 @@
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "April 2025" %}
+{% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "1" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -130,7 +130,7 @@
   <p>You can also add classes to create a lead paragraph or smaller body copy to convey hierarchy in your page.</p>
 
   <h3 id="lead-paragraph">Lead paragraph</h3>
-  <p>A lead paragraph is an introductory paragraph that you can use at the top of a page to summarise the content. Lead paragraphs use 24px type on desktop and should only be used once per page if needed.</p>
+  <p>A lead paragraph is an introductory paragraph that you can use at the top of a page to summarise the content. Lead paragraphs use 26px type on desktop and should only be used once per page if needed.</p>
 
   {{ designExample({
     group: "styles",
@@ -221,6 +221,18 @@
     group: "styles",
     item: "typography",
     type: "links-unvisited",
+    htmlOnly: true
+  }) }}
+
+  <p>If the link is on a dark background, for example in custom components, use the  <code>nhsuk-link--reverse</code> modifier class to make the text white.</p>
+
+  <p>The white links and background colour must have a contrast ratio of at least 4.5:1 to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA</a>.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "typography",
+    type: "links-reverse",
+    background: "blue",
     htmlOnly: true
   }) }}
 

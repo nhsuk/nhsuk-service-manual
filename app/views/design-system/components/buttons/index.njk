@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "July 2024" %}
+{% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -27,15 +27,15 @@
   <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
-  <p>We have 4 buttons:</p>
+  <p>We have 3 buttons:</p>
   <ul>
     <li><a href="#primary-button">primary button</a></li>
     <li><a href="#secondary-button">secondary button</a></li>
-    <li><a href="#reverse-button">white button on solid background colour (reverse button)</a></li>
     <li><a href="#warning-button">warning button</a></li>
   </ul>
 
   <h2 id="primary-button">Primary button</h2>
+  <p>There are 2 versions of the primary button: the default version and the reverse version.</p>
 
   {{ designExample({
     group: "components",
@@ -43,32 +43,49 @@
     type: "default"
   }) }}
 
+  <p>Use the reverse version on dark backgrounds.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "reverse",
+    background: "blue"
+  }) }}
+
   <h3>When to use a primary button</h3>
-  <p>Use a primary button to help users carry out an action on a page like starting an application or saving their progress.</p>
+  <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
+  <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
+
   <h2 id="secondary-button">Secondary button</h2>
+  <p>There are 2 versions of the secondary button.</p>
+  <p>By default, the secondary button is transparent and has no colour. Use it on the page background colour (<code>$color_nhsuk-grey-5</code>).</p>
 
   {{ designExample({
     group: "components",
     item: "buttons",
     type: "secondary"
   }) }}
-
-  <h3>When to use a secondary button</h3>
-  <p>Use a secondary button on pages that have more than 1 action or when users are not noticing standard link text.</p>
-  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
-
-  <h2 id="reverse-button">White button on solid background colour (reverse button)</h2>
+  <p>You can make the button white when you use it on darker backgrounds. Use the <code>.nhsuk-button--secondary-solid</code> class to maintain colour contrast.</p>
 
   {{ designExample({
     group: "components",
     item: "buttons",
-    type: "reverse"
+    type: "secondary-solid",
+    background: "grey-4"
   }) }}
 
-  <h3>When to use a white button on solid background colour</h3>
-  <p>White buttons on solid background colour are good on components like interruption cards where link text, primary and secondary buttons would be lost.</p>
+
+
+  <h3>When to use a secondary button</h3>
+  <p>Use a secondary button either:</p>
+  <ul>
+    <li>for secondary actions on a page</li>
+    <li>when an action needs less prominence, for example because it is optional</li>
+  </ul>
+
+  <p>Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
 
   <h2 id="warning-button">Warning button</h2>
@@ -79,18 +96,14 @@
     type: "warning"
   }) }}
 
+  <h3>When to use a warning button</h3>
   <p>Warning buttons are designed to make users think carefully before they use them. They are only effective if used very sparingly. Most services should not need one.</p>
-
   <p>Only use warning buttons for actions with serious destructive consequences that a user cannot easily undo. For example, permanently deleting an account.</p>
-
-  <p>When letting users carry out an action like this, it's a good idea to include an additional step which asks them to confirm it.</p>
-
-  <p>In this instance, use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
-
+  <p>For important destructive actions like this, include an additional step to confirm it. Use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
   <p>Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it means. Make sure the context and button text make clear what will happen if the user selects it.</p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
-  <p>Use buttons to start or save transactional journeys.</p>
+  <p>Use buttons to start transactional journeys and carry out actions, like saving information.</p>
 
   <h2 id="when-not-to-use-buttons">When not to use buttons</h2>
   <p>Do not use buttons as links:
@@ -99,13 +112,25 @@
     <li>from 1 flat content page to another</li>
     <li>to external websites</li>
   </ul>
-  <p>Try not to have multiple buttons on 1 page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
+  <p>Try not to have multiple buttons on a page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
 
   <h2 id="how-to-use-buttons">How to use buttons</h2>
-  <p>The <a href="https://design-system.service.gov.uk/components/button/">GOV.UK design system</a> suggests using a button to help users carry out an action on a page like starting an application or saving their progress.</p>
-  <p>Write button text in sentence case and describe the action the button performs. For example "Save and continue" or "Start now".</p>
+  <p>Write button text in sentence case, describing the action it performs. For example:</p>
+  <ul>
+    <li>"Start now" on the <a href="/design-system/patterns/start-page/">start page</a> of your service</li>
+    <li>"Log in" to an account a user has already created</li>
+    <li>"Continue" whether the service saves or does not save a user's information</li>
+    <li>"Save and continue" when the service saves a user's information but your research shows you need to reassure them that it does</li>
+    <li>"Save and come back later" when a user can save their information and come back later</li>
+    <li>"Add another" to add another item to a list or group</li>
+    <li>"Pay" to make a payment</li>
+    <li>"Confirm and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that does not have any legal content a user must agree to</li>
+    <li>"Confirm and save" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> on a staff-facing service or where data is not being sent to another person or system</li>
+    <li>"Accept and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that has legal content a user must agree to</li>
+    <li>"Log out" when a user is logged in to an account</li>
+  </ul>
+  <p>You may need to include more or different words to better describe the action. For example, "Add another address" and "Accept and claim a tax refund".</p>
   <p>Align the primary action button to the left edge of your form.</p>
-
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-button" role="note">
       <span class="nhsuk-u-visually-hidden">Information: </span>

@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #RELATED-NAV
    ========================================================================== */
@@ -5,20 +7,20 @@
 .nhsuk-related-nav {
   border-top: 2px solid $color_nhsuk-blue;
 
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     margin-top: nhsuk-spacing(7);
   }
 }
 
 .nhsuk-related-nav__heading {
-  @include nhsuk-typography-responsive(24, $override-line-height: 1.2);
-
   margin-bottom: nhsuk-spacing(3);
   padding-top: nhsuk-spacing(3);
+
+  @include nhsuk-font-size(26, $line-height: 1.2);
 }
 
 .nhsuk-related-nav__heading--small {
-  @include nhsuk-typography-responsive(19);
+  @include nhsuk-font-size(19);
 }
 
 .nhsuk-related-nav__list {
@@ -28,11 +30,11 @@
 }
 
 .nhsuk-related-nav__item {
-  @include nhsuk-typography-responsive(16);
+  @include nhsuk-font-size(16);
 }
 
 .nhsuk-related-nav__sub-heading {
   @include nhsuk-responsive-margin(2, 'bottom');
   @include nhsuk-responsive-padding(2, 'top');
-  @include nhsuk-typography-responsive(19, $override-line-height: 1.2);
+  @include nhsuk-font-size(19, $line-height: 1.2);
 }

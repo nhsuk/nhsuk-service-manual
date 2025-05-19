@@ -1,3 +1,5 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #FEATURED-LIST
    ========================================================================== */
@@ -12,7 +14,7 @@
   padding-left: 0;
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
   .featured-list {
     margin: nhsuk-spacing(6) 0 nhsuk-spacing(5);
   }
@@ -22,7 +24,7 @@
   margin-bottom: nhsuk-spacing(5);
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
   .featured-list--item {
     display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
     display: flex; // sass-lint:disable-line no-duplicate-properties
@@ -41,7 +43,7 @@
   margin-bottom: nhsuk-spacing(3);
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
   .featured-list--item__number {
     display: block;
     left: - nhsuk-spacing(9);
@@ -53,7 +55,7 @@
 .featured-list--item__number--mobile {
   display: block;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     display: none;
   }
 }
@@ -69,7 +71,7 @@
   position: relative;
 }
 
-@include mq($from: tablet) {
+@include nhsuk-media-query($from: tablet) {
   .featured-list--item__heading {
     padding-top: nhsuk-spacing(5);
   }

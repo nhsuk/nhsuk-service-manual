@@ -40,7 +40,7 @@ exports.getNunjucksCode = (path) => {
 exports.getHTMLCode = (path) => {
   const fileContents = getFileContents(path);
 
-  let html;
+  let html = '';
   try {
     html = nunjucks.renderString(fileContents);
   } catch (err) {

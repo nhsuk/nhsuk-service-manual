@@ -1,8 +1,13 @@
+@use '../vendor/nhsuk-frontend' as *;
+
 /* ==========================================================================
    #EXAMPLE-CALLOUT
    ========================================================================== */
 
 .app-example {
+  border: 1px solid $color_nhsuk-grey-3;
+  position: relative;
+
   @include top-and-bottom;
   @include nhsuk-responsive-margin(5, 'bottom');
   @include nhsuk-responsive-margin(3, 'top');
@@ -10,9 +15,6 @@
   @include nhsuk-responsive-padding(5, 'left');
   @include nhsuk-responsive-padding(5, 'right');
   @include nhsuk-responsive-padding(7, 'top');
-
-  border: 1px solid $color_nhsuk-grey-3;
-  position: relative;
 }
 
 .app-example__heading {
