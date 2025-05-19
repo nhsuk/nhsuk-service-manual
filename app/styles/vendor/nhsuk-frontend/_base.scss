@@ -1,2 +1,5 @@
-@forward 'pkg:nhsuk-frontend/packages/core/settings';
+@forward 'pkg:nhsuk-frontend/packages/core/settings' with (
+  $nhsuk-page-width: 1100px
+);
+
 @forward 'pkg:nhsuk-frontend/packages/core/tools';
