@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    cookies: './app/scripts/cookie-consent.js',
-    main: './app/scripts/main.js',
+    cookies: './app/javascripts/cookie-consent.js',
+    main: './app/javascripts/main.js',
   },
   mode: 'production',
   module: {
@@ -16,6 +16,6 @@ module.exports = {
   },
   output: {
     filename: '[name].min.js',
-    path: path.resolve(__dirname, 'public/js/'),
+    path: path.resolve(__dirname, 'public/javascripts/'),
   },
 };
