@@ -30,8 +30,10 @@
 
     <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/design-system/styles/spacing">Spacing</a>
       <ul class="app-side-nav__list app-side-nav__list--nested">
-        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-scale">The responsive spacing scale</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#responsive-spacing">Responsive spacing</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#static-spacing">Static spacing</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-on-custom-components">Spacing on custom components</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-override-classes">Spacing override classes</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
       </ul>
     </li>
@@ -47,8 +49,9 @@
 
 {% block bodyContent %}
 
-  <h2 id="spacing-scale">The responsive spacing scale</h2>
-  <p>We use a responsive spacing scale which adapts based on screen size. For example, if you apply spacing unit 9 to a margin, it will be 64px on large screens and 56px on small screens.</p>
+  <h2 id="responsive-spacing">Responsive spacing</h2>
+  <p>The responsive spacing scale adapts based on screen size.</p>
+  <p>The spacing for 'large screens' is used when the screen is wider than the desktop breakpoint (768px). Spacing for the smallest units (0-2) stays the same for all screen sizes.
 
   {{ table({
     panel: false,
@@ -200,15 +203,155 @@
     ]
   }) }}
 
-  <h3 id="spacing-override-classes">Spacing override classes</h3>
+  <h2 id="static-spacing">Static spacing</h2>
+  <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as 'large screens' in the responsive spacing scale.</p>
+
+  {{ table({
+    panel: false,
+    caption: "",
+    head: [
+      {
+        text: "Spacing unit"
+      },
+      {
+        text: "All screens",
+        format: "numeric"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "9"
+        },
+        {
+          text: "56px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "8"
+        },
+        {
+          text: "48px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "7"
+        },
+        {
+          text: "40px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "6"
+        },
+        {
+          text: "32px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "5"
+        },
+        {
+          text: "24px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "4"
+        },
+        {
+          text: "16px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "3"
+        },
+        {
+          text: "8px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "2"
+        },
+        {
+          text: "8px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "1"
+        },
+        {
+          text: "4px",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "0"
+        },
+        {
+          text: "0",
+          format: "numeric"
+        }
+      ]
+    ]
+  }) }}
+
+  <h2 id="spacing-on-custom-components">Spacing on custom components</h2>
+  <p>If you're building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a mixin or a function.</p>
+
+  <h3 id="using-the-static-spacing-function">Using the static spacing function</h3>
+  <p>If you want to use static values that will not change based on breakpoints you can reference the static spacing scale function like this:</p>
+  <p class="rich-text"><code>padding-top: nhsuk-spacing(6)</code></p>
+
+  <h3 id="using-the-responsive-spacing-mixin">Using the responsive spacing mixin</h3>
+  <p>If you want to use the responsive spacing scale you can reference the mixin.</p>
+  <p>For example:</p>
+  <ul>
+    <li><p class="rich-text">use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens</p></li>
+    <li><p class="rich-text">use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens</p></li>
+  </ul>
+
+  <h2 id="spacing-override-classes">Spacing override classes</h2>
   <p>Occasionally, you might need to make minor adjustments like adding spacing or removing it from elements of your design. You can use the responsive spacing override classes for this.</p>
 
-  <h3 id="using-the-override-classes">Using the override classes</h3>
-  <p>The spacing override classes are structured to allow you to apply any size of the scale, using margin or padding in any direction.</p>
-  <p class="rich-text">For example, <code>nhsuk-u-margin-9</code> will set a margin of 64px on large screens and 56px on small screens.</p>
-  <p class="rich-text">To add padding use <code>-padding</code> instead of <code>-margin</code>.</p>
-  <p class="rich-text">If you want to add the margin or padding in a particular direction, add <code>left</code> for left, <code>right</code> for right, <code>top</code> for top, or <code>bottom</code> for bottom. For example, <code>-margin-top</code> will set margin-top, <code>-padding-right</code> will set padding-right. If you do not specify a direction, the margin or padding will be applied to all sides of the element.</p>
-  <p class="rich-text">The last part of the class represents the spacing unit value you want to apply. For example, in <code>nhsuk-u-margin-9</code>, the <code>-9</code> represents 9 on the spacing scale.</p>
+  <h3 id="responsive-spacing-override-classes">Responsive spacing override classes</h3>
+  <p class="rich-text">The responsive spacing override classes start with: <code>nhsuk-u-</code>, followed by either <code>margin-</code> or <code>padding-</code>, and then a spacing unit number.</p>
+  <p class="rich-text">To apply spacing in a single direction, include <code>left-</code>, <code>right-</code>, <code>top-</code>, or <code>bottom-</code> just before the spacing unit.</p>
+
+  <p>For example, use:</p>
+
+  <ul>
+    <li><p class="rich-text"><code>nhsuk-u-margin-9</code> to apply a 56px margin to all sides of the element on small screens, increasing to 64px on large screens</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-padding-right-5</code> to apply 24px of padding to the right side of the element on small screens, increasing to 32px on large screens</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-margin-0</code> to remove all margins at all screen sizes</p></li>
+  </ul>
+
+  <h3 id="static-spacing-override-classes">Static spacing override classes</h3>
+  <p class="rich-text">The static spacing override classes start with <code>nhsuk-u-static</code>. Use them the same way as the responsive spacing override classes.</p>
+
+  <p>For example, use:</p>
+
+  <ul>
+    <li><p class="rich-text"><code>nhsuk-u-static-margin-9</code> to apply a 64px margin to all sides of the element at all screen sizes</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-static-padding-right-5</code> to apply 32px of padding to the right side of the element at all screen sizes</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-static-margin-0</code> to remove all margins at all screen sizes, same as <code>nhsuk-u-margin-0</code></p></li>
+  </ul>
 
   <h3 id="spacing-examples" class="nhsuk-u-padding-top-3">Examples</h3>
 
@@ -225,21 +368,6 @@
     type: "text",
     htmlOnly: true
   }) }}
-
-  <h2 id="spacing-on-custom-components">Spacing on custom components</h2>
-  <p>If you’re building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a mixin or a function.</p>
-
-  <h3 id="using-the-static-spacing-function">Using the static spacing function</h3>
-  <p>If you want to use static values that will not change based on breakpoints you can reference the static spacing scale function like this:</p>
-  <p class="rich-text"><code>padding-top: nhsuk-spacing(6)</code></p>
-
-  <h3 id="using-the-responsive-spacing-mixin">Using the responsive spacing mixin</h3>
-  <p>If you want to use the responsive spacing scale you can reference the mixin.</p>
-  <p>For example:</p>
-  <ul>
-    <li><p class="rich-text">use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens</p></li>
-    <li><p class="rich-text">use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens</p></li>
-  </ul>
 
   <h2 id="width-override-classes">Width override classes</h2>
   <p>If you need to constrain the width of an element independently of the <a href="/design-system/styles/layout">grid system</a>, you can use width override classes.</p>
