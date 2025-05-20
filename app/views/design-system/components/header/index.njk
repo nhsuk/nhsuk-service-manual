@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "May 2025" %}
+{% set dateUpdated = "June 2025" %}
 {% set backlog_issue_id = "16" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -20,7 +20,7 @@
   </strong>
 
   <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
-  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <p>Make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a></li>
     <li><a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a></li>
@@ -45,10 +45,10 @@
   <h2 id="how-to-use-the-NHS-header">How to use the header</h2>
   <p>The header is made up of 4 elements:</p>
   <ul class="nhsuk-list nhsuk-list--bullet">
-    <li>the NHS logo, which may be accompanied by the service name</li>
-    <li>a search bar</li>
-    <li>navigation, with exposed links and a drop-down "More" button</li>
-    <li>account information and links</li>
+    <li><a href="#nhs-logo-and-service-name">the NHS logo, which may be accompanied by the service name</a></li>
+    <li><a href="#search-bar">a search bar</a></li>
+    <li><a href="#navigation">navigation</a>, with exposed links and a drop-down "More" button</li>
+    <li><a href="#account-information-and-links">account information and links</a></li>
   </ul>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
@@ -73,7 +73,7 @@
     <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
   </div>
 
-  <h3 id="logo-service-name">NHS logo and service name</h3>
+  <h3 id="nhs-logo-and-service-name">NHS logo and service name</h3>
   <p>The NHS logo must always be used. Add a service name to help users understand they're not on the main NHS website.</p>
 
   {{ designExample({
@@ -82,7 +82,7 @@
     type: "logo-service-name"
   }) }}
 
-  <h3 id="search">Search bar</h3>
+  <h3 id="search-bar">Search bar</h3>
   <p>The header can include a search bar.</p>
   <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality.</p> 
   <p>If your service is on the nhs.uk domain but not part of the NHS website or is on another domain, you will have to arrange your own search functionality, if you need it.</p>
@@ -115,17 +115,17 @@
   }) }}
 
   <h4>When to use</h4>
-  <p>Use on services when users have an account. The header can display a log out link and other account-related information and links.</p>
-  <p>It has been designed for staff systems. If you want to use it on a public-facing service, you must test it first and <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/16">feed back your findings</a>.</p>
+  <p>Use the logged-in header on services when users have an account. The header can display a log out link and other account-related information and links.</p>
+  <p>It has been designed for staff systems. If you want to use it on a public-facing service, you must test it first and <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/16">feed back your findings via the header issue in GitHub</a>.</p>
 
   <h4>How to use</h4>
   <p>Account information and links can be used with the other header features, for example service name and search. However, keep the number of items in the header to a minimum.</p>
   <p>When allowing users to log in to your service, make sure you have a visible service name, so that they know which system they are logging in to.</p>
 
   <h4>Using account information and links</h4>
-  <p>You can add multiple items to the account information and links section, such as the logged in user’s name and role. Items can be links or just plain text information.</p>
+  <p>You can add multiple items to the account information and links section, such as the logged in user's name and role. Items can be links or just plain text information.</p>
   <p>Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and placing them on a separate page. For example, an account settings page could include actions like change name, change role and reset password. Testing with users should inform which combination of items will best meet their needs.</p>
-  <p>If showing a log out link, place it last in the list, showing top right on desktop screens and last on small screens. If placing log out and other account actions on a dedicated page, it's link should be shown last.</p>
+  <p>If showing a log out link, place it last in the list, showing top right on desktop screens and last on small screens. If placing log out and other account actions on a dedicated page, the log out link should be shown last.</p>
 
   <h4>User information</h4>
   <p>Consider whether you need to show the user information about the account they have logged into. This may depend on whether:</p>
@@ -133,10 +133,10 @@
     <li>the computer they are likely to use is shared</li>
     <li>they are likely to have multiple accounts or roles</li>
   </ul>
-  <p>When showing the user their account, you can highlight this with the user profile icon. Only show the icon next to one item. Your user research will inform how best to display the user’s account information, for example, whether to show their full name or their email address.</p>
+  <p>When showing the user their account, you can highlight this with the user profile icon (on the <a href="/design-system/styles/icons">icons page</a>). Only show the icon next to 1 item. Test with users how best to display the user's account information, for example, whether to show their full name or their email address.</p>
 
   <h4>Header with complex account information and links</h4>
-  <p>An example showing account information and multiple links, with a service name and navigation.</p>
+  <p>This example shows account information and multiple links, with a service name and navigation.</p>
 
   {{ designExample({
     group: "components",
@@ -181,8 +181,8 @@
     type: "organisational-white-with-nav"
   }) }}
 
-  <p>You must have a Frutiger font licence to use an NHS organisational logo. Our guidance on <a href="/design-system/styles/typography">typography</a> explains how to get hold of the Frutiger webfont.</p>
-
+  <p>You must have a Frutiger font licence to use an NHS organisational logo. Find out about <a href="/design-system/styles/use-frutiger-font">using the Frutiger font</a>, including registering for a free licence.</p>
+  
   <h3>Organisational logos</h3>
   <p>Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos in the NHS England identity guidelines</a>.</p>
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>

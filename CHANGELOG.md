@@ -4,11 +4,23 @@
 
 :new: **New features**
 
+- Add new account information and links variant of header component
+- Update design of header to include:
+  - new feature to highlight current page in the navigation menu
+  - improving NHS logo focus state
+  - removing home link from header that was automatically added on small screens
+  - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
+  - left-aligning navigation items by default
+- Add new profile icon to icons page
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
 :wrench: **Maintenance**
 
 - Move page width to `$nhsuk-page-width` setting
+- Turn off HTML5 validation in examples
+- Update code examples to use system monospace font
+- Update wording re WCAG 2.2 on design system components and patterns
+- Move Nunjucks macro options to NHS.UK frontend
 
 :wrench: **Fixes**
 
