@@ -42,7 +42,6 @@ app.use(
 
 // Middleware to serve static assets
 app.use(express.static(config.publicPath));
-app.use('/iframe-resizer', express.static(join(config.modulePath, 'iframe-resizer')));
 
 // View engine (nunjucks)
 app.set('view engine', 'njk');
