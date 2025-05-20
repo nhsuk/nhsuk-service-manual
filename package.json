@@ -2,12 +2,10 @@
   "name": "nhsuk-service-manual",
   "version": "7.10.0",
   "description": "NHS digital service manual",
+  "engines": {
+    "node": "^20.9.0 || ^22.11.0"
+  },
   "main": "app.js",
-  "browserslist": [
-    "> 0.25%",
-    "not dead",
-    "IE 11"
-  ],
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:assets",
     "build:css": "sass --embed-sources --pkg-importer node --style compressed app/styles/:public/css/",
@@ -22,17 +20,12 @@
     "start": "node app",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "jest --coverage=true",
-    "watch": "cross-env NODE_ENV=development concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm run watch:assets\" \"npm start\"",
+    "watch": "NODE_ENV=development concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm run watch:assets\" \"npm start\"",
     "watch:scss": "npm run build:css && npm run build:css -- -w",
     "watch:js": "webpack -w",
     "watch:assets": "cpx 'app/assets/*' public/assets/ --watch",
     "webpack": "webpack",
-    "prepare": "husky install"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "axios": "axios/dist/node/axios.cjs"
-    }
+    "prepare": "husky"
   },
   "author": "https://github.com/nhsuk",
   "repository": {
@@ -41,43 +34,36 @@
   },
   "license": "MIT",
   "dependencies": {
-    "accessible-autocomplete": "^2.0.3",
-    "axios": "^1.7.7",
+    "accessible-autocomplete": "^2.0.4",
+    "axios": "^1.9.0",
     "basic-auth": "^2.0.1",
-    "browser-sync": "^3.0.3",
-    "cheerio": "^1.0.0-rc.10",
-    "compression": "^1.7.4",
-    "cross-env": "^7.0.3",
+    "browser-sync": "^3.0.4",
+    "cheerio": "^1.0.0",
+    "compression": "^1.8.0",
     "express": "^4.21.2",
     "helmet": "^4.6.0",
-    "highlight.js": "^11.2.0",
-    "iframe-resizer": "^4.3.2",
-    "js-beautify": "^1.14.0",
+    "highlight.js": "^11.11.1",
+    "iframe-resizer": "^4.4.2",
+    "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
     "marked": "^15.0.11",
     "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#header-breaking-changes",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.6",
-    "@babel/preset-env": "^7.22.6",
-    "babel-loader": "^8.2.2",
-    "concurrently": "^6.2.1",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
+    "concurrently": "^9.1.2",
     "cpx": "^1.5.0",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-mocha": "^9.0.0",
-    "husky": "^8.0.3",
-    "jest": "^27.1.0",
-    "nodemon": "^2.0.19",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
     "sass-embedded": "^1.89.0",
     "sass-lint": "^1.13.1",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^4.8.0"
-  },
-  "volta": {
-    "node": "14.18.3"
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
   }
 }
