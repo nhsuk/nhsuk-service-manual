@@ -12,9 +12,31 @@
   {% include "standards-and-technology/_breadcrumb.njk" %}
 {% endblock %}
 
+{% block sideNav %}
+<nav class="app-side-nav">
+  <ul class="nhsuk-list app-side-nav__list">
+    <h2 class="app-side-nav__heading">Architecture <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/standards-and-technology/architecture/solution-architecture-framework">Solution Architecture Framework</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/standards-and-technology/architecture/core-dimensions">Core Dimensions</a></li>
+    <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/standards-and-technology/architecture/requirements">Requirements</a>
+      <ul class="app-side-nav__list app-side-nav__list--nested">
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#S">Strategic Alignment, Vision and Roadmap</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#DM">Decision Making &amp; Governance</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#SD">Solution Design &amp; Methods</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#T">Technology Choices</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#NF">Non-Functional Profile</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#RU">Reuse Principles and Development of Shared Services</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#D">Documentation</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</nav>
+{% endblock %}
+
 {% block bodyContent %}
 
-<h3>Strategic Alignment, Vision, and roadmap</h3>
+<h3 id="S">Strategic Alignment, Vision, and roadmap</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -47,7 +69,7 @@
 </table>
 
 
-<h3>Decision Making &amp; Governance</h3>
+<h3 id="DM">Decision Making &amp; Governance</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -105,7 +127,7 @@
   </tbody>
 </table>
 
-<h3>Solution Design &amp; Methods</h3>
+<h3 id="SD">Solution Design &amp; Methods</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -193,7 +215,7 @@
   </tbody>
 </table>
 
-<h3>Technology Choices</h3>
+<h3 id="T">Technology Choices</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -224,7 +246,7 @@
   </tbody>
 </table>
 
-<h3>Non-Functional Profile</h3>
+<h3 id="NF">Non-Functional Profile</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -272,7 +294,7 @@
   </tbody>
 </table>
 
-<h3>Reuse Principles and Development of Shared Services</h3>
+<h3 id="RU">Reuse Principles and Development of Shared Services</h3>
 <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -395,7 +417,7 @@ Capability
   </tbody>
 </table>
 
-<h3>Documentation</h3>
+<h3 id="D">Documentation</h3>
   <table class="nhsuk-table" aria-label="Requirements">
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
