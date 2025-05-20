@@ -16,7 +16,9 @@ module.exports = {
   // Common paths
   sourcePath: join(rootPath, 'app'),
   modulePath: join(rootPath, 'node_modules'),
-  publicPath: join(rootPath, 'public'),
+  publicPath: NODE_ENV === 'test'
+    ? join(rootPath, 'test/fixtures')
+    : join(rootPath, 'public'),
 
   // Base URL
   baseURL: BASE_URL,

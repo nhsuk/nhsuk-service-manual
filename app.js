@@ -72,6 +72,7 @@ const env = nunjucks.configure(appViews, {
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode);
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode);
 env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams);
+env.addGlobal('getAssetPath', fileHelper.getAssetPath);
 env.addFilter('highlight', filters.highlight);
 env.addFilter('markdown', filters.markdown);
 
