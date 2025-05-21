@@ -1,8 +1,8 @@
 {% set pageTitle = "Spacing" %}
-{% set pageDescription = "We've followed the Government Design System's approach to spacing pages and setting the width of page elements so that they are consistent, responsive and clear. But we have adapted it for NHS-specific styles." %}
+{% set pageDescription = "The design system uses 2 different spacing scales: responsive and static." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "24" %}
 
 {% extends "includes/app-layout.njk" %}
@@ -51,7 +51,7 @@
 
   <h2 id="responsive-spacing">Responsive spacing</h2>
   <p>The responsive spacing scale adapts based on screen size.</p>
-  <p>The spacing for 'large screens' is used when the screen is wider than the desktop breakpoint (768px). Spacing for the smallest units (0-2) stays the same for all screen sizes.
+  <p>The spacing for "large screens" is used when the screen is wider than the desktop breakpoint (768px). Spacing for the smallest units (0 to 2) stays the same for all screen sizes.
 
   {{ table({
     panel: false,
@@ -204,7 +204,7 @@
   }) }}
 
   <h2 id="static-spacing">Static spacing</h2>
-  <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as 'large screens' in the responsive spacing scale.</p>
+  <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as "large screens" in the responsive spacing scale.</p>
 
   {{ table({
     panel: false,
@@ -370,7 +370,7 @@
   }) }}
 
   <h2 id="width-override-classes">Width override classes</h2>
-  <p>If you need to constrain the width of an element independently of the <a href="/design-system/styles/layout">grid system</a>, you can use width override classes.</p>
+  <p>If you need to constrain the width of an element independently of the <a href="/design-system/styles/layout#grid">grid system</a>, you can use width override classes.</p>
   <p class="rich-text">As with the spacing override classes, the width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
   <p>For example:</p>
   <ul>
