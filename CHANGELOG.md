@@ -3,6 +3,7 @@
 ## Unreleased
 
 :new: **New features**
+- Add guidance on new override classes to apply static spacing</p>
 - Move Nunjucks macro options to NHS.UK frontend
 - Update code examples to use system monospace font
 - Turn off HTML5 validation in examples
