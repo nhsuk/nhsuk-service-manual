@@ -1,0 +1,55 @@
+{% set pageTitle = "Version History" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework" %}
+{% set pageDescription = "As the NHS England Solution Architecture Framework (SAF) evolves, we will release updated versions of the framework. Assessments will be recorded against specific versions, and this page provides a changelog to guide on what has changed since an assessment was last undertaken." %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "21 May 2025 (SAF Version 1.0)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "standards-and-technology/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+
+
+<table class="nhsuk-table" aria-label="Framework components">
+<thead role="rowgroup" class="nhsuk-table__head">
+  <tr role="row">
+    <th role="columnheader" class="" scope="col">Version</th>
+    <th role="columnheader" class="" scope="col">Date</th>
+    <th role="columnheader" class="" scope="col">Changes</th>
+  </tr>
+</thead>
+<tbody class="nhsuk-table__body">
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">1.0</td>
+    <td class="nhsuk-table__cell">21 May 2025</td>
+    <td class="nhsuk-table__cell">First published version. Multiple updates based on feedback from earlier draft versions</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">0.3</td>
+    <td class="nhsuk-table__cell"></td>
+    <td class="nhsuk-table__cell">Updated and pushed for comments; assessment spreadsheet created.</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">0.2</td>
+    <td class="nhsuk-table__cell"></td>
+    <td class="nhsuk-table__cell">Updated and adapted into Confluence</td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">0.1</td>
+    <td class="nhsuk-table__cell"></td>
+    <td class="nhsuk-table__cell">Initial version</td>
+  </tr>
+</tbody>
+</table>
+
+
+  <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:england.service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+{% endblock %}

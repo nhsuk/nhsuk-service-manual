@@ -1,11 +1,10 @@
 {% set pageTitle = "Usage" %}
-{% set landingPage = true %}
 {% set pageSection = "Standards and technology" %}
-{% set subSection = "Architecture" %}
+{% set subSection = "Solution Architecture Framework" %}
 {% set pageDescription = "How will the NHS England SAF be used?" %}
 {% set beta = true %}
 {% set hideContact = "true" %}
-{% set dateUpdated = "May 2025" %}
+{% set dateUpdated = "21 May 2025 (SAF Version 1.0)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -24,7 +23,7 @@
 
 <h2>Architecture Fitness Assessment</h2>
 <p>Alongside day to day use we will require architects to perform periodic reviews of existing products plus those in development</p>
-<ol>
+<ol class="nhsuk-list nhsuk-list--number">
 <li>Solution Architects will be required to undertake a review of maturity/compliance against the requirements for each of the <strong>key</strong> products within their portfolios.</li>
 <li>Any review should not be done in isolation and should be done with the product owner and wider product team.</li>
 <li>The review must be positioned as a helpful tool to highlight risks, issues and areas for improvement.</li>
@@ -35,7 +34,7 @@
 
 <h2>Overall Guidance</h2>
 <p>The assessment mechanism described below is intended to be risk based and several factors should be considered whilst undertaking a review:</p>
-<ol>
+<ol class="nhsuk-list nhsuk-list--number">
 <li>Consider the service level and business criticality. i.e. Simple noncritical applications which may be poorly designed or have poor architecture processes may present a low impact of failure to users and therefore remediation actions should be considered appropriately.</li>
 <li>Measuring adherence to the requirement is not binary and will have an unavoidable level of subjectivity. A product may achieve one requirement well in some places and not in others. Exercise cautious pragmatism and team judgement when undertaking a review.</li>
 <li>When doing reviews consider the solution, but also as a set of individual components. For example, the overall solution may be considered well architected however a single critical component maybe very weak and therefore present significant risk to the overall solution.</li>
@@ -47,7 +46,7 @@
 <p>For each requirement statement the architect needs to assess how well the architecture and supporting processes meet the objective of the requirement and the overall dimension of the SAF.</p>
 <p>There may be different ways a requirement can be met. We should focus on the outcome <strong>and</strong> satisfy ourselves that the evidence provided can meet it.</p>
 <p>The assessment can be made via interviews, document reviews, cloud provider Well Architected Framework reviews, delivery team meetings and ceremonies etc. It is not a &quot;one size fits all&quot; and will vary depending on the team make up etc. At all times we will be risk based.</p>
-<p>An <a href="/app/assets/nhs-england-saf-assessment-template.xlsx">assessment spreadsheet</a> has been created which allows for a score based on the criteria below. Each requirement is some form of weighting to ensure more significant or complex requirements are accounted for. (Note: The weighting will be subject to change and review.)</p>
+<p>An <a href="https://nhs.sharepoint.com/:x:/r/sites/msteams_9e4bf8/Shared%20Documents/General/NHS%20England%20Solution%20Architecture%20Framework/NHS%20England%20SAF%20Assessment%20Template.xlsx?d=w0d207da6bf5e41c8a619b1c90d5e63fc&csf=1&web=1&e=C81FND">assessment spreadsheet</a> (NHSE SharePoint) has been created which allows for a score based on the criteria below. Each requirement is some form of weighting to ensure more significant or complex requirements are accounted for. (Note: The weighting will be subject to change and review.)</p>
 
 
  <table class="nhsuk-table" aria-label="Dimensions">
@@ -90,7 +89,7 @@
 
 <p>This is not an exact science and in many cases it will be challenging to judge particularly where underpinning material such as strategies, principles, polices etc are not in place. Within the requirements spreadsheet there will be some guidance to help give a sense.<p>
 <p>For example:</p>
-<ul>
+<ul class="nhsuk-list nhsuk-list--bullet">
 <li>5 = A strategy paper has been produced, openly published, well socialised, approved at executive level and is widely accepted and baked into governance.</li>
 <li>3 = Some form of strategy has been written down and generally seems well accepted at a directorate level, but may not be openly published. Teams outside of a directorate might not consistently recognise it as a formal strategy.</li>
 <li>1 = Nothing recognisable as a strategy, written down or otherwise.</li>
@@ -120,5 +119,6 @@
 
   <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
   <p><a href="mailto:england.service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
 
 {% endblock %}

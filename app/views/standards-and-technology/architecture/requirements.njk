@@ -1,10 +1,10 @@
 {% set pageTitle = "Requirements" %}
 {% set pageSection = "Standards and technology" %}
-{% set subSection = "Architecture" %}
+{% set subSection = "Solution Architecture Framework" %}
 {% set pageDescription = "The SAF is broken down into seven dimensions, the following requirements make up each dimension." %}
 {% set beta = true %}
 {% set hideContact = "true" %}
-{% set dateUpdated = "May 2025" %}
+{% set dateUpdated = "21 May 2025 (SAF Version 1.0)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -84,8 +84,8 @@
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">DM05</td>
       <td class="nhsuk-table__cell">
-        <p>The solution design and architecture decisions should be managed effectively through local programme design authorities and TRG at the appropriate stages of the lifecycle.</p>
-        <p>The relevant Lead Architects and SMEs are engaged and are supportive.</p>
+        <p>The solution design and architecture decisions should be managed through local programme design authorities and TRG at the appropriate stages of the lifecycle.</p>
+        <p>The relevant Lead Architects and Subject Matter Experts (SMEs) are engaged and are supportive.</p>
       </td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
@@ -101,7 +101,7 @@
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">DM08</td>
-      <td class="nhsuk-table__cell">All decision-making should be structured i.e. identify key strategic drivers, user need assess options against drivers, present rationale, clarity on trade-offs, dependencies, risks and issues understood etc.</td>
+      <td class="nhsuk-table__cell">All decision-making should be structured. E.g. identify key strategic drivers, user need assess options against drivers, present rationale, clarity on trade-offs, dependencies, risks and issues understood.</td>
     </tr>
   </tbody>
 </table>
@@ -121,7 +121,7 @@
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">SD01</td>
-      <td class="nhsuk-table__cell">An appropriate design methodology should be followed e.g. Domain Driven Design and should include NHS/CDDO Service Design and Secure By Design principles and methods.</td>
+      <td class="nhsuk-table__cell">An appropriate design methodology should be followed e.g. Domain Driven Design and should include NHS/CDDO Service Design and Secure by Design principles and methods.</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">SD02</td>
@@ -135,13 +135,12 @@
       <td class="nhsuk-table__cell">SD04</td>
       <td class="nhsuk-table__cell">
         <p>Solution design should follow good practice design principles. E.g.</p>
-        <ul>
+        <ul class="nhsuk-list nhsuk-list--bullet">
           <li>Separation of concerns</li>
           <li>Encapsulation / Modularisation</li>
           <li>Loose coupling</li>
           <li>High cohesion / single responsibility</li>
           <li>Design for flexibility/change</li>
-          <li>Etc.</li>
         </ul>
       </td>
     </tr>
@@ -151,7 +150,7 @@
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">SD06</td>
-      <td class="nhsuk-table__cell">An API First design methodology should be followed, where APIs are at the fore front of the design process, functionality and data is exposed via APIs and the needs of the API consumer have been considered.</td>
+      <td class="nhsuk-table__cell">An API First design methodology should be followed, where APIs are at the forefront of the design process, functionality and data is exposed via APIs and the needs of the API consumer have been considered.</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">SD07</td>
@@ -172,8 +171,8 @@
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">SD11</td>
       <td class="nhsuk-table__cell">
-        <p>Solutions should adhere to (Aalto needs updating with full list)</p>
-        <ol>
+        <p>Solutions should adhere to:</p>
+        <ol class="nhsuk-list nhsuk-list--number">
           <li><a href="https://www.security.gov.uk/guidance/secure-by-design/">Government "Secure by Design" policy</a></li>
           <li><a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework">NCSC CAF</a></li>
           <li><a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework/caf-objective-b/principle-b2-identity-and-access-control">Access Control Guidelines</a></li>
@@ -188,6 +187,7 @@
       <td class="nhsuk-table__cell">SD12</td>
       <td class="nhsuk-table__cell">
         <p>The relevant cloud &quot;Well Architected Framework&quot; should be followed, and the solutions assessed against it.</p>
+        <p><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html">AWS</a> | <a href="https://learn.microsoft.com/en-us/azure/well-architected/">Azure</a>
         <p>(Note there are overlaps with the Engineering Software Quality Framework; ensure a consistent response and do not repeat assessments)</p>
       </td>
     </tr>
@@ -244,7 +244,7 @@
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">NF02</td>
-      <td class="nhsuk-table__cell">Reliability &amp; Resilience needs should be defined (in terms of standard NHS England service levels) and solution mechanisms to meet these needs are defined including metrics such as RTO, RPO etc.</td>
+      <td class="nhsuk-table__cell">Reliability &amp; Resilience needs should be defined (in terms of standard NHS England service levels) and solution mechanisms to meet these needs are defined including metrics such as Recovery Time Objective (RTO) and Recovery Point Objective (RPO).</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell">NF03</td>
@@ -421,7 +421,7 @@ Capability
       <td class="nhsuk-table__cell">D03</td>
       <td class="nhsuk-table__cell">
         <p>The architecture documentation should be appropriate in scope and quality for the solution covering (but not exclusively):</p>
-        <ul>
+        <ul class="nhsuk-list nhsuk-list--bullet">
           <li>Architecture Vision</li>
           <li>Architecture Roadmap</li>
           <li>Layer Diagrams</li>

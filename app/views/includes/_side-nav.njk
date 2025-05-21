@@ -10,10 +10,11 @@
 ] %}
 
 {% set dsArchitecture = [
-  { title: "Solution Architecture Framework", url: "/standards-and-technology/architecture/solution-architecture-framework" },
+  { title: "Introduction", url: "/standards-and-technology/architecture/solution-architecture-framework" },
   { title: "Usage", url: "/standards-and-technology/architecture/usage" },
   { title: "Core Dimensions", url: "/standards-and-technology/architecture/core-dimensions" },
-  { title: "Requirements", url: "/standards-and-technology/architecture/requirements" }
+  { title: "Requirements", url: "/standards-and-technology/architecture/requirements" },
+  { title: "Version History", url: "/standards-and-technology/architecture/saf-version-history" }
 ] %}
 
 {% set dsSAFRequirements = [
@@ -184,7 +185,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "Standards and technology" and subSection != "Architecture"%}
+  {%- if pageSection == "Standards and technology" and subSection != "Solution Architecture Framework"%}
     <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
@@ -199,7 +200,7 @@
     {% endfor %}
     </ul>
 
-    <h2 class="app-side-nav__heading">Architecture</h2>
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsArchitecture %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -208,8 +209,8 @@
 
   {% endif %}
 
-  {%- if pageSection == "Standards and technology" and subSection == "Architecture" %}
-    <h2 class="app-side-nav__heading">Architecture</h2>
+  {%- if pageSection == "Standards and technology" and subSection == "Solution Architecture Framework" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsArchitecture %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
