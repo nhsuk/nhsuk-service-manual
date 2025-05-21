@@ -30,6 +30,7 @@
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#containers">Containers</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#main-content">Main content</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#grid">Grid system</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#layouts">Common layouts</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#utility-classes">Layout utility classes</a></li>
       </ul>
@@ -166,6 +167,22 @@
     group: "styles",
     item: "layout",
     type: "nested",
+    htmlOnly: true
+  }) }}
+
+  <h2 id="width-override-classes">Width override classes</h2>
+  <p>If you need to constrain the width of an element independently of the grid system, you can use width override classes.</p>
+  <p class="rich-text">The width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
+  <p>For example:</p>
+  <ul>
+    <li><p class="rich-text"><code>nhsuk-u-width-one-half</code>  will apply a width of 50% and</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p></li>
+  </ul>
+
+  {{ designExample({
+    group: "styles",
+    item: "layout",
+    type: "width",
     htmlOnly: true
   }) }}
 

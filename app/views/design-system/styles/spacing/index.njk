@@ -32,7 +32,6 @@
       <ul class="app-side-nav__list app-side-nav__list--nested">
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#responsive-spacing">Responsive spacing</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#static-spacing">Static spacing</a></li>
-        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
       </ul>
     </li>
 
@@ -365,22 +364,5 @@
 
   <p>If you're building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a function like this:</p>
   <p class="rich-text"><code>padding-top: nhsuk-spacing(6)</code></p>
-
-
-  <h2 id="width-override-classes">Width override classes</h2>
-  <p>If you need to constrain the width of an element independently of the <a href="/design-system/styles/layout#grid">grid system</a>, you can use width override classes.</p>
-  <p class="rich-text">As with the spacing override classes, the width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
-  <p>For example:</p>
-  <ul>
-    <li><p class="rich-text"><code>nhsuk-u-width-one-half</code>  will apply a width of 50% and</p></li>
-    <li><p class="rich-text"><code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p></li>
-  </ul>
-
-  {{ designExample({
-    group: "styles",
-    item: "spacing",
-    type: "width",
-    htmlOnly: true
-  }) }}
 
 {% endblock %}
