@@ -32,8 +32,6 @@
       <ul class="app-side-nav__list app-side-nav__list--nested">
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#responsive-spacing">Responsive spacing</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#static-spacing">Static spacing</a></li>
-        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-on-custom-components">Spacing on custom components</a></li>
-        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#spacing-override-classes">Spacing override classes</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
       </ul>
     </li>
@@ -203,7 +201,46 @@
     ]
   }) }}
 
+  <h3>How to use responsive spacing classes</h3>
+
+  <p class="rich-text">The responsive spacing override classes start with: <code>nhsuk-u-</code>, followed by either <code>margin-</code> or <code>padding-</code>, and then a spacing unit number.</p>
+  <p class="rich-text">To apply spacing in a single direction, include <code>left-</code>, <code>right-</code>, <code>top-</code>, or <code>bottom-</code> just before the spacing unit.</p>
+
+  <p>For example, use:</p>
+
+  <ul>
+    <li><p class="rich-text"><code>nhsuk-u-margin-9</code> to apply a 56px margin to all sides of the element on small screens, increasing to 64px on large screens</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-padding-right-5</code> to apply 24px of padding to the right side of the element on small screens, increasing to 32px on large screens</p></li>
+    <li><p class="rich-text"><code>nhsuk-u-margin-0</code> to remove all margins at all screen sizes</p></li>
+  </ul>
+
+  <h4 class="nhsuk-u-padding-top-3">Examples</h4>
+
+  {{ designExample({
+    group: "styles",
+    item: "spacing",
+    type: "default",
+    htmlOnly: true
+  }) }}
+
+  {{ designExample({
+    group: "styles",
+    item: "spacing",
+    type: "text",
+    htmlOnly: true
+  }) }}
+
+  <h3>How to use responsive spacing in your own components</h3>
+
+  <p>If you want to use the responsive spacing scale you can reference the mixin.</p>
+  <p>For example:</p>
+  <ul>
+    <li><p class="rich-text">use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens</p></li>
+    <li><p class="rich-text">use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens</p></li>
+  </ul>
+
   <h2 id="static-spacing">Static spacing</h2>
+
   <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as "large screens" in the responsive spacing scale.</p>
 
   {{ table({
@@ -312,37 +349,8 @@
     ]
   }) }}
 
-  <h2 id="spacing-on-custom-components">Spacing on custom components</h2>
-  <p>If you're building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a mixin or a function.</p>
+  <h3>How to use static spacing classes</h3>
 
-  <h3 id="using-the-static-spacing-function">Using the static spacing function</h3>
-  <p>If you want to use static values that will not change based on breakpoints you can reference the static spacing scale function like this:</p>
-  <p class="rich-text"><code>padding-top: nhsuk-spacing(6)</code></p>
-
-  <h3 id="using-the-responsive-spacing-mixin">Using the responsive spacing mixin</h3>
-  <p>If you want to use the responsive spacing scale you can reference the mixin.</p>
-  <p>For example:</p>
-  <ul>
-    <li><p class="rich-text">use <code>@include nhsuk-responsive-margin(6, "bottom");</code> for 40px margin-bottom on large screens and 32px on small screens</p></li>
-    <li><p class="rich-text">use <code>@include nhsuk-responsive-padding(6);</code> for 40px padding on all sides on large screens and 32px on small screens</p></li>
-  </ul>
-
-  <h2 id="spacing-override-classes">Spacing override classes</h2>
-  <p>Occasionally, you might need to make minor adjustments like adding spacing or removing it from elements of your design. You can use the responsive spacing override classes for this.</p>
-
-  <h3 id="responsive-spacing-override-classes">Responsive spacing override classes</h3>
-  <p class="rich-text">The responsive spacing override classes start with: <code>nhsuk-u-</code>, followed by either <code>margin-</code> or <code>padding-</code>, and then a spacing unit number.</p>
-  <p class="rich-text">To apply spacing in a single direction, include <code>left-</code>, <code>right-</code>, <code>top-</code>, or <code>bottom-</code> just before the spacing unit.</p>
-
-  <p>For example, use:</p>
-
-  <ul>
-    <li><p class="rich-text"><code>nhsuk-u-margin-9</code> to apply a 56px margin to all sides of the element on small screens, increasing to 64px on large screens</p></li>
-    <li><p class="rich-text"><code>nhsuk-u-padding-right-5</code> to apply 24px of padding to the right side of the element on small screens, increasing to 32px on large screens</p></li>
-    <li><p class="rich-text"><code>nhsuk-u-margin-0</code> to remove all margins at all screen sizes</p></li>
-  </ul>
-
-  <h3 id="static-spacing-override-classes">Static spacing override classes</h3>
   <p class="rich-text">The static spacing override classes start with <code>nhsuk-u-static</code>. Use them the same way as the responsive spacing override classes.</p>
 
   <p>For example, use:</p>
@@ -353,21 +361,11 @@
     <li><p class="rich-text"><code>nhsuk-u-static-margin-0</code> to remove all margins at all screen sizes, same as <code>nhsuk-u-margin-0</code></p></li>
   </ul>
 
-  <h3 id="spacing-examples" class="nhsuk-u-padding-top-3">Examples</h3>
+  <h3 id="static-spacing-override-classes">How to use static spacing in your own components</h3>
 
-  {{ designExample({
-    group: "styles",
-    item: "spacing",
-    type: "default",
-    htmlOnly: true
-  }) }}
+  <p>If you're building your own components and want to reference the spacing scale directly in your SCSS file, you can use the spacing scale through a function like this:</p>
+  <p class="rich-text"><code>padding-top: nhsuk-spacing(6)</code></p>
 
-  {{ designExample({
-    group: "styles",
-    item: "spacing",
-    type: "text",
-    htmlOnly: true
-  }) }}
 
   <h2 id="width-override-classes">Width override classes</h2>
   <p>If you need to constrain the width of an element independently of the <a href="/design-system/styles/layout#grid">grid system</a>, you can use width override classes.</p>
