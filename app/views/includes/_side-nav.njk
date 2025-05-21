@@ -16,6 +16,17 @@
   { title: "Requirements", url: "/standards-and-technology/architecture/requirements" }
 ] %}
 
+{% set dsSAFRequirements = [
+  { title: "Strategic Alignment, Vision and Roadmap", url: "#S" },
+  { title: "Decision Making &amp; Governance", url: "#DM" },
+  { title: "Solution Design &amp; Methods", url: "#SD" },
+  { title: "Technology Choices", url: "#T" },
+  { title: "Non-Functional Profile", url: "#NF" },
+  { title: "Reuse Principles and Development of Shared Services", url: "#RU" },
+  { title: "Documentation", url: "#D" }
+] %}
+
+
 {% set dsPrinciples = [
   { title: "Design principles", url: "/design-system/design-principles" }
 ] %}
@@ -173,7 +184,7 @@
 
 <nav class="app-side-nav">
 
-  {%- if pageSection == "Standards and technology" %}
+  {%- if pageSection == "Standards and technology" and subSection != "Architecture"%}
     <h2 class="app-side-nav__heading">NHS service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in serviceStandard %}
@@ -194,6 +205,23 @@
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+
+  {% endif %}
+
+  {%- if pageSection == "Standards and technology" and subSection == "Architecture" %}
+    <h2 class="app-side-nav__heading">Architecture</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsArchitecture %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+    {%- if pageTitle == "Requirements" and item.title == "Requirements"%}
+    {% for SAFitem in dsSAFRequirements %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+       </li> </ul>
+    {% endfor %}
+  </ul>
 
   {% endif %}
 
