@@ -1,0 +1,40 @@
+{% set pageTitle = "Development CCC" %}
+{% set pageDescription = "They are concerned with the high-level design of the solution, sharing past learnings and experience and enabling you to create a robust and easily maintainable solution." %}
+{% set pageSection = "TRG" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "trg/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+
+     <p>It is advisable to contact the Development CCC as early as possible in the process of starting your submission to the TRG. They take an over-arching view of all submissions, some of which may not be relevant to every other CCC, which means they can use their learning from other projects to help you develop a robust solution.</p>
+        <p>This CCC seeks to promote development / engineering best practice. Rather than listing a set of considerations here, the CCC recommends the principles set out in the <a href="https://github.com/NHSDigital/software-engineering-quality-framework/blob/master/principles.md"/>Software Engineering Quality Framework</a>. Please note, this is intended as helpful guidance, not as a set of requirements for TRG submitters to explicitly address.</p>
+        <p>This CCC will also share any relevant past learning, e.g. where tools that you may be considering have been used in the past and with what degree of success, or if any other area of the business has tried to achieve something similar and what approach they found worked.</p>
+        <p>Their higher-level view of design, and domain knowledge, means they are ideally placed to spot areas of overlap and provide an informed view and feedback that could save you time as you develop your submission. Their role is to help you create a robust solution that will be easier to maintain in the long-term.</p>
+        <h3>What evidence will they be looking for in your submission?</h3>
+       <ul>
+          <li>They would like to see a general overview of your proposed design, approach and technology.</li>
+       </ul>
+
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-full nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:chris.walters@nhs.net">Who can I contact about Engineering</a></h2>
+              <p class="nhsuk-card__description">Chris Walters<br>chris.walters@nhs.net</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+        </section>
+{% endblock %}

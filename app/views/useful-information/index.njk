@@ -1,0 +1,55 @@
+{% set pageTitle = "Information" %}
+{% set pageDescription = "Don’t waste time searching high and low for content or creating material from scratch which may already exist." %}
+{% set pageSection = "Information" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "useful-information/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+
+              <p>Simply select the technology area you are interested in below and we will
+        guide you to all relevant related information including guiding principles,
+        strategies, policies, standards, patterns, applications, CCCs and approved
+        technology stacks. And if you still can’t find what you need, we will show you
+        who you need to talk to.</p>
+          <h3>Principle</h3>
+          <p>A principle is a rarely changing rule or guideline. Our principles define how the NHS needs to operate in the future and are designed to empower you to act without constant monitoring, evaluating, correcting and controlling. They must be adopted when applying governance to all systems, services and applications.</p>
+          <h3>Strategy</h3>
+          <p>A strategy is a plan of action designed to achieve a long term or overall aim. They outline our specific visions and identify the direction of travel. Our strategies are underpinned and informed typically by a set of principles and will go on to guide specific policies attached to this strategic vision.</p>
+          <h3>Policy</h3>
+          <p>A policy is specific rule which must be adhered to. A policy is ‘black and white’ and testable, and a solution will either comply or not.</p>
+          <h3>Standard</h3>
+          <p>A standard is something which has been approved internally for adoption across the business to ensure consistency and often, cost effectiveness. We break standards down into three areas; security standards, technology standards and interoperability standards.</p>
+          <h3>Pattern</h3>
+          <p>A proven, reusable solution to a common business or IT problem.</p>
+
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:trg.mailbox@nhs.net">Who can I contact about TRG</a></h2>
+              <p class="nhsuk-card__description">Chair: Greg Fletcher<br>Secrtariat: Laura Fenton</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/trg/contacts">I want to find out who the CCC Leads are</a></h2>
+              <p class="nhsuk-card__description">Who are the CCC Leads?</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+        </section>
+{% endblock %}

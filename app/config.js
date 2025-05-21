@@ -5,7 +5,7 @@ module.exports = {
     || '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
 
   // Base URL
-  baseURL: process.env.BASE_URL || 'https://service-manual.nhs.uk',
+  baseURL: process.env.BASE_URL || 'https://architecture.digital.nhs.uk',
 
   // Environment
   env: process.env.NODE_ENV || 'production',

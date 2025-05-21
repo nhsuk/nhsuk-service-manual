@@ -3,9 +3,9 @@
 {%- if disableSearch %}
   {{ header({
     homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
+    ariaLabel: "NHS Architecture homepage",
     service: {
-      name: "Digital service manual",
+      name: "NHS Architecture manual",
       longName: "true"
     },
     classes: "app-header__container",
@@ -15,24 +15,16 @@
     searchInputName: "search-field",
     primaryLinks: [
       {
-        url  : "/service-standard",
-        label : "NHS service standard"
+        url  : "/trg",
+        label : "Technical Review Group"
       },
       {
-        url : '/design-system',
-        label : 'Design system'
+        url : '/solution-architecture-framework',
+        label : 'Solution Architecture Framework'
       },
       {
-        url  : '/content',
-        label : 'Content guide'
-      },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
+        url  : '/Useful-Information',
+        label : 'Useful Information'
       }
     ]
     })
@@ -40,36 +32,28 @@
 {% else %}
   {{ header({
     homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
+    ariaLabel: "NHS Architecture manual homepage",
     service: {
-      name: "Digital service manual",
+      name: "NHS Architecture manual",
       longName: "true"
     },
     classes: "app-header__container",
     showNav: "true",
-    showSearch: "true",
+    showSearch: "false",
     searchAction: "/search/",
     searchInputName: "search-field",
     primaryLinks: [
       {
-        url  : "/service-standard",
-        label : "NHS service standard"
+        url  : "/trg",
+        label : "Technical Review Group"
       },
       {
-        url : '/design-system',
-        label : 'Design system'
+        url : '/solution-architecture-framework',
+        label : 'Solution Architecture Framework'
       },
       {
-        url  : '/content',
-        label : 'Content guide'
-      },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
+        url  : '/Useful-Information',
+        label : 'Useful Information'
       }
     ]
     })

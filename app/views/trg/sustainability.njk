@@ -1,0 +1,46 @@
+{% set pageTitle = "Sustainability CCC" %}
+{% set pageDescription = "Concerned with ensuring submissions have duly considered the climate and organisational impact of the proposed change." %}
+{% set pageSection = "TRG" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "trg/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+<p>The Sustainability CCC is concerned with ensuring submissions have duly considered the climate and organisational impact of the proposed change.</p>
+        <p>This would include ensuring that services are:</p>
+        <ul>
+        <li>Right-sized for their utilisation, for instance by using serverless cloud compute.</li>
+        <li>Adopting higher-tier services where possible, indicating a preference for SaaS, PaaS over IaaS.</li>
+         <li>Considering and documenting the CO2 impact of service design choices.</li>
+        </ul>
+        <p>It is recommended to engage with the Sustainability CCC as early as possible in the process of drafting your TRG submission.</p>
+        <h3>What evidence will they be looking for in your submission?</h3>
+          <ul>
+            <li>How have you designed the service to ensure optimal resource utilisation?</li>
+            <li>If you are using IaaS tier services, have you articulated why SaaS or PaaS options are not available?</li>
+            <li>If you are using NHS-managed infrastructure, have you documented the CO2 impact of doing so?</li>
+        </ul>
+
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-full nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:andy.bray1@nhs.net">Who can I contact about Enterprise Architecture</a></h2>
+              <p class="nhsuk-card__description">Andy Bray<br>andy.bray1@nhs.net</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+        </section>
+{% endblock %}

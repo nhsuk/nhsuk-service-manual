@@ -1,0 +1,51 @@
+{% set pageTitle = "Cloud" %}
+{% set pageDescription = "Developing services within the public cloud does not come without risk." %}
+{% set pageSection = "Information" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "useful-information/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+     <p>Designed to align with and comply with existing national best practice (National Cyber Security Centre Cloud Security Principles), the <a href="https://digital.nhs.uk/services/cloud-centre-of-excellence/infrastructure-operations-and-support">Public
+        Cloud and Co-Location Infrastructure Platforms Policy</a> will help you understand the risks and the relevant controls to mitigate these.</p>
+          <h3>Does this apply to me?</h3>
+          <p>This policy applies to anyone involved in the
+        governance, commissioning, design, development
+        or delivery of NHS Digital services</p>
+          <h3>What is it?</h3>
+          <ul>
+            <li>It provides guidance and clarification on the controls that must be implemented to
+        provide a secure approach to providing access and transfer capabilities between the
+        NHS private network environment and public cloud platforms.</li>
+            <li>It defines our risk appetite (in line with the Data Risk Assessment guidance) and
+        the constraints that you should apply when using public cloud for hosting services
+        and applications. It will help you understand the necessary constraints and the
+        expectations programmes and functions will have to provide for cloud services
+        once their data classification is identified.</li>
+          </ul>
+          <h3>What does the Public Cloud and Co-location Infrastructure Platforms Policy cover?</h3>
+          <ol>
+            <li>Regulatory requirements</li>
+            <li>Data Risk Assessment classifications</li>
+            <li>Minimum documentation standards and principles</li>
+            <li>Approval flow for cloud services</li>
+            <li>Governance</li>
+            <li>Selecting and working with the appropriate cloud</li>
+            <ol>
+              <li>Guidance on migrating existing/legacy services to Public Cloud</li>
+              <li>Guidance on developing NEW services in Public Cloud</li>
+            </ol>
+        </ol>
+        <h3>Is it known by another name</h3>
+        <p>Yes. You may also have heard this policy called the Public Cloud First Policy,
+        the Cloud Hosting Policy or Public Cloud Access from NHS Private Network.
+        They are all the same thing.</p>
+
+
+{% endblock %}

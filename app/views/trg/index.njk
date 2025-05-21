@@ -1,0 +1,109 @@
+{% set pageTitle = "The role of TRG" %}
+{% set pageDescription = "TRG is responsible for the technical review and governance of all NHS Digital projects throughout the delivery lifecycle." %}
+{% set pageSection = "TRG" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "trg/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+
+
+        <p>TRG is the Technical Review and Governance group and is made up of technical experts from across our organisation. It meets every first and third Wednesday each month.</p>
+        <p>TRG provides technical governance by ensuring that all developments and activities align to published policies, principles, patterns and standards.</p>
+
+        <p>The Live Services Board looks to TRG. If programmes have not been to TRG they will not be supported in going live. As a technical and/or project professional working on a new programme or project, it therefore makes sense to engage with TRG at an early stage.</p>
+
+        <h2>Taking something through the TRG</h2>
+        <p>We are required, by the Government, to provide fully audited and traceable governance of all the services we at NHS Digital deliver. TRG is how we do this for technology. The role of the TRG is to provide technical reviews and governance across the delivery lifecycle of all NHS Digital projects. We ensure that the right criteria are being met (principles, strategies, policies, standards and guidance) at every step of the way from Discovery stage to Go Live.</p>
+        <ul>
+          <li>The TRG are not there to increase workload or complexity – rather the opposite. We ensure scalability and flexibility but with the necessary controls.</li>
+          <li>This process helps make sure the right decisions are being made at the right time. Protecting public spending and providing a level of confidence in the programmes being launched to reduce risk of failure.</li>
+        </ul>
+
+        <h2>What do I need to take to TRG?</h2>
+        <p>All works (programmes, projects or other initiatives) which lead to a change to the systems and services impacting technology need to have TRG consideration. Identifying where there is a need for TRG involvement and ensuring that the right information is provided early on avoids any potential for delays or misunderstandings later. It also ensures that each of the CCCs have the information they need at the right time.</p>
+
+
+        <p>TRG submissions are made up of two main artefacts, the Solution Design Overview (SDO) and Key Architecture Decision (KAD). Additionally, if you require a new cloud hosting account/subscription a Cloud Hosting Request (CHR) should be completed, if you are proposing the use of a commercial off the shelf product or service you should complete a Commercial Off-The-Shelf product request (COTS). Both KADs, CHRs and COTS are attached to specific SDOs so an SDO will need to be completed first, before moving on to the other forms.</p>
+          <figure class="nhsuk-image">
+            <img class="nhsuk-image__img" src="/assets/images/SDO-KAD-CHR-COTs.jpg" alt="Diagram of the relationship between SDOs, KADs, CHRs and COTS.">
+            <figcaption class="nhsuk-image__caption">
+             The relationship between SDOs, KADs, CHRs and COTS.
+            </figcaption>
+          </figure>
+
+        <h2>Solution Design Overview</h2>
+        <p>The Solution Design Overview (SDO) captures overarching information about the solution or service which is being developed.  Within the SDO you can attach supporting solution design and programme documents.
+        Within the SDO you will also need to complete a risk assessment which is made up of two components.<p>
+          <ol>
+            <li>The Data Classification Risk Assessment – This is the existing assessment from the NHS Cloud Guidance.  We have converted the spreadsheet to a form should you wish to use it – or you can just enter the classification.</li>
+            <li>The Architecture Risk Assessment – This takes you through some basic questions to gauge the complexity of your service or change and we use it to establish the appropriate governance route – simple changes with a low risk can be fast tracked, higher risk change is fully assessed.</li>
+        </ol>
+        <h2>Key Architecture Decision (KAD)</h2>
+        <p>A KAD documents the fundamental technology choices you make as you develop your service covering elements such as hosting, authentication, technology or product choices, API design etc.</p>
+        <p>The KAD form is very simple but you will be expected to provide additional information, normally in the form of a slide deck which outlines how you reached your decision, options considered and a clear rationale for the final choice made.</p>
+        <h2>Cloud Hosting Request (CHR)</h2>
+        <p>As part of the NHS Digital's Platform Strategy, the organisation has identified a position of “Cloud First” for all future services. To request a new account/subscription for AWS, Azure or Texas you should complete the CHR form detailing the intended platform and anticipated costs.</p>
+        <h2>Commercial Off-The-Shelf request (COTS)</h2>
+        <p>The COTS submission is used by a programme to outline to TRG the proposed procurement or use of a Commercial Off-The-Shelf product or service. TRG would be interested in the technical fit for its intended purpose, how that was determined, and any close alternatives may have been considered.</p>
+        <p>All forms and further information can be found here <a href="https://nhs.sharepoint.com/sites/X26_TRG%20Submission/SitePages/TRG-Home.aspx">TRG Homepage</a></p>
+        <h2>TRG Top Tips</h2>
+        <ol>
+          <li>Engage with TRG as you make decisions (at whatever life cycle stage). Do not come to TRG a week before your go live!</li>
+          <li>Be really clear what you want from TRG in your submissions & presentations e.g. “We want TRG to approve these KADs….”</li>
+          <li>Ensure the Lead Technical Architect supports the decisions you are making, it will help your position and provides a simple escalation route if there are issues.</li>
+          <li>Ensure you have good rationale for the decisions you make and options you discount.</li>
+          <li>If in doubt, ask us!! <a href="mailto:trg.mailbox@nhs.net">trg.mailbox@nhs.net</a></li>
+        </ol>
+        <h2>Aalto</h2>
+        <p>You will be expected as part of developing your solution to create or update the information held in the Enterprise Architecture tool, Aalto. As a minimum this includes Archimate layer model and technology and interface changes.  TRG will ask that you have done this.</p>
+        <p>If you need help with this please contact the EA team directly via their email <a href="mailto:aalto.architecture@nhs.net">aalto.architecture@nhs.net</a></p>
+        <h2>Examples of work that would require TRG engagement</h2>
+        <p>New solution designs (from concept to physical design process), cloud infrastructure requests and code-in-the-open submissions. TRG is also there to review current long-term, large scale programmes against PPPS (Principles, Policies, Patterns and Standards). These are frequently updated as part of our continual improvement process, so please always look at the latest version which are held in <a href="https://aalto.digital.nhs.uk/#/dashboard?library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">Aalto</a></p>
+
+        <h2>What DON’T I need to take to TRG?</h2>
+        <p> However, there are many things (applications, standards, tech stacks) which will have already been approved and published as “Preferred” or “Strategic”. In these cases, you won’t need to present them for review, you just have to simply ensure Aalto is up to date with this information. You can access a list of everything TRG has approved in <a href="https://aalto.digital.nhs.uk/#/dashboard?library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">Aalto</a></p>
+        <h2>TRG meeting attendance</h2>
+        <p>We would like to see people attend the formal TRG meetings by exception only. We will use the risk assessments to ensure only more complex changes require board attendance. Following review, if attendance is required then you will be contacted by the secretariat.</p>
+        <h2>What is my responsibility with CCCs?</h2>
+        <p>All submissions will be made via the TRG Forms (SDO, KAD, CHR & COTS) which can be found here <a href="https://nhs.sharepoint.com/sites/X26_TRG%20Submission/SitePages/TRG-Home.aspx">TRG Homepage</a> and these will be visible to those responsible for each of the cross-cutting concerns (CCCs).</p>
+        <h2>There are ten CCCs</h2>
+
+        <p>Data, Development, Enterprise Architecture, Infrastructure, Interoperability, Service Management, Security, Solution Assurance, Sustainability and Usability and Accessibility.</p>
+
+        <p>We would recommend that you engage each CCC that is relevant to your project as early as possible in the process of writing your submission.  Engagement with the CCC leads does not replace any programme level engagement you would normally do, for example security or IG SMES.</p>
+        <p> With the benefit of their experience, they may be able to save both time and investment as they have visibility of all projects going through the TRG. They can identify duplication in current submissions that may provide learning for your own project and will know if a similar solution has already been designed to meet the same objective(s).</p>
+        <p>For a list of who the CCCs are and more information – please see the link below:</p>
+
+        <p><a href="/trg/tccce">Find out more about the role of the CCCs.</a></p>
+
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:trg.mailbox@nhs.net">Who can I contact about TRG</a></h2>
+              <p class="nhsuk-card__description">Chair: Greg Fletcher<br>Secrtariat: Laura Fenton</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/trg/contacts">I want to find out who the CCC Leads are</a></h2>
+              <p class="nhsuk-card__description">Who are the CCC Leads?</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+        </section>
+{% endblock %}

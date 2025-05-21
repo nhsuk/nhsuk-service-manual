@@ -1,0 +1,38 @@
+{% set pageTitle = "Interoperability" %}
+{% set pageDescription = "Interoperability is the ability to safely share and make use of shared information and services, regardless of the systems in use, and who supplied them." %}
+{% set pageSection = "Information" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "useful-information/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+ <p>The strategy covers delivery of national systems and services and supports/assists the delivery of local interoperable solutions. It does NOT cover standardising care pathways/clinical processes, development and maintenance of standards, cross-border interoperability</p>
+        <h2>Does this apply to me?</h2>
+        <p>The Interoperability Strategy applies to all architects within NHS England and within software supplier organisations.</p>
+        <h2>What is it?</h2>
+        <p>The strategy outlines a vision for delivering an
+        integrated set of patient records and services,
+        within a mixed landscape of locally held and
+        controlled services delivered by a broad
+        range of organisations at varying levels
+        of maturity, supported by national
+        services in some areas.</p>
+        <h2>What does the Interoperability Strategy cover?</h2>
+        <ol>
+          <li>Interoperability vision</li>
+          <li>Presentation interoperability</li>
+          <li>Information interoperability</li>
+          <li>Application interoperability</li>
+          <li>Technical interoperability</li>
+          <li>Outstanding challenges</li>
+        </ol>
+
+
+{% endblock %}

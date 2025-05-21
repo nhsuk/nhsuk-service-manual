@@ -1,0 +1,59 @@
+{% set pageTitle = "Data" %}
+{% set pageDescription = "The Data Principles exist to communicate the rules and guidelines around the use of data, focused on all aspects of how data is managed and exchanged with, and beyond, your solution." %}
+{% set pageSection = "Information" %}
+{% set landingPage = true %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "May 2025" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "useful-information/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>It is really important that you familiarise yourself with the <a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/codes-of-practice-for-handling-information-in-health-and-care/code-of-practice-on-confidential-information"> NHS code of practice </a>in order to remain compliant and keep you in line with the guidance on confidential information.</p>
+        <p>The principles apply to anyone developing anything that involves the collection, use, sharing and storage of information and data.</p>
+        <p>If you are working on anything related to data, you will also need to complete a Data Processing Impact Assessment (DPIA) and, if you are hosting in the Cloud, a Cloud Risk score.</p>
+
+        <h2>TRG Applications - pre-requisite for data</h2>
+        <p>NHS England's Register of Data Processing (Unified Register) and Information Asset Records.</p>
+        <p>The Data Protection Act 2018 (GDPR Article 30) requires Controller organisations to demonstrate accountability. This includes maintaining a register of the processing
+        of personal data and stipulates the contents of the register e.g. purpose of the processing, categories of data subjects etc.</p>
+
+        <p>For other (non-personal) data there are also valid business reasons for a complete and comprehensive record of all processing that supports key business functions.
+        GDPR does not require the business function to be registered but in order to have a logical structure useful to NHS Digital, data processing should be grouped under distinct business functions e.g. HR.</p>
+
+        <p>To meet the legal obligation, NHS England has developed the Unified Register (UR). The UR is also the repository for supporting documentation
+        (also required by GDPR) such as Data Protection Impact Assessments (DPIA), System Level Security
+        Policies (SLSP) and other documents. Existing and new information assets which include processing
+        of personal data (or sensitive personal data) must be entered on the UR.</p>
+
+        <p>A clear statement must be included on documentation submitted to TRG that the status of the UR entry and associated documentation has been completed (or reasons why not, e.g. already registered and no change to existing documentation). This will avoid delay in approval.</p>
+
+
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:officeofthesiro@nhs.net">I want to find more information</a></h2>
+              <p class="nhsuk-card__description">Contact office of the SIRO</p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://hscic365.sharepoint.com/Pages/Getting-PRepared-for-new-data-protection-law.aspx">I want more guidance</a></h2>
+              <p class="nhsuk-card__description">The steps are set out in “Information Assets &amp; GDPR: A Step by Step Guide</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+        </section>
+{% endblock %}

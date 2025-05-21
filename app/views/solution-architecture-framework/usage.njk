@@ -1,0 +1,124 @@
+{% set pageTitle = "Usage" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework" %}
+{% set pageDescription = "How will the NHS England SAF be used?" %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "21 May 2025 (SAF Version 1.0)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2>Day to Day Usage</h2>
+<p>As part of the BAU activities of Solution Architects working within delivery teams we will expect them to use the SAF to help structure their activities, their approach to solutions design, documentation and decision making. The SAF will act as an &quot;aide memoir&quot; for Solution Architects to drive a consistent approach, regardless of whether they are permanent, contract or supplier colleague.</p>
+
+<p>The SAF isn't a set of hard and fast rules but is intended to guide architects and product teams make the right decisions, drive up quality and to be able to provide rationale for the trade offs we ultimately have to make.</p>
+
+<p>Further information and guidance will be developed on the specifics of the framework e.g. best practice document templates, non-functional requirement sets, good practice governance. We will expect and positively encourage Solution Architects to actively contribute back into the framework and wider community of practice by developing supporting collateral.</p>
+
+<h2>Architecture Fitness Assessment</h2>
+<p>Alongside day to day use we will require architects to perform periodic reviews of existing products plus those in development</p>
+<ol class="nhsuk-list nhsuk-list--number">
+<li>Solution Architects will be required to undertake a review of maturity/compliance against the requirements for each of the <strong>key</strong> products within their portfolios.</li>
+<li>Any review should not be done in isolation and should be done with the product owner and wider product team.</li>
+<li>The review must be positioned as a helpful tool to highlight risks, issues and areas for improvement.</li>
+<li>The outcome of the assessments will be an architecture remediation plan. Depending on the risks, the remediation plan may be managed by the product team themselves as part of BAU or, for high-risk assessments, will be tracked by the appropriate governance group. This needs to be agreed collectively by the product team.</li>
+<li>Architecture assessment should be presented alongside wider dimensions including the <a href="https://github.com/NHSDigital/software-engineering-quality-framework">software quality framework</a> and the <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/Red-lines.aspx">engineering redlines (SharePoint)</a>.</li>
+<li>We should not rank or compare products based on their SAF assessment i.e. a 55 in one product for a SAF dimension does not translate to higher quality, less risk etc than a product which scores 61. Judgement should be applied based on the product and the associated risk (and lifecycle stage).</li>
+</ol>
+
+<h2>Overall Guidance</h2>
+<p>The assessment mechanism described below is intended to be risk based and several factors should be considered whilst undertaking a review:</p>
+<ol class="nhsuk-list nhsuk-list--number">
+<li>Consider the service level and business criticality. i.e. Simple noncritical applications which may be poorly designed or have poor architecture processes may present a low impact of failure to users and therefore remediation actions should be considered appropriately.</li>
+<li>Measuring adherence to the requirement is not binary and will have an unavoidable level of subjectivity. A product may achieve one requirement well in some places and not in others. Exercise cautious pragmatism and team judgement when undertaking a review.</li>
+<li>When doing reviews consider the solution, but also as a set of individual components. For example, the overall solution may be considered well architected however a single critical component maybe very weak and therefore present significant risk to the overall solution.</li>
+<li>Ensure the right people are involved in the review.</li>
+<li>Don't see the assessment as a one off exercise or a gate review &ndash; it should be a continuous process, particularly for new and emerging products.</li>
+<li>Use the continuous review process to inform product backlogs and team ways of working, building into standard ceremonies (e.g. sprint planning and retros).</li>
+</ol>
+<h2>Requirements &amp; Outcomes</h2>
+<p>For each requirement statement the architect needs to assess how well the architecture and supporting processes meet the objective of the requirement and the overall dimension of the SAF.</p>
+<p>There may be different ways a requirement can be met. We should focus on the outcome <strong>and</strong> satisfy ourselves that the evidence provided can meet it.</p>
+<p>The assessment can be made via interviews, document reviews, cloud provider Well Architected Framework reviews, delivery team meetings and ceremonies etc. It is not a &quot;one size fits all&quot; and will vary depending on the team make up etc. At all times we will be risk based.</p>
+<p>An <a href="https://nhs.sharepoint.com/:x:/r/sites/msteams_9e4bf8/Shared%20Documents/General/NHS%20England%20Solution%20Architecture%20Framework/NHS%20England%20SAF%20Assessment%20Template.xlsx?d=w0d207da6bf5e41c8a619b1c90d5e63fc&csf=1&web=1&e=C81FND">assessment spreadsheet</a> (NHSE SharePoint) has been created which allows for a score based on the criteria below. Each requirement is some form of weighting to ensure more significant or complex requirements are accounted for. (Note: The weighting will be subject to change and review.)</p>
+
+
+ <table class="nhsuk-table" aria-label="Dimensions">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Score
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Compliance Criteria
+      </th>
+    </tr>
+  </thead>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">0</td>
+    <td class="nhsuk-table__cell">No evidence that the requirement is supported and as such presents significant service risk.</td>
+  </tr>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">1</td>
+    <td class="nhsuk-table__cell">Limited evidence that the requirement is supported with high risks gaps.</td>
+  </tr>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">2</td>
+    <td class="nhsuk-table__cell">Some elements of the requirement are met with an acceptable level of evidence, but significant number of notable gaps.</td>
+  </tr>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">3</td>
+    <td class="nhsuk-table__cell">Much of the requirement is met with an acceptable level of evidence, but there are notable gaps which present risk which require mitigating action.</td>
+  </tr>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">4</td>
+    <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence, there are some gaps but are not thought to present significant risk.</td>
+  </tr>
+ <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">5</td>
+    <td class="nhsuk-table__cell">Comprehensive evidence that the requirements is met and exceeds expectations in several areas. We would consider this an exemplar.</td>
+  </tr>
+</tbody>
+</table>
+
+<p>This is not an exact science and in many cases it will be challenging to judge particularly where underpinning material such as strategies, principles, polices etc are not in place. Within the requirements spreadsheet there will be some guidance to help give a sense.<p>
+<p>For example:</p>
+<ul class="nhsuk-list nhsuk-list--bullet">
+<li>5 = A strategy paper has been produced, openly published, well socialised, approved at executive level and is widely accepted and baked into governance.</li>
+<li>3 = Some form of strategy has been written down and generally seems well accepted at a directorate level, but may not be openly published. Teams outside of a directorate might not consistently recognise it as a formal strategy.</li>
+<li>1 = Nothing recognisable as a strategy, written down or otherwise.</li>
+</ul>
+
+<p>Based on the assessment the architect and product team should agree a remediation plan for those areas considered more significant e.g. where one of the dimensions has an &quot;AMBER&quot; or &quot;RED&quot; score OR where there is one specific area the team are concerned about. Whilst the RAG rating is more important than the specific scores, care should be taken that significant issues and risks are not lost as scores get weighted and averaged out.</p>
+
+<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="/assets/solution-architecture-framework-scoring-example.png" alt="A screenshot of the SAF scoring summary, showing the dimensions, scores, and a red/amber/green compliance guide">
+  <figcaption class="nhsuk-image__caption">
+    Example summary scores for a SAF assessment
+  </figcaption>
+</figure>
+
+<p>Remediation planning should be tracked via an appropriate mechanism depending on the risks and issues identified. For instance live services which have significant amber and red ratings might be tracked at an executive level such as the Design Authority, less significant via TRG or within the delivery team as part of BAU processes.</p>
+
+<p>We need to be able to reflect the health of our solution architectures in a simple and digestible form. The example below demonstrates a simple dashboard view for each product. This view will be enhanced as we undertake the initial review exercises and gather stakeholder feedback.</p>
+<p>We will be making use of the EA tooling capability to capture this data and make available via automated dashboards etc.</p>
+
+<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="/assets/solution-architecture-framework-summary-example.png" alt="A screenshot of an example summary information sheets, showing high level product information, the SAF scoring summary, and a remediation plan">
+  <figcaption class="nhsuk-image__caption">
+    Example summary dashboard for a product including SAF assessment and remediation plan
+  </figcaption>
+</figure>
+
+
+  <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
+  <p><a href="mailto:england.service-manual@nhs.net">Email us</a> or get in touch on the <a href="/slack">service manual Slack channel</a>.</p>
+
+
+{% endblock %}
