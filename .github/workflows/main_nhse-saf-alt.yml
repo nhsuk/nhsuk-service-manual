@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - alternative
+      - TRG
   workflow_dispatch:
 
 jobs:
