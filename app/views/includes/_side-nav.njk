@@ -18,8 +18,8 @@
   { title: "Introduction", url: "/solution-architecture-framework/solution-architecture-framework" },
   { title: "Usage", url: "/solution-architecture-framework/usage" },
   { title: "Core Dimensions", url: "/solution-architecture-framework/core-dimensions" },
-  { title: "Requirements", url: "/solution-architecture-framework/requirements" }
-    { title: "Version History", url: "/solution-architecture-framework/architecture/saf-version-history" }
+  { title: "Requirements", url: "/solution-architecture-framework/requirements" },
+  { title: "Version History", url: "/solution-architecture-framework/saf-version-history" }
 ] %}
 
 {% set dsSAFRequirements = [
@@ -76,6 +76,7 @@
     </ul>
 
   {% endif %}
+    {% endif %}
 
   {%- if pageSection == "Standards and technology" and subSection == "Solution Architecture Framework" %}
     <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
@@ -91,7 +92,7 @@
   {% endif %}
 
 
-  {%- if subSection == "Architecture" %}
+  {%- if subSection == "Solution Architecture Framework" %}
     <h2 class="app-side-nav__heading">Architecture</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsArchitecture %}
