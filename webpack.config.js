@@ -56,7 +56,17 @@ module.exports = {
               ? 'stylesheets/[name].[contenthash:7].min.css'
               : 'stylesheets/[name].css',
         },
-        use: ['postcss-loader', 'sass-loader'],
+        use: [
+          'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                loadPaths: [join(__dirname, 'node_modules')],
+              },
+            },
+          },
+        ],
       },
     ],
   },
