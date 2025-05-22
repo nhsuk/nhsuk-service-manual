@@ -8,3 +8,14 @@ app/.DS_Store
 .idea
 .scannerwork
 coverage
+
+node_modules
+public
+.terraform
+.DStore
+.DS_Store
+app/.DS_Store
+.vscode
+.idea
+.scannerwork
+coverage
