@@ -6,8 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - nhse-saf
 on:
   push:
     branches:
-      - alternative
-      - TRG
+      - main
   workflow_dispatch:
 
 jobs:
