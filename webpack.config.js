@@ -1,21 +1,98 @@
-const path = require('path');
+const { join } = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
+const { NODE_ENV } = process.env;
+
+/**
+ * @type {Configuration}
+ */
 module.exports = {
+  context: join(__dirname, 'app'),
+  devtool: 'source-map',
   entry: {
-    cookies: './app/javascripts/cookie-consent.js',
-    main: './app/javascripts/main.js',
+    // Cookie banner
+    cookies: './javascripts/cookie-consent.js',
+
+    // Main application script and styles
+    main: [
+      './javascripts/main.js',
+      './stylesheets/main.scss',
+    ],
+
+    // Design example overrides
+    overrides: {
+      import: './stylesheets/design-example-overrides.scss',
+      filename: 'design-example-overrides',
+    },
   },
-  mode: 'production',
+
+  // Optimise for production
+  mode: NODE_ENV === 'production'
+    ? 'production'
+    : 'development',
+
   module: {
-    rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-      options: { rootMode: 'upward' },
-    }],
+    rules: [
+      {
+        test: /\.(js|mjs|scss)$/,
+        loader: 'source-map-loader',
+        enforce: 'pre',
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: { rootMode: 'upward' },
+      },
+      {
+        test: /\.scss$/,
+        type: 'asset/resource',
+        generator: {
+          binary: false,
+          publicPath: '/stylesheets',
+          filename: 'stylesheets/[name].css',
+        },
+        use: ['sass-loader'],
+      },
+    ],
   },
+
   output: {
-    filename: '[name].min.js',
-    path: path.resolve(__dirname, 'public/javascripts/'),
+    filename: 'javascripts/[name].js',
+    path: join(__dirname, 'public'),
+    publicPath: '/',
   },
+
+  // Only check JavaScript file size
+  performance: {
+    assetFilter(assetFilename) {
+      return assetFilename.endsWith('.js');
+    },
+  },
+
+  plugins: [
+    new WebpackManifestPlugin({
+      fileName: 'assets-manifest.json',
+    }),
+    new CopyPlugin({
+      patterns: [{
+        from: 'assets',
+        to: 'assets',
+      }],
+    }),
+  ],
+
+  stats: {
+    errorDetails: true,
+    loggingDebug: ['sass-loader'],
+    preset: 'minimal',
+  },
+
+  // Use Browserslist config
+  target: 'browserslist',
 };
+
+/**
+ * @import { Configuration } from 'webpack'
+ */
