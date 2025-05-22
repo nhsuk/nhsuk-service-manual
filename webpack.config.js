@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { dirname, join } = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
@@ -94,6 +94,10 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
+        {
+          from: join(dirname(require.resolve('nhsuk-frontend')), 'assets'),
+          to: 'assets',
+        },
         {
           from: 'assets',
           to: 'assets',

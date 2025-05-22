@@ -42,8 +42,6 @@ app.use(
 
 // Middleware to serve static assets
 app.use(express.static(config.publicPath));
-app.use('/nhsuk-frontend', express.static(join(config.modulePath, 'nhsuk-frontend/dist')));
-app.use('/nhsuk-frontend', express.static(join(config.modulePath, 'nhsuk-frontend/packages')));
 app.use('/iframe-resizer', express.static(join(config.modulePath, 'iframe-resizer')));
 
 // View engine (nunjucks)
