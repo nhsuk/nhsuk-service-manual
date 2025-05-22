@@ -11,9 +11,6 @@ module.exports = {
   context: join(__dirname, 'app'),
   devtool: 'source-map',
   entry: {
-    // Cookie banner
-    cookies: './javascripts/cookie-consent.js',
-
     // Main application script and styles
     main: [
       './javascripts/main.js',
@@ -96,10 +93,16 @@ module.exports = {
       fileName: 'assets-manifest.json',
     }),
     new CopyPlugin({
-      patterns: [{
-        from: 'assets',
-        to: 'assets',
-      }],
+      patterns: [
+        {
+          from: 'assets',
+          to: 'assets',
+        },
+        {
+          from: 'javascripts/vendor',
+          to: 'javascripts/vendor',
+        },
+      ],
     }),
   ],
 
