@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 7.11.0 - 22 May 2025
+## 7.11.0 - 23 May 2025
 
 :new: **New features**
 - Add guidance on new override classes to apply static spacing
