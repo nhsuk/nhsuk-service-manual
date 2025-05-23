@@ -4,13 +4,14 @@
 {% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "318" %}
 
-{% block extraMeta %}
-  <meta name="page-index" content="special">
-{% endblock %}
-
 {% extends "includes/app-layout.njk" %}
 
-{% block breadcrumb %}
+{% block head %}
+  <meta name="page-index" content="special">
+  {{ super() }}
+{% endblock %}
+
+{% block beforeContent %}
   {% include "content/_breadcrumb.njk" %}
 {% endblock %}
 
@@ -980,7 +981,7 @@
       <h3 id="seizure-or-fit">seizure or fit</h3>
       <p>We add the word "fit" after "seizure" ("seizure or fit") in content about epilepsy, brain cancer and brain tumours. We know that "seizure" is the word that people with epilepsy use, understand and generally prefer and that it's not the same as a "fit" (which is a kind of seizure that makes the body jerk and shake uncontrollably). But some of our users do not understand the word "seizure" and including the word "fit" when we first mention seizures helps them.</p>
       <p>In general content, for example, with medicines that might make people jerk and shake uncontrollably as a side effect, we use the term "seizure or fit" and explain that this is what we mean.</p>
-      <p>We only mention "convulsions" where there's good evidence that users are searching for the term.</p> 
+      <p>We only mention "convulsions" where there's good evidence that users are searching for the term.</p>
       <h3 id="service-user">service user</h3>
       <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" - or in social services "people who use services".</p>
       <h3 id="setting">setting</h3>

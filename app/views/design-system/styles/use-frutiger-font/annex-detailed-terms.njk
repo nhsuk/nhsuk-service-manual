@@ -1,9 +1,9 @@
 {% extends "template.njk" %}
 
 {% block head %}
+  <meta name="robots" content="noindex">
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
   <script src="{{ getAssetPath("main.js") }}" defer></script>
-  <meta name="robots" content="noindex" />
 {% endblock %}
 
 {% block pageTitle %}

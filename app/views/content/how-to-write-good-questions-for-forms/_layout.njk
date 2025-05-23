@@ -1,6 +1,6 @@
 {% extends "includes/layout.njk" %}
 
-{% block breadcrumb %}
+{% block beforeContent %}
   {{ breadcrumb({
     items: [
       {
@@ -17,7 +17,7 @@
   }) }}
 {% endblock %}
 
-{% block body %}
+{% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full app-component-reading-width">
