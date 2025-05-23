@@ -6,11 +6,11 @@
   {% set showCode = params.showCode !== false %}
 
   {% set html %}
-  {{- getHTMLCode(params.group, params.item, params.type) | highlight('html') | safe -}}
+  {{- getHTMLCode(params) | highlight('html') | safe -}}
   {% endset %}
 
   {% set nunjucks %}
-  {{- getNunjucksCode(params.group, params.item, params.type) | highlight('js') | safe -}}
+  {{- getNunjucksCode(params) | highlight('js') | safe -}}
   {% endset %}
 
   {#

@@ -77,7 +77,9 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   const { type } = req.params;
 
   // Get the given example as HTML.
-  const exampleHtml = fileHelper.getHTMLCode(group, item, type);
+  const exampleHtml = fileHelper.getHTMLCode({
+    group, item, type, env,
+  });
 
   // Wrap the example HTML in a basic html base template.
   let baseTemplate = 'layouts/design-example-wrapper.njk';
