@@ -3,7 +3,7 @@
 
 {% extends "includes/layout.njk" %}
 
-{% block body %}
+{% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
@@ -159,7 +159,7 @@
 </div>
 {% endblock %}
 
-{% block pageScripts %}
+{% block bodyEnd %}
 <script>
   // Check the checkboxes based on status of cookie preferences
   window.addEventListener("load", function checkCookie() {
