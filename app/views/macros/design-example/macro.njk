@@ -1,5 +1,5 @@
 {% macro designExample(params) %}
-  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type + "?fullpage=" + params.fullpage + "&blankpage=" + params.blankpage + "&background=" + params.background %}
+  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
