@@ -87,12 +87,12 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   const exampleHtml = fileHelper.getHTMLCode(group, item, type);
 
   // Wrap the example HTML in a basic html base template.
-  let baseTemplate = 'includes/design-example-wrapper.njk';
+  let baseTemplate = 'layouts/design-example-wrapper.njk';
   if (displayFullPage) {
-    baseTemplate = 'includes/design-example-wrapper-full.njk';
+    baseTemplate = 'layouts/design-example-wrapper-full.njk';
   }
   if (blankPage) {
-    baseTemplate = 'includes/design-example-wrapper-blank.njk';
+    baseTemplate = 'layouts/design-example-wrapper-blank.njk';
   }
 
   res.render(baseTemplate, {
@@ -117,7 +117,7 @@ app.get('/search', (req, res) => {
   const startingIndex = resultsPerPage * (currentPage - 1);
   const endingIndex = startingIndex + resultsPerPage;
 
-  res.render('includes/search.njk', {
+  res.render('layouts/search', {
     currentPage,
     maxPage,
     query,

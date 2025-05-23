@@ -59,7 +59,7 @@
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
       WCAG 2.2
     </strong>
-  
+
     <p>Do not make header elements, like the "More" dropdown menu, sticky to the top of the page by using <code>position: fixed</code> or any other method. In other words, avoid anything that makes the menu sit on top of page content.</p>
     <p>This is to make sure it does not hide or obscure any content which has a focus applied. This complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not Obscured (W3C)</a>.</p>
   </div>
@@ -69,16 +69,16 @@
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
      WCAG 2.2
     </strong>
-  
+
     <p>You can add a link to a "help" page in your service's header. If you do, the link must be positioned consistently in the header, and must always link to the same place.</p>
     <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
   </div>
 
   <h4 id="search">Search</h4>
   <p>The NHS header can include a search bar.</p>
-  <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality contract.</p> 
+  <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality contract.</p>
   <p>If your service is on the nhs.uk domain but not part of the NHS website or is on another domain, you will have to arrange your own search functionality, if you need it.</p>
-  
+
   <h4 id="NHS-default-header">NHS default header</h4>
   <p>The <a href="https://www.nhs.uk/">NHS website</a> has the default header with logo, navigation links and search.</p>
 
@@ -118,7 +118,7 @@
     <li>white background with blue nav</li>
     <li>white background with white nav</li>
   </ul>
-  
+
   <h3>Blue background organisational header</h3>
 
   {{ designExample({
@@ -144,12 +144,12 @@
   }) }}
 
   <p>You must have a Frutiger font licence to use an NHS organisational logo. Our guidance on <a href="/design-system/styles/typography">typography</a> explains how to get hold of the Frutiger webfont.</p>
-  
-  <h3>Organisational logos</h3>  
+
+  <h3>Organisational logos</h3>
   <p>Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos in the NHS England identity guidelines</a>.</p>
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>
- 
+
 
 <pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Anyplace Anytown Anywhere NHS Foundation Trust homepage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-org-logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/path-to-assets/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -157,5 +157,5 @@
 
 <h2 id="research">Research</h2>
 <p>The NHS header was updated in September 2023. It includes exposed navigation links and a drop down that says "More" instead of a menu button. The search box now fills the width of the screen on mobile.</p>
-<p>On the NHS website, we found that exposing main topics helps users navigate and find what they're looking for. The dynamic resizing and the "More" button help users on mobile navigate top tasks.</p> 
+<p>On the NHS website, we found that exposing main topics helps users navigate and find what they're looking for. The dynamic resizing and the "More" button help users on mobile navigate top tasks.</p>
 {% endblock %}
