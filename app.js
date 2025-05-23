@@ -89,9 +89,9 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   }
 
   res.render(baseTemplate, {
-    body: exampleHtml,
-    item,
     background,
+    exampleHtml,
+    item,
   });
 });
 
