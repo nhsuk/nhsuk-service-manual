@@ -81,6 +81,10 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
     group, item, type, env,
   });
 
+  const { data } = fileHelper.getFrontmatter({
+    group, item, type,
+  });
+
   // Wrap the example HTML in a basic html base template.
   let baseTemplate = 'layouts/design-example-wrapper.njk';
   if (displayFullPage) {
@@ -91,6 +95,7 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
   }
 
   res.render(baseTemplate, {
+    ...data,
     background,
     exampleHtml,
     item,
