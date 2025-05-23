@@ -1,11 +1,12 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 7.11.0 - 22 May 2025
 
 :new: **New features**
-- Move Nunjucks macro options to NHS.UK frontend
-- Update code examples to use system monospace font
-- Turn off HTML5 validation in examples
+- Add guidance on new override classes to apply static spacing
+
+:wrench: **Maintenance**
+- Move width override classes to Layout page
 
 ## 7.10.0 - 14 May 2025
 
