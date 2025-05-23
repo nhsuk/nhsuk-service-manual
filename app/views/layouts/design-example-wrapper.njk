@@ -1,4 +1,4 @@
-{% extends "includes/layout.njk" %}
+{% extends "layouts/layout.njk" %}
 
 {% set pageTitle = "Standalone example" %}
 {% set bodyClasses = "app-example-" ~ item ~ "-page" %}
@@ -18,7 +18,7 @@
 {% block beforeContent %}{% endblock %}
 
 {% block main %}
-  {{ body | safe }}
+  {{ exampleHtml | safe }}
 {% endblock %}
 
 {% block footer %}{% endblock %}

@@ -6,7 +6,7 @@
 {% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "7" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -48,8 +48,7 @@
   {{ designExample({
     group: "components",
     item: "buttons",
-    type: "reverse",
-    background: "blue"
+    type: "reverse"
   }) }}
 
   <h3>When to use a primary button</h3>
@@ -72,8 +71,7 @@
   {{ designExample({
     group: "components",
     item: "buttons",
-    type: "secondary-solid",
-    background: "grey-4"
+    type: "secondary-solid"
   }) }}
 
 

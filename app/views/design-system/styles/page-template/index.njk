@@ -5,7 +5,7 @@
 {% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "200" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -112,8 +112,7 @@
   {{ designExample({
     group: "styles",
     item: "page-template",
-    type: "default",
-    blankpage: true
+    type: "default"
   }) }}
 
   <h2 id="customised-page-template">Customised page template</h2>
@@ -127,8 +126,7 @@
   {{ designExample({
     group: "styles",
     item: "page-template",
-    type: "transactional",
-    blankpage: true
+    type: "transactional"
   }) }}
 
   <p>Vertical padding is reduced on transactional services using the <code>.nhsuk-main-wrapper--s</code> modifier class.
@@ -143,8 +141,7 @@
   {{ designExample({
     group: "styles",
     item: "page-template",
-    type: "content",
-    blankpage: true
+    type: "content"
   }) }}
 
   <h2 id="changing-template-content">Changing template content</h2>
@@ -388,7 +385,6 @@
     group: "styles",
     item: "page-template",
     type: "annotated",
-    blankpage: true,
     showCode: false
   }) }}
 

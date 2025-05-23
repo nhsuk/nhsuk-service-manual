@@ -5,7 +5,7 @@
 {% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "4" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -178,7 +178,7 @@
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
       WCAG 2.2
     </strong>
-  
+
     <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: an "X" icon to close, supported by a labelled "Close" button.</p>
     <p>This is to make sure users can easily interact with them. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
   </div>

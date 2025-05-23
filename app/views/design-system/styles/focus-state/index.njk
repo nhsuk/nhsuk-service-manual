@@ -5,7 +5,7 @@
 {% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "193" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -34,7 +34,7 @@
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
       WCAG 2.2
     </strong>
-  
+
     <p>Do not let user interface elements hide or obscure any content which has a focus applied, for example: sticky headers or overlaid cookie banners. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus Not Obscured (W3C)</a>.</p>
   </div>
 
@@ -52,7 +52,7 @@
   <img class="app-image--border app-example--image" src="/assets/focus-example-input.png" alt="A text input labelled &quot;What is your name?&quot;. The example shows the text input both unfocused and focused.">
   <p><a href="/design-system/components/radios">Radios</a> and <a href="/design-system/components/checkboxes">checkboxes</a> use the same style.</p>
   <img class="app-image--border app-example--image" src="/assets/focus-example-radios.png" alt="Yes and no radio options to answer the question &quot;Do you know your NHS number?&quot;. In this example, the &quot;No&quot; option is focused.">
-  
+
   <h2 id="making-focus-states-accessible-for-extended-and-modified-components">Making focus states accessible for extended and modified components</h2>
   <p>If you've extended or modified components in the NHS digital service manual, you can use service manual styles to make the focus states of these components accessible.</p>
   <p>How you make focus states accessible depends on whether the component is:</p>

@@ -47,14 +47,7 @@ app.use(express.static(config.publicPath));
 app.set('view engine', 'njk');
 
 // Nunjucks configuration
-const appViews = [
-  join(config.sourcePath, 'views'),
-  join(config.modulePath, 'nhsuk-frontend/packages/components'),
-  join(config.modulePath, 'nhsuk-frontend/packages/macros'),
-  join(config.modulePath, 'nhsuk-frontend/packages'),
-];
-
-const env = nunjucks.configure(appViews, {
+const env = nunjucks.configure(config.nunjucksPaths, {
   autoescape: true,
   express: app,
   noCache: true,
@@ -75,30 +68,24 @@ env.addFilter('markdown', filters.markdown);
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res) => {
-  const displayFullPage = req.query.fullpage === 'true';
-  const blankPage = req.query.blankpage === 'true';
-  const backgroundColours = ['blue', 'grey-4'];
-  const background = backgroundColours.includes(req.query.background) ? req.query.background : null;
-  const { group } = req.params;
-  const { item } = req.params;
-  const { type } = req.params;
+  const { group, item, type } = req.params;
 
   // Get the given example as HTML.
-  const exampleHtml = fileHelper.getHTMLCode(group, item, type);
+  const exampleHtml = fileHelper.getHTMLCode({
+    group, item, type, env,
+  });
+
+  const { data } = fileHelper.getFrontmatter({
+    group, item, type,
+  });
 
   // Wrap the example HTML in a basic html base template.
-  let baseTemplate = 'includes/design-example-wrapper.njk';
-  if (displayFullPage) {
-    baseTemplate = 'includes/design-example-wrapper-full.njk';
-  }
-  if (blankPage) {
-    baseTemplate = 'includes/design-example-wrapper-blank.njk';
-  }
+  const { previewLayout = 'design-example-wrapper' } = data;
 
-  res.render(baseTemplate, {
-    body: exampleHtml,
+  res.render(`layouts/${previewLayout}`, {
+    ...data,
+    exampleHtml,
     item,
-    background,
   });
 });
 
@@ -117,7 +104,7 @@ app.get('/search', (req, res) => {
   const startingIndex = resultsPerPage * (currentPage - 1);
   const endingIndex = startingIndex + resultsPerPage;
 
-  res.render('includes/search.njk', {
+  res.render('layouts/search', {
     currentPage,
     maxPage,
     query,

@@ -1,4 +1,4 @@
-{% extends "includes/layout.njk" %}
+{% extends "layouts/layout.njk" %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
@@ -8,7 +8,7 @@
 
         <div class="app-pane__side-bar">
           {% block sideNav %}
-            {% include "./_side-nav.njk" %}
+            {% include "includes/_side-nav.njk" %}
           {% endblock %}
         </div>
 
@@ -50,7 +50,7 @@
           {% block contactPanel %}
             {% if hideContact != "true" %}
               {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content guide" or pageSection === "Accessibility" or pageSection === "Standards and technology" or pageTitle === "Design principles" %}
-                {% include "./_contact-panel.njk" %}
+                {% include "includes/_contact-panel.njk" %}
               {% endif %}
               {% else %}
             {% endif %}

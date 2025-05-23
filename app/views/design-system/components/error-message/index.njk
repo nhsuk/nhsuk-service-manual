@@ -6,7 +6,7 @@
 {% set dateUpdated = "April 2024" %}
 {% set backlog_issue_id = "12" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -69,7 +69,7 @@
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
       WCAG 2.2
     </strong>
-  
+
     <p>Do not clear any form fields when adding error messages. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
   </div>
 
@@ -115,22 +115,19 @@
   {{ designExample({
     group: "components",
     item: "error-message",
-    type: "error-summary-placement",
-    fullpage: true
+    type: "error-summary-placement"
   }) }}
 
   {{ designExample({
     group: "components",
     item: "error-message",
-    type: "error-summary-placement-input",
-    fullpage: true
+    type: "error-summary-placement-input"
   }) }}
 
   {{ designExample({
     group: "components",
     item: "error-message",
-    type: "error-summary-placement-multiple",
-    fullpage: true
+    type: "error-summary-placement-multiple"
   }) }}
 
   <h3>How to write error messages</h3>

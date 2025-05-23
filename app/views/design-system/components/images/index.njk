@@ -6,7 +6,7 @@
 {% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "28" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -17,8 +17,7 @@
   {{ designExample({
     group: "components",
     item: "images",
-    type: "default",
-    fullpage: false
+    type: "default"
   }) }}
 
   <h2>When to use images</h2>

@@ -6,7 +6,7 @@
 {% set dateUpdated = "April 2021" %}
 {% set backlog_issue_id = "86" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -17,8 +17,7 @@
   {{ designExample({
     group: "patterns",
     item: "mini-hub",
-    type: "example",
-    fullpage: true
+    type: "example"
   }) }}
 
   <p>The mini-hub is made up of:</p>

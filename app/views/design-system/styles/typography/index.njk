@@ -5,7 +5,7 @@
 {% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "1" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -152,7 +152,7 @@
 
   <h3 id="bold-italics-and-underlining">Bold, italics and underlining</h3>
   <p>Do not use italics or underlining (except for <a href="#links">links</a>, which are underlined by default). Use bold sparingly.</p>
-  <p>Find out more about <a href="/content/formatting#bold-italics-and-underlining">bold, italics and underlining on the Formatting page in the content guide</a>.</p> 
+  <p>Find out more about <a href="/content/formatting#bold-italics-and-underlining">bold, italics and underlining on the Formatting page in the content guide</a>.</p>
 
   <h2 id="font-override-classes">Font override classes</h2>
   <p>You might need to set the font size or font weight of an element outside of the predefined heading and paragraph classes. For this you can use the font override classes in your HTML or reference the typography mixins in your own components.</p>
@@ -232,7 +232,6 @@
     group: "styles",
     item: "typography",
     type: "links-reverse",
-    background: "blue",
     htmlOnly: true
   }) }}
 

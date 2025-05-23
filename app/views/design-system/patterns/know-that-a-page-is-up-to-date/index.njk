@@ -6,7 +6,7 @@
 {% set dateUpdated = "July 2022" %}
 {% set backlog_issue_id = "31" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -39,8 +39,7 @@
   {{ designExample({
     group: "patterns",
     item: "know-that-a-page-is-up-to-date",
-    type: "page",
-    blankpage: true
+    type: "page"
   }) }}
 
   <h3>Embedded content, such as videos</h3>

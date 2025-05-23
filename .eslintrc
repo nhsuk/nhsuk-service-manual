@@ -10,6 +10,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       { "devDependencies": ["**/*.config.*", "**/*.test.*"] }
-    ]
+    ],
+    "no-use-before-define": ["error", "nofunc"]
   }
 }

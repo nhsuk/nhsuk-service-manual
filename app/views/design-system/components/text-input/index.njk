@@ -6,7 +6,7 @@
 {% set dateUpdated = "October 2023" %}
 {% set backlog_issue_id = "21" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -92,7 +92,7 @@
   {{ designExample({
     group: "components",
     item: "text-input",
-    type: "prefix-and-suffix" 
+    type: "prefix-and-suffix"
   }) }}
 
   <p>Prefixes and suffixes are useful when there's a commonly understood symbol or abbreviation for the type of information you're asking for. Do not rely on prefixes or suffixes alone, because screen readers will not read them out.</p>
@@ -105,7 +105,7 @@
   {{ designExample({
     group: "components",
     item: "text-input",
-    type: "prefix" 
+    type: "prefix"
   }) }}
 
   <h4 id="text-inputs-with-a-suffix">Text inputs with a suffix</h4>
@@ -113,7 +113,7 @@
   {{ designExample({
     group: "components",
     item: "text-input",
-    type: "suffix" 
+    type: "suffix"
   }) }}
 
   <h3 id="error-messages">Error messages</h3>
@@ -130,7 +130,7 @@
   {{ designExample({
     group: "components",
     item: "text-input",
-    type: "error-and-prefix-and-suffix" 
+    type: "error-and-prefix-and-suffix"
   }) }}
 
   <p>Follow:</p>
@@ -146,4 +146,3 @@
   <p>If you've used text input, please share your user research findings.</p>
 
 {% endblock %}
-
