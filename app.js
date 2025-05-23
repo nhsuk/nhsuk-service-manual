@@ -47,14 +47,7 @@ app.use(express.static(config.publicPath));
 app.set('view engine', 'njk');
 
 // Nunjucks configuration
-const appViews = [
-  join(config.sourcePath, 'views'),
-  join(config.modulePath, 'nhsuk-frontend/packages/components'),
-  join(config.modulePath, 'nhsuk-frontend/packages/macros'),
-  join(config.modulePath, 'nhsuk-frontend/packages'),
-];
-
-const env = nunjucks.configure(appViews, {
+const env = nunjucks.configure(config.nunjucksPaths, {
   autoescape: true,
   express: app,
   noCache: true,

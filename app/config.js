@@ -8,17 +8,27 @@ const {
 } = process.env;
 
 const rootPath = resolve(__dirname, '..');
+const sourcePath = join(rootPath, 'app');
+const modulePath = join(rootPath, 'node_modules');
 
 module.exports = {
   // Adobe analytics
   adobeTrackingUrl: ADOBE_TRACKING_URL,
 
   // Common paths
-  sourcePath: join(rootPath, 'app'),
-  modulePath: join(rootPath, 'node_modules'),
+  sourcePath,
+  modulePath,
   publicPath: NODE_ENV === 'test'
     ? join(rootPath, 'test/fixtures')
     : join(rootPath, 'public'),
+
+  // Nunjucks search paths
+  nunjucksPaths: [
+    join(sourcePath, 'views'),
+    join(modulePath, 'nhsuk-frontend/packages/components'),
+    join(modulePath, 'nhsuk-frontend/packages/macros'),
+    join(modulePath, 'nhsuk-frontend/packages'),
+  ],
 
   // Base URL
   baseURL: BASE_URL,
