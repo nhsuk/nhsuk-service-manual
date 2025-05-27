@@ -1,5 +1,5 @@
 // Core dependencies
-const path = require('path');
+const { join } = require('path');
 
 // External dependencies
 const browserSync = require('browser-sync');
@@ -41,23 +41,13 @@ app.use(
 );
 
 // Middleware to serve static assets
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/dist')));
-app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
-app.use('/iframe-resizer', express.static(path.join(__dirname, 'node_modules/iframe-resizer/')));
+app.use(express.static(config.publicPath));
 
 // View engine (nunjucks)
 app.set('view engine', 'njk');
 
 // Nunjucks configuration
-const appViews = [
-  path.join(__dirname, '/app/views/'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/components'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages/macros'),
-  path.join(__dirname, '/node_modules/nhsuk-frontend/packages'),
-];
-
-const env = nunjucks.configure(appViews, {
+const env = nunjucks.configure(config.nunjucksPaths, {
   autoescape: true,
   express: app,
   noCache: true,
@@ -72,35 +62,30 @@ const env = nunjucks.configure(appViews, {
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode);
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode);
 env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams);
+env.addGlobal('getAssetPath', fileHelper.getAssetPath);
 env.addFilter('highlight', filters.highlight);
 env.addFilter('markdown', filters.markdown);
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res) => {
-  const displayFullPage = req.query.fullpage === 'true';
-  const blankPage = req.query.blankpage === 'true';
-  const backgroundColours = ['blue', 'grey-4'];
-  const background = backgroundColours.includes(req.query.background) ? req.query.background : null;
-  const { group } = req.params;
-  const { item } = req.params;
-  const { type } = req.params;
+  const { group, item, type } = req.params;
 
   // Get the given example as HTML.
-  const exampleHtml = fileHelper.getHTMLCode(group, item, type);
+  const exampleHtml = fileHelper.getHTMLCode({
+    group, item, type, env,
+  });
+
+  const { data } = fileHelper.getFrontmatter({
+    group, item, type,
+  });
 
   // Wrap the example HTML in a basic html base template.
-  let baseTemplate = 'includes/design-example-wrapper.njk';
-  if (displayFullPage) {
-    baseTemplate = 'includes/design-example-wrapper-full.njk';
-  }
-  if (blankPage) {
-    baseTemplate = 'includes/design-example-wrapper-blank.njk';
-  }
+  const { previewLayout = 'design-example-wrapper' } = data;
 
-  res.render(baseTemplate, {
-    body: exampleHtml,
+  res.render(`layouts/${previewLayout}`, {
+    ...data,
+    exampleHtml,
     item,
-    background,
   });
 });
 
@@ -119,7 +104,7 @@ app.get('/search', (req, res) => {
   const startingIndex = resultsPerPage * (currentPage - 1);
   const endingIndex = startingIndex + resultsPerPage;
 
-  res.render('includes/search.njk', {
+  res.render('layouts/search', {
     currentPage,
     maxPage,
     query,
@@ -238,7 +223,10 @@ app.get('*', (_, res) => {
 if (config.env === 'development') {
   app.listen(config.port - 50, () => {
     browserSync({
-      files: ['app/views/**/*.*', 'public/**/*.*'],
+      files: [
+        join(config.sourcePath, 'views/**'),
+        join(config.publicPath, '**'),
+      ],
       notify: true,
       open: false,
       port: config.port,

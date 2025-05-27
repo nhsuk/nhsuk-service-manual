@@ -33,7 +33,7 @@ function renderPath(path, res, next) {
   });
 }
 
-exports.matchRoutes = (req, res, next) => {
+function matchRoutes(req, res, next) {
   let { path } = req;
 
   path = path.substr(1); // [6] //
@@ -43,4 +43,8 @@ exports.matchRoutes = (req, res, next) => {
   }
 
   renderPath(path, res, next);
+}
+
+module.exports = {
+  matchRoutes,
 };

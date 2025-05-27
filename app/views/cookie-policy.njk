@@ -1,9 +1,9 @@
 {% set pageTitle = "Cookie policy" %}
 {% set pageDescription = "Find out about the cookies we use on the NHS digital service manual and how to turn them on or off." %}
 
-{% extends "includes/layout.njk" %}
+{% extends "layouts/layout.njk" %}
 
-{% block body %}
+{% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
@@ -159,7 +159,7 @@
 </div>
 {% endblock %}
 
-{% block pageScripts %}
+{% block bodyEnd %}
 <script>
   // Check the checkboxes based on status of cookie preferences
   window.addEventListener("load", function checkCookie() {

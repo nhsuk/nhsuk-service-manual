@@ -54,7 +54,7 @@
 // Removal of table cell element top and bottom margins
 // Remove bottom margin from a <p>
 .nhsuk-table__cell {
-  @include top-and-bottom;
+  @include nhsuk-top-and-bottom;
 }
 
 // Helper to break long words/URLs in tables
@@ -231,7 +231,7 @@
 // Margin-top to avoid excessive spacing between guidance block and design examples.
 // Border colour altered to match tag colour.
 .app-wcag-inset-text {
-  border-left-color: shade($color_nhsuk-blue, 10%);
+  border-left-color: nhsuk-shade($color_nhsuk-blue, 10%);
   @include nhsuk-responsive-margin(0, 'top');
 }
 

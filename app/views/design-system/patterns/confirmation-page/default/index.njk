@@ -1,4 +1,8 @@
-{% extends "includes/design-example-wrapper-full-layout.njk" %}
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
 {% from 'panel/macro.njk' import panel %}
 {% from "summary-list/macro.njk" import summaryList %}
@@ -11,7 +15,7 @@
                 titleText: "Booking complete",
                 html: "We have sent you a confirmation email"
             }) }}
-            
+
             <h2 class="nhsuk-heading-m">Your appointment details</h2>
 
                 {{ summaryList({

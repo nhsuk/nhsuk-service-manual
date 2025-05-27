@@ -10,7 +10,7 @@
 
 .hljs-comment,
 .hljs-quote {
-  color: tint($color_nhsuk-grey-1, 10%); // sass-lint:disable-line no-color-hex no-color-literals
+  color: nhsuk-tint($color_nhsuk-grey-1, 10%); // sass-lint:disable-line no-color-hex no-color-literals
   font-style: italic;
 }
 

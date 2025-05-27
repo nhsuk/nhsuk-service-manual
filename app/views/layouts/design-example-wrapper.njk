@@ -1,0 +1,28 @@
+{% extends "layouts/layout.njk" %}
+
+{% set pageTitle = "Standalone example" %}
+{% set bodyClasses = "app-example-" ~ item ~ "-page" %}
+
+{% if background %}
+  {% set bodyClasses = bodyClasses ~ " app-example-background--" ~ background %}
+{% endif %}
+
+{% block head %}
+  <meta name="description" content="NHS digital service manual - standalone example">
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/design-example-overrides.scss") }}">
+  <script src="{{ getAssetPath("main.js") }}" defer></script>
+{% endblock %}
+
+{% block header %}{% endblock %}
+{% block beforeContent %}{% endblock %}
+
+{% block main %}
+  {{ exampleHtml | safe }}
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("javascripts/vendor/iframeResizer.contentWindow.min.js") }}"></script>
+{% endblock %}
