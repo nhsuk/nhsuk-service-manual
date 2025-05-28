@@ -33,7 +33,6 @@
 {%- from 'panel/macro.njk' import panel %}
 {%- from 'macros/design-example/macro.njk' import designExample %}
 
-{% set containerClasses = "app-width-container" %}
 {% set mainClasses = "nhsuk-main-wrapper--s app-main-wrapper" %}
 {% set opengraphUrl = BASE_URL %}
 {% set opengraphImageUrl = BASE_URL ~ "/assets/open-graph" ~ ("_" ~ pageSection | lower | replace(" ", "_") | replace("'", "") if pageSection else "") ~ ".png" %}
