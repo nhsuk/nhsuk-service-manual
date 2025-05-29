@@ -1,4 +1,4 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
 /// System ui-monospace font stack
 ///
@@ -13,14 +13,15 @@
 /// * Cascadia Mono, Segoe UI Mono, Consolas - Fonts for Windows 11, 10, 8
 /// * Consolas - Font for older Windows versions
 /// * Liberation Mono - Font for Linux used by GitHub
-$app-code-font: ui-monospace, menlo, 'Cascadia Mono', 'Segoe UI Mono', consolas, 'Liberation Mono', monospace;
+$app-code-font: ui-monospace, menlo, "Cascadia Mono", "Segoe UI Mono", consolas, "Liberation Mono", monospace;
 
 // Highlight code within body copy
 li code,
 p code,
 td code {
   background-color: $color_nhsuk-white;
-  color: #d14; // sass-lint:disable-line no-color-hex no-color-literals
+  // stylelint-disable-next-line color-no-hex
+  color: #dd1144;
   padding: 2px nhsuk-spacing(2);
   word-break: break-word;
   @include nhsuk-font-size(16);
@@ -35,14 +36,14 @@ td code {
   padding: nhsuk-spacing(3);
   position: relative;
 
-  @include nhsuk-responsive-margin(4, 'bottom');
+  @include nhsuk-responsive-margin(4, "bottom");
 
   & + h2 {
-    @include nhsuk-responsive-padding(4, 'top');
+    @include nhsuk-responsive-padding(4, "top");
   }
 
   & + h3 {
-    @include nhsuk-responsive-padding(2, 'top');
+    @include nhsuk-responsive-padding(2, "top");
   }
 }
 

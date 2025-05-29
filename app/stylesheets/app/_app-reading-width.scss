@@ -1,16 +1,13 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #APP READING WIDTH
-   ========================================================================== */
-
-/**
- * Constrains text on a full width page
- */
+////
+/// Reading width wrapper
+///
+/// Constrains text on a full width page
+////
 
 @include nhsuk-media-query($from: desktop) {
   .app-component-reading-width {
-
     h1 {
       max-width: 14.5em;
     }
@@ -53,6 +50,5 @@
     .nhsuk-pagination__list {
       max-width: 100%;
     }
-
   }
 }

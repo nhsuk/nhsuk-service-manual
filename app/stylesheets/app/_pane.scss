@@ -1,13 +1,13 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #APP-PANE
-   ========================================================================== */
+////
+/// Pane component
+////
 
 .app-pane {
   display: -webkit-box;
-  display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
-  display: flex; // sass-lint:disable-line no-duplicate-properties
+  display: -ms-flexbox;
+  display: flex;
   min-height: 0;
   overflow: inherit;
   position: relative;
@@ -29,14 +29,14 @@
 }
 
 .app-pane__main-content {
-  -ms-flex: 1 1 100%; // sass-lint:disable-line no-duplicate-properties
+  -ms-flex: 1 1 100%;
   -ms-flex-direction: column;
   -webkit-box-direction: normal;
   -webkit-box-flex: 1;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
-  display: flex; // sass-lint:disable-line no-duplicate-properties
+  display: -ms-flexbox;
+  display: flex;
   flex: 1 1 100%;
   flex-direction: column;
   min-width: 0;
@@ -44,7 +44,6 @@
   @include nhsuk-media-query($from: desktop) {
     padding-left: nhsuk-spacing(9);
   }
-
 }
 
 // Custom spacing for page headings

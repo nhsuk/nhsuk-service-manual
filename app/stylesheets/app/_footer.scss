@@ -1,12 +1,10 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #FOOTER
-   ========================================================================== */
-
-/**
- * Custom features for the service manual footer
- */
+////
+/// Footer
+///
+/// Custom features for the service manual footer
+////
 
 .app-ogl-footer {
   background-color: $color_nhsuk-grey-4;
@@ -17,7 +15,7 @@
   margin-bottom: 0;
 
   @include nhsuk-font(16);
-  @include nhsuk-responsive-padding(5, 'bottom');
+  @include nhsuk-responsive-padding(5, "bottom");
 
   @include nhsuk-media-query($until: tablet) {
     padding-bottom: nhsuk-spacing(4);
@@ -28,5 +26,4 @@
     position: relative;
     top: 2px;
   }
-
 }

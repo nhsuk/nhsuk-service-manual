@@ -1,17 +1,17 @@
-@use 'vendor/nhsuk-frontend/base' as *;
+// stylelint-disable color-no-hex
 
-/*
- * WARNING: This file is intended for adding extra styles to the code snippet
- * examples and standalone examples.
- * Beware of adding too much in to this file, we should aim for our example
- * code to look as close to the unmodified nhsuk-frontend library as possible.
- */
+@use "vendor/nhsuk-frontend/base" as *;
+
+// WARNING: This file is intended for adding extra styles to the code snippet
+// examples and standalone examples.
+// Beware of adding too much in to this file, we should aim for our example
+// code to look as close to the unmodified nhsuk-frontend library as possible.
 
 html {
   background-color: $color_nhsuk-grey-5;
 }
 
-/* Component examples need a bit of space around them */
+// Component examples need a bit of space around them
 body {
   padding: 32px;
 
@@ -24,20 +24,18 @@ body {
   padding: 0;
 }
 
-/* Component examples on a blue background */
+// Component examples on a blue background
 .app-example-background--blue {
-  background-color: #005eb8; // sass-lint:disable-line no-color-hex no-color-literals
+  background-color: $color_nhsuk-blue;
 }
 
-/* Component examples on a grey-4 background */
+// Component examples on a grey-4 background
 .app-example-background--grey-4 {
-  background-color: #d8dde0; // sass-lint:disable-line no-color-hex no-color-literals
+  background-color: $color_nhsuk-grey-4;
 }
 
-/*
-  In order to show how the grid works, we need to have an element inside the
-  grid that is visible and fills the available space with a background color.
-*/
+// In order to show how the grid works, we need to have an element inside the
+// grid that is visible and fills the available space with a background color.
 .nhsuk-grid-row > .spacing-example div > p {
   background-color: $color_nhsuk-blue;
   color: $color_nhsuk-white;
@@ -45,22 +43,17 @@ body {
   text-align: center;
 }
 
-
-/*
-  Spacing examples for on divs
-*/
+// Spacing examples for on divs
 .spacing-example div {
-  background: #80afdc; // sass-lint:disable-line no-color-hex no-color-literals
+  background: #80afdc;
 }
 
 .spacing-example div:nth-of-type(odd) {
-  background: #337ec6; // sass-lint:disable-line no-color-hex no-color-literals
+  background: #337ec6;
 }
 
-/*
-  Layout examples for on divs
-*/
-.app-example-layout-page [class^='nhsuk-grid-column']>p {
+// Layout examples for on divs
+.app-example-layout-page [class^="nhsuk-grid-column"] > p {
   background-color: $color_nhsuk-blue;
   color: $color_nhsuk-white;
   padding: 20px;

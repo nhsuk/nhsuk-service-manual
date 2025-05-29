@@ -1,16 +1,16 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #PAGE-CONTENTS
-   ========================================================================== */
+////
+/// Page contents
+////
 
 .app-page-contents {
-  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(5, "bottom");
 }
 
 .app-page-contents__heading {
   @include nhsuk-font(19, $weight: bold);
-  @include nhsuk-responsive-margin(3, 'bottom');
+  @include nhsuk-responsive-margin(3, "bottom");
 }
 
 .app-page-contents__list {
@@ -18,5 +18,5 @@
 }
 
 .app-page-contents__item {
-  @include nhsuk-responsive-margin(1, 'bottom');
+  @include nhsuk-responsive-margin(1, "bottom");
 }

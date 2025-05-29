@@ -1,8 +1,8 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #SIDE-NAV
-   ========================================================================== */
+////
+/// Side nav component
+////
 
 .app-side-nav__heading {
   color: $nhsuk-secondary-text-color;
@@ -66,8 +66,8 @@
 }
 
 .app-side-nav__list--nested {
-  @include nhsuk-responsive-margin(2, 'bottom');
-  @include nhsuk-responsive-margin(3, 'top');
+  @include nhsuk-responsive-margin(2, "bottom");
+  @include nhsuk-responsive-margin(3, "top");
 
   .app-side-nav__item {
     list-style: none;
@@ -81,11 +81,11 @@
 
 .app-side-nav__list--nested .app-side-nav__item::before {
   color: $color_nhsuk-grey-3;
-  content: '—';
+  content: "—";
   margin-left: -20px;
   margin-right: 4px;
 }
 
 .app-index-navigation {
-  @include nhsuk-responsive-padding(4, 'top');
+  @include nhsuk-responsive-padding(4, "top");
 }

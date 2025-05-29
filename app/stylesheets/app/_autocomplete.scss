@@ -1,25 +1,23 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   COMPONENTS / #HEADER / #AUTOCOMPLETE
-   ========================================================================== */
-
-/**
-   * 1. IE 10 prefix for flexbox
-   * 2. Proprietary extension so form field looks the same in Safari
-   * 3. Custom height and width of form items
-   * 4. Custom height and width of svg icons
-   * 5. Custom spacing to position the search icon
-   * 6. Drop shadow on search suggestions dopdown box, custom spread and blur
-   * 7. Z-index to bring the dropdown to the front
-   * 8. No current spacing at 12px so using this value
-   * 9. Z-index to being search box to the front for focus state style
-   * 10. Custom padding to stop text jumping on focus
-*/
+////
+/// Autocomplete component
+///
+/// 1. IE 10 prefix for flexbox
+/// 2. Proprietary extension so form field looks the same in Safari
+/// 3. Custom height and width of form items
+/// 4. Custom height and width of svg icons
+/// 5. Custom spacing to position the search icon
+/// 6. Drop shadow on search suggestions dropdown box, custom spread and blur
+/// 7. Z-index to bring the dropdown to the front
+/// 8. No current spacing at 12px so using this value
+/// 9. Z-index to bring search box to the front for focus state style
+/// 10. Custom padding to stop text jumping on focus
+////
 
 .autocomplete-container {
   display: inline-block;
-  z-index: 1; /* [9] */
+  z-index: 1; // [9]
 
   @include nhsuk-media-query($until: tablet) {
     display: inline;
@@ -28,10 +26,10 @@
 }
 
 @include nhsuk-media-query($until: tablet) {
-  /* duplicate of .nhsuk-search__input in _header.scss, for non javascript version */
+  // duplicate of .nhsuk-search__input in _header.scss, for non javascript version
   .autocomplete__input {
-    -ms-flex-positive: 2; /* [1] */
-    -webkit-appearance: listbox; // sass-lint:disable-line prefixes /* [2] */
+    -ms-flex-positive: 2; // [1]
+    -webkit-appearance: listbox; // [2]
     border-bottom: 1px solid $color_nhsuk-grey-3;
     border-bottom-left-radius: $nhsuk-border-radius;
     border-bottom-right-radius: 0;
@@ -42,26 +40,26 @@
     border-top-right-radius: 0;
     flex-grow: 2;
     font-size: inherit;
-    height: 52px; /* [3] */
+    height: 52px; // [3]
     margin: 0;
     outline: none;
     padding: 0 nhsuk-spacing(3);
-    width: 100%; /* [3] */
+    width: 100%; // [3]
 
     &:focus {
       border: $nhsuk-focus-width solid $nhsuk-focus-text-color;
       box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color;
       outline: $nhsuk-focus-width solid transparent;
       outline-offset: $nhsuk-focus-width;
-      padding: 0 13px; /* [10] */
+      padding: 0 13px; // [10]
     }
   }
 }
 
 @include nhsuk-media-query($from: tablet) {
-  /* duplicate of .nhsuk-search__input in _header.scss, for non javascript version */
+  // duplicate of .nhsuk-search__input in _header.scss, for non javascript version
   .autocomplete__input {
-    -webkit-appearance: listbox; // sass-lint:disable-line prefixes /* [2] */
+    -webkit-appearance: listbox; // [2]
     border: 1px solid $color_nhsuk-white;
     border-bottom-left-radius: $nhsuk-border-radius;
     border-bottom-right-radius: 0;
@@ -69,16 +67,16 @@
     border-top-left-radius: $nhsuk-border-radius;
     border-top-right-radius: 0;
     font-size: $nhsuk-base-font-size;
-    height: 40px; /* [3] */
-    padding: 0 12px; /* [9] */
-    width: 200px; /* [3] */
+    height: 40px; // [3]
+    padding: 0 12px; // [9]
+    width: 200px; // [3]
 
     &:focus {
       border: 2px solid $nhsuk-focus-text-color;
       box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color;
       outline: $nhsuk-focus-width solid transparent;
       outline-offset: $nhsuk-focus-width;
-      padding: 0 11px; /* [10] */
+      padding: 0 11px; // [10]
     }
 
     &::placeholder {
@@ -95,16 +93,15 @@
 }
 
 .autocomplete__menu {
-  // sass-lint:disable-block no-vendor-prefixes, no-color-literals
-  -moz-box-shadow: 0 3px 5px rgba($nhsuk-box-shadow-color, $alpha-transparency-50); /* [6] */
-  -webkit-box-shadow: 0 3px 5px rgba($nhsuk-box-shadow-color, $alpha-transparency-50); /* [6] */
+  -moz-box-shadow: 0 3px 5px rgba($nhsuk-box-shadow-color, $alpha-transparency-50); // [6]
+  -webkit-box-shadow: 0 3px 5px rgba($nhsuk-box-shadow-color, $alpha-transparency-50); // [6]
   background-color: $color_nhsuk-white;
   border-bottom: 1px solid $color_nhsuk-grey-4;
   border-bottom-left-radius: $nhsuk-border-radius;
   border-bottom-right-radius: $nhsuk-border-radius;
   border-left: 1px solid $color_nhsuk-grey-4;
   border-right: 1px solid $color_nhsuk-grey-4;
-  box-shadow: 0 0 ($nhsuk-box-shadow-spread - 1) 0 rgba($nhsuk-box-shadow-color, $alpha-transparency-50); /* [6] */
+  box-shadow: 0 0 ($nhsuk-box-shadow-spread - 1) 0 rgba($nhsuk-box-shadow-color, $alpha-transparency-50); // [6]
   list-style: none;
   margin-top: 2px;
   overflow-x: hidden;
@@ -113,7 +110,7 @@
   position: absolute;
   top: 100%;
   width: 100%;
-  z-index: 1; /* [7] */
+  z-index: 1; // [7]
 
   @include nhsuk-media-query($until: tablet) {
     border: 0;
@@ -138,16 +135,16 @@
   color: $color_nhsuk-blue;
   cursor: pointer;
   font-size: $nhsuk-base-font-size;
-  padding-bottom: 12px; /* [8] */
+  padding-bottom: 12px; // [8]
   text-align: left;
   text-decoration: underline;
 
   .nhsuk-icon__search {
     fill: $color_nhsuk-grey-3;
     float: left;
-    height: 22px; /* [4] */
-    margin: 2px 4px 0 0; /* [5] */
-    width: 22px; /* [4] */
+    height: 22px; // [4]
+    margin: 2px 4px 0 0; // [5]
+    width: 22px; // [4]
   }
 
   &:hover,
@@ -160,7 +157,7 @@
     text-decoration: none;
 
     a {
-      @include nhsuk-focused-text();
+      @include nhsuk-focused-text;
     }
   }
 

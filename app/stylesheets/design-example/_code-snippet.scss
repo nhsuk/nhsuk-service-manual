@@ -1,6 +1,5 @@
-@use '../vendor/nhsuk-frontend' as *;
-
-// sass-lint:disable border-zero no-color-hex
+// stylelint-disable color-no-hex, max-nesting-depth
+@use "../vendor/nhsuk-frontend" as *;
 
 .code-snippet {
   background-color: $color_nhsuk-grey-5;
@@ -10,7 +9,6 @@
   }
 
   .app-link {
-
     &--copy {
       border-bottom-color: $nhsuk-button-color;
       box-shadow: 0 2px 0 $nhsuk-button-color;
@@ -124,7 +122,6 @@
         outline: $nhsuk-focus-width solid transparent;
         text-decoration: none;
       }
-
     }
 
     &--current {
@@ -144,7 +141,6 @@
             color: $nhsuk-focus-text-color;
           }
         }
-
       }
     }
 
@@ -158,9 +154,8 @@
       @include nhsuk-media-query($from: tablet) {
         display: none;
       }
-
-      }
     }
+  }
 
   &__container {
     background-color: $color_nhsuk-white;
@@ -173,7 +168,6 @@
       background-color: $color_nhsuk-white;
       padding: 0;
     }
-
   }
 }
 
@@ -218,7 +212,7 @@ $color-syntax--selector: #330072;
   .hljs-literal,
   .hljs-variable,
   .hljs-template-variable,
-  .hljs-tag .hljs-attr { //sass-lint:disable-line force-element-nesting
+  .hljs-tag .hljs-attr {
     color: $color-syntax--var;
   }
 
@@ -239,7 +233,7 @@ $color-syntax--selector: #330072;
   }
 
   .hljs-type,
-  .hljs-class .hljs-title { //sass-lint:disable-line force-element-nesting
+  .hljs-class .hljs-title {
     color: $color-syntax--var;
     font-weight: normal;
   }

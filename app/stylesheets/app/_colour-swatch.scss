@@ -1,12 +1,10 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #COLOUR SWATCH
-   ========================================================================== */
-
-/**
- * Custom table for the colour palette
- */
+////
+/// Colour swatch
+///
+/// Custom table for the colour palette
+////
 
 .app-colour-list {
   margin-top: 0;
