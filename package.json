@@ -11,7 +11,7 @@
     "build": "NODE_ENV=${NODE_ENV:-production} webpack",
     "clean": "del-cli public/**",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint . --ignore-pattern '/public'",
+    "lint:js": "eslint --cache --cache-location .cache/eslint --cache-strategy content --color --ignore-path .gitignore \"**/*.{cjs,js,mjs}\"",
     "lint:css": "sass-lint 'app/stylesheets/**/*.scss' -v -q",
     "nuke": "npm run clean && rm -rf node_modules/",
     "start": "node .",
