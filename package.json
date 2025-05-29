@@ -89,5 +89,13 @@
     "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1",
     "webpack-manifest-plugin": "^5.0.1"
-  }
+  },
+  "files": [
+    "app",
+    "lib",
+    "middleware",
+    "public",
+    "app.js",
+    "!**/*.test.*"
+  ]
 }
