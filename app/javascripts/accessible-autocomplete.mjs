@@ -1,19 +1,18 @@
 import AccessibleAutoComplete from 'accessible-autocomplete'
 
 /**
- @typedef autocompleteConfig
- @type {Object}
- Optional param for NHS.UK functionality
- @property {string=} formId ID of form element containing autocomplete.
- Required params for accessible-autocomplete
- @property {string} inputId ID of the input field.
- @property {string} containerId ID of element in which the autocomplete will be rendered in.
- @property {function} source Function called on input change
-*/
+ * @typedef {object} AutocompleteConfig
+ * @property {string} [formId] - ID of form element containing autocomplete.
+ *   (Optional param for NHS.UK functionality)
+ * @property {string} inputId - ID of the input field.
+ * @property {string} containerId - ID of element in which the autocomplete will be rendered in.
+ * @property {Function} source - Function called on input change
+ */
 
 /**
  * Create an autocomplete.
- * @param {autocompleteConfig} config
+ *
+ * @param {AutocompleteConfig} config
  */
 export default (config) => {
   const { formId, inputId, containerId } = config
@@ -48,10 +47,7 @@ export default (config) => {
     input.parentNode.removeChild(input)
 
     // Initialise accessibleAutocomplete
-    AccessibleAutoComplete({
-      ...defaultConfig,
-      ...config
-    })
+    AccessibleAutoComplete(Object.assign({}, defaultConfig, config))
   }
 
   // Add autocomplete functionality if required config options exist

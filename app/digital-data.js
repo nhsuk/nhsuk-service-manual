@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys */
 function getPageName(path) {
   return `nhs:manual${path.replace(/\/$/, '').replace(/\//g, ':')}`
 }

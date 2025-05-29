@@ -1,4 +1,4 @@
 {
-  "main.js": "/javascripts/main.xxxxxxx.min.js",
+  "main.mjs": "/javascripts/main.xxxxxxx.min.js",
   "stylesheets/main.scss": "/stylesheets/main.xxxxxxx.min.css"
 }

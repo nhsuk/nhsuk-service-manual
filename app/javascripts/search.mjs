@@ -1,6 +1,7 @@
 /**
  * Function to build truncated result with svg for search autocomplete
- * @param {string} result String containing individual result from autocomplete source function
+ *
+ * @param {string} result - String containing individual result from autocomplete source function
  * @returns {string} String of HTML containing passed result
  */
 export const suggestion = ({ title, parent }) => {
@@ -19,8 +20,9 @@ export const inputValue = (obj) => {
 
 /**
  * Function to populate the search autocomplete.
- * @param {string} query Query to pass to search API
- * @param {function} populateResults Callback function passed to source by autocomplete plugin
+ *
+ * @param {string} query - Query to pass to search API
+ * @param {Function} populateResults - Callback function passed to source by autocomplete plugin
  */
 export const source = (query, populateResults) => {
   // Build URL for search endpoint

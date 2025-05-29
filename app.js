@@ -9,13 +9,13 @@ const helmet = require('helmet')
 const nunjucks = require('nunjucks')
 
 // Local dependencies
-const authentication = require('./middleware/authentication')
 const config = require('./app/config')
+const locals = require('./app/locals')
 const fileHelper = require('./lib/file-helper')
 const filters = require('./lib/filters')
-const locals = require('./app/locals')
-const routing = require('./middleware/routing')
 const PageIndex = require('./lib/page-index')
+const authentication = require('./middleware/authentication')
+const routing = require('./middleware/routing')
 
 const pageIndex = new PageIndex(config)
 

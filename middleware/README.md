@@ -12,21 +12,21 @@
 
 When server is started, page-indexer will retrieve the HTML of every page listed in `/sitemap` and index the pages in this form:
 
-```js
+```json
 {
-  title: <all h1 element text>,
-  index: <all h2 and h3 element text>,
-  url: <page path>
+  "title": "<all h1 element text>",
+  "index": "<all h2 and h3 element text>",
+  "url": "<page path>"
 }
 ```
 
 For example, the Accessibility page would be indexed to:
 
-```js
+```json
 {
-  title: 'Accessibility',
-  index: 'What everyone needs to know Guidance for different activities Get in touch',
-  url: '/accessibility'
+  "title": "Accessibility",
+  "index": "What everyone needs to know Guidance for different activities Get in touch",
+  "url": "/accessibility"
 }
 ```
 
@@ -41,9 +41,9 @@ There are three lists to add to:
 `additionalIndices` controls any additional index to add to pages. The key is the url of the page and the value is a list of additional index.
 
 ```js
-//in this case accessibility testing page will have additional index 'svg' added
-const  additionalIndicies  = {
-  '/accessibility/testing': [ 'svg' ]
+// in this case accessibility testing page will have additional index 'svg' added
+const additionalIndicies  = {
+  '/accessibility/testing': ['svg']
 }
 ```
 
@@ -52,8 +52,8 @@ const  additionalIndicies  = {
 ```js
 // in this case any page with the word 'fever' in its index will also include 'temperature' in the index
 // similarly any page with the word 'temperature' will include 'fever' in the index
-const  alternativeSpelling  = {
-  'fever': [ 'temperature' ],
-  'temperature': [ 'fever' ]
+const alternativeSpelling = {
+  fever: ['temperature'],
+  temperature: ['fever']
 }
 ```

@@ -1,5 +1,5 @@
-const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
 
 const { NODE_ENV } = process.env
 
