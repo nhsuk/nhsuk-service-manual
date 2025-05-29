@@ -10,68 +10,71 @@
         text: "Digital service manual",
         href: "/"
       },
-      primaryLinks: [
-        {
-          href: "/service-standard",
-          text: "NHS service standard"
-        },
-        {
-          href: "/design-system",
-          text: "Design system"
-        },
-        {
-          href: "/content",
-          text: "Content guide"
-        },
-        {
-          href: "/accessibility",
-          text: "Accessibility"
-        },
-        {
-          href: "/community-and-contribution",
-          text: "Community and contribution"
-        }
-      ]
+      navigation: {
+        items: [
+          {
+            text: "NHS service standard",
+            href: "/service-standard"
+          },
+          {
+            text: "Design system",
+            href: "/design-system"
+          },
+          {
+            text: "Content guide",
+            href: "/content"
+          },
+          {
+            text: "Accessibility",
+            href: "/accessibility"
+          },
+          {
+            text: "Community and contribution",
+            href: "/community-and-contribution"
+          }
+        ]
+      }
     })
   }}
 {% else %}
   {{ header({
-      logo: {
-        href: "/",
-        ariaLabel: "NHS digital service manual homepage"
-      },
-      service: {
-        text: "Digital service manual",
-        href: "/"
-      },
-      search: {
-        action: "/search/",
-        name: "search-field",
-        placeholder: "Search",
-        visuallyHiddenLabel: "Search the NHS digital service manual"
-      },
-      primaryLinks: [
-          {
-            href: "/service-standard",
-            text: "NHS service standard"
-          },
-          {
-            href: "/design-system",
-            text: "Design system"
-          },
-          {
-            href: "/content",
-            text: "Content guide"
-          },
-          {
-            href: "/accessibility",
-            text: "Accessibility"
-          },
-          {
-            href: "/community-and-contribution",
-            text: "Community and contribution"
-          }
-        ]
-    })
-  }}
+    logo: {
+      href: "/",
+      ariaLabel: "NHS digital service manual homepage"
+    },
+    service: {
+      text: "Digital service manual",
+      href: "/"
+    },
+    search: {
+      action: "/search/",
+      name: "search-field",
+      placeholder: "Search",
+      visuallyHiddenLabel: "Search the NHS digital service manual"
+    },
+    navigation: {
+      items: [
+        {
+          text: "NHS service standard",
+          href: "/service-standard"
+        },
+        {
+          text: "Design system",
+          href: "/design-system"
+        },
+        {
+          text: "Content guide",
+          href: "/content"
+        },
+        {
+          text: "Accessibility",
+          href: "/accessibility"
+        },
+        {
+          text: "Community and contribution",
+          href: "/community-and-contribution"
+        }
+      ]
+    }
+  }) }}
 {% endif %}

@@ -25,32 +25,31 @@ previewLayout: design-example-wrapper-blank
 
 {% block header %}
   {{ header({
-      showNav: "true",
-      showSearch: "true",
-      primaryLinks: [
+    navigation: {
+      items: [
         {
-          url  : "#",
-          label : "Health A-Z"
+          text: "Health A-Z",
+          href: "#"
         },
         {
-          url : '#',
-          label : 'Live Well'
+          text: 'Live Well',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Care and support'
+          text: 'Care and support',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Pregnancy'
+          text: 'Pregnancy',
+          href: '#'
         },
         {
-          url : '#',
-          label : 'NHS services'
+          text: 'NHS services',
+          href: '#'
         }
       ]
-    })
-}}
+    }
+  }) }}
 {% endblock %}
 
 {% block content %}

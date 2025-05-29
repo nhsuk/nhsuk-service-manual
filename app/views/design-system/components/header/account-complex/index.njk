@@ -1,18 +1,18 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-    logo: {
-      href: "#",
-      ariaLabel: "Manage patients homepage"
-    },
-    service: {
-      text: "Manage patients",
-      href: "#"
-    },
-    search: {
-      placeholder: "Search patients",
-      visuallyHiddenLabel: "Search for a patient"
-    },
+  logo: {
+    href: "#",
+    ariaLabel: "Manage patients homepage"
+  },
+  service: {
+    text: "Manage patients",
+    href: "#"
+  },
+  search: {
+    placeholder: "Search patients",
+    visuallyHiddenLabel: "Search for a patient"
+  },
   account: {
     items: [
       {
@@ -20,27 +20,29 @@
         icon: true
       },
       {
-        href: "#",
-        text: "Change role"
+        text: "Change role",
+        href: "#"
       },
       {
-        href: "#",
-        text: "Log out"
+        text: "Log out",
+        href: "#"
       }
     ]
   },
-  primaryLinks: [
-    {
-      href: "#",
-      text: "Home"
-    },
-    {
-      href: "#",
-      text: "Add new patient"
-    },
-    {
-      href: "#",
-      text: "Find a patient"
-    }
-  ]
+  navigation: {
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Add new patient",
+        href: "#"
+      },
+      {
+        text: "Find a patient",
+        href: "#"
+      }
+    ]
+  }
 }) }}

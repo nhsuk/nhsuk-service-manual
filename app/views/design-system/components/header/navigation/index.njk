@@ -1,28 +1,29 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-    primaryLinks: [
+  navigation: {
+    items: [
       {
-        href: "#",
-        text: "NHS service standard"
+        text: "NHS service standard",
+        href: "#"
       },
       {
-        href: '#',
         text: 'Design system',
+        href: '#',
         active: true
       },
       {
-        href: '#',
-        text: 'Content guide'
+        text: 'Content guide',
+        href: '#'
       },
       {
-        href: '#',
-        text: 'Accessibility'
+        text: 'Accessibility',
+        href: '#'
       },
       {
-        href: '#',
-        text: 'Community and contribution'
+        text: 'Community and contribution',
+        href: '#'
       }
     ]
-  })
-}}
+  }
+}) }}
