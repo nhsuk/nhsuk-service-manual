@@ -3,19 +3,23 @@
 ## 7.11.0 - 23 May 2025
 
 :new: **New features**
+
 - Add guidance on new override classes to apply static spacing
 
 :wrench: **Maintenance**
+
 - Move width override classes to Layout page
 
 ## 7.10.0 - 14 May 2025
 
 :new: **New features**
+
 - Add styling and guidance for secondary buttons
 - Add examples of text to use on buttons
 - Add reverse link style
 
 :wrench: **Maintenance**
+
 - Restructure buttons guidance
 - Update lead para to 26px
 - Update links to information standard DAPB3051
@@ -23,12 +27,14 @@
 ## 7.9.0 - 23 April 2025
 
 :new: **New features**
+
 - Add guidance on using the Check answers pattern
 - Add new Nunjucks options to Page template and update the examples to use template.njk from frontend
 - Add guidance on word breaks to typography section, table component, and hyphens section in content guide
 - Add classes to set column widths on responsive table example
 
 :wrench: **Maintenance**
+
 - Update word "efficient" to "effective" in accessibility testing page re manual testing
 - Update date on cookie policy - cookies are up-to-date
 - Remove mention of SVG fallbacks from icons guidance
@@ -36,28 +42,34 @@
 ## 7.8.0 - 09 April 2025
 
 :new: **New features**
+
 - Update NHS service standard 9 to reflect updates to GOV.UK service standard 9
 - Add new bullet point about use of resources to service standard 11
 - Make minor changes to NHS service standard points 9, 15 and 16 to help teams consider misuse of tech for domestic abuse
 
 :wrench: **Maintenance**
+
 - Update contact us message on Frutiger terms of licence page
 
 ## 7.7.0 - 27 March 2025
 
 :new: **New features**
+
 - New guidance on registering to use Frutiger font, with terms of licence
 
 :wrench: **Maintenance**
+
 - Update fonts page
 
 ## 7.6.0 - 26 February 2025
 
 :new: **New features**
+
 - Add new headings and page title guidance, to accessibility guidance, content guide and design system
 - Add new entries for ear drop, eye drop, incontinence products and log in and log out to content guide
 
 :wrench: **Maintenance**
+
 - Split up Formatting and Punctuation sections in content guide
 - Move links guidance to Formatting section
 - Tweak panel wording in panel component and confirmation page
@@ -67,12 +79,14 @@
 ## 7.5.0 - 13 February 2025
 
 :new: **New features**
+
 - Add new panel component and confirmation page pattern
 - Update mention of WCAG 2.2 in guidance about PDFs
 
 ## 7.4.0 - 21 January 2025
 
 :wrench: **Maintenance**
+
 - Removed an outdated link on the button component page
 - Update example code in image component
 - Remove same-page profession links from accessibility guidance
@@ -83,31 +97,37 @@
 ## 7.3.0 - 17 December 2024
 
 :wrench: **Maintenance**
+
 - Update image, caption and alt text in image component
 
 ## 7.2.0 - 6 November 2024
 
 :new: **New features**
+
 - Add new Task list component
 - Add new Complete multiple tasks pattern
 - Add a resources page to the community and contribution section
 
 :wrench: **Maintenance**
+
 - Rename and reorganise pattern subsection headings in the design system
 
 ## 7.1.0 - 15 October 2024
 
 :new: **New features**
+
 - Update accessibility guidance to say that WCAG 2.2 includes WCAG 2.1 and teams are now monitored to WCAG 2.2
 
 ## 7.0.0 - 19 September 2024
 
 :new: **New features**
+
 - Add entries on Down's syndrome, fit note and period products to the A to Z of NHS health writing
 - Add guidance for heading classes
-– Add classes to style table captions similar to headings, detailed in Nunjucks macro option `captionClasses`
+  – Add classes to style table captions similar to headings, detailed in Nunjucks macro option `captionClasses`
 
 :wrench: **Maintenance**
+
 - Update page template examples to make the default example size `l` and inside the grid system
 - Update page template Nunjucks options, to remove `outerContent` block
 - Make our guidance on age clearer
@@ -166,17 +186,17 @@
 - Add sections on making sure your service meets WCAG 2.2 for: Product and delivery and Design, Development and Testing
 - Add list of changes to meet new accessibility requirements to design system index page
 - Update components and styles for WCAG 2.2:
-    - Back link: guidance on positioning and keeping data the user has entered
-    - Breadcrumbs: guidance on positioning
-    - Buttons: guidance on minimum target size
-    - Error message: guidance on not clearing data the user has entered
-    - Footer: guidance on placing help links
-    - Header: guidance on placing help links and not hiding content that has a focus applied
-    - Select: guidance on avoiding click and drag
-    - Summary list: guidance on action link target size and keeping data the user has entered
-    - Tag: guidance on avoiding click and drag
-    - Focus state: guidance on not hiding content that has a focus applied
-    - Icons: guidance on minimum target size
+  - Back link: guidance on positioning and keeping data the user has entered
+  - Breadcrumbs: guidance on positioning
+  - Buttons: guidance on minimum target size
+  - Error message: guidance on not clearing data the user has entered
+  - Footer: guidance on placing help links
+  - Header: guidance on placing help links and not hiding content that has a focus applied
+  - Select: guidance on avoiding click and drag
+  - Summary list: guidance on action link target size and keeping data the user has entered
+  - Tag: guidance on avoiding click and drag
+  - Focus state: guidance on not hiding content that has a focus applied
+  - Icons: guidance on minimum target size
 
 :wrench: **Maintenance**
 

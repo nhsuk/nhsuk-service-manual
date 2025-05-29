@@ -1,8 +1,8 @@
-const { dirname, join } = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const { dirname, join } = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV } = process.env
 
 /**
  * @type {Configuration}
@@ -12,35 +12,30 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     // Main application script and styles
-    main: [
-      './javascripts/main.js',
-      './stylesheets/main.scss',
-    ],
+    main: ['./javascripts/main.js', './stylesheets/main.scss'],
 
     // Design example overrides
     overrides: {
       import: './stylesheets/design-example-overrides.scss',
-      filename: 'design-example-overrides',
-    },
+      filename: 'design-example-overrides'
+    }
   },
 
   // Optimise for production
-  mode: NODE_ENV === 'production'
-    ? 'production'
-    : 'development',
+  mode: NODE_ENV === 'production' ? 'production' : 'development',
 
   module: {
     rules: [
       {
         test: /\.(js|mjs|scss)$/,
         loader: 'source-map-loader',
-        enforce: 'pre',
+        enforce: 'pre'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        options: { rootMode: 'upward' },
+        options: { rootMode: 'upward' }
       },
       {
         test: /\.scss$/,
@@ -51,7 +46,7 @@ module.exports = {
           filename:
             NODE_ENV === 'production'
               ? 'stylesheets/[name].[contenthash:7].min.css'
-              : 'stylesheets/[name].css',
+              : 'stylesheets/[name].css'
         },
         use: [
           'postcss-loader',
@@ -59,70 +54,71 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sassOptions: {
-                loadPaths: [join(__dirname, 'node_modules')],
-              },
-            },
-          },
-        ],
-      },
-    ],
+                loadPaths: [join(__dirname, 'node_modules')]
+              }
+            }
+          }
+        ]
+      }
+    ]
   },
 
   // Only minify in production
   optimization: {
-    minimize: NODE_ENV === 'production',
+    minimize: NODE_ENV === 'production'
   },
 
   output: {
-    filename: NODE_ENV === 'production'
-      ? 'javascripts/[name].[contenthash:7].min.js'
-      : 'javascripts/[name].js',
+    filename:
+      NODE_ENV === 'production'
+        ? 'javascripts/[name].[contenthash:7].min.js'
+        : 'javascripts/[name].js',
     path: join(__dirname, 'public'),
-    publicPath: '/',
+    publicPath: '/'
   },
 
   // Only check JavaScript file size
   performance: {
     assetFilter(assetFilename) {
-      return assetFilename.endsWith('.js');
-    },
+      return assetFilename.endsWith('.js')
+    }
   },
 
   plugins: [
     new WebpackManifestPlugin({
-      fileName: 'assets-manifest.json',
+      fileName: 'assets-manifest.json'
     }),
     new CopyPlugin({
       patterns: [
         {
           from: join(dirname(require.resolve('nhsuk-frontend')), 'assets'),
-          to: 'assets',
+          to: 'assets'
         },
         {
           from: 'assets',
-          to: 'assets',
+          to: 'assets'
         },
         {
           from: join(dirname(require.resolve('iframe-resizer')), 'js'),
-          to: 'javascripts/vendor',
+          to: 'javascripts/vendor'
         },
         {
           from: 'javascripts/vendor',
-          to: 'javascripts/vendor',
-        },
-      ],
-    }),
+          to: 'javascripts/vendor'
+        }
+      ]
+    })
   ],
 
   stats: {
     errorDetails: true,
     loggingDebug: ['sass-loader'],
-    preset: 'minimal',
+    preset: 'minimal'
   },
 
   // Use Browserslist config
-  target: 'browserslist',
-};
+  target: 'browserslist'
+}
 
 /**
  * @import { Configuration } from 'webpack'

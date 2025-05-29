@@ -7,13 +7,13 @@ module.exports = {
         bugfixes: true,
 
         // Apply smaller "loose" transforms for browsers
-        loose: true,
-      },
-    ],
+        loose: true
+      }
+    ]
   ],
   env: {
     test: {
-      browserslistEnv: 'node',
-    },
-  },
-};
+      browserslistEnv: 'node'
+    }
+  }
+}

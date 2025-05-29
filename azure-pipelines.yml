@@ -1,25 +1,24 @@
 trigger:
   branches:
     include:
-    - main
-    - master
-    - ia-site
-    - refs/tags/v*
-    - refs/heads/review/1-*
-    - refs/heads/review/2-*
-    - refs/heads/review/3-*
-    - refs/heads/dev/*
-    - refs/heads/user/*
+      - main
+      - master
+      - ia-site
+      - refs/tags/v*
+      - refs/heads/review/1-*
+      - refs/heads/review/2-*
+      - refs/heads/review/3-*
+      - refs/heads/dev/*
+      - refs/heads/user/*
   paths:
     exclude:
-    - CHANGELOG.md
-    - README.md
+      - CHANGELOG.md
+      - README.md
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
   - script: npm ci
     displayName: 'Install'
 
@@ -52,7 +51,7 @@ steps:
       pollingTimeoutSec: '300'
 
   - task: sonarcloud-buildbreaker@2
-    displayName: "Break the build if the quality gate fails"
+    displayName: 'Break the build if the quality gate fails'
     inputs:
       SonarCloud: 'SonarCloud'
       organization: 'nhsdigital'
