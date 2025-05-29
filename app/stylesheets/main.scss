@@ -201,20 +201,6 @@
   margin-top: 0;
   position: relative;
   @include nhsuk-font-size(19);
-
-  &:visited {
-    color: $nhsuk-link-visited-color;
-  }
-
-  &:hover,
-  &:focus {
-    color: $nhsuk-link-hover-color;
-    text-decoration: none;
-
-    .nhsuk-icon {
-      fill: $nhsuk-text-color;
-    }
-  }
 }
 
 // Styling for WCAG 2.2 guidance blocks.

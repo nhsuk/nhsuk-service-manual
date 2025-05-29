@@ -43,25 +43,14 @@
 
 .app-side-nav__link {
   text-decoration: none;
+  @include nhsuk-link-style-no-visited-state;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   @include nhsuk-media-query($until: desktop) {
     text-decoration: underline;
-  }
-
-  &:visited {
-    color: $color_nhsuk-blue;
-  }
-
-  &:hover {
-    color: $nhsuk-link-hover-color;
-    text-decoration: underline;
-  }
-
-  &:focus {
-    &:hover,
-    &:visited {
-      color: $nhsuk-focus-text-color;
-    }
   }
 }
 
