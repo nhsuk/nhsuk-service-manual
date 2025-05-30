@@ -62,7 +62,7 @@
     "copy-webpack-plugin": "^13.0.0",
     "cssnano": "^7.0.7",
     "del-cli": "^6.0.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-es-x": "^8.6.2",
