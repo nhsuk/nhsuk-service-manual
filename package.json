@@ -83,7 +83,7 @@
     "sass-embedded": "^1.89.0",
     "sass-loader": "^16.0.5",
     "source-map-loader": "^5.0.0",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^7.0.0",
     "webpack": "^5.99.8",
