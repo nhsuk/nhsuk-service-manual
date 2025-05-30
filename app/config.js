@@ -1,15 +1,15 @@
-const { join, resolve } = require('path');
+const { join, resolve } = require('path')
 
 const {
   ADOBE_TRACKING_URL = '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
   BASE_URL = 'https://service-manual.nhs.uk',
   NODE_ENV = 'production',
-  PORT = '3000',
-} = process.env;
+  PORT = '3000'
+} = process.env
 
-const rootPath = resolve(__dirname, '..');
-const sourcePath = join(rootPath, 'app');
-const modulePath = join(rootPath, 'node_modules');
+const rootPath = resolve(__dirname, '..')
+const sourcePath = join(rootPath, 'app')
+const modulePath = join(rootPath, 'node_modules')
 
 module.exports = {
   // Adobe analytics
@@ -18,16 +18,17 @@ module.exports = {
   // Common paths
   sourcePath,
   modulePath,
-  publicPath: NODE_ENV === 'test'
-    ? join(rootPath, 'test/fixtures')
-    : join(rootPath, 'public'),
+  publicPath:
+    NODE_ENV === 'test'
+      ? join(rootPath, 'test/fixtures')
+      : join(rootPath, 'public'),
 
   // Nunjucks search paths
   nunjucksPaths: [
     join(sourcePath, 'views'),
     join(modulePath, 'nhsuk-frontend/packages/components'),
     join(modulePath, 'nhsuk-frontend/packages/macros'),
-    join(modulePath, 'nhsuk-frontend/packages'),
+    join(modulePath, 'nhsuk-frontend/packages')
   ],
 
   // Base URL
@@ -37,5 +38,5 @@ module.exports = {
   env: NODE_ENV,
 
   // Port to run local development server on
-  port: parseInt(PORT, 10),
-};
+  port: parseInt(PORT, 10)
+}

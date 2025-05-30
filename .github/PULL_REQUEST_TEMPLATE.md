@@ -1,10 +1,13 @@
 ## Description
+
 <!--- Describe your changes in detail -->
 
 ### Related issue
+
 <!--- Optional: if there is an open GitHub or JIRA issue, please link to the issue here -->
 
 ## Checklist
+
 <!-- Ensure each of the points below have been considered and completed where applicable -->
 
 - [ ] Tested against the [NHS.UK frontend testing policy](https://github.com/nhsuk/nhsuk-frontend/blob/main/docs/contributing/testing.md) (Resolution, Browser & Accessibility)
