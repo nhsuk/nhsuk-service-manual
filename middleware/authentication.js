@@ -8,10 +8,9 @@ const basicAuth = require('basic-auth')
  * @example
  * const authentication = required('authentication');
  * app.use(authentication);
- *
- * @param   {string}   req Express Request object
- * @param   {string}   res Express Response object
- * @returns {function} Express 4 middleware requiring the given credentials
+ * @param {string} req - Express Request object
+ * @param {string} res - Express Response object
+ * @returns {Function} Express 4 middleware requiring the given credentials
  */
 
 module.exports = (req, res, next) => {

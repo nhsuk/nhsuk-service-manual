@@ -1,4 +1,5 @@
 const { dirname, join } = require('path')
+
 const CopyPlugin = require('copy-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 
@@ -12,7 +13,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     // Main application script and styles
-    main: ['./javascripts/main.js', './stylesheets/main.scss'],
+    main: ['./javascripts/main.mjs', './stylesheets/main.scss'],
 
     // Design example overrides
     overrides: {
@@ -32,7 +33,7 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.js$/,
+        test: /\.(js|mjs)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: { rootMode: 'upward' }
@@ -80,7 +81,7 @@ module.exports = {
   // Only check JavaScript file size
   performance: {
     assetFilter(assetFilename) {
-      return assetFilename.endsWith('.js')
+      return assetFilename.endsWith('.mjs')
     }
   },
 

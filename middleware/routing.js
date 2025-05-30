@@ -12,7 +12,7 @@
  * 5. We got template not found both times - call next to trigger the 404 page
  * 6. Remove the first slash, render won't work with it
  * 7. If it's blank, render the root index
- * */
+ */
 
 function renderPath(path, res, next) {
   res.render(path, (error, html) => {
