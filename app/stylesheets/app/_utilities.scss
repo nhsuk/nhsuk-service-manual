@@ -1,8 +1,8 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #UTILITIES
-   ========================================================================== */
+////
+/// Utilities
+////
 
 .app-u-border-top {
   border-top: 2px solid $color_nhsuk-blue;
@@ -17,7 +17,6 @@
     list-style: none;
     padding-left: 0;
   }
-
 }
 
 // Hide content on mobile
@@ -36,6 +35,9 @@
 
 // Make content full width of its parent container
 .app-u-full-width {
-  max-width: 100% !important; // sass-lint:disable-line no-important */
-  width: 100% !important; // sass-lint:disable-line no-important */
+  // stylelint-disable-next-line declaration-no-important
+  max-width: 100% !important;
+
+  // stylelint-disable-next-line declaration-no-important
+  width: 100% !important;
 }

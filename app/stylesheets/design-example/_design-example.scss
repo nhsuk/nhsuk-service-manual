@@ -1,8 +1,8 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-@forward 'govuk/main';
-@forward 'code-embed';
-@forward 'code-snippet';
+@forward "govuk/main";
+@forward "code-embed";
+@forward "code-snippet";
 
 .design-example {
   $root: &;
@@ -40,16 +40,15 @@
         color: $nhsuk-focus-text-color;
       }
     }
-
   }
 }
 
 p + .design-example {
-  @include nhsuk-responsive-padding(3, 'top');
+  @include nhsuk-responsive-padding(3, "top");
 }
 
 .nhsuk-lede-text + .design-example {
-  @include nhsuk-responsive-padding(0, 'top');
+  @include nhsuk-responsive-padding(0, "top");
 }
 
 .design-example-frame {

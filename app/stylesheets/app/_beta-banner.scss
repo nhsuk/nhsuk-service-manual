@@ -1,8 +1,8 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #BETA-BANNER
-   ========================================================================== */
+////
+/// Beta banner
+////
 
 .app-beta__container {
   border-bottom: 1px solid $nhsuk-border-color;

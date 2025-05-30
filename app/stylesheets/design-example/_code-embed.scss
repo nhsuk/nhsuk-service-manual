@@ -1,4 +1,4 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
 .code-embed {
   background-color: $color_nhsuk-grey-5;
@@ -9,7 +9,7 @@
     width: 100%;
   }
 
-  [src*='components/header'] {
+  [src*="components/header"] {
     width: 99%;
   }
 

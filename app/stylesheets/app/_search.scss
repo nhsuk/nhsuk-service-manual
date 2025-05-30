@@ -1,19 +1,19 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #SEARCH
-   ========================================================================== */
+////
+/// Search
+////
 
 .nhsuk-list--border li {
   border-bottom: 1px solid $color_nhsuk-grey-4;
   padding: 8px 0 16px;
 }
 
-.nhsuk-list--border li>:first-child {
+.nhsuk-list--border li > :first-child {
   margin-top: 0;
 }
 
-.nhsuk-list--border li>:last-child {
+.nhsuk-list--border li > :last-child {
   margin-bottom: 0;
 }
 
@@ -24,12 +24,12 @@
 
 .nhsuk-header__search-form--search-results {
   background-color: transparent;
-  display: -ms-flexbox; /* [14] */
-  display: flex; // sass-lint:disable-line no-duplicate-properties
+  display: -ms-flexbox; // [14]
+  display: flex;
   padding: 0;
   width: 100%;
 
-  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-responsive-margin(7, "bottom");
 
   .autocomplete-container {
     width: 100%;
@@ -41,9 +41,10 @@
 
   .autocomplete__input,
   .nhsuk-search__input {
-    -ms-flex-positive: 2; /* [14] */
-    -webkit-appearance: listbox; // sass-lint:disable-line prefixes /* [5] */
-    background-color: $color_nhsuk-white !important; // sass-lint:disable-line no-important /* [6] */
+    -ms-flex-positive: 2; // [14]
+    -webkit-appearance: listbox; // [5]
+    // stylelint-disable-next-line declaration-no-important
+    background-color: $color_nhsuk-white !important; // [6]
     border-bottom: 1px solid $color_nhsuk-grey-3;
     border-bottom-left-radius: $nhsuk-border-radius;
     border-bottom-right-radius: 0;
@@ -54,11 +55,11 @@
     border-top-right-radius: 0;
     flex-grow: 2;
     font-size: inherit;
-    height: 52px; /* [2] */
+    height: 52px; // [2]
     margin: 0;
     outline: none;
     padding: 0 nhsuk-spacing(3);
-    width: 100%; /* [2] */
+    width: 100%; // [2]
 
     &:focus {
       border: $nhsuk-box-shadow-spread solid $nhsuk-focus-color;
@@ -75,7 +76,7 @@
     border-top-right-radius: $nhsuk-border-radius;
     float: right;
     font-size: inherit;
-    height: 52px; /* [2] */
+    height: 52px; // [2]
     line-height: inherit;
     margin: 0;
     outline: none;
@@ -84,12 +85,12 @@
 
     .nhsuk-icon__search {
       fill: $color_nhsuk-white;
-      height: 38px; /* [3] */
-      width: 38px; /* [3] */
+      height: 38px; // [3]
+      width: 38px; // [3]
     }
 
     &::-moz-focus-inner {
-      border: 0; /* [4] */
+      border: 0; // [4]
     }
 
     &:hover {
@@ -105,9 +106,7 @@
         fill: $nhsuk-focus-text-color;
       }
     }
-
   }
-
 }
 
 .app-search-results-item {
@@ -159,7 +158,6 @@
 }
 
 @include nhsuk-media-query($from: tablet) {
-
   .autocomplete__option:last-child {
     padding-bottom: 0;
   }
@@ -171,7 +169,6 @@
   .autocomplete__option-title {
     text-decoration: underline;
   }
-
 }
 
 .autocomplete__option-category {

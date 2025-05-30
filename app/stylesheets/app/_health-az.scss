@@ -1,17 +1,14 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #HEALTH-A-Z
-   ========================================================================== */
-
-/**
- * Custom style for the content guide
- */
+////
+/// Health A-Z
+///
+/// Custom style for the content guide
+////
 
 .app-style-guide-a-z {
-
   .nhsuk-a-z-list--results-items {
-    @include nhsuk-responsive-margin(9, 'bottom');
+    @include nhsuk-responsive-margin(9, "bottom");
   }
 
   .nhsuk-back-to-top__link {
@@ -24,5 +21,4 @@
     display: inline-block;
     padding: nhsuk-spacing(2) + $nhsuk-box-shadow-link;
   }
-
 }

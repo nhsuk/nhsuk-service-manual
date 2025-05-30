@@ -1,12 +1,10 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #FEATURED-LIST
-   ========================================================================== */
-
-/**
- * Styled list for design principles and service standard
- */
+////
+/// Featured list component
+///
+/// Styled list for design principles and service standard
+////
 
 .featured-list {
   list-style: none;
@@ -26,8 +24,8 @@
 
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item {
-    display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
-    display: flex; // sass-lint:disable-line no-duplicate-properties
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: nhsuk-spacing(6);
     padding-left: nhsuk-spacing(9);
   }
@@ -46,7 +44,7 @@
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item__number {
     display: block;
-    left: - nhsuk-spacing(9);
+    left: -nhsuk-spacing(9);
     margin: 0;
     position: absolute;
   }
@@ -64,8 +62,8 @@
   -ms-flex-align: center;
   align-items: center;
   border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
-  display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
-  display: flex; // sass-lint:disable-line no-duplicate-properties
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 0;
   padding-top: nhsuk-spacing(3);
   position: relative;

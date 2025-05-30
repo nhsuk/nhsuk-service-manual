@@ -1,12 +1,12 @@
 // NHS.UK Frontend
-@use 'vendor/nhsuk-frontend' as *;
-@forward 'vendor/nhsuk-frontend';
+@use "vendor/nhsuk-frontend" as *;
+@forward "vendor/nhsuk-frontend";
 
 // App specific styles
-@forward 'app/app';
+@forward "app/app";
 
 // Design examples
-@forward 'design-example/design-example';
+@forward "design-example/design-example";
 
 /////////////////
 // FRONTEND FIXES + UPDATES
@@ -61,11 +61,13 @@
 .nhsuk-table__cell--break-all {
   word-break: break-all;
 }
+
 .nhsuk-table__cell--break-all--tablet {
   @include nhsuk-media-query($until: tablet) {
     word-break: break-all;
   }
 }
+
 .nhsuk-table__cell--break-all--desktop {
   @include nhsuk-media-query($until: large-desktop) {
     word-break: break-all;
@@ -172,7 +174,7 @@
 // Team pictures used for lists
 
 .app-team-pictures-list {
-  @include nhsuk-responsive-padding(0, 'left');
+  @include nhsuk-responsive-padding(0, "left");
 
   img {
     border: 2px solid transparent;
@@ -184,7 +186,7 @@
     vertical-align: middle;
     width: 40px;
 
-    @include nhsuk-responsive-margin(3, 'right');
+    @include nhsuk-responsive-margin(3, "right");
   }
 
   li {
@@ -192,37 +194,25 @@
   }
 }
 
-/* Back to top link */
+// Back to top link
 
 .nhsuk-back-to-top__link {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1.5;
   margin-top: 0;
   position: relative;
-
-  @include nhsuk-media-query($from: tablet) {
-    font-size: 1.1875rem;
-    line-height: 1.47368;
-  }
-
-  @media print {
-    display: none;
-    font-size: 14pt;
-    line-height: 1.15;
-  }
+  @include nhsuk-font-size(19);
 
   &:visited {
-    color: #330072; // sass-lint:disable-line no-color-hex no-color-literals
+    color: $nhsuk-link-visited-color;
   }
 
   &:hover,
   &:focus {
-    color: #7c2855; // sass-lint:disable-line no-color-hex no-color-literals
+    color: $nhsuk-link-hover-color;
     text-decoration: none;
 
     .nhsuk-icon {
-      fill: #212b32; // sass-lint:disable-line no-color-hex no-color-literals
+      fill: $nhsuk-text-color;
     }
   }
 }
@@ -232,16 +222,17 @@
 // Border colour altered to match tag colour.
 .app-wcag-inset-text {
   border-left-color: nhsuk-shade($color_nhsuk-blue, 10%);
-  @include nhsuk-responsive-margin(0, 'top');
+  @include nhsuk-responsive-margin(0, "top");
 }
 
 // Slightly more margin top to maintain visual rhythm of page content
 // margin bottom placed on container and stripped from final p element for :target box styling
 // max-width to reduce empty space caused by limiting line length of body content
 .app-wcag-22 {
-  @include nhsuk-responsive-margin(1, 'top');
-  @include nhsuk-responsive-margin(4, 'bottom');
+  @include nhsuk-responsive-margin(1, "top");
+  @include nhsuk-responsive-margin(4, "bottom");
 }
+
 .app-wcag-22 p:last-child {
   margin-bottom: 0;
 }

@@ -1,14 +1,14 @@
-@use '../vendor/nhsuk-frontend' as *;
+// stylelint-disable color-no-hex
 
-/* ==========================================================================
-   #CODE BLOCK HIGHLIGHTING
-   ========================================================================== */
+@use "../vendor/nhsuk-frontend" as *;
 
-// sass-lint:disable-all
+////
+/// Code block highlighting
+////
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
+  color: #000000;
   background: none;
   text-align: left;
   white-space: pre;
@@ -26,14 +26,18 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
   text-shadow: none;
   background: #b3d4fc;
 }
@@ -49,17 +53,17 @@ pre[class*="language-"] {
   padding: 1em;
   overflow: auto;
 
-  @include nhsuk-responsive-margin(4, 'bottom');
+  @include nhsuk-responsive-margin(4, "bottom");
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #fff;
+  background: #ffffff;
 }
 
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
+  padding: 0.1em;
+  border-radius: 0.3em;
   white-space: normal;
 }
 
@@ -67,15 +71,15 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: slategray;
+  color: #708090;
 }
 
 .token.punctuation {
-  color: #999;
+  color: #999999;
 }
 
 .namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .token.property,
@@ -85,7 +89,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #905;
+  color: #990055;
 }
 
 .token.selector,
@@ -94,7 +98,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #690;
+  color: #669900;
 }
 
 .token.operator,
@@ -103,30 +107,31 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
-  background: hsla(0, 0%, 100%, .5);
+  background: hsla(0deg, 0%, 100%, 0.5);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #07a;
+  color: #0077aa;
 }
 
 .token.function,
 .token.class-name {
-  color: #DD4A68;
+  color: #dd4a68;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: #e90;
+  color: #ee9900;
 }
 
 .token.important,
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }

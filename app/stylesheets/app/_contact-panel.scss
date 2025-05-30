@@ -1,18 +1,18 @@
-@use '../vendor/nhsuk-frontend' as *;
+@use "../vendor/nhsuk-frontend" as *;
 
-/* ==========================================================================
-   #CONTACT-PANEL
-   ========================================================================== */
+////
+/// Contact panel
+////
 
 .app-contact-panel {
   border-top: 2px solid $color_nhsuk-blue;
 
-  @include nhsuk-responsive-margin(6, 'top');
+  @include nhsuk-responsive-margin(6, "top");
 }
 
 .app-contact-panel__heading {
   @include nhsuk-font(26, $weight: bold);
-  @include nhsuk-responsive-padding(3, 'top');
+  @include nhsuk-responsive-padding(3, "top");
 }
 
 .nhsuk-pagination + .app-contact-panel {
