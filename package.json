@@ -86,7 +86,7 @@
     "stylelint": "^16.20.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^7.0.0",
-    "webpack": "^5.99.8",
+    "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
     "webpack-manifest-plugin": "^5.0.1"
   },
