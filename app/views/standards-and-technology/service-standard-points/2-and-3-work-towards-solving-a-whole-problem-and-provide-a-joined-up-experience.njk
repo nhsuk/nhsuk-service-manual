@@ -6,9 +6,9 @@
 {% set dateUpdated = "March 2022" %}
 {% set backlog_issue_id = "337" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
-{% block breadcrumb %}
+{% block beforeContent %}
   {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
 {% endblock %}
 
@@ -17,7 +17,7 @@
   <p class="nhsuk-lede-text app-lede-text">Collaborate across team, programme and organisational boundaries and create a service that meets users' needs across all channels.</p>
 
   {{ insetText({
-    HTML: "<p>In the GOV.UK service standard, these are 2 separate points but our user research showed that it helped digital teams working in health to deal with them together.</p>",
+    html: "<p>In the GOV.UK service standard, these are 2 separate points but our user research showed that it helped digital teams working in health to deal with them together.</p>",
     classes: "nhsuk-u-margin-top-0"
   }) }}
 

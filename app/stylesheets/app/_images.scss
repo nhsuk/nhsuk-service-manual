@@ -1,0 +1,10 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+////
+/// Images
+////
+
+.app-image--border {
+  border: 1px solid $color_nhsuk-grey-3;
+  width: 100%;
+}

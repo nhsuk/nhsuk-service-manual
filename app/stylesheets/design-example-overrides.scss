@@ -1,0 +1,61 @@
+// stylelint-disable color-no-hex
+
+@use "vendor/nhsuk-frontend/base" as *;
+
+// WARNING: This file is intended for adding extra styles to the code snippet
+// examples and standalone examples.
+// Beware of adding too much in to this file, we should aim for our example
+// code to look as close to the unmodified nhsuk-frontend library as possible.
+
+html {
+  background-color: $color_nhsuk-grey-5;
+}
+
+// Component examples need a bit of space around them
+body {
+  padding: 32px;
+
+  @include nhsuk-media-query($until: tablet) {
+    padding: 16px;
+  }
+}
+
+.app-example-wrapper--full-page {
+  padding: 0;
+}
+
+// Component examples on a blue background
+.app-example-background--blue {
+  background-color: $color_nhsuk-blue;
+}
+
+// Component examples on a grey-4 background
+.app-example-background--grey-4 {
+  background-color: $color_nhsuk-grey-4;
+}
+
+// In order to show how the grid works, we need to have an element inside the
+// grid that is visible and fills the available space with a background color.
+.nhsuk-grid-row > .spacing-example div > p {
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  padding: 20px;
+  text-align: center;
+}
+
+// Spacing examples for on divs
+.spacing-example div {
+  background: #80afdc;
+}
+
+.spacing-example div:nth-of-type(odd) {
+  background: #337ec6;
+}
+
+// Layout examples for on divs
+.app-example-layout-page [class^="nhsuk-grid-column"] > p {
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  padding: 20px;
+  text-align: center;
+}

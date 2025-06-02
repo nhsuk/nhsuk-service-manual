@@ -6,9 +6,9 @@
 {% set dateUpdated = "April 2021" %}
 {% set backlog_issue_id = "86" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
-{% block breadcrumb %}
+{% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
 {% endblock %}
 
@@ -17,9 +17,7 @@
   {{ designExample({
     group: "patterns",
     item: "mini-hub",
-    type: "example",
-    fullpage: true,
-    showArguments: false
+    type: "example"
   }) }}
 
   <p>The mini-hub is made up of:</p>
@@ -52,8 +50,7 @@
     group: "patterns",
     item: "mini-hub",
     type: "default",
-    htmlOnly: true,
-    showArguments: false
+    htmlOnly: true
   }) }}
 
   <h3 class="nhsuk-u-margin-top-6">Contents list</h3>

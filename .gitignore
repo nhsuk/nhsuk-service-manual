@@ -4,7 +4,8 @@ public
 .DStore
 .DS_Store
 app/.DS_Store
-.vscode
+.cache
 .idea
 .scannerwork
+.vscode
 coverage

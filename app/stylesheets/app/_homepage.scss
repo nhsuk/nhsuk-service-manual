@@ -1,0 +1,22 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+////
+/// Home page
+///
+/// Custom style for the homepage
+////
+
+.nhsuk-section {
+  @include nhsuk-responsive-padding(6, "bottom");
+  @include nhsuk-responsive-padding(6, "top");
+
+  @include nhsuk-media-query($until: desktop) {
+    .nhsuk-grid-column-one-half:last-child {
+      padding-top: nhsuk-spacing(3);
+    }
+  }
+}
+
+.nhsuk-section--white {
+  background-color: $color_nhsuk-white;
+}

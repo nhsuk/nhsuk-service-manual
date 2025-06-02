@@ -1,0 +1,91 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+////
+/// Side nav component
+////
+
+.app-side-nav__heading {
+  color: $nhsuk-secondary-text-color;
+  margin-bottom: 12px;
+  padding-top: 4px;
+  @include nhsuk-font(19, $line-height: 1.25, $weight: bold);
+
+  @include nhsuk-media-query($until: desktop) {
+    color: $nhsuk-text-color;
+    @include nhsuk-font(26, $line-height: 1.25, $weight: bold);
+  }
+}
+
+.app-side-nav__list {
+  margin-bottom: 0;
+  @include nhsuk-font(16, $line-height: 1.3);
+
+  @include nhsuk-media-query($until: desktop) {
+    margin-bottom: nhsuk-spacing(2);
+    @include nhsuk-font(19, $line-height: 1.3);
+  }
+}
+
+.app-side-nav__item {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.app-side-nav__item--current {
+  border-left: 4px solid $color_nhsuk-blue;
+  margin-left: -12px;
+  padding-left: 8px;
+
+  .app-side-nav__link {
+    font-weight: $nhsuk-font-bold;
+  }
+}
+
+.app-side-nav__link {
+  text-decoration: none;
+
+  @include nhsuk-media-query($until: desktop) {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  &:hover {
+    color: $nhsuk-link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    &:hover,
+    &:visited {
+      color: $nhsuk-focus-text-color;
+    }
+  }
+}
+
+.app-side-nav__list--nested {
+  @include nhsuk-responsive-margin(2, "bottom");
+  @include nhsuk-responsive-margin(3, "top");
+
+  .app-side-nav__item {
+    list-style: none;
+    @include nhsuk-font(16, $line-height: 1.3);
+  }
+
+  .app-side-nav__link {
+    font-weight: 400;
+  }
+}
+
+.app-side-nav__list--nested .app-side-nav__item::before {
+  color: $color_nhsuk-grey-3;
+  content: "—";
+  margin-left: -20px;
+  margin-right: 4px;
+}
+
+.app-index-navigation {
+  @include nhsuk-responsive-padding(4, "top");
+}

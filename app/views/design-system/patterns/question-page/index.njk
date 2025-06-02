@@ -6,7 +6,7 @@
 {% set dateUpdated = "June 2025" %}
 {% set backlog_issue_id = "242" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block breadcrumb %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -31,9 +31,7 @@
   {{ designExample({
     group: "patterns",
     item: "question-page",
-    type: "default",
-    fullpage: true,
-    showArguments: false
+    type: "default"
   }) }}
 
 <h2 id="when-to-use">When to use a question page</h2>
@@ -98,9 +96,7 @@
   {{ designExample({
     group: "patterns",
     item: "question-page",
-    type: "legend-page-heading",
-    fullpage: true,
-    showArguments: false
+    type: "legend-page-heading"
   }) }}
 
 <p>A question page with a label as the page heading:</p>
@@ -108,9 +104,7 @@
   {{ designExample({
     group: "patterns",
     item: "question-page",
-    type: "label-page-heading",
-    fullpage: true,
-    showArguments: false
+    type: "label-page-heading"
   }) }}
 
 <p>Do not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
@@ -140,9 +134,7 @@
   {{ designExample({
     group: "patterns",
     item: "question-page",
-    type: "complex-question",
-    fullpage: true,
-    showArguments: false
+    type: "complex-question"
   }) }}
 
 <h4 id="asking-multiple-questions-on-a-page">Asking multiple questions on a page</h4>
@@ -155,9 +147,7 @@
   {{ designExample({
     group: "patterns",
     item: "question-page",
-    type: "multiple-questions",
-    fullpage: true,
-    showArguments: false
+    type: "multiple-questions"
   }) }}
 
 <h3 id="continue-button">Continue button</h3>
@@ -207,9 +197,9 @@
 </div>
 <!-- <h2 id="accessibility">Accessibility</h2>
 <p>ANYTHING TO SAY OVER AND ABOVE WCAG 2.2?</p>
-  
+
 <h2 id="research">Research</h2>
 <p>ANYTHING TO SAY ABOUT THIS?<p> -->
 
-  
+
 {% endblock %}

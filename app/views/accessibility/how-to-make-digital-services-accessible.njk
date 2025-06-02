@@ -6,9 +6,9 @@
 {% set dateUpdated = "January 2024" %}
 {% set backlog_issue_id = "351" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
-{% block breadcrumb %}
+{% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
 {% endblock %}
 
@@ -57,4 +57,3 @@
 {% block asideContent %}
   {% include "./partials/related-nav.njk" %}
 {% endblock %}
-

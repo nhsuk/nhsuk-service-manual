@@ -6,9 +6,9 @@
 {% set dateUpdated = "October 2021" %}
 {% set backlog_issue_id = "169" %}
 
-{% extends "includes/app-layout.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
-{% block breadcrumb %}
+{% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
 {% endblock %}
 
@@ -16,9 +16,7 @@
   {{ designExample({
     group: "patterns",
     item: "start-page",
-    type: "example",
-    fullpage: true,
-    showArguments: false
+    type: "example"
   }) }}
 
   <h2>When to use a start page</h2>
