@@ -3,7 +3,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "April 2025" %}
+{% set dateUpdated = "June 2025" %}
 {% set backlog_issue_id = "242" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -20,7 +20,7 @@
   </strong>
 
   <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this pattern</h3>
-  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
+  <p>Make sure that users can successfully:</p>
   <ul>
     <li><a href="#wcag-avoid-information-reentry">avoid re-entering information they've given in a previous answer</a></li>
     <li><a href="#wcag-interact-without-click-drag-task">select an answer without relying on click and drag movements</a></li>
@@ -37,9 +37,8 @@
   }) }}
 
 <h2 id="when-to-use">When to use a question page</h2>
-<p>Follow this pattern whenever you need to ask users questions within your service.</p>
+<p>Follow this pattern whenever you need to ask users questions in your service.</p>
 <p>You should make sure you know why you're asking every question and only ask users for information you really need.</p>
-<p>To help you work out what to ask, you can carry out a question protocol.</p>
 <p>If you ask for optional information:</p>
 <ul>
     <li>in most contexts, add "(optional)" to the labels of optional fields</li>
@@ -89,7 +88,7 @@
 <h3 id="page-headings">Page headings</h3>
 <p>Page headings can be questions or statements.</p>
 
-<h4 id="start-by-asking-1-question-per-page">Start by asking 1 question per page</h4>
+<h4 id="use-legends-labels-and-captions">Use legends, labels and captions</h4>
 <p>Asking just 1 question per question page helps users understand what you're asking them to do, and focus on the specific question and its answer.</p>
 <p>To help you follow this approach, you can set the contents of a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> for a page's input as the page heading. This is good practice as it means that users of screen readers will only hear the contents once.</p>
 <p>Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">make labels and legends headings (on GOV.UK)</a> or see examples below.</p>
@@ -114,8 +113,7 @@
     showArguments: false
   }) }}
 
-<p>Do not use the same page heading across multiple pages.</p>
-<p>The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
+<p>Do not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
 <p>If you need to show the high-level section, you can use an <code>nhsuk-caption</code> style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions</a>.</p>
 <p>For example, "About you":</p>
 
@@ -126,20 +124,17 @@
     htmlOnly: true
   }) }}
 
-<p>Read about <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order">beginning prototyping with 1 thing per page in our guidance on getting questions into order</a>.</p>
+<p>Read about <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order">prototyping with 1 thing per page in our guidance on getting questions into order</a>.</p>
 
 <h4 id="hint-text">Hint text</h4>
 <p>Use <a href="/design-system/components/hint-text">hint text</a> to show information that helps the majority of users answer the question, like how their information will be used, or where to find it.</p>
-<p>Keep each hint to a single short sentence, without any full stops.(CHECK - SEE GITHUB ISSUE #2070)</p>
-<p>If you need to give a long, detailed explanation, do not use hint text. Screen readers will read out the entire text when users interact with the form element. This could frustrate users if the text is long.</P>
-<P>Do not use links in hint text. While screen readers will read out the link text when describing the field, they usually do not tell users the text is a link.</p>
 
 <h4 id="asking-complex-questions-without-using-hint-text">Asking complex questions without using hint text</h4>
 <p>If you're asking a question that needs a detailed explanation, use:</p>
 <ul>
-  <li>an <code>&lt;h1&gt;</code> heading that's a statement (for example, "Interview needs") rather than a question</li>
+  <li>an <code>&lt;h1&gt;</code> heading that's a statement (for example, "If we need to contact you") rather than a question</li>
   <li>whatever mix of text, paragraphs, lists and examples best explains your question to users</li>
-  <li>a label, above the form input, that asks users a specific question – for example, "Do you have any interview needs?"</li>
+  <li>a label, above the form input, that asks users a specific question – for example, "Do you have any communication needs?"</li>
 </ul>
 
   {{ designExample({
@@ -152,9 +147,10 @@
 
 <h4 id="asking-multiple-questions-on-a-page">Asking multiple questions on a page</h4>
 <p>Sometimes it makes sense to group a number of related questions on the same page.</p>
-<p>User research will tell you when you can group pages together. For example, if you're designing an internal service for government users who need to repeat and switch between tasks quickly.</p>
+<p>User research will tell you when you can group pages together. For example, if you're designing an internal service for staff who need to repeat and switch between tasks quickly.</p>
 <p>If you need to ask for multiple related things on a page, use a statement as the heading.</p>
-<p>You can style each <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> to make the questions easier to scan. Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/#styling-options-for-labels-and-legends">style labels and legends headings (on GOV.UK)</a>. [UNLESS WE HAVE NHS EQUIV.]</p>
+<p>You can style each <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> to make the questions easier to scan. Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/#styling-options-for-labels-and-legends">style labels and legends headings (on GOV.UK)</a>.</p>
+<!-- <p>THIS ISN'T A STAFF EXAMPLE - DOES IT MATTER?:</p> -->
 
   {{ designExample({
     group: "patterns",
@@ -209,10 +205,10 @@
   <p>Avoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
   <p>If you do use a range slider, you must provide a method for selecting an answer that doesn't rely on click and drag movements. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
 </div>
-<h2 id="accessibility">Accessibility</h2>
+<!-- <h2 id="accessibility">Accessibility</h2>
 <p>ANYTHING TO SAY OVER AND ABOVE WCAG 2.2?</p>
   
 <h2 id="research">Research</h2>
-<p>ANYTHING TO SAY ABOUT THIS?<p>
+<p>ANYTHING TO SAY ABOUT THIS?<p> -->
 
 {% endblock %}
