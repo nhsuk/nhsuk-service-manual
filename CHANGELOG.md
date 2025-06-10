@@ -4,16 +4,16 @@
 
 :new: **New features**
 
-- Add new question page pattern to design system
-- Update guidance on questions on page template and hint text and in parts of the forms guidance
-- Add new account information and links variant of header component
 - Update design of header to include:
+  - account information and links
   - new feature to highlight current page in the navigation menu
   - improving NHS logo focus state
   - removing home link from header that was automatically added on small screens
   - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
   - left-aligning navigation items by default
 - Add new profile icon to icons page
+- Add new question page pattern
+- Update guidance on questions on page template and in parts of forms guidance
 - Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
@@ -26,6 +26,7 @@
 - Move full list of WCAG 2.2 changes to design system to a separate page
 - Change "Go back" to "Back" on back link
 - Update wording on Do and Don't component
+- Remove beta label from BSL standard and from technology pages
 - Move Nunjucks macro options to NHS.UK frontend
 
 :wrench: **Fixes**
