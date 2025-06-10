@@ -3,10 +3,12 @@
 ## TBC
 
 :new: **New features**
+
 - Add new question page pattern to design system
 - Update guidance on questions on page template and hint text and in parts of the forms guidance
 
 :wrench: **Maintenance**
+
 - Remove beta label from BSL standard and from technology pages
 
 ## Unreleased
