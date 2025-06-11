@@ -44,10 +44,6 @@ Code pushed to a branch starting with `review/3-` will deploy on the [review/3 e
 
 Code pushed to a branch starting with `dev/` will deploy on the [development environment](https://nhsuk-service-manual-wa-dev-uks.azurewebsites.net/).
 
-#### User Testing
-
-Code pushed to a branch starting with `user/` will deploy on the [user testing environment](https://nhsuk-service-manual-usertesting-wa-dev-uks.azurewebsites.net/).
-
 #### Staging
 
 Used for very final checks before changes are pushed to the live website.
