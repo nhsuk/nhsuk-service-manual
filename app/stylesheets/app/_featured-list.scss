@@ -44,7 +44,7 @@
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item__number {
     display: block;
-    left: -nhsuk-spacing(9);
+    left: nhsuk-spacing(-9);
     margin: 0;
     position: absolute;
   }
