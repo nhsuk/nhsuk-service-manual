@@ -48,7 +48,7 @@ Code pushed to a branch starting with `dev/` will deploy on the [development env
 
 Used for very final checks before changes are pushed to the live website.
 
-Code pushed to the `main` branch will deploy to the [Staging environment](https://nhsuk-service-manual-dev-uks.azurewebsites.net/).
+Code pushed to the `main` branch will deploy to the [Staging environment](https://nhsuk-service-manual-wa-stag-uks.azurewebsites.net/).
 
 #### Live
 
