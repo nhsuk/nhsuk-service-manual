@@ -6,6 +6,11 @@
 
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
+:wrench: **Maintenance**
+
+- Update blog posts in What's new section
+- Update blog posts on service standard pages
+
 ## 7.11.0 - 23 May 2025
 
 :new: **New features**
