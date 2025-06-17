@@ -1,5 +1,5 @@
 {% set pageTitle = "Question pages" %}
-{% set pageDescription = "This pattern explains when to use question pages and what elements they need to include." %}
+{% set pageDescription = "This pattern explains when to use question pages and the elements they can include." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
@@ -63,8 +63,8 @@
 <ul>
   <li>back link</li>
   <li>page heading</li>
+  <li>way for users to input information</li>
   <li>continue button</li>
-  <li>a way for users to input information</li>
 </ul>
 
 <h4 id="back-link">Back link</h4>
@@ -74,23 +74,15 @@
 <p>An exception to this is when the user has performed an action they should only do once, like make a payment or complete an application. The browser back button should still work, but show the user a sensible message rather than letting them perform the action again.</p>
 
 <h4 id="page-heading">Page heading</h4>
-<p>Question page headings are usually questions but can also be statements.</p>
-<p>Find out more about when to use statements in the sections on:</p>
+<p>Usually the page heading (the <code>&lt;h1&gt;</code>) should be the question. Do this by using a label or legend. Find out about <a href="#using-legends-labels-and-captions">using legends, labels and captions</a>.</p>
+<p>Sometimes the page heading will be a statement. Find out more about when to use statements in the sections on:</p>
 <ul>
   <li><a href="#asking-complex-questions-without-using-hint-text">asking complex questions without using hint text</a></li>
   <li><a href="#asking-multiple-questions-on-a-page">asking multiple questions on a page</a></li>
 </ul>
 
-<h4 id="continue-button">Continue button</h4>
-<p>Make sure your Continue button is:</p>
-<ul>
-  <li>labelled "Continue", not "Next"</li>
-  <li>aligned to the left so users do not miss it</li>
-</ul>
-
 <h4 id="input">Input</h4>
-<p>For example, a text input box, radios or checkboxes.</p>
-
+<p>For example, a <a href="/design-system/components/text-input">text input</a> box, <a href="/design-system/components/radios">radios</a> or <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-information-reentry" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
@@ -102,9 +94,16 @@
   </ul>
 </div>
 
+<h4 id="continue-button">Continue button</h4>
+<p>Make sure your Continue button is:</p>
+<ul>
+  <li>labelled "Continue", not "Next"</li>
+  <li>aligned to the left so users do not miss it</li>
+</ul>
+
 <h3 id="using-legends-labels-and-captions">Using legends, labels and captions</h3>
 
-<p>You can set the contents of a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> for a page's input as the page heading. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.) Using a legend or label as a page heading is good practice as it means that screen reader users will only hear the contents once.</p>
+<p>For single question pages, using a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> as the page heading is good practice as it means that screen reader users will only hear the contents once. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.)</p>
 <p>Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">make labels and legends headings (on&nbsp;GOV.UK)</a> or see the examples below.</p>
 
 <p>Here's an example of a question page with a legend as the page heading.</p>
@@ -124,7 +123,7 @@
   }) }}
 
 <p>Do not use the same page heading across multiple pages. The page heading should relate specifically to the information being asked for on the current page, not any higher-level section the page is part of.</p>
-<p>If you need to show the high-level section, you can use an <code>nhsuk-caption</code> style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions</a>.</p>
+<p>If you need to show the high-level section, you can use an <code>nhsuk-caption</code> style. See <a href="/design-system/styles/typography#headings-with-captions">headings with captions (on the Typography page)</a>.</p>
 <p>In this example, the heading has the caption "About you" above it.</p>
 
   {{ designExample({
@@ -161,7 +160,6 @@
     item: "question-pages",
     type: "multiple-questions"
   }) }}
-
 
 <h3 id="using-progress-indicators">Using progress indicators</h3>
 <p>Start by testing your form without a progress indicator to see if it's simple enough that users do not need one.</p>
