@@ -47,9 +47,11 @@
     "iframe-resizer": "^4.4.2",
     "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
-    "marked": "^15.0.11",
+    "marked": "^15.0.12",
+    "marked-smartypants": "^1.1.9",
     "nhsuk-frontend": "^9.6.1",
-    "nunjucks": "^3.2.4"
+    "nunjucks": "^3.2.4",
+    "smartypants": "^0.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
