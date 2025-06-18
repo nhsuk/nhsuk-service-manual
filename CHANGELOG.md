@@ -12,7 +12,7 @@
   - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
   - left-aligning navigation items by default
 - Add new profile icon to icons page
-- Add new question page pattern
+- Add new question pages pattern
 - Update guidance on questions on page template and in parts of forms guidance
 - Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
