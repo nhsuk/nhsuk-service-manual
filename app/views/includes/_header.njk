@@ -56,23 +56,33 @@
       items: [
         {
           text: "NHS service standard",
-          href: "/service-standard"
+          href: "/service-standard",
+          current: (pageSection === "Standards and technology" and subSection === "NHS service standard" and landingPage === true),
+          active: (pageSection === "Standards and technology" and not(subSection === "NHS service standard" and landingPage === true))
         },
         {
           text: "Design system",
-          href: "/design-system"
+          href: "/design-system",
+          current: (pageSection === "Design system" and (not subSection)),
+          active: (pageSection === "Design system" and subSection)
         },
         {
           text: "Content guide",
-          href: "/content"
+          href: "/content",
+          current: (pageSection === "Content guide" and landingPage === true),
+          active: (pageSection == "Content guide" and landingPage != true)
         },
         {
           text: "Accessibility",
-          href: "/accessibility"
+          href: "/accessibility",
+          current: (pageSection === "Accessibility" and landingPage === true),
+          active: (pageSection == "Accessibility" and landingPage != true)
         },
         {
           text: "Community and contribution",
-          href: "/community-and-contribution"
+          href: "/community-and-contribution",
+          current: (pageSection === "Community and contribution" and landingPage === true),
+          active: (pageSection == "Community and contribution" and landingPage != true)
         }
       ]
     }
