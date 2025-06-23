@@ -1,8 +1,12 @@
 {% from "notification-banner/macro.njk" import notificationBanner %}
 
-{% call notificationBanner() %}
+{% set html %}
   <p class="nhsuk-notification-banner__heading">
     You have 7 days left to send your application.
     <a class="nhsuk-notification-banner__link" href="#">View application</a>.
   </p>
-{% endcall %}
+{% endset %}
+
+{{ notificationBanner({
+  html: html
+}) }}
