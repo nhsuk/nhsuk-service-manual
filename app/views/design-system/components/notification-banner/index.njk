@@ -1,7 +1,7 @@
 {% set pageTitle = "Notification banner" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use the notification banner to provide important information to users." %}
+{% set pageDescription = "Use a notification banner to tell the user about something they need to know about, but that’s not directly related to the page content." %}
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "June 2025" %}
 {% set backlog_issue_id = "559" %}
@@ -14,9 +14,11 @@
 
 {% block bodyContent %}
 
-<p>Use a notification banner to tell the user about something they need to know about, but that's not directly related to the page content.</p>
-
-{# {{ example({ group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", loading: "eager" }) }} #}
+{{ designExample({
+  group: "components",
+  item: "notification-banner",
+  type: "default"
+}) }}
 
 <h2 id="when-to-use-this-component">When to use this component</h2>
 
@@ -66,7 +68,11 @@
 <li>in an account-type service, the user might need to know that the service will be down for scheduled maintenance</li>
 </ul>
 
-{# {{ example({ group: "components", item: "notification-banner", example: "whole-service", html: true, nunjucks: true, open: false, size: "s" }) }} #}
+{{ designExample({
+  group: "components",
+  item: "notification-banner",
+  type: "whole-service"
+}) }}
 
 <h2 id="telling-the-user-about-something-thats-happening-elsewhere">Telling the user about something that's happening elsewhere</h2>
 
@@ -77,7 +83,11 @@
   <li>in an account-type service, you might need to tell the user that there's a deadline approaching or that a payment is overdue</li>
 </ul>
 
-{# {{ example({ group: "components", item: "notification-banner", example: "default", html: true, nunjucks: true, open: false, size: "s", titleSuffix: "second" }) }} #}
+{{ designExample({
+  group: "components",
+  item: "notification-banner",
+  type: "default"
+}) }}
 
 <h2 id="reacting-to-something-the-user-has-done">Reacting to something the user has done</h2>
 
@@ -90,6 +100,12 @@
 <p>Use the green version of the notification banner to confirm that something they're expecting to happen has happened.</p>
 
 {# {{ example({ group: "components", item: "notification-banner", example: "success", html: true, nunjucks: true, open: false, size: "s" }) }} #}
+
+{{ designExample({
+  group: "components",
+  item: "notification-banner",
+  type: "success"
+}) }}
 
 <p>Since you're using the notification banner to tell the user about the outcome of something they've just done, add <code>role="alert"</code> so focus shifts to the notification banner on page load.</p>
 
