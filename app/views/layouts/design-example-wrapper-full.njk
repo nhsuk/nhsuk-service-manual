@@ -7,7 +7,6 @@
   <meta name="description" content="NHS digital service manual - standalone example">
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/design-example-overrides.scss") }}">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {% endblock %}
 
 {% block header %}
@@ -25,5 +24,6 @@
 {% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getAssetPath("javascripts/vendor/iframeResizer.contentWindow.min.js") }}"></script>
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
+  <script src="{{ getAssetPath("javascripts/vendor/iframeResizer.contentWindow.min.js") }}" type="module"></script>
 {% endblock %}

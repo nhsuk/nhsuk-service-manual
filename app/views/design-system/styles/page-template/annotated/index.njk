@@ -6,7 +6,6 @@ previewLayout: design-example-wrapper-blank
 
 {% block head %}
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {% endblock %}
 
 {% block bodyStart -%}
@@ -70,4 +69,6 @@ previewLayout: design-example-wrapper-blank
     <span class="app-annotate-block__label">block: bodyEnd</span>
     {{ super() }}
   </div>
+
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
 {%- endblock %}
