@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "7.12.0",
+  "version": "7.11.0",
   "description": "NHS digital service manual",
   "engines": {
     "node": "^20.9.0 || ^22.11.0"
@@ -49,7 +49,7 @@
     "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
     "marked": "^15.0.11",
-    "nhsuk-frontend": "^9.6.3",
+    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#41d5b907d",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
