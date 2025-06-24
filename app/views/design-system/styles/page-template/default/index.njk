@@ -6,7 +6,6 @@ previewLayout: design-example-wrapper-blank
 
 {% block head %}
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {%- endblock %}
 
 {% block pageTitle -%}
@@ -21,4 +20,8 @@ previewLayout: design-example-wrapper-blank
       </h1>
     </div>
   </div>
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
 {% endblock %}
