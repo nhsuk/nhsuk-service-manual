@@ -147,9 +147,13 @@
           </div>
         </div>
       </fieldset>
-      <a href="/cookie-confirmation" onclick="changeConsent();" type="submit" class="nhsuk-button nhsuk-u-margin-bottom-0">
-        Save my cookie settings
-      </a>
+
+      {{ button({
+        href: "/cookie-confirmation",
+        text: "Save my cookie settings",
+        classes: "nhsuk-u-margin-bottom-0",
+        attributes: { id: "button-statistics" }
+      }) }}
 
     </div>
 
@@ -160,19 +164,21 @@
 {% endblock %}
 
 {% block bodyEnd %}
-  <script>
-    // Check the checkboxes based on status of cookie preferences
-    window.addEventListener("load", function checkCookie() {
-      document.getElementById("input-statistics-1").checked = NHSCookieConsent.getStatistics();
-      document.getElementById("input-statistics-2").checked = !NHSCookieConsent.getStatistics();
-    });
+  {{ super() }}
 
-    // Edit consent preferences based on checkbox input
-    function changeConsent() {
-      NHSCookieConsent.setStatistics(document.getElementById("input-statistics-1").checked);
-      if (typeof NHSCookieConsent.setConsented === "function") {
-        NHSCookieConsent.setConsented(true);
-      }
-    }
+  <script type="module">
+    const $radioYes = document.getElementById("input-statistics-1")
+    const $radioNo = document.getElementById("input-statistics-2")
+    const $button = document.getElementById("button-statistics")
+
+    // Update radios based on cookie preferences
+    $radioYes.checked = NHSCookieConsent.getStatistics()
+    $radioNo.checked = !NHSCookieConsent.getStatistics()
+
+    // Update cookie preferences based on radios
+    $button.addEventListener("click", () => {
+      NHSCookieConsent.setStatistics($radioYes.checked)
+      NHSCookieConsent.setConsented(true);
+    });
   </script>
 {% endblock %}
