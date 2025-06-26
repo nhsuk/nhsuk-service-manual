@@ -11,9 +11,10 @@
   .app-button {
     &--copy {
       background-color: $color_nhsuk-white;
-      border: 1px solid $color_nhsuk-green;
-      border-bottom-color: $nhsuk-button-color;
-      box-shadow: 0 2px 0 $nhsuk-button-color;
+      border: solid $color_nhsuk-green;
+      border-width: 1px 1px 0;
+      border-radius: 3px;
+      box-shadow: 0 4px 0 $nhsuk-button-color;
       color: $color_nhsuk-green;
       cursor: pointer;
       margin-bottom: 16px;
