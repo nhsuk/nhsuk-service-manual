@@ -10,14 +10,22 @@
 
   .app-button {
     &--copy {
+      background-color: $color_nhsuk-white;
+      border: 1px solid $color_nhsuk-green;
       border-bottom-color: $nhsuk-button-color;
       box-shadow: 0 2px 0 $nhsuk-button-color;
+      color: $color_nhsuk-green;
+      cursor: pointer;
       margin-bottom: 16px;
+      min-width: 58px;
       padding: 2px 8px;
       position: absolute;
       right: 16px;
-      text-transform: none;
+      text-align: center;
+      text-decoration: none;
       top: 16px;
+      z-index: 1;
+      @include nhsuk-font(14);
 
       &:hover {
         background-color: $color_nhsuk-grey-5;
