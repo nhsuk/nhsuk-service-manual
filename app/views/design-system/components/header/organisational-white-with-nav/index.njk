@@ -1,7 +1,7 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-  classes: "nhsuk-header--white nhsuk-header--white-navigation",
+  classes: "nhsuk-header--white",
   logo: {
     href: "#",
     ariaLabel: "NHS Anytown Anyplace Anywhere NHS Foundation Trust homepage"
@@ -15,6 +15,7 @@
     visuallyHiddenLabel: "Search the Anytown Anyplace Anywhere website"
   },
   navigation: {
+    classes: "nhsuk-header__navigation--white",
     items: [
       {
         text: "Your hospital visit",
