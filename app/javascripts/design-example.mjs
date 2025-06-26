@@ -1,3 +1,4 @@
+import ClipboardJS from 'clipboard'
 import { iframeResize } from 'iframe-resizer'
 
 class DesignExample {
@@ -32,10 +33,9 @@ class DesignExample {
       closeButton.removeAttribute('hidden')
     })
 
-    this.copyButtons.forEach((copyButton) => {
-      copyButton.addEventListener('click', (e) => this.handleCopyClick(e))
-      copyButton.removeAttribute('hidden')
-    })
+    if (ClipboardJS.isSupported()) {
+      this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
+    }
   }
 
   handleTabClick(e) {
@@ -67,18 +67,24 @@ class DesignExample {
     })
   }
 
-  // Follows approach from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
-  handleCopyClick(e) {
-    e.preventDefault()
-    const el = document.createElement('textarea')
-    const str = e.target.parentElement.querySelector('pre')
-    el.value = str.innerText
-    document.body.appendChild(el)
-    el.select()
-    document.execCommand('copy')
-    document.body.removeChild(el)
-    e.target.innerText = 'Copied'
-    setTimeout(() => (e.target.innerText = 'Copy code'), 2500)
+  initCopyClick(copyButton) {
+    const clipboard = new ClipboardJS(copyButton, {
+      target: () => copyButton.parentElement.querySelector('pre')
+    })
+
+    // Update button on success
+    clipboard.on('success', (event) => {
+      copyButton.innerText = 'Code copied'
+      event.clearSelection()
+
+      // Reset button after delay
+      setTimeout(() => {
+        copyButton.innerText = 'Copy code'
+      }, 2500)
+    })
+
+    // Reveal button
+    copyButton.removeAttribute('hidden')
   }
 
   showEl(el) {
