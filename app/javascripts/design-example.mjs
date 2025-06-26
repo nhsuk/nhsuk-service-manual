@@ -27,13 +27,15 @@ class DesignExample {
       tab.addEventListener('click', (e) => this.handleTabClick(e))
     )
 
-    this.closeButtons.forEach((closeButton) =>
+    this.closeButtons.forEach((closeButton) => {
       closeButton.addEventListener('click', (e) => this.handleCloseClick(e))
-    )
+      closeButton.removeAttribute('hidden')
+    })
 
-    this.copyButtons.forEach((copyButton) =>
+    this.copyButtons.forEach((copyButton) => {
       copyButton.addEventListener('click', (e) => this.handleCopyClick(e))
-    )
+      copyButton.removeAttribute('hidden')
+    })
   }
 
   handleTabClick(e) {

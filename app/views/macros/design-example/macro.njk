@@ -174,7 +174,7 @@
               {% endif %}
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
-                <button class="app-button--copy" aria-live="assertive">
+                <button class="app-button--copy" aria-live="assertive" hidden>
                   Copy code<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
                 </button>
 
@@ -183,7 +183,7 @@
                 </code></pre>
               </div>
               {% if snippets | length > 1 %}
-              <button class="app-button--close">
+              <button class="app-button--close" hidden>
                 Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
               </button>
               {% endif %}
