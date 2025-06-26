@@ -2,13 +2,13 @@
 
 // NHS.UK frontend components
 import {
-  initCharacterCount,
+  initCharacterCounts,
   initCheckboxes,
   initDetails,
   initErrorSummary,
   initHeader,
   initRadios,
-  initSkipLink,
+  initSkipLinks,
   initTabs
 } from 'nhsuk-frontend'
 
@@ -20,11 +20,11 @@ import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 // Initialise NHS.UK frontend components
 initHeader()
 initDetails()
-initSkipLink()
+initSkipLinks()
 initCheckboxes()
 initRadios()
 initTabs()
-initCharacterCount()
+initCharacterCounts()
 initErrorSummary({ focusOnPageLoad: false })
 
 // Initialise NHS digital service manual components
