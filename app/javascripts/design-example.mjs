@@ -71,9 +71,7 @@ class DesignExample {
   handleCopyClick(e) {
     e.preventDefault()
     const el = document.createElement('textarea')
-    const str = this.node.querySelector(
-      '.code-snippet__preformatted:not(.js-hidden) code'
-    )
+    const str = e.target.parentElement.querySelector('pre')
     el.value = str.innerText
     document.body.appendChild(el)
     el.select()
