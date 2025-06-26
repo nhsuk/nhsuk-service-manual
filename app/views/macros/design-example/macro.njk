@@ -174,15 +174,18 @@
               {% endif %}
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
-                <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy<span class="nhsuk-u-visually-hidden"> {{ exampleTitle }}</span> code</a>
+                <button class="app-button--copy" aria-live="assertive" hidden>
+                  Copy code<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
+                </button>
+
                 <pre><code class="{{ snippet.language }}">
                   {{- snippet.code | safe -}}
                 </code></pre>
               </div>
               {% if snippets | length > 1 %}
-              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
-                Close<span class="nhsuk-u-visually-hidden"> {{ exampleTitle }} code</span>
-              </a>
+              <button class="app-button--close" hidden>
+                Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
+              </button>
               {% endif %}
             </div>
           {% endfor %}

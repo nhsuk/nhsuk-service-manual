@@ -8,16 +8,25 @@
     display: none;
   }
 
-  .app-link {
+  .app-button {
     &--copy {
-      border-bottom-color: $nhsuk-button-color;
-      box-shadow: 0 2px 0 $nhsuk-button-color;
+      background-color: $color_nhsuk-white;
+      border: solid $color_nhsuk-green;
+      border-width: 1px 1px 0;
+      border-radius: 3px;
+      box-shadow: 0 4px 0 $nhsuk-button-color;
+      color: $color_nhsuk-green;
+      cursor: pointer;
       margin-bottom: 16px;
+      min-width: 58px;
       padding: 2px 8px;
       position: absolute;
       right: 16px;
-      text-transform: none;
+      text-align: center;
+      text-decoration: none;
       top: 16px;
+      z-index: 1;
+      @include nhsuk-font(14);
 
       &:hover {
         background-color: $color_nhsuk-grey-5;

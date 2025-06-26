@@ -6,6 +6,10 @@
 
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
+:wrench: **Fixes**
+
+- Fix the code copy button on Nunjucks snippets that follow an HTML snippet
+
 ## 7.11.0 - 23 May 2025
 
 :new: **New features**
