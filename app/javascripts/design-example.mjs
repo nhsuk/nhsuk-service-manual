@@ -13,8 +13,8 @@ class DesignExample {
 
     this.tabs = this.node.querySelectorAll(`.${this.tabClass}`)
     this.examples = this.node.querySelectorAll('.code-snippet__preformatted')
-    this.closeButtons = this.node.querySelectorAll('.app-link--close')
-    this.copyButtons = this.node.querySelectorAll('.app-link--copy')
+    this.closeButtons = this.node.querySelectorAll('.app-button--close')
+    this.copyButtons = this.node.querySelectorAll('.app-button--copy')
     this.iframe = this.node.querySelector('iframe')
 
     this.bindEvents()

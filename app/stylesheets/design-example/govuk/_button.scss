@@ -1,12 +1,12 @@
 @use "../../vendor/nhsuk-frontend" as *;
 
-.app-link--copy:link,
-.app-link--copy:active,
-.app-link--copy:visited,
-.app-link--copy:hover {
+.app-button--copy,
+.app-button--copy:active,
+.app-button--copy:hover {
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-green;
   color: $color_nhsuk-green;
+  cursor: pointer;
   min-width: 58px;
   padding: 4px 10px 0;
   position: absolute;
