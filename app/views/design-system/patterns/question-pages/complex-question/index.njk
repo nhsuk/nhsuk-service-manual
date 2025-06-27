@@ -18,40 +18,39 @@ previewLayout: design-example-wrapper-full
 {% endblock %}
 
 {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-            <h1 class="nhsuk-heading-l">
-                If we need to contact you
-            </h1>
-            <p>Let us know if you have any communication needs you'd like us to be aware of. For example, a hearing or visual impairment.</p>
+      <h1 class="nhsuk-heading-l">
+        If we need to contact you
+      </h1>
+      <p>Let us know if you have any communication needs you'd like us to be aware of. For example, a hearing or visual impairment.</p>
 
+      {{ radios({
+        name: "contactNeeds",
+        fieldset: {
+          legend: {
+            text: "Do you have any communication needs?",
+            classes: "nhsuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
 
-            {{ radios({
-                name: "contactNeeds",
-                fieldset: {
-                legend: {
-                    text: "Do you have any communication needs?",
-                    classes: "nhsuk-fieldset__legend--m"
-                }
-                },
-                items: [
-                    {
-                        value: "yes",
-                        text: "Yes"
-                    },
-                    {
-                        value: "no",
-                        text: "No"
-                    }
-                ]
-            }) }}
+      {{ button({
+        text: "Continue"
+      }) }}
 
-            {{ button({
-            text: "Continue"
-            }) }}
-
-        </div>
     </div>
+  </div>
 
 {% endblock %}
