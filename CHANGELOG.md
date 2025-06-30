@@ -16,6 +16,7 @@
 - Update guidance on questions and in parts of forms guidance
 - Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
+- Add button groups and make buttons full width on small screens
 
 :wrench: **Maintenance**
 

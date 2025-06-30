@@ -71,8 +71,6 @@
     type: "secondary-solid"
   }) }}
 
-
-
   <h3>When to use a secondary button</h3>
   <p>Use a secondary button either:</p>
   <ul>
@@ -137,7 +135,24 @@
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
 
   <h3>Colour contrast</h3>
-  <p>All 4 buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
+  <p>All our buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
+
+  <h3 id="grouping-buttons">Grouping buttons</h3>
+  <p>Use a button group when 2 or more buttons are placed together.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "buttons",
+      type: "button-group"
+    }) }}
+
+  <p>Any links within a button group will automatically align with the buttons.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "buttons",
+      type: "button-group-link"
+    }) }}
 
   <h3 id="stop-users-from-accidentally-sending-information-more-than-once">Stop users from accidentally sending information more than once</h3>
   <p>Sometimes, users double click buttons because they:</p>
