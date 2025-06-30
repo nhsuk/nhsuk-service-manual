@@ -1,6 +1,8 @@
 // stylelint-disable color-no-hex
 
-@use "vendor/nhsuk-frontend/base" as *;
+// NHS.UK Frontend defaults
+@use "nhsuk-frontend/packages/nhsuk" as *;
+@forward "nhsuk-frontend/packages/nhsuk";
 
 // WARNING: This file is intended for adding extra styles to the code snippet
 // examples and standalone examples.
