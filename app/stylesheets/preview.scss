@@ -1,4 +1,4 @@
-// stylelint-disable color-no-hex
+@use "settings" as *;
 
 // NHS.UK Frontend defaults
 @use "nhsuk-frontend/packages/nhsuk" as *;
@@ -22,6 +22,10 @@ body {
   }
 }
 
+.app-example-page code {
+  font-family: $app-code-font;
+  @include nhsuk-font-size(16);
+}
 // Component examples on a blue background
 .app-example-background--blue {
   background-color: $color_nhsuk-blue;
@@ -43,10 +47,12 @@ body {
 
 // Spacing examples for on divs
 .spacing-example div {
+  // stylelint-disable-next-line color-no-hex
   background: #80afdc;
 }
 
 .spacing-example div:nth-of-type(odd) {
+  // stylelint-disable-next-line color-no-hex
   background: #337ec6;
 }
 
