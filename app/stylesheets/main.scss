@@ -147,30 +147,6 @@
   }
 }
 
-// Page template annotation
-
-.app-annotate-block {
-  margin-bottom: nhsuk-spacing(4);
-  outline: 2px dashed $color_nhsuk-grey-1;
-  padding: nhsuk-spacing(3);
-  padding-top: nhsuk-spacing(7);
-  position: relative;
-}
-
-.app-annotate-block__label {
-  border-bottom: 2px dashed $color_nhsuk-grey-1;
-  border-right: 2px dashed $color_nhsuk-grey-1;
-  left: 0;
-  padding: nhsuk-spacing(1) nhsuk-spacing(2);
-  position: absolute;
-  top: 0;
-}
-
-.app-annotate-block + .nhsuk-main-wrapper {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
 // Team pictures used for lists
 
 .app-team-pictures-list {

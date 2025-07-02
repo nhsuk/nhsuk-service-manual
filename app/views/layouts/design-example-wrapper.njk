@@ -1,10 +1,11 @@
 {% extends "layouts/layout.njk" %}
 
 {% set pageTitle = "Standalone example" %}
-{% set bodyClasses = "app-example-" ~ item ~ "-page" %}
+{% set htmlAttributes = { "class": "app-example-wrapper" } %}
+{% set bodyClasses = "app-example-page app-example-page--" ~ item %}
 
 {% if background %}
-  {% set bodyClasses = bodyClasses ~ " app-example-background--" ~ background %}
+  {% set bodyClasses = bodyClasses ~ " app-example-page--background-" ~ background %}
 {% endif %}
 
 {% block head %}
