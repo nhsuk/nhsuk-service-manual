@@ -6,9 +6,14 @@
 
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
+:wrench: **Maintenance**
+
+- Move page width to `$nhsuk-page-width` setting
+
 :wrench: **Fixes**
 
 - Fix the code copy button on Nunjucks snippets that follow an HTML snippet
+- Fix Stylelint code style affecting Sass `nhsuk-spacing()` output
 
 ## 7.11.0 - 23 May 2025
 

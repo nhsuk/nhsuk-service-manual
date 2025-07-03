@@ -1,18 +1,20 @@
-// stylelint-disable color-no-hex
+@use "settings" as *;
 
-@use "vendor/nhsuk-frontend/base" as *;
+// NHS.UK Frontend defaults
+@use "nhsuk-frontend/packages/nhsuk" as *;
+@forward "nhsuk-frontend/packages/nhsuk";
 
 // WARNING: This file is intended for adding extra styles to the code snippet
 // examples and standalone examples.
 // Beware of adding too much in to this file, we should aim for our example
 // code to look as close to the unmodified nhsuk-frontend library as possible.
 
-html {
+.app-example-wrapper {
   background-color: $color_nhsuk-grey-5;
 }
 
 // Component examples need a bit of space around them
-body {
+.app-example-page {
   padding: 32px;
 
   @include nhsuk-media-query($until: tablet) {
@@ -20,17 +22,18 @@ body {
   }
 }
 
-.app-example-wrapper--full-page {
-  padding: 0;
+.app-example-page code {
+  font-family: $app-code-font;
+  @include nhsuk-font-size(16);
 }
 
 // Component examples on a blue background
-.app-example-background--blue {
+.app-example-page--background-blue {
   background-color: $color_nhsuk-blue;
 }
 
 // Component examples on a grey-4 background
-.app-example-background--grey-4 {
+.app-example-page--background-grey-4 {
   background-color: $color_nhsuk-grey-4;
 }
 
@@ -45,17 +48,43 @@ body {
 
 // Spacing examples for on divs
 .spacing-example div {
+  // stylelint-disable-next-line color-no-hex
   background: #80afdc;
 }
 
 .spacing-example div:nth-of-type(odd) {
+  // stylelint-disable-next-line color-no-hex
   background: #337ec6;
 }
 
 // Layout examples for on divs
-.app-example-layout-page [class^="nhsuk-grid-column"] > p {
+.app-example-page--layout [class^="nhsuk-grid-column"] > p {
   background-color: $color_nhsuk-blue;
   color: $color_nhsuk-white;
   padding: 20px;
   text-align: center;
+}
+
+// Page template annotation
+
+.app-annotate-block {
+  margin-bottom: nhsuk-spacing(4);
+  outline: 2px dashed $color_nhsuk-grey-1;
+  padding: nhsuk-spacing(3);
+  padding-top: nhsuk-spacing(7);
+  position: relative;
+}
+
+.app-annotate-block__label {
+  border-bottom: 2px dashed $color_nhsuk-grey-1;
+  border-right: 2px dashed $color_nhsuk-grey-1;
+  left: 0;
+  padding: nhsuk-spacing(1) nhsuk-spacing(2);
+  position: absolute;
+  top: 0;
+}
+
+.app-annotate-block + .nhsuk-main-wrapper {
+  padding-bottom: 0;
+  padding-top: 0;
 }

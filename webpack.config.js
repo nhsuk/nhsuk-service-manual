@@ -15,10 +15,10 @@ module.exports = {
     // Main application script and styles
     main: ['./javascripts/main.mjs', './stylesheets/main.scss'],
 
-    // Design example overrides
-    overrides: {
-      import: './stylesheets/design-example-overrides.scss',
-      filename: 'design-example-overrides'
+    // Design example preview styles
+    preview: {
+      import: './stylesheets/preview.scss',
+      filename: 'preview'
     }
   },
 
