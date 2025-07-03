@@ -14,11 +14,22 @@
 
 {% block bodyContent %}
 
-{{ image({
-  src: "/assets/BSL-icon-01.png",
-  classes: "nhsuk-u-width-one-half app-image--border nhsuk-u-margin-top-0",
-  alt: "Two hands signing British Sign Language"
-}) }}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    {{ image({
+      src: "/assets/BSL-icon-01.png",
+      classes: "app-image--border nhsuk-u-margin-top-0",
+      alt: "Two hands signing translation in British Sign Language, with the letters BSL beside"
+    }) }}
+  </div>
+    <div class="nhsuk-grid-column-one-third">
+    {{ image({
+      src: "/assets/BSL-icon-02.png",
+      classes: "app-image--border nhsuk-u-width-two-thirds nhsuk-u-margin-top-0",
+      alt: "Two hands signing translation in British Sign Language"
+    }) }}
+  </div>
+</div>
 
 <p>You can use it:</p>
 <ul>
