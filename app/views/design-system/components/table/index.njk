@@ -65,6 +65,18 @@
   }) }}
   <p>Find out more about word-breaks, with or without a hyphen, in <a href="/design-system/styles/typography#breaking-up-long-words">breaking up long words in the typography section</a>.</p>
 
+  <h2 id="missing-data-table">Displaying missing data</h2>
+
+  <p>You should not have empty cells in your table, except for the top left cell. If you have data which is missing, instead use some short text to explain why it is missing, if known, or use 'No data' or 'Not applicable'.</p>
+
+  <p>You can use the <code>nhsuk-u-secondary-text-color</code> modifier to make the text for missing data dark grey if this is helpful to distinguish it from other text.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "missing-data"
+  }) }}
+
   <h2 id="how-it-works">How tables work</h2>
   <h3>Accessibility</h3>
   <p>Follow <a href="https://webaim.org/techniques/tables/data">WebAIM's guidance for tables</a> and:</p>
