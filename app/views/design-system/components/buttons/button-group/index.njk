@@ -1,0 +1,13 @@
+{% from 'button/macro.njk' import button %}
+
+<div class="nhsuk-button-group">
+  {{ button({
+    "text": "Continue",
+    "classes": "nhsuk-button"
+  }) }}
+
+  {{ button({
+    "text": "Save and come back later",
+    "classes": "nhsuk-button--secondary"
+  }) }}
+</div>
