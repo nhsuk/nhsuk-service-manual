@@ -18,14 +18,11 @@ previewLayout: design-example-wrapper-blank
 
 {% block header %}
   {{ header({
-    transactionalService: {
-        name: "Service name here",
-        href: "#"
-      },
-      showNav: "false",
-      showSearch: "false"
-    })
-  }}
+    service: {
+      text: "Service name here",
+      href: "#"
+    }
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}

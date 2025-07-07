@@ -26,6 +26,14 @@
 
 :new: **New features**
 
+- Add new account information and links variant of header component
+- Update design of header to include:
+  - new feature to highlight current page in the navigation menu
+  - improving NHS logo focus state
+  - removing home link from header that was automatically added on small screens
+  - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
+  - left-aligning navigation items by default
+- Add new profile icon to icons page
 - Add new question pages pattern
 - Update guidance on questions and in parts of forms guidance
 - Add guidance on how to use hint text and update hint text examples

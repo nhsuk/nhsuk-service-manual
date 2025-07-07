@@ -1,0 +1,44 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+  logo: {
+    href: "#",
+    ariaLabel: "Manage patients homepage"
+  },
+  service: {
+    text: "Manage patients",
+    href: "#"
+  },
+  account: {
+    items: [
+      {
+        text: "Florence Nightingale (Regional Manager)",
+        icon: true
+      },
+      {
+        text: "Change role",
+        href: "#"
+      },
+      {
+        text: "Log out",
+        href: "#"
+      }
+    ]
+  },
+  navigation: {
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Add new patient",
+        href: "#"
+      },
+      {
+        text: "Find a patient",
+        href: "#"
+      }
+    ]
+  }
+}) }}
