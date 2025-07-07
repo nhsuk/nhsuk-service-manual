@@ -19,38 +19,37 @@ previewLayout: design-example-wrapper-blank
       }
     ],
     href: "#",
-    text: "Health A-Z"
+    text: "Health A to Z"
   }) }}
 {% endblock %}
 
 {% block header %}
   {{ header({
-      showNav: "true",
-      showSearch: "true",
-      primaryLinks: [
+    navigation: {
+      items: [
         {
-          url  : "#",
-          label : "Health A-Z"
+          text: "Health A to Z",
+          href: "#"
         },
         {
-          url : '#',
-          label : 'Live Well'
+          text: 'Live Well',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Care and support'
+          text: 'Care and support',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Pregnancy'
+          text: 'Pregnancy',
+          href: '#'
         },
         {
-          url : '#',
-          label : 'NHS services'
+          text: 'NHS services',
+          href: '#'
         }
       ]
-    })
-}}
+    }
+  }) }}
 {% endblock %}
 
 {% block content %}

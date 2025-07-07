@@ -5,7 +5,6 @@
 
 {% block head %}
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {%- endblock %}
 
 {% block pageTitle %}
@@ -239,4 +238,8 @@
   </div>
 </div>
 
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
 {% endblock %}

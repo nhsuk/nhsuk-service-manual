@@ -1,18 +1,6 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-  logo: {
-    href: "#",
-    ariaLabel: "NHS digital service manual homepage"
-  },
-  service: {
-    text: "Digital service manual",
-    href: "#"
-  },
-  search: {
-    placeholder: "Search",
-    visuallyHiddenLabel: "Search the NHS digital service manual"
-  },
   navigation: {
     items: [
       {
@@ -21,7 +9,8 @@
       },
       {
         text: 'Design system',
-        href: '#'
+        href: '#',
+        active: true
       },
       {
         text: 'Content guide',
