@@ -10,6 +10,7 @@
 :wrench: **Maintenance**
 
 - Move page width to `$nhsuk-page-width` setting
+- Move full list of WCAG 2.2 changes to design system to a separate page
 - Change "Go back" to "Back" on back link
 - Update wording on Do and Don't component
 
