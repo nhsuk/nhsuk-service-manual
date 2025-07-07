@@ -39,6 +39,7 @@
 - Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 - Add link to NHS App design system to community resources
+- Add button groups and make buttons full width on small screens
 
 :wrench: **Maintenance**
 
