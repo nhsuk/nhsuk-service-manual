@@ -3,7 +3,7 @@
 {% set pageSection = "Content guide" %}
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "As well as questions, your form or service may need an introduction, help text, error messages and a confirmation or thank you page. Think about content across other channels too." %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "331" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -26,8 +26,15 @@
   <p>Also, user journeys rarely start with the start page and many forms or services do not need a special start page. Think about how users will get to your form or service as well as how to introduce it.</p>
 
   <h2 id="give-users-help-in-context">Give users help in context</h2>
-  <p>If users need help or guidance with filling in a question, do not link to something labelled "help". <a href="#how-to-add-help-text">Add just enough help text</a> where they need it - and only if you see in research that they need it.</p>
-  <p>For example, users do not usually need to be told to "Select the answer that applies to you" with <a href="/design-system/components/radios">radios</a>, but they may need telling to "Select all options that are relevant to you" with <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
+  <p>If users need help or guidance with filling in a question, do not link to something labelled "help". Add just enough help text where they need it and only if you see in research that they need it.</p>
+  <p>For example, users do not usually need to be told to "Select the answer that applies to you" with radios, but they may need telling to "Select all options that are relevant to you" with checkboxes.</p>
+  <p>Add <a href="/design-system/components/hint-text">hint text</a> as a part of other form inputs, such as:</p>
+  <ul>
+    <li><a href="/design-system/components/checkboxes#checkboxes-with-hint-text">checkboxes</a></li>
+    <li><a href="/design-system/components/radios#radios-with-hints">radios</a></li>
+    <li><a href="/design-system/components/text-input#using-hint-text">text inputs</a></li>
+  </ul>
+
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
     {{ checkboxes({
@@ -40,7 +47,7 @@
         }
       },
       hint: {
-        text: "Select all options that are relevant to you."
+        text: "Select all options that are relevant to you"
       },
       items: [
         {
@@ -68,49 +75,10 @@
   <p>Use it to explain:</p>
   <ul>
     <li>any necessary jargon</li>
-    <li>where to find their NHS number</li>
     <li>what format users should give information in</li>
     <li>what you’ll do with personal information</li>
     <li>the consequences of making 1 choice over another</li>
   </ul>
-
-  <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
-
-    {% set hintHtml -%}
-      <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456.</p>
-      <p>You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service.</p>
-    {%- endset %}
-
-    {{ radios({
-      idPrefix: "example-hints",
-      name: "example-hints",
-      fieldset: {
-        legend: {
-          text: "Do you know your NHS number?",
-          classes: "nhsuk-fieldset__legend--l",
-          isPageHeading: true
-        }
-      },
-      hint: {
-        html: hintHtml
-      },
-      items: [
-      {
-        value: "yes",
-        text: "Yes, I know my NHS number"
-      },
-      {
-        value: "no",
-        text: "No, I do not know my NHS number"
-      },
-      {
-        value: "not sure",
-        text: "I'm not sure"
-      }
-    ]
-    }) }}
-  </div>
 
   <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>
   <p>Bear in mind that users may miss the help text. Sometimes a <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#what-are-filter-questions">filter question</a> will work better.</p>
@@ -120,13 +88,7 @@
     <p>If you have to explain your interface, it needs more work.</p>
   </div>
 
-  <h3 id="how-to-add-help-text">How to add help text</h3>
   <p>We do not recommend tool tips. They can be hard for users to see and are not accessible.</p>
-  <p>Instead you can:</p>
-  <ul>
-    <li>add <a href="/design-system/components/hint-text">hint text</a> as a part of other form inputs, such as <a href="/design-system/components/text-input#using-hint-text">text inputs</a>, <a href="/design-system/components/radios#radios-with-hints">radios</a> and <a href="/design-system/components/checkboxes#checkboxes-with-hint-text">checkboxes</a>, for help that's relevant to most of your users</li>
-    <li>use the <a href="/design-system/components/details">details component</a> to reveal expanding help text - this is useful if the help text is only relevant for some users</li>
-  </ul>
 
   <h2 id="error-messages">Use error messages to explain what went wrong</h2>
   <p>Think of error messages as a step in <a href="/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation">the conversation</a>. Tell the user how to fix the problem as soon as you can.</p>
