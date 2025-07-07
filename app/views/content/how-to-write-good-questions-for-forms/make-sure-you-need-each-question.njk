@@ -2,7 +2,7 @@
 {% set pageSection = "Content guide" %}
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "Question your questions. Keep them to a minimum." %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "326" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -51,7 +51,12 @@
   <p>Decide if each question is essential (sometimes called "required" or "mandatory") or not. If the user cannot get the service unless they give you this information, it is essential.</p>
   <p>Not all personal data is essential. <a href="/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions">Consider the sensitivities of your questions</a> and the data you really need.</p>
   <p>Only add optional questions when some users clearly need them.</p>
-  <p>Do not mark essential fields. Mark optional fields with "(optional)" - in brackets.</p>
+  <p>Do not mark essential fields.</p>
+  <p>If you ask for optional information:</p>
+  <ul>
+    <li>in most contexts, add "(optional)" to the labels of optional fields</li>
+    <li>for <a href="/design-system/components/radios">radios</a> and <a href="/design-system/components/checkboxes">checkboxes</a>, add "(optional)" to the legend</li>
+  </ul>
 
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
@@ -83,7 +88,7 @@
 
   <p>We do not use asterisks for essential fields. Research suggests that they're not necessary and they can make users anxious and less likely to complete the form.</p>
 
-  <h2 id="use-information-your-organisation-already-has">Use information your organisation already has - or can access</h2>
+  <h2 id="use-information-your-organisation-already-has">Use information your organisation already has or can access</h2>
   <p>If you already have some data about the user, you may only need them to confirm that it's correct.</p>
   <p>Investigate whether you can get some of the information you need from another NHS system.</p>
   <details class="nhsuk-details">

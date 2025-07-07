@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "January 2025" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "20" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -20,11 +20,8 @@
   </strong>
 
   <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
-  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
-  <ul>
-    <li><a href="#wcag-avoid-dragging-multiple-options">use select without relying on click and drag movements (if you add functionality to select multiple options)</a></li>
-  </ul>
-  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+  <p>Make sure that users can successfully <a href="#wcag-avoid-dragging-multiple-options">use select without relying on click and drag movements</a> (if you add functionality to select multiple options).</p>
+  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
   {{ designExample({

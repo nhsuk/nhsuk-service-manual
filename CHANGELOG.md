@@ -1,14 +1,26 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 7 July 2025
 
 :new: **New features**
 
+- Add new question pages pattern
+- Update guidance on questions and in parts of forms guidance
+- Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
+- Add link to NHS App design system to community resources
 
 :wrench: **Maintenance**
 
 - Move page width to `$nhsuk-page-width` setting
+- Turn off HTML5 validation in examples
+- Update code examples to use system monospace font
+- Update wording re WCAG 2.2 on design system components and patterns
+- Move full list of WCAG 2.2 changes to design system to a separate page
+- Change "Go back" to "Back" on back link
+- Update wording on Do and Don't component
+- Remove beta label from BSL standard and from technology pages
+- Move Nunjucks macro options to NHS.UK frontend
 
 :wrench: **Fixes**
 

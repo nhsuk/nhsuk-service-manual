@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "May 2025" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -20,11 +20,8 @@
   </strong>
 
   <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
-  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
-  <ul>
-    <li><a href="#wcag-interact-button">interact with buttons</a></li>
-  </ul>
-  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+  <p>Make sure that users can successfully <a href="#wcag-interact-button">interact with buttons</a>.</p>
+  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
   <p>We have 3 buttons:</p>
@@ -138,7 +135,6 @@
 
   <h3>Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
-  <p>We have developed disabled versions of the 3 buttons but we haven't tested them yet. You can <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/components/button">get the latest disabled button code in the NHS.UK frontend library in GitHub</a>.</p>
 
   <h3>Colour contrast</h3>
   <p>All 4 buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>

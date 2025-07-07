@@ -9,40 +9,8 @@
 @forward "design-example/design-example";
 
 /////////////////
-// FRONTEND FIXES + UPDATES
+// FRONTEND FIXES
 /////////////////
-
-// ADDED TO FRONTEND - AWAITING RELEASE
-// REMOVE ONCE RELEASED
-
-// Breadcrumb hotfix
-// To not have a visited state for back link
-.nhsuk-breadcrumb__backlink:visited {
-  color: $nhsuk-link-color;
-}
-
-// Breadcrumb hotfix
-// To not have a visited state for breadcrumb link
-.nhsuk-breadcrumb__link:visited {
-  color: $color_nhsuk-blue;
-}
-
-// Breadcrumb hotfix
-// To change color on hover when visited
-.nhsuk-breadcrumb__link:hover {
-  color: $nhsuk-link-hover-color;
-}
-
-// Back link hotfix
-// To change color on hover when visited
-.nhsuk-back-link__link:hover {
-  color: $nhsuk-link-hover-color;
-}
-
-// Pagination hotfix for icon colour on focus & hover
-.nhsuk-pagination__link:visited:focus .nhsuk-icon {
-  fill: $nhsuk-focus-text-color;
-}
 
 // A to Z target size
 // Ensures minimum target size is 24px, as per WCAG AA
@@ -177,20 +145,6 @@
   margin-top: 0;
   position: relative;
   @include nhsuk-font-size(19);
-
-  &:visited {
-    color: $nhsuk-link-visited-color;
-  }
-
-  &:hover,
-  &:focus {
-    color: $nhsuk-link-hover-color;
-    text-decoration: none;
-
-    .nhsuk-icon {
-      fill: $nhsuk-text-color;
-    }
-  }
 }
 
 // Styling for WCAG 2.2 guidance blocks.

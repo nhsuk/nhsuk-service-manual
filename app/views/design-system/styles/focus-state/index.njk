@@ -2,7 +2,7 @@
 {% set pageDescription = "Use these focus state styles to let users know which element they’re on and that they can interact with it." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "April 2024" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "193" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -19,11 +19,8 @@
   </strong>
 
   <h3 id="wcag-22-affects-this-style">WCAG 2.2 affects these styles</h3>
-  <p>To meet new success criteria introduced in the Web Content Accessibility Guidelines (WCAG) 2.2, make sure that users can successfully:</p>
-  <ul>
-    <li><a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed</a></li>
-  </ul>
-  <p>See the full list of <a href="/design-system">design system changes to meet WCAG 2.2</a>.</p>
+  <p>Make sure that users can successfully <a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed</a>.</p>
+  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
   <h2>What is a focus state?</h2>
@@ -81,7 +78,7 @@
   <h2 id="if-you-do-not-use-sass">If you do not use Sass</h2>
   <p>To make a component's focus state accessible without using Sass, you can:</p>
   <ul>
-    <li class="rich-text">see how the <code>nhsuk-focused-text</code> mixin works from the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/core/tools/_focused.scss#L12-L23">NHS.UK frontend source code</a></li>
+    <li class="rich-text">see how the <code>nhsuk-focused-text</code> mixin works from the <a href="https://github.com/nhsuk/nhsuk-frontend/blob/main/packages/nhsuk-frontend/src/nhsuk/core/tools/_focused.scss">NHS.UK frontend source code</a></li>
     <li class="rich-text">get the values for <code>$nhsuk-focus-color</code> and <code>$nhsuk-focus-text-color</code> from the <a href="/design-system/styles/colour">colour page</a></li>
   </ul>
 
