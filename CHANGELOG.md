@@ -10,6 +10,7 @@
 :wrench: **Maintenance**
 
 - Move page width to `$nhsuk-page-width` setting
+- Change "Go back" to "Back" on back link
 - Update wording on Do and Don't component
 
 :wrench: **Fixes**
