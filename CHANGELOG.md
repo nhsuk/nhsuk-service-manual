@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Add guidance on how to use hint text and update hint text examples
 - Add guidance for `nhsuk-summary-list__row--no-border` class
 
 :wrench: **Maintenance**
