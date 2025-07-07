@@ -1,0 +1,56 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'radios/macro.njk' import radios %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">
+        If we need to contact you
+      </h1>
+      <p>Let us know if you have any communication needs you'd like us to be aware of. For example, a hearing or visual impairment.</p>
+
+      {{ radios({
+        name: "contactNeeds",
+        fieldset: {
+          legend: {
+            text: "Do you have any communication needs?",
+            classes: "nhsuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ button({
+        text: "Continue"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
