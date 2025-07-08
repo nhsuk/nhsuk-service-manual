@@ -4,7 +4,6 @@
 import {
   initCharacterCounts,
   initCheckboxes,
-  initDetails,
   initErrorSummary,
   initHeader,
   initRadios,
@@ -19,7 +18,6 @@ import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
 initHeader()
-initDetails()
 initSkipLinks()
 initCheckboxes()
 initRadios()
