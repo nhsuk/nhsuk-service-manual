@@ -284,13 +284,25 @@
     <loc>https://service-manual.nhs.uk/design-system/components/warning-callout</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/a-to-z</loc>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/a-to-z-page</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/check-answers</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/confirmation-page</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/help-users-decide-when-and-where-to-get-care</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
@@ -300,15 +312,6 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/start-page</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/check-answers</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/confirmation-page</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
