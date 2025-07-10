@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "April 2025" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "26" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -67,12 +67,12 @@
 
   <h2 id="missing-data-table">Displaying missing data</h2>
 
-  <p>You should not have empty cells in your table, except for the top left cell. If you have missing data, include some short text to explain why it’s missing, or use:</p>
+  <p>Do not leave empty cells in your table. The only exception can be the top left cell. If you have missing data, include some short text to explain why it's missing, such as:</p>
 
   <ul>
-    <li>No data</li>
-    <li>Not applicable</li>
-    <li>Not known</li>
+    <li>"No data"</li>
+    <li>"Not applicable"</li>
+    <li>"Not known"</li>
   </ul>
 
   <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-color</code> modifier to make it dark grey.</p>
