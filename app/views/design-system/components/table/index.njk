@@ -67,9 +67,15 @@
 
   <h2 id="missing-data-table">Displaying missing data</h2>
 
-  <p>You should not have empty cells in your table, except for the top left cell. If you have data which is missing, instead use some short text to explain why it is missing, if known, or use 'No data' or 'Not applicable'.</p>
+  <p>You should not have empty cells in your table, except for the top left cell. If you have missing data, include some short text to explain why it’s missing, or use:</p>
 
-  <p>You can use the <code>nhsuk-u-secondary-text-color</code> modifier to make the text for missing data dark grey if this is helpful to distinguish it from other text.</p>
+  <ul>
+    <li>No data</li>
+    <li>Not applicable</li>
+    <li>Not known</li>
+  </ul>
+
+  <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-color</code> modifier to make it dark grey.</p>
 
   {{ designExample({
     group: "components",
