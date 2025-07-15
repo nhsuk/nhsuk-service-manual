@@ -1,7 +1,7 @@
 {% set pageTitle = "Notification banner" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use a notification banner to tell the user about something they need to know about, but that's not directly related to the page content." %}
+{% set pageDescription = "Use a notification banner to tell the user something they need to know that's not directly related to the page content." %}
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "559" %}
@@ -22,47 +22,57 @@
 
 <h2 id="when-to-use-this-component">When to use this component</h2>
 
-<p>A notification banner lets you tell the user about something that's not directly relevant to the thing they're trying to do on that page of the service. For example:</p>
+<p>A notification banner lets you tell the user about something that's not directly relevant to the thing they're trying to do on that page of the service.</p>
+
+<p>There are 2 versions of the notification banner:</p>
+<ul>
+<li>a blue information banner</li>
+<li>a green success banner</li>
+</ul>
+
+<p>Use the blue banner to tell the user information about:</p>
 
 <ul>
-  <li>telling the user about a problem that's affecting the service as a whole (such as delays in processing applications)</li>
-  <li>telling the user about something that affects them in particular (like an approaching deadline they need to meet)</li>
-  <li>telling the user about the outcome of something they've just done on a previous page (for example, confirming that an email has been sent)</li>
+<li>something that affects the service as a whole (such as delays in processing applications or planned downtime)</li>
+<li>something that affects them in particular (for example, an approaching deadline they need to meet)</li>
 </ul>
+
+<p>Use the green banner to tell the user that something they've just done on a previous page was successful (for example, confirming that an email has been sent).</p>
 
 <h2 id="when-not-to-use-this-component">When not to use this component</h2>
 
-<p>Use notification banners sparingly. There's evidence that people often miss banners, and using them too often is likely to make this problem worse. See <a href="https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/">Banner blindness revisited by Norman Nielsen Group</a>.</p>
+<p>Use notification banners sparingly. There's evidence that people often miss banners. Using them too often is likely to make this problem worse. See <a href="https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/">Banner blindness revisited by Norman Nielsen Group</a>.</p>
+
+<p>Avoid showing more than 1 notification banner on the same page. Instead, combine the messages in a single notification banner. If the messages are too different to combine, only show the highest priority notification banner.</p>
 
 <p>If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. Use an <a href="/design-system/components/inset-text/">inset text component</a> or <a href="/design-system/components/warning-callout/">warning callout</a> if it needs to stand out.</p>
 
 <p>Do not use a notification banner to tell the user about validation errors. Use an <a href="/design-system/components/error-message/">error message component</a> and <a href="/design-system/components/error-summary/">error summary component</a> instead.</p>
+
 <p>Do not show a notification banner and an <a href="/design-system/components/error-summary/">error summary component</a> on the same page. Just show the error summary.</p>
 
 <h2 id="how-it-works">How it works</h2>
 
-<p>Position a notification banner immediately before the page <code>h1</code>. The notification banner should be the same width as the page's other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. <a href="/design-system/styles/layout/">Read about how to lay out pages</a>.</p>
+<p>Put a notification banner immediately before the page <code>h1</code>. The notification banner should be the same width as the page's other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. <a href="/design-system/styles/layout/">Read about page layout</a>.</p>
 
 <p>Use <code>role="region"</code> and <code>aria-labelledby="nhsuk-notification-banner-title"</code> (with <code>id="nhsuk-notification-banner-title"</code> on <code>&lt;nhsuk-notification-banner__title&gt;</code>) so that screen reader users can navigate to the notification banner.</p>
-
-<p>Avoid showing more than 1 notification banner on the same page. Instead, combine the messages in a single notification banner. If the messages are too different to combine, only show the highest priority notification banner.</p>
 
 <h3 id="notification-banner-headings">Notification banner headings</h3>
 
 <p>The notification banner starts with a heading "Important" or "Success". This is usually an <code>&lt;h2&gt;</code>.</p>
 
-<p>If you need another heading, place it in <code>nhsuk-notification-banner__content</code>. It will normally be an <code>&lt;h3&gt;</code>.</p>
+<p>If you need another heading, place it in <code>nhsuk-notification-banner__content</code>. It will normally be an <code>&lt;h3&gt;</code>. But avoid using another heading for single-line notifications that do not need them.</p>
 
-<p>Avoid using headings for single-line notifications that do not need them.</p>
+<p>When you're not using a heading, you can style the text to stand out, for example, by applying the <code>nhsuk-notification-banner__heading</code> class to a paragraph.</p>
 
-<h2 id="telling-the-user-about-a-problem-that-affects-the-whole-service">Telling the user about a problem that affects the whole service</h2>
+<h2 id="using-the-blue-information-banner">Using the blue notification banner</h2>
 
-<p>Use a "neutral" blue notification banner if the user needs to know about a problem with the service as a whole.</p>
+<p>Use a blue notification banner to give users information about something that affects the service as a whole.</p>
 
 <p>For example:</p>
 
 <ul>
-<li>in a service that lets the user register or apply for something, they might need to know that it's taking longer than usual to process applications</li>
+<li>in a service that lets the user apply for something, they might need to know that it's taking longer than usual to process applications</li>
 <li>in an account-type service, the user might need to know that the service will be down for scheduled maintenance</li>
 </ul>
 
@@ -72,9 +82,9 @@
   type: "whole-service"
 }) }}
 
-<h2 id="telling-the-user-about-something-thats-happening-elsewhere">Telling the user about something that's happening elsewhere</h2>
+<p>If your service is getting more demand than usual, check that you’ve set up "There is a problem with the service" pages and "Service unavailable" pages, and the wording is up to date. Use the <a href="https://design-system.service.gov.uk/patterns/">patterns in the GOV.UK design system</a>.</p>
 
-<p>Use a "neutral" notification banner if the user needs to know about something that's happening elsewhere in the service. For example:</p>
+<p>You can also use the blue notification banner to tell users information about something that's happening elsewhere in the service. For example:</p>
 
 <ul>
   <li>in a case working system, the user might need to know that there are new cases waiting for their attention</li>
@@ -87,15 +97,9 @@
   type: "default"
 }) }}
 
-<h2 id="reacting-to-something-the-user-has-done">Reacting to something the user has done</h2>
+<h2 id="using-the-green-notification-banner">Using the green notification banner</h2>
 
-<p>You can also use a notification banner to tell the user about the outcome of something they've just done. If they have not finished the current journey, it does not make sense to use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a> at this point in your service.</p>
-
-<p>Using a notification banner is unlikely to be the right approach in a linear service, for example, a service that lets the user register for a thing. For a linear service, it usually makes sense to stick to the approach of <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">starting with 1 thing per page (in GOV.UK's guidance on structuring forms)</a>, and avoid using a notification banner.</p>
-
-<p>Use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a> in a linear service to tell users that they've finished using the service instead of a notification banner.</p>
-
-<p>Use the green version of the notification banner to confirm that something they're expecting to happen has happened.</p>
+<p>Use the green notification banner during a journey to confirm that something the user was expecting to happen has happened.</p>
 
 {{ designExample({
   group: "components",
@@ -106,6 +110,12 @@
 <p>Since you're using the notification banner to tell the user about the outcome of something they've just done, add <code>role="alert"</code> so focus shifts to the notification banner on page load.</p>
 
 <p>Remove a green notification banner when the user moves to a new page.</p>
+
+<p>When the user finishes a linear journey, for example, a service that lets the user register for a thing, use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a>, not a notification banner.</p>
+
+<p>For long, complex services, use the <a href="/design-system/components/task-list">task list component</a>. You are unlikely to need a green notification banner on a page with a task list.</p> 
+
+<h3>Accessibility</h3>
 
 <p>To make the green version of the notification banner accessible:</p>
 
