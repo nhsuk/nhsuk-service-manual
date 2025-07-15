@@ -21,22 +21,24 @@
   border-radius: 50%;
   display: inline-block;
   height: nhsuk-spacing(6);
-  margin-right: nhsuk-spacing(2);
+  margin-right: 0;
   vertical-align: middle;
   width: nhsuk-spacing(6);
 
+  position: absolute;
+  left: 0;
+  top: 0;
+
   @include nhsuk-media-query($until: tablet) {
     height: nhsuk-spacing(4);
-    left: 0;
-    position: absolute;
     width: nhsuk-spacing(4);
   }
 }
 
 .app-colour-list__column {
   padding-left: 0;
-  padding-top: 0;
-  vertical-align: middle;
+  padding-top: nhsuk-spacing(2);
+  vertical-align: top;
 
   @include nhsuk-media-query($until: tablet) {
     display: block;
@@ -47,15 +49,19 @@
 
 .app-colour-list__column--name {
   font-weight: normal;
+  position: relative;
+  padding-left: nhsuk-spacing(8);
 
   @include nhsuk-media-query($until: tablet) {
+    padding-left: nhsuk-spacing(5);
     padding-bottom: nhsuk-spacing(1);
-    padding-top: nhsuk-spacing(2);
+    padding-top: nhsuk-spacing(1);
   }
 }
 
 .app-colour-list__column--colour {
   @include nhsuk-media-query($until: tablet) {
+    padding-top: 0;
     padding-bottom: nhsuk-spacing(1);
   }
 }
