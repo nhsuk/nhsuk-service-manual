@@ -4,7 +4,7 @@
 
 :new: **New features**
 
-- Add new guidance on displaying missing data in tables
+- Add guidance on displaying missing data in tables
 
 ## 7.12.0 - 7 July 2025
 
