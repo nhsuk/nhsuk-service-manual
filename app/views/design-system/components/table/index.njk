@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "April 2025" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "26" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -64,6 +64,24 @@
     type: "word-break"
   }) }}
   <p>Find out more about word-breaks, with or without a hyphen, in <a href="/design-system/styles/typography#breaking-up-long-words">breaking up long words in the typography section</a>.</p>
+
+  <h2 id="missing-data-table">Displaying missing data</h2>
+
+  <p>Do not leave empty cells in your table. The only exception can be the top left cell. If you have missing data, include some short text to explain why it's missing, such as:</p>
+
+  <ul>
+    <li>"No data"</li>
+    <li>"Not applicable"</li>
+    <li>"Not known"</li>
+  </ul>
+
+  <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-color</code> modifier class to make it dark grey.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "missing-data"
+  }) }}
 
   <h2 id="how-it-works">How tables work</h2>
   <h3>Accessibility</h3>
