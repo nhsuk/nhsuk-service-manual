@@ -27,11 +27,12 @@
 
   position: absolute;
   left: 0;
-  top: 0;
+  top: nhsuk-spacing(1) / 2;
 
   @include nhsuk-media-query($until: tablet) {
     height: nhsuk-spacing(4);
     width: nhsuk-spacing(4);
+    top: nhsuk-spacing(1);
   }
 }
 
