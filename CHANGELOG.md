@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 7.13.0 - TBC
+
+:new: **New features**
+
+- Add guidance on using `nhsuk-u-secondary-text-color` modifier class
+
 ## 7.12.0 - 7 July 2025
 
 :new: **New features**
