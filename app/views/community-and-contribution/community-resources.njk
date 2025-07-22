@@ -52,20 +52,19 @@
 
   <h2 class="nhsuk-heading-m">Support for these resources</h2>
   <p>The NHS service manual team is not responsible for these resources and we cannot support you with using them.</p>
-  {{ details({
-    text: "Get support with these resources via Slack",
-    html: "
+  {% call details({
+    summaryText: "Get support with these resources via Slack"
+  }) %}
     <p><a href=\"https://service-manual.nhs.uk/slack\">Join our free Slack workspace</a> to access dedicated channels where you can ask questions and discuss issues and ideas. The channels are:</p>
     <ul>
-        <li>#mural-flow-diagrams</li>
-        <li>#paper-sketching-templates</li>
-        <li>#figma-design-library</li>
-        <li>#react-components</li>
-        <li>#wordpress</li>
-        <li>#nhs-app</li>
+      <li>#mural-flow-diagrams</li>
+      <li>#paper-sketching-templates</li>
+      <li>#figma-design-library</li>
+      <li>#react-components</li>
+      <li>#wordpress</li>
+      <li>#nhs-app</li>
     </ul>
-    "
-  }) }}
+  {% endcall %}
 
   <h2 class="nhsuk-heading-m">Suggest a new resource</h2>
   <p>To suggest a new resource, <a href="/get-in-touch">get in touch</a> with the service manual team.</p>
