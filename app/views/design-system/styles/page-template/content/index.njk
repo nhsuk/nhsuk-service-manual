@@ -72,41 +72,43 @@ previewLayout: design-example-wrapper-blank
 
 {% block footer %}
   {{ footer({
-    links: [
-      {
-        URL: "#",
-        label: "NHS sites"
-      },
-      {
-        URL: "#",
-        label: "About us"
-      },
-      {
-        URL: "#",
-        label: "Contact us"
-      },
-      {
-        URL: "#",
-        label: "Profile editor login"
-      },
-      {
-        URL: "#",
-        label: "Site map"
-      },
-      {
-        URL: "#",
-        label: "Accessibility statement"
-      },
-      {
-        URL: "#",
-        label: "Our policies"
-      },
-      {
-        URL: "#",
-        label: "Cookies"
-      }
-    ]
-  })}}
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "NHS sites"
+        },
+        {
+          href: "#",
+          text: "About us"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Profile editor login"
+        },
+        {
+          href: "#",
+          text: "Site map"
+        },
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Our policies"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        }
+      ]
+    }
+  }) }}
 {% endblock %}
 
 {% block bodyEnd %}
