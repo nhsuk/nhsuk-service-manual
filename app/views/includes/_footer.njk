@@ -1,30 +1,44 @@
-<footer role="contentinfo">
-  <div class="app-footer__container nhsuk-footer-container">
-    <div class="nhsuk-width-container">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/accessibility-statement">Accessibility statement</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/cookie-policy">Cookie policy</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/get-in-touch">Get in touch</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/service-manual-team">Service manual team</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/site-map">Site map</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/terms-and-conditions">Terms and conditions</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/whats-new">What's new</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="/your-privacy">Your privacy</a></li>
-      </ul>
-      <div>
-        <p class="nhsuk-footer__copyright">&copy; NHS England</p>
-      </div>
-    </div>
-  </div>
-  <div class="app-ogl-footer">
-    <div class="nhsuk-width-container">
-      <p class="app-ogl-footer--text">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" focusable="false" >
-          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
-        </svg>
-        All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
-      </p>
-    </div>
-  </div>
-</footer>
+{% call footer({
+  meta: {
+    items: [
+      {
+        href: "/accessibility-statement",
+        text: "Accessibility statement"
+      },
+      {
+        href: "/cookie-policy",
+        text: "Cookie policy"
+      },
+      {
+        href: "/get-in-touch",
+        text: "Get in touch"
+      },
+      {
+        href: "/site-map",
+        text: "Site map"
+      },
+      {
+        href: "/terms-and-conditions",
+        text: "Terms and conditions"
+      },
+      {
+        href: "/whats-new",
+        text: "What's new"
+      },
+      {
+        href: "/your-privacy",
+        text: "Your privacy"
+      }
+    ]
+  }
+}) %}
+  <p class="nhsuk-body-s">
+    Built by the <a class="nhsuk-footer__list-item-link" href="/service-manual-team">service manual team at NHS England</a>
+  </p>
+  <p class="nhsuk-body-s">
+    <svg class="nhsuk-u-static-margin-right-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 17" aria-hidden="true" focusable="false" height="17" width="41">
+      <path fill="currentColor" d="M35.77 12.4V.02l-4.3 2.8V16.8H41v-4.4Zm-10.38-.83a3.93 3.93 0 0 1-4.29.64 4.09 4.09 0 0 1-2.35-3.71 3.97 3.97 0 0 1 7.36-2.2l3.63-2.35A8.25 8.25 0 0 0 22.75.02c-3.1 0-5.8 1.74-7.22 4.3A8.3 8.3 0 0 0 8.3.02 8.4 8.4 0 0 0 0 8.5a8.4 8.4 0 0 0 8.3 8.48c3.1 0 5.8-1.75 7.22-4.32a8.17 8.17 0 0 0 12.7 2.2l1.64 1.93h.25V9.18h-6.79Zm-17.1 1.02A4.04 4.04 0 0 1 4.3 8.5c0-2.25 1.8-4.08 4-4.08s4 1.82 4 4.08c0 2.25-1.8 4.09-4 4.09"/>
+    </svg>
+    All content is available under the <a class="nhsuk-footer__list-item-link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated.
+  </p>
+{% endcall %}
