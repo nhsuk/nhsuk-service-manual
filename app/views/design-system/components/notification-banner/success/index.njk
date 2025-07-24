@@ -1,0 +1,22 @@
+{% from "notification-banner/macro.njk" import notificationBanner %}
+
+{% set html %}
+  <h3 class="nhsuk-notification-banner__heading">
+    Patient outcome recorded
+  </h3>
+  <p>Contact <a class="nhsuk-notification-banner__link" href="#">example@department.nhs.uk</a> if you think there’s a problem.</p>
+{% endset %}
+
+{{ notificationBanner({
+  html: html,
+  type: "success"
+}) }}
+
+{# {% call notificationBanner({
+  type: "success"
+}) %}
+  <h3 class="nhsuk-notification-banner__heading">
+    Patient outcome recorded
+  </h3>
+  <p>Contact <a class="nhsuk-notification-banner__link" href="#">example@department.nhs.uk</a> if you think there’s a problem.</p>
+{% endcall %} #}
