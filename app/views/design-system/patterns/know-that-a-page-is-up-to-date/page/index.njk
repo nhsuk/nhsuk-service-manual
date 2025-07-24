@@ -19,38 +19,37 @@ previewLayout: design-example-wrapper-blank
       }
     ],
     href: "#",
-    text: "Health A-Z"
+    text: "Health A to Z"
   }) }}
 {% endblock %}
 
 {% block header %}
   {{ header({
-      showNav: "true",
-      showSearch: "true",
-      primaryLinks: [
+    navigation: {
+      items: [
         {
-          url  : "#",
-          label : "Health A-Z"
+          text: "Health A to Z",
+          href: "#"
         },
         {
-          url : '#',
-          label : 'Live Well'
+          text: 'Live Well',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Care and support'
+          text: 'Care and support',
+          href: '#'
         },
         {
-          url  : '#',
-          label : 'Pregnancy'
+          text: 'Pregnancy',
+          href: '#'
         },
         {
-          url : '#',
-          label : 'NHS services'
+          text: 'NHS services',
+          href: '#'
         }
       ]
-    })
-}}
+    }
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -73,39 +72,41 @@ previewLayout: design-example-wrapper-blank
 
 {% block footer %}
   {{ footer({
-    links: [
-      {
-        URL: "#",
-        label: "NHS sites"
-      },
-      {
-        URL: "#",
-        label: "About us"
-      },
-      {
-        URL: "#",
-        label: "Contact us"
-      },
-      {
-        URL: "#",
-        label: "Profile editor login"
-      },
-      {
-        URL: "#",
-        label: "Site map"
-      },
-      {
-        URL: "#",
-        label: "Accessibility statement"
-      },
-      {
-        URL: "#",
-        label: "Our policies"
-      },
-      {
-        URL: "#",
-        label: "Cookies"
-      }
-    ]
-  })}}
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "NHS sites"
+        },
+        {
+          href: "#",
+          text: "About us"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Profile editor login"
+        },
+        {
+          href: "#",
+          text: "Site map"
+        },
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Our policies"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        }
+      ]
+    }
+  }) }}
 {% endblock %}
