@@ -29,124 +29,207 @@
       <p>We use cookies to keep our website secure and fast.</p>
     </div>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          List of cookies that make our website work
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-
-          <table class="nhsuk-table nhsuk-table-responsive">
-            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Cookie names and purposes</caption>
-            <thead class="nhsuk-table__head" role="rowgroup">
-              <tr class="nhsuk-table__row" role="row">
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Cookie name</th>
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Purpose</th>
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Expiry</th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>nhsuk-cookie-consent</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Remembers if you used our cookies banner</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>When you close the browser (if you do not use the banner) or 1 year (if you use the banner)</td>
-              </tr>
-            </tbody>
-          </table>
-
-      </div>
-    </details>
+    {% call details({
+      summaryText: "List of cookies that make our website work"
+    }) %}
+      {{ table({
+        caption: "Cookie names and purposes",
+        captionClasses: "nhsuk-u-visually-hidden",
+        responsive: true,
+        head: [
+          {
+            text: "Cookie name"
+          },
+          {
+            text: "Purpose"
+          },
+          {
+            text: "Expiry"
+          }
+        ],
+        rows: [
+          [
+            {
+              header: "Cookie name",
+              text: "nhsuk-cookie-consent"
+            },
+            {
+              header: "Purpose",
+              text: "Remembers if you used our cookies banner"
+            },
+            {
+              header: "Expiry",
+              text: "When you close the browser (if you do not use the banner) or 1 year (if you use the banner)"
+            }
+          ]
+        ]
+      }) }}
+    {% endcall %}
 
     <div class="nhsuk-u-reading-width">
       <h2>Cookies that measure website use</h2>
       <p>We also like to use analytics cookies. These cookies store anonymous information about how you use our website, such as which pages you visit or what you click on.</p>
     </div>
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          List of cookies that measure website use
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-
-          <table class="nhsuk-table nhsuk-table-responsive">
-            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Cookie names and purposes</caption>
-            <thead class="nhsuk-table__head" role="rowgroup">
-              <tr class="nhsuk-table__row" role="row">
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Cookie name</th>
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Purpose</th>
-                <th class="nhsuk-table__header" role="columnheader" scope="col">Expiry</th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>AMCV_#</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Tells us if you've used our site before.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>2 years</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>AMCVS_#AdobeOrg</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Tells us how you use our site.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>When you close the browser</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span><span class="nhsuk-table__cell--break-all">com.adobe.reactor.dataElementCookiesMigrated</span></td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Includes data elements set to capture usage of our website.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>No expiry</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>demdex</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Allows cross-domain analytics of NHS properties.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>180 days</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>s_cc</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Checks if cookies work in your web browser.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>When you close the browser</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>s_getNewRepeat</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Tells us if you've used our website before.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>30 days</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>s_ppn</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Tells us how you use our website by reading the previous page you visited.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>1 day</td>
-              </tr>
-              <tr class="nhsuk-table__row" role="row">
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Cookie name </span>s_sq</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose </span>Used by Adobe Analytics. Remembers the last link you clicked on.</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry </span>When you close the browser</td>
-              </tr>
-            </tbody>
-          </table>
-
-      </div>
-    </details>
+    {% call details({
+      summaryText: "List of cookies that measure website use"
+    }) %}
+      {{ table({
+        caption: "Cookie names and purposes",
+        captionClasses: "nhsuk-u-visually-hidden",
+        responsive: true,
+        head: [
+          {
+            text: "Cookie name"
+          },
+          {
+            text: "Purpose"
+          },
+          {
+            text: "Expiry"
+          }
+        ],
+        rows: [
+          [
+            {
+              header: "Cookie name",
+              text: "AMCV_#"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Tells us if you've used our site before."
+            },
+            {
+              header: "Expiry",
+              text: "2 years"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "AMCVS_#AdobeOrg"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Tells us how you use our site."
+            },
+            {
+              header: "Expiry",
+              text: "When you close the browser"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              html: "com.<wbr>adobe.<wbr>reactor.<wbr>dataElement<wbr>Cookies<wbr>Migrated",
+              classes: 'nhsuk-u-text-break-word'
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Includes data elements set to capture usage of our website."
+            },
+            {
+              header: "Expiry",
+              text: "No expiry"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "demdex"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Allows cross-domain analytics of NHS properties."
+            },
+            {
+              header: "Expiry",
+              text: "180 days"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "s_cc"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Checks if cookies work in your web browser."
+            },
+            {
+              header: "Expiry",
+              text: "When you close the browser"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "s_getNewRepeat"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Tells us if you've used our website before."
+            },
+            {
+              header: "Expiry",
+              text: "30 days"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "s_ppn"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Tells us how you use our website by reading the previous page you visited."
+            },
+            {
+              header: "Expiry",
+              text: "1 day"
+            }
+          ],
+          [
+            {
+              header: "Cookie name",
+              text: "s_sq"
+            },
+            {
+              header: "Purpose",
+              text: "Used by Adobe Analytics. Remembers the last link you clicked on."
+            },
+            {
+              header: "Expiry",
+              text: "When you close the browser"
+            }
+          ]
+        ]
+      }) }}
+    {% endcall %}
 
     <div class="nhsuk-u-reading-width">
-       <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
+      <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
 
-      <h3>Tell us if we can use analytics cookies</h3>
-      <fieldset class="nhsuk-fieldset" id="cookie-statistics-form" aria-describedby="cookie-statistics">
-        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-u-margin-bottom-6">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="input-statistics-1" name="input-statistics" type="radio" value="on">
-            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-1">
-            Use cookies to measure my website use
-            </label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="input-statistics-2" name="input-statistics" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-2">
-            Do not use cookies to measure my website use
-            </label>
-          </div>
-        </div>
-      </fieldset>
+      {{ radios({
+        classes: "nhsuk-radios--inline",
+        fieldset: {
+          legend: {
+            text: "Tell us if we can use analytics cookies",
+            classes: 'nhsuk-fieldset__legend--m'
+          }
+        },
+        name: "input-statistics",
+        items: [
+          {
+            text: "Use cookies to measure my website use",
+            value: "yes"
+          },
+          {
+            text: "Do not use cookies to measure my website use",
+            value: "no"
+          }
+        ]
+      }) }}
 
       {{ button({
         href: "/cookie-confirmation",
@@ -167,7 +250,7 @@
   {{ super() }}
 
   <script type="module">
-    const $radioYes = document.getElementById("input-statistics-1")
+    const $radioYes = document.getElementById("input-statistics")
     const $radioNo = document.getElementById("input-statistics-2")
     const $button = document.getElementById("button-statistics")
 
