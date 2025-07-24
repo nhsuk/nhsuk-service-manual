@@ -13,6 +13,8 @@
 
 - Add check answers and confirmation pages to site map and search
 - Update blog posts page and links to blog posts from service standard
+- Update hint text in radio examples 
+- Update examples in NHS number pattern
 
 ## 7.12.0 - 7 July 2025
 
