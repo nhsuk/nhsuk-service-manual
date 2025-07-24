@@ -6,6 +6,13 @@
 
 - Add guidance on using `nhsuk-u-secondary-text-color` modifier class
 - Add guidance on displaying missing data in tables
+- Add entries to A to Z of NHS health writing, including: app, brackets, kilobytes and megabytes, money and United Kingdom
+- Update content guidance on words like "see" in link text
+
+:wrench: **Maintenance**
+
+- Add check answers and confirmation pages to site map and search
+- Update blog posts page and links to blog posts from service standard
 
 ## 7.12.0 - 7 July 2025
 
