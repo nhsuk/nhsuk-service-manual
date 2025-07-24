@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Add guidance on using `nhsuk-u-secondary-text-color` modifier class
 - Add guidance on displaying missing data in tables
 
 ## 7.12.0 - 7 July 2025
