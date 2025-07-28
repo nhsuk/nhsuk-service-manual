@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 7.13.0 - TBC
+## 7.13.0 - 28 July 2025
 
 :new: **New features**
 
