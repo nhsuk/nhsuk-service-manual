@@ -1,5 +1,21 @@
 # NHS digital service manual Changelog
 
+## 7.13.0 - 28 July 2025
+
+:new: **New features**
+
+- Add guidance on using `nhsuk-u-secondary-text-color` modifier class
+- Add guidance on displaying missing data in tables
+- Add entries to A to Z of NHS health writing, including: app, brackets, kilobytes and megabytes, money and United Kingdom
+- Update content guidance on words like "see" in link text
+
+:wrench: **Maintenance**
+
+- Add check answers and confirmation pages to site map and search
+- Update blog posts page and links to blog posts from service standard
+- Update hint text in radio examples
+- Update examples in NHS number pattern
+
 ## 7.12.0 - 7 July 2025
 
 :new: **New features**
@@ -26,6 +42,11 @@
 
 - Fix the code copy button on Nunjucks snippets that follow an HTML snippet
 - Fix Stylelint code style affecting Sass `nhsuk-spacing()` output
+
+:wrench: **Maintenance**
+
+- Update blog posts in What's new section
+- Update blog posts on service standard pages
 
 ## 7.11.0 - 23 May 2025
 
