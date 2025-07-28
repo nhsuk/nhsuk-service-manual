@@ -1,4 +1,5 @@
 @use "../vendor/nhsuk-frontend" as *;
+@use "sass:math";
 
 ////
 /// Colour swatch
@@ -27,7 +28,7 @@
 
   position: absolute;
   left: 0;
-  top: nhsuk-spacing(1) / 2;
+  top: math.div(nhsuk-spacing(1), 2);
 
   @include nhsuk-media-query($until: tablet) {
     height: nhsuk-spacing(4);
