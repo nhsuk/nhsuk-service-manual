@@ -58,9 +58,30 @@
   <p>A Nunjucks macro is a simple template that generates more complex HTML.</p>
   <p>Nunjucks macros save you time by managing repetitive or error-prone tasks, like linking form labels to their controls.</p>
   <p>Nunjucks macros also make it easier to keep your application up to date. You can run a command to update component code instead of having to manually update your HTML.</p>
-  <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend components, which is <code>node_modules/nhsuk-frontend/packages/components/</code>. From <code>nhsuk-frontend version 9.0.0</code> and onwards, you will also have to add the path to the helper macros, which is <code>/node_modules/nhsuk-frontend/packages/macros</code>.</p>
-  <p>To include a specific component macro in your page template, you need to import the macro.</p>
-  <p>For example, to use the button macro, use the import statement <code>% from 'node_modules/nhsuk-frontend/packages/components/button/macro.njk' import button %}</code>.</p>
+
+  <p>For example, to use the button macro, use the import statement:</p>
+
+  <pre class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6"><code class="language-njk">{% raw %}{% <span class="hljs-keyword">from</span> <span class="hljs-string">"nhsuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> button %}{% endraw %}</code></pre>
+
+  <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend.
+
+  <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v10.x (latest)</h4>
+  <p>Configure Nunjucks search paths for <code>v10.x</code> versions and higher:</p>
+
+  <pre class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6"><code class="language-js">nunjucks.<span class="hljs-title function_">configure</span>([
+  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk/components'</span>,
+  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk/macros'</span>,
+  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk'</span>,
+  <span class="hljs-string">'node_modules/nhsuk-frontend/dist'</span>
+]);</code></pre>
+
+  <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v9.x</h4>
+  <p>Configure Nunjucks search paths for <code>v9.x</code> versions only:</p>
+
+  <pre class="nhsuk-u-margin-top-0"><code class="language-js">nunjucks.<span class="hljs-title function_">configure</span>([
+  <span class="hljs-string">'node_modules/nhsuk-frontend/packages/components'</span>,
+  <span class="hljs-string">'node_modules/nhsuk-frontend/packages/macros'</span>
+]);</code></pre>
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-5">
     <p>If you’re using Nunjucks macros in production, be aware that using  <code>html</code> arguments or ones ending with <code>html</code> can be a security risk. The <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks templating documentation</a> has guidance on how to mitigate the risks.</p>
