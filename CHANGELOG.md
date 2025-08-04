@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Update links to blog post about question protocol
+
 ## 7.13.0 - 28 July 2025
 
 :new: **New features**
