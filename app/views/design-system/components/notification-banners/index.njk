@@ -33,17 +33,17 @@
 <p>Use the information banner to tell the user about:</p>
 
 <ul>
-<li>something that affects the service as a whole (such as delays in processing applications or planned downtime)</li>
-<li>something that affects them in particular (for example, an approaching deadline they need to meet)</li>
+<li>something that affects the service as a whole, like delays in processing applications or planned downtime</li>
+<li>something that affects them in particular, like an approaching deadline they need to meet</li>
 </ul>
 
-<p>Use the success banner to tell the user that something they've just done on a previous page was successful (for example, confirming that an email has been sent).</p>
+<p>Use the success banner to tell the user that something they've just done was successful, like confirming that an email has been sent.</p>
 
 <h2 id="when-not-to-use-this-component">When not to use this component</h2>
 
 <p>Use notification banners sparingly. There's evidence that people often miss banners. Using them too often is likely to make this problem worse. See <a href="https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/">Banner blindness revisited by Nielsen Norman Group</a>.</p>
 
-<p>Avoid showing more than 1 notification banner on the same page. Instead, combine messages in a single notification banner. If the messages are too different to combine, decide which is your highest priority message and show that one.</p>
+<p>Avoid showing more than 1 notification banner on the same page. Instead, combine messages in a single notification banner. If the messages are too different to combine, only show your highest priority message.</p>
 
 <p>If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. If it needs to stand out, use the:</p>
 <ul>
@@ -51,7 +51,7 @@
   <li><a href="/design-system/components/warning-callout/">warning callout</a></li>
 </ul>
 
-<p>Do not use a notification banner to tell the user about validation errors. Use an <a href="/design-system/components/error-message/">error message component</a> and <a href="/design-system/components/error-summary/">error summary component</a> instead.</p>
+<p>Do not use a notification banner to tell the user about validation errors. Use an <a href="/design-system/components/error-summary/">error summary</a> and <a href="/design-system/components/error-message/">error messages</a> instead.</p>
 
 <p>Do not show a notification banner and an error summary component on the same page. Just show the error summary.</p>
 
@@ -69,7 +69,7 @@
 
 <p>If you need a heading in the banner content, place it in <code>&lt;div class="nhsuk-notification-banner__content"&gt;</code>. It will normally be an <code>&lt;h3&gt;</code>.</p>
 
-<p>Do not use a heading for single line notifications. You can apply the <code>nhsuk-notification-banners__heading</code> class to a paragraph to make it stand out.</p>
+<p>Do not use a heading for single line notifications. You can apply the <code>nhsuk-notification-banners__heading</code> class to a paragraph to make the text stand out.</p>
 
 <h2 id="using-the-information-banner">Using the information banner</h2>
 
@@ -105,7 +105,7 @@
 
 <h2 id="using-the-success-banner">Using the success banner</h2>
 
-<p>Use a success banner to confirm an action on a previous page was successful. For example, for steps in a long journey or small repeated tasks.</p>
+<p>Use a success banner to confirm an action on a previous page was successful, for example, for steps in a long journey or small repeated tasks.</p>
 
 {{ designExample({
   group: "components",
@@ -115,7 +115,7 @@
 
 <p>Remove the success banner when the user moves to a new page.</p>
 
-<p>When the user finishes an entire journey, for example, a service that lets the user register for a thing, use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a>, instead of a success banner.</p>
+<p>When the user finishes an entire journey, such as a service that lets them register for a thing, use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a> instead of a success banner.</p>
 
 <p>For long, complex services, use the <a href="/design-system/components/task-list">task list component</a>. You are unlikely to need a success banner on a page with a task list.</p>
 
