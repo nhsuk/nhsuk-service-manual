@@ -1,9 +1,9 @@
-{% set pageTitle = "Notification banner" %}
+{% set pageTitle = "Notification banners" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a notification banner to tell the user something they need to know that's not directly related to the page content." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "559" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -16,7 +16,7 @@
 
 {{ designExample({
   group: "components",
-  item: "notification-banner",
+  item: "notification-banners",
   type: "default"
 }) }}
 
@@ -41,11 +41,15 @@
 
 <h2 id="when-not-to-use-this-component">When not to use this component</h2>
 
-<p>Use notification banners sparingly. There's evidence that people often miss banners. Using them too often is likely to make this problem worse. See <a href="https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/">Banner blindness revisited by Norman Nielsen Group</a>.</p>
+<p>Use notification banners sparingly. There's evidence that people often miss banners. Using them too often is likely to make this problem worse. See <a href="https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/">Banner blindness revisited by Nielsen Norman Group</a>.</p>
 
 <p>Avoid showing more than 1 notification banner on the same page. Instead, combine the messages in a single notification banner. If the messages are too different to combine, decide which is your highest priority message and show that one.</p>
 
-<p>If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. Use an <a href="/design-system/components/inset-text/">inset text component</a> or <a href="/design-system/components/warning-callout/">warning callout</a> if it needs to stand out.</p>
+<p>If the information is directly relevant to the thing the user is doing on that page, put the information in the main page content instead. If it needs to stand out, use:</p>
+<ul>
+  <li><a href="/design-system/components/inset-text/">inset text component</a></li>
+  <li><a href="/design-system/components/warning-callout/">warning callout</a></li>
+</ul>
 
 <p>Do not use a notification banner to tell the user about validation errors. Use an <a href="/design-system/components/error-message/">error message component</a> and <a href="/design-system/components/error-summary/">error summary component</a> instead.</p>
 
@@ -57,15 +61,15 @@
 
 <p>The notification banner should be the same width as the page's other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. <a href="/design-system/styles/layout/">Read about page layout</a>.</p>
 
-<p>Use <code>role="region"</code> and <code>aria-labelledby="nhsuk-notification-banner-title"</code> (with <code>id="nhsuk-notification-banner-title"</code> on <code>&lt;nhsuk-notification-banner__title&gt;</code>) so that screen reader users can navigate to the notification banner.</p>
+<p>Use <code>role="region"</code> and <code>aria-labelledby="nhsuk-notification-banners-title"</code> (with <code>id="nhsuk-notification-banners-title"</code> on <code>&lt;nhsuk-notification-banners__title&gt;</code>) so that screen reader users can navigate to the notification banner.</p>
 
-<h3 id="notification-banner-headings">Notification banner headings</h3>
+<h3 id="notification-banners-headings">Notification banner headings</h3>
 
-<p>The notification banner starts with a heading "Important" or "Success". This is usually an <code>&lt;h2&gt;</code>.</p>
+<p>The notification banner starts with a heading like "Important" or "Success". This is usually an <code>&lt;h2&gt;</code>.</p>
 
-<p>If you need another heading, place it in <code>nhsuk-notification-banner__content</code>. It will normally be an <code>&lt;h3&gt;</code>. But avoid using another heading for single-line notifications that do not need them.</p>
+<p>If you need a heading in the banner content, place it in <code>&lt;div class="nhsuk-notification-banner__content"&gt;</code>. It will normally be an <code>&lt;h3&gt;</code>.</p>
 
-<p>When you're not using a heading, you can style the text to stand out, for example, by applying the <code>nhsuk-notification-banner__heading</code> class to a paragraph.</p>
+<p>Do not use a heading for single line notifications. You can apply the <code>nhsuk-notification-banners__heading</code> class to a paragraph to make it stand out.</p>
 
 <h2 id="using-the-information-banner">Using the information banner</h2>
 
@@ -80,7 +84,7 @@
 
 {{ designExample({
   group: "components",
-  item: "notification-banner",
+  item: "notification-banners",
   type: "whole-service"
 }) }}
 
@@ -95,35 +99,34 @@
 
 {{ designExample({
   group: "components",
-  item: "notification-banner",
+  item: "notification-banners",
   type: "default"
 }) }}
 
 <h2 id="using-the-success-banner">Using the success banner</h2>
 
-<p>Use a success banner during a journey to confirm that something the user was expecting to happen has happened.</p>
+<p>Use a success banner to confirm an action on a previous page was successful. For example, for steps in a long journey or small repeated tasks.</p>
 
 {{ designExample({
   group: "components",
-  item: "notification-banner",
+  item: "notification-banners",
   type: "success"
 }) }}
 
-<p>Since you're using the banner to tell the user about the outcome of something they've just done, add <code>role="alert"</code> so focus shifts to the notification banner on page load.</p>
-
 <p>Remove the success banner when the user moves to a new page.</p>
 
-<p>When the user finishes a linear journey, for example, a service that lets the user register for a thing, use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a>, not a success banner.</p>
+<p>When the user finishes an entire journey, for example, a service that lets the user register for a thing, use a <a href="/design-system/patterns/confirmation-page/">confirmation page</a>, instead of a success banner.</p>
 
-<p>For long, complex services, use the <a href="/design-system/components/task-list">task list component</a>. You are unlikely to need a success banner on a page with a task list.</p> 
+<p>For long, complex services, use the <a href="/design-system/components/task-list">task list component</a>. You are unlikely to need a success banner on a page with a task list.</p>
 
-<h3>Accessibility</h3>
+<h2>Accessibility</h2>
 
-<p>To make the success banner accessible:</p>
+<p>To make notification banners accessible:</p>
 
 <ul>
 <li>use a heading like "Success" so that you're not relying on colour alone to convey meaning (to <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">meet WCAG 2.2 success criterion 1.4.1 Use of colour</a>)</li>
-<li>use the same heading for success banners within the same service so that you're identifying components that work in the same way consistently (to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification">meet WCAG 2.2 success criterion 3.2.4 Consistent identification</a>)</li>
+<li>use the same heading for banners across a service so that you're identifying components that work in the same way consistently (to <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification">meet WCAG 2.2 success criterion 3.2.4 Consistent identification</a>)</li>
+<li>the success banner includes <code>role="alert"</code> so the <a href="/design-system/styles/focus-state">focus state</a> shifts to the notification banner on page load.</li>
 </ul>
 
 <h2 id="research-on-this-component">Research on this component</h2>
@@ -132,7 +135,7 @@
 
 <ul>
 <li>how common it is for users to miss important information in notification banners (including users of assistive technology, who might skip straight to the <code>h1</code>)</li>
-<li>whether it's sometimes helpful to allow users to dismiss notifications, and how to do this</li>
+<li>when it's helpful to allow users to dismiss notifications, and how to do this</li>
 </ul>
 
 {% endblock %}
