@@ -18,6 +18,7 @@
 :wrench: **Maintenance**
 
 - Update footer component and examples
+- Update guidance for using Nunjucks in production code on NHS.UK frontend v10.x
 
 ## 7.13.0 - 28 July 2025
 
