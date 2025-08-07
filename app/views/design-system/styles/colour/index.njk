@@ -2,7 +2,7 @@
 {% set pageDescription = "Our colours, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "July 2024" %}
+{% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "2" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -49,6 +49,7 @@
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
           <code>$nhsuk-secondary-text-color</code>
+          <p class="nhsuk-u-margin-bottom-0">Modifier class: <code>nhsuk-u-secondary-text-color</code></p>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #4c6272
@@ -205,6 +206,13 @@
     <li>components with important information, like callouts, stand out</li>
   </ul>
   <p class="rich-text"><code>$color_nhsuk-white</code> is used to make important information stand out and for alternating backgrounds, for example on <a href="https://www.nhs.uk/">the NHS website home page</a>.</p>
+
+  <h3 id="secondary-text-colour">Secondary text colour</h3>
+
+  <p>You can use the <code>nhsuk-u-secondary-text-color</code> class for text that should appear in the secondary text colour of dark grey.</p>
+
+  <p>For example, this could be used for text to describe missing data in a table or summary list.</p>
+
 
   <h2 id="colour-palette">Colour palette</h2>
   <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-color</code> Sass variable rather than <code>$color_nhsuk-red</code>.</p>

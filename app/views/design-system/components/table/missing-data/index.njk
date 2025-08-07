@@ -1,0 +1,41 @@
+{% from 'tables/macro.njk' import table %}
+
+{{ table({
+  caption: "Vaccinations given",
+  head: [
+    {
+      text: "Date"
+    },
+    {
+      text: "Vaccine"
+    },
+    {
+      text: "Product"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "10 July 2024"
+      },
+      {
+        text: "RSV"
+      },
+      {
+        text: "Abrysvo"
+      }
+    ],
+    [
+      {
+        text: "6 September 2023"
+      },
+      {
+        text: "Flu"
+      },
+      {
+        text: "No data",
+        classes: "nhsuk-u-secondary-text-color"
+      }
+    ]
+  ]
+}) }}
