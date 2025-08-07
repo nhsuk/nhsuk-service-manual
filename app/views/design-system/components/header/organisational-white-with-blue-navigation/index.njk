@@ -1,0 +1,42 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+  classes: "nhsuk-header--white",
+  logo: {
+    href: "#",
+    ariaLabel: "NHS Anytown Anyplace Anywhere NHS Foundation Trust homepage"
+  },
+  organisation: {
+    name: "Anytown Anyplace",
+    split: "Anywhere",
+    descriptor: "NHS Foundation Trust"
+  },
+  search: {
+    visuallyHiddenLabel: "Search the Anytown Anyplace Anywhere website"
+  },
+  navigation: {
+    items: [
+      {
+        text: "Your hospital visit",
+        href: "#"
+      },
+      {
+        text: "Wards and departments",
+        href: "#",
+        active: true
+      },
+      {
+        text: "Conditions and treatments",
+        href: "#"
+      },
+      {
+        text: "Our people",
+        href: "#"
+      },
+      {
+        text: "Our research",
+        href: "#"
+      }
+    ]
+  }
+}) }}

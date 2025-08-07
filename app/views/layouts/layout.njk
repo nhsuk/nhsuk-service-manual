@@ -64,16 +64,6 @@
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
 
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
-
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
-  <script src="{{ getAssetPath("javascripts/vendor/cookie-consent.min.js") }}" data-policy-url="/cookie-policy" defer></script>
-
-  <!-- Adobe Analytics -->
-  {% if adobeTrackingUrl %}
-    <!-- Data Layer -->
-    {% include "includes/_digital-data.njk" %}
-    <script src="{{ adobeTrackingUrl }}" type="text/plain" data-cookieconsent="statistics" async></script>
-  {% endif %}
 {% endblock %}
 
 {% block header %}
@@ -94,4 +84,18 @@
 
 {% block footer %}
   {% include "includes/_footer.njk" %}
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
+  <script src="{{ getAssetPath("javascripts/vendor/cookie-consent.min.js") }}" data-policy-url="/cookie-policy" type="module"></script>
+
+  {% if adobeTrackingUrl %}
+  <script type="module">
+    window.digitalData = {{ digitalData | dump | safe }};
+  </script>
+
+  <!-- Adobe Analytics -->
+  <script src="{{ adobeTrackingUrl }}" type="text/plain" data-cookieconsent="statistics" async></script>
+  {% endif %}
 {% endblock %}

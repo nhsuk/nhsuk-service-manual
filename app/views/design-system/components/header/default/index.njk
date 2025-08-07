@@ -1,34 +1,40 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-    showNav: "true",
-    showSearch: "true",
-    searchAction: " ",
-    primaryLinks: [
+  logo: {
+    href: "#",
+    ariaLabel: "NHS digital service manual homepage"
+  },
+  service: {
+    text: "Digital service manual",
+    href: "#"
+  },
+  search: {
+    placeholder: "Search",
+    visuallyHiddenLabel: "Search the NHS digital service manual"
+  },
+  navigation: {
+    items: [
       {
-        url  : "https://www.nhs.uk/conditions",
-        "label" : "Health A-Z"
+        text: "NHS service standard",
+        href: "#"
       },
       {
-        url : 'https://www.nhs.uk/live-well/',
-        label : 'Live Well'
+        text: 'Design system',
+        href: '#'
       },
       {
-        url : 'https://www.nhs.uk/mental-health/',
-        label : 'Mental health'
+        text: 'Content guide',
+        href: '#'
       },
       {
-        url  : 'https://www.nhs.uk/conditions/social-care-and-support/',
-        label : 'Care and support'
+        text: 'Accessibility',
+        href: '#'
       },
       {
-        url  : 'https://www.nhs.uk/pregnancy/',
-        label : 'Pregnancy'
-      },
-      {
-        url : 'https://www.nhs.uk/nhs-services/',
-        label : 'NHS services'
+        text: 'Community and contribution',
+        href: '#'
       }
     ]
-  })
-}}
+  }
+}) }}
