@@ -1,0 +1,21 @@
+---
+background: blue
+---
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  classes: "nhsuk-breadcrumb--reverse",
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "NHS services"
+    }
+  ],
+  href: "#",
+  text: "Hospitals"
+}) }}
