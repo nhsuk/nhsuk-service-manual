@@ -25,20 +25,10 @@
 
 <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-breadcrumbs">interact with breadcrumbs</a>.</p>
 
-<p>There are 2 versions of the breadcrumbs: the default version and the reverse version.</p>
-
 {{ designExample({
   group: "components",
   item: "breadcrumbs",
   type: "default"
-}) }}
-
-<p>Use the reverse version on dark backgrounds.</p>
-
-{{ designExample({
-  group: "components",
-  item: "breadcrumbs",
-  type: "reverse"
 }) }}
 
 <h2>When to use breadcrumbs</h2>
@@ -64,12 +54,18 @@
 
 <p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
 <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
-
-<h3>Accessibility</h3>
-<p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use
+<p>We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use
   screen readers know what it is.</p>
-<p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/design-system/styles/icons">icons</a>
-  to hide them from people who use screen readers.</p>
+
+<h2 id="breadcrumbs-on-dark-backgrounds">Breadcrumbs on dark backgrounds</h2>
+<p>Use the <code>nhsuk-breadcrumb--reverse</code> modifier class to show white links and arrows on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.</p>
+<p>Make sure all users can see the breadcrumbs – the background colour must have a contrast ratio of at least 4.5:1 with white to <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA</a>.</p>
+
+{{ designExample({
+  group: "components",
+  item: "breadcrumbs",
+  type: "reverse"
+}) }}
 
 <h2>Research</h2>
 <p>We tested breadcrumbs on pages with lots of content about conditions or medicines. They helped people understand
@@ -77,6 +73,6 @@
   back to where they came from or to get back home.</p>
 <p>We took out the breadcrumb links when we tested our pages in transactional journeys (in more than 3 labs). We thought
   that having extra links would distract users and that fewer people would complete the journey. As we expected, we
-  found that users didn't miss the links because they were focused on the task.</p>
+  found that users did miss the links because they were focused on the task.</p>
 
 {% endblock %}
