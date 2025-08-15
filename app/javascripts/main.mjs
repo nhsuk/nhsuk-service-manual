@@ -1,15 +1,7 @@
 /* eslint-disable no-new */
 
 // NHS.UK frontend components
-import {
-  initCharacterCounts,
-  initCheckboxes,
-  initErrorSummary,
-  initHeader,
-  initRadios,
-  initSkipLinks,
-  initTabs
-} from 'nhsuk-frontend'
+import { initAll } from 'nhsuk-frontend'
 
 // NHS digital service manual components
 import initAccessibleAutocomplete from './accessible-autocomplete.mjs'
@@ -17,13 +9,11 @@ import DesignExample from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
-initHeader()
-initSkipLinks()
-initCheckboxes()
-initRadios()
-initTabs()
-initCharacterCounts()
-initErrorSummary({ focusOnPageLoad: false })
+initAll({
+  errorSummary: {
+    disableAutoFocus: true
+  }
+})
 
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({
