@@ -4,7 +4,7 @@
 @forward "code-embed";
 @forward "code-snippet";
 
-.design-example {
+.app-design-example {
   $root: &;
   margin-bottom: nhsuk-spacing(6);
   position: relative;
@@ -43,16 +43,16 @@
   }
 }
 
-p + .design-example {
+.app-design-example__frame {
+  border: 0;
+}
+
+p + .app-design-example {
   @include nhsuk-responsive-padding(3, "top");
 }
 
-.nhsuk-lede-text + .design-example {
+.nhsuk-lede-text + .app-design-example {
   @include nhsuk-responsive-padding(0, "top");
-}
-
-.design-example-frame {
-  border: 0;
 }
 
 .app-code-snippet__macro {

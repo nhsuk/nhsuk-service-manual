@@ -1,22 +1,23 @@
 import ClipboardJS from 'clipboard'
 import { iframeResize } from 'iframe-resizer'
+import { Component } from 'nhsuk-frontend'
 
-class DesignExample {
-  static selector() {
-    return '.design-example'
-  }
+export class DesignExample extends Component {
+  /**
+   * @param {Element | null} $root - HTML element to use for component
+   */
+  constructor($root) {
+    super($root)
 
-  constructor(node) {
-    this.node = node
     this.tabClass = 'app-tabs__item'
     this.currentTabClass = `${this.tabClass}--current`
     this.hiddenClass = 'js-hidden'
 
-    this.tabs = this.node.querySelectorAll(`.${this.tabClass}`)
-    this.examples = this.node.querySelectorAll('.code-snippet__preformatted')
-    this.closeButtons = this.node.querySelectorAll('.app-button--close')
-    this.copyButtons = this.node.querySelectorAll('.app-button--copy')
-    this.iframe = this.node.querySelector('iframe')
+    this.tabs = this.$root.querySelectorAll(`.${this.tabClass}`)
+    this.examples = this.$root.querySelectorAll('.code-snippet__preformatted')
+    this.closeButtons = this.$root.querySelectorAll('.app-button--close')
+    this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
+    this.iframe = this.$root.querySelector('iframe')
 
     this.bindEvents()
 
@@ -119,6 +120,6 @@ class DesignExample {
       }
     }
   }
-}
 
-export default DesignExample
+  static moduleName = 'app-design-example'
+}

@@ -1,11 +1,11 @@
 /* eslint-disable no-new */
 
 // NHS.UK frontend components
-import { initAll } from 'nhsuk-frontend'
+import { createAll, initAll } from 'nhsuk-frontend'
 
 // NHS digital service manual components
 import initAccessibleAutocomplete from './accessible-autocomplete.mjs'
-import DesignExample from './design-example.mjs'
+import { DesignExample } from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
@@ -29,6 +29,4 @@ initAccessibleAutocomplete({
 })
 
 // Design examples
-document.querySelectorAll(DesignExample.selector()).forEach((el) => {
-  new DesignExample(el)
-})
+createAll(DesignExample)

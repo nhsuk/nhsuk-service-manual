@@ -42,14 +42,14 @@
   {% set exampleId = params.type + "-example" %}
   {% set exampleTitle = exampleType + " " + exampleItem %}
 
-  <div class="design-example">
+  <div class="app-design-example" data-module="app-design-example">
 
     {% if showExample %}
-      <a href="{{ standaloneURL }}" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+      <a href="{{ standaloneURL }}" class="app-design-example__pop-out" target="_blank" rel="noopener noreferrer">
         Open this<span class="nhsuk-u-visually-hidden"> {{ exampleTitle }}</span> example in a new tab
       </a>
       <div class="code-embed">
-        <iframe title="{{ params.type }}" src="{{ standaloneURL }}" class="design-example-frame"></iframe>
+        <iframe title="{{ params.type }}" src="{{ standaloneURL }}" class="app-design-example__frame"></iframe>
       </div>
     {% endif %}
 
