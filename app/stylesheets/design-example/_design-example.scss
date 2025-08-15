@@ -15,7 +15,7 @@
   }
 
   &__pop-out {
-    border: 1px solid $color_nhsuk-grey-3;
+    border: 1px solid nhsuk-colour("grey-3");
     border-bottom: 0;
     display: block;
     outline: 2px solid transparent;
@@ -30,14 +30,14 @@
     }
 
     &:focus {
-      background-color: $nhsuk-focus-color;
-      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-color;
-      color: $nhsuk-focus-text-color;
+      background-color: $nhsuk-focus-colour;
+      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
+      color: $nhsuk-focus-text-colour;
       outline: $nhsuk-focus-width solid transparent;
       text-decoration: none;
 
       &:hover {
-        color: $nhsuk-focus-text-color;
+        color: $nhsuk-focus-text-colour;
       }
     }
   }
@@ -60,11 +60,11 @@ p + .app-design-example {
 }
 
 .app-tabs__container pre {
-  background-color: $color_nhsuk-grey-5;
+  background-color: nhsuk-colour("grey-5");
 }
 
 .app-code-snippet__container {
-  background-color: $color_nhsuk-grey-5;
+  background-color: nhsuk-colour("grey-5");
   padding: nhsuk-spacing(3);
   padding-top: nhsuk-spacing(8);
   position: relative;

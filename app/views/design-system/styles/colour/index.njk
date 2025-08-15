@@ -23,8 +23,8 @@
   <p>Our text and background colours are designed to meet accessibility needs. Read more about <a href="/design-system/styles/colour#accessibility">accessibility and colour on this page</a>.</p>
 
   <h2 id="main-colours">Main colours</h2>
-  <p class="rich-text">If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-color</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
-  <p class="rich-text">Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>$color_nhsuk-red</code> rather than <code>$nhsuk-error-color</code>.</p>
+  <p class="rich-text">If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-colour</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
+  <p class="rich-text">Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>nhsuk-colour("red")</code> rather than <code>$nhsuk-error-colour</code>.</p>
 
   <table class="app-colour-list" summary="Table of main colours">
     <tbody>
@@ -39,7 +39,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>$nhsuk-text-color</code>
+          <code>$nhsuk-text-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #212b32
@@ -48,8 +48,8 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>$nhsuk-secondary-text-color</code>
-          <p class="nhsuk-u-margin-bottom-0">Modifier class: <code>nhsuk-u-secondary-text-color</code></p>
+          <code>$nhsuk-secondary-text-colour</code>
+          <p class="nhsuk-u-margin-bottom-0">Modifier class: <code>nhsuk-u-secondary-text-colour</code></p>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #4c6272
@@ -66,7 +66,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#005eb8"></span>
-          <code>$nhsuk-link-color</code>
+          <code>$nhsuk-link-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #005eb8
@@ -75,7 +75,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#7C2855"></span>
-          <code>$nhsuk-link-hover-color</code>
+          <code>$nhsuk-link-hover-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #7C2855
@@ -84,7 +84,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#330072"></span>
-          <code>$nhsuk-link-visited-color</code>
+          <code>$nhsuk-link-visited-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #330072
@@ -93,7 +93,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#002f5c"></span>
-          <code>$nhsuk-link-active-color</code>
+          <code>$nhsuk-link-active-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #002f5c
@@ -110,7 +110,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#ffeb3b"></span>
-          <code>$nhsuk-focus-color</code>
+          <code>$nhsuk-focus-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #ffeb3b
@@ -119,7 +119,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>$nhsuk-focus-text-color</code>
+          <code>$nhsuk-focus-text-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #212b32
@@ -136,7 +136,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#d8dde0"></span>
-          <code>$nhsuk-border-color</code>
+          <code>$nhsuk-border-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #d8dde0
@@ -145,7 +145,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>$nhsuk-form-border-color</code>
+          <code>$nhsuk-form-border-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #4c6272
@@ -162,7 +162,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#d5281b"></span>
-          <code>$nhsuk-error-color</code>
+          <code>$nhsuk-error-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #d5281b
@@ -179,7 +179,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#007f3b"></span>
-          <code>$nhsuk-button-color</code>
+          <code>$nhsuk-button-colour</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #007f3b
@@ -199,23 +199,23 @@
   </table>
 
   <h3>Page background colour</h3>
-  <p class="rich-text">We use <code>$color_nhsuk-grey-5</code> as a background tint. This is because:</p>
+  <p class="rich-text">We use <code>nhsuk-colour("grey-5")</code> as a background tint. This is because:</p>
   <ul>
     <li>it reduces overall page glare</li>
     <li>the <a href="https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide">British Dyslexia Association's style guide</a> recommends dark text on a light, but not white, background</li>
     <li>components with important information, like callouts, stand out</li>
   </ul>
-  <p class="rich-text"><code>$color_nhsuk-white</code> is used to make important information stand out and for alternating backgrounds, for example on <a href="https://www.nhs.uk/">the NHS website home page</a>.</p>
+  <p class="rich-text"><code>nhsuk-colour("white")</code> is used to make important information stand out and for alternating backgrounds, for example on <a href="https://www.nhs.uk/">the NHS website home page</a>.</p>
 
   <h3 id="secondary-text-colour">Secondary text colour</h3>
 
-  <p>You can use the <code>nhsuk-u-secondary-text-color</code> class for text that should appear in the secondary text colour of dark grey.</p>
+  <p>You can use the <code>nhsuk-u-secondary-text-colour</code> class for text that should appear in the secondary text colour of dark grey.</p>
 
   <p>For example, this could be used for text to describe missing data in a table or summary list.</p>
 
 
   <h2 id="colour-palette">Colour palette</h2>
-  <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-color</code> Sass variable rather than <code>$color_nhsuk-red</code>.</p>
+  <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-colour</code> Sass variable rather than <code>nhsuk-colour("red")</code>.</p>
 
   <table class="app-colour-list" summary="Table of the full colour palette">
     <tbody>
@@ -223,7 +223,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#005eb8"></span>
-          <code>$color_nhsuk-blue</code>
+          <code>nhsuk-colour("blue")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #005eb8
@@ -233,7 +233,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#007f3b"></span>
-          <code>$color_nhsuk-green</code>
+          <code>nhsuk-colour("green")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #007f3b
@@ -243,7 +243,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#ffeb3b"></span>
-          <code>$color_nhsuk-yellow</code>
+          <code>nhsuk-colour("yellow")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #ffeb3b
@@ -253,7 +253,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#ffb81C"></span>
-          <code>$color_nhsuk-warm-yellow</code>
+          <code>nhsuk-colour("warm-yellow")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #ffb81C
@@ -263,7 +263,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#d5281b"></span>
-          <code>$color_nhsuk-red</code>
+          <code>nhsuk-colour("red")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #d5281b
@@ -273,7 +273,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#7C2855"></span>
-          <code>$color_nhsuk-dark-pink</code>
+          <code>nhsuk-colour("dark-pink")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #7C2855
@@ -283,7 +283,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#330072"></span>
-          <code>$color_nhsuk-purple</code>
+          <code>nhsuk-colour("purple")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #330072
@@ -293,7 +293,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>$color_nhsuk-black</code>
+          <code>nhsuk-colour("black")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #212b32
@@ -303,7 +303,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>$color_nhsuk-grey-1</code>
+          <code>nhsuk-colour("grey-1")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #4c6272
@@ -313,7 +313,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#768692"></span>
-          <code>$color_nhsuk-grey-2</code>
+          <code>nhsuk-colour("grey-2")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #768692
@@ -323,7 +323,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#aeb7bd"></span>
-          <code>$color_nhsuk-grey-3</code>
+          <code>nhsuk-colour("grey-3")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #aeb7bd
@@ -333,7 +333,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#d8dde0"></span>
-          <code>$color_nhsuk-grey-4</code>
+          <code>nhsuk-colour("grey-4")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #d8dde0
@@ -343,7 +343,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch app-colour-list__swatch--border" style="background-color:#f0f4f5"></span>
-          <code>$color_nhsuk-grey-5</code>
+          <code>nhsuk-colour("grey-5")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #f0f4f5
@@ -353,7 +353,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#ffffff"></span>
-          <code>$color_nhsuk-white</code>
+          <code>nhsuk-colour("white")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #ffffff
@@ -363,7 +363,7 @@
       <tr class="app-colour-list__row">
         <th class="app-colour-list__column app-colour-list__column--name" scope="row">
           <span class="app-colour-list__swatch" style="background-color:#fff9c4"></span>
-          <code>$color_nhsuk-pale-yellow</code>
+          <code>nhsuk-colour("pale-yellow")</code>
         </th>
         <td class="app-colour-list__column app-colour-list__column--colour">
           #fff9c4
@@ -381,7 +381,7 @@
   <h3>Colour contrast</h3>
   <p>Text, interface components (like buttons) and graphic elements must have contrast ratios that meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">the contrast minimum for AA of the Web Content Accessibility Guidelines (WCAG 2.2)</a>. We aim for AAA as far as possible.</p>
   <p>This helps people with low vision and colour vision deficiency (colour blindness) who find it difficult to distinguish between certain colours, often shades of red, yellow and green.</p>
-  <p>Not all combinations from our colour palette meet the minimum contrast. For example, <code>$nhsuk-border-color</code> has low contrast on our page background.</p>
+  <p>Not all combinations from our colour palette meet the minimum contrast. For example, <code>$nhsuk-border-colour</code> has low contrast on our page background.</p>
 
   <details class="nhsuk-details">
     <summary class="nhsuk-details__summary">

@@ -7,11 +7,11 @@
 ////
 
 .app-ogl-footer {
-  background-color: $color_nhsuk-grey-4;
+  background-color: nhsuk-colour("grey-4");
 }
 
 .app-ogl-footer--text {
-  color: $color_nhsuk-grey-1;
+  color: nhsuk-colour("grey-1");
   margin-bottom: 0;
 
   @include nhsuk-font(16);

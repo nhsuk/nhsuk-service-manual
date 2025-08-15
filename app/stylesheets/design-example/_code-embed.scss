@@ -1,8 +1,8 @@
 @use "../vendor/nhsuk-frontend" as *;
 
 .code-embed {
-  background-color: $color_nhsuk-grey-5;
-  border: 1px solid $color_nhsuk-grey-3;
+  background-color: nhsuk-colour("grey-5");
+  border: 1px solid nhsuk-colour("grey-3");
 
   iframe {
     display: block;
