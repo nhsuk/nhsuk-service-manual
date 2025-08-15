@@ -7,6 +7,8 @@
 
 {% extends "layouts/app-layout.njk" %}
 
+{% from "nhsuk/macros/icon.njk" import nhsukIcon %}
+
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
 {% endblock %}
@@ -15,160 +17,62 @@
 
   <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-icon-focus">interact with icons used as buttons</a>.</p>
 
-  <table class="nhsuk-table nhsuk-table--full-width nhsuk-table-responsive app-icon-table">
-    <caption class="nhsuk-table__caption">Icon you can use</caption>
-    <thead>
-      <tr>
-        <th>Icon</th>
-        <th>Label</th>
-        <th>Code in GitHub</th>
-        <th>Used in</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" height="34" width="34">
-            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Search</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-search.svg">icon-search.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/header">Header</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="34" width="34">
-            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Chevron left</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-chevron-left.svg">icon-chevron-left.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><span><a href="/design-system/components/breadcrumbs">Breadcrumbs</a> (on mobile screens)</span></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="34" width="34">
-            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Chevron right</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-chevron-right.svg">icon-chevron-right.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><span>Mobile menu, and primary <a href="/design-system/components/card">card</a> and <a href="/design-system/components/breadcrumbs">breadcrumb</a> on desktop</span></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-            <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Close</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-close.svg">icon-close.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span>Mobile menu</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="34" width="34">
-            <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
-            <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Cross (don't)</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-cross.svg">icon-cross.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/do-and-dont-lists">Do and Don't lists</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
-            <path stroke-width="4" stroke-linecap="round" stroke="#007f3b" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Tick (do)</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-tick.svg">icon-tick.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/do-and-dont-lists">Do and Don't lists</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="34" width="34">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Arrow right circle</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-arrow-right-circle.svg">icon-arrow-right-circle.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/action-link">Action link</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-            <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Arrow right</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-arrow-right.svg">icon-arrow-right.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><span>Next page (<a href="/design-system/components/pagination">pagination</a>)</span></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Arrow left</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-arrow-left.svg">icon-arrow-left.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><span>Previous page (<a href="/design-system/components/pagination">pagination</a>)</span></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true" height="34" width="34">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M12 8v8M8 12h8"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Plus</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-plus.svg">icon-plus.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/expander">Expander</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true" height="34" width="34">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M8 12h8"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Minus</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-minus.svg">icon-minus.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/expander">Expander</a></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td>
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Icon </span>
-          <svg class="nhsuk-icon nhsuk-icon__user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22Zm0 2a9 9 0 0 0-5 16.5V18a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v1.5A9 9 0 0 0 12 3Zm0 3a3.5 3.5 0 1 1-3.5 3.5A3.4 3.4 0 0 1 12 6Z"></path>
-          </svg>
-        </td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span>Profile</td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Code in GitHub </span><a target="_blank" rel="noopener noreferrer" href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons/icon-user.svg">icon-user.svg</a></td>
-        <td><span class="nhsuk-table-responsive__heading" aria-hidden="true">Used in </span><a href="/design-system/components/header">Header</a></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>You can find all the SVG icons code in the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets/icons">NHS.UK frontend library on GitHub</a>.</p>
-
-  <h2 id="when-to-use-these-icons">When to use these icons</h2>
+  <h2 id="icons">Icons you can use</h2>
   <p>Use these icons to mark important parts of the page and highlight things you want users to do.</p>
+
+  <h3 id="arrows">Left and right arrows</h3>
+  <p>The left and right arrow icons are used in the <a href="/design-system/components/pagination">pagination</a> component. These icons should be used alongside text labels, for example ‘Previous page’ and ‘Next page’.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "arrows"
+  }) }}
+
+  <h3 id="arrow-right-circle">Right arrow (inside a circle)</h3>
+  <p>The right arrow inside a circle icon is used in the <a href="/design-system/components/action-link">action link</a> component. This icon should be used to signpost links that start a digital service.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "arrow-right-circle"
+  }) }}
+
+  <h3 id="arrow-right-circle">Right chevron (inside a circle)</h3>
+  <p>The right arrow inside a circle icon is used in the primary <a href="/design-system/components/card">card</a> component. This icon should be used to signpost links to frequently visited or important topics.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "chevron-right-circle"
+  }) }}
+
+  <h3 id="tick-and-cross">Tick and cross</h3>
+  <p>The tick (do) and cross (don't) icons are used for <a href="/design-system/components/do-and-dont-lists">do and don't lists</a>. These icons should be shown below 'Do' and 'Don't' headings.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "tick-and-cross"
+  }) }}
+
+  <h3 id="search">Search</h3>
+  <p>The search icon is used in the <a href="/design-system/components/header">header</a> component. When used without a visible text label, make sure the icon has an accessible name, for example 'Search'.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "search"
+  }) }}
+
+  <h3 id="user">User profile</h3>
+  <p>The user profile icon is used in the <a href="/design-system/components/header">header</a> component. This icon should be shown alongside information about the currently logged in user.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "user"
+  }) }}
 
   <h2 id="how-to-use-these-icons">How to use these icons</h2>
   <p>Use icons sparingly, and not for decoration.</p>
@@ -179,30 +83,24 @@
       WCAG 2.2
     </strong>
 
-    <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: an "X" icon to close, supported by a labelled "Close" button.</p>
+    <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: a search icon to submit a query supported by a labelled "Search" button.</p>
     <p>This is to make sure users can easily interact with them. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
   </div>
-
-  <h3>Using text with icons</h3>
-  <p>Some of our icons can be used on their own. Users recognise them easily. They include:</p>
-  <ul>
-    <li>search</li>
-    <li>chevron right</li>
-    <li>plus and minus (for reveals)</li>
-    <li>close</li>
-  </ul>
-  <p>Other icons needs an explanation. They include:</p>
-  <ul>
-    <li><a href="/design-system/components/action-link">action links</a> – tell the user what the link will help them do, for example: "Find a pharmacy"</li>
-    <li>right and left arrows for <a href="/design-system/components/pagination">pagination</a> – add "Previous" or "Next"</li>
-    <li>cross and tick – use the words Do and Don't at the top of <a href="/design-system/components/do-and-dont-lists">Do and Don't lists</a></li>
-  </ul>
 
   <h3>Using SVG classes for icons</h3>
   <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
   <p>SVG icons are sharp, flexible, and load quickly. You can control how they appear, for example their colour, with style sheets (CSS).</p>
-  <p class="rich-text">If you're using a server side or templating language, you can include the icons with <code>include 'partials/icons/icon-search.svg'</code>.</p>
-  <p class="rich-text">SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon__search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
+  <p>If you're using Nunjucks templating language, you can use the <code>nhsukIcon</code> macro.</p>
+  <p>SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon--search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
+
+  <h3>Changing the size of an icon</h3>
+  <p>If you want to make an icon bigger, you can use the size override classes to make an icon 25%, 50%, 75% or 100% larger.</p>
+
+  {{ designExample({
+    group: "styles",
+    item: "icons",
+    type: "sizes"
+  }) }}
 
   <h3>Accessibility</h3>
   <p>SVG icons must be accessible. For example, they need to meet accessible colour contrast standards. Our recommended tool to test colour combinations is the <a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a>. Read more about <a href="https://css-tricks.com/accessible-svgs/">accessible SVGs on CSS Tricks website</a>.</p>
