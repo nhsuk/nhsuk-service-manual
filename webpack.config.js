@@ -118,7 +118,7 @@ module.exports = {
   },
 
   // Use Browserslist config
-  target: 'browserslist'
+  target: 'browserslist:javascripts'
 }
 
 /**
