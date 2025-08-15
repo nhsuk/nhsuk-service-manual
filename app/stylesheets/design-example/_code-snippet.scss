@@ -1,7 +1,7 @@
 // stylelint-disable color-no-hex, max-nesting-depth
 @use "../vendor/nhsuk-frontend" as *;
 
-.code-snippet {
+.app-code-snippet {
   background-color: nhsuk-colour("grey-5");
 
   .js-hidden {
@@ -84,11 +84,8 @@
     border-bottom: 1px solid nhsuk-colour("grey-3");
     display: flex;
     flex-direction: column;
-    padding: 16px;
 
-    @include nhsuk-media-query($from: tablet) {
-      padding: 24px;
-    }
+    @include nhsuk-responsive-padding(4);
   }
 }
 

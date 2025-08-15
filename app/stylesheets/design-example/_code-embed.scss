@@ -1,6 +1,6 @@
 @use "../vendor/nhsuk-frontend" as *;
 
-.code-embed {
+.app-code-embed {
   background-color: nhsuk-colour("grey-5");
   border: 1px solid nhsuk-colour("grey-3");
 
@@ -13,7 +13,7 @@
     width: 99%;
   }
 
-  + .code-snippet {
+  + .app-code-snippet {
     margin-top: -1px;
   }
 }

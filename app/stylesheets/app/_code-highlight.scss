@@ -34,15 +34,6 @@ td code {
   }
 }
 
-// Design example code snippet overrides
-.code-snippet__preformatted {
-  align-items: flex-end;
-  border-bottom: 1px solid nhsuk-colour("grey-4");
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-
 .hljs {
   background-color: nhsuk-colour("white");
   color: nhsuk-colour("black");
@@ -68,8 +59,4 @@ td code {
 .app-tabs__container pre,
 .app-tabs__container code {
   font-family: $app-code-font;
-}
-
-.code-snippet__macro {
-  width: 100%;
 }
