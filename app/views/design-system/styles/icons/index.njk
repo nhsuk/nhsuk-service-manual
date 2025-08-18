@@ -82,7 +82,10 @@
   <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
   <p>SVG icons are sharp, flexible, and load quickly. You can control how they appear, for example their colour, with style sheets (CSS).</p>
   <p>If you're using Nunjucks templating language, you can use the <code>nhsukIcon</code> macro.</p>
-  <p>SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon--search</code>. The specific class allows you to modify the icon with styles, such as fill. This means you can change the colour of the SVG for states such as hover, focus and active.</p>
+  <p>SVG icons have the class <code>.nhsuk-icon</code>, which sets a default size for the icon. Each icon also has a specific class, such as <code>.nhsuk-icon--search</code>. The specific class allows you to modify the icon with styles, such as colour via <code>fill</code>.</p>
+
+  <h3>Using colour with icons</h3>
+  <p>Icons often need to change colour based on their context and state, such as hover, focus and active. Make sure that when choosing icon colours, they have sufficient colour contrast to pass <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">WCAG 2.2 success criterion 1.4.11 Non-text Contrast (W3C)</a>.</p>
 
   <h3>Changing the size of an icon</h3>
   <p>If you want to make an icon bigger, you can use the size override classes to make an icon 25%, 50%, 75% or 100% larger.</p>
