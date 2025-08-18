@@ -2,6 +2,10 @@
 
 ## TBC
 
+:new: **New features**
+
+- Add new guidance about risks of using textarea
+
 :wrench: **Maintenance**
 
 - Update links to blog post about question protocol
