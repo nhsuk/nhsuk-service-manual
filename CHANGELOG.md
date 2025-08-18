@@ -2,6 +2,10 @@
 
 ## TBC
 
+:new: **New features**
+
+- Add more links to image libraries for inclusive skin symptoms
+
 :wrench: **Maintenance**
 
 - Update links to blog post about question protocol
