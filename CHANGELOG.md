@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add new guidance about risks of using textarea
+
 :wrench: **Maintenance**
 
 - Added form tags to pattern page examples
