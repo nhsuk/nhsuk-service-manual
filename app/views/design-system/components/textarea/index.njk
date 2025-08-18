@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use textarea to let users enter more than 1 line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "January 2020" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "22" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -21,15 +21,48 @@
   }) }}
 
   <h2 id="when-to-use-this-component">When to use textarea</h2>
-  <p>Use textarea when you want users to enter an amount of text that’s longer than a single line.</p>
+  <p>Use textarea when you want users to enter multiple lines of text.</p>
+  <p>Use it when you are confident that users will:</p>
+  <ul>
+    <li>input the information you need</li>
+    <li>not input any information that could cause safeguarding issues</li>
+  </ul>
 
   <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
-  <p>Users can find open-ended questions difficult to answer. It's usually better to break up 1 complex question into a series of simple ones, for example where users can select from options using <a href="/design-system/components/radios">radios</a>.</p>
 
-  <h3 id="if-you-need-to-ask-an-open-question">If you need to ask an open question</h3>
-  <p>Do not use textarea if you want users to enter single line answer, such as a phone number or name. In this case, you should use <a href="/design-system/components/text-input">text input</a>.</p>
+    <div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label"> <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Important
+    </span> </h3>
+  <p>Avoid using textarea in public services.</p>
+  </div>
+  <p>Consider other ways to collect the information you need.</p>
+
+  <p>Users can find open questions difficult to answer. They may input information that's difficult to analyse. They may also input distressing symptoms or situations and expect you to reply quickly.</p>
+  <p>Use structured, closed questions if possible. For example, let users select from options using radios or checkboxes.</p>
+  <p>If you want users to enter a single line answer, such as a phone number or name, use <a href="/design-system/components/text-input">text input</a>.</p>
+  <p>Only use textarea if it's the best way to meet user and business needs.</p>
 
   <h2 id="how-to-use-textarea">How to use textarea</h2>
+  <h3 id="understand-and-manage-the-risks">Understand and manage the risks</h3>
+  <p>Users sometimes use open text boxes to report health concerns or difficult circumstances. Your team must monitor and respond quickly to any clinical safety or safeguarding concerns.</p>
+  <p>If you cannot do this, it can leave:</p>
+  <ul>
+  <li>users in unsafe situations</li>
+  <li>staff feeling stressed and uncertain what to do</li>
+  <li>the organisation facing reputational harm or legal action for not acting on information</li>
+  </ul>
+
+  <p>Read our <a href="https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question">guidance on making sure you need each question.</a></p>
+  <p>If you want use textarea in a public service, make sure you:</p>
+  <ul>
+    <li>assess the risks</li>
+    <li>talk with your clinical and legal teams</li>
+    <li>have a process for dealing with safety issues, including over weekends and holidays</li>
+    <li>set up technical safeguards, for example to detect inappropriate content</li>
+  </ul>
+
   <h3 id="label-textareas">Label textareas</h3>
   <p>You must label textareas.</p>
   <p>Do not use placeholder text for a label, as it disappears when users click inside the textarea.</p>
@@ -66,6 +99,5 @@
 
   <h2>Research</h2>
   <p>We tested the textarea component on a "Register with a GP" prototype at 2 labs in December 2018. Users understood the purpose of the textarea and were able to use it.</p>
-  <p>If you’ve used this component, get in touch to <a href="/community-and-contribution">share your user research findings</a>.</p>
 
 {% endblock %}

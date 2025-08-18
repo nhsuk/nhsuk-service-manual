@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add new guidance about risks of using textarea
+
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
