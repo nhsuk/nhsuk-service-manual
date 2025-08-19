@@ -20,6 +20,7 @@
 
 - Update footer component and examples
 - Update guidance for using Nunjucks in production code on NHS.UK frontend v10.x
+- Update guidance for icons as we now provide inline SVG icons via nhsukIcon macro
 - Update links to blog post about question protocol
 
 ## 7.13.0 - 28 July 2025
