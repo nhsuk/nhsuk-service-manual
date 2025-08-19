@@ -12,6 +12,9 @@ import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 initAll({
   errorSummary: {
     disableAutoFocus: true
+  },
+  notificationBanner: {
+    disableAutoFocus: true
   }
 })
 
