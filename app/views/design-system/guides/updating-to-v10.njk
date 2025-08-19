@@ -217,7 +217,27 @@
 
   <h3>Header</h3>
 
-  <p>TO-DO</p>
+  <p>The generated HTML and Nunjucks macro options for the <a href="/design-system/components/header">Header</a> component has been completely refactored and changed.</p>
+
+  <p>Update the HTML generated for your header using the examples on Header page.</p>
+
+  <p>If you are using the header Nunjucks macro, then make these changes instead:</p>
+
+  <ul>
+    <li>rename the <code>transactionalService</code> option to the new <code>service</code> option, and remove the boolean <code>transactional</code> option</li>
+    <li> replace the <code>primaryLinks</code> option with the nested <code>navigation.items</code> option, using <code>text</code> and <code>href</code> instead of <code>label</code> and <code>url</code></li>
+    <li> replace the <code>searchAction</code> option with the nested <code>search.action</code> option</li>
+    <li> replace the <code>searchInputName</code> option with the nested <code>search.name</code> option</li>
+    <li> remove the boolean <code>showNav</code> and <code>showSearch</code> options - the respective parts of the header are now shown automatically when <code>navigation.items</code> or <code>search</code> options are provided</li>
+  </ul>
+
+  <h4>Header modifier classes</h4>
+
+  <p>If you are using the <code>nhsuk-header--white-nav</code> class to have a white background on the navigation bar, update this to <code>nhsuk-header__navigation--white</code>.</p>
+
+  <p>If you are using the <code>nhsuk-header__navigation-list--left-aligned</code> class, remove this as navigation items are now aligned left by default.</p>
+
+  <p>To restore the previous justified alignment, where navigation items appeared evenly spaced out, add the new <code>nhsuk-header__navigation--justified</code> modifier class.</p>
 
   <h3>Footer</h3>
 
