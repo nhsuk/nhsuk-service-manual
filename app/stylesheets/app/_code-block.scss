@@ -2,6 +2,21 @@
 
 @use "../vendor/nhsuk-frontend" as *;
 
+/// Code showing deleted and inserted lines:
+
+code del {
+  background-color: nhsuk-tint(nhsuk-colour("red"), 80%);
+  color: nhsuk-colour("red");
+  text-decoration: none;
+}
+
+code ins {
+  background-color: nhsuk-tint(nhsuk-colour("green"), 80%);
+  color: nhsuk-colour("green");
+  text-decoration: none;
+}
+
+
 ////
 /// Code block highlighting
 ////

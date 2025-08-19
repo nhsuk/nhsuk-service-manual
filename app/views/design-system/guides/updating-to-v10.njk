@@ -12,5 +12,188 @@
 {% endblock %}
 
 {% block bodyContent %}
+  <p>This release introduces a number of breaking changes.</p>
+
+  <p>You must read and follow this guide carefully to apply the updates and make sure your service does not break.</p>
+
+  <h2>Using a front end build</h2>
+
+  <p>If you are using a build of the design system in another language or framework, for example React or a Wordpress theme, you may need the maintainer of that tool to update it to support version 10 before you can upgrade.</p>
+
+  <h2>Update how you use the stylesheets</h2>
+
+  <p>The file structure for the stylesheets has changed. You will have to make different updates depending on whether you are compiling the <a href="https://sass-lang.com/">Sass</a> or using the precompiled files.</p>
+
+  <h3>Sass</h3>
+
+  <p>If you are compiling the Sass files, you must add <code>node_modules</code> to load paths, by either:</p>
+
+  <ul>
+    <li>calling the Sass compiler from the command line with the <code>--load-path node_modules</code> flag</li>
+    <li>using the JavaScript API with <code>loadPaths: ['node_modules']</code> in the <code>options</code> object</li>
+  </ul>
+
+  <p>Replace <code>packages</code> with <code>dist/nhsuk</code> for any <code>@forward</code>, <code>@use</code> or <code>@import</code> paths in your Sass files, making sure to remove the unnecessary <code>node_modules/</code> prefix:</p>
+
+  <code class="nhsuk-u-margin-bottom-6">
+    <del>- @import "node_modules/nhsuk-frontend/packages/nhsuk";</del><br>
+    <ins>+ @import "nhsuk-frontend/dist/nhsuk";</ins>
+  </code>
+
+  <h3>Precompiled stylesheets</h3>
+
+  <p>If you are using the precompiled file in the npm package at <code>node_modules/dist/nhsuk/nhsuk-frontend.min.css</code>, update this path to <code>node_modules/dist/nhsuk.min.css</code></p>
+
+  <p>If you are using the precompiled file from the GitHub release zip file at <code>css/nhsuk-&lt;VERSION-NUMBER&gt;.min.css</code>, update this path to <code>nhsuk-frontend-&lt;VERSION-NUMBER&gt;.min.css</code>.</p>
+
+  <h2>Update how you use the JavaScript</h2>
+
+  <p>The file structure for the JavaScript has changed. You will have to make different updates depending on whether you are using a bundler or the precompiled files.</p>
+
+  <h3>Using a JavaScript bundler</h3>
+
+  <p>For JavaScript imported using a bundler, consolidate all <code>import</code> or <code>require()</code> calls to <code>nhsuk-frontend/packages/components/*</code> into a single statement:</p>
+
+  <code class="nhsuk-u-margin-bottom-6">
+  <del>- import initButtons from 'nhsuk-frontend/packages/components/button/button.js'<br>
+  - import initCheckboxes from 'nhsuk-frontend/packages/components/checkboxes/checkboxes.js'</del><br>
+  <ins>+ import { initButtons, initCheckboxes } from 'nhsuk-frontend'</ins>
+  </code>
+
+  <p>Make sure component initialisation functions match the named exports:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  import { initButtons, initCheckboxes } from 'nhsuk-frontend'
+
+  // Initialise all button components
+  initButtons();
+
+  // Initialise all checkboxes components
+  initCheckboxes();
+  </pre></code>
+
+  <p>Or alternatively, you can initialise individual component classes:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  import { Button, Checkboxes } from 'nhsuk-frontend';
+
+  const $button = document.querySelector('.app-button')
+  const $checkboxes = document.querySelector('.app-checkboxes')
+
+  // Initialise single button component
+  new Button($button);
+
+  // Initialise single checkboxes component
+  new Checkboxes($checkboxes);
+  </pre></code>
+
+  <h3>Using precompiled JavaScript</h3>
+
+  <p>For precompiled JavaScript, note the following path changes:</p>
+
+  <p>If you are using the precompiled file in the npm package at <code>node_modules/dist/nhsuk/nhsuk-frontend.min.js</code>, update this path to <code>node_modules/dist/nhsuk.min.js</code></p>
+
+  <p>If you are using the precompiled file from the GitHub release zip file at <code>css/nhsuk-&lt;VERSION-NUMBER&gt;.min.js</code>, update this path to <code>nhsuk-frontend-&lt;VERSION-NUMBER&gt;.min.js</code>.</p>
+
+  <p>Then include the script before the closing <code>&lt;/body&gt;</code> tag of your page using the <code>type="module"</code> attribute, and run the <code>initAll</code> function to initialise all the components.</p>
+
+  <p>Before:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+    &lt;script src="/javascripts/nhsuk-frontend.min.js" defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  </pre></code>
+
+  <p>After:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+    &lt;script type="module" src="/javascripts/nhsuk-frontend.min.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      import { initAll } from '/javascripts/nhsuk-frontend.min.js'
+      initAll()
+    &lt;/script&gt;
+  &lt;/body&gt;
+  </pre></code>
+
+
+  <h2>Update how you use the static assets</h2>
+
+  <p>The location of the folder containing static assets such as logos, icons and other images has changed.</p>
+
+  <p>Replace <code>packages/</code> with <code>dist/nhsuk</code> when copying or serving NHS.UK frontend logos, icons and other assets:</p>
+
+  <code class="nhsuk-u-margin-bottom-6">
+  <del>- node_modules/nhsuk-frontend/packages/assets</del><br>
+  <ins>+ node_modules/nhsuk-frontend/dist/nhsuk/assets</ins>
+  </code>
+
+  <p>For example, if you're using <a href="https://expressjs.com/">Express.js</a>, request routing could be set up as follows:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-6"><pre>
+  router.use('/assets', [
+    express.static('node_modules/nhsuk-frontend/dist/nhsuk/assets')
+  ])
+  </pre></code>
+
+  <h2>Update how you use Nunjucks</h2>
+
+  <p>If you are using the Nunjucks macros, update the list of paths in <code>nunjucks.configure()</code>:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-6">
+    nunjucks.configure([<br>
+  <del>-   'node_modules/nhsuk-frontend/packages/components',<br>
+  -   'node_modules/nhsuk-frontend/packages/macros'</del><br>
+  <ins>+   'node_modules/nhsuk-frontend/dist/nhsuk/components',<br>
+  +   'node_modules/nhsuk-frontend/dist/nhsuk/macros',<br>
+  +   'node_modules/nhsuk-frontend/dist/nhsuk',<br>
+  +   'node_modules/nhsuk-frontend/dist'</ins><br>
+    ])
+  </code>
+
+  <h2>Update your page template</h2>
+
+  <p>We have made several updates to the <a href="/design-system/styles/page-template">page template</a>.</p>
+
+  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make any changes.</p>
+
+  <p>Otherwise, you will need to make the following changes.</p>
+
+  <h3>Remove the X-UA-Compatible meta tag</h3>
+
+  <p>Remove the <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code> tag.</p>
+
+  <p>Internet Explorer versions 8, 9 and 10 included a feature that would try to determine if the page was built for an older version of IE and silently enable compatibility mode, modifying the rendering engine's behaviour to match the older version of IE. Setting this meta tag prevented that behaviour.</p>
+
+  <p>IE11 deprecated this meta tag and defaulted to always using IE11's renderer when the page has a HTML5 doctype (<code>&lt;!DOCTYPE html&gt;</code>).</p>
+
+  <p>As NHS.UK frontend no longer supports Internet Explorer versions older than 11, this meta tag should now be removed.</p>
+
+  <h3>Update the viewport meta tag</h3>
+
+  <p>Update the viewport meta tag by changing <code>shrink-to-fit=no</code> to <code>viewport-fit=cover</code>:</p>
+
+  <code class="nhsuk-u-margin-bottom-6">
+  <del>- &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;<br>
+  <ins>+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"&gt;
+  </code>
+
+  <p>This is to better accommodate mobile devices with camera notches.</p>
+
+  <h2>Update the favicons, app icons and Open Graph image tags</h2>
+
+  <p>We've changed the names, formats and sizes of icon assets we distribute in NHS.UK frontend.</p>
+
+  <p>Update the list of icons in the template's head with the following:</p>
+
+  <code class="language-html nhsuk-u-margin-bottom-5">
+  &lt;link rel="icon" href="/assets/images/favicon.ico" sizes="48x48"&gt;<br>
+  &lt;link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml"&gt;<br>
+  &lt;link rel="mask-icon" href="/assets/images/nhsuk-icon-mask.svg" color="#005eb8"&gt;<br>
+  &lt;link rel="apple-touch-icon" href="/assets/images/nhsuk-icon-180.png"&gt;<br>
+  &lt;link rel="manifest" href="/assets/manifest.json"&gt;
+  </code>
+
+  <p>You will need to update the <code>/assets/images/</code> file path if you copy the assets to a different location.</p>
+
 
 {% endblock %}
