@@ -158,6 +158,22 @@
 
   <p>Otherwise, you will need to make the following changes.</p>
 
+  <h3>Update the JavaScript supported script snippet</h3>
+
+  <p>The <code>&lt;script&gt;</code> snippet at the top of the <code>&lt;body&gt;</code> tag to check whether JavaScript is supported has been updated.</p>
+
+  <p>Change this:</p>
+
+  <code class="nhsuk-u-margin-bottom-4">
+  <del>&lt;script&gt;document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');&lt;/script&gt;
+  </code>
+
+  <p>to this:</p>
+
+  <code class="nhsuk-u-margin-bottom-6">
+  <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;
+  </code>
+
   <h3>Remove the X-UA-Compatible meta tag</h3>
 
   <p>Remove the <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code> tag.</p>
@@ -179,7 +195,7 @@
 
   <p>This is to better accommodate mobile devices with camera notches.</p>
 
-  <h2>Update the favicons, app icons and Open Graph image tags</h2>
+  <h3>Update the favicons, app icons and Open Graph image tags</h3>
 
   <p>We've changed the names, formats and sizes of icon assets we distribute in NHS.UK frontend.</p>
 
