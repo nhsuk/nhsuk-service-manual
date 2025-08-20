@@ -551,5 +551,50 @@
     </tbody>
   </table>
 
+  <h3>Typography scale point 24 removed</h3>
+
+  <p>The point 24 (24px large screens, 20px small screens) on the typography scale has been removed, after previously being deprecated in version 9.5.0.</p>
+
+  <p>Use either point 22 or point 26 instead.</p>
+
+  <h3>Main wrapper mixins removed</h3>
+
+  <p>We've removed the <code>govuk-main-wrapper()</code>, <code>govuk-main-wrapper--l()</code> and <code>govuk-main-wrapper--s()</code> Sass mixins, after previously being deprecated in version 9.5.0.</p>
+
+  <p>Remove any use of these mixins and replace them with the <code>.nhsuk-main-wrapper</code>, <code>.nhsuk-main-wrapper--l</code> and <code>.nhsuk-main-wrapper--s</code> classes in your HTML instead.</p>
+
+  <h3>Class param removed from grid column mixin</h3>
+
+  <p>If you're using the <code>nhsuk-grid-column()</code> Sass mixin to create custom grid classes, you must remove the <code>$class</code> parameter:</p>
+
+  <code class="language-css nhsuk-u-margin-bottom-4"><pre>
+    .app-grid-column-one-quarter-at-desktop {
+<del>  -   @include nhsuk-grid-column(one-quarter, $at: desktop, $class: false);</del>
+<ins>  +   @include nhsuk-grid-column(one-quarter, $at: desktop);</ins>
+    }
+</pre></code>
+
+  <h3>Prefix added to mixins and functions</h3>
+
+  <p>Sass mixins have been updated to all have an <code>nhsuk-</code> prefix. If you are using any of these in your code, update the names of the functions as follows:</p>
+
+  <ul>
+    <li><code>govuk-exports</code> updated to <code>nhsuk-exports</code></li>
+    <li><code>govuk-grid-column</code> updated to <code>nhsuk-grid-column</code>
+    <li><code>govuk-shape-arrow</code> updated to <code>nhsuk-shape-arrow</code>
+    <li><code>govuk-width-container</code> updated to <code>nhsuk-width-container</code>
+    <li><code>grid-width</code> updated to <code>nhsuk-grid-width</code>
+    <li><code>tint</code> updated to <code>nhsuk-tint</code>
+    <li><code>shade</code> updated to <code>nhsuk-shade</code>
+  </ul>
+
+  <h3>Grid row mixin removed</h3>
+
+  <p>The <code>govuk-grid-row</code> mixin has been removed. If you are using this, update your code to use the <code>.nhsuk-grid-row</code> class in your HTML instead.</p>
+
+  <h3>Iff function removed</h3>
+
+  <p>The <code>iff</code> function has been removed. If you are using this, update your code to use the <a href="https://sass-lang.com/documentation/modules/#if">Sass <code>if</code> function</a> instead.</p>
+
 
 {% endblock %}
