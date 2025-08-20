@@ -66,10 +66,10 @@
 
   <p>Replace <code>packages</code> with <code>dist/nhsuk</code> for any <code>@forward</code>, <code>@use</code> or <code>@import</code> paths in your Sass files, making sure to remove the unnecessary <code>node_modules/</code> prefix:</p>
 
-  <code class="nhsuk-u-margin-bottom-6">
-    <del>- @import "node_modules/nhsuk-frontend/packages/nhsuk";</del><br>
-    <ins>+ @import "nhsuk-frontend/dist/nhsuk";</ins>
-  </code>
+  <code class="nhsuk-u-margin-bottom-6 language-diff"><pre>
+  <del>- @import "node_modules/nhsuk-frontend/packages/nhsuk";</del>
+  <ins>+ @import "nhsuk-frontend/dist/nhsuk";</ins>
+  </pre></code>
 
   <h3>Precompiled stylesheets</h3>
 
