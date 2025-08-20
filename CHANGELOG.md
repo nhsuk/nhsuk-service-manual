@@ -5,10 +5,11 @@
 :new: **New features**
 
 - Add new guidance about risks of using textarea
+- Update guidance on using textarea on page about character count component
 
 :wrench: **Maintenance**
 
-- Update links to blog post about question protocol
+- Make heading styles consistent for single question coded examples
 
 ## 7.13.0 - 28 July 2025
 
