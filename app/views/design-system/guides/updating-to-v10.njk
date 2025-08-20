@@ -477,6 +477,8 @@
 
   <p>We've removed support for the <code>nhsuk-button--disabled</code> class. If you are using this, remove it and use the <code>disabled</code> attribute to mark the button as disabled instead.</p>
 
+  <p>Buttons and links can now be grouped together so that they appear side-by-side on tablet and desktop by using a <code>&lt;div class="nhsuk-button-group"&gt; &lt;/div&gt;</code> container. If you are currently doing this using custom CSS code, you can remove that code and use the class provided.</p>
+
   <h3 id="inset-text">Inset text</h3>
 
   <p>There are no changes to the HTML.</p>
@@ -526,6 +528,12 @@
   <ins>+ &lt;div class="nhsuk-skip-link" data-module="nhsuk-skip-link"&gt;</ins>
   </code>
 
+  <h3>Notification banner</h3>
+
+  <p>A <a href="/design-system/components/notification-banners">notification banner</a> component has been added.</p>
+
+  <p>If you have created your own custom notification banner component, you can replace this with the newly added one.</p>
+
   <h2 id="sass-functions">Sass functions</h2>
 
   <p>If you make use of the Sass functions, variables or mixins for your own custom CSS, you may need to make some changes.</p>
@@ -550,6 +558,20 @@
       <tr><td><code>$color_shade_nhsuk-green-50</code></td><td><code>nhsuk-shade(nhsuk-colour("green"), 50%)</code></td></tr>
     </tbody>
   </table>
+
+  <h3>NHS colour function added</h3>
+
+  <p>The Sass colour palette variables (e.g. <code>$color_nhsuk-blue</code>) have been moved into a new single <code>$nhsuk-colours</code> map.</p>
+
+  <p>If you need to reference a colour within your application you should use the new <code>nhsuk-colour</code> function:</p>
+
+  <code class="language-css nhsuk-u-margin-bottom-4"><pre>
+  .nhsuk-example {
+<del>-     color: $color_nhsuk-blue;</del>
+<ins>+     color: nhsuk-colour("blue");</ins>
+  }</pre></code>
+
+  <p>The existing colour variables will continue to work but are deprecated and will be removed in a future release.</p>
 
   <h3>Typography scale point 24 removed</h3>
 
