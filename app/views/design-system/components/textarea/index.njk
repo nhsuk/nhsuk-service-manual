@@ -25,10 +25,11 @@
   <p>Use it when you are confident that users will:</p>
   <ul>
     <li>input the information you need</li>
-    <li>not input any information that could cause safeguarding issues</li>
+    <li>not input information that could cause clinical or safeguarding concerns, for example, details of medical symptoms or harmful behaviour that your service is not designed to deal with</li>
   </ul>
+  <p>If you are not sure about this, talk with your clinical team.</p>
 
-  <h2 id="when-not-to-use-this-component">When not to use textarea</h2>
+  <h2 id="when-not-to-use-textarea">When not to use textarea</h2>
 
     <div class="nhsuk-warning-callout">
   <h3 class="nhsuk-warning-callout__label"> <span role="text">
@@ -37,16 +38,19 @@
     </span> </h3>
   <p>Avoid using textarea in public services.</p>
   </div>
-  <p>Consider other ways to collect the information you need.</p>
-
-  <p>Users can find open questions difficult to answer. They may input information that's difficult to analyse. They may also input distressing symptoms or situations and expect you to reply quickly.</p>
-  <p>Use structured, closed questions if possible. For example, let users select from options using radios or checkboxes.</p>
+  <p>Textarea can cause problems as users may:</p>
+  <ul>
+  <li>find open questions difficult to answer</li>
+  <li>input information that's difficult to analyse</li>
+  <li>disclose personal information, for example, about their symptoms or situation and expect you to reply quickly</li>
+  </ul>
+  <p>Consider other ways to collect the information you need. Use structured, closed questions if possible. For example, let users select from options using radios or checkboxes.</p>
   <p>If you want users to enter a single line answer, such as a phone number or name, use <a href="/design-system/components/text-input">text input</a>.</p>
   <p>Only use textarea if it's the best way to meet user and business needs.</p>
 
   <h2 id="how-to-use-textarea">How to use textarea</h2>
   <h3 id="understand-and-manage-the-risks">Understand and manage the risks</h3>
-  <p>Users sometimes use open text boxes to report health concerns or difficult circumstances. Your team must monitor and respond quickly to any clinical safety or safeguarding concerns.</p>
+  <p>Users sometimes use open text boxes to report health concerns or difficult circumstances that are not relevant to your service, even if you ask them not to. Your team must monitor and respond to any clinical safety or safeguarding concerns.</p>
   <p>If you cannot do this, it can leave:</p>
   <ul>
   <li>users in unsafe situations</li>
@@ -55,11 +59,11 @@
   </ul>
 
   <p>Read our <a href="https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question">guidance on making sure you need each question.</a></p>
-  <p>If you want use textarea in a public service, make sure you:</p>
+  <p>If you use textarea in a public service, make sure you:</p>
   <ul>
     <li>assess the risks</li>
     <li>talk with your clinical and legal teams</li>
-    <li>have a process for dealing with safety issues, including over weekends and holidays</li>
+    <li>put in place a process for monitoring and dealing with safety issues, including over weekends and holidays</li>
     <li>set up technical safeguards, for example to detect inappropriate content</li>
   </ul>
 
@@ -74,11 +78,13 @@
   {{ designExample({
     group: "components",
     item: "textarea",
-    type: "longer"
+    type: "right-size"
   }) }}
+  <p>If you are using a large textarea in a public service, with or without <a href="/design-system/components/character-count">character count</a>, be aware that giving users more space may increase clinical risk.</p>
 
   <h3>Using hint text</h3>
-  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>, for example, tell users what information to include or not to include. <a href="/design-system/components/hint-text">Read more about hint text</a>.</p>
+  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>, for example, tell users what information to include or not to include. But bear in mind that users may ignore this, especially in public services.</p>
+  <p><a href="/design-system/components/hint-text">Read more about hint text</a>.</p>
   <h3 id="do-not-disable-copy-and-paste">Do not disable copy and paste</h3>
   <p>Users will often need to copy and paste information into a textarea, so do not stop them doing this.</p>
 
