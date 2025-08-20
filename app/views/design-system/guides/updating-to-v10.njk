@@ -126,27 +126,6 @@
 
   <p>If you are using the precompiled file from the GitHub release zip file at <code>css/nhsuk-&lt;VERSION-NUMBER&gt;.min.js</code>, update this path to <code>nhsuk-frontend-&lt;VERSION-NUMBER&gt;.min.js</code>.</p>
 
-  <p>Then include the script before the closing <code>&lt;/body&gt;</code> tag of your page using the <code>type="module"</code> attribute, and run the <code>initAll</code> function to initialise all the components.</p>
-
-  <p>Before:</p>
-
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
-    &lt;script src="/javascripts/nhsuk-frontend.min.js" defer&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  </pre></code>
-
-  <p>After:</p>
-
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
-    &lt;script type="module" src="/javascripts/nhsuk-frontend.min.js"&gt;&lt;/script&gt;
-    &lt;script type="module"&gt;
-      import { initAll } from '/javascripts/nhsuk-frontend.min.js'
-      initAll()
-    &lt;/script&gt;
-  &lt;/body&gt;
-  </pre></code>
-
-
   <h2 id="assets">Static assets</h2>
 
   <p>The location of the folder containing static assets such as logos, icons and other images has changed.</p>
@@ -204,6 +183,38 @@
   <code class="nhsuk-u-margin-bottom-6">
   <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;
   </code>
+
+  <h3>Update the main script tag</h3>
+
+  <p>The main <code>&lt;script&gt;</code> tag for the JavaScript has been updated and moved.</p>
+
+  <p>You need to:</p>
+
+  <ul>
+    <li>move it from within the <code>&lt;head&gt;</code> element to just before the closing <code>&lt;/body&gt;</code> tag</li>
+    <li>remove the <code>defer</code> attribute</li>
+    <li>add a <code>type="module"</code> attribute</li>
+    <li>add a second <code>&lt;script&gt;</code> tag to import and initialise the components</li>
+  </ul>
+
+  <p>Before:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <del>  &lt;script src="/javascripts/nhsuk-frontend.min.js" defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+</del></pre></code>
+
+  <p>After:</p>
+
+  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <ins>  &lt;script type="module" src="/javascripts/nhsuk-frontend.min.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      import { initAll } from '/javascripts/nhsuk-frontend.min.js'
+      initAll()
+    &lt;/script&gt;
+  &lt;/body&gt;
+</ins></pre></code>
+
 
   <h3>Remove the X-UA-Compatible meta tag</h3>
 
