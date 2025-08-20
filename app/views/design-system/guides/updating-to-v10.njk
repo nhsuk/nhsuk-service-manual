@@ -241,15 +241,52 @@
 
   <h3>Footer</h3>
 
-  <p>TO-DO</p>
+  <p>The <a href="/design-system/components/footer">footer</a> component's Nunjucks macros and HTML have been updated for better consistency and flexibility.</p>
 
-  <h3>Footer</h3>
+  <p>See the examples on the footer page for the updated HTML.</p>
 
-  <p>TO-DO</p>
+  <p>If you are using the Nunjucks macro, make these changes instead:</p>
+
+  <ul>
+    <li>replace the <code>links</code> option with the nested <code>navigation.items</code> option</li>
+    <li>replace the <code>metaLinks</code> option with the nested <code>meta.items</code> option</li>
+    <li>update all items to rename <code>label</code> to <code>text</code> and <code>URL</code> to <code>href</code></li>
+  </ul>
+
+  <p>If you are using additional columns with the <code>linksColumn2</code> and <code>linksColumn3</code> options, update this to wrap the <code>navigation</code> object in an array to support multiple columns.</p>
+
+  <h3>Action link</h3>
+
+  <p>The HTML for the <a href="/design-system/components/action-link">action link</a> has been updated.</p>
+
+  <p>You need to:</p>
+
+  <ul>
+    <li>remove the wrapper element <code>&lt;div class="nhsuk-action-link"&gt; &lt;/div&gt;</code></li>
+    <li>rename the action link <code>&lt;a class="nhsuk-action-link__link"</code> class attribute to <code>&lt;a class="nhsuk-action-link"</code></li>
+  </ul>
+
+  <p>You do not need to do anything if you're using Nunjucks macros.</p>
 
   <h3>Back link</h3>
 
-  <p>TO-DO</p>
+  <p>For consistency with other links, we've added an underline to the <a href="/design-system/components/back-link">back link</a> component. We've also changed the default text from "Go back" to "Back" in all examples.</p>
+
+  <p>The HTML has been updated to no longer have a wrapper element or an embedded SVG icon.</p>
+
+  <p>You need to make these changes:</p>
+
+  <code class="nhsuk-u-margin-bottom-4">
+  <del>- &lt;div class="nhsuk-back-link"> &lt;a class="nhsuk-back-link__link" href="#"&gt;<br>
+  -   &lt;svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24"&gt;<br>
+  -     &lt;path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">&lt;/path&gt;<br>
+  -   &lt;/svg&gt;<br>
+  -   Back&lt;/a&gt;<br>
+  - &lt;/div></del><br>
+  <ins>+ &lt;a class="nhsuk-back-link" href="#">Back&lt;/a></ins>
+  </code>
+
+  <p>You do not need to do anything if you're using Nunjucks macros.</p>
 
   <h3>Breadcrumbs</h3>
 
@@ -259,9 +296,6 @@
 
   <p>TO-DO</p>
 
-  <h3>Action link</h3>
-
-  <p>TO-DO</p>
 
   <h3>Do and don’t lists</h3>
 
