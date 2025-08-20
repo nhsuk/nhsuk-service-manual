@@ -371,6 +371,8 @@
 
   <p>You can also rename the <code>html</code> option to <code>text</code> if there is no HTML markup within your content.</p>
 
+  <p>Make sure you are using the lowercase <code>html</code> option, as the the uppercase <code>HTML</code> option has been removed.</p>
+
   <h3>Do and don’t lists</h3>
 
   <p>The SVG icons within the Do and don't lists have been updated.</p>
@@ -447,7 +449,30 @@
   +    &lt;/svg&gt;</ins>
   </code>
 
-  <p>You do not neet to make any changes if you are using the Nunjucks macro.</p>
+  <p>If you are using the Nunjucks macro, make sure you are using the lowercase <code>html</code> option, as the the uppercase <code>HTML</code> option has been removed.</p>
 
+  <h3 id="button">Button</h3>
+
+  <p>We’ve removed support for the <code>nhsuk-button--disabled</code> class. If you are using this, remove it and use the <code>disabled</code> attribute to mark the button as disabled instead.</p>
+
+  <p>There are no other changes.</p>
+
+  <h3 id="inset-text">Inset text</h3>
+
+  <p>There are no changes to the HTML.</p>
+
+  <p>If you are using the Nunjucks macro for <a href="">inset text</a>, make sure you are using the lowercase <code>html</code> option, as the the uppercase <code>HTML</code> option has been removed.</p>
+
+  <h3 id="warning-callout">Warning callout</h3>
+
+  <p>There are no changes to the HTML.</p>
+
+  <p>If you are using the Nunjucks macro for <a href="/design-system/components/warning-callout">warning callout</a>, make sure you are using the lowercase <code>html</code> option, as the the uppercase <code>HTML</code> option has been removed.</p>
+
+  <h3 id="tabs">Tabs</h3>
+
+  <p>There are no changes to the HTML or Nunjucks for <a href="/design-system/components/tabs">tabs</a>.</p>
+
+  <p>The tabs component no longer triggers the <code>tab.show</code> and <code>tab.hide</code> custom JavaScript events. <a href="/get-in-touch">Get in touch</a> if you need to continue using these events.
 
 {% endblock %}
