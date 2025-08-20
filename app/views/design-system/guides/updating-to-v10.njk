@@ -46,6 +46,10 @@
       {
         href: "#components",
         text: "Components"
+      },
+      {
+        href: "#sass",
+        text: "Sass"
       }
     ]
   }) }}
@@ -515,6 +519,31 @@
   <del>- &lt;div class="nhsuk-skip-link"&gt;</del><br>
   <ins>+ &lt;div class="nhsuk-skip-link" data-module="nhsuk-skip-link"&gt;</ins>
   </code>
+
+  <h2 id="sass">Sass</h2>
+
+  <p>If you make use of the Sass partials, functions or mixings for your own custom CSS, you may need to make some changes.</p>
+
+  <h3>Tinted and shaded colours</h2>
+
+  <p>Sass colour tint and shade variables (e.g. <code>$color_tint_nhsuk-black-10</code>) have been removed but are available using the <code>nhsuk-tint</code> and <code>nhsuk-shade</code> functions:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Before: Colour variable</th>
+        <th>After: Suggested replacement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>$color_tint_nhsuk-black-10</code></td><td><code>nhsuk-tint(nhsuk-colour("black"), 10%)</code></td></tr>
+      <tr><td><code>$color_shade_nhsuk-blue-20</code></td><td><code>nhsuk-shade(nhsuk-colour("blue"), 20%)</code></td></tr>
+      <tr><td><code>$color_shade_nhsuk-blue-35</code></td><td><code>nhsuk-shade(nhsuk-colour("blue"), 35%)</code></td></tr>
+      <tr><td><code>$color_shade_nhsuk-blue-50</code></td><td><code>nhsuk-shade(nhsuk-colour("blue"), 50%)</code></td></tr>
+      <tr><td><code>$color_shade_nhsuk-green-35</code></td><td><code>nhsuk-shade(nhsuk-colour("green"), 35%)</code></td></tr>
+      <tr><td><code>$color_shade_nhsuk-green-50</code></td><td><code>nhsuk-shade(nhsuk-colour("green"), 50%)</code></td></tr>
+    </tbody>
+  </table>
 
 
 {% endblock %}
