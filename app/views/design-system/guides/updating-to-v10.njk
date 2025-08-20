@@ -16,11 +16,42 @@
 
   <p>You must read and follow this guide carefully to apply the updates and make sure your service does not break.</p>
 
-  <h2>Using a front end build</h2>
+  {{ insetText({
+    text: "If you are using a build of the design system in another language or framework, for example React or a Wordpress theme, you may need the maintainer of that tool to follow these updates to support version 10 before you can upgrade."
+  }) }}
 
-  <p>If you are using a build of the design system in another language or framework, for example React or a Wordpress theme, you may need the maintainer of that tool to update it to support version 10 before you can upgrade.</p>
 
-  <h2>Update how you use the stylesheets</h2>
+  <p>Contents</p>
+  {{ contentsList({
+    items: [
+      {
+        href: "#stylesheets",
+        text: "Stylesheets"
+      },
+      {
+        href: "#javascript",
+        text: "JavaScript"
+      },
+      {
+        href: "#assets",
+        text: "Static assets"
+      },
+      {
+        href: "#nunjucks",
+        text: "Nunjucks"
+      },
+      {
+        href: "#page-template",
+        text: "Page template"
+      },
+      {
+        href: "#components",
+        text: "Components"
+      }
+    ]
+  }) }}
+
+  <h2 id="stylesheets">Stylesheets</h2>
 
   <p>The file structure for the stylesheets has changed. You will have to make different updates depending on whether you are compiling the <a href="https://sass-lang.com/">Sass</a> or using the precompiled files.</p>
 
@@ -46,7 +77,7 @@
 
   <p>If you are using the precompiled file from the GitHub release zip file at <code>css/nhsuk-&lt;VERSION-NUMBER&gt;.min.css</code>, update this path to <code>nhsuk-frontend-&lt;VERSION-NUMBER&gt;.min.css</code>.</p>
 
-  <h2>Update how you use the JavaScript</h2>
+  <h2 id="javascript">JavaScript</h2>
 
   <p>The file structure for the JavaScript has changed. You will have to make different updates depending on whether you are using a bundler or the precompiled files.</p>
 
@@ -116,7 +147,7 @@
   </pre></code>
 
 
-  <h2>Update how you use the static assets</h2>
+  <h2 id="assets">Static assets</h2>
 
   <p>The location of the folder containing static assets such as logos, icons and other images has changed.</p>
 
@@ -135,7 +166,7 @@
   ])
   </pre></code>
 
-  <h2>Update how you use Nunjucks</h2>
+  <h2 id="nunjucks">Nunjucks</h2>
 
   <p>If you are using the Nunjucks macros, update the list of paths in <code>nunjucks.configure()</code>:</p>
 
@@ -150,7 +181,7 @@
     ])
   </code>
 
-  <h2>Update your page template</h2>
+  <h2 id="page-templates">Page template</h2>
 
   <p>We have made several updates to the <a href="/design-system/styles/page-template">page template</a>.</p>
 
@@ -211,11 +242,11 @@
 
   <p>You will need to update the <code>/assets/images/</code> file path if you copy the assets to a different location.</p>
 
-  <h2>Update the components</h2>
+  <h2 id="components">Components</h2>
 
   <p>The generated HTML and Nunjucks params for some of the components has changed.</p>
 
-  <h3>Header</h3>
+  <h3 id="header">Header</h3>
 
   <p>The generated HTML and Nunjucks macro options for the <a href="/design-system/components/header">Header</a> component has been completely refactored and changed.</p>
 
@@ -239,7 +270,7 @@
 
   <p>To restore the previous justified alignment, where navigation items appeared evenly spaced out, add the new <code>nhsuk-header__navigation--justified</code> modifier class.</p>
 
-  <h3>Footer</h3>
+  <h3 id="footer">Footer</h3>
 
   <p>The <a href="/design-system/components/footer">footer</a> component's Nunjucks macros and HTML have been updated for better consistency and flexibility.</p>
 
@@ -255,7 +286,7 @@
 
   <p>If you are using additional columns with the <code>linksColumn2</code> and <code>linksColumn3</code> options, update this to wrap the <code>navigation</code> object in an array to support multiple columns.</p>
 
-  <h3>Action link</h3>
+  <h3 id="action-link">Action link</h3>
 
   <p>The HTML for the <a href="/design-system/components/action-link">action link</a> has been updated.</p>
 
@@ -271,7 +302,7 @@
 
   <p>You do not need to do anything if you're using Nunjucks macros.</p>
 
-  <h3>Back link</h3>
+  <h3 id="back-link">Back link</h3>
 
   <p>For consistency with other links, we've added an underline to the <a href="/design-system/components/back-link">back link</a> component. We've also changed the default text from "Go back" to "Back" in all examples.</p>
 
@@ -291,7 +322,7 @@
 
   <p>You do not need to do anything if you're using Nunjucks macros.</p>
 
-  <h3>Breadcrumbs</h3>
+  <h3 id="breadcrumbs">Breadcrumbs</h3>
 
   <p>The HTML for the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component has been updated.</p>
 
@@ -330,7 +361,7 @@
 
   <p>You do not need to do anything if you're using Nunjucks macros.</p>
 
-  <h3>Details</h3>
+  <h3 id="details">Details</h3>
 
   <p>The <a href="/design-system/components/details">details</a> component no longer uses JavaScript, and is no longer polyfilled in older browsers. If you have extended browser support requirements, check that the details component works as expected in older browsers.</p>
 
@@ -369,7 +400,7 @@
 
   <p>You do not neet to make any changes if you are using the Nunjucks macro.</p>
 
-  <h3>Pagination</h3>
+  <h3 id="pagination">Pagination</h3>
 
   <p>The SVG icons within the <a href="/design-system/components/pagination">pagination</a> component have been updated.</p>
 
@@ -397,7 +428,7 @@
 
   <p>You do not neet to make any changes if you are using the Nunjucks macro.</p>
 
-  <h3>Card</h3>
+  <h3 id="card">Card</h3>
 
   <p>The SVG arrow icon in the <a href="/design-system/components/card">card</a> component has been updated.</p>
 
