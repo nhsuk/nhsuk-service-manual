@@ -610,6 +610,23 @@
     <li><code>shade</code> updated to <code>nhsuk-shade</code>
   </ul>
 
+  <h3>Color spelling updated to colour</h3>
+
+  <p>All Sass variables and mixins have been updated to use "colour" (not "color") spelling.</p>
+
+  <p>For example:</p>
+
+  <ul>
+    <li><code>$nhsuk-link-color</code> renamed to <code>$nhsuk-link-colour</code></li>
+    <li><code>$nhsuk-link-hover-color</code> renamed to <code>$nhsuk-link-hover-colour</code></li>
+    <li><code>$nhsuk-link-active-color</code> renamed to <code>$nhsuk-link-active-colour</code></li>
+    <li><code>$nhsuk-link-visited-color</code> renamed to <code>$nhsuk-link-visited-colour</code></li>
+    <li><code>nhsuk-print-color()</code> renamed to <code>nhsuk-print-colour()</code></li>
+    <li><code>nhsuk-text-color()</code> renamed to <code>nhsuk-text-colour()</code></li>
+  </ul>
+
+  <p>You can still use the previous names but they are deprecated and will be removed in a future breaking release.</p>
+
   <h3>Grid row mixin removed</h3>
 
   <p>The <code>govuk-grid-row</code> mixin has been removed. If you are using this, update your code to use the <code>.nhsuk-grid-row</code> class in your HTML instead.</p>
