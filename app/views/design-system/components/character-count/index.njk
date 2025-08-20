@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users know how much text they can enter when there is a limit on the number of characters." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "April 2023" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "172" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -31,6 +31,13 @@
 
   <h2 id="when-not-to-use">When not to use character count</h2>
   <p>If your users keep hitting the character limit imposed by the backend of your service, try to increase the limit rather than use a character count.</p>
+  <div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">Before using character count<span role="text">
+      <span class="nhsuk-u-visually-hidden">Important/span>
+      Important
+    </span> </h3>
+  <p>Consider the risks around using open text boxes, especially in public services. Read about <a href="/design-system/components/textarea#when-not-to-use-textarea">when not to use textarea</a>.</p>
+  </div>
 
   <h2 id="how-to-use">How to use character count</h2>
   <h3>How it works</h3>
@@ -70,7 +77,7 @@
   }) }}
 
   <h3>If you're asking more than 1 question on the page</h3>
-  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Follow the guidance on asking multiple questions on <a href="https://design-system.service.gov.uk/patterns/question-pages">question pages in the GOV.UK design system</a>.</p>
+  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Follow the guidance on <a href="/design-system/patterns/question-pages#asking-multiple-questions-on-a-page">asking multiple questions in the question pages pattern</a>.</p>
   {{ designExample({
     group: "components",
     item: "character-count",

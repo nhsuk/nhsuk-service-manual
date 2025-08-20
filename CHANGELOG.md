@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Add new guidance about risks of using textarea
+- Update guidance on using textarea on page about character count component
 
 :wrench: **Maintenance**
 
@@ -22,6 +23,7 @@
 
 - Added form tags to pattern page examples
 - Removed form tags from component examples
+- Make heading styles consistent for single question coded examples
 
 ## 8.0.0 - 27 August 2025
 
