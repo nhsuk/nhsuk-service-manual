@@ -477,19 +477,34 @@
 
   <h3 id="error-summary">Checkboxes</h3>
 
-  <p>There are no changes to the HTML.</p>
+  <p>The HTML has been updated to add a missing <code>data-module</code> attribute:</p>
 
-  <p>If you are using the Nunjucks macro, the <code>id</code> attribute first checkbox no longer has the suffix <code>-1</code>.</p>
+  <code class="nhsuk-u-margin-bottom-4">
+  <del>- &lt;div class="nhsuk-checkboxes"&gt;</del><br>
+  <ins>+ &lt;div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes"&gt;</ins>
+  </code>
 
-  <p>If you are linking to the first checkbox from an error summary, remove the <code>-1</code> from the link.</p>
+  <p>If you are using the Nunjucks macro, the <code>id</code> attribute first checkbox no longer has the suffix <code>-1</code>. You will need to update any links to the first checkbox from error summaries to remove this suffix.</p>
 
   <h3 id="error-summary">Radios</h3>
 
-  <p>There are no changes to the HTML.</p>
+  <p>The HTML has been updated to add a missing <code>data-module</code> attribute:</p>
 
-  <p>If you are using the Nunjucks macro, the <code>id</code> attribute first radio no longer has the suffix <code>-1</code>.</p>
+  <code class="nhsuk-u-margin-bottom-4">
+  <del>- &lt;div class="nhsuk-radios"&gt;</del><br>
+  <ins>+ &lt;div class="nhsuk-radios" data-module="nhsuk-radios"&gt;</ins>
+  </code>
 
-  <p>If you are linking to the first radio from an error summary, remove the <code>-1</code> from the link.</p>
+  <p>If you are using the Nunjucks macro, the <code>id</code> attribute first radio no longer has the suffix <code>-1</code>. You will need to update any links to the first radio from error summaries to remove this suffix.</p>
+
+  <h3 id="error-summary">Skip link</h3>
+
+  <p>The HTML has been updated to add a missing <code>data-module</code> attribute:</p>
+
+  <code class="nhsuk-u-margin-bottom-4">
+  <del>- &lt;div class="nhsuk-skip-link"&gt;</del><br>
+  <ins>+ &lt;div class="nhsuk-skip-link" data-module="nhsuk-skip-link"&gt;</ins>
+  </code>
 
 
 {% endblock %}
