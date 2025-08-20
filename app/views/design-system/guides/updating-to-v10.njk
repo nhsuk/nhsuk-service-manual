@@ -167,10 +167,6 @@
 
   <p>We have made several updates to the <a href="/design-system/styles/page-template">page template</a>.</p>
 
-  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make any changes.</p>
-
-  <p>Otherwise, you will need to make the following changes.</p>
-
   <h3>Update the JavaScript supported script snippet</h3>
 
   <p>The <code>&lt;script&gt;</code> snippet at the top of the <code>&lt;body&gt;</code> tag to check whether JavaScript is supported has been updated.</p>
@@ -186,6 +182,8 @@
   <code class="nhsuk-u-margin-bottom-6">
   <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;
   </code>
+
+  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
   <h3>Update the main script tag</h3>
 
@@ -218,6 +216,8 @@
   &lt;/body&gt;
 </ins></pre></code>
 
+  <p>If you are using the Nunjucks page template included within NHS frontend, the code should moved from the <code>head</code> block to the <code>bodyEnd</code> block.</p>
+
 
   <h3>Remove the X-UA-Compatible meta tag</h3>
 
@@ -229,6 +229,8 @@
 
   <p>As NHS.UK frontend no longer supports Internet Explorer versions older than 11, this meta tag should now be removed.</p>
 
+  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
+
   <h3>Update the viewport meta tag</h3>
 
   <p>Update the viewport meta tag by changing <code>shrink-to-fit=no</code> to <code>viewport-fit=cover</code>:</p>
@@ -239,6 +241,8 @@
   </code>
 
   <p>This is to better accommodate mobile devices with camera notches.</p>
+
+  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
   <h3>Update the favicons, app icons and Open Graph image tags</h3>
 
@@ -255,6 +259,8 @@
   </code>
 
   <p>You will need to update the <code>/assets/images/</code> file path if you copy the assets to a different location.</p>
+
+  <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
   <h2 id="components">Components</h2>
 
