@@ -17,6 +17,7 @@
   <p>Follow this guide carefully when applying updates to make sure your service does not break.</p>
 
   {{ insetText({
+    classes: "nhsuk-u-margin-top-4",
     text: "If you are using a build of the design system in another language or framework, for example React or a Wordpress theme, you may need the maintainer of that tool to follow these updates to support version 10 before you can upgrade."
   }) }}
 
@@ -96,7 +97,7 @@
 
   <p>Make sure component initialisation functions match the named exports:</p>
 
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-js nhsuk-u-margin-bottom-4"><pre>
   import { initButtons, initCheckboxes } from 'nhsuk-frontend'
 
   // Initialise all button components
@@ -108,7 +109,7 @@
 
   <p>Or alternatively, you can initialise individual component classes:</p>
 
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-js nhsuk-u-margin-bottom-6"><pre>
   import { Button, Checkboxes } from 'nhsuk-frontend';
 
   const $button = document.querySelector('.app-button')
@@ -135,7 +136,7 @@
 
   <p>Replace <code>packages/</code> with <code>dist/nhsuk</code> when copying or serving NHS.UK frontend logos, icons and other assets:</p>
 
-  <code class="language-html nhsuk-u-margin-bottom-6"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   <del>- node_modules/nhsuk-frontend/packages/assets</del>
   <ins>+ node_modules/nhsuk-frontend/dist/nhsuk/assets</ins></pre>
   </code>
@@ -179,7 +180,7 @@
 
   <p>to this:</p>
 
-  <code class="language-html nhsuk-u-margin-bottom-6"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;</pre>
   </code>
 
@@ -200,14 +201,14 @@
 
   <p>Before:</p>
 
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-js nhsuk-u-margin-bottom-4"><pre>
     <del>&lt;script src="/javascripts/nhsuk-frontend.min.js" defer&gt;&lt;/script&gt;</del>
   <del>&lt;/head&gt;</del>
 </pre></code>
 
   <p>After:</p>
 
-  <code class="language-js nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-js nhsuk-u-margin-bottom-4"><pre>
     <ins>&lt;script type="module" src="/javascripts/nhsuk-frontend.min.js"&gt;&lt;/script&gt;</ins>
     <ins>&lt;script type="module"&gt;</ins>
       <ins>import { initAll } from '/javascripts/nhsuk-frontend.min.js'</ins>
@@ -235,7 +236,7 @@
 
   <p>Update the viewport meta tag by changing <code>shrink-to-fit=no</code> to <code>viewport-fit=cover</code>:</p>
 
-  <code class="language-html nhsuk-u-margin-bottom-6"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   <del>- &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;</del>
   <ins>+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"&gt;</ins></pre>
   </code>
@@ -250,7 +251,7 @@
 
   <p>Update the list of icons in the template's head with the following:</p>
 
-  <code class="language-html nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   &lt;link rel="icon" href="/assets/images/favicon.ico" sizes="48x48"&gt;
   &lt;link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml"&gt;
   &lt;link rel="mask-icon" href="/assets/images/nhsuk-icon-mask.svg" color="#005eb8"&gt;
@@ -319,7 +320,7 @@
   </ul>
 
   <p>Before:</p>
-  <code class="language-html nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   <del>&lt;div class="nhsuk-action-link"&gt;</del>
     <del>&lt;a class="nhsuk-action-link__link href="#"&gt;</del>
       <del>&lt;svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36"></del>
@@ -332,7 +333,7 @@
   </code>
 
   <p>After:</p>
-  <code class="language-html nhsuk-u-margin-bottom-5"><pre>
+  <code class="language-html nhsuk-u-margin-bottom-4"><pre>
   <ins>&lt;a class="nhsuk-action-link href="#"&gt;</ins>
     <ins>&lt;svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"&gt;</ins>
       <ins>&lt;path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/&gt;</ins>
@@ -429,7 +430,7 @@
   <del>-  &lt;svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34"&gt;</del>
   <del>-    &lt;path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"&gt;&lt;/path&gt;</del>
   <del>-  &lt;/svg&gt;</del>
-  <ins>+  &lt;svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"&gt;
+  <ins>+  &lt;svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"&gt;</ins>
   <ins>+    &lt;path d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/&gt;</ins>
   <ins>+  &lt;/svg&gt;</ins></pre>
   </code>
@@ -616,7 +617,7 @@
 
   <p>If you're using the <code>nhsuk-grid-column()</code> Sass mixin to create custom grid classes, you must remove the <code>$class</code> parameter:</p>
 
-  <code class="language-css nhsuk-u-margin-bottom-4"><pre>
+  <code class="language-css nhsuk-u-margin-bottom-6"><pre>
   .app-grid-column-one-quarter-at-desktop {
   <del>-   @include nhsuk-grid-column(one-quarter, $at: desktop, $class: false);</del>
   <ins>+   @include nhsuk-grid-column(one-quarter, $at: desktop);</ins>
