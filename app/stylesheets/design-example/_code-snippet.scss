@@ -138,7 +138,7 @@
         text-decoration: none;
 
         @include nhsuk-media-query($from: tablet) {
-          box-shadow: 0 $button-shadow-size 0 nhsuk-colour("blue");
+          box-shadow: 0 $nhsuk-button-shadow-size 0 nhsuk-colour("blue");
         }
 
         &:hover {
