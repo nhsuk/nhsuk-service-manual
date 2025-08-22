@@ -13,11 +13,20 @@
 {% endblock %}
 
 {% block bodyContent %}
+  <p>There are 2 versions of the action link: the default version and the reverse version.</p>
 
   {{ designExample({
     group: "components",
     item: "action-link",
     type: "default"
+  }) }}
+
+  <p>Use the reverse version on dark backgrounds.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "action-link",
+    type: "reverse"
   }) }}
 
   <h2>When to use action links </h2>

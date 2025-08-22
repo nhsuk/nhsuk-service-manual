@@ -29,10 +29,20 @@
   <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
 </div>
 
+<p>There are 2 versions of the back link: the default version and the reverse version.</p>
+
 {{ designExample({
-group: "components",
-item: "back-link",
-type: "default"
+  group: "components",
+  item: "back-link",
+  type: "default"
+}) }}
+
+<p>Use the reverse version on dark backgrounds.</p>
+
+{{ designExample({
+  group: "components",
+  item: "back-link",
+  type: "reverse"
 }) }}
 
 <h2>When to use a back link</h2>
@@ -82,11 +92,10 @@ type: "default"
   data back to the previous page.</p>
 
 {{ designExample({
-group: "components",
-item: "back-link",
-type: "button"
+  group: "components",
+  item: "back-link",
+  type: "button"
 }) }}
-
 
 <h2>Research</h2>
 <p>During testing, <a href="https://111.nhs.uk/">NHS 111 online</a> found that some users wanted to change their
