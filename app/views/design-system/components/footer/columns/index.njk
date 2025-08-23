@@ -1,6 +1,9 @@
 {% from 'footer/macro.njk' import footer %}
 
 {{ footer({
+  copyright: {
+    text: "© Crown copyright"
+  },
   navigation: [
     {
       items: [
@@ -11,6 +14,10 @@
         {
           href: "#",
           text: "Health A to Z"
+        },
+        {
+          href: "#",
+          text: "NHS services"
         },
         {
           href: "#",
@@ -34,11 +41,7 @@
         },
         {
           href: "#",
-          text: "NHS services"
-        },
-        {
-          href: "#",
-          text: "Coronavirus (COVID-19)"
+          text: "COVID-19"
         }
       ]
     },
@@ -54,7 +57,11 @@
         },
         {
           href: "#",
-          text: "Your health records"
+          text: "View your GP health records"
+        },
+        {
+          href: "#",
+          text: "View your test results"
         },
         {
           href: "#",
@@ -70,10 +77,6 @@
       items: [
         {
           href: "#",
-          text: "Contact us"
-        },
-        {
-          href: "#",
           text: "Other NHS websites"
         },
         {
@@ -87,6 +90,10 @@
         {
           href: "#",
           text: "About us"
+        },
+        {
+          href: "#",
+          text: "Give us feedback"
         },
         {
           href: "#",

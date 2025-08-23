@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "7" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -126,10 +126,12 @@
   <p>You may need to include more or different words to better describe the action. For example, "Add another address" and "Accept and claim a tax refund".</p>
   <p>Align the primary action button to the left edge of your form.</p>
 
+  <p>On smaller screens, such as on mobile, buttons stretch across the screen's width. This makes them easier to press for users holding a phone in their right hand.</p>
+
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-button" role="note">
       <span class="nhsuk-u-visually-hidden">Information: </span>
     <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
-    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with buttons. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
+    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with them. It complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
   </div>
 
   <h3>Disabled buttons</h3>
@@ -139,7 +141,7 @@
   <p>All our buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
 
   <h3 id="grouping-buttons">Grouping buttons</h3>
-  <p>Use a button group when 2 or more buttons are placed together. The buttons will display side by side on wider screens. On smaller screens such as on mobile, they’ll appear above each other.</p>
+  <p>Use a button group when 2 or more buttons are placed together. The buttons will display side by side on wider screens. On smaller screens, such as on mobile, they'll appear above each other.</p>
 
     {{ designExample({
       group: "components",
