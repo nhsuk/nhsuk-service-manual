@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 8.0.0 - 26 August 2025
+## 8.0.0 - 27 August 2025
 
 :new: **New features**
 
