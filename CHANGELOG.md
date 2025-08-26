@@ -15,6 +15,7 @@
 - Add new profile icon to icons page
 - Add button groups and make buttons full width on small screens
 - Add more links to image libraries for inclusive skin symptoms
+- Update guidance on colour variables to use 'colour' spelling instead of 'color'
 
 :wrench: **Maintenance**
 
