@@ -23,6 +23,17 @@
   <p>Our text and background colours are designed to meet accessibility needs. Read more about <a href="/design-system/styles/colour#accessibility">accessibility and colour on this page</a>.</p>
 
   <h2 id="main-colours">Main colours</h2>
+
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
+
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Colour variables updated in August 2025</h3>
+    <p>All colour variables and functions have been updated to use the spelling 'colour' instead of 'color'.
+    <p>See <a href="/design-system/guides/updating-to-v10#sass-functions">updates to colours in version 10</a></p>
+  </div>
+
   <p class="rich-text">If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-colour</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
   <p class="rich-text">Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>nhsuk-colour("red")</code> rather than <code>$nhsuk-error-colour</code>.</p>
 
