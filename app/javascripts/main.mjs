@@ -45,3 +45,9 @@ AccessibleAutocomplete({
 document.querySelectorAll(DesignExample.selector()).forEach((el) => {
   new DesignExample(el)
 })
+
+document.querySelectorAll('form[action="/form-handler"]').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  })
+})
