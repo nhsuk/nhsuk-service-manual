@@ -43,7 +43,10 @@ previewLayout: design-example-wrapper-full
 
       <p>We'll ask you for: ...</p>
 
-      <a class="nhsuk-button" href="#" role="button" draggable="false">Start now</a>
+      {{ button({
+        text: "Start now",
+        href: "#"
+      }) }}
 
       <p>By using this service you are agreeing to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>.</p>
 
