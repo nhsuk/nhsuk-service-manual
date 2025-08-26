@@ -20,40 +20,42 @@ previewLayout: design-example-wrapper-full
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
 
-      {{ radios({
-        name: "whereDoYouLive",
-        fieldset: {
-          legend: {
-            text: "Where do you live?",
-            isPageHeading: true,
-            classes: "nhsuk-fieldset__legend--l"
-          }
-        },
-        items: [
-          {
-            value: "england",
-            text: "England"
+        {{ radios({
+          name: "whereDoYouLive",
+          fieldset: {
+            legend: {
+              text: "Where do you live?",
+              isPageHeading: true,
+              classes: "nhsuk-fieldset__legend--l"
+            }
           },
-          {
-            value: "scotland",
-            text: "Scotland"
-          },
-          {
-            value: "wales",
-            text: "Wales"
-          },
-          {
-            value: "northern-ireland",
-            text: "Northern Ireland"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "england",
+              text: "England"
+            },
+            {
+              value: "scotland",
+              text: "Scotland"
+            },
+            {
+              value: "wales",
+              text: "Wales"
+            },
+            {
+              value: "northern-ireland",
+              text: "Northern Ireland"
+            }
+          ]
+        }) }}
 
-      {{ button({
-        text: "Continue"
-      }) }}
+        {{ button({
+          text: "Continue"
+        }) }}
 
+      </form>
     </div>
   </div>
 {% endblock %}
