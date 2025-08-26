@@ -1,5 +1,5 @@
 // Core dependencies
-const { join } = require('path')
+const { join, parse } = require('path')
 
 // External dependencies
 const browserSync = require('browser-sync')
@@ -59,23 +59,53 @@ app.use(
   })
 )
 
-app.use(
-  '/javascripts',
+/**
+ * Middleware to serve javascripts
+ * (Redirects to latest hashed main.js on 404)
+ */
+app.use('/javascripts', [
   express.static(join(config.publicPath, 'javascripts'), {
     setHeaders(res) {
       res.set('Cache-Control', 'public,max-age=2147483648,immutable')
     }
-  })
-)
+  }),
+  (req, res, next) => {
+    const { name, ext } = parse(req.path)
 
-app.use(
-  '/stylesheets',
+    // Redirect to latest main javascript
+    if (name.startsWith('main.') && ext === '.js') {
+      res.redirect(fileHelper.getAssetPath('main.js'))
+      return
+    }
+
+    // 404 page
+    next()
+  }
+])
+
+/**
+ * Middleware to serve javascripts
+ * (Redirects to latest hashed main.css on 404)
+ */
+app.use('/stylesheets', [
   express.static(join(config.publicPath, 'stylesheets'), {
     setHeaders(res) {
       res.set('Cache-Control', 'public,max-age=2147483648,immutable')
     }
-  })
-)
+  }),
+  (req, res, next) => {
+    const { name, ext } = parse(req.path)
+
+    // Redirect to latest main stylesheet
+    if (name.startsWith('main.') && ext === '.css') {
+      res.redirect(fileHelper.getAssetPath('stylesheets/main.scss'))
+      return
+    }
+
+    // 404 page
+    next()
+  }
+])
 
 // View engine (nunjucks)
 app.set('view engine', 'njk')
