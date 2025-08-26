@@ -14,7 +14,9 @@ export class DesignExample extends Component {
     this.hiddenClass = 'js-hidden'
 
     this.tabs = this.$root.querySelectorAll(`.${this.tabClass}`)
-    this.examples = this.$root.querySelectorAll('.code-snippet__preformatted')
+    this.examples = this.$root.querySelectorAll(
+      '.app-code-snippet__preformatted'
+    )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
