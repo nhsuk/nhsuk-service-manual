@@ -68,19 +68,19 @@
 // Custom style for home page hero card
 .app-card--transparent {
   background: transparent;
-  border: 2px solid $nhsuk-secondary-border-color;
-  color: $color_nhsuk-white;
+  border: 2px solid $nhsuk-secondary-border-colour;
+  color: nhsuk-colour("white");
 
   a {
-    color: $color_nhsuk-white;
+    color: nhsuk-colour("white");
 
     &:hover,
     &:visited {
-      color: $color_nhsuk-grey-5;
+      color: nhsuk-colour("grey-5");
     }
 
     &:focus {
-      color: $nhsuk-focus-text-color;
+      color: $nhsuk-focus-text-colour;
     }
   }
 }
@@ -151,7 +151,7 @@
 // Margin-top to avoid excessive spacing between guidance block and design examples.
 // Border colour altered to match tag colour.
 .app-wcag-inset-text {
-  border-left-color: nhsuk-shade($color_nhsuk-blue, 10%);
+  border-left-color: nhsuk-shade(nhsuk-colour("blue"), 10%);
   @include nhsuk-responsive-margin(0, "top");
 }
 
@@ -165,4 +165,10 @@
 
 .app-wcag-22 p:last-child {
   margin-bottom: 0;
+}
+
+.app-icon-table .nhsuk-icon__user {
+  height: 32px;
+  margin: 0 1px;
+  width: 32px;
 }

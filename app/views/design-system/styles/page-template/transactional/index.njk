@@ -9,7 +9,6 @@ previewLayout: design-example-wrapper-blank
 
 {% block head %}
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {%- endblock %}
 
 {% block pageTitle -%}
@@ -18,14 +17,11 @@ previewLayout: design-example-wrapper-blank
 
 {% block header %}
   {{ header({
-    transactionalService: {
-        name: "Service name here",
-        href: "#"
-      },
-      showNav: "false",
-      showSearch: "false"
-    })
-  }}
+    service: {
+      text: "Service name here",
+      href: "#"
+    }
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -47,27 +43,33 @@ previewLayout: design-example-wrapper-blank
 
 {% block footer %}
   {{ footer({
-    links: [
-      {
-        URL: "#",
-        label: "Accessibility statement"
-      },
-      {
-        URL: "#",
-        label: "Contact us"
-      },
-      {
-        URL: "#",
-        label: "Cookies"
-      },
-      {
-        URL: "#",
-        label: "Privacy policy"
-      },
-      {
-        URL: "#",
-        label: "Terms and conditions"
-      }
-    ]
-  })}}
+    navigation: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Contact us"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy policy"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
 {% endblock %}

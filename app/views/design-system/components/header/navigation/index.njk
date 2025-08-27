@@ -1,0 +1,29 @@
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+  navigation: {
+    items: [
+      {
+        text: "NHS service standard",
+        href: "#"
+      },
+      {
+        text: 'Design system',
+        href: '#',
+        active: true
+      },
+      {
+        text: 'Content guide',
+        href: '#'
+      },
+      {
+        text: 'Accessibility',
+        href: '#'
+      },
+      {
+        text: 'Community and contribution',
+        href: '#'
+      }
+    ]
+  }
+}) }}

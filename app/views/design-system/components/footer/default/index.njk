@@ -1,26 +1,28 @@
 {% from 'footer/macro.njk' import footer %}
 
 {{ footer({
-  links: [
-    {
-      URL: "#",
-      label: "Accessibility statement"
-    },
-    {
-      URL: "#",
-      label: "Contact us"
-    },
-    {
-      URL: "#",
-      label: "Cookies"
-    },
-    {
-      URL: "#",
-      label: "Privacy policy"
-    },
-    {
-      URL: "#",
-      label: "Terms and conditions"
-    }
-  ]
-})}}
+  meta: {
+    items: [
+      {
+        href: "#",
+        text: "Accessibility statement"
+      },
+      {
+        href: "#",
+        text: "Contact us"
+      },
+      {
+        href: "#",
+        text: "Cookies"
+      },
+      {
+        href: "#",
+        text: "Privacy policy"
+      },
+      {
+        href: "#",
+        text: "Terms and conditions"
+      }
+    ]
+  }
+}) }}

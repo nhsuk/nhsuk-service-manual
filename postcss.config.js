@@ -9,10 +9,14 @@ const { NODE_ENV } = process.env
 module.exports = {
   plugins: [
     // Add vendor prefixes
-    autoprefixer(),
+    autoprefixer({
+      env: 'stylesheets'
+    }),
 
     // Only minify in production
-    NODE_ENV === 'production' ? cssnano() : false
+    NODE_ENV === 'production'
+      ? cssnano({ preset: ['default', { env: 'stylesheets' }] })
+      : false
   ]
 }
 

@@ -5,7 +5,7 @@
 ////
 
 .nhsuk-related-nav {
-  border-top: 2px solid $color_nhsuk-blue;
+  border-top: 2px solid nhsuk-colour("blue");
 
   @include nhsuk-media-query($until: desktop) {
     margin-top: nhsuk-spacing(7);

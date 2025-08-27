@@ -1,9 +1,27 @@
 # NHS digital service manual Changelog
 
-## TBC
+## 8.0.0 - 27 August 2025
+
+:new: **New features**
+
+- Add new account information and links variant of header component
+- Update design of header to include:
+  - new feature to highlight current page in the navigation menu
+  - improving NHS logo focus state
+  - removing home link from header that was automatically added on small screens
+  - wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo
+  - left-aligning navigation items by default
+- Add new notification banners component
+- Add new profile icon to icons page
+- Add button groups and make buttons full width on small screens
+- Add more links to image libraries for inclusive skin symptoms
+- Update guidance on colour variables to use 'colour' spelling instead of 'color'
 
 :wrench: **Maintenance**
 
+- Update footer component and examples
+- Update guidance for using Nunjucks in production code on NHS.UK frontend v10.x
+- Update guidance for icons as we now provide inline SVG icons via nhsukIcon macro
 - Update links to blog post about question protocol
 
 ## 7.13.0 - 28 July 2025

@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "16" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -14,42 +14,38 @@
 
 {% block bodyContent %}
 
-<div class="nhsuk-inset-text app-wcag-inset-text">
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
 
-  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this component</h3>
-  <p>Make sure that users can successfully:</p>
-  <ul>
-    <li><a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a></li>
-    <li><a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a></li>
-  </ul>
-  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
-</div>
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Header updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#header">updates to Header in version 10</a></p>
+  </div>
+
+  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a> and <a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a>.</p>
 
   {{ designExample({
     group: "components",
     item: "header",
-    type: "top-of-page"
+    type: "default"
   }) }}
 
-  <h2 id="NHS-header">NHS header</h2>
+  <h2 id="when-to-use-the-NHS-header">When to use the header</h2>
+  <p>Use the header if your service is a national NHS service in England on the nhs.uk domain.</p>
 
-  <h3 id="when-to-use-the-NHS-header">When to use the NHS header</h3>
-  <p>Use the NHS header if your service is a national NHS service in England on the nhs.uk domain.</p>
-
-  <h3 id="when-not-to-use-the-NHS-header">When not to use the NHS header</h3>
-  <p>Do not use the NHS header if your service is hosted on another domain (not nhs.uk).</p>
+  <h2 id="when-not-to-use-the-NHS-header">When not to use the header</h2>
+  <p>Do not use the NHS logo alone if your service is hosted on another domain (not nhs.uk).</p>
   <p>Use the <a href="#organisational-header">organisational header</a> instead.</p>
   <p>For information about supplier and partnership branding, see the <a href="https://www.england.nhs.uk/nhsidentity/">NHS identity guidelines</a>.</p>
 
-  <h3 id="how-to-use-the-NHS-header">How to use the NHS header</h3>
-  <p>The NHS header is made up of 3 elements:</p>
-  <ul>
-    <li>the NHS logo, which may be accompanied by the service name</li>
-    <li>navigation, with exposed links and a drop-down "More" button</li>
-    <li>a search bar</li>
+  <h2 id="how-to-use-the-NHS-header">How to use the header</h2>
+  <p>The header is made up of 4 elements:</p>
+  <ul class="nhsuk-list nhsuk-list--bullet">
+    <li><a href="#nhs-logo-and-service-name">the NHS logo, which may be accompanied by the service name</a></li>
+    <li><a href="#search-bar">a search bar</a></li>
+    <li><a href="#navigation">navigation</a>, with exposed links and a drop-down "More" button</li>
+    <li><a href="#account-information-and-links">account information and links</a></li>
   </ul>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
@@ -74,36 +70,75 @@
     <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
   </div>
 
-  <h4 id="search">Search</h4>
-  <p>The NHS header can include a search bar.</p>
-  <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality contract.</p>
+  <h3 id="nhs-logo-and-service-name">NHS logo and service name</h3>
+  <p>The NHS logo must always be used. Add a service name to help users understand they're not on the main NHS website.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "logo-service-name"
+  }) }}
+
+  <h3 id="search-bar">Search bar</h3>
+  <p>The header can include a search bar.</p>
+  <p>If your content or service is on the NHS website and you need help with search, <a href="/service-manual-team">the service manual team</a> can put you in touch with the team that manages our search functionality.</p>
   <p>If your service is on the nhs.uk domain but not part of the NHS website or is on another domain, you will have to arrange your own search functionality, if you need it.</p>
 
-  <h4 id="NHS-default-header">NHS default header</h4>
-  <p>The <a href="https://www.nhs.uk/">NHS website</a> has the default header with logo, navigation links and search.</p>
-
   {{ designExample({
     group: "components",
     item: "header",
-    type: "default"
+    type: "search"
   }) }}
 
-  <h4 id="NHS-header-with-service-name">NHS header with service name</h4>
-  <p>The <a href="https://service-manual.nhs.uk/">NHS digital service manual</a> includes the logo, service name, navigation links and search.  </p>
+  <h3 id="navigation">Navigation</h3>
+  <p>Help users find what they need quickly by providing consistent navigation.</p>
+  <p>If your service is a linear end-to-end journey, you probably do not need navigation links. You can use the <a href="/design-system/patterns/complete-multiple-tasks">Complete multiple tasks pattern</a>.</p>
+  <p>Place links to your most important top-level sections first. When there is not enough space to show all links, they will be moved into the "More" drop-down list.</p>
+  <p>You can highlight the section the user is currently in.</p>
 
   {{ designExample({
     group: "components",
     item: "header",
-    type: "service"
+    type: "navigation"
   }) }}
 
-  <h4 id="NHS-transactional-service-header">NHS transactional service header</h4>
-  <p><a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number (on the NHS website)</a> is a transactional service and includes the logo and service name only.</p>
+  <h3 id="account-information-and-links">Account information and links</h3>
+  <p>The header can include account information and links for logged-in users.</p>
 
   {{ designExample({
     group: "components",
     item: "header",
-    type: "transactional"
+    type: "account-basic"
+  }) }}
+
+  <h4>When to use</h4>
+  <p>Use the logged-in header on services when users have an account. The header can display a log out link and other account-related information and links.</p>
+  <p>It has been designed for staff systems. If you want to use it on a public-facing service, you must test it first and <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/16">feed back your findings via the header issue in GitHub</a>.</p>
+
+  <h4>How to use</h4>
+  <p>Account information and links can be used with the other header features, for example service name and search. However, keep the number of items in the header to a minimum.</p>
+  <p>When allowing users to log in to your service, make sure you have a visible service name, so that they know which system they are logging in to.</p>
+
+  <h4>Using account information and links</h4>
+  <p>You can add multiple items to the account information and links section, such as the logged-in user's name and role. Items can be links or just plain text information.</p>
+  <p>Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and putting them on a separate page. For example, an account settings page could include actions like change name, change role and reset password. Test with users so you know which combination of items best meets their needs.</p>
+  <p>If you use a log out link, put it last in the list, showing top right on desktop screens and last on small screens. If you put log out and other account actions on a separate page, show the log out link last.</p>
+
+  <h4>User information</h4>
+  <p>Consider whether you need to show the user information about the account they have logged in to. This may depend on whether they:</p>
+  <ul class="nhsuk-list nhsuk-list--bullet">
+    <li>share a computer</li>
+    <li>have multiple accounts or roles</li>
+  </ul>
+  <p>When showing the user their account, you can highlight this with the profile icon (on the <a href="/design-system/styles/icons">icons page</a>). Only show the icon next to 1 item. Test with users how best to display the user's account information, for example, whether to show their full name or their email address.</p>
+
+  <h4>Header with complex account information and links</h4>
+  <p>This example shows account information and multiple links, with a service name and navigation.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "account-complex"
   }) }}
 
   <h2 id="organisational-header">Organisational header</h2>
@@ -114,12 +149,12 @@
   </ul>
   <p>There are 3 variants of the organisational header:</p>
   <ul>
-    <li>blue background</li>
-    <li>white background with blue nav</li>
-    <li>white background with white nav</li>
+    <li>blue header</li>
+    <li>white header</li>
+    <li>white header with blue navigation</li>
   </ul>
 
-  <h3>Blue background organisational header</h3>
+  <h3>Blue header</h3>
 
   {{ designExample({
     group: "components",
@@ -127,7 +162,7 @@
     type: "organisational"
   }) }}
 
-  <h3>White background organisational header with blue nav</h3>
+  <h3>White header</h3>
 
   {{ designExample({
     group: "components",
@@ -135,27 +170,23 @@
     type: "organisational-white"
   }) }}
 
-  <h3>White background organisational header with white nav</h3>
+  <h3>White header with blue navigation</h3>
 
   {{ designExample({
     group: "components",
     item: "header",
-    type: "organisational-white-with-nav"
+    type: "organisational-white-with-blue-navigation"
   }) }}
 
-  <p>You must have a Frutiger font licence to use an NHS organisational logo. Our guidance on <a href="/design-system/styles/typography">typography</a> explains how to get hold of the Frutiger webfont.</p>
+  <p>You must have a Frutiger font licence to use an NHS organisational logo. Find out about <a href="/design-system/styles/use-frutiger-font">using the Frutiger font</a>, including registering for a free licence.</p>
 
   <h3>Organisational logos</h3>
   <p>Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos in the NHS England identity guidelines</a>.</p>
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>
 
-
-<pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Anyplace Anytown Anywhere NHS Foundation Trust homepage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-org-logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/path-to-assets/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__service-logo<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__organisation-logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/assets/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>280<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Anyplace Anytown Anywhere NHS Foundation Trust homepage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
 
-<h2 id="research">Research</h2>
-<p>The NHS header was updated in September 2023. It includes exposed navigation links and a drop down that says "More" instead of a menu button. The search box now fills the width of the screen on mobile.</p>
-<p>On the NHS website, we found that exposing main topics helps users navigate and find what they're looking for. The dynamic resizing and the "More" button help users on mobile navigate top tasks.</p>
 {% endblock %}

@@ -14,25 +14,13 @@
 
 {% block bodyContent %}
 
-<div class="nhsuk-inset-text app-wcag-inset-text">
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+<p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-avoid-information-reentry">avoid re-entering information they've given in a previous answer</a> and <a href="#wcag-interact-without-click-drag-task">select an answer without relying on click and drag movements</a>.</p>
 
-  <h3 id="wcag-22-affects-this-component">WCAG 2.2 affects this pattern</h3>
-  <p>Make sure that users can successfully:</p>
-  <ul>
-    <li><a href="#wcag-avoid-information-reentry">avoid re-entering information they've given in a previous answer</a></li>
-    <li><a href="#wcag-interact-without-click-drag-task">select an answer without relying on click and drag movements</a></li>
-  </ul>
-  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
-</div>
-
-  {{ designExample({
-    group: "patterns",
-    item: "question-pages",
-    type: "default"
-  }) }}
+{{ designExample({
+  group: "patterns",
+  item: "question-pages",
+  type: "default"
+}) }}
 
 <h2 id="when-to-use">When to use a question page</h2>
 <p>Follow this pattern whenever you need to ask users questions in your service.</p>

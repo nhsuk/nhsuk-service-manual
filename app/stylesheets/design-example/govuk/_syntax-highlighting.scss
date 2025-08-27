@@ -12,7 +12,7 @@
 
 .hljs-comment,
 .hljs-quote {
-  color: nhsuk-tint($color_nhsuk-grey-1, 10%);
+  color: nhsuk-tint(nhsuk-colour("grey-1"), 10%);
   font-style: italic;
 }
 
@@ -28,12 +28,12 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: $color_nhsuk-green;
+  color: nhsuk-colour("green");
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: $color_nhsuk-red;
+  color: nhsuk-colour("red");
 }
 
 .hljs-title,

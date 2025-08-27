@@ -5,7 +5,7 @@
 ////
 
 .app-contact-panel {
-  border-top: 2px solid $color_nhsuk-blue;
+  border-top: 2px solid nhsuk-colour("blue");
 
   @include nhsuk-responsive-margin(6, "top");
 }

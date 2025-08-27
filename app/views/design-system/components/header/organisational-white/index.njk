@@ -1,36 +1,43 @@
 {% from 'header/macro.njk' import header %}
 
 {{ header({
-    showNav: "true",
-    showSearch: "true",
-    searchAction: " ",
-    classes: "nhsuk-header--white",
-    organisation: {
-      name: "Anytown Anyplace",
-      split: "Anywhere",
-      descriptor: "NHS Foundation Trust"
-    },
-    primaryLinks: [
+  classes: "nhsuk-header--white",
+  logo: {
+    href: "#",
+    ariaLabel: "NHS Anytown Anyplace Anywhere NHS Foundation Trust homepage"
+  },
+  organisation: {
+    name: "Anytown Anyplace",
+    split: "Anywhere",
+    descriptor: "NHS Foundation Trust"
+  },
+  search: {
+    visuallyHiddenLabel: "Search the Anytown Anyplace Anywhere website"
+  },
+  navigation: {
+    classes: "nhsuk-header__navigation--white",
+    items: [
       {
-        url  : "#",
-        label : "Your hospital visit"
+        text: "Your hospital visit",
+        href: "#"
       },
       {
-        url : '#',
-        label : 'Wards and departments'
+        text: "Wards and departments",
+        href: "#",
+        active: true
       },
       {
-        url  : '#',
-        label : 'Conditions and treatments'
+        text: "Conditions and treatments",
+        href: "#"
       },
       {
-        url  : '#',
-        label : 'Our people'
+        text: "Our people",
+        href: "#"
       },
       {
-        url : '#',
-        label : 'Our research'
+        text: "Our research",
+        href: "#"
       }
     ]
-  })
-}}
+  }
+}) }}

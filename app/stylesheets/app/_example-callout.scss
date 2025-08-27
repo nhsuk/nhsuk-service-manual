@@ -5,7 +5,7 @@
 ////
 
 .app-example {
-  border: 1px solid $color_nhsuk-grey-3;
+  border: 1px solid nhsuk-colour("grey-3");
   position: relative;
 
   @include nhsuk-top-and-bottom;
@@ -18,7 +18,7 @@
 }
 
 .app-example__heading {
-  background: $color_nhsuk-grey-1;
+  background: nhsuk-colour("grey-1");
   border: 0;
   left: -1px;
   position: absolute;
@@ -34,7 +34,7 @@
 }
 
 .app-example--white {
-  background: $color_nhsuk-white;
+  background: nhsuk-colour("white");
 }
 
 // Image example

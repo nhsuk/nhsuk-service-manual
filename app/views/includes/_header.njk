@@ -2,74 +2,89 @@
 
 {%- if disableSearch %}
   {{ header({
-    homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
-    service: {
-      name: "Digital service manual",
-      longName: "true"
-    },
-    showNav: "true",
-    showSearch: "false",
-    searchAction: "/search/",
-    searchInputName: "search-field",
-    primaryLinks: [
-      {
-        url  : "/service-standard",
-        label : "NHS service standard"
+      logo: {
+        href: "/",
+        ariaLabel: "NHS digital service manual homepage"
       },
-      {
-        url : '/design-system',
-        label : 'Design system'
+      service: {
+        text: "Digital service manual",
+        href: "/"
       },
-      {
-        url  : '/content',
-        label : 'Content guide'
-      },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
+      navigation: {
+        items: [
+          {
+            text: "NHS service standard",
+            href: "/service-standard"
+          },
+          {
+            text: "Design system",
+            href: "/design-system"
+          },
+          {
+            text: "Content guide",
+            href: "/content"
+          },
+          {
+            text: "Accessibility",
+            href: "/accessibility"
+          },
+          {
+            text: "Community and contribution",
+            href: "/community-and-contribution"
+          }
+        ]
       }
-    ]
     })
   }}
 {% else %}
   {{ header({
-    homeHref: "/",
-    ariaLabel: "NHS digital service manual homepage",
-    service: {
-      name: "Digital service manual",
-      longName: "true"
+    logo: {
+      href: "/",
+      ariaLabel: "NHS digital service manual homepage"
     },
-    showNav: "true",
-    showSearch: "true",
-    searchAction: "/search/",
-    searchInputName: "search-field",
-    primaryLinks: [
-      {
-        url  : "/service-standard",
-        label : "NHS service standard"
-      },
-      {
-        url : '/design-system',
-        label : 'Design system'
-      },
-      {
-        url  : '/content',
-        label : 'Content guide'
-      },
-      {
-        url  : '/accessibility',
-        label : 'Accessibility'
-      },
-      {
-        url : '/community-and-contribution',
-        label : 'Community and contribution'
-      }
-    ]
-    })
-  }}
+    service: {
+      text: "Digital service manual",
+      href: "/"
+    },
+    search: {
+      action: "/search/",
+      name: "search-field",
+      placeholder: "Search",
+      visuallyHiddenLabel: "Search the NHS digital service manual"
+    },
+    navigation: {
+      items: [
+        {
+          text: "NHS service standard",
+          href: "/service-standard",
+          current: (pageSection === "Standards and technology" and subSection === "NHS service standard" and landingPage === true),
+          active: (pageSection === "Standards and technology" and not(subSection === "NHS service standard" and landingPage === true))
+        },
+        {
+          text: "Design system",
+          href: "/design-system",
+          current: (pageSection === "Design system" and (not subSection)),
+          active: (pageSection === "Design system" and subSection)
+        },
+        {
+          text: "Content guide",
+          href: "/content",
+          current: (pageSection === "Content guide" and landingPage === true),
+          active: (pageSection == "Content guide" and landingPage != true)
+        },
+        {
+          text: "Accessibility",
+          href: "/accessibility",
+          current: (pageSection === "Accessibility" and landingPage === true),
+          active: (pageSection == "Accessibility" and landingPage != true)
+        },
+        {
+          text: "Community and contribution",
+          href: "/community-and-contribution",
+          current: (pageSection === "Community and contribution" and landingPage === true),
+          active: (pageSection == "Community and contribution" and landingPage != true)
+        }
+      ]
+    }
+  }) }}
 {% endif %}

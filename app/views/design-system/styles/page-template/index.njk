@@ -2,7 +2,7 @@
 {% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "200" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -48,9 +48,18 @@
 
 {% block bodyContent %}
 
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
+
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Page template updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#page-template">updates to page template in version 10</a></p>
+  </div>
+
   <p>This page template combines boilerplate markup and <a href="/design-system/components">components</a> needed for a content page and a transactional page. This includes:</p>
   <ul>
-    <li>JavaScript that adds a <code>js-enabled</code> class, which components with JavaScript behaviour need</li>
+    <li>JavaScript that adds a <code>.nhsuk-frontend-supported</code> class, which components with JavaScript behaviour need</li>
     <li>the <a href="/design-system/components/skip-link">skip link</a>, <a href="/design-system/components/header">header</a> and <a href="/design-system/components/footer">footer</a> components</li>
     <li>favicons, and other page metadata</li>
   </ul>
