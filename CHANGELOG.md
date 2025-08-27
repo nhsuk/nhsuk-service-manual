@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Added form tags to pattern page examples
+- Removed form tags from component examples
+
 ## 8.0.0 - 27 August 2025
 
 :new: **New features**
