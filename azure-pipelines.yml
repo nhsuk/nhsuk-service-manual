@@ -32,7 +32,7 @@ steps:
   - script: npm run build
     displayName: 'Build'
 
-  - script: npm run test
+  - script: npm test --ignore-scripts
     displayName: 'Test'
 
   - task: SonarCloudAnalyze@1
