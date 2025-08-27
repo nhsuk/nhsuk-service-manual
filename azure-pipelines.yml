@@ -2,14 +2,7 @@ trigger:
   branches:
     include:
       - main
-      - master
-      - ia-site
       - refs/tags/v*
-      - refs/heads/review/1-*
-      - refs/heads/review/2-*
-      - refs/heads/review/3-*
-      - refs/heads/dev/*
-      - refs/heads/user/*
   paths:
     exclude:
       - CHANGELOG.md
