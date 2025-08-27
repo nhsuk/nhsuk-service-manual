@@ -33,3 +33,9 @@ initAccessibleAutocomplete({
 
 // Design examples
 createAll(DesignExample)
+
+document.querySelectorAll('form[action="/form-handler"]').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+  })
+})

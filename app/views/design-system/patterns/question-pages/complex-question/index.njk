@@ -26,30 +26,33 @@ previewLayout: design-example-wrapper-full
       </h1>
       <p>Let us know if you have any communication needs you'd like us to be aware of. For example, a hearing or visual impairment.</p>
 
-      {{ radios({
-        name: "contactNeeds",
-        fieldset: {
-          legend: {
-            text: "Do you have any communication needs?",
-            classes: "nhsuk-fieldset__legend--m"
-          }
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes"
+      <form action="/form-handler" method="post" novalidate>
+
+        {{ radios({
+          name: "contactNeeds",
+          fieldset: {
+            legend: {
+              text: "Do you have any communication needs?",
+              classes: "nhsuk-fieldset__legend--m"
+            }
           },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
 
-      {{ button({
-        text: "Continue"
-      }) }}
+        {{ button({
+          text: "Continue"
+        }) }}
 
+      </form>
     </div>
   </div>
 

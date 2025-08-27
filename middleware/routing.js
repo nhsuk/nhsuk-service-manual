@@ -18,7 +18,10 @@ function renderPath(path, res, next) {
   res.render(path, (error, html) => {
     // [1] //
     if (!error) {
-      res.set({ 'Content-type': 'text/html; charset=utf-8' }) // [2] //
+      res.set({
+        'Cache-Control': 'public,max-age=0,must-revalidate',
+        'Content-Type': 'text/html; charset=utf-8'
+      }) // [2] //
       res.end(html)
       return
     }
