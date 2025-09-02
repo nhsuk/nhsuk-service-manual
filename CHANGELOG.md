@@ -10,6 +10,7 @@
 :wrench: **Maintenance**
 
 - Make heading styles consistent for single question coded examples
+- Make textarea examples consistent across design system
 
 ## 7.13.0 - 28 July 2025
 

@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use textarea to let users enter more than 1 line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "22" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -29,14 +29,12 @@
   </ul>
   <p>If you are not sure about this, talk with your clinical team.</p>
 
-  <h2 id="when-not-to-use-textarea">When not to use textarea</h2>
-
-    <div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label"> <span role="text">
-      <span class="nhsuk-u-visually-hidden">Important: </span>
-      Important
+  <div class="nhsuk-warning-callout">
+    <h3 class="nhsuk-warning-callout__label"> <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important</span>
+      Consider the alternatives first
     </span> </h3>
-  <p>Avoid using textarea in public services.</p>
+  <p>Before using textarea in public services, make sure you understand the risks.</p>
   </div>
   <p>Textarea can cause problems as users may:</p>
   <ul>
@@ -44,9 +42,14 @@
   <li>input information that's difficult to analyse</li>
   <li>disclose personal information, for example, about their symptoms or situation and expect you to reply quickly</li>
   </ul>
+  <p>They may ignore messages in hint text such as "Do not include personal information like your name, date of birth or NHS number".</p>
   <p>Consider other ways to collect the information you need. Use structured, closed questions if possible. For example, let users select from options using radios or checkboxes.</p>
+
+  <h2 id="when-not-to-use-textarea">When not to use textarea</h2>
+
+  
   <p>If you want users to enter a single line answer, such as a phone number or name, use <a href="/design-system/components/text-input">text input</a>.</p>
-  <p>Only use textarea if it's the best way to meet user and business needs.</p>
+  <p>Only use textarea if your team has considered the alternatives and agreed that it's the best way to meet user and business needs.</p>
 
   <h2 id="how-to-use-textarea">How to use textarea</h2>
   <h3 id="understand-and-manage-the-risks">Understand and manage the risks</h3>
@@ -63,6 +66,7 @@
   <ul>
     <li>assess the risks</li>
     <li>talk with your clinical and legal teams</li>
+    <li>make your question as specific as possible</li>
     <li>put in place a process for monitoring and dealing with safety issues, including over weekends and holidays</li>
     <li>set up technical safeguards, for example to detect inappropriate content</li>
   </ul>
