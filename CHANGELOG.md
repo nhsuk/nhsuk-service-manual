@@ -24,6 +24,7 @@
 - Added form tags to pattern page examples
 - Removed form tags from component examples
 - Make heading styles consistent for single question coded examples
+- Make textarea examples consistent across design system
 
 ## 8.0.0 - 27 August 2025
 
