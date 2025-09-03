@@ -20,23 +20,25 @@ previewLayout: design-example-wrapper-full
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
 
-      {{ input({
-        label: {
-          text: "What is your home postcode?",
-          isPageHeading: true,
-          classes: "nhsuk-label--l"
-        },
-        classes: "nhsuk-input--width-10",
-        id: "postcode",
-        name: "postcode",
-        autocomplete: "postal-code"
-      }) }}
+        {{ input({
+          label: {
+            text: "What is your home postcode?",
+            isPageHeading: true,
+            classes: "nhsuk-label--l"
+          },
+          classes: "nhsuk-input--width-10",
+          id: "postcode",
+          name: "postcode",
+          autocomplete: "postal-code"
+        }) }}
 
-      {{ button({
-        text: "Continue"
-      }) }}
+        {{ button({
+          text: "Continue"
+        }) }}
 
+      </form>
     </div>
   </div>
 {% endblock %}

@@ -1,33 +1,31 @@
 {% from 'checkboxes/macro.njk' import checkboxes %}
 
-<form method="post" novalidate>
-  {{ checkboxes({
-    idPrefix: "contact",
-    name: "contact",
-    fieldset: {
-      legend: {
-        text: "How would you like to be contacted?",
-        classes: "nhsuk-fieldset__legend--l",
-        isPageHeading: true
-      }
+{{ checkboxes({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "How would you like to be contacted?",
+      classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: true
+    }
+  },
+  hint: {
+    text: "Select all options that are relevant to you"
+  },
+  items: [
+    {
+      value: "email",
+      text: "Email",
+      id: "contact"
     },
-    hint: {
-      text: "Select all options that are relevant to you"
+    {
+      value: "phone",
+      text: "Phone"
     },
-    items: [
-      {
-        value: "email",
-        text: "Email",
-        id: "contact"
-      },
-      {
-        value: "phone",
-        text: "Phone"
-      },
-      {
-        value: "text message",
-        text: "Text message"
-      }
-    ]
-  }) }}
-</form>
+    {
+      value: "text message",
+      text: "Text message"
+    }
+  ]
+}) }}

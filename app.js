@@ -40,8 +40,42 @@ app.use(
   })
 )
 
-// Middleware to serve static assets
-app.use(express.static(config.publicPath))
+/**
+ * Send different cache-control headers depending on the file path
+ *
+ * Asset filenames with fingerprint hashes (stylesheets, javascripts) are
+ * given an 'infinite' max-age since the content never changes.
+ *
+ * Historically, an 'infinite' max-age is the 32-bit maximum 2,147,483,648.
+ * https://datatracker.ietf.org/doc/html/rfc9111#section-1.2.2
+ */
+
+app.use(
+  '/assets',
+  express.static(join(config.publicPath, 'assets'), {
+    setHeaders(res) {
+      res.set('Cache-Control', 'public,max-age=0,must-revalidate')
+    }
+  })
+)
+
+app.use(
+  '/javascripts',
+  express.static(join(config.publicPath, 'javascripts'), {
+    setHeaders(res) {
+      res.set('Cache-Control', 'public,max-age=2147483648,immutable')
+    }
+  })
+)
+
+app.use(
+  '/stylesheets',
+  express.static(join(config.publicPath, 'stylesheets'), {
+    setHeaders(res) {
+      res.set('Cache-Control', 'public,max-age=2147483648,immutable')
+    }
+  })
+)
 
 // View engine (nunjucks)
 app.set('view engine', 'njk')
@@ -238,7 +272,7 @@ app.get('/robots.txt', (_, res) => {
 })
 
 // Render 404 page
-app.get('*', (_, res) => {
+app.all('*', (_, res) => {
   res.statusCode = 404
   res.render('page-not-found')
 })

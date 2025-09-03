@@ -2,7 +2,7 @@
 {% set pageDescription = "Use these focus state styles to let users know which element they’re on and that they can interact with it." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "193" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -13,15 +13,7 @@
 
 {% block bodyContent %}
 
-<div class="nhsuk-inset-text app-wcag-inset-text">
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
-
-  <h3 id="wcag-22-affects-this-style">WCAG 2.2 affects these styles</h3>
-  <p>Make sure that users can successfully <a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed</a>.</p>
-  <p>See the full list of <a href="/design-system/changes-to-design-system-wcag-2-2">design system changes to meet WCAG 2.2</a>.</p>
-</div>
+  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-tag-do-not-cover-focus">see where focus is currently placed</a>.</p>
 
   <h2>What is a focus state?</h2>
   <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they're currently on and that it's ready for them to interact with.</p>
@@ -68,8 +60,8 @@
   <p>If you use Sass, you can use 3 NHS.UK frontend variables if your component has a background colour or border. For example, a text input, checkbox or icons and images used as links.</p>
   <p>The 3 Sass variables are:</p>
   <ul>
-    <li class="rich-text"><code>$nhsuk-focus-color</code> - yellow background</li>
-    <li class="rich-text"><code>$nhsuk-focus-text-color</code> - black text</li>
+    <li class="rich-text"><code>$nhsuk-focus-colour</code> - yellow background</li>
+    <li class="rich-text"><code>$nhsuk-focus-text-colour</code> - black text</li>
     <li class="rich-text"><code>$nhsuk-focus-width</code> - for consistent width</li>
   </ul>
 
@@ -79,7 +71,7 @@
   <p>To make a component's focus state accessible without using Sass, you can:</p>
   <ul>
     <li class="rich-text">see how the <code>nhsuk-focused-text</code> mixin works from the <a href="https://github.com/nhsuk/nhsuk-frontend/blob/main/packages/nhsuk-frontend/src/nhsuk/core/tools/_focused.scss">NHS.UK frontend source code</a></li>
-    <li class="rich-text">get the values for <code>$nhsuk-focus-color</code> and <code>$nhsuk-focus-text-color</code> from the <a href="/design-system/styles/colour">colour page</a></li>
+    <li class="rich-text">get the values for <code>$nhsuk-focus-colour</code> and <code>$nhsuk-focus-text-colour</code> from the <a href="/design-system/styles/colour">colour page</a></li>
   </ul>
 
 {% endblock %}

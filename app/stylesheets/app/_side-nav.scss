@@ -5,13 +5,13 @@
 ////
 
 .app-side-nav__heading {
-  color: $nhsuk-secondary-text-color;
+  color: $nhsuk-secondary-text-colour;
   margin-bottom: 12px;
   padding-top: 4px;
   @include nhsuk-font(19, $line-height: 1.25, $weight: bold);
 
   @include nhsuk-media-query($until: desktop) {
-    color: $nhsuk-text-color;
+    color: $nhsuk-text-colour;
     @include nhsuk-font(26, $line-height: 1.25, $weight: bold);
   }
 }
@@ -32,7 +32,7 @@
 }
 
 .app-side-nav__item--current {
-  border-left: 4px solid $color_nhsuk-blue;
+  border-left: 4px solid nhsuk-colour("blue");
   margin-left: -12px;
   padding-left: 8px;
 
@@ -69,7 +69,7 @@
 }
 
 .app-side-nav__list--nested .app-side-nav__item::before {
-  color: $color_nhsuk-grey-3;
+  color: nhsuk-colour("grey-3");
   content: "—";
   margin-left: -20px;
   margin-right: 4px;

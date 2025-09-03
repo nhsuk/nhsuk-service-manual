@@ -10,7 +10,7 @@
 // code to look as close to the unmodified nhsuk-frontend library as possible.
 
 .app-example-wrapper {
-  background-color: $color_nhsuk-grey-5;
+  background-color: nhsuk-colour("grey-5");
 }
 
 // Component examples need a bit of space around them
@@ -29,19 +29,19 @@
 
 // Component examples on a blue background
 .app-example-page--background-blue {
-  background-color: $color_nhsuk-blue;
+  background-color: nhsuk-colour("blue");
 }
 
 // Component examples on a grey-4 background
 .app-example-page--background-grey-4 {
-  background-color: $color_nhsuk-grey-4;
+  background-color: nhsuk-colour("grey-4");
 }
 
 // In order to show how the grid works, we need to have an element inside the
 // grid that is visible and fills the available space with a background color.
 .nhsuk-grid-row > .spacing-example div > p {
-  background-color: $color_nhsuk-blue;
-  color: $color_nhsuk-white;
+  background-color: nhsuk-colour("blue");
+  color: nhsuk-colour("white");
   padding: 20px;
   text-align: center;
 }
@@ -59,8 +59,8 @@
 
 // Layout examples for on divs
 .app-example-page--layout [class^="nhsuk-grid-column"] > p {
-  background-color: $color_nhsuk-blue;
-  color: $color_nhsuk-white;
+  background-color: nhsuk-colour("blue");
+  color: nhsuk-colour("white");
   padding: 20px;
   text-align: center;
 }
@@ -69,15 +69,15 @@
 
 .app-annotate-block {
   margin-bottom: nhsuk-spacing(4);
-  outline: 2px dashed $color_nhsuk-grey-1;
+  outline: 2px dashed nhsuk-colour("grey-1");
   padding: nhsuk-spacing(3);
   padding-top: nhsuk-spacing(7);
   position: relative;
 }
 
 .app-annotate-block__label {
-  border-bottom: 2px dashed $color_nhsuk-grey-1;
-  border-right: 2px dashed $color_nhsuk-grey-1;
+  border-bottom: 2px dashed nhsuk-colour("grey-1");
+  border-right: 2px dashed nhsuk-colour("grey-1");
   left: 0;
   padding: nhsuk-spacing(1) nhsuk-spacing(2);
   position: absolute;

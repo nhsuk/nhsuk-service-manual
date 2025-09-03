@@ -61,7 +61,7 @@
 .featured-list--item__heading {
   -ms-flex-align: center;
   align-items: center;
-  border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
+  border-top: nhsuk-spacing(1) solid nhsuk-colour("blue");
   display: -ms-flexbox;
   display: flex;
   margin-top: 0;

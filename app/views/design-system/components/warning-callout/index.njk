@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a warning callout to help users identify and understand warning content on the page, even if they do not read the whole page." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2024" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "23" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -13,6 +13,15 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
+
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Warning callout updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#warning-callout">updates to warning callout in version 10</a></p>
+  </div>
 
   {{ designExample({
     group: "components",

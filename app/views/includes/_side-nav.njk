@@ -18,6 +18,11 @@
   { title: "Production code", url: "/design-system/production" }
 ] %}
 
+{% set dsGuides = [
+  { title: "Updating to v10", url: "/design-system/guides/updating-to-v10" },
+  { title: "Changes to meet WCAG 2.2", url: "/design-system/changes-to-design-system-wcag-2-2" }
+] %}
+
 {% set dsDesign = [
   { title: "Styles", url: "/design-system/styles" },
   { title: "Components", url: "/design-system/components" },
@@ -105,6 +110,7 @@
   { title: "Expander", url: "/design-system/components/expander" },
   { title: "Images", url: "/design-system/components/images" },
   { title: "Inset text", url: "/design-system/components/inset-text" },
+  { title: "Notification banners", url: "/design-system/components/notification-banners" },
   { title: "Panel", url: "/design-system/components/panel" },
   { title: "Review date", url: "/design-system/components/review-date" },
   { title: "Summary list", url: "/design-system/components/summary-list" },
@@ -203,6 +209,13 @@
     <h2 class="app-side-nav__heading">Design</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsDesign %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Update guides</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsGuides %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

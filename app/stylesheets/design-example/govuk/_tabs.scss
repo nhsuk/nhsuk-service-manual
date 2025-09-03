@@ -19,7 +19,7 @@
       background: inherit;
       border-bottom: 2px solid transparent;
       border-top: 2px solid transparent;
-      color: $color_nhsuk-blue;
+      color: nhsuk-colour("blue");
       display: block;
       font-weight: bold;
       margin-top: -1px;
@@ -28,8 +28,8 @@
     }
 
     &--current a {
-      border-bottom-color: $color_nhsuk-blue;
-      border-top-color: $color_nhsuk-blue;
+      border-bottom-color: nhsuk-colour("blue");
+      border-top-color: nhsuk-colour("blue");
     }
 
     &__heading a {

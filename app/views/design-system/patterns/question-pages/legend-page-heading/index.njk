@@ -20,40 +20,42 @@ previewLayout: design-example-wrapper-full
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <form action="/form-handler" method="post" novalidate>
 
-      {{ dateInput({
-        id: "example",
-        namePrefix: "example",
-        fieldset: {
-          legend: {
-            text: "What is your date of birth?",
-            classes: "nhsuk-label--l",
-            isPageHeading: true
-          }
-        },
-        hint: {
-          text: "For example, 15 3 1984"
-        },
-        items: [
-          {
-            name: "day",
-            classes: "nhsuk-input--width-2"
+        {{ dateInput({
+          id: "example",
+          namePrefix: "example",
+          fieldset: {
+            legend: {
+              text: "What is your date of birth?",
+              classes: "nhsuk-label--l",
+              isPageHeading: true
+            }
           },
-          {
-            name: "month",
-            classes: "nhsuk-input--width-2"
+          hint: {
+            text: "For example, 15 3 1984"
           },
-          {
-            name: "year",
-            classes: "nhsuk-input--width-4"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              name: "day",
+              classes: "nhsuk-input--width-2"
+            },
+            {
+              name: "month",
+              classes: "nhsuk-input--width-2"
+            },
+            {
+              name: "year",
+              classes: "nhsuk-input--width-4"
+            }
+          ]
+        }) }}
 
-      {{ button({
-        text: "Continue"
-      }) }}
+        {{ button({
+          text: "Continue"
+        }) }}
 
+      </form>
     </div>
   </div>
 {% endblock %}

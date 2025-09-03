@@ -2,7 +2,7 @@
 
 // Added meta data for a promo (date)
 .app-meta-data {
-  color: $nhsuk-secondary-text-color;
+  color: $nhsuk-secondary-text-colour;
 
   @include nhsuk-font($size: 16);
 
@@ -20,6 +20,6 @@
 }
 
 .app-meta-data--strong {
-  color: $nhsuk-text-color;
+  color: $nhsuk-text-colour;
   font-weight: 600;
 }

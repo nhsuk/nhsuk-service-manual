@@ -5,6 +5,63 @@ updates:
   - package-ecosystem: npm
     directory: /
 
+    # Group packages into shared PR
+    groups:
+      application:
+        patterns:
+          - 'accessible-autocomplete'
+          - 'axios'
+          - 'basic-auth'
+          - 'cheerio'
+          - 'clipboard'
+          - 'compression'
+          - 'express'
+          - 'gray-matter'
+          - 'helmet'
+          - 'highlight.js'
+          - 'iframe-resizer'
+          - 'js-beautify'
+          - 'lunr'
+          - 'marked'
+          - 'nhsuk-frontend'
+          - 'nunjucks'
+
+      build:
+        patterns:
+          - '@babel/*'
+          - 'autoprefixer'
+          - 'caniuse-lite'
+          - 'cssnano'
+          - 'cssnano-*'
+          - '*-loader'
+          - 'postcss'
+          - 'postcss-*'
+          - 'sass-embedded'
+          - 'webpack'
+          - 'webpack-*'
+          - '*-webpack-plugin'
+
+      lint:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
+          - 'stylelint'
+          - 'stylelint-*'
+
+      test:
+        patterns:
+          - 'jest'
+          - 'jest-*'
+
+      tools:
+        patterns:
+          - 'browser-sync'
+          - 'concurrently'
+          - 'del-cli'
+          - 'husky'
+
     schedule:
       interval: monthly
 

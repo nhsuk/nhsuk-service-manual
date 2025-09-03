@@ -6,7 +6,6 @@
 {% block head %}
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
   <meta name="description" content="This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font.">
-  <script src="{{ getAssetPath("main.js") }}" defer></script>
 {%- endblock %}
 
 {% block pageTitle %}
@@ -234,10 +233,14 @@
 
     <p>If you do not have an nhs.net email account (for example, you use an nhs.uk email account), contact: <a href="mailto:england.font@nhs.net?subject=Problem registering via the form">england.font@nhs.net</a>.</p>
 
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
       Updated: March 2025<br>
     </p>
   </div>
 </div>
 
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "November 2021" %}
+{% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "5" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -13,11 +13,29 @@
 {% endblock %}
 
 {% block bodyContent %}
+  <p>There are 2 versions of the action link: the default version and the reverse version.</p>
+
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
+
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Action link updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#action-link">updates to action link in version 10</a></p>
+  </div>
 
   {{ designExample({
     group: "components",
     item: "action-link",
     type: "default"
+  }) }}
+
+  <p>Use the reverse version on dark backgrounds.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "action-link",
+    type: "reverse"
   }) }}
 
   <h2>When to use action links </h2>
