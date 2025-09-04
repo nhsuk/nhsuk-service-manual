@@ -1,10 +1,15 @@
 # NHS digital service manual Changelog
 
-## TBC
+## September 2025 TBC
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
 
 :wrench: **Maintenance**
 
-- Update links to blog post about question protocol
+- Add span class to NHS number examples
+
 
 ## 7.13.0 - 28 July 2025
 
