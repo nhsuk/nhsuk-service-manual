@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
