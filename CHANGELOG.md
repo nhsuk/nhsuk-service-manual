@@ -36,6 +36,10 @@
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
 
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
