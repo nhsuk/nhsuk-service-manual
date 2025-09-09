@@ -9,6 +9,8 @@
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
+- Add span class to NHS number examples
+- Replace NHS number 3-option radio examples with alternative examples
 
 ## 8.0.2 - 12 September 2025
 

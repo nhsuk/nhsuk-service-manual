@@ -3,7 +3,7 @@
 {% from 'hint/macro.njk' import hint %}
 
 {% set hintHtml -%}
-  <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like <span class="nhsuk-u-nowrap">987 654 3210</span>, that you can find on an NHS letter, prescription or in the NHS App</p>
+  <p class="nhsuk-u-margin-bottom-2">Select 1 option</p>
 {%- endset %}
 
 {{ radios({
@@ -11,7 +11,7 @@
   name: "example-hints",
   fieldset: {
     legend: {
-      text: "Do you know your NHS number?",
+      text: "When were the xrays taken?",
       classes: "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
@@ -21,16 +21,16 @@
   },
   items: [
   {
-    value: "yes",
-    text: "Yes, I know my NHS number"
+    value: "exact",
+    text: "Enter exact date"
   },
   {
-    value: "no",
-    text: "No, I do not know my NHS number"
+    value: "approximate",
+    text: "Enter approximate date"
   },
   {
     value: "not sure",
-    text: "I'm not sure"
+    text: "Not sure"
   }
 ]
 }) }}
