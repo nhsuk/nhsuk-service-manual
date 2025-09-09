@@ -5,6 +5,8 @@
 :wrench: **Maintenance**
 
 - Update wording about reverse examples
+- Add span class to NHS number examples
+- Replace NHS number 3-option radio examples with alternative examples
 
 ## 8.3.0 - 4 November 2025
 
