@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Add new pattern to help users find BSL content
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
 
@@ -19,12 +20,14 @@
 
 ## 8.0.1 - 2 September 2025
 
+
 :wrench: **Maintenance**
 
-- Added form tags to pattern page examples
-- Removed form tags from component examples
+- Add form tags to pattern page examples
+- Remove form tags from component examples
 - Make heading styles consistent for single question coded examples
 - Make textarea examples consistent across design system
+- Update site map
 
 ## 8.0.0 - 27 August 2025
 
