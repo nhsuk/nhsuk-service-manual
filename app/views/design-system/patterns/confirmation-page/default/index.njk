@@ -8,41 +8,50 @@ previewLayout: design-example-wrapper-full
 {% from "summary-list/macro.njk" import summaryList %}
 
 {% block content %}
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-            {{ panel({
-                titleText: "Booking complete",
-                html: "We have sent you a confirmation email"
-            }) }}
+      {{ panel({
+        titleText: "Booking complete",
+        text: "We have sent you a confirmation email"
+      }) }}
 
-            <h2 class="nhsuk-heading-m">Your appointment details</h2>
+      <h2 class="nhsuk-heading-m">Your appointment details</h2>
 
-                {{ summaryList({
-                classes: 'nhsuk-summary-list--no-border',
-                rows: [
-                    {
-                        key: {
-                            text: "Site location"
-                        },
-                        value: {
-                            html: "St Georges Pharmacy<br>46 St George's Rd,<br>Elephant and Castle,<br>London<br>SE1 6ET<br>
-                            <a href='#'>Map and directions (opens in a new tab)</a>"
-                        }
-                    },
-                    {
-                        key: {
-                            text: "Date and time"
-                        },
-                        value: {
-                            text: "Thursday 15 June at 9:10am"
-                        }
-                    }
-                ]
-                }) }}
+      {% set siteLocationHtml %}
+        St George's Pharmacy<br>
+        46 St George's Rd<br>
+        Elephant and Castle<br>
+        London<br>
+        SE1 6ET
+      {% endset %}
 
-            <p><a href="#" class="nhsuk-link">Tell us about your experience using this service (opens in a new tab)</a></p>
+      {{ summaryList({
+        classes: "nhsuk-summary-list--no-border",
+        rows: [
+          {
+            key: {
+              text: "Site location"
+            },
+            value: {
+              html: siteLocationHtml
+            }
+          },
+          {
+            key: {
+              text: "Date and time"
+            },
+            value: {
+              text: "Thursday 15 June at 9:10am"
+            }
+          }
+        ]
+      }) }}
 
-        </div>
+      <p>
+        <a href="#">Tell us about your experience using this service</a>
+      </p>
+
     </div>
+  </div>
 {% endblock %}
