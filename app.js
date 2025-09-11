@@ -101,8 +101,13 @@ env.addFilter('highlight', filters.highlight)
 env.addFilter('markdown', filters.markdown)
 
 // Render standalone design examples
-app.get('/design-example/:group/:item/:type', (req, res) => {
+app.get('/design-example/:group/:item/:type', (req, res, next) => {
   const { group, item, type } = req.params
+
+  // Continue to 404 page
+  if (!fileHelper.hasNunjucksPath({ group, item, type })) {
+    return next()
+  }
 
   // Get the given example as HTML.
   const exampleHtml = fileHelper.getHTMLCode({
