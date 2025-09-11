@@ -267,6 +267,12 @@ app.get(
   }
 )
 
+// Redirects for design system examples
+
+app.get('/design-example/components/checkboxes/hint', (req, res) => {
+  res.redirect('/design-example/components/checkboxes/hint-text')
+})
+
 // Redirects for design system patterns
 
 app.get(
