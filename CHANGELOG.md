@@ -6,6 +6,7 @@
 
 - Added form tags to pattern page examples
 - Removed form tags from component examples
+- Update examples to use set or text as needed
 
 ## 8.0.0 - 27 August 2025
 
