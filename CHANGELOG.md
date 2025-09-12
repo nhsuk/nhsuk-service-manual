@@ -4,7 +4,7 @@
 
 :wrench: **Maintenance**
 
-- Update examples to use set or text as needed  
+- Update examples to use set or text as needed
 
 ## 8.0.1 - 2 September 2025
 
