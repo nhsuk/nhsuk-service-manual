@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Update javascript path examples in version 10 upgrade guide
+
 ## 8.0.2 - 12 September 2025
 
 :wrench: **Maintenance**
