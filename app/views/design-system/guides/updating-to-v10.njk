@@ -204,16 +204,16 @@
   <p>Before:</p>
 
   <code class="language-js nhsuk-u-margin-bottom-4"><pre>
-    <del>&lt;script src="/<JAVASCRIPTS-PATH>/nhsuk.min.js" defer&gt;&lt;/script&gt;</del>
+    <del>&lt;script src="/&lt;JAVASCRIPTS-PATH&gt;/nhsuk.min.js" defer&gt;&lt;/script&gt;</del>
   <del>&lt;/head&gt;</del>
 </pre></code>
 
   <p>After:</p>
 
   <code class="language-js nhsuk-u-margin-bottom-4"><pre>
-    <ins>&lt;script type="module" src="/<JAVASCRIPTS-PATH>/nhsuk-frontend.min.js"&gt;&lt;/script&gt;</ins>
+    <ins>&lt;script type="module" src="/&lt;JAVASCRIPTS-PATH&gt;/nhsuk-frontend.min.js"&gt;&lt;/script&gt;</ins>
     <ins>&lt;script type="module"&gt;</ins>
-      <ins>import { initAll } from '/<JAVASCRIPTS-PATH>/nhsuk-frontend.min.js'</ins>
+      <ins>import { initAll } from '/&lt;JAVASCRIPTS-PATH&gt;/nhsuk-frontend.min.js'</ins>
       <ins>initAll()</ins>
     <ins>&lt;/script&gt;</ins>
   <ins>&lt;/body&gt;</ins>
