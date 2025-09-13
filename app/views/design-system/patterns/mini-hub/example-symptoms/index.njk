@@ -74,31 +74,35 @@ previewLayout: design-example-wrapper-full
       <p>AMD isn't painful and doesn't affect the appearance of your eyes.</p>
 
       {{ insetText({
-        html: "<p>Sometimes AMD may be found during a routine eye test before you have symptoms.</p>"
+        text: "Sometimes AMD may be found during a routine eye test before you have symptoms."
       }) }}
+
+      {% set nonUrgentCardContentHtml %}
+        <p>If you have a problem with your eyes, early diagnosis and treatment may help stop your vision getting worse.</p>
+        <p><a href="https://www.nhs.uk/service-search/Opticians/LocationSearch/9">Find an opticians</a></p>
+      {% endset %}
 
       {{ card({
         type: "non-urgent",
         heading: "See an optician if you're worried about your vision",
-        html: "
-        <p>If you have a problem with your eyes, early diagnosis and treatment may help stop your vision getting worse.</p>
-        <p><a href=\"https://www.nhs.uk/service-search/Opticians/LocationSearch/9\">Find an opticians</a></p>
-        "
+        html: nonUrgentCardContentHtml
       }) }}
+
+      {% set urgentCardContentHtml %}
+        <ul>
+          <li>your vision gets suddenly worse </li>
+          <li>you have a dark "curtain" or shadow moving across your vision</li>
+          <li>your eye is red and painful</li>
+        </ul>
+        <p>These aren't symptoms of AMD but can be signs of other eye problems that need to be treated immediately.</p>
+        <p><strong>Go to A&amp;E or call 111 straight away if you can't get an urgent appointment.</strong></p>
+        <p><a href="https://www.nhs.uk/service-search/accident-and-emergency-services/locationsearch/428">Find an A&amp;E department</a></p>
+      {% endset %}
 
       {{ card({
         type: "urgent",
         heading: "Ask for an urgent GP appointment if:",
-        html: "
-        <ul>
-          <li>your vision gets suddenly worse </li>
-          <li>you have a dark \"curtain\" or shadow moving across your vision</li>
-        <li>your eye is red and painful</li>
-        </ul>
-        <p>These aren't symptoms of AMD but can be signs of other eye problems that need to be treated immediately.</p>
-        <p><strong>Go to A&amp;E or call 111 straight away if you can't get an urgent appointment.</strong></p>
-        <p><a href=\"https://www.nhs.uk/service-search/accident-and-emergency-services/locationsearch/428\">Find an A&amp;E department</a></p>
-        "
+        html: urgentCardContentHtml
       }) }}
 
       <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-colour">
