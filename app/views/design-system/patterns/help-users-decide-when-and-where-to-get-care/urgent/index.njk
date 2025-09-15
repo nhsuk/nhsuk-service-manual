@@ -1,15 +1,17 @@
 {% from 'card/macro.njk' import card %}
 
-{{ card({
-  type: "urgent",
-  heading: "Ask for an urgent GP appointment or get help from NHS 111 if you have:",
-  descriptionHtml: "
+{% set cardDescriptionHtml %}
   <ul>
     <li>pain in your eyes</li>
     <li>changes to your vision, such as vision loss or blurred vision</li>
     <li>very red eyes</li>
   </ul>
-   <p>These can be signs of a more serious eye problem.</p>
-   <p>You can call 111 or <a href=\"#\">get help from 111 online</a>.</p>
-  "
+  <p>These can be signs of a more serious eye problem.</p>
+  <p>You can call 111 or <a href="#">get help from 111 online</a>.</p>
+{% endset %}
+
+{{ card({
+  type: "urgent",
+  heading: "Ask for an urgent GP appointment or get help from NHS 111 if you have:",
+  descriptionHtml: cardDescriptionHtml
 }) }}
