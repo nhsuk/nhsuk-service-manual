@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "NHS login" %}
 {% set pageSection = "Standards and technology" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "You must use NHS login if you're building products and services and need to digitally authenticate members of the public logging into them." %}
 {% set hideContact = "true" %}
 {% set dateUpdated = "March 2022" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/_breadcrumb.njk" %}

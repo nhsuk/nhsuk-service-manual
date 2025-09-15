@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "A to Z page" %}
 {% set pageDescription = "A to Z is a way of presenting a number of pages alphabetically." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Pages" %}
 {% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "96" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

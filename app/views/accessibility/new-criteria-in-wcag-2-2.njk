@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "New criteria in WCAG 2.2" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "October 2024" %}
 {% set backlog_issue_id = "512" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
 {% include "accessibility/_breadcrumb.njk" %}
@@ -65,7 +65,6 @@
 
 <h3>Consistent help</h3>
 <p>If your service provides help options such as contact details or live chat, they should be presented consistently across pages, to make sure users can find and interact with them easily. <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">Learn more about consistent help (W3C website)</a>.</p>
-
 
 <h2>Further reading</h2>
 <ul>

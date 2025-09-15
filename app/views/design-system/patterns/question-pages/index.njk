@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Question pages" %}
 {% set pageDescription = "This pattern explains when to use question pages and the elements they can include." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Pages" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "242" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

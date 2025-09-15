@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Review date" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "November 2021" %}
 {% set hideContact = "true" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -16,6 +16,5 @@
 <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
 <p>Go to the pattern to <a href="/design-system/patterns/know-that-a-page-is-up-to-date">reassure users that a page is up to date</a>.</p>
 </div>
-
 
 {% endblock %}

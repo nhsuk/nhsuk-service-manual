@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Find British Sign Language content" %}
 {% set pageDescription = "The British Sign Language (BSL) icon helps BSL users recognise that information is available in BSL." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Help users to" %}
 {% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "547" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

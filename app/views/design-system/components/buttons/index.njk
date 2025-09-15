@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Buttons" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Form elements" %}
 {% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "7" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -53,7 +53,6 @@
   <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
   <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
   <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
-
 
   <h2 id="secondary-button">Secondary button</h2>
   <p>There are 2 versions of the secondary button.</p>

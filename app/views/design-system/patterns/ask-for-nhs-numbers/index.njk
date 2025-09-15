@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "NHS numbers" %}
 {% set pageDescription = "Use this pattern to ask people for their NHS number and help them find it." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Ask users for" %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "109" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

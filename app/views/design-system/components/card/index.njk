@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Card" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -6,8 +8,6 @@
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "159" %}
 {% set hideDescription = "true" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
