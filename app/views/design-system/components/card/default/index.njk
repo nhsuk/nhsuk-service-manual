@@ -1,7 +1,11 @@
 {% from 'card/macro.njk' import card %}
 
+{% set cardDescriptionHtml %}
+  <p>Go to <a href="#">NHS 111 online</a> or <a href="#">call 111</a></p>
+{% endset %}
+
 {{ card({
   heading: "If you need help now, but it’s not an emergency",
   headingLevel: "3",
-  descriptionHtml: "<p class=\"nhsuk-card__description\">Go to <a href=\"#\">NHS 111 online</a> or <a href=\"#\">call 111</a></p>"
+  descriptionHtml: cardDescriptionHtml
 }) }}
