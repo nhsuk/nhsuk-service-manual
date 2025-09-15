@@ -1,16 +1,18 @@
 {% from 'card/macro.njk' import card %}
 
-{{ card({
-  type: "emergency",
-  heading: "Call 999 or go to A&E if:",
-  descriptionHtml: "
+{% set cardDescriptionHtml %}
   <p>You've been exposed to very cold temperatures and:</p>
   <ul>
-    <li>have hard, frozen skin</li> 
+    <li>have hard, frozen skin</li>
     <li>have swelling and loss of feeling in the affected area</li>
     <li>have blisters filled with blood or a clear or milky fluid</li>
     <li>you're constantly shivering, have slurred speech, slow breathing and are tired and confused</li>
   </ul>
-  <p><a href=\"\">Find your nearest A&E</a></p>
-  "
+  <p><a href="#">Find your nearest A&E</a></p>
+{% endset %}
+
+{{ card({
+  type: "emergency",
+  heading: "Call 999 or go to A&E if:",
+  descriptionHtml: cardDescriptionHtml
 }) }}
