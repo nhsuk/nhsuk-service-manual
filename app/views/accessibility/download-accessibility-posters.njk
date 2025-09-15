@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Download accessibility posters" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "December 2021" %}
 {% set backlog_issue_id = "405" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
@@ -61,8 +61,6 @@
 <p>Do 3 kinds of tests: test with people with access needs, do automated tests, and manual testing with guidelines.</p>
 <p>(On a green background, with an icon showing a clipboard with a tick on it.)</p>
 <p><a href="/assets/nhs-digital-testing-accessibility-poster.pdf">Download poster for testing (PDF, 44KB)</a></p>
-
-
 
 {% endblock %}
 

@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Date input" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Form elements" %}
 {% set dateUpdated = "June 2021" %}
 {% set backlog_issue_id = "10" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -25,7 +25,6 @@
 
   <h2>When not to use date input</h2>
   <p>Do not use date input if users are unlikely to know the exact date you're asking about.</p>
-
 
   <h2>How to use date input</h2>
   <p>Date input consists of 3 fields to let users enter a day, month and year.</p>
