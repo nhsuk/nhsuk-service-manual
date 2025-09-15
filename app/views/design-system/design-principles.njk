@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Design principles" %}
 {% set pageDescription = "These principles guide all of our design. Use them to get started on a project and to help with making decisions." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Principles" %}
 {% set dateUpdated = "April 2023" %}
 {% set backlog_issue_id = "442" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/_breadcrumb.njk" %}

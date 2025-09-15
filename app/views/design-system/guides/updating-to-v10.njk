@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Updating to version 10" %}
 {% set pageDescription = "In August 2025, we released version 10 of the design system and NHS.UK frontend library with new features, updates and bug fixes." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Design system" %}
 {% set theme = "Update guides" %}
 {% set dateUpdated = "August 2025" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/_breadcrumb.njk" %}
@@ -22,7 +22,6 @@
     classes: "nhsuk-u-margin-top-4",
     text: "If you are using a build of the design system in another language or framework, for example React or a Wordpress theme, you may need the maintainer of that tool to follow these updates to support version 10 before you can upgrade."
   }) }}
-
 
   {{ contentsList({
     items: [
@@ -220,7 +219,6 @@
 </pre></code>
 
   <p>If you are using the Nunjucks page template included within NHS frontend, the code should moved from the <code>head</code> block to the <code>bodyEnd</code> block.</p>
-
 
   <h3>Remove the X-UA-Compatible meta tag</h3>
 
@@ -664,6 +662,5 @@
   <h3>Iff function removed</h3>
 
   <p>The <code>iff</code> function has been removed. If you are using this, update your code to use the <a href="https://sass-lang.com/documentation/modules/#if">Sass <code>if</code> function</a> instead.</p>
-
 
 {% endblock %}
