@@ -18,6 +18,7 @@
 
 - Added form tags to pattern page examples
 - Removed form tags from component examples
+- Update wording about reverse examples
 
 ## 8.0.0 - 27 August 2025
 

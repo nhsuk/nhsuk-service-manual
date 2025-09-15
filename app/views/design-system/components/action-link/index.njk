@@ -3,7 +3,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "5" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -42,8 +42,8 @@
   <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
 
   <h3 id="action-link-on-dark-backgrounds">Action link on dark backgrounds</h3>
-  <p>Use the <code>nhsuk-action-link--reverse</code> modifier class to show white links and arrows on dark backgrounds – for example, in custom components and patterns with darker backgrounds.</p>
-  <p>Make sure all users can see the action link – the background colour must have a contrast ratio of at least 4.5:1 with white to <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA</a>.</p>
+  <p>Use the <code>nhsuk-action-link--reverse</code> modifier class to show white links and arrows on dark backgrounds.</p>
+  <p>Make sure all users can see the action link. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -51,13 +51,10 @@
     type: "reverse"
   }) }}
 
-  <h3>Accessibility</h3>
-  <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
-
   <h2 id="research">Research</h2>
   <p>We tested the action links on health information pages with lots of content, callout boxes and multi-page navigation.</p>
   <p>Users didn't notice early versions, so we made the size of the text larger than body text size.</p>
-  <p>We used NHS blue first but users didn't notice it. So we changed the arrow colour to green - our "action" colour. Users seemed to see the green better.</p>
+  <p>We used NHS blue first but users didn't notice it. So we changed the arrow colour to green (our "action" colour). Users seemed to see the green better.</p>
   <p>In follow-up tests on busy content pages, users pointed out the action links and said they found them useful.</p>
   <p>Get in touch to <a href="/community-and-contribution">share your research findings</a> about this pattern.</p>
 
