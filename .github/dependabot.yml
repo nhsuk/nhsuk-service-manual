@@ -74,3 +74,11 @@ updates:
       # Include indirect browser data updates
       # https://caniuse.com
       - dependency-name: caniuse-lite
+
+  # Update GitHub Actions
+  - package-ecosystem: github-actions
+    directories:
+      - .github/workflows/
+
+    schedule:
+      interval: 'monthly'
