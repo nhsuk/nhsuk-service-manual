@@ -101,19 +101,26 @@
   <h4>Known issues</h4>
   <p>Users are not always notified when a conditionally revealed question is shown or hidden. This fails <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">WCAG 2.2 success criterion 4.1.2 name, role, value (W3C)</a></p>
   <p>However, GOV.UK found that screen reader users did not have difficulty answering a conditionally revealed question as long as it's simple. It confused users when they conditionally revealed complicated questions, particularly questions with more than 1 part.</p>
-  
+
   <h3 id="smaller-radios">Smaller radios</h3>
   <p>Use standard-sized radios in most cases.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "smaller"
+  }) }}
+
   <p>You can use small radios where you need something less visually prominent. For example, on:</p>
   <ul>
   <li>a page of search results where users need to see and change search filters without distracting them from the results</li>
   <li> on information-dense screens in services designed for repeat use, like staff-facing systems</li>
   </ul>
-  
+
   <h3 id="error-messages">Error messages</h3>
   <p>Display an error message if the user has not:</p>
   <ul>
-    <li>selected any radios</li>  
+    <li>selected any radios</li>
     <li>answered a conditionally revealed question</li>
   </ul>
   <p>Style error messages like this:</p>
