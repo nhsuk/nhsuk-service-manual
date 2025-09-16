@@ -3,7 +3,7 @@
 {% from 'hint/macro.njk' import hint %}
 
 {% set hintHtml -%}
-  <p class="nhsuk-u-margin-bottom-2">Select 1 option</p>
+  <p class="nhsuk-u-margin-bottom-2">Conditions include asthma, dementia, diabetes, cancer or heart disease</p>
 {%- endset %}
 
 {{ radios({
@@ -11,7 +11,7 @@
   name: "example-hints",
   fieldset: {
     legend: {
-      text: "When were the xrays taken?",
+      text: "Do you have any medical conditions?",
       classes: "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
@@ -20,17 +20,20 @@
     html: hintHtml
   },
   items: [
-  {
-    value: "exact",
-    text: "Enter exact date"
-  },
-  {
-    value: "approximate",
-    text: "Enter approximate date"
-  },
-  {
-    value: "not sure",
-    text: "Not sure"
-  }
-]
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "not-sure",
+      text: "Not sure"
+    }
+  ]
 }) }}
