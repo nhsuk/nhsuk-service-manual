@@ -3,7 +3,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Ask users for" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "109" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -27,17 +27,16 @@
   <p>Users do not need to know their NHS number to get care. This means that most people do not know their number.</p>
 
   <h2>How to use the NHS number pattern</h2>
-  <p>There are 3 ways of asking users for their NHS number:</p>
+  <p>There are 2 ways of asking users for their NHS number:</p>
   <ul>
     <li>single text input</li>
     <li>filter question before input</li>
-    <li>filter question before input with a 3rd option</li>
   </ul>
 
   <h3 id="single-text-input">Single text input</h3>
   <p>Use a single <a href="/design-system/components/text-input">text input</a> if the only way users can get the service is by entering their NHS number.</p>
 
-  <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, always try to give users an alternative way to continue with their journey, and use 1 of the other ways of asking for an NHS number on this page instead.</p>
+  <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, always try to give users an alternative way to continue with their journey, and use a filter question instead.</p>
 
   {{ designExample({
     group: "patterns",
@@ -54,15 +53,16 @@
 
   <h3 id="filter-question-before-single-text">Filter question before single text input</h3>
   <p>Use a <a href='/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users'>filter question</a> before a single text input if there is another way for users to continue without an NHS number.</p>
-  <p>Use a 2-option radio button that asks the user if they know their NHS number (or try giving users <a href="#filter-question-before-input-with-3rd-option">a 3rd option</a>).</p>
+  <p>Use a 2-option radio button that asks the user if they know their NHS number.</p>
+  
 
   {{ designExample({
     group: "patterns",
     item: "ask-for-nhs-numbers",
     type: "filter"
   }) }}
-
-  <p>If users do know their NHS number, route them to a page that asks for it.</p>
+  
+  <p>If users know their NHS number, route them to a page that asks for it.</p>
 
   {{ designExample({
     group: "patterns",
@@ -70,18 +70,7 @@
     type: "filter-single"
   }) }}
 
-  <p>If users do not know their NHS number, route them to a page that asks for alternative details, for example, a combination of other personal details like their postcode and date of birth.</p>
-  <p>On the filter question page and the single text input page, help users find and recognise their NHS number, for example, using hint text.</p>
-
-  <h3 id="filter-question-before-input-with-3rd-option">Filter question before input with 3rd option</h3>
-  <p>You may want to give users a 3rd option that provides extra information about their NHS number and where to find it.</p>
-  <p>Our research and testing in alpha and discovery stages showed a 3rd option is often useful. We recommend that you always try and give a 3rd option.</p>
-
-  {{ designExample({
-    group: "patterns",
-    item: "ask-for-nhs-numbers",
-    type: "filter-third"
-  }) }}
+  <p>If users do not know their NHS number, route them to a page that asks for the alternative details your service needs, for example, postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.</p>
 
   <h3>How to build the NHS number pattern</h3>
   <p>When asking for an NHS number:</p>
@@ -89,28 +78,18 @@
       <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
       <li>allow at least 12 characters in your NHS number input</li>
       <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/attributes/nhs_number.html'>modulus 11 algorithm (explained on the NHS number page in the NHS Data Model and Dictionary)</a></li>
-      <li class="rich-text">keep the NHS number on 1 line - do not allow it to break over 2 lines. If you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">485 777 3456&lt;/span></code>.</li>
+      <li class="rich-text">keep the NHS number on 1 line – if you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">987 654 3210&lt;/span></code></li>
       <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
       <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS will not recognise any phone numbers on the page)</li>
   </ul>
 
-  <h3>Explain where users can find their NHS number and what it looks like</h3>
-  <p>Users are more likely to succeed in their journey the earlier you mention that they need an NHS number and where to find it.</p>
-  <p>Give them help before they start the service. Also <a href='/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context'>give them help in context</a> using 1 of these:</p>
-  <ul>
-      <li>hint text in form inputs (such as <a href='/design-system/components/text-input#using-hint-text'>text inputs</a>, <a href='/design-system/components/radios#radios-with-hints'>radios</a> and <a href='/design-system/components/checkboxes#checkboxes-with-hint-text'>checkboxes</a>)</li>
-      <li>a <a href='/design-system/components/details'>details component</a>, for example:</li>
-  </ul>
-
-  {{ designExample({
-    group: "components",
-    item: "details",
-    type: "default"
-  }) }}
+  <h3>Help users find and recognise their NHS number</h3>
+  <p>Explain where users can find their NHS number and what it looks like. Use <a href="/design-system/components/hint-text">hint text</a> on the filter question page and the single text input page.</p>
+  <p>Users are more likely to succeed in their journey the earlier you mention that you will ask for their NHS number and where to find it. For example, you could explain on your service <a href="/design-system/patterns/start-page">start page</a> that having their NHS number is useful, but they do not need it.</p>
 
   <h3>Use the correct NHS number format</h3>
-  <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. This is the preferred example NHS number, but you can also use 123 456 7890. You should use the same number for all examples.</p>
-  <p>Read more about how to format <a href='/content/a-to-z-of-nhs-health-writing#NHS-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
+  <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 987 654 3210. This is the preferred example NHS number. You must use a number that starts with 9 as these numbers are used for testing, not for real patients. Use the same number for all examples.</p>
+  <p>Read more about how to format <a href='/content/a-to-z-of-nhs-health-writing#nhs-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
 
   <h3>Write clear error messages</h3>
   <p>Make sure you use clear <a href='/design-system/components/error-message'>error messages</a> and <a href='/design-system/components/error-summary'>error summaries</a> when you ask users for their NHS number.</p>

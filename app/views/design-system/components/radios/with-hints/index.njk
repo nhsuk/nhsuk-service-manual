@@ -2,6 +2,10 @@
 {% from 'fieldset/macro.njk' import fieldset %}
 {% from 'hint/macro.njk' import hint %}
 
+{% set hintHtml -%}
+  <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like <span class="nhsuk-u-nowrap">987 654 3210</span>, that you can find on an NHS letter, prescription or in the NHS App</p>
+{%- endset %}
+
 {{ radios({
   idPrefix: "example-hints",
   name: "example-hints",
@@ -13,7 +17,7 @@
     }
   },
   hint: {
-    text: "This is a 10 digit number, like 485 777 3456, that you can find on an NHS letter, prescription or in the NHS App"
+    html: hintHtml
   },
   items: [
   {
