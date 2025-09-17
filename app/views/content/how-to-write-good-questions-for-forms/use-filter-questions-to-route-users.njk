@@ -68,10 +68,6 @@
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
 
-    {% set hintHtml -%}
-      <p class="nhsuk-u-margin-bottom-2">Conditions include asthma, dementia, diabetes, cancer or heart disease</p>
-    {%- endset %}
-
     {{ radios({
       idPrefix: "example-hints",
       name: "example-hints",
@@ -83,7 +79,7 @@
         }
       },
       hint: {
-        html: hintHtml
+        text: 'Conditions include asthma, dementia, diabetes, cancer or heart disease'
       },
       items: [
       {

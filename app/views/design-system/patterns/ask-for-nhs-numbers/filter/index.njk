@@ -13,10 +13,6 @@ previewLayout: design-example-wrapper-full
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      {% set hintHtml -%}
-        <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like <span class="nhsuk-u-nowrap">987 654 3210</span>, that you can find on an NHS letter, prescription or in the NHS App</p>
-      {%- endset %}
-
       {{ radios({
         idPrefix: "example-hints",
         name: "example-hints",
@@ -28,7 +24,7 @@ previewLayout: design-example-wrapper-full
           }
         },
         hint: {
-          html: hintHtml
+          html: 'This is a 10 digit number, like <span class="nhsuk-u-nowrap">987 654 3210</span>, that you can find on an NHS letter, prescription or in the NHS App'
         },
         items: [
         {
