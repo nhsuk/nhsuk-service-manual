@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add smaller checkboxes and radios and align guidance better with GOV.UK
+
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
