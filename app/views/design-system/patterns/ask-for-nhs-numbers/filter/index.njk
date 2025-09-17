@@ -14,7 +14,7 @@ previewLayout: design-example-wrapper-full
     <div class="nhsuk-grid-column-two-thirds">
 
       {% set hintHtml -%}
-        <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456, that you can find on an NHS letter, prescription or in the NHS App</p>
+        <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like <span class="nhsuk-u-nowrap">987 654 3210</span>, that you can find on an NHS letter, prescription or in the NHS App</p>
       {%- endset %}
 
       {{ radios({
@@ -37,9 +37,13 @@ previewLayout: design-example-wrapper-full
         },
         {
           value: "no",
-          text: "No, I do not know my NHS number"
+          text: "No, continue without"
         }
       ]
+      }) }}
+
+      {{ button({
+        text: "Continue"
       }) }}
 
     </div>
