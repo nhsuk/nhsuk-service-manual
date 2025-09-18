@@ -27,6 +27,8 @@
 - Remove form tags from component examples
 - Make heading styles consistent for single question coded examples
 - Make textarea examples consistent across design system
+- Add note on fullstops and links to content guide
+- Fix missing update in last What's new
 - Update site map
 
 ## 8.0.0 - 27 August 2025
