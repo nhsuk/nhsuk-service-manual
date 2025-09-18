@@ -63,7 +63,7 @@
 
   <h2 id="beware-binary-choices">Beware binary choices</h2>
   <p>There will often be at least 1 other option besides "Yes" and "No", including, for example, "I do not know" or "I'm not sure".</p>
-  <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but you should consider them.</p>
+  <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but they're better than forcing users to choose an option that's not their true answer.</p>
 
   <div class="app-example">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
@@ -73,13 +73,13 @@
       name: "example-hints",
       fieldset: {
         legend: {
-          text: "Do you have any medical conditions?",
+          text: "Have you had all the vaccinations you're eligible for in the UK?",
           classes: "nhsuk-fieldset__legend--l",
           isPageHeading: true
         }
       },
       hint: {
-        text: 'Conditions include asthma, dementia, diabetes, cancer or heart disease'
+        text: 'You would have got these vaccinations at school, from your GP surgery or another healthcare provider'
       },
       items: [
       {
@@ -94,16 +94,16 @@
       divider: "or"
       },
       {
-        value: "not-sure",
-        text: "Not sure"
+        value: "unknown",
+        text: "I do not know"
       }
     ]
     }) }}
   </div>
 
-  <p>Having a 3rd option lets you can route people down a different path, for example, to more information. Or it can give users confidence that not knowing something or being unsure is OK and they can continue their journey.</p>
+  <p>Having a 3rd option lets you route people down a different path, for example, to more information. Or it can give users confidence that not knowing something or being unsure is OK and they can continue their journey.</p>
   <p>"Other" can be a useful option, but <a href="/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions#think-before-you-use-other">avoid using "Other" with personal or sensitive information</a>.</p>
-  <p>In your user research, find out what would help your users, for example, by leaving a box with hint text for them to type in something other than "Yes" or "No".</p>
+  <p>In your user research, find out what would help your users, for example, by including a box labelled "Something else" for them to type in an answer other than "Yes" or "No".</p>
 
   <h2 id="offer-people-other-ways-to-do-things">Offer people other ways to do things</h2>
   <p>If you need people to enter details to continue and they cannot do this, for example, because they do not have key information to hand, consider whether you could add something to the "No" option to reassure them that there is an alternative.</p>
