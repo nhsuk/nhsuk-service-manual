@@ -2,11 +2,16 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Update guidance on avoiding binary choices
+
 :wrench: **Maintenance**
 
-- Update wording about reverse examples
+- Change dummy NHS number to 999 123 4567
 - Add span class to NHS number examples
 - Replace NHS number 3-option radio examples with alternative examples
+- Update wording about reverse examples
 
 ## 8.3.0 - 4 November 2025
 
