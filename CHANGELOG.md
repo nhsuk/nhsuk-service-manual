@@ -321,7 +321,7 @@
 
 :new: **New features**
 
-- Add new page "Feedback or share insights" in Community and contribution section
+- Add new page "Feed back or share insights" in Community and contribution section
 - Update "Help us improve this guidance" section at bottom of pages across site
 
 :wrench: **Maintenance**
