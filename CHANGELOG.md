@@ -28,6 +28,8 @@
 - Make heading styles consistent for single question coded examples
 - Make textarea examples consistent across design system
 - Add note on fullstops and links to content guide
+- Remove old Qualtrics links
+- Fix "feedback" typos
 - Fix missing update in last What's new
 - Update site map
 
