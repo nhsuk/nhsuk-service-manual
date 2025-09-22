@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add new pagination variation for navigating between pages of items
+
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
