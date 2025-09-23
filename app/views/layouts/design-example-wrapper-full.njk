@@ -9,7 +9,19 @@
 {% endblock %}
 
 {% block header %}
-  {{ header() }}
+  {{ header({
+    service: {
+      text: "Service name"
+    },
+    account: {
+      items: [
+        {
+          text: "Log in",
+          href: "#"
+        }
+      ]
+    }
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}{% endblock %}

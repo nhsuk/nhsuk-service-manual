@@ -1,0 +1,63 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper.njk" %}
+
+{% from 'back-link/macro.njk' import backLink %}
+{% from 'button/macro.njk' import button %}
+{% from 'radios/macro.njk' import radios %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+
+{% block main %}
+  <div class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half nhsuk-u-one-half-tablet">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Headine to describe the service</h1>
+
+            <p>A short tagline to add a bit more detail.</p>
+
+            <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+              {{ button({
+                text: "Sign up",
+                href: "#",
+                classes: "nhsuk-button--reverse"
+              }) }}
+
+              <a href="#" class="nhsuk-link nhsuk-link--reverse">log in</a>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-u-one-half-tablet">
+          <!-- Add an illustration here -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-main-wrapper nhsuk-u-padding-bottom-4">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-third">
+            <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">First benefit</h2>
+            <p class="nhsuk-body">Description of how the service solves a problem.</p>
+          </div>
+
+          <div class="nhsuk-grid-column-one-third">
+            <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Second benefit</h2>
+            <p class="">Another reason to use the service.</p>
+          </div>
+          <div class="nhsuk-grid-column-one-third">
+            <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Third benefit</h2>
+            <p class="">Something else about the service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
