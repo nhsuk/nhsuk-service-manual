@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.1.0 - 24 September 2025
 
 :new: **New features**
 
@@ -19,7 +19,6 @@
 - Update examples to use set or text as needed
 
 ## 8.0.1 - 2 September 2025
-
 
 :wrench: **Maintenance**
 
