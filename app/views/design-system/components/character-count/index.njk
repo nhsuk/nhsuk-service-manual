@@ -31,13 +31,12 @@
 
   <h2 id="when-not-to-use">When not to use character count</h2>
   <p>If your users keep hitting the character limit imposed by the backend of your service, try to increase the limit rather than use a character count.</p>
-  <div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label">Before using character count<span role="text">
-      <span class="nhsuk-u-visually-hidden">Important/span>
-      Important
-    </span> </h3>
-  <p>Consider the risks around using open text boxes, especially in public services. Read about <a href="/design-system/components/textarea#when-to-use-this-component">when to use textarea</a>.</p>
-  </div>
+
+  {% call warningCallout({
+    heading: "Before using character count"
+  }) %}
+    <p>Consider the risks around using open text boxes, especially in public services. Read about <a href="/design-system/components/textarea#when-to-use-this-component">when to use textarea</a>.</p>
+  {% endcall %}
 
   <h2 id="how-to-use">How to use character count</h2>
   <h3>How it works</h3>

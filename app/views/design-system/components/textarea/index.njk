@@ -29,13 +29,11 @@
   </ul>
   <p>If you are not sure about this, talk with your clinical team.</p>
 
-  <div class="nhsuk-warning-callout">
-    <h3 class="nhsuk-warning-callout__label"> <span role="text">
-      <span class="nhsuk-u-visually-hidden">Important</span>
-      Consider the risks
-    </span> </h3>
-  <p>Before using textarea in public services, look at alternatives.</p>
-  </div>
+  {{ warningCallout({
+    heading: "Consider the risks",
+    text: "Before using textarea in public services, look at alternatives."
+  }) }}
+
   <p>Textarea can cause problems as users may:</p>
   <ul>
   <li>find open questions difficult to answer</li>
