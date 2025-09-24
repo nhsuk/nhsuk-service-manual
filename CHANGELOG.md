@@ -1,6 +1,12 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.1.0 - 24 September 2025
+
+:new: **New features**
+
+- Add new pattern to help users find BSL content
+- Add new guidance about risks of using textarea
+- Update guidance on using textarea on page about character count component
 
 :wrench: **Maintenance**
 
@@ -16,8 +22,15 @@
 
 :wrench: **Maintenance**
 
-- Added form tags to pattern page examples
-- Removed form tags from component examples
+- Add form tags to pattern page examples
+- Remove form tags from component examples
+- Make heading styles consistent for single question coded examples
+- Make textarea examples consistent across design system
+- Add note on fullstops and links to content guide
+- Remove old Qualtrics links
+- Fix "feedback" typos
+- Fix missing update in last What's new
+- Update site map
 
 ## 8.0.0 - 27 August 2025
 
@@ -309,7 +322,7 @@
 
 :new: **New features**
 
-- Add new page "Feedback or share insights" in Community and contribution section
+- Add new page "Feed back or share insights" in Community and contribution section
 - Update "Help us improve this guidance" section at bottom of pages across site
 
 :wrench: **Maintenance**
