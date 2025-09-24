@@ -98,16 +98,10 @@
     <loc>https://service-manual.nhs.uk/accessibility-statement</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/sitemap</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/terms-and-conditions</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/privacy</loc>
-  </url>
-  <url>
     <loc>https://service-manual.nhs.uk/assets/NHS_design_principles.pdf</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/download-accessibility-posters</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/accessibility/what-all-nhs-services-need-to-do</loc>
@@ -118,8 +112,8 @@
   <url>
     <loc>https://service-manual.nhs.uk/accessibility/getting-started</loc>
   </url>
-    <url>
-    <loc>https://service-manual.nhs.uk/accessibility/download-accessibility-posters</loc>
+  <url>
+    <loc>https://service-manual.nhs.uk/accessibility/new-criteria-in-wcag-2-2</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/accessibility/product-and-delivery</loc>
@@ -161,13 +155,13 @@
     <loc>https://service-manual.nhs.uk/content/punctuation</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/content/numbers-measurement-dates-time</loc>
+    <loc>https://service-manual.nhs.uk/content/numbers-measurements-dates-time</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/content/british-sign-language-BSL-quality-assurance-standard</loc>
+    <loc>https://service-manual.nhs.uk/content/british-sign-language-bsl-quality-assurance-standard</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/colour</loc>
@@ -208,8 +202,11 @@
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/card</loc>
   </url>
-    <url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/care-cards</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/character-count</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/checkboxes</loc>
@@ -245,6 +242,9 @@
     <loc>https://service-manual.nhs.uk/design-system/components/header</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/hint-text</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/images</loc>
   </url>
   <url>
@@ -255,6 +255,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/pagination</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/panel</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/radios</loc>
@@ -275,7 +278,13 @@
     <loc>https://service-manual.nhs.uk/design-system/components/table</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/tabs</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/components/tag</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/task-list</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/text-input</loc>
@@ -326,7 +335,16 @@
     <loc>https://service-manual.nhs.uk/design-system/changes-to-design-system-wcag-2-2</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/guides/updating-to-v10</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/backlog-of-components-and-patterns</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/community-and-contribution/contribution-criteria</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/community-resources</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/community-and-contribution/propose-component-pattern</loc>
@@ -356,6 +374,9 @@
     <loc>https://service-manual.nhs.uk/content/inclusive-content/sex-gender-and-sexuality</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/content/inclusive-content/skin-symptoms</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms</loc>
   </url>
   <url>
@@ -383,9 +404,33 @@
     <loc>https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/test-your-questions</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/cookie-policy</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/get-in-touch</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/service-manual-team</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/sitemap</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/terms-and-conditions</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/whats-new</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/whats-new/blog-posts</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/whats-new/show-and-tells</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/whats-new/updates</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/your-privacy</loc>
   </url>
 </urlset>
