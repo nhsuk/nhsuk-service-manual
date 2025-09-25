@@ -8,8 +8,16 @@
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
 
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update guidance on avoiding binary choices
+
 :wrench: **Maintenance**
 
+- Change dummy NHS number to 999 123 4567
+- Add span class to NHS number examples
+- Replace NHS number 3-option radio examples with alternative examples
 - Update javascript path examples in version 10 upgrade guide
 
 ## 8.0.2 - 12 September 2025

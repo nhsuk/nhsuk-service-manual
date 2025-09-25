@@ -5,26 +5,29 @@
   name: "example-divider",
   fieldset: {
     legend: {
-      text: "How do you want to sign in?",
+      text: "Have you had all the vaccinations you're eligible for in the UK?",
       classes: "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
   },
+  hint: {
+    text: 'You would have got these vaccinations at school, from your GP surgery or another healthcare provider'
+  },
   items: [
     {
-      value: "nhsuk-login",
-      text: "Use NHS login"
+      value: "yes",
+      text: "Yes"
     },
     {
-      value: "government-verify",
-      text: "Use GOV.UK Verify"
+      value: "no",
+      text: "No"
     },
     {
       divider: "or"
     },
     {
-      value: "create-account",
-      text: "Create an account"
+      value: "unknown",
+      text: "I do not know"
     }
   ]
 }) }}
