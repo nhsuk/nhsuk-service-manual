@@ -1,0 +1,74 @@
+{% set pageTitle = "Product pages" %}
+{% set pageDescription = "Use a product page for staff-facing services or platform products." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "August 2025" %}
+{% set backlog_issue_id = "242" %}
+
+{% extends "layouts/app-layout.njk" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "product-page",
+    type: "default",
+    htmlOnly: false
+  }) }}
+
+<h2 id="when-to-use">When to use a product page</h2>
+
+<p>Use a product page if you have a service which is for NHS staff, or a service used as a platform or API on which other services are built.</p>
+
+<p>The page should help users find your service, understand what it does, and how to get started using it.</p>
+
+<p>Do not use a product page for patient-facing services. Those services should use a <a href="/design-system/patterns/start-page">start page</a> on the NHS website instead.</p>
+
+<p>The product page should be the signed-out page for your service, from which users can log in. Users can also be returned to the product page after logging out.</p>
+
+<h2>What to include on a product page</h2>
+
+<p>You should do research with your users (and potential users) to understand what information would help them decide whether to use your service.</p>
+
+<p>You could include:</p>
+
+<ul>
+  <li>a short description of what the service does and who it is for</li>
+  <li>benefits of using the service</li>
+  <li>an illustration</li>
+  <li>how to get started</li>
+  <li>a step by step summary of how it works</li>
+  <li>some stats on usage of your service</li>
+  <li>support and contact information</li>
+  <li>a roadmap of features recently added and planned for the future</li>
+  <li>links to any guidance or further documentation</li>
+</ul>
+
+<p>The blue section at the top uses a <a href="/design-system/components/buttons">reversed button</a> for the primary action. For example this could be to sign up, to log in, or to find out more.</p>
+
+<p>Add additional sections below the blue section as needed. These could have blue, grey or white backgrounds.</p>
+
+<h2 id="services-using-this-pattern">Services using this pattern</h2>
+
+<p>Product pages are being used by:</p>
+
+<ul>
+  <li><a href="https://notify.nhs.uk">NHS Notify</a></li>
+  <li><a href="http://ravs.england.nhs.uk">NHS Record a vaccination</a></li>
+  <li><a href="prototype-kit.service-manual.nhs.…">NHS Prototype kit</a></li>
+</ul>
+
+<p>There are also some GOV.UK examples:</p>
+
+<ul>
+  <li><a href="https://www.notifications.service.gov.uk">GOV.UK Notify</a></li>
+  <li><a href="https://www.forms.service.gov.uk">GOV.UK Forms</a></li>
+  <li><a href="https://www.payments.service.gov.uk">GOV.UK Pay</a></li>
+</ul>
+
+{% endblock %}
