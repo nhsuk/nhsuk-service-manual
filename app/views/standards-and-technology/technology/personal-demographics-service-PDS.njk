@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Personal Demographics Service (PDS)" %}
 {% set pageSection = "Standards and technology" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "You must use PDS if you're building products and services and need to access or manage patient demographic data." %}
 {% set hideContact = "true" %}
 {% set dateUpdated = "March 2022" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/_breadcrumb.njk" %}

@@ -1,9 +1,11 @@
-{% from 'input/macro.njk' import input %}
+{% from "input/macro.njk" import input %}
 
 {{ input({
   label: {
-    text: "Full name"
+    text: "What is your full name?",
+    classes: "nhsuk-label--l",
+    isPageHeading: true
   },
-  id: "example",
-  name: "example"
+  id: "full-name",
+  name: "fullName"
 }) }}

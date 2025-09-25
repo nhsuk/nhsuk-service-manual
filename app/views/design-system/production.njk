@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Production code" %}
 {% set pageDescription = "The code you need to start building user interfaces for NHS websites and services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Design system" %}
 {% set theme = "Setup" %}
 {% set dateUpdated = "January 2020" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/_breadcrumb.njk" %}
@@ -87,10 +87,7 @@
     <p>If you’re using Nunjucks macros in production, be aware that using  <code>html</code> arguments or ones ending with <code>html</code> can be a security risk. The <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks templating documentation</a> has guidance on how to mitigate the risks.</p>
   </div>
 
-
-
   <h2>Keeping your code up to date</h2>
   <p>We update the NHS.UK frontend library from time to time. Check for recent releases in the <a href="https://github.com/nhsuk/nhsuk-frontend/blob/main/CHANGELOG.md">NHS.UK frontend changelog</a>.</p>
-
 
 {% endblock %}
