@@ -1,0 +1,44 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'panel/macro.njk' import panel %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% set panelHtml %}
+        <p>They had a COVID-19 vaccine on 25 September 2025.</p>
+        <p>For most people, the minimum recommended gap between COVID-19 vaccine doses is 3 months.</p>
+        <div class="nhsuk-button-group">
+          {{ button({
+            text: "Continue anyway",
+            classes: "nhsuk-button--reverse",
+            href: "#"
+          }) }}
+          <a href="#">Cancel</a>
+        </div>
+      {% endset %}
+
+      {{ panel({
+        titleText: "Jodie Brown had a COVID-19 vaccine less than 3 months ago",
+        titleClasses: "nhsuk-panel__title--l",
+        classes: "nhsuk-panel--interruption",
+        html: panelHtml
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

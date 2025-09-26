@@ -1,0 +1,22 @@
+{% from 'panel/macro.njk' import panel %}
+{% from 'button/macro.njk' import button %}
+
+{% set panelHtml %}
+  <p>They had a COVID-19 vaccine on 25 September 2025.</p>
+  <p>For most people, the minimum recommended gap between COVID-19 vaccine doses is 3 months.</p>
+  <div class="nhsuk-button-group">
+    {{ button({
+      text: "Continue anyway",
+      classes: "nhsuk-button--reverse",
+      href: "#"
+    }) }}
+    <a href="#">Cancel</a>
+  </div>
+{% endset %}
+
+{{ panel({
+  titleText: "Jodie Brown had a COVID-19 vaccine less than 3 months ago",
+  titleClasses: "nhsuk-panel__title--l",
+  classes: "nhsuk-panel--interruption",
+  html: panelHtml
+}) }}

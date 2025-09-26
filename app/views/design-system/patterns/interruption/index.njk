@@ -1,0 +1,100 @@
+{% set pageTitle = "Interruption pages" %}
+{% set pageDescription = "Use an interruption page if you need to pause a user’s journey with important information." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "October 2025" %}
+{% set backlog_issue_id = "241" %}
+
+{% extends "layouts/app-layout.njk" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use">When to use an interruption page</h2>
+
+  <p>You should only use an interruption page when you need to make sure that the user is not about to make a mistake.</p>
+
+  <p>It should be used sparingly as the more often a user sees it, the more likely they are to skip over the content.</p>
+
+  <p>You should try using a regular page first, and only use the interruption page if you find in research that users are often missing the content.</p>
+
+  <p>Example use cases are:</p>
+
+  <ul>
+    <li>asking users to check whether somethin they have entered is correct if it is quite likely to be a mistake</li>
+    <li>asking users to confirm something which cannot be undone, such as cancelling an appointment</li>
+    <li>an exceptional clinical warning in a staff-facing service</li>
+  </ul>
+
+  <h3>Possible mistakes</h3>
+
+  <p>If the user has entered some information which is highly likely to be mistake, but is not completely impossible, you can use an interruption card to check it with them.</p>
+
+  <p>Unlike a <a href="/design-system/components/error-summary">validation error</a>, they can continue without changing their answer.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption",
+    type: "possible-mistake"
+  }) }}
+
+  <h3>Confirming something which cannot be undone</h3>
+
+  <p>If the user is about to do something unusual which cannot be undone and could have a serious consequences, such as cancelling a hospital appointment, you can use an interruption page to check with them first.</p>
+
+  <p>Do not use this pattern if the outcome is less serious, such as unsubscribing from notifications.</p>
+
+  <p>Do not use this pattern to ask a user to check all their answers as part of a regular journey, use the <a href="/design-system/patterns/check-answers">check answers pattern instead</a>.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption",
+    type: "confirmation"
+  }) }}
+
+  <h3>Clinical warnings</h3>
+
+  <p>In a staff facing service you can use an interruption page to warn clinicians that they are about to do something unusual, but which they can go ahead with based upon their clinical judgement.</p>
+
+  <p>If the action should never be taken in any circumstances, you should prevent it from happening instead.</p>
+
+  <p>Use this warning sparingly.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption",
+    type: "default"
+  }) }}
+
+  <h2 id="when-not-to-use">When not to use an interruption page</h2>
+
+  <p>Do not use an interruption card to:</p>
+
+  <ul>
+    <li>emphasise large amounts of content on a page (as the impact will be lost)</li>
+    <li>ask users to agree to terms of use or other legal terms</li>
+    <li>display content that the user will repeatedly see, such as a warning that a service is provided by another organisation</li>
+  </ul>
+
+
+  <h2 id="how-to-use">How to use an interruption page</h2>
+
+  <p>The interruption page uses the <a href="/design-system/components/panel">panel component</a> with the addition of a <code>nhsuk-panel--interruption</code> class to make it blue.</p>
+
+  <p>You should include a <a href="/design-system/components/back-link">back link</a> at the top of the page, as well as allowing users to use their browser back button.</p>
+
+  <p>Within the panel, the button should have a <code>nhsuk-button--reverse</code> class to make it appear white.</p>
+
+  <p>You can also include a cancel or change link beside the button if needed. If you do this, you should add a <code>&lt;div class="nhsuk-button-group"&gt;</code> container to <a href="/design-system/components/buttons#grouping-buttons">group the button</a> and the link together.</p>
+
+{% endblock %}
