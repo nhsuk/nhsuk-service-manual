@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Added new guidance on the interruption page pattern
+- Added guidance on new interruption panel variant
+
 :wrench: **Maintenance**
 
 - Amend page summary for service standard 3 to align with GOV's
