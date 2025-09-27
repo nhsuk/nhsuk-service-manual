@@ -1,0 +1,44 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'panel/macro.njk' import panel %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% set panelHtml %}
+        <p>You will be able to reschedule your appointment for another time, but this may delay your treatment.</p>
+
+        <p>Cancelling your appointment cannot be undone.</p>
+        <div class="nhsuk-button-group">
+          {{ button({
+            text: "Yes, I want to cancel",
+            classes: "nhsuk-button--reverse",
+            href: "#"
+          }) }}
+        </div>
+      {% endset %}
+
+      {{ panel({
+        titleText: "Are you sure you want to cancel your hospital appointment?",
+        titleClasses: "nhsuk-panel__title--l",
+        classes: "nhsuk-panel--interruption",
+        html: panelHtml
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
