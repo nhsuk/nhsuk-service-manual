@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Add smaller checkboxes and radios and align guidance better with GOV.UK
+- Add guidance for new numbered pagination component
 
 :wrench: **Maintenance**
 
