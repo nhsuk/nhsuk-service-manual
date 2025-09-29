@@ -61,10 +61,15 @@
 
   <h3 id="for-navigating-between-pages-of-items">For navigating between pages of items</h3>
   <p>Use a list-type layout if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.</p>
-  <p>ADD CODED EXAMPLE</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered"
+  }) }}
 
   <p>Show the page number in the page <code>&lt;title&gt;</code> so that screen reader users know they've navigated to a different page. For example, "Search results (page 1&nbsp;of&nbsp;4)".</p>
-  <p>Show an appropriate number of pages to fit the horizontal space available.</p> 
+  <p>Show an appropriate number of pages to fit the horizontal space available.</p>
   <p>For smaller screens, show page numbers for:</p>
   <ul>
     <li>the current page</li>
@@ -91,7 +96,18 @@
 
   <h4 id="1st-and-last-pages">1st and last pages</h4>
   <p>Do not show the previous page link on the 1st page and do not show the next page link on the last page.</p>
-  <p>ADD EXAMPLES</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered-first-page"
+  }) }}
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered-last-page"
+  }) }}
 
   <h4 id="filtering-and-sorting">Filtering and sorting</h4>
   <p>Consider adding filtering or sorting options if it helps users to find what they need in a long list of pages. For example, <a href="https://www.gov.uk/business-finance-support">the business support finder on GOV.UK</a> has filtering options.</p>
