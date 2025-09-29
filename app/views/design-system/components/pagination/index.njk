@@ -1,7 +1,7 @@
 {% set pageTitle = "Pagination" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use pagination to allow users to navigate between related pages, for example about a single condition." %}
+{% set pageDescription = "Use pagination to allow users to navigate between related pages or pages containing lists of items." %}
 {% set theme = "Navigation" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "27" %}
@@ -30,8 +30,7 @@
   }) }}
 
   <h2>When to use pagination</h2>
-  <p>Use pagination at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.</p>
-  <p>If you're using pagination, you should also use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page. The 2 components make up the multi-page navigation pattern.</p>
+  <p>Use pagination at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages) or to navigate between pages of items such as search results.</p>
 
   <h2>When not to use pagination</h2>
   <p>Do not use pagination on pages which aren't grouped together or "related" as this is likely to confuse users.</p>
@@ -42,8 +41,79 @@
   </ul>
 
   <h2>How to use pagination</h2>
-  <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page together with pagination at the bottom of each page.</p>
+
+  <p>Add the pagination component at the bottom of each page.</p>
+
+  <p>Do not show pagination if there is only a single page.</p>
+
+  <p>Redirect users to the first page if they enter a URL of a page that no longer exists.</p>
+
+  <h3>For navigating between pages of content</h3>
+
+  <p>Use pagination to let users navigate through related content that has been split across multiple pages.</p>
+
+  <p>Add a <a href="/design-system/components/contents-list">contents list</a> at the top of the page together with pagination at the bottom of each page. The 2 components make up the multi-page navigation pattern.</p>
+
   <p>Use the word "Previous" with an arrow left and a link to the previous page. Use the word Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
+
+  <h3>For navigating between pages of items</h3>
+
+  <p>Use the numbered pagination if users need to navigate through pages of similar items. For example, a list of appointments or a list of search results.</p>
+
+  <p>You should determine the maximum number of items to show per page based upon the context of your service and the amount of content shown for each item.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered"
+  }) }}
+
+  <p>Include the page number in the <a href="/design-system/styles/page-template#page-title">page title</a> so that screen reader users know they’ve navigated to a different page. For example, 'Search results (page 1 of 4)'.
+
+  <p>For smaller screens, show page numbers for:</p>
+
+  <ul>
+    <li>the current page</li>
+    <li>previous and next pages</li>
+    <li>first and last pages</li>
+  </ul>
+
+  <p>For larger screens, show page numbers for:</p>
+
+  <ul>
+    <li>the current page</li>
+    <li>at least one page immediately before and after the current page</li>
+    <li>first and last pages</li>
+  </ul>
+
+  <p>Use ellipses (…) to replace any skipped pages. For example:</p>
+
+  <ul>
+    <li><strong>[1]</strong> 2 … 100</li>
+    <li>1 <strong>[2]</strong> 3 … 100</li>
+    <li>1 2 <strong>[3]</strong> 4 … 100</li>
+    <li>1 2 3 <strong>[4]</strong> 5 … 100</li>
+    <li>1 … 4 <strong>[5]</strong> 6 … 100</li>
+    <li>1 … 97 <strong>[98]</strong> 99 100</li>
+    <li>1 … 98 <strong>[99]</strong> 100</li>
+    <li>1 … 99 <strong>[100]</strong></li>
+  </ul>
+
+  <p>Do not show the previous page link on the first page and do not show the next page link on the last page.</p>
+
+  <p>If there is a only a single page of items, do not include pagination at all.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered"
+  }) }}
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered"
+  }) }}
 
   <h3>Accessibility</h3>
   <p class="rich-text">The pagination components are surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pagination</code>. Screen readers that support this attribute will read this.</p>
