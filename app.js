@@ -197,6 +197,13 @@ app.get('/community/propose-component-pattern', (req, res) => {
   res.redirect('/community-and-contribution/propose-component-pattern')
 })
 
+app.get(
+  '/community-and-contribution/feedback-or-share-insights',
+  (req, res) => {
+    res.redirect('/community-and-contribution/feed-back-or-share-insights')
+  }
+)
+
 // Redirects for new service standards URLs
 
 app.get('/service-standard', (req, res) => {
@@ -239,8 +246,6 @@ app.get(
   }
 )
 
-// REDIRECT STOPS HERE
-
 app.get(
   '/content/health-literacy/use-a-readability-tool-to-prioritise-content',
   (req, res) => {
@@ -248,11 +253,17 @@ app.get(
   }
 )
 
+app.get('/content/numbers-measurement-dates-time', (req, res) => {
+  res.redirect('/content/numbers-measurements-dates-time')
+})
+
 // PDF page redirect
 // https://github.com/nhsuk/nhsuk-service-manual/pull/965
 app.get('/content/pdfs', (req, res) => {
   res.redirect('/content/pdfs-and-other-non-html-documents')
 })
+
+// REDIRECT STOPS HERE
 
 // Automatically route pages
 app.get(/^([^.]+)$/, (req, res, next) => {

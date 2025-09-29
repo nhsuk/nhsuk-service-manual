@@ -2,14 +2,7 @@ trigger:
   branches:
     include:
       - main
-      - master
-      - ia-site
       - refs/tags/v*
-      - refs/heads/review/1-*
-      - refs/heads/review/2-*
-      - refs/heads/review/3-*
-      - refs/heads/dev/*
-      - refs/heads/user/*
   paths:
     exclude:
       - CHANGELOG.md
@@ -39,7 +32,7 @@ steps:
   - script: npm run build
     displayName: 'Build'
 
-  - script: npm run test
+  - script: npm test --ignore-scripts
     displayName: 'Test'
 
   - task: SonarCloudAnalyze@1
