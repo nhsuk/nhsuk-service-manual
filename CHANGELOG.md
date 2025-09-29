@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add guidance for new numbered pagination component
+
 ## 8.1.0 - 24 September 2025
 
 :new: **New features**
