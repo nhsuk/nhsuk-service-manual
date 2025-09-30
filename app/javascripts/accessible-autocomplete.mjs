@@ -1,15 +1,6 @@
 import AccessibleAutoComplete from 'accessible-autocomplete'
 
 /**
- * @typedef {object} AutocompleteConfig
- * @property {string} [formId] - ID of form element containing autocomplete.
- *   (Optional param for NHS.UK functionality)
- * @property {string} inputId - ID of the input field.
- * @property {string} containerId - ID of element in which the autocomplete will be rendered in.
- * @property {Function} source - Function called on input change
- */
-
-/**
  * Create an autocomplete.
  *
  * @param {AutocompleteConfig} config
@@ -57,3 +48,12 @@ export default (config) => {
     if (form) addFormEvents()
   }
 }
+
+/**
+ * @typedef {object} AutocompleteConfig
+ * @property {string} [formId] - ID of form element containing autocomplete.
+ *   (Optional param for NHS.UK functionality)
+ * @property {string} inputId - ID of the input field.
+ * @property {string} containerId - ID of element in which the autocomplete will be rendered in.
+ * @property {Function} source - Function called on input change
+ */
