@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Ask users for" %}
-{% set dateUpdated = "September 2025" %}
+{% set dateUpdated = "October 2025" %}
 {% set backlog_issue_id = "109" %}
 
 {% block beforeContent %}
@@ -15,16 +15,18 @@
 {% block bodyContent %}
 
   <h2>When to use the NHS number pattern</h2>
-  <p>Follow this pattern whenever you need to ask for an NHS number.</p>
-  <p>Only ask for an NHS number if 1 of these applies:</p>
+  <p>Follow this pattern when you need to ask for an NHS number.</p>
+  <p>Weigh up user and business needs and clinical risk in deciding whether to ask users for their NHS number. Asking users for their NHS number is the best way to identify a patient and minimise the risks of matching the wrong person but:</p>
   <ul>
-    <li>your service needs it</li>
-    <li>the user is more likely to succeed on their journey if they can give you an NHS number</li>
+    <li>users do not need to know their NHS number to get care</li>
+    <li>most users do not know their number and many cannot find it easily</li>
   </ul>
-
+  <p>Use this pattern if users are more likely to succeed in their journey if they can give you their NHS number. Provide an alternative route for users who cannot.</p>
+  <p>To minimise the risks of a wrong match and to improve the user experience, do not rely on an NHS number on its own.</p>
+  
   <h2>When not to use the NHS number pattern</h2>
-  <p>If users are more likely to succeed by providing other details instead of their NHS number, do not use this pattern.</p>
-  <p>Users do not need to know their NHS number to get care. This means that most people do not know their number.</p>
+  <p>Weigh up user and business needs. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to this pattern.</p>
+  <p>Do not use this pattern if you need to digitally authenticate members of the public logging into a product or service. Use <a href="/standards-and-technology/technology/NHS-login">NHS login</a> instead.</p>
 
   <h2>How to use the NHS number pattern</h2>
   <p>There are 2 ways of asking users for their NHS number:</p>
@@ -36,7 +38,7 @@
   <h3 id="single-text-input">Single text input</h3>
   <p>Use a single <a href="/design-system/components/text-input">text input</a> if the only way users can get the service is by entering their NHS number.</p>
 
-  <p>However, we recommend you avoid building a service that requires users to enter their NHS number. If possible, give users an alternative way to continue with their journey, and use a filter question instead.</p>
+  <p>However, avoid building a service that relies on users entering their NHS number. If possible, give users an alternative way to continue with their journey, and use a filter question instead.</p>
 
   {{ designExample({
     group: "patterns",
@@ -85,7 +87,15 @@
 
   <h3>Help users find and recognise their NHS number</h3>
   <p>Explain where users can find their NHS number and what it looks like. Use <a href="/design-system/components/hint-text">hint text</a> on the filter question page and the single text input page.</p>
-  <p>Users are more likely to succeed in their journey the earlier you mention that you will ask for their NHS number and where to find it. For example, you could explain on your service <a href="/design-system/patterns/start-page">start page</a> that having their NHS number is useful, but they do not need it.</p>
+  <p>Users are more likely to succeed in their journey the earlier you mention that you will ask for their NHS number and where to find it. For example, explain on your service <a href="/design-system/patterns/start-page">start page</a> that having their NHS number is useful, but they do not need it.</p>
+  <div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p>You do not need your NHS number but telling us it will give us the best chance of matching you to your NHS record.</p>
+    </div>
+  </div>
+
 
   <h3>Use the correct NHS number format</h3>
   <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567. This is the preferred example NHS number. You must use a number that starts with 9 as these numbers are used for testing, not for real patients. Use the same number for all examples.</p>
