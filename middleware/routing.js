@@ -12,8 +12,11 @@
  * 5. We got template not found both times - call next to trigger the 404 page
  * 6. Remove the first slash, render won't work with it
  * 7. If it's blank, render the root index
+ *
+ * @param {string} path - URL path to render
+ * @param {Response} res
+ * @param {NextFunction} next
  */
-
 function renderPath(path, res, next) {
   res.render(path, (error, html) => {
     // [1] //
@@ -38,6 +41,11 @@ function renderPath(path, res, next) {
   })
 }
 
+/**
+ * @param {Request} req
+ * @param {Response} res
+ * @param {NextFunction} next
+ */
 function matchRoutes(req, res, next) {
   let { path } = req
 
@@ -54,3 +62,7 @@ function matchRoutes(req, res, next) {
 module.exports = {
   matchRoutes
 }
+
+/**
+ * @import { Request, Response, NextFunction } from 'express'
+ */

@@ -3,7 +3,8 @@ import AccessibleAutoComplete from 'accessible-autocomplete'
 /**
  * Create an autocomplete.
  *
- * @param {AutocompleteConfig} config
+ * @template {unknown} ResultType
+ * @param {Config<ResultType>} config
  */
 export default (config) => {
   const { formId, inputId, containerId } = config
@@ -50,10 +51,37 @@ export default (config) => {
 }
 
 /**
- * @typedef {object} AutocompleteConfig
- * @property {string} [formId] - ID of form element containing autocomplete.
+ * @template {unknown} ResultType
+ * @typedef {object} Config
+ * @property {string} [formId] - ID of form element containing autocomplete
  *   (Optional param for NHS.UK functionality)
- * @property {string} inputId - ID of the input field.
- * @property {string} containerId - ID of element in which the autocomplete will be rendered in.
- * @property {Function} source - Function called on input change
+ * @property {string} inputId - ID of the input field
+ * @property {string} containerId - ID of element in which the autocomplete will be rendered in
+ * @property {OnSourceCallback<ResultType>} source - Search query callback function
+ * @property {OnConfirmCallback<ResultType>} [onConfirm] - Result selection confirmed callback function
+ * @property {object} [templates] - Template functions
+ * @property {(result: ResultType) => string} [templates.inputValue] - Populate suggestion text from result
+ * @property {(result: ResultType) => string} [templates.suggestion] - Populate input value from result
+ */
+
+/**
+ * @template {unknown} ResultType
+ * @callback OnSourceCallback
+ * @param {string} query - Search input value
+ * @param {OnPopulateResultsCallback<ResultType>} populateResults - Search results callback function
+ * @returns {void}
+ */
+
+/**
+ * @template {unknown} ResultType
+ * @callback OnConfirmCallback
+ * @param {ResultType} result - Search result selected
+ * @returns {void}
+ */
+
+/**
+ * @template {unknown} ResultType
+ * @callback OnPopulateResultsCallback
+ * @param {ResultType[]} results - Search results
+ * @returns {void}
  */

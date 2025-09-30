@@ -6,13 +6,15 @@ const basicAuth = require('basic-auth')
  * Based on template found at: http://www.danielstjules.com/2014/08/03/basic-auth-with-express-4/
  *
  * @example
+ * ```js
  * const authentication = required('authentication');
  * app.use(authentication);
- * @param {string} req - Express Request object
- * @param {string} res - Express Response object
- * @returns {Function} Express 4 middleware requiring the given credentials
+ * ```
+ * @param {Request} req
+ * @param {Response} res
+ * @param {NextFunction} next
+ * @returns Express 4 middleware requiring the given credentials
  */
-
 module.exports = (req, res, next) => {
   // External dependencies
 
@@ -39,3 +41,7 @@ module.exports = (req, res, next) => {
   }
   return next()
 }
+
+/**
+ * @import { Request, Response, NextFunction } from 'express'
+ */
