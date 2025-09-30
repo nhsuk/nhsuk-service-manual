@@ -3,123 +3,94 @@
 ////
 /// Autocomplete component
 ///
-/// 1. IE 10 prefix for flexbox
-/// 2. Proprietary extension so form field looks the same in Safari
-/// 3. Custom height and width of form items
-/// 4. Custom height and width of svg icons
-/// 5. Custom spacing to position the search icon
-/// 6. Drop shadow on search suggestions dropdown box, custom spread and blur
-/// 7. Z-index to bring the dropdown to the front
-/// 8. No current spacing at 12px so using this value
-/// 9. Z-index to bring search box to the front for focus state style
-/// 10. Custom padding to stop text jumping on focus
+/// 1. Custom height and width of form items
+/// 2. Custom height and width of svg icons
+/// 3. Custom spacing to position the search icon
+/// 4. Drop shadow on search suggestions dropdown box, custom spread and blur
 ////
 
-.autocomplete-container {
-  display: inline-block;
-  z-index: 1; // [9]
+.autocomplete {
+  width: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 9;
+
+  // Stack button above autocomplete
+  + .nhsuk-header__search-submit {
+    position: relative;
+    z-index: 10;
+  }
+
+  // Stack button below autocomplete when focused
+  &:focus-within + .nhsuk-header__search-submit {
+    z-index: 8;
+  }
 
   @include nhsuk-media-query($until: tablet) {
-    display: inline;
-    width: 100%;
-  }
-}
-
-@include nhsuk-media-query($until: tablet) {
-  // duplicate of .nhsuk-search__input in _header.scss, for non javascript version
-  .autocomplete__input {
-    -ms-flex-positive: 2; // [1]
-    -webkit-appearance: listbox; // [2]
-    border-bottom: 1px solid nhsuk-colour("grey-3");
-    border-bottom-left-radius: $nhsuk-border-radius;
-    border-bottom-right-radius: 0;
-    border-left: 1px solid nhsuk-colour("grey-3");
-    border-right: 0;
-    border-top: 1px solid nhsuk-colour("grey-3");
-    border-top-left-radius: $nhsuk-border-radius;
-    border-top-right-radius: 0;
-    flex-grow: 2;
-    font-size: inherit;
-    height: 52px; // [3]
-    margin: 0;
-    outline: none;
-    padding: 0 nhsuk-spacing(3);
-    width: 100%; // [3]
-
-    &:focus {
-      border: $nhsuk-focus-width solid $nhsuk-focus-text-colour;
-      box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-colour;
-      outline: $nhsuk-focus-width solid transparent;
-      outline-offset: $nhsuk-focus-width;
-      padding: 0 13px; // [10]
+    + .nhsuk-header__search-submit {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 }
 
-@include nhsuk-media-query($from: tablet) {
-  // duplicate of .nhsuk-search__input in _header.scss, for non javascript version
-  .autocomplete__input {
-    -webkit-appearance: listbox; // [2]
-    border: 1px solid nhsuk-colour("white");
-    border-bottom-left-radius: $nhsuk-border-radius;
-    border-bottom-right-radius: 0;
-    border-right: 0;
-    border-top-left-radius: $nhsuk-border-radius;
-    border-top-right-radius: 0;
-    font-size: $nhsuk-base-font-size;
-    height: 40px; // [3]
-    padding: 0 12px; // [9]
-    width: 200px; // [3]
+.autocomplete__input.nhsuk-header__search-input {
+  pointer-events: all;
+  width: calc(100% - 44px); // [1]
 
-    &:focus {
-      border: 2px solid $nhsuk-focus-text-colour;
-      box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-colour;
-      outline: $nhsuk-focus-width solid transparent;
-      outline-offset: $nhsuk-focus-width;
-      padding: 0 11px; // [10]
-    }
-
-    &::placeholder {
-      color: nhsuk-colour("grey-1");
-      font-size: $nhsuk-base-font-size;
-    }
-  }
-}
-
-@include nhsuk-media-query($from: desktop) {
-  .autocomplete__input {
-    width: 235px;
+  @include nhsuk-media-query($from: tablet) {
+    width: 100%; // [1]
   }
 }
 
 .autocomplete__menu {
-  -moz-box-shadow: 0 3px 5px rgba(nhsuk-colour("grey-1"), 0.5); // [6]
-  -webkit-box-shadow: 0 3px 5px rgba(nhsuk-colour("grey-1"), 0.5); // [6]
   background-color: nhsuk-colour("white");
-  border-bottom: 1px solid nhsuk-colour("grey-4");
-  border-bottom-left-radius: $nhsuk-border-radius;
-  border-bottom-right-radius: $nhsuk-border-radius;
-  border-left: 1px solid nhsuk-colour("grey-4");
-  border-right: 1px solid nhsuk-colour("grey-4");
-  box-shadow: 0 0 3px 0 rgba(nhsuk-colour("grey-1"), 0.5); // [6]
   list-style: none;
-  margin-top: 2px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding: nhsuk-spacing(3);
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  z-index: 1; // [7]
+  margin: 10px 0 0;
+  padding: 0;
+  pointer-events: all;
+  position: relative;
+  @include nhsuk-print-hide;
 
-  @include nhsuk-media-query($until: tablet) {
-    border: 0;
-    box-shadow: none;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -$nhsuk-gutter;
+    bottom: 0;
+    left: -$nhsuk-gutter;
+
+    display: block;
+    background-color: nhsuk-colour("white");
+    content: "";
   }
+
+  @include nhsuk-media-query($from: tablet) {
+    border: solid nhsuk-colour("grey-4");
+    border-width: 0 1px 1px;
+    border-radius: $nhsuk-border-radius;
+    box-shadow: 0 0 3px 0 rgba(nhsuk-colour("grey-1"), 0.5); // [4]
+    margin: 2px -44px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: nhsuk-spacing(2) nhsuk-spacing(3);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 360px;
+    z-index: -1;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.autocomplete__option-category {
+  color: $nhsuk-secondary-text-colour;
+  display: block;
+  @include nhsuk-font(16);
+  margin-top: nhsuk-spacing(1);
 }
 
 .autocomplete__menu--visible {
@@ -131,54 +102,45 @@
 }
 
 .autocomplete__option {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: nhsuk-spacing(3) 2px;
+  white-space: nowrap;
   border-bottom: 1px solid nhsuk-colour("grey-5");
-  color: nhsuk-colour("blue");
+  color: $nhsuk-header-item-colour;
   cursor: pointer;
-  font-size: $nhsuk-base-font-size;
-  padding-bottom: 12px; // [8]
-  text-align: left;
-  text-decoration: underline;
+  @include nhsuk-font(16);
 
-  .nhsuk-icon__search {
-    fill: nhsuk-colour("grey-3");
-    float: left;
-    height: 22px; // [4]
-    margin: 2px 4px 0 0; // [5]
-    width: 22px; // [4]
+  @include nhsuk-link-style-visited($nhsuk-header-item-colour);
+  @include nhsuk-link-style-hover($nhsuk-header-item-hover-colour);
+  @include nhsuk-link-style-active($nhsuk-header-item-active-colour);
+  @include nhsuk-link-style-focus;
+
+  &:last-child {
+    border-color: transparent;
   }
 
   &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
   &:focus {
-    outline: 1px solid transparent;
-    text-decoration: none;
-
-    a {
-      @include nhsuk-focused-text;
+    .autocomplete__option-title {
+      text-decoration: none;
     }
   }
 
-  @include nhsuk-media-query($from: tablet) {
-    &:last-child {
-      border-bottom: 0;
-    }
+  &:focus,
+  &:focus:visited {
+    color: $nhsuk-focus-text-colour;
+    box-shadow: inset 0 ($nhsuk-focus-width * -1) $nhsuk-focus-text-colour;
+    border-color: nhsuk-colour("white");
+  }
+
+  @include nhsuk-media-query($until: tablet) {
+    font-size: inherit;
   }
 }
 
-.autocomplete__option--no-results {
-  border-bottom: 0;
-  color: nhsuk-colour("black");
-  font-size: $nhsuk-base-font-size;
-  line-height: $nhsuk-base-line-height;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
-
-  @include nhsuk-media-query($until: tablet) {
-    padding: nhsuk-spacing(3) 0;
-  }
+.autocomplete__option-title {
+  text-decoration: underline;
 }
