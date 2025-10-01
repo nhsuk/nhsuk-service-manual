@@ -9,6 +9,8 @@ previewLayout: design-example-wrapper-full
 {% from "fieldset/macro.njk" import fieldset %}
 {% from "radios/macro.njk" import radios %}
 
+{% set dummyNhsNumber = "999 123 4567" %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
@@ -24,7 +26,7 @@ previewLayout: design-example-wrapper-full
           }
         },
         hint: {
-          html: 'This is a 10 digit number, like <span class="nhsuk-u-nowrap">999 123 4567</span>, that you can find on an NHS letter, prescription or in the NHS App'
+          html: 'This is a 10 digit number, like <span class="nhsuk-u-nowrap">' + dummyNhsNumber + '</span>, that you can find on an NHS letter, prescription or in the NHS App'
         },
         items: [
         {
