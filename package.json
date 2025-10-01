@@ -85,7 +85,6 @@
     "prettier": "^3.6.2",
     "sass-embedded": "^1.93.2",
     "sass-loader": "^16.0.5",
-    "source-map-loader": "^5.0.0",
     "stylelint": "^16.24.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^7.0.0",
