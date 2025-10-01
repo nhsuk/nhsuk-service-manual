@@ -1,13 +1,12 @@
 @use "../vendor/nhsuk-frontend" as *;
 
 .app-code-embed {
-  background-color: nhsuk-colour("grey-5");
   border: 1px solid nhsuk-colour("grey-3");
 
-  iframe {
-    display: block;
-    width: 100%;
-  }
+  // Add a 'checkerboard' background
+  background: nhsuk-colour("grey-5")
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==")
+    repeat;
 
   [src*="components/header"] {
     width: 99%;
