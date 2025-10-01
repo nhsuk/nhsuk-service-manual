@@ -19,10 +19,10 @@
   <p>Weigh up user and business needs and clinical risk in deciding whether to ask users for their NHS number. Asking users for their NHS number is the best way to identify a patient and minimise the risks of matching the wrong person but:</p>
   <ul>
     <li>users do not need to know their NHS number to get care</li>
-    <li>most users do not know their number and many cannot find it easily</li>
+    <li>some users do not know their number and cannot find it easily</li>
   </ul>
-  <p>Use this pattern if users are more likely to succeed in their journey if they can give you their NHS number. Provide an alternative route for users who cannot.</p>
-  <p>To minimise the risks of a wrong match and to improve the user experience, do not rely on an NHS number on its own.</p>
+  <p>Use this pattern if users are more likely to succeed in their journey if they can give you their NHS number. Provide another route for users who cannot.</p>
+  <p>To minimise the risks of a wrong match, do not rely on an NHS number on its own.</p>
 
   <h2>When not to use the NHS number pattern</h2>
   <p>Weigh up user and business needs. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to use this pattern.</p>
@@ -38,7 +38,7 @@
   <h3 id="single-text-input">Single text input</h3>
   <p>Use a single <a href="/design-system/components/text-input">text input</a> if the only way users can get the service is by entering their NHS number.</p>
 
-  <p>However, avoid building a service that relies on users entering their NHS number. If possible, give users an alternative way to continue with their journey, and use a filter question instead.</p>
+  <p>However, avoid building a service that relies on users entering their NHS number. If possible, give users another way to continue with their journey, and use a filter question instead.</p>
 
   {{ designExample({
     group: "patterns",
@@ -131,13 +131,11 @@
   <p>If you're building products and services that need to access or manage patient demographic data, you must use the Personal Demographic Service (PDS). <a href="/standards-and-technology/technology/personal-demographics-service-PDS">Read more about PDS</a>.</p>
 
   <h2>Research</h2>
-  <p>Our research showed that:</p>
+  <p>Our research showed that many people know their NHS number, can find it quickly and would rather enter it than other details. But some users:</p>
   <ul>
-    <li>users did not always know what their NHS number looked like</li>
-    <li>users did not know where to find their NHS number</li>
-    <li>some users thought they were being asked for their National Insurance number</li>
-    <li>users with access needs were more likely to know their NHS number because they deal with health and social care organisations more often</li>
-    <li>users are more successful the earlier you tell them where to find their NHS number before starting the service</li>
+    <li>do not know what their NHS number looks like</li>
+    <li>cannot easily find it</li>
+    <li>try to enter their National Insurance number or a Scottish CHI (Community Health Index) number</li>
   </ul>
 
 {% endblock %}
