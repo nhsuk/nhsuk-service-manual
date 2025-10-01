@@ -1,7 +1,7 @@
 {% set pageTitle = "Pagination" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use pagination to help users navigate backwards and forwards through a series of pages." %}
+{% set pageDescription = "Use pagination to help users navigate forwards and backwards through a series of pages." %}
 {% set theme = "Navigation" %}
 {% set dateUpdated = "October 2025" %}
 {% set backlog_issue_id = "27" %}
@@ -61,13 +61,13 @@
   }) }}
 
   <p>If you're using pagination at the bottom of  content pages, you should also use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page. The 2 components make up the <a href="/design-system/patterns/mini-hub">mini-hub pattern</a>.</p>
-  <p>Use the word "Previous" with an arrow left and a link to the previous page. Use the same page titles as in the contents list.</p>
+  <p>Use the word "Previous" with an arrow left and a link to the previous page and the word Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
 
   <h3 id="for-navigating-between-pages-of-items">For navigating between pages of items</h3>
 
   <p>Use numbered pagination if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.</p>
 
-  <p>You should determine the maximum number of items to show per page based upon the context of your service and the amount of content shown for each item.</p>
+  <p>Decide the maximum number of items to show on each page based on the context of your service and the amount of content for each item.</p>
 
   {{ designExample({
     group: "components",
@@ -122,7 +122,8 @@
 
   <h2>Research</h2>
   <p>We tested content page pagination in grouped information pages in 3 labs in summer 2018. We have not tested it in forms.</p>
-  <p>In a user research lab, 4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
+  <p>4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
   <p>Users found that the pagination reflected the way they read content and their mental model of the structure of the content. </p>
+  <p>GOV.UK based their component for navigating between pages of items on similar ones developed and used successfully by the Government Digital Service, Ministry of Justice and the Home Office.</p>
 
 {% endblock %}
