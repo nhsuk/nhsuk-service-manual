@@ -6,6 +6,10 @@
 
 - Add guidance for new numbered pagination component
 
+:wrench: **Maintenance**
+
+- Bring content on contents list component and mini-hub pattern into line with updates to pagination component
+
 ## 8.1.0 - 24 September 2025
 
 :new: **New features**
