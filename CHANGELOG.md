@@ -10,7 +10,7 @@
 :wrench: **Maintenance**
 
 - Change dummy NHS number to 999 123 4567
-- Add span class to NHS number examples
+- Update NHS number examples, including adding span class
 - Replace NHS number 3-option radio examples with alternative examples
 - Update wording about reverse examples
 
