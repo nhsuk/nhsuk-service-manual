@@ -110,18 +110,5 @@ export class DesignExample extends Component {
     )
   }
 
-  // Yoink attr: https://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
-  setIframeHeight(iframe) {
-    if (iframe) {
-      const iframeWin =
-        iframe.contentWindow || iframe.contentDocument.parentWindow
-      if (iframeWin.document.body) {
-        iframe.height =
-          iframeWin.document.documentElement.scrollHeight ||
-          iframeWin.document.body.scrollHeight
-      }
-    }
-  }
-
   static moduleName = 'app-design-example'
 }
