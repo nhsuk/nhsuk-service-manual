@@ -97,10 +97,6 @@ module.exports = {
           to: 'assets'
         },
         {
-          from: join(dirname(require.resolve('iframe-resizer')), 'js'),
-          to: 'javascripts/vendor'
-        },
-        {
           from: 'javascripts/vendor',
           to: 'javascripts/vendor'
         }
