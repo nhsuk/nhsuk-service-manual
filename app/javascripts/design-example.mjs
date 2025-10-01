@@ -19,7 +19,9 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
+
     this.iframe = this.$root.querySelector('iframe')
+    this.content = this.iframe ? this.iframe.contentDocument : null
 
     this.bindEvents()
   }
@@ -39,8 +41,26 @@ export class DesignExample extends Component {
     }
 
     if (this.iframe) {
-      initialize(this.iframe)
+      initialize(
+        { onBeforeIframeResize: () => this.isResizeAllowed() },
+        this.iframe
+      )
     }
+  }
+
+  isResizeAllowed() {
+    const { iframe, content } = this
+
+    if (!content) {
+      return true
+    }
+
+    // Prevent when iframe and body has focus
+    // e.g. When resizing manually using handle
+    return !(
+      document.activeElement === iframe &&
+      content.activeElement === content.body
+    )
   }
 
   handleTabClick(e) {
@@ -114,3 +134,7 @@ export class DesignExample extends Component {
 
   static moduleName = 'app-design-example'
 }
+
+/**
+ * @import { InitializeResult } from '@open-iframe-resizer/core'
+ */
