@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## Unreleased - October 2025
 
 :new: **New features**
 
