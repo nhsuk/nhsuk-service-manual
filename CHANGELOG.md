@@ -13,6 +13,7 @@
 - Update page titles to use en-dash rather than hyphen
 - Replace BSL icons download file
 - Fix broken cookies URL
+- Bring content on contents list component and mini-hub pattern into line with updates to pagination component
 
 ## 8.1.0 - 24 September 2025
 
