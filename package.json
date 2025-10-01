@@ -36,6 +36,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@open-iframe-resizer/core": "^2.0.0",
     "accessible-autocomplete": "^3.0.1",
     "axios": "^1.12.2",
     "basic-auth": "^2.0.1",
@@ -47,7 +48,6 @@
     "gray-matter": "^4.0.3",
     "helmet": "^4.6.0",
     "highlight.js": "^11.11.1",
-    "iframe-resizer": "^4.4.2",
     "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
     "marked": "^15.0.11",

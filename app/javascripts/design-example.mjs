@@ -1,5 +1,5 @@
+import { initialize } from '@open-iframe-resizer/core'
 import ClipboardJS from 'clipboard'
-import { iframeResize } from 'iframe-resizer'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -22,8 +22,6 @@ export class DesignExample extends Component {
     this.iframe = this.$root.querySelector('iframe')
 
     this.bindEvents()
-
-    iframeResize([{ heightCalculationMethod: 'max' }], this.iframe)
   }
 
   bindEvents() {
@@ -38,6 +36,10 @@ export class DesignExample extends Component {
 
     if (ClipboardJS.isSupported()) {
       this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
+    }
+
+    if (this.iframe) {
+      initialize(this.iframe)
     }
   }
 
