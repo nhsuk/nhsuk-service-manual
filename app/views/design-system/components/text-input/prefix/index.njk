@@ -1,11 +1,12 @@
-{% from 'input/macro.njk' import input %}
+{% from "input/macro.njk" import input %}
 
 {{ input({
   label: {
       text: "Cost in pounds"
   },
-  id: "example",
-  name: "example",
+  id: "cost-pounds",
+  name: "costPounds",
   prefix: "£",
-  classes: "nhsuk-input--width-5"
+  classes: "nhsuk-input--width-5",
+  spellcheck: false
 }) }}

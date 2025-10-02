@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "NHS service standard" %}
 {% set pageDescription = "This NHS companion to the GOV.UK service standard will help you check that you're working to best practice from the start." %}
 {% set pageSection = "Standards and technology" %}
@@ -5,8 +7,6 @@
 {% set landingPage = true %}
 {% set dateUpdated = "February 2022" %}
 {% set backlog_issue_id = "336" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/_breadcrumb.njk" %}
@@ -24,7 +24,6 @@
   <p>It contains the 14 points of the GOV.UK service standard, with guidance to help teams meet them in a health context, and <a href="#3-points-specific-to-health-and-social-care">3 extra points specific to health and social care</a>.</p>
   <p>If your service is being assessed by the Government Digital Service, you must meet the first 14 points. If you work in health, we recommend trying to meet all 17 points.</p>
   <p><a href="/standards-and-technology/about-the-service-standard">Read more about the NHS service standard</a>.</p>
-
 
   <h2 class="nhsuk-u-margin-bottom-0">The GOV.UK service standard in the context of health</h2>
 

@@ -1,11 +1,11 @@
-{% from 'error-summary/macro.njk' import errorSummary %}
-{% from 'checkboxes/macro.njk' import checkboxes %}
+{% from "error-summary/macro.njk" import errorSummary %}
+{% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ errorSummary({
   titleText: "There is a problem",
   errorList: [
     {
-      text: "Select how you like to be contacted",
+      text: "Select how you want to be contacted",
       href: "#contact"
     }
   ]
@@ -16,7 +16,7 @@
   name: "contact",
   fieldset: {
     legend: {
-      text: "How would you like to be contacted?",
+      text: "How do you want to be contacted about this?",
       classes: "nhsuk-fieldset__legend--l",
       isPageHeading: true
     }
@@ -25,7 +25,7 @@
     text: "Select all options that are relevant to you"
   },
   errorMessage: {
-    text: "Select how you like to be contacted"
+    text: "Select how you want to be contacted"
   },
   items: [
     {

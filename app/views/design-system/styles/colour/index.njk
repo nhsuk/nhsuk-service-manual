@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Colour" %}
 {% set pageDescription = "Our colours, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "2" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -240,7 +240,6 @@
   <p>You can use the <code>nhsuk-u-secondary-text-colour</code> class for text that should appear in the secondary text colour of dark grey.</p>
 
   <p>For example, this could be used for text to describe missing data in a table or summary list.</p>
-
 
   <h2 id="colour-palette">Colour palette</h2>
   <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-colour</code> Sass variable rather than <code>nhsuk-colour("red")</code>.</p>
