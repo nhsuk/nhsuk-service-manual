@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## Unreleased - October 2025
+
+:new: **New features**
+
+- Add guidance for new numbered pagination component
+
+:wrench: **Maintenance**
+
+- Bring content on contents list component and mini-hub pattern into line with updates to pagination component
+
 ## 8.1.0 - 24 September 2025
 
 :new: **New features**
@@ -7,6 +17,10 @@
 - Add new pattern to help users find BSL content
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
+
+:new: **New features**
+
+- Add new pagination variation for navigating between pages of items
 
 :wrench: **Maintenance**
 

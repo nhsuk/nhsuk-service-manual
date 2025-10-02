@@ -1,9 +1,9 @@
 {% set pageTitle = "Contents list" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use contents lists to allow users to navigate between related pages, for example about a single condition." %}
+{% set pageDescription = "Use contents lists to help users to navigate through a series of related pages, for example about a health condition." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "February 2019" %}
+{% set dateUpdated = "October 2025" %}
 {% set backlog_issue_id = "25" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -21,16 +21,17 @@
   }) }}
 
   <h2>When to use a contents list</h2>
-  <p>Use a contents list at the top of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition. The example on this page is from the nhs.uk page about <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/">age-related macular degeneration</a>.</p>
-  <p>If you're using a contents list, you should also use <a href="/design-system/components/pagination">pagination</a> at the bottom of the page. The 2 components make up the multi-page navigation pattern.</p>
+  <p>Use a contents list at the top of the page to help users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is based on an NHS website page about age-related macular degeneration (AMD).</p>
+  <p>If you're using a contents list, you should also use <a href="/design-system/components/pagination">pagination</a> at the bottom of the page. The 2 components make up the <a href="/design-system/patterns/mini-hub">mini-hub pattern</a>.</p>
 
   <h2>When not to use a contents list</h2>
-  <p>Do not use a contents list on pages which aren't grouped together or "related" as this is likely confuse users.</p>
-  <p>Do not use a contents list in a transactional service or a form. We use other components instead, including:</p>
+  <p>Do not use a contents list on pages which are not grouped together or "related" as this is likely confuse users.</p>
+  <p>Do not use pagination to navigate through a multi-page form. We use other components instead, including:</p>
   <ul>
-    <li><a href="/design-system/components/buttons">buttons</a> to move forward</li>
+    <li><a href="/design-system/components/buttons">buttons</a> (usually a "Continue" button) to move forward
     <li><a href="/design-system/components/back-link">back link</a> to navigate back</li>
   </ul>
+
 
   <h2>How to use a contents list</h2>
   <p>Use the contents list at the top of the page together with pagination at the bottom of each page.</p>
@@ -43,7 +44,7 @@
   <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
 
   <h2>Research</h2>
-  <p>We tested contents lists in grouped information pages, like the <a href="https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/">AMD page</a>, not on forms.</p>
+  <p>We tested contents lists in grouped information pages, like the AMD page on the website, but not on forms.</p>
   <p>Users understood and engaged with the contents list navigation and said that it fitted how they thought the content would be made up.</p>
   <p>The active link formatting helped users know where they were.</p>
   <p>Some users said that the page titles helped them orientate themselves, so they knew they were in the right place. Some felt that the links helped them understand what information there was and choose what was relevant to them.</p>
