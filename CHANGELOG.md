@@ -1,5 +1,18 @@
 # NHS digital service manual Changelog
 
+## TBC October 2025
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update guidance on avoiding binary choices
+
+:wrench: **Maintenance**
+
+- Change dummy NHS number to 999 123 4567
+- Update NHS number examples, including adding span class
+- Replace NHS number 3-option radio examples with alternative examples
+
 ## 8.1.0 - 24 September 2025
 
 :new: **New features**
