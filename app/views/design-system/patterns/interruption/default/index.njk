@@ -8,6 +8,8 @@ previewLayout: design-example-wrapper-full
 {% from 'panel/macro.njk' import panel %}
 {% from 'back-link/macro.njk' import backLink %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block beforeContent %}
   {{ backLink({
     href: "#",
