@@ -1,0 +1,32 @@
+{% from 'checkboxes/macro.njk' import checkboxes %}
+
+{{ checkboxes({
+  idPrefix: "example",
+  name: "example",
+  fieldset: {
+    legend: {
+      text: "Care setting",
+      classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: true
+    }
+  },
+  classes: "nhsuk-checkboxes--small",
+  items: [
+    {
+      value: "ambulance or urgent and emergency care",
+      text: "Ambulance or urgent and emergency care"
+    },
+    {
+      value: "care home",
+      text: "Care home"
+    },
+    {
+      value: "community health",
+      text: "Community health"
+    },
+    {
+      value: "dentistry",
+      text: "Dentistry"
+    }
+  ]
+}) }}
