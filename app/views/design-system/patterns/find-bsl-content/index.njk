@@ -1,0 +1,90 @@
+{% set pageTitle = "Find British Sign Language content" %}
+{% set pageDescription = "The British Sign Language (BSL) icon helps BSL users recognise that information is available in BSL." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Help users to" %}
+{% set dateUpdated = "September 2025" %}
+{% set backlog_issue_id = "547" %}
+
+{% extends "layouts/app-layout.njk" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+    {{ image({
+      src: "/assets/BSL-icon-01.svg",
+      classes: "app-image--border nhsuk-u-padding-6 nhsuk-u-margin-top-0",
+      alt: "Two hands signing translation in British Sign Language, with the letters BSL beside"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+    {{ image({
+      src: "/assets/BSL-icon-02.svg",
+      classes: "app-image--border nhsuk-u-width-one-half nhsuk-u-padding-6 nhsuk-u-margin-top-0",
+      alt: "Two hands signing translation in British Sign Language"
+    }) }}
+  </div>
+</div>
+
+<p>You can use it:</p>
+<ul>
+  <li>to signpost to BSL content or services</li>
+  <li>next to content about a BSL service</li>
+  <li>in video thumbnails</li>
+</ul>
+
+<p>Do not use the icon on its own without content to explain what it is.</p>
+<p>Do not use "BSL" in written content without spelling out the abbreviation. For example, in a video description, explain "Includes British Sign Language (BSL) translation".</p>
+
+<h2>Download the icons</h2>
+<p>Download a zip folder containing the icons in SVG and PNG format.</p>
+
+<div class="nhsuk-u-margin-bottom-4">
+  {{ button({
+    text: "Download BSL icons (2.37MB)",
+    href: "/assets/bsl-icons.zip",
+    preventDoubleClick: true
+  }) }}
+</div>
+
+<h2>Feed back your findings</h2>
+<p>We have tested the icon with BSL users but we need more information about:</p>
+<ul>
+  <li>how non-BSL users react to the icon as part of their user journey</li>
+  <li>where BSL users expect to find the BSL icon as part of their user journey</li>
+  <li>if the BSL icon is appropriate for signposting to both BSL translation and interpretation services (like BSL video relay services)</li>
+</ul>
+
+{#
+  {{ designExample({
+    group: "patterns",
+    item: "find-bsl-content",
+    type: "default"
+  }) }}
+
+  <h2>When to use this pattern</h2>
+  <p>Use this pattern when your research shows users need to know when the whole page was last checked and when it will be checked again.</p>
+
+  <h2>When not to use this pattern</h2>
+  <p>Do not use this pattern in transactional services. We have not tested review dates in forms.</p>
+
+  <h2>How the pattern works</h2>
+  <p>The pattern consists of 2 dates:</p>
+  <ul>
+    <li>when you last reviewed the page</li>
+    <li>when you will review it again</li>
+  </ul>
+
+  <figure class="nhsuk-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-7">
+    <img class="nhsuk-image__img app-u-full-width" src="/assets/review-date-pattern-embedded-content.png" alt="Image of video showing exercise trainer doing workout on mat in fitness studio">
+    <figcaption class="nhsuk-image__caption">
+      Example of review date used under a video
+    </figcaption>
+  </figure> #}
+
+{% endblock %}
