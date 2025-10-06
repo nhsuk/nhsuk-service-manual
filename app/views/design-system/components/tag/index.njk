@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Tag" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -6,8 +8,6 @@
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "174" %}
 {% set hideDescription = "true" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}

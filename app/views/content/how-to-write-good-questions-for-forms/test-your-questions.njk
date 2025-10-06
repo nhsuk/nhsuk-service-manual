@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Test your questions" %}
 {% set pageSection = "Content guide" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "Test your questions and answers with real users and the staff who deal with the form." %}
 {% set dateUpdated = "November 2019" %}
 {% set backlog_issue_id = "332" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/how-to-write-good-questions-for-forms/_breadcrumb.njk" %}
@@ -119,7 +118,6 @@
     <li>areas of the form that aren't giving you the answers you need</li>
   </ul>
 
-
   <h2>Read more about prototyping and testing</h2>
   <p>There are some good resources on GOV.UK:</p>
   <ul>
@@ -128,8 +126,6 @@
     <li><a href="https://www.gov.uk/service-manual/user-research">User research</a></li>
     <li><a href="https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing">Using moderated usability testing</a></li>
   </ul>
-
-
 
 {% endblock %}
 
