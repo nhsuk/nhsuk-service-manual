@@ -97,3 +97,31 @@ jobs:
         with:
           name: Javascript unit tests coverage
           path: coverage
+
+  sonar:
+    name: Sonar analysis
+    runs-on: ubuntu-latest
+    needs: [build, tests]
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+    steps:
+      - name: Checkout
+        if: ${{ env.SONAR_TOKEN }}
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Restore test coverage
+        if: ${{ env.SONAR_TOKEN }}
+        uses: actions/download-artifact@v5
+        with:
+          name: Javascript unit tests coverage
+          path: coverage
+
+      - name: Sonar analysis
+        if: ${{ env.SONAR_TOKEN }}
+        uses: SonarSource/sonarqube-scan-action@v6
