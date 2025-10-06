@@ -1,5 +1,5 @@
+import { initialize } from '@open-iframe-resizer/core'
 import ClipboardJS from 'clipboard'
-import { iframeResize } from 'iframe-resizer'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -19,11 +19,11 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
+
     this.iframe = this.$root.querySelector('iframe')
+    this.content = this.iframe ? this.iframe.contentDocument : null
 
     this.bindEvents()
-
-    iframeResize([{ heightCalculationMethod: 'max' }], this.iframe)
   }
 
   bindEvents() {
@@ -39,6 +39,28 @@ export class DesignExample extends Component {
     if (ClipboardJS.isSupported()) {
       this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
     }
+
+    if (this.iframe) {
+      initialize(
+        { onBeforeIframeResize: () => this.isResizeAllowed() },
+        this.iframe
+      )
+    }
+  }
+
+  isResizeAllowed() {
+    const { iframe, content } = this
+
+    if (!content) {
+      return true
+    }
+
+    // Prevent when iframe and body has focus
+    // e.g. When resizing manually using handle
+    return !(
+      document.activeElement === iframe &&
+      content.activeElement === content.body
+    )
   }
 
   handleTabClick(e) {
@@ -110,18 +132,9 @@ export class DesignExample extends Component {
     )
   }
 
-  // Yoink attr: https://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
-  setIframeHeight(iframe) {
-    if (iframe) {
-      const iframeWin =
-        iframe.contentWindow || iframe.contentDocument.parentWindow
-      if (iframeWin.document.body) {
-        iframe.height =
-          iframeWin.document.documentElement.scrollHeight ||
-          iframeWin.document.body.scrollHeight
-      }
-    }
-  }
-
   static moduleName = 'app-design-example'
 }
+
+/**
+ * @import { InitializeResult } from '@open-iframe-resizer/core'
+ */
