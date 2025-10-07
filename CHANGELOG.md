@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.2.0 - TBC October 2025
+
+:new: **New features**
+
+- Add smaller checkboxes and radios and align guidance better with GOV.UK
 
 :wrench: **Maintenance**
 
@@ -15,10 +19,6 @@
 - Add new pattern to help users find BSL content
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
-
-:new: **New features**
-
-- Add smaller checkboxes and radios and align guidance better with GOV.UK
 
 :wrench: **Maintenance**
 
