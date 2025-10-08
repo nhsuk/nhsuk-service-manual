@@ -6,6 +6,10 @@
 
 - Add smaller checkboxes and radios and align guidance better with GOV.UK
 
+:wrench: **Maintenance**
+
+- Fix broken cookies URL
+
 
 ## 8.1.0 - 24 September 2025
 
