@@ -38,7 +38,7 @@
 {% set opengraphImageUrl = BASE_URL ~ "/assets/open-graph" ~ ("_" ~ pageSection | lower | replace(" ", "_") | replace("'", "") if pageSection else "") ~ ".png" %}
 
 {% block pageTitle -%}
-  {% if pageTitle %}{{ pageTitle }} - {% endif %}NHS digital service manual
+  {% if pageTitle %}{{ pageTitle }} – {% endif %}NHS digital service manual
 {%- endblock %}
 
 {% block head %}
@@ -49,7 +49,7 @@
 
   <meta property="og:url" content="{{ opengraphUrl }}">
   <meta property="og:site_name" content="nhs.uk">
-  <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - {% endif %}NHS digital service manual">
+  <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} – {% endif %}NHS digital service manual">
   <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
