@@ -5,6 +5,7 @@
 :wrench: **Maintenance**
 
 - Tweak page title example to improve readability
+- Update page titles to use en-dash rather than hyphen
 
 ## 8.1.0 - 24 September 2025
 
