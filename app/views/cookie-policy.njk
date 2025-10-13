@@ -1,7 +1,7 @@
+{% extends "layouts/layout.njk" %}
+
 {% set pageTitle = "Cookie policy" %}
 {% set pageDescription = "Find out about the cookies we use on the NHS digital service manual and how to turn them on or off." %}
-
-{% extends "layouts/layout.njk" %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
@@ -122,7 +122,7 @@
             {
               header: "Cookie name",
               html: "com.<wbr>adobe.<wbr>reactor.<wbr>dataElement<wbr>Cookies<wbr>Migrated",
-              classes: 'nhsuk-u-text-break-word'
+              classes: "nhsuk-u-text-break-word"
             },
             {
               header: "Purpose",
@@ -215,10 +215,10 @@
         fieldset: {
           legend: {
             text: "Tell us if we can use analytics cookies",
-            classes: 'nhsuk-fieldset__legend--m'
+            classes: "nhsuk-fieldset__legend--m"
           }
         },
-        name: "input-statistics",
+        name: "inputStatistics",
         items: [
           {
             text: "Use cookies to measure my website use",
@@ -250,8 +250,8 @@
   {{ super() }}
 
   <script type="module">
-    const $radioYes = document.getElementById("input-statistics")
-    const $radioNo = document.getElementById("input-statistics-2")
+    const $radioYes = document.getElementById("inputStatistics")
+    const $radioNo = document.getElementById("inputStatistics-2")
     const $button = document.getElementById("button-statistics")
 
     // Update radios based on cookie preferences

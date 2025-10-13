@@ -22,7 +22,7 @@ initAll({
 initAccessibleAutocomplete({
   containerId: 'autocomplete-container',
   formId: 'search',
-  inputId: 'search-field',
+  inputId: 'searchField',
   onConfirm,
   source,
   templates: {

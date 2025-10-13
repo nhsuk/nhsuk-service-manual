@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Getting started with accessibility" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "352" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
@@ -49,7 +49,6 @@
 
   <h2 id="talk-to-other-people-with-an-interest-in-accessibility">Talk to other people with an interest in accessibility</h2>
   <p>Join the <a href="https://www.gov.uk/service-manual/communities/accessibility-community">GOV.UK accessibility community</a> or talk to NHS colleagues on our <a href="/slack">public Slack workspace</a> to get advice and support, stay up to date and share examples.</p>
-
 
 {% endblock %}
 

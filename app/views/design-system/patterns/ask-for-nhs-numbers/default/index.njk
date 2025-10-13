@@ -4,8 +4,8 @@ previewLayout: design-example-wrapper-full
 
 {% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
-{% from 'input/macro.njk' import input %}
-{% from 'button/macro.njk' import button %}
+{% from "input/macro.njk" import input %}
+{% from "button/macro.njk" import button %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -18,10 +18,10 @@ previewLayout: design-example-wrapper-full
           isPageHeading: true
         },
         hint: {
-          html: "Your NHS number is a 10 digit number that you find on any letter the NHS has sent you, for example, <span class=\"nhsuk-u-nowrap\">485 777 3456</span>"
+          html: 'Your NHS number is a 10 digit number that you find on any letter the NHS has sent you, for example, <span class="nhsuk-u-nowrap">485 777 3456</span>'
         },
         id: "nhs-number",
-        name: "nhs-number",
+        name: "nhsNumber",
         classes: "nhsuk-input--width-10",
         inputmode: "numeric"
       }) }}

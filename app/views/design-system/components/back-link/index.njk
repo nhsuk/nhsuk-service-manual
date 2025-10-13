@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Back link" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use back links to help users go back to the previous page in a multi-page transaction." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "32" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
 {% include "design-system/components/_breadcrumb.njk" %}
@@ -25,20 +25,10 @@
 
 <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-avoid-information-reentry">avoid re-entering information they've previously given when they go back to a page</a> and <a href="#wcag-interact-back-links">interact with back links</a>.</p>
 
-<p>There are 2 versions of the back link: the default version and the reverse version.</p>
-
 {{ designExample({
   group: "components",
   item: "back-link",
   type: "default"
-}) }}
-
-<p>Use the reverse version on dark backgrounds.</p>
-
-{{ designExample({
-  group: "components",
-  item: "back-link",
-  type: "reverse"
 }) }}
 
 <h2>When to use a back link</h2>
@@ -82,7 +72,6 @@
       href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
 </div>
 
-
 <h3 id="back-link-as-a-button">Back link as a button</h3>
 <p class="rich-text">You can render the back link as a <code>button</code> element if necessary in order to post form
   data back to the previous page.</p>
@@ -93,8 +82,17 @@
   type: "button"
 }) }}
 
+<h3 id="back-link-on-dark-backgrounds">Back link on dark backgrounds</h3>
+<p>Use the <code>nhsuk-back-link--reverse</code> modifier class to show white links and arrows on dark backgrounds.</p>
+<p>Make sure all users can see the back link. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
+
+{{ designExample({
+  group: "components",
+  item: "back-link",
+  type: "reverse"
+}) }}
+
 <h2>Research</h2>
 <p>During testing, <a href="https://111.nhs.uk/">NHS 111 online</a> found that some users wanted to change their
   answers, so they introduced a back link and labelled it to "Change my previous answer".</p>
-
 {% endblock %}

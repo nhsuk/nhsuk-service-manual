@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Write the supporting content for your form" %}
 {% set pageSection = "Content guide" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "As well as questions, your form or service may need an introduction, help text, error messages and a confirmation or thank you page. Think about content across other channels too." %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "331" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/how-to-write-good-questions-for-forms/_breadcrumb.njk" %}
@@ -42,7 +41,7 @@
       name: "contact",
       fieldset: {
         legend: {
-          text: "How would you like to be contacted?",
+          text: "How do you want to be contacted about this?",
           classes: "nhsuk-fieldset__legend--m"
         }
       },
@@ -117,8 +116,6 @@
 
   <h2>Read more about writing content for transactions</h2>
   <p>GOV.UK has some good guidance on <a href="https://www.gov.uk/service-manual/design/govuk-content-transactions">designing how GOV.UK content and transactions work together</a>.</p>
-
-
 
 {% endblock %}
 

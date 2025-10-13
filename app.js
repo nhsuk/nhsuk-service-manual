@@ -133,8 +133,13 @@ env.addFilter('highlight', filters.highlight)
 env.addFilter('markdown', filters.markdown)
 
 // Render standalone design examples
-app.get('/design-example/:group/:item/:type', (req, res) => {
+app.get('/design-example/:group/:item/:type', (req, res, next) => {
   const { group, item, type } = req.params
+
+  // Continue to 404 page
+  if (!fileHelper.hasNunjucksPath({ group, item, type })) {
+    return next()
+  }
 
   // Get the given example as HTML.
   const exampleHtml = fileHelper.getHTMLCode({
@@ -161,7 +166,7 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
 })
 
 app.get('/search', (req, res) => {
-  const query = req.query['search-field'] || ''
+  const query = req.query['searchField'] || ''
   const resultsPerPage = 10
   let currentPage = parseInt(req.query.page, 10)
   const results = pageIndex.search(query)
@@ -261,6 +266,12 @@ app.get(
     res.redirect('/accessibility/new-criteria-in-wcag-2-2')
   }
 )
+
+// Redirects for design system examples
+
+app.get('/design-example/components/checkboxes/hint', (req, res) => {
+  res.redirect('/design-example/components/checkboxes/hint-text')
+})
 
 // Redirects for design system patterns
 

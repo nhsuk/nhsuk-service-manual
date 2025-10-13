@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Mini-hub" %}
 {% set pageDescription = "Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Pages" %}
 {% set dateUpdated = "April 2021" %}
 {% set backlog_issue_id = "86" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
