@@ -1,0 +1,51 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'hint/macro.njk' import hint %}
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from 'radios/macro.njk' import radios %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% set hintHtml -%}
+        <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number (like 999 123 4567) that you can find on an NHS letter, prescription or in the NHS App</p>
+      {%- endset %}
+
+      {{ radios({
+        idPrefix: "example-hints",
+        name: "example-hints",
+        fieldset: {
+          legend: {
+            text: "Do you know your NHS number?",
+            classes: "nhsuk-fieldset__legend--l",
+            isPageHeading: true
+          }
+        },
+        hint: {
+          html: hintHtml
+        },
+        items: [
+        {
+          value: "yes",
+          text: "Yes, I know my NHS number"
+        },
+        {
+          value: "no",
+          text: "No, I do not know my NHS number"
+        },
+        {
+          value: "not sure",
+          text: "I'm not sure"
+        }
+      ]
+      }) }}
+
+   </div>
+  </div>
+{% endblock %}
