@@ -51,10 +51,14 @@
 {% block afterContact %}
 
    {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service",
-    previousPage: "Point 5",
-    nextUrl: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working",
-    nextPage: "Point 7"
+    previous: {
+      labelText: "Point 5",
+      href: "/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service"
+    },
+    next: {
+      labelText: "Point 7",
+      href: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working"
+    }
   }) }}
 
   {% endblock %}

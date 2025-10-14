@@ -125,10 +125,14 @@
 {% block afterContact %}
 
  {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
-    previousPage: "Think of the form as a conversation",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/test-your-questions",
-    nextPage: "Test your questions"
+    previous: {
+      labelText: "Think of the form as a conversation",
+      href: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation"
+    },
+    next: {
+      labelText: "Test your questions",
+      href: "/content/how-to-write-good-questions-for-forms/test-your-questions"
+    }
   }) }}
 
 {% endblock %}

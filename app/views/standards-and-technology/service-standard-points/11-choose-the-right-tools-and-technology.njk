@@ -63,10 +63,14 @@
 {% block afterContact %}
 
   {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
-    previousPage: "Point 10",
-    nextUrl: "/standards-and-technology/service-standard-points/12-make-new-source-code-open",
-    nextPage: "Point 12"
+    previous: {
+      labelText: "Point 10",
+      href: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing"
+    },
+    next: {
+      labelText: "Point 12",
+      href: "/standards-and-technology/service-standard-points/12-make-new-source-code-open"
+    }
   }) }}
 
 

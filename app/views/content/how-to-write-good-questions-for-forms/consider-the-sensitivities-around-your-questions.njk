@@ -81,11 +81,15 @@
 
 {% block afterContact %}
 
-{{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question",
-    previousPage: "Make sure you need each question",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
-    nextPage: "Use filter questions to route users"
+  {{ pagination({
+    previous: {
+      labelText: "Make sure you need each question",
+      href: "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question"
+    },
+    next: {
+      labelText: "Use filter questions to route users",
+      href: "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users"
+    }
   }) }}
 
 {% endblock %}

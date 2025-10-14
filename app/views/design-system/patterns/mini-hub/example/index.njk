@@ -78,8 +78,10 @@ previewLayout: design-example-wrapper-full
       </p>
 
       {{ pagination({
-        nextUrl: "#",
-        nextPage: "Symptoms"
+        next: {
+          labelText: "Symptoms",
+          href: "#"
+        }
       }) }}
 
     </div>

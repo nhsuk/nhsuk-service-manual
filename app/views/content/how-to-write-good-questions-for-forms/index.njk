@@ -53,8 +53,10 @@
 {% block afterContact %}
 
 {{ pagination({
-    nextUrl: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions",
-    nextPage: "Understand the problem before you write your questions"
+    next: {
+      labelText: "Understand the problem before you write your questions",
+      href: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions"
+    }
   }) }}
 
 {% endblock %}
