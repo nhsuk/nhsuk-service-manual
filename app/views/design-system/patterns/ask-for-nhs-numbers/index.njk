@@ -33,6 +33,7 @@
   <ul>
     <li>single text input</li>
     <li>filter question before input</li>
+    <li>filter question before input with a 3rd option</li>
   </ul>
 
   <h3 id="single-text-input">Single text input</h3>
@@ -73,6 +74,22 @@
   }) }}
 
   <p>If users do not know their NHS number, route them to a page that asks for the alternative details your service needs, for example, postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.</p>
+
+  <h3>Filter question before input with 3rd option</h3>
+  <p>Some users may benefit from a 3rd option: "I'm not sure".</p>
+  <p>Only use this if:</p>
+  <ul>
+    <li>you can demonstrate a clear user need and business value</li>
+    <li>your service can offer an alternative journey for "not sure" users</li>
+  </ul>
+
+  <p>Do not use a 3rd option to signpost to general information about NHS numbers.</p>
+
+    {{ designExample({
+    group: "patterns",
+    item: "ask-for-nhs-numbers",
+    type: "filter-third"
+  }) }}
 
   <h3>How to build the NHS number pattern</h3>
   <p>When asking for an NHS number:</p>
