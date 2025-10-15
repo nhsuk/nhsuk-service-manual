@@ -1,12 +1,11 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## Unreleased end October 2025 TBC
 
 :wrench: **Maintenance**
 
-- Tweak page title example to improve readability
-- Update page titles to use en-dash rather than hyphen
-- Replace BSL icons download file
+- Update and add links in service standards 5 and 11
+- Remove outdated beta label from service standard 11
 
 ## 8.1.0 - 24 September 2025
 
