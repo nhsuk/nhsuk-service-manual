@@ -31,14 +31,6 @@
 
   @include nhsuk-responsive-margin(7, "bottom");
 
-  .autocomplete-container {
-    width: 100%;
-  }
-
-  .autocomplete__menu--hidden {
-    display: none;
-  }
-
   .autocomplete__input,
   .nhsuk-search__input {
     -ms-flex-positive: 2; // [14]
@@ -127,53 +119,4 @@
   color: $nhsuk-secondary-text-colour;
   display: block;
   font-size: 14px;
-}
-
-.autocomplete__option {
-  line-height: 1.35;
-  text-decoration: none;
-
-  &:focus {
-    .autocomplete__option-title {
-      @include nhsuk-focused-text;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    .autocomplete__option-title {
-      text-decoration: none;
-    }
-  }
-
-  &-title {
-    text-decoration: underline;
-  }
-}
-
-// Autocomplete list hotfixes
-
-.autocomplete__option .nhsuk-icon__search {
-  margin: 2px 4px 2px 0;
-}
-
-@include nhsuk-media-query($from: tablet) {
-  .autocomplete__option:last-child {
-    padding-bottom: 0;
-  }
-
-  .autocomplete__menu {
-    padding: 16px 8px;
-  }
-
-  .autocomplete__option-title {
-    text-decoration: underline;
-  }
-}
-
-.autocomplete__option-category {
-  color: $nhsuk-secondary-text-colour;
-  display: block;
-  font-size: 14px;
-  margin-top: nhsuk-spacing(1);
 }
