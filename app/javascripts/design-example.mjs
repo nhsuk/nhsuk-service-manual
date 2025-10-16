@@ -1,5 +1,5 @@
+import { initialize } from '@open-iframe-resizer/core'
 import ClipboardJS from 'clipboard'
-import { iframeResize } from 'iframe-resizer'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -19,11 +19,13 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
-    this.iframe = this.$root.querySelector('iframe')
+
+    this.iframe = {
+      element: this.$root.querySelector('iframe'),
+      isMouseDown: false
+    }
 
     this.bindEvents()
-
-    iframeResize([{ heightCalculationMethod: 'max' }], this.iframe)
   }
 
   bindEvents() {
@@ -39,6 +41,22 @@ export class DesignExample extends Component {
     if (ClipboardJS.isSupported()) {
       this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
     }
+
+    if (this.iframe.element) {
+      const { iframe: state } = this
+      const { element: iframe } = this.iframe
+
+      iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
+      iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
+
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
+    }
+  }
+
+  isResizeAllowed() {
+    // Prevent when iframe and body has focus
+    // e.g. When resizing manually using handle
+    return !this.iframe.isMouseDown
   }
 
   handleTabClick(e) {
@@ -108,19 +126,6 @@ export class DesignExample extends Component {
         ? example.classList.remove(this.hiddenClass)
         : example.classList.add(this.hiddenClass)
     )
-  }
-
-  // Yoink attr: https://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
-  setIframeHeight(iframe) {
-    if (iframe) {
-      const iframeWin =
-        iframe.contentWindow || iframe.contentDocument.parentWindow
-      if (iframeWin.document.body) {
-        iframe.height =
-          iframeWin.document.documentElement.scrollHeight ||
-          iframeWin.document.body.scrollHeight
-      }
-    }
   }
 
   static moduleName = 'app-design-example'

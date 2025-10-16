@@ -6,6 +6,7 @@
 
 - Add smaller checkboxes and radios and align guidance better with GOV.UK
 - Add new numbered variant for pagination component
+- Allow design examples to be manually resized
 
 :wrench: **Maintenance**
 
