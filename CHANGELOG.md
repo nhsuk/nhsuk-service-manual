@@ -23,10 +23,6 @@
 - Add new guidance about risks of using textarea
 - Update guidance on using textarea on page about character count component
 
-:new: **New features**
-
-- Add new pagination variation for navigating between pages of items
-
 :wrench: **Maintenance**
 
 - Update javascript path examples in version 10 upgrade guide
