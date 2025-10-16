@@ -20,6 +20,7 @@ initAll({
 
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({
+  form: document.querySelector('.nhsuk-header__search-form'),
   input: document.querySelector('.nhsuk-header__search-input'),
   button: document.querySelector('.nhsuk-header__search-submit'),
   onConfirm,
