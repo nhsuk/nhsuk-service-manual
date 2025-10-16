@@ -6,13 +6,14 @@
   label: {
     text: "What is your NHS number?",
     classes: "nhsuk-label--l",
-    isPageHeading: "true"
+    isPageHeading: true
   },
   hint: {
     html: 'This is a 10 digit number (like <span class="nhsuk-u-nowrap">' + dummyNhsNumber + '</span>) that you can find on an NHS letter, prescription or in the NHS App'
   },
-  id: "example-with-hint-text",
-  name: "example-with-hint-text",
+  id: "nhs-number",
+  name: "nhs-number",
   classes: "nhsuk-input--width-10 nhsuk-input--code",
+  value: dummyNhsNumber,
   inputmode: "numeric"
 }) }}
