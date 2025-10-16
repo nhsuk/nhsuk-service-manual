@@ -1,12 +1,17 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.2.0 - TBC October 2025
+
+:new: **New features**
+
+- Add smaller checkboxes and radios and align guidance better with GOV.UK
 
 :wrench: **Maintenance**
 
 - Tweak page title example to improve readability
 - Update page titles to use en-dash rather than hyphen
 - Replace BSL icons download file
+- Fix broken cookies URL
 
 ## 8.1.0 - 24 September 2025
 
