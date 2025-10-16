@@ -5,7 +5,7 @@
 :new: **New features**
 
 - Update guidance on asking users for their NHS number
-- Update guidance on avoiding binary choices
+- Update section on avoiding binary choices in forms guidance
 
 :wrench: **Maintenance**
 
