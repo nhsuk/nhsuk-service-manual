@@ -111,10 +111,14 @@ previewLayout: design-example-wrapper-full
       </p>
 
       {{ pagination({
-        previousUrl: "/design-example/patterns/mini-hub/example?fullpage=true",
-        previousPage: "Age-related macular degeneration (AMD)",
-        nextUrl: "#",
-        nextPage: "Getting diagnosed"
+        previous: {
+          labelText: "Age-related macular degeneration (AMD)",
+          href: "/design-example/patterns/mini-hub/example?fullpage=true"
+        },
+        next: {
+          labelText: "Getting diagnosed",
+          href: "#"
+        }
       }) }}
 
     </div>

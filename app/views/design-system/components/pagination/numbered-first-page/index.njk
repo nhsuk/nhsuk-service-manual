@@ -1,0 +1,22 @@
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: '#',
+      current: true
+    },
+    {
+      number: 2,
+      href: '#'
+    },
+    {
+      number: 3,
+      href: '#'
+    }
+  ]
+}) }}

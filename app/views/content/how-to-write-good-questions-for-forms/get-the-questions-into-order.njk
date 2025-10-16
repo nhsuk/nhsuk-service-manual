@@ -64,10 +64,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users",
-    previousPage: "Use filter questions to route users",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation",
-    nextPage: "Think of the form as a conversation"
+    previous: {
+      labelText: "Use filter questions to route users",
+      href: "/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users"
+    },
+    next: {
+      labelText: "Think of the form as a conversation",
+      href: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation"
+    }
   }) }}
 
 {% endblock %}

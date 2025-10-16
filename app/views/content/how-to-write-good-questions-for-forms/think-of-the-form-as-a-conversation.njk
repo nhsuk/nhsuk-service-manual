@@ -166,10 +166,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",
-    previousPage: "Get the questions into order",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form",
-    nextPage: "Write the supporting content for your form"
+    previous: {
+      labelText: "Get the questions into order",
+      href: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order"
+    },
+    next: {
+      labelText: "Write the supporting content for your form",
+      href: "/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form"
+    }
   }) }}
 
 {% endblock %}

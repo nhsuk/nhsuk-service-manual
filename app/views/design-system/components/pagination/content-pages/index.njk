@@ -1,0 +1,12 @@
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  previous: {
+    labelText: "Treatments",
+    href: "#"
+  },
+  next: {
+    labelText: "Symptoms",
+    href: "#"
+  }
+}) }}

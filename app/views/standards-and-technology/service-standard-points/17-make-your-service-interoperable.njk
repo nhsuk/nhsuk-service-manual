@@ -64,8 +64,10 @@
 {% block afterContact %}
 
  {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe",
-    previousPage: "Point 16"
+    previous: {
+      labelText: "Point 16",
+      href: "/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe"
+    }
   }) }}
 
-  {% endblock %}
+{% endblock %}

@@ -133,10 +133,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions",
-    previousPage: "Understand the problem before you write your questions",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
-    nextPage: "Consider the sensitivities around your questions"
+    previous: {
+      labelText: "Understand the problem before you write your questions",
+      href: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions"
+    },
+    next: {
+      labelText: "Consider the sensitivities around your questions",
+      href: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions"
+    }
   }) }}
 
 {% endblock %}

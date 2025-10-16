@@ -48,10 +48,14 @@
 {% block afterContact %}
 
   {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
-    previousPage: "Point 6",
-    nextUrl: "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently",
-    nextPage: "Point 8"
+    previous: {
+      labelText: "Point 6",
+      href: "/standards-and-technology/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives"
+    },
+    next: {
+      labelText: "Point 8",
+      href: "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently"
+    }
   }) }}
 
   {% endblock %}

@@ -55,10 +55,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/index",
-    previousPage: "How to write good questions for forms home page",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question",
-    nextPage: "Make sure you need each question"
+    previous: {
+      labelText: "How to write good questions for forms home page",
+      href: "/content/how-to-write-good-questions-for-forms/index"
+    },
+    next: {
+      labelText: "Make sure you need each question",
+      href: "/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question"
+    }
   }) }}
 
 {% endblock %}

@@ -67,10 +67,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/15-support-a-culture-of-care",
-    previousPage: "Point 15",
-    nextUrl: "/standards-and-technology/service-standard-points/17-make-your-service-interoperable",
-    nextPage: "Point 17"
+    previous: {
+      labelText: "Point 15",
+      href: "/standards-and-technology/service-standard-points/15-support-a-culture-of-care"
+    },
+    next: {
+      labelText: "Point 17",
+      href: "/standards-and-technology/service-standard-points/17-make-your-service-interoperable"
+    }
   }) }}
 
   {% endblock %}

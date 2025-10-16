@@ -48,10 +48,14 @@
 {% block afterContact %}
 
   {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/12-make-new-source-code-open",
-    previousPage: "Point 12",
-    nextUrl: "/standards-and-technology/service-standard-points/14-operate-a-reliable-service",
-    nextPage: "Point 14"
+    previous: {
+      labelText: "Point 12",
+      href: "/standards-and-technology/service-standard-points/12-make-new-source-code-open"
+    },
+    next: {
+      labelText: "Point 14",
+      href: "/standards-and-technology/service-standard-points/14-operate-a-reliable-service"
+    }
   }) }}
 
   {% endblock %}

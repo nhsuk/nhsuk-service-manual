@@ -73,10 +73,14 @@
 {% block afterContact %}
 
   {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use",
-    previousPage: "Point 4",
-    nextUrl: "/standards-and-technology/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives",
-    nextPage: "Point 6"
+    previous: {
+      labelText: "Point 4",
+      href: "/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use"
+    },
+    next: {
+      labelText: "Point 6",
+      href: "/standards-and-technology/service-standard-points/6-create-a-team-that-includes-multidisciplinary-skills-and-perspectives"
+    }
   }) }}
 
-  {% endblock %}
+{% endblock %}

@@ -48,11 +48,15 @@
 
 {% block afterContact %}
 
- {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working",
-    previousPage: "Point 7",
-    nextUrl: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy",
-    nextPage: "Point 9"
+  {{ pagination({
+    previous: {
+      labelText: "Point 7",
+      href: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working"
+    },
+    next: {
+      labelText: "Point 9",
+      href: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy"
+    }
   }) }}
 
   {% endblock %}

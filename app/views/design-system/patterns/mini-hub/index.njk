@@ -1,9 +1,9 @@
 {% set pageTitle = "Mini-hub" %}
-{% set pageDescription = "Mini-hubs are a way of presenting a number of pages about 1 topic on the NHS website." %}
+{% set pageDescription = "Mini-hubs are a way of presenting a series of related pages about 1 topic, for example a health condition." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "April 2021" %}
+{% set dateUpdated = "October 2025" %}
 {% set backlog_issue_id = "86" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -29,8 +29,8 @@
 
   <h2 class="nhsuk-u-margin-top-6">When to use this pattern</h2>
   <p>Use mini-hubs to present information on 1 complex topic spread over 2 to 8 pages.</p>
-  <p>We've found that mini-hubs help users understand complex topics. They break the topic down into manageable chunks and help users digest the information in a way that meets their needs.</p>
-  <p>But this isn't the case for all of the NHS website. (We explain more in the <a href=#research>Research section</a> on this page.) Test the pattern with your users to make sure that it works for your content.</p>
+  <p>We've found that mini-hubs help users understand complex topics, for example health conditions. They break the topic down into manageable chunks and help users digest the information in a way that meets their needs.</p>
+  <p>But this is not always the case. Test the pattern with your users to make sure that it works for your content.</p>
 
   <h2>When not to use this pattern</h2>
   <p>Do not use mini-hubs:</p>
@@ -41,9 +41,9 @@
 
   <h2>Elements of the mini-hub</h2>
   <h3>Heading and sub-heading</h3>
-  <p>Put an H1 heading at the top of the page. The first thing in the H1 heading should be the name of the page you're on, not the mini-hub topic.</p>
-  <p class="rich-text">Put the mini-hub topic underneath the page heading. We include it in the same H1 with <code>class="nhsuk-caption-xl"</code> which makes it look like a sub-heading.</p>
-  <p>The page heading and topic are both part of the H1 but the page heading looks more important than the topic. (We explain why we do this in the <a href=#research>Research section</a> on this page.)</p>
+  <p>Put an <code>&lt;h1&gt;</code> heading at the top of the page. The first thing in the <code>&lt;h1&gt;</code> heading should be the name of the page you're on, not the mini-hub topic.</p>
+  <p class="rich-text">Put the mini-hub topic underneath the page heading. We include it in the same <code>&lt;h1&gt;</code> with <code>class="nhsuk-caption-xl"</code> which makes it look like a sub-heading.</p>
+  <p>The page heading and topic are both part of the <code>&lt;h1&gt;</code> but the page heading looks more important than the topic. (We explain why we do this in the <a href=#research>Research section</a> on this page.)</p>
   <p>In this example, "What is AMD?" is the heading for the page. "Age-related macular degeneration (AMD)" is the topic.</p>
 
   {{ designExample({
@@ -54,7 +54,7 @@
   }) }}
 
   <h3 class="nhsuk-u-margin-top-6">Contents list</h3>
-  <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page, underneath the heading and sub-heading, to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is from the NHS website information about AMD.</p>
+  <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page, underneath the heading and sub-heading, to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is based on an NHS website page about age-related macular degeneration (AMD).</p>
 
   {{ designExample({
     group: "components",
@@ -63,17 +63,17 @@
   }) }}
 
   <h3 class="nhsuk-u-margin-top-6">Pagination</h3>
-  <p>Use <a href="/design-system/components/pagination">pagination</a>  at the bottom of the page to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition.</p>
+  <p>Use <a href="/design-system/components/pagination">pagination</a> at the bottom of the page to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition.</p>
 
   {{ designExample({
     group: "components",
     item: "pagination",
-    type: "default"
+    type: "content-pages"
   }) }}
 
   <h2 id="research">Research on this pattern</h2>
   <p>We developed the mini-hub pattern for NHS website pages about health conditions.</p>
-  <p>We ran 3 rounds of research and tested our information about AMD with a range of users, including disabled people and people with low digital literacy. The Digital Accessibility Centre also tested the pattern.</p>
+  <p>We tested our information about AMD with a range of users, including disabled people and people with low digital literacy. The Digital Accessibility Centre also tested the pattern.</p>
   <p>We found that:</p>
   <ul>
     <li>the structure and labelling of the pages fitted users' mental model and helped them understand the structure of the content</li>
@@ -82,10 +82,7 @@
   </ul>
 
   <h3>Heading structure</h3>
-  <p>At first we made the mini-hub topic the main H1 heading but, when users navigated between pages, it was not obvious to them which page they were on. In some cases they did not realise they had moved between pages. It was only when we made the page heading into the larger H1 heading that users were clear which page they were on.</p>
-  <p class="rich-text">We found that screen readers struggled to pronounce the heading and sub-heading together and that confused people. So we've used <code>&lt;span&gt;</code> tags around the headings in the <code>&lt;h1&gt;&lt;/h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.</p>
-
-  <h3>Where this pattern did not work</h3>
-  <p>We tried using this pattern for information about <a href="https://www.nhs.uk/medicines/">medicines</a> and found that users did not understand that the separate pages of a mini-hub made up a whole medicines topic. Users expected to see all the information about a medicine on 1 long page.</p>
+  <p>At first we made the mini-hub topic the main <code>&lt;h1&gt;</code> heading but, when users navigated between pages, it was not obvious to them which page they were on. In some cases they did not realise they had moved between pages. It was only when we made the page heading into the larger <code>&lt;h1&gt;</code> heading that users were clear which page they were on.</p>
+  <p class="rich-text">We found that screen readers struggled to pronounce the heading and sub-heading together and that confused people. So we've used <code>&lt;span&gt;</code> tags around the headings in the <code>&lt;h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.</p>
 
 {% endblock %}

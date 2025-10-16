@@ -1,9 +1,9 @@
 {% set pageTitle = "Pagination" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use pagination to allow users to navigate between related pages, for example about a single condition." %}
+{% set pageDescription = "Use pagination to help users navigate forwards and backwards through a series of pages." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "October 2025" %}
 {% set backlog_issue_id = "27" %}
 
 {% extends "layouts/app-layout.njk" %}
@@ -15,35 +15,102 @@
 {% block bodyContent %}
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
 
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Pagination updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#pagination">updates to pagination in version 10</a></p>
+    <h3 id="v10-affects-this-component">Pagination updates</h3>
+    <p>Added numbered pagination option in version 10.1</p>
+    <p>Made <a href="/design-system/guides/updating-to-v10#pagination">"breaking code changes" to pagination in version 10</a></p>
   </div>
 
   {{ designExample({
     group: "components",
     item: "pagination",
-    type: "default"
+    type: "numbered"
   }) }}
 
   <h2>When to use pagination</h2>
-  <p>Use pagination at the bottom of the page to allow users to navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific condition.</p>
-  <p>If you're using pagination, you should also use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page. The 2 components make up the multi-page navigation pattern.</p>
-
-  <h2>When not to use pagination</h2>
-  <p>Do not use pagination on pages which aren't grouped together or "related" as this is likely to confuse users.</p>
-  <p>Do not use pagination in a transactional service or a form. We use other components instead, including:</p>
+  <p>Use pagination at the bottom of the page to help users navigate forwards and backwards through a series of related pages. For example, pages of search results or information about a health condition that's divided into multiple web pages.</p>
+  <p>Consider using pagination when:</p>
   <ul>
-    <li><a href="/design-system/components/buttons">buttons</a> to move forward
+    <li>showing all the content on a single page makes the page take too long to load or read</li>
+    <li>most users only need the content on the 1st page or 1st few pages</li>
+  </ul>
+  <p>Use pagination rather than the "infinite scroll" technique which automatically loads content when the user approaches the bottom of the page. This causes problems for keyboard users.</p>
+  <h2>When not to use pagination</h2>
+  <p>Only break up content onto separate pages if it improves the performance or usability of your service.</p>
+  <p>Do not use pagination on pages which are not grouped together or "related" as this is likely to confuse users.</p>
+  <p>Do not use pagination to navigate through a multi-page form. We use other components instead, including:</p>
+  <ul>
+    <li><a href="/design-system/components/buttons">buttons</a> (usually a "Continue" button) to move forward
     <li><a href="/design-system/components/back-link">back link</a> to navigate back</li>
   </ul>
 
   <h2>How to use pagination</h2>
-  <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page together with pagination at the bottom of each page.</p>
-  <p>Use the word "Previous" with an arrow left and a link to the previous page. Use the word Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
+  <p>Add the pagination component after the content on each page that you're paginating.</p>
+  <p>Do not show pagination if there's only 1 page of content.</p>
+  <p>Redirect users to the 1st page if they enter a URL of a page that no longer exists.</p>
+
+  <h3 id="for-navigating-between-content-pages">For navigating between content pages</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "content-pages"
+  }) }}
+  <p>Use pagination at the bottom of pages of content to allow users to navigate around a topic that's divided into multiple pages (up to 8 pages).</p>
+  <p>If you're using pagination at the bottom of content pages, you should also use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page. The 2 components make up the <a href="/design-system/patterns/mini-hub">mini-hub pattern</a>.</p>
+  <p>Use the word "Previous" with an arrow left and a link to the previous page and the word "Next" with an arrow right and a link to the next page. Use the same page titles as in the contents list.</p>
+
+  <h3 id="for-navigating-between-pages-of-items">For navigating between pages of items</h3>
+
+  <p>Use numbered pagination if users need to navigate through pages of similar items. For example, a list of search results or a list of cases in a case working system.</p>
+
+  <p>Decide the maximum number of items to show on each page based on the context of your service and the amount of content for each item.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered"
+  }) }}
+
+  <p>Show the page number in the page <code>&lt;title&gt;</code> so that screen reader users know they've navigated to a different page. For example, "Search results (page 1&nbsp;of&nbsp;4)".</p>
+
+  <p>The pagination should always show the page numbers for:</p>
+
+  <ul>
+    <li>the current page</li>
+    <li>the page before the current page</li>
+    <li>the page after the current page</li>
+    <li>1st and last pages</li>
+  </ul>
+
+  <p>For larger screens, you can show the page numbers for 2 or more pages before and after the current page.</p>
+
+  <p>Use ellipses (…) to show gaps in the page numbering. For example:</p>
+  <ul>
+    <li><strong>[1]</strong> 2 … 100</li>
+    <li>1 <strong>[2]</strong> 3 … 100</li>
+    <li>1 2 <strong>[3]</strong> 4 … 100</li>
+    <li>1 2 3 <strong>[4]</strong> 5 … 100</li>
+    <li>1 … 4 <strong>[5]</strong> 6 … 100</li>
+    <li>1 … 97 <strong>[98]</strong> 99 100</li>
+    <li>1 … 98 <strong>[99]</strong> 100</li>
+    <li>1 … 99 <strong>[100]</strong></li>
+  </ul>
+
+  <h4 id="1st-and-last-pages">1st and last pages</h4>
+  <p>Do not show the previous page link on the 1st page and do not show the next page link on the last page.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered-first-page"
+  }) }}
+
+  {{ designExample({
+    group: "components",
+    item: "pagination",
+    type: "numbered-last-page"
+  }) }}
 
   <h3>Accessibility</h3>
   <p class="rich-text">The pagination components are surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pagination</code>. Screen readers that support this attribute will read this.</p>
@@ -51,8 +118,11 @@
   <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
 
   <h2>Research</h2>
-  <p>We tested pagination in grouped information pages in 3 labs in summer 2018. We haven't tested it in forms.</p>
-  <p>In a user research lab, 4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
+  <h3>Content page navigation</h3>
+  <p>We tested content page pagination in grouped information pages in 3 labs in 2018. We have not tested it in forms.</p>
+  <p>4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
   <p>Users found that the pagination reflected the way they read content and their mental model of the structure of the content. </p>
+  <h3>Numbered page navigation</h3>
+  <p>GOV.UK based their component for navigating between pages of items on similar ones developed and used successfully by the Government Digital Service, Ministry of Justice and the Home Office.</p>
 
 {% endblock %}

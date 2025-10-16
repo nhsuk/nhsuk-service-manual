@@ -62,10 +62,14 @@
 {% block afterContact %}
 
 {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/1-understand-users-and-their-needs-context-health-and-care",
-    previousPage: "Point 1",
-    nextUrl: "/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use",
-    nextPage: "Point 4"
+    previous: {
+      labelText: "Point 1",
+      href: "/standards-and-technology/service-standard-points/1-understand-users-and-their-needs-context-health-and-care"
+    },
+    next: {
+      labelText: "Point 4",
+      href: "/standards-and-technology/service-standard-points/4-make-the-service-simple-to-use"
+    }
   }) }}
 
 {% endblock %}

@@ -148,10 +148,14 @@
 {% block afterContact %}
 
  {{ pagination({
-    previousUrl: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions",
-    previousPage: "Consider the sensitivities around your questions",
-    nextUrl: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order",
-    nextPage: "Get the questions into order"
+    previous: {
+      labelText: "Consider the sensitivities around your questions",
+      href: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions"
+    },
+    next: {
+      labelText: "Get the questions into order",
+      href: "/content/how-to-write-good-questions-for-forms/get-the-questions-into-order"
+    }
   }) }}
 
 {% endblock %}

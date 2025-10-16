@@ -74,10 +74,14 @@
 {% block afterContact %}
 
  {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently",
-    previousPage: "Point 8",
-    nextUrl: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing",
-    nextPage: "Point 10"
+    previous: {
+      labelText: "Point 8",
+      href: "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently"
+    },
+    next: {
+      labelText: "Point 10",
+      href: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing"
+    }
   }) }}
 
-  {% endblock %}
+{% endblock %}

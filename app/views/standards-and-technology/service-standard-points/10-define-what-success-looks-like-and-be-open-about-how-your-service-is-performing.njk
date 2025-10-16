@@ -54,10 +54,14 @@
 {% block afterContact %}
 
  {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy",
-    previousPage: "Point 9",
-    nextUrl: "/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology",
-    nextPage: "Point 11"
+    previous: {
+      labelText: "Point 9",
+      href: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy"
+    },
+    next: {
+      labelText: "Point 11",
+      href: "/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology"
+    }
   }) }}
 
-  {% endblock %}
+{% endblock %}

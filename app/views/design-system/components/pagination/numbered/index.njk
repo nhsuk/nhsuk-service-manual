@@ -1,0 +1,47 @@
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  previous: {
+    href: "#"
+  },
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: '#'
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 8,
+      href: '#'
+    },
+    {
+      number: 9,
+      href: '#'
+    },
+    {
+      number: 10,
+      href: '#',
+      current: true
+    },
+    {
+      number: 11,
+      href: '#'
+    },
+    {
+      number: 12,
+      href: '#'
+    },
+    {
+      ellipsis: true
+    },
+    {
+      number: 42,
+      href: '#'
+    }
+  ]
+}) }}

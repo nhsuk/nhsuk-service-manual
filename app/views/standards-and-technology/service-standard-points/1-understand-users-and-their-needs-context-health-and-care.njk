@@ -67,8 +67,10 @@
 {% block afterContact %}
 
 {{ pagination({
-    nextUrl: "/standards-and-technology/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience",
-    nextPage: "Points 2 and 3"
+    next: {
+      labelText: "Points 2 and 3",
+      href: "/standards-and-technology/service-standard-points/2-and-3-work-towards-solving-a-whole-problem-and-provide-a-joined-up-experience"
+    }
   }) }}
 
 {% endblock %}

@@ -42,10 +42,14 @@
 {% block afterContact %}
 
   {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/13-use-and-contribute-to-open-standards-common-components-and-patterns",
-    previousPage: "Point 13",
-    nextUrl: "/standards-and-technology/service-standard-points/15-support-a-culture-of-care",
-    nextPage: "Point 15"
+    previous: {
+      labelText: "Point 13",
+      href: "/standards-and-technology/service-standard-points/13-use-and-contribute-to-open-standards-common-components-and-patterns"
+    },
+    next: {
+      labelText: "Point 15",
+      href: "/standards-and-technology/service-standard-points/15-support-a-culture-of-care"
+    }
   }) }}
 
   {% endblock %}
