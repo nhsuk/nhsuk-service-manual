@@ -1,11 +1,11 @@
 # NHS digital service manual Changelog
 
-## 8.2.0 - TBC October 2025
+## 8.2.0 - 16 October 2025
 
 :new: **New features**
 
 - Add smaller checkboxes and radios and align guidance better with GOV.UK
-- Add guidance for new numbered pagination component
+- Add new numbered variant for pagination component
 
 :wrench: **Maintenance**
 
