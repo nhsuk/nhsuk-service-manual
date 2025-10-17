@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Added new guidance on the interruption page pattern
+- Added guidance on new interruption panel variant
+
 ## 8.2.0 - 16 October 2025
 
 :new: **New features**
