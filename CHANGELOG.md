@@ -8,6 +8,7 @@
 - Remove outdated beta label from service standard 11
 - Bring service standard 13 into closer alignment with GOV's
 - Review and update service standard 17 with Interoperability Standards Team
+- Update ourdated references to NHS Digital, and fix broken links
 
 ## 8.5.1 - 16 December 2025
 
