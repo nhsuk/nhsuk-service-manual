@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add password input component
+
 ## 8.2.0 - 16 October 2025
 
 :new: **New features**
