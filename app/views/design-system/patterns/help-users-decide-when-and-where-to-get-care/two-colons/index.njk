@@ -1,4 +1,5 @@
 {% from "card/macro.njk" import card %}
+{% from "action-link/macro.njk" import actionLink %}
 
 {% set cardDescriptionHtml %}
   <p>You've been exposed to very cold temperatures and:</p>
@@ -8,11 +9,15 @@
     <li>have blisters filled with blood or a clear or milky fluid</li>
     <li>you're constantly shivering, have slurred speech, slow breathing and are tired and confused</li>
   </ul>
-  <p><a href="#">Find your nearest A&E</a></p>
+  {{ actionLink({
+    text: "Find your nearest A&E",
+    href: "#",
+    classes: "nhsuk-action-link--reverse"
+  }) }}
 {% endset %}
 
 {{ card({
   type: "emergency",
   heading: "Call 999 or go to A&E if:",
-  descriptionHtml: cardDescriptionHtml
+  descriptionHtml: cardDescriptionHtml | safe
 }) }}
