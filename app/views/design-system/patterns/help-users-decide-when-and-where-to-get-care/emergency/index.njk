@@ -1,20 +1,21 @@
 {% from "card/macro.njk" import card %}
 {% from "action-link/macro.njk" import actionLink %}
 
-{% call card({
-  type: "emergency",
-  heading: "Call 999 or go to A&E now if:"
-}) %}
-
+{% set cardDescriptionHtml %}
   <ul>
     <li>you're coughing up more than just a few spots or streaks of blood – this could be a sign of serious bleeding in your lungs</li>
     <li>you have severe difficulty breathing – you're gasping, choking or not able to get words out</li>
   </ul>
 
-{{ actionLink({
-  text: "Find your nearest A&E",
-  href: "#",
-  classes: "nhsuk-action-link--reverse"
-}) }}
+  {{ actionLink({
+    text: "Find your nearest A&E",
+    href: "#",
+    classes: "nhsuk-action-link--reverse"
+  }) }}
+{% endset %}
 
-{% endcall %}
+{{ card({
+  type: "emergency",
+  heading: "Call 999 or go to A&E now if:",
+  descriptionHtml: cardDescriptionHtml | safe
+}) }}
