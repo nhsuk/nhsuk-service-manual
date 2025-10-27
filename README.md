@@ -74,7 +74,7 @@ Git tags created using SEMVER format `v0.0.0` will deploy to the [Live environme
 
 ### Code Analysis
 
-Code analysis results can be found in [SonarQube](https://sonar.nhswebsite.nhs.uk/dashboard?id=service-manual).
+Code analysis results can be found in [SonarQube](https://sonarcloud.io/project/overview?id=nhsuk-service-manual).
 
 ## Get in touch
 

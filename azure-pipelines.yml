@@ -15,39 +15,11 @@ steps:
   - script: npm ci
     displayName: 'Install'
 
-  - task: SonarCloudPrepare@1
-    displayName: 'Prepare analysis on SonarCloud'
-    inputs:
-      SonarCloud: 'SonarCloud'
-      organization: 'nhsdigital'
-      scannerMode: 'CLI'
-      extraProperties: |
-        sonar.projectKey=nhsuk-service-manual
-        sonar.exclusions=$(System.DefaultWorkingDirectory)/dependency-scan-results/**
-        sonar.javascript.lcov.reportPaths=coverage/lcov.info
-        sonar.coverage.exclusions=**/*.config.js,**/coverage/**
-        sonar.dependencyCheck.htmlReportPath=$(System.DefaultWorkingDirectory)/dependency-scan-results/dependency-check-report.html
-        sonar.language=js
-
   - script: npm run build
     displayName: 'Build'
 
   - script: npm test --ignore-scripts
     displayName: 'Test'
-
-  - task: SonarCloudAnalyze@1
-    displayName: 'Run SonarCloud Code Analysis'
-
-  - task: SonarCloudPublish@1
-    displayName: 'Publish Quality Gate Result'
-    inputs:
-      pollingTimeoutSec: '300'
-
-  - task: sonarcloud-buildbreaker@2
-    displayName: 'Break the build if the quality gate fails'
-    inputs:
-      SonarCloud: 'SonarCloud'
-      organization: 'nhsdigital'
 
   - task: ArchiveFiles@2
     inputs:
