@@ -71,8 +71,8 @@ pre[class*="language-"] {
   @include nhsuk-responsive-margin(4, "bottom");
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+pre code[class*="language-"] {
+  display: block;
   background: #ffffff;
 }
 
