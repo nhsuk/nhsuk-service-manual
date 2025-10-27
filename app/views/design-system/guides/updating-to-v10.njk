@@ -177,14 +177,14 @@
   <p>Change this:</p>
 
   <pre><code class="language-html nhsuk-u-margin-bottom-4">
-  <del>&lt;script&gt;document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');&lt;/script&gt;
-  </del></code></pre>
+  <del>&lt;script&gt;document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');&lt;/script&gt;</del>
+  </code></pre>
 
   <p>to this:</p>
 
   <pre><code class="language-html nhsuk-u-margin-bottom-4">
-  <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;
-  </ins></code></pre>
+  <ins>&lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' nhsuk-frontend-supported' : '');&lt;/script&gt;</ins>
+  </code></pre>
 
   <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
