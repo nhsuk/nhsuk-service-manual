@@ -1,3 +1,6 @@
 {% from 'button/macro.njk' import button %}
 
-Imagine I'm a small button
+{{ button({
+    text: 'Save and continue',
+    classes: 'nhsuk-button--small'
+}) }}

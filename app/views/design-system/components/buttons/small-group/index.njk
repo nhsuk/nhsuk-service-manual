@@ -1,3 +1,15 @@
 {% from 'button/macro.njk' import button %}
 
-Imagine I'm a small button group
+<div class="nhsuk-button-group nhsuk-button-group--small">
+    {{ button({
+        text: 'Add to my list',
+        classes: 'nhsuk-button--small'
+    }) }}
+
+    {{ button({
+        text: 'Add to another list',
+        classes: 'nhsuk-button--secondary nhsuk-button--small'
+    }) }}
+
+    <a href="#" class="nhsuk-link">Discard selection</a>
+</div>

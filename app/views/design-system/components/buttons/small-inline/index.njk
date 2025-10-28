@@ -1,3 +1,26 @@
 {% from 'button/macro.njk' import button %}
+{# {% from "password-input/macro.njk" import passwordInput %}
 
-I'm actually password input
+{{ passwordInput({
+    label: {
+        text: 'Password',
+        classes: 'nhsuk-label--l',
+        isPageHeading: true
+    },
+    id: 'example',
+    name: 'example'
+}) }} #}
+
+<div class="nhsuk-form-group nhsuk-password-input" data-module="nhsuk-password-input" data-nhsuk-password-input-init="">
+  <h1 class="nhsuk-label-wrapper">
+    <label class="nhsuk-label nhsuk-label--l" for="width-class-7">
+      Password
+    </label>
+  </h1>
+  <div class="nhsuk-input__wrapper nhsuk-form-group nhsuk-form-group--inline">
+    <input class="nhsuk-input nhsuk-password-input__input nhsuk-js-password-input-input nhsuk-input--width-20" id="width-class-7" name="example-7" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none"><div class="nhsuk-password-input__sr-status nhsuk-u-visually-hidden" aria-live="polite"></div>
+    <button class="nhsuk-button nhsuk-button--secondary nhsuk-button--small nhsuk-password-input__toggle nhsuk-js-password-input-toggle" data-module="nhsuk-button" aria-controls="width-class-7" aria-label="Show password" type="button" data-nhsuk-button-init="">
+      Show
+    </button>
+  </div>
+</div>
