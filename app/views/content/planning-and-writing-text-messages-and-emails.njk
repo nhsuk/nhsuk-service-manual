@@ -1,0 +1,180 @@
+{% set pageTitle = "Planning and writing text messages and emails" %}
+{% set pageSection = "Content guide" %}
+{% set pageDescription = "This guide explains when to send emails and text messages to your users and how to write them." %}
+{% set dateUpdated = "November 2025" %}
+{% set backlog_issue_id = "450" %}
+
+{% extends "layouts/app-layout.njk" %}
+
+{% block beforeContent %}
+  {% include "content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2 id="when-to-send-emails-and-text-messages">When to send emails and text messages</h2>
+
+<p>Always consider whether you can send an email or text message instead of a letter. If a user doesn’t respond, you may still be able to follow up with a letter.</p>
+
+<p>Some information is too sensitive to be sent by email or text. You should consider this and discuss  anything you’re not sure about with your information assurance team.</p>
+
+<p>Only send email or text messages when it meets a user need. Two types of message that meet a user need are transactional messages and subscription messages.</p>
+
+<h2 id="transactional-messages">Transactional messages</h2>
+
+<p>Transactional messages relate directly to something a user has done. For example:</p>
+
+<ul>
+  <li>they completed a transaction, and you’re sending them a confirmation email</li>
+  <li>they paid for an annual service a year ago, and you’re reminding them that it’s about to expire</li>
+  <li>their application has been approved, and you’re sending them a text message to let them know</li>
+</ul>
+
+<p>Transactional messages reassure the user that the service is working as they expect it to. They reduce anxiety and stop users contacting your service needlessly.</p>
+
+<p>Look at your service end to end and find the points where users are likely to get anxious. Talk to your contact centre staff to find out why people are contacting you.</p>
+
+<p>If you’re sending an email or text message because the user has completed an action, automate the sending so that the user gets it straight away. That way they will know they’ve been successful.</p>
+
+<p>If a message doesn’t need to be sent immediately, consider sending it during business hours as it’s more likely to be read. If possible, avoid sending text messages late at night.</p>
+
+<p>You don’t need to ask permission to send transactional messages. Make it clear to users when you collect any details that you may use them for sending messages.</p>
+
+<h3 id="example-of-a-transactional-message">Example of a transactional message</h3>
+
+<p>Transport for London’s Dial-a-Ride service sends users the following text message to confirm the details of a booking:</p>
+
+<div class="example">
+  <p>Dial-a-Ride: Your vehicle will arrive in approximately [number of minutes] at [time of day] on [date]. Your driver today is [driver name].</p>
+</div>
+
+<h2 id="subscription-messages">Subscription messages</h2>
+
+<p>Subscription messages relate to something a user has asked to be updated about - for example, the publication of new information or changes to government guidance.</p>
+
+<p>Never send subscription messages unless the user has explicitly asked for them - for example, by signing up for alerts. Always give users a way to unsubscribe.</p>
+
+<h3 id="example-of-a-subscription-message">Example of a subscription message</h3>
+
+<p>Users who sign up to be notified when their MOT is about to expire receive the following email:</p>
+
+<div class="example">
+  <p>From: MOT Remind me &lt;mot-remind-me@notifications.service.gov.uk&gt;</p>
+
+  <p>Subject: You’ve signed up for an MOT reminder for [vehicle details]</p>
+
+  <p>Body of email:</p>
+
+  <p>You’ve signed up for MOT reminders.</p>
+
+  <p>The MOT for [vehicle details] [is due or expires] on [date].</p>
+
+  <p>You’ll get an annual reminder a month before your MOT is due, and again 2 weeks later if you don’t have your MOT yet.</p>
+
+  <p>DVSA (Driver and Vehicle Standards Agency)</p>
+
+  <p>Unsubscribe from MOT reminders: [link to unsubscribe]</p>
+</div>
+
+<h2 id="choosing-email-or-text-message">Choosing email or text message</h2>
+
+<p>When choosing whether to send an email or text message, consider:</p>
+
+<ul>
+  <li>which contact details you hold and have permission to use</li>
+  <li>what individual users have said about how they prefer to be contacted</li>
+  <li>the length of your message</li>
+</ul>
+
+<p>It’s a good idea to use a mix of emails and text messages, especially if the contact details you have are old and might be out of date. For example, you could send an email asking a user to do something. If they haven’t done it after a week, follow it up with a text message.</p>
+
+<p>You should avoid sending emails and text messages at the same time, unless there’s a very good reason to do this.</p>
+
+<h2 id="protect-your-users-from-spam-and-phishing">Protect your users from spam and phishing</h2>
+
+<p>When contacting your users, you must:</p>
+
+<ul>
+  <li>leave out sensitive information, like bank details</li>
+  <li>avoid making requests for personal information, like a user’s date of birth</li>
+  <li>only send links which point to the GOV.UK domain</li>
+  <li>spell out any web addresses (URLs) in full to show the user where links are going - for example, https://www.gov.uk/exampleservice</li>
+  <li>avoid including redirects in any links - for example, tracking</li>
+  <li>avoid sending attachments with emails</li>
+  <li>include the user’s first name and surname in the body of the email to make phishing more difficult</li>
+</ul>
+
+<p>You must also follow <a href="/service-manual/technology/how-to-email-your-users">technical standards for emails</a>.</p>
+
+<h2 id="how-to-write-emails-and-text-messages">How to write emails and text messages</h2>
+
+<p>Follow the <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Government Digital Service (<abbr title="Government Digital Service">GDS</abbr>) style guide</a> and <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk#how-people-read">write clearly using plain English</a>.</p>
+
+<h3 id="personalise-your-messages">Personalise your messages</h3>
+
+<p>Users are more likely to trust information that’s relevant and clearly meant for them. You should:</p>
+
+<ul>
+  <li>say who the message is from - consider that the name of your service might mean more to the user than your department or agency name</li>
+  <li>tailor your message - for example, use ‘visa application’ for the email subject line rather than something generic like ‘application’</li>
+  <li>start emails with ‘Dear [firstname lastname]’ not ‘Hi’ (you don’t need to do either for texts)</li>
+  <li>include a reference number and contact details for your service if the user might need to contact you</li>
+</ul>
+
+<h3 id="be-concise">Be concise</h3>
+
+<p>Keep email and text messages short and to the point. Say only one important thing in each message. If you have several important things to say, send more than one message.</p>
+
+<p>Get the most important information across in the first sentence, so it’s more likely to be read (and to appear in the preview). Remember that email subject lines are often shortened.</p>
+
+<p>Don’t use jargon or acronyms without explanation.</p>
+
+<h3 id="give-clear-instructions">Give clear instructions</h3>
+
+<p>Don’t explain back-end processes or policy. Give the user just enough information so they know what to do next:</p>
+
+<ul>
+  <li>make it clear what you need the user to do and include any deadlines - for example, ‘Complete this form and send it back to us by 20 May’</li>
+  <li>say what will happen if they don’t do what you’re asking - for example, ‘If you don’t pay by 20 May, you’ll have to apply for a new licence’</li>
+  <li>explain what you’ll do next and when they’ll hear from you - if you won’t be contacting them again, make it clear that it’s the end of the process</li>
+</ul>
+
+<h3 id="example-of-a-personalised-message">Example of a personalised message</h3>
+
+<p>The Help with Prison Visits service sends users the following message:</p>
+
+<div class="example">
+  <p>From: Help with Prison Visits &lt;help-with-prison-visits@notifications.service.gov.uk&gt;</p>
+
+  <p>Subject: Your reference number</p>
+
+  <p>Body of message:</p>
+
+  <p>Dear [firstname lastname]</p>
+
+  <p>You asked for a reminder of your reference number.</p>
+
+  <p>Your reference number is:</p>
+
+  <p>[reference]</p>
+
+  <p>Check progress or start a new claim at [service URL].</p>
+
+  <p>Regards,
+APVU (Assisted Prison Visit Unit)</p>
+</div>
+
+<h2 id="related-guides">Related guides</h2>
+<p>You may also find these guides useful:</p>
+
+<ul>
+  <li><a href="/service-manual/design/using-adapting-and-creating-patterns">Using, adapting and creating patterns</a></li>
+  <li><a href="/service-manual/design/confirmation-pages">Confirmation pages</a></li>
+</ul>
+
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}
+
