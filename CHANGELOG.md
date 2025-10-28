@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add guidance on planning and writing text messages and emails
+
 ## 8.3.0 - 4 November 2025
 
 :new: **New features**
