@@ -22,7 +22,12 @@
 
   <h2 id="when-to-use-password-input">When to use password input</h2>
   <p>Use this component whenever you need users to create or enter a password.</p>
-  <p>Before using this component, read <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>.</p>
+  <p>Before using this component, read:</p>
+  <ul>
+    <li>the <a href="https://www.ncsc.gov.uk/collection/passwords">National Cyber Security Centre's guidance on password administration for system owners</a>, including their <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">Password policy: updating your approach</a></li>
+    <li><a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a></li>
+  </ul>
 
   <h2 id="when-not-to-use-password-input">When not to use password input</h2>
   <p>Do not use this component to ask for any information other than a password.</p>
@@ -37,6 +42,7 @@
   <h2 id="how-to-use-password-input">How to use password input</h2>
   <p>This component lets users enter a password, with an option to show what they've entered as plain text.</p>
   <p>This allows users to visually check their password before they submit it, which helps them reduce errors and choose passwords that are more unique and secure.</p>
+  <p>The password input component requires JavaScript to work. Without it, users will see a regular input and no button.</p>
 
 
   <h3 id="error-messages">Error messages</h3>
@@ -75,7 +81,21 @@
   <p>Many browsers will autofill password inputs, even when the <code>autocomplete</code> attribute is missing or set to <code>off</code>.</p>
 
   <h3 id="allow-copy-and-paste">Allow copy and paste</h3>
-  <p>Always allow users to copy and paste in password fields. People may have very good reasons why they want to do this, for example if they're using a password manager.</p>
+
+  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
+      WCAG 2.2
+    </strong>
+
+    <p>Let users copy and paste passwords. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 success criterion 3.3.8 Accessible authentication (W3C)</a>.</p>
+  </div>
+
+  <p>The NCSC recommends that online services let people:</p>
+  <ul>
+    <li>use password managers</li>
+    <li>paste passwords into web forms</li>
+  </ul>
 
   <h4 id="copying-text-from-password-fields">Copying text from password fields</h4>
   <p>Users can copy any text from a password field when it's set on "show". This is a feature of browser behaviour and cannot be overridden.</p>
@@ -84,7 +104,8 @@
   <h3 id="avoid-restricting-the-users-input">Avoid restricting the user's input</h3>
   <p>See <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a> to see how to help users choose strong passwords.</p>
   <p>Support all the characters users may need to enter a password, including numbers and symbols.</p>
-  <p>If you must place password restrictions on users, such as for technical or security reasons, be clear and consistent.</p>
+  <p>Set a minimum length of at least 8 characters but do not set a maximum length.</p>
+  <p>The <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">NCSC password policy</a> includes advice on technical solutions and reducing the burden on users. If you must place password restrictions on users, such as for technical reasons, be clear and consistent.</p>
   <p>Any restrictions must be identical wherever the user creates or enters a password. If you change the restrictions over time, you must continue to support existing user passwords or ask them to set a new one.</p>
 
   <h4 id="do-not-use-maxlength-to-restrict-password-length">Do not use maxlength to restrict password length</h4>
