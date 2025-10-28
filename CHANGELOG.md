@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Added guidance on new interruption panel variant
+
 :wrench: **Maintenance**
 
 - Update CSS path examples in version 10 upgrade guide
