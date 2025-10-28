@@ -55,8 +55,8 @@
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.27.2",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.41.0",
     "autoprefixer": "^10.4.21",
@@ -84,11 +84,11 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.6.2",
     "sass-embedded": "^1.93.2",
-    "sass-loader": "^16.0.5",
+    "sass-loader": "^16.0.6",
     "stylelint": "^16.24.0",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^7.0.0",
-    "webpack": "^5.102.0",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
     "webpack-manifest-plugin": "^5.0.1"
   },
