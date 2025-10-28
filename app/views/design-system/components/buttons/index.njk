@@ -137,6 +137,14 @@
 
   <h3 id="small-buttons">Small buttons</h3>
   <p>Use them sparingly. First try using a standard button.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "small-button"
+  }) }}
+
+
   <p>Only use small buttons when:</p>
   <ul>
     <li>space is limited, for example in a card or panel</li>
@@ -151,15 +159,15 @@
       type: "small-group"
     }) }}
 
-  <p>Do not mix up button sizes within button groups, for example, do not group a small button with a standard button.</p>
+  <p>Do not mix up button sizes within button groups, for example, do not group a small button with a standard button. Only use one primary button in a group.</p>
 
     {{ designExample({
       group: "components",
       item: "buttons",
-      type: "small-password"
+      type: "small-inline"
     }) }}
 
-  <p>Small buttons can be used inline with text inputs when the button relates specifically to the input, for example showing a password.</p>
+  <p>Small buttons can be used inline with text inputs when the button relates specifically to the input, for example a password input's "show" button.</p>
 
   <h3 id="disabled-buttons">Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
