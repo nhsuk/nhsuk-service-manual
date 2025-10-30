@@ -71,7 +71,7 @@
   <p>See <a href="#research-on-this-component">Research on this component</a> and why GOV.UK decided having a 2nd field is not helpful for users.</p>
 
   <h3 id="define-the-inputs-type-as-password">Define the input's type as "password"</h3>
-  <p>When the form is submitted, JavaScript will change the password input's <code>type</code> to <code>password</code>. Check that it does this automatically.</p>
+  <p>If the form is submitted when the input's text is visible, JavaScript will change the input <code>type</code> back to <code>password</code>. You must check this happens automatically.</p>
   <p>This is to prevent browsers from remembering it as a previously-provided value and potentially displaying it as an autofill option on non-password inputs.</p>
 
   <h3 id="use-the-autocomplete-attribute">Use the autocomplete attribute</h3>
