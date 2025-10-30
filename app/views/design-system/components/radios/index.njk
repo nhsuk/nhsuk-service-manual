@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use radios when you want users to select only 1 option from a list." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "October 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "19" %}
 
 {% block beforeContent %}
@@ -15,10 +15,12 @@
 {% block bodyContent %}
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
+      Version 10
+    </strong>
 
-    <h3 id="v10-affects-this-component">Radios updates</h3>
-    <p>Added smaller radios in version 10.1</p>
-    <p>Made <a href="/design-system/guides/updating-to-v10#radios">"breaking code changes" to radios in version 10</a></p>
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Radios updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#radios">breaking code updates to radios in version 10</a></p>
   </div>
 
   {{ designExample({
@@ -34,17 +36,18 @@
   <p>Do not use radios if users might need to select more than 1 option. Use <a href="/design-system/components/checkboxes">checkboxes</a> instead.</p>
 
   <h2 id="how-it-works">How to use radios</h2>
-  <p>Position radios to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.</p>
-  <p>Unlike with checkboxes, users can only select 1 option from a list of radios. Do not assume that users will know how many options they can select based on the visual difference between radios and checkboxes alone. If needed, add a hint explaining this, for example, "Select 1 option".</p>
+  <p>When you're drafting your radio options, <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">beware binary choices</a>. Try testing a 3rd option.</p>
+  <p>Order radio options alphabetically by default. </p>
+  <p>Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Are you 18 or over?".</p>
+  <p>If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+  <p>Read more on the GOV.UK Design System about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+
   <p>Do not pre-select radio options as this makes it more likely that users will:</p>
   <ul>
     <li>not realise they've missed a question</li>
     <li>submit the wrong answer</li>
   </ul>
-  <p>Users cannot go back to having no option selected once they have selected an option, without refreshing their browser window. So you should include "None of these" or "I do not know" if they are valid options. In any case, it's best to <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">beware binary choices</a>.</p>
-  <p>Order radio options alphabetically by default.  In some cases, it's helpful to order them from most-to-least common options, for example, by population size. But be careful, as this can reinforce bias. If in doubt, order alphabetically.</p>
-  <p>Group radios together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. This is usually a question, like "Are you 18 or over?". Read more about using <a href="/design-system/components/fieldset">fieldset</a>.</p>
-
+  <p>Users cannot go back to having no option selected once they have selected an option, without refreshing their browser window. Include "None of these" or "I do not know" if they are valid options.</p>
 
   <h3 id="inline-radios">Inline radios</h3>
   <p>If there are only 2 short options, you can either stack the radios vertically or display them horizontally (inline).</p>
@@ -57,7 +60,7 @@
 
   <h3 id="radios-with-hints">Radios with hints</h3>
   <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>. Read more about <a href="/design-system/components/hint-text">hint text</a>.</p>
-
+  <p>Do not assume that users will know that they can only select 1 option based on the visual difference between radios and checkboxes. If needed, add a hint explaining this, for example, "Select 1 option".</p>
   {{ designExample({
     group: "components",
     item: "radios",

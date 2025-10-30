@@ -1,9 +1,21 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## TBC November 2025
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update section on avoiding binary choices in forms guidance
+- Add guidance around reverse example in breadcrumb component
 
 :wrench: **Maintenance**
 
+- Change dummy NHS number to 999 123 4567
+- Update NHS number examples across design system, including adding span class
+- Update coded examples on breadcrumb, care cards, checkboxes, fieldset, hint text, inset text, radios, select, start page and text input component pages
+- Remove duplicate example from summary list component
+- Change Active tag from green to blue
+- Update video review date on pattern for helping users know that a page is up to date
 - Update CSS path examples in version 10 upgrade guide
 
 ## 8.2.0 - 16 October 2025
