@@ -42,7 +42,7 @@
   <h2 id="how-to-use-password-input">How to use password input</h2>
   <p>This component lets users enter a password, with an option to show what they've entered as plain text.</p>
   <p>This allows users to visually check their password before they submit it, which helps them reduce errors and choose passwords that are more unique and secure.</p>
-  <p>The password input component requires JavaScript to work. Without it, users will see a regular input and no button.</p>
+  <p>The password input component requires JavaScript to work. Without it, users will see a password input and no "show" button.</p>
 
 
   <h3 id="error-messages">Error messages</h3>
@@ -58,7 +58,7 @@
   <p>See how to handle incorrect login attempts and help users who forget their password in <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>.</p>
 
   <h3 id="showing-and-hiding-passwords">Showing and hiding passwords</h3>
-  <p>Hide passwords by default until the user chooses to show it using the "show" button. Users might not be in a private space when entering or creating a password, so hide passwords by default.</p>
+  <p>Hide the password by default until the user chooses to show it using the "show" button. Users might not be in a private space when entering or creating a password, so hide passwords by default.</p>
   <p>If you do choose to include 2 or more password inputs on a page, the "show" and "hide" toggles and labels for each password input must be different.</p>
   <p>For example, you can label:</p>
   <ul>
@@ -71,7 +71,7 @@
   <p>See <a href="#research-on-this-component">Research on this component</a> and why GOV.UK decided having a 2nd field is not helpful for users.</p>
 
   <h3 id="define-the-inputs-type-as-password">Define the input's type as "password"</h3>
-  <p>When the form is submitted, the password input should automatically change its <code>type</code> to <code>password</code>, if it has not already done so.</p>
+  <p>When the form is submitted, JavaScript will change the password input's <code>type</code> to <code>password</code>. Check that it does.</p>
   <p>This is to prevent browsers from remembering it as a previously-provided value and potentially displaying it as an autofill option on non-password inputs.</p>
 
   <h3 id="use-the-autocomplete-attribute">Use the autocomplete attribute</h3>
