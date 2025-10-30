@@ -1,11 +1,12 @@
-{% from 'input/macro.njk' import input %}
+{% from "input/macro.njk" import input %}
 
 {{ input({
   label: {
       text: "Weight in kilograms"
   },
-  id: "example",
-  name: "example",
+  id: "weight",
+  name: "weight",
   suffix: "kg",
-  classes: "nhsuk-input--width-5"
+  classes: "nhsuk-input--width-5",
+  spellcheck: false
 }) }}

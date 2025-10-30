@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "11. Choose the right tools and technology" %}
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
@@ -5,8 +7,6 @@
 {% set beta = true %}
 {% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "354" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
@@ -72,6 +72,5 @@
       href: "/standards-and-technology/service-standard-points/12-make-new-source-code-open"
     }
   }) }}
-
 
   {% endblock %}

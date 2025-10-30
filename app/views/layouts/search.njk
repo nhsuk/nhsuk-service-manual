@@ -1,8 +1,8 @@
+{% extends "layouts/layout.njk" %}
+
 {% set pageTitle = "Search" %}
 {% set pageDescription = "Search results." %}
 {% set disableSearch = true %}
-
-{% extends "layouts/layout.njk" %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -10,7 +10,7 @@
       <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Search</h1>
       <form class="nhsuk-header__search-form nhsuk-header__search-form--search-results" id="search" action="/search/" method="get" role="search">
         <label class="nhsuk-u-visually-hidden" for="search-results-field">Search the NHS digital service manual</label>
-        <input class="nhsuk-search__input" id="search-results-field" name="search-field" type="search" value="{{query}}" autocomplete="off">
+        <input class="nhsuk-search__input" id="search-results-field" name="searchField" type="search" value="{{query}}" autocomplete="off">
         <button class="nhsuk-search__submit" type="submit">
           <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
             <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -41,7 +41,7 @@
           {% if currentPage != 1%}
           <li class="nhsuk-pagination-item--previous">
             <a class="nhsuk-pagination__link nhsuk-pagination__link--prev"
-              href="/search/?search-field={{query}}&page={{currentPage - 1}}">
+              href="/search/?searchField={{query}}&page={{currentPage - 1}}">
               <span class="nhsuk-pagination__title">Previous</span>
               <span class="nhsuk-u-visually-hidden">:</span>
               <span class="nhsuk-pagination__page">{{ currentPage - 1 }} of {{ maxPage }} </span>
@@ -58,7 +58,7 @@
           {% if currentPage != maxPage %}
           <li class="nhsuk-pagination-item--next">
             <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-              href="/search/?search-field={{query}}&page={{currentPage + 1}}">
+              href="/search/?searchField={{query}}&page={{currentPage + 1}}">
               <span class="nhsuk-pagination__title">Next</span>
               <span class="nhsuk-u-visually-hidden">:</span>
               <span class="nhsuk-pagination__page">{{ currentPage + 1}} of {{ maxPage }}</span>

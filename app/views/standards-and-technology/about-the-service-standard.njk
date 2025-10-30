@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "About the NHS service standard" %}
 {% set pageSection = "Standards and technology" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "The NHS service standard is designed to help teams meet the GOV.UK service standard in the context of health and care." %}
 {% set hideContact = "true" %}
 {% set dateUpdated = "September 2024" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/_breadcrumb.njk" %}

@@ -1,4 +1,4 @@
-{% from 'header/macro.njk' import header %}
+{% from "header/macro.njk" import header %}
 
 {%- if disableSearch %}
   {{ header({
@@ -48,7 +48,7 @@
     },
     search: {
       action: "/search/",
-      name: "search-field",
+      name: "searchField",
       placeholder: "Search",
       visuallyHiddenLabel: "Search the NHS digital service manual"
     },
