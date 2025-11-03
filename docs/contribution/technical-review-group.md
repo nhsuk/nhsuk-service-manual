@@ -1,8 +1,8 @@
-# Technical Review Group Guidelines
+# Contributing to the Technical Review Group guidance
 
 ## Overview
 
-The Technical Review Group (TRG) pages are here to help teams go through this key NHS England Archtiecture governance process. Contributions should help readers navigate to the key information quickly and answer common questions. 
+The Technical Review Group (TRG) pages are here to help teams go through this key NHS England Architecture governance process. Contributions should help readers navigate to the key information quickly and answer common questions. 
 
 ## Review Process
 

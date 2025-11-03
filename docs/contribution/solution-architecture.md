@@ -1,4 +1,4 @@
-# Solution Architecture Framework
+# Contributing to Solution Architecture Framework guidance
 
 ## Overview
 
@@ -9,7 +9,7 @@ The Solution Architecture Framework (SAF) pages define what good looks like when
 1. **Submission**: Contributors must submit their changes in a pull request (PR) to `main`, but from a branch specific to the changes
 3. **Review**: The maintainers will perform a detailed review, focusing on:
    - Simple and clear content - following the [NHS Service Manual content guide](https://service-manual.nhs.uk/content)
-   - Do the changes help other architects or tech leads to complete assessments?
+   - Do the changes help other architects or tech leads complete assessments?
    - If relevant, code quality and adherence to coding standards
    - Alignment with NHSE architecture and design principles
  
