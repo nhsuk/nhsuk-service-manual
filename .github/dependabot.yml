@@ -43,12 +43,14 @@ updates:
 
       lint:
         patterns:
-          - '@typescript-eslint/*'
+          - '@eslint/*'
           - 'eslint'
           - 'eslint-*'
+          - 'globals'
           - 'prettier'
           - 'stylelint'
           - 'stylelint-*'
+          - 'typescript-*'
 
       test:
         patterns:
