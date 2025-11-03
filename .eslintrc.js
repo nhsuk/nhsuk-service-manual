@@ -112,12 +112,6 @@ module.exports = {
 
         // Avoid hard to read multi assign statements
         'no-multi-assign': 'error'
-      },
-      settings: {
-        jsdoc: {
-          // Allows us to use type declarations that exist in our dependencies
-          mode: 'typescript'
-        }
       }
     },
     {
