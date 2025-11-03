@@ -36,6 +36,11 @@ export default defineConfig([
       }
     },
     rules: {
+      // Turn off rules that are handled by TypeScript
+      // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+      'import/no-named-as-default': 'off',
+      'import/no-named-as-default-member': 'off',
+
       // Check import or require statements are A-Z ordered
       'import/order': [
         'error',
@@ -100,6 +105,12 @@ export default defineConfig([
 
       // Avoid hard to read multi assign statements
       'no-multi-assign': 'error'
+    },
+    settings: {
+      'import/resolver': {
+        node: true,
+        typescript: true
+      }
     }
   },
   {
