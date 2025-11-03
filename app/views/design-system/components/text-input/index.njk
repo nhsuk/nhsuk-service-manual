@@ -30,7 +30,26 @@
   <h3 id="give-the-text-input-a-label">Give the text input a label</h3>
   <p>Give it a visible label. Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
   <p>Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+
+  <h3>If you’re asking one question on the page</h3>
+
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "default"
+  }) }}
+
+  <h3>If you’re asking more than one question on the page</h3>
+
+  <p>If you’re asking more than one question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "without-heading"
+  }) }}
 
   <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
   <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
