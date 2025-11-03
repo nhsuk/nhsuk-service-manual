@@ -6,7 +6,7 @@
 
 - Update guidance on asking users for their NHS number
 - Update section on avoiding binary choices in forms guidance
-- Add guidance around reverse example in breadcrumb component
+- Add guidance around reverse examples (action link, back link, breadcrumb, typography)
 
 :wrench: **Maintenance**
 
