@@ -1,4 +1,4 @@
-const { dirname, join } = require('path')
+const { dirname, join } = require('node:path')
 
 const CopyPlugin = require('copy-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
