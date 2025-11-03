@@ -41,6 +41,9 @@ export default defineConfig([
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
 
+      // Always import Node.js packages from `node:*`
+      'import/enforce-node-protocol-usage': ['error', 'always'],
+
       // Check import or require statements are A-Z ordered
       'import/order': [
         'error',
