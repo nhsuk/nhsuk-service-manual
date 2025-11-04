@@ -33,9 +33,22 @@
   <h4>If you're asking 1 question on the page</h4>
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
   <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">how to make labels and legends headings</a> on the GOV.UK Design System.</p>
-  
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "default"
+  }) }}
+
   <h4>If you're asking more than 1 question on the page</h4>
   <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Read more about asking multiple questions on <a href="/design-system/patterns/question-pages">question pages</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "without-heading"
+  }) }}
+
   <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
   <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
   <p>By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.</p>
