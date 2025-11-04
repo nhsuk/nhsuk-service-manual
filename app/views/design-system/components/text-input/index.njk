@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "October 2023" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "21" %}
 
 {% block beforeContent %}
@@ -30,8 +30,12 @@
   <h3 id="give-the-text-input-a-label">Give the text input a label</h3>
   <p>Give it a visible label. Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
   <p>Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+  <h4>If you're asking 1 question on the page</h4>
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
-
+  <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">how to make labels and legends headings</a> on the GOV.UK Design System.</p>
+  
+  <h4>If you're asking more than 1 question on the page</h4>
+  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Read more about asking multiple questions on <a href="/design-system/patterns/question-pages">question pages</a>.</p>
   <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
   <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
   <p>By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.</p>
