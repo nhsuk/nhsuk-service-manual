@@ -4,7 +4,7 @@
 
 :new: **New features**
 
-- Add guidance for `nhsuk-u-nowrap` class
+- Add guidance for `nhsuk-u-nowrap` class on typography page
 
 :wrench: **Maintenance**
 
