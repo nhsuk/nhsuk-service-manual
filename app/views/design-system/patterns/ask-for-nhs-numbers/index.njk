@@ -21,11 +21,11 @@
     <li>users do not need to know their NHS number to get care</li>
     <li>some users do not know their number and cannot find it easily</li>
   </ul>
-  <p>Use this pattern if users are more likely to succeed in their journey if they can give you their NHS number. Provide another route for users who cannot.</p>
+  <p>Use this pattern if users are more likely to succeed in their journey by giving you their NHS number. Provide another route for users who cannot.</p>
   <p>To minimise the risks of a wrong match, do not rely on an NHS number on its own.</p>
 
   <h2>When not to use the NHS number pattern</h2>
-  <p>Weigh up user and business needs. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to use this pattern.</p>
+  <p>Weigh up user and business needs and clinical risk. If users are more likely to succeed by providing other details instead of their NHS number, it may be better not to use this pattern.</p>
   <p>Do not use this pattern if you need to digitally authenticate members of the public logging into a product or service. Use <a href="/standards-and-technology/technology/NHS-login">NHS login</a> instead.</p>
 
   <h2>How to use the NHS number pattern</h2>
@@ -50,7 +50,7 @@
   <p>If you have no other option and must use a single text input:</p>
   <ul>
     <li>label it "What is your NHS number?" or "Enter your NHS number"</li>
-    <li>help users recognise their NHS number and know the correct details to enter, for example, with <a href="/design-system/components/hint-text">hint text</a></li>
+    <li>help users recognise their NHS number and know the correct details to enter, for example with <a href="/design-system/components/hint-text">hint text</a></li>
     <li>tell users where they can find their NHS number before they start the service, as well as during the journey</li>
   </ul>
 
@@ -65,7 +65,7 @@
     type: "filter"
   }) }}
 
-  <p>If users know their NHS number, route them to a page that asks for it.</p>
+  <p>If users know their NHS number, direct them to a page that asks for it.</p>
 
   {{ designExample({
     group: "patterns",
@@ -73,7 +73,7 @@
     type: "filter-single"
   }) }}
 
-  <p>If users do not know their NHS number, route them to a page that asks for the alternative details your service needs, for example, postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.</p>
+  <p>If users do not know their NHS number, direct them to a page that asks for the alternative details your service needs, for example postcode and date of birth. It may help to set expectations on the filter question page by telling users what details you will ask them for so they can complete their journey.</p>
 
   <h3>Filter question before input with 3rd option</h3>
   <p>Some users may benefit from a 3rd option: "I'm not sure".</p>
@@ -94,7 +94,7 @@
   <h3>How to build the NHS number pattern</h3>
   <p>When asking for an NHS number:</p>
   <ul>
-      <li>use a text input that allows for spaces and other characters between numbers, as users will type it in in different ways (for example, with dashes)</li>
+      <li>use a text input that allows for spaces and other characters between numbers, as users will enter it in in different ways (for example with dashes)</li>
       <li>allow at least 12 characters in your NHS number input</li>
       <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/attributes/nhs_number.html'>modulus 11 algorithm (explained on the NHS number page in the NHS Data Model and Dictionary)</a></li>
       <li class="rich-text">keep the NHS number on 1 line – if you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">999 123 4567&lt;/span></code></li>
@@ -123,7 +123,7 @@
   <h3>Use the correct NHS number format</h3>
   <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567.</p>
   <p>We include an example NHS number in this pattern. 999 123 4567 is the preferred example number. If you include an example number, you must use a number that starts with 9 as these numbers are used for testing, not for real patients. Use the same number for all examples.</p>
-  <p>If you are displaying an NHS number a user has input, show it in this format, not the way the user entered it.</p>
+  <p>If you are displaying an NHS number a user has entered, show it in this format, not the way the user entered it.</p>
   <p>Read more about how to format <a href='/content/a-to-z-of-nhs-health-writing#nhs-number'>the NHS number</a> in the A to Z of NHS health writing.</p>
 
   <h3>Write clear error messages</h3>
