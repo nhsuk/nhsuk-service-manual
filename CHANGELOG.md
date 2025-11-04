@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add guidance for `nhsuk-u-nowrap` class
+
 :wrench: **Maintenance**
 
 - Update CSS path examples in version 10 upgrade guide
