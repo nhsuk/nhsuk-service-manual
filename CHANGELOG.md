@@ -1,10 +1,10 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.3.0 - 4 November 2025
 
-:wrench: **Maintenance**
+:new: **New features**
 
-- Update CSS path examples in version 10 upgrade guide
+- Add latest blog post
 
 ## 8.2.0 - 16 October 2025
 
