@@ -2,43 +2,27 @@
 
 {{ select({
   label: {
-    text: "Choose region"
+    text: "Sort by"
   },
-  id: "region",
-  name: "region",
-  value: "choose",
+  id: "sort-by",
+  name: "sortBy",
+  value: "recently-published",
   items: [
     {
-      value: "choose",
-      text: "Choose region"
+      value: "recently-published",
+      text: "Recently published"
     },
     {
-      value: "east",
-      text: "East of England"
+      value: "recently-updated",
+      text: "Recently updated"
     },
     {
-      value: "london",
-      text: "London"
+      value: "most-views",
+      text: "Most views"
     },
     {
-      value: "midlands",
-      text: "Midlands"
-    },
-    {
-      value: "yorkshire",
-      text: "North East and Yorkshire"
-    },
-    {
-      value: "northwest",
-      text: "North West"
-    },
-    {
-      value: "southeast",
-      text: "South East"
-    },
-    {
-      value: "southeast",
-      text: "South West"
+      value: "most-comments",
+      text: "Most comments"
     }
   ]
 }) }}

@@ -37,9 +37,21 @@
   <h3 id="select-with-hint">Select with hint</h3>
   <p>You can add <a href="/design-system/components/hint-text">hint text</a> to help the user understand the options and choose 1 of them.</p>
   
+  {{ designExample({
+    group: "components",
+    item: "select",
+    type: "with-hint"
+  }) }}
+
   <h3 id="error-messages">Error messages</h3>
   <p>Display an error message if the user has not selected an option.</p>
   <p>Style error messages as shown in the example:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "select",
+    type: "error"
+  }) }}
 
   <h3 id="avoid-adding-functionality-to-allow-selecting-multiple-options">Avoid adding functionality to allow selecting multiple options</h3>
   <p>The select component does not support selecting multiple options, as there's a history of poor usability and assistive technology support for <code>&lt;select multiple&gt;</code>. If you need to ask the user to pick more than 1 item from a list, it's almost always better to use another method, such as a list of <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
