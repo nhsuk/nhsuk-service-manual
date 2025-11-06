@@ -1,4 +1,4 @@
-{% from 'tag/macro.njk' import tag %}
+{% from "tag/macro.njk" import tag %}
 
 <table class="nhsuk-table">
   <thead class="nhsuk-table__head">
@@ -43,23 +43,23 @@
     </tr>
     <tr class="nhsuk-table__row">
       <td class="nhsuk-table__cell">
-        <code> nhsuk-tag--aqua-green </code>
+        <code> nhsuk-tag--blue </code>
       </td>
       <td class="nhsuk-table__cell">
         {{ tag({
           text: "Active",
-          classes: "nhsuk-tag--aqua-green"
+          classes: "nhsuk-tag--blue"
         })}}
       </td>
     </tr>
     <tr class="nhsuk-table__row">
       <td class="nhsuk-table__cell">
-        <code> nhsuk-tag--blue </code>
+        <code> nhsuk-tag--aqua-green </code>
       </td>
       <td class="nhsuk-table__cell">
         {{ tag({
           text: "Pending",
-          classes: "nhsuk-tag--blue"
+          classes: "nhsuk-tag--aqua-green"
         })}}
       </td>
     </tr>

@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Typography" %}
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "1" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -226,7 +226,7 @@
 
   <p>If the link is on a dark background, for example in custom components, use the  <code>nhsuk-link--reverse</code> modifier class to make the text white.</p>
 
-  <p>The white links and background colour must have a contrast ratio of at least 4.5:1 to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA</a>.</p>
+  <p>The white links and background colour must have a contrast ratio of at least 4.5:1 to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
   {{ designExample({
     group: "styles",

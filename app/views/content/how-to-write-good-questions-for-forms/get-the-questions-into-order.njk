@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Get the questions into order" %}
 {% set pageSection = "Content guide" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "Think about how the questions flow and group them in a way that makes sense to the user." %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "329" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/how-to-write-good-questions-for-forms/_breadcrumb.njk" %}
@@ -56,8 +55,6 @@
 
   <p>You need to understand which questions your users expect first and how they group them. One way to do this is with a <a href="/content/how-to-write-good-questions-for-forms/test-your-questions#do-a-card-sorting-exercise">card sorting exercise</a>. Test the order again when you prototype your form.</p>
   <p>For example, do users expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
-
-
 
 {% endblock %}
 

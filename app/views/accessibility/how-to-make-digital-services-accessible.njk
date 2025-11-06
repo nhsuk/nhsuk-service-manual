@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "How to make digital services accessible" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "January 2024" %}
 {% set backlog_issue_id = "351" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
@@ -50,7 +50,6 @@
   <p>An expert audit can help find accessibility problems with your service and make sure it meets accessibility requirements. If you run your own tests regularly, the audit should find very little that needs changing.</p>
   <p>Follow our <a href="testing">guidance on testing</a> and our guidance on <a href="/accessibility/product-and-delivery#monitor-and-record-your-work">monitoring and recording accessibility testing</a> (for product and delivery managers).</p>
   <p>Find out about <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit">getting an accessibility audit (GOV.UK service manual)</a>.</li>
-
 
 {% endblock %}
 
