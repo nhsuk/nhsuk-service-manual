@@ -6,13 +6,16 @@
 
 - Update guidance on asking users for their NHS number
 - Update section on avoiding binary choices in forms guidance
+- Add guidance around reverse example in breadcrumb component
 
 :wrench: **Maintenance**
 
 - Change dummy NHS number to 999 123 4567
-- Update NHS number examples, including adding span class
-- Replace NHS number 3-option radio examples with alternative examples
-- Update wording about reverse examples
+- Update NHS number examples across design system, including adding span class
+- Update coded examples on breadcrumb, care cards, checkboxes, fieldset, hint text, inset text, radios, select, start page and text input component pages
+- Remove duplicate example from summary list component
+- Change Active tag from green to blue
+- Update video review date on pattern for helping users know that a page is up to date
 
 ## 8.3.0 - 4 November 2025
 
