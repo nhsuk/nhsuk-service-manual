@@ -1,16 +1,16 @@
 {% from "select/macro.njk" import select %}
 
 {{ select({
-  id: "select-1",
-  name: "select1",
   label: {
     text: "Choose region"
   },
+  id: "region",
+  name: "region",
+  value: "choose",
   items: [
     {
       value: "choose",
-      text: "Choose region",
-      selected: true
+      text: "Choose region"
     },
     {
       value: "east",
