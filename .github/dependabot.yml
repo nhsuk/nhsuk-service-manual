@@ -62,7 +62,6 @@ updates:
           - 'browser-sync'
           - 'concurrently'
           - 'del-cli'
-          - 'husky'
 
     schedule:
       interval: monthly
