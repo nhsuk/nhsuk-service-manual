@@ -29,13 +29,13 @@
 
       <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/planning-and-writing-text-messages-and-emails">Planning and writing text messages and emails</a></li>
         <ul class="app-side-nav__list app-side-nav__list--nested">
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#when-to-send-emails-and-text-messages">When to send a digital message</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#when-to-send-emails-and-text-messages">Choosing your channel</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#transactional-messages">Messages in the NHS App</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#subscription-messages">Text messages and emails</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#choosing-email-or-text-message">Choosing email or text message</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-messages">Text messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#emails">Emails</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#letters">Letters</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#protect-your-users-from-spam-and-phishing">Protect your users from spam and phishing</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#how-to-write-emails-and-text-messages">How to write emails and text messages</li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#related-guides">Related guides</li>
         </ul>
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting">Formatting</a></li>
       
@@ -56,7 +56,7 @@
 
 {% block bodyContent %}
 
-<h2 id="when-to-send-emails-and-text-messages">When to send a digital message</h2>
+<h2 id="when-to-send-emails-and-text-messages">Choosing your channel</h2>
 
 <p>Always consider whether you can send a digital message in the NHS App first, followed by text or email. If a user doesn’t respond to a digital message, you may still be able to follow up with a letter.</p>
 
@@ -64,12 +64,14 @@
 
 <h2 id="transactional-messages">Messages in the NHS App</h2>
 
-<p>Sending messages in the NHS App are a safe and secure way of communicating with patients and service users. For example:</p>
+<p>Sending messages in the NHS App are a safe and secure way of communicating with patients and service users. You should:</p>
 
 <ul>
-  <li>they completed a transaction, and you’re sending them a confirmation email</li>
-  <li>they paid for an annual service a year ago, and you’re reminding them that it’s about to expire</li>
-  <li>their application has been approved, and you’re sending them a text message to let them know</li>
+  <li>consider the App first as it’s secure and verified</li>
+  <li>keep messages short and concise</li>
+  <li>put whatever matters most first</li>
+  <li>use short descriptive titles</li>
+  <li>include a call to action</li>
 </ul>
 
 <p>Transactional messages reassure the user that the service is working as they expect it to. They reduce anxiety and stop users contacting your service needlessly.</p>
@@ -83,26 +85,64 @@
 <p>You don’t need to ask permission to send transactional messages. Make it clear to users when you collect any details that you may use them for sending messages.</p>
 
 <h3 id="example-of-a-transactional-message">Example of an NHS App message</h3>
+{% from 'inset-text/macro.njk' import insetText %}
 
-<p>Transport for London’s Dial-a-Ride service sends users the following text message to confirm the details of a booking:</p>
+{% set insetTextHtml %}
+<p><strong>Welcome to the NHS App</strong><p>
+<p>If you have full access to the NHS App you can do things like:</p>
+<ul>
+<li>order repeat prescriptions</li>
+<li>manage appointments</li>
+<li>view your GP health record</li>
+</ul>
+<p>If you are unable to access these features, you may need to prove who you are. <a href="https://www.nhs.uk/nhs-app/nhs-app-help-and-support/getting-started-with-the-nhs-app/proving-who-you-are-to-get-full-access/" title="External website">Read more about how to prove who you are</a>.</p>
+{% endset %}
 
-<div class="example">
-  <p>Dial-a-Ride: Your vehicle will arrive in approximately [number of minutes] at [time of day] on [date]. Your driver today is [driver name].</p>
-</div>
+{{ insetText({
+  html: insetTextHtml
+}) }}
 
-<h2 id="choosing-email-or-text-message">Choosing email or text message</h2>
+<h2 id="text-messages">Text messages</h2>
 
-<p>When choosing whether to send an email or text message, consider:</p>
+<p>When choosing to send a text message you should consider:</p>
 
 <ul>
-  <li>which contact details you hold and have permission to use</li>
-  <li>what individual users have said about how they prefer to be contacted</li>
-  <li>the length of your message</li>
+  <li>keeping text messages as short as possible, within one fragment (160 characters), wherever possible for readability</li>
+  <li>avoiding abbreviations and links unless necessary</li>
+  <li>if this is the right channel for sensitive or clinical information</li>
 </ul>
 
 <p>It’s a good idea to use a mix of emails and text messages, especially if the contact details you have are old and might be out of date. For example, you could send an email asking a user to do something. If they haven’t done it after a week, follow it up with a text message.</p>
 
 <p>You should avoid sending emails and text messages at the same time, unless there’s a very good reason to do this.</p>
+
+<h2 id="emails">Emails</h2>
+
+<p>Emails are suitable for longer messages with less time sensitive information. When choosing to send an email you should consider:</p>
+
+<ul>
+  <li>keeping subject lines short and descriptive</li>
+    <li>using plan-text layouts and where possible avoid attachments</li>
+  <li>only sending from official NHS domains (e.g. @nhs.net, @nhs.uk)</li>
+</ul>
+
+<p>It’s a good idea to use a mix of emails and text messages, especially if the contact details you have are old and might be out of date. For example, you could send an email asking a user to do something. If they haven’t done it after a week, follow it up with a text message.</p>
+
+<p>You should avoid sending emails and text messages at the same time, unless there’s a very good reason to do this.</p>
+
+<h2 id="letters">Letters</h2>
+
+<p>Letters should be considered for accessibility or legal reasons and when you need to communicate sensitive information. When choosing to send a letter you should: </p>
+
+<ul>
+  <li>avoid jargon</li>
+  <li>use clear formatting such as headings and bold for key actions</li>
+</ul>
+
+<p>It’s a good idea to use a mix of emails and text messages, especially if the contact details you have are old and might be out of date. For example, you could send an email asking a user to do something. If they haven’t done it after a week, follow it up with a text message.</p>
+
+<p>You should avoid sending emails and text messages at the same time, unless there’s a very good reason to do this.</p>
+
 
 <h2 id="protect-your-users-from-spam-and-phishing">Protect your users from spam and phishing</h2>
 
@@ -178,7 +218,7 @@
 APVU (Assisted Prison Visit Unit)</p>
 </div>
 
-<h2 id="related-guides">Related guides</h2>
+<h2>Additional guidance</h2>
 <p>You may also find these guides useful:</p>
 
 <ul>
