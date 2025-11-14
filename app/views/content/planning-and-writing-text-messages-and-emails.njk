@@ -114,6 +114,22 @@
 
 <p>Maecenas commodo enim vel massa fermentum, in suscipit quam maximus. Maecenas vehicula est eu porta dapibus.</p>
 
+<h3 id="example-of-a-transactional-message">Example of a text message</h3>
+{% from 'inset-text/macro.njk' import insetText %}
+
+{% set insetTextHtml %}
+<p><strong>SenderID: NHSApp</strong><p>
+<p>[First Name]</p>
+<p>You have a new secure message from the NHS.</p>
+<p>Open the NHS App to read it.</p>
+<p>Or you can log in through the NHS website: https://www.nhs.uk/inbox</p>
+{% endset %}
+
+{{ insetText({
+  html: insetTextHtml
+}) }}
+
+
 <h2 id="emails">Emails</h2>
 
 <p>Emails are suitable for longer messages with less time sensitive information. When choosing to send an email you should consider:</p>
@@ -125,6 +141,26 @@
 </ul>
 
 <p>Morbi augue dolor, venenatis in lobortis quis, sodales vel quam. Donec rhoncus lectus ut odio consectetur fringilla. In porta ipsum a dui molestie elementum.</p>
+
+<h3 id="example-of-a-transactional-message">Example of an email</h3>
+{% from 'inset-text/macro.njk' import insetText %}
+
+{% set insetTextHtml %}
+<p><strong>Subject: Lorem ipsum dolor sit amet</strong><p>
+<p>Dear ((fullName)),</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+<p>Contact your GP surgery.</p>
+<p>Book a pharmacy appointment on the NHS App or online at www.nhs.uk/book-a-flu-vaccination</p>
+<p>Find a pharmacy at www.nhs.uk/flu-pharmacy</p>
+<p>Yours sincerely,</p>
+<p>Anim id est laborum</p>
+{% endset %}
+
+{{ insetText({
+  html: insetTextHtml
+}) }}
+
+
 
 <h2 id="letters">Letters</h2>
 
