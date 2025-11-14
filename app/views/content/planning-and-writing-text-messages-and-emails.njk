@@ -1,6 +1,6 @@
-{% set pageTitle = "Planning and writing text messages and emails" %}
+{% set pageTitle = "Planning and writing NHS messages" %}
 {% set pageSection = "Content guide" %}
-{% set pageDescription = "This guide explains when to send emails and text messages to your users and how to write them." %}
+{% set pageDescription = "This guide explains how to create digital messages for NHS App, text and emails, as well as letters." %}
 {% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "450" %}
 
@@ -29,13 +29,15 @@
 
       <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/planning-and-writing-text-messages-and-emails">Planning and writing text messages and emails</a></li>
         <ul class="app-side-nav__list app-side-nav__list--nested">
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#when-to-send-emails-and-text-messages">When to send emails and text messages</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#transactional-messages">Transactional messages</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#subscription-messages">Subscription messages</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#choosing-email-or-text-message">Choosing email or text message</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#protect-your-users-from-spam-and-phishing">Protect your users from spam and phishing</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#how-to-write-emails-and-text-messages">How to write emails and text messages</li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#related-guides">Related guides</li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#when-to-send-emails-and-text-messages">Choosing your channel</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#transactional-messages">Messages in the NHS App</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-messages">Text messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#emails">Emails</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#letters">Letters</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#writing-effective-messages">Writing effective messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#keeping-messages-safe">Keeping messages safe</li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#example-message-templates">Example message templates</li>
         </ul>
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting">Formatting</a></li>
       
@@ -56,159 +58,172 @@
 
 {% block bodyContent %}
 
-<h2 id="when-to-send-emails-and-text-messages">When not to send emails and text messages</h2>
+<h2 id="when-to-send-emails-and-text-messages">Choosing your channel</h2>
 
-<p>Always consider whether you can send an email or text message instead of a letter. If a user doesn’t respond, you may still be able to follow up with a letter.</p>
+<p>Always consider whether you can send a digital message in the NHS App first, followed by text or email. If a user doesn’t respond to a digital message, you may still be able to follow up with a letter.</p>
 
-<p>Some information is too sensitive to be sent by email or text. You should consider this and discuss  anything you’re not sure about with your information assurance team.</p>
+<p>Discuss anything you’re not sure about with your information governance team.</p>
 
-<p>Only send email or text messages when it meets a user need. Two types of message that meet a user need are transactional messages and subscription messages.</p>
+<h2 id="transactional-messages">Messages in the NHS App</h2>
 
-<h2 id="transactional-messages">Transactional messages</h2>
-
-<p>Transactional messages relate directly to something a user has done. For example:</p>
+<p>Sending messages in the NHS App are a safe and secure way of communicating with patients and service users. You should:</p>
 
 <ul>
-  <li>they completed a transaction, and you’re sending them a confirmation email</li>
-  <li>they paid for an annual service a year ago, and you’re reminding them that it’s about to expire</li>
-  <li>their application has been approved, and you’re sending them a text message to let them know</li>
+  <li>consider the App first as it’s secure and verified</li>
+  <li>keep messages short and concise</li>
+  <li>put whatever matters most first</li>
+  <li>use short descriptive titles</li>
+  <li>include a call to action</li>
 </ul>
 
-<p>Transactional messages reassure the user that the service is working as they expect it to. They reduce anxiety and stop users contacting your service needlessly.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut bibendum dolor. Donec interdum porttitor neque. Praesent at augue eget metus tincidunt efficitur.</p>
 
-<p>Look at your service end to end and find the points where users are likely to get anxious. Talk to your contact centre staff to find out why people are contacting you.</p>
+<p>Maecenas commodo enim vel massa fermentum, in suscipit quam maximus. Maecenas vehicula est eu porta dapibus.</p>
 
-<p>If you’re sending an email or text message because the user has completed an action, automate the sending so that the user gets it straight away. That way they will know they’ve been successful.</p>
+<p>Morbi augue dolor, venenatis in lobortis quis, sodales vel quam. Donec rhoncus lectus ut odio consectetur fringilla. In porta ipsum a dui molestie elementum.</p>
 
-<p>If a message doesn’t need to be sent immediately, consider sending it during business hours as it’s more likely to be read. If possible, avoid sending text messages late at night.</p>
+<h3 id="example-of-a-transactional-message">Example of an NHS App message</h3>
+{% from 'inset-text/macro.njk' import insetText %}
 
-<p>You don’t need to ask permission to send transactional messages. Make it clear to users when you collect any details that you may use them for sending messages.</p>
+{% set insetTextHtml %}
+<p><strong>Welcome to the NHS App</strong><p>
+<p>If you have full access to the NHS App you can do things like:</p>
+<ul>
+<li>order repeat prescriptions</li>
+<li>manage appointments</li>
+<li>view your GP health record</li>
+</ul>
+<p>If you are unable to access these features, you may need to prove who you are. <a href="https://www.nhs.uk/nhs-app/nhs-app-help-and-support/getting-started-with-the-nhs-app/proving-who-you-are-to-get-full-access/" title="External website">Read more about how to prove who you are</a>.</p>
+{% endset %}
 
-<h3 id="example-of-a-transactional-message">Example of a transactional message</h3>
+{{ insetText({
+  html: insetTextHtml
+}) }}
 
-<p>Transport for London’s Dial-a-Ride service sends users the following text message to confirm the details of a booking:</p>
+<h2 id="text-messages">Text messages</h2>
 
-<div class="example">
-  <p>Dial-a-Ride: Your vehicle will arrive in approximately [number of minutes] at [time of day] on [date]. Your driver today is [driver name].</p>
-</div>
-
-<h2 id="subscription-messages">Subscription messages</h2>
-
-<p>Subscription messages relate to something a user has asked to be updated about - for example, the publication of new information or changes to government guidance.</p>
-
-<p>Never send subscription messages unless the user has explicitly asked for them - for example, by signing up for alerts. Always give users a way to unsubscribe.</p>
-
-<h3 id="example-of-a-subscription-message">Example of a subscription message</h3>
-
-<p>Users who sign up to be notified when their MOT is about to expire receive the following email:</p>
-
-<div class="example">
-  <p>From: MOT Remind me &lt;mot-remind-me@notifications.service.gov.uk&gt;</p>
-
-  <p>Subject: You’ve signed up for an MOT reminder for [vehicle details]</p>
-
-  <p>Body of email:</p>
-
-  <p>You’ve signed up for MOT reminders.</p>
-
-  <p>The MOT for [vehicle details] [is due or expires] on [date].</p>
-
-  <p>You’ll get an annual reminder a month before your MOT is due, and again 2 weeks later if you don’t have your MOT yet.</p>
-
-  <p>DVSA (Driver and Vehicle Standards Agency)</p>
-
-  <p>Unsubscribe from MOT reminders: [link to unsubscribe]</p>
-</div>
-
-<h2 id="choosing-email-or-text-message">Choosing email or text message</h2>
-
-<p>When choosing whether to send an email or text message, consider:</p>
+<p>When choosing to send a text message you should consider:</p>
 
 <ul>
-  <li>which contact details you hold and have permission to use</li>
-  <li>what individual users have said about how they prefer to be contacted</li>
-  <li>the length of your message</li>
+  <li>keeping text messages as short as possible, within one fragment (160 characters), wherever possible for readability</li>
+  <li>avoiding abbreviations and links unless necessary</li>
+  <li>if this is the right channel for sensitive or clinical information</li>
 </ul>
 
-<p>It’s a good idea to use a mix of emails and text messages, especially if the contact details you have are old and might be out of date. For example, you could send an email asking a user to do something. If they haven’t done it after a week, follow it up with a text message.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut bibendum dolor. Donec interdum porttitor neque. Praesent at augue eget metus tincidunt efficitur.</p>
 
-<p>You should avoid sending emails and text messages at the same time, unless there’s a very good reason to do this.</p>
+<p>Maecenas commodo enim vel massa fermentum, in suscipit quam maximus. Maecenas vehicula est eu porta dapibus.</p>
 
-<h2 id="protect-your-users-from-spam-and-phishing">Protect your users from spam and phishing</h2>
+<h3 id="example-of-a-transactional-message">Example of a text message</h3>
+{% from 'inset-text/macro.njk' import insetText %}
 
-<p>When contacting your users, you must:</p>
+{% set insetTextHtml %}
+<p><strong>SenderID: NHSApp</strong><p>
+<p>[First Name]</p>
+<p>You have a new secure message from the NHS.</p>
+<p>Open the NHS App to read it.</p>
+<p>Or you can log in through the NHS website: https://www.nhs.uk/inbox</p>
+{% endset %}
+
+{{ insetText({
+  html: insetTextHtml
+}) }}
+
+
+<h2 id="emails">Emails</h2>
+
+<p>Emails are suitable for longer messages with less time sensitive information. When choosing to send an email you should consider:</p>
 
 <ul>
-  <li>leave out sensitive information, like bank details</li>
-  <li>avoid making requests for personal information, like a user’s date of birth</li>
-  <li>only send links which point to the GOV.UK domain</li>
-  <li>spell out any web addresses (URLs) in full to show the user where links are going - for example, https://www.gov.uk/exampleservice</li>
-  <li>avoid including redirects in any links - for example, tracking</li>
-  <li>avoid sending attachments with emails</li>
-  <li>include the user’s first name and surname in the body of the email to make phishing more difficult</li>
+  <li>keeping subject lines short and descriptive</li>
+    <li>using plan-text layouts and where possible avoid attachments</li>
+  <li>only sending from official NHS domains (e.g. @nhs.net, @nhs.uk)</li>
 </ul>
 
-<p>You must also follow <a href="/service-manual/technology/how-to-email-your-users">technical standards for emails</a>.</p>
+<p>Morbi augue dolor, venenatis in lobortis quis, sodales vel quam. Donec rhoncus lectus ut odio consectetur fringilla. In porta ipsum a dui molestie elementum.</p>
 
-<h2 id="how-to-write-emails-and-text-messages">How to write emails and text messages</h2>
+<h3 id="example-of-a-transactional-message">Example of an email</h3>
+{% from 'inset-text/macro.njk' import insetText %}
 
-<p>Follow the <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Government Digital Service (<abbr title="Government Digital Service">GDS</abbr>) style guide</a> and <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk#how-people-read">write clearly using plain English</a>.</p>
+{% set insetTextHtml %}
+<p><strong>Subject: Lorem ipsum dolor sit amet</strong><p>
+<p>Dear ((fullName)),</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+<p>Contact your GP surgery.</p>
+<p>Book a pharmacy appointment on the NHS App or online at www.nhs.uk/book-a-flu-vaccination</p>
+<p>Find a pharmacy at www.nhs.uk/flu-pharmacy</p>
+<p>Yours sincerely,</p>
+<p>Anim id est laborum</p>
+{% endset %}
 
-<h3 id="personalise-your-messages">Personalise your messages</h3>
+{{ insetText({
+  html: insetTextHtml
+}) }}
 
-<p>Users are more likely to trust information that’s relevant and clearly meant for them. You should:</p>
+
+
+<h2 id="letters">Letters</h2>
+
+<p>Letters should be considered for accessibility or legal reasons and when you need to communicate sensitive information. When choosing to send a letter you should: </p>
 
 <ul>
-  <li>say who the message is from - consider that the name of your service might mean more to the user than your department or agency name</li>
-  <li>tailor your message - for example, use ‘visa application’ for the email subject line rather than something generic like ‘application’</li>
-  <li>start emails with ‘Dear [firstname lastname]’ not ‘Hi’ (you don’t need to do either for texts)</li>
-  <li>include a reference number and contact details for your service if the user might need to contact you</li>
+  <li>avoid jargon</li>
+  <li>use clear formatting such as headings and bold for key actions</li>
 </ul>
 
-<h3 id="be-concise">Be concise</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut bibendum dolor. Donec interdum porttitor neque. Praesent at augue eget metus tincidunt efficitur.</p>
 
-<p>Keep email and text messages short and to the point. Say only one important thing in each message. If you have several important things to say, send more than one message.</p>
+<p>Maecenas commodo enim vel massa fermentum, in suscipit quam maximus. Maecenas vehicula est eu porta dapibus.</p>
 
-<p>Get the most important information across in the first sentence, so it’s more likely to be read (and to appear in the preview). Remember that email subject lines are often shortened.</p>
 
-<p>Don’t use jargon or acronyms without explanation.</p>
-
-<h3 id="give-clear-instructions">Give clear instructions</h3>
-
-<p>Don’t explain back-end processes or policy. Give the user just enough information so they know what to do next:</p>
+<h2 id="writing-effective-messages">Writing effective messages</h2>
 
 <ul>
-  <li>make it clear what you need the user to do and include any deadlines - for example, ‘Complete this form and send it back to us by 20 May’</li>
-  <li>say what will happen if they don’t do what you’re asking - for example, ‘If you don’t pay by 20 May, you’ll have to apply for a new licence’</li>
-  <li>explain what you’ll do next and when they’ll hear from you - if you won’t be contacting them again, make it clear that it’s the end of the process</li>
+  <li>This is where most of the content guidelines will go, e.g.</li>
+  <li>Be clear and concise – one purpose per message.</li>
+  <li>Start with the key action or information.</li>
+  <li>Use plain English (link to “How we write” nhs.uk page?)</li>
+  <li>Personalise appropriately for channel (could go in channels section). E.g. “Dear (full name) for letters. 
+</li>
+  <li>Example here about what constitutes an effective message?</li>
+  <li>Before/ After of MBP principles being used to improve a message?</li>
 </ul>
 
-<h3 id="example-of-a-personalised-message">Example of a personalised message</h3>
+<p>Maecenas commodo enim vel massa fermentum, in suscipit quam maximus. Maecenas vehicula est eu porta dapibus.</p>
 
-<p>The Help with Prison Visits service sends users the following message:</p>
+<h2 id="keeping-messages-safe">Keeping messages safe</h2>
 
-<div class="example">
-  <p>From: Help with Prison Visits &lt;help-with-prison-visits@notifications.service.gov.uk&gt;</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut bibendum dolor. Donec interdum porttitor neque. Praesent at augue eget metus tincidunt efficitur.</p>
 
-  <p>Subject: Your reference number</p>
+<ul>
+  <li>Only include sensitive information when necessary.</li>
+  <li>Use approved channels (NHS App, Notify, secure email – avoid personal devices)</li>
+  <li>Follow your organisation’s information governance and clinical safety process</li>
+</ul>
 
-  <p>Body of message:</p>
+<h2 id="supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</h2>
 
-  <p>Dear [firstname lastname]</p>
+<ul>
+  <li>Write messages that everyone can understand.</li>
+  <li>Provide alternatives for those not using digital channels. </li>
+  <li>Info about Screen readers, translations in App?</li>
+</ul>
 
-  <p>You asked for a reminder of your reference number.</p>
+<p>Morbi augue dolor, venenatis in lobortis quis, sodales vel quam. Donec rhoncus lectus ut odio consectetur fringilla. In porta ipsum a dui molestie elementum.</p>
 
-  <p>Your reference number is:</p>
+<h2 id="example-message-templates">Example message templates</h2>
 
-  <p>[reference]</p>
+<p>Morbi augue dolor, venenatis in lobortis quis, sodales vel quam. Donec rhoncus lectus ut odio consectetur fringilla. In porta ipsum a dui molestie elementum.</p>
 
-  <p>Check progress or start a new claim at [service URL].</p>
+<ul>
+  <li>Appointment reminder</li>
+  <li>Screening invitation </li>
+  <li>Test results ready notification</li>
+  <li>Vaccination campaign invitation</li>
+</ul>
 
-  <p>Regards,
-APVU (Assisted Prison Visit Unit)</p>
-</div>
 
-<h2 id="related-guides">Related guides</h2>
+<h2>Additional guidance</h2>
 <p>You may also find these guides useful:</p>
 
 <ul>
