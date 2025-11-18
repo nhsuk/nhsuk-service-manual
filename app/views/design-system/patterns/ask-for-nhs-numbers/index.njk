@@ -98,8 +98,8 @@
       <li>allow at least 12 characters in your NHS number input</li>
       <li>check that the NHS number is valid by using a <a href='https://www.datadictionary.nhs.uk/attributes/nhs_number.html'>modulus 11 algorithm (explained on the NHS number page in the NHS Data Model and Dictionary)</a></li>
       <li class="rich-text">keep the NHS number on 1 line – if you use the NHS frontend library or prototype kit, use this HTML code to stop the number from breaking up over 2 lines: <code>&lt;span class="nhsuk-u-nowrap">999 123 4567&lt;/span></code></li>
-      <li class="rich-text">add the <code>inputmode='numeric'</code> attribute to your input to let mobile users use a numeric keyboard on iOS devices and mobile Chrome</li>
-      <li class="rich-text">add <code>meta name="format-detection" content="telephone=no"</code> to your page to stop iOS treating the NHS number as a phone number (but this means that iOS will not recognise any phone numbers on the page)</li>
+      <li class="rich-text">add the <code>inputmode="numeric"</code> attribute to your input so people can use a numeric keyboard on mobile browsers</li>
+      <li class="rich-text">add <code>&lt;meta name="format-detection" content="telephone=no"&gt;</code> to your page to turn off automatic detection of possible phone numbers (including the NHS number) in Safari</li>
   </ul>
 
   <h3>Help users find and recognise their NHS number</h3>
