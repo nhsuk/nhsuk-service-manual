@@ -6,9 +6,9 @@ previewLayout: design-example-wrapper-blank
 
 {% from "breadcrumb/macro.njk" import breadcrumb %}
 
-{% block pageTitle %}
+{% block pageTitle -%}
   Content page template
-{% endblock %}
+{%- endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
