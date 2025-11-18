@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Check answers" %}
 {% set pageDescription = "Use this pattern to let users check their answers before sending information to a service." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Help users to" %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "313" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -82,6 +82,5 @@
     <p>If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.</p>
 
     <p>If you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as "Not provided".</p>
-
 
 {% endblock %}

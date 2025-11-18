@@ -1,25 +1,44 @@
-{% from 'select/macro.njk' import select %}
+{% from "select/macro.njk" import select %}
 
 {{ select({
-  id: "select-1",
-  name: "select-1",
   label: {
-    text: "Label text goes here"
+    text: "Choose region"
   },
+  id: "region",
+  name: "region",
+  value: "choose",
   items: [
     {
-      value: 1,
-      text: "NHS.UK frontend option 1"
+      value: "choose",
+      text: "Choose region"
     },
     {
-      value: 2,
-      text: "NHS.UK frontend option 2",
-      selected: true
+      value: "east",
+      text: "East of England"
     },
     {
-      value: 3,
-      text: "NHS.UK frontend option 3",
-      disabled: true
+      value: "london",
+      text: "London"
+    },
+    {
+      value: "midlands",
+      text: "Midlands"
+    },
+    {
+      value: "yorkshire",
+      text: "North East and Yorkshire"
+    },
+    {
+      value: "northwest",
+      text: "North West"
+    },
+    {
+      value: "southeast",
+      text: "South East"
+    },
+    {
+      value: "southeast",
+      text: "South West"
     }
   ]
 }) }}

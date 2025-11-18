@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Summary list" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "36" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -35,13 +35,6 @@
   <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="/design-system/patterns/complete-multiple-tasks">complete multiple tasks pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
   <h2>How to use summary lists</h2>
-  <p>There are 2 ways to use the summary list component. You can use HTML or, if you're using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK prototype kit</a>, you can use the Nunjucks macro.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "summary-list",
-    type: "default"
-  }) }}
 
   <h3 id="summary-list-with-actions">Summary list with actions</h3>
   <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>

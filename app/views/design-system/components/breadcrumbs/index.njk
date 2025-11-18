@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Breadcrumbs" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use breadcrumbs to help users understand where they are in the website." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "September 2025" %}
 {% set backlog_issue_id = "6" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
 {% include "design-system/components/_breadcrumb.njk" %}
@@ -25,31 +25,21 @@
 
 <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-breadcrumbs">interact with breadcrumbs</a>.</p>
 
-<p>There are 2 versions of the breadcrumbs: the default version and the reverse version.</p>
-
 {{ designExample({
   group: "components",
   item: "breadcrumbs",
   type: "default"
 }) }}
 
-<p>Use the reverse version on dark backgrounds.</p>
-
-{{ designExample({
-  group: "components",
-  item: "breadcrumbs",
-  type: "reverse"
-}) }}
-
 <h2>When to use breadcrumbs</h2>
-<p>Use breadcrumbs to give users context and let them move back or up a level if they can't find what they want on the
+<p>Use breadcrumbs to give users context and let them move back or up a level if they cannot find what they want on the
   page.</p>
 
 <h2>When not to use breadcrumbs</h2>
-<p>Don't use breadcrumbs in transactional journeys as they can get in the way of the user completing the task.</p>
+<p>Do not use breadcrumbs in transactional journeys as they can get in the way of the user completing the task.</p>
 
 <h2>How to use breadcrumbs</h2>
-<p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but don't break a breadcrumb if
+<p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but do not break a breadcrumb if
   it doesn't fit the line.</p>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-breadcrumbs" role="note">
@@ -62,21 +52,25 @@
       href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
 </div>
 
-<p>You don't need to show the current page in the breadcrumb because this information is in the H1.</p>
+<p>You do not need to show the current page in the breadcrumb because this information is in the H1.</p>
 <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
-
-<h3>Accessibility</h3>
-<p class="rich-text">We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use
+<p>We use <code>aria-label="breadcrumb"</code> as a label in the nav element to let people who use
   screen readers know what it is.</p>
-<p class="rich-text">We add <code>aria-hidden="true"</code> to the svg <a href="/design-system/styles/icons">icons</a>
-  to hide them from people who use screen readers.</p>
+
+<h2 id="breadcrumbs-on-dark-backgrounds">Breadcrumbs on dark backgrounds</h2>
+<p>Use the <code>nhsuk-breadcrumb--reverse</code> modifier class to show white links and arrows on dark backgrounds.</p>
+<p>Make sure all users can see the breadcrumbs. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
+
+{{ designExample({
+  group: "components",
+  item: "breadcrumbs",
+  type: "reverse"
+}) }}
 
 <h2>Research</h2>
 <p>We tested breadcrumbs on pages with lots of content about conditions or medicines. They helped people understand
   their place on the website. People noticed them and appreciated the context they gave. People also used them to get
   back to where they came from or to get back home.</p>
-<p>We took out the breadcrumb links when we tested our pages in transactional journeys (in more than 3 labs). We thought
-  that having extra links would distract users and that fewer people would complete the journey. As we expected, we
-  found that users didn't miss the links because they were focused on the task.</p>
+<p>We took out the breadcrumb links when we tested our pages in transactional journeys (in more than 3 labs). We thought that having breadcrumb links would distract users from completing the journey. We found that they did not need the breadcrumbs because they were focused on the task.</p>
 
 {% endblock %}

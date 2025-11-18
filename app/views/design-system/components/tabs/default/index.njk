@@ -1,8 +1,8 @@
-{% from 'tabs/macro.njk' import tabs %} 
-{% from 'tables/macro.njk' import table %}
+{% from "tabs/macro.njk" import tabs %}
+{% from "tables/macro.njk" import table %}
 
 
-{% set pastDayContent %}  
+{% set pastDayContent %}
   {{ table({
     responsive: false,
     panel: false,
@@ -62,7 +62,7 @@
         }
       ]
     ]
-  }) }} 
+  }) }}
 {% endset -%} {% set pastWeekContent %}
   {{ table({
     responsive: false,
@@ -123,7 +123,7 @@
         }
       ]
     ]
-  }) }} 
+  }) }}
 {% endset -%} {% set pastMonthContent %}
   {{ table({
     responsive: false,
@@ -184,7 +184,7 @@
         }
       ]
     ]
-  }) }} 
+  }) }}
 {% endset -%} {% set pastYearContent %}
   {{ table({
     responsive: false,
@@ -245,37 +245,37 @@
         }
       ]
     ]
-  }) }}   
-{% endset -%} 
-{{ tabs({ 
-  items: [ 
-  { 
-    label: "Past day", 
-    id: "past-day", 
-    panel: { 
-      html: pastDayContent 
-      } 
-    }, 
-    { 
-      label: "Past week", 
-      id: "past-week", 
-      panel: { 
-        html: pastWeekContent 
-      } 
-    }, 
-    { 
-      label: "Past month", 
-      id: "past-month", 
-      panel: { 
-        html: pastMonthContent 
-      } 
-    },  
-    { 
-      label: "Past year", 
-      id: "past-year", 
-      panel: { 
-        html: pastYearContent 
-      } 
-    } 
-  ] 
+  }) }}
+{% endset -%}
+{{ tabs({
+  items: [
+  {
+    label: "Past day",
+    id: "past-day",
+    panel: {
+      html: pastDayContent
+      }
+    },
+    {
+      label: "Past week",
+      id: "past-week",
+      panel: {
+        html: pastWeekContent
+      }
+    },
+    {
+      label: "Past month",
+      id: "past-month",
+      panel: {
+        html: pastMonthContent
+      }
+    },
+    {
+      label: "Past year",
+      id: "past-year",
+      panel: {
+        html: pastYearContent
+      }
+    }
+  ]
 }) }}
