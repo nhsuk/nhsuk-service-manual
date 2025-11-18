@@ -7,13 +7,14 @@
 - Update guidance on asking users for their NHS number
 - Update section on avoiding binary choices in forms guidance
 - Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
+- Update select component guidance to bring it closer to GOV.UK design system
 
 :wrench: **Maintenance**
 
 - Change dummy NHS number to 999 123 4567
 - Update NHS number examples across design system, including adding span class (in details, hint text, and text input)
 - Update coded examples on breadcrumb, care cards, checkboxes, fieldset, error summary, hint text, inset text, radios, select, start page and text input component pages and in forms guidance
-- Bring guidance on labels and text input into line with GOV.UK design system
+- Bring guidance on labels and text input into line with GOV.UK
 - Remove duplicate example from summary list component
 - Change Active tag from green to blue
 - Update video review date on pattern for helping users know that a page is up to date

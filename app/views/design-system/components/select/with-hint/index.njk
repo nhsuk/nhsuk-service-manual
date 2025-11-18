@@ -1,0 +1,48 @@
+{% from "select/macro.njk" import select %}
+
+{{ select({
+  label: {
+    text: "Choose region",
+    classes: "nhsuk-label--s"
+  },
+  hint: {
+    text: "This can be different to what you selected before"
+  },
+  id: "region",
+  name: "region",
+  value: "choose",
+  items: [
+    {
+      value: "choose",
+      text: "Choose region"
+    },
+    {
+      value: "east",
+      text: "East of England"
+    },
+    {
+      value: "london",
+      text: "London"
+    },
+    {
+      value: "midlands",
+      text: "Midlands"
+    },
+    {
+      value: "yorkshire",
+      text: "North East and Yorkshire"
+    },
+    {
+      value: "northwest",
+      text: "North West"
+    },
+    {
+      value: "southeast",
+      text: "South East"
+    },
+    {
+      value: "southeast",
+      text: "South West"
+    }
+  ]
+}) }}
