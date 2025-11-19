@@ -4,13 +4,15 @@
 {% from "back-link/macro.njk" import backLink %}
 
 {% block head %}
-  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
   <meta name="description" content="This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font.">
-{%- endblock %}
+  <meta name="format-detection" content="telephone=no">
 
-{% block pageTitle %}
-  Terms of NHS Frutiger licence
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
 {% endblock %}
+
+{% block pageTitle -%}
+  Terms of NHS Frutiger licence – NHS digital service manual
+{%- endblock %}
 
 {% block beforeContent %}
   {{ backLink({
