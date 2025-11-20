@@ -13,6 +13,14 @@
 {% endblock %}
 
 {% block bodyContent %}
+  <p>We have 3 kinds of tables:</p>
+  <ul>
+    <li><a href="#basic-tables">basic</a></li>
+    <li><a href="#responsive-table">responsive</a></li>
+    <li><a href="#sortable-table">sortable</a></li>
+  </ul>
+  <p>Use tables with caution. They may not be the best way to present information, especially for the public. In staff services, complex data tables can lead to a poor user experience and performance issues.</p>
+
   <h2 id="basic-tables">Basic tables</h2>
   <h3 id="2-column-table">2 column table</h3>
 
@@ -55,6 +63,32 @@
     <li>to lay out content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
     <li>if your content is easier to read and understand on a small screen in a non-responsive layout – use a <a href="#basic-tables">basic table</a> instead</li>
   </ul>
+
+  <h2 id="sortable-table">Sortable table</h2>
+  <p>A sortable table lets users sort columns in ascending or descending order.</p>
+  <p>Users can click on the column header to trigger sorting. They can only sort by 1 column at a time.</p>
+  <p>Think carefully about which columns to sort on. This table allows users to sort:</p>
+  <ul>
+    <li>numerically</li>
+    <li>alphabetically</li>
+    <li>by dates and times</li>
+    <li>by empty or null cells</li>
+  </ul>
+ 
+  <p>[What types of data should not be sorted?]</p>
+
+  <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
+  <p>Use this table when users need to sort data to find what they need, for example in staff systems with large data sets.</p>
+
+  <h3 id="when-not-to-use-a-sortable-table">When not to use a sortable table</h3>
+  <p>Do not let users sort a table when the data must be viewed as is.</p>
+
+  <h3>Session storage</h3>
+  <p>Do not add code to save the sorting order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its original sort order.</p>
+
+  <h3 id="client-or-server-side-sorting">Client or server-side sorting</h3>
+  <p>[What to say? E.g.] For large data sets, use server-side sorting where only the current page of data is sorted on the client side, while the rest is handled by the server.</p>
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
@@ -101,12 +135,23 @@
   <p>Use table headers to tell users what the rows and columns represent.</p>
 
   <h2 id="research">Research</h2>
+
   <h3>Basic tables</h3>
   <p>These tables tested well with users of health information on the NHS website.</p>
 
   <h3>Responsive table</h3>
   <p>This table was tested at HM Revenue &amp; Customs.</p>
 
+  <h3>Sortable table</h3>
+  <p>This table was developed by NHS England and tested in WHERE.</p>
+  <p>There is an overlap between sortable tables and:</p>
+  <ul>
+    <li>search</li>
+    <li>filter</li>
+    <li><a href="/design-system/components/pagination">pagination</a></li>
+  </ul>
+  <p>We want to understand better how they can work together. Please get in touch if you are working on these components.</p>
+  <p>We have not yet developed a responsive or scrolling sortable table. If you need a responsive sorting table, you could try adding a <a href="/design-system/components/select">select component</a>. Please feedback if you experiment with these.</p>
   <h3>Table with panel</h3>
   <p>We have also designed a table with a panel. You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/tables/as-a-panel/">find an example in the frontend library</a>. We have not included it in this list of components yet because it needs more testing.</p>
 
