@@ -13,6 +13,7 @@
 - Update guidance on asking users for their NHS number
 - Update section on avoiding binary choices in forms guidance
 - Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
+- Update select component guidance to bring it closer to GOV.UK design system
 
 :wrench: **Maintenance**
 
