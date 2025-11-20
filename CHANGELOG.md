@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add guidance for codes and sequences class to text input component
+
 ## 8.4.0 - 19 November 2025
 
 :new: **New features**
@@ -7,7 +13,6 @@
 - Update guidance on asking users for their NHS number
 - Update section on avoiding binary choices in forms guidance
 - Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
-- Update select component guidance to bring it closer to GOV.UK design system
 
 :wrench: **Maintenance**
 
