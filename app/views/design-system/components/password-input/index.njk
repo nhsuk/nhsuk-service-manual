@@ -104,7 +104,7 @@
   <h3 id="avoid-restricting-the-users-input">Avoid restricting the user's input</h3>
   <p>See <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a> to see how to help users choose strong passwords.</p>
   <p>Support all the characters users may need to enter a password, including numbers and symbols.</p>
-  <p>Set a minimum length of at least 8 characters but do not set a maximum length.</p>
+  <p>Set a minimum length of at least 12 characters. Use a maximum length to prevent buffer overflow attacks, for example 1,024 characters.</p>
   <p>The <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">NCSC password policy</a> includes advice on technical solutions and reducing the burden on users. If you must place password restrictions on users, such as for technical reasons, be clear and consistent.</p>
   <p>Any restrictions must be identical wherever the user creates or enters a password. If you change the restrictions over time, you must continue to support existing user passwords or ask them to set a new one.</p>
 
