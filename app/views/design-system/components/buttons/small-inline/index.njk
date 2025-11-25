@@ -1,23 +1,19 @@
 {% from "button/macro.njk" import button %}
-{% from "fieldset/macro.njk" import fieldset %}
 {% from "input/macro.njk" import input %}
 
-{% call fieldset({
-  legend: {
-    text: "Product order number",
-    classes: "nhsuk-fieldset__legend--s"
+{{ input({
+  label: {
+    text: "Product order number"
+  },
+  id: "product-code",
+  name: "productCode",
+  classes: "nhsuk-input--width-10 nhsuk-input--code",
+  formGroup: {
+    afterInput: {
+      html: button({
+        text: "Find",
+        classes: "nhsuk-button--small"
+      })
+    }
   }
-}) %}
-  <div class="nhsuk-form-group nhsuk-u-width-one-half nhsuk-form-group--inline">
-    {{ input({
-      id: "product-code",
-      name: "productCode",
-      classes: "nhsuk-button--small nhsuk-input--code"
-    }) }}
-
-    {{ button({
-      text: "Find",
-      classes: "nhsuk-button--small"
-    }) }}
-  </div>
-{% endcall %}
+}) }}
