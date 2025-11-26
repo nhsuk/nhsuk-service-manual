@@ -27,6 +27,8 @@
     <li>the <a href="https://www.ncsc.gov.uk/collection/passwords">National Cyber Security Centre's guidance on password administration for system owners</a>, including their <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">Password policy: updating your approach</a></li>
     <li><a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a></li>
     <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a></li>
+    <li>about using <a href="/standards-and-technology/technology/NHS-login">NHS login</a> and <a href="https://digital.nhs.uk/services/care-identity-service">Care Identity Service</a> for authentication</li>
+    <li>the NHS <a href="https://digital.nhs.uk/cyber-and-data-security/guidance-and-assurance/multi-factor-authentication-mfa-policy">Multi-factor authentication (MFA) policy</a></li>
   </ul>
 
   <h2 id="when-not-to-use-password-input">When not to use password input</h2>
@@ -104,13 +106,13 @@
   <h3 id="avoid-restricting-the-users-input">Avoid restricting the user's input</h3>
   <p>See <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a> to see how to help users choose strong passwords.</p>
   <p>Support all the characters users may need to enter a password, including numbers and symbols.</p>
-  <p>Set a minimum length of at least 12 characters. Use a maximum length to prevent buffer overflow attacks, for example 1,024 characters.</p>
-  <p>The <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">NCSC password policy</a> includes advice on technical solutions and reducing the burden on users. If you must place password restrictions on users, such as for technical reasons, be clear and consistent.</p>
+  <p>Set a minimum length of at least 12 characters. Set a maximum length of at least 64 characters to help prevent buffer overflow attacks.</p>
+  <p>The <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">NCSC password policy</a> includes advice on technical solutions and reducing the burden on users.</p>
   <p>Any restrictions must be identical wherever the user creates or enters a password. If you change the restrictions over time, you must continue to support existing user passwords or ask them to set a new one.</p>
 
   <h4 id="do-not-use-maxlength-to-restrict-password-length">Do not use maxlength to restrict password length</h4>
   <p>Users will not get any feedback when they've reached the <code>maxlength</code> and their text input has been truncated. This happens when a user has pasted text from elsewhere or it's been autofilled by a password manager.</p>
-  <p>If you must restrict the length of a password, show an error message instead. See <a href="https://design-system.service.gov.uk/patterns/validation/">GOV.UK's pattern for helping users to recover from validation errors </a>.</p>
+  <p>When restricting the length of a password, show an error message instead. See <a href="https://design-system.service.gov.uk/patterns/validation/">GOV.UK's pattern for helping users to recover from validation errors </a>.</p>
 
   <h3 id="do-not-spell-check-or-autocapitalise-the-users-input">Do not spell-check or autocapitalise the user's input</h3>
   <p>Some browsers might automatically change what the user is typing when the input's text is visible, such as correcting spelling or automatically turning on upper case letters at the start of sentences.</p>
