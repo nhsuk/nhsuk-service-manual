@@ -26,8 +26,6 @@
   <ul>
     <li>the <a href="https://www.ncsc.gov.uk/collection/passwords">National Cyber Security Centre's guidance on password administration for system owners</a> (including their <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">password policy</a>) and <a href="https://digital.nhs.uk/cyber-and-data-security/guidance-and-assurance/multi-factor-authentication-mfa-policy">NHS England's multi-factor authentication (MFA) policy</a></li>
     <li>about using <a href="/standards-and-technology/technology/NHS-login">NHS login</a> and <a href="https://digital.nhs.uk/services/care-identity-service">Care Identity Service (NHS England)</a> for authentication</li>
-    <li><a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a> to help users create and enter secure and memorable passwords</li>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a></li>
   </ul>
 
   <h2 id="when-not-to-use-password-input">When not to use password input</h2>
@@ -43,8 +41,8 @@
   <h2 id="how-to-use-password-input">How to use password input</h2>
   <p>This component lets users enter a password, with an option to show what they've entered as plain text.</p>
   <p>This allows users to visually check their password before they submit it, which helps them reduce errors and choose passwords that are more unique and secure.</p>
+  <p>Use this guidance with <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>, which explains how to help users create and enter secure and memorable passwords.</p>
   <p>The password input component requires JavaScript to work. Without it, users will see a password input but no "show" button.</p>
-
 
   <h3 id="error-messages">Error messages</h3>
 
@@ -133,6 +131,9 @@
   <li>a keyboard shortcut is pressed</li>
   <li>a suggested password is created</li>
   </ul>
+
+<h2 id="accessibility">Accessibility</h2>
+<p>Follow <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a>.</p>
 
 <h2 id="research-on-this-component">Research on this component</h2>
 <p>GOV.UK decided that having a 2nd field is not helpful for users, particularly on password inputs with show and hide buttons.</p>
