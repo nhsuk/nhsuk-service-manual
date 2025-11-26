@@ -66,6 +66,14 @@
 
   <h2 id="sortable-table">Sortable table</h2>
   <p>A sortable table lets users sort columns in ascending or descending order.</p>
+
+  {# {{ designExample({
+    group: "components",
+    item: "table",
+    type: "sortable"
+  }) }} #}
+  <p>[EXAMPLE HERE]</p>
+
   <p>Users can click on the column header to trigger sorting. They can only sort by 1 column at a time.</p>
   <p>Carry out user research to understand which columns your users need to sort on, how much data to display at once and how it should be ordered by default. Ask what your users need to do with the data?</p>
   <p>This table allows users to sort:</p>
@@ -76,7 +84,7 @@
     <li>by empty or null cells</li>
   </ul>
  
-  <p>[What types of data should not be sorted?]</p>
+  <p>Don't allow sorting on columns that cannot be meaningfully ordered, for example paragraphs of text.</p>
 
   <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
   <p>Use this table when users need to sort data to find what they need, for example in staff systems with large data sets.</p>
