@@ -92,9 +92,9 @@
   <h3 id="when-not-to-use-a-sortable-table">When not to use a sortable table</h3>
   <p>Do not let users sort a table showing fixed information such as upcoming appointments.</p>
 
-  <h3>Session storage</h3>
-  <p>Do not add code to save the sorting order. Users may not expect this and it could add clinical risk.</p>
-  <p>A page refresh or navigation must return the page to its original sort order.</p>
+  <h3 id="session-storage">Session storage</h3>
+  <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its default sort order. Unless you add functionality to allow users to save their sorting order explicitly.</p>
 
   <h3 id="client-or-server-side-sorting">Client or server-side sorting</h3>
   <p>[What to say? E.g.] For large data sets, use server-side sorting where only the current page of data is sorted on the client side, while the rest is handled by the server.</p>
