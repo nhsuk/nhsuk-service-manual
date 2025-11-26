@@ -4,8 +4,9 @@
 
 :new: **New features**
 
-- Add guidance for codes and sequences class to text input component
 - Add password input component
+- Add smaller buttons
+- Add guidance on codes and sequences class for text input component
 
 ## 8.4.0 - 19 November 2025
 
