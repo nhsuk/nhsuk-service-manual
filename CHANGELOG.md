@@ -9,6 +9,10 @@
 - Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
 - Update select component guidance to bring it closer to GOV.UK design system
 
+:new: **New features**
+
+- Added guidance on new interruption panel variant
+
 :wrench: **Maintenance**
 
 - Change dummy NHS number to 999 123 4567
