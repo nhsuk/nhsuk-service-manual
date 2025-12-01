@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add guidance for codes and sequences class to text input component
+
 ## 8.4.0 - 19 November 2025
 
 :new: **New features**
