@@ -1,0 +1,33 @@
+{% extends "layouts/layout.njk" %}
+
+{% set pageTitle = "Standalone example" %}
+{% set bodyClasses = "nhsuk-u-static-padding-0" %}
+
+{% block head %}
+  <meta name="description" content="NHS digital service manual - standalone example">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
+{% endblock %}
+
+{% block header %}
+  {{ header({
+    service: {
+      text: "Service name"
+    }
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block main %}
+  {{ exampleHtml | safe }}
+{% endblock %}
+
+{% block footer %}
+  {{ footer() }}
+{% endblock %}
+
+{% block bodyEnd %}
+  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
+{% endblock %}
