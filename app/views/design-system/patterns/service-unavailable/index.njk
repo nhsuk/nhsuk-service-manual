@@ -1,0 +1,43 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Service unavailable pages" %}
+{% set pageDescription = "Tell users what do do when your service is unavailable" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "November 2025" %}
+{% set backlog_issue_id = "8" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>Use a service unavailable page when a service is temporaily not able to be used. This could be for planned reasons, or for reasons outside of your control such as a hosting provider outage.</p>
+
+<p>Have a general page in case you need to close a service and do not have time to update the page. As soon as you know when the service will be available, update the page.</p>
+
+<p>You should consider what users should do whils the service is unavailable. For example, you could include a phone number they could contact for urgent issues, or a link to a form which can be downloaded to record information temporarily.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "default"
+}) }}
+
+<h2>Standalone page</h2>
+
+<p>Some hosting providers may let you have page that can be switched to automatically if your service is down.</p>
+
+<p>If this page is required to be standalone, with no external CSS or javascript files, you can download and customise this template.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "standalone",
+  htmlOnly: true
+}) }}
+
+
+{% endblock %}
