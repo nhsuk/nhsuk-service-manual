@@ -1,5 +1,3 @@
-/* eslint-disable no-new */
-
 // NHS.UK frontend components
 import { createAll, initAll } from 'nhsuk-frontend'
 

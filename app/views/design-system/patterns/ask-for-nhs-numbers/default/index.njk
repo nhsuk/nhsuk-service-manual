@@ -4,8 +4,10 @@ previewLayout: design-example-wrapper-full
 
 {% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
-{% from 'input/macro.njk' import input %}
-{% from 'button/macro.njk' import button %}
+{% from "input/macro.njk" import input %}
+{% from "button/macro.njk" import button %}
+
+{% set dummyNhsNumber = "999 123 4567" %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -14,16 +16,17 @@ previewLayout: design-example-wrapper-full
       {{ input({
         label: {
           text: "What is your NHS number?",
-          classes: "nhsuk-label--l",
+          size: "l",
           isPageHeading: true
         },
         hint: {
-          html: "Your NHS number is a 10 digit number that you find on any letter the NHS has sent you, for example, <span class=\"nhsuk-u-nowrap\">485 777 3456</span>"
+          html: 'This is a 10 digit number (like <span class="nhsuk-u-nowrap">' + dummyNhsNumber + '</span>) that you can find on an NHS letter, prescription or in the NHS App'
         },
         id: "nhs-number",
-        name: "nhs-number",
-        classes: "nhsuk-input--width-10",
-        inputmode: "numeric"
+        name: "nhsNumber",
+        classes: "nhsuk-input--width-10 nhsuk-input--code",
+        inputmode: "numeric",
+        spellcheck: false
       }) }}
 
       {{ button({

@@ -1,11 +1,12 @@
-{% from 'date-input/macro.njk' import dateInput %}
+{% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "dob-errors",
+  id: "date-of-birth",
+  namePrefix: "dateOfBirth",
   fieldset: {
     legend: {
       text: "What is your date of birth?",
-      classes: "nhsuk-label--l",
+      size: "l",
       isPageHeading: true
     }
   },

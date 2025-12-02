@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Select" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use select to let users choose an option from a long list but only use it as a last resort." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "20" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -22,8 +22,40 @@
     type: "default"
   }) }}
 
-  <h2 id="how-it-works">How to use select</h2>
-  <p>The select component allows users to choose an option from a long list. Before using it, try other questions which will allow you to present users with fewer options. Consider using a different solution, such as <a href="/design-system/components/radios">radios</a>.</p>
+  <h2 id="when-to-use-select">When to use select</h2>
+  <p>The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.</p>
+  
+  <h2 id="when-not-to-use-select">When not to use select</h2>
+  <p>The select component allows users to choose an option from a long list. Before using the select component, try asking users other questions which will allow you to present them with fewer options.</p>
+  <p>Consider using a different solution, such as <a href="/design-system/components/radios/">radios</a>.</p>
+
+  <h2 id="how-to-use-select">How to use select</h2>
+
+  <p>If you use the component for settings, you can make an option pre-selected by default when users first see it.</p>
+  <p>If you use the component for questions, do not pre-select any of the options in case it influences users' answers.</p>
+
+  <h3 id="select-with-hint">Select with hint</h3>
+  <p>You can add <a href="/design-system/components/hint-text">hint text</a> to help the user understand the options and choose 1 of them.</p>
+  
+  {{ designExample({
+    group: "components",
+    item: "select",
+    type: "with-hint"
+  }) }}
+
+  <h3 id="error-messages">Error messages</h3>
+  <p>Display an error message if the user has not selected an option.</p>
+  <p>Style error messages as shown in the example:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "select",
+    type: "error"
+  }) }}
+
+  <h3 id="avoid-adding-functionality-to-allow-selecting-multiple-options">Avoid adding functionality to allow selecting multiple options</h3>
+  <p>The select component does not support selecting multiple options, as there's a history of poor usability and assistive technology support for <code>&lt;select multiple&gt;</code>. If you need to ask the user to pick more than 1 item from a list, it's almost always better to use another method, such as a list of <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
+  <p>Read <a href="https://www.24a11y.com/2019/select-your-poison/">Select your poison (24 Accessibility)</a>.</p>
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -44,6 +76,11 @@
     <li>confused focused items with selected items</li>
     <li>tried to pinch zoom select options on smaller devices</li>
     <li>not understood that they can scroll down to see more items, or how to</li>
+  </ul>
+  <p>Find out more in:</p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=-dH6a6eMdXE">a video of Alice Barlett talking about binning select tags</a>, with examples of users struggling with selects</li>
+    <li><a href="https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/">a blog post on Asking for a date of birth (GOV.UK)</a>, which shows an example where a text input is used over a select</li>
   </ul>
 
 {% endblock %}

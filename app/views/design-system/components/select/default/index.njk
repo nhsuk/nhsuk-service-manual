@@ -1,25 +1,28 @@
-{% from 'select/macro.njk' import select %}
+{% from "select/macro.njk" import select %}
 
 {{ select({
-  id: "select-1",
-  name: "select-1",
   label: {
-    text: "Label text goes here"
+    text: "Sort by"
   },
+  id: "sort-by",
+  name: "sortBy",
+  value: "recently-published",
   items: [
     {
-      value: 1,
-      text: "NHS.UK frontend option 1"
+      value: "recently-published",
+      text: "Recently published"
     },
     {
-      value: 2,
-      text: "NHS.UK frontend option 2",
-      selected: true
+      value: "recently-updated",
+      text: "Recently updated"
     },
     {
-      value: 3,
-      text: "NHS.UK frontend option 3",
-      disabled: true
+      value: "most-views",
+      text: "Most views"
+    },
+    {
+      value: "most-comments",
+      text: "Most comments"
     }
   ]
 }) }}

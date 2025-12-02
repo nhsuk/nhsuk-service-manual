@@ -1,15 +1,15 @@
-{% from 'radios/macro.njk' import radios %}
+{% from "radios/macro.njk" import radios %}
 
 {{ radios({
   idPrefix: "example-error",
-  name: "example-error",
+  name: "exampleError",
   errorMessage: {
     text: "Select yes if you have changed your name"
   },
   fieldset: {
     legend: {
       text: "Have you changed your name?",
-      classes: "nhsuk-fieldset__legend--l",
+      size: "l",
       isPageHeading: true
     }
   },

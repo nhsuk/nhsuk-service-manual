@@ -1,7 +1,7 @@
 {% extends "layouts/layout.njk" %}
 
 {% set pageTitle = "Standalone example" %}
-{% set htmlAttributes = { "class": "app-example-wrapper" } %}
+{% set htmlAttributes = { class: "app-example-wrapper" } %}
 {% set bodyClasses = "app-example-page app-example-page--" ~ item %}
 
 {% if background %}
@@ -10,6 +10,8 @@
 
 {% block head %}
   <meta name="description" content="NHS digital service manual - standalone example">
+  <meta name="format-detection" content="telephone=no">
+
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
 {% endblock %}
 

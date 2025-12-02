@@ -1,17 +1,17 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "What's new" %}
 {% set pageDescription = "Find out what's happening with the service manual." %}
 {% set pageSection = "What's new" %}
 {% set landingPage = true %}
 
-{% extends "layouts/app-layout.njk" %}
-
 {% block bodyContent %}
 
   <h2>Latest updates</h2>
 
-  <h3>October 2025</h3>
+  <h3>November 2025</h3>
   <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in October 2025</caption>
+    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in November 2025</caption>
     <thead class="nhsuk-table__head">
       <tr class="nhsuk-table__row">
         <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
@@ -20,10 +20,22 @@
     </thead>
     <tbody class="nhsuk-table__body">
       <tr>
+        <td class="nhsuk-table__cell">Content guide</td>
+        <td class="nhsuk-table__cell">
+          <p>Updated section on <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">avoiding binary choices in guidance on writing good questions for forms</a></p>
+        </td>
+      </tr>
+      <tr>
         <td class="nhsuk-table__cell">Design system</td>
         <td class="nhsuk-table__cell">
-          <p>Added <a href="/design-system/components/checkboxes#smaller-checkboxes">smaller checkboxes</a> and <a href="/design-system/components/radios#smaller-radios">smaller radios</a> and aligned guidance better with GOV.UK</p>
-          <p>Added <a href="/design-system/components/pagination#for-navigating-between-pages-of-items">numbered pagination, for navigating between pages of items</a></p>
+          <p>Added new <a href="/design-system/components/password-input">password input component</a></p>
+          <p>Added <a href="/design-system/components/buttons#smaller-buttons">smaller buttons</a></p>
+          <p>Add guidance on <a href="/design-system/components/text-input#codes-and-sequences">codes and sequences for text input</a></p>
+          <p>Updated guidance on <a href="/design-system/patterns/ask-for-nhs-numbers">asking users for their NHS number</a>, including new dummy NHS number 999 123 4567</p>
+          <p>Updated guidance for reverse examples, such as white links on dark backgrounds</p>
+          <p>Updated <a href="/design-system/components/select">select component</a> guidance to bring it closer to GOV.UK design system</p>
+          <p>Updated coded examples in design system</p>
+          <p>(More details in <a href="https://github.com/nhsuk/nhsuk-service-manual/blob/main/CHANGELOG.md">changelog in GitHub</a>)</p>
         </td>
       </tr>
     </tbody>
@@ -35,6 +47,18 @@
   <p>Posts by the service manual team and community.</p>
 
   <div class="nhsuk-grid-row nhsuk-card-group">
+   <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <img class="nhsuk-card__img" src="/assets/blog-post-frontend-v10.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading"><a href="https://digital.nhs.uk/blog/design-matters/2025/making-the-nhs-design-system-fit-for-the-future">Making the NHS design system fit for the future</a></h3>
+          </h3>
+          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
+          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
+          <p class="nhsuk-card__description">Tero Väänänen explains why the NHS design system exists and why it plays an important role in fulfilling the 10-year health plan. He also describes recent changes to the frontend code behind the design system, and why it is important for teams to adopt them now.</p>
+        </div>
+      </div>
+    </div>
     <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
       <div class="nhsuk-card nhsuk-card--clickable">
         <img class="nhsuk-card__img" src="/assets/blog-prototype-kit.png" alt="">
@@ -43,18 +67,6 @@
           <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 July 2025</p>
           <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
           <p class="nhsuk-card__description">Frankie Roberto and Mike Gallagher explain why we revived the NHS prototype kit, the benefits of prototyping in code and how digital teams in the NHS can get started using it.</p>
-        </div>
-      </div>
-    </div>
-    <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <img class="nhsuk-card__img" src="/assets/blog-domestic-abuse.jpg" alt="">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="https://digital.nhs.uk/blog/design-matters/2025/mitigating-the-risks-of-domestic-abuse">Mitigating the risks of domestic abuse</a></h3>
-          </h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 May 2025</p>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
-          <p class="nhsuk-card__description">Emma Swift and Zuzanna Lito explain how we've updated the NHS service standard to make sure teams building online services are more aware and responsive to the risks of domestic abuse and coercive control.</p>
         </div>
       </div>
     </div>
