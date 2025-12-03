@@ -1,10 +1,10 @@
 {% extends "layouts/app-layout.njk" %}
 
-{% set pageTitle = "Navigate content pages" %}
-{% set pageDescription = "Use cards to help users navigate to the content they need." %}
+{% set pageTitle = "Hub page" %}
+{% set pageDescription = "Hub pages use cards to help users navigate to the content they need." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
-{% set theme = "Help users to" %}
+{% set theme = "Pages" %}
 {% set dateUpdated = "December 2025" %}
 {% set backlog_issue_id = "8" %}
 
@@ -13,6 +13,12 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "hub-page",
+    type: "example"
+  }) }}
 
   <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
   <p>Use clickable <a href="/design-system/components/card">cards</a> on hub pages to signpost groupings of related content and help users find the content they need.</p>

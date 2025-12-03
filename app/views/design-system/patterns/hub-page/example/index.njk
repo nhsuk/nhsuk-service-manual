@@ -1,0 +1,105 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from "card/macro.njk" import card %}
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Home"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<h1>NHS services</h1>
+<p class="nhsuk-body-l">Find out about NHS services such as GPs, pharmacies and hospitals, services near you, and online services to manage your health</p>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      clickable: "true",
+      headingLevel: 5,
+      heading: "Order a repeat prescription",
+      headingClasses: "nhsuk-heading-xs"
+    }) }}
+  </li>
+</ul>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      primary: "true",
+      clickable: "true",
+      heading: "GPs",
+      headingClasses: "nhsuk-heading-m",
+      description: "About GP services, including how to find and register with a local GP and how to book an appointment"
+    }) }}
+  </li>
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      primary: "true",
+      clickable: "true",
+      heading: "Hospitals",
+      headingClasses: "nhsuk-heading-m",
+      description: "About NHS hospitals, booking and changing appointments with the NHS e-Referral Service and going into hospital"
+    }) }}
+  </li>
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      primary: "true",
+      clickable: "true",
+      heading: "Dentists",
+      headingClasses: "nhsuk-heading-m",
+      description: "About NHS dental services, how to find an NHS dentist and how much treatment costs"
+    }) }}
+  </li>
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      primary: "true",
+      clickable: "true",
+      heading: "Prescriptions",
+      headingClasses: "nhsuk-heading-m",
+      description: "Find out about prescriptions including charges, repeat prescriptions and if you can get free prescriptions"
+    }) }}
+  </li>
+</ul>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+  {{ card({
+    href: "#",
+    clickable: "true",
+    secondary: "true",
+    heading: "Services A to Z",
+    headingClasses: "nhsuk-heading-m",
+    description: "Use our service finder to find other health services"
+  }) }}
+  </li>
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+  {{ card({
+    href: "#",
+    clickable: "true",
+    secondary: "true",
+    heading: "Online services",
+    headingClasses: "nhsuk-heading-m",
+    description: "Get your NHS number and find out how to view test results online"
+  }) }}
+  </li>
+</ul>
+
+{% endblock %}
+
