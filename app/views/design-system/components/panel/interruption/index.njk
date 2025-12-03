@@ -1,5 +1,5 @@
-{% from 'panel/macro.njk' import panel %}
-{% from 'button/macro.njk' import button %}
+{% from "button/macro.njk" import button %}
+{% from "panel/macro.njk" import panel %}
 
 {% set panelHtml %}
   <p>They had a COVID-19 vaccine on 25 September 2025.</p>
@@ -16,7 +16,7 @@
 
 {{ panel({
   titleText: "Jodie Brown had a COVID-19 vaccine less than 3 months ago",
-  titleClasses: "nhsuk-panel__title--l",
+  titleSize: "l",
   classes: "nhsuk-panel--interruption",
   html: panelHtml
 }) }}
