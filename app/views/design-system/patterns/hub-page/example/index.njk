@@ -20,7 +20,7 @@ previewLayout: design-example-wrapper-full
 
 {% block content %}
 
-<h1>NHS services</h1>
+<h1 class="nhsuk-heading-xl">NHS services</h1>
 <p class="nhsuk-body-l">Find out about NHS services such as GPs, pharmacies and hospitals, services near you, and online services to manage your health</p>
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
@@ -80,26 +80,25 @@ previewLayout: design-example-wrapper-full
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-  {{ card({
-    href: "#",
-    clickable: "true",
-    secondary: "true",
-    heading: "Services A to Z",
-    headingClasses: "nhsuk-heading-m",
-    description: "Use our service finder to find other health services"
-  }) }}
+    {{ card({
+      href: "#",
+      clickable: "true",
+      secondary: "true",
+      heading: "Services A to Z",
+      headingClasses: "nhsuk-heading-m",
+      description: "Use our service finder to find other health services"
+    }) }}
   </li>
-    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-  {{ card({
-    href: "#",
-    clickable: "true",
-    secondary: "true",
-    heading: "Online services",
-    headingClasses: "nhsuk-heading-m",
-    description: "Get your NHS number and find out how to view test results online"
-  }) }}
+  <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    {{ card({
+      href: "#",
+      clickable: "true",
+      secondary: "true",
+      heading: "Online services",
+      headingClasses: "nhsuk-heading-m",
+      description: "Get your NHS number and find out how to view test results online"
+    }) }}
   </li>
 </ul>
 
 {% endblock %}
-
