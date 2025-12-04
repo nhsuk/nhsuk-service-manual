@@ -105,7 +105,8 @@
 
   <h2 id="grid">Grid system</h2>
   <p class="rich-text">The grid is structured with a <code>nhsuk-grid-row</code> wrapper which acts as a row to contain your grid columns.</p>
-  <p class="rich-text">You can add columns inside this wrapper to create your layout. To define your columns, add the class beginning with <code>nhsuk-grid-column-</code> to a new container followed by the width, for example <code>nhsuk-grid-column-one-third</code>, to make it the width you want.</p>
+  <p class="rich-text">You can add columns inside this wrapper to create your layout. To define your columns, add the class beginning with <code>nhsuk-grid-column-</code> to a new container followed by the width, for example <code>nhsuk-grid-column-one-third</code>.</p>
+  <p>Columns only apply on screen sizes above tablet (641px). To make columns that apply to smaller screen sizes, use <a href="/design-system/styles/layout#breakpoints">breakpoint specific classes</a>.</p>
 
   <h3>Full width</h3>
 
@@ -219,18 +220,18 @@
     htmlOnly: true
   }) }}
 
-  <h3>Tablet and mobile specific grid classes</h3>
-  <p>By default, grid columns sizes will go to 100% width of the container on screen sizes below the desktop breakpoint (769px). These utility classes will enforce column widths on all screen sizes.</p>
-  <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> utility class followed by the width to an existing grid column, for example <code>nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
+  <h3>Breakpoint-specific column classes</h3>
+  <p>By default, grid columns will be 100% width of the container on screen sizes until the tablet breakpoint (641px). These classes will enforce column widths at specific breakpoints.</p>
+  <p>To define your column sizes, add: <code>-from-mobile</code> or <code>-from-desktop</code> classes.</p> <p>Note there are no "from tablet" classes because this is the default behavior.</p>
 
   {{ designExample({
     group: "styles",
     item: "layout",
-    type: "tablet-mobile",
+    type: "breakpoint-columns",
     htmlOnly: true
   }) }}
 
-  <h3>Tablet specific grid classes</h3>
+  {# <h3>Tablet specific grid classes</h3>
   <p>These utility classes will enforce column widths on screen sizes above the mobile breakpoint (320px).</p>
   <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> utility class followed by the width and the suffix <code>-tablet</code> to an existing grid column. For example, <code>nhsuk-u-one-third-tablet</code> will set your column width to be one-third on screen sizes tablet and above.</p>
 
@@ -239,6 +240,6 @@
     item: "layout",
     type: "tablet",
     htmlOnly: true
-  }) }}
+  }) }} #}
 
 {% endblock %}
