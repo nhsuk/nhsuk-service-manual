@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Split out hub page pattern from card component and updated content
+
 ## 8.7.0 - 17 February 2026
 
 :new: **New features**
