@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## TBC - December 2025
+
+:new: **New features**
+
+- Add interruption panel to panel component
+- Add new interruption page pattern
+
 ## 8.5.0 - 27 November 2025
 
 :new: **New features**
@@ -16,6 +23,10 @@
 - Update section on avoiding binary choices in forms guidance
 - Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
 - Update select component guidance to bring it closer to GOV.UK design system
+
+:new: **New features**
+
+- Added guidance on new interruption panel variant
 
 :wrench: **Maintenance**
 
