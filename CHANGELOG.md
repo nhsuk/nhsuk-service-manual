@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## TBC - December 2025
+
+:new: **New features**
+
+- Add interruption panel to panel component
+- Add new interruption page pattern
+
 ## 8.5.0 - 27 November 2025
 
 :new: **New features**
