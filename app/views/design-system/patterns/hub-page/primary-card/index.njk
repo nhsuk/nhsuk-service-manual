@@ -1,0 +1,14 @@
+{% from "card/macro.njk" import card %}
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
+  {{ card({
+    href: "#",
+    primary: "true",
+    clickable: "true",
+    heading: "GPs",
+    headingClasses: "nhsuk-heading-m",
+    description: "About GP services, including how to find and register with a local GP and how to book an appointment"
+  }) }}
+  </li>
+</ul>

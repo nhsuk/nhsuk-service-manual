@@ -1,0 +1,90 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Hub page" %}
+{% set pageDescription = "Hub pages use cards to help users navigate to the content they need." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "December 2025" %}
+{% set backlog_issue_id = "260" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "hub-page",
+    type: "example"
+  }) }}
+
+  <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+  <p>Use clickable <a href="/design-system/components/card">cards</a> on hub pages to signpost groupings of related content and help users find the content they need.</p>
+  <p>Hub pages work well on large websites. For smaller sites, other components may be enough, for example:</p>
+  <ul>
+    <li><a href="/design-system/components/header#navigation">header navigation</a></li>
+    <li><a href="/design-system/patterns/mini-hub">a mini-hub</a></li>
+    <li>a simple list of links</li>
+  </ul>
+
+  <h2 id="when-not-to-use-this-pattern">When not to use this pattern</h2>
+  <p>Do not use this pattern as a substitute for a clear information architecture. Use the header component, for example, to provide consistent navigation.</p>
+  <p>Do not use cards to help users navigate a transactional journey. But you may use them to help people find your service <a href="/design-system/patterns/start-page">start page</a>.</p>
+
+  <h2 id="how-this-pattern-works">How this pattern works</h2>
+  <p>This pattern uses 3 types of clickable card, the:</p>
+    <ul>
+      <li><a href="#top-task-card">top task card</a></li>
+      <li><a href="#primary-card-with-chevron">primary card with chevron</a></li>
+      <li><a href="#secondary-card">secondary card</a></li>
+    </ul>
+  <p>Hub pages should include primary cards. They do not need to include top task cards or secondary cards.</p>
+  <p>Group cards to show a collection of related topics. Prioritise the cards so the content users need most comes first.</p>
+  <p>Use different card styles to help users understand the importance of different groups of cards.</p>
+
+  <h3 id="top-task-card">Top task card</h3>
+
+  {{ designExample({
+    group: "patterns",
+    item: "hub-page",
+    type: "top-task"
+  }) }}
+
+  <p>Top task cards are small clickable cards.</p>
+  <p>Use them at the top of hub pages above other cards (such as primary cards) to help users quickly access specific information or tasks buried deeper in the navigation. Use them as shortcuts to content or services that are popular with users or meet an important business need.</p>
+  <p>If you want to link to a page just below the hub page, use a primary card instead.</p>
+  <p>Do not use more than 3 top tasks on a hub page.</p>
+
+  <h3 id="primary-card-with-chevron">Primary card (with chevron)</h3>
+
+    {{ designExample({
+      group: "patterns",
+      item: "hub-page",
+      type: "primary-card"
+    }) }}
+
+  <p>Use primary cards on hub pages to signpost groups of information that are important to users.</p>
+  <p>You can include a primary card that links to a single page at a lower level if other primary cards on the same hub page link to groups of content.</p>
+  <p>The chevron icon (from our <a href="/design-system/styles/icons">icon set</a>) helps users know the card will take them to more content. The size of the card helps them understand that the topics these cards link to are more frequently visited or more important than topics signposted by secondary cards.</p>
+  <p>Include a heading, with a link, and descriptive text.</p>
+  
+  <h3 id="secondary-card">Secondary card</h3>
+
+  {{ designExample({
+    group: "patterns",
+    item: "hub-page",
+    type: "secondary-card"
+  }) }}
+
+  <p>Use secondary cards on hub pages to signpost groups of information on less important topics. Use them below primary cards which signpost important information.</p>
+  <p>Secondary cards have less visual impact than top tasks or primary cards.</p>
+  <p>Include a heading, with a link, and descriptive text.</p>
+
+  <h2 id="research">Research</h2>
+
+  <p>We tested these 3 card variations as part of an iterative process to improve the NHS website's information architecture and navigation patterns.</p>
+  <p>We tested the cards in usability sessions and monitored analytics to understand how successful they were.</p>
+  
+{% endblock %}
