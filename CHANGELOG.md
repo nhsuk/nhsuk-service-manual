@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Split out hub page pattern from card component and updated content
+
 ## 8.5.0 - 27 November 2025
 
 :new: **New features**
