@@ -4,8 +4,8 @@
 
 :new: **New features**
 
-- Added new guidance on the interruption page pattern
-- Added guidance on new interruption panel variant
+- Add interruption panel to panel component
+- Add new interruption page pattern
 
 :wrench: **Maintenance**
 
