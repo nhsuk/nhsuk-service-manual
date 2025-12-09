@@ -17,10 +17,7 @@ module.exports = {
     'main': ['./javascripts/main.mjs', './stylesheets/main.scss'],
 
     // Design example preview styles
-    'preview': {
-      import: './stylesheets/preview.scss',
-      filename: 'preview'
-    },
+    'preview': './stylesheets/preview.scss',
 
     // NHS.UK frontend script and styles
     'nhsuk-frontend': [
