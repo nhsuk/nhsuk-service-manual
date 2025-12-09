@@ -7,14 +7,7 @@ import { DesignExample } from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
-initAll({
-  errorSummary: {
-    disableAutoFocus: true
-  },
-  notificationBanner: {
-    disableAutoFocus: true
-  }
-})
+initAll()
 
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({

@@ -29,6 +29,13 @@
   <script src="{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}" type="module"></script>
   <script type="module">
     import { initAll } from '{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}'
-    initAll()
+    initAll({
+      errorSummary: {
+        disableAutoFocus: true
+      },
+      notificationBanner: {
+        disableAutoFocus: true
+      }
+    })
   </script>
 {% endblock %}
