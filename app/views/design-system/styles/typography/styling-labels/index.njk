@@ -1,37 +1,21 @@
-{% from "input/macro.njk" import input %}
+{% from "label/macro.njk" import label %}
 
-{{ input({
-  label: {
+{{ label({
     text: "nhsuk-label--l",
     size: "l",
     isPageHeading: true
-  },
-  id: "example",
-  name: "example"
 }) }}
 
-{{ input({
-  label: {
-    text: "nhsuk-label--m",
-    size: "m"
-  },
-  id: "example-2",
-  name: "example2"
+{{ label({
+  text: "nhsuk-label--m",
+  size: "m"
 }) }}
 
-{{ input({
-  label: {
-    text: "nhsuk-label--s",
-    size: "s"
-  },
-  id: "example-3",
-  name: "example3"
+{{ label({
+  text: "nhsuk-label--s",
+  size: "s"
 }) }}
 
-{{ input({
-  label: {
-    text: "nhsuk-label"
-  },
-  id: "example-4",
-  name: "example4"
+{{ label({
+  text: "nhsuk-label"
 }) }}
