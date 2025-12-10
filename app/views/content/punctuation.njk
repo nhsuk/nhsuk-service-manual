@@ -160,32 +160,26 @@
   <h3>Dashes</h3>
   <p>Dashes can make content hard to read so we do not often use them.</p>
   <p>You can use a dash, or a comma, in a bulleted list if you need to expand on an item. But follow our guidance on <a href="/content/formatting#lists">lists (on the Formatting page)</a> and keep bullet points as short as possible.</p>
-    <div class="app-example app-example--content">
+  <div class="app-example app-example--content">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
-    <div class="nhsuk-do-dont-list">
-  <h3 class="nhsuk-do-dont-list__label">Do</h3>
-  <ul class="nhsuk-list nhsuk-list--tick" role="list">
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-        <path d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
-      </svg>
-      use insect repellent on your skin and make sure it's 50% DEET-based
-    </li>
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-        <path d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
-      </svg>
-      sleep under mosquito nets treated with insecticide
-    </li>
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-        <path d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
-      </svg>
-      wear loose clothing that covers your arms and legs – the mosquitoes that carry Zika virus are most active during the day
-    </li>
-  </ul>
-</div>
-</div>
+
+      {{ list({
+        title: "Do",
+        type: "tick",
+        items: [
+          {
+            text: "use insect repellent on your skin and make sure it's 50% DEET-based"
+          },
+          {
+            text: "sleep under mosquito nets treated with insecticide"
+          },
+          {
+            text: "wear loose clothing that covers your arms and legs – the mosquitoes that carry Zika virus are most active during the day"
+          }
+        ]
+      }) }}
+  </div>
+
   <p>Consider other ways of formatting your content without dashes, for example:</p>
   <ul>
     <li>using a comma or brackets</li>
