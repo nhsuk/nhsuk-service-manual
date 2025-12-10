@@ -24,10 +24,3 @@ initAccessibleAutocomplete({
 
 // Design examples
 createAll(DesignExample)
-
-// Form patterns
-document.querySelectorAll('form[action="/form-handler"]').forEach(($form) => {
-  $form.addEventListener('submit', (event) => {
-    event.preventDefault()
-  })
-})

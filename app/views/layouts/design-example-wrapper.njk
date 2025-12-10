@@ -28,6 +28,7 @@
 
 {% block bodyEnd %}
   <script src="{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}" type="module"></script>
+  <script src="{{ getAssetPath("preview.js") }}" type="module"></script>
   <script type="module">
     import { initAll } from '{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}'
     initAll({
