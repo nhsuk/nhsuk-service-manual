@@ -7,14 +7,7 @@ import { DesignExample } from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
-initAll({
-  errorSummary: {
-    disableAutoFocus: true
-  },
-  notificationBanner: {
-    disableAutoFocus: true
-  }
-})
+initAll()
 
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({
@@ -31,10 +24,3 @@ initAccessibleAutocomplete({
 
 // Design examples
 createAll(DesignExample)
-
-// Form patterns
-document.querySelectorAll('form[action="/form-handler"]').forEach(($form) => {
-  $form.addEventListener('submit', (event) => {
-    event.preventDefault()
-  })
-})

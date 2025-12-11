@@ -45,16 +45,13 @@
 
 .app-design-example__frame {
   display: block;
-
   position: relative;
-  right: -1px;
 
-  width: 100%;
+  width: calc(100% + 1px);
   min-width: 230px;
-  max-width: 100%;
+  max-width: calc(100% + 1px);
   height: 150px;
   min-height: 80px;
-  margin-right: -1px;
 
   overflow: auto;
   resize: both;

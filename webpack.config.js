@@ -1,9 +1,10 @@
-const { dirname, join } = require('node:path')
+const { basename, dirname, join, parse } = require('node:path')
 
 const CopyPlugin = require('copy-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 
 const { NODE_ENV } = process.env
+const nhsukFrontendPath = dirname(require.resolve('nhsuk-frontend'))
 
 /**
  * @type {Configuration}
@@ -13,19 +14,31 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     // Main application script and styles
-    main: ['./javascripts/main.mjs', './stylesheets/main.scss'],
+    'main': ['./javascripts/main.mjs', './stylesheets/main.scss'],
 
     // Design example preview styles
-    preview: {
-      import: './stylesheets/preview.scss',
-      filename: 'preview'
-    }
+    'preview': ['./javascripts/preview.mjs', './stylesheets/preview.scss'],
+
+    // NHS.UK frontend script and styles
+    'nhsuk-frontend': [
+      join(nhsukFrontendPath, 'nhsuk-frontend.min.css'),
+      join(nhsukFrontendPath, 'nhsuk-frontend.min.js')
+    ]
   },
 
   // Optimise for production
   mode: NODE_ENV === 'production' ? 'production' : 'development',
 
   module: {
+    generator: {
+      'asset/resource': {
+        outputPath({ filename }) {
+          return filename?.endsWith('.css') || filename?.endsWith('.scss')
+            ? 'stylesheets'
+            : 'javascripts'
+        }
+      }
+    },
     rules: [
       {
         test: /\.(js|mjs)$/,
@@ -40,11 +53,10 @@ module.exports = {
         extractSourceMap: true,
         generator: {
           binary: false,
-          publicPath: '/stylesheets',
           filename:
             NODE_ENV === 'production'
-              ? 'stylesheets/[name].[contenthash:7].min.css'
-              : 'stylesheets/[name].css'
+              ? '[name].[contenthash:7].min.css'
+              : '[name].css'
         },
         use: [
           'postcss-loader',
@@ -57,6 +69,22 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /nhsuk-frontend\.min\.(css|js)/,
+        type: 'asset/resource',
+        extractSourceMap: true,
+        generator: {
+          binary: false,
+          filename({ filename }) {
+            const { name } = parse(filename)
+
+            // Move script or style `.min` suffix after hash
+            return NODE_ENV === 'production'
+              ? `${basename(name, '.min')}.[contenthash:7].min[ext]`
+              : '[name][ext]'
+          }
+        }
       }
     ]
   },
@@ -89,7 +117,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: join(dirname(require.resolve('nhsuk-frontend')), 'assets'),
+          from: join(nhsukFrontendPath, 'assets'),
           to: 'assets'
         },
         {
