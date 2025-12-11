@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add guidance for `nhsuk-u-nowrap` class on typography page
+
 :wrench: **Maintenance**
 
 - Use NHS.UK frontend CSS and JS in design example previews
