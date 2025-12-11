@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add guidance on setting label and legend sizes
+
 :wrench: **Maintenance**
 
 - Use NHS.UK frontend CSS and JS in design example previews

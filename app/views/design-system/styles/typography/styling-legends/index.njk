@@ -1,0 +1,29 @@
+{% from "fieldset/macro.njk" import fieldset %}
+
+{{ fieldset({
+  legend: {
+    text: "Legend size large",
+    size: "l",
+    isPageHeading: true
+  }
+}) }}
+
+{{ fieldset({
+  legend: {
+    text: "Legend size medium",
+    size: "m"
+  }
+}) }}
+
+{{ fieldset({
+  legend: {
+    text: "Legend size small",
+    size: "s"
+  }
+}) }}
+
+{{ fieldset({
+  legend: {
+    text: "Legend default"
+  }
+}) }}
