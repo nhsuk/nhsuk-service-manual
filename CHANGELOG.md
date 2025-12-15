@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Add guidance on setting label and legend sizes
+- Mention staff-facing services on service manual home page and design system index page
 
 :wrench: **Maintenance**
 
