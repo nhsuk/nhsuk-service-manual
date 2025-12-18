@@ -1,0 +1,96 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from "tables/macro.njk" import table %}
+{% from "checkboxes/macro.njk" import checkboxes %}
+{% from "button/macro.njk" import button %}
+
+
+{% set organisations = [{name: "NHS England", code: "X26"}, {name: "NHS Business Services Authority", code: "T1450"}, {name: "NHS Blood and Tranplant", code: "T1460"}, {name: "UK Health Security Agency", code: "X36"}] %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {% set headerCheckboxHtml %}
+        {{ checkboxes({
+          idPrefix: "organisations",
+          name: "organisations",
+          classes: "nhsuk-checkboxes--small",
+          formGroup: {
+            classes: "nhsuk-u-margin-bottom-0"
+          },
+          items: [
+            {
+              value: "",
+              text: "Name",
+              id: "organisation-select-all",
+              inclusive: true,
+              label: {
+                classes: "nhsuk-label--s"
+              }
+            }
+          ]
+        }) }}
+      {% endset %}
+
+      {% set rows = [] %}
+
+      {% for organisation in organisations %}
+        {% set nameCheckboxHtml %}
+          {{ checkboxes({
+            idPrefix: "organisations",
+            name: "organisations",
+            classes: "nhsuk-checkboxes--small",
+            formGroup: {
+              classes: "nhsuk-u-margin-bottom-0"
+            },
+            items: [
+              {
+                value: organisation.code,
+                text: organisation.name,
+                id: "organisation-" + loop.index0
+              }
+            ]
+          }) }}
+        {% endset %}
+
+        {% set editLinkHtml %}
+          <a href="#" class="nhsuk-link">Edit<span class="nhsuk-u-visually-hidden"> {{ organisation.name }}</a>
+        {% endset %}
+
+        {% set rows = (rows.push([{ html: nameCheckboxHtml}, {text: organisation.code}, {html: editLinkHtml}]), rows) %}
+      {% endfor %}
+
+      {{ table({
+        panel: false,
+        caption: "Organisations",
+        captionSize: "l",
+        firstCellIsHeader: false,
+        head: [
+          {
+            html: headerCheckboxHtml
+          },
+          {
+            text: "ODS code"
+          },
+          {
+            text: "Actions"
+          }
+        ],
+        rows: rows
+      }) }}
+
+      <div class="nhsuk-button-group nhsuk-button-group--small">
+        {{ button({
+          text: "Edit selected",
+          classes: "nhsuk-button--secondary nhsuk-button--small"
+        }) }}
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
