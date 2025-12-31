@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add file upload component
+
 ## 8.5.1 - 16 December 2025
 
 :new: **New features**

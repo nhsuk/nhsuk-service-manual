@@ -235,6 +235,9 @@
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/fieldset</loc>
   </url>
+    <url>
+    <loc>https://service-manual.nhs.uk/design-system/components/file-upload</loc>
+  </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/footer</loc>
   </url>
