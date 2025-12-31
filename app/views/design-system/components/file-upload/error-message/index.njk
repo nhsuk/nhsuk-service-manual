@@ -1,0 +1,11 @@
+{% from "file-upload/macro.njk" import fileUpload %}
+
+{{ fileUpload({
+  label: {
+    text: "Upload a file"
+  },
+  errorMessage: {
+    text: "The CSV must be smaller than 2MB"
+  },
+  name: "file-hint"
+}) }}
