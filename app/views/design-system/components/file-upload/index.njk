@@ -1,0 +1,101 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "File upload" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Help users select and upload a file."%}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "January 2026" %}
+{% set backlog_issue_id = "93" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "file-upload",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use-file-upload">When to use file upload</h2>
+  <p>You should only ask users to upload something if it's critical to the delivery of your service.</p>
+  <p>Read a <a href="https://designnotes.blog.gov.uk/2017/02/14/some-design-tips-for-uploading-things/">blog post about design tips for uploading things (GOV.UK)</a>.</p>
+
+  <h2 id="how-to-use-file-upload">How to use file upload</h2>
+  <p>To upload a file, the user can either:</p>
+  <ul>
+    <li>use the "Choose file" button</li>
+    <li>drag and drop a file into the file upload input area</li>
+  </ul>
+
+  <h3>Let users reuse uploaded files</h3>
+  <p>Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security or privacy concern.</p>
+  <p>For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.</p>
+  <p>You can make it easier for the user to reuse a file by showing it as an option for the user to select. Consider users on public devices before choosing to make the file available to preview or download.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "file-upload",
+    type: "default"
+  }) }}
+
+  <h3>Changing the button text</h3>
+  <p>You can change the text on the button and in the "No file chosen" message. This text is changeable so you can translate it or be specific about the file to upload.</p>
+  <p>Keep the text as short as possible. Screen reader users, for example, might find it difficult to use the component if the text is too long.</p>
+  <p>All the text in the component can be translated to match the language of the page content when JavaScript is running.</p>
+
+  <h3>Error messages</h3>
+  <p>Error messages should be styled like this:</p>
+
+  {{ designExample({
+    group: "components",
+    item: "file-upload",
+    type: "error-message"
+  }) }}
+
+  <p>Make sure errors follow the guidance in the <a href="/design-system/components/error-message">error message component</a> and have specific error messages for specific error states.</p>
+
+  <h4>If no file has been selected</h4>
+  <p>Say "Select a [whatever they need to select]".</p>
+  <p>For example, "Select a report".</p>
+
+  <h4>If the file is the wrong file type</h4>
+  <p>Say "The selected file must be a [list of file types]".</p>
+  <p>For example, "The selected file must be a CSV" or "The selected file must be a JPG, BMP, PNG, TIF or PDF".</p>
+
+  <h4>If the file is too big</h4>
+  <p>Say "The selected file must be smaller than [largest file size]".</p>
+  <p>For example, "The selected file must be smaller than 2MB".</p>
+
+  <h4>If the file is empty</h4>
+  <p>Say "The selected file is empty".</h4>
+
+  <h4>If the file contains a virus</h4>
+  <p>Say "The selected file contains a virus".</p>
+
+  <h4>If the file is password protected</h4>
+  <p>Say "The selected file is password protected".</p>
+
+  <h4>If there was a problem and the file was not uploaded</h4>
+  <p>Say "The selected file could not be uploaded – try again".
+
+  <h4>If there is a limit on how many files the user can select</h4>
+  <p>Say "You can only select up to [highest number] files at the same time".</p>
+  <p>For example, "You can only select up to 10 files at the same time".</p>
+
+  <h4>If the file is not in a template that must be used or the template has been changed</h4>
+  <p>Say "The selected file must use the template".</p>
+
+  <h2>Accessibility</h2>
+  <p>Users of Dragon, a speech recognition tool, cannot activate their browser's native file inputs by using commands for interacting with web page controls. They have to rely on mouse commands or keyboard commands, which take multiple steps to activate the component.</p>
+  <p>With this file upload component, users can say commands for interacting with web page controls to choose files.</p>
+  <p>However, due to browser security features, this may not work on other later interactions on the same page. If the component needs to be used more than once (for example, to correct a mistake), users will first need to perform another action, such as a mouse click.</p>
+
+  <h2>Research</h2>
+  <p>This component is based on GOV.UK's March 2025 file upload component.</p>
+  <p>We have tested it in ....</p>
+
+{% endblock %}

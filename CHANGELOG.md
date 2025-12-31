@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Add file upload component
 - Add interruption panel to panel component
 - Add new interruption page pattern
 
