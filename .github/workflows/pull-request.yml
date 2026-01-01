@@ -93,7 +93,7 @@ jobs:
         run: npm run test:js -- --coverage
 
       - name: Save test coverage
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: Javascript unit tests coverage
           path: coverage
