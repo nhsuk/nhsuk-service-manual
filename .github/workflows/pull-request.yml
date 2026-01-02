@@ -117,7 +117,7 @@ jobs:
 
       - name: Restore test coverage
         if: ${{ env.SONAR_TOKEN }}
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: Javascript unit tests coverage
           path: coverage
