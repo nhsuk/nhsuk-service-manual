@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Buttons" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "7" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -20,81 +20,10 @@
     </strong>
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Buttons updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#button">updates to buttons in version 10</a></p>
+    <p>See <a href="/design-system/guides/updating-to-v10#button">breaking code updates to buttons in version 10</a></p>
   </div>
 
   <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-button">interact with buttons</a>.</p>
-
-  <p>We have 3 buttons:</p>
-  <ul>
-    <li><a href="#primary-button">primary button</a></li>
-    <li><a href="#secondary-button">secondary button</a></li>
-    <li><a href="#warning-button">warning button</a></li>
-  </ul>
-
-  <h2 id="primary-button">Primary button</h2>
-  <p>There are 2 versions of the primary button: the default version and the reverse version.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "default"
-  }) }}
-
-  <p>Use the reverse version on dark backgrounds.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "reverse"
-  }) }}
-
-  <h3>When to use a primary button</h3>
-  <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
-  <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
-  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
-
-
-  <h2 id="secondary-button">Secondary button</h2>
-  <p>There are 2 versions of the secondary button.</p>
-  <p>By default, the secondary button is transparent and has no colour. Use it on the page background colour (<code>nhsuk-colour("grey-5")</code>).</p>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "secondary"
-  }) }}
-  <p>You can make the button white when you use it on darker backgrounds. Use the <code>.nhsuk-button--secondary-solid</code> class to maintain colour contrast.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "secondary-solid"
-  }) }}
-
-  <h3>When to use a secondary button</h3>
-  <p>Use a secondary button either:</p>
-  <ul>
-    <li>for secondary actions on a page</li>
-    <li>when an action needs less prominence, for example because it is optional</li>
-  </ul>
-
-  <p>Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.</p>
-  <p><a href="#when-to-use-buttons">More about when to use and not use buttons.</a></p>
-
-  <h2 id="warning-button">Warning button</h2>
-
-  {{ designExample({
-    group: "components",
-    item: "buttons",
-    type: "warning"
-  }) }}
-
-  <h3>When to use a warning button</h3>
-  <p>Warning buttons are designed to make users think carefully before they use them. They are only effective if used very sparingly. Most services should not need one.</p>
-  <p>Only use warning buttons for actions with serious destructive consequences that a user cannot easily undo. For example, permanently deleting an account.</p>
-  <p>For important destructive actions like this, include an additional step to confirm it. Use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
-  <p>Do not only rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or will understand what it means. Make sure the context and button text make clear what will happen if the user selects it.</p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start transactional journeys and carry out actions, like saving information.</p>
@@ -109,21 +38,15 @@
   <p>Try not to have multiple buttons on a page. Follow <a href="https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page">GOV.UK guidance on structuring forms and starting with one thing per page</a>.</p>
 
   <h2 id="how-to-use-buttons">How to use buttons</h2>
-  <p>Write button text in sentence case, describing the action it performs. For example:</p>
-  <ul>
-    <li>"Start now" on the <a href="/design-system/patterns/start-page/">start page</a> of your service</li>
-    <li>"Log in" to an account a user has already created</li>
-    <li>"Continue" whether the service saves or does not save a user's information</li>
-    <li>"Save and continue" when the service saves a user's information but your research shows you need to reassure them that it does</li>
-    <li>"Save and come back later" when a user can save their information and come back later</li>
-    <li>"Add another" to add another item to a list or group</li>
-    <li>"Pay" to make a payment</li>
-    <li>"Confirm and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that does not have any legal content a user must agree to</li>
-    <li>"Confirm and save" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> on a staff-facing service or where data is not being sent to another person or system</li>
-    <li>"Accept and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that has legal content a user must agree to</li>
-    <li>"Log out" when a user is logged in to an account</li>
+  <p>We have 5 kinds of button:</p>
+    <ul>
+    <li><a href="#primary-buttons">primary buttons</a></li>
+    <li><a href="#secondary-buttons">secondary buttons</a></li>
+    <li><a href="#warning-buttons">warning buttons</a></li>
+    <li><a href="#smaller-buttons">smaller buttons</a></li>
+    <li><a href="#disabled-buttons">disabled buttons</a></li>
   </ul>
-  <p>You may need to include more or different words to better describe the action. For example, "Add another address" and "Accept and claim a tax refund".</p>
+
   <p>Align the primary action button to the left edge of your form.</p>
 
   <p>On smaller screens, such as on mobile, buttons stretch across the screen's width. This makes them easier to press for users holding a phone in their right hand.</p>
@@ -134,7 +57,102 @@
     <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with them. It complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
   </div>
 
-  <h3>Disabled buttons</h3>
+
+  <h3 id="primary-buttons">Primary buttons</h3>
+  <p>There are 2 versions of the primary button: the default version and the reverse version.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "default"
+  }) }}
+
+  <h4>When to use a primary button</h4>
+  <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
+  <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
+
+  <h4 id="primary-buttons-on-dark-backgrounds">Primary buttons on dark backgrounds</h4>
+  <p>Use the <code>nhsuk-button--reverse</code> modifier class to show a white button on dark backgrounds.</p>
+  <p>Make sure all users can see the button. The background colour must have a contrast ratio of at least 3:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">WCAG 2.2 success criterion 1.4.11 Non-text Contrast, level AA (W3C)</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "reverse"
+  }) }}
+
+  <h3 id="secondary-buttons">Secondary buttons</h3>
+  <p>There are 2 versions of the secondary button.</p>
+  <p>By default, the secondary button is transparent and has no colour. Use it on the page background colour (<code>nhsuk-colour("grey-5")</code>).</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "secondary"
+  }) }}
+  <p>You can make the button white when you use it on darker backgrounds. Use the <code>nhsuk-button--secondary-solid</code> class to maintain colour contrast.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "secondary-solid"
+  }) }}
+
+  <h4>When to use a secondary button</h4>
+  <p>Use a secondary button either:</p>
+  <ul>
+    <li>for secondary actions on a page</li>
+    <li>when an action needs less prominence, for example because it is optional</li>
+  </ul>
+
+  <p>Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.</p>
+
+  <h3 id="warning-buttons">Warning buttons</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "warning"
+  }) }}
+
+  <h4>When to use a warning button</h4>
+  <p>Warning buttons are designed to make users think carefully before they use them. They are only effective if used very sparingly. Most services should not need one.</p>
+  <p>Only use warning buttons for actions with serious destructive consequences that a user cannot easily undo, for example permanently deleting an account.</p>
+  <p>For important destructive actions like this, include an additional step to confirm it. Use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
+  <p>Do not rely on the red colour of a warning button to communicate the serious nature of the action. This is because not all users will be able to see the colour or understand what it means. Make sure the context and button text make clear what will happen if the user selects it.</p>
+
+  <h3 id="smaller-buttons">Smaller buttons</h3>
+  <p>Use them sparingly. First try using a standard button.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "buttons",
+    type: "smaller-button"
+  }) }}
+
+  <p>Only use smaller buttons when one of these applies:</p>
+  <ul>
+    <li>space is limited, for example in a card or panel</li>
+    <li>there are several actions of a similar priority that a user can take, for example on a staff-facing system</li>
+  </ul>
+
+    {{ designExample({
+      group: "components",
+      item: "buttons",
+      type: "smaller-group"
+    }) }}
+
+  <p>Do not mix up button sizes within button groups. For example, do not group a smaller button with a standard button. Only use 1 primary button in a group.</p>
+
+    {{ designExample({
+      group: "components",
+      item: "buttons",
+      type: "smaller-inline"
+    }) }}
+
+  <p>Smaller buttons can be used inline with text inputs when the button relates specifically to the input, for example a code lookup.</p>
+
+  <h3 id="disabled-buttons">Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
 
   <h4>Colour contrast</h4>
@@ -157,6 +175,23 @@
       type: "button-group-link"
     }) }}
 
+  <h3 id="button-text">Button text</h3>
+  <p>Write button text in sentence case, describing the action it performs. For example:</p>
+  <ul>
+    <li>"Start now" on the <a href="/design-system/patterns/start-page/">start page</a> of your service</li>
+    <li>"Log in" to an account a user has already created</li>
+    <li>"Continue" whether the service saves or does not save a user's information</li>
+    <li>"Save and continue" when the service saves a user's information but your research shows you need to reassure them that it does</li>
+    <li>"Save and come back later" when a user can save their information and come back later</li>
+    <li>"Add another" to add another item to a list or group</li>
+    <li>"Pay" to make a payment</li>
+    <li>"Confirm and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that does not have any legal content a user must agree to</li>
+    <li>"Confirm and save" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> on a staff-facing service or where data is not being sent to another person or system</li>
+    <li>"Accept and send" on a <a href="/design-system/patterns/check-answers/">Check answers page</a> that has legal content a user must agree to</li>
+    <li>"Log out" when a user is logged in to an account</li>
+  </ul>
+  <p>You may need to include more or different words to better describe the action. For example, "Add another address" and "Accept and claim a tax refund".</p>
+  
   <h3 id="stop-users-from-accidentally-sending-information-more-than-once">Stop users from accidentally sending information more than once</h3>
   <p>Sometimes, users double click buttons because they:</p>
   <ul>
@@ -176,7 +211,7 @@
     }) }}
 
   <p>This feature will prevent double clicks for users that have JavaScript enabled. However, you should also think about the issue server-side to protect against attacks.</p>
-  <p>In the case of slow connections, aim to give the user information about what's happening, for example, by showing a loading spinner or a modal, before using <code>data-prevent-double-click</code>.</p>
+  <p>In the case of slow connections, aim to give the user information about what's happening, for example by showing a loading spinner or a modal, before using <code>data-prevent-double-click</code>.</p>
 
   <h2 id="research">Research</h2>
   <p>We based our buttons on the GOV.UK designs. But because our logo is a blue rectangle and a number of our components (including panel headings) have squared edges, we decided that GOV.UK buttons did not stand out enough. The square buttons did not look clickable next to the other square components.</p>

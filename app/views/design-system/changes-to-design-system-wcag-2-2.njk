@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Changes to meet WCAG 2.2" %}
 {% set pageDescription = "In 2024, we  updated the design system to comply with the new criteria and recommendations in WCAG 2.2." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Update guides" %}
 
 {% set dateUpdated = "July 2025" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/_breadcrumb.njk" %}
@@ -126,7 +126,6 @@
 
   <h2>Updates to the GOV.UK design system</h2>
   <p>Our design system is based on GOV.UK and we know that teams regularly refer to their guidance too. If your service uses any components or patterns borrowed from the GOV.UK design system, check for any guidance about how WCAG 2.2 affects them.</p>
-
 
   <div class="app-index-navigation app-u-hide-desktop">
     {% include "includes/_side-nav.njk" %}

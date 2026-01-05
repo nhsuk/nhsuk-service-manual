@@ -1,32 +1,32 @@
-{% from 'radios/macro.njk' import radios %}
-{% from 'fieldset/macro.njk' import fieldset %}
-{% from 'hint/macro.njk' import hint %}
+{% from "radios/macro.njk" import radios %}
+{% from "fieldset/macro.njk" import fieldset %}
+{% from "hint/macro.njk" import hint %}
 
 {{ radios({
   idPrefix: "example-hints",
-  name: "example-hints",
+  name: "exampleHints",
   fieldset: {
     legend: {
-      text: "Do you know your NHS number?",
-      classes: "nhsuk-fieldset__legend--l",
+      text: "How do you want to be contacted about this?",
+      size: "l",
       isPageHeading: true
     }
   },
   hint: {
-    text: "This is a 10 digit number, like 485 777 3456, that you can find on an NHS letter, prescription or in the NHS App"
+    text: "Select 1 option"
   },
   items: [
-  {
-    value: "yes",
-    text: "Yes, I know my NHS number"
-  },
-  {
-    value: "no",
-    text: "No, I do not know my NHS number"
-  },
-  {
-    value: "not sure",
-    text: "I'm not sure"
-  }
-]
+    {
+      value: "email",
+      text: "Email"
+    },
+    {
+      value: "phone",
+      text: "Phone"
+    },
+    {
+      value: "text-message",
+      text: "Text message"
+    }
+  ]
 }) }}

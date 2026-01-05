@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Complete multiple tasks" %}
 {% set pageDescription = "Use this pattern to give users more control over how they complete long, complex services." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Help users to" %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "539" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

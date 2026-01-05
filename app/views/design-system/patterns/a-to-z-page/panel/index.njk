@@ -1,59 +1,82 @@
-{% from 'card/macro.njk' import card %}
+{% from "card/macro.njk" import card %}
 
 {% block content %}
   <div id="nhsuk-nav-a-z">
+    {% set cardADescriptionHtml %}
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li><a href="/conditions/abdominal-aortic-aneurysm/">AAA, see Abdominal aortic aneurysm</a></li>
+        <li><a href="/conditions/abdominal-aortic-aneurysm/">Abdominal aortic aneurysm</a></li>
+        <li><a href="/conditions/abscess/">Abscess</a></li>
+      </ul>
+    {% endset %}
+
     {{ card({
-              feature: "true",
-              heading: "A",
-              headingClasses: "nhsuk-u-font-size-24",
-              descriptionHtml: "<ul class='nhsuk-list nhsuk-list--border'>
-              <li><a href='/conditions/abdominal-aortic-aneurysm/'>AAA, see Abdominal aortic aneurysm</a></li>
-              <li><a href='/conditions/abdominal-aortic-aneurysm/'>Abdominal aortic aneurysm</a></li>
-              <li><a href='/conditions/abscess/'>Abscess</a></li>
-            </ul>"
-            }) }}
+      feature: "true",
+      heading: "A",
+      headingClasses: "nhsuk-u-font-size-24",
+      descriptionHtml: cardADescriptionHtml
+    }) }}
+
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
         Back to top
       </a>
     </div>
+
+    {% set cardBDescriptionHtml %}
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li>There are currently no conditions listed</li>
+      </ul>
+    {% endset %}
+
     {{ card({
-              feature: "true",
-              heading: "B",
-              headingClasses: "nhsuk-u-font-size-24",
-              descriptionHtml: "<ul class='nhsuk-list nhsuk-list--border'>
-              <li>There are currently no conditions listed</li>
-            </ul>"
-            }) }}
+      feature: "true",
+      heading: "B",
+      headingClasses: "nhsuk-u-font-size-24",
+      descriptionHtml: cardBDescriptionHtml
+    }) }}
+
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
         Back to top
       </a>
     </div>
+
+    {% set cardCDescriptionHtml %}
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li><a href="/conditions/chest-pain/">Chest pain</a></li>
+        <li><a href="/conditions/cold-sores/">Cold sore</a></li>
+      </ul>
+    {% endset %}
+
     {{ card({
-              feature: "true",
-              heading: "C",
-              headingClasses: "nhsuk-u-font-size-24",
-              descriptionHtml: "<ul class='nhsuk-list nhsuk-list--border'>
-              <li><a href='/conditions/chest-pain/'>Chest pain</a></li>
-              <li><a href='/conditions/cold-sores/'>Cold sore</a></li>
-            </ul>"
-            }) }}
+      feature: "true",
+      heading: "C",
+      headingClasses: "nhsuk-u-font-size-24",
+      descriptionHtml: cardCDescriptionHtml
+    }) }}
+
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
         Back to top
       </a>
     </div>
+
+    {% set cardDDescriptionHtml %}
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li><a href="/conditions/dandruff/">Dandruff</a></li>
+        <li><a href="/conditions/dementia/">Dementia</a></li>
+        <li><a href="/conditions/toothache/">Dental pain</a></li>
+      </ul>
+    {% endset %}
+
     {{ card({
-              feature: "true",
-              heading: "D",
-              headingClasses: "nhsuk-u-font-size-24",
-              descriptionHtml: "<ul class='nhsuk-list nhsuk-list--border'>
-              <li><a href='/conditions/dandruff/'>Dandruff</a></li>
-              <li><a href='/conditions/dementia/'>Dementia</a></li>
-              <li><a href='/conditions/toothache/'>Dental pain</a></li>
-            </ul>"
-            }) }}
+      feature: "true",
+      heading: "D",
+      headingClasses: "nhsuk-u-font-size-24",
+      descriptionHtml: cardDDescriptionHtml
+    }) }}
+
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
         Back to top

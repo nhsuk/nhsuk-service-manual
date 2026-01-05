@@ -1,12 +1,12 @@
-{% from 'checkboxes/macro.njk' import checkboxes %}
+{% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
   idPrefix: "contact",
   name: "contact",
   fieldset: {
     legend: {
-      text: "How would you like to be contacted?",
-      classes: "nhsuk-fieldset__legend--l",
+      text: "How do you want to be contacted about this?",
+      size: "l",
       isPageHeading: true
     }
   },

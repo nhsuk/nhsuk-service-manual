@@ -1,10 +1,10 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "A to Z of NHS health writing" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Words and phrases we use to make our content about health and the NHS easy to understand." %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "318" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block head %}
   <meta name="page-index" content="special">
@@ -219,7 +219,7 @@
       <p>See <a href="#poo">poo</a>.</p>
       <h3 id="brackets">brackets</h3>
       <p>You can use round brackets ( ) but do not overuse them.</p>
-      <p>Do not use brackets to refer to something that could either be singular or plural, like "lie down with your leg(s) on cushions". If in doubt, use the plural: legs.</p> 
+      <p>Do not use brackets to refer to something that could either be singular or plural, like "lie down with your leg(s) on cushions". If in doubt, use the plural: legs.</p>
       <h3 id="braille">Braille</h3>
       <p>Starts with a capital letter.</p>
       <h3 id="breast-milk">breast milk</h3>
@@ -626,10 +626,10 @@
       <h3 id="kidney">kidney</h3>
       <p>We use "kidney" instead of "renal".</p>
       <p>We may mention "renal" as well as "kidney" if our search analytics, user testing or survey feedback suggest that people will hear their doctor use "renal" or will search for it.</p>
-      <h3 id="kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes (KB and MB)</h3>  
-      <p>Use MB for anything over 1MB: 4MB not 4096KB.</p>   
-      <p>Use KB for anything under 1MB: 569KB not 0.55MB.</p> 
-      <p>Find out how we use KB and MB for document size in our guidance on <a href="/content/formatting#links">links</a>.</p> 
+      <h3 id="kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes (KB and MB)</h3>
+      <p>Use MB for anything over 1MB: 4MB not 4096KB.</p>
+      <p>Use KB for anything under 1MB: 569KB not 0.55MB.</p>
+      <p>Find out how we use KB and MB for document size in our guidance on <a href="/content/formatting#links">links</a>.</p>
       <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
         Back to top
       </a>
@@ -697,7 +697,7 @@
       <p>We write "breast milk" as two words.</p>
       <h3 id="money">money</h3>
       <p>Do not use decimals unless pence are included. Write "£75" and "£75.50", but not "£75.00".</p>
-      <p>Write out "pence" in full: "Calls will cost 4 pence a minute from a landline".</p>  
+      <p>Write out "pence" in full: "Calls will cost 4 pence a minute from a landline".</p>
       <p>See also our guidance on <a href="/content/numbers-measurements-dates-time">numbers, measurements, dates and time</a>.</p>
       <h3 id="morning-after-pill">morning after pill</h3>
       <p>Lower case without hyphens. It can be "emergency contraception".</p>
@@ -750,17 +750,16 @@
       <p>We write "login" in lower case and as one word. <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">The NHS login</a> lets people see their personal health information online.</p>
       <p>See also "<a href="#log-in-and-log-out">log in and log out</a>".</p>
       <h3 id="nhs-number">NHS number</h3>
-      <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. (This is an example or test number.)</p>
+      <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567. (This is an example or test number.)</p>
       <p>The format is 3 3 4: 2 groups of 3 digits followed by 4 digits.</p>
-      <p>Make sure that you:</p>
-      <ul>
-        <li>use this format whenever you include an example or include an NHS number</li>
-        <li>keep the NHS number on 1 line - do not allow it to break over 2 lines</li>
-        <li>only use a space as a separator - do not use dashes or dots</li>
-        <li>do not use a real NHS number as an example - use 485 777 3456 or 123 456 7890</li>
-      </ul>
       <p>This number format makes it easier for people and assistive technologies to read. It also makes it less likely that people will make mistakes.</p>
       <p>Ask your frontend or coding colleagues how to stop the NHS number breaking over 2 lines.</p>
+      <p>Make sure that you:</p>
+      <ul>
+        <li>use this format whenever you include an NHS number</li>
+        <li>only use a space as a separator – do not use dashes or dots</li>
+        <li>do not use a real NHS number as an example – use 999 123 4567 or another number that starts with 9 as these are test numbers and not given to real patients</li>
+      </ul>
       <p>See our design pattern for <a href="/design-system/patterns/ask-for-nhs-numbers"> asking users for their NHS number</a>.</p>
       <h3 id="nhs-website">NHS website</h3>
       <p>Lower case "website". The NHS website is <a href="https://www.nhs.uk">the website at nhs.uk</a>.</p>
@@ -1128,7 +1127,7 @@
       <p>See the guidance on <a href="/content/formatting#bold-italics-and-underlining">underlining on the Formatting page</a>.</p>
       <h3 id="united-kingdom">United Kingdom</h3>
       <p>Use "United Kingdom" or "UK" rather than "Britain" or "Great Britain".</p>
-      <p>United Kingdom includes England, Scotland, Wales and Northern Ireland. Great Britain refers only to England, Scotland and Wales.</p>   
+      <p>United Kingdom includes England, Scotland, Wales and Northern Ireland. Great Britain refers only to England, Scotland and Wales.</p>
       <p>Our work is focused on the NHS in England. Take care not to refer to the UK when you mean England.</p>
       <h3 id="unplanned">unplanned</h3>
       <p>Use "unplanned' rather than "unwanted" when talking about pregnancy.</p>
@@ -1233,7 +1232,5 @@
       </a>
     </div>
     </div>
-
-
 
 {% endblock %}

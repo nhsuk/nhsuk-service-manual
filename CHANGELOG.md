@@ -1,6 +1,11 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.5.1 - 16 December 2025
+
+:new: **New features**
+
+- Add guidance on setting label and legend sizes
+- Mention staff-facing services on service manual home page and design system index page
 
 :new: **New features**
 
@@ -8,7 +13,40 @@
 
 :wrench: **Maintenance**
 
-- Update CSS path examples in version 10 upgrade guide
+- Use NHS.UK frontend CSS and JS in design example previews
+
+## 8.5.0 - 27 November 2025
+
+:new: **New features**
+
+- Add password input component
+- Add smaller buttons
+- Add guidance on codes and sequences class for text input component
+
+## 8.4.0 - 19 November 2025
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update section on avoiding binary choices in forms guidance
+- Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
+- Update select component guidance to bring it closer to GOV.UK design system
+
+:wrench: **Maintenance**
+
+- Change dummy NHS number to 999 123 4567
+- Update NHS number examples across design system, including adding span class (in details, hint text, and text input)
+- Update coded examples on breadcrumb, care cards, checkboxes, fieldset, error summary, hint text, inset text, radios, select, start page and text input component pages and in forms guidance
+- Bring guidance on labels and text input into line with GOV.UK
+- Remove duplicate example from summary list component
+- Change Active tag from green to blue
+- Update video review date on pattern for helping users know that a page is up to date
+
+## 8.3.0 - 4 November 2025
+
+:new: **New features**
+
+- Add latest blog post
 
 ## 8.2.0 - 16 October 2025
 

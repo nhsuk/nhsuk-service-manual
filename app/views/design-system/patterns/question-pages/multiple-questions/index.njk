@@ -4,9 +4,9 @@ previewLayout: design-example-wrapper-full
 
 {% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
-{% from 'back-link/macro.njk' import backLink %}
-{% from 'button/macro.njk' import button %}
-{% from 'input/macro.njk' import input %}
+{% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+{% from "input/macro.njk" import input %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -30,7 +30,7 @@ previewLayout: design-example-wrapper-full
         {{ input({
           label: {
             text: "First name",
-            classes: "nhsuk-label--s"
+            size: "s"
           },
           id: "example",
           name: "example"
@@ -39,7 +39,7 @@ previewLayout: design-example-wrapper-full
         {{ input({
           label: {
             text: "Last name",
-            classes: "nhsuk-label--s"
+            size: "s"
           },
           id: "example1",
           name: "example1"
@@ -48,7 +48,7 @@ previewLayout: design-example-wrapper-full
         {{ input({
           label: {
             text: "Relationship to the person being registered",
-            classes: "nhsuk-label--s"
+            size: "s"
           },
           hint: {
             text: "For example, a family member or friend"
@@ -60,7 +60,7 @@ previewLayout: design-example-wrapper-full
         {{ input({
           label: {
             text: "Contact phone number",
-            classes: "nhsuk-label--s"
+            size: "s"
           },
           id: "example3",
           name: "example3",

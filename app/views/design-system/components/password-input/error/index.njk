@@ -1,0 +1,12 @@
+{% from "password-input/macro.njk" import passwordInput %}
+
+{{ passwordInput({
+  label: {
+    text: "Password"
+  },
+  errorMessage: {
+    text: "Enter a password"
+  },
+  id: "example",
+  name: "example"
+}) }}

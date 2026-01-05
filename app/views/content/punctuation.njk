@@ -1,10 +1,10 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Punctuation" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Including capitalisation, contractions and hyphens." %}
 {% set dateUpdated = "April 2025" %}
 {% set backlog_issue_id = "322" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/_breadcrumb.njk" %}
@@ -160,32 +160,26 @@
   <h3>Dashes</h3>
   <p>Dashes can make content hard to read so we do not often use them.</p>
   <p>You can use a dash, or a comma, in a bulleted list if you need to expand on an item. But follow our guidance on <a href="/content/formatting#lists">lists (on the Formatting page)</a> and keep bullet points as short as possible.</p>
-    <div class="app-example app-example--content">
+  <div class="app-example app-example--content">
     <strong class="nhsuk-tag app-example__heading">Example</strong>
-    <div class="nhsuk-do-dont-list">
-  <h3 class="nhsuk-do-dont-list__label">Do</h3>
-  <ul class="nhsuk-list nhsuk-list--tick" role="list">
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
-        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
-      </svg>
-      use insect repellent on your skin and make sure it's 50% DEET-based
-    </li>
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
-        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
-      </svg>
-      sleep under mosquito nets treated with insecticide
-    </li>
-    <li>
-      <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
-        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
-      </svg>
-      wear loose clothing that covers your arms and legs – the mosquitoes that carry Zika virus are most active during the day
-    </li>
-  </ul>
-</div>
-</div>
+
+      {{ list({
+        title: "Do",
+        type: "tick",
+        items: [
+          {
+            text: "use insect repellent on your skin and make sure it's 50% DEET-based"
+          },
+          {
+            text: "sleep under mosquito nets treated with insecticide"
+          },
+          {
+            text: "wear loose clothing that covers your arms and legs – the mosquitoes that carry Zika virus are most active during the day"
+          }
+        ]
+      }) }}
+  </div>
+
   <p>Consider other ways of formatting your content without dashes, for example:</p>
   <ul>
     <li>using a comma or brackets</li>

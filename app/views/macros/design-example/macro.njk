@@ -22,11 +22,11 @@
   render onto the page with the `|safe` filter.
   #}
   {% set htmlDefinition = {
-    name: 'HTML',
+    name: "HTML",
     code: html
   } %}
   {% set nunjucksDefinition = {
-    name: 'Nunjucks',
+    name: "Nunjucks",
     code: nunjucks
   } %}
   {% if params.htmlOnly %}
@@ -124,7 +124,8 @@
                                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ option.required }}
                               </td>
                               <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ option.description | markdown }}
+                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+                                <span>{{ option.description | markdown }}</span>
                               </td>
                             </tr>
                             {% if option.params %}
@@ -141,7 +142,8 @@
                                     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subOption.required }}
                                   </td>
                                   <td role="cell" class="nhsuk-table__cell">
-                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subOption.description | markdown }}
+                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+                                    <span>{{ subOption.description | markdown }}</span>
                                   </td>
                                 </tr>
                                 {% if subOption.params %}
@@ -158,7 +160,8 @@
                                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subSubOption.required }}
                                     </td>
                                     <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>{{ subSubOption.description | markdown }}
+                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+                                      <span>{{ subSubOption.description | markdown }}</span>
                                     </td>
                                   </tr>
                                   {% endfor %}
