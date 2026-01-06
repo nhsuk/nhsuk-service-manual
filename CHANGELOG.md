@@ -1,15 +1,17 @@
 # NHS digital service manual Changelog
 
+### TBC
+
+:new: **New features**
+
+- Add guidance for `nhsuk-u-nowrap` class on typography page
+
 ## 8.5.1 - 16 December 2025
 
 :new: **New features**
 
 - Add guidance on setting label and legend sizes
 - Mention staff-facing services on service manual home page and design system index page
-
-:new: **New features**
-
-- Add guidance for `nhsuk-u-nowrap` class on typography page
 
 :wrench: **Maintenance**
 
