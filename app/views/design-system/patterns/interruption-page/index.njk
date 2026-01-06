@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "December 2025" %}
+{% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "241" %}
 
 {% block beforeContent %}
@@ -91,10 +91,12 @@
 
   <p>The interruption page uses the <a href="/design-system/components/panel">panel component</a> with the addition of a <code>nhsuk-panel--interruption</code> class to make it blue.</p>
 
-  <p>You should include a <a href="/design-system/components/back-link">back link</a> at the top of the page, as well as allowing users to use their browser back button.</p>
+  <p>Include a <a href="/design-system/components/back-link">back link</a> at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.</p>
+
+  <p>If it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <code>&lt;div class="nhsuk-button-group"&gt;</code> container to <a href="/design-system/components/buttons#grouping-buttons">group the button</a> and the link together.</p>
+
+  <p>Avoid having both a Back link at the top and a Cancel link next to the button which go to the same page.</p>
 
   <p>Within the panel, the button should have a <code>nhsuk-button--reverse</code> class to make it appear white.</p>
-
-  <p>You can also include a cancel or change link beside the button if needed. If you do this, you should add a <code>&lt;div class="nhsuk-button-group"&gt;</code> container to <a href="/design-system/components/buttons#grouping-buttons">group the button</a> and the link together.</p>
 
 {% endblock %}
