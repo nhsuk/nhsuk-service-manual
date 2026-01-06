@@ -1,5 +1,5 @@
 // Core dependencies
-const { join, parse } = require('path')
+const { join, parse } = require('node:path')
 
 // External dependencies
 const browserSync = require('browser-sync')

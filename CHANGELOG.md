@@ -6,6 +6,12 @@
 
 - Add guidance on planning and writing text messages and emails
 
+## 8.3.0 - 4 November 2025
+
+:new: **New features**
+
+- Add latest blog post
+
 ## 8.2.0 - 16 October 2025
 
 :new: **New features**

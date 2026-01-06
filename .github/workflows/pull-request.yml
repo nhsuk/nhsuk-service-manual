@@ -29,7 +29,7 @@ jobs:
 
       - name: Setup Node
         if: steps.npm-install-cache.outputs.cache-hit != 'true'
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
 
@@ -59,7 +59,7 @@ jobs:
           path: node_modules
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
@@ -84,7 +84,7 @@ jobs:
           path: node_modules
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
@@ -93,7 +93,7 @@ jobs:
         run: npm run test:js -- --coverage
 
       - name: Save test coverage
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Javascript unit tests coverage
           path: coverage
@@ -117,7 +117,7 @@ jobs:
 
       - name: Restore test coverage
         if: ${{ env.SONAR_TOKEN }}
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: Javascript unit tests coverage
           path: coverage

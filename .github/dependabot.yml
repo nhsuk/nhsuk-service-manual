@@ -43,12 +43,14 @@ updates:
 
       lint:
         patterns:
-          - '@typescript-eslint/*'
+          - '@eslint/*'
           - 'eslint'
           - 'eslint-*'
+          - 'globals'
           - 'prettier'
           - 'stylelint'
           - 'stylelint-*'
+          - 'typescript-*'
 
       test:
         patterns:
@@ -60,7 +62,6 @@ updates:
           - 'browser-sync'
           - 'concurrently'
           - 'del-cli'
-          - 'husky'
 
     schedule:
       interval: monthly
