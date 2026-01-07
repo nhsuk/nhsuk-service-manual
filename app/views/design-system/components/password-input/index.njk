@@ -80,15 +80,19 @@
 
   <h3 id="allow-copy-and-paste">Allow copy and paste</h3>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-avoid-dragging-multiple-options",
+    attributes: { role: "note" }
+  }) %}
     {{ tag({
       text: "WCAG 2.2",
       classes: "nhsuk-u-margin-bottom-2"
     }) }}
 
     <p>Let users copy and paste passwords. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 success criterion 3.3.8 Accessible authentication (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <p>The NCSC recommends that online services let people:</p>
   <ul>

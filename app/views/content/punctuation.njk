@@ -117,11 +117,13 @@
   <p>Do not use negative contractions like can't and don't. When you're telling users not to do something, use "Do not" rather than "Don't".</p>
   <p>Avoid should've, could've, would've and they've. They can be hard to read.</p>
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
     <h3>Research insight</h3>
     <p>GDS research shows that many users find negative contractions harder to read and they sometimes misread them as the opposite of what they say.</p>
     <p>The NHS.UK medicines team observed that, when we're telling people not to do something, they find "do not" clearer and more emphatic than "don't".</p>
-  </div>
+  {% endcall %}
 
   <h3>Contractions in URLs and page titles</h3>
   <p>Do not use contractions in URLs (web addresses). They can be unclear, hard to read, type and share. Some are ambiguous, like "shell" and "were" (for "she'll" and "we're"). </p>
@@ -192,11 +194,13 @@
   </ul>
   <p>We use "to" instead of a dash for <a href="/content/numbers-measurements-dates-time#ranges">ranges of numbers, dates or time</a>.</p>
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
     <h4 class="nhsuk-heading-m">Research insight</h4>
     <p>There are some accessibility concerns with dashes. Assistive technologies read them out in different ways. But <a href="https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/">GOV.UK research</a> shows that commas are consistently read out with a pause.</p>
     <p>People with poor literacy can find hyphens and dashes an obstacle to easy reading. They also find long sentences with lots of commas difficult.</p>
-  </div>
+  {% endcall %}
 
   <h2 id="lists">Lists</h2>
   <p>Use lists to make text easier to read.​</p>

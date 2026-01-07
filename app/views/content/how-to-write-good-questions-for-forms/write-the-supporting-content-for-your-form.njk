@@ -85,10 +85,12 @@
   <p>Good help text saves having to write <a href="#error-messages">error messages</a>.</p>
   <p>Bear in mind that users may miss the help text. Sometimes a <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#what-are-filter-questions">filter question</a> will work better.</p>
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
     <p>If you have to explain your interface, it needs more work.</p>
-  </div>
+  {% endcall %}
 
   <p>We do not recommend tool tips. They can be hard for users to see and are not accessible.</p>
 

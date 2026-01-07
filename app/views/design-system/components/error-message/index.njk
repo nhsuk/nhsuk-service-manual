@@ -53,15 +53,19 @@
     <li>if the error relates to specific text fields in the question, give these a red border as well</li>
   </ul>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-clear-answers-error" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-clear-answers-error",
+    attributes: { role: "note" }
+  }) %}
     {{ tag({
       text: "WCAG 2.2",
       classes: "nhsuk-u-margin-bottom-2"
     }) }}
 
     <p>Do not clear any form fields when adding error messages. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <p>Keeping information that caused errors helps users to:</p>
   <ul>

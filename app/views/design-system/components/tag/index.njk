@@ -42,15 +42,19 @@
     type: "multiple"
   }) }}
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-tag-no-dragging-reorder",
+    attributes: { role: "note" }
+  }) %}
     {{ tag({
       text: "WCAG 2.2",
       classes: "nhsuk-u-margin-bottom-2"
     }) }}
 
     <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <h3 id="using-colour-with-tags">Using colour with tags</h3>
   <p>You can use colour to help distinguish between different tags – or to help draw the user's attention to a tag if it's especially important. For example, it makes sense to use  <code>nhsuk-tag--red</code> for a tag that reads "Urgent".</p>

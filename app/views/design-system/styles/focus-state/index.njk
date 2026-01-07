@@ -18,15 +18,19 @@
   <h2>What is a focus state?</h2>
   <p>Some people use keyboards or other devices to navigate through a page by jumping from 1 interactive element to the next. The focus state lets users know which element they're currently on and that it's ready for them to interact with.</p>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-do-not-cover-focus" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-tag-do-not-cover-focus",
+    attributes: { role: "note" }
+  }) %}
     {{ tag({
       text: "WCAG 2.2",
       classes: "nhsuk-u-margin-bottom-2"
     }) }}
 
     <p>Do not let user interface elements hide or obscure any content which has a focus applied, for example: sticky headers or overlaid cookie banners. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus Not Obscured (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <h2>Our focus state styles</h2>
   <p>We've followed the <a href="https://design-system.service.gov.uk/get-started/focus-states/">GOV.UK design system's approach to focus state styles</a>.</p>

@@ -13,8 +13,9 @@
 {% endblock %}
 
 {% block bodyContent %}
-<div class="nhsuk-inset-text nhsuk-u-margin-top-4">
-<p>Go to the pattern to <a href="/design-system/patterns/know-that-a-page-is-up-to-date">reassure users that a page is up to date</a>.</p>
-</div>
-
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
+    <p>Go to the pattern to <a href="/design-system/patterns/know-that-a-page-is-up-to-date">reassure users that a page is up to date</a>.</p>
+  {% endcall %}
 {% endblock %}
