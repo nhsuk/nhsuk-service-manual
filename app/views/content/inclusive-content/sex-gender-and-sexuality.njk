@@ -38,7 +38,11 @@
   <h2>Gender neutral language</h2>
   <p>We make content gender neutral as far as possible. In general, we word our content to avoid masculine and feminine pronouns ("he" or "she"). Instead we use "you" where appropriate and sometimes "they" when we need a gender-neutral pronoun (unless this is confusing).​</p>
    <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>You should see the GP if you have persistent symptoms of osteoarthritis so they can confirm the diagnosis and prescribe any necessary treatment.</p>
   </div>
   <p>Avoid asking users for their title, such as Mr, Miss, Mrs, or Ms.</p>

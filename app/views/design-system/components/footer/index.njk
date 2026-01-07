@@ -15,9 +15,10 @@
 {% block bodyContent %}
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Footer updated in August 2025</h3>
     <p>See <a href="/design-system/guides/updating-to-v10#footer">breaking code updates to footer in version 10</a></p>
@@ -54,9 +55,10 @@
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-consistent-links" role="note">
     <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>If you include links to "help" pages in a footer, make sure to place those links consistently in the footer content. Also make sure that "help" links always work in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
   </div>

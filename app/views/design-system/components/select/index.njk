@@ -24,7 +24,7 @@
 
   <h2 id="when-to-use-select">When to use select</h2>
   <p>The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.</p>
-  
+
   <h2 id="when-not-to-use-select">When not to use select</h2>
   <p>The select component allows users to choose an option from a long list. Before using the select component, try asking users other questions which will allow you to present them with fewer options.</p>
   <p>Consider using a different solution, such as <a href="/design-system/components/radios/">radios</a>.</p>
@@ -36,7 +36,7 @@
 
   <h3 id="select-with-hint">Select with hint</h3>
   <p>You can add <a href="/design-system/components/hint-text">hint text</a> to help the user understand the options and choose 1 of them.</p>
-  
+
   {{ designExample({
     group: "components",
     item: "select",
@@ -59,9 +59,10 @@
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
 
   <p>Any input that's designed to let a user select multiple options must offer a way to do so without relying on click and drag movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
 </div>

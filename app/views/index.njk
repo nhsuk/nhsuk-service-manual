@@ -35,9 +35,11 @@
         <li class="nhsuk-grid-column-full nhsuk-card-group__item">
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
-              <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-0 nhsuk-u-margin-right-3">
-                Version 10
-              </strong>
+              {{ tag({
+                text: "Version 10",
+                classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-0 nhsuk-u-margin-right-3"
+              }) }}
+
               <h2 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0 nhsuk-u-display-inline-block nhsuk-u-font-weight-normal">Design system and NHS.UK frontend library updated: <a href="/design-system/guides/updating-to-v10">see our update guide</a></h2>
             </div>
           </div>

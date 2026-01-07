@@ -20,9 +20,10 @@
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-do-not-cover-focus" role="note">
     <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-      WCAG 2.2
-    </strong>
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>Do not let user interface elements hide or obscure any content which has a focus applied, for example: sticky headers or overlaid cookie banners. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus Not Obscured (W3C)</a>.</p>
   </div>

@@ -50,7 +50,11 @@
     <li>avoid dead ends, if they're in the wrong place, and find what they need through surrounding navigation elements</li>
   </ul>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>The <a href="https://www.nhs.uk/nhs-services/vaccination-and-booking-services/book-covid-19-vaccination/">Book, change or cancel a COVID-19 vaccination appointment service on the NHS website</a> is in the section about vaccination and booking services.</p>
     <p>The start page links to other information people want to know about COVID-19 vaccines.</p>
   </div>

@@ -46,7 +46,11 @@
   <p>For example, a rash that looks red when it appears on white skin may not look red on skin that's brown or black.</p>
   <p>If a change in skin colour does not affect everyone equally, make this clear.</p>
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>On white skin the rash can appear red, but on brown and black skin the rash may be harder to see.</p>
   </div>
   <p>If possible, be specific about how a symptom may appear differently on a range of skin tones. This can be difficult because of a lack of medical sources on which to base this information. See the <a href="#medical-sources-for-symptoms-on-black-and-brown-skin">medical sources for symptoms on black and brown skin (on this page)</a>.</p>
@@ -56,7 +60,11 @@
   <h3>Include descriptions of how skin feels, if possible</h3>
   <p>Non-visual symptoms are especially useful for people with sight loss.</p>
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>The scarlet fever rash feels like sandpaper and starts on the chest and tummy.</p>
   </div>
 
@@ -70,7 +78,11 @@
   <p>Alt-text is a short text description of an image for people who cannot see the image (ideally under 125 characters including spaces).</p>
   <p>Use the terms "light brown", "medium brown" and "dark brown" or "white" to describe skin tone in alt-text, rather than just saying "brown", "black" or "white".</p>
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>Yellowing of the white part of the eye and the skin under the person's eyebrows. Shown on dark brown skin.</p>
     <p>(Alt-text example from <a href="https://www.nhs.uk/conditions/jaundice/">NHS website jaundice page</a>)</p>
   </div>
@@ -80,8 +92,12 @@
   <p>If you can, also add a long description for images of skin symptoms because short alt-text cannot convey all the information in the image.</p>
   <p>With complex images, like images of skin symptoms, long descriptions help people who face barriers due to sight loss. They can give these users the same level of detail that sighted users can see in the image.</p>
   <p>The NHS website team is experimenting with using the <a href="/design-system/components/details">details component</a> to reveal a long description under an image. That means everyone, not just screen reader users, can access the information if it they want to. Please feed back if you are exploring other ways to present long descriptions.</p>
-    <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example of a long description for an image of chickenpox</strong>
+  <div class="app-example">
+    {{ tag({
+      text: "Example of a long description for an image of chickenpox",
+      classes: "app-example__heading"
+    }) }}
+
     <p>This is a close-up image of chickenpox spots on white skin. You cannot tell what part of the body is shown.</p>
     <p>There are about 10 spots that vary in size from about 1mm to 1cm. Some spots are close together.</p>
     <p>Some of the bigger spots are raised and have scabs over them. The scabs are yellow and pink and the skin around the scab is pink. Some scabs look soft and seem to be filled with fluid.</p>

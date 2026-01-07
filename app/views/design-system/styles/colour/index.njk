@@ -25,9 +25,10 @@
   <h2 id="main-colours">Main colours</h2>
 
   <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Colour variables updated in August 2025</h3>
     <p>All colour variables and functions have been updated to use the spelling 'colour' instead of 'color'.

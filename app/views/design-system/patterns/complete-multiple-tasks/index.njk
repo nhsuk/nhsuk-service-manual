@@ -55,7 +55,11 @@
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
+
   <p>Any task list that lets the user reorder the tasks must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
 </div>
 
@@ -158,7 +162,11 @@
 
 <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-edit-information-previous-task" role="note">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
+
   <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
 <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
 </div>

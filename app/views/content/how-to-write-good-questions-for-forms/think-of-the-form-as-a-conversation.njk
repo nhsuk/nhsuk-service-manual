@@ -52,7 +52,11 @@
     summaryText: "Example of a difficult question"
   }) %}
     <div class="app-example app-example--content">
-      <strong class="nhsuk-tag app-example__heading">Example</strong>
+      {{ tag({
+        text: "Example",
+        classes: "app-example__heading"
+      }) }}
+
       <p>What percentage of your working day do you spend doing moderate-intensity activities that make you breathe faster and raise your heart rate (such as brisk walking or housework, like vacuuming) for at least 10 minutes continuously?</p>
     </div>
     <p>To answer a question like this, the user has to:</p>

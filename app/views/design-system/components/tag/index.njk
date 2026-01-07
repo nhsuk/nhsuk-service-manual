@@ -44,9 +44,10 @@
 
   <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
     <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
   </div>
