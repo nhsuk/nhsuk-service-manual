@@ -168,9 +168,11 @@
 <p>Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.</p>
 <p>Do not use progress indicators, like this one, that show all the questions at once.</p>
 
-<figure class="nhsuk-image app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-5">
-  <img class="nhsuk-image__img app-image__img app-u-full-width" src="/assets/progress-indicator.png" alt="Design of a progress indicator listing each question with a big red cross though it, to show that we shouldn't use this design.">
-</figure>
+{{ image({
+  src: "/assets/progress-indicator.png",
+  alt: "Design of a progress indicator listing each question with a big red cross though it, to show that we shouldn't use this design.",
+  classes: "app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-5"
+}) }}
 
 <p>These can be problematic because they:</p>
 <ul>

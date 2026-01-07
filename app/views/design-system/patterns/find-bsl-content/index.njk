@@ -18,15 +18,15 @@
   <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
     {{ image({
       src: "/assets/BSL-icon-01.svg",
-      classes: "app-image--border nhsuk-u-padding-6 nhsuk-u-margin-top-0",
-      alt: "Two hands signing translation in British Sign Language, with the letters BSL beside"
+      alt: "Two hands signing translation in British Sign Language, with the letters BSL beside",
+      classes: "app-image--border nhsuk-u-padding-6 nhsuk-u-margin-top-0"
     }) }}
   </div>
   <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
     {{ image({
       src: "/assets/BSL-icon-02.svg",
-      classes: "app-image--border nhsuk-u-width-one-half nhsuk-u-padding-6 nhsuk-u-margin-top-0",
-      alt: "Two hands signing translation in British Sign Language"
+      alt: "Two hands signing translation in British Sign Language",
+      classes: "app-image--border nhsuk-u-width-one-half nhsuk-u-padding-6 nhsuk-u-margin-top-0"
     }) }}
   </div>
 </div>
@@ -80,11 +80,13 @@
     <li>when you will review it again</li>
   </ul>
 
-  <figure class="nhsuk-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-7">
-    <img class="nhsuk-image__img app-u-full-width" src="/assets/review-date-pattern-embedded-content.png" alt="Image of video showing exercise trainer doing workout on mat in fitness studio">
-    <figcaption class="nhsuk-image__caption">
-      Example of review date used under a video
-    </figcaption>
-  </figure> #}
+  {{ image({
+    src: "/assets/review-date-pattern-embedded-content.png",
+    alt: "Image of video showing exercise trainer doing workout on mat in fitness studio",
+    caption: {
+      text: "Example of review date used under a video"
+    },
+    classes: "app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-7"
+  }) }} #}
 
 {% endblock %}
