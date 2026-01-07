@@ -450,18 +450,13 @@
   <p>This helps people with low vision and colour vision deficiency (colour blindness) who find it difficult to distinguish between certain colours, often shades of red, yellow and green.</p>
   <p>Not all combinations from our colour palette meet the minimum contrast. For example, <code>$nhsuk-border-colour</code> has low contrast on our page background.</p>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-      More about contrast in components and graphic elements
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <p>Use a tool to calculate the ratio between the element and the adjacent colour. For example, the white arrow (foreground) and the green circle (background) in an <a href="/design-system/components/action-link">action link</a>.</p>
-      <p>If you rely on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it does not have to meet the requirement but we recommend you try to meet it anyway.</p>
-      <p>Components that are visible but not currently active (like a submit button that is not active until the user has filled in the form) do not have to meet the requirement. But if you can meet the minimum contrast without it being confusing, it will help people with low vision.</p>
-    </div>
-  </details>
+  {% call details({
+    summaryText: "More about contrast in components and graphic elements"
+  }) %}
+    <p>Use a tool to calculate the ratio between the element and the adjacent colour. For example, the white arrow (foreground) and the green circle (background) in an <a href="/design-system/components/action-link">action link</a>.</p>
+    <p>If you rely on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it does not have to meet the requirement but we recommend you try to meet it anyway.</p>
+    <p>Components that are visible but not currently active (like a submit button that is not active until the user has filled in the form) do not have to meet the requirement. But if you can meet the minimum contrast without it being confusing, it will help people with low vision.</p>
+  {% endcall %}
 
   <h4>WCAG 2.2 AA</h4>
   <p>The contrast ratio should be at least:</p>

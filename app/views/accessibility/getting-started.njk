@@ -21,22 +21,17 @@
   <h2 id="learn-on-your-own">Learn on your own</h2>
   <p>You can learn a lot through reading blogs and watching videos. There are some good resources online.</p>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-      Online resources
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <ul>
-        <li><a href="https://accessibility.blog.gov.uk/category/accessibility-and-me/">Accessibility and me (GOV.UK blog)</a> – a series of interviews with people with access needs</li>
-        <li><a href="https://accessibility.blog.gov.uk/">Accessibility in government (GOV.UK blog)</a></li>
-        <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/">Dos and don'ts on designing for accessibility (GOV.UK blog)</a> with GOV.UK posters about designing inclusive services</li>
-        <li><a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles">Understanding disabilities and impairments: user profiles (GOV.UK)</a> – a set of profiles highlighting common barriers users face when accessing digital services. Please share any accessibility user profiles for NHS services on <a href="/slack">our public Slack channel</a>.</li>
-        <li><a href="https://www.w3.org/WAI/perspective-videos/">Web accessibility perspectives (W3C)</a>  – a series of videos about how accessible design can help people with disabilities</li>
-      </ul>
-      </div>
-  </details>
+  {% call details({
+    summaryText: "Online resources"
+  }) %}
+    <ul>
+      <li><a href="https://accessibility.blog.gov.uk/category/accessibility-and-me/">Accessibility and me (GOV.UK blog)</a> – a series of interviews with people with access needs</li>
+      <li><a href="https://accessibility.blog.gov.uk/">Accessibility in government (GOV.UK blog)</a></li>
+      <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/">Dos and don'ts on designing for accessibility (GOV.UK blog)</a> with GOV.UK posters about designing inclusive services</li>
+      <li><a href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles">Understanding disabilities and impairments: user profiles (GOV.UK)</a> – a set of profiles highlighting common barriers users face when accessing digital services. Please share any accessibility user profiles for NHS services on <a href="/slack">our public Slack channel</a>.</li>
+      <li><a href="https://www.w3.org/WAI/perspective-videos/">Web accessibility perspectives (W3C)</a>  – a series of videos about how accessible design can help people with disabilities</li>
+    </ul>
+  {% endcall %}
 
   <h2 id="book-a-session-in-an-accessibility-lab">Book a session in an accessibility lab</h2>
   <p>An accessibility lab will give you hands-on experience of some of the technologies that people use with online services. Some labs also have goggles that simulate visual impairments and headphones to simulate hearing loss.</p>

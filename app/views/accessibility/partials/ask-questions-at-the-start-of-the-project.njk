@@ -6,34 +6,29 @@
   <li>whether your team has the capacity and expertise to do it</li>
 </ul>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-    More questions to ask yourself
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>If the answer to any of the following questions is 'yes', it's a sign that the project will need a higher level of accessibility expertise or support.</p>
+{% call details({
+  summaryText: "More questions to ask yourself"
+}) %}
+  <p>If the answer to any of the following questions is 'yes', it's a sign that the project will need a higher level of accessibility expertise or support.</p>
 
-    <h3 class="nhsuk-heading-xs">Does the project affect people with access needs differently?</h3>
-    <p>For example, does the user's journey include physical access to a GP surgery? If so, include people who might find this difficult in your user research - for example, people with hearing, visual or mobility impairments. Read more about <a href="/accessibility/user-research#involve-people-with-access-needs-at-every-stage">involving people with access needs</a> in user research.</p>
+  <h3 class="nhsuk-heading-xs">Does the project affect people with access needs differently?</h3>
+  <p>For example, does the user's journey include physical access to a GP surgery? If so, include people who might find this difficult in your user research - for example, people with hearing, visual or mobility impairments. Read more about <a href="/accessibility/user-research#involve-people-with-access-needs-at-every-stage">involving people with access needs</a> in user research.</p>
 
-    <h3 class="nhsuk-heading-xs">Will the project use any technologies you haven't already tested for accessibility?</h3>
-    <p>You will need to test them, and the team working on them will need a higher level of accessibility knowledge or support.</p>
+  <h3 class="nhsuk-heading-xs">Will the project use any technologies you haven't already tested for accessibility?</h3>
+  <p>You will need to test them, and the team working on them will need a higher level of accessibility knowledge or support.</p>
 
-    <h3 class="nhsuk-heading-xs">Is the project about a complex subject with lots of jargon?</h3>
-    <p>You'll need to allow time to <a href="/accessibility/content#write-content-thats-easy-to-understand">write content that's easy to understand</a>.</p>
+  <h3 class="nhsuk-heading-xs">Is the project about a complex subject with lots of jargon?</h3>
+  <p>You'll need to allow time to <a href="/accessibility/content#write-content-thats-easy-to-understand">write content that's easy to understand</a>.</p>
 
-    <h3 class="nhsuk-heading-xs">Will the interface need new components?</h3>
-    <p>You should show that you've tested existing components and demonstrated a clear need for new ones. You must also make sure new components are accessible and you must test and maintain them.</p>
+  <h3 class="nhsuk-heading-xs">Will the interface need new components?</h3>
+  <p>You should show that you've tested existing components and demonstrated a clear need for new ones. You must also make sure new components are accessible and you must test and maintain them.</p>
 
-    <h3 class="nhsuk-heading-xs">Will there be a different colour scheme?</h3>
-    <p>You'll need to <a href="/accessibility/design#check-colour-contrast">check colour contrast</a>, both for text and graphical elements.</p>
+  <h3 class="nhsuk-heading-xs">Will there be a different colour scheme?</h3>
+  <p>You'll need to <a href="/accessibility/design#check-colour-contrast">check colour contrast</a>, both for text and graphical elements.</p>
 
-    <h3 class="nhsuk-heading-xs">Will the project use multimedia, PDFs, infographics, large data tables or other less common content?</h3>
-    <p>Check the capabilities of the systems and the people creating them so that you can be sure that they will be accessible.</p>
+  <h3 class="nhsuk-heading-xs">Will the project use multimedia, PDFs, infographics, large data tables or other less common content?</h3>
+  <p>Check the capabilities of the systems and the people creating them so that you can be sure that they will be accessible.</p>
 
-    <h3 class="nhsuk-heading-xs">Is there a reason to include 'Easy Read' documents or translations?</h3>
-    <p>If there is some key information that everyone must understand (such as a guide to a new national service), then consider including an Easy Read version for people with low-literacy or learning disabilities. Or you could link to Easy Read content from other organisations.</p>
-  </div>
-</details>
+  <h3 class="nhsuk-heading-xs">Is there a reason to include 'Easy Read' documents or translations?</h3>
+  <p>If there is some key information that everyone must understand (such as a guide to a new national service), then consider including an Easy Read version for people with low-literacy or learning disabilities. Or you could link to Easy Read content from other organisations.</p>
+{% endcall %}

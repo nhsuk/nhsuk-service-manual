@@ -1,3 +1,5 @@
+{% from "details/macro.njk" import details %}
+
 {% macro designExample(params) %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
 
@@ -81,98 +83,93 @@
 
               {% if nunjucksParams | length %}
                 <div class="app-code-snippet__macro">
-                  <details class="nhsuk-details">
-                    <summary class="nhsuk-details__summary">
-                      <span class="nhsuk-details__summary-text">
-                        Nunjucks macro options
-                      </span>
-                    </summary>
-                    <div class="nhsuk-details__text">
-                      <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
-                      <p>Some options are required for the macro to work. These are marked as "Required" in the option description.</p>
-                      <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
+                  {% call details({
+                    summaryText: "Nunjucks macro options"
+                  }) %}
+                    <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
+                    <p>Some options are required for the macro to work. These are marked as "Required" in the option description.</p>
+                    <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 
-                      <table class="nhsuk-table nhsuk-table-responsive">
-                        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Nunjucks arguments for {{ exampleTitle }}</caption>
-                        <thead role="rowgroup" class="nhsuk-table__head">
-                          <tr role="row">
-                            <th role="columnheader" class="" scope="col">
-                              Name
-                            </th>
-                            <th role="columnheader" class="" scope="col">
-                              Type
-                            </th>
-                            <th role="columnheader" class="" scope="col">
-                              Required
-                            </th>
-                            <th role="columnheader" class="" scope="col">
-                              Description
-                            </th>
+                    <table class="nhsuk-table nhsuk-table-responsive">
+                      <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Nunjucks arguments for {{ exampleTitle }}</caption>
+                      <thead role="rowgroup" class="nhsuk-table__head">
+                        <tr role="row">
+                          <th role="columnheader" class="" scope="col">
+                            Name
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Type
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Required
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Description
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+                        {% for option in nunjucksParams %}
+                          <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
+                              <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}</span>
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ option.type }}
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ option.required }}
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+                              <span>{{ option.description | markdown }}</span>
+                            </td>
                           </tr>
-                        </thead>
-                        <tbody class="nhsuk-table__body">
-                          {% for option in nunjucksParams %}
-                            <tr role="row" class="nhsuk-table__row">
-                              <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
-                                <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}</span>
-                              </td>
-                              <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ option.type }}
-                              </td>
-                              <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ option.required }}
-                              </td>
-                              <td role="cell" class="nhsuk-table__cell">
-                                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
-                                <span>{{ option.description | markdown }}</span>
-                              </td>
-                            </tr>
-                            {% if option.params %}
-                              {% for subOption in option.params %}
+                          {% if option.params %}
+                            {% for subOption in option.params %}
+                              <tr role="row" class="nhsuk-table__row">
+                                <td role="cell" class="nhsuk-table__cell">
+                                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
+                                  <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}{% if option.type == "array" %}[]{% else %}{}{% endif %}.{{ subOption.name }}</span>
+                                </td>
+                                <td role="cell" class="nhsuk-table__cell">
+                                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ subOption.type }}
+                                </td>
+                                <td role="cell" class="nhsuk-table__cell">
+                                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subOption.required }}
+                                </td>
+                                <td role="cell" class="nhsuk-table__cell">
+                                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
+                                  <span>{{ subOption.description | markdown }}</span>
+                                </td>
+                              </tr>
+                              {% if subOption.params %}
+                                {% for subSubOption in subOption.params %}
                                 <tr role="row" class="nhsuk-table__row">
                                   <td role="cell" class="nhsuk-table__cell">
                                     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
-                                    <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}{% if option.type == "array" %}[]{% else %}{}{% endif %}.{{ subOption.name }}</span>
+                                    <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}{% if option.type == "array" %}[]{% else %}{}{% endif %}.{{ subOption.name }}{% if subOption.type == "array" %}[]{% else %}{}{% endif %}.{{ subSubOption.name }}</span>
                                   </td>
                                   <td role="cell" class="nhsuk-table__cell">
-                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ subOption.type }}
+                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ subSubOption.type }}
                                   </td>
                                   <td role="cell" class="nhsuk-table__cell">
-                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subOption.required }}
+                                    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subSubOption.required }}
                                   </td>
                                   <td role="cell" class="nhsuk-table__cell">
                                     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
-                                    <span>{{ subOption.description | markdown }}</span>
+                                    <span>{{ subSubOption.description | markdown }}</span>
                                   </td>
                                 </tr>
-                                {% if subOption.params %}
-                                  {% for subSubOption in subOption.params %}
-                                  <tr role="row" class="nhsuk-table__row">
-                                    <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>
-                                      <span class="nhsuk-table__cell--break-all--desktop">{{ option.name }}{% if option.type == "array" %}[]{% else %}{}{% endif %}.{{ subOption.name }}{% if subOption.type == "array" %}[]{% else %}{}{% endif %}.{{ subSubOption.name }}</span>
-                                    </td>
-                                    <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>{{ subSubOption.type }}
-                                    </td>
-                                    <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Required </span>{{ subSubOption.required }}
-                                    </td>
-                                    <td role="cell" class="nhsuk-table__cell">
-                                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Description </span>
-                                      <span>{{ subSubOption.description | markdown }}</span>
-                                    </td>
-                                  </tr>
-                                  {% endfor %}
-                                {% endif %}
-                              {% endfor %}
-                            {% endif %}
-                          {% endfor %}
-                        </tbody>
-                      </table>
-                    </div>
-                  </details>
+                                {% endfor %}
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  {% endcall %}
                 </div>
               {% endif %}
               <div class="app-code-snippet__macro"></div>

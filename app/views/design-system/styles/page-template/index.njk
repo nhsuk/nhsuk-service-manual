@@ -73,44 +73,33 @@
   <p>The page title (<code>&lt;title&gt;</code>) is in the HTML metadata, in the <code>&lt;head&gt;</code> section. It is displayed in the browser tab.</p>
   <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by an en dash. For example: <code>&lt;title&gt;Flu – NHS&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p>
 
-    <details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-       More complex page titles
-    </span>
-  </summary>
-    <div class="nhsuk-details__text">
-  <p>A page title can have up to 4 elements separated by dashes. They are the:</p>
-  <ul>
-    <li><code>&lt;h1&gt;</code></li>
-    <li>section name, if the service has more than 1 section</li>
-    <li>service name</li>
-    <li>website</li>
-  </ul>
+  {% call details({
+    summaryText: "More complex page titles"
+  }) %}
+    <p>A page title can have up to 4 elements separated by dashes. They are the:</p>
+    <ul>
+      <li><code>&lt;h1&gt;</code></li>
+      <li>section name, if the service has more than 1 section</li>
+      <li>service name</li>
+      <li>website</li>
+    </ul>
     <p>Examples from the NHS website include:</p>
     <ul>
       <li>Money, work, benefits and social care – Social care and support guide – NHS</li>
       <li>How old are you? – Calculate your heart age – NHS</li>
     </ul>
     <p>This is an example from HMRC:</br>
-   Do you live in the UK? – Your details – Manage your tax credits – GOV.UK</p>
+    Do you live in the UK? – Your details – Manage your tax credits – GOV.UK</p>
     <p>If the user makes an error, add "Error: " to the beginning of the title so screen readers read it out as soon as possible.</p>
-    </div>
+  {% endcall %}
 
-  </details>
-
-  <details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-       Personally identifiable information
-    </span>
-  </summary>
-    <div class="nhsuk-details__text">
-      <p>If there is personally identifiable information in the <code>&lt;h1&gt;</code>, for example, in a transactional journey, you must make sure it is not recorded in your analytics package.</p>
-      <p>For example, if the <code>&lt;h1&gt;</code> is "What is Gordon's date of birth?", record "What is their date of birth?".</p>
-      <p>To do this you could change the page title to use "their" but keep "Gordon" in the <code>&lt;h1&gt;</code>. Or you could keep "Gordon" in the page title and send a different page title to your analytics package.</p>
-    </div>
-  </details>
+  {% call details({
+    summaryText: "Personally identifiable information"
+  }) %}
+    <p>If there is personally identifiable information in the <code>&lt;h1&gt;</code>, for example, in a transactional journey, you must make sure it is not recorded in your analytics package.</p>
+    <p>For example, if the <code>&lt;h1&gt;</code> is "What is Gordon's date of birth?", record "What is their date of birth?".</p>
+    <p>To do this you could change the page title to use "their" but keep "Gordon" in the <code>&lt;h1&gt;</code>. Or you could keep "Gordon" in the page title and send a different page title to your analytics package.</p>
+  {% endcall %}
 
   <p>Find out more about writing good <a href="/content/formatting#headings">headings in the content guide</a>.</p>
   <p>See examples of <a href="/design-system/patterns/question-pages#page-headings">page headings with legends, labels and captions in the question pages pattern</a>.</p>

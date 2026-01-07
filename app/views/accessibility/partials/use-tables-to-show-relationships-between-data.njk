@@ -2,39 +2,32 @@
 <p>Tables make it easier for users to understand logical relationships between bits of data or information.</p>
 <p>Only use tables when there is a relationship between the "header" cells and the "data" cells in the grid. Assistive technologies announce the header with the data it refers to.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Example of good table layout
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-
-    <p>Here is an example from the <a href="/design-system/components/table">tables component</a> in the service manual.</p>
-      <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-bottom-5">
-        <caption class="nhsuk-table__caption">Skin symptoms and possible causes</caption>
-        <thead class="nhsuk-table__head" role="rowgroup">
-          <tr class="nhsuk-table__row" role="row">
-          <th class="nhsuk-table__header" role="columnheader" scope="col">Skin symptoms</th>
-          <th class="nhsuk-table__header" role="columnheader" scope="col">Possible cause</th>
-          </tr>
-        </thead>
-        <tbody class="nhsuk-table__body">
-          <tr class="nhsuk-table__row" role="row">
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Blisters on lips or around the mouth</td>
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>cold sores</td>
-          </tr>
-          <tr class="nhsuk-table__row" role="row">
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Itchy, dry, cracked, sore</td>
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>eczema</td>
-          </tr>
-          <tr class="nhsuk-table__row" role="row">
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Itchy blisters</td>
-          <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>shingles, chickenpox</td>
-          </tr>
-        </tbody>
-      </table>
-    <p>Screen readers would read out the last row as: "Skin symptoms: itchy blisters. Possible cause: shingles, chickenpox".</p>
-
-  </div>
-</details>
+{% call details({
+  summaryText: "Example of good table layout"
+}) %}
+  <p>Here is an example from the <a href="/design-system/components/table">tables component</a> in the service manual.</p>
+  <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-bottom-5">
+    <caption class="nhsuk-table__caption">Skin symptoms and possible causes</caption>
+    <thead class="nhsuk-table__head" role="rowgroup">
+      <tr class="nhsuk-table__row" role="row">
+      <th class="nhsuk-table__header" role="columnheader" scope="col">Skin symptoms</th>
+      <th class="nhsuk-table__header" role="columnheader" scope="col">Possible cause</th>
+      </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Blisters on lips or around the mouth</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>cold sores</td>
+      </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Itchy, dry, cracked, sore</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>eczema</td>
+      </tr>
+      <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Skin symptoms</span>Itchy blisters</td>
+      <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Possible cause</span>shingles, chickenpox</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Screen readers would read out the last row as: "Skin symptoms: itchy blisters. Possible cause: shingles, chickenpox".</p>
+{% endcall %}

@@ -75,13 +75,10 @@
     <li>use bullets</li>
     <li>use words like "important" in your content </li>
   </ul>
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-        Why we say this
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
+
+  {% call details({
+    summaryText: "Why we say this"
+  }) %}
     <p>Large areas of bold, italics or underlining can be difficult for some people to read. Too much bold makes it difficult for them to know which parts of your content to pay most attention to.</p>
     <p>People may mistake stand-alone bold text for a heading and underlined text for a link.</p>
     <p>By default, screen readers do not announce text in these HTML tags differently:</p>
@@ -91,8 +88,7 @@
       <li>&lt;em&gt; for emphasis</li>
     </ul>
     <p>Users may miss anything you wanted to express by using them.</p>
-    </div>
-  </details>
+  {% endcall %}
 
   <h2 id="headings">Headings</h2>
   <p>Headings help users understand what the page covers and find the information they need. Use them to break up and structure text.</p>

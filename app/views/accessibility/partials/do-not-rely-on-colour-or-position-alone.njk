@@ -6,19 +6,13 @@
 </ul>
 <p>Do not rely on people understanding instructions that refer to the position of page elements.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Why you should not say "Press the red button on the right"
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-
-    <p>If someone is:</p>
-    <ul>
-      <li>"colour blind", they may not be able to tell the difference between red and green</li>
-      <li>zoomed in, the button may not be on the right</li>
-      <li>using a screenreader, they may not see the colour - and position, for them, is simply up or down</li>
-    </ul>
-  </div>
-</details>
+{% call details({
+  summaryText: "Why you should not say \"Press the red button on the right\""
+}) %}
+  <p>If someone is:</p>
+  <ul>
+    <li>"colour blind", they may not be able to tell the difference between red and green</li>
+    <li>zoomed in, the button may not be on the right</li>
+    <li>using a screenreader, they may not see the colour - and position, for them, is simply up or down</li>
+  </ul>
+{% endcall %}
