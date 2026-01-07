@@ -11,694 +11,1078 @@
 {% block bodyContent %}
 
 <h2>January 2026</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in January 2026</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added <a href="/design-system/components/file-upload">file upload component</a></p>
-        <p>Added <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and added <a href="/design-system/components/panel#interruption-panel">interruption panel on panel component page</a></p>
-        <p>Added <a href="/design-system/components/summary-list#summary-cards">summary cards to summary list component</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Standards and technology</td>
-      <td class="nhsuk-table__cell">
-        <p>Updated <a href="/standards-and-technology/service-standard">NHS service standard</a>, including:</p>
-        <ul>
-          <li>amending the page summary for service standard 3 to align with GOV's</li>
-          <li>updating and adding links in service standards 5 and 11</li>
-          <li>bringing service standard 13 into closer alignment with GOV's</li>
-          <li>updating service standard 16 with clinical colleagues</li>
-          <li>reviewing service standard 17 with interoperability standards team</li>
-          <li>updating outdated references to NHS Digital and fixing broken links</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202601 %}
+  <p>Added <a href="/design-system/components/file-upload">file upload component</a></p>
+  <p>Added <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and added <a href="/design-system/components/panel#interruption-panel">interruption panel on panel component page</a></p>
+  <p>Added <a href="/design-system/components/summary-list#summary-cards">summary cards to summary list component</a></p>
+{% endset %}
+
+{% set standardHtml202601 %}
+  <p>Updated <a href="/standards-and-technology/service-standard">NHS service standard</a>, including:</p>
+  <ul>
+    <li>amending the page summary for service standard 3 to align with GOV's</li>
+    <li>updating and adding links in service standards 5 and 11</li>
+    <li>bringing service standard 13 into closer alignment with GOV's</li>
+    <li>updating service standard 16 with clinical colleagues</li>
+    <li>reviewing service standard 17 with interoperability standards team</li>
+    <li>updating outdated references to NHS Digital and fixing broken links</li>
+  </ul>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in January 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202601
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202601
+      }
+    ]
+  ]
+}) }}
 
 <h2>December 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in December 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added section on <a href="/design-system/styles/typography#labels-and-legends">labels and legends on typography page</a></p>
-        </td>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202512 %}
+  <p>Added section on <a href="/design-system/styles/typography#labels-and-legends">labels and legends on typography page</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in November 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202512
+      }
+    ]
+  ]
+}) }}
 
 <h2>November 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in November 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Content guide</td>
-      <td class="nhsuk-table__cell">
-        <p>Updated section on <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">avoiding binary choices in guidance on writing good questions for forms</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added new <a href="/design-system/components/password-input">password input component</a></p>
-        <p>Added <a href="/design-system/components/buttons#smaller-buttons">smaller buttons</a></p>
-        <p>Add guidance on <a href="/design-system/components/text-input#codes-and-sequences">codes and sequences for text input</a></p>
-        <p>Updated guidance on <a href="/design-system/patterns/ask-for-nhs-numbers">asking users for their NHS number</a>, including new dummy NHS number 999 123 4567</p>
-        <p>Updated guidance for reverse examples, such as white links on dark backgrounds</p>
-        <p>Updated <a href="/design-system/components/select">select component</a> guidance to bring it closer to GOV.UK design system</p>
-        <p>Updated coded examples in design system</p>
-        <p>(More details in <a href="https://github.com/nhsuk/nhsuk-service-manual/blob/main/CHANGELOG.md">changelog in GitHub</a>)</p>
-        </td>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set contentHtml202511 %}
+  <p>Updated section on <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users#beware-binary-choices">avoiding binary choices in guidance on writing good questions for forms</a></p>
+{% endset %}
+
+{% set designHtml202511 %}
+  <p>Added new <a href="/design-system/components/password-input">password input component</a></p>
+  <p>Added <a href="/design-system/components/buttons#smaller-buttons">smaller buttons</a></p>
+  <p>Add guidance on <a href="/design-system/components/text-input#codes-and-sequences">codes and sequences for text input</a></p>
+  <p>Updated guidance on <a href="/design-system/patterns/ask-for-nhs-numbers">asking users for their NHS number</a>, including new dummy NHS number 999 123 4567</p>
+  <p>Updated guidance for reverse examples, such as white links on dark backgrounds</p>
+  <p>Updated <a href="/design-system/components/select">select component</a> guidance to bring it closer to GOV.UK design system</p>
+  <p>Updated coded examples in design system</p>
+  <p>(More details in <a href="https://github.com/nhsuk/nhsuk-service-manual/blob/main/CHANGELOG.md">changelog in GitHub</a>)</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in November 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202511
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202511
+      }
+    ]
+  ]
+}) }}
 
 <h2>October 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in October 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added <a href="/design-system/components/checkboxes#smaller-checkboxes">smaller checkboxes</a> and <a href="/design-system/components/radios#smaller-radios">smaller radios</a> and aligned guidance better with GOV.UK</p>
-        <p>Added <a href="/design-system/components/pagination#for-navigating-between-pages-of-items">numbered pagination, for navigating between pages of items</a></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202510 %}
+  <p>Added <a href="/design-system/components/checkboxes#smaller-checkboxes">smaller checkboxes</a> and <a href="/design-system/components/radios#smaller-radios">smaller radios</a> and aligned guidance better with GOV.UK</p>
+  <p>Added <a href="/design-system/components/pagination#for-navigating-between-pages-of-items">numbered pagination, for navigating between pages of items</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in October 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202510
+      }
+    ]
+  ]
+}) }}
 
 <h2>September 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in September 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added a pattern to help users <a href="/design-system/patterns/find-bsl-content">find British Sign Language content</a></p>
-        <p>Added guidance on risks of using <a href="/design-system/components/textarea">textarea</a> (free text field)</p>
-        <p>Added guidance on using textarea on page about <a href="/design-system/components/character-count">character count component</a></p>
-        <p>Made heading styles consistent for single question coded examples</p>
-        <p>Made textarea examples consistent across design system</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202509 %}
+  <p>Added a pattern to help users <a href="/design-system/patterns/find-bsl-content">find British Sign Language content</a></p>
+  <p>Added guidance on risks of using <a href="/design-system/components/textarea">textarea</a> (free text field)</p>
+  <p>Added guidance on using textarea on page about <a href="/design-system/components/character-count">character count component</a></p>
+  <p>Made heading styles consistent for single question coded examples</p>
+  <p>Made textarea examples consistent across design system</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in September 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202509
+      }
+    ]
+  ]
+}) }}
 
 <h2>August 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in August 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added new <a href="/design-system/components/header#account-information-and-links">account information and links variant of header component</a>.</p>
-        <p><a href="/design-system/components/header">Header</a> design updates include:</p>
-        <ul>
-          <li>new feature to highlight current page in the navigation menu</li>
-          <li>improved NHS logo focus state</li>
-          <li>removing home link that was automatically added on small screens</li>
-          <li>wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo</li>
-          <li>left-aligning navigation items by default</li>
-        </ul>
-        <p>Added new <a href="/design-system/components/notification-banners">notification banners component</a></p>
-        <p>Added new styling for <a href="/design-system/components/buttons#grouping-buttons">grouping buttons</a></p>
-        <p>Changed <a href="/design-system/components/buttons">button component</a> styling to make buttons full width on small screens, which aligns with GOV.UK and NHS App</p>
-        <p>Updated <a href="/design-system/components/footer">footer component</a> and examples</p>
-        <p>Updated guidance for <a href="/design-system/styles/icons">icons</a> as we now provide inline SVG icons via nhsukIcon macro</p>
-        <p>Added new profile icon to <a href="/design-system/styles/icons">icons page</a></p>
-        <p>Updated guidance for using Nunjucks in <a href="/design-system/production#using-nunjucks-macros">production code</a> on NHS.UK frontend v10.x</p>
-        <p>Added more links to image libraries for <a href="/content/inclusive-content/skin-symptoms">inclusive skin symptoms</a></p>
-        <p>Updated guidance on <a href="/design-system/styles/colour">colour variables</a> to use 'colour' spelling instead of 'color'</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202508 %}
+  <p>Added new <a href="/design-system/components/header#account-information-and-links">account information and links variant of header component</a>.</p>
+  <p><a href="/design-system/components/header">Header</a> design updates include:</p>
+  <ul>
+    <li>new feature to highlight current page in the navigation menu</li>
+    <li>improved NHS logo focus state</li>
+    <li>removing home link that was automatically added on small screens</li>
+    <li>wrapping service name onto a new line only when there is not enough space to show it beside the NHS logo</li>
+    <li>left-aligning navigation items by default</li>
+  </ul>
+  <p>Added new <a href="/design-system/components/notification-banners">notification banners component</a></p>
+  <p>Added new styling for <a href="/design-system/components/buttons#grouping-buttons">grouping buttons</a></p>
+  <p>Changed <a href="/design-system/components/buttons">button component</a> styling to make buttons full width on small screens, which aligns with GOV.UK and NHS App</p>
+  <p>Updated <a href="/design-system/components/footer">footer component</a> and examples</p>
+  <p>Updated guidance for <a href="/design-system/styles/icons">icons</a> as we now provide inline SVG icons via nhsukIcon macro</p>
+  <p>Added new profile icon to <a href="/design-system/styles/icons">icons page</a></p>
+  <p>Updated guidance for using Nunjucks in <a href="/design-system/production#using-nunjucks-macros">production code</a> on NHS.UK frontend v10.x</p>
+  <p>Added more links to image libraries for <a href="/content/inclusive-content/skin-symptoms">inclusive skin symptoms</a></p>
+  <p>Updated guidance on <a href="/design-system/styles/colour">colour variables</a> to use 'colour' spelling instead of 'color'</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in August 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202508
+      }
+    ]
+  ]
+}) }}
 
 <h2>July 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in July 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-        <td class="nhsuk-table__cell">Community and contribution</td>
-        <td class="nhsuk-table__cell">
-          <p>Added link to NHS App design system to <a href="https://service-manual.nhs.uk/community-and-contribution/community-resources">Community resources page</a></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Content guide</td>
-        <td class="nhsuk-table__cell">
-          <p>Added entries to A to Z of NHS health writing, including: <a href="/content/a-to-z-of-nhs-health-writing#app">app</a>, <a href="/content/a-to-z-of-nhs-health-writing#brackets">brackets</a>, <a href="/content/a-to-z-of-nhs-health-writing#kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes</a>, <a href="/content/a-to-z-of-nhs-health-writing#money">money</a> and <a href="/content/a-to-z-of-nhs-health-writing#united-kingdom">United Kingdom</a></p>
-          <p>Updated guidance on words like "see" in <a href="/content/formatting#links">links</a></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Design system</td>
-        <td class="nhsuk-table__cell">
-          <p>Added new <a href="/design-system/patterns/question-pages">question pages pattern</a></p>
-          <p>Added guidance on <a href="/design-system/styles/colour#secondary-text-colour">using the grey secondary text colour modifier class</a></p>
-          <p>Added new guidance on <a href="/design-system/components/table#missing-data-table">displaying missing data in tables</a></p>
-          <p>Added guidance on <a href="/design-system/components/hint-text#how-to-use-hint-text">how to use hint text</a> and updated examples in design system</p>
-          <p>Updated WCAG 2.2 alerts in the design system and moved full list of <a href="/design-system/changes-to-design-system-wcag-2-2">changes to the design system to meet WCAG 2.2</a></p>
-          <p>Changed "Go back" to "Back" on <a href="/design-system/components/back-link">back link</a> and in back link examples on other pages</p>
-        </td>
-      </tr>
-  </tbody>
-</table>
+
+{% set communityHtml202507 %}
+  <p>Added link to NHS App design system to <a href="https://service-manual.nhs.uk/community-and-contribution/community-resources">Community resources page</a></p>
+{% endset %}
+
+{% set contentHtml202507 %}
+  <p>Added entries to A to Z of NHS health writing, including: <a href="/content/a-to-z-of-nhs-health-writing#app">app</a>, <a href="/content/a-to-z-of-nhs-health-writing#brackets">brackets</a>, <a href="/content/a-to-z-of-nhs-health-writing#kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes</a>, <a href="/content/a-to-z-of-nhs-health-writing#money">money</a> and <a href="/content/a-to-z-of-nhs-health-writing#united-kingdom">United Kingdom</a></p>
+  <p>Updated guidance on words like "see" in <a href="/content/formatting#links">links</a></p>
+{% endset %}
+
+{% set designHtml202507 %}
+  <p>Added new <a href="/design-system/patterns/question-pages">question pages pattern</a></p>
+  <p>Added guidance on <a href="/design-system/styles/colour#secondary-text-colour">using the grey secondary text colour modifier class</a></p>
+  <p>Added new guidance on <a href="/design-system/components/table#missing-data-table">displaying missing data in tables</a></p>
+  <p>Added guidance on <a href="/design-system/components/hint-text#how-to-use-hint-text">how to use hint text</a> and updated examples in design system</p>
+  <p>Updated WCAG 2.2 alerts in the design system and moved full list of <a href="/design-system/changes-to-design-system-wcag-2-2">changes to the design system to meet WCAG 2.2</a></p>
+  <p>Changed "Go back" to "Back" on <a href="/design-system/components/back-link">back link</a> and in back link examples on other pages</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in July 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Community and contribution"
+      },
+      {
+        html: communityHtml202507
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202507
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202507
+      }
+    ]
+  ]
+}) }}
 
 <h2>May 2025</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in May 2025</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added guidance on new override classes to apply <a href="/design-system/styles/spacing">static spacing</a></p>
-        <p>Added <a href="/design-system/components/buttons#secondary-button">secondary button styling on buttons page</a> and reorganised page</p>
-        <p>Added button text examples to <a href="/design-system/components/buttons#how-to-use-buttons">how to use section of buttons page</a></p>
-        <p>Added reverse link style to <a href="/design-system/styles/typography#links">links on typography page</a></p>
-        <p>Moved width override classes to <a href="/design-system/styles/layout">layout page</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Standards and technology</td>
-      <td class="nhsuk-table__cell">
-        <p>Updated links to information standard DAPB3051, previously DCB3051</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202505 %}
+  <p>Added guidance on new override classes to apply <a href="/design-system/styles/spacing">static spacing</a></p>
+  <p>Added <a href="/design-system/components/buttons#secondary-button">secondary button styling on buttons page</a> and reorganised page</p>
+  <p>Added button text examples to <a href="/design-system/components/buttons#how-to-use-buttons">how to use section of buttons page</a></p>
+  <p>Added reverse link style to <a href="/design-system/styles/typography#links">links on typography page</a></p>
+  <p>Moved width override classes to <a href="/design-system/styles/layout">layout page</a></p>
+{% endset %}
+
+{% set standardHtml202505 %}
+  <p>Updated links to information standard DAPB3051, previously DCB3051</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in May 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202505
+      }
+    ],
+    [
+      {
+        text: "NHS service standard"
+      },
+      {
+        html: standardHtml202505
+      }
+    ]
+  ]
+}) }}
 
 <h2>April 2025</h2>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in April 2025</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-            <tr>
-        <td class="nhsuk-table__cell">Content guide</td>
-        <td class="nhsuk-table__cell">
-          <p>Added <a href="/content/punctuation#hyphens-and-dashes">guidance on breaking up long words in the hyphens section</a></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Design system</td>
-        <td class="nhsuk-table__cell">
-          <p>Added <a href="/design-system/patterns/check-answers">Check answers pattern</a></p>
-          <p>Added <a href="/design-system/styles/typography#breaking-up-long-words">typography helper class and guidance on breaking up long words</a></p>
-          <p>Added example of <a href="/design-system/components/table#word-breaks-table">using word-breaks in tables</a></p>
-          <p>Updated <a href="/design-system/styles/page-template">page template</a> to use template from nhsuk-frontend, with new Nunjucks options</p>
-          <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#utility-classes">reading width helper classes</a></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">NHS service standard</td>
-        <td class="nhsuk-table__cell">
-          <p>Updated <a href="/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy">NHS service standard 9 – Create a secure service that protects people's privacy</a> to reflect updates to <a href="https://www.gov.uk/service-manual/service-standard/point-9-create-a-secure-service">GOV.UK service standard 9</a></p>
-          <p>Added a new bullet point about use of resources to <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">service standard 11</a> to reflect our <a href="/design-system/design-principles">design principle</a> about protecting the environment, with related links</p>
-          <p>Made minor changes to <a href="/standards-and-technology/service-standard">NHS service standard</a> points 9, 15 and 16 to help teams consider the risks of online services being misused for domestic abuse</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+{% set contentHtml202504 %}
+  <p>Added <a href="/content/punctuation#hyphens-and-dashes">guidance on breaking up long words in the hyphens section</a></p>
+{% endset %}
+
+{% set designHtml202504 %}
+  <p>Added <a href="/design-system/patterns/check-answers">Check answers pattern</a></p>
+  <p>Added <a href="/design-system/styles/typography#breaking-up-long-words">typography helper class and guidance on breaking up long words</a></p>
+  <p>Added example of <a href="/design-system/components/table#word-breaks-table">using word-breaks in tables</a></p>
+  <p>Updated <a href="/design-system/styles/page-template">page template</a> to use template from nhsuk-frontend, with new Nunjucks options</p>
+  <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#utility-classes">reading width helper classes</a></p>
+{% endset %}
+
+{% set standardHtml202504 %}
+  <p>Updated <a href="/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy">NHS service standard 9 – Create a secure service that protects people's privacy</a> to reflect updates to <a href="https://www.gov.uk/service-manual/service-standard/point-9-create-a-secure-service">GOV.UK service standard 9</a></p>
+  <p>Added a new bullet point about use of resources to <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">service standard 11</a> to reflect our <a href="/design-system/design-principles">design principle</a> about protecting the environment, with related links</p>
+  <p>Made minor changes to <a href="/standards-and-technology/service-standard">NHS service standard</a> points 9, 15 and 16 to help teams consider the risks of online services being misused for domestic abuse</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in April 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202504
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202504
+      }
+    ],
+    [
+      {
+        text: "NHS service standard"
+      },
+      {
+        html: standardHtml202504
+      }
+    ]
+  ]
+}) }}
 
 <h2>March 2025</h2>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in March 2025</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-      <p>Added new guidance on <a href="/design-system/styles/use-frutiger-font/">getting the Frutiger font</a></p>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+
+{% set designHtml202503 %}
+  <p>Added new guidance on <a href="/design-system/styles/use-frutiger-font/">getting the Frutiger font</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in March 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202503
+      }
+    ]
+  ]
+}) }}
 
 <h2>February 2025</h2>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in February 2025</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr>
-        <td class="nhsuk-table__cell">Accessibility</td>
-        <td class="nhsuk-table__cell">
-        <p>Updated guidance on <a href="/accessibility/content#provide-informative-page-titles">providing informative page titles and using headings correctly</a></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Content guide</td>
-        <td class="nhsuk-table__cell">
-        <p>Updated guidance on <a href="/content/pdfs-and-other-non-html-documents">PDFs and other non-HTML documents</a> to mention WCAG 2.2</p>
-          <p>Added new guidance about <a href="/content/formatting#headings">headings on Formatting page</a></p>
-          <p>Split up <a href="/content/formatting">Formatting</a> and <a href="/content/punctuation">Punctuation</a> sections and added Links guidance to Formatting page</p>
-          <p>Added new entries to the A to Z of NHS health writing for:</p>
-          <ul>
-            <li><a href="/content/a-to-z-of-nhs-health-writing#ear-drop-and-words-like-eardrum-and-earlobe">ear drop and words like eardrum and earlobe</a></li>
-            <li><a href="/content/a-to-z-of-nhs-health-writing#eye-drop-and-words-like-eyelash-and-eyelid">eye drop and words like eyelash and eyelid</a></li>
-            <li><a href="/content/a-to-z-of-nhs-health-writing#incontinence-products">incontinence products</a></li>
-            <li><a href="/content/a-to-z-of-nhs-health-writing#log-in-and-log-out">log in and log out</a></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Design system</td>
-        <td class="nhsuk-table__cell">
-        <p>Added new <a href="/design-system/components/panel">panel component</a> and <a href="/design-system/patterns/confirmation-page">confirmation page pattern</a></p>
-        <p>Added new guidance on <a href="/design-system/styles/page-template#page-title">page titles on Page template page</a></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+{% set accessibility202502 %}
+  <p>Updated guidance on <a href="/accessibility/content#provide-informative-page-titles">providing informative page titles and using headings correctly</a></p>
+{% endset %}
+
+{% set contentHtml202502 %}
+  <p>Updated guidance on <a href="/content/pdfs-and-other-non-html-documents">PDFs and other non-HTML documents</a> to mention WCAG 2.2</p>
+  <p>Added new guidance about <a href="/content/formatting#headings">headings on Formatting page</a></p>
+  <p>Split up <a href="/content/formatting">Formatting</a> and <a href="/content/punctuation">Punctuation</a> sections and added Links guidance to Formatting page</p>
+  <p>Added new entries to the A to Z of NHS health writing for:</p>
+  <ul>
+    <li><a href="/content/a-to-z-of-nhs-health-writing#ear-drop-and-words-like-eardrum-and-earlobe">ear drop and words like eardrum and earlobe</a></li>
+    <li><a href="/content/a-to-z-of-nhs-health-writing#eye-drop-and-words-like-eyelash-and-eyelid">eye drop and words like eyelash and eyelid</a></li>
+    <li><a href="/content/a-to-z-of-nhs-health-writing#incontinence-products">incontinence products</a></li>
+    <li><a href="/content/a-to-z-of-nhs-health-writing#log-in-and-log-out">log in and log out</a></li>
+  </ul>
+{% endset %}
+
+{% set designHtml202502 %}
+  <p>Added new <a href="/design-system/components/panel">panel component</a> and <a href="/design-system/patterns/confirmation-page">confirmation page pattern</a></p>
+  <p>Added new guidance on <a href="/design-system/styles/page-template#page-title">page titles on Page template page</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in February 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility"
+      },
+      {
+        html: accessibility202502
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202502
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202502
+      }
+    ]
+  ]
+}) }}
 
 <h2>January 2025</h2>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in January 2025</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Accessibility</td>
-      <td class="nhsuk-table__cell">
-      <p>Removed same-page profession links as they have caused confusion in testing</p>
-      <p>Updated page on <a href="/accessibility/getting-started">Getting started with accessibility</a></p>
-      </td>
-    </tr>
-   <tr>
-      <td class="nhsuk-table__cell">Content guide</td>
-      <td class="nhsuk-table__cell">
-      <p>Changed jump link IDs on the <a href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-     <p>Updated example code in <a href="/design-system/components/images">image component</a></p>
-      <p>Removed broken link on <a href="/design-system/components/select">Select component page</a> and added new research section</p>
-      <p>Changed jump link IDs on <a href="/design-system/patterns/a-to-z-page">A to Z page pattern</a> to lower case</p>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+
+{% set accessibility202501 %}
+  <p>Removed same-page profession links as they have caused confusion in testing</p>
+  <p>Updated page on <a href="/accessibility/getting-started">Getting started with accessibility</a></p>
+{% endset %}
+
+{% set contentHtml202501 %}
+  <p>Changed jump link IDs on the <a href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></p>
+{% endset %}
+
+{% set designHtml202501 %}
+  <p>Updated example code in <a href="/design-system/components/images">image component</a></p>
+  <p>Removed broken link on <a href="/design-system/components/select">Select component page</a> and added new research section</p>
+  <p>Changed jump link IDs on <a href="/design-system/patterns/a-to-z-page">A to Z page pattern</a> to lower case</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in January 2025",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility"
+      },
+      {
+        html: accessibility202501
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202501
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202501
+      }
+    ]
+  ]
+}) }}
 
 <h2>December 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in December 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-  <tr>
-    <td class="nhsuk-table__cell">Design system</td>
-    <td class="nhsuk-table__cell">
-    <p>Replaced image in <a href="https://service-manual.nhs.uk/design-system/components/images">image component</a></p>
-    </td>
-  </tr>
-  </tbody>
-</table>
+
+{% set designHtml202412 %}
+  <p>Replaced image in <a href="https://service-manual.nhs.uk/design-system/components/images">image component</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in December 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202412
+      }
+    ]
+  ]
+}) }}
 
 <h2>November 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in November 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-  <tr>
-    <td class="nhsuk-table__cell">Community and contribution</td>
-    <td class="nhsuk-table__cell">
-    <p>Added <a href="/community-and-contribution/community-resources">Community resources</a> page to list resources based on the NHS design system.</p>
-    </td>
-  </tr>
-  <tr>
-    <td class="nhsuk-table__cell">Design system</td>
-    <td class="nhsuk-table__cell">
-    <p>Added a <a href="/design-system/components/task-list">task list component</a> and a pattern to <a href="/design-system/patterns/complete-multiple-tasks">help users complete multiple tasks</a></p>
-    <p>Changed side navigation in <a href="/design-system/patterns">patterns</a><p>
-    </td>
-  </tr>
-  </tbody>
-</table>
+
+{% set communityHtml202411 %}
+  <p>Added <a href="/community-and-contribution/community-resources">Community resources</a> page to list resources based on the NHS design system.</p>
+{% endset %}
+
+{% set designHtml202411 %}
+  <p>Added a <a href="/design-system/components/task-list">task list component</a> and a pattern to <a href="/design-system/patterns/complete-multiple-tasks">help users complete multiple tasks</a></p>
+  <p>Changed side navigation in <a href="/design-system/patterns">patterns</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in November 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Community and contribution"
+      },
+      {
+        html: communityHtml202411
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202411
+      }
+    ]
+  ]
+}) }}
 
 <h2>October 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in October 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Accessibility guidance</td>
-      <td class="nhsuk-table__cell">
-      <p>Updated <a href="/accessibility">Accessibility guidance</a> to make it clear that:</p>
-      <ul>
-        <li>the Web Content Accessibility Guidelines (WCAG) 2.2 include WCAG 2.1</li>
-        <li>teams are now monitored to WCAG 2.2</li>
-      </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set accessibilityHtml202410 %}
+  <p>Updated <a href="/accessibility">Accessibility guidance</a> to make it clear that:</p>
+  <ul>
+    <li>the Web Content Accessibility Guidelines (WCAG) 2.2 include WCAG 2.1</li>
+    <li>teams are now monitored to WCAG 2.2</li>
+  </ul>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in October 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202410
+      }
+    ]
+  ]
+}) }}
 
 <h2>September 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in September 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-  <tr>
-    <td class="nhsuk-table__cell">Accessibility guidance</td>
-    <td class="nhsuk-table__cell">
-      <p>Updated <a href="/accessibility/content#write-good-link-and-form-control-names">link section</a> to recommend avoiding "see"</p>
-    </td>
-  </tr>
-  <tr>
-    <td class="nhsuk-table__cell">Content guide</td>
-    <td class="nhsuk-table__cell">
-      <p>Rewrote our <a href="/content/inclusive-content/age">guidance on age</a> to make it clearer</p>
-      <p>Added <a href="/content/a-to-z-of-nhs-health-writing#Downs-syndrome">Down's syndrome</a>, <a href="/content/a-to-z-of-nhs-health-writing#fit-note">fit note</a> and <a href="/content/a-to-z-of-nhs-health-writing#period-products">period products</a> to the A to Z of NHS health writing</p>
-      <p>Updated <a href="/content/a-to-z-of-nhs-health-writing#fetus">fetus</a>, <a href="/content/a-to-z-of-nhs-health-writing#microgram">microgram</a> and <a href="/content/a-to-z-of-nhs-health-writing#NHS">NHS</a> in the A to Z</p>
-      <p>Updated <a href="/content/links">links guidance</a> to recommend avoiding "see"</p>
-      <p>Updated section on <a href="/content/punctuation#capitalisation">capitalisation</a> to mention geographical names</p>
-    </td>
-  </tr>
-  <tr>
-    <td class="nhsuk-table__cell">Design system</td>
-    <td class="nhsuk-table__cell">
-      <p>Made minor changes to <a href="/design-system/styles/typography">typography section</a>:</p>
-      <ul>
-        <li>updated guidance on heading sizes</li>
-        <li>increased large and medium heading size on desktop and mobile</li>
-        <li>tweaked line-heights for headings</li>
-        <li>reduced heading captions sizes</li>
-        <li>tweaked the typography print styles</li>
-      </ul>
-      <p>Tweaked the spacing around the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> and <a href="/design-system/components/back-link">back link</a>, with a recommendation to put back link top of page</p>
-      <p>Updated <a href="/design-system/styles/page-template">page template</a> guidance and examples:</p>
-        <ul>
-          <li>new breadcrumbs position within content page template</li>
-          <li>added guidance on heading sizes for content pages</li>
-          <li>updated the <a href="/design-system/styles/page-template#options">Options</a> table</li>
-        </ul>
-      <p>Added <a href="/design-system/components/table">table</a> caption size classes</p>
 
-    </td>
-  </tr>
-  <tr>
-    <td class="nhsuk-table__cell">NHS service standard</td>
-    <td class="nhsuk-table__cell">
-    <p>Updated <a href="/standards-and-technology/about-the-service-standard">About the NHS service standard</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td class="nhsuk-table__cell">Other</td>
-    <td class="nhsuk-table__cell">
-      <p>Updated the <a href="/service-manual-team">service manual team page</a></p>
-      <p>Updated service manual team email address on <a href="/get-in-touch">Get in touch</a> and other pages</p>
-    </td>
-  </tr>
-  </tbody>
-</table>
+{% set accessibilityHtml202409 %}
+  <p>Updated <a href="/accessibility/content#write-good-link-and-form-control-names">link section</a> to recommend avoiding "see"</p>
+{% endset %}
+
+{% set contentHtml202409 %}
+  <p>Rewrote our <a href="/content/inclusive-content/age">guidance on age</a> to make it clearer</p>
+  <p>Added <a href="/content/a-to-z-of-nhs-health-writing#Downs-syndrome">Down's syndrome</a>, <a href="/content/a-to-z-of-nhs-health-writing#fit-note">fit note</a> and <a href="/content/a-to-z-of-nhs-health-writing#period-products">period products</a> to the A to Z of NHS health writing</p>
+  <p>Updated <a href="/content/a-to-z-of-nhs-health-writing#fetus">fetus</a>, <a href="/content/a-to-z-of-nhs-health-writing#microgram">microgram</a> and <a href="/content/a-to-z-of-nhs-health-writing#NHS">NHS</a> in the A to Z</p>
+  <p>Updated <a href="/content/links">links guidance</a> to recommend avoiding "see"</p>
+  <p>Updated section on <a href="/content/punctuation#capitalisation">capitalisation</a> to mention geographical names</p>
+{% endset %}
+
+{% set designHtml202409 %}
+  <p>Made minor changes to <a href="/design-system/styles/typography">typography section</a>:</p>
+  <ul>
+    <li>updated guidance on heading sizes</li>
+    <li>increased large and medium heading size on desktop and mobile</li>
+    <li>tweaked line-heights for headings</li>
+    <li>reduced heading captions sizes</li>
+    <li>tweaked the typography print styles</li>
+  </ul>
+  <p>Tweaked the spacing around the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> and <a href="/design-system/components/back-link">back link</a>, with a recommendation to put back link top of page</p>
+  <p>Updated <a href="/design-system/styles/page-template">page template</a> guidance and examples:</p>
+  <ul>
+    <li>new breadcrumbs position within content page template</li>
+    <li>added guidance on heading sizes for content pages</li>
+    <li>updated the <a href="/design-system/styles/page-template#options">Options</a> table</li>
+  </ul>
+  <p>Added <a href="/design-system/components/table">table</a> caption size classes</p>
+{% endset %}
+
+{% set standardHtml202409 %}
+  <p>Updated <a href="/standards-and-technology/about-the-service-standard">About the NHS service standard</a></p>
+{% endset %}
+
+{% set other202409 %}
+  <p>Updated the <a href="/service-manual-team">service manual team page</a></p>
+  <p>Updated service manual team email address on <a href="/get-in-touch">Get in touch</a> and other pages</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in September 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202409
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202409
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202409
+      }
+    ],
+    [
+      {
+        text: "NHS service standard"
+      },
+      {
+        html: standardHtml202409
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: other202409
+      }
+    ]
+  ]
+}) }}
 
 <h2>July 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in July 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-          <p>Added new <a href="/design-system/components/buttons#warning-button">warning button</a> to buttons component</p>
-          <p>Updated <a href="/design-system/components/table">table component</a> examples and guidance, with information about responsive tables, including when to use them</p>
-          <p>Fixed alignment between header, footer and main content in <a href="/design-system/styles/page-template">page template</a> examples</p>
-          <p>Improved <a href="/design-system/components/fieldset">fieldset component</a> guidance to better explain their uses and importance for accessibility</p>
-          <p>Improved <a href="/design-system/components/tabs">tabs component</a> guidance to explain how tabs should operate using a keyboard or screen reader</p>
-          <p>Improved guidance on contrast and accessibility on <a href="/design-system/styles/colour">colour page</a></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set designHtml202407 %}
+  <p>Added new <a href="/design-system/components/buttons#warning-button">warning button</a> to buttons component</p>
+  <p>Updated <a href="/design-system/components/table">table component</a> examples and guidance, with information about responsive tables, including when to use them</p>
+  <p>Fixed alignment between header, footer and main content in <a href="/design-system/styles/page-template">page template</a> examples</p>
+  <p>Improved <a href="/design-system/components/fieldset">fieldset component</a> guidance to better explain their uses and importance for accessibility</p>
+  <p>Improved <a href="/design-system/components/tabs">tabs component</a> guidance to explain how tabs should operate using a keyboard or screen reader</p>
+  <p>Improved guidance on contrast and accessibility on <a href="/design-system/styles/colour">colour page</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in July 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202407
+      }
+    ]
+  ]
+}) }}
 
 <h2>June 2024</h2>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in April 2024</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr>
-        <td class="nhsuk-table__cell">Design system</td>
-        <td class="nhsuk-table__cell">
-          <p>Added <a href="/design-system/styles/typography#headings-with-captions">guidance for headings with captions</a></p>
-          <p>Updated <a href="/design-system/components/breadcrumbs">breadcrumbs component's</a> Nunjucks macro options descriptions</p>
-          <p>Updated <a href="/design-system/components/error-summary">error summary</a> guidance to explain that the NHS.UK frontend will add focus on page load</p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Accessibility guidance</td>
-        <td class="nhsuk-table__cell">
-          <p>Updated <a href="/accessibility/content#write-good-link-and-form-control-names">link section</a> to point to updated links guidance in content guide</p>
-        </td>
-      </tr>
-      <tr>
-        <td class="nhsuk-table__cell">Content guide</td>
-        <td class="nhsuk-table__cell">
-          <p>Updated <a href="/content/links">link guidance</a> to use "new tab" instead of "new window"</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+{% set designHtml202406 %}
+  <p>Added <a href="/design-system/styles/typography#headings-with-captions">guidance for headings with captions</a></p>
+  <p>Updated <a href="/design-system/components/breadcrumbs">breadcrumbs component's</a> Nunjucks macro options descriptions</p>
+  <p>Updated <a href="/design-system/components/error-summary">error summary</a> guidance to explain that the NHS.UK frontend will add focus on page load</p>
+{% endset %}
+
+{% set accessibilityHtml202406 %}
+  <p>Updated <a href="/accessibility/content#write-good-link-and-form-control-names">link section</a> to point to updated links guidance in content guide</p>
+{% endset %}
+
+{% set contentHtml202406 %}
+  <p>Updated <a href="/content/links">link guidance</a> to use "new tab" instead of "new window"</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in April 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202406
+      }
+    ],
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202406
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202406
+      }
+    ]
+  ]
+}) }}
 
 <h2>April 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in April 2024</caption>
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-      <th class="nhsuk-table__header" scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Accessibility guidance</td>
-      <td class="nhsuk-table__cell">
-        <p>Added <a href="/accessibility/new-criteria-in-wcag-2-2">new accessibility requirements: WCAG 2.2</a></p>
-        <p>Added sections on making sure your service meets WCAG 2.2 for: <a href="/accessibility/product-and-delivery">Product and delivery</a> and <a href="/accessibility/design">Design</a>, <a href="/accessibility/development">Development</a> and <a href="/accessibility/testing">Testing</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Added list of changes to meet new accessibility requirements to <a href="/design-system">design system</a></p>
-        <p>Updated components and styles for WCAG 2.2:</p>
-        <ul>
-          <li><a href="/design-system/components/back-link">Back link</a>: guidance on positioning and keeping data the user has entered</li>
-          <li><a href="/design-system/components/breadcrumbs">Breadcrumbs</a>: guidance on positioning</li>
-          <li><a href="/design-system/components/buttons">Buttons</a>: guidance on minimum target size</li>
-          <li><a href="/design-system/components/error-message">Error message</a>: guidance on not clearing data the user has entered</li>
-          <li><a href="/design-system/components/footer">Footer</a>: guidance on placing help links</li>
-          <li><a href="/design-system/components/header">Header</a>: guidance on placing help links and not hiding content that has a focus applied</li>
-          <li><a href="/design-system/components/select">Select</a>: guidance on avoiding click and drag</li>
-          <li><a href="/design-system/components/summary-list">Summary list</a>: guidance on action link target size and keeping data the user has entered</li>
-          <li><a href="/design-system/components/tag">Tag</a>: guidance on avoiding click and drag</li>
-          <li><a href="/design-system/styles/focus-state">Focus state</a>: guidance on not hiding content that has a focus applied</li>
-          <li><a href="/design-system/styles/icons">Icons</a>: guidance on minimum target size</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Other</td>
-      <td class="nhsuk-table__cell">
-        <p>Updated <a href="/site-map">site map</a></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set accessibilityHtml202404 %}
+  <p>Added <a href="/accessibility/new-criteria-in-wcag-2-2">new accessibility requirements: WCAG 2.2</a></p>
+  <p>Added sections on making sure your service meets WCAG 2.2 for: <a href="/accessibility/product-and-delivery">Product and delivery</a> and <a href="/accessibility/design">Design</a>, <a href="/accessibility/development">Development</a> and <a href="/accessibility/testing">Testing</a></p>
+{% endset %}
+
+{% set designHtml202404 %}
+  <p>Added list of changes to meet new accessibility requirements to <a href="/design-system">design system</a></p>
+  <p>Updated components and styles for WCAG 2.2:</p>
+  <ul>
+    <li><a href="/design-system/components/back-link">Back link</a>: guidance on positioning and keeping data the user has entered</li>
+    <li><a href="/design-system/components/breadcrumbs">Breadcrumbs</a>: guidance on positioning</li>
+    <li><a href="/design-system/components/buttons">Buttons</a>: guidance on minimum target size</li>
+    <li><a href="/design-system/components/error-message">Error message</a>: guidance on not clearing data the user has entered</li>
+    <li><a href="/design-system/components/footer">Footer</a>: guidance on placing help links</li>
+    <li><a href="/design-system/components/header">Header</a>: guidance on placing help links and not hiding content that has a focus applied</li>
+    <li><a href="/design-system/components/select">Select</a>: guidance on avoiding click and drag</li>
+    <li><a href="/design-system/components/summary-list">Summary list</a>: guidance on action link target size and keeping data the user has entered</li>
+    <li><a href="/design-system/components/tag">Tag</a>: guidance on avoiding click and drag</li>
+    <li><a href="/design-system/styles/focus-state">Focus state</a>: guidance on not hiding content that has a focus applied</li>
+    <li><a href="/design-system/styles/icons">Icons</a>: guidance on minimum target size</li>
+  </ul>
+{% endset %}
+
+{% set otherHtml202404 %}
+  <p>Updated <a href="/site-map">site map</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in April 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202404
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202404
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202404
+      }
+    ]
+  ]
+}) }}
 
 <h2>March 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in January 2024</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Content guide</td>
-      <td class="nhsuk-table__cell">
-        <p>Updated outstanding COVID-19 entries in the <a href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></p>
-        <p>Deleted entry for NHS COVID Pass as this service has closed</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Right aligned copyright statement in the <a href="/design-system/components/footer">footer component</a></p>
-        <p>Fixed target size issue on <a href="/design-system/patterns/a-to-z-page">A to Z page</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Other</td>
-      <td class="nhsuk-table__cell">
-      <p>Added new page <a href="/community-and-contribution/feed back-or-share-insights">Feed back or share insights in Community and contribution section</a></p>
-      <p>Updated the "Help us improve this guidance" section at the bottom of pages across the site</p>
-      <p>Updated <a href="/site-map">site map</a></p>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+
+{% set contentHtml202403 %}
+  <p>Updated outstanding COVID-19 entries in the <a href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></p>
+  <p>Deleted entry for NHS COVID Pass as this service has closed</p>
+{% endset %}
+
+{% set designHtml202403 %}
+  <p>Right aligned copyright statement in the <a href="/design-system/components/footer">footer component</a></p>
+  <p>Fixed target size issue on <a href="/design-system/patterns/a-to-z-page">A to Z page</a></p>
+{% endset %}
+
+{% set other202403 %}
+  <p>Added new page <a href="/community-and-contribution/feed back-or-share-insights">Feed back or share insights in Community and contribution section</a></p>
+  <p>Updated the "Help us improve this guidance" section at the bottom of pages across the site</p>
+  <p>Updated <a href="/site-map">site map</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in January 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202403
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202403
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: other202403
+      }
+    ]
+  ]
+}) }}
 
 <h2>January 2024</h2>
-<table class="nhsuk-table">
-  <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in January 2024</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-    <tr>
-      <td class="nhsuk-table__cell">Accessibility guidance</td>
-      <td class="nhsuk-table__cell">
-        <p>Introduced WCAG 2.2 requirement in <a href="/accessibility">Accessibility guidance</a></p>
-        <p>Updated <a href="https://nhsdigital.github.io/accessibility-checklist/">NHS accessibility checklist</a> to reflect WCAG 2.2</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Content guide</td>
-      <td class="nhsuk-table__cell">
-        <p>Renamed "Content style guide" "Content guide"</p>
-        <p>Added new <a href="/content/british-sign-language-bsl-quality-assurance-standard">British Sign Language (BSL) quality assurance standard</a></p>
-        <p>Added mention of "convulsions" to entry on <a href="/content/a-to-z-of-nhs-health-writing#seizure-or-fit">"seizure or fit" in the A to Z of NHS health writing</a></p>
-        <p>Amended entry for <a href="/content/a-to-z-of-nhs-health-writing#NHS-111-online">"NHS 111 online" in the A to Z of NHS health writing</a></p>
-        <p>Updated the <a href="/content/standard-for-creating-health-content">standard for creating health content</a> to refer to WCAG 2.2</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Design system</td>
-      <td class="nhsuk-table__cell">
-        <p>Clarified content about font on <a href="/design-system/styles/typography">typography page</a></p>
-        <p>Added section on copyright to the <a href="/design-system/components/footer">footer component</a> and updated examples</p>
-        <p>Explained about headings below <a href="/design-system/components/do-and-dont-lists">Do and Don't list</a> and <a href="/design-system/components/warning-callout">warning callout</a> components</p>
-        <p>Changed example of <a href="/design-system/components/radios">radio</a> items with hints</a>
-        <p>Reworded <a href="/design-system/components/care-cards">care card component</a></p>
-        <p>Introduced WCAG 2.2 requirement on the <a href="/design-system">design system home page</a></p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">NHS service standard</td>
-      <td class="nhsuk-table__cell">
-      <p>Added section on AI and digital healthcare technologies to <a href="/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently">standard 8 in the NHS service standard</a></p>
-      <p>Added section about the AI and Digital Regulations Service to <a href="/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe">section 16 of the NHS service standard</a></p>
-      <p>Added link to the AI and Digital Regulations Service for health and social care from <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">section 11 of the NHS service standard</a></p>
-      <p>Updated <a href="/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service">service standard 5</a> to refer to WCAG 2.2</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="nhsuk-table__cell">Other</td>
-      <td class="nhsuk-table__cell">
-      <p>Updated <a href="/site-map">site map</a></p>
-      <p>Updated service manual footer to say (c) NHS England</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+{% set accessibilityHtml202401 %}
+  <p>Introduced WCAG 2.2 requirement in <a href="/accessibility">Accessibility guidance</a></p>
+  <p>Updated <a href="https://nhsdigital.github.io/accessibility-checklist/">NHS accessibility checklist</a> to reflect WCAG 2.2</p>
+{% endset %}
+
+{% set contentHtml202401 %}
+  <p>Renamed "Content style guide" "Content guide"</p>
+  <p>Added new <a href="/content/british-sign-language-bsl-quality-assurance-standard">British Sign Language (BSL) quality assurance standard</a></p>
+  <p>Added mention of "convulsions" to entry on <a href="/content/a-to-z-of-nhs-health-writing#seizure-or-fit">"seizure or fit" in the A to Z of NHS health writing</a></p>
+  <p>Amended entry for <a href="/content/a-to-z-of-nhs-health-writing#NHS-111-online">"NHS 111 online" in the A to Z of NHS health writing</a></p>
+  <p>Updated the <a href="/content/standard-for-creating-health-content">standard for creating health content</a> to refer to WCAG 2.2</p>
+{% endset %}
+
+{% set designHtml202401 %}
+  <p>Clarified content about font on <a href="/design-system/styles/typography">typography page</a></p>
+  <p>Added section on copyright to the <a href="/design-system/components/footer">footer component</a> and updated examples</p>
+  <p>Explained about headings below <a href="/design-system/components/do-and-dont-lists">Do and Don't list</a> and <a href="/design-system/components/warning-callout">warning callout</a> components</p>
+  <p>Changed example of <a href="/design-system/components/radios">radio</a> items with hints</p>
+  <p>Reworded <a href="/design-system/components/care-cards">care card component</a></p>
+  <p>Introduced WCAG 2.2 requirement on the <a href="/design-system">design system home page</a></p>
+{% endset %}
+
+{% set standardHtml202401 %}
+  <p>Added section on AI and digital healthcare technologies to <a href="/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently">standard 8 in the NHS service standard</a></p>
+  <p>Added section about the AI and Digital Regulations Service to <a href="/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe">section 16 of the NHS service standard</a></p>
+  <p>Added link to the AI and Digital Regulations Service for health and social care from <a href="/standards-and-technology/service-standard-points/11-choose-the-right-tools-and-technology">section 11 of the NHS service standard</a></p>
+  <p>Updated <a href="/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service">service standard 5</a> to refer to WCAG 2.2</p>
+{% endset %}
+
+{% set otherHtml202401 %}
+  <p>Updated <a href="/site-map">site map</a></p>
+  <p>Updated service manual footer to say (c) NHS England</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in January 2024",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202401
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202401
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202401
+      }
+    ],
+    [
+      {
+        text: "NHS service standard"
+      },
+      {
+        html: standardHtml202401
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202401
+      }
+    ]
+  ]
+}) }}
 
 {% endblock %}
