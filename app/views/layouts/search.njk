@@ -1,8 +1,13 @@
 {% extends "layouts/layout.njk" %}
 
 {% set pageTitle = "Search" %}
-{% set pageDescription = "Search results." %}
 {% set disableSearch = true %}
+
+{% if results | length %}
+  {% set pageTitle = "Search results for " ~ query %}
+{% elif query is string %}
+  {% set pageTitle = "No results for " ~ query if query else "No results" %}
+{% endif %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -12,8 +17,10 @@
           legend: {
             text: pageTitle,
             size: "xl",
+            classes: "nhsuk-u-margin-bottom-7",
             isPageHeading: true
-          }
+          },
+          classes: "app-component-reading-width"
         }) %}
           {{ input({
             label: {
@@ -25,11 +32,14 @@
             id: "search-results-field",
             classes: "app-search__input nhsuk-u-width-full",
             autocomplete: "off",
+            attributes: {
+              placeholder: "Search"
+            },
             formGroup: {
               classes: "nhsuk-u-width-one-half",
               afterInput: {
                 html: button({
-                  html: nhsukIcon("search", { title: "Search" }),
+                  html: nhsukIcon("search", { title: "Submit" }),
                   classes: "app-search__submit nhsuk-button--small"
                 })
               }
@@ -42,9 +52,9 @@
   {% if results | length or query is string %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-    {% if results | length > 0 %}
-      <p class="nhsuk-u-margin-bottom-3">
-        {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
+    {% if results | length %}
+      <p class="nhsuk-u-margin-bottom-4">
+        1 – {{ results | length }} of {{ resultsLen }} results for "{{ query }}"
       </p>
 
       <ul class="nhsuk-list nhsuk-list--border">
@@ -70,12 +80,11 @@
       }) }}
       {% endif %}
     {% elif query is string %}
-      <p>Your search - <span class="nhsuk-u-font-weight-bold">{{query}}</span> - had no matching results.</p>
-      <p>Improve your search results by:</p>
+      <p>You could try:</p>
       <ul>
-        <li>double-checking your spelling</li>
-        <li>using fewer keywords</li>
-        <li>searching for something less specific</li>
+        <li>check your spelling</li>
+        <li>use fewer keywords</li>
+        <li>search for something less specific</li>
       </ul>
     {% endif %}
     </div>
