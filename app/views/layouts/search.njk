@@ -31,8 +31,8 @@
             {% for item in results %}
               <li>
                 {% if item.parent %}<span class="app-search-results-category">{{ item.parent }}</span>{% endif %}
-                <a href="{{item.url}}" class="app-search-results-item">{{item.title}}</a>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">{{item.description}}</p>
+                <a class="app-search-results-item" href="{{ item.url }}">{{ item.title }}</a>
+                <p class="nhsuk-body-s">{{ item.description }}</p>
               </li>
             {% endfor %}
           </ul>
