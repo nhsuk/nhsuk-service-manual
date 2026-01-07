@@ -82,9 +82,12 @@
 
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home",
-    classes: "app-breadcrumb"
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ]
   }) }}
 {% endblock %}
 
