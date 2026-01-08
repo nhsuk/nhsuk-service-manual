@@ -4,6 +4,7 @@
 
 :wrench: **Maintenance**
 
+- Amend page summary for service standard 3 to align with GOV's
 - Update and add links in service standards 5 and 11
 - Remove outdated beta label from service standard 11
 - Bring service standard 13 into closer alignment with GOV's
