@@ -132,7 +132,7 @@
 <p>Avoid using just a surname or first name without a greeting as it sounds impersonal (except when sending a text message – see Text messages).</p>
 
 <h3 id="protecting-people-from-spam-and-phishing-app">Protecting people from spam and phishing</h3>
-<p>To access messages in the App, patients need to go through NHS login. This means App messages are more secure than email messages or text. Research has shown patients are more likely to trust links in the NHS App than in emails or text messages. However, you should still follow best practice when including any links in a message.</p>
+<p>To access messages in the App, patients need to go through NHS login. This means App messages are more secure than email messages or text. Research has shown patients are more likely to trust links in the NHS App, and because the App is secure you can use text links rather than having to write out the full URL as in a text message or email.</p>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/links-and-urls" title="External website">How to use text links and URLs in the NHS App</a>.</p>
 
 <h3 id="telling-patients-who-your-message-is-from-app">Telling patients who your message is from</h3>
@@ -166,11 +166,30 @@
   summaryText: "Example 2 of an NHS App message",
   classes: "nhsuk-expander"
 }) %}
-  <p>Lorem ipsum:</p>
+<p>We’re inviting you to get your free winter NHS COVID-19 vaccination. This is because you are aged 75 or over (or will be by 31 January 2026).</p>
+  <p>How to get your COVID-19 vaccination:</p>
   <ul>
-    <li>lorem</li>
-    <li>ipsum</li>
+    <li><p>book on the <a href="https://www.nhs.uk/nbs/nhs-app/covid?wt.mc_id=AppMsgCovid" title="External website">NHS App</a>.</p></li>
+    <li><p>book on the <a href="https://www.nhs.uk/nhs-services/vaccination-and-booking-services/book-covid-19-vaccination/" title="External website">Book online</a>.</p></li>
+    <li><p>find your nearest <a href="https://www.nhs.uk/nhs-services/vaccination-and-booking-services/find-a-walk-in-covid-19-vaccination-site/" title="External website">walk-in COVID-19 vaccination site</a>.</p></li>
   </ul>
+  <p>It’s best to get vaccinated as soon as you can ahead of the colder months.</p>
+  <p><strong>If you need support</strong><p>
+  <p>If you can’t get online, phone 119. Translators are available. You can also use text phone 18001 119 or the <a href="http://www.signvideo.co.uk/nhs119" title="External website">NHS British Sign Language service</a>.</p>
+  <p>If you get your care at home, ask your GP surgery for a home visit.</p>
+  <p>Information available in <a href="http://www.england.nhs.uk/seasonal-invites" title="External website">easy read and other languages and formats</a>.</p>
+  <p><strong>Why the NHS is offering a winter COVID-19 vaccination</strong><p>
+  <p>COVID-19 spreads more easily in winter and can be hard to avoid. Every year thousands of older adults need hospital care for COVID-19. It’s important you have your vaccination every year to reduce your risk of severe symptoms. Protection fades over time and viruses change. Read <a href="http://www.nhs.uk/covidvaccination" title="External website">more information on NHS.UK</a>.</p>
+  <p><strong>Other NHS vaccinations</strong><p>
+<p>If you haven't already, you can get:</p>
+<ul>
+<li>a pneumococcal vaccination</li>
+<li>an RSV vaccination (if you are aged 75 to 79 years, or have turned 80 since 1 September 2024)</li>
+<li>shingles vaccinations (if you are under 80)</li>
+</ul>
+<p>For full details, go to <a href="http://www.nhs.uk/vaccinations" title="External website">http://www.nhs.uk/vaccinations</a>.</p>
+<p>NHS England Vaccination Team</p>
+<p>Data protection: Read <a href="http://www.england.nhs.uk/contact-us/privacy-notice" title="External website">NHS England's privacy notice</a>.</p>
 {% endcall %}
 {% from "details/macro.njk" import details %}
 
@@ -190,7 +209,7 @@
 <p>When possible, text messages should be brief, direct and contain a clear action that patients can follow. It is important to use simple language and avoid unnecessary detail that may make the message too long or unclear. However, clinical safety requirements and the needs of the patient should always be considered when deciding what to include.</p>
 
 <h3 id="greeting-text">Greeting</h3>
-<p>For brevity and to save characters text messages do not require a greeting. Instead start with the patient’s first or full name as people are more likely to trust a text message if it is personalised.</p>
+<p>For brevity and to save characters text messages do not require a formal greeting. Instead start with the patient’s first or full name as people are more likely to trust a text message if it is personalised.</p>
 
 <h3 id="protecting-people-from-spam-and-phishing-text">Protecting people from spam and phishing</h3>
 <p>Patients will read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message.</p>
@@ -237,16 +256,12 @@
 
 <h3 id="text-message-examples">Text message examples</h3>
 {% from "details/macro.njk" import details %}
-
 {% call details({
   summaryText: "Example 1 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID: MVP</strong><p>
-<p>John Smith</p>
-<p>Your blood test results and blood pressure readings are in range.</p>
-<p>Contact your pharmacist if you have any questions about medication.</p>
-<p>Manor View Practice</p>
+<p><strong>SenderID: NHSservicename</strong><p>
+<p>John Smith, you are due for your NHS service name. Book your appointment or find out more at <a href="https://www.nhs.uk/inbox" title="External website">https://www.nhs.uk/inbox</a></p>
 {% endcall %}
 {% from "details/macro.njk" import details %}
 
@@ -254,11 +269,11 @@
   summaryText: "Example 2 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID: NHSApp</strong><p>
+<p><strong>SenderID:</strong> NHSApp<p>
 <p>John</p>
 <p>You have a new secure message from the NHS.</p>
 <p>Open the NHS App to read it.</p>
-<p>Or you can log in through the website: <a href="https://www.nhs.uk/inbox" title="External website">https://www.nhs.uk/inbox</a>.</p>
+<p>Or you can log in through the website: <a href="www.nhs.uk/service-name-invite" title="External website">www.nhs.uk/service-name-invite</a></p>
 {% endcall %}
 {% from "details/macro.njk" import details %}
 
@@ -266,11 +281,8 @@
   summaryText: "Example 3 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-  <p>Lorem ipsum:</p>
-  <ul>
-    <li>lorem</li>
-    <li>ipsum</li>
-  </ul>
+<p><strong>SenderID:</strong> NHSvaccine<p>
+<p>You can get your free NHS winter COVID-19 vaccine because of your age. Book on the NHS App or at <a href="http://www.nhs.uk/book-covid" title="External website">http://www.nhs.uk/book-covid</a>Can’t get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit. COVID spreads more easily in winter. It’s best to get vaccinated as soon as you can, ahead of the colder months. Vaccination tops up your protection against severe symptoms. Read more: <a href="www.nhs.uk/covidvaccination" title="External website">www.nhs.uk/covidvaccination</a>. For easy read and other formats: <a href="www.england.nhs.uk/seasonal-invites" title="External website">www.england.nhs.uk/seasonal-invites</a>. To opt out: <a href="http://www.nhs.uk/covid-invite-preferences" title="External website">http://www.nhs.uk/covid-invite-preferences</a>.</p>
 {% endcall %}
 
 <h2 id="emails">Emails</h2>
@@ -319,24 +331,55 @@
 {% from "details/macro.njk" import details %}
 
 {% call details({
-  summaryText: "Example of an NHS email message",
+  summaryText: "Example 1 of an NHS email message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>Subject: Lorem ipsum dolor sit amet </strong><p>
-<p>Dear John Smith</p>
-<p>Your blood test results and blood pressure readings are in range.</p>
-<p>If you require further information you can:</p>
-<ul>
-<li>contact your GP surgery </li>
-<li>find a pharmacy at <a href="https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy/" title="External website">https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy/</a>.</p>
-</li>
-</ul>
+<p><strong>SenderID:</strong>NHS Service Name</p>
+<p>Subject: NHS Service Name invitation</p>
+<p>Dear Jane Smith,</p>
+<p>We are inviting you for your NHS Service Name appointment.</p>
+<p>Find more information about your service name invite, including how to book your appointment: <a href="https://www.nhs.uk/service-name-invite" title="External website">https://www.nhs.uk/service-name-invite</a>.</p>
 <p>Yours sincerely,</p>
-<p>Manor View Practice</p>
+<p>Service Name</p>
 
 {% endcall %}
 {% from "details/macro.njk" import details %}
+{% from "details/macro.njk" import details %}
 
+{% call details({
+  summaryText: "Example 2 of an NHS email message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong>NHS Vaccinations</p>
+<p>Subject: Booking your NHS winter COVID-19 vaccination</p>
+<p>Dear Mr. Smith,</p>
+<p>You can book a free winter NHS COVID-19 vaccination because you are aged 75 or over (or will be by 31 January 2026).</p>
+<p><strong>How to get your COVID-19 vaccination</strong></p>
+  <ul>
+    <li>Book on the NHS App or online at <a href="http://www.nhs.uk/get-vaccination" title="External website">http://www.nhs.uk/get-vaccination</a></li>
+    <li>Find your nearest COVID-19 vaccination walk-in site at <a href="http://www.nhs.uk/covid-walk-in" title="External website">http://www.nhs.uk/covid-walk-in</a></li>
+  </ul>
+  <p>It’s best to get vaccinated as soon as you can ahead of the colder months.</p>
+<p><strong>If you need support</strong></p>
+<p>If you can’t get online, phone 119. Translators are available. You can also use text phone 18001 119 or the NHS British Sign Language service at <a href="http://www.signvideo.co.uk/nhs119" title="External website">http://www.signvideo.co.uk/nhs119</a>.</p>
+<p>If you get your care at home, contact your GP surgery for a home visit.</p>
+<p>For information in easy read and other languages and formats, go to <a href="http://www.england.nhs.uk/seasonal-invites" title="External website">http://www.england.nhs.uk/seasonal-invites</a>.</p>
+<p><strong>Why the NHS is offering a winter COVID-19 vaccination</strong></p>
+<p>COVID-19 spreads more easily in winter and can be hard to avoid. Every year, thousands of older adults need hospital care. It’s important you have your vaccination every year to reduce your risk of severe symptoms. Protection fades over time and viruses change. Read more at <a href="https://www.nhs.uk/covidvaccination" title="External website">https://www.nhs.uk/covidvaccination</a>.</p>
+<p><strong>Other NHS vaccinations</strong></p>
+<p>If you haven't already, you can get:</p>
+  <ul>
+    <li>a pneumococcal vaccination</li>
+    <li>an RSV vaccination (if you are aged 75 to 79 years, or have turned 80 since 1 September 2024)</li>
+    <li>shingles vaccinations (if you are aged under 80)  </li>
+  </ul>
+  <p>For full details, go to <a href="http://www.nhs.uk/vaccinations" title="External website">http://www.nhs.uk/vaccinations</a>.</p>
+<p>Yours sincerely,</p>
+<p>NHS England Vaccination Team</p>
+<p>Data protection: NHS England is responsible for processing your personal data. This is for the purpose of national vaccination programmes. To find out more, you can access our privacy notice at: <a href="http://www.england.nhs.uk/contact-us/privacy-notice" title="External website">http://www.england.nhs.uk/contact-us/privacy-notice</a>. To opt out: <a href="http://www.nhs.uk/covid-invite-preferences" title="External website">http://www.nhs.uk/covid-invite-preferences</a>.</p>
+ 
+{% endcall %}
+{% from "details/macro.njk" import details %}
 
 <h2 id="paper-letters">Paper letters</h2>
 
@@ -367,8 +410,38 @@
   summaryText: "Example of an NHS paper letter",
   classes: "nhsuk-expander"
 }) %}
-<p>lorem ipsum</p>
 
+<p><strong>Reference number - </strong></p>
+<p><strong>NHS number - </strong></p>
+<p>Dear Jane Smith,</p>
+<p><strong>Confirm your address with NHS England</strong></p>
+<p>We are writing to you to confirm if the home address the NHS holds for you is up to date.</p>
+<p>If we do not receive the information we need from you within 30 days of the date of this letter, it will be assumed that you have moved and we will begin the process of removing you from your GP surgery’s patient list. This means you will not receive important information about your healthcare and will no longer be registered with a GP surgery.</p>
+<p>Please complete one of the options on the attached page. You may want to keep this page in a safe place for your records.</p>
+<p><strong>What to do if your address information is correct</strong></p>
+<p>Please complete one of the following options:</p>
+<p><strong>Option 1</strong></p>
+<p>Scan the QR code and complete the online form to confirm your address. You will need Reference number ((Reference number)) and NHS number ((NHS number)).  </p>
+<p>((QR CODE))</p>
+<p><strong>Option 2 </strong></p>
+<p>Text ((Reference number)) to 07860 055388 (usual contract charges will apply).</p>
+<p><strong>Option 3</strong></p>
+<p>Tick this box [BOX] and return this page in the envelope provided. You do not need a stamp.</p>
+<p><strong>What to do if your address information is not correct.</strong></p>
+  <ul>
+    <li>You may need to register with a new GP surgery using the following link <a href="https://www.nhs.uk/service-search/find-a-gp/" title="External website">https://www.nhs.uk/service-search/find-a-gp/</a>.</li>
+    <li>Contact your existing GP surgery to update your address.</li>
+    <li>If you have left the United Kingdom and do not intend to return within 3 months you should call your GP and ask to be removed from their patient list.</li>
+  </ul>
+<p>You may also receive this message in an email.</p>
+<p><strong>How do I request this letter in an alternative format?</strong></p>
+<p>To request this letter in an alternative format such as braille, large print or audio version please contact your GP surgery.</p>
+<p>Find a translated version of this letter at <a href="https://pcse.england.nhs.uk/members-public/my-details-and-nhs/other-languages" title="External website">https://pcse.england.nhs.uk/members-public/my-details-and-nhs/other-languages</a>.</p>
+<p>Thank you for taking the time to respond to this request.</p>
+<p>Yours sincerely,</p>
+<p>Primary Care Support England</p>
+<p>Delivered on behalf of NHS England by Capita <a href="https://pcse.england.nhs.uk/organisations/public/" title="External website">https://pcse.england.nhs.uk/organisations/public/</a>.</p>
+<p>Primary Care Support England provides administrative and support services for primary care on behalf of NHS England and is part of Capita plc.</p>
 {% endcall %}
 {% from "details/macro.njk" import details %}
 
