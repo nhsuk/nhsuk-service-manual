@@ -1,0 +1,121 @@
+{% from "summary-list/macro.njk" import summaryList %}
+
+{{ summaryList({
+  card: {
+        heading: 'Karen Francis',
+        headingSize: 'm'
+      },
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Karen Francis"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Appointment date"
+      },
+      value: {
+        text: "15 March 2027"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: "<p>07700 900362</p><p>karen.francis@example.com</p>"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+{{ summaryList({
+  card: {
+        heading: 'Dwayne P Harvey ',
+        headingSize: 'm'
+      },
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Dwayne P Harvey"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Appointment date"
+      },
+      value: {
+        text: "15 March 2027"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: "<p>07964 850567</p><p>dwayne.p.harvey@example.com</p>"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
