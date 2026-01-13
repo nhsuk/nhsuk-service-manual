@@ -164,7 +164,16 @@
     <loc>https://service-manual.nhs.uk/content/british-sign-language-bsl-quality-assurance-standard</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/colour</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/icons</loc>
@@ -186,6 +195,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/styles/use-frutiger-font/terms-of-licence</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/components</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/components/action-link</loc>
@@ -299,6 +311,9 @@
     <loc>https://service-manual.nhs.uk/design-system/components/warning-callout</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/a-to-z-page</loc>
   </url>
   <url>
@@ -333,9 +348,6 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/start-page</loc>
-  </url>
-  <url>
-    <loc>https://service-manual.nhs.uk/design-system/styles/focus-state</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/changes-to-design-system-wcag-2-2</loc>
