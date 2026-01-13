@@ -193,7 +193,7 @@ app.get('/suggestions', (req, res) => {
   const results = pageIndex.search(req.query.search)
   const slicedResults = results.slice(0, 10)
   res.set({ 'Content-Type': 'application/json' })
-  res.send(JSON.stringify(slicedResults))
+  res.status(200).send(JSON.stringify(slicedResults))
 })
 
 app.get('/assets/NHS_design_principles.pdf', (req, res) => {
@@ -326,7 +326,7 @@ app.get('/robots.txt', (_, res) => {
 })
 
 // Render 404 page
-app.all('*', (_, res) => {
+app.all('/*subPaths', (_, res) => {
   res.statusCode = 404
   res.render('page-not-found')
 })

@@ -12,8 +12,8 @@ initAll()
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({
   form: document.querySelector('.nhsuk-header__search-form'),
-  input: document.querySelector('.nhsuk-header__search-input'),
-  button: document.querySelector('.nhsuk-header__search-submit'),
+  input: document.querySelector('.nhsuk-header__search-form .nhsuk-input'),
+  button: document.querySelector('.nhsuk-header__search-form .nhsuk-button'),
   onConfirm,
   source,
   templates: {
