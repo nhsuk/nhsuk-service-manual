@@ -26,9 +26,9 @@ module.exports = (req, res, next) => {
   if (env === 'review' || env === 'staging') {
     if (!username || !password) {
       console.error('Username or password is not set in environment variables.')
-      return res.send(
-        '<p>Username or password not set in environment variables.</p>'
-      )
+      res
+        .status(200)
+        .send('<p>Username or password not set in environment variables.</p>')
     }
 
     const user = basicAuth(req)
