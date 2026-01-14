@@ -1,0 +1,107 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Interruption page" %}
+{% set pageDescription = "If you need to pause a user's journey with important information, use an interruption page." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "January 2026" %}
+{% set backlog_issue_id = "241" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption-page",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use">When to use an interruption page</h2>
+
+  <p>The interruption page is visually different from other components and patterns in order to draw a user's attention to something important.</p>
+
+  <p>Only use an interruption page when you need to make sure that the user is not about to make a mistake.</p>
+
+  <p>Use interruption pages sparingly as the more often a user sees them, the more likely they are to skip over the content.</p>
+
+  <p>Try using a regular page first, and only use the interruption page if you find in research that users are often missing the content. Please feed back any user research you do on this pattern.</p>
+
+  <p>For example use it to:</p>
+
+  <ul>
+    <li>ask users to <a href="#check-a-likely-mistake">check a likely mistake</a></li>
+    <li>ask users to <a href="#confirm-something-which-cannot-be-undone">confirm something which cannot be undone</a></li>
+    <li><a href="#warn-clinicians-they-are-about-to-do-something-unusual">warn clinicians they are about to do something unusual</a></li>
+  </ul>
+
+  <h3 id="check-a-likely-mistake">Check a likely mistake</h3>
+
+  <p>If the user has entered some information which is likely to be mistake, but is not impossible, you can use an interruption card to ask users to check if what they have entered is correct.</p>
+
+  <p>Unlike a validation error in an <a href="/design-system/components/error-summary">error summary</a>, they can continue without changing their answer.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption-page",
+    type: "possible-mistake"
+  }) }}
+
+  <h3 id="confirm-something-which-cannot-be-undone">Confirm something which cannot be undone</h3>
+
+  <p>If the user is about to do something unusual which cannot be undone and could have serious consequences, such as cancelling a hospital appointment, you can use an interruption page to check with them first.</p>
+
+  <p>Do not use this pattern if the outcome is less serious, such as unsubscribing from notifications.</p>
+
+  <p>Do not use this pattern to ask a user to check all their answers as part of a regular journey. Use the <a href="/design-system/patterns/check-answers">check answers pattern</a> instead.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption-page",
+    type: "confirmation"
+  }) }}
+
+  <h3 id="warn-clinicians-they-are-about-to-do-something-unusual">Warn clinicians they are about to do something unusual</h3>
+
+  <p>In a staff-facing service you can use an interruption page to make clinicians aware that they're doing something unusual, but they can choose to go ahead based upon their clinical judgement.</p>
+
+  <p>If the action should never be taken, you should prevent it from happening.</p>
+
+  <p>Use this warning sparingly.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "interruption-page",
+    type: "default"
+  }) }}
+
+  <h2 id="when-not-to-use">When not to use an interruption page</h2>
+
+  <p>Do not use an interruption card to:</p>
+
+  <ul>
+    <li>highlight important text on a page of content – consider using <a href="/design-system/components/inset-text">inset text</a> instead</li>
+    <li>ask users to agree to terms of use or other legal terms</li>
+    <li>display content that the user will see repeatedly</li>
+    <li>show users they have completed a task – use a <a href="/design-system/patterns/confirmation-page">confirmation page</a> instead</li>
+  </ul>
+
+
+  <h2 id="how-to-use">How to use an interruption page</h2>
+
+  <p>The interruption page uses the <a href="/design-system/components/panel">panel component</a> with the addition of a <code>nhsuk-panel--interruption</code> class to make it blue.</p>
+  
+  <p>Keep the content on the interruption page as brief as possible.</p>
+
+  <p>Include a <a href="/design-system/components/back-link">back link</a> at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.</p>
+
+  <p>If it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <code>&lt;div class="nhsuk-button-group"&gt;</code> container to <a href="/design-system/components/buttons#grouping-buttons">group the button</a> and the link together.</p>
+
+  <p>Do not include a Cancel link if it takes you back to the same page as the Back link.</p>
+
+  <p>Within the panel, the button should have a <code>nhsuk-button--reverse</code> class to make it appear white.</p>
+
+{% endblock %}

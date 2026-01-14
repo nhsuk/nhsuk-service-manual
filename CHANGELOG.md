@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+:new: **New features**
+
+- Add interruption panel to panel component
+- Add new interruption page pattern
+
 :wrench: **Maintenance**
 
 - Amend page summary for service standard 3 to align with GOV's
