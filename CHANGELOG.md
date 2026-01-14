@@ -7,6 +7,7 @@
 - Add new file upload component
 - Add new interruption page pattern
 - Add interruption panel to panel component
+- Add summary cards to summary list component
 
 :wrench: **Maintenance**
 
