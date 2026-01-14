@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Update and add links in service standards 5 and 11
+- Remove outdated beta label from service standard 11
+
 ## 8.5.1 - 16 December 2025
 
 :new: **New features**
