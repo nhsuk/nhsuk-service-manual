@@ -4,7 +4,7 @@
 {% set pageDescription = "Our fonts and typographic styles, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "December 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "1" %}
 
 {% block beforeContent %}
@@ -198,7 +198,7 @@
     htmlOnly: true
   }) }}
 
-  <h3 id="breaking-up-long-words">Breaking up long words</h3>
+  <h3 id="break-up-long-words">Break up long words</h3>
   <p>Long words, including email addresses, can create problems in limited spaces such as mobile device screens and data tables. They can overflow the layout, making users scroll horizontally to view some of your content.</p>
   <p>You can help to reduce these issues by surrounding content likely to overflow with <code>nhsuk-u-text-break-word</code>.</p>
   <p>When words are longer than the width of the container, this class splits them onto multiple lines. It makes the split exactly where the word would otherwise overflow, but this can make it difficult to read. You can control where a word can be split. There are 2 ways to do this.</p>
@@ -224,6 +224,10 @@
   }) }}
 
   <p>There is also an example of <a href="/design-system/components/table#word-breaks-table">breaking long email addresses in the table component</a>.</p>
+
+  <h3 id="prevent-text-wrapping">Prevent text wrapping</h3>
+  <p>You can use the class <code>nhsuk-u-nowrap</code> to stop text wrapping onto 2 lines. For example, we use it on NHS numbers to make sure they are displayed on a single line to help users read the full number accurately.</p>
+  <p>Use this class with caution. It will force the text to break out of its layout if it cannot fit on 1 line. Be especially careful about using it with text that automatically updates, for example via user input or changes to application data.</p>
 
   <h2 id="links">Links</h2>
   <p>Links are blue and underlined by default with a <a href="/design-system/styles/focus-state">styled focus state</a> for people who use keyboards or other devices to navigate through a page.</p>

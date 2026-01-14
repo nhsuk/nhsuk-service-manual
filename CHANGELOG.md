@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+### TBC
+
+:new: **New features**
+
+- Add guidance for `nhsuk-u-nowrap` class on typography page
+
 ## 8.5.1 - 16 December 2025
 
 :new: **New features**
