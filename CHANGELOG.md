@@ -4,8 +4,13 @@
 
 :wrench: **Maintenance**
 
+- Amend page summary for service standard 3 to align with GOV's
 - Update and add links in service standards 5 and 11
 - Remove outdated beta label from service standard 11
+- Bring service standard 13 into closer alignment with GOV's
+- Update service standard 16 with clinical colleagues
+- Review and update service standard 17 with Interoperability Standards Team
+- Update outdated references to NHS Digital, and fix broken links
 
 ## 8.5.1 - 16 December 2025
 
