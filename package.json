@@ -51,7 +51,8 @@
     "lunr": "^2.3.9",
     "marked": "^17.0.1",
     "nhsuk-frontend": "^10.3.0",
-    "nunjucks": "^3.2.4"
+    "nunjucks": "^3.2.4",
+    "slug": "^11.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.6",

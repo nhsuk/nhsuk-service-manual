@@ -130,7 +130,9 @@ env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
 env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams)
 env.addGlobal('getAssetPath', fileHelper.getAssetPath)
 env.addFilter('highlight', filters.highlight)
+env.addFilter('kebabCase', filters.kebabCase)
 env.addFilter('markdown', filters.markdown)
+env.addFilter('slugify', filters.slugify)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
