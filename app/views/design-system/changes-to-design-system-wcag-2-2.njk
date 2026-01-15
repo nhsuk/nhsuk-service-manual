@@ -19,110 +19,169 @@
 
   <h2>Updates to our components</h2>
   <p>No changes to design or code, but you must check the updated guidance to understand whether your service needs updating.</p>
-  <table class="nhsuk-table" aria-label="Component updates">
-    <thead class="nhsuk-table__head">
-      <tr>
-        <th scope="col">
-          Page
-        </th>
-        <th scope="col">
-          Changes
-        </th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a href="/design-system/components/back-link">Back link</a></td>
-        <td class="nhsuk-table__cell">Guidance on positioning and keeping data the user has entered</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/breadcrumbs">Breadcrumbs</a></td>
-        <td class="nhsuk-table__cell">Guidance on positioning</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/buttons">Buttons</a></td>
-        <td class="nhsuk-table__cell">Guidance on minimum target size</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/error-message">Error message</a></td>
-        <td class="nhsuk-table__cell">Guidance on not clearing data the user has entered</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/footer">Footer</a></td>
-        <td class="nhsuk-table__cell">Guidance on placing help links</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/header">Header</a></td>
-        <td class="nhsuk-table__cell">Guidance on placing help links and not hiding content that has a focus applied</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/select">Select</a></td>
-        <td class="nhsuk-table__cell">Guidance on avoiding click and drag</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/summary-list">Summary list</a></td>
-        <td class="nhsuk-table__cell">Guidance on action link target size and keeping data the user has entered</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/components/tag">Tag</a></td>
-        <td class="nhsuk-table__cell">Guidance on avoiding click and drag</td>
-      </tr>
-    </tbody>
-  </table>
+
+  {{ table({
+    caption: "Component updates",
+    captionClasses: "nhsuk-u-visually-hidden",
+    head: [
+      {
+        text: "Page"
+      },
+      {
+        text: "Changes"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: '<a href="/design-system/components/back-link">Back link</a>'
+        },
+        {
+          text: "Guidance on positioning and keeping data the user has entered"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/breadcrumbs">Breadcrumbs</a>'
+        },
+        {
+          text: "Guidance on positioning"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/buttons">Buttons</a>'
+        },
+        {
+          text: "Guidance on minimum target size"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/error-message">Error message</a>'
+        },
+        {
+          text: "Guidance on not clearing data the user has entered"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/footer">Footer</a>'
+        },
+        {
+          text: "Guidance on placing help links"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/header">Header</a>'
+        },
+        {
+          text: "Guidance on placing help links and not hiding content that has a focus applied"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/select">Select</a>'
+        },
+        {
+          text: "Guidance on avoiding click and drag"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/summary-list">Summary list</a>'
+        },
+        {
+          text: "Guidance on action link target size and keeping data the user has entered"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/components/tag">Tag</a>'
+        },
+        {
+          text: "Guidance on avoiding click and drag"
+        }
+      ]
+    ]
+  }) }}
 
   <h2>Updates to our styles</h2>
   <p>No changes to design or code, but you must check the updated guidance to understand whether your service needs updating.</p>
-  <table class="nhsuk-table" aria-label="Style updates">
-    <thead class="nhsuk-table__head">
-      <tr>
-        <th scope="col">
-          Page
-        </th>
-        <th scope="col">
-          Changes
-        </th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/styles/focus-state">Focus state</a></td>
-        <td class="nhsuk-table__cell">	Guidance on not hiding content that has a focus applied</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell" ><a href="/design-system/styles/icons">Icons</a></td>
-        <td class="nhsuk-table__cell">Guidance on minimum target size</td>
-      </tr>
-    </tbody>
-  </table>
+
+  {{ table({
+    caption: "Style updates",
+    captionClasses: "nhsuk-u-visually-hidden",
+    head: [
+      {
+        text: "Page"
+      },
+      {
+        text: "Changes"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: '<a href="/design-system/styles/focus-state">Focus state</a>'
+        },
+        {
+          text: "Guidance on not hiding content that has a focus applied"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/styles/icons">Icons</a>'
+        },
+        {
+          text: "Guidance on minimum target size"
+        }
+      ]
+    ]
+  }) }}
 
   <h2>Updates to our patterns</h2>
- <p>No changes to design or code, but you must check the updated guidance to understand whether your service needs updating.</p>
-  <table class="nhsuk-table" aria-label="Component updates">
-    <thead class="nhsuk-table__head">
-      <tr>
-        <th scope="col">
-          Page
-        </th>
-        <th scope="col">
-          Changes
-        </th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a href="/design-system/patterns/check-answers">Check answers</a></td>
-        <td class="nhsuk-table__cell">Guidance on keeping data the user has entered</td>
-     </tr>
-    <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a href="/design-system/patterns/complete-multiple-tasks">Complete multiple tasks</a></td>
-        <td class="nhsuk-table__cell">Guidance on avoiding click and drag and keeping data the user has entered</td>
-     </tr>
-    <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a href="/design-system/patterns/question-pages">Question pages</a></td>
-        <td class="nhsuk-table__cell">Guidance on avoiding click and drag and keeping data the user has entered</td>
-     </tr>
-    </tbody>
-  </table>
+  <p>No changes to design or code, but you must check the updated guidance to understand whether your service needs updating.</p>
+
+  {{ table({
+    caption: "Pattern updates",
+    captionClasses: "nhsuk-u-visually-hidden",
+    head: [
+      {
+        text: "Page"
+      },
+      {
+        text: "Changes"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: '<a href="/design-system/patterns/check-answers">Check answers</a>'
+        },
+        {
+          text: "Guidance on keeping data the user has entered"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/patterns/complete-multiple-tasks">Complete multiple tasks</a>'
+        },
+        {
+          text: "Guidance on avoiding click and drag and keeping data the user has entered"
+        }
+      ],
+      [
+        {
+          html: '<a href="/design-system/patterns/question-pages">Question pages</a>'
+        },
+        {
+          text: "Guidance on avoiding click and drag and keeping data the user has entered"
+        }
+      ]
+    ]
+  }) }}
 
   <h2>Updates to the GOV.UK design system</h2>
   <p>Our design system is based on GOV.UK and we know that teams regularly refer to their guidance too. If your service uses any components or patterns borrowed from the GOV.UK design system, check for any guidance about how WCAG 2.2 affects them.</p>

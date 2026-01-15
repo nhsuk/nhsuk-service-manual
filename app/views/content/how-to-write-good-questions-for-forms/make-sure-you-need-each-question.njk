@@ -33,17 +33,12 @@
   </ul>
   <p>If you do not know how you'll use an answer, find out or remove the question.</p>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-        Example: signatures
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <p>Paper forms often ask for a signature but not many organisations authenticate them. Does your service need a signature and if so, how will you check the user's identity?</p>
-      <p>If you do have to verify and authenticate individuals, read <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services/">NHS England's Identity verification and authentication standard for digital health and care services, DAPB3051 (previously DCB3051)</a>.</p>
-    </div>
-  </details>
+  {% call details({
+    summaryText: "Example: signatures"
+  }) %}
+    <p>Paper forms often ask for a signature but not many organisations authenticate them. Does your service need a signature and if so, how will you check the user's identity?</p>
+    <p>If you do have to verify and authenticate individuals, read <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services/">NHS England's Identity verification and authentication standard for digital health and care services, DAPB3051 (previously DCB3051)</a>.</p>
+  {% endcall %}
 
   <p>All the data you capture is subject to data protection legislation, including GDPR.  Get specialist advice on protecting users' confidentiality and privacy from your business and information risk teams (for example, senior information risk owners and information asset owners). This is another reason to collect as little data as possible.</p>
 
@@ -59,7 +54,11 @@
   </ul>
 
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     {% call fieldset({
       legend: {
         text: "Subscribe to newsletter",
@@ -91,13 +90,10 @@
   <h2 id="use-information-your-organisation-already-has">Use information your organisation already has or can access</h2>
   <p>If you already have some data about the user, you may only need them to confirm that it's correct.</p>
   <p>Investigate whether you can get some of the information you need from another NHS system.</p>
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-        Example: doing the hard work to avoid asking a question
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
+
+  {% call details({
+    summaryText: "Example: doing the hard work to avoid asking a question"
+  }) %}
     <p>The NHS has <a href="https://your-data-matters.service.nhs.uk/">a service that lets patients choose if data from their health records is shared for research and planning</a>. As part of the service, users need to confirm their identity. They can do this by giving their NHS number. But the team found that some users struggled to find their number.</p>
     <p>So they designed a way users could prove their identity by using their personal details instead. This involved looking up a patient database which needed the user's:</p>
     <ul>
@@ -108,8 +104,7 @@
     </ul>
     <p>The database check needs gender (the service does not), but not everyone wants to answer a question about gender. The team gets around this by checking the database 4 times - once for each of the gender options in the database.</p>
     <p>That way they do not have to ask users their gender and this makes the service more inclusive.</p>
-    </div>
-  </details>
+  {% endcall %}
 
   <h2>Postpone questions you could ask later</h2>
   <p>If you do not need information right now, consider collecting it afterwards.</p>

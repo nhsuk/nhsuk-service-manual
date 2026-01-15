@@ -36,6 +36,9 @@
 {% from "textarea/macro.njk" import textarea %}
 {% from "warning-callout/macro.njk" import warningCallout %}
 
+{% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
+{% from "nhsuk/macros/icon.njk" import nhsukIcon %}
+
 {% from "macros/design-example/macro.njk" import designExample %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s app-main-wrapper" %}
@@ -82,9 +85,12 @@
 
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home",
-    classes: "app-breadcrumb"
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ]
   }) }}
 {% endblock %}
 

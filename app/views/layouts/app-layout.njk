@@ -33,7 +33,10 @@
             {{pageTitle}}
             <div>
               {%- if experimental %}
-                <strong class="nhsuk-tag nhsuk-tag--yellow">Experimental</strong>
+                {{ tag({
+                  text: "Experimental",
+                  classes: "nhsuk-tag--yellow"
+                }) }}
               {% endif %}
             </div>
           </h1>

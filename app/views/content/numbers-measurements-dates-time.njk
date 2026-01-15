@@ -86,27 +86,39 @@
   </ul>
   <p>If you need to use numbers less than 1, use 0 before the decimal point – for example, 0.25.</p>
 
-<div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Examples</strong>
-      <ul>
-        <li>Add 1 to 2 teaspoons of honey.</li>
-        <li>Do this for 1 or 2 minutes.</li>
-        <li>It takes 1 to 3 weeks from the time you were exposed to chickenpox for the spots to start appearing.</li>
-        <li>Depression affects about 1 in 10 people at some point during their life.</li>
-      </ul>
+  <div class="app-example app-example--content">
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
+    <ul>
+      <li>Add 1 to 2 teaspoons of honey.</li>
+      <li>Do this for 1 or 2 minutes.</li>
+      <li>It takes 1 to 3 weeks from the time you were exposed to chickenpox for the spots to start appearing.</li>
+      <li>Depression affects about 1 in 10 people at some point during their life.</li>
+    </ul>
   </div>
 
   <h4>Using numerals at the start of a sentence</h4>
   <p>It is OK to use numerals at the start of a sentence but, if it looks confusing, consider rewording your sentence.</p>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>14 units is equivalent to 6 pints of average-strength beer or 10 small glasses of low-strength wine.</p>
   </div>
 
   <h4>Using numerals in headings</h4>
   <p>It's also OK to use them in headings.</p>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
     <ul>
       <li>8 tips for healthy eating</li>
       <li>6-in-1 vaccine</li>
@@ -116,7 +128,11 @@
   <h4>Using numerals in lists</h4>
   <p>You can use numerals in lists.</p>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
     <p>A portion is:</p>
     <ul>
       <li>80g of fresh, canned or frozen fruit and vegetables</li>
@@ -128,7 +144,11 @@
   <h5>One</h5>
   <p>We spell out "one" when it means "a" or to avoid repeating a word.</p>
     <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>Never take 2 doses at the same time to make up for a forgotten one.</p>
   </div>
   <p>We also use "one" in phrases like:</p>
@@ -143,7 +163,11 @@
 <p>We use numerals with letter suffixes for ordinal numbers (including 1st and 2nd), for example, when we're talking about dates, quantities and things in a list or sequence.</p>
 <p>The letters should be the same size as the numbers. Do not use superscript, for example 1<sup>st</sup>, as it does not always read out correctly on screen readers and could confuse people.</p>
  <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
     <ul>
       <li>a 2nd dose of vaccine</li>
       <li>2nd half of pregnancy</li>
@@ -165,19 +189,25 @@
 <p>We use "calorie" when talking about calories in general, for example "calorie information on menus". Where appropriate, we explain that calories are often written as "kcal".</p>
 <p>We use "kcal" as the unit of measurement. We do not put a space between the number and the measurement.</p>
 <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>The average man needs around 2,500kcal.</p>
 </div>
 <h3 id="dosage">Dosage</h3>
 <p>We do not use a space between amount and measurement.</p>
  <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>The usual dose is 250mg to 500mg.</p>
   </div>
 <p>Use your judgement when explaining medicines doses. Avoid having 2 sets of numerals next to each other.</p>
 {{ table({
-  panel: false,
-  firstCellIsHeader: false,
   head: [
       {
         text: "We say:"
@@ -201,7 +231,11 @@
   <h3>Temperature</h3>
   <p>We use Celsius for temperature, but only when talking about children under 6 months old. For adults or children over 6 months old, we do not give a specific temperature.</p>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>If your child is under 3 months old and has a temperature of 38C or higher, or you think they have a high temperature</p>
   </div>
   <p>Read more about <a href="/content/a-to-z-of-nhs-health-writing#temperature">temperature in the A to Z of NHS health writing</a>.</p>
@@ -217,10 +251,8 @@
   <h2 id="time">Time</h2>
 
   {{ table({
-    panel: false,
-    caption: "",
+    caption: "Time examples",
     captionClasses: "nhsuk-u-visually-hidden",
-    firstCellIsHeader: false,
     head: [
       {
         text: "We use:"
@@ -276,7 +308,11 @@
   <h2 id="ranges">Ranges of numbers, dates and time</h2>
   <p>We use "to" for time, date and numerical ranges, not hyphens or dashes.</p>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Examples</strong>
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
     <ul>
       <li>The surgery is open Monday to Friday, 2pm to 6pm.</li>
       <li>A BMI of 18.5 to 24.9 means you're a healthy weight.</li>
@@ -292,7 +328,11 @@
   <p>Use the clearest, most meaningful format to explain what you're illustrating. For example, use "1 in 7 people" rather than "14.3% of people".</p>
   <p>Avoid mixing different number formats. Use one or the other.</p>
    <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>Overall, around 7 in every 10 people live at least a year after diagnosis and around 5 in 10 people live at least 10 years.</p>
   </div>
 

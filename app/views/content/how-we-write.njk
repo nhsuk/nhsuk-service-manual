@@ -18,9 +18,8 @@
   <p>We avoid making subjective statements. Use words like "good", "bad", or "easy" with care. For example, don't talk about "a good chance of recovery".</p>
   <p>We do use "good" and "bad" where our users do to describe their symptoms, for example "bad pain" or "bad breath".</p>
   <p>We also use them when there's a good evidence base. For example, we talk about "a good source of iron" or "lack of sleep is bad for your health".</p>
+
   {{ table({
-    panel: false,
-    firstCellIsHeader: false,
     head: [
       {
         text: "We would say:"
@@ -72,10 +71,12 @@
   <p>We use a plain English term first, then the medical term. Example: piles (haemorrhoids).</p>
   <p>We use the same style for specialist audiences like health professionals.</p>
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4">
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
     <h3>Research insight</h3>
     <p>Research has shown that <a href="https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/" title="External website">most people prefer to read plain English</a>, and that the more specialist a person's knowledge is, the greater their preference.</p>
-  </div>
+  {% endcall %}
 
   <p>Read <a href="/content/health-literacy">our guidance on health literacy</a> to see why it's important to create content that's simple to read.</p>
   <p>You can use a tool like the <a href="https://hemingwayapp.com/">Hemingway Editor</a> to help you write clearer, more usable content.</p>

@@ -13,8 +13,11 @@
 {% endblock %}
 
 {% block bodyContent %}
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4"><p>Go to the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care</a>.</p>
-  </div>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
+    <p>Go to the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care</a>.</p>
+  {% endcall %}
 
 <p>It includes 3 care cards for 3 levels of care:</p>
 <ul>

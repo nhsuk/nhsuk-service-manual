@@ -2,14 +2,9 @@
 <p>Check that the thing you're testing is technically accessible - for example, that it works for people who use screen readers or voice input.</p>
 <p>This applies to your survey software too. If you're using Qualtrics, as many user researchers do, be aware that it's not fully accessible.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      More about surveys and assistive technologies
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>For basic surveys, asking users to write something in a text box or to select from a few options, your software should be OK. But people who use assistive technologies may have problems with matrix tables, rank order or slider questions.</p>
-    <p>Test your survey with assistive technologies, including a screen reader, keyboard, in high contrast mode, and by zooming in to 400% at least.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "More about surveys and assistive technologies"
+}) %}
+  <p>For basic surveys, asking users to write something in a text box or to select from a few options, your software should be OK. But people who use assistive technologies may have problems with matrix tables, rank order or slider questions.</p>
+  <p>Test your survey with assistive technologies, including a screen reader, keyboard, in high contrast mode, and by zooming in to 400% at least.</p>
+{% endcall %}

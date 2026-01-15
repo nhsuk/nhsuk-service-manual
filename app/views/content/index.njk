@@ -18,15 +18,19 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-half">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <img class="nhsuk-card__img" src="/assets/word-of-mouth.jpg" alt="">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="https://www.bbc.co.uk/programmes/m000dpkc">Interview: Word of Mouth - NHS language use</a></h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 - 28 minutes</p>
-          <p class="nhsuk-card__description">Michael Rosen talks with Sara Wilcox, NHS website content designer, and consultant Dr Hugh Rayner, about the words we choose for the NHS website and for letters consultants write to patients</p>
-        </div>
-      </div>
+      {% call card({
+        image: {
+          src: "/assets/word-of-mouth.jpg"
+        },
+        clickable: true,
+        href: "https://www.bbc.co.uk/programmes/m000dpkc",
+        heading: "Interview: Word of Mouth – NHS language use",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
+        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 – 28 minutes</p>
+        <p class="nhsuk-card__description">Michael Rosen talks with Sara Wilcox, NHS website content designer, and consultant Dr Hugh Rayner, about the words we choose for the NHS website and for letters consultants write to patients</p>
+      {% endcall %}
     </div>
   </div>
 

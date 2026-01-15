@@ -1,17 +1,12 @@
 <h2 id="set-language">Set language</h2>
 <p>You need a small bit of markup on every page for screenreaders (and search engines) to know what language the content (or a part of the content) is in.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      How to code for language
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>In the HTML element, set the language for the whole page to English:</p>
-    <pre class="rich-text"><code>&lt;html lang="en"&gt;</code></pre> or whatever language the page is in.</p>
-    <p>If there are changes of language within the page, mark these up as well:</p>
-    <pre class="rich-text"><code>&lt;p&gt;Make sure you are treated by a state healthcare provider in France (&lt;span lang="fr"&gt;conventionné&lt;/span&gt;).&lt;/p&gt;</code></pre>
-    <p>You can apply the lang attribute to any container.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "How to code for language"
+}) %}
+  <p>In the HTML element, set the language for the whole page to English:</p>
+  <pre class="rich-text"><code>&lt;html lang="en"&gt;</code></pre> or whatever language the page is in.</p>
+  <p>If there are changes of language within the page, mark these up as well:</p>
+  <pre class="rich-text"><code>&lt;p&gt;Make sure you are treated by a state healthcare provider in France (&lt;span lang="fr"&gt;conventionné&lt;/span&gt;).&lt;/p&gt;</code></pre>
+  <p>You can apply the lang attribute to any container.</p>
+{% endcall %}

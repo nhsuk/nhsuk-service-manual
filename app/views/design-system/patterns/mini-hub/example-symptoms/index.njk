@@ -20,10 +20,12 @@ previewLayout: design-example-wrapper-full
       {
         href: "#",
         text: "Health A to Z"
+      },
+      {
+        href: "#",
+        text: "Age-related macular degeneration (AMD)"
       }
-    ],
-    href: "#",
-    text: "Age-related macular degeneration (AMD)"
+    ]
   }) }}
 {% endblock %}
 
@@ -51,7 +53,9 @@ previewLayout: design-example-wrapper-full
         sizes: "(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw",
         srcset: "https://assets.nhs.uk/nhsuk-cms/images/NHSC_0218_AMD_Version2.original.width-640.jpg 640w, https://assets.nhs.uk/nhsuk-cms/images/NHSC_0218_AMD_Version2.original.width-640.jpg 640w",
         alt: "Blurred book showing what vision is like for a person with early AMD",
-        caption: "The first symptom is often a blurred or distorted area in your vision"
+        caption: {
+          text: "The first symptom is often a blurred or distorted area in your vision"
+        }
       }) }}
 
       {{ image({
@@ -59,7 +63,9 @@ previewLayout: design-example-wrapper-full
         sizes: "(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw",
         srcset: "https://assets.nhs.uk/nhsuk-cms/images/S_0218_AMD_C0037144.original.width-640.jpg 640w, https://assets.nhs.uk/nhsuk-cms/images/S_0218_AMD_C0037144.original.width-767.jpg 767w",
         alt: "A dark patch in the vision of someone with AMD",
-        caption: "If it gets worse, you might struggle to see anything in the middle of your vision"
+        caption: {
+          text: "If it gets worse, you might struggle to see anything in the middle of your vision"
+        }
       }) }}
 
       <p>AMD can make things like reading, watching TV, driving or recognising faces difficult.</p>
