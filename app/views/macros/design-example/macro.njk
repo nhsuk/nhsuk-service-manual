@@ -66,6 +66,9 @@
   {% set exampleType = params.type | lower | replace("-", " ") %}
   {% set exampleItem = params.item | lower | replace("-", " ") %}
   {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem + " " + exampleType) %}
+  {% if params.titleSuffix %}
+    {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
+  {% endif %}
 
   {% if params.id %}
     {% set exampleId = params.id %}
