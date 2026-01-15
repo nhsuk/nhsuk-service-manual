@@ -96,12 +96,8 @@
                       text: option.type
                     },
                     {
-                      header: "Required",
-                      text: option.required
-                    },
-                    {
                       header: "Description",
-                      html: option.description | markdown
+                      html: ("<strong>Required</strong>. " ~ option.description if option.required else option.description) | markdown
                     }
                   ]), optionRows) %}
 
@@ -119,12 +115,8 @@
                           text: subOption.type
                         },
                         {
-                          header: "Required",
-                          text: subOption.required
-                        },
-                        {
                           header: "Description",
-                          html: subOption.description | markdown
+                          html: ("<strong>Required</strong>. " ~ subOption.description if subOption.required else subOption.description) | markdown
                         }
                       ]), optionRows) %}
 
@@ -142,12 +134,8 @@
                               text: subSubOption.type
                             },
                             {
-                              header: "Required",
-                              text: subSubOption.required
-                            },
-                            {
                               header: "Description",
-                              html: subSubOption.description | markdown
+                              html: ("<strong>Required</strong>. " ~ subSubOption.description if subSubOption.required else subSubOption.description) | markdown
                             }
                           ]), optionRows) %}
                         {% endfor %}
@@ -174,9 +162,6 @@
                         },
                         {
                           text: "Type"
-                        },
-                        {
-                          text: "Required"
                         },
                         {
                           text: "Description"
