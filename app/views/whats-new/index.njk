@@ -104,17 +104,20 @@
 <!--<h2>Latest show and tell</h2>
   <div class="nhsuk-grid-row nhsuk-card-group">
     <div class="nhsuk-grid-column-full nhsuk-card-group__item">
-      <div class="nhsuk-card">
-        <div class="app-card__video">
-          <iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo" title="NHS digital service manual - show and tell 20 February 2020" allowfullscreen></iframe>
-        </div>
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading">NHS digital service manual show and tell</h3>
-          <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
-          <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>
-          <p class="nhsuk-card__description">The team talks about the redesign of the service manual, how to write good questions for forms, inclusive language, the beta service standard for health and the NHS Digital accessibility lab in Leeds. The NHS Leadership Academy also share a Wordpress theme based on the NHS.UK frontend library.</p>
-        </div>
-      </div>
+      {% call card({
+        classes: "app-card",
+        image: {
+          html: '<div class="app-card__video">' +
+            '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual - show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
+          "</div>"
+        },
+        heading: "NHS digital service manual show and tell",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
+        <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>
+        <p class="nhsuk-card__description">The team talks about the redesign of the service manual, how to write good questions for forms, inclusive language, the beta service standard for health and the NHS Digital accessibility lab in Leeds. The NHS Leadership Academy also share a Wordpress theme based on the NHS.UK frontend library.</p>
+      {% endcall %}
     </div>
   </div>
 
