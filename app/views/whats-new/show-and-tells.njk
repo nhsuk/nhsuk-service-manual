@@ -18,7 +18,7 @@
         </div>
         <div class="nhsuk-card__content">
           <h3 class="nhsuk-card__heading">NHS digital service manual show and tell</h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
           <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>
           <p class="nhsuk-card__description">The team talks about the redesign of the service manual, how to write good questions for forms, inclusive language, the beta service standard for health and the NHS Digital accessibility lab in Leeds. The NHS Leadership Academy also share a Wordpress theme based on the NHS.UK frontend library.</p>
         </div>
@@ -28,15 +28,19 @@
   <h2>Previous show and tells</h2>
   <div class="nhsuk-grid-row nhsuk-card-group">
     <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <img class="nhsuk-card__img" src="/assets/word-of-mouth.jpg" alt="">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="https://www.bbc.co.uk/programmes/m000dpkc">Interview: Word of Mouth - NHS language use</a></h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 - 28 minutes</p>
-          <p class="nhsuk-card__description">Michael Rosen talks with Sara Wilcox, NHS website content designer, and consultant Dr Hugh Rayner, about the words we choose for the NHS website and for letters consultants write to patients.</p>
-        </div>
-      </div>
+      {% call card({
+        image: {
+          src: "/assets/word-of-mouth.jpg"
+        },
+        clickable: true,
+        href: "https://www.bbc.co.uk/programmes/m000dpkc",
+        heading: "Interview: Word of Mouth – NHS language use",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
+        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 – 28 minutes</p>
+        <p class="nhsuk-card__description">Michael Rosen talks with Sara Wilcox, NHS website content designer, and consultant Dr Hugh Rayner, about the words we choose for the NHS website and for letters consultants write to patients</p>
+      {% endcall %}
     </div>
     <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
       <div class="nhsuk-card">
@@ -45,7 +49,7 @@
         </div>
         <div class="nhsuk-card__content">
           <h3 class="nhsuk-card__heading">NHS digital service manual show and tell</h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>18 July 2019</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>18 July 2019</p>
           <p class="nhsuk-card__description">The team talks about accessibility guidance, improvements to the NHS website and community contributions for the digital service manual. </p>
         </div>
       </div>
@@ -57,7 +61,7 @@
         </div>
         <div class="nhsuk-card__content">
           <h3 class="nhsuk-card__heading">NHS digital service manual show and tell</h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>14 February 2019</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>14 February 2019</p>
           <p class="nhsuk-card__description">The NHS.UK redesign and standards team talks about the NHS.UK service manual, frontend library, prototype kit, content guide and an NHS digital service standard.</p>
         </div>
       </div>

@@ -95,18 +95,18 @@ previewLayout: design-example-wrapper-full
         </ol>
       </nav>
 
-      <div class="nhsuk-card nhsuk-card--feature">
-        <div class="nhsuk-card__content nhsuk-card__content--feature">
-          <h2 id="a" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
-            A
-          </h2>
-          <ul class="nhsuk-list nhsuk-list--border">
-            <li><a href="/conditions/abdominal-aortic-aneurysm/">AAA, see Abdominal aortic aneurysm</a></li>
-            <li><a href="/conditions/abdominal-aortic-aneurysm/">Abdominal aortic aneurysm</a></li>
-            <li><a href="/conditions/abscess/">Abscess</a></li>
-          </ul>
-        </div>
-      </div>
+      {% call card({
+        feature: true,
+        heading: "A",
+        headingId: "a",
+        headingSize: 'm'
+      }) %}
+        <ul class="nhsuk-list nhsuk-list--border">
+          <li><a href="/conditions/abdominal-aortic-aneurysm/">AAA, see Abdominal aortic aneurysm</a></li>
+          <li><a href="/conditions/abdominal-aortic-aneurysm/">Abdominal aortic aneurysm</a></li>
+          <li><a href="/conditions/abscess/">Abscess</a></li>
+        </ul>
+      {% endcall %}
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
@@ -114,16 +114,16 @@ previewLayout: design-example-wrapper-full
         </a>
       </div>
 
-      <div class="nhsuk-card nhsuk-card--feature">
-        <div class="nhsuk-card__content nhsuk-card__content--feature">
-          <h2 id="b" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
-            B
-          </h2>
-          <ul class="nhsuk-list nhsuk-list--border">
-            <li>There are currently no conditions listed</li>
-          </ul>
-        </div>
-      </div>
+      {% call card({
+        feature: true,
+        heading: "B",
+        headingId: "b",
+        headingSize: 'm'
+      }) %}
+        <ul class="nhsuk-list nhsuk-list--border">
+          <li>There are currently no conditions listed</li>
+        </ul>
+      {% endcall %}
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
@@ -131,17 +131,17 @@ previewLayout: design-example-wrapper-full
         </a>
       </div>
 
-      <div class="nhsuk-card nhsuk-card--feature">
-        <div class="nhsuk-card__content nhsuk-card__content--feature">
-          <h2 id="c" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
-            C
-          </h2>
-          <ul class="nhsuk-list nhsuk-list--border">
-            <li><a href="/conditions/chest-pain/">Chest pain</a></li>
-            <li><a href="/conditions/cold-sores/">Cold sore</a></li>
-          </ul>
-        </div>
-      </div>
+      {% call card({
+        feature: true,
+        heading: "C",
+        headingId: "c",
+        headingSize: 'm'
+      }) %}
+        <ul class="nhsuk-list nhsuk-list--border">
+          <li><a href="/conditions/chest-pain/">Chest pain</a></li>
+          <li><a href="/conditions/cold-sores/">Cold sore</a></li>
+        </ul>
+      {% endcall %}
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
@@ -149,18 +149,18 @@ previewLayout: design-example-wrapper-full
         </a>
       </div>
 
-      <div class="nhsuk-card nhsuk-card--feature">
-        <div class="nhsuk-card__content nhsuk-card__content--feature">
-          <h2 id="d" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
-            D
-          </h2>
-          <ul class="nhsuk-list nhsuk-list--border">
-            <li><a href="/conditions/dandruff/">Dandruff</a></li>
-            <li><a href="/conditions/dementia/">Dementia</a></li>
-            <li><a href="/conditions/toothache/">Dental pain</a></li>
-          </ul>
-        </div>
-      </div>
+      {% call card({
+        feature: true,
+        heading: "D",
+        headingId: "d",
+        headingSize: 'm'
+      }) %}
+        <ul class="nhsuk-list nhsuk-list--border">
+          <li><a href="/conditions/dandruff/">Dandruff</a></li>
+          <li><a href="/conditions/dementia/">Dementia</a></li>
+          <li><a href="/conditions/toothache/">Dental pain</a></li>
+        </ul>
+      {% endcall %}
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
