@@ -1,0 +1,12 @@
+{% from "card/macro.njk" import card %}
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
+  {{ card({
+    secondary: true,
+    heading: "Urgent and emergency care services",
+    headingClasses: "nhsuk-heading-m",
+    description: "Services the NHS provides if you need urgent or emergency medical help"
+  }) }}
+  </li>
+</ul>

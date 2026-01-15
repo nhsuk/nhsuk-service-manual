@@ -3,11 +3,11 @@
 {% set pageTitle = "Card" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use a card to give users a brief summary of content or a task, often with a link to more detail. You can display a card alongside other cards to group related content or tasks." %}
+{% set pageDescription = "Use a card to signpost related content and help users find information quickly." %}
 {% set theme = "Navigation" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "159" %}
-{% set hideDescription = "true" %}
+{# {% set hideDescription = "true" %} #}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -27,62 +27,68 @@
   {% endcall %}
 
   <h2 id="when-to-use">When to use a card</h2>
-  <p>Use a card to give users a brief summary of content or a task, often with a link to more detail. You can display a card alongside other cards to group related content or tasks.</p>
-  <p>Use clickable cards on hub pages to signpost groupings of related content and help users navigate to the content they need.</p>
-  <p>You can use a basic, non-clickable card on content pages.</p>
-  <p>These cards are different from the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care (care cards)</a>.</p>
+  <p>Use a card to help users identify related content or actions they may need.</p>
+  <p>You can display a card alongside other cards, but if you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="https://service-manual.nhs.uk/design-system/patterns">Hub page pattern</a>.</p>
 
-  <h2 id="how-to-use-cards">How to use cards</h2>
-  <p>Make cards easy to scan for relevant and actionable information.</p>
-  <p>You can include multiple elements, such as a title, text, an image and links. If you include a link, the link should mirror the heading of the page it links to.</p>
+  <h2 class="nhsuk-heading-l">When not to use a card</h2>
+  <p>Do not use a card to replace or highlight content on the page.</p>
+  <p>Before using a card consider these components first:</p>
+  <ul>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/details">Details:</a> Makes a page easier to scan by letting users reveal more detailed information.</li>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/expander">Expander:</a> Make a complex topic easier to digest by letting users reveal more detailed information.</li>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/inset-text">Inset text:</a> Helps users identify and understand important content on the page.</li>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/tabs">Tabs:</a> Lets users navigate between related sections of content, displaying 1 section at a time.</li>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/warning-callout">Warning callout:</a> Helps users identify and understand warning content on a page.</li>
+  </ul>
 
-  <h3>Clickable cards</h3>
+  <h2 class="nhsuk-heading-l">How to use a card</h2>
+  <p>Make a card easy to scan for relevant and actionable information.</p>
+  <p>You can include multiple elements, such as a heading, text, image, and link. If you include a link, the link should mirror the heading of the page it links to.</p>
+  <p>A card can be either clickable or non-clickable, for example, a clickable card will have a single link or action and the hit area will wrap the entire card. A non-clickable card can include multiple links.</p>
+  <p>For a clickable card, avoid wrapping the entire card in an anchor tag as this can be a difficult experience for screen reader users.</p>
+  <p>There are 4 types of cards:</p>
+  <ul>
+    <li>Primary card</li>
+    <li>Primary card (with chevron)</li>
+    <li>Secondary card</li>
+    <li>Image card</li>
+  </ul>
 
-  <p>If the card contains a single link, you can make the hit area for the link wrap the entire card. We avoid wrapping an entire card in an anchor tag as this can be a difficult experience for screen reader users.</p>
+  <h3 class="nhsuk-heading-m">Primary card</h3>
+  <p>Primary cards are small clickable cards that can include a heading by itself or a heading, text, and links.</p>
+  <p>Use the primary card to signpost important content or actions, helping users reach popular services without navigating deeper.</p>
 
-  <h4 id="top-task-card">Top task card</h4>
+  <h4 class="nhsuk-heading-s">Primary card clickable</h4>
+  
+  {{ designExample({
+    group: "components",
+    item: "card",
+    type: "primary-card-clickable"
+  }) }}
+
+  <h4 class="nhsuk-heading-s">Primary card non-clickable</h4>
+  
+    {{ designExample({
+    group: "components",
+    item: "card",
+    type: "primary-card-non-clickable"
+  }) }}
+
+  <h4 class="nhsuk-heading-s">Primary card with chevron</h4>
+  <p>The primary card (with chevron) is more visual and stands out more than the other cards. It consists of a heading, text, and chevron icon.</p>
+  <p>There is only a clickable version of this card. Due to the design, this card should only have one link or action.</p>
 
   {{ designExample({
     group: "components",
     item: "card",
-    type: "top-task"
+    type: "primary-card"
   }) }}
 
-  <p>Top task cards are small clickable cards.</p>
-  <p>Use them at the top of hub pages above other cards (such as primary cards) to help users quickly access specific information or tasks buried deeper in the navigation. Use them as shortcuts to content or services that are popular with users or meet an important business need.</p>
-  <p>If you want to link to a page just below the hub page, use a primary card instead.</p>
-  <p>Do not use more than 3 top tasks on a hub page.</p>
-  <div class="app-example app-example--content">
-    {{ tag({
-      text: "Example",
-      classes: "app-example__heading"
-    }) }}
-
-    <p><a href="https://www.nhs.uk/nhs-services/">The NHS services hub page on the NHS website</a> uses 3 top task cards to help people get help quickly.</p>
-  </div>
-
-  <h4 id="primary-card-with-chevron">Primary card (with chevron)</h4>
-
-    {{ designExample({
-      group: "components",
-      item: "card",
-      type: "primary-card"
-    }) }}
-
-  <p>Use primary cards on hub pages to signpost groups of information that are important to users.</p>
-  <p>You can include a primary card that links to a single page at a lower level if other primary cards on the same hub page link to groups of content.</p>
-  <p>The chevron icon (from our <a href="/design-system/styles/icons">icon set</a>) helps users know the card will take them to more content. The size of the card helps them understand that the topics these cards link to are more frequently visited or more important than topics signposted by secondary cards.</p>
-  <div class="app-example app-example--content">
-    {{ tag({
-      text: "Example",
-      classes: "app-example__heading"
-    }) }}
-
-    <p><a href="https://www.nhs.uk/conditions/social-care-and-support-guide/">The Social care and support guide hub page on the NHS website</a> routes users to different social care topics using primary cards.</p>
-  </div>
-  <p>Primary cards with chevrons replace a similar clickable card without a chevron which is being phased out.</p>
-
-  <h4 id="secondary-card">Secondary card</h4>
+  <h3 class="nhsuk-heading-m">Secondary card</h3>
+  <p>The secondary card has a less visual impact than the primary cards and can contain a heading, text and links.</p>
+  <p>When used with other cards, use the secondary card to group less important content or actions.</p>
+  
+  <h4 class="nhsuk-heading-s">Secondary card clickable</h4>
 
   {{ designExample({
     group: "components",
@@ -90,18 +96,19 @@
     type: "secondary-card"
   }) }}
 
-  <p>Use secondary cards on hub pages to signpost groups of information on less important topics. Use them below primary cards which signpost important information.</p>
-  <p>Secondary cards have less visual impact than top tasks or primary cards.</p>
-  <div class="app-example app-example--content">
-    {{ tag({
-      text: "Example",
-      classes: "app-example__heading"
-    }) }}
+  <h4 class="nhsuk-heading-s">Secondary card non-clickable</h4>
 
-    <p><a href="https://www.nhs.uk/nhs-services/">The NHS services hub page on the NHS website</a> has secondary cards at the bottom of the page for topics that are less searched for.</p>
-  </div>
+  {{ designExample({
+    group: "components",
+    item: "card",
+    type: "secondary-card-non-clickable"
+  }) }}
 
-  <h4 id="card-with-an-image">Card with an image</h4>
+  <h3 class="nhsuk-heading-m">Image card</h3>
+  <p>The image card displays an image above the header and text. The image is set as a decorative image by default, with the alternative text being null.</p>
+  <p>Only use cards with images if you have evidence that they help your users, for example, where you can show that they motivate users.</p>
+  
+  <h4 class="nhsuk-heading-s">Image card clickable</h4>
 
   {{ designExample({
     group: "components",
@@ -109,46 +116,22 @@
     type: "with-image"
   }) }}
 
-  <p>Only use cards with images if you have evidence that they help your users, for example, where you can show that they motivate users.</p>
-  <p>The card image is set as a decorative image by default, with the <a href="/accessibility/content#use-alternative-text-for-images-in-content">alternative text</a> being null.</p>
-
-  <h3 id="non-clickable-basic-card">Non-clickable basic card</h3>
+  <h4 class="nhsuk-heading-s">Image card non-clickable</h4>
 
   {{ designExample({
     group: "components",
     item: "card",
-    type: "default"
+    type: "with-image-non-clickable"
   }) }}
 
-  <p>Use basic cards on content pages, not hub pages.</p>
-  <p>Consider using these components instead:</p>
-  <ul>
-    <li><a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">a care card to help users decide when and where to get care</a></li>
-    <li><a href="/design-system/components/inset-text">inset text</a></li>
-    <li><a href="/design-system/components/warning-callout">a warning callout</a></li>
-  </ul>
+  <h3 class="nhsuk-heading-m">Grouping cards</h3>
+  <p>You can group multiple cards to show a collection of related topics or highlight key information and figures.</p>
+  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="https://service-manual.nhs.uk/design-system/patterns">Hub page pattern</a>.</p>
 
-  <h3 id="grouping-cards">Grouping cards</h3>
-  <p>You can group multiple cards to show a collection of related topics. Prioritise the cards so the content users need most comes first.</p>
-  <p>Use different card styles to help users understand the importance of different groups of cards.</p>
-  <div class="app-example app-example--content">
-    {{ tag({
-      text: "Example",
-      classes: "app-example__heading"
-    }) }}
+  <h4 class="nhsuk-heading-s">Card width</h4>
+  <p>We define the width of the cards using the grid system. For example, <code>nhsuk-grid-column-one-half</code> is used to make the cards half width:</p>
 
-    <p><a href="https://www.nhs.uk/live-well/">The Live Well hub page on the NHS website</a> helps users see the breadth of information available. It groups, ranks and links to content on different topics using:</p>
-    <ul>
-      <li>top task cards</li>
-      <li>primary cards</li>
-      <li>secondary cards</li>
-    </ul>
-  </div>
-
-  <h4 id="card-width">Card width</h4>
-  <p>We define the width of the cards using the <a href="/design-system/styles/layout#grid">grid system</a>. For example,  <code>nhsuk-grid-column-one-half</code> is used to make the cards half width:</p>
-
-  {{ designExample({
+    {{ designExample({
     group: "components",
     item: "card",
     type: "group-half"
