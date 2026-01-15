@@ -10,6 +10,7 @@
 - Add summary cards to summary list component
 - Add new entries for addresses and Wi-Fi to A to Z in content guide
 - Update entry for seizure (fit) in A to Z in content guide
+- Improved Nunjucks macro option documentation
 
 :wrench: **Maintenance**
 
