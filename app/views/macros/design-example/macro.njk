@@ -1,6 +1,27 @@
 {% from "details/macro.njk" import details %}
 {% from "tables/macro.njk" import table %}
 
+{% macro macroOption(option, optionName, exampleId) %}
+{% set componentPath = getMacroPageName(option.slug) %}
+
+{% if (option.required) %}
+  <strong>Required.</strong>
+{% endif %}
+  {{ option.description | safe }}
+{% if (option.params) or (option.isComponent and ["label", "legend"].includes(option.id)) %}
+  {% if option.isComponent and not ["label", "legend"].includes(option.id) %}
+    {# Link to subset of Nunjucks macro options table and design system component page -#}
+    <a href="#options-{{ exampleId }}--{{ option.slug }}">See supported {{ option.name | safe }} macro options</a> for <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ optionName | safe }} component macro</a>.
+  {% else %}
+    {# Link to Nunjucks macro options table only -#}
+    <a href="#options-{{ exampleId }}--{{ option.slug }}"> See macro options for {{ option.name | safe }}</a>.
+  {% endif %}
+{% elif option.isComponent %}
+  {# Link to design system component page for nested components -#}
+  <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">See macro options for {{ optionName | safe }}</a>.
+{% endif %}
+{% endmacro %}
+
 {% macro designExample(params) %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
 
@@ -26,10 +47,12 @@
   #}
   {% set htmlDefinition = {
     name: "HTML",
+    id: "html",
     code: html
   } %}
   {% set nunjucksDefinition = {
     name: "Nunjucks",
+    id: "nunjucks",
     code: nunjucks
   } %}
   {% if params.htmlOnly %}
@@ -40,16 +63,24 @@
     {% set snippets = [htmlDefinition, nunjucksDefinition] %}
   {% endif %}
 
-  {% set exampleType = params.type|lower|replace("-", " ") %}
-  {% set exampleItem = params.item|lower|replace("-", " ") %}
-  {% set exampleId = params.type + "-example" %}
-  {% set exampleTitle = exampleType + " " + exampleItem %}
+  {% set exampleType = params.type | lower | replace("-", " ") %}
+  {% set exampleItem = params.item | lower | replace("-", " ") %}
+  {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem + " " + exampleType) %}
+  {% if params.titleSuffix %}
+    {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
+  {% endif %}
+
+  {% if params.id %}
+    {% set exampleId = params.id %}
+  {% else %}
+    {% set exampleId = (exampleTitle + " example") | slugify %}
+  {% endif %}
 
   <div class="app-design-example" data-module="app-design-example">
 
     {% if showExample %}
       <a href="{{ standaloneURL }}" class="app-design-example__pop-out" target="_blank" rel="noopener noreferrer">
-        Open this<span class="nhsuk-u-visually-hidden"> {{ exampleTitle }}</span> example in a new tab
+        Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
       </a>
       <div class="app-code-embed">
         <iframe title="{{ params.type }}" src="{{ standaloneURL }}" class="app-design-example__frame"></iframe>
@@ -59,10 +90,11 @@
     {% if showCode %}
       <div class="app-code-snippet">
         {% if snippets | length > 1 %}
+          <span id="options-{{ exampleId }}"></span>
           <ul class="app-tabs" role="tablist">
             {% for snippet in snippets %}
               <li class="app-tabs__item" role="presentation" data-index="ex-{{ loop.index }}">
-                <a href="javascript:void(0);" role="tab" aria-controls="{{ exampleId }}" data-track="tab-html" aria-selected="true">
+                <a href="#{{ exampleId }}-{{ snippet.id }}" role="tab" aria-controls="{{ exampleId }}" data-track="tab-{{ snippet.id }}">
                   {{ snippet.name }}<span class="nhsuk-u-visually-hidden"> code for {{ exampleTitle }}</span>
                 </a>
               </li>
@@ -74,109 +106,61 @@
           {% for snippet in snippets %}
             {% if snippets | length > 1 %}
               <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-{{ loop.index }}">
-                <a href="" role="tab" aria-controls="{{ exampleId }}" data-track="tab-html" aria-selected="true">
+                <a href="#{{ exampleId }}-{{ snippet.id }}" role="tab" aria-controls="{{ exampleId }}" data-track="tab-{{ snippet.id }}">
                   {{ snippet.name }}<span class="nhsuk-u-visually-hidden"> code for {{ exampleTitle }}</span>
                 </a>
               </div>
             {% endif %}
-            <div class="app-code-snippet__preformatted {% if snippets|length > 1 %}js-hidden{% endif %}" data-index="ex-{{ loop.index }}">
-              {% set nunjucksParams = getNunjucksParams(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
+            <div class="app-code-snippet__preformatted {%- if snippets | length > 1 %} js-hidden {%- endif %}" data-index="ex-{{ loop.index }}">
+              {% set macroOptions = getMacroOptions(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
 
-              {% if nunjucksParams | length %}
-                {% set optionRows = [] %}
+              {% if macroOptions | length %}
+              <div class="app-code-snippet__macro">
+                {% call details({
+                  summaryText: "Nunjucks macro options",
+                  classes: "app-code-snippet__details",
+                  id: "options-" + exampleId + "-details"
+                }) %}
+                  <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
+                  <p>Some options are required for the macro to work. These are marked as "Required" in the option description.</p>
+                  <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 
-                {% for option in nunjucksParams %}
-                  {% set optionRows = (optionRows.push([
-                    {
-                      header: "Name",
-                      text: option.name
-                    },
-                    {
-                      header: "Type",
-                      text: option.type
-                    },
-                    {
-                      header: "Required",
-                      text: option.required
-                    },
-                    {
-                      header: "Description",
-                      html: option.description | markdown
-                    }
-                  ]), optionRows) %}
+                  {% for options in macroOptions %}
+                    {% set optionRows = [] %}
 
-                  {% if option.params %}
-                    {% for subOption in option.params %}
-                      {% set subOptionName = option.name ~ ("[]" if option.type == "array" else "{}") ~ "." ~ subOption.name %}
-
+                    {% for option in options.params %}
+                      {% set optionName = option.name.split(" ") | last -%}
                       {% set optionRows = (optionRows.push([
                         {
                           header: "Name",
-                          text: subOptionName
+                          html: optionName
                         },
                         {
                           header: "Type",
-                          text: subOption.type
-                        },
-                        {
-                          header: "Required",
-                          text: subOption.required
+                          text: option.type
                         },
                         {
                           header: "Description",
-                          html: subOption.description | markdown
+                          html: macroOption(option, optionName, exampleId)
                         }
                       ]), optionRows) %}
-
-                      {% if subOption.params %}
-                        {% for subSubOption in subOption.params %}
-                          {% set subSubOptionName = subOptionName ~ ("[]" if subOption.type == "array" else "{}") ~ "." ~ subSubOption.name %}
-
-                          {% set optionRows = (optionRows.push([
-                            {
-                              header: "Name",
-                              text: subSubOptionName
-                            },
-                            {
-                              header: "Type",
-                              text: subSubOption.type
-                            },
-                            {
-                              header: "Required",
-                              text: subSubOption.required
-                            },
-                            {
-                              header: "Description",
-                              html: subSubOption.description | markdown
-                            }
-                          ]), optionRows) %}
-                        {% endfor %}
-                      {% endif %}
                     {% endfor %}
-                  {% endif %}
-                {% endfor %}
-
-                <div class="app-code-snippet__macro">
-                  {% call details({
-                    summaryText: "Nunjucks macro options"
-                  }) %}
-                    <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
-                    <p>Some options are required for the macro to work. These are marked as "Required" in the option description.</p>
-                    <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 
                     {{ table({
-                      caption: "Nunjucks arguments for " ~ exampleTitle,
-                      captionClasses: "nhsuk-u-visually-hidden",
+                      caption: options.name | safe,
+                      captionClasses: "nhsuk-u-visually-hidden" if options.slug == 'primary',
+                      firstCellIsHeader: true,
                       responsive: true,
+                      classes: "app-code-snippet__options",
+                      id: "options-" + exampleId + "--" + options.slug,
                       head: [
                         {
-                          text: "Name"
+                          text: "Name",
+                          classes: "app-code-snippet__option-name"
                         },
                         {
-                          text: "Type"
-                        },
-                        {
-                          text: "Required"
+                          text: "Type",
+                          classes: "app-code-snippet__option-type"
                         },
                         {
                           text: "Description"
@@ -184,8 +168,9 @@
                       ],
                       rows: optionRows
                     }) }}
-                  {% endcall %}
-                </div>
+                  {% endfor %}
+                {% endcall %}
+              </div>
               {% endif %}
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">

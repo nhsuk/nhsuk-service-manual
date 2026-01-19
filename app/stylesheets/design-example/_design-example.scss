@@ -69,18 +69,6 @@ p + .app-design-example {
   @include nhsuk-responsive-padding(0, "top");
 }
 
-.app-code-snippet__macro {
-  width: 100%;
-}
-
 .app-tabs__container pre {
   background-color: nhsuk-colour("grey-5");
-}
-
-.app-code-snippet__container {
-  background-color: nhsuk-colour("grey-5");
-  padding: nhsuk-spacing(3);
-  padding-top: nhsuk-spacing(8);
-  position: relative;
-  width: 100%;
 }

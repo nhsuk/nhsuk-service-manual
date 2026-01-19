@@ -13,6 +13,7 @@ const config = require('./app/config')
 const locals = require('./app/locals')
 const fileHelper = require('./lib/file-helper')
 const filters = require('./lib/filters')
+const macroOptions = require('./lib/macro-options')
 const PageIndex = require('./lib/page-index')
 const authentication = require('./middleware/authentication')
 const routing = require('./middleware/routing')
@@ -127,10 +128,13 @@ const env = nunjucks.configure(config.nunjucksPaths, {
  */
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode)
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
-env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams)
 env.addGlobal('getAssetPath', fileHelper.getAssetPath)
+env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
+env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
 env.addFilter('highlight', filters.highlight)
+env.addFilter('kebabCase', filters.kebabCase)
 env.addFilter('markdown', filters.markdown)
+env.addFilter('slugify', filters.slugify)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
