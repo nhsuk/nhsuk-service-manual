@@ -89,6 +89,39 @@
   }
 }
 
+.app-code-snippet__macro {
+  width: 100%;
+}
+
+.app-code-snippet__details {
+  // stylelint-disable-next-line declaration-no-important
+  max-width: none !important;
+}
+
+.app-code-snippet__options {
+  max-width: 38em;
+}
+
+.app-code-snippet__option-name {
+  @include nhsuk-media-query($from: tablet) {
+    width: 29%;
+  }
+}
+
+.app-code-snippet__option-type {
+  @include nhsuk-media-query($from: tablet) {
+    width: 10%;
+  }
+}
+
+.app-code-snippet__container {
+  background-color: nhsuk-colour("grey-5");
+  padding: nhsuk-spacing(3);
+  padding-top: nhsuk-spacing(8);
+  position: relative;
+  width: 100%;
+}
+
 .app-tabs {
   background: nhsuk-colour("white");
   border: 1px solid nhsuk-colour("grey-3");
