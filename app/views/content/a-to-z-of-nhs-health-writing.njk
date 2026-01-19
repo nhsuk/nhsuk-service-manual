@@ -3,7 +3,7 @@
 {% set pageTitle = "A to Z of NHS health writing" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Words and phrases we use to make our content about health and the NHS easy to understand." %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "318" %}
 
 {% block head %}
@@ -129,6 +129,18 @@
       <h3 id="acute">acute</h3>
       <p>We prefer "sudden", "starts suddenly", "in a short period of time" or, where appropriate, "short-term".</p>
       <p>We do use "acute" in the names of conditions like "acute lymphoblastic leukaemia". We also use it if our search analytics, user testing or survey feedback suggest that people will hear their doctor use the word "acute" or will search for it. If we use it, we explain what it means.</p>
+      <h3 id="addresses">addresses</h3>
+      <p>Display addresses vertically.</p>
+      <p>For example:</p>
+      <p>NHS England London<br>  
+      10 South Colonnade<br>   
+      Poplar<br> 
+      London<br>  
+      E14 4PU</p>
+      <p>Start each part of the address on a new line. Write the town and postcode on separate lines. Do not use punctuation at the end of each line.</p>  
+      <p>If you need to display addresses horizontally, for example to present multiple addresses on results pages, punctuate them. For example:</p>  
+      <p>NHS England, 7 and 8 Wellington Place, Leeds, West Yorkshire, LS1 4AP</p>  
+      <p>To ask users for their address, use <a href="https://design-system.service.gov.uk/patterns/addresses/">the address pattern in the GOV.UK design system</a>.</p>
       <h3 id="affects">affects</h3>
       <p>It's alright to use "affects" but in some contexts, for example with medicines, it can be better to say that "something changes the way something else works". </p>
       <p>Check a dictionary if you're not sure of the difference between "affect" and "effect".</p>
@@ -226,8 +238,7 @@
       <h3 id="bowel-movement">bowel movement</h3>
       <p>See <a href="#poo">poo</a>.</p>
       <h3 id="brackets">brackets</h3>
-      <p>You can use round brackets ( ) but do not overuse them.</p>
-      <p>Do not use brackets to refer to something that could either be singular or plural, like "lie down with your leg(s) on cushions". If in doubt, use the plural: legs.</p>
+      <p>See the guidance on <a href="/content/punctuation#brackets">brackets on the Punctuation page</a>.</p>
       <h3 id="braille">Braille</h3>
       <p>Starts with a capital letter.</p>
       <h3 id="breast-milk">breast milk</h3>
@@ -449,7 +460,7 @@
       <p>We prefer the words "high <a href="#temperature">temperature</a>" to "fever", for example in a list of symptoms. Our user research shows that "fever" is not a well understood word.</p>
       <p>But we still use it when we're writing specifically about fever or different types of fever (such as scarlet fever).</p>
       <h3 id="fit">fit</h3>
-      <p>See <a href="#seizure-or-fit">seizure or fit</a>.</p>
+      <p>See <a href="#seizure-fit">seizure (fit)</a>.</p>
       <h3 id="fit-note">fit note</h3>
       <p>Use "fit note (sick note)" at first mention, then use "fit note".</p>
       <p>Or, if your users need more information, explain it in a sentence.</p>
@@ -944,7 +955,7 @@
       <p>With a hyphen.</p>
       <h3 id="preconception-care">preconception care</h3>
       <p>We prefer "planning your pregnancy" or "thinking about your health before you get pregnant" or just "getting pregnant". This is the kind of language our users use.</p>
-      <p>Clinicians sometimes use "preconception care" when they're talking about women who need special care before they get pregnant - for example, changes to their medicine. We do not use "preconception care" as a topic. Instead we give specific advice where people need it, for example: "Talk to your doctor if you want to get pregnant. It's best to stop taking [name of medicine] at least 3 months before you start trying for a baby."</p>
+      <p>Clinicians sometimes use "preconception care" when they're talking about women who need special care before they get pregnant, for example changes to their medicine. We do not use "preconception care" as a topic. Instead we give specific advice where people need it, for example: "Talk to your doctor if you want to get pregnant. It's best to stop taking [name of medicine] at least 3 months before you start trying for a baby."</p>
       <h3 id="premenstrual-syndrome">premenstrual syndrome</h3>
       <p>See "<a href="#pms-(premenstrual-syndrome)">PMS (premenstrual syndrome)</a>".</p>
       <h3 id="prognosis">prognosis</h3>
@@ -1035,12 +1046,16 @@
       <p>See "<a href="#drowsy">drowsy</a>".</p>
       <h3 id="seek">seek</h3>
       <p>We say "ask for".</p>
-      <h3 id="seizure-or-fit">seizure or fit</h3>
-      <p>We add the word "fit" after "seizure" ("seizure or fit") in content about epilepsy, brain cancer and brain tumours. We know that "seizure" is the word that people with epilepsy use, understand and generally prefer and that it's not the same as a "fit" (which is a kind of seizure that makes the body jerk and shake uncontrollably). But some of our users do not understand the word "seizure" and including the word "fit" when we first mention seizures helps them.</p>
-      <p>In general content, for example, with medicines that might make people jerk and shake uncontrollably as a side effect, we use the term "seizure or fit" and explain that this is what we mean.</p>
+      <h3 id="seizure-fit">seizure (fit)</h3>
+     <p>Use:</p>
+     <ul>
+      <li>"seizure (fit)" in most contexts, for example medicines side effects or as a symptom, with "fit" only included at 1st mention</li> 
+      <li>"seizure (sometimes called fit)" in content about epilepsy or brain tumours aimed at a general audience</li>
+      <li>"seizure" without any mention of "fit" in content aimed specifically at people with epilepsy (in other words, information not targeted at the general public)</li>
+      </ul>
       <p>We only mention "convulsions" where there's good evidence that users are searching for the term.</p>
       <h3 id="service-user">service user</h3>
-      <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" - or in social services "people who use services".</p>
+      <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" – or in social services "people who use services".</p>
       <h3 id="setting">setting</h3>
       <p>We avoid the term "hospital setting". We just say "in hospital".</p>
       <p>Instead of "community setting", we mention the place, for example, "in school", "in a clinic" or "at home".</p>
@@ -1121,8 +1136,8 @@
       <p>In a list of symptoms, we say "a high temperature" or "if your child is feeling hotter than usual if you touch their neck, back or tummy".</p>
       <p>When we're telling people to do something about a high temperature in an adult or a child over 6 months old (for example, in the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care, with care cards</a>), we say:</p>
       <ul>
-        <li>"if your temperature is very high, or you feel hot or shivery"</li>
-        <li>"if your child's temperature is very high, or they feel hot or shivery"</li>
+        <li>"if your temperature is very high, or you feel hot, cold or shivery"</li>
+        <li>"if your child's temperature is very high, or they feel hot, cold or shivery"</li>
       </ul>
       <p>The exception is when talking about the temperature of a child under 6 months old. In these cases we state a specific temperature and say:</p>
       <ul><li>"if your child is under 3 months old and has a temperature of 38C or higher, or you think they have a high temperature"</li>
@@ -1236,6 +1251,8 @@
       <h3 id="white-skin">white skin</h3>
       <p>We talk about skin colour clearly and use terms that are easy to understand, including "white skin". We do not describe white skin as "fair" or "light".</p>
       <p>See the guidance on <a href="/content/inclusive-content/skin-symptoms">skin symptoms in the Inclusive content section</a>.</p>
+      <h3 id="wi-fi">Wi-Fi</h3>
+      <p>With capital letters and a hyphen. Find out more about <a href="https://digital.nhs.uk/services/nhs-wifi">NHS Wi-Fi on NHS England's website</a>. 
       <h3 id="wind">wind</h3>
       <p>We use "wind" when we're talking about babies. For example, "bringing up wind".</p>
       <p>We also use it when we're talking about "trapped wind" or bloating.</p>

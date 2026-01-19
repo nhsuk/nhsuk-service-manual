@@ -8,6 +8,8 @@
 - Add new interruption page pattern
 - Add interruption panel to panel component
 - Add summary cards to summary list component
+- Add new entries for addresses and Wi-Fi to A to Z in content guide
+- Update entry for seizure (fit) in A to Z in content guide
 
 :wrench: **Maintenance**
 
@@ -17,6 +19,10 @@
 - Bring service standard 13 into closer alignment with GOV's
 - Update service standard 16 with clinical colleagues
 - Review and update service standard 17 with interoperability standards team
+- Move brackets content to punctuation page
+- Specify that we use en dashes and change hyphens used as dash to en dash
+- Add "third party" to guidance on numbers, measurements, dates and time
+- Add word "cold" to guidance on writing about temperature in A to Z
 - Update outdated references to NHS Digital, and fix broken links
 - Reorganise XML site map
 

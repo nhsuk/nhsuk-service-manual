@@ -12,6 +12,13 @@
 
 <h2>January 2026</h2>
 
+{% set contentHtml202601 %}
+  <p>Added new entries for <a href="/content/a-to-z-of-nhs-health-writing#addresses">addresses</a> and <a href="/content/a-to-z-of-nhs-health-writing#wi-fi">Wi-Fi</a> to A to Z in content guide</p>
+  <p>Updated entries for <a href="/content/a-to-z-of-nhs-health-writing#seizure-fit">seizure (fit)</a> and <a href="/content/a-to-z-of-nhs-health-writing#temperature">temperature</a> in A to Z</p>
+  <p>Specified that we use en dashes in our guidance on <a href="/content/punctuation#hyphens-and-dashes">hyphens and dashes</a></p>
+  <p>Added "third party" to guidance on <a href="/content/numbers-measurements-dates-time#numbers">numbers</a> (section on ordinal numbers)</p>
+{% endset %}
+
 {% set designHtml202601 %}
   <p>Added <a href="/design-system/components/file-upload">file upload component</a></p>
   <p>Added <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and added <a href="/design-system/components/panel#interruption-panel">interruption panel on panel component page</a></p>
@@ -43,6 +50,14 @@
     }
   ],
   rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202601
+      }
+    ],
     [
       {
         text: "Design system"

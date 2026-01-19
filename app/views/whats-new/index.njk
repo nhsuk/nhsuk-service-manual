@@ -11,6 +11,13 @@
 
   <h3>January 2026</h3>
 
+  {% set contentHtml %}
+    <p>Added new entries for <a href="/content/a-to-z-of-nhs-health-writing#addresses">addresses</a> and <a href="/content/a-to-z-of-nhs-health-writing#wi-fi">Wi-Fi</a> to A to Z in content guide</p>
+    <p>Updated entries for <a href="/content/a-to-z-of-nhs-health-writing#seizure-fit">seizure (fit)</a> and <a href="/content/a-to-z-of-nhs-health-writing#temperature">temperature</a> in A to Z</p>
+    <p>Specified that we use en dashes in our guidance on <a href="/content/punctuation#hyphens-and-dashes">hyphens and dashes</a></p>
+    <p>Added "third party" to guidance on <a href="/content/numbers-measurements-dates-time#numbers">numbers</a> (section on ordinal numbers)</p>
+  {% endset %}
+
   {% set designHtml %}
     <p>Added <a href="/design-system/components/file-upload">file upload component</a></p>
     <p>Added <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and added <a href="/design-system/components/panel#interruption-panel">interruption panel on panel component page</a></p>
@@ -42,6 +49,14 @@
       }
     ],
     rows: [
+      [
+        {
+          text: "Content guide"
+        },
+        {
+          html: contentHtml
+        }
+      ],
       [
         {
           text: "Design system"
@@ -108,7 +123,7 @@
         classes: "app-card",
         image: {
           html: '<div class="app-card__video">' +
-            '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual - show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
+            '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual – show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
           "</div>"
         },
         heading: "NHS digital service manual show and tell",
