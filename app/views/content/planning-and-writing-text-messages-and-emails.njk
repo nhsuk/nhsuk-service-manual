@@ -108,7 +108,7 @@
 <p>The NHS App is a free and secure way to communicate with patients and the public. Consider the following when writing messages for the App.</p>
 
 <h3 id="greeting-app">Greeting</h3>
-<p>You may consider a greeting unnecessary for patients receiving their messages in the App. If you start your message with a greeting make sure you use "Dear" followed by the patient's name and not "Hi" or similar.</p>
+<p>If you start your message with a greeting make sure you use "Dear" followed by the patient's name and not "Hi" or similar.</p>
 <p>Choosing which name to use depends on the context of the message. Use a first name when you want to be more encouraging or conversational. For a more formal or reassuring tone consider using a full name.</p>
 <div class="app-example app-example--content">
 <strong class="nhsuk-tag app-example__heading">
@@ -174,7 +174,7 @@
 <p>However, for those who haven't had regular cervical screening, we're offering an alternative option called HPV self-testing.</p>
 <p><strong>What HPV self-testing is</strong></p>
 <p>HPV self-testing checks for high-risk HPV, which causes nearly all cervical cancers.</p>
-<p>It's not a test for cancer. It's a test to help prevent cancer.<a href="#" title="External website">Find out more about HPV self-testing</a>.</p>
+<p>It's not a test for cancer. It's a test to help prevent cancer. <a href="#" title="External website">Find out more about HPV self-testing</a>.</p>
 <p>It's different to the cervical screening test done at your GP surgery or sexual health clinic. You will take a sample from your vagina and won't need to reach your cervix.</p>
 <p>You might find this more comfortable than cervical screening at your GP surgery or sexual health clinic. If you need additional support to help you do the test, for example, if you have a physical or learning disability, you can speak to your GP practice.</p>
 <p><strong>How it works</strong></p>
@@ -238,8 +238,8 @@
 
 <p>If you include links in your text message make sure they:</p>
   <ul>
-    <li>go to trusted sites such as nhs.uk or gov.uk</li>
-    <li>are human readable, for example, nhs.uk/tests-and-treatments</li>
+    <li>go to trusted sites such as www.nhs.uk or www.gov.uk</li>
+    <li>are human readable, for example, http://www.nhs.uk/tests-and-treatments</li>
     <li>include the full URL</li>
     <li>do not contain any personal information such as the patient’s name or NHS number</li>
     <li>are consistent across all your messaging channels so people can check them independently</li>
@@ -251,7 +251,7 @@
 <p><a href="https://notify.nhs.uk/using-nhs-notify/formatting" title="External website">Find out more about message formatting when using NHS Notify</a>.</p>
 
 <h3 id="telling-patients-who-your-message-is-from-text">Telling patients who your message is from</h3>
-<p>The text message sender name (also called SenderID) shows the reader who the text message is from and is often the first thing they see when reading a text or App notification. If you choose a recognisable SenderID, they can quickly tell who the message is from and are more likely to open and read it.</p>
+<p>The text message sender name (also called SenderID) shows the reader who the text message is from and is often the first thing they see when reading a text notification. If you choose a recognisable SenderID, they can quickly tell who the message is from and are more likely to open and read it.</p>
 
 <p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#text-message-sender-name" title="External website">Read more about text sender message names when using NHS Notify</a>.</p>
 
@@ -269,7 +269,7 @@
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> Blood Test<p>
-<p>((firstName))((lastName)), you are due for your NHS Blood Test. Book your appointment or find out more at <a href="#" title="External website">www.nhs.uk/blood-test-invite</a></p>
+<p>((firstName))((lastName)), you are due for your NHS Blood Test. Book your appointment or find out more at <a href="#" title="External website">http://www.nhs.uk/blood-test-invite</a></p>
 {% endcall %}
 {% from "details/macro.njk" import details %}
 
@@ -294,8 +294,8 @@
 Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk/book-covid</a></p>
 <p>Can’t get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit. </p>
 <p>COVID spreads more easily in winter. It’s best to get vaccinated as soon as you can, ahead of the colder months. Vaccination tops up your protection against severe symptoms.</p>
-<p>Read more: <a href="#" title="External website">www.nhs.uk/covidvaccination</a></p>
-<p>For easy read and other formats: <a href="#" title="External website">www.england.nhs.uk/seasonal-invites</a><p>
+<p>Read more: <a href="#" title="External website">http://www.nhs.uk/covidvaccination</a></p>
+<p>For easy read and other formats: <a href="#" title="External website">http://www.england.nhs.uk/seasonal-invites</a><p>
 <p>To opt out: <a href="#" title="External website">http://www.nhs.uk/covid-invite-preferences</a></p>
 {% endcall %}
 
@@ -318,7 +318,7 @@ Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk
 <p>Further ways to protect people from spam or phishing:</p>
 <ul>
   <li>avoid making requests for personal information, like a patient's date of birth, in the content of your messages</li>
-  <li>only include recognisable links to trusted websites such as the NHS website (www.nhs.uk) or the GOV.UK website</li>
+  <li>only include recognisable links to trusted websites such as the NHS or the GOV.UK websites</li>
 </ul>
 
 <h3 id="telling-patients-who-your-message-is-from-email">Telling patients who your message is from</h3>
@@ -459,6 +459,9 @@ Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk
   summaryText: "Example 2 of an NHS paper letter",
   classes: "nhsuk-expander"
 }) %}
+<p>Date: DD MONTH YYYY</p>
+<p>Your NHS number: XXXXXXX</p>
+<p><strong>Booking your measles, mumps and rubella vaccination</strong><p/>
 <p>Dear ((firstName))((lastName)),</p>
 <p>Measles cases are increasing in England, so it’s important you are fully vaccinated.</p>
 <p>We’re inviting you to book a free measles, mumps and rubella (MMR) vaccination. This is because your NHS record suggests you have not completed your two-dose course of the MMR vaccine. You need two doses for the best protection against measles, mumps and rubella.</p>
@@ -466,8 +469,8 @@ Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk
 <p><strong>How to book a vaccination</strong></p>
 <p>Please contact your GP surgery to confirm your record and book a vaccination appointment if needed. You can also ask about any other routine NHS vaccinations you may need. They may be able to arrange these for the same appointment. If you have already booked, please attend your appointment.  </p>
 <p><strong>More information</strong></p>
-<p>The MMR vaccine is the most effective way to protect you against measles, mumps and rubella. Millions of doses are given every year. Most side effects are mild and do not last long. Visit <a href="#" title="External website"> www.nhs.uk/mmr</a> for more information on the vaccine.</p>
-<p><p>Visit <a href="#" title="External website"> www.england.nhs.uk/mmr-invites</a> to get this information in easy read and other languages and formats.</p>
+<p>The MMR vaccine is the most effective way to protect you against measles, mumps and rubella. Millions of doses are given every year. Most side effects are mild and do not last long. Visit <a href="#" title="External website"> https://www.nhs.uk/mmr</a> for more information on the vaccine.</p>
+<p><p>Visit <a href="#" title="External website"> https://www.england.nhs.uk/mmr-invites</a> to get this information in easy read and other languages and formats.</p>
 <p>Yours sincerely, </p>
 <p>NHS England Vaccination Team</p>
 <p>Data Protection: NHS England is responsible for processing your personal data for the purposes of national vaccination programmes. To find out more, you can access our privacy notice at: www.england.nhs.uk/contact-us/privacy-notice, or search for "NHS England Privacy Notice" in your website browser.</p>
