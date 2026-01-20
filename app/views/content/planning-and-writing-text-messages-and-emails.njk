@@ -198,21 +198,38 @@
 <p>You can consider a formal greeting if it matches the required tone or content of your message.</p>
 
 <h3 id="protecting-people-from-spam-and-phishing-text">Protecting people from spam and phishing</h3>
-<p>Patients are more likely to read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message. Consider asking someone to check your messages for errors before you send them.</p>
-<p>Avoid:</p>
-  <ul>
-    <li>spelling mistakes, grammatical errors, inaccuracies or poor formatting</li>
-    <li>abbreviations or acronyms the patient may not be familiar with</li>
-  </ul>
+<p>Patients are more likely to read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message.</p>
+{% from "do-dont-list/macro.njk" import list %}
 
-<p>Where possible:</p>
-  <ul>
-    <li>include the name of your service or organisation</li>
-    <li>reference an event they may be familiar with such as an appointment or test</li>
-    <li>follow NHS guidance on voice and tone</li>
-  </ul>
+{{ list({
+  title: "Do",
+  type: "tick",
+  items: [
+    {
+      text: "include the name of your service or organisation"
+    },
+    {
+      text: "reference an event they may be familiar with such as an appointment or test"
+    },
+    {
+      text: "ask someone to check your messages for errors before you send them"
+    }
+  ]
+}) }}
 
-<p><a href="https://service-manual.nhs.uk/content/voice-and-tone" title="External website">Read about voice and tone</a>.</p>
+{{ list({
+  title: "Don't",
+  type: "cross",
+  items: [
+    {
+      text: "include spelling mistakes, grammatical errors, inaccuracies or poor formatting"
+    },
+    {
+      text: "use abbreviations or acronyms the patient may not be familiar with"
+    }
+  ]
+}) }}
+
 
 <p>If you include links in your text message make sure they:</p>
   <ul>
@@ -301,16 +318,13 @@ Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk
 
 <h3 id="telling-patients-who-your-message-is-from-email">Telling patients who your message is from</h3>
 <p>When sending an email, there are several ways to tell the patient who it is from. Use an email sender name that clearly represents your NHS organisation or service. You should also use this name at the end of the email.</p>
-<p>For example:</p>
-{% from "inset-text/macro.njk" import insetText %}
-{% set insetTextHtml %}
+<div class="app-example app-example--content">
+<strong class="nhsuk-tag app-example__heading">
+  Example
+</strong>
 <p>Yours sincerely,</p>
 <p>NHS vaccination invitations</p>
-{% endset %}
-
-{{ insetText({
-  html: insetTextHtml
-}) }}
+  </div>
 
 <p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#email-sender-name-and-from-email-address" title="External website">Read more about email sender name and from email address when using NHS Notify</a>.</p>
 
@@ -452,8 +466,6 @@ Book on the NHS App or at <a href="#" title="External website">http://www.nhs.uk
 <p>Yours sincerely, </p>
 <p>NHS England Vaccination Team</p>
 <p>Data Protection: NHS England is responsible for processing your personal data for the purposes of national vaccination programmes. To find out more, you can access our privacy notice at: www.england.nhs.uk/contact-us/privacy-notice, or search for "NHS England Privacy Notice" in your website browser.</p>
-<p></p>
-<p></p>
 
 
 
