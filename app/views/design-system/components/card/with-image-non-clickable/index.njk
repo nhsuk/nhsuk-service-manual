@@ -1,5 +1,9 @@
 {% from "card/macro.njk" import card %}
 
+{% set cardDescriptionHtml %}
+  <p>Learning the <a href="#">benefits of exercise</a> and why we <a href="#">should be sitting less</a></p>
+{% endset %}
+
 {{ card({
   image: {
     src: "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg"
@@ -7,5 +11,5 @@
   clickable: false,
   heading: "Exercise",
   headingClasses: "nhsuk-heading-m",
-  description: "Programmes, workouts and tips to get you moving and improve your fitness and wellbeing"
+  descriptionHtml: cardDescriptionHtml
 }) }}
