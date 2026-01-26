@@ -37,7 +37,10 @@ app.use(compression())
 // by setting http headers
 app.use(
   helmet({
-    contentSecurityPolicy: false
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: {
+      policy: 'cross-origin'
+    }
   })
 )
 
