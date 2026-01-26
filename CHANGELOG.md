@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.6.1 - 26 January 2026
+
+:wrench: **Maintenance**
+
+- Add guidance for border bottom class to summary cards
+
 ## 8.6.0 - 19 January 2026
 
 :new: **New features**
