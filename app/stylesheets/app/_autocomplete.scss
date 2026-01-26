@@ -38,6 +38,7 @@
 .autocomplete__input.nhsuk-input {
   pointer-events: all;
   width: calc(100% - 44px); // [1]
+  margin-left: 0;
 
   @include nhsuk-media-query($from: tablet) {
     width: 100%; // [1]

@@ -33,7 +33,7 @@ module.exports = {
   ],
 
   // Base URL
-  baseURL: BASE_URL,
+  baseUrl: BASE_URL,
 
   // Environment
   env: NODE_ENV,

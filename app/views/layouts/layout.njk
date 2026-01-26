@@ -42,8 +42,8 @@
 {% from "macros/design-example/macro.njk" import designExample %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s app-main-wrapper" %}
-{% set opengraphUrl = BASE_URL %}
-{% set opengraphImageUrl = BASE_URL ~ "/assets/open-graph" ~ ("_" ~ pageSection | lower | replace(" ", "_") | replace("'", "") if pageSection else "") ~ ".png" %}
+{% set opengraphUrl = baseUrl %}
+{% set opengraphImageUrl = baseUrl ~ "/assets/open-graph" ~ ("_" ~ pageSection | lower | replace(" ", "_") | replace("'", "") if pageSection else "") ~ ".png" %}
 
 {% block pageTitle -%}
   {% if pageTitle %}{{ pageTitle }} – {% endif %}NHS digital service manual
@@ -71,6 +71,7 @@
 
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link href="{{ baseUrl }}{{ basePath }}" rel="canonical">
 
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
 {% endblock %}
