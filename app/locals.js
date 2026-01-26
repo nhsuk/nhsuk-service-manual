@@ -12,6 +12,14 @@ module.exports =
    * @param {NextFunction} next
    */
   (req, res, next) => {
+    let { path: basePath } = req
+
+    // Remove trailing slash
+    if (basePath.endsWith('/')) {
+      basePath = basePath.slice(0, -1)
+    }
+
+    res.locals.basePath = basePath
     res.locals.baseUrl = config.baseUrl
     res.locals.env = config.env
 

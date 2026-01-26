@@ -332,6 +332,7 @@ app.get('/robots.txt', (_, res) => {
 // Render 404 page
 app.all('/*subPaths', (_, res) => {
   res.statusCode = 404
+  res.locals.basePath = '/page-not-found'
   res.render('page-not-found')
 })
 
