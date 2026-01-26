@@ -1,9 +1,10 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.6.1 - 26 January 2026
 
-:wrench: **Fixes**
+:wrench: **Maintenance**
 
+- Add guidance for border bottom class to summary cards
 - Fix top-level page routing with trailing slashes
 
 ## 8.6.0 - 19 January 2026
