@@ -6,6 +6,10 @@
 
 - Add guidance for border bottom class to summary cards
 
+:wrench: **Fixes**
+
+- Fix top-level page routing with trailing slashes
+
 ## 8.6.0 - 19 January 2026
 
 :new: **New features**

@@ -37,7 +37,10 @@ app.use(compression())
 // by setting http headers
 app.use(
   helmet({
-    contentSecurityPolicy: false
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: {
+      policy: 'cross-origin'
+    }
   })
 )
 
@@ -312,11 +315,6 @@ app.get('/content/pdfs', (req, res) => {
 
 // REDIRECT STOPS HERE
 
-// Automatically route pages
-app.get(/^([^.]+)$/, (req, res, next) => {
-  routing.matchRoutes(req, res, next)
-})
-
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' })
@@ -329,9 +327,13 @@ app.get('/robots.txt', (_, res) => {
   res.render('robots.txt')
 })
 
+// Automatically route pages
+app.use(routing.matchRoutes)
+
 // Render 404 page
 app.all('/*subPaths', (_, res) => {
   res.statusCode = 404
+  res.locals.basePath = '/page-not-found'
   res.render('page-not-found')
 })
 
