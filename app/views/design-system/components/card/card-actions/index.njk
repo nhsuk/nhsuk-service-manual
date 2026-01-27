@@ -1,0 +1,12 @@
+{% from "card/macro.njk" import card %}
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
+  {{ card({
+    clickable: false,
+    heading: "Card with actions",
+    headingClasses: "nhsuk-heading-m",
+    description: "TBC"
+  }) }}
+  </li>
+</ul>
