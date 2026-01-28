@@ -1,10 +1,10 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Writing NHS messages" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "How to write NHS App messages, text messages, emails and letters for patients and the public, with advice on structure, tone and wording so your message is effective and easy to understand." %}
 {% set dateUpdated = "February 2026" %}
 {% set backlog_issue_id = "450" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/_breadcrumb.njk" %}
@@ -36,7 +36,7 @@
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-messages">Text messages</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#emails">Emails</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#paper-letters">Paper letters</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</a></li>
         </ul>
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting">Formatting</a></li>
 
@@ -64,9 +64,13 @@
   <li>communications teams</li>
   <li>administration staff</li>
 </ul>
-<div class="nhsuk-inset-text nhsuk-u-margin-top-4">
-    <p>If you need guidance on messaging strategy, governance requirements, or using NHS Notify visit the <a href="#">NHS Messaging best practice website</a>.</p>
-</div>
+
+{% call insetText({
+  classes: "nhsuk-u-margin-top-4"
+}) %}
+  <p>If you need guidance on messaging strategy, governance requirements, or using NHS Notify visit the <a href="#">NHS Messaging best practice website</a>.</p>
+{% endcall %}
+
 <p>Use this guidance if you want to:</p>
 <ul>
   <li>write messages that work well on different channels</li>
@@ -102,15 +106,18 @@
 <h3 id="greeting-app">Greeting</h3>
 <p>If you start your message with a greeting make sure you use "Dear" followed by the patient's name and not "Hi" or similar.</p>
 <p>Choosing which name to use depends on the context of the message. Use a first name when you want to be more encouraging or conversational. For a more formal or reassuring tone consider using a full name.</p>
+
 <div class="app-example app-example--content">
-<strong class="nhsuk-tag app-example__heading">
-  Example
-</strong>
-<ul>
-  <li>conversational tone - "Dear ((firstName))"</li>
-  <li>reassuring tone - "Dear ((firstName))((lastName))"</li>
-</ul>
-  </div>
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+
+  <ul>
+    <li>conversational tone - "Dear ((firstName))"</li>
+    <li>reassuring tone - "Dear ((firstName))((lastName))"</li>
+  </ul>
+</div>
 
 <p>Avoid using just a last name or first name without a greeting as it can sound impersonal.</p>
 
@@ -127,38 +134,36 @@
 <p>NHS App messages can be up to 5,000 characters, but research shows some patients will only read the first part of the message.</p>
 <p>Make longer messages easier for your reader to scan by:</p>
 <ul>
-<li>keeping messages concise</li>
-<li>putting the important information first</li>
-<li>breaking longer content into short paragraphs or steps</li>
-<li>using bullet point lists and section headings</li>
+  <li>keeping messages concise</li>
+  <li>putting the important information first</li>
+  <li>breaking longer content into short paragraphs or steps</li>
+  <li>using bullet point lists and section headings</li>
 </ul>
 
 <h3 id="app-message-examples">App message examples</h3>
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 1 of an NHS App message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID: </strong>NHS App<p>
+<p><strong>SenderID:</strong> NHS App</p>
 <p>Dear ((firstName))</p>
-<p><strong>Welcome to the NHS App</strong><p>
+<p><strong>Welcome to the NHS App</strong></p>
 <p>If you have full access to the NHS App you can do things like:</p>
 <ul>
-<li>order repeat prescriptions</li>
-<li>manage appointments</li>
-<li>view your GP health record</li>
+  <li>order repeat prescriptions</li>
+  <li>manage appointments</li>
+  <li>view your GP health record</li>
 </ul>
-<p>If you are unable to access these features, you may need to prove who you are. <a href="#">Read more about how to prove who you are</a>.</p>
+<p>If you are unable to access these features, you may need to prove who you are. Read more about how to prove who you are.</p>
 {% endcall %}
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 2 of an NHS App message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID: </strong>NHS Screening<p>
-<p>Dear ((firstName))((lastName))
+<p><strong>SenderID:</strong> NHS Screening</p>
+<p>Dear ((firstName))((lastName))</p>
 <p>We're inviting you to do a test for human papillomavirus (HPV) at home.</p>
 <p>HPV is the name of a very common group of viruses. They do not cause any problems in most people, but high-risk types can cause cervical cancer.</p>
 <p><strong>Why you're being invited</strong></p>
@@ -172,19 +177,17 @@
 <p>You might find this more comfortable than cervical screening at your GP surgery or sexual health clinic. If you need additional support to help you do the test, for example, if you have a physical or learning disability, you can speak to your GP practice.</p>
 <p><strong>How it works</strong></p>
 <ol>
-<li>Order your free kit online.</li>
-<li>Do the test following the instructions in the kit.</li>
-<li>Return the kit in the prepaid packaging.</li>
-<li>Your results will be sent to you within 14 days.</li>
+  <li>Order your free kit online.</li>
+  <li>Do the test following the instructions in the kit.</li>
+  <li>Return the kit in the prepaid packaging.</li>
+  <li>Your results will be sent to you within 14 days.</li>
 </ol>
 <p><strong>Getting your results</strong></p>
 <p>If your test is negative, you won't need to do anything.</p>
 <p>If your test is positive, we'll ask you to go for a cervical screening test at your GP surgery or a sexual health clinic. This is to check for any abnormal changes to the cells in your cervix.</p>
 <p><strong>Other ways to get tested</strong></p>
 <p>If you do not want to take part in HPV self-testing, you can still come for your regular cervical screening, even if you were invited months or years ago. Contact your GP surgery or <a href="#">sexual health clinic </a>to make an appointment.</p>
-
 {% endcall %}
-{% from "details/macro.njk" import details %}
 
 
 <h2 id="text-messages">Text messages</h2>
@@ -197,7 +200,6 @@
 
 <h3 id="protecting-people-from-spam-and-phishing-text">Protecting people from spam and phishing</h3>
 <p>Patients are more likely to read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message.</p>
-{% from "do-dont-list/macro.njk" import list %}
 
 {{ list({
   title: "Do",
@@ -228,15 +230,14 @@
   ]
 }) }}
 
-
 <p>If you include links in your text message make sure they:</p>
-  <ul>
-    <li>go to trusted sites such as the NHS.UK or GOV.UK</li>
-    <li>are human readable, for example, http://www.nhs.uk/tests-and-treatments</li>
-    <li>include the full URL</li>
-    <li>do not contain any personal information such as the patient's name or NHS number</li>
-    <li>are consistent across all your messaging channels so people can check them independently</li>
-  </ul>
+<ul>
+  <li>go to trusted sites such as the NHS.UK or GOV.UK</li>
+  <li>are human readable, for example, http://www.nhs.uk/tests-and-treatments</li>
+  <li>include the full URL</li>
+  <li>do not contain any personal information such as the patient's name or NHS number</li>
+  <li>are consistent across all your messaging channels so people can check them independently</li>
+</ul>
 
 <h3 id="formatting-text">Formatting</h3>
 <p>Text messages do not support formatting such as bullet points, numbered lists, bold text or headings. However, you can use paragraph breaks to make them more readable. If you are condensing a longer message into a text message, make sure it works without formatting.</p>
@@ -254,41 +255,38 @@
 
 <p><a href="https://notify.nhs.uk/pricing-and-commercial/text-messages">Find the cost of sending text messages with NHS Notify</a>.</p>
 
-
 <h3 id="text-message-examples">Text message examples</h3>
-{% from "details/macro.njk" import details %}
+
 {% call details({
   summaryText: "Example 1 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> Blood Test<p>
+<p><strong>SenderID:</strong> Blood Test</p>
 <p>((firstName))((lastName)), you are due for your NHS blood test. Book your appointment or find out more at <a href="#">http://www.nhs.uk/blood-test-invite</a></p>
 {% endcall %}
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 2 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS App<p>
+<p><strong>SenderID:</strong> NHS App</p>
 <p>You have a new secure message from the NHS.</p>
 <p>Open the NHS App to read it.</p>
 <p>Or you can log in through the website: <a href="#">https://www.nhs.uk/inbox</a></p>
 {% endcall %}
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 3 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS vaccination invitations<p>
-((firstName))((lastName))
+<p><strong>SenderID:</strong> NHS vaccination invitations</p>
+<p>((firstName))((lastName))</p>
 <p>You can get your free NHS winter COVID-19 vaccine because of your age.</p>
-Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
-<p>Cannot get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit. </p>
+<p>Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
+<p>Cannot get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit.</p>
 <p>COVID spreads more easily in winter. It's best to get vaccinated as soon as you can, ahead of the colder months. Vaccination tops up your protection against severe symptoms.</p>
 <p>Read more: <a href="#">http://www.nhs.uk/covidvaccination</a></p>
-<p>For easy read and other formats: <a href="#">http://www.england.nhs.uk/seasonal-invites</a><p>
+<p>For easy read and other formats: <a href="#">http://www.england.nhs.uk/seasonal-invites</a></p>
 <p>To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
 {% endcall %}
 
@@ -316,20 +314,22 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 
 <h3 id="telling-patients-who-your-message-is-from-email">Telling patients who your message is from</h3>
 <p>When sending an email, there are several ways to tell the patient who it is from. Use an email sender name that clearly represents your NHS organisation or service. You should also use this name at the end of the email.</p>
+
 <div class="app-example app-example--content">
-<strong class="nhsuk-tag app-example__heading">
-  Example
-</strong>
-<p>Yours sincerely,</p>
-<p>NHS vaccination invitations</p>
-  </div>
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+
+  <p>Yours sincerely,</p>
+  <p>NHS vaccination invitations</p>
+</div>
 
 <p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#email-sender-name-and-from-email-address">Read more about email sender name and from email address on the NHS Notify website</a>.</p>
 
 <p>For the email subject line use something specific like "Your GP appointment reminder" or "NHS vaccination invitation" rather than a generic "NHS invite". Keeping subject lines short will make your email stand out in a patient's inbox and more likely to be opened and read.</p>
 
 <h3 id="email-message-examples">Email message examples</h3>
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 1 of an NHS email message",
@@ -342,10 +342,7 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p>Find more information about your service name invite, including how to book your appointment: <a href="#">https://www.nhs.uk/service-name-invite</a>.</p>
 <p>Yours sincerely,</p>
 <p>Service_name</p>
-
 {% endcall %}
-{% from "details/macro.njk" import details %}
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 2 of an NHS email message",
@@ -356,11 +353,11 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p>Dear ((firstName))((lastName)),</p>
 <p>You can book a free winter NHS COVID-19 vaccination because you are aged 75 or over (or will be by 31 January 2026).</p>
 <p><strong>How to get your COVID-19 vaccination</strong></p>
-  <ul>
-    <li>Book on the NHS App or online at <a href="#">http://www.nhs.uk/get-vaccination</a></li>
-    <li>Find your nearest COVID-19 vaccination walk-in site at <a href="#">http://www.nhs.uk/covid-walk-in</a></li>
-  </ul>
-  <p>It is best to get vaccinated as soon as you can ahead of the colder months.</p>
+<ul>
+  <li>Book on the NHS App or online at <a href="#">http://www.nhs.uk/get-vaccination</a></li>
+  <li>Find your nearest COVID-19 vaccination walk-in site at <a href="#">http://www.nhs.uk/covid-walk-in</a></li>
+</ul>
+<p>It is best to get vaccinated as soon as you can ahead of the colder months.</p>
 <p><strong>If you need support</strong></p>
 <p>If you cannot get online, phone 119. Translators are available. You can also use text phone 18001 119 or the NHS British Sign Language service at <a href="#">http://www.signvideo.co.uk/nhs119</a></p>
 <p>If you get your care at home, contact your GP surgery for a home visit.</p>
@@ -377,10 +374,9 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
   <p>For full details, go to <a href="#">http://www.nhs.uk/vaccinations</a></p>
 <p>Yours sincerely,</p>
 <p>NHS England Vaccination Team</p>
-<p>Data protection: NHS England is responsible for processing your personal data. This is for the purpose of national vaccination programmes. To find out more, you can access our privacy notice at: <a href="#">http://www.england.nhs.uk/contact-us/privacy-notice</a> To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
-
+<p>Data protection: NHS England is responsible for processing your personal data. This is for the purpose of national vaccination programmes. To find out more, you can access our privacy notice at: <a href="#">http://www.england.nhs.uk/contact-us/privacy-notice</a></p>
+<p>To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
 {% endcall %}
-{% from "details/macro.njk" import details %}
 
 <h2 id="paper-letters">Paper letters</h2>
 
@@ -405,15 +401,13 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/upload-a-letter">Find out more about formatting and letter templates on the NHS Notify website</a>.</p>
 
 <h3 id="paper-letter-examples">Paper letter examples</h3>
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 1 of an NHS paper letter",
   classes: "nhsuk-expander"
 }) %}
-
-<p><strong>Reference number - </strong></p>
-<p><strong>NHS number - </strong>999 123 4567</p>
+<p><strong>Reference number -</strong></p>
+<p><strong>NHS number -</strong> 999 123 4567</p>
 <p>Dear ((firstName))((lastName)),</p>
 <p><strong>Confirm your address with NHS England</strong></p>
 <p>We are writing to you to confirm if the home address the NHS holds for you is up to date.</p>
@@ -424,16 +418,16 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p><strong>Option 1</strong></p>
 <p>Scan the QR code and complete the online form to confirm your address. You will need Reference number ((Reference number)) and NHS number ((NHS number)).</p>
 <p>((QR CODE))</p>
-<p><strong>Option 2 </strong></p>
+<p><strong>Option 2</strong></p>
 <p>Text ((Reference number)) to 07860 055388 (usual contract charges will apply).</p>
 <p><strong>Option 3</strong></p>
 <p>Tick this box [BOX] and return this page in the envelope provided. You do not need a stamp.</p>
 <p><strong>What to do if your address information is not correct.</strong></p>
-  <ul>
-    <li>You may need to register with a new GP surgery using the following link https://www.nhs.uk/service-search/find-a-gp/</li>
-    <li>Contact your existing GP surgery to update your address.</li>
-    <li>If you have left the United Kingdom and do not intend to return within 3 months you should call your GP and ask to be removed from their patient list.</li>
-  </ul>
+<ul>
+  <li>You may need to register with a new GP surgery using the following link https://www.nhs.uk/service-search/find-a-gp/</li>
+  <li>Contact your existing GP surgery to update your address.</li>
+  <li>If you have left the United Kingdom and do not intend to return within 3 months you should call your GP and ask to be removed from their patient list.</li>
+</ul>
 <p>You may also receive this message in an email.</p>
 <p><strong>How do I request this letter in an alternative format?</strong></p>
 <p>To request this letter in an alternative format such as braille, large print or audio version please contact your GP surgery.</p>
@@ -444,9 +438,6 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p>Delivered on behalf of NHS England by Capita https://pcse.england.nhs.uk/organisations/public/</p>
 <p>Primary Care Support England provides administrative and support services for primary care on behalf of NHS England and is part of Capita plc.</p>
 {% endcall %}
-{% from "details/macro.njk" import details %}
-
-{% from "details/macro.njk" import details %}
 
 {% call details({
   summaryText: "Example 2 of an NHS paper letter",
@@ -454,7 +445,7 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 }) %}
 <p>Date: DD MONTH YYYY</p>
 <p>Your NHS number: 999 123 4567</p>
-<p><strong>Booking your measles, mumps and rubella vaccination</strong><p/>
+<p><strong>Booking your measles, mumps and rubella vaccination</strong></p>
 <p>Dear ((firstName))((lastName)),</p>
 <p>Measles cases are increasing in England, so it's important you are fully vaccinated.</p>
 <p>We're inviting you to book a free measles, mumps and rubella (MMR) vaccination. This is because your NHS record suggests you have not completed your two-dose course of the MMR vaccine. You need 2 doses for the best protection against measles, mumps and rubella.</p>
@@ -463,13 +454,10 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p>Please contact your GP surgery to confirm your record and book a vaccination appointment if needed. You can also ask about any other routine NHS vaccinations you may need. They may be able to arrange these for the same appointment. If you have already booked, please attend your appointment.  </p>
 <p><strong>More information</strong></p>
 <p>The MMR vaccine is the most effective way to protect you against measles, mumps and rubella. Millions of doses are given every year. Most side effects are mild and do not last long. Visit https://www.nhs.uk/mmr for more information on the vaccine.</p>
-<p><p>Visit https://www.england.nhs.uk/mmr-invites to get this information in easy read and other languages and formats.</p>
+<p>Visit https://www.england.nhs.uk/mmr-invites to get this information in easy read and other languages and formats.</p>
 <p>Yours sincerely, </p>
 <p>NHS England Vaccination Team</p>
 <p>Data Protection: NHS England is responsible for processing your personal data for the purposes of national vaccination programmes. To find out more, you can access our privacy notice at: www.england.nhs.uk/contact-us/privacy-notice, or search for "NHS England Privacy Notice" in your website browser.</p>
-
-
-
 {% endcall %}
 
 <h2 id="supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</h2>
@@ -478,9 +466,6 @@ Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
 <p>Generally, digital channels can be made accessible through assistive technology. Letters sent through NHS Notify are available in accessible formats including easy read and braille.</p>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/accessible-formats">Read more about accessible formats when sending messages through NHS Notify</a>.</p>
 <p>All NHS web pages and content should follow the principles in our <a href="/accessibility">accessibility guidance</a>.</p>
-
-
-
 {% endblock %}
 
 {% block asideContent %}
