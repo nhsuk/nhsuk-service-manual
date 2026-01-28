@@ -16,18 +16,18 @@
   z-index: 9;
 
   // Stack button above autocomplete
-  + .nhsuk-header__search-submit {
+  + .nhsuk-button {
     position: relative;
     z-index: 10;
   }
 
   // Stack button below autocomplete when focused
-  &:focus-within + .nhsuk-header__search-submit {
+  &:focus-within + .nhsuk-button {
     z-index: 8;
   }
 
   @include nhsuk-media-query($until: tablet) {
-    + .nhsuk-header__search-submit {
+    + .nhsuk-button {
       position: absolute;
       right: 0;
       top: 0;
@@ -35,9 +35,10 @@
   }
 }
 
-.autocomplete__input.nhsuk-header__search-input {
+.autocomplete__input.nhsuk-input {
   pointer-events: all;
   width: calc(100% - 44px); // [1]
+  margin-left: 0;
 
   @include nhsuk-media-query($from: tablet) {
     width: 100%; // [1]

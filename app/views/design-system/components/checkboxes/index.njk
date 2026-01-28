@@ -1,25 +1,29 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Checkboxes" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use checkboxes to let users select 1 or more options on a form." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "October 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "9" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-
-    <h3 id="v10-affects-this-component">Checkboxes updates</h3>
-    <p>Added smaller checkboxes in version 10.1</p>
-    <p>Made <a href="/design-system/guides/updating-to-v10#checkboxes">"breaking code changes" to checkboxes in version 10</a></p>
-  </div>
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Checkboxes updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#checkboxes">breaking code updates to checkboxes in version 10</a></p>
+  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -45,7 +49,7 @@
     <li>submit the wrong answer</li>
   </ul>
   <p>Order checkbox options alphabetically by default. In some cases, it's helpful to order them from most-to-least common options, for example, by population size. But be careful, as this can reinforce bias. If in doubt, order alphabetically.</p>
-  <p>Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How would you like to be contacted?".</p>
+  <p>Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How do you want to be contacted about this?".</p>
   <p>Read more about using <a href="/design-system/components/fieldset">fieldset</a>.</p>
 
 
@@ -56,7 +60,7 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "hint"
+    type: "hint-text"
   }) }}
 
   <h3 id="checkbox-items-with-hints">Checkbox items with hints</h3>
@@ -117,7 +121,7 @@
   </ul>
 
   <h3 id="error-messages">Error messages</h3>
-  <p>Error messages should be styled like this:</p>
+  <p>Style error messages like this.</p>
 
   {{ designExample({
     group: "components",

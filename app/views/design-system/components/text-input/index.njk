@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Text input" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use text input to let users enter a single line of text." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "October 2023" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "21" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -30,7 +30,25 @@
   <h3 id="give-the-text-input-a-label">Give the text input a label</h3>
   <p>Give it a visible label. Do not use placeholder text for a label as it vanishes when users click on the text input.</p>
   <p>Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.</p>
+  <h4>If you're asking 1 question on the page</h4>
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;label&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
+  <p>Read more about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">how to make labels and legends headings</a> on the GOV.UK Design System.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "default",
+    titleSuffix: "second"
+  }) }}
+
+  <h4>If you're asking more than 1 question on the page</h4>
+  <p>If you're asking more than 1 question on the page, do not set the contents of the <code>&lt;label&gt;</code> as the page heading. Read more about asking multiple questions on <a href="/design-system/patterns/question-pages">question pages</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "without-heading"
+  }) }}
 
   <h3 id="use-appropriately-sized-text-inputs">Make text inputs the right size</h3>
   <p>Help users understand what they should enter by making text inputs the right size for the information you want them to give you.</p>
@@ -68,7 +86,7 @@
 
   <h3 id="asking-for-numbers">Asking for numbers</h3>
   <h4 id="whole-numbers">Whole numbers</h4>
-  <p>If you're asking the user to enter a whole number and you want to bring up the numeric keypad on a mobile device, set the <code>inputmode</code> attribute to <code>numeric</code> and the <code>pattern</code> attribute to <code>[0-9]*</code>. See how to do this in the HTML and Nunjucks tabs in the following example.</p>
+  <p>If you're asking the user to enter a whole number, set the <code>inputmode</code> attribute to <code>numeric</code> to use the numeric keypad on devices with on-screen keyboards.</p>
 
   {{ designExample({
     group: "components",
@@ -85,6 +103,16 @@
   </ul>
   <h4 id="decimal-numbers">Decimal numbers</h4>
   <p>The GOV.UK Design System has guidance on <a href="https://design-system.service.gov.uk/components/text-input/#asking-for-decimal-numbers">asking for decimal numbers</a>.</p>
+
+  <h3 id="codes-and-sequences">Codes and sequences</h3>
+  <p>Help the user visually check the code they've typed is correct by slightly increasing the spacing between characters. Do this by adding the <code>nhsuk-input--code</code> class to the input to make the input text use a monospace font. This is important if you're asking the user to enter a code or sequence they're unlikely to remember, such as an <a href="/design-system/patterns/ask-for-nhs-numbers">NHS number</a>, booking reference or security code.</p>
+  <p>You do not need to do this for memorable information, such as phone numbers and postcodes.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "text-input",
+    type: "codes-and-sequences"
+  }) }}
 
   <h3 id="prefixes-and-suffixes">Prefixes and suffixes</h3>
   <p>Use prefixes and suffixes to help users enter things like currencies and measurements.</p>

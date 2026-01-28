@@ -13,28 +13,73 @@ export class DesignExample extends Component {
     this.currentTabClass = `${this.tabClass}--current`
     this.hiddenClass = 'js-hidden'
 
-    this.tabs = this.$root.querySelectorAll(`.${this.tabClass}`)
+    this.tabs = this.$root.querySelectorAll(`.${this.tabClass} a`)
     this.examples = this.$root.querySelectorAll(
       '.app-code-snippet__preformatted'
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
-
-    this.iframe = {
-      element: this.$root.querySelector('iframe'),
-      isMouseDown: false
-    }
+    this.iframe = this.$root.querySelector('iframe')
 
     this.bindEvents()
+
+    const hash = window.location.hash
+
+    if (hash.match('^#options-')) {
+      const $optionsElement = this.$root.querySelector(hash)
+      if (!$optionsElement) {
+        return
+      }
+
+      // Is hash for a specific options table? eg. #options-checkboxes-example--hint
+      const isLinkToTable = hash.indexOf('--') > -1
+
+      const exampleName = isLinkToTable
+        ? hash.split('#options-')[1].split('--')[0]
+        : hash.split('#options-')[1]
+
+      if (exampleName) {
+        const $tabLink = this.$root.querySelector(
+          `a[href="#${exampleName}-nunjucks"]`
+        )
+
+        const $optionsDetailsElement = this.$root.querySelector(
+          `#options-${exampleName}-details`
+        )
+
+        if (
+          !($tabLink instanceof HTMLAnchorElement) ||
+          !($optionsDetailsElement instanceof HTMLDetailsElement)
+        ) {
+          return
+        }
+
+        this.handleTabClick($tabLink)
+
+        $optionsDetailsElement.open = true
+
+        window.setTimeout(() => {
+          $tabLink.focus()
+          if (isLinkToTable) $optionsElement.scrollIntoView()
+        }, 0)
+      }
+    }
   }
 
   bindEvents() {
     this.tabs.forEach((tab) =>
-      tab.addEventListener('click', (e) => this.handleTabClick(e))
+      tab.addEventListener('click', (event) => {
+        this.handleTabClick(event.currentTarget)
+        event.preventDefault()
+      })
     )
 
     this.closeButtons.forEach((closeButton) => {
-      closeButton.addEventListener('click', (e) => this.handleCloseClick(e))
+      closeButton.addEventListener('click', (event) => {
+        this.handleCloseClick()
+        event.preventDefault()
+      })
+
       closeButton.removeAttribute('hidden')
     })
 
@@ -42,36 +87,33 @@ export class DesignExample extends Component {
       this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
     }
 
-    if (this.iframe.element) {
-      const { iframe: state } = this
-      const { element: iframe } = this.iframe
-
-      iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
-      iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
-
-      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
+    if (this.iframe) {
+      initialize(
+        {
+          // Prevent resize when iframe has mouse cursor
+          // e.g. When resizing manually using handle
+          onBeforeIframeResize({ interactionState }) {
+            return !interactionState.isHovered
+          }
+        },
+        this.iframe
+      )
     }
   }
 
-  isResizeAllowed() {
-    // Prevent when iframe and body has focus
-    // e.g. When resizing manually using handle
-    return !this.iframe.isMouseDown
-  }
-
-  handleTabClick(e) {
-    const targetEl = e.target.parentElement
-    const index = targetEl.dataset.index
-
-    e.preventDefault()
+  handleTabClick($tabLink) {
+    const $tabParent = $tabLink.parentElement
+    const index = $tabParent.dataset.index
 
     this.tabs.forEach((tab) => {
-      if (tab.classList.contains(this.currentTabClass)) {
-        tab.classList.remove(this.currentTabClass)
+      if (tab.href !== $tabLink.href) {
+        tab.setAttribute('aria-expanded', 'false')
+        tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
 
-    targetEl.classList.add(this.currentTabClass)
+    $tabLink.setAttribute('aria-expanded', 'true')
+    $tabParent.classList.add(this.currentTabClass)
 
     this.exampleToggler(index)
   }
@@ -82,8 +124,9 @@ export class DesignExample extends Component {
     })
 
     this.tabs.forEach((tab) => {
-      if (tab.classList.contains(this.currentTabClass)) {
-        tab.classList.remove(this.currentTabClass)
+      if (tab.parentElement.classList.contains(this.currentTabClass)) {
+        tab.setAttribute('aria-expanded', 'false')
+        tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
   }

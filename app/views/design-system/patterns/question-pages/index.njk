@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Question pages" %}
 {% set pageDescription = "This pattern explains when to use question pages and the elements they can include." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Pages" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "242" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -71,16 +71,24 @@
 
 <h4 id="input">Input</h4>
 <p>For example, a <a href="/design-system/components/text-input">text input</a> box, <a href="/design-system/components/radios">radios</a> or <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
-<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-information-reentry" role="note">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+{% call insetText({
+  visuallyHiddenText: "Information",
+  classes: "app-wcag-inset-text app-wcag-22",
+  id: "wcag-avoid-information-reentry",
+  attributes: { role: "note" }
+}) %}
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
+
   <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they've already provided. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
   <p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
   <ul>
     <li>pre-populating the relevant fields</li>
     <li>showing carried-forward responses as an option for the user to select</li>
   </ul>
-</div>
+{% endcall %}
 
 <h4 id="continue-button">Continue button</h4>
 <p>Make sure your Continue button is:</p>
@@ -93,7 +101,7 @@
 
 <p>For single question pages, using a <code>&lt;legend&gt;</code> or <code>&lt;label&gt;</code> as the page heading is good practice as it means that screen reader users will only hear the contents once. (Use a legend for a group or set of elements as a whole and a label for a specific element, like a text input.)</p>
 <p>Read more about why and how to <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">make labels and legends headings (on&nbsp;GOV.UK)</a> or see the examples below.</p>
-
+<p>Learn how to <a href="/design-system/styles/typography#labels-and-legends">set label and legend sizes on the typography page</a>.</p>
 <p>Here's an example of a question page with a legend as the page heading.</p>
 
   {{ designExample({
@@ -164,9 +172,11 @@
 <p>Only include the total number of questions if you can do so reliably. As the user moves through the form, make sure the indicator updates to tell them which question they are on and the total number remaining.</p>
 <p>Do not use progress indicators, like this one, that show all the questions at once.</p>
 
-<figure class="nhsuk-image app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-5">
-  <img class="nhsuk-image__img app-image__img app-u-full-width" src="/assets/progress-indicator.png" alt="Design of a progress indicator listing each question with a big red cross though it, to show that we shouldn't use this design.">
-</figure>
+{{ image({
+  src: "/assets/progress-indicator.png",
+  alt: "Design of a progress indicator listing each question with a big red cross though it, to show that we shouldn't use this design.",
+  classes: "app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-5"
+}) }}
 
 <p>These can be problematic because they:</p>
 <ul>
@@ -179,11 +189,19 @@
 </ul>
 
 <h3>Using range sliders</h3>
-<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-without-click-drag-task" role="note">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
+{% call insetText({
+  visuallyHiddenText: "Information",
+  classes: "app-wcag-inset-text app-wcag-22",
+  id: "wcag-interact-without-click-drag-task",
+  attributes: { role: "note" }
+}) %}
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
+
   <p>Avoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
   <p>If you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
-</div>
+{% endcall %}
 
 {% endblock %}

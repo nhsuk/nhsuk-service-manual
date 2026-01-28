@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Download accessibility posters" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "December 2021" %}
 {% set backlog_issue_id = "405" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
@@ -17,12 +17,13 @@
 <p><a href="/assets/nhs-digital-accessibility-posters.pdf">Download all 6 accessibility posters (PDF, 88KB)</a></p>
 <p>These posters contain some basic principles of accessibility on a coloured background. Display them in your workplace to encourage your team to think about accessibility and to find out more.</p>
 
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="/assets/accessibility-posters-grid.jpg" alt="3x2 grid view of all 6 accessibility posters">
-  <figcaption class="nhsuk-image__caption">
-    Preview of all 6 accessibility posters
-  </figcaption>
-</figure>
+{{ image({
+  src: "/assets/accessibility-posters-grid.jpg",
+  alt: "3x2 grid view of all 6 accessibility posters",
+  caption: {
+    text: "Preview of all 6 accessibility posters"
+  }
+}) }}
 
 <h2>What the posters say</h2>
 
@@ -61,8 +62,6 @@
 <p>Do 3 kinds of tests: test with people with access needs, do automated tests, and manual testing with guidelines.</p>
 <p>(On a green background, with an icon showing a clipboard with a tick on it.)</p>
 <p><a href="/assets/nhs-digital-testing-accessibility-poster.pdf">Download poster for testing (PDF, 44KB)</a></p>
-
-
 
 {% endblock %}
 

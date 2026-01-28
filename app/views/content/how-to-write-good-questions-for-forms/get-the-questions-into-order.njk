@@ -1,3 +1,4 @@
+{% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Get the questions into order" %}
 {% set pageSection = "Content guide" %}
@@ -5,8 +6,6 @@
 {% set pageDescription = "Think about how the questions flow and group them in a way that makes sense to the user." %}
 {% set dateUpdated = "July 2025" %}
 {% set backlog_issue_id = "329" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/how-to-write-good-questions-for-forms/_breadcrumb.njk" %}
@@ -24,7 +23,7 @@
     <li>1 question they have to answer</li>
   </ul>
 
-  <img class="nhsuk-image__img nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
+  <img class="nhsuk-image__img nhsuk-u-reading-width nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
 
   <p>User research will tell you when you can merge pages together. For example, if you're designing a service for staff who need to repeat and switch between tasks quickly. <a href="/design-system/patterns/question-pages#asking-multiple-questions-on-a-page">Read about asking multiple questions on a page in the Question pages pattern</a>.</p>
 
@@ -32,7 +31,11 @@
   <p>Make sure you're asking 1 question at a time, not 2 or more questions in 1.</p>
 
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p class="nhsuk-u-font-weight-bold">2 questions in 1:</p>
     <p>If you have an email address, can we contact you about research?</p>
     <p class="nhsuk-u-font-weight-bold">4 questions in 1:</p>
@@ -56,8 +59,6 @@
 
   <p>You need to understand which questions your users expect first and how they group them. One way to do this is with a <a href="/content/how-to-write-good-questions-for-forms/test-your-questions#do-a-card-sorting-exercise">card sorting exercise</a>. Test the order again when you prototype your form.</p>
   <p>For example, do users expect to give you personal details at the start or do they want to deal with the task first and give you personal details at the end?</p>
-
-
 
 {% endblock %}
 

@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Notification banners" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -6,22 +8,22 @@
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "559" %}
 
-{% extends "layouts/app-layout.njk" %}
-
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
-
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Notification banners added in August 2025</h3>
     <p>See <a href="/design-system/guides/updating-to-v10#notification-banners">notification banners in version 10</a></p>
-  </div>
+  {% endcall %}
 
 {{ designExample({
   group: "components",
@@ -109,7 +111,8 @@
 {{ designExample({
   group: "components",
   item: "notification-banners",
-  type: "default"
+  type: "default",
+  titleSuffix: "second"
 }) }}
 
 <h2 id="using-the-success-banner">Using the success banner</h2>

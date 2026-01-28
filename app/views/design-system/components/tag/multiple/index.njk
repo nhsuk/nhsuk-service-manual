@@ -1,89 +1,92 @@
-{% from 'tag/macro.njk' import tag %}
+{% from "tag/macro.njk" import tag %}
+{% from "tables/macro.njk" import table %}
 
-<table class="nhsuk-table">
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col"> Application </th>
-      <th class="nhsuk-table__header" scope="col"> Status </th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Leo Cashin
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+{{ table({
+  head: [
+    {
+      text: "Application"
+    },
+    {
+      text: "Status"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Leo Cashin"
+      },
+      {
+        html: tag({
           text: "Urgent",
           classes: "nhsuk-tag--red"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Amy Louth
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Amy Louth"
+      },
+      {
+        html: tag({
           text: "New",
           classes: "nhsuk-tag--blue"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Barbara Angel
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Barbara Angel"
+      },
+      {
+        html: tag({
           text: "New",
           classes: "nhsuk-tag--blue"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Annette Armstrong
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Annette Armstrong"
+      },
+      {
+        html: tag({
           text: "New",
           classes: "nhsuk-tag--blue"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Vishal Gurudutt
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Vishal Gurudutt"
+      },
+      {
+        html: tag({
           text: "New",
           classes: "nhsuk-tag--blue"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Rachel Preece
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Rachel Preece"
+      },
+      {
+        html: tag({
           text: "Finished",
           classes: "nhsuk-tag--green"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Tom Hunter
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Tom Hunter"
+      },
+      {
+        html: tag({
           text: "Waiting on",
           classes: "nhsuk-tag--yellow"
-        })}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+        })
+      }
+    ]
+  ]
+}) }}

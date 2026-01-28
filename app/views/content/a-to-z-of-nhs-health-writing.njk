@@ -1,10 +1,10 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "A to Z of NHS health writing" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Words and phrases we use to make our content about health and the NHS easy to understand." %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "318" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block head %}
   <meta name="page-index" content="special">
@@ -113,8 +113,12 @@
       <p>It's OK to use "abdomen" where people are familiar with this term. For example, we know that pregnant women talk about "abdominal pain".</p>
       <p>If users may not be familiar with "abdomen" but are likely to hear their GP or another health professional use this word, we may add "abdomen" after "tummy".</p>
       <div class="app-example app-example--content">
-      <strong class="nhsuk-tag app-example__heading">Example</strong>
-      <p>a dull ache in your tummy (abdomen)</p>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
+        <p>a dull ache in your tummy (abdomen)</p>
       </div>
       <h3 id="absorb">absorb</h3>
       <p>We use "take in".</p>
@@ -125,6 +129,18 @@
       <h3 id="acute">acute</h3>
       <p>We prefer "sudden", "starts suddenly", "in a short period of time" or, where appropriate, "short-term".</p>
       <p>We do use "acute" in the names of conditions like "acute lymphoblastic leukaemia". We also use it if our search analytics, user testing or survey feedback suggest that people will hear their doctor use the word "acute" or will search for it. If we use it, we explain what it means.</p>
+      <h3 id="addresses">addresses</h3>
+      <p>Display addresses vertically.</p>
+      <p>For example:</p>
+      <p>NHS England London<br>  
+      10 South Colonnade<br>   
+      Poplar<br> 
+      London<br>  
+      E14 4PU</p>
+      <p>Start each part of the address on a new line. Write the town and postcode on separate lines. Do not use punctuation at the end of each line.</p>  
+      <p>If you need to display addresses horizontally, for example to present multiple addresses on results pages, punctuate them. For example:</p>  
+      <p>NHS England, 7 and 8 Wellington Place, Leeds, West Yorkshire, LS1 4AP</p>  
+      <p>To ask users for their address, use <a href="https://design-system.service.gov.uk/patterns/addresses/">the address pattern in the GOV.UK design system</a>.</p>
       <h3 id="affects">affects</h3>
       <p>It's alright to use "affects" but in some contexts, for example with medicines, it can be better to say that "something changes the way something else works". </p>
       <p>Check a dictionary if you're not sure of the difference between "affect" and "effect".</p>
@@ -193,7 +209,11 @@
       <p>Use a capital letter when you're writing about ethnicity or when you're asking users for their ethnic group.</p>
       <p>Use lower case when you're writing about skin colour.</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Examples</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <ul>
           <li>"Black, Asian, African, Black British or Caribbean"</li>
           <li>"On white skin the rash can appear red, but on brown and black skin the rash may be harder to see."</li>
@@ -218,8 +238,7 @@
       <h3 id="bowel-movement">bowel movement</h3>
       <p>See <a href="#poo">poo</a>.</p>
       <h3 id="brackets">brackets</h3>
-      <p>You can use round brackets ( ) but do not overuse them.</p>
-      <p>Do not use brackets to refer to something that could either be singular or plural, like "lie down with your leg(s) on cushions". If in doubt, use the plural: legs.</p> 
+      <p>See the guidance on <a href="/content/punctuation#brackets">brackets on the Punctuation page</a>.</p>
       <h3 id="braille">Braille</h3>
       <p>Starts with a capital letter.</p>
       <h3 id="breast-milk">breast milk</h3>
@@ -441,12 +460,16 @@
       <p>We prefer the words "high <a href="#temperature">temperature</a>" to "fever", for example in a list of symptoms. Our user research shows that "fever" is not a well understood word.</p>
       <p>But we still use it when we're writing specifically about fever or different types of fever (such as scarlet fever).</p>
       <h3 id="fit">fit</h3>
-      <p>See <a href="#seizure-or-fit">seizure or fit</a>.</p>
+      <p>See <a href="#seizure-fit">seizure (fit)</a>.</p>
       <h3 id="fit-note">fit note</h3>
       <p>Use "fit note (sick note)" at first mention, then use "fit note".</p>
       <p>Or, if your users need more information, explain it in a sentence.</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <p>If you are unwell and cannot work, you may need a fit note (sometimes called a sick note) for your employer.</p>
       </div>
       <h3 id="flatulence">flatulence</h3>
@@ -492,7 +515,11 @@
       <p>Not all users are registered with a GP or have a regular GP. We use "a GP" to emphasise that users should get help and that it doesn't matter which GP they see.</p>
       <p>Once we've used "a GP", we follow up with "the GP".</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <p>Talk to a GP about your condition. The GP might suggest...</p>
       </div>
       <h4>your GP</h4>
@@ -626,10 +653,10 @@
       <h3 id="kidney">kidney</h3>
       <p>We use "kidney" instead of "renal".</p>
       <p>We may mention "renal" as well as "kidney" if our search analytics, user testing or survey feedback suggest that people will hear their doctor use "renal" or will search for it.</p>
-      <h3 id="kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes (KB and MB)</h3>  
-      <p>Use MB for anything over 1MB: 4MB not 4096KB.</p>   
-      <p>Use KB for anything under 1MB: 569KB not 0.55MB.</p> 
-      <p>Find out how we use KB and MB for document size in our guidance on <a href="/content/formatting#links">links</a>.</p> 
+      <h3 id="kilobytes-and-megabytes-KB-and-MB">kilobytes and megabytes (KB and MB)</h3>
+      <p>Use MB for anything over 1MB: 4MB not 4096KB.</p>
+      <p>Use KB for anything under 1MB: 569KB not 0.55MB.</p>
+      <p>Find out how we use KB and MB for document size in our guidance on <a href="/content/formatting#links">links</a>.</p>
       <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
         Back to top
       </a>
@@ -697,7 +724,7 @@
       <p>We write "breast milk" as two words.</p>
       <h3 id="money">money</h3>
       <p>Do not use decimals unless pence are included. Write "£75" and "£75.50", but not "£75.00".</p>
-      <p>Write out "pence" in full: "Calls will cost 4 pence a minute from a landline".</p>  
+      <p>Write out "pence" in full: "Calls will cost 4 pence a minute from a landline".</p>
       <p>See also our guidance on <a href="/content/numbers-measurements-dates-time">numbers, measurements, dates and time</a>.</p>
       <h3 id="morning-after-pill">morning after pill</h3>
       <p>Lower case without hyphens. It can be "emergency contraception".</p>
@@ -706,7 +733,11 @@
       <h3 id="mucus-and-mucous">mucus and mucous</h3>
       <p>"Mucus" is a noun. "Mucous" is an adjective.</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <p>If you have allergic rhinitis, the inside layer of your nose (the mucous membrane) may become swollen and you may produce a lot of mucus.</p>
       </div>
       <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
@@ -738,11 +769,15 @@
       <p>To avoid repetition of "NHS App", you can use "the app" where needed, for example "You can also order repeat prescriptions in the app".</p>
       <p>When referring to something inside the NHS App, use "in" the app, not "on" or "with" the app.</p>
       <div class="app-example app-example--content">
-      <strong class="nhsuk-tag app-example__heading">Example</strong>
-      <p>You can get health advice in the NHS App.</p>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
+        <p>You can get health advice in the NHS App.</p>
       </div>
       <p>When advising users about the browser version of the NHS App, we say: "You can also access NHS App services from the browser on your desktop or laptop computer".</p>
-      <p><a href="https://digital.nhs.uk/services/nhs-app">Find out more about the NHS App on NHS Digital's website.</a></p>
+      <p><a href="https://digital.nhs.uk/services/nhs-app">Find out more about the NHS App on NHS England's website.</a></p>
       <p>See also "<a href="#app">app</a>".</p>
       <h3 id="nhs-england">NHS England (NHSE)</h3>
       <p>The full name of the organisation is NHS England. The abbreviation is NHSE.</p>
@@ -750,23 +785,22 @@
       <p>We write "login" in lower case and as one word. <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">The NHS login</a> lets people see their personal health information online.</p>
       <p>See also "<a href="#log-in-and-log-out">log in and log out</a>".</p>
       <h3 id="nhs-number">NHS number</h3>
-      <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 485 777 3456. (This is an example or test number.)</p>
+      <p>Write the NHS number as 3 groups of numbers, with a single space between them, like this: 999 123 4567. (This is an example or test number.)</p>
       <p>The format is 3 3 4: 2 groups of 3 digits followed by 4 digits.</p>
-      <p>Make sure that you:</p>
-      <ul>
-        <li>use this format whenever you include an example or include an NHS number</li>
-        <li>keep the NHS number on 1 line - do not allow it to break over 2 lines</li>
-        <li>only use a space as a separator - do not use dashes or dots</li>
-        <li>do not use a real NHS number as an example - use 485 777 3456 or 123 456 7890</li>
-      </ul>
       <p>This number format makes it easier for people and assistive technologies to read. It also makes it less likely that people will make mistakes.</p>
       <p>Ask your frontend or coding colleagues how to stop the NHS number breaking over 2 lines.</p>
+      <p>Make sure that you:</p>
+      <ul>
+        <li>use this format whenever you include an NHS number</li>
+        <li>only use a space as a separator – do not use dashes or dots</li>
+        <li>do not use a real NHS number as an example – use 999 123 4567 or another number that starts with 9 as these are test numbers and not given to real patients</li>
+      </ul>
       <p>See our design pattern for <a href="/design-system/patterns/ask-for-nhs-numbers"> asking users for their NHS number</a>.</p>
       <h3 id="nhs-website">NHS website</h3>
       <p>Lower case "website". The NHS website is <a href="https://www.nhs.uk">the website at nhs.uk</a>.</p>
       <h3 id="nhs.uk-and-nhs.uk">nhs.uk and NHS.UK</h3>
       <p>When we're referring to <a href="https://www.nhs.uk">the website at nhs.uk</a>, we call it "the NHS website". We give the url in lower case.</p>
-      <p>If we're talking about NHS.UK as a programme in NHS Digital, we use capital letters.</p>
+      <p>If we're talking about NHS.UK as a programme in NHS England, we use capital letters.</p>
       <h3 id="nhsx">NHSX</h3>
       <p>We no longer use NHSX. It is now part of the Transformation Directorate at NHS England.</p>
       <h3 id="normally">normally</h3>
@@ -905,7 +939,11 @@
       <p>If you use the word "positive" in the context of test results, be aware that some users may interpret it as positive news. In other words, they may think they do not have the disease.</p>
       <p>If you have to use "positive", because this is the word people will hear when they get their test results, explain what it means. Positive means the test found what it was looking for.</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <p>A positive result means it's likely you had COVID-19 when the test was done.</p>
       </div>
       <h3 id="practice">practice</h3>
@@ -917,7 +955,7 @@
       <p>With a hyphen.</p>
       <h3 id="preconception-care">preconception care</h3>
       <p>We prefer "planning your pregnancy" or "thinking about your health before you get pregnant" or just "getting pregnant". This is the kind of language our users use.</p>
-      <p>Clinicians sometimes use "preconception care" when they're talking about women who need special care before they get pregnant - for example, changes to their medicine. We do not use "preconception care" as a topic. Instead we give specific advice where people need it, for example: "Talk to your doctor if you want to get pregnant. It's best to stop taking [name of medicine] at least 3 months before you start trying for a baby."</p>
+      <p>Clinicians sometimes use "preconception care" when they're talking about women who need special care before they get pregnant, for example changes to their medicine. We do not use "preconception care" as a topic. Instead we give specific advice where people need it, for example: "Talk to your doctor if you want to get pregnant. It's best to stop taking [name of medicine] at least 3 months before you start trying for a baby."</p>
       <h3 id="premenstrual-syndrome">premenstrual syndrome</h3>
       <p>See "<a href="#pms-(premenstrual-syndrome)">PMS (premenstrual syndrome)</a>".</p>
       <h3 id="prognosis">prognosis</h3>
@@ -947,7 +985,11 @@
       <p>Rapid lateral flow tests show the result on the device that comes with the test.</p>
       <p>Use "rapid lateral flow test".</p>
       <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
         <p>Report an NHS rapid lateral flow test result on GOV.UK.</p>
       </div>
       <p>Use "rapid lateral flow device" for the device used as part of a rapid lateral flow test.</p>
@@ -1004,12 +1046,16 @@
       <p>See "<a href="#drowsy">drowsy</a>".</p>
       <h3 id="seek">seek</h3>
       <p>We say "ask for".</p>
-      <h3 id="seizure-or-fit">seizure or fit</h3>
-      <p>We add the word "fit" after "seizure" ("seizure or fit") in content about epilepsy, brain cancer and brain tumours. We know that "seizure" is the word that people with epilepsy use, understand and generally prefer and that it's not the same as a "fit" (which is a kind of seizure that makes the body jerk and shake uncontrollably). But some of our users do not understand the word "seizure" and including the word "fit" when we first mention seizures helps them.</p>
-      <p>In general content, for example, with medicines that might make people jerk and shake uncontrollably as a side effect, we use the term "seizure or fit" and explain that this is what we mean.</p>
+      <h3 id="seizure-fit">seizure (fit)</h3>
+     <p>Use:</p>
+     <ul>
+      <li>"seizure (fit)" in most contexts, for example medicines side effects or as a symptom, with "fit" only included at 1st mention</li> 
+      <li>"seizure (sometimes called fit)" in content about epilepsy or brain tumours aimed at a general audience</li>
+      <li>"seizure" without any mention of "fit" in content aimed specifically at people with epilepsy (in other words, information not targeted at the general public)</li>
+      </ul>
       <p>We only mention "convulsions" where there's good evidence that users are searching for the term.</p>
       <h3 id="service-user">service user</h3>
-      <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" - or in social services "people who use services".</p>
+      <p>We prefer "<a href="#people-or-patients">people" or "patients</a>" – or in social services "people who use services".</p>
       <h3 id="setting">setting</h3>
       <p>We avoid the term "hospital setting". We just say "in hospital".</p>
       <p>Instead of "community setting", we mention the place, for example, "in school", "in a clinic" or "at home".</p>
@@ -1090,8 +1136,8 @@
       <p>In a list of symptoms, we say "a high temperature" or "if your child is feeling hotter than usual if you touch their neck, back or tummy".</p>
       <p>When we're telling people to do something about a high temperature in an adult or a child over 6 months old (for example, in the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care, with care cards</a>), we say:</p>
       <ul>
-        <li>"if your temperature is very high, or you feel hot or shivery"</li>
-        <li>"if your child's temperature is very high, or they feel hot or shivery"</li>
+        <li>"if your temperature is very high, or you feel hot, cold or shivery"</li>
+        <li>"if your child's temperature is very high, or they feel hot, cold or shivery"</li>
       </ul>
       <p>The exception is when talking about the temperature of a child under 6 months old. In these cases we state a specific temperature and say:</p>
       <ul><li>"if your child is under 3 months old and has a temperature of 38C or higher, or you think they have a high temperature"</li>
@@ -1128,7 +1174,7 @@
       <p>See the guidance on <a href="/content/formatting#bold-italics-and-underlining">underlining on the Formatting page</a>.</p>
       <h3 id="united-kingdom">United Kingdom</h3>
       <p>Use "United Kingdom" or "UK" rather than "Britain" or "Great Britain".</p>
-      <p>United Kingdom includes England, Scotland, Wales and Northern Ireland. Great Britain refers only to England, Scotland and Wales.</p>   
+      <p>United Kingdom includes England, Scotland, Wales and Northern Ireland. Great Britain refers only to England, Scotland and Wales.</p>
       <p>Our work is focused on the NHS in England. Take care not to refer to the UK when you mean England.</p>
       <h3 id="unplanned">unplanned</h3>
       <p>Use "unplanned' rather than "unwanted" when talking about pregnancy.</p>
@@ -1147,24 +1193,32 @@
       <h3 id="vaccination">vaccination</h3>
       <p>We use "vaccination" for the process or national programme. (We do not say "immunisation programme".)</p>
       <div class="app-example app-example--content">
-      <strong class="nhsuk-tag app-example__heading">Examples</strong>
-      <ul>
-        <li>NHS vaccination schedule</li>
-        <li>flu vaccination programme</li>
-        <li>COVID-19 vaccination programme</li>
-      </ul>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
+        <ul>
+          <li>NHS vaccination schedule</li>
+          <li>flu vaccination programme</li>
+          <li>COVID-19 vaccination programme</li>
+        </ul>
       </div>
       <p>Most people search for "vaccination", not "immunisation".</p>
       <p>"Vaccination" includes injections and oral or nasal spray.</p>
       <h3 id="vaccine">vaccine</h3>
       <p>We use "vaccine" for the dose people get as part of a vaccination programme.</p>
       <div class="app-example app-example--content">
-      <strong class="nhsuk-tag app-example__heading">Examples</strong>
-      <ul>
-        <li>the 6‑in‑1 vaccine</li>
-        <li>the HPV vaccine</li>
-        <li>you will have the vaccine as an injection in (part of the body)</li>
-      </ul>
+        {{ tag({
+          text: "Example",
+          classes: "app-example__heading"
+        }) }}
+
+        <ul>
+          <li>the 6‑in‑1 vaccine</li>
+          <li>the HPV vaccine</li>
+          <li>you will have the vaccine as an injection in (part of the body)</li>
+        </ul>
       </div>
     <p>Use "COVID-19 vaccine".</p>
     <p>Use "COVID-19 vaccination" for the vaccination process or programme.</p>
@@ -1197,6 +1251,8 @@
       <h3 id="white-skin">white skin</h3>
       <p>We talk about skin colour clearly and use terms that are easy to understand, including "white skin". We do not describe white skin as "fair" or "light".</p>
       <p>See the guidance on <a href="/content/inclusive-content/skin-symptoms">skin symptoms in the Inclusive content section</a>.</p>
+      <h3 id="wi-fi">Wi-Fi</h3>
+      <p>With capital letters and a hyphen. Find out more about <a href="https://digital.nhs.uk/services/nhs-wifi">NHS Wi-Fi on NHS England's website</a>. 
       <h3 id="wind">wind</h3>
       <p>We use "wind" when we're talking about babies. For example, "bringing up wind".</p>
       <p>We also use it when we're talking about "trapped wind" or bloating.</p>
@@ -1233,7 +1289,5 @@
       </a>
     </div>
     </div>
-
-
 
 {% endblock %}

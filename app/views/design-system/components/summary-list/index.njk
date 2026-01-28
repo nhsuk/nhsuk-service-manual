@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Summary list" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the summary list to summarise information, for example, a user's responses at the end of a form." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "36" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -35,42 +35,45 @@
   <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="/design-system/patterns/complete-multiple-tasks">complete multiple tasks pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
   <h2>How to use summary lists</h2>
-  <p>There are 2 ways to use the summary list component. You can use HTML or, if you're using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK prototype kit</a>, you can use the Nunjucks macro.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "summary-list",
-    type: "default"
-  }) }}
 
   <h3 id="summary-list-with-actions">Summary list with actions</h3>
   <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-row-actions" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-interact-row-actions",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>Make sure any "Change" or other action links are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-change-answers" role="note">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
-
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-change-answers",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
     <p>If a user decides to go back to a previous answer through a link, make sure information they have already entered is pre-populated.</p>
     <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <p>People who use assistive technology, like a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 
   {{ designExample({
     group: "components",
     item: "summary-list",
-    type: "default"
+    type: "default",
+    titleSuffix: "second"
   }) }}
 
   <h3 id="summary-list-without-actions">Summary list without actions</h3>
@@ -91,5 +94,62 @@
   }) }}
 
   <p>To remove borders on a single row, use the <code>nhsuk-summary-list__row--no-border</code> class.</p>
+
+  <h2 id="summary-cards">Summary cards</h2>
+  <p>If you're showing multiple summary lists on a page, you can show each list within a summary card. This lets you visually separate each summary list and give each a title and some actions.</p>
+
+  <p>Use summary cards when you need to show:</p>
+  <ul>
+    <li>multiple summary lists that all describe the same type of thing, such as people</li>
+    <li>actions that will apply to all the items in a list</li>
+  </ul>
+  <p>Summary cards are often used in case working systems to help users quickly view a set of information and related actions.</p>
+
+  <p>Do not use summary cards if you only need to show a small amount of related information. Use summary lists instead, and structure them with headings if needed.</p>
+
+  <p>If you're showing summary cards at the end of a longer journey, you might want to familiarise the user with them earlier on, such as when the user reviews individual sections.</p>
+
+  <h3 id="card-titles">Card titles</h3>
+  <p>Use the summary card's header area to give each summary list a title.</p>
+
+  <p>Each title must be unique and help identify what the summary list describes. For example, this could be the name of a specific person, organisation or professional qualification.</p>
+
+  <p>Try to keep titles short and relevant. You can use 1 or 2 important values in the summary list, such as the first and last name of a person.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "summary-card"
+  }) }}
+
+  <p>The example uses the <code>nhsuk-summary-list__row--no-border</code> class to remove the bottom border of the last row.</p>
+
+  <h3 id="card-actions">Card actions</h3>
+  <p>You can add card actions in the header, which will be shown after the summary card's title.</p>
+
+  <p>For example, if you have multiple rows with "change" actions that all take the user to the same place, you can show a single "change" card action instead. This helps avoid repeating the same row action on every row.</p>
+
+  <p>Card actions are shown in bold text to make them visually distinct from row actions. They help alert the user that the card action will affect the entire summary card.</p>
+
+  <p>Write link text for card actions to tell the user what the card action will do and that it will apply to the entire summary card. It should also be as short as possible, usually 2 words.</p>
+
+  <p>Example card actions include:</p>
+  <ul>
+    <li>Remove appointment</li>
+    <li>Edit appointment</li>
+    <li>Update issue</li>
+    <li>Approve application</li>
+    <li>Cancel order</li>
+  </ul>
+
+  <p>Keep it short and do not add more than 2 to 3 actions in a header.</p>
+
+  <p>If a card action cannot easily be undone or might have serious consequences, consider adding a warning or asking the user for confirmation.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "summary-list",
+    type: "summary-card-with-actions"
+  }) }}
 
 {% endblock %}

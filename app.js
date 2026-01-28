@@ -13,6 +13,7 @@ const config = require('./app/config')
 const locals = require('./app/locals')
 const fileHelper = require('./lib/file-helper')
 const filters = require('./lib/filters')
+const macroOptions = require('./lib/macro-options')
 const PageIndex = require('./lib/page-index')
 const authentication = require('./middleware/authentication')
 const routing = require('./middleware/routing')
@@ -36,7 +37,10 @@ app.use(compression())
 // by setting http headers
 app.use(
   helmet({
-    contentSecurityPolicy: false
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: {
+      policy: 'cross-origin'
+    }
   })
 )
 
@@ -127,14 +131,22 @@ const env = nunjucks.configure(config.nunjucksPaths, {
  */
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode)
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
-env.addGlobal('getNunjucksParams', fileHelper.getNunjucksParams)
 env.addGlobal('getAssetPath', fileHelper.getAssetPath)
+env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
+env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
 env.addFilter('highlight', filters.highlight)
+env.addFilter('kebabCase', filters.kebabCase)
 env.addFilter('markdown', filters.markdown)
+env.addFilter('slugify', filters.slugify)
 
 // Render standalone design examples
-app.get('/design-example/:group/:item/:type', (req, res) => {
+app.get('/design-example/:group/:item/:type', (req, res, next) => {
   const { group, item, type } = req.params
+
+  // Continue to 404 page
+  if (!fileHelper.hasNunjucksPath({ group, item, type })) {
+    return next()
+  }
 
   // Get the given example as HTML.
   const exampleHtml = fileHelper.getHTMLCode({
@@ -161,7 +173,7 @@ app.get('/design-example/:group/:item/:type', (req, res) => {
 })
 
 app.get('/search', (req, res) => {
-  const query = req.query['search-field'] || ''
+  const query = req.query.q
   const resultsPerPage = 10
   let currentPage = parseInt(req.query.page, 10)
   const results = pageIndex.search(query)
@@ -188,7 +200,7 @@ app.get('/suggestions', (req, res) => {
   const results = pageIndex.search(req.query.search)
   const slicedResults = results.slice(0, 10)
   res.set({ 'Content-Type': 'application/json' })
-  res.send(JSON.stringify(slicedResults))
+  res.status(200).send(JSON.stringify(slicedResults))
 })
 
 app.get('/assets/NHS_design_principles.pdf', (req, res) => {
@@ -262,6 +274,12 @@ app.get(
   }
 )
 
+// Redirects for design system examples
+
+app.get('/design-example/components/checkboxes/hint', (req, res) => {
+  res.redirect('/design-example/components/checkboxes/hint-text')
+})
+
 // Redirects for design system patterns
 
 app.get(
@@ -297,11 +315,6 @@ app.get('/content/pdfs', (req, res) => {
 
 // REDIRECT STOPS HERE
 
-// Automatically route pages
-app.get(/^([^.]+)$/, (req, res, next) => {
-  routing.matchRoutes(req, res, next)
-})
-
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' })
@@ -314,9 +327,13 @@ app.get('/robots.txt', (_, res) => {
   res.render('robots.txt')
 })
 
+// Automatically route pages
+app.use(routing.matchRoutes)
+
 // Render 404 page
-app.all('*', (_, res) => {
+app.all('/*subPaths', (_, res) => {
   res.statusCode = 404
+  res.locals.basePath = '/page-not-found'
   res.render('page-not-found')
 })
 

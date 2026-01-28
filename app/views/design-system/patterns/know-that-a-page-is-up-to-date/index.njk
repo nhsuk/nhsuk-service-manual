@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Know that a page is up to date" %}
 {% set pageDescription = "Use review dates to let users know when a page was last checked and will be checked again." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Help users to" %}
-{% set dateUpdated = "July 2022" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "31" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -46,12 +46,14 @@
   <p>Review dates for embedded content should sit close to the content they relate to. Include the last reviewed date (usually the production date) and next review date in the component that holds the embedded content. This is in addition to the page review date.</p>
   <p>For example:</p>
 
-  <figure class="nhsuk-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-7">
-    <img class="nhsuk-image__img app-u-full-width" src="/assets/review-date-pattern-embedded-content.png" alt="Image of video showing exercise trainer doing workout on mat in fitness studio">
-    <figcaption class="nhsuk-image__caption">
-      Example of review date used under a video
-    </figcaption>
-  </figure>
+  {{ image({
+    src: "/assets/review-date-pattern-embedded-content.jpg",
+    alt: "Video player with a caption below showing review dates",
+    caption: {
+      text: "Example of review date used under a video"
+    },
+    classes: "app-image app-image--border nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-7"
+  }) }}
 
   <h3>The review process</h3>
   <p>A page review involves reviewing the whole page to check that it is still accurate and up to date. Whole page reviews should be part of a planned content lifecycle where you create, then update or delete outdated content.</p>

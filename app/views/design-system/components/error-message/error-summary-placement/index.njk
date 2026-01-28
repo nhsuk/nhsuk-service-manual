@@ -4,10 +4,10 @@ previewLayout: design-example-wrapper-full
 
 {% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
-{% from 'back-link/macro.njk' import backLink %}
-{% from 'button/macro.njk' import button %}
-{% from 'date-input/macro.njk' import dateInput %}
-{% from 'error-summary/macro.njk' import errorSummary %}
+{% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+{% from "date-input/macro.njk" import dateInput %}
+{% from "error-summary/macro.njk" import errorSummary %}
 
 {% block beforeContent %}
   {{ backLink({
@@ -36,7 +36,7 @@ previewLayout: design-example-wrapper-full
           fieldset: {
             legend: {
               text: "What is your date of birth?",
-              classes: "nhsuk-fieldset__legend--l",
+              size: "l",
               isPageHeading: true
             }
           },
@@ -50,12 +50,12 @@ previewLayout: design-example-wrapper-full
             {
               name: "day",
               classes: "nhsuk-input--width-2",
-              value: 15
+              value: "15"
             },
             {
               name: "month",
               classes: "nhsuk-input--width-2",
-              value: 3
+              value: "3"
             },
             {
               name: "year",

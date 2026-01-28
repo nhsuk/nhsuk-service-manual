@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Care cards" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -6,15 +8,16 @@
 {% set dateUpdated = "January 2024" %}
 {% set hideContact = "true" %}
 
-{% extends "layouts/app-layout.njk" %}
-
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-4"><p>Go to the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care</a>.</p>
-  </div>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
+    <p>Go to the pattern to <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">help users decide when and where to get care</a>.</p>
+  {% endcall %}
 
 <p>It includes 3 care cards for 3 levels of care:</p>
 <ul>
@@ -22,6 +25,5 @@
   <li>urgent care card (red)</li>
   <li>emergency care card (red and dark grey)</li>
 </ul>
-
 
 {% endblock %}

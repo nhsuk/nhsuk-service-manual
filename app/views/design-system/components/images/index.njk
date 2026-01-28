@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Images" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "January 2025" %}
 {% set backlog_issue_id = "28" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}

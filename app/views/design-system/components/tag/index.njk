@@ -1,13 +1,13 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Tag" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the tag component when it's possible for something to have more than 1 status and it's useful for the user to know about that status. For example, you can use a tag to show whether an item in a task list has been \"completed\"." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "174" %}
 {% set hideDescription = "true" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -42,14 +42,19 @@
     type: "multiple"
   }) }}
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-tag-no-dragging-reorder" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-tag-no-dragging-reorder",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>Any tag implementation that allows the user to change the order of tags must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <h3 id="using-colour-with-tags">Using colour with tags</h3>
   <p>You can use colour to help distinguish between different tags – or to help draw the user's attention to a tag if it's especially important. For example, it makes sense to use  <code>nhsuk-tag--red</code> for a tag that reads "Urgent".</p>

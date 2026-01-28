@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Start page" %}
 {% set pageDescription = "Use this pattern to help users start a service." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "October 2021" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "169" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}
@@ -50,8 +50,12 @@
     <li>avoid dead ends, if they're in the wrong place, and find what they need through surrounding navigation elements</li>
   </ul>
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
-    <p>The <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/book-coronavirus-vaccination/">Book or manage your coronavirus (COVID-19) vaccination service on the NHS website</a> is in the section about coronavirus (COVID-19).</p>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
+    <p>The <a href="https://www.nhs.uk/nhs-services/vaccination-and-booking-services/book-covid-19-vaccination/">Book, change or cancel a COVID-19 vaccination appointment service on the NHS website</a> is in the section about vaccination and booking services.</p>
     <p>The start page links to other information people want to know about COVID-19 vaccines.</p>
   </div>
   <p>If possible:</p>

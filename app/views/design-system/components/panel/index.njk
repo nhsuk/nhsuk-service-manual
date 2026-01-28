@@ -1,12 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Panel" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a panel to highlight that users have done something successfully." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "February 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "537" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -23,6 +23,7 @@
   <h2 id="when-to-use">When to use a panel</h2>
   <p>Use the panel component to display important information when a transaction has been completed.</p>
   <p>In most cases, the panel component is used on <a href="/design-system/patterns/confirmation-page">confirmation pages</a>, to tell the user they have successfully completed the transaction.</p>
+  <p>You can also use an <a href="#interruption-panel">interruption panel</a> to pause a user's journey with important information.</p>
 
   <h2 id="when-not-to-use">When not to use a panel</h2>
   <p>Never use the panel component to highlight important information in body content. Instead consider using:</p>
@@ -40,8 +41,23 @@
   </ul>
 
   <h3 id="how-to-write-panel-text">How to write panel text</h3>
-  <p>Keep your panel text brief. It only needs to summarise what has happened. For example, "Application complete".</p>
+
+  <p>Keep your panel heading text brief. It only needs to summarise what has happened. For example, "Application complete".</p>
+
   <p>Use short words and phrases to make sure highlighted information is easy to read at different screen sizes. Shorter text is less likely to wrap around the panel, which can happen when using the zoom function on mobiles.</p>
-  <p>If you need to give detailed information, or more context, use the description text under the heading text.</p>
+
+  <p>If the panel heading needs to be longer, you can reduce the text size by adding the <code>nhsuk-panel__title--l</code> class or setting the <code>titleSize: "l"</code> Nunjucks macro option.</p>
+
+  <p>You can add more context or details by using additional text under the heading.</p>
+
+  <h3 id="interruption-panel">Interruption panel</h3>
+
+  <p>If you need to pause a user's journey with important information, use an interruption panel. Read the guidance on the <a href="/design-system/patterns/interruption-page">interruption page pattern</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "panel",
+    type: "interruption"
+  }) }}
 
 {% endblock %}

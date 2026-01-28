@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Testing" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Accessibility guidance for:" %}
 {% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "350" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}
@@ -19,7 +19,6 @@
     <li>a full list of WCAG 2.2 success criteria and guidance for levels A and AA</li>
     <li>some success criteria and best practice for level AAA</li>
   </ul>
-
 
   {% include "./partials/make-sure-your-service-meets-wcag-2-2.njk" %}
   {% include "./partials/understand-types-of-testing.njk" %}

@@ -5,6 +5,7 @@ previewLayout: design-example-wrapper-blank
 {% extends "template.njk" %}
 
 {% block head %}
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/nhsuk-frontend.min.css") }}">
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
 {% endblock %}
 
@@ -33,7 +34,7 @@ previewLayout: design-example-wrapper-blank
     <div class="app-annotate-block">
     <span class="app-annotate-block__label">block: beforeContent</span>
     {{ super() }}
-    {% from 'back-link/macro.njk' import backLink %}
+    {% from "back-link/macro.njk" import backLink %}
 
     {{ backLink({
       href: "/",
@@ -70,5 +71,9 @@ previewLayout: design-example-wrapper-blank
     {{ super() }}
   </div>
 
-  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
+  <script src="/javascripts/nhsuk-frontend.min.js" type="module"></script>
+  <script type="module">
+    import { initAll } from '/javascripts/nhsuk-frontend.min.js'
+    initAll()
+  </script>
 {%- endblock %}

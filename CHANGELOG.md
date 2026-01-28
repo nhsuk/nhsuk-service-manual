@@ -6,6 +6,78 @@
 
 - Add guidance on planning and writing text messages and emails
 
+## 8.6.1 - 26 January 2026
+
+:wrench: **Maintenance**
+
+- Add guidance for border bottom class to summary cards
+- Fix top-level page routing with trailing slashes
+
+## 8.6.0 - 19 January 2026
+
+:new: **New features**
+
+- Add new file upload component
+- Add new interruption page pattern
+- Add interruption panel to panel component
+- Add summary cards to summary list component
+- Add new entries for addresses and Wi-Fi to A to Z in content guide
+- Update entry for seizure (fit) in A to Z in content guide
+- Improved Nunjucks macro option documentation
+
+:wrench: **Maintenance**
+
+- Amend page summary for service standard 3 to align with GOV's
+- Update and add links in service standards 5 and 11
+- Remove outdated beta label from service standard 11
+- Bring service standard 13 into closer alignment with GOV's
+- Update service standard 16 with clinical colleagues
+- Review and update service standard 17 with interoperability standards team
+- Move brackets content to punctuation page
+- Specify that we use en dashes and change hyphens used as dash to en dash
+- Add "third party" to guidance on numbers, measurements, dates and time
+- Add word "cold" to guidance on writing about temperature in A to Z
+- Update outdated references to NHS Digital, and fix broken links
+- Reorganise XML site map
+
+## 8.5.1 - 16 December 2025
+
+:new: **New features**
+
+- Add guidance on setting label and legend sizes
+- Mention staff-facing services on service manual home page and design system index page
+
+:wrench: **Maintenance**
+
+- Use NHS.UK frontend CSS and JS in design example previews
+
+## 8.5.0 - 27 November 2025
+
+:new: **New features**
+
+- Add password input component
+- Add smaller buttons
+- Add guidance on codes and sequences class for text input component
+
+## 8.4.0 - 19 November 2025
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update section on avoiding binary choices in forms guidance
+- Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
+- Update select component guidance to bring it closer to GOV.UK design system
+
+:wrench: **Maintenance**
+
+- Change dummy NHS number to 999 123 4567
+- Update NHS number examples across design system, including adding span class (in details, hint text, and text input)
+- Update coded examples on breadcrumb, care cards, checkboxes, fieldset, error summary, hint text, inset text, radios, select, start page and text input component pages and in forms guidance
+- Bring guidance on labels and text input into line with GOV.UK
+- Remove duplicate example from summary list component
+- Change Active tag from green to blue
+- Update video review date on pattern for helping users know that a page is up to date
+
 ## 8.3.0 - 4 November 2025
 
 :new: **New features**

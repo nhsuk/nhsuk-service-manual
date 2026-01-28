@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Date input" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Form elements" %}
 {% set dateUpdated = "June 2021" %}
 {% set backlog_issue_id = "10" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -26,7 +26,6 @@
   <h2>When not to use date input</h2>
   <p>Do not use date input if users are unlikely to know the exact date you're asking about.</p>
 
-
   <h2>How to use date input</h2>
   <p>Date input consists of 3 fields to let users enter a day, month and year.</p>
   <p class="rich-text">Group the 3 date fields together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "What is your date of birth?".</p>
@@ -34,7 +33,7 @@
   <p>Read more on the GOV.UK Design System about how to <a href="https://design-system.service.gov.uk/patterns/dates/">ask users for dates</a> and <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
 
   <h2>Error messages</h2>
-  <p>Style error messages like this:</p>
+  <p>Style error messages like this.</p>
 
   {{ designExample({
     group: "components",

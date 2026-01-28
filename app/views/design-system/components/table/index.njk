@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Table" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "26" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -19,6 +19,7 @@
   {{ designExample({
     group: "components",
     item: "table",
+    id: "table-example",
     type: "basic"
   }) }}
 
@@ -94,7 +95,7 @@
 
   <h3 id="table-captions">Table captions</h3>
   <p>Use the <code>&lt;caption&gt;</code> element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.</p>
-  <p>Style table captions to match the visual hierarchy of your page's content using classes, for example <code>nhsuk-table__caption--l</code>.</p>
+  <p>Style table captions to match the visual hierarchy of your page's content. If using Nunjucks, use the <code>captionSize</code> macro option. In HTML add the <code>nhsuk-table__caption--l</code> class. You can use sizes <code>s</code>, <code>m</code>, <code>l</code>, <code>xl</code>.</p>
 
   <h3 id="table-headers">Table headers</h3>
   <p>Use table headers to tell users what the rows and columns represent.</p>

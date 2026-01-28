@@ -1,8 +1,9 @@
-@use "settings" as *;
-
 // NHS.UK Frontend defaults
-@use "nhsuk-frontend/packages/nhsuk" as *;
-@forward "nhsuk-frontend/packages/nhsuk";
+@use "nhsuk-frontend/dist/nhsuk/core/settings" as *;
+@use "nhsuk-frontend/dist/nhsuk/core/tools" as *;
+@use "nhsuk-frontend/dist/nhsuk/core/helpers" as *;
+
+@use "settings" as *;
 
 // WARNING: This file is intended for adding extra styles to the code snippet
 // examples and standalone examples.

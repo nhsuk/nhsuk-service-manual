@@ -1,10 +1,10 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Formatting" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Formatting and structuring text, including headings, links and lists." %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "322" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/_breadcrumb.njk" %}
@@ -67,7 +67,6 @@
   <p>For translations into languages that run right to left (like Arabic), right-align instead.</p>
   <p>Find out more about <a href="/design-system/styles/typography#text-alignment">text alignment in the design system</a>.</p>
 
-
   <h2 id="bold-italics-and-underlining">Bold, italics and underlining</h2>
   <p>Use bold sparingly. Do not use italics or underlining (except for links, which are underlined by default).</p>
   <p>Use bold in technical instructions to tell users which element (for example, a text input or button) to select. For example: Select <strong>More</strong>, then select <strong>Messages</strong>.</p>
@@ -78,13 +77,10 @@
     <li>use bullets</li>
     <li>use words like "important" in your content </li>
   </ul>
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-        Why we say this
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
+
+  {% call details({
+    summaryText: "Why we say this"
+  }) %}
     <p>Large areas of bold, italics or underlining can be difficult for some people to read. Too much bold makes it difficult for them to know which parts of your content to pay most attention to.</p>
     <p>People may mistake stand-alone bold text for a heading and underlined text for a link.</p>
     <p>By default, screen readers do not announce text in these HTML tags differently:</p>
@@ -94,9 +90,7 @@
       <li>&lt;em&gt; for emphasis</li>
     </ul>
     <p>Users may miss anything you wanted to express by using them.</p>
-    </div>
-  </details>
-
+  {% endcall %}
 
   <h2 id="headings">Headings</h2>
   <p>Headings help users understand what the page covers and find the information they need. Use them to break up and structure text.</p>
@@ -115,7 +109,7 @@
   <p>Give your content a unique and informative main heading, which will be heading level 1, or h1. You should only have one h1 per page.</p>
   <p>Keep your h1 concise, ideally 65 characters or less, including spaces.</p>
   <h4>Main headings and page titles</h4>
-  <p>The page title in the HTML metadata (the &lt;title&gt; tag) usually includes the h1 together with the website name, separated by a dash. A simple example is "Flu&nbsp;–&nbsp;NHS", which is the page title for <a href="https://www.nhs.uk/conditions/flu/">the flu page on the NHS website</a>. It shows in the browser tab.</p>
+  <p>The page title in the HTML metadata (the &lt;title&gt; tag) usually includes the h1 together with the website name, separated by an en dash (–). A simple example is "Flu&nbsp;–&nbsp;NHS", which is the page title for <a href="https://www.nhs.uk/conditions/flu/">the flu page on the NHS website</a>. It shows in the browser tab.</p>
   <p>If you use a content management system (CMS), it may create the title from your h1 automatically.</p>
   <p>Find more information about setting up <a href="/design-system/styles/page-template#page-title">page titles in the Page template</a>, including examples of different text in the h1 and page title.</p>
 
@@ -139,14 +133,12 @@
       <li><a href="/design-system/patterns/question-pages#page-headings">using legends, labels and captions with page headings, in the question pages pattern</a></li>
   </ul>
 
-
    <h2 id="links">Links</h2>
   <p>Make links active, specific and concise.</p>
   <p>Links should describe where they're taking the user. Where you can, use the same words as the title of the page you're linking to. That way, the user will know what to expect.</p>
   <p>We do not use link text such as "click here" or anything that does not make sense when read out of context. Screen readers can move between links without reading the surrounding content.</p>
+
   {{ table({
-    panel: false,
-    firstCellIsHeader: false,
     head: [
       {
         text: "We would use:"
@@ -214,7 +206,11 @@
   <p>Use a lead-in line with a colon. The bullets should make sense running on from the lead-in line. In effect, the list is 1 continuous sentence.</p>
 
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p>A pharmacist can recommend:</p>
     <ul>
       <li>creams to ease pain and irritation</li>
@@ -232,7 +228,11 @@
   <p>If your user research shows that it helps your users, you can use full sentence bullet points. For example, our medicines information uses full sentence bullet points for key facts.</p>
 
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <h3>Key facts</h3>
     <ul>
       <li>Paracetamol takes up to an hour to work.</li>
@@ -249,7 +249,11 @@
   <p>We use numbered lists instead of bulleted ones to guide people through a process. Each point starts with a capital letter and ends with a full stop, without a lead-in line.</p>
 
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <h3>How to gargle with salt water</h3>
     <ol>
       <li>Dissolve half a teaspoon of salt in a glass of warm water.</li>
@@ -257,7 +261,6 @@
       <li>Repeat as often as you like.</li>
     </ol>
   </div>
-
 
 {% endblock %}
 

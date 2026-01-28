@@ -1,33 +1,80 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "What's new" %}
 {% set pageDescription = "Find out what's happening with the service manual." %}
 {% set pageSection = "What's new" %}
 {% set landingPage = true %}
 
-{% extends "layouts/app-layout.njk" %}
-
 {% block bodyContent %}
 
   <h2>Latest updates</h2>
 
-  <h3>October 2025</h3>
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Updates to the service manual in October 2025</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col" style="width: 25%;">Section</th>
-        <th class="nhsuk-table__header" scope="col">Update</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr>
-        <td class="nhsuk-table__cell">Design system</td>
-        <td class="nhsuk-table__cell">
-          <p>Added <a href="/design-system/components/checkboxes#smaller-checkboxes">smaller checkboxes</a> and <a href="/design-system/components/radios#smaller-radios">smaller radios</a> and aligned guidance better with GOV.UK</p>
-          <p>Added <a href="/design-system/components/pagination#for-navigating-between-pages-of-items">numbered pagination, for navigating between pages of items</a></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <h3>January 2026</h3>
+
+  {% set contentHtml %}
+    <p>Added new entries for <a href="/content/a-to-z-of-nhs-health-writing#addresses">addresses</a> and <a href="/content/a-to-z-of-nhs-health-writing#wi-fi">Wi-Fi</a> to A to Z in content guide</p>
+    <p>Updated entries for <a href="/content/a-to-z-of-nhs-health-writing#seizure-fit">seizure (fit)</a> and <a href="/content/a-to-z-of-nhs-health-writing#temperature">temperature</a> in A to Z</p>
+    <p>Specified that we use en dashes in our guidance on <a href="/content/punctuation#hyphens-and-dashes">hyphens and dashes</a></p>
+    <p>Added "third party" to guidance on <a href="/content/numbers-measurements-dates-time#numbers">numbers</a> (section on ordinal numbers)</p>
+  {% endset %}
+
+  {% set designHtml %}
+    <p>Added <a href="/design-system/components/file-upload">file upload component</a></p>
+    <p>Added <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and added <a href="/design-system/components/panel#interruption-panel">interruption panel on panel component page</a></p>
+    <p>Added <a href="/design-system/components/summary-list#summary-cards">summary cards to summary list component</a></p>
+  {% endset %}
+
+  {% set standardHtml %}
+    <p>Updated <a href="/standards-and-technology/service-standard">NHS service standard</a>, including:</p>
+    <ul>
+      <li>amending the page summary for service standard 3 to align with GOV's</li>
+      <li>updating and adding links in service standards 5 and 11</li>
+      <li>bringing service standard 13 into closer alignment with GOV's</li>
+      <li>updating service standard 16 with clinical colleagues</li>
+      <li>reviewing service standard 17 with interoperability standards team</li>
+      <li>updating outdated references to NHS Digital and fixing broken links</li>
+    </ul>
+  {% endset %}
+
+  {{ table({
+    caption: "Updates to the service manual in January 2026",
+    captionClasses: "nhsuk-u-visually-hidden",
+    head: [
+      {
+        text: "Section",
+        classes: "nhsuk-u-width-one-quarter"
+      },
+      {
+        text: "Update"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Content guide"
+        },
+        {
+          html: contentHtml
+        }
+      ],
+      [
+        {
+          text: "Design system"
+        },
+        {
+          html: designHtml
+        }
+      ],
+      [
+        {
+          text: "Standards and technology"
+        },
+        {
+          html: standardHtml
+        }
+      ]
+    ]
+  }) }}
 
   <p><a href="/whats-new/updates">See all updates</a></p>
 
@@ -36,27 +83,34 @@
 
   <div class="nhsuk-grid-row nhsuk-card-group">
    <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <img class="nhsuk-card__img" src="/assets/blog-post-frontend-v10.jpg" alt="">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="https://digital.nhs.uk/blog/design-matters/2025/making-the-nhs-design-system-fit-for-the-future">Making the NHS design system fit for the future</a></h3>
-          </h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
-          <p class="nhsuk-card__description">Tero Väänänen explains why the NHS design system exists and why it plays an important role in fulfilling the 10-year health plan. He also describes recent changes to the frontend code behind the design system, and why it is important for teams to adopt them now.</p>
-        </div>
-      </div>
+      {% call card({
+        image: {
+          src: "/assets/blog-post-frontend-v10.jpg"
+        },
+        clickable: true,
+        href: "https://digital.nhs.uk/blog/design-matters/2025/making-the-nhs-design-system-fit-for-the-future",
+        heading: "Making the NHS design system fit for the future",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
+        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
+        <p class="nhsuk-card__description">Tero Väänänen explains why the NHS design system exists and why it plays an important role in fulfilling the 10-year health plan. He also describes recent changes to the frontend code behind the design system, and why it is important for teams to adopt them now.</p>
+      {% endcall %}
     </div>
     <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <img class="nhsuk-card__img" src="/assets/blog-prototype-kit.png" alt="">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="https://digital.nhs.uk/blog/design-matters/2025/why-we-are-reinvesting-in-the-nhs-prototype-kit">Why we are reinvesting in the NHS prototype kit</a></h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 July 2025</p>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
-          <p class="nhsuk-card__description">Frankie Roberto and Mike Gallagher explain why we revived the NHS prototype kit, the benefits of prototyping in code and how digital teams in the NHS can get started using it.</p>
-        </div>
-      </div>
+      {% call card({
+        image: {
+          src: "/assets/blog-prototype-kit.png"
+        },
+        clickable: true,
+        href: "https://digital.nhs.uk/blog/design-matters/2025/why-we-are-reinvesting-in-the-nhs-prototype-kit",
+        heading: "Why we are reinvesting in the NHS prototype kit",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 July 2025</p>
+        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
+        <p class="nhsuk-card__description">Frankie Roberto and Mike Gallagher explain why we revived the NHS prototype kit, the benefits of prototyping in code and how digital teams in the NHS can get started using it.</p>
+      {% endcall %}
     </div>
   </div>
 
@@ -65,17 +119,20 @@
 <!--<h2>Latest show and tell</h2>
   <div class="nhsuk-grid-row nhsuk-card-group">
     <div class="nhsuk-grid-column-full nhsuk-card-group__item">
-      <div class="nhsuk-card">
-        <div class="app-card__video">
-          <iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo" title="NHS digital service manual - show and tell 20 February 2020" allowfullscreen></iframe>
-        </div>
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading">NHS digital service manual show and tell</h3>
-          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
-          <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>
-          <p class="nhsuk-card__description">The team talks about the redesign of the service manual, how to write good questions for forms, inclusive language, the beta service standard for health and the NHS Digital accessibility lab in Leeds. The NHS Leadership Academy also share a Wordpress theme based on the NHS.UK frontend library.</p>
-        </div>
-      </div>
+      {% call card({
+        classes: "app-card",
+        image: {
+          html: '<div class="app-card__video">' +
+            '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual – show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
+          "</div>"
+        },
+        heading: "NHS digital service manual show and tell",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
+        <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>
+        <p class="nhsuk-card__description">The team talks about the redesign of the service manual, how to write good questions for forms, inclusive language, the beta service standard for health and the NHS Digital accessibility lab in Leeds. The NHS Leadership Academy also share a Wordpress theme based on the NHS.UK frontend library.</p>
+      {% endcall %}
     </div>
   </div>
 

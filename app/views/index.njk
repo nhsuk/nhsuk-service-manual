@@ -1,7 +1,7 @@
+{% extends "layouts/layout.njk" %}
+
 {% set pageDescription = "Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first." %}
 {% set pageLayout = "Homepage" %}
-
-{% extends "layouts/layout.njk" %}
 
 {% block beforeContent %}{% endblock %}
 
@@ -13,21 +13,19 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
           <div class="nhsuk-hero__wrapper app-hero__wrapper">
-            <h1 class="nhsuk-u-margin-bottom-4">Design and build digital services for the NHS</h1>
+            <h1 class="nhsuk-u-margin-bottom-4">Design and build NHS digital services for the public and staff</h1>
             <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">Use the service manual to build consistent, usable services that put people first. Learn from the research and experience of other NHS teams.</p>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-third app-latest-update">
-          <div class="nhsuk-card app-card--transparent nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/whats-new">What's new</a></h2>
-              <p class="nhsuk-card__description">We've added:</p>
-              <ul>
-                <li><a href="/design-system/components/checkboxes#smaller-checkboxes">smaller checkboxes</a> and <a href="/design-system/components/radios#smaller-radios">smaller radios</a></li>
-                <li><a href="/design-system/components/pagination#for-navigating-between-pages-of-items">numbered pagination, for navigating between pages of items</a></li>
-              </ul>
-            </div>
-          </div>
+          {% call card({
+            heading: "What's new",
+            headingSize: "m",
+            href: "/whats-new",
+            classes: "app-card--transparent nhsuk-u-margin-0"
+          }) %}
+            <p class="nhsuk-card__description">We've added a <a href="/design-system/components/file-upload">file upload component</a>, an <a href="/design-system/patterns/interruption-page">interruption page</a>, and updated the <a href="/standards-and-technology/service-standard">NHS service standard</a>, especially points 16 and 17.</p>
+          {% endcall %}
         </div>
       </div>
     </div>
@@ -37,62 +35,70 @@
     <div class="nhsuk-width-container">
       <ul class="nhsuk-grid-row nhsuk-card-group">
         <li class="nhsuk-grid-column-full nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-0 nhsuk-u-margin-right-3">
-                Version 10
-              </strong>
+          {% call card({
+            clickable: true
+          }) %}
+              {{ tag({
+                text: "Version 10",
+                classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-0 nhsuk-u-margin-right-3"
+              }) }}
+
               <h2 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0 nhsuk-u-display-inline-block nhsuk-u-font-weight-normal">Design system and NHS.UK frontend library updated: <a href="/design-system/guides/updating-to-v10">see our update guide</a></h2>
-            </div>
-          </div>
+          {% endcall %}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/standards-and-technology">Standards and technology</a></h2>
-              <p class="nhsuk-card__description">Check you're working to best practice from the start</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Standards and technology",
+            headingSize: "m",
+            description: "Check you're working to best practice from the start",
+            href: "/standards-and-technology",
+            clickable: true
+          }) }}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/design-system">Design system</a></h2>
-              <p class="nhsuk-card__description">Build consistent, accessible user interfaces</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Design system",
+            headingSize: "m",
+            description: "Build consistent, accessible user interfaces",
+            href: "/design-system",
+            clickable: true
+          }) }}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/content">Content guide</a></h2>
-              <p class="nhsuk-card__description">How to create content for digital NHS services</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Content guide",
+            headingSize: "m",
+            description: "How to create content for digital NHS services",
+            href: "/content",
+            clickable: true
+          }) }}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/accessibility">Accessibility</a></h2>
-              <p class="nhsuk-card__description">Make NHS services accessible for everyone</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Accessibility",
+            headingSize: "m",
+            description: "Make NHS services accessible for everyone",
+            href: "/accessibility",
+            clickable: true
+          }) }}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/design-system/design-principles">Design principles</a></h2>
-              <p class="nhsuk-card__description">These principles guide all of our design</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Design principles",
+            headingSize: "m",
+            description: "These principles guide all of our design",
+            href: "/design-system/design-principles",
+            clickable: true
+          }) }}
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/community-and-contribution">Community and contribution</a></h2>
-              <p class="nhsuk-card__description">Help grow and improve the service manual</p>
-            </div>
-          </div>
+          {{ card({
+            heading: "Community and contribution",
+            headingSize: "m",
+            description: "Help grow and improve the service manual",
+            href: "/community-and-contribution",
+            clickable: true
+          }) }}
         </li>
       </ul>
       <hr class="nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-6">

@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Colour" %}
 {% set pageDescription = "Our colours, and how to apply them." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set dateUpdated = "August 2025" %}
 {% set backlog_issue_id = "2" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -24,15 +24,18 @@
 
   <h2 id="main-colours">Main colours</h2>
 
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Colour variables updated in August 2025</h3>
     <p>All colour variables and functions have been updated to use the spelling 'colour' instead of 'color'.
-    <p>See <a href="/design-system/guides/updating-to-v10#sass-functions">updates to colours in version 10</a></p>
-  </div>
+    <p>See <a href="/design-system/guides/updating-to-v10#sass-functions">breaking code updates to colours in version 10</a></p>
+  {% endcall %}
 
   <p class="rich-text">If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-colour</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
   <p class="rich-text">Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>nhsuk-colour("red")</code> rather than <code>$nhsuk-error-colour</code>.</p>
@@ -240,7 +243,6 @@
   <p>You can use the <code>nhsuk-u-secondary-text-colour</code> class for text that should appear in the secondary text colour of dark grey.</p>
 
   <p>For example, this could be used for text to describe missing data in a table or summary list.</p>
-
 
   <h2 id="colour-palette">Colour palette</h2>
   <p class="rich-text">Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-colour</code> Sass variable rather than <code>nhsuk-colour("red")</code>.</p>
@@ -451,18 +453,13 @@
   <p>This helps people with low vision and colour vision deficiency (colour blindness) who find it difficult to distinguish between certain colours, often shades of red, yellow and green.</p>
   <p>Not all combinations from our colour palette meet the minimum contrast. For example, <code>$nhsuk-border-colour</code> has low contrast on our page background.</p>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-      More about contrast in components and graphic elements
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <p>Use a tool to calculate the ratio between the element and the adjacent colour. For example, the white arrow (foreground) and the green circle (background) in an <a href="/design-system/components/action-link">action link</a>.</p>
-      <p>If you rely on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it does not have to meet the requirement but we recommend you try to meet it anyway.</p>
-      <p>Components that are visible but not currently active (like a submit button that is not active until the user has filled in the form) do not have to meet the requirement. But if you can meet the minimum contrast without it being confusing, it will help people with low vision.</p>
-    </div>
-  </details>
+  {% call details({
+    summaryText: "More about contrast in components and graphic elements"
+  }) %}
+    <p>Use a tool to calculate the ratio between the element and the adjacent colour. For example, the white arrow (foreground) and the green circle (background) in an <a href="/design-system/components/action-link">action link</a>.</p>
+    <p>If you rely on users understanding a graphic (like an icon) without text, it must meet the minimum contrast ratio. If it also has text, it does not have to meet the requirement but we recommend you try to meet it anyway.</p>
+    <p>Components that are visible but not currently active (like a submit button that is not active until the user has filled in the form) do not have to meet the requirement. But if you can meet the minimum contrast without it being confusing, it will help people with low vision.</p>
+  {% endcall %}
 
   <h4>WCAG 2.2 AA</h4>
   <p>The contrast ratio should be at least:</p>

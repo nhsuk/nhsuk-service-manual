@@ -1,9 +1,9 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Community resources" %}
 {% set pageSection = "Community and contribution" %}
 {% set pageDescription = "Resources created and maintained by the design system community." %}
 {% set dateUpdated = "August 2025" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "community-and-contribution/_breadcrumb.njk" %}
@@ -56,6 +56,7 @@
 
   <h2 class="nhsuk-heading-m">Support for these resources</h2>
   <p>The NHS service manual team is not responsible for these resources and we cannot support you with using them.</p>
+
   {% call details({
     summaryText: "Get support with these resources via Slack"
   }) %}

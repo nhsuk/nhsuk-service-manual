@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Use filter questions to route users" %}
 {% set pageSection = "Content guide" %}
 {% set subSection = "How to write good questions for forms" %}
 {% set pageDescription = "Filter questions help users move quickly through the form by routing them to the questions that apply to them." %}
-{% set dateUpdated = "November 2019" %}
+{% set dateUpdated = "November 2025" %}
 {% set backlog_issue_id = "328" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/how-to-write-good-questions-for-forms/_breadcrumb.njk" %}
@@ -24,21 +24,24 @@
     <li>simplify long questions (like <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#watch-out-for-double-barrelled-questions">"double-barrelled" questions</a>) by breaking them up</li>
   </ul>
 
-  <img class="nhsuk-image__img nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/filter-question-example.png" alt="">
+  <img class="nhsuk-image__img nhsuk-u-reading-width nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/filter-question-example.png" alt="">
 
   <p>But often you need more than a simple "Yes" or "No". In the "Are you 18 or over?" example, for instance, you should think about what your service can offer younger users as an alternative and how you can support their user journey.</p>
 
   <h2>Spell out what "Yes" and "No" mean</h2>
   <p>Check how users react to your Yes/No question when you test it. Sometimes you will find you need to be clearer about what "Yes" and "No" mean.</p>
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
     {{ radios({
       idPrefix: "example-research",
-      name: "example-research",
+      name: "exampleResearch",
       fieldset: {
         legend: {
           text: "Can we email you about research?",
-          classes: "nhsuk-fieldset__legend--m"
+          size: "m"
         }
       },
       items: [
@@ -63,62 +66,66 @@
 
   <h2 id="beware-binary-choices">Beware binary choices</h2>
   <p>There will often be at least 1 other option besides "Yes" and "No", including, for example, "I do not know" or "I'm not sure".</p>
-  <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but you should consider them.</p>
+  <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but they're better than forcing users to choose an option that's not their true answer.</p>
 
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
-
-    {% set hintHtml -%}
-      <p class="nhsuk-u-margin-bottom-2">This is a 10 digit number, like 485 777 3456.</p>
-      <p>You can find it on any letter the NHS has sent you, on a prescription or by logging in to a GP practice online service.</p>
-    {%- endset %}
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
 
     {{ radios({
       idPrefix: "example-hints",
-      name: "example-hints",
+      name: "exampleHints",
       fieldset: {
         legend: {
-          text: "Do you know your NHS number?",
-          classes: "nhsuk-fieldset__legend--l",
+          text: "Have you had all the vaccinations you're eligible for in the UK?",
+          size: "l",
           isPageHeading: true
         }
       },
       hint: {
-        html: hintHtml
+        text: "You would have got these vaccinations at school, from your GP surgery or another healthcare provider"
       },
       items: [
       {
         value: "yes",
-        text: "Yes, I know my NHS number"
+        text: "Yes"
       },
       {
         value: "no",
-        text: "No, I do not know my NHS number"
+        text: "No"
+      },
+       {
+      divider: "or"
       },
       {
-        value: "not sure",
-        text: "I'm not sure"
+        value: "unknown",
+        text: "I do not know"
       }
     ]
     }) }}
   </div>
 
-  <p>Having a 3rd option means that you can give people extra information, for example, about their NHS number and where to find it. Our pattern for <a href="/design-system/patterns/ask-for-nhs-numbers">asking users for their NHS number</a> explains more about this.</p>
+  <p>Having a 3rd option lets you route people down a different path, for example, to more information. Or it can give users confidence that not knowing something or being unsure is OK and they can continue their journey.</p>
   <p>"Other" can be a useful option, but <a href="/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions#think-before-you-use-other">avoid using "Other" with personal or sensitive information</a>.</p>
-  <p>In your user research, find out what would help your users, for example, by leaving a box with hint text for them to type in something other than "Yes" or "No".</p>
+  <p>In your user research, find out what would help your users, for example, by including a box labelled "Something else" for them to type in an answer other than "Yes" or "No".</p>
 
   <h2 id="offer-people-other-ways-to-do-things">Offer people other ways to do things</h2>
   <p>If you need people to enter details to continue and they cannot do this, for example, because they do not have key information to hand, consider whether you could add something to the "No" option to reassure them that there is an alternative.</p>
 
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
     {{ radios({
       idPrefix: "example-registration-details",
-      name: "example-registration-details",
+      name: "exampleRegistrationDetails",
       fieldset: {
         legend: {
           text: "Do you have your registration details?",
-          classes: "nhsuk-fieldset__legend--m"
+          size: "m"
         }
       },
       items: [
@@ -140,8 +147,6 @@
   <p>It can help to use post-its, or print out and cut up a paper prototype, to see how the answers might take users on 1 journey or another.</p>
   <p><a href="/content/how-to-write-good-questions-for-forms/test-your-questions">Read more about testing your questions</a>.</p>
   <p>If a lot of people cannot answer "Yes" or "No", reconsider your question.</p>
-
-
 
 {% endblock %}
 
