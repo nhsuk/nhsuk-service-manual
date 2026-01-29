@@ -39,6 +39,8 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+
+  @include nhsuk-font-size(16);
 }
 
 pre[class*="language-"]::-moz-selection,
