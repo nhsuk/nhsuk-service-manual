@@ -37,10 +37,10 @@
   "dependencies": {
     "@open-iframe-resizer/core": "^2.2.0",
     "accessible-autocomplete": "^3.0.1",
-    "axios": "^1.13.2",
+    "axios": "^1.13.4",
     "basic-auth": "^2.0.1",
     "browser-sync": "^3.0.4",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.2.0",
     "clipboard": "^2.0.11",
     "compression": "^1.8.1",
     "express": "^5.2.1",
