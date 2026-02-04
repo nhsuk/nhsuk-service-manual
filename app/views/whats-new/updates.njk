@@ -10,6 +10,36 @@
 
 {% block bodyContent %}
 
+<h2>February 2026</h2>
+
+{% set contentHtml202601 %}
+  <p>Added guidance on <a href="/content/writing-nhs-messages">writing NHS messages</a> to the content guide</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in January 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202601
+      }
+    ]
+  ]
+}) }}
+
 <h2>January 2026</h2>
 
 {% set contentHtml202601 %}
