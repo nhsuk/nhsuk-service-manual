@@ -114,8 +114,8 @@
   }) }}
 
   <ul>
-    <li>conversational tone - "Dear ((firstName))"</li>
-    <li>reassuring tone - "Dear ((firstName))((lastName))"</li>
+    <li>conversational tone – "Dear ((firstName))"</li>
+    <li>reassuring tone – "Dear ((firstName))((lastName))"</li>
   </ul>
 </div>
 
@@ -270,6 +270,7 @@
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> NHS App</p>
+<p>((firstName))((lastName))</p>
 <p>You have a new secure message from the NHS.</p>
 <p>Open the NHS App to read it.</p>
 <p>Or you can log in through the website: <a href="#">https://www.nhs.uk/inbox</a></p>
@@ -335,13 +336,13 @@
   summaryText: "Example 1 of an NHS email message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS Service_name</p>
-<p>Subject: NHS Service_name invitation</p>
+<p><strong>SenderID:</strong> NHS ((serviceName))</p>
+<p>Subject: NHS ((serviceName)) invitation</p>
 <p>Dear ((firstName))((lastName)),</p>
-<p>We are inviting you for your NHS Service_name appointment.</p>
+<p>We are inviting you for your NHS ((serviceName)) appointment.</p>
 <p>Find more information about your service name invite, including how to book your appointment: <a href="#">https://www.nhs.uk/service-name-invite</a>.</p>
 <p>Yours sincerely,</p>
-<p>Service_name</p>
+<p>((serviceName))</p>
 {% endcall %}
 
 {% call details({
