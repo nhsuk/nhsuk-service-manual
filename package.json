@@ -50,7 +50,7 @@
     "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
     "marked": "^17.0.1",
-    "nhsuk-frontend": "^10.3.1",
+    "nhsuk-frontend": "github:nhsuk/nhsuk-frontend#703f004de",
     "nunjucks": "^3.2.4",
     "slug": "^11.0.1"
   },
