@@ -79,6 +79,11 @@
   }) }} #}
   <p>[EXAMPLE HERE]</p>
 
+  <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
+  <p>Use this table when users need to find and prioritise data, for example in staff systems with large data sets.</p>
+
+  <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
+
   <p>This table only sorts by 1 column at a time. Users can click on the column header to trigger sorting.</p>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
   <p>Find out:</p>
@@ -93,28 +98,29 @@
     <li>alphabetically</li>
   </ul>
   <p>If you need to sort another way, for example by dates and times or empty cells, use data attributes that contain a number.</p>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example paragraphs of text.</p>
-
-  <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
-  <p>Use this table when users need to find and prioritise data, for example in staff systems with large data sets.</p>
-
-  <h3 id="when-not-to-use-a-sortable-table">When not to use a sortable table</h3>
-  <p>Do not let users sort a table if there is no reason to sort the data, for example:</p>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example:</p>
   <ul>
     <li>free text</li>
     <li>first names</li>
     <li>NHS numbers or other codes</li>
-    <li>medical conditions (but you may filter instead)</li>
+    <li>medical conditions</li>
   </ul>
   <p>Do not sort data alphabetically if it has an established logical sequence. For example, months of the year.</p>
+  <p>Ignore leading definite and indefinite articles ("a", "an", "the").</p>
   <p>Consider letting users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need. If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.</p>
   <h3 id="session-storage">Session storage</h3>
   <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
-  <p>A page refresh or navigation must return the page to its default sort order. Unless you add functionality to allow users to save their sorting order explicitly.</p>
+  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
 
   <h3 id="server-side-sorting">Server-side sorting</h3>
-  <p>This component provides client-side sorting, which only sorts the data currently shown in the table.</p>
-  <p>For large data sets with many pages of data, use server-side sorting.</p>
+  <p>This component provides client-side sorting, which only sorts the data currently visible in the table on the page.</p>
+  <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
+  <ul>
+    <li>build your own server-side function</li>
+    <li>consider how to show "loading" states and error states if loading fails</li>
+    <li>test with users</li>
+  </ul>
+  <p>Please feed back to the design system.</p>
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
@@ -176,8 +182,9 @@
     <li>filter</li>
     <li><a href="/design-system/components/pagination">pagination</a></li>
   </ul>
-  <p>We want to understand better how they can work together. Please get in touch if you are working on these components.</p>
-  <p>We have not yet developed a responsive or scrolling sortable table. If you need a responsive sorting table, you could try adding a <a href="/design-system/components/select">select component</a>. Please feedback if you experiment with these.</p>
+  <p>We want to understand better how they can work together.</p>
+  <p>We have not yet developed a responsive or scrolling sortable table. If you need a responsive sorting table, you could try adding a <a href="/design-system/components/select">select component</a>.</p>
+  <p>Please feed back if you develop any of these or implement server-side sorting.</p>
   <h3>Table with panel</h3>
   <p>We have also designed a table with a panel. You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/tables/as-a-panel/">find an example in the frontend library</a>. We have not included it in this list of components yet because it needs more testing.</p>
 
