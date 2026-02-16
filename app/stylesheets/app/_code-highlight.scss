@@ -51,4 +51,9 @@ p code {
 .app-code__container {
   padding: nhsuk-spacing(3);
   overflow-x: auto;
+  border: $nhsuk-border-width-form-element solid transparent;
+
+  &:focus {
+    @include nhsuk-focused-input;
+  }
 }
