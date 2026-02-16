@@ -61,27 +61,42 @@
 
   <p>For example, to use the button macro, use the import statement:</p>
 
-  <pre class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6"><code class="language-njk">{% raw %}{% <span class="hljs-keyword">from</span> <span class="hljs-string">"nhsuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> button %}{% endraw %}</code></pre>
+  {% call appCode({
+    language: "njk",
+    classes: "nhsuk-u-margin-bottom-6"
+  }) %}
+    {% raw %}{% from "nhsuk/components/button/macro.njk" import button %}{% endraw %}
+  {% endcall %}
 
   <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend.
 
   <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v10.x (latest)</h4>
   <p>Configure Nunjucks search paths for <code>v10.x</code> versions and higher:</p>
 
-  <pre class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6"><code class="language-js">nunjucks.<span class="hljs-title function_">configure</span>([
-  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk/components'</span>,
-  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk/macros'</span>,
-  <span class="hljs-string">'node_modules/nhsuk-frontend/dist/nhsuk'</span>,
-  <span class="hljs-string">'node_modules/nhsuk-frontend/dist'</span>
-]);</code></pre>
+  {% call appCode({
+    language: "js",
+    classes: "nhsuk-u-margin-bottom-6"
+  }) %}
+    nunjucks.configure([
+      'node_modules/nhsuk-frontend/dist/nhsuk/components',
+      'node_modules/nhsuk-frontend/dist/nhsuk/macros',
+      'node_modules/nhsuk-frontend/dist/nhsuk',
+      'node_modules/nhsuk-frontend/dist'
+    ]);
+  {% endcall %}
 
   <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v9.x</h4>
   <p>Configure Nunjucks search paths for <code>v9.x</code> versions only:</p>
 
-  <pre class="nhsuk-u-margin-top-0"><code class="language-js">nunjucks.<span class="hljs-title function_">configure</span>([
-  <span class="hljs-string">'node_modules/nhsuk-frontend/packages/components'</span>,
-  <span class="hljs-string">'node_modules/nhsuk-frontend/packages/macros'</span>
-]);</code></pre>
+  {% call appCode({
+    language: "js",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) %}
+    nunjucks.configure([
+      'node_modules/nhsuk-frontend/packages/components',
+      'node_modules/nhsuk-frontend/packages/macros'
+    ]);
+  {% endcall %}
 
   {% call insetText({
     classes: "nhsuk-u-margin-top-5"

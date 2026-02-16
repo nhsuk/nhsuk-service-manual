@@ -197,8 +197,12 @@
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>
 
-<pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__service-logo<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nhsuk-header__organisation-logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/assets/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>280<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Anyplace Anytown Anywhere NHS Foundation Trust homepage<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+  {% call appCode({
+    language: "html"
+  }) %}
+    <a class="nhsuk-header__service-logo" href="/">
+      <img class="nhsuk-header__organisation-logo" src="/assets/logo.png" width="280" alt="Anyplace Anytown Anywhere NHS Foundation Trust homepage">
+    </a>
+  {% endcall %}
 
 {% endblock %}
