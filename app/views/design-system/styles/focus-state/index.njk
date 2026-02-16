@@ -57,9 +57,14 @@
 
   <h3 id="make-focusable-text-accessible">Make focusable text accessible</h3>
   <p class="rich-text">If you use Sass, you should include the <code>nhsuk-focused-text</code> mixin in your component's <code>:focus</code> selector if that component is focusable text. For example, if the component is a link in body text, or the details component:</p>
-<pre class="app-pre"><code><span class="hljs-selector-class">.app-component</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-variable">@include</span> nhsuk-focused-text;
-}</code></pre>
+
+  {% call appCode({
+    language: "css"
+  }) %}
+    .app-component:focus {
+      @include nhsuk-focused-text;
+    }
+  {% endcall %}
 
   <h3 id="make-other-focusable-elements-accessible">Make other focusable elements accessible</h3>
   <p>If you use Sass, you can use 3 NHS.UK frontend variables if your component has a background colour or border. For example, a text input, checkbox or icons and images used as links.</p>

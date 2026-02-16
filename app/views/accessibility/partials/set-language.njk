@@ -5,8 +5,22 @@
   summaryText: "How to code for language"
 }) %}
   <p>In the HTML element, set the language for the whole page to English:</p>
-  <pre class="rich-text"><code>&lt;html lang="en"&gt;</code></pre> or whatever language the page is in.</p>
+
+  {% call appCode({
+    language: "html"
+  }) %}
+    <html lang="en">
+  {% endcall %}
+
+  <p>or whatever language the page is in.</p>
   <p>If there are changes of language within the page, mark these up as well:</p>
-  <pre class="rich-text"><code>&lt;p&gt;Make sure you are treated by a state healthcare provider in France (&lt;span lang="fr"&gt;conventionné&lt;/span&gt;).&lt;/p&gt;</code></pre>
+
+  {% call appCode({
+    language: "html"
+  }) %}
+    <p>Make sure you are treated by a state healthcare provider in France
+    (<span lang="fr">conventionné</span>).</p>
+  {% endcall %}
+
   <p>You can apply the lang attribute to any container.</p>
 {% endcall %}

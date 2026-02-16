@@ -1,0 +1,11 @@
+{#- Set classes for this component #}
+{%- set classNames = "app-code" -%}
+
+{% if params.classes %}
+  {% set classNames = classNames + " " + params.classes %}
+{% endif -%}
+
+<pre class="{{ classNames }}"><code class="app-code__container hljs
+  {%- if params.language %} language-{{ params.language }}{% endif %}">
+  {{- caller() | unindent | highlight(params.language) | safe -}}
+</code></pre>
