@@ -3,11 +3,8 @@
 @use "../../vendor/nhsuk-frontend" as *;
 
 .hljs {
-  background: #f8f8f8;
-  color: #333333;
   display: block;
-  overflow-x: auto;
-  padding: 0.5em;
+  color: nhsuk-colour("black");
 }
 
 .hljs-comment,
@@ -81,11 +78,15 @@
 }
 
 .hljs-deletion {
-  background: #ffdddd;
+  background-color: nhsuk-tint(nhsuk-colour("red"), 85%);
+  color: nhsuk-shade(nhsuk-colour("red"), 10%);
+  text-decoration: none;
 }
 
 .hljs-addition {
-  background: #ddffdd;
+  background-color: nhsuk-tint(nhsuk-colour("green"), 85%);
+  color: nhsuk-shade(nhsuk-colour("green"), 8%);
+  text-decoration: none;
 }
 
 .hljs-emphasis {
@@ -94,4 +95,10 @@
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.hljs.language-css .hljs-selector-class,
+.hljs.language-css .hljs-selector-tag,
+.hljs.language-css .hljs-keyword {
+  color: nhsuk-colour("purple");
 }
