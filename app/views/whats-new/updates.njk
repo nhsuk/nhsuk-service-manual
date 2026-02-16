@@ -12,12 +12,16 @@
 
 <h2>February 2026</h2>
 
-{% set contentHtml202601 %}
+{% set contentHtml202602 %}
   <p>Added guidance on <a href="/content/writing-nhs-messages">writing NHS messages</a> to the content guide</p>
 {% endset %}
 
+{% set standardHtml202602 %}
+  <p>Updated <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2, 6, 11 and 14 with AI requirements to align with GOV standard</p>
+{% endset %}
+
 {{ table({
-  caption: "Updates to the service manual in January 2026",
+  caption: "Updates to the service manual in February 2026",
   captionClasses: "nhsuk-u-visually-hidden",
   head: [
     {
@@ -34,7 +38,15 @@
         text: "Content guide"
       },
       {
-        html: contentHtml202601
+        html: contentHtml202602
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202602
       }
     ]
   ]

@@ -6,6 +6,11 @@
 
 - Add guidance on writing NHS messages to the content guide
 
+:wrench: **Maintenance**
+
+- Update service standard points 2, 6, 11 and 14 with AI requirements to align with GOV standard
+- Update links to DAPB standard
+
 ## 8.6.1 - 26 January 2026
 
 :wrench: **Maintenance**

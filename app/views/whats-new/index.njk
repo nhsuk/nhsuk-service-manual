@@ -15,6 +15,10 @@
     <p>Added guidance on <a href="/content/writing-nhs-messages">writing NHS messages</a> to the content guide</p>
   {% endset %}
 
+  {% set standardHtml %}
+  <p>Updated <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2, 6, 11 and 14 with AI requirements to align with GOV standard</p>
+  {% endset %}
+
   {{ table({
     caption: "Updates to the service manual in February 2026",
     captionClasses: "nhsuk-u-visually-hidden",
@@ -35,6 +39,14 @@
         {
           html: contentHtml
         }
+      ],
+      [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml
+      }
       ]
     ]
   }) }}
