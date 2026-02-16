@@ -25,13 +25,17 @@ p code {
 }
 
 // Highlight code in a block
-.app-pre {
+.app-code,
+.app-code__container {
+  font-family: $app-code-font;
+}
+
+.app-code {
   background: nhsuk-colour("white");
   border: 1px solid $nhsuk-border-colour;
-  margin-top: 0;
-  overflow: auto;
-  padding: nhsuk-spacing(3);
+  margin: 0;
   position: relative;
+  font-size: inherit;
 
   @include nhsuk-responsive-margin(4, "bottom");
 
@@ -44,29 +48,7 @@ p code {
   }
 }
 
-.hljs {
-  background-color: nhsuk-colour("white");
-  color: nhsuk-colour("black");
-  display: block;
-  overflow-x: scroll;
-  padding: 0;
-}
-
-.hljs.css .hljs-selector-class,
-.hljs.css .hljs-selector-tag,
-.hljs.css .hljs-keyword {
-  color: nhsuk-colour("purple");
-}
-
-.app-tabs__container pre {
-  -ms-flex-item-align: stretch;
-  -ms-grid-row-align: stretch;
-  align-self: stretch;
-  background-color: nhsuk-colour("white");
-  padding: 0;
-}
-
-.app-tabs__container pre,
-.app-tabs__container code {
-  font-family: $app-code-font;
+.app-code__container {
+  padding: nhsuk-spacing(3);
+  overflow-x: auto;
 }

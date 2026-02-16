@@ -2,29 +2,13 @@
 
 @use "../vendor/nhsuk-frontend" as *;
 
-/// Code showing deleted and inserted lines:
-
-code del {
-  background-color: nhsuk-tint(nhsuk-colour("red"), 85%);
-  color: nhsuk-shade(nhsuk-colour("red"), 10%);
-  text-decoration: none;
-}
-
-code ins {
-  background-color: nhsuk-tint(nhsuk-colour("green"), 85%);
-  color: nhsuk-shade(nhsuk-colour("green"), 8%);
-  text-decoration: none;
-}
-
 ////
 /// Code block highlighting
 ////
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*="language-"] {
   color: #000000;
   background: none;
-  overflow: auto;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -41,16 +25,12 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
@@ -58,99 +38,17 @@ code[class*="language-"] ::selection {
 }
 
 @media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*="language-"] {
     text-shadow: none;
   }
 }
 
-pre[class*="language-"] {
-  padding: 1em;
-  overflow: auto;
-
-  @include nhsuk-responsive-margin(4, "bottom");
-}
-
 pre code[class*="language-"] {
   display: block;
-  background: #ffffff;
 }
 
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
   white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #708090;
-}
-
-.token.punctuation {
-  color: #999999;
-}
-
-.namespace {
-  opacity: 0.7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #990055;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #669900;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #9a6e3a;
-  background: hsla(0deg, 0%, 100%, 0.5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #0077aa;
-}
-
-.token.function,
-.token.class-name {
-  color: #dd4a68;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: #ee9900;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
 }
