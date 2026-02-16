@@ -5,7 +5,7 @@
   {% set classNames = classNames + " " + params.classes %}
 {% endif -%}
 
-<pre class="{{ classNames }}"><code class="app-code__container hljs
+<pre class="{{ classNames }}" data-module="app-code"><code class="app-code__container hljs
   {%- if params.language %} language-{{ params.language }}{% endif %}">
   {{- caller() | unindent | highlight(params.language) | safe -}}
 </code></pre>
