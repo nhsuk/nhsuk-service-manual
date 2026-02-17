@@ -1,14 +1,16 @@
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
-  <p>If you think you need medical help go to <a href="#">NHS 11 online</a> or <a href="#">call 111</a></p>
+  <p>If you're worried about a symptom and not sure what help you need, NHS 111 can tell you what to do next.</p>
+  <p>Go to <a href="#">NHS 111 online</a> or <a href="#">call 111</a></p>
+  <p>For a life-threatening emergency call 999.</p>
 {% endset %}
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
   {{ card({
     secondary: true,
-    heading: "Get help for your symptoms",
+    heading: "Help from NHS 111",
     headingClasses: "nhsuk-heading-m",
     descriptionHtml: cardDescriptionHtml
   }) }}

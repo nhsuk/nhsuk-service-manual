@@ -2,13 +2,14 @@
 
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
-  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
-{{ card({
-  clickable: true,
-  href: "#",
-  heading: "Introduction to care and support",
-  headingClasses: "nhsuk-heading-m",
-  description: "A quick guide for people who have care and support needs and their carers"
-}) }}
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    {% call card({
+      clickable: true,
+      heading: "91",
+      headingClasses: "nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1",
+      headingVisuallyHiddenText: "Applicants"
+    }) %}
+      <a href="#/applicants" class="nhsuk-card__link">Applicants</a>
+    {% endcall %}
 </li>
 </ul>
