@@ -182,11 +182,14 @@
                   {{- snippet.code | safe -}}
                 </code></pre>
               </div>
-              {% if snippets | length > 1 %}
-              <button class="app-button--close" hidden>
-                Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
-              </button>
-              {% endif %}
+              <div class="app-code-snippet__footer">
+                <p class="app-code-snippet__footer-version">NHS.UK frontend 10.3.0 &nbsp;<a href="/design-system/guides/check-frontend-version">Check your <span class="nhsuk-u-visually-hidden">frontend</span> version</a></p>
+                {% if snippets | length > 1 %}
+                  <button class="app-button--close" hidden>
+                    Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
+                  </button>
+                {% endif %}
+              </div>
             </div>
           {% endfor %}
         </div>
