@@ -68,7 +68,3 @@ p + .app-design-example {
 .nhsuk-lede-text + .app-design-example {
   @include nhsuk-responsive-padding(0, "top");
 }
-
-.app-tabs__container pre {
-  background-color: nhsuk-colour("grey-5");
-}

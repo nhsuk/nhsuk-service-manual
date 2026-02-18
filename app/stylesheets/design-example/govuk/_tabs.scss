@@ -1,6 +1,7 @@
 // stylelint-disable color-no-hex
 
 @use "../../vendor/nhsuk-frontend" as *;
+@use "../../settings" as *;
 
 .app-tabs {
   list-style-type: none;
@@ -9,48 +10,76 @@
   overflow: visible;
   padding: 0;
 
+  background: nhsuk-colour("white");
+  border: 1px solid nhsuk-colour("grey-3");
+  border-bottom: 0;
+  display: none;
+
+  @include nhsuk-media-query($from: tablet) {
+    display: block;
+  }
+
   &__item {
     display: inline-block;
     margin: 0;
     position: relative;
     z-index: 2;
+    background-color: transparent;
+  }
 
-    a {
-      background: inherit;
-      border-bottom: 2px solid transparent;
-      border-top: 2px solid transparent;
-      color: nhsuk-colour("blue");
-      display: block;
-      font-weight: bold;
-      margin-top: -1px;
-      padding: 15px;
+  &__item a {
+    margin: 0;
+    padding: 8px 16px;
+    background: inherit;
+    color: nhsuk-colour("blue");
+    display: block;
+
+    @include nhsuk-media-query($from: tablet) {
+      padding: 12px 24px;
+    }
+
+    &:hover {
+      color: $nhsuk-link-hover-colour;
+      outline: 0;
       text-decoration: none;
     }
 
-    &--current a {
-      border-bottom-color: nhsuk-colour("blue");
-      border-top-color: nhsuk-colour("blue");
+    &:focus {
+      background-color: $nhsuk-focus-colour;
+      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
+      color: $nhsuk-focus-text-colour;
+      outline: $nhsuk-focus-width solid transparent;
+      text-decoration: none;
+    }
+  }
+
+  &__item--current a {
+    border-bottom-color: nhsuk-colour("blue");
+    border-top-color: nhsuk-colour("blue");
+    text-decoration: none;
+
+    @include nhsuk-media-query($from: tablet) {
+      box-shadow: 0 $nhsuk-button-shadow-size 0 nhsuk-colour("blue");
     }
 
-    &__heading a {
-      background: inherit;
-      border: 1px solid #bfc1c3;
-      border-top: 0;
-      color: #005ea5;
+    &:hover {
+      color: $nhsuk-link-colour;
+    }
+
+    &:focus:hover {
+      color: $nhsuk-focus-text-colour;
+    }
+  }
+
+  &__item--mobile {
+    background-color: nhsuk-colour("white");
+    border: 1px solid nhsuk-colour("grey-3");
+    border-width: 1px 0;
+    display: block;
+    margin: -1px 0;
+
+    @include nhsuk-media-query($from: tablet) {
       display: none;
-      font-weight: bold;
-      padding: 15px;
-      position: relative;
-      text-decoration: none;
-      z-index: 2;
-
-      &:visited {
-        color: #005ea5;
-      }
-    }
-
-    &__heading--current {
-      background-color: #f0f0f0;
     }
   }
 
@@ -59,20 +88,21 @@
   }
 
   &__container {
-    border: 1px solid #bfc1c3;
-    margin-top: -2px;
+    margin-top: 0;
     position: relative;
 
-    pre {
-      background-color: #f8f8f8;
-      border: 0;
-      font-size: inherit;
-      margin: 0;
-      margin-bottom: 0;
-      max-width: inherit;
-      overflow: auto;
-      padding: 15px;
-      position: relative;
-    }
+    background-color: nhsuk-colour("white");
+    border: 1px solid nhsuk-colour("grey-3");
+    border-bottom: 0;
+  }
+
+  &__container pre {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &__container pre code {
+    padding-top: nhsuk-spacing(8);
   }
 }

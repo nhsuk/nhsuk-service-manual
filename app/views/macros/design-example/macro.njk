@@ -1,5 +1,6 @@
 {% from "details/macro.njk" import details %}
 {% from "tables/macro.njk" import table %}
+{% from "code/macro.njk" import appCode %}
 
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.slug) %}
@@ -29,14 +30,6 @@
   {% set showExample = params.showExample !== false %}
   {% set showCode = params.showCode !== false %}
 
-  {% set html %}
-  {{- getHTMLCode(params) | highlight('html') | safe -}}
-  {% endset %}
-
-  {% set nunjucks %}
-  {{- getNunjucksCode(params) | highlight('js') | safe -}}
-  {% endset %}
-
   {#
   Set up the `snippets` array to be a definition of the types of snippet to
   display. If `params.htmlOnly` is true, the only snippet type to show is HTML.
@@ -48,12 +41,14 @@
   {% set htmlDefinition = {
     name: "HTML",
     id: "html",
-    code: html
+    code: getHTMLCode(params),
+    language: "html"
   } %}
   {% set nunjucksDefinition = {
     name: "Nunjucks",
     id: "nunjucks",
-    code: nunjucks
+    code: getNunjucksCode(params),
+    language: "njk"
   } %}
   {% if params.htmlOnly %}
     {% set snippets = [htmlDefinition] %}
@@ -178,9 +173,9 @@
                   Copy code<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
                 </button>
 
-                <pre><code class="{{ snippet.language }}">
+                {% call appCode(snippet) %}
                   {{- snippet.code | safe -}}
-                </code></pre>
+                {% endcall %}
               </div>
               {% if snippets | length > 1 %}
               <button class="app-button--close" hidden>
