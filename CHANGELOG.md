@@ -4,6 +4,7 @@
 
 :wrench: **Maintenance**
 
+- Remove 1 example from NHS messages guidance
 - Resize example iframes when contents changes size
 
 ## 8.7.0 - 17 February 2026
