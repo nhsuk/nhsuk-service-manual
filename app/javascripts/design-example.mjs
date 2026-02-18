@@ -20,6 +20,7 @@ export class DesignExample extends Component {
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
+    this.state = { isMouseDown: false }
 
     this.bindEvents()
 
@@ -88,17 +89,19 @@ export class DesignExample extends Component {
     }
 
     if (this.iframe) {
-      initialize(
-        {
-          // Prevent resize when iframe has mouse cursor
-          // e.g. When resizing manually using handle
-          onBeforeIframeResize({ interactionState }) {
-            return !interactionState.isHovered
-          }
-        },
-        this.iframe
-      )
+      const { iframe, state } = this
+
+      iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
+      iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
+
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
     }
+  }
+
+  isResizeAllowed() {
+    // Prevent resize when iframe has mouse down
+    // e.g. When resizing manually using handle
+    return !this.state.isMouseDown
   }
 
   handleTabClick($tabLink) {
