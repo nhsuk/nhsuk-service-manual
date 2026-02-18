@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.7.1 - 18 February 2026
 
 :wrench: **Maintenance**
 
