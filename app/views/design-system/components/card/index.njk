@@ -34,12 +34,12 @@
   <p>Do not use a card to highlight content on the page of long form content.</p>
   <p>Before using a card consider using:</p>
   <ul>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/care-cards">care card</a>, to help users identify and understand the care they need, who to contact and how quickly</li>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/details">details</a>, to make a page easier to scan by letting users reveal more detailed information</li>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/expander">expander</a>, to make a complex topic easier to digest by letting users reveal more detailed information</li>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/inset-text">inset text</a>, to help users identify and understand important content on the page</li>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/tabs">tabs</a>, to let users navigate between related sections of content, displaying 1 section at a time</li>
-    <li><a href="https://service-manual.nhs.uk/design-system/components/warning-callout">warning callout</a>, to help users identify and understand warning content on a page</li>
+    <li><a href="/design-system/components/care-cards">care card</a>, to help users identify and understand the care they need, who to contact and how quickly</li>
+    <li><a href="/design-system/components/details">details</a>, to make a page easier to scan by letting users reveal more detailed information</li>
+    <li><a href="/design-system/components/expander">expander</a>, to make a complex topic easier to digest by letting users reveal more detailed information</li>
+    <li><a href="/design-system/components/inset-text">inset text</a>, to help users identify and understand important content on the page</li>
+    <li><a href="/design-system/components/tabs">tabs</a>, to let users navigate between related sections of content, displaying 1 section at a time</li>
+    <li><a href="/design-system/components/warning-callout">warning callout</a>, to help users identify and understand warning content on a page</li>
   </ul>
 
   <h2 id="how-to-use">How to use a card</h2>
@@ -68,7 +68,7 @@
     <h4 class="nhsuk-heading-s">Primary card with chevron</h4>
   <p>This primary card uses the chevron icon to make this even more visually prominent, helping it stand out from the other cards.</p>
   <p>There is only a clickable version of this card.</p>
-  <p>This card is also used in the <a href="https://service-manual.nhs.uk/design-system/patterns">hub page pattern</a></p>
+  <p>This card /design-system/patterns">hub page pattern</a></p>
 
   {{ designExample({
     group: "components",
@@ -92,7 +92,7 @@
   
   <h4 class="nhsuk-heading-s">Secondary card clickable</h4>
 
-  <p>This card is also used in the <a href="https://service-manual.nhs.uk/design-system/patterns">hub page pattern</a></p>
+  <p>This card is also used in the <a href="/design-system/patterns">hub page pattern</a></p>
 
   {{ designExample({
     group: "components",
@@ -131,8 +131,9 @@
   }) }}
 
   <h3 id="action">Adding actions</h3>
-  <p>You can add actions to the card's header, they are shown below the heading on small screens and right aligned on bigger screens.</p>
-  <p>Card actions cannot be used on clickable cards because the entire card is 1 clickable link.</p>
+  <p>You can add links for 1 or more actions to a card. They show below the heading on small screens and right-aligned on bigger screens.</p>
+  <p>Card actions cannot be used on clickable cards.</p>
+  <p>They can be used in <a href="/design-system/components/summary-list#summary-cards">summary cards</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -140,21 +141,21 @@
     type: "card-actions"
   }) }}
 
-  <p>Write link text for card actions to tell the user what the card action will do and that it will apply to the entire card. Keep it short and do not add more than 2 to 3 actions in a header.</p>
+  <p>Write link text that makes it clear what will happen next. Keep it short and do not add more than 3 actions.</p>
   <p>Example card actions include:</p>
   <ul>
-    <li>Remove appointment</li>
-    <li>Edit appointment</li>
-    <li>Update issue</li>
-    <li>Approve application</li>
-    <li>Cancel order</li>
+    <li>remove appointment</li>
+    <li>edit appointment</li>
+    <li>update issue</li>
+    <li>approve application</li>
+    <li>cancel order</li>
   </ul>
-  <p>Card titles must be unique and help identify what the card contains. Keep titles short and relevant. When card actions are read aloud by screen readers, the card title will be prefixed, making each action link unique.</p>
+  <p>Card titles must be unique and help identify what the card contains. When a screen reader reads out card actions, it also reads out the card heading, making each action link unique. This means all card headings must be short, relevant and unique.</p>
   <p>If a card action cannot easily be undone or might have serious consequences, consider adding a warning or asking the user for confirmation.</p>
 
   <h3 class="nhsuk-heading-m">Grouping cards</h3>
   <p>You can group multiple cards to show a collection of related topics or highlight key information and figures.</p>
-  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="https://service-manual.nhs.uk/design-system/patterns">Hub page pattern</a>.</p>
+  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="/design-system/patterns">hub page pattern</a>.</p>
 
   <h4 class="nhsuk-heading-s">Card width</h4>
   <p>We define the width of the cards using the grid system. For example, <code>nhsuk-grid-column-one-half</code> is used to make the cards half width:</p>
