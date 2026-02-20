@@ -1,5 +1,10 @@
 # NHS digital service manual Changelog
 
+## 7.11.0 - 20 Feb 2026
+
+:wrench: **Maintenance**
+- Update TRG CCC contacts list
+
 ## 7.10.0 - 14 May 2025
 
 :new: **New features**
