@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.7.2 - 24 February 2026
+
+:wrench: **Maintenance**
+
+- Add 1 example to NHS messages guidance
+
 ## 8.7.1 - 18 February 2026
 
 :wrench: **Maintenance**

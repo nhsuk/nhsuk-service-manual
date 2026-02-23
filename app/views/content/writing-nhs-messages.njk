@@ -158,6 +158,32 @@
 <p>If you are unable to access these features, you may need to prove who you are. <a href="#">Read more about how to prove who you are</a>.</p>
 {% endcall %}
 
+{% call details({
+  summaryText: "Example 2 of an NHS App message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> ((serviceName))</p>
+<p>Dear ((firstName)) ((lastName))</p>
+<p>We are inviting you to do a screening test at home.</p>
+<p><strong>Why screening is done</strong></p>
+<p>We offer screening every 2 years to people aged 50 to 74.</p>
+<p>Screening for this condition uses a test called a [condition] screening test. It can help find symptoms early, when treatment is more likely to be effective.</p>
+<p>You collect a sample at home and send it by post to be tested.</p>
+<p><a href="#">Find out more about screening including how to get a home test kit.</a></p>
+<p><strong>When to contact us</strong></p>
+<p>You can call the [condition] screening programme helpline on 0800 123 4567 to:</p>
+<ul>
+  <li>get help to use the kit</li>
+  <li>check if you should use the kit</li>
+  <li>ask for information in other formats</li>
+</ul>
+<p>If you have hearing or speech difficulties, use the <a href="#">Relay UK service</a>. You could also ask someone to call or email for you.</p>
+<p><strong>Getting your result</strong></p>
+<p>We will post your result to you and your GP within 2 weeks of getting your completed kit. If your result is negative, you will not need to do anything else. If your result is positive, we will ask you to do more tests.</p>
+<p><strong>More information</strong></p>
+<p><a href="#">Find out more about screening on the NHS website.</a></p>
+{% endcall %}
+
 <h2 id="text-messages">Text messages</h2>
 
 <p>Make sure text messages are brief, direct and contain a clear action that patients can follow. Use simple language and avoid unnecessary detail that may make the message too long or unclear.</p>
