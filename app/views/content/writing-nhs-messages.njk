@@ -1,0 +1,442 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Writing NHS messages" %}
+{% set pageSection = "Content guide" %}
+{% set pageDescription = "How to write NHS App messages, text messages, emails and letters for patients and the public, with advice on structure, tone and wording so your message is effective and easy to understand." %}
+{% set dateUpdated = "February 2026" %}
+{% set backlog_issue_id = "450" %}
+
+{% block beforeContent %}
+  {% include "content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block sideNav %}
+<nav class="app-side-nav">
+
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/standard-for-creating-health-content">Standard for creating health content</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-we-write">How we write</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/voice-and-tone">Voice and tone</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/health-literacy">Health literacy</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/a-to-z-of-nhs-health-writing">A to Z of NHS health writing</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/inclusive-content">Inclusive content</a></li>
+
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/writing-nhs-messages">Writing NHS messages</a></li>
+        <ul class="app-side-nav__list app-side-nav__list--nested">
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#who-this-guidance-is-for">Who this guidance is for</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#writing-effective-messages">Writing effective messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#writing-for-different-channels">Writing for different channels</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#nhs-app-messages">NHS App messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#text-messages">Text messages</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#emails">Emails</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#paper-letters">Paper letters</a></li>
+          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</a></li>
+        </ul>
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting">Formatting</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/punctuation">Punctuation</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/numbers-measurements-dates-time">Numbers, measurements, dates and time</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/how-to-write-good-questions-for-forms">How to write good questions for forms</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/pdfs-and-other-non-html-documents">PDFs and other non-HTML documents</a></li>
+
+      <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/british-sign-language-bsl-quality-assurance-standard">British Sign Language (BSL) quality assurance standard</a></li>
+
+    </ul>
+
+</nav>
+{% endblock %}
+
+{% block bodyContent %}
+<h2 id="who-this-guidance-is-for">Who this guidance is for</h2>
+
+<p>This guidance is for anyone who writes or edits patient messages, including:</p>
+<ul>
+  <li>content designers</li>
+  <li>communications teams</li>
+  <li>administration staff</li>
+</ul>
+
+{% call insetText({
+  classes: "nhsuk-u-margin-top-4"
+}) %}
+  <p>If you need guidance on messaging strategy, governance requirements, or using NHS Notify visit the <a href="https://digital.nhs.uk/services/messaging-best-practice">Messaging best practice section of the NHS England website</a>.</p>
+{% endcall %}
+
+<p>Use this guidance if you want to:</p>
+<ul>
+  <li>write messages that work well on different channels</li>
+  <li>choose wording that patients understand</li>
+  <li>make content inclusive and accessible</li>
+  <li>find examples and templates to reference when writing your message</li>
+</ul>
+<p>It was developed with input from clinical safety, governance and delivery teams across NHS England. It brings together established writing standards and findings from user research into how NHS messages are read and understood.</p>
+<p>It sits alongside the Messaging best practice section of the NHS England website so teams can plan, write and send messages in a joined-up and consistent way.</p>
+
+<h2 id="writing-effective-messages">Writing effective messages</h2>
+<p>When writing your message always consider the needs of the patient, any clinical safety requirements and the channel you are using to send the message.</p>
+<p>To write messages in any channel:</p>
+<ul>
+  <li>use plain simple English and our <a href="/content/voice-and-tone">voice and tone</a></li>
+  <li>keep messages short and concise as they'll be easier for the reader to scan</li>
+  <li>start with the most important information</li>
+  <li>use short, descriptive titles or subject lines</li>
+  <li>try to avoid more than one call to action but if you cannot, make it clear which is the priority</li>
+  <li>only include links when they are necessary and have a clear purpose</li>
+  <li>test your messages with users before sending them</li>
+</ul>
+
+<h2 id="writing-for-different-channels">Writing for different channels</h2>
+
+<p>If your service has a fallback strategy you may be required to write the same message for multiple channels.</p>
+<p>Writing messages specifically for the channel means users are more likely to understand and engage with important health-related requests or advice. For example, copying and pasting the contents of a letter into a text message or NHS App message is bad practice as this can create formatting issues and could result in a poor user experience.</p>
+<p>Find out how to write for different channels by referring to the specific channel guidance and examples on this page. The examples illustrate how this guidance can be applied in practice. You should test your messages to make sure they meet the needs of your users.</p>
+<h2 id="nhs-app-messages">NHS App messages</h2>
+
+<p>The NHS App is a free and secure way to communicate with patients and the public. Consider the following when writing messages for the NHS App.</p>
+
+<h3 id="greeting-app">Greeting</h3>
+<p>If you start your message with a greeting make sure you use "Dear" followed by the patient's name and not "Hi" or similar.</p>
+<p>Choosing which name to use depends on the context of the message. Use a first name when you want to be more encouraging or conversational. For a more formal or reassuring tone consider using a full name.</p>
+
+<div class="app-example app-example--content">
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+
+  <ul>
+    <li>conversational tone – "Dear ((firstName))"</li>
+    <li>reassuring tone – "Dear ((firstName)) ((lastName))"</li>
+  </ul>
+</div>
+
+<p>Avoid using just a last name or first name without a greeting as it can sound impersonal.</p>
+
+<h3 id="protecting-people-from-spam-and-phishing-app">Protecting people from spam and phishing</h3>
+<p>To access messages in the NHS App, patients need to go through NHS login and prove their identity. This means NHS App messages are more secure than email messages or text. Research has shown patients are more likely to trust links in the NHS App, and because the NHS App is secure you can use text links rather than having to write out the full URL as in a text message or email.</p>
+<p><a href="https://notify.nhs.uk/using-nhs-notify/links-and-urls">Find out how to use text links and URLs in an NHS App message on the NHS Notify website</a>.</p>
+
+<h3 id="telling-patients-who-your-message-is-from-app">Telling patients who your message is from</h3>
+<p>Patients and the public are more likely to trust a message if they know who sent it. You can choose the sender name that is displayed with your NHS App message when you onboard with NHS Notify.</p>
+<p>Your sender name can help patients quickly identify your service, for example "NHS vaccination invitations", "NHS App" or "Tree Tops Medical  Practice". Due to the way sender name is displayed in the NHS App it is not necessary to use a signature at the end of your message.</p>
+<p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#nhs-app-sender-name%22%20HYPERLINK%20%22https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#nhs-app-sender-name">Read more about sender names on the NHS Notify website</a>.</p>
+
+<h3 id="length-of-message-app">Length of message</h3>
+<p>NHS App messages can be up to 5,000 characters including spaces, but research shows some patients will only read the first part of the message.</p>
+<p>Make longer messages easier for your reader to scan by:</p>
+<ul>
+  <li>keeping messages concise</li>
+  <li>putting the important information first</li>
+  <li>breaking longer content into short paragraphs or steps</li>
+  <li>using bullet point lists and section headings</li>
+</ul>
+
+<h3 id="nhs-app-message-examples">NHS App message examples</h3>
+
+{% call details({
+  summaryText: "Example 1 of an NHS App message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS App</p>
+<p>Dear ((firstName))</p>
+<p><strong>Welcome to the NHS App</strong></p>
+<p>If you have full access to the NHS App you can do things like:</p>
+<ul>
+  <li>order repeat prescriptions</li>
+  <li>manage appointments</li>
+  <li>view your GP health record</li>
+</ul>
+<p>If you are unable to access these features, you may need to prove who you are. <a href="#">Read more about how to prove who you are</a>.</p>
+{% endcall %}
+
+<h2 id="text-messages">Text messages</h2>
+
+<p>Make sure text messages are brief, direct and contain a clear action that patients can follow. Use simple language and avoid unnecessary detail that may make the message too long or unclear.</p>
+
+<h3 id="greeting-text">Greeting</h3>
+<p>For brevity and to save characters, text messages do not always require a formal greeting. Start your message with the patient's first or full name as people are more likely to trust a text message if it is personalised.</p>
+<p>You can consider a formal greeting if it matches the required tone or content of your message.</p>
+
+<h3 id="protecting-people-from-spam-and-phishing-text">Protecting people from spam and phishing</h3>
+<p>Patients are more likely to read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message.</p>
+
+{{ list({
+  title: "Do",
+  type: "tick",
+  items: [
+    {
+      text: "include the name of your service or organisation"
+    },
+    {
+      text: "reference an event they may be familiar with such as an appointment or test"
+    },
+    {
+      text: "ask someone to check your messages for errors before you send them"
+    }
+  ]
+}) }}
+
+{{ list({
+  title: "Don't",
+  type: "cross",
+  items: [
+    {
+      text: "include spelling mistakes, grammatical errors, inaccuracies or poor formatting"
+    },
+    {
+      text: "use abbreviations or acronyms the patient may not be familiar with"
+    }
+  ]
+}) }}
+
+<p>If you include links in your text message make sure they:</p>
+<ul>
+  <li>go to trusted sites such as NHS.UK or GOV.UK</li>
+  <li>are human readable, for example, http://www.nhs.uk/tests-and-treatments</li>
+  <li>include the full URL</li>
+  <li>do not contain any personal information such as the patient's name or NHS number</li>
+  <li>are consistent across all your messaging channels so people can check them independently</li>
+</ul>
+
+<h3 id="formatting-text">Formatting</h3>
+<p>Text messages do not support formatting such as bullet points, numbered lists, bold text or headings. If you are condensing a longer message into a text message, make sure it works without formatting. Use paragraph or line breaks to make text messages easier to read.</p>
+
+<p><a href="https://notify.nhs.uk/using-nhs-notify/formatting">Find out more about message formatting on the NHS Notify website</a>.</p>
+
+<h3 id="telling-patients-who-your-message-is-from-text">Telling patients who your message is from</h3>
+<p>The text message sender name (also called SenderID) shows the reader who the text message is from and is often the first thing they see when reading a text notification. If you choose a recognisable SenderID, they can quickly tell who the message is from and are more likely to open and read it.</p>
+
+<p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#text-message-sender-name">Read more about text message sender names on the NHS Notify website</a>.</p>
+
+<h3 id="length-of-message-text">Length of message</h3>
+
+<p>If a text message is longer than 160 characters including spaces, it will be charged as more than 1 message. Some signs and symbols count as 2 characters. Using accented characters may also increase the cost of your text message.</p>
+
+<p><a href="https://notify.nhs.uk/pricing-and-commercial/text-messages">Find the cost of sending text messages with NHS Notify</a>.</p>
+
+<h3 id="text-message-examples">Text message examples</h3>
+
+{% call details({
+  summaryText: "Example 1 of an NHS text message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS Blood Test</p>
+<p>((firstName)) ((lastName)), you are due for your NHS blood test. Book your appointment or find out more at <a href="#">http://www.nhs.uk/service-name-invite</a></p>
+{% endcall %}
+
+{% call details({
+  summaryText: "Example 2 of an NHS text message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS App</p>
+<p>((firstName)) ((lastName))</p>
+<p>You have a new secure message from the NHS.</p>
+<p>Open the NHS App to read it.</p>
+<p>Or you can log in through the website: <a href="#">https://www.nhs.uk/inbox</a></p>
+{% endcall %}
+
+{% call details({
+  summaryText: "Example 3 of an NHS text message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS vaccination invitations</p>
+<p>((firstName)) ((lastName))</p>
+<p>You can get your free NHS winter COVID-19 vaccine because of your age.</p>
+<p>Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
+<p>Cannot get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit.</p>
+<p>COVID spreads more easily in winter. It's best to get vaccinated as soon as you can, ahead of the colder months. Vaccination tops up your protection against severe symptoms.</p>
+<p>Read more: <a href="#">http://www.nhs.uk/covidvaccination</a></p>
+<p>For easy read and other formats: <a href="#">http://www.england.nhs.uk/seasonal-invites</a></p>
+<p>To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
+{% endcall %}
+
+<h2 id="emails">Emails</h2>
+<p>Emails are a cost-effective channel for longer messages, but keep them brief and direct and include a clear action that patients can follow.</p>
+<p>When sending an email:</p>
+<ul>
+  <li>keep subject lines short and descriptive</li>
+  <li>avoid attachments</li>
+  <li>send from official NHS domains such as @nhs.net or @nhs.uk</li>
+  <li>use formatting such as headings and lists if it makes the message easier to read</li>
+</ul>
+
+<h3 id="greeting-email">Greeting</h3>
+<p>Patients are more likely to engage with a message that's relevant and clearly meant for them. If you start your message with a greeting you should use "Dear" and not "Hi" or similar.</p>
+
+<h3 id="protecting-people-from-spam-and-phishing-email">Protecting people from spam and phishing</h3>
+<p>Patients do not trust emails with poor formatting, spelling mistakes, grammatical errors or inaccuracies. Write messages that follow our <a href="/content/voice-and-tone">voice and tone.</a> Consider asking someone to check your messages for errors before you send them.</p>
+
+<p>Further ways to protect people from spam or phishing:</p>
+<ul>
+  <li>avoid making requests for personal information, like a patient's date of birth, in the content of your messages</li>
+  <li>only include recognisable links to trusted websites such as the NHS.UK or the GOV.UK websites</li>
+</ul>
+
+<h3 id="telling-patients-who-your-message-is-from-email">Telling patients who your message is from</h3>
+<p>When sending an email, there are several ways to tell the patient who it is from. Use an email sender name that clearly represents your NHS organisation or service. You should also use this name at the end of the email.</p>
+
+<div class="app-example app-example--content">
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+
+  <p>Yours sincerely,</p>
+  <p>NHS vaccination invitations</p>
+</div>
+
+<p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#email-sender-name-and-from-email-address">Read more about email sender name and from email address on the NHS Notify website</a>.</p>
+
+<p>For the email subject line use something specific like "Your GP appointment reminder" or "NHS vaccination invitation" rather than a generic "NHS invite". Keeping subject lines short will make your email stand out in a patient's inbox and is more likely to be opened and read.</p>
+
+<h3 id="email-message-examples">Email message examples</h3>
+
+{% call details({
+  summaryText: "Example 1 of an NHS email message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS ((serviceName))</p>
+<p>Subject: NHS ((serviceName)) invitation</p>
+<p>Dear ((firstName)) ((lastName)),</p>
+<p>We are inviting you for your NHS ((serviceName)) appointment.</p>
+<p>Find more information about your ((serviceName)) invite, including how to book your appointment: <a href="#">https://www.nhs.uk/service-name-invite</a>.</p>
+<p>Yours sincerely,</p>
+<p>((serviceName))</p>
+{% endcall %}
+
+{% call details({
+  summaryText: "Example 2 of an NHS email message",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>SenderID:</strong> NHS vaccination invitations</p>
+<p>Subject: Booking your NHS winter COVID-19 vaccination</p>
+<p>Dear ((firstName)) ((lastName)),</p>
+<p>You can book a free winter NHS COVID-19 vaccination because you are aged 75 or over (or will be by 31 January 2026).</p>
+<p><strong>How to get your COVID-19 vaccination</strong></p>
+<ul>
+  <li>Book on the NHS App or online at <a href="#">http://www.nhs.uk/get-vaccination</a></li>
+  <li>Find your nearest COVID-19 vaccination walk-in site at <a href="#">http://www.nhs.uk/covid-walk-in</a></li>
+</ul>
+<p>It is best to get vaccinated as soon as you can ahead of the colder months.</p>
+<p><strong>If you need support</strong></p>
+<p>If you cannot get online, phone 119. Translators are available. You can also use text phone 18001 119 or the NHS British Sign Language service at <a href="#">http://www.signvideo.co.uk/nhs119</a></p>
+<p>If you get your care at home, contact your GP surgery for a home visit.</p>
+<p>For information in easy read and other languages and formats, go to <a href="#">http://www.england.nhs.uk/seasonal-invites</a></p>
+<p><strong>Why the NHS is offering a winter COVID-19 vaccination</strong></p>
+<p>COVID-19 spreads more easily in winter and can be hard to avoid. Every year, thousands of older adults need hospital care. It's important you have your vaccination every year to reduce your risk of severe symptoms. Protection fades over time and viruses change. Read more at <a href="https://www.nhs.uk/covidvaccination">https://www.nhs.uk/covidvaccination</a></p>
+<p><strong>Other NHS vaccinations</strong></p>
+<p>If you have not already, you can get:</p>
+  <ul>
+    <li>a pneumococcal vaccination</li>
+    <li>an RSV vaccination (if you are aged 75 to 79 years, or have turned 80 since 1 September 2024)</li>
+    <li>shingles vaccinations (if you are aged under 80)  </li>
+  </ul>
+  <p>For full details, go to <a href="#">http://www.nhs.uk/vaccinations</a></p>
+<p>Yours sincerely,</p>
+<p>NHS England Vaccination Team</p>
+<p>Data protection: NHS England is responsible for processing your personal data. This is for the purpose of national vaccination programmes. To find out more, you can access our privacy notice at: <a href="#">http://www.england.nhs.uk/contact-us/privacy-notice</a></p>
+<p>To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
+{% endcall %}
+
+<h2 id="paper-letters">Paper letters</h2>
+
+<p>Letters allow for longer messages and you can format the text to include headings and bullet points. They are available in large print and braille, which makes them more accessible for some patients. There may also be legal or clinical safety reasons for using letters.</p>
+<p>Letters are expensive to send and a digital alternative should always be considered.</p>
+
+<p><a href="https://notify.nhs.uk/pricing-and-commercial/letters">Find the cost of sending letters with NHS Notify</a>.</p>
+
+<h3 id="greeting-letters">Greeting</h3>
+
+<p>Letters tend to be more formal so start your message with "Dear" and not "Hi" or similar. Including a greeting is important as it builds trust.</p>
+
+<h3 id="telling-patients-who-your-message-is-from-letter">Telling patients who your letter is from</h3>
+
+<p>Consider displaying your service name in a header as well as in the signature, so patients can quickly recognise who the letter is from. For consistency this should match the name used in your NHS App messages, emails or text messages.</p>
+
+<h3 id="formatting-and-templates-letters">Formatting and templates</h3>
+
+<p>You can format your letter to include bullet points, numbered lists, bold text, headings and more.</p>
+<p>If you are using NHS Notify to send your message you can download a letter template, which has further guidance on writing letters.</p>
+
+<p><a href="https://notify.nhs.uk/using-nhs-notify/upload-a-letter">Find out more about formatting and letter templates on the NHS Notify website</a>.</p>
+
+<h3 id="paper-letter-examples">Paper letter examples</h3>
+
+{% call details({
+  summaryText: "Example 1 of an NHS paper letter",
+  classes: "nhsuk-expander"
+}) %}
+<p><strong>Reference number -</strong></p>
+<p><strong>NHS number -</strong> ((NHS number))</p>
+<p>Dear ((firstName)) ((lastName)),</p>
+<p><strong>Confirm your address with NHS England</strong></p>
+<p>We are writing to you to confirm if the home address the NHS holds for you is up to date.</p>
+<p>If we do not receive the information we need from you within 30 days of the date of this letter, it will be assumed that you have moved and we will begin the process of removing you from your GP surgery’s patient list. This means you will not receive important information about your healthcare and will no longer be registered with a GP surgery.</p>
+<p>Please complete one of the options on the attached page. You may want to keep this page in a safe place for your records.</p>
+<p><strong>What to do if your address information is correct</strong></p>
+<p>Please complete one of the following options:</p>
+<p><strong>Option 1</strong></p>
+<p>Scan the QR code and complete the online form to confirm your address. You will need Reference number ((Reference number)) and NHS number ((NHS number)).</p>
+<p>((QR CODE))</p>
+<p><strong>Option 2</strong></p>
+<p>Text ((Reference number)) to 07860 055388 (usual contract charges will apply).</p>
+<p><strong>Option 3</strong></p>
+<p>Tick this box [BOX] and return this page in the envelope provided. You do not need a stamp.</p>
+<p><strong>What to do if your address information is not correct.</strong></p>
+<ul>
+  <li>You may need to register with a new GP surgery using the following link https://www.nhs.uk/service-search/find-a-gp/</li>
+  <li>Contact your existing GP surgery to update your address.</li>
+  <li>If you have left the United Kingdom and do not intend to return within 3 months you should call your GP and ask to be removed from their patient list.</li>
+</ul>
+<p>You may also receive this message in an email.</p>
+<p><strong>How do I request this letter in an alternative format?</strong></p>
+<p>To request this letter in an alternative format such as braille, large print or audio version please contact your GP surgery.</p>
+<p>Find a translated version of this letter at https://pcse.england.nhs.uk/members-public/my-details-and-nhs/other-languages</p>
+<p>Thank you for taking the time to respond to this request.</p>
+<p>Yours sincerely,</p>
+<p>Primary Care Support England</p>
+<p>Delivered on behalf of NHS England by Capita https://pcse.england.nhs.uk/organisations/public/</p>
+<p>Primary Care Support England provides administrative and support services for primary care on behalf of NHS England and is part of Capita plc.</p>
+{% endcall %}
+
+{% call details({
+  summaryText: "Example 2 of an NHS paper letter",
+  classes: "nhsuk-expander"
+}) %}
+<p>Date: DD MONTH YYYY</p>
+<p>Your NHS number: ((NHS number))</p>
+<p><strong>Booking your measles, mumps and rubella vaccination</strong></p>
+<p>Dear ((firstName)) ((lastName)),</p>
+<p>Measles cases are increasing in England, so it's important you are fully vaccinated.</p>
+<p>We're inviting you to book a free measles, mumps and rubella (MMR) vaccination. This is because your NHS record suggests you have not completed your two-dose course of the MMR vaccine. You need 2 doses for the best protection against measles, mumps and rubella.</p>
+<p>These illnesses spread easily between unvaccinated people. Infection can lead to serious problems including meningitis, hearing loss and problems during pregnancy.</p>
+<p><strong>How to book a vaccination</strong></p>
+<p>Please contact your GP surgery to confirm your record and book a vaccination appointment if needed. You can also ask about any other routine NHS vaccinations you may need. They may be able to arrange these for the same appointment. If you have already booked, please attend your appointment.  </p>
+<p><strong>More information</strong></p>
+<p>The MMR vaccine is the most effective way to protect you against measles, mumps and rubella. Millions of doses are given every year. Most side effects are mild and do not last long. Visit https://www.nhs.uk/mmr for more information on the vaccine.</p>
+<p>Visit https://www.england.nhs.uk/mmr-invites to get this information in easy read and other languages and formats.</p>
+<p>Yours sincerely, </p>
+<p>NHS England Vaccination Team</p>
+<p>Data Protection: NHS England is responsible for processing your personal data for the purposes of national vaccination programmes. To find out more, you can access our privacy notice at: www.england.nhs.uk/contact-us/privacy-notice, or search for "NHS England Privacy Notice" in your website browser.</p>
+{% endcall %}
+
+<h2 id="supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</h2>
+<p>Your message should use language that is inclusive and respectful.</p>
+<p><a href="/content/inclusive-content">See our section on inclusive content</a>.</p>
+<p>Generally, digital channels can be made accessible through assistive technology. Letters sent through NHS Notify are available in accessible formats including easy read and braille.</p>
+<p><a href="https://notify.nhs.uk/using-nhs-notify/accessible-formats">Read more about accessible formats when sending messages through NHS Notify</a>.</p>
+<p>All NHS web pages and content should follow the principles in our <a href="/accessibility">accessibility guidance</a>.</p>
+{% endblock %}
+
+{% block asideContent %}
+  {% include "./partials/related-nav.njk" %}
+{% endblock %}

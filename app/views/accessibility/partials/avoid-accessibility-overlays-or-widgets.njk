@@ -13,19 +13,13 @@
 </ul>
 <p>If you add this sort of functionality, test it to make sure it does not cause problems for any of your users. Please share your research findings via the <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/449">GitHub issue for overlays, widgets and banners</a>.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      The problems with overlays or widgets
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-
-    <p>Widgets typically sit in the banner or a corner of the page, sometimes obscuring key functionality. They often use icons that can be difficult for users to understand.</p>
-    <p>When a user clicks on the widget, by accident or on purpose, an overlay may pop up and cover up information or create a barrier that users cannot get past. People find them confusing and unhelpful.</p>
-    <p>People with access needs often use their preferred assistive technologies across all websites. Widgets only meet some access needs and only deal with one part of a user journey. They cannot hand over from one system or site to another. Widgets can also cause problems for people who use assistive technologies.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "The problems with overlays or widgets"
+}) %}
+  <p>Widgets typically sit in the banner or a corner of the page, sometimes obscuring key functionality. They often use icons that can be difficult for users to understand.</p>
+  <p>When a user clicks on the widget, by accident or on purpose, an overlay may pop up and cover up information or create a barrier that users cannot get past. People find them confusing and unhelpful.</p>
+  <p>People with access needs often use their preferred assistive technologies across all websites. Widgets only meet some access needs and only deal with one part of a user journey. They cannot hand over from one system or site to another. Widgets can also cause problems for people who use assistive technologies.</p>
+{% endcall %}
 
 <h3>The best way to help people with access needs</h3>
 <p>The best solution for most people with access needs is a well-designed, well-structured website or service that is:</p>

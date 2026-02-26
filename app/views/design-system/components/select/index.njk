@@ -24,7 +24,7 @@
 
   <h2 id="when-to-use-select">When to use select</h2>
   <p>The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.</p>
-  
+
   <h2 id="when-not-to-use-select">When not to use select</h2>
   <p>The select component allows users to choose an option from a long list. Before using the select component, try asking users other questions which will allow you to present them with fewer options.</p>
   <p>Consider using a different solution, such as <a href="/design-system/components/radios/">radios</a>.</p>
@@ -36,7 +36,7 @@
 
   <h3 id="select-with-hint">Select with hint</h3>
   <p>You can add <a href="/design-system/components/hint-text">hint text</a> to help the user understand the options and choose 1 of them.</p>
-  
+
   {{ designExample({
     group: "components",
     item: "select",
@@ -57,14 +57,18 @@
   <p>The select component does not support selecting multiple options, as there's a history of poor usability and assistive technology support for <code>&lt;select multiple&gt;</code>. If you need to ask the user to pick more than 1 item from a list, it's almost always better to use another method, such as a list of <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
   <p>Read <a href="https://www.24a11y.com/2019/select-your-poison/">Select your poison (24 Accessibility)</a>.</p>
 
-<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-avoid-dragging-multiple-options" role="note">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
-
-  <p>Any input that's designed to let a user select multiple options must offer a way to do so without relying on click and drag movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
-</div>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-avoid-dragging-multiple-options",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
+    <p>Any input that's designed to let a user select multiple options must offer a way to do so without relying on click and drag movements or keyboard and mouse combination actions. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging Movements (W3C)</a>.</p>
+  {% endcall %}
 
   <h2>Research</h2>
   <p>User research shows that some users struggle with the select component, especially people who use a keyboard to navigate and people with motor difficulties. The dropdown feature makes users work hard to see and understand their options and click the option they want.</p>

@@ -51,28 +51,18 @@
 
 <p>If you do not register here for a licence, you must buy your own licence.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Organisations with an existing licence
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>If your organisation already has a licence for desktop applications (such as graphic design software) and for enough users, you do not need to do anything and can continue to use the font in desktop applications.</p>
-    <p>If you're paying an annual subscription to use the font or require more users, you will save money by registering for a licence for the 3 font weights, as the NHS-wide licence is free and does not expire.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "Organisations with an existing licence"
+}) %}
+  <p>If your organisation already has a licence for desktop applications (such as graphic design software) and for enough users, you do not need to do anything and can continue to use the font in desktop applications.</p>
+  <p>If you're paying an annual subscription to use the font or require more users, you will save money by registering for a licence for the 3 font weights, as the NHS-wide licence is free and does not expire.</p>
+{% endcall %}
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      NHS England staff
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>NHS England teams do not need to register to use the font. Find out more on the staff User Centred Design (UCD) SharePoint.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "NHS England staff"
+}) %}
+  <p>NHS England teams do not need to register to use the font. Find out more on the staff User Centred Design (UCD) SharePoint.</p>
+{% endcall %}
 
 <h2>Frutiger weights included</h2>
 <p>The licence covers 3 weights. These are:</p>
@@ -83,17 +73,12 @@
 </ul>
 <p>You can use the font in these weights online and offline, for example, on your website or in printed products.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Weights not covered
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>If you want to use another weight of Frutiger, for example Frutiger Italic, you must buy your own licence. We do not recommend italic fonts. Some people find them hard to read.</p>
-    <p>You must also buy your own licence if you want to use Frutiger 45 Light in an app.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "Weights not covered"
+}) %}
+  <p>If you want to use another weight of Frutiger, for example Frutiger Italic, you must buy your own licence. We do not recommend italic fonts. Some people find them hard to read.</p>
+  <p>You must also buy your own licence if you want to use Frutiger 45 Light in an app.</p>
+{% endcall %}
 
 <h2>Before you start</h2>
 <p>To register for a licence to use the font, you must:</p>

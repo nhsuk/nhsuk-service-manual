@@ -13,15 +13,17 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Do and Don't lists updated in August 2025</h3>
     <p>See <a href="/design-system/guides/updating-to-v10#do-and-dont-lists">breaking code updates to Do and Don't lists in version 10</a></p>
-  </div>
+  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -33,7 +35,7 @@
   <p>Use a Do and Don't list to give users clear and simple advice, for example about treating a problem themselves.</p>
 
   <h2 id="when-not-to-use-do-and-dont-lists">When not to use Do and Don't lists</h2>
-  <p>If you only have 1 Do - or 1 Don't, consider using <a href="/design-system/components/inset-text">inset text</a> or a <a href="/design-system/components/warning-callout">warning callout</a> instead. </p>
+  <p>If you only have 1 Do or 1 Don't, consider using <a href="/design-system/components/inset-text">inset text</a> or a <a href="/design-system/components/warning-callout">warning callout</a> instead. </p>
 
   <h2 id="how-to-use-do-and-dont-lists">How to use Do and Don't lists</h2>
   <p>Keep your points as brief as possible.</p>

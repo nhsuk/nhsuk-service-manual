@@ -14,15 +14,17 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Icons updated in August 2025</h3>
     <p>See <a href="/design-system/guides/updating-to-v10#components">breaking code updates to components (including icons) in version 10</a></p>
-  </div>
+  {% endcall %}
 
   <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-icon-focus">interact with icons used as buttons</a>.</p>
 
@@ -92,15 +94,20 @@
   <h2 id="how-to-use-these-icons">How to use these icons</h2>
   <p>Use icons sparingly, and not for decoration.</p>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-icon-focus" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-      WCAG 2.2
-    </strong>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-icon-focus",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
     <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: a search icon to submit a query supported by a labelled "Search" button.</p>
     <p>This is to make sure users can easily interact with them. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
   <h3>Using SVG classes for icons</h3>
   <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
@@ -128,8 +135,8 @@
   <p>Read <a href="https://digital.nhs.uk/blog/transformation-blog/2019/icons-avoid-temptation-and-start-with-user-needs">Icons: avoid temptation and start with user needs (NHS England)</a>.</p>
   <p>Find out more about the benefits of SVG icons:</p>
   <ul>
-    <li><a href="https://css-tricks.com/pretty-good-svg-icon-system/">CSS Tricks - a pretty good SVG icon system</a></li>
-    <li><a href="https://css-tricks.com/a-complete-guide-to-svg-fallbacks/">CSS Tricks - a complete guide to SVG fallbacks</a></li>
+    <li><a href="https://css-tricks.com/pretty-good-svg-icon-system/">CSS Tricks – a pretty good SVG icon system</a></li>
+    <li><a href="https://css-tricks.com/a-complete-guide-to-svg-fallbacks/">CSS Tricks – a complete guide to SVG fallbacks</a></li>
   </ul>
 
 {% endblock %}

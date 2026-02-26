@@ -7,20 +7,13 @@ import { DesignExample } from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
 // Initialise NHS.UK frontend components
-initAll({
-  errorSummary: {
-    disableAutoFocus: true
-  },
-  notificationBanner: {
-    disableAutoFocus: true
-  }
-})
+initAll()
 
 // Initialise NHS digital service manual components
 initAccessibleAutocomplete({
   form: document.querySelector('.nhsuk-header__search-form'),
-  input: document.querySelector('.nhsuk-header__search-input'),
-  button: document.querySelector('.nhsuk-header__search-submit'),
+  input: document.querySelector('.nhsuk-header__search-form .nhsuk-input'),
+  button: document.querySelector('.nhsuk-header__search-form .nhsuk-button'),
   onConfirm,
   source,
   templates: {
@@ -31,10 +24,3 @@ initAccessibleAutocomplete({
 
 // Design examples
 createAll(DesignExample)
-
-// Form patterns
-document.querySelectorAll('form[action="/form-handler"]').forEach(($form) => {
-  $form.addEventListener('submit', (event) => {
-    event.preventDefault()
-  })
-})

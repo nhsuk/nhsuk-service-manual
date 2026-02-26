@@ -23,7 +23,7 @@
     <li>1 question they have to answer</li>
   </ul>
 
-  <img class="nhsuk-image__img nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
+  <img class="nhsuk-image__img nhsuk-u-reading-width nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/one-thing-per-page-example.png" alt="A user journey with one question per page">
 
   <p>User research will tell you when you can merge pages together. For example, if you're designing a service for staff who need to repeat and switch between tasks quickly. <a href="/design-system/patterns/question-pages#asking-multiple-questions-on-a-page">Read about asking multiple questions on a page in the Question pages pattern</a>.</p>
 
@@ -31,7 +31,11 @@
   <p>Make sure you're asking 1 question at a time, not 2 or more questions in 1.</p>
 
   <div class="app-example app-example--content">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
+
     <p class="nhsuk-u-font-weight-bold">2 questions in 1:</p>
     <p>If you have an email address, can we contact you about research?</p>
     <p class="nhsuk-u-font-weight-bold">4 questions in 1:</p>

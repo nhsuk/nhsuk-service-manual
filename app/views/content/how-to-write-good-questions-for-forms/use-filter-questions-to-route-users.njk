@@ -24,14 +24,17 @@
     <li>simplify long questions (like <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#watch-out-for-double-barrelled-questions">"double-barrelled" questions</a>) by breaking them up</li>
   </ul>
 
-  <img class="nhsuk-image__img nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/filter-question-example.png" alt="">
+  <img class="nhsuk-image__img nhsuk-u-reading-width nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-7" src="/assets/filter-question-example.png" alt="">
 
   <p>But often you need more than a simple "Yes" or "No". In the "Are you 18 or over?" example, for instance, you should think about what your service can offer younger users as an alternative and how you can support their user journey.</p>
 
   <h2>Spell out what "Yes" and "No" mean</h2>
   <p>Check how users react to your Yes/No question when you test it. Sometimes you will find you need to be clearer about what "Yes" and "No" mean.</p>
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
     {{ radios({
       idPrefix: "example-research",
       name: "exampleResearch",
@@ -66,7 +69,10 @@
   <p>We recommend that you always try out a 3rd option. Extra options can be challenging for the service, but they're better than forcing users to choose an option that's not their true answer.</p>
 
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
 
     {{ radios({
       idPrefix: "example-hints",
@@ -109,7 +115,10 @@
   <p>If you need people to enter details to continue and they cannot do this, for example, because they do not have key information to hand, consider whether you could add something to the "No" option to reassure them that there is an alternative.</p>
 
   <div class="app-example">
-    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    {{ tag({
+      text: "Example",
+      classes: "app-example__heading"
+    }) }}
     {{ radios({
       idPrefix: "example-registration-details",
       name: "exampleRegistrationDetails",

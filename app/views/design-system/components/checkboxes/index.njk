@@ -13,15 +13,17 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Checkboxes updated in August 2025</h3>
     <p>See <a href="/design-system/guides/updating-to-v10#checkboxes">breaking code updates to checkboxes in version 10</a></p>
-  </div>
+  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -119,7 +121,7 @@
   </ul>
 
   <h3 id="error-messages">Error messages</h3>
-  <p>Error messages should be styled like this:</p>
+  <p>Style error messages like this.</p>
 
   {{ designExample({
     group: "components",

@@ -67,13 +67,20 @@
 
   <p>You should provide a "Change" link next to each section on your check answers page so that users can add or change the information. "Change" links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each "Change" link is for.</p>
 
-  <div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-change-answers" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-    <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">WCAG 2.2</strong>
-    <p>If a user decides to go back to a previous answer through a link, make sure information they've previously entered is pre-populated.</p>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-change-answers",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
 
+    <p>If a user decides to go back to a previous answer through a link, make sure information they've previously entered is pre-populated.</p>
     <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
-  </div>
+  {% endcall %}
 
     <p>The answers pages should look the same way they did when the user last used them.</p>
 

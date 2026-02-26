@@ -1,5 +1,68 @@
 # NHS digital service manual Changelog
 
+## 8.7.1 - 18 February 2026
+
+:wrench: **Maintenance**
+
+- Remove 1 example from NHS messages guidance
+- Resize example iframes when contents changes size
+
+## 8.7.0 - 17 February 2026
+
+:new: **New features**
+
+- Add guidance on writing NHS messages to the content guide
+
+:wrench: **Maintenance**
+
+- Update service standard points 2, 6, 11 and 14 with AI requirements to align with GOV standard
+- Update links to DAPB standard
+
+## 8.6.1 - 26 January 2026
+
+:wrench: **Maintenance**
+
+- Add guidance for border bottom class to summary cards
+- Fix top-level page routing with trailing slashes
+
+## 8.6.0 - 19 January 2026
+
+:new: **New features**
+
+- Add new file upload component
+- Add new interruption page pattern
+- Add interruption panel to panel component
+- Add summary cards to summary list component
+- Add new entries for addresses and Wi-Fi to A to Z in content guide
+- Update entry for seizure (fit) in A to Z in content guide
+- Improved Nunjucks macro option documentation
+
+:wrench: **Maintenance**
+
+- Amend page summary for service standard 3 to align with GOV's
+- Update and add links in service standards 5 and 11
+- Remove outdated beta label from service standard 11
+- Bring service standard 13 into closer alignment with GOV's
+- Update service standard 16 with clinical colleagues
+- Review and update service standard 17 with interoperability standards team
+- Move brackets content to punctuation page
+- Specify that we use en dashes and change hyphens used as dash to en dash
+- Add "third party" to guidance on numbers, measurements, dates and time
+- Add word "cold" to guidance on writing about temperature in A to Z
+- Update outdated references to NHS Digital, and fix broken links
+- Reorganise XML site map
+
+## 8.5.1 - 16 December 2025
+
+:new: **New features**
+
+- Add guidance on setting label and legend sizes
+- Mention staff-facing services on service manual home page and design system index page
+
+:wrench: **Maintenance**
+
+- Use NHS.UK frontend CSS and JS in design example previews
+
 ## 8.5.0 - 27 November 2025
 
 :new: **New features**

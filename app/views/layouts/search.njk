@@ -1,90 +1,93 @@
 {% extends "layouts/layout.njk" %}
 
 {% set pageTitle = "Search" %}
-{% set pageDescription = "Search results." %}
 {% set disableSearch = true %}
+
+{% if results | length %}
+  {% set pageTitle = "Search results for " ~ query %}
+{% elif query is string %}
+  {% set pageTitle = "No results for " ~ query if query else "No results" %}
+{% endif %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Search</h1>
-      <form class="nhsuk-header__search-form nhsuk-header__search-form--search-results" id="search" action="/search/" method="get" role="search">
-        <label class="nhsuk-u-visually-hidden" for="search-results-field">Search the NHS digital service manual</label>
-        <input class="nhsuk-search__input" id="search-results-field" name="q" type="search" value="{{query}}" autocomplete="off">
-        <button class="nhsuk-search__submit" type="submit">
-          <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-          </svg>
-          <span class="nhsuk-u-visually-hidden">Search</span>
-        </button>
+    <div class="nhsuk-grid-column-full">
+      <form class="app-search" action="/search/" method="get" novalidate>
+        {% call fieldset({
+          legend: {
+            text: pageTitle,
+            size: "xl",
+            classes: "nhsuk-u-margin-bottom-7",
+            isPageHeading: true
+          },
+          classes: "app-component-reading-width"
+        }) %}
+          {{ input({
+            label: {
+              text: "Search the NHS digital service manual",
+              classes: "nhsuk-u-visually-hidden"
+            },
+            name: "q",
+            value: query,
+            id: "search-results-field",
+            classes: "app-search__input nhsuk-u-width-full",
+            autocomplete: "off",
+            attributes: {
+              placeholder: "Search"
+            },
+            formGroup: {
+              classes: "nhsuk-u-width-one-half",
+              afterInput: {
+                html: button({
+                  html: nhsukIcon("search", { title: "Submit" }),
+                  classes: "app-search__submit nhsuk-button--small"
+                })
+              }
+            }
+          }) }}
+        {% endcall %}
       </form>
     </div>
   </div>
-  <article>
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        {% if results | length > 0 %}
-          <p class="nhsuk-u-margin-bottom-3">
-           {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
-         </p>
-          <ul class="nhsuk-list nhsuk-list--border">
-            {% for item in results %}
-              <li>
-                {% if item.parent %}<span class="app-search-results-category">{{ item.parent }}</span>{% endif %}
-                <a href="{{item.url}}" class="app-search-results-item">{{item.title}}</a>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">{{item.description}}</p>
-              </li>
-            {% endfor %}
-          </ul>
-          <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-        <ul class="nhsuk-list nhsuk-pagination__list">
-          {% if currentPage != 1%}
-          <li class="nhsuk-pagination-item--previous">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev"
-              href="/search/?q={{query}}&page={{currentPage - 1}}">
-              <span class="nhsuk-pagination__title">Previous</span>
-              <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">{{ currentPage - 1 }} of {{ maxPage }} </span>
-              <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                aria-hidden="true">
-                <path
-                  d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z">
-                </path>
-              </svg>
-            </a>
-          </li>
-          {% endif %}
+  {% if results | length or query is string %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+    {% if results | length %}
+      <p class="nhsuk-u-margin-bottom-4">
+        1 – {{ results | length }} of {{ resultsLen }} results for "{{ query }}"
+      </p>
 
-          {% if currentPage != maxPage %}
-          <li class="nhsuk-pagination-item--next">
-            <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-              href="/search/?q={{query}}&page={{currentPage + 1}}">
-              <span class="nhsuk-pagination__title">Next</span>
-              <span class="nhsuk-u-visually-hidden">:</span>
-              <span class="nhsuk-pagination__page">{{ currentPage + 1}} of {{ maxPage }}</span>
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                aria-hidden="true" width="34" height="34">
-                <path
-                  d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                </path>
-              </svg>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </nav>
-        {% else %}
-          {% if query != "" %}
-            <p>Your search - <span class="nhsuk-u-font-weight-bold">{{query}}</span> - had no matching results.</p>
-            <p>Improve your search results by:</p>
-            <ul>
-              <li>double-checking your spelling</li>
-              <li>using fewer keywords</li>
-              <li>searching for something less specific</li>
-            </ul>
-          {% endif %}
-        {% endif %}
-        </div>
+      <ul class="nhsuk-list nhsuk-list--border">
+      {% for item in results %}
+        <li>
+          {% if item.parent %}<span class="app-search-results-category">{{ item.parent }}</span>{% endif %}
+          <a class="app-search-results-item" href="{{ item.url }}">{{ item.title }}</a>
+          <p class="nhsuk-body-s">{{ item.description }}</p>
+        </li>
+      {% endfor %}
+      </ul>
+
+      {% if maxPage > 1 %}
+      {{ pagination({
+        previous: {
+          labelText: (currentPage - 1) ~ " of " ~ maxPage,
+          href: "/search/?q=" ~ query ~ "&page=" ~ (currentPage - 1)
+        } if currentPage != 1,
+        next: {
+          labelText: (currentPage + 1) ~ " of " ~ maxPage,
+          href: "/search/?q=" ~ query ~ "&page=" ~ (currentPage + 1)
+        } if currentPage != maxPage
+      }) }}
+      {% endif %}
+    {% elif query is string %}
+      <p>You could try:</p>
+      <ul>
+        <li>check your spelling</li>
+        <li>use fewer keywords</li>
+        <li>search for something less specific</li>
+      </ul>
+    {% endif %}
     </div>
-  </article>
+  </div>
+  {% endif %}
 {% endblock %}

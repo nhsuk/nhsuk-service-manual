@@ -13,15 +13,17 @@
 {% endblock %}
 
 {% block bodyContent %}
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
-<div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-  <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-    Version 10
-  </strong>
-
-  <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Breadcrumbs updated in August 2025</h3>
-  <p>See <a href="/design-system/guides/updating-to-v10#breadcrumbs">breaking code updates to breadcrumbs in version 10</a></p>
-</div>
+    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Breadcrumbs updated in August 2025</h3>
+    <p>See <a href="/design-system/guides/updating-to-v10#breadcrumbs">breaking code updates to breadcrumbs in version 10</a></p>
+  {% endcall %}
 
 <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-breadcrumbs">interact with breadcrumbs</a>.</p>
 
@@ -42,15 +44,19 @@
 <p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but do not break a breadcrumb if
   it doesn't fit the line.</p>
 
-<div class="nhsuk-inset-text app-wcag-inset-text app-wcag-22" id="wcag-interact-breadcrumbs" role="note">
-    <span class="nhsuk-u-visually-hidden">Information: </span>
-  <strong class="nhsuk-tag nhsuk-u-margin-bottom-2">
-    WCAG 2.2
-  </strong>
-  <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily
-    interact with the breadcrumbs. This is to comply with <a
-      href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-</div>
+{% call insetText({
+  visuallyHiddenText: "Information",
+  classes: "app-wcag-inset-text app-wcag-22",
+  id: "wcag-interact-breadcrumbs",
+  attributes: { role: "note" }
+}) %}
+  {{ tag({
+    text: "WCAG 2.2",
+    classes: "nhsuk-u-margin-bottom-2"
+  }) }}
+
+  <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
+{% endcall %}
 
 <p>You do not need to show the current page in the breadcrumb because this information is in the H1.</p>
 <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>

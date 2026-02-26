@@ -45,50 +45,44 @@
     <li>from their heads</li>
     <li>from information they have to hand</li>
     <li>by figuring something out</li>
-    <li>by asking someone else - for example, arranging a witness or referee</li>
+    <li>by asking someone else, for example, arranging a witness or referee</li>
   </ul>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-      Example of a difficult question
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <div class="app-example app-example--content">
-        <strong class="nhsuk-tag app-example__heading">Example</strong>
-        <p>What percentage of your working day do you spend doing moderate-intensity activities that make you breathe faster and raise your heart rate (such as brisk walking or housework, like vacuuming) for at least 10 minutes continuously?</p>
-      </div>
-      <p>To answer a question like this, the user has to:</p>
-      <ul>
-        <li>understand and interpret the question</li>
-        <li>think and remember, or go and check something</li>
-        <li>make a judgement or estimate (some people find calculations like percentages difficult)</li>
-        <li>choose an answer and hope it matches an option on the form</li>
-      </ul>
-      <p>Here the user has to work out, for example:</p>
-      <ul>
-        <li>when their working day starts and ends</li>
-        <li>what a typical day is</li>
-        <li>whether to tell you about a typical day or a more active one</li>
-      </ul>
+  {% call details({
+    summaryText: "Example of a difficult question"
+  }) %}
+    <div class="app-example app-example--content">
+      {{ tag({
+        text: "Example",
+        classes: "app-example__heading"
+      }) }}
+
+      <p>What percentage of your working day do you spend doing moderate-intensity activities that make you breathe faster and raise your heart rate (such as brisk walking or housework, like vacuuming) for at least 10 minutes continuously?</p>
     </div>
-  </details>
+    <p>To answer a question like this, the user has to:</p>
+    <ul>
+      <li>understand and interpret the question</li>
+      <li>think and remember, or go and check something</li>
+      <li>make a judgement or estimate (some people find calculations like percentages difficult)</li>
+      <li>choose an answer and hope it matches an option on the form</li>
+    </ul>
+    <p>Here the user has to work out, for example:</p>
+    <ul>
+      <li>when their working day starts and ends</li>
+      <li>what a typical day is</li>
+      <li>whether to tell you about a typical day or a more active one</li>
+    </ul>
+  {% endcall %}
 
   <h2>Think about context: where your user will be when they fill in the form</h2>
   <p>Will they be at home, on their mobile, or using someone else's phone in an emergency, for example? How will they be feeling?</p>
   <p>Will they be filling in the form themselves? If someone else is helping them fill in the form, that may change how appropriate the question is.</p>
 
-  <details class="nhsuk-details">
-    <summary class="nhsuk-details__summary">
-      <span class="nhsuk-details__summary-text">
-        Example: a callback number
-      </span>
-    </summary>
-    <div class="nhsuk-details__text">
-      <p>If you’re offering a callback service, rather than asking for "your" phone number or "their" phone number, ask "What number do you want us to call you on?"</p>
-    </div>
-  </details>
+  {% call details({
+    summaryText: "Example: a callback number"
+  }) %}
+    <p>If you're offering a callback service, rather than asking for "your" phone number or "their" phone number, ask "What number do you want us to call you on?"</p>
+  {% endcall %}
 
   <h2 id="pause-to-allow-users-to-reflect">Pause to allow users to reflect</h2>
   <p>Give users a chance to think twice if:</p>

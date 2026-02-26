@@ -2,17 +2,12 @@
 <p>Do not use single letter keyboard shortcuts. (Gmail, for example, uses the "j" and "k" keys to move between emails.)</p>
 <p>Keyboard shortcuts which use single numbers, punctuation, lowercase letters, uppercase letters or symbol characters can interfere with voice input software.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Keyboard shortcuts in 3rd party content
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>If you use 3rd party content with these types of shortcuts, you must have one of these:</p>
-    <ul>
-      <li>a mechanism that allows users to turn off character key shortcuts</li>
-      <li>a functionality to remap the shortcuts to use more than one character (for example, ALT + j)</li>
-    </ul>
-  </div>
-</details>
+{% call details({
+  summaryText: "Keyboard shortcuts in 3rd party content"
+}) %}
+  <p>If you use 3rd party content with these types of shortcuts, you must have one of these:</p>
+  <ul>
+    <li>a mechanism that allows users to turn off character key shortcuts</li>
+    <li>a functionality to remap the shortcuts to use more than one character (for example, ALT + j)</li>
+  </ul>
+{% endcall %}

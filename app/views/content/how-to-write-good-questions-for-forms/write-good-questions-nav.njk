@@ -10,17 +10,14 @@
   { title: "Test your questions", url: "/content/how-to-write-good-questions-for-forms/test-your-questions" }
 ] %}
 
-<nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
-  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
-  <ol class="nhsuk-contents-list__list">
-    {% for item in writeGoodQuestionsNav %}
-    <li class="nhsuk-contents-list__item" {% if item.title == pageTitle %} aria-current="page"{% endif %}>
-      {% if item.title == pageTitle %}
-      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
-      {% else %}
-      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ol>
-</nav>
+{% for item in writeGoodQuestionsNav %}
+  {% set writeGoodQuestionsNav = (writeGoodQuestionsNav.splice(loop.index0, 1, {
+    text: item.title,
+    href: item.url,
+    current: item.title == pageTitle
+  }), writeGoodQuestionsNav) %}
+{% endfor %}
+
+{{ contentsList({
+  items: writeGoodQuestionsNav
+}) }}

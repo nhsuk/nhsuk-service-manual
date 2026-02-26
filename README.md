@@ -78,7 +78,7 @@ Code analysis results can be found in [SonarQube](https://sonarcloud.io/project/
 
 ## Get in touch
 
-The NHS digital service manual is maintained by NHS Digital. [Email the service manual team](mailto:england.service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-service-manual/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://service-manual.nhs.uk/slack).
+The NHS digital service manual is maintained by NHS England. [Email the service manual team](mailto:england.service-manual@nhs.net), open a [GitHub issue](https://github.com/nhsuk/nhsuk-service-manual/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://service-manual.nhs.uk/slack).
 
 ## Licence
 

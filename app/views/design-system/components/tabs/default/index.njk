@@ -1,13 +1,9 @@
 {% from "tabs/macro.njk" import tabs %}
 {% from "tables/macro.njk" import table %}
 
-
 {% set pastDayContent %}
   {{ table({
-    responsive: false,
-    panel: false,
     caption: "Past day",
-    firstCellIsHeader: false,
     head: [
       {
         text: "Case manager"
@@ -63,12 +59,11 @@
       ]
     ]
   }) }}
-{% endset -%} {% set pastWeekContent %}
+{% endset -%}
+
+{% set pastWeekContent %}
   {{ table({
-    responsive: false,
-    panel: false,
     caption: "Past week",
-    firstCellIsHeader: false,
     head: [
       {
         text: "Case manager"
@@ -124,12 +119,11 @@
       ]
     ]
   }) }}
-{% endset -%} {% set pastMonthContent %}
+{% endset -%}
+
+{% set pastMonthContent %}
   {{ table({
-    responsive: false,
-    panel: false,
     caption: "Past month",
-    firstCellIsHeader: false,
     head: [
       {
         text: "Case manager"
@@ -185,12 +179,11 @@
       ]
     ]
   }) }}
-{% endset -%} {% set pastYearContent %}
+{% endset -%}
+
+{% set pastYearContent %}
   {{ table({
-    responsive: false,
-    panel: false,
     caption: "Past year",
-    firstCellIsHeader: false,
     head: [
       {
         text: "Case manager"

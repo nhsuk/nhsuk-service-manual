@@ -20,29 +20,36 @@
     <li>reduce the cost of building new products and services</li>
   </ul>
 
-  <h2>Common tools and their uses</h2>
-  <table class="nhsuk-table" aria-label="Tools and their uses">
-  <thead role="rowgroup" class="nhsuk-table__head">
-    <tr role="row">
-      <th role="columnheader" class="" scope="col">
-        Tool
-      </th>
-      <th role="columnheader" class="" scope="col">
-        What to use it for
-      </th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell"><a href="/standards-and-technology/technology/NHS-login">NHS login</a></td>
-      <td class="nhsuk-table__cell ">To authenticate identity</td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell"><a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></td>
-      <td class="nhsuk-table__cell ">To manage patient demographic data</td>
-    </tr>
-  </tbody>
-  </table>
+  {{ table({
+    caption: "Common tools and their uses",
+    captionSize: "l",
+    head: [
+      {
+        text: "Tool"
+      },
+      {
+        text: "What to use it for"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: '<a href="/standards-and-technology/technology/NHS-login">NHS login</a>'
+        },
+        {
+          text: "To authenticate identity"
+        }
+      ],
+      [
+        {
+          html: '<a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a>'
+        },
+        {
+          text: "To manage patient demographic data"
+        }
+      ]
+    ]
+  }) }}
 
   <h2>Approval of common tools</h2>
   <p>The System Design Authority (SDA) approves inclusion of common tools in the service manual. It has approved the above tools so far.</p>

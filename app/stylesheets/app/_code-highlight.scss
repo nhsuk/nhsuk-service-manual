@@ -3,8 +3,9 @@
 
 // Highlight code within body copy
 li code,
-p code,
-td code {
+caption code,
+td code,
+p code {
   font-family: $app-code-font;
   background-color: nhsuk-colour("white");
   // stylelint-disable-next-line color-no-hex
@@ -12,6 +13,15 @@ td code {
   padding: 2px nhsuk-spacing(2);
   word-break: break-word;
   @include nhsuk-font-size(16);
+}
+
+// Add styling for code in headings and captions
+.nhsuk-heading-s code,
+.nhsuk-heading-m code,
+.nhsuk-heading-l code,
+.nhsuk-heading-xl code,
+.nhsuk-table__caption code {
+  font-size: inherit;
 }
 
 // Highlight code in a block
