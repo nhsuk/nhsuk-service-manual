@@ -1,0 +1,112 @@
+---
+previewLayout: design-example-wrapper-blank
+---
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Service unavailable – NHS Service name</title>
+    <style>
+@font-face {
+      font-family: "Frutiger W01";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix");
+      src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix") format("eot"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2") format("woff2"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff") format("woff"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.ttf") format("truetype"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.svg#7def0e34-f28d-434f-b2ec-472bde847115") format("svg");
+    }
+    @font-face {
+      font-family: "Frutiger W01";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix");
+      src: url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix") format("eot"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2") format("woff2"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff") format("woff"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.ttf") format("truetype"), url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.svg#eae74276-dd78-47e4-9b27-dac81c3411ca") format("svg");
+    }
+html { font-family: "Frutiger W01", arial, sans-serif; background-color: #d8dde0; }
+body { margin: 0; min-height: 100%; font-size: 16px; background-color: #f0f4f5; color: #212b32; -moz-osx-font-smoothing: grayscale;   -webkit-font-smoothing: antialiased;}
+.nhsuk-header { color: #ffffff; background-color: #005eb8; }
+.nhsuk-header__container { display: flex; flex-flow: row wrap; gap: 16px; padding: 16px 0; }
+.nhsuk-header__service { display: flex; gap: 8px 16px; }
+.nhsuk-header__service-name { font-size: 1.1875rem; line-height: 1.1; display: inline-flex; flex-grow: 0; flex-direction: column; justify-content: center; }
+
+.nhsuk-width-container {
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 960px;
+}
+@media (min-width: 48.0625em) {
+  .nhsuk-width-container {
+    margin-left: 32px; margin-right: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .nhsuk-width-container {
+    margin-left: auto; margin-right: auto;
+  }
+}
+.nhsuk-main-wrapper { padding-top: 48px; padding-bottom: 48px; }
+
+.nhsuk-grid-row {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.nhsuk-grid-row:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.nhsuk-grid-column-two-thirds {
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+@media (min-width:40.0625em) {
+  .nhsuk-grid-column-two-thirds {
+    float: left;
+    width: 66.6666666667%;
+  }
+}
+
+.nhsuk-body-s { font-size: 1rem; line-height: 1.5; }
+
+h1 { font-size: 2.25rem; line-height: 1.16667; font-weight: 600; margin-top: 0; }
+p { margin-bottom: 24px; font-size: 1.1875rem; line-height: 1.47368; }
+.nhsuk-footer { border-top: 4px solid #005eb8; background-color: #d8dde0; padding-top: 32px; padding-bottom: 32px; }
+    </style>
+  </head>
+<header class="nhsuk-header" role="banner" data-module="nhsuk-header">
+  <div class="nhsuk-header__container nhsuk-width-container">
+    <div class="nhsuk-header__service">
+      <svg class="nhsuk-header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" height="40" width="100" focusable="false" role="img" aria-label="NHS">
+        <title>NHS</title>
+        <path fill="currentcolor" d="M200 0v80H0V0h200Zm-27.5 5.5c-14.5 0-29 5-29 22 0 10.2 7.7 13.5 14.7 16.3l.7.3c5.4 2 10.1 3.9 10.1 8.4 0 6.5-8.5 7.5-14 7.5s-12.5-1.5-16-3.5L135 70c5.5 2 13.5 3.5 20 3.5 15.5 0 32-4.5 32-22.5 0-19.5-25.5-16.5-25.5-25.5 0-5.5 5.5-6.5 12.5-6.5a35 35 0 0 1 14.5 3l4-13.5c-4.5-2-12-3-20-3Zm-131 2h-22l-14 65H22l9-45h.5l13.5 45h21.5l14-65H64l-9 45h-.5l-13-45Zm63 0h-18l-13 65h17l6-28H117l-5.5 28H129l13.5-65H125L119.5 32h-20l5-24.5Z"/>
+      </svg>
+      <span class="nhsuk-header__service-name">Service name</span>
+    </div>
+  </div>
+</header>
+  <div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">Sorry, the service is unavailable</h1>
+
+        <p>Contact the hospital if you need to cancel an appointment.</p>
+
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="nhsuk-footer" role="contentinfo">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-footer__meta">
+      <p class="nhsuk-body-s">© NHS England</p>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
