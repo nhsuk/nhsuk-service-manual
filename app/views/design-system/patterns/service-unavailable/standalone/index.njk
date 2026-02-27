@@ -30,7 +30,11 @@ body { margin: 0; min-height: 100%; font-size: 16px; background-color: #f0f4f5; 
 .nhsuk-header__service { display: flex; gap: 8px 16px; }
 .nhsuk-header__service-name { font-size: 1.1875rem; line-height: 1.1; display: inline-flex; flex-grow: 0; flex-direction: column; justify-content: center; }
 
-.nhsuk-width-container { margin-left: 16px; margin-right: 16px; }
+.nhsuk-width-container {
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 960px;
+}
 @media (min-width: 48.0625em) {
   .nhsuk-width-container {
     margin-left: 32px; margin-right: 32px;
@@ -42,7 +46,32 @@ body { margin: 0; min-height: 100%; font-size: 16px; background-color: #f0f4f5; 
   }
 }
 .nhsuk-main-wrapper { padding-top: 48px; padding-bottom: 48px; }
+
+.nhsuk-grid-row {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.nhsuk-grid-row:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.nhsuk-grid-column-two-thirds {
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+@media (min-width:40.0625em) {
+  .nhsuk-grid-column-two-thirds {
+    float: left;
+    width: 66.6666666667%;
+  }
+}
+
 .nhsuk-body-s { font-size: 1rem; line-height: 1.5; }
+
 h1 { font-size: 2.25rem; line-height: 1.16667; font-weight: 600; margin-top: 0; }
 p { margin-bottom: 24px; font-size: 1.1875rem; line-height: 1.47368; }
 .nhsuk-footer { border-top: 4px solid #005eb8; background-color: #d8dde0; padding-top: 32px; padding-bottom: 32px; }
