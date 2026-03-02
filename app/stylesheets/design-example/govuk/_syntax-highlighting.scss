@@ -89,6 +89,11 @@
   text-decoration: none;
 }
 
+.hljs-deletion,
+.hljs-addition {
+  display: inline-block;
+}
+
 .hljs-emphasis {
   font-style: italic;
 }
