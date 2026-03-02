@@ -51,10 +51,11 @@ p code {
 .app-code__container {
   padding: nhsuk-spacing(3);
   overflow-x: auto;
-  border: $nhsuk-border-width-form-element solid transparent;
   line-height: 1.5;
+  border: $nhsuk-focus-width solid transparent;
 
   &:focus {
-    @include nhsuk-focused-input;
+    border: $nhsuk-focus-width solid $nhsuk-focus-text-colour;
+    outline: $nhsuk-focus-width solid $nhsuk-focus-colour;
   }
 }
