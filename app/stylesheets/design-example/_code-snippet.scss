@@ -122,6 +122,22 @@
   width: 100%;
 }
 
+.app-code-snippet__footer {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+
+  &-version {
+    margin: 0;
+    color: $nhsuk-secondary-text-colour;
+    @include nhsuk-font-size(16);
+  }
+
+  .app-button--close {
+    margin-left: auto;
+  }
+}
+
 .app-tabs {
   background: nhsuk-colour("white");
   border: 1px solid nhsuk-colour("grey-3");
