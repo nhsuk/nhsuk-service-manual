@@ -52,8 +52,14 @@ p code {
   padding: nhsuk-spacing(3);
   overflow-x: auto;
   border: $nhsuk-border-width-form-element solid transparent;
+  line-height: 1.5;
 
   &:focus {
     @include nhsuk-focused-input;
   }
+}
+
+.hljs-deletion,
+.hljs-addition {
+  display: inline-block;
 }
