@@ -136,8 +136,8 @@ env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
 env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
 env.addFilter('highlight', filters.highlight)
 env.addFilter('kebabCase', filters.kebabCase)
-env.addFilter('markdown', filters.markdown)
 env.addFilter('slugify', filters.slugify)
+env.addFilter('unindent', filters.unindent)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {

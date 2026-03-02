@@ -45,6 +45,7 @@ export default {
     {
       ...config,
       displayName: 'JavaScript behaviour tests',
+      setupFilesAfterEnv: ['./jest.jsdom.setup.mjs'],
       testEnvironment: 'jsdom',
       testMatch: ['<rootDir>/**/*.jsdom.test.{js,mjs}']
     }
