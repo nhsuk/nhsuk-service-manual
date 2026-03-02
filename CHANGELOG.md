@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Port Nunjucks syntax highlighting from GOV.UK Design System
+- Support focus and keyboard left/right scrolling on code blocks
+
 ## 8.7.2 - 2 March 2026
 
 :wrench: **Maintenance**
