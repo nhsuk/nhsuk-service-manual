@@ -4,7 +4,7 @@
 
 :wrench: **Maintenance**
 
-- Add 1 example to NHS messages guidance
+- Make minor changes to NHS messages guidance
 
 ## 8.7.1 - 18 February 2026
 
