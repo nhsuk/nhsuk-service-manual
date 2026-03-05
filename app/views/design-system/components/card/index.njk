@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a card to visually group related content and actions to help users do what they need to more quickly." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "March 2026" %}
 {% set backlog_issue_id = "159" %}
 
 {% block beforeContent %}
@@ -26,19 +26,19 @@
   {% endcall %}
 
   <h2 id="when-to-use">When to use a card</h2>
-  <p>Use a card to visually group related content and actions to help users do what they need to more quickly.</p>
-  <p>You can display a card alongside other cards, but if you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="https://service-manual.nhs.uk/design-system/patterns">hub page pattern</a>.</p>
+  <p>Use a card to visually group related content and actions to help users do what they need to more quickly. You can display a card alongside other cards.</p>
+  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="https://service-manual.nhs.uk/design-system/patterns">hub page pattern</a>.</p>
 
   <h2 id="when-not-to-use">When not to use a card</h2>
-  <p>Do not use a card to highlight content on the page of long form content.</p>
-  <p>Before using a card consider using:</p>
+  <p>Do not use a card to highlight content on a page of long form content.</p>
+  <p>Before using a card, consider using:</p>
   <ul>
-    <li><a href="/design-system/components/care-cards">care card</a>, to help users identify and understand the care they need, who to contact and how quickly</li>
-    <li><a href="/design-system/components/details">details</a>, to make a page easier to scan by letting users reveal more detailed information</li>
-    <li><a href="/design-system/components/expander">expander</a>, to make a complex topic easier to digest by letting users reveal more detailed information</li>
-    <li><a href="/design-system/components/inset-text">inset text</a>, to help users identify and understand important content on the page</li>
-    <li><a href="/design-system/components/tabs">tabs</a>, to let users navigate between related sections of content, displaying 1 section at a time</li>
-    <li><a href="/design-system/components/warning-callout">warning callout</a>, to help users identify and understand warning content on a page</li>
+    <li><a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">the care card pattern to help users decide when and where to get care</a></li>
+    <li><a href="/design-system/components/details">details</a></li>
+    <li><a href="/design-system/components/expander">an expander</a></li>
+    <li><a href="/design-system/components/inset-text">inset text</a></li>
+    <li><a href="/design-system/components/tabs">tabs</a></li>
+    <li><a href="/design-system/components/warning-callout">a warning callout</a></li>
   </ul>
 
   <h2 id="how-to-use">How to use a card</h2>
@@ -48,13 +48,13 @@
     <li><a href="#primary-card">primary card</a></li>
     <li><a href="#secondary-card">secondary card</a></li>
   </ul>
-  <p>Both cards can be clickable or non clickable.</p>
-  <p>A card can include different elements, such as a heading, text, link, <a href="#image">image</a>, and <a href="#action">action</a>. If you include a link, the link should mirror the heading of the page it links to.</p>
+  <p>Both cards can be clickable or non-clickable.</p>
+  <p>A card can include different elements, such as a heading, text and link. You can also <a href="#adding-an image">add an image</a> or <a href="#adding-actions">add actions</a>. If you include a link, the link should mirror the heading of the page it links to.</p>
   <p>For clickable cards, avoid wrapping the entire card in an anchor tag as this can be a difficult experience for screen reader users.</p>
   <p>Keep the card short so it is easy to scan for relevant and actionable information.</p>
 
   <h3 id="primary-card">Primary card</h3>
-  <p>The primary cards have a higher visual prominence than secondary cards.</p>
+  <p>The primary cards are more visual prominent than secondary cards.</p>
 
   <h4 class="nhsuk-heading-s">Primary card clickable</h4>
 
@@ -65,10 +65,10 @@
     type: "primary-card-clickable"
   }) }}
 
-    <h4 class="nhsuk-heading-s">Primary card with chevron</h4>
-  <p>This primary card uses the chevron icon to make this even more visually prominent, helping it stand out from the other cards.</p>
+  <h4 class="nhsuk-heading-s">Primary card with chevron</h4>
+  <p>This primary card uses the chevron icon to make this even more visually prominent.</p>
   <p>There is only a clickable version of this card.</p>
-  <p>This card /design-system/patterns">hub page pattern</a></p>
+  <p>Read about how to use primary cards with chevrons in the <a href="/design-system/patterns/hub-page">hub page pattern</a></p>
 
   {{ designExample({
     group: "components",
@@ -78,7 +78,7 @@
 
   <h4 class="nhsuk-heading-s">Primary card non-clickable</h4>
 
-  <p>Use the non-clickable card when you are using more than one link.</p>
+  <p>Use the non-clickable card when you are using more than 1 link.</p>
 
   {{ designExample({
     group: "components",
@@ -87,12 +87,12 @@
   }) }}
 
   <h3 id="secondary-card">Secondary card</h3>
-  <p>The secondary card has a less visual impact than the primary cards.</p>
+  <p>The secondary card has less visual impact than the primary cards.</p>
   <p>When used with other cards, use the secondary card to group less important content or actions.</p>
 
   <h4 class="nhsuk-heading-s">Secondary card clickable</h4>
 
-  <p>This card is also used in the <a href="/design-system/patterns">hub page pattern</a></p>
+  <p>This card is also used in the <a href="/design-system/patterns/hub-page">hub page pattern</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -102,7 +102,7 @@
 
   <h4 class="nhsuk-heading-s">Secondary card non-clickable</h4>
 
-  <p>Use the non-clickable card when you have more than one link in the content.</p>
+  <p>Use the non-clickable card when you have more than 1 link in the content.</p>
 
   {{ designExample({
     group: "components",
@@ -110,9 +110,9 @@
     type: "secondary-card-non-clickable"
   }) }}
 
-  <h3 id="image">Adding image</h3>
-  <p>Images added to a card will be displayed above the heading and text. The image is set as a decorative image by default, with the alternative text being null.</p>
+  <h3 id="adding-an-image">Adding an image</h3>
   <p>Only use cards with images if you have evidence that they help your users, for example, where you can show that they motivate users.</p>
+  <p>Images in a card will be displayed above the heading and text. The image is set as a decorative image by default, with the alternative text being null.</p>
 
   <h4 class="nhsuk-heading-s">Image card clickable</h4>
 
@@ -130,7 +130,7 @@
     type: "with-image-non-clickable"
   }) }}
 
-  <h3 id="action">Adding actions</h3>
+  <h3 id="adding-actions">Adding actions</h3>
   <p>You can add links for 1 or more actions to a card. They show below the heading on small screens and right-aligned on bigger screens.</p>
   <p>Card actions cannot be used on clickable cards.</p>
   <p>They can be used in <a href="/design-system/components/summary-list#summary-cards">summary cards</a>.</p>
@@ -141,8 +141,8 @@
     type: "card-actions"
   }) }}
 
-  <p>Write link text that makes it clear what will happen next. Keep it short and do not add more than 3 actions.</p>
-  <p>Example card actions include:</p>
+  <p>Write link text that makes it clear what will happen when you click the action. Keep it short and do not add more than 3 actions.</p>
+  <p>Examples of card actions include:</p>
   <ul>
     <li>remove appointment</li>
     <li>edit appointment</li>
@@ -155,7 +155,7 @@
 
   <h3 class="nhsuk-heading-m">Grouping cards</h3>
   <p>You can group multiple cards to show a collection of related topics or highlight key information and figures.</p>
-  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="/design-system/patterns">hub page pattern</a>.</p>
+  <p>If you are grouping cards to create a hub page (sometimes called a landing page) use the <a href="/design-system/patterns/hub-page">hub page pattern</a>.</p>
 
   <h4 class="nhsuk-heading-s">Card width</h4>
   <p>We define the width of the cards using the grid system. For example, <code>nhsuk-grid-column-one-half</code> is used to make the cards half width:</p>
@@ -185,7 +185,7 @@
 
   <h2 id="accessibility">Accessibility</h2>
   <h3 id="heading-level-and-size">Heading level and size</h3>
-  <p><a href="/accessibility/design#use-headings-correctly">Use headings correctly</a> to reflect the page structure. If you need to, update the default H2 heading.</p>
+  <p><a href="/accessibility/design#use-headings-correctly">Use headings correctly</a> to reflect the page structure. If you need to, change the default <code>h2</code> heading.</p>
   <p>Here's an example of replacing the default <code>h2</code> heading with an <code>h3</code>:</p>
 
   {{ designExample({

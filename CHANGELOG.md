@@ -1,5 +1,13 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Update card component guidance to make it clearer
+- Add section on actions in cards
+- Split out use of cards in new hub page pattern
+
 ## 8.8.0 - 19 March 2026
 
 :new: **New features**
