@@ -1,5 +1,14 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Update card component guidance to make it clearer 
+- Add section on actions in cards
+- Split out use of cards in new hub page pattern
+
+
 ## Unreleased
 
 :wrench: **Maintenance**

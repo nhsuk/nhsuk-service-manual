@@ -1,15 +1,8 @@
 {% from "card/macro.njk" import card %}
 
 {% set cardDescription %}
-  <p>Dear ((firstName)) ((lastName)),</p>
-
-  <p>We are inviting you for your NHS ((serviceName)) appointment.</p>
-
-  <p>Find more information about your ((serviceName)) invite, including how to book your appointment: <a href="https://www.nhs.uk/service-name-invite">https://www.nhs.uk/service-name-invite</a></p>
-
-  <p>Yours sincerely,</p>
-
-  <p>((serviceName))</p>
+  <p><strong>SenderID</strong>: NHS Blood Test</p>
+  <p>((firstName)) ((lastName)), you are due for your NHS blood test. Book your appointment or find out more at <a href="#">http://www.nhs.uk/service-name-invite</a></p>
 {% endset %}
 
 {{ card({
