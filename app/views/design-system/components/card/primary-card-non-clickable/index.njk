@@ -1,13 +1,11 @@
 {% from "card/macro.njk" import card %}
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
-  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
     {{ card({
-      clickable: true,
-      href: "#",
-      headingLevel: 5,
+      clickable: false,
       heading: "Order a repeat prescription",
-      headingClasses: "nhsuk-heading-xs"
+      headingClasses: "nhsuk-heading-m"
     }) }}
   </li>
 </ul>
