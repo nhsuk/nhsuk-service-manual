@@ -6,7 +6,7 @@
 
 - Update card component guidance to make it clearer
 - Add section on actions in cards
-- Split out use of cards in new hub page pattern
+- Split out use of cards for navigation into new hub page pattern
 
 ## 8.8.0 - 19 March 2026
 
@@ -18,9 +18,8 @@
 
 :wrench: **Maintenance**
 
-- Port Nunjucks syntax highlighting from GOV.UK Design System
+- Port Nunjucks syntax highlighting from GOV.UK design system
 - Support focus and keyboard left/right scrolling on code blocks
-- Split out hub page pattern from card component and updated content
 
 ## 8.7.2 - 2 March 2026
 
