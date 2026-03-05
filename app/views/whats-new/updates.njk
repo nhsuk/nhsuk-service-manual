@@ -10,6 +10,37 @@
 
 {% block bodyContent %}
 
+<h2>March 2026</h2>
+
+{% set designHtml202603 %}
+  <p>Updated <a href="/design-system/components/card">card component</a></p>
+  <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in March 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202603
+      }
+    ]
+  ]
+}) }}
+
 <h2>February 2026</h2>
 
 {% set contentHtml202602 %}
