@@ -1,10 +1,10 @@
 {% from "card/macro.njk" import card %}
 
 {% set cardDescriptionHtml %}
-  <p>Ewell Road, Surbiton, KT6 6EZ,<br />
-  Phone: <a href="#">011 111 111</a>,<br />
-  Email: <a href="#">email@organisation.com</a>,</p>
-  <p><a href="#">View pharmacy details</a></p>
+  <p>Ewell Road, Surbiton, KT6 6EZ<br />
+  Phone: <a href="#">011 111 111</a><br />
+  Email: <a href="#">email@organisation.com</a></p>
+  <p><a href="#">Get directions (opens in Google Maps)</a></p>
 {% endset %}
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
@@ -13,6 +13,7 @@
       clickable: false,
       heading: "Berrylands Pharmacy",
       headingClasses: "nhsuk-heading-m",
+      href: "/#",
       descriptionHtml: cardDescriptionHtml
     }) }}
   </li>
