@@ -43,8 +43,16 @@
   }
 }
 
-.app-design-example--small-screen .app-design-example__frame {
-  width: 400px;
+.app-design-example--s .app-design-example__frame {
+  width: 260px; // sub-mobile / smart watch
+}
+
+.app-design-example--m .app-design-example__frame {
+  width: 400px; // common mobile
+}
+
+.app-design-example--l .app-design-example__frame {
+  width: 700px; // small tablet
 }
 
 .app-design-example__frame {
