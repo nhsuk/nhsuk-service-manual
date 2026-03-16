@@ -52,7 +52,7 @@
     "marked": "^17.0.1",
     "nhsuk-frontend": "^10.4.1",
     "nunjucks": "^3.2.4",
-    "slug": "^11.0.1"
+    "slug": "^9.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.6",
