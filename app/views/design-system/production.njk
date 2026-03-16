@@ -61,11 +61,14 @@
 
   <p>For example, to use the button macro, use the import statement:</p>
 
-  {% call appCode({
-    language: "njk",
+  {% call code({
     classes: "nhsuk-u-margin-bottom-6"
   }) %}
-    {% raw %}{% from "nhsuk/components/button/macro.njk" import button %}{% endraw %}
+    {% filter highlight("njk") %}
+      {% raw %}
+        {% from "nhsuk/components/button/macro.njk" import button %}
+      {% endraw %}
+    {%- endfilter %}
   {% endcall %}
 
   <p>To use Nunjucks macros in your application, you’ll need to setup Nunjucks views to point to the location of NHS.UK frontend.
@@ -73,29 +76,31 @@
   <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v10.x (latest)</h4>
   <p>Configure Nunjucks search paths for <code>v10.x</code> versions and higher:</p>
 
-  {% call appCode({
-    language: "js",
+  {% call code({
     classes: "nhsuk-u-margin-bottom-6"
   }) %}
-    nunjucks.configure([
-      'node_modules/nhsuk-frontend/dist/nhsuk/components',
-      'node_modules/nhsuk-frontend/dist/nhsuk/macros',
-      'node_modules/nhsuk-frontend/dist/nhsuk',
-      'node_modules/nhsuk-frontend/dist'
-    ]);
+    {% filter highlight("js") %}
+      nunjucks.configure([
+        'node_modules/nhsuk-frontend/dist/nhsuk/components',
+        'node_modules/nhsuk-frontend/dist/nhsuk/macros',
+        'node_modules/nhsuk-frontend/dist/nhsuk',
+        'node_modules/nhsuk-frontend/dist'
+      ])
+    {% endfilter %}
   {% endcall %}
 
   <h4 class="nhsuk-u-margin-bottom-2">NHS.UK frontend v9.x</h4>
   <p>Configure Nunjucks search paths for <code>v9.x</code> versions only:</p>
 
-  {% call appCode({
-    language: "js",
+  {% call code({
     classes: "nhsuk-u-margin-bottom-2"
   }) %}
-    nunjucks.configure([
-      'node_modules/nhsuk-frontend/packages/components',
-      'node_modules/nhsuk-frontend/packages/macros'
-    ]);
+    {% filter highlight("js") %}
+      nunjucks.configure([
+        'node_modules/nhsuk-frontend/packages/components',
+        'node_modules/nhsuk-frontend/packages/macros'
+      ])
+    {% endfilter %}
   {% endcall %}
 
   {% call insetText({

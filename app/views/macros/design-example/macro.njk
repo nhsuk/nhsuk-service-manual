@@ -1,6 +1,6 @@
 {% from "details/macro.njk" import details %}
 {% from "tables/macro.njk" import table %}
-{% from "code/macro.njk" import appCode %}
+{% from "code/macro.njk" import code %}
 
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.slug) %}
@@ -167,16 +167,19 @@
                 {% endcall %}
               </div>
               {% endif %}
-              <div class="app-code-snippet__macro"></div>
-              <div class="app-code-snippet__container">
-                <button class="app-button--copy" aria-live="assertive" hidden>
-                  Copy code<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
-                </button>
-
-                {% call appCode(snippet) %}
+              {% call code({
+                background: "body",
+                button: true,
+                classes: "app-code-snippet__code",
+                copyButtonClassList: [
+                  "nhsuk-button--secondary-solid",
+                  "nhsuk-button--small"
+                ]
+              }) %}
+                {% filter highlight(snippet.language) %}
                   {{- snippet.code | safe -}}
-                {% endcall %}
-              </div>
+                {% endfilter %}
+              {% endcall %}
               {% if snippets | length > 1 %}
               <button class="app-button--close" hidden>
                 Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>

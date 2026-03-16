@@ -58,12 +58,12 @@
   <h3 id="make-focusable-text-accessible">Make focusable text accessible</h3>
   <p class="rich-text">If you use Sass, you should include the <code>nhsuk-focused-text</code> mixin in your component's <code>:focus</code> selector if that component is focusable text. For example, if the component is a link in body text, or the details component:</p>
 
-  {% call appCode({
-    language: "css"
-  }) %}
-    .app-component:focus {
-      @include nhsuk-focused-text;
-    }
+  {% call code() %}
+    {% filter highlight("css") %}
+      .app-component:focus {
+        @include nhsuk-focused-text;
+      }
+    {% endfilter %}
   {% endcall %}
 
   <h3 id="make-other-focusable-elements-accessible">Make other focusable elements accessible</h3>
