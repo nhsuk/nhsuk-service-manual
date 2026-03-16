@@ -25,6 +25,8 @@ updates:
           - 'marked'
           - 'nhsuk-frontend'
           - 'nunjucks'
+          - 'outdent'
+          - 'slug'
 
       build:
         patterns:
