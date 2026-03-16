@@ -5,6 +5,11 @@
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.slug) %}
 
+{% if option.deprecated | length %}
+  <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }}</a><br><br>
+{% elif option.deprecated %}
+  <strong>Deprecated</strong><br><br>
+{% endif %}
 {% if (option.required) %}
   <strong>Required.</strong>
 {% endif %}
@@ -117,7 +122,7 @@
                   id: "options-" + exampleId + "-details"
                 }) %}
                   <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
-                  <p>Some options are required for the macro to work. These are marked as "Required" in the option description.</p>
+                  <p>Some options are required for the macro to work. These are marked as "Required" in the option description. Deprecated options are marked as "Deprecated".</p>
                   <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 
                   {% for options in macroOptions %}
