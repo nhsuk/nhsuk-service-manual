@@ -1,0 +1,21 @@
+{% from "header/macro.njk" import header %}
+
+{{ header({
+  classes: "nhsuk-header--inline",
+  logo: {
+    href: "#",
+    ariaLabel: "Manage patients homepage"
+  },
+  service: {
+    text: "Manage patients",
+    href: "#"
+  },
+  account: {
+    items: [
+      {
+        text: "Log out",
+        href: "#"
+      }
+    ]
+  }
+}) }}
