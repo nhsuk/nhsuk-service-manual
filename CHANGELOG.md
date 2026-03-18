@@ -1,6 +1,10 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.8.0 - 19 March 2026
+
+:new: **New features**
+
+- Add a modifier class to make header component with account or search inline on small screens
 
 :wrench: **Maintenance**
 
