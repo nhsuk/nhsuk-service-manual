@@ -12,35 +12,35 @@
 
 <h2>March 2026</h2>
 
-  {% set designHtml202603 %}
-    <p>Added a modifier class to make the <a href="/design-system/components/header#inline-account-search">header component</a> display account links or search inline on small screens</p>
-    <p>Changed the <a href="/design-system/components/character-count">character count component</a>  to hide messages when not needed</p>
-    <p>Improved the display of our code blocks and syntax highlighting</p>
-  {% endset %}
+{% set designHtml202603 %}
+  <p>Added a modifier class to make the <a href="/design-system/components/header#inline-account-search">header component</a> display account links or search inline on small screens</p>
+  <p>Changed the <a href="/design-system/components/character-count">character count component</a>  to hide messages when not needed</p>
+  <p>Improved the display of our code blocks and syntax highlighting</p>
+{% endset %}
 
-  {{ table({
-    caption: "Updates to the service manual in March 2026",
-    captionClasses: "nhsuk-u-visually-hidden",
-    head: [
+{{ table({
+  caption: "Updates to the service manual in March 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
       {
-        text: "Section",
-        classes: "nhsuk-u-width-one-quarter"
+        text: "Design system"
       },
       {
-        text: "Update"
+        html: designHtml202603
       }
-    ],
-    rows: [
-      [
-        {
-          text: "Design system"
-        },
-        {
-          html: designHtml202603
-        }
-      ]
     ]
-  }) }}
+  ]
+}) }}
 
 <h2>February 2026</h2>
 
