@@ -10,11 +10,11 @@ updates:
       application:
         patterns:
           - '@open-iframe-resizer/*'
+          - '@prettier/*'
           - 'accessible-autocomplete'
           - 'axios'
           - 'basic-auth'
           - 'cheerio'
-          - 'clipboard'
           - 'compression'
           - 'express'
           - 'gray-matter'
@@ -25,6 +25,8 @@ updates:
           - 'marked'
           - 'nhsuk-frontend'
           - 'nunjucks'
+          - 'outdent'
+          - 'slug'
 
       build:
         patterns:

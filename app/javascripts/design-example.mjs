@@ -1,5 +1,4 @@
 import { initialize } from '@open-iframe-resizer/core'
-import ClipboardJS from 'clipboard'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -18,7 +17,6 @@ export class DesignExample extends Component {
       '.app-code-snippet__preformatted'
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
-    this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
     this.state = { isMouseDown: false }
 
@@ -84,10 +82,6 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
-    if (ClipboardJS.isSupported()) {
-      this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
-    }
-
     if (this.iframe) {
       const { iframe, state } = this
 
@@ -132,26 +126,6 @@ export class DesignExample extends Component {
         tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
-  }
-
-  initCopyClick(copyButton) {
-    const clipboard = new ClipboardJS(copyButton, {
-      target: () => copyButton.parentElement.querySelector('pre')
-    })
-
-    // Update button on success
-    clipboard.on('success', (event) => {
-      copyButton.innerText = 'Code copied'
-      event.clearSelection()
-
-      // Reset button after delay
-      setTimeout(() => {
-        copyButton.innerText = 'Copy code'
-      }, 2500)
-    })
-
-    // Reveal button
-    copyButton.removeAttribute('hidden')
   }
 
   showEl(el) {

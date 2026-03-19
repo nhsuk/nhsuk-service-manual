@@ -197,12 +197,12 @@
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>
 
-  {% call appCode({
-    language: "html"
-  }) %}
-    <a class="nhsuk-header__service-logo" href="/">
-      <img class="nhsuk-header__organisation-logo" src="/assets/logo.png" width="280" alt="Anyplace Anytown Anywhere NHS Foundation Trust homepage">
-    </a>
+  {% call code() %}
+    {% filter highlight("html") %}
+      <a class="nhsuk-header__service-logo" href="/">
+        <img class="nhsuk-header__organisation-logo" src="/assets/logo.png" width="280" alt="Anyplace Anytown Anywhere NHS Foundation Trust homepage">
+      </a>
+    {% endfilter %}
   {% endcall %}
 
 {% endblock %}

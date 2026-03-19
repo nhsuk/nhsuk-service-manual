@@ -9,35 +9,6 @@
   }
 
   .app-button {
-    &--copy {
-      background-color: nhsuk-colour("white");
-      border: solid nhsuk-colour("green");
-      border-width: 1px 1px 0;
-      border-radius: 3px;
-      box-shadow: 0 4px 0 $nhsuk-button-colour;
-      color: nhsuk-colour("green");
-      cursor: pointer;
-      margin-bottom: 16px;
-      min-width: 58px;
-      padding: 2px 8px;
-      position: absolute;
-      right: 16px;
-      text-align: center;
-      text-decoration: none;
-      top: 16px;
-      z-index: 1;
-      @include nhsuk-font(14);
-
-      &:hover {
-        background-color: nhsuk-colour("grey-5");
-      }
-
-      &:focus {
-        border-color: $nhsuk-focus-colour;
-        @include nhsuk-focused-text;
-      }
-    }
-
     &--close {
       background-color: transparent;
       border: 0;
@@ -68,14 +39,6 @@
         bottom: 24px;
         right: 24px;
       }
-
-      svg {
-        fill: nhsuk-colour("blue");
-        height: 16px;
-        margin: 5px 5px 0 0;
-        transform: rotate(-90deg);
-        width: 16px;
-      }
     }
   }
 
@@ -102,6 +65,10 @@
   max-width: 38em;
 }
 
+.app-code-snippet__options code {
+  background-color: nhsuk-colour("grey-5");
+}
+
 .app-code-snippet__option-name {
   @include nhsuk-media-query($from: tablet) {
     width: 29%;
@@ -114,8 +81,7 @@
   }
 }
 
-.app-code-snippet__container {
-  background-color: nhsuk-colour("grey-5");
-  position: relative;
+.app-code-snippet__code {
   width: 100%;
+  margin: 0;
 }

@@ -19,7 +19,7 @@ const config = {
   // Enable Babel transforms for ESM-only node_modules
   // See: https://jestjs.io/docs/ecmascript-modules
   transformIgnorePatterns: [
-    `<rootDir>/node_modules/(?!${['marked', 'slug'].join('|')}/)`
+    `<rootDir>/node_modules/(?!${['marked'].join('|')}/)`
   ]
 }
 

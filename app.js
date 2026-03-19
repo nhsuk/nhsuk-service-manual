@@ -6,7 +6,7 @@ const browserSync = require('browser-sync')
 const compression = require('compression')
 const express = require('express')
 const helmet = require('helmet')
-const nunjucks = require('nunjucks')
+const { nunjucks } = require('nhsuk-frontend/lib')
 
 // Local dependencies
 const config = require('./app/config')
@@ -118,12 +118,9 @@ app.set('view engine', 'njk')
 
 // Nunjucks configuration
 const env = nunjucks.configure(config.nunjucksPaths, {
-  autoescape: true,
   express: app,
   noCache: true,
-  watch: true,
-  trimBlocks: true,
-  lstripBlocks: true
+  watch: true
 })
 
 /*

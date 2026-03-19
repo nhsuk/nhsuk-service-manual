@@ -3,7 +3,6 @@ import { createAll, initAll } from 'nhsuk-frontend'
 
 // NHS digital service manual components
 import initAccessibleAutocomplete from './accessible-autocomplete.mjs'
-import { Code } from './code.mjs'
 import { DesignExample } from './design-example.mjs'
 import { inputValue, onConfirm, source, suggestion } from './search.mjs'
 
@@ -22,9 +21,6 @@ initAccessibleAutocomplete({
     suggestion
   }
 })
-
-// Code highlight blocks
-createAll(Code)
 
 // Design examples
 createAll(DesignExample)
