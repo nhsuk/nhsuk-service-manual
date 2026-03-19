@@ -65,6 +65,8 @@ updates:
 
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
 
     versioning-strategy: increase
 
@@ -73,13 +75,14 @@ updates:
       - dependency-type: direct
 
       # Include indirect browser data updates
+      # https://web.dev/baseline
+      - dependency-name: baseline-browser-mapping
       # https://caniuse.com
       - dependency-name: caniuse-lite
 
   # Update GitHub Actions
   - package-ecosystem: github-actions
-    directories:
-      - .github/workflows/
+    directory: /
 
     # Group actions into shared PR
     groups:
@@ -88,4 +91,6 @@ updates:
           - '*'
 
     schedule:
-      interval: 'monthly'
+      interval: monthly
+    cooldown:
+      default-days: 7
