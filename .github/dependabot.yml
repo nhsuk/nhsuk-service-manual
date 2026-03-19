@@ -81,5 +81,11 @@ updates:
     directories:
       - .github/workflows/
 
+    # Group actions into shared PR
+    groups:
+      actions:
+        patterns:
+          - '*'
+
     schedule:
       interval: 'monthly'
