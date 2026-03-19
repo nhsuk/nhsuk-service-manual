@@ -65,6 +65,10 @@
   max-width: 38em;
 }
 
+.app-code-snippet__options code {
+  background-color: nhsuk-colour("grey-5");
+}
+
 .app-code-snippet__option-name {
   @include nhsuk-media-query($from: tablet) {
     width: 29%;
