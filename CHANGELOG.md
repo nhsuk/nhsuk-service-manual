@@ -1,6 +1,12 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.8.0 - 19 March 2026
+
+:new: **New features**
+
+- Add a modifier class to make header component with account or search inline on small screens
+- Improve clickable card hover and active states, and target area
+- Remove table row hover styles
 
 :wrench: **Maintenance**
 
