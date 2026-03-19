@@ -43,16 +43,17 @@
   }
 }
 
+// Widths bigger than expected to account for scrollbar and internal paddding of the frame
 .app-design-example--s .app-design-example__frame {
-  width: 260px; // sub-mobile / smart watch
+  width: 320px; // sub-mobile / smart watch
 }
 
 .app-design-example--m .app-design-example__frame {
-  width: 400px; // common mobile
+  width: 440px; // common mobile
 }
 
 .app-design-example--l .app-design-example__frame {
-  width: 700px; // small tablet
+  width: 640px; // small tablet
 }
 
 .app-design-example__frame {

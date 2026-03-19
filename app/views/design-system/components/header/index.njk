@@ -153,14 +153,23 @@
     type: "account-complex"
   }) }}
 
-  <h4 id="inline-account-links">Inline account links</h4>
-  <p>By default, account links drop below the logo and service name on small screens. If there is enough space available, you can keep the account section inline by adding the <code>nhsuk-header--inline</code> class to the <code>nhsuk-header</code>. This will depend on the length of your service name and account links.</p>
+  <h3 id="inline-account-search">Inline account or search</h3>
+  <p>By default, the account links and search bar drop below the logo and service name on small screens. If there is enough space available, you can keep them inline by adding the <code>nhsuk-header--inline</code> class to the <code>nhsuk-header</code>. This will depend on the length of your service name and account links. If they cannot fit inline, they will wrap to the next line.</p>
   
+  <h4>Inline account links</h4>
   {{ designExample({
     group: "components",
     classes: "app-design-example--m",
     item: "header",
     type: "account-inline"
+  }) }}
+
+  <h4>Inline search</h4>
+  {{ designExample({
+    group: "components",
+    classes: "app-design-example--m",
+    item: "header",
+    type: "search-inline"
   }) }}
 
   <h2 id="organisational-header">Organisational header</h2>
