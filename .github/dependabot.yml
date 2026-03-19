@@ -32,6 +32,7 @@ updates:
         patterns:
           - '@babel/*'
           - 'autoprefixer'
+          - 'babel-plugin-*'
           - 'caniuse-lite'
           - 'cssnano'
           - 'cssnano-*'
@@ -56,6 +57,7 @@ updates:
 
       test:
         patterns:
+          - 'babel-jest'
           - 'jest'
           - 'jest-*'
 
