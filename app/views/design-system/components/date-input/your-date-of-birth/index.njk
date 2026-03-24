@@ -5,7 +5,7 @@
   namePrefix: "dateOfBirth",
   fieldset: {
     legend: {
-      text: "What is their date of birth?",
+      text: "What is your date of birth?",
       size: "l",
       isPageHeading: true
     }
@@ -16,15 +16,18 @@
   items: [
     {
       name: "day",
-      classes: "nhsuk-input--width-2"
+      classes: "nhsuk-input--width-2",
+      autocomplete: "bday-day"
     },
     {
       name: "month",
-      classes: "nhsuk-input--width-2"
+      classes: "nhsuk-input--width-2",
+      autocomplete: "bday-month"
     },
     {
       name: "year",
-      classes: "nhsuk-input--width-4"
+      classes: "nhsuk-input--width-4",
+      autocomplete: "bday-year"
     }
   ]
 }) }}
