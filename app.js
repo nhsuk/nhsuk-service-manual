@@ -277,6 +277,14 @@ app.get('/design-example/components/checkboxes/hint', (req, res) => {
   res.redirect('/design-example/components/checkboxes/hint-text')
 })
 
+// Redirects for design system components
+
+app.get('/design-system/components/care-cards', (req, res) => {
+  res.redirect(
+    '/design-system/patterns/help-users-decide-when-and-where-to-get-care'
+  )
+})
+
 // Redirects for design system patterns
 
 app.get(
