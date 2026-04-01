@@ -49,8 +49,8 @@
     "highlight.js": "^11.11.1",
     "js-beautify": "^1.15.4",
     "lunr": "^2.3.9",
-    "marked": "^17.0.4",
-    "nhsuk-frontend": "^10.4.1",
+    "marked": "^17.0.5",
+    "nhsuk-frontend": "^10.4.2",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "slug": "^9.1.0"
