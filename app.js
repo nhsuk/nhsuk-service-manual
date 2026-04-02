@@ -119,7 +119,6 @@ app.set('view engine', 'njk')
 // Nunjucks configuration
 const env = nunjucks.configure(config.nunjucksPaths, {
   express: app,
-  noCache: true,
   watch: true
 })
 
