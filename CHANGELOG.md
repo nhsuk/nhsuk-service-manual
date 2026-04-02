@@ -7,6 +7,12 @@
 - Update card component guidance to make it clearer
 - Add section on actions in cards
 - Split out use of cards for navigation into new hub page pattern
+- Update NHS App greeting section in Writing NHS messages
+- Add section on using autocomplete attribute to date input
+
+:wrench: **Maintenance**
+
+- Remove care card page from components and redirect to care card pattern
 
 ## 8.8.0 - 19 March 2026
 
