@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## 8.9.0 - 2 April 2026
+
+:new: **New features**
+
+- Update card component guidance to make it clearer
+- Add section on actions in cards
+- Split out use of cards for navigation into new hub page pattern
+- Update NHS App greeting section in Writing NHS messages
+- Add section on using autocomplete attribute to date input
+
+:wrench: **Maintenance**
+
+- Remove care card page from components and redirect to care card pattern
+
 ## 8.8.0 - 19 March 2026
 
 :new: **New features**
@@ -10,9 +24,8 @@
 
 :wrench: **Maintenance**
 
-- Port Nunjucks syntax highlighting from GOV.UK Design System
+- Port Nunjucks syntax highlighting from GOV.UK design system
 - Support focus and keyboard left/right scrolling on code blocks
-- Split out hub page pattern from card component and updated content
 
 ## 8.7.2 - 2 March 2026
 

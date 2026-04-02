@@ -119,7 +119,8 @@ app.set('view engine', 'njk')
 // Nunjucks configuration
 const env = nunjucks.configure(config.nunjucksPaths, {
   express: app,
-  noCache: true,
+  lstripBlocks: true, // Remove leading spaces from a block/tag
+  trimBlocks: true, // Remove trailing newlines from a block/tag
   watch: true
 })
 
@@ -275,6 +276,14 @@ app.get(
 
 app.get('/design-example/components/checkboxes/hint', (req, res) => {
   res.redirect('/design-example/components/checkboxes/hint-text')
+})
+
+// Redirects for design system components
+
+app.get('/design-system/components/care-cards', (req, res) => {
+  res.redirect(
+    '/design-system/patterns/help-users-decide-when-and-where-to-get-care'
+  )
 })
 
 // Redirects for design system patterns

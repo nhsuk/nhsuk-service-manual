@@ -1,16 +1,19 @@
 {% from "card/macro.njk" import card %}
 
+{% set cardDescriptionHtml %}
+  <p>The <a href="#">benefits of exercise</a> and <a href="#">why we should sit less</a></p>
+{% endset %}
+
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
     {{ card({
       image: {
         src: "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg"
       },
-      clickable: true,
-      href: "#",
+      clickable: false,
       heading: "Exercise",
       headingSize: "m",
-      description: "Programmes, workouts and tips to get you moving and improve your fitness and wellbeing"
+      descriptionHtml: cardDescriptionHtml
     }) }}
   </li>
 </ul>

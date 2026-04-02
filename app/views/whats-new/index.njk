@@ -9,18 +9,24 @@
 
   <h2>Latest updates</h2>
 
-   <h3>March 2026</h3>
+  <h3>April 2026</h3>
+
+  {% set contentHtml %}
+    <p>Updated <a href="/content/writing-nhs-messages#nhs-app-messages">NHS App greeting section in Writing NHS messages</a></p>
+  {% endset %}
 
   {% set designHtml %}
-    <p>Added a modifier class to make the <a href="/design-system/components/header#inline-account-search">header component</a> display account links or search inline on small screens</p>
-    <p>Changed the <a href="/design-system/components/character-count">character count component</a>  to hide messages when not needed</p>
-    <p>Improved hover and active styles, and target area for clickable <a href="/design-system/components/card">card</a> and <a href="/design-system/components/expander">expander</a></p>
-    <p>Improved the display of our code blocks and syntax highlighting</p>
-    <p>Removed <a href="/design-system/components/table">table</a> row hover styles because they only showed on white backgrounds</p>
+    <p>Updated <a href="/design-system/components/card">card component</a></p>
+    <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
+    <p>Added section on <a href="/design-system/components/date-input#using-autocomplete-attribute">using autocomplete attribute to date input</a></p>
+  {% endset %}
+
+  {% set otherHtml %}
+    <p>Updated <a href="/accessibility-statement">accessibility statement</a> after latest audit</p>
   {% endset %}
 
   {{ table({
-    caption: "Updates to the service manual in March 2026",
+    caption: "Updates to the service manual in April 2026",
     captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
@@ -34,10 +40,26 @@
     rows: [
       [
         {
+          text: "Content"
+        },
+        {
+          html: contentHtml
+        }
+      ],
+      [
+        {
           text: "Design system"
         },
         {
           html: designHtml
+        }
+      ],
+      [
+        {
+          text: "Other"
+        },
+        {
+          html: otherHtml
         }
       ]
     ]

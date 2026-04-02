@@ -10,6 +10,62 @@
 
 {% block bodyContent %}
 
+<h2>April 2026</h2>
+
+{% set contentHtml202604 %}
+  <p>Updated <a href="/content/writing-nhs-messages#nhs-app-messages">NHS App greeting section in Writing NHS messages</a></p>
+{% endset %}
+
+{% set designHtml202604 %}
+  <p>Updated <a href="/design-system/components/card">card component</a></p>
+  <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
+  <p>Added section on <a href="/design-system/components/date-input#using-autocomplete-attribute">using autocomplete attribute to date input</a></p>
+{% endset %}
+
+{% set otherHtml202604 %}
+  <p>Updated <a href="/accessibility-statement">accessibility statement</a> after latest audit</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in April 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202604
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202604
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202604
+      }
+    ]
+  ]
+}) }}
+
 <h2>March 2026</h2>
 
 {% set designHtml202603 %}
