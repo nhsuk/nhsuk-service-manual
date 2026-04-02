@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Amend alt text for BSL icon
+
 ## 8.8.0 - 19 March 2026
 
 :new: **New features**
