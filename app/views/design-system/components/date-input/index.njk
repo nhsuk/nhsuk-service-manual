@@ -3,7 +3,7 @@
 {% set pageTitle = "Date input" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use date input to help users enter a memorable date, like their date of birth." %}
+{% set pageDescription = "Use date input to help users enter a date, like a date of birth." %}
 {% set theme = "Form elements" %}
 {% set dateUpdated = "June 2021" %}
 {% set backlog_issue_id = "10" %}
@@ -28,9 +28,23 @@
 
   <h2>How to use date input</h2>
   <p>Date input consists of 3 fields to let users enter a day, month and year.</p>
-  <p class="rich-text">Group the 3 date fields together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "What is your date of birth?".</p>
+  <p class="rich-text">Group the 3 date fields together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "When was your appointment?".</p>
   <p class="rich-text">If you are asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means that screen reader users will only hear the contents once.</p>
   <p>Read more on the GOV.UK Design System about how to <a href="https://design-system.service.gov.uk/patterns/dates/">ask users for dates</a> and <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+
+  <h2>Using the autocomplete attribute</h2>
+
+  <p>If you are asking the user for their own date of birth, use the <code>autocomplete</code> attributes. This lets some browsers autofill the information if the user has entered it previously.</p>
+
+  <p>You'll need to do this to meet <a class="nhsuk-link" href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">WCAG 2.2 success criterion 1.3.5: Identify input purpose, level AA</a>.</p>
+
+  <p>To do it, set the <code>autocomplete</code> attribute on the 3 fields to <code>bday-day</code>, <code>bday-month</code> and <code>bday-year</code>. See how to do this in the HTML and Nunjucks tabs in the following example.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "date-input",
+    type: "your-date-of-birth"
+  }) }}
 
   <h2>Error messages</h2>
   <p>Style error messages like this.</p>
