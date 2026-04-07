@@ -25,8 +25,8 @@
     <li>present data or information that can be organised in a structured way</li>
     <li>make it easy for users to scan and compare information and understand relationships between data</li>
   </ul>
-  <p>Aim to present a minimum of data. If you have a lot of data, try to organise it into multiple tables or multiple pages.</p>   
-  
+  <p>Aim to present a minimum of data. If you have a lot of data, try to organise it into multiple tables or multiple pages.</p>
+
   <h2 id="when-not-to-use-a-table">When not to use a table</h2>
   <p>Use tables with caution. They may not be the best way to present information, especially for the public and on mobile screens. In staff services, complex data tables can lead to cognitive overload, a poor user experience and performance issues.</p>
   <p>There may be better ways to meet users' needs, for example:</p>
@@ -37,7 +37,7 @@
   </ul>
   <p>Check this in your user research.</p>
   <p>Do not use a table to lay out content on a page. Use the <a href="/design-system/styles/layout#grid">grid system</a> instead.</p>
-  
+
   <h2 id="basic-tables">Basic tables</h2>
   <h3 id="2-column-table">2 column table</h3>
 
@@ -59,7 +59,7 @@
 
   <h3 id="when-not-to-use-a-basic-table">When not to use a basic table</h3>
   <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a responsive table instead.</p>
- 
+
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays as a 3 column table. However, on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
@@ -103,21 +103,36 @@
     <li>whether to place unsortable data such as empty or null values at the start or end of the table</li>
   </ul>
 
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example free text.</p>
+
   <h4 id="sort-order">Sort order</h4>
-  <p>The table allows users to sort:</p>
+  <p>By default a column will be sorted:</p>
   <ul>
-    <li>numerically</li>
+    <li>numerically – if the cells contain numbers</li>
     <li>alphabetically</li>
   </ul>
-  <p>If you need to change the sort order, you can override the defaults by adding <code>data-sort-value</code> attributes that contain a number. For example:</p>
-  <ul>
-    <li>dates: <td data-sort-value="2026-11-30">30 November 2026</td></li>
-    <li>formatting numbers: <td data-sort-value="123456">123,456</td></li>
-    <li>currencies: <td data-sort-value="3.5">£3.50</td></li>
-  </ul>
-  <p>You may want to remove common prefixes like "a" and "the", treating them as "stop words", so that "The Whittington Hospital" comes under W, not under T.</p>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example free text.</p>
+
   <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
+
+  <p>You may want to remove common prefixes like "a" and "the", treating them as "stop words", so that "The Whittington Hospital" comes under W, not under T.</p>
+
+  <p>If you need to change the sort order, you can override the defaults by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
+
+  <p>For example:</p>
+  <ul>
+    <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
+    <li>formatting numbers: 123,456 would be <code>123456</code></li>
+    <li>currencies: £3.50 would be <code>3.5</code></li>
+    <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
+  </ul>
+
+  <p>See example:</p>
+
+ {{ designExample({
+    group: "components",
+    item: "table",
+    type: "sortable-custom"
+  }) }}
 
   <h4 id="consider-search-and-filter">Consider search and filter</h3>
   <p>Sometimes it's better to let users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need.</p>
@@ -128,11 +143,11 @@
     <li>medical conditions</li>
   </ul>
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
-  
+
   <h4 id="session-storage">Session storage</h4>
   <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
-  
+
   <h4 id="server-side-sorting">Server-side sorting</h4>
   <p>This component provides client-side sorting, which only sorts the data currently visible in the table on the page.</p>
   <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
