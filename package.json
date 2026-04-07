@@ -56,6 +56,9 @@
     "outdent": "^0.8.0",
     "slug": "^9.1.0"
   },
+  "overrides": {
+    "slug": "9.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
