@@ -1,17 +1,17 @@
 {% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "date-of-birth",
-  namePrefix: "dateOfBirth",
+  id: "appointment-date",
+  namePrefix: "appointmentDate",
   fieldset: {
     legend: {
-      text: "What is your date of birth?",
+      text: "When was your appointment?",
       size: "l",
       isPageHeading: true
     }
   },
   hint: {
-    text: "For example, 15 3 1984"
+    text: "For example, ((dateLastMonth))"
   },
   items: [
     {

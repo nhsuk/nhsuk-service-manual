@@ -6,6 +6,47 @@
 
 - Add sortable table
 
+## 8.9.0 - 2 April 2026
+
+:new: **New features**
+
+- Update card component guidance to make it clearer
+- Add section on actions in cards
+- Split out use of cards for navigation into new hub page pattern
+- Update NHS App greeting section in Writing NHS messages
+- Add section on using autocomplete attribute to date input
+
+:wrench: **Maintenance**
+
+- Remove care card page from components and redirect to care card pattern
+
+## 8.8.0 - 19 March 2026
+
+:new: **New features**
+
+- Add a modifier class to make header component with account or search inline on small screens
+- Improve clickable card hover and active states, and target area
+- Remove table row hover styles
+
+:wrench: **Maintenance**
+
+- Port Nunjucks syntax highlighting from GOV.UK design system
+- Support focus and keyboard left/right scrolling on code blocks
+
+## 8.7.2 - 2 March 2026
+
+:wrench: **Maintenance**
+
+- Make minor changes to NHS messages guidance
+
+## 8.7.1 - 18 February 2026
+
+:wrench: **Maintenance**
+
+- Remove 1 example from NHS messages guidance
+- Resize example iframes when contents changes size
+>>>>>>> main
+
 ## 8.7.0 - 17 February 2026
 
 :new: **New features**

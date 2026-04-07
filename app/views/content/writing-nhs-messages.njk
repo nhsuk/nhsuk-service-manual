@@ -3,7 +3,7 @@
 {% set pageTitle = "Writing NHS messages" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "How to write NHS App messages, text messages, emails and letters for patients and the public, with advice on structure, tone and wording so your message is effective and easy to understand." %}
-{% set dateUpdated = "February 2026" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "450" %}
 
 {% block beforeContent %}
@@ -27,7 +27,7 @@
 
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/inclusive-content">Inclusive content</a></li>
 
-      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/writing-nhs-messages">Writing NHS messages</a></li>
+      <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="/content/writing-nhs-messages">Writing NHS messages</a>
         <ul class="app-side-nav__list app-side-nav__list--nested">
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#who-this-guidance-is-for">Who this guidance is for</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#writing-effective-messages">Writing effective messages</a></li>
@@ -38,6 +38,8 @@
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#paper-letters">Paper letters</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#supporting-accessibility-and-inclusion">Supporting accessibility and inclusion</a></li>
         </ul>
+      </li>
+
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/formatting">Formatting</a></li>
 
       <li class="app-side-nav__item"><a class="app-side-nav__link" href="/content/punctuation">Punctuation</a></li>
@@ -80,7 +82,7 @@
 </ul>
 <p>It was developed with input from clinical safety, governance and delivery teams across NHS England. It brings together established writing standards and findings from user research into how NHS messages are read and understood.</p>
 <p>It sits alongside the Messaging best practice section of the NHS England website so teams can plan, write and send messages in a joined-up and consistent way.</p>
-
+<p>Consistency in NHS messages means they are more easily recognised and trustworthy. By following this guidance you will help create a reliable standard across the NHS.</p>
 <h2 id="writing-effective-messages">Writing effective messages</h2>
 <p>When writing your message always consider the needs of the patient, any clinical safety requirements and the channel you are using to send the message.</p>
 <p>To write messages in any channel:</p>
@@ -95,9 +97,8 @@
 </ul>
 
 <h2 id="writing-for-different-channels">Writing for different channels</h2>
-
-<p>If your service has a fallback strategy you may be required to write the same message for multiple channels.</p>
-<p>Writing messages specifically for the channel means users are more likely to understand and engage with important health-related requests or advice. For example, copying and pasting the contents of a letter into a text message or NHS App message is bad practice as this can create formatting issues and could result in a poor user experience.</p>
+<p>When sending the same message from multiple channels it is best practice to tailor the message to each channel.</p>
+<p>For example, copying and pasting the contents of a letter into a text message or NHS App message can create formatting issues and could result in a poor user experience. Formatting the message for each channel is more engaging and accessible for the user. This is especially important when sending health-related requests or advice.</p>
 <p>Find out how to write for different channels by referring to the specific channel guidance and examples on this page. The examples illustrate how this guidance can be applied in practice. You should test your messages to make sure they meet the needs of your users.</p>
 <h2 id="nhs-app-messages">NHS App messages</h2>
 
@@ -121,12 +122,26 @@
 
 <p>Avoid using just a last name or first name without a greeting as it can sound impersonal.</p>
 
+<h4>Parent, carer and proxy</h4>
+<p>If you are writing to an adult who has another person looking after their health (sometimes called a proxy), greet the patient and not their carer to avoid confusion over who the communication is intended for.</p>
+<p>Try to avoid using the word "proxy". Research has shown users prefer "carer" or "trusted person".</p> 
+<p>However, greet the parent or carer if you are writing to newborns or children. Try to include an identifying detail such as the name or date of birth of the child in the body of the message.</p>
+<div class="app-example app-example--content">
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+<p>for children – "Dear parent or carer, we are inviting your child born in ((month)) ((year)) for free NHS vaccinations to keep them healthy."</p>
+</div>
+
+<p>You can apply this guidance for greeting carers across all channels, including text messages, emails and paper letters.</p>
+
 <h3 id="protecting-people-from-spam-and-phishing-app">Protecting people from spam and phishing</h3>
-<p>To access messages in the NHS App, patients need to go through NHS login and prove their identity. This means NHS App messages are more secure than email messages or text. Research has shown patients are more likely to trust links in the NHS App, and because the NHS App is secure you can use text links rather than having to write out the full URL as in a text message or email.</p>
+<p>To access messages in the NHS App, patients need to go through NHS login and prove their identity. This means NHS App messages are more secure than emails or text messages. Research has shown patients are more likely to trust links in the NHS App, and because the NHS App is secure you can use text links rather than having to write out the full URL.</p>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/links-and-urls">Find out how to use text links and URLs in an NHS App message on the NHS Notify website</a>.</p>
 
 <h3 id="telling-patients-who-your-message-is-from-app">Telling patients who your message is from</h3>
-<p>Patients and the public are more likely to trust a message if they know who sent it. You can choose the sender name that is displayed with your NHS App message when you onboard with NHS Notify.</p>
+<p>Patients and the public are more likely to read a message if they know who sent it. You can choose the sender name that is displayed with your NHS App message when you onboard with NHS Notify.</p>
 <p>Your sender name can help patients quickly identify your service, for example "NHS vaccination invitations", "NHS App" or "Tree Tops Medical  Practice". Due to the way sender name is displayed in the NHS App it is not necessary to use a signature at the end of your message.</p>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#nhs-app-sender-name%22%20HYPERLINK%20%22https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#nhs-app-sender-name">Read more about sender names on the NHS Notify website</a>.</p>
 
@@ -159,36 +174,30 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Example 2 of an NHS App message",
-  classes: "nhsuk-expander"
+  summaryText: "Example 2 of an NHS App message",
+  classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS Screening</p>
+<p><strong>SenderID:</strong> ((serviceName))</p>
 <p>Dear ((firstName)) ((lastName))</p>
-<p>We're inviting you to do a test for human papillomavirus (HPV) at home.</p>
-<p>HPV is the name of a very common group of viruses. They do not cause any problems in most people, but high-risk types can cause cervical cancer.</p>
-<p><strong>Why you're being invited</strong></p>
-<p>Our records show you have been invited for cervical screening, previously known as a "smear test", but have not attended or not attended in a while.</p>
-<p>Cervical screening tests for high-risk HPV and can let you know if you're at risk of developing cervical cancer.</p>
-<p>However, for those who have not had regular cervical screening, we're offering an alternative option called HPV self-testing.</p>
-<p><strong>What HPV self-testing is</strong></p>
-<p>HPV self-testing checks for high-risk HPV, which causes nearly all cervical cancers.</p>
-<p>It's not a test for cancer. It's a test to help prevent cancer. <a href="#">Find out more about HPV self-testing</a>.</p>
-<p>It's different to the cervical screening test done at your GP surgery or sexual health clinic. You will take a sample from your vagina and will not need to reach your cervix.</p>
-<p>You might find this more comfortable than cervical screening at your GP surgery or sexual health clinic. If you need additional support to help you do the test, for example, if you have a physical or learning disability, you can speak to your GP practice.</p>
-<p><strong>How it works</strong></p>
-<ol>
-  <li>Order your free kit online.</li>
-  <li>Do the test following the instructions in the kit.</li>
-  <li>Return the kit in the prepaid packaging.</li>
-  <li>Your results will be sent to you within 14 days.</li>
-</ol>
-<p><strong>Getting your results</strong></p>
-<p>If your test is negative, you won't need to do anything.</p>
-<p>If your test is positive, we'll ask you to go for a cervical screening test at your GP surgery or a sexual health clinic. This is to check for any abnormal changes to the cells in your cervix.</p>
-<p><strong>Other ways to get tested</strong></p>
-<p>If you do not want to take part in HPV self-testing, you can still come for your regular cervical screening, even if you were invited months or years ago. Contact your GP surgery or <a href="#">sexual health clinic </a>to make an appointment.</p>
+<p>We are inviting you to do a screening test at home.</p>
+<p><strong>Why screening is done</strong></p>
+<p>We offer screening every 2 years to people aged 50 to 74.</p>
+<p>It can help find symptoms early, when treatment is more likely to be effective.</p>
+<p>You collect a sample at home and send it by post to be tested.</p>
+<p><a href="#">Find out more about screening including how to get a home test kit.</a></p>
+<p><strong>When to contact us</strong></p>
+<p>You can call the screening programme helpline on 0800 123 4567 to:</p>
+<ul>
+  <li>get help to use the kit</li>
+  <li>check if you should use the kit</li>
+  <li>ask for information in other formats</li>
+</ul>
+<p>If you have hearing or speech difficulties, use the <a href="#">Relay UK service</a>. You could also ask someone to call or email for you.</p>
+<p><strong>Getting your result</strong></p>
+<p>We will post your result to you and your GP within 2 weeks of getting your completed kit. If your result is negative, you will not need to do anything else. If your result is positive, we will ask you to do more tests.</p>
+<p><strong>More information</strong></p>
+<p><a href="#">Find out more about screening on the NHS website.</a></p>
 {% endcall %}
-
 
 <h2 id="text-messages">Text messages</h2>
 
@@ -240,7 +249,7 @@
 </ul>
 
 <h3 id="formatting-text">Formatting</h3>
-<p>Text messages do not support formatting such as bullet points, numbered lists, bold text or headings. If you are condensing a longer message into a text message, make sure it works without formatting. Use paragraph or line breaks to make text messages easier to read.</p>
+<p>Text messages do not support formatting such as bullet points, numbered lists, bold text or headings. If you are condensing a longer message into a text message, make sure it works without formatting. Use line breaks to make text messages easier to read.</p>
 
 <p><a href="https://notify.nhs.uk/using-nhs-notify/formatting">Find out more about message formatting on the NHS Notify website</a>.</p>
 

@@ -14,7 +14,8 @@ module.exports = {
   ],
   env: {
     test: {
-      browserslistEnv: 'node'
+      browserslistEnv: 'node',
+      plugins: ['transform-import-meta']
     }
   }
 }

@@ -26,10 +26,7 @@ module.exports = {
   // Nunjucks search paths
   nunjucksPaths: [
     join(sourcePath, 'views'),
-    join(modulePath, 'nhsuk-frontend/dist/nhsuk/components'),
-    join(modulePath, 'nhsuk-frontend/dist/nhsuk/macros'),
-    join(modulePath, 'nhsuk-frontend/dist/nhsuk'),
-    join(modulePath, 'nhsuk-frontend/dist')
+    join(sourcePath, 'views/components')
   ],
 
   // Base URL

@@ -6,7 +6,7 @@ const browserSync = require('browser-sync')
 const compression = require('compression')
 const express = require('express')
 const helmet = require('helmet')
-const nunjucks = require('nunjucks')
+const { nunjucks } = require('nhsuk-frontend/lib')
 
 // Local dependencies
 const config = require('./app/config')
@@ -118,12 +118,10 @@ app.set('view engine', 'njk')
 
 // Nunjucks configuration
 const env = nunjucks.configure(config.nunjucksPaths, {
-  autoescape: true,
   express: app,
-  noCache: true,
-  watch: true,
-  trimBlocks: true,
-  lstripBlocks: true
+  lstripBlocks: true, // Remove leading spaces from a block/tag
+  trimBlocks: true, // Remove trailing newlines from a block/tag
+  watch: true
 })
 
 /*
@@ -136,8 +134,8 @@ env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
 env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
 env.addFilter('highlight', filters.highlight)
 env.addFilter('kebabCase', filters.kebabCase)
-env.addFilter('markdown', filters.markdown)
 env.addFilter('slugify', filters.slugify)
+env.addFilter('unindent', filters.unindent)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
@@ -278,6 +276,14 @@ app.get(
 
 app.get('/design-example/components/checkboxes/hint', (req, res) => {
   res.redirect('/design-example/components/checkboxes/hint-text')
+})
+
+// Redirects for design system components
+
+app.get('/design-system/components/care-cards', (req, res) => {
+  res.redirect(
+    '/design-system/patterns/help-users-decide-when-and-where-to-get-care'
+  )
 })
 
 // Redirects for design system patterns

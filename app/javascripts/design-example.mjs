@@ -1,5 +1,4 @@
 import { initialize } from '@open-iframe-resizer/core'
-import ClipboardJS from 'clipboard'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -18,8 +17,8 @@ export class DesignExample extends Component {
       '.app-code-snippet__preformatted'
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
-    this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
+    this.state = { isMouseDown: false }
 
     this.bindEvents()
 
@@ -83,22 +82,20 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
-    if (ClipboardJS.isSupported()) {
-      this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
-    }
-
     if (this.iframe) {
-      initialize(
-        {
-          // Prevent resize when iframe has mouse cursor
-          // e.g. When resizing manually using handle
-          onBeforeIframeResize({ interactionState }) {
-            return !interactionState.isHovered
-          }
-        },
-        this.iframe
-      )
+      const { iframe, state } = this
+
+      iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
+      iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
+
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
     }
+  }
+
+  isResizeAllowed() {
+    // Prevent resize when iframe has mouse down
+    // e.g. When resizing manually using handle
+    return !this.state.isMouseDown
   }
 
   handleTabClick($tabLink) {
@@ -129,26 +126,6 @@ export class DesignExample extends Component {
         tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
-  }
-
-  initCopyClick(copyButton) {
-    const clipboard = new ClipboardJS(copyButton, {
-      target: () => copyButton.parentElement.querySelector('pre')
-    })
-
-    // Update button on success
-    clipboard.on('success', (event) => {
-      copyButton.innerText = 'Code copied'
-      event.clearSelection()
-
-      // Reset button after delay
-      setTimeout(() => {
-        copyButton.innerText = 'Copy code'
-      }, 2500)
-    })
-
-    // Reveal button
-    copyButton.removeAttribute('hidden')
   }
 
   showEl(el) {

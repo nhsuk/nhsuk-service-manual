@@ -10,11 +10,11 @@ updates:
       application:
         patterns:
           - '@open-iframe-resizer/*'
+          - '@prettier/*'
           - 'accessible-autocomplete'
           - 'axios'
           - 'basic-auth'
           - 'cheerio'
-          - 'clipboard'
           - 'compression'
           - 'express'
           - 'gray-matter'
@@ -25,11 +25,14 @@ updates:
           - 'marked'
           - 'nhsuk-frontend'
           - 'nunjucks'
+          - 'outdent'
+          - 'slug'
 
       build:
         patterns:
           - '@babel/*'
           - 'autoprefixer'
+          - 'babel-plugin-*'
           - 'caniuse-lite'
           - 'cssnano'
           - 'cssnano-*'
@@ -54,6 +57,7 @@ updates:
 
       test:
         patterns:
+          - 'babel-jest'
           - 'jest'
           - 'jest-*'
 
@@ -65,6 +69,8 @@ updates:
 
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
 
     versioning-strategy: increase
 
@@ -73,13 +79,22 @@ updates:
       - dependency-type: direct
 
       # Include indirect browser data updates
+      # https://web.dev/baseline
+      - dependency-name: baseline-browser-mapping
       # https://caniuse.com
       - dependency-name: caniuse-lite
 
   # Update GitHub Actions
   - package-ecosystem: github-actions
-    directories:
-      - .github/workflows/
+    directory: /
+
+    # Group actions into shared PR
+    groups:
+      actions:
+        patterns:
+          - '*'
 
     schedule:
-      interval: 'monthly'
+      interval: monthly
+    cooldown:
+      default-days: 7
