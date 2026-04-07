@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to scan and compare data or information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "February 2026" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -75,6 +75,13 @@
 
   <h2 id="sortable-table">Sortable table</h2>
   <p>A sortable table lets users sort columns in ascending or descending order.</p>
+  <p>Ascending order (up arrow) arranges:</p>
+  <ul>
+    <li>numerical data from the lowest to the highest value</li>
+    <li>text in alphabetical order A to Z</li>
+  </ul>
+  <p>Descending order (down arrow) reverses this.</p>
+  <p>The default is ascending first, but you can change the default.</p>
 
   {{ designExample({
     group: "components",
@@ -88,34 +95,45 @@
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
 
   <p>This table only sorts by 1 column at a time. Users can click on the column header to trigger sorting.</p>
-  <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
-  <p>Find out:</p>
+  <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs. Find out:</p>
   <ul>
     <li>which columns they need to sort on</li>
     <li>how much data to display at once</li>
     <li>how it should be ordered by default</li>
+    <li>whether to place unsortable data such as empty or null values at the start or end of the table</li>
   </ul>
+
+  <h4 id="sort-order">Sort order</h4>
   <p>The table allows users to sort:</p>
   <ul>
     <li>numerically</li>
     <li>alphabetically</li>
   </ul>
-  <p>If you need to sort another way, for example by dates and times or empty cells, use data attributes that contain a number.</p>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example:</p>
+  <p>If you need to change the sort order, you can override the defaults by adding <code>data-sort-value</code> attributes that contain a number. For example:</p>
   <ul>
-    <li>free text</li>
+    <li>dates: <td data-sort-value="2026-11-30">30 November 2026</td></li>
+    <li>formatting numbers: <td data-sort-value="123456">123,456</td></li>
+    <li>currencies: <td data-sort-value="3.5">£3.50</td></li>
+  </ul>
+  <p>You may want to remove common prefixes like "a" and "the", treating them as "stop words", so that "The Whittington Hospital" comes under W, not under T.</p>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example free text.</p>
+  <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
+
+  <h4 id="consider-search-and-filter">Consider search and filter</h3>
+  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need.</p>
+  <p>For example, search or filter may work better than sorting for:</p>
+  <ul>
     <li>first names</li>
     <li>NHS numbers or other codes</li>
     <li>medical conditions</li>
   </ul>
-  <p>Do not sort data alphabetically if it has an established logical sequence. For example, months of the year.</p>
-  <p>Ignore leading definite and indefinite articles ("a", "an", "the").</p>
-  <p>Consider letting users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need. If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.</p>
-  <h3 id="session-storage">Session storage</h3>
+  <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
+  
+  <h4 id="session-storage">Session storage</h4>
   <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
-
-  <h3 id="server-side-sorting">Server-side sorting</h3>
+  
+  <h4 id="server-side-sorting">Server-side sorting</h4>
   <p>This component provides client-side sorting, which only sorts the data currently visible in the table on the page.</p>
   <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
   <ul>

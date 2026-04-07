@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add sortable table
+
 ## 8.7.0 - 17 February 2026
 
 :new: **New features**
