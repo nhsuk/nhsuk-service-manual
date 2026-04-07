@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "January 2026" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "241" %}
 
 {% block beforeContent %}
@@ -35,7 +35,7 @@
   <ul>
     <li>ask users to <a href="#check-a-likely-mistake">check a likely mistake</a></li>
     <li>ask users to <a href="#confirm-something-which-cannot-be-undone">confirm something which cannot be undone</a></li>
-    <li><a href="#warn-clinicians-they-are-about-to-do-something-unusual">warn clinicians they are about to do something unusual</a></li>
+    <li><a href="#warn-professionals-they-are-about-to-do-something-risky">warn professionals they are about to do something risky</a></li>
   </ul>
 
   <h3 id="check-a-likely-mistake">Check a likely mistake</h3>
@@ -64,9 +64,9 @@
     type: "confirmation"
   }) }}
 
-  <h3 id="warn-clinicians-they-are-about-to-do-something-unusual">Warn clinicians they are about to do something unusual</h3>
+  <h3 id="warn-professionals-they-are-about-to-do-something-risky">Warn professionals they are about to do something risky</h3>
 
-  <p>In a staff-facing service you can use an interruption page to make clinicians aware that they're doing something unusual, but they can choose to go ahead based upon their clinical judgement.</p>
+  <p>In a staff-facing service you can use an interruption page to make professionals, for example clinicians, aware that they're doing something unusual and potentially risky, but they can choose to go ahead based upon their professional judgement.</p>
 
   <p>If the action should never be taken, you should prevent it from happening.</p>
 
@@ -85,6 +85,7 @@
 
   <ul>
     <li>highlight important text on a page of content – consider using <a href="/design-system/components/inset-text">inset text</a> instead</li>
+    <li>warn users on a page of long-form content – use a <a href="/design-system/components/warning-callout">warning callout</a> instead</li>
     <li>ask users to agree to terms of use or other legal terms</li>
     <li>display content that the user will see repeatedly</li>
     <li>show users they have completed a task – use a <a href="/design-system/patterns/confirmation-page">confirmation page</a> instead</li>
@@ -93,16 +94,16 @@
 
   <h2 id="how-to-use">How to use an interruption page</h2>
 
-  <p>The interruption page uses the <a href="/design-system/components/panel">panel component</a> with the addition of a <code>nhsuk-panel--interruption</code> class to make it blue.</p>
+  <p>The interruption page uses the <a href="/design-system/components/panel">panel component</a> with the addition of a <code>nhsuk-panel--interruption</code> class to make it blue. The button should have a <code>nhsuk-button--reverse</code> class to make it appear white.</p>
   
   <p>Keep the content on the interruption page as brief as possible.</p>
+
+  <h3 id="back-links-and-cancel-buttons">Back links and cancel buttons</h3>
 
   <p>Include a <a href="/design-system/components/back-link">back link</a> at the top of the page to allow users to go back 1 step. Also allow users to use their browser back button.</p>
 
   <p>If it's helpful to cancel the journey and jump back multiple steps or to a different part of the service, use an additional link grouped with the primary button. Label the link so that users know what will happen and where it will take them. To do this, add a <code>&lt;div class="nhsuk-button-group"&gt;</code> container to <a href="/design-system/components/buttons#grouping-buttons">group the button</a> and the link together.</p>
 
   <p>Do not include a Cancel link if it takes you back to the same page as the Back link.</p>
-
-  <p>Within the panel, the button should have a <code>nhsuk-button--reverse</code> class to make it appear white.</p>
 
 {% endblock %}
