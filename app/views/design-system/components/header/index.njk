@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "16" %}
 
 {% block beforeContent %}
@@ -33,6 +33,19 @@
     type: "default"
   }) }}
 
+  <p>The standard NHS header is made up of 4 elements:</p>
+  <ul class="nhsuk-list nhsuk-list--bullet">
+    <li><a href="#nhs-logo-and-service-name">the NHS logo and service name</a></li>
+    <li><a href="#search-bar">a search bar</a></li>
+    <li><a href="#navigation">navigation</a></li>
+    <li><a href="#logged-in-account-information-and-links">logged-in account information and links</a></li>
+  </ul>
+  <p>This page also covers:</p>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+    <li><a href="#inline-account-search">inline account or search</a></li>
+    <li><a href="#organisational-headers">organisational headers</a> and information about organisational logos</li>
+  </ul>
+
   <h2 id="when-to-use-the-NHS-header">When to use the header</h2>
   <p>Use the header if your service is a national NHS service in England on the nhs.uk domain.</p>
 
@@ -44,10 +57,10 @@
   <h2 id="how-to-use-the-NHS-header">How to use the header</h2>
   <p>The header is made up of 4 elements:</p>
   <ul class="nhsuk-list nhsuk-list--bullet">
-    <li><a href="#nhs-logo-and-service-name">the NHS logo, which may be accompanied by the service name</a></li>
-    <li><a href="#search-bar">a search bar</a></li>
-    <li><a href="#navigation">navigation</a>, with exposed links and a drop-down "More" button</li>
-    <li><a href="#account-information-and-links">account information and links</a></li>
+    <li>the NHS logo which may be accompanied by the service name</li>
+    <li>a search bar</li>
+    <li>navigation, with exposed links and a drop-down "More" button</li>
+    <li>account information and links</li>
   </ul>
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
@@ -114,7 +127,7 @@
     type: "navigation"
   }) }}
 
-  <h3 id="account-information-and-links">Account information and links</h3>
+  <h3 id="logged-in-account-information-and-links">Logged-in account information and links</h3>
   <p>The header can include account information and links for logged-in users.</p>
 
   {{ designExample({
@@ -172,7 +185,7 @@
     type: "search-inline"
   }) }}
 
-  <h2 id="organisational-header">Organisational header</h2>
+  <h2 id="organisational-headers">Organisational headers</h2>
   <p>Use the organisational header if your organisation or service is:</p>
   <ul>
     <li>a regional or local NHS service, such as an NHS trust</li>

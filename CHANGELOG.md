@@ -4,7 +4,7 @@
 
 :wrench: **Maintenance**
 
-- Improve guidance on panel component and interruption pattern after user testing
+- Improve guidance on panel component, interruption pattern and account header after user testing
 
 ## 8.9.0 - 2 April 2026
 
