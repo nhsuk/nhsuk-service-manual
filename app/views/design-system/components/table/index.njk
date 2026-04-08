@@ -3,9 +3,9 @@
 {% set pageTitle = "Table" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
+{% set pageDescription = "Use a table to make it easier for users to scan and compare data or information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -13,6 +13,31 @@
 {% endblock %}
 
 {% block bodyContent %}
+  <p>We have 3 kinds of tables:</p>
+  <ul>
+    <li><a href="#basic-tables">basic</a></li>
+    <li><a href="#responsive-table">responsive</a></li>
+    <li><a href="#sortable-table">sortable</a></li>
+  </ul>
+  <h2 id="when-to-use-a-table">When to use a table</h2>
+  <p>Use a table to:</p>
+  <ul>
+    <li>present data or information that can be organised in a structured way</li>
+    <li>make it easy for users to scan and compare information and understand relationships between data</li>
+  </ul>
+  <p>Aim to present a minimum of data. If you have a lot of data, try to organise it into multiple tables or multiple pages.</p>
+
+  <h2 id="when-not-to-use-a-table">When not to use a table</h2>
+  <p>Use tables with caution. They may not be the best way to present information, especially for the public and on mobile screens. In staff services, complex data tables can lead to cognitive overload, a poor user experience and performance issues.</p>
+  <p>There may be better ways to meet users' needs, for example:</p>
+  <ul>
+    <li>a plain English summary with headings and lists</li>
+    <li><a href="/design-system/components/expanders">expanders</a></li>
+    <li><a href="/design-system/components/tabs">tabs</a></li>
+  </ul>
+  <p>Check this in your user research.</p>
+  <p>Do not use a table to lay out content on a page. Use the <a href="/design-system/styles/layout#grid">grid system</a> instead.</p>
+
   <h2 id="basic-tables">Basic tables</h2>
   <h3 id="2-column-table">2 column table</h3>
 
@@ -33,11 +58,7 @@
   }) }}
 
   <h3 id="when-not-to-use-a-basic-table">When not to use a basic table</h3>
-  <p>Do not use a basic table:</p>
-  <ul>
-    <li>to lay out content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
-    <li>if your table content becomes squashed and hard to read on small screens – use a responsive table instead</li>
-  </ul>
+  <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a responsive table instead.</p>
 
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays as a 3 column table. However, on small screens it stacks vertically.</p>
@@ -50,11 +71,96 @@
   }) }}
 
   <h3 id="when-not-to-use-a-responsive-table">When not to use a responsive table</h3>
-  <p>Do not use a responsive table:</p>
+  <p>Do not use a responsive table if your content is easier to read and understand on a small screen in a non-responsive layout. Use a <a href="#basic-tables">basic table</a> instead.</p>
+
+  <h2 id="sortable-table">Sortable table</h2>
+  <p>A sortable table lets users sort columns in ascending or descending order.</p>
+  <p>Ascending order (up arrow) arranges:</p>
   <ul>
-    <li>to lay out content on a page – use the <a href="/design-system/styles/layout#grid">grid system</a> instead</li>
-    <li>if your content is easier to read and understand on a small screen in a non-responsive layout – use a <a href="#basic-tables">basic table</a> instead</li>
+    <li>numerical data from the lowest to the highest value</li>
+    <li>text in alphabetical order A to Z</li>
   </ul>
+  <p>Descending order (down arrow) reverses this.</p>
+  <p>The default is ascending first, but you can change the default.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "sortable"
+  }) }}
+
+  <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
+  <p>Use this table when users need to find and prioritise data, for example in staff systems with large data sets.</p>
+
+  <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
+
+  <p>This table only sorts by 1 column at a time. Users can click on the column header to trigger sorting.</p>
+  <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs. Find out:</p>
+  <ul>
+    <li>which columns they need to sort on</li>
+    <li>how much data to display at once</li>
+    <li>how it should be ordered by default</li>
+    <li>whether to place unsortable data such as empty or null values at the start or end of the table</li>
+  </ul>
+
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example free text.</p>
+
+  <h4 id="sort-order">Sort order</h4>
+  <p>By default a column will be sorted:</p>
+  <ul>
+    <li>numerically – if the cells contain numbers</li>
+    <li>alphabetically</li>
+  </ul>
+
+  <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
+
+  <p>You may want to remove common prefixes like "a" and "the", treating them as "stop words", so that "The Whittington Hospital" comes under W, not under T.</p>
+
+  <p>If you need to change the sort order, you can override the defaults by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
+
+  <p>For example:</p>
+  <ul>
+    <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
+    <li>formatting numbers: 123,456 would be <code>123456</code></li>
+    <li>currencies: £3.50 would be <code>3.5</code></li>
+    <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
+  </ul>
+
+  <p>By default when you click on the column heading for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column heading if descending is the more useful initial sort.</p>
+
+  <p>Clicking the column heading for a currently sorted column will always toggle it between ascending and descending.</p>
+
+  <p>See example:</p>
+
+ {{ designExample({
+    group: "components",
+    item: "table",
+    type: "sortable-custom"
+  }) }}
+
+  <h4 id="consider-search-and-filter">Consider search and filter</h3>
+  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need.</p>
+  <p>For example, search or filter may work better than sorting for:</p>
+  <ul>
+    <li>first names</li>
+    <li>NHS numbers or other codes</li>
+    <li>medical conditions</li>
+  </ul>
+  <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
+
+  <h4 id="session-storage">Session storage</h4>
+  <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
+
+  <h4 id="server-side-sorting">Server-side sorting</h4>
+  <p>This component provides client-side sorting, which only sorts the data currently visible in the table on the page.</p>
+  <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
+  <ul>
+    <li>build your own server-side function</li>
+    <li>consider how to show "loading" states and error states if loading fails</li>
+    <li>test with users</li>
+  </ul>
+  <p>Please feed back to the design system.</p>
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
@@ -101,12 +207,24 @@
   <p>Use table headers to tell users what the rows and columns represent.</p>
 
   <h2 id="research">Research</h2>
+
   <h3>Basic tables</h3>
   <p>These tables tested well with users of health information on the NHS website.</p>
 
   <h3>Responsive table</h3>
   <p>This table was tested at HM Revenue &amp; Customs.</p>
 
+  <h3>Sortable table</h3>
+  <p>This table was developed by NHS England and tested in WHERE.</p>
+  <p>There is an overlap between sortable tables and:</p>
+  <ul>
+    <li>search</li>
+    <li>filter</li>
+    <li><a href="/design-system/components/pagination">pagination</a></li>
+  </ul>
+  <p>We want to understand better how they can work together.</p>
+  <p>We have not yet developed a responsive or scrolling sortable table. If you need a responsive sorting table, you could try adding a <a href="/design-system/components/select">select component</a>.</p>
+  <p>Please feed back if you develop any of these or implement server-side sorting.</p>
   <h3>Table with panel</h3>
   <p>We have also designed a table with a panel. You can <a href="https://nhsuk.github.io/nhsuk-frontend/components/tables/as-a-panel/">find an example in the frontend library</a>. We have not included it in this list of components yet because it needs more testing.</p>
 
