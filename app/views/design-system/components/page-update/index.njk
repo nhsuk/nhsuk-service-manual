@@ -1,0 +1,28 @@
+{% extends "layouts/app-layout-two-thirds.njk" %}
+
+{% block bodyContent %}
+
+
+<p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: November 2025 - <a href="javascript:void(0)" id="toggleLink" onclick="toggleContent(this)">View all updates</a></p>
+
+<div id="myContent" style="display:none; margin-top: 40px;">
+  <p>Surprise! Here is the extra content.</p>
+</div>
+
+<script>
+function toggleContent(linkElement) {
+  var content = document.getElementById("myContent");
+  
+  if (content.style.display === "none") {
+    content.style.display = "block";
+    linkElement.innerHTML = "Hide updates"; // Change text when shown
+  } else {
+    content.style.display = "none";
+    linkElement.innerHTML = "Show all updates";    // Change text when hidden
+  }
+}
+</script>
+
+
+
+{% endblock %}
