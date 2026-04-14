@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Improve guidance on panel component, interruption page pattern and logged-in account header after user testing
+
 ## 8.9.0 - 2 April 2026
 
 :new: **New features**

@@ -3,9 +3,9 @@
 {% set pageTitle = "Panel" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "Use a panel to highlight that users have done something successfully." %}
+{% set pageDescription = "Use a panel to highlight that users have done something successfully or to interrupt a journey." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2026" %}
+{% set dateUpdated = "April 2026" %}
 {% set backlog_issue_id = "537" %}
 
 {% block beforeContent %}
@@ -21,9 +21,12 @@
   }) }}
 
   <h2 id="when-to-use">When to use a panel</h2>
-  <p>Use the panel component to display important information when a transaction has been completed.</p>
-  <p>In most cases, the panel component is used on <a href="/design-system/patterns/confirmation-page">confirmation pages</a>, to tell the user they have successfully completed the transaction.</p>
-  <p>You can also use an <a href="#interruption-panel">interruption panel</a> to pause a user's journey with important information.</p>
+  <p>Use the panel component to display important information.</p>
+  <p>There are 2 versions of this component:</p>
+  <ul>
+    <li>the <a href="#green-panel">green panel</a> which is used on confirmation pages to tell the user they have successfully completed the transaction</li>
+    <li>the <a href="#blue-interruption-panel">blue interruption panel</a> which is used on interruption pages to pause a user's journey with important information</li>
+  </ul>
 
   <h2 id="when-not-to-use">When not to use a panel</h2>
   <p>Never use the panel component to highlight important information in body content. Instead consider using:</p>
@@ -33,14 +36,15 @@
     <li><a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">the pattern to help users decide when and where to get care (care cards)</a></li>
   </ul>
 
-  <h2 id="how-to-use">How to use a panel</h2>
-  <p>A panel is made up of:</p>
+  <h2 id="green-panel">Green panel</h2>
+  <h3 id="how-to-use-green-panel">How to use the green panel</h3>
+  <p>The panel is made up of:</p>
   <ul>
     <li>a heading that confirms what has happened</li>
     <li>description text, which is optional</li>
   </ul>
-
-  <h3 id="how-to-write-panel-text">How to write panel text</h3>
+  <p>Read how to use it in the <a href="/design-system/patterns/confirmation-page">confirmation page pattern</a>.
+  <h4 id="how-to-write-panel-text">How to write panel text</h4>
 
   <p>Keep your panel heading text brief. It only needs to summarise what has happened. For example, "Application complete".</p>
 
@@ -50,9 +54,10 @@
 
   <p>You can add more context or details by using additional text under the heading.</p>
 
-  <h3 id="interruption-panel">Interruption panel</h3>
+  <h2 id="blue-interruption-panel">Blue interruption panel</h2>
 
-  <p>If you need to pause a user's journey with important information, use an interruption panel. Read the guidance on the <a href="/design-system/patterns/interruption-page">interruption page pattern</a>.</p>
+  <p>If you need to pause a user's journey with important information, use an interruption panel.</p>
+  <p>Read how to use it in the <a href="/design-system/patterns/interruption-page">interruption page pattern</a>.</p>
 
   {{ designExample({
     group: "components",
