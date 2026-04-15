@@ -22,7 +22,7 @@
 
 <h2 id="when-to-use">When to use tabbed navigation</h2>
 <p>Use the tabbed navigation component when users need to move between related pages in a service.</p>
-<p>It is designed for staff-facing services and most useful in services that staff use repeatedly.</p>
+<p>It is designed for staff-facing services that staff use repeatedly.</p>
 
 <h2 id="when-not-to-use">When not to use tabbed navigation</h2>
 <p>Do not use tabbed navigation as the primary navigation in a service. Use the <a href="/design-system/components/header">header component</a> with the navigation option.</p>
@@ -31,40 +31,60 @@
     <li><a href="/design-system/patterns/hub-page">hub page pattern</a></li>
     <li><a href="/design-system/patterns/mini-hub">mini hub pattern</a></li> 
 </ul>
-<p>Do not use it for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
+<p>Do not use this component for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
 <ul>
-    <li>cutting content back</li>
+    <li>cutting the content back</li>
     <li>using headings</li>    
     <li>the <a href="/design-system/components/tabs">tab component</a></li>
     <li><a href="/design-system/components/expander">expanders</a></li>
     <li><a href="/design-system/components/details">details</a></li>
 </ul>
 
-<p>The tab component, expanders and details hide sections of content on a page which a user can choose to reveal. [Do we need to make it clearer what the differences between tab component and tabbed nav are here?]</p>
-<p>Another form of secondary navigation is side navigation. If you would like to help us develop a side navigation component, get in touch or contribute via the side navigation GitHub issue in the design system backlog [create and link].</p>
+<p>The tab component, expanders and details hide sections of content on a page which a user can choose to reveal.</p>
+<p>Another form of secondary navigation is side navigation. If you would like to help us develop a side navigation component, <a href="/get-in-touch">get in touch</a> or contribute via the side navigation GitHub issue in the design system backlog [create issue and link].</p>
 
 <h2 id="how-to-use">How to use tabbed navigation</h2>
-<p>Tabbed navigation looks like tabs but [note how it is different].</p>
-<p>Unlike tabs, it does not use JavaScript. Each item in the navigation is a link to a separate page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
+<p>Tabbed navigation is a horizontal list of links. On small screens, it displays vertically.</p>
+<p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
+<p>Tabbed navigation looks like the <a href="/design-system/components/tabs">tabs component</a> but [note how it is different]. Unlike the tabs component, it does not use JavaScript. Each item in the navigation is a link to a separate page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
 <p>One of the items in tabbed navigation should always be highlighted as the current page. (This is different from the main navigation.) This item remains a link, but uses black text and has a line beneath it. [Amend if need be.]</p>
-<p>On small screens, it displays vertically.</p>
 <p>[Was there something about not displaying in a disabled state?]</p>
-<h3>Positioning tabbed navigation on the page</h3>
-<p>Put the component near the top of the page. Users may not see it if it is further down.</p>
-<p>You can put it before or after the main heading (<code>h1</code>).</p>
-<p>Users will probably expect any content above the tabbed navigation to display on the linked pages they navigate to.</p>
-<p>The <code>h1</code> and the page title on each linked page should be unique. If you place the component below the main heading, there are several ways you can make each <code>h1</code> unique. For example, you can:</p>
-<ul>
-    <li>use hidden text</li>
-    <li>use a caption</li>
-</ul>
-<p>[Explain and include examples?]</p>
-<p>[See what <a href="https://govuk-prototype-components.x-govuk.org/secondary-navigation/#secondary-navigation-html">X-GOV page</a> says about main and labelledBy. Do we need to include any of this?]
-     
-<h3 id="ordering-and-labelling-items">Ordering and labelling items</h3>
-<p>Consider how many items to include in the navigation. Take into account label length and how the navigation overflows or displays responsively. Keep tab labels (link text) as short as possible.</p>
-<p>Make sure that the language of the link text reflects the heading of the page that the label links to.</p> 
-<p>Decide on the default tab to load. Generally it's best to order items from most to least used, with the most-used item being the first in the list and the one that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not the most useful one to display by default.</p>
+
+<h3>Making page titles and headings unique</h3>
+<p>Make sure each page linked from the tabbed navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). When screen reader users navigate by headings, a repeated heading does not tell them that the page has changed.</p>
+<p>How you do this depends on where you put the tabbed navigation.</p>
+<h4>Tabbed navigation above the <code>&lt;h1&gt;</code></h4>
+<p>The <code>&lt;h1&gt;</code> on each page can be the name of the tab, for example "Today", "Yesterday" or "Last week". The page title should match.</p>
+<p>[Insert example]</p>
+<h4>Tabbed navigation below the <code>&lt;h1&gt;</code></h4>
+<p>This layout is common when a page is about a specific record or view that you want to keep visible as the user switches tabs, for example a case list filtered by date.</p>
+<p>Visually, you may want the same <code>&lt;h1&gt;</code> to appear on every tab. But for accessibility, you must also include something unique to show users which tab's content they are on.</p>
+<p>There are 2 ways to do this.</p>
+<h5>Hidden text</h5>
+<p>Keep the visual heading as-is and add a hidden span after it that names the current tab. Screen readers will announce both parts, while sighted users only see the main heading.</p>
+  {{ designExample({
+    group: "components",
+    item: "tabbed-navigation",
+    type: "heading-with-hidden-text",
+    htmlOnly: true
+  }) }}
+<p>The page <code>&lt;title&gt;</code> should also include the tab name, for example: Cases – Today – [Service name].</p>
+<p>This works well when the consistent heading is already meaningful context and you just need to make the tab heading unique for assistive technology.</p>
+<h5>Caption</h5>
+<p>You can use a caption inside the <code>&lt;h1&gt;</code> to provide context, with the tab name as the caption.</p>
+<p>The caption ("Today") appears visually above the heading text ("Cases") but is part of the same <code>&lt;h1&gt;</code> element, so screen readers announce it as a single heading.</p>
+  {{ designExample({
+    group: "components",
+    item: "tabbed-navigation",
+    type: "heading-with-caption",
+    htmlOnly: true
+  }) }}
+<p>The page <code>&lt;title&gt;</code> should still be unique, for example: Today – Cases – [Service name].</p>
+
+<h3 id="labelling-and-ordering-items">Labelling and ordering items</h3>
+<p>Consider how many items to include in the navigation. Take into account label (link text) length and how the navigation overflows or displays responsively. Keep labels as short as possible.</p>
+<p>Make sure that the label matches the heading of the page it links to.</p> 
+<p>Decide on the default item to load. Generally it's best to order items from most to least used, with the most-used item being the first in the list and the one that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not the most useful one to display by default.</p>
 <p>[Include example of past, current, future quarters?]</p>
 
 <h3 id="counts">Counts</h3>
