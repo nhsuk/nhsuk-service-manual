@@ -1,0 +1,103 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Tabbed navigation" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "A horizontal list of secondary navigation links to allow users to navigate between pages in a section of a service." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "May 2026" %}
+{% set backlog_issue_id = "556" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  
+  {{ designExample({
+    group: "components",
+    item: "tabbed-navigation",
+    type: "default"
+  }) }}
+
+<h2 id="when-to-use">When to use tabbed navigation</h2>
+<p>Use the tabbed navigation component when users need to move between related pages in a service. For example, if your service is a case management system, you could use tabbed navigation if there are several pages associated with a single case.</p>
+<p>It is designed for staff-facing services that staff use repeatedly.</p>
+
+<h2 id="when-not-to-use">When not to use tabbed navigation</h2>
+<p>Do not use tabbed navigation as the primary navigation in a service. Use the <a href="/design-system/components/header">header component</a> with the navigation option.</p>
+<p>Do not use it on content-heavy public websites. Users may scroll past tabbed navigation on long content pages. To help users navigate content, consider the:</p>
+<ul>
+    <li><a href="/design-system/patterns/hub-page">hub page pattern</a></li>
+    <li><a href="/design-system/patterns/mini-hub">mini hub pattern</a></li> 
+</ul>
+<p>Do not use this component for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
+<ul>
+    <li>cutting the content back</li>
+    <li>using headings</li>    
+    <li>the <a href="/design-system/components/tabs">tab component</a></li>
+    <li><a href="/design-system/components/expander">expanders</a></li>
+    <li><a href="/design-system/components/details">details</a></li>
+</ul>
+
+<p>The tab component, expanders and details hide sections of content on a page which a user can choose to reveal.</p>
+<p>Another form of secondary navigation is side navigation. If you want to help us develop a side navigation component, you can contribute via the side navigation GitHub issue in the design system backlog [create issue and link].</p>
+
+<h2 id="how-to-use">How to use tabbed navigation</h2>
+<p>Tabbed navigation is a horizontal list of links. On small screens, it displays vertically.</p>
+<p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
+<p>If you put the component before your main heading (the <code>&lt;h1&gt;</code>), put it before the <code>&lt;main&gt;</code> element of the page. This means it is skipped when skip link is used.</p>
+<p>Tabbed navigation looks like the <a href="/design-system/components/tabs">tabs component</a> but [note how it is different]. Unlike the tabs component, it does not use JavaScript. Each item in the navigation is a link to a separate full page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
+<p>Unlike main navigation, 1 of the items in tabbed navigation should always be highlighted as the current page. This item remains a link, but uses black text and has a line beneath it. [Amend if need be.]</p>
+<p>[Was there something about not displaying in a disabled state?]</p>
+
+<h3>Making page titles and headings unique</h3>
+<p>Make sure each page linked from the tabbed navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
+<p>How you do this depends on where you put the tabbed navigation.</p>
+<h4>Tabbed navigation above the <code>&lt;h1&gt;</code></h4>
+<p>The <code>&lt;h1&gt;</code> on each page can be the name of the tab, for example "Today", "Yesterday" or "Last week". The page title should match.</p>
+<p>[Insert example]</p>
+<h4>Tabbed navigation below the <code>&lt;h1&gt;</code></h4>
+<p>This layout is common when a page is about a specific record or view that you want to keep visible as the user switches tabs, for example a case list filtered by date.</p>
+<p>Visually, you may want the same <code>&lt;h1&gt;</code> to appear on every tab. But for accessibility, you must also include something unique to show users which tab's content they are on.</p>
+<p>There are 2 ways to do this.</p>
+<h5>Hidden text</h5>
+<p>Keep the visual heading as-is and add a hidden span after it that names the current tab. Screen readers will announce both parts, while sighted users only see the main heading.</p>
+  {{ designExample({
+    group: "components",
+    item: "tabbed-navigation",
+    type: "heading-with-hidden-text",
+    htmlOnly: true
+  }) }}
+<p>The page <code>&lt;title&gt;</code> should also include the tab name, for example: Cases – Today – [Service name].</p>
+<p>This works well when the consistent heading is already meaningful context and you just need to make the tab heading unique for assistive technology.</p>
+<h5>Caption</h5>
+<p>You can use a caption inside the <code>&lt;h1&gt;</code> to provide context, with the tab name as the caption.</p>
+<p>The caption ("Today") appears visually above the heading text ("Cases") but is part of the same <code>&lt;h1&gt;</code> element, so screen readers announce it as a single heading.</p>
+  {{ designExample({
+    group: "components",
+    item: "tabbed-navigation",
+    type: "heading-with-caption",
+    htmlOnly: true
+  }) }}
+<p>The page <code>&lt;title&gt;</code> should still be unique, for example: Today – Cases – [Service name].</p>
+
+<h3 id="labelling-and-ordering-items">Labelling and ordering items</h3>
+<p>Consider how many items to include in the navigation. Take into account label (link text) length and how the navigation overflows or displays responsively. Keep labels as short as possible.</p>
+<p>Make sure that the label matches the heading of the page it links to.</p> 
+<p>Decide on the default item to load. Generally it's best to order items from most to least used, with the most-used item being the first in the list and the one that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not the most useful one to display by default.</p>
+<p>[Include example of past, current, future quarters?]</p>
+
+<h3 id="counts">Counts</h3>
+<p>The component allows you to include a count of items displayed on that tab. [Explain and include example?]</p>
+<p>[<a href="https://design-patterns.service.justice.gov.uk/components/sub-navigation/">MOJ sub-nav page</a> refers to a <a href="https://design-patterns.service.justice.gov.uk/components/notification-badge/">notification badge component</a>.]</p>
+
+<h3 id="dark-backgrounds">Tabbed component on dark backgrounds</h3>
+<p>[Include reverse example.]</p>
+
+<h2>Accessibility</h2>
+<p>[Anything to say about this?]</p>
+
+<h2>Research</h2>
+<p>[Can we say where this was developed and tested? MAVIS?]</p>
+{% endblock %}
