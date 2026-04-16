@@ -21,7 +21,7 @@
   }) }}
 
 <h2 id="when-to-use">When to use tabbed navigation</h2>
-<p>Use the tabbed navigation component when users need to move between related pages in a service.</p>
+<p>Use the tabbed navigation component when users need to move between related pages in a service. For example, if your service is a case management system, you could use tabbed navigation if there are several pages associated with a single case.</p>
 <p>It is designed for staff-facing services that staff use repeatedly.</p>
 
 <h2 id="when-not-to-use">When not to use tabbed navigation</h2>
@@ -41,17 +41,18 @@
 </ul>
 
 <p>The tab component, expanders and details hide sections of content on a page which a user can choose to reveal.</p>
-<p>Another form of secondary navigation is side navigation. If you would like to help us develop a side navigation component, <a href="/get-in-touch">get in touch</a> or contribute via the side navigation GitHub issue in the design system backlog [create issue and link].</p>
+<p>Another form of secondary navigation is side navigation. If you want to help us develop a side navigation component, you can contribute via the side navigation GitHub issue in the design system backlog [create issue and link].</p>
 
 <h2 id="how-to-use">How to use tabbed navigation</h2>
 <p>Tabbed navigation is a horizontal list of links. On small screens, it displays vertically.</p>
 <p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
-<p>Tabbed navigation looks like the <a href="/design-system/components/tabs">tabs component</a> but [note how it is different]. Unlike the tabs component, it does not use JavaScript. Each item in the navigation is a link to a separate page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
-<p>One of the items in tabbed navigation should always be highlighted as the current page. (This is different from the main navigation.) This item remains a link, but uses black text and has a line beneath it. [Amend if need be.]</p>
+<p>If you put the component before your main heading (the <code>&lt;h1&gt;</code>), put it before the <code>&lt;main&gt;</code> element of the page. This means it is skipped when skip link is used.</p>
+<p>Tabbed navigation looks like the <a href="/design-system/components/tabs">tabs component</a> but [note how it is different]. Unlike the tabs component, it does not use JavaScript. Each item in the navigation is a link to a separate full page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
+<p>Unlike main navigation, 1 of the items in tabbed navigation should always be highlighted as the current page. This item remains a link, but uses black text and has a line beneath it. [Amend if need be.]</p>
 <p>[Was there something about not displaying in a disabled state?]</p>
 
 <h3>Making page titles and headings unique</h3>
-<p>Make sure each page linked from the tabbed navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). When screen reader users navigate by headings, a repeated heading does not tell them that the page has changed.</p>
+<p>Make sure each page linked from the tabbed navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
 <p>How you do this depends on where you put the tabbed navigation.</p>
 <h4>Tabbed navigation above the <code>&lt;h1&gt;</code></h4>
 <p>The <code>&lt;h1&gt;</code> on each page can be the name of the tab, for example "Today", "Yesterday" or "Last week". The page title should match.</p>
