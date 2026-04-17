@@ -1,28 +1,189 @@
-{% extends "layouts/app-layout-two-thirds.njk" %}
+{% extends "layouts/app-layout.njk" %}
 
 {% block bodyContent %}
 
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-<p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: November 2025 - <a href="javascript:void(0)" id="toggleLink" onclick="toggleContent(this)">View all updates</a></p>
+      <h1 class="nhsuk-heading-xl">Page update options</h1>
+      <p>Examples showing different options for how we could show page updates.</p>
 
-<div id="myContent" style="display:none; margin-top: 40px;">
-  <p>Surprise! Here is the extra content.</p>
+      <h2 class="nhsuk-heading-l">Example 1</h2>
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content1')">See all updates</a></p>
+
+      <div id="content1" style="display:none; margin-top: 40px">
+        <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>February 2026</strong></p>
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated to follow GOV.UK and make it clear that</p>
+        <ul class="nhsuk-body-s nhsuk-u-secondary-text-colour">
+          <li>not designing services around technologies including not designing them around AI technologies</li>
+          <li>checking for existing solutions includes existing AI solutions</li>
+        </ul>
+        <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>January 2026</strong></p>
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.</p>
+      </div>
+
+      <hr class="nhsuk-section-break nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
+      <h2 class="nhsuk-heading-l">Example 2</h2>
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content2')">See all updates</a></p>
+
+<div id="content2" style="display:none; margin-top: px;">
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4" style="border-color: #4c6272; border-left-width: 5px;">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><strong>February 2026</strong></p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated to follow GOV.UK and make it clear that</p>
+    <ul class="nhsuk-body-s nhsuk-u-secondary-text-colour">
+      <li>not designing services around technologies including not designing them around AI technologies</li>
+      <li>checking for existing solutions includes existing AI solutions</li>
+    </ul>
+  </div>
+  <div class="nhsuk-inset-text nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0" style="border-color: #4c6272; border-left-width: 5px;">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><strong>January 2026</strong></p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.</p>
+  </div>
+
 </div>
 
-<script>
-function toggleContent(linkElement) {
-  var content = document.getElementById("myContent");
-  
-  if (content.style.display === "none") {
-    content.style.display = "block";
-    linkElement.innerHTML = "Hide updates"; // Change text when shown
-  } else {
-    content.style.display = "none";
-    linkElement.innerHTML = "Show all updates";    // Change text when hidden
-  }
-}
-</script>
+<hr class="nhsuk-section-break nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
+      <h2 class="nhsuk-heading-l">Example 3</h2>
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content3')">See all updates</a></p>
+
+      <div id="content3" style="display:none; margin-top: 20px;">
+  <dl class="nhsuk-summary-list nhsuk-body-s nhsuk-u-secondary-text-colour">
+    
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key" style="width: 30%;">
+        February 2026
+      </dt>
+      <dd class="nhsuk-summary-list__value" style="font-size: 16px;">
+        Updated to follow GOV.UK AI guidelines:
+        <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-top-2 nhsuk-u-secondary-text-colour" style="font-size: 16px;">
+          <li>not designing services around technologies including not designing them around AI technologies</li>
+          <li>checking for existing solutions includes existing AI solutions</li>
+        </ul>
+      </dd>
+    </div>
+
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        January 2026
+      </dt>
+      <dd class="nhsuk-summary-list__value" style="font-size: 16px;">
+        Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.
+      </dd>
+    </div>
+
+  </dl>
+</div>
+
+      <hr class="nhsuk-section-break nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
+<h2 class="nhsuk-heading-l">Example 4</h2>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-4">
+      <p>Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content4')">See all updates</a></p>
+
+      <div id="content4" style="display:none; margin-top: 40px">
+        <p><strong>February 2026</strong></p>
+        <p>Updated to follow GOV.UK and make it clear that</p>
+        <ul>
+          <li>not designing services around technologies including not designing them around AI technologies</li>
+          <li>checking for existing solutions includes existing AI solutions</li>
+        </ul>
+        <p><strong>January 2026</strong></p>
+        <p>Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.</p>
+      </div>
+
+      <hr class="nhsuk-section-break nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
+      <h2 class="nhsuk-heading-l">Example 5</h2>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-4">
+      <p>Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content5')">See all updates</a></p>
+
+      <div id="content5" style="display:none; margin-top: 40px;">
+        <table class="nhsuk-table">
+          <caption class="nhsuk-table__caption">Summary of recent changes</caption>
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Date</th>
+              <th class="nhsuk-table__header" scope="col">Update description</th>
+            </tr>
+          </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">February 2026</td>
+                <td class="nhsuk-table__cell">Updated to follow GOV.UK and make it clear that
+                  <ul>
+                    <li>not designing services around technologies including not designing them around AI technologies</li>
+                    <li>checking for existing solutions includes existing AI solutions</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">January 2026</td>
+                <td class="nhsuk-table__cell">Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+
+<hr class="nhsuk-section-break nhsuk-u-margin-top-9 nhsuk-u-margin-bottom-9">
+
+      <h2 class="nhsuk-heading-l">Example 6</h2>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-4">
+      <p>Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content6')">See all updates</a></p>
+
+      <div id="content6" style="display:none; margin-top: 40px; margin-bottom: 40px;">
+  <dl class="nhsuk-summary-list">
+    
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key" style="width: 30%;">
+        February 2026
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Updated to follow GOV.UK and make it clear that
+        <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-top-2">
+          <li>not designing services around technologies including not designing them around AI technologies</li>
+          <li>checking for existing solutions includes existing AI solutions</li>
+        </ul>
+      </dd>
+    </div>
+
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        January 2026
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Updated to follow GOV.UK with a small change to the intro paragraph to clarify this standard point (you need to provide the mix of channels that users need, rather than supporting all the channels all the time.
+      </dd>
+    </div>
+
+  </dl>
+</div>
+
+      <script>
+      function toggleContent(linkElement, contentId) {
+        var content = document.getElementById(contentId);
+
+        if (content.style.display === "none") {
+        content.style.display = "block";
+        linkElement.innerHTML = "Hide all updates"; 
+       } else {
+        content.style.display = "none";
+        linkElement.innerHTML = "Show all updates"; 
+        }
+      } 
+      </script>
 
 
+
+
+
+
+
+
+
+
+    </div>
+  </div>
 
 {% endblock %}
