@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.10.0 - 21 April 2026
+
+:new: **New features**
+
+- Add blog post
+
 ## 8.9.0 - 2 April 2026
 
 :new: **New features**
