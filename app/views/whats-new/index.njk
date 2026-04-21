@@ -71,7 +71,22 @@
   <p>Posts by the service manual team and community.</p>
 
   <div class="nhsuk-grid-row nhsuk-card-group">
-   <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      {% call card({
+        image: {
+          src: "/assets/blog-prototype-kit.png"
+        },
+        clickable: true,
+        href: "#",
+        heading: "One design system is better than 2",
+        headingLevel: 3
+      }) %}
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 April 2026</p>
+        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
+        <p class="nhsuk-card__description">Frankie and Ananda explain why the NHS design system is not just for public-facing services, with an overview of recent changes to meet the needs of staff-facing services. There's also more change coming, and you can get involved too.</p>
+      {% endcall %}
+    </div>
+    <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
       {% call card({
         image: {
           src: "/assets/blog-post-frontend-v10.jpg"
@@ -84,21 +99,6 @@
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
         <p class="nhsuk-card__description">Tero Väänänen explains why the NHS design system exists and why it plays an important role in fulfilling the 10-year health plan. He also describes recent changes to the frontend code behind the design system, and why it is important for teams to adopt them now.</p>
-      {% endcall %}
-    </div>
-    <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      {% call card({
-        image: {
-          src: "/assets/blog-prototype-kit.png"
-        },
-        clickable: true,
-        href: "https://digital.nhs.uk/blog/design-matters/2025/why-we-are-reinvesting-in-the-nhs-prototype-kit",
-        heading: "Why we are reinvesting in the NHS prototype kit",
-        headingLevel: 3
-      }) %}
-        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 July 2025</p>
-        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
-        <p class="nhsuk-card__description">Frankie Roberto and Mike Gallagher explain why we revived the NHS prototype kit, the benefits of prototyping in code and how digital teams in the NHS can get started using it.</p>
       {% endcall %}
     </div>
   </div>
