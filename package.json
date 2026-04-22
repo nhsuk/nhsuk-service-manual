@@ -81,6 +81,7 @@
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-jsdoc": "^62.9.0",
     "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-node-import": "^1.2.0",
     "eslint-plugin-promise": "^7.2.1",
     "globals": "^17.5.0",
     "jest": "^30.3.0",

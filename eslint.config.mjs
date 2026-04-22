@@ -11,6 +11,7 @@ import pluginJest from 'eslint-plugin-jest'
 import pluginJestDom from 'eslint-plugin-jest-dom'
 import pluginJsdoc from 'eslint-plugin-jsdoc'
 import pluginNode from 'eslint-plugin-n'
+import pluginNodeImport from 'eslint-plugin-node-import'
 import pluginPromise from 'eslint-plugin-promise'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
@@ -40,9 +41,6 @@ export default defineConfig([
       // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
-
-      // Always import Node.js packages from `node:*`
-      'import/enforce-node-protocol-usage': ['error', 'always'],
 
       // Check for valid formatting
       'jsdoc/check-line-alignment': [
@@ -132,7 +130,8 @@ export default defineConfig([
     extends: [
       pluginTypeScript.configs.strict,
       pluginTypeScript.configs.stylistic,
-      pluginNode.configs['flat/recommended']
+      pluginNode.configs['flat/recommended'],
+      pluginNodeImport.configs['flat/recommended']
     ],
     languageOptions: {
       globals: globals.node
