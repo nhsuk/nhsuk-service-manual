@@ -47,7 +47,7 @@ export const source = (query, populateResults) => {
  * @type {OnConfirmCallback<PageDoc>}
  */
 export const onConfirm = ({ url }) => {
-  window.location = url
+  window.location.assign(url)
 }
 
 /**

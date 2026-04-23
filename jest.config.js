@@ -28,9 +28,8 @@ const config = {
  *
  * @type {Config}
  */
-export default {
+module.exports = {
   collectCoverageFrom: [
-    '<rootDir>/app.js',
     '<rootDir>/app/**/*.{js,mjs}',
     '<rootDir>/lib/**/*.{js,mjs}',
     '<rootDir>/middleware/**/*.{js,mjs}'
@@ -54,10 +53,6 @@ export default {
   // Enable GitHub Actions reporter UI
   reporters: ['default', 'github-actions']
 }
-
-/**
- * @typedef {Exclude<Config['projects'][0], string>} ProjectConfig
- */
 
 /**
  * @import { Config } from 'jest'

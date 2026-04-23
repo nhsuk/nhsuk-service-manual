@@ -1,11 +1,10 @@
 node_modules
 public
-.terraform
-.DStore
-.DS_Store
-app/.DS_Store
+coverage
 .cache
+.DS_Store
 .idea
 .scannerwork
+.terraform
 .vscode
-coverage
+*.tsbuildinfo

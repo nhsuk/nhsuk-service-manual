@@ -47,12 +47,16 @@ updates:
       lint:
         patterns:
           - '@eslint/*'
+          - '@trivago/prettier-plugin-*'
+          - '@types/*'
           - 'eslint'
           - 'eslint-*'
           - 'globals'
           - 'prettier'
           - 'stylelint'
           - 'stylelint-*'
+          - 'typed-query-selector'
+          - 'typescript'
           - 'typescript-*'
 
       test:

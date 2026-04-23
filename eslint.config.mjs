@@ -4,15 +4,15 @@ import { fileURLToPath } from 'node:url'
 import { includeIgnoreFile } from '@eslint/compat'
 import eslint from '@eslint/js'
 import pluginMarkdown from '@eslint/markdown'
-import { defineConfig, globalIgnores } from 'eslint/config'
 import configPrettier from 'eslint-config-prettier/flat'
 import pluginESx from 'eslint-plugin-es-x'
-import pluginImport from 'eslint-plugin-import'
 import pluginJest from 'eslint-plugin-jest'
 import pluginJestDom from 'eslint-plugin-jest-dom'
 import pluginJsdoc from 'eslint-plugin-jsdoc'
 import pluginNode from 'eslint-plugin-n'
+import pluginNodeImport from 'eslint-plugin-node-import'
 import pluginPromise from 'eslint-plugin-promise'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import pluginTypeScript from 'typescript-eslint'
 
@@ -24,35 +24,18 @@ export default defineConfig([
     files: ['**/*.{cjs,js,mjs}'],
     extends: [
       eslint.configs.recommended,
-      pluginImport.flatConfigs.recommended,
-      pluginImport.flatConfigs.typescript,
       pluginJsdoc.configs['flat/recommended-typescript-flavor'],
       pluginPromise.configs['flat/recommended'],
       configPrettier
     ],
     languageOptions: {
       parserOptions: {
-        ecmaVersion: 'latest'
+        ecmaVersion: 'latest',
+        projectService: true,
+        tsconfigRootDir: rootPath
       }
     },
     rules: {
-      // Turn off rules that are handled by TypeScript
-      // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
-      'import/no-named-as-default': 'off',
-      'import/no-named-as-default-member': 'off',
-
-      // Always import Node.js packages from `node:*`
-      'import/enforce-node-protocol-usage': ['error', 'always'],
-
-      // Check import or require statements are A-Z ordered
-      'import/order': [
-        'error',
-        {
-          'alphabetize': { order: 'asc' },
-          'newlines-between': 'always'
-        }
-      ],
-
       // Check for valid formatting
       'jsdoc/check-line-alignment': [
         'warn',
@@ -107,29 +90,17 @@ export default defineConfig([
       'no-else-return': 'error',
 
       // Avoid hard to read multi assign statements
-      'no-multi-assign': 'error'
-    },
-    settings: {
-      'import/resolver': {
-        node: true,
-        typescript: true
-      }
-    }
-  },
-  {
-    // Configure ESLint for ES modules
-    files: ['**/*.mjs'],
-    rules: {
-      'import/extensions': [
+      'no-multi-assign': 'error',
+
+      // Prefer rules that are type aware
+      'no-redeclare': 'off',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
         'error',
-        'always',
         {
-          ignorePackages: true,
-          pattern: {
-            cjs: 'always',
-            js: 'always',
-            mjs: 'always'
-          }
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_'
         }
       ]
     }
@@ -141,7 +112,8 @@ export default defineConfig([
     extends: [
       pluginTypeScript.configs.strict,
       pluginTypeScript.configs.stylistic,
-      pluginNode.configs['flat/recommended']
+      pluginNode.configs['flat/recommended'],
+      pluginNodeImport.configs['flat/recommended']
     ],
     languageOptions: {
       globals: globals.node
@@ -169,7 +141,10 @@ export default defineConfig([
     },
     rules: {
       // Babel transpiles ES2022 class static fields
-      'es-x/no-class-static-fields': 'off'
+      'es-x/no-class-static-fields': 'off',
+
+      // Babel transpiles ES2020 optional chaining
+      'es-x/no-optional-chaining': 'off'
     }
   },
   {
@@ -229,11 +204,7 @@ export default defineConfig([
   globalIgnores([
     '**/coverage/',
     '**/dist/',
-
-    // Enable dotfile linting
-    '!.*',
-    'node_modules/',
-    'node_modules/.*',
+    '**/vendor/',
 
     // Prevent CHANGELOG history changes
     'CHANGELOG.md'

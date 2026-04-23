@@ -3,7 +3,7 @@
  *
  * Try to match a request to a template, for example a request for /test
  * would look for /app/views/test.html and /app/views/test/index.html
- * See line 21-23 of app.js and below
+ * See line 21-23 of app/index.js and below
  *
  * 1. Try to render the path
  * 2. if success - send the response
