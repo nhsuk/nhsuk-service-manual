@@ -30,7 +30,9 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        ecmaVersion: 'latest'
+        ecmaVersion: 'latest',
+        projectService: true,
+        tsconfigRootDir: rootPath
       }
     },
     rules: {
@@ -88,7 +90,19 @@ export default defineConfig([
       'no-else-return': 'error',
 
       // Avoid hard to read multi assign statements
-      'no-multi-assign': 'error'
+      'no-multi-assign': 'error',
+
+      // Prefer rules that are type aware
+      'no-redeclare': 'off',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_'
+        }
+      ]
     }
   },
   {
@@ -187,11 +201,7 @@ export default defineConfig([
   globalIgnores([
     '**/coverage/',
     '**/dist/',
-
-    // Enable dotfile linting
-    '!.*',
-    'node_modules/',
-    'node_modules/.*',
+    '**/vendor/',
 
     // Prevent CHANGELOG history changes
     'CHANGELOG.md'
