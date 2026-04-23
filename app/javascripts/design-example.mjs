@@ -105,7 +105,7 @@ export class DesignExample extends Component {
     this.tabs.forEach((tab) => {
       if (tab.href !== $tabLink.href) {
         tab.setAttribute('aria-expanded', 'false')
-        tab.parentElement.classList.remove(this.currentTabClass)
+        tab.parentElement?.classList.remove(this.currentTabClass)
       }
     })
 
@@ -121,7 +121,7 @@ export class DesignExample extends Component {
     })
 
     this.tabs.forEach((tab) => {
-      if (tab.parentElement.classList.contains(this.currentTabClass)) {
+      if (tab.parentElement?.classList.contains(this.currentTabClass)) {
         tab.setAttribute('aria-expanded', 'false')
         tab.parentElement.classList.remove(this.currentTabClass)
       }

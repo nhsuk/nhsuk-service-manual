@@ -28,7 +28,7 @@ const config = {
  *
  * @type {Config}
  */
-export default {
+module.exports = {
   collectCoverageFrom: [
     '<rootDir>/app/**/*.{js,mjs}',
     '<rootDir>/lib/**/*.{js,mjs}',

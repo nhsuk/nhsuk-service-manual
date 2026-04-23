@@ -36,6 +36,7 @@ app.use(compression())
 // Use helmet to help secure the application
 // by setting http headers
 app.use(
+  // @ts-expect-error - This expression is not callable
   helmet({
     contentSecurityPolicy: false,
     crossOriginResourcePolicy: {
@@ -147,12 +148,14 @@ app.get('/design-example/:group/:item/:type', (req, res, next) => {
   }
 
   // Get the given example as HTML.
-  const exampleHtml = fileHelper.getHTMLCode({
-    group,
-    item,
-    type,
-    env
-  })
+  const exampleHtml = fileHelper.getHTMLCode.call(
+    { env },
+    {
+      group,
+      item,
+      type
+    }
+  )
 
   const { data } = fileHelper.getFrontmatter({
     group,
@@ -171,11 +174,21 @@ app.get('/design-example/:group/:item/:type', (req, res, next) => {
 })
 
 app.get('/search', (req, res) => {
-  const query = req.query.q
+  let query
+  let currentPage = 1
+
+  if (typeof req.query.q === 'string') {
+    query = req.query.q
+  }
+
+  if (typeof req.query.page === 'string') {
+    currentPage = parseInt(req.query.page, 10)
+  }
+
   const resultsPerPage = 10
-  let currentPage = parseInt(req.query.page, 10)
   const results = pageIndex.search(query)
   const maxPage = Math.ceil(results.length / resultsPerPage)
+
   if (!Number.isInteger(currentPage)) {
     currentPage = 1
   } else if (currentPage > maxPage || currentPage < 1) {
@@ -195,8 +208,13 @@ app.get('/search', (req, res) => {
 })
 
 app.get('/suggestions', (req, res) => {
-  const results = pageIndex.search(req.query.search)
+  const results =
+    typeof req.query.search === 'string'
+      ? pageIndex.search(req.query.search)
+      : []
+
   const slicedResults = results.slice(0, 10)
+
   res.set({ 'Content-Type': 'application/json' })
   res.status(200).send(JSON.stringify(slicedResults))
 })
