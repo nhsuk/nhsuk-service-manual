@@ -55,9 +55,5 @@ export default {
 }
 
 /**
- * @typedef {Exclude<Config['projects'][0], string>} ProjectConfig
- */
-
-/**
  * @import { Config } from 'jest'
  */
