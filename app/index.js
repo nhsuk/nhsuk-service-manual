@@ -203,7 +203,9 @@ app.get('/search', (req, res) => {
     maxPage,
     query,
     results: results.slice(startingIndex, endingIndex),
-    resultsLen: results.length
+    resultsStart: startingIndex + 1,
+    resultsEnd: Math.min(endingIndex, results.length),
+    resultsTotal: results.length
   })
 })
 
