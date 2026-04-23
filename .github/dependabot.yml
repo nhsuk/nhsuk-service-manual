@@ -33,6 +33,7 @@ updates:
           - '@babel/*'
           - 'autoprefixer'
           - 'babel-plugin-*'
+          - 'baseline-browser-mapping'
           - 'caniuse-lite'
           - 'cssnano'
           - 'cssnano-*'
