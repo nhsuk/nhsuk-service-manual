@@ -30,7 +30,6 @@ const config = {
  */
 export default {
   collectCoverageFrom: [
-    '<rootDir>/app.js',
     '<rootDir>/app/**/*.{js,mjs}',
     '<rootDir>/lib/**/*.{js,mjs}',
     '<rootDir>/middleware/**/*.{js,mjs}'

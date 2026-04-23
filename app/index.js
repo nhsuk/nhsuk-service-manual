@@ -9,14 +9,14 @@ const helmet = require('helmet')
 const { nunjucks } = require('nhsuk-frontend/lib')
 
 // Local dependencies
-const config = require('./app/config')
-const locals = require('./app/locals')
-const fileHelper = require('./lib/file-helper')
-const filters = require('./lib/filters')
-const macroOptions = require('./lib/macro-options')
-const PageIndex = require('./lib/page-index')
-const authentication = require('./middleware/authentication')
-const routing = require('./middleware/routing')
+const config = require('./config')
+const locals = require('./locals')
+const fileHelper = require('../lib/file-helper')
+const filters = require('../lib/filters')
+const macroOptions = require('../lib/macro-options')
+const PageIndex = require('../lib/page-index')
+const authentication = require('../middleware/authentication')
+const routing = require('../middleware/routing')
 
 const pageIndex = new PageIndex(config)
 

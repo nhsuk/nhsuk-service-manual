@@ -6,7 +6,7 @@
     "node": "^20.9.0 || ^22.11.0",
     "npm": "^10.5.0"
   },
-  "main": "app.js",
+  "main": "app/index.js",
   "scripts": {
     "prebuild": "npm run clean",
     "build": "NODE_ENV=${NODE_ENV:-production} webpack",
@@ -109,7 +109,6 @@
     "lib",
     "middleware",
     "public",
-    "app.js",
     "!**/*.test.*"
   ]
 }
