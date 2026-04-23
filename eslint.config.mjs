@@ -141,7 +141,10 @@ export default defineConfig([
     },
     rules: {
       // Babel transpiles ES2022 class static fields
-      'es-x/no-class-static-fields': 'off'
+      'es-x/no-class-static-fields': 'off',
+
+      // Babel transpiles ES2020 optional chaining
+      'es-x/no-optional-chaining': 'off'
     }
   },
   {
