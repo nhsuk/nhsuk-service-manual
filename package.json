@@ -43,7 +43,7 @@
     "basic-auth": "^2.0.1",
     "browser-sync": "^3.0.4",
     "cheerio": "^1.2.0",
-    "chokidar": "^3.6.0",
+    "chokidar": "^4.0.3",
     "compression": "^1.8.1",
     "express": "^5.2.1",
     "gray-matter": "^4.0.3",
