@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to scan and compare data or information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "April 2026" %}
+{% set dateUpdated = "May 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -15,7 +15,7 @@
 {% block bodyContent %}
   <p>We have 3 kinds of tables:</p>
   <ul>
-    <li><a href="#basic-tables">basic</a></li>
+    <li><a href="#basic-table">basic</a></li>
     <li><a href="#responsive-table">responsive</a></li>
     <li><a href="#sortable-table">sortable</a></li>
   </ul>
@@ -32,13 +32,13 @@
   <p>There may be better ways to meet users' needs, for example:</p>
   <ul>
     <li>a plain English summary with headings and lists</li>
-    <li><a href="/design-system/components/expanders">expanders</a></li>
+    <li><a href="/design-system/components/expander">an expander</a></li>
     <li><a href="/design-system/components/tabs">tabs</a></li>
   </ul>
   <p>Check this in your user research.</p>
   <p>Do not use a table to lay out content on a page. Use the <a href="/design-system/styles/layout#grid">grid system</a> instead.</p>
 
-  <h2 id="basic-tables">Basic tables</h2>
+  <h2 id="basic-table">Basic table</h2>
   <h3 id="2-column-table">2 column table</h3>
 
   {{ designExample({
@@ -81,7 +81,7 @@
     <li>text in alphabetical order A to Z</li>
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
-  <p>The default is ascending first, but you can change the default per column.</p>
+  <p>When you click in the header of an unsorted column, the default is ascending first, but you can change the default per column.</p>
 
   {{ designExample({
     group: "components",
@@ -90,7 +90,7 @@
   }) }}
 
   <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
-  <p>Use this table when users need to find and prioritise data, for example in staff systems with large data sets.</p>
+  <p>Use this table when users need to find and prioritise data, for example in staff systems.</p>
 
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
 
@@ -103,7 +103,7 @@
     <li>whether to place unsortable data such as empty or null values at the start or end of the table</li>
   </ul>
 
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example free text.</p>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
 
   <h4 id="sort-order">Sort order</h4>
   <p>By default a column will be sorted:</p>
@@ -208,8 +208,8 @@
 
   <h2 id="research">Research</h2>
 
-  <h3>Basic tables</h3>
-  <p>These tables tested well with users of health information on the NHS website.</p>
+  <h3>Basic table</h3>
+  <p>This table tested well with users of health information on the NHS website.</p>
 
   <h3>Responsive table</h3>
   <p>This table was tested at HM Revenue &amp; Customs.</p>
