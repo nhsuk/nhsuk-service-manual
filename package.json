@@ -107,9 +107,9 @@
     "stylelint": "^16.26.1",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^8.1.1",
-    "typed-query-selector": "^2.12.1",
+    "typed-query-selector": "^2.12.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.58.2",
+    "typescript-eslint": "^8.59.0",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-manifest-plugin": "^6.0.1"
