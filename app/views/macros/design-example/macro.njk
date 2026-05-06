@@ -3,7 +3,7 @@
 {% from "code/macro.njk" import code %}
 
 {% macro macroOption(option, optionName, exampleId) %}
-{% set componentPath = getMacroPageName(option.slug) %}
+{% set componentPath = getMacroPageName(option.alias or option.slug) %}
 
 {% if option.deprecated | length %}
   <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }}</a><br><br>
@@ -17,7 +17,7 @@
 {% if (option.params) or (option.isComponent and ["label", "legend"].includes(option.id)) %}
   {% if option.isComponent and not ["label", "legend"].includes(option.id) %}
     {# Link to subset of Nunjucks macro options table and design system component page -#}
-    <a href="#options-{{ exampleId }}--{{ option.slug }}">See supported {{ option.name | safe }} macro options</a> for <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ optionName | safe }} component macro</a>.
+    <a href="#options-{{ exampleId }}--{{ option.slug }}">See {{ option.name | safe }} macro options</a> using <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ option.alias or optionName | safe }} component macro</a>.
   {% else %}
     {# Link to Nunjucks macro options table only -#}
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See macro options for {{ option.name | safe }}</a>.
