@@ -20,7 +20,7 @@
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See supported {{ option.name | safe }} macro options</a> for <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ optionName | safe }} component macro</a>.
   {% else %}
     {# Link to Nunjucks macro options table only -#}
-    <a href="#options-{{ exampleId }}--{{ option.slug }}"> See macro options for {{ option.name | safe }}</a>.
+    <a href="#options-{{ exampleId }}--{{ option.slug }}">See macro options for {{ option.name | safe }}</a>.
   {% endif %}
 {% elif option.isComponent %}
   {# Link to design system component page for nested components -#}
