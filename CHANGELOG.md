@@ -8,6 +8,8 @@
 - Add link to Writing NHS messages guidance to service standard 2/3
 - Update intro to service standard 2 on service standard home page
 - Fix typo in service standard 12
+- Clarify content guidance about full stops and linked text
+- Remove full stops from linked text
 
 ## 8.10.0 - 21 April 2026
 
