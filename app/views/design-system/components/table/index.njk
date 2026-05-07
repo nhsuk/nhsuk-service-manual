@@ -81,6 +81,7 @@
     <li>text in alphabetical order A to Z</li>
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
+  <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>When you click in the header of an unsorted column, the default is ascending first, but you can change the default per column.</p>
 
   {{ designExample({
@@ -93,16 +94,9 @@
   <p>Use this table when users need to find and prioritise data, for example in staff systems.</p>
 
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
-
+  <p>This table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
   <p>This table only sorts by 1 column at a time. Users can click on the column header to trigger sorting.</p>
-  <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs. Find out:</p>
-  <ul>
-    <li>which columns they need to sort on</li>
-    <li>how much data to display at once</li>
-    <li>how it should be ordered by default</li>
-    <li>whether to place unsortable data such as empty or null values at the start or end of the table</li>
-  </ul>
-
+  <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
 
   <h4 id="sort-order">Sort order</h4>
@@ -112,11 +106,7 @@
     <li>alphabetically</li>
   </ul>
 
-  <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
-
-  <p>You may want to remove common prefixes like "a" and "the", treating them as "stop words", so that "The Whittington Hospital" comes under W, not under T.</p>
-
-  <p>If you need to change the sort order, you can override the defaults by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
+  <p>You can override the default sort order (strict alphabetical or numerical) to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
 
   <p>For example:</p>
   <ul>
@@ -125,6 +115,8 @@
     <li>currencies: £3.50 would be <code>3.5</code></li>
     <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
   </ul>
+
+  <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
 
   <p>By default when you click on the column heading for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column heading if descending is the more useful initial sort direction.</p>
 
@@ -153,7 +145,7 @@
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
 
   <h4 id="server-side-sorting">Server-side sorting</h4>
-  <p>This component provides client-side sorting, which only sorts the data currently visible in the table on the page.</p>
+  <p>This component uses JavaScript to sort the data in the user's browser (known as client-side sorting). It only sorts the data currently visible in the table on the page.</p>
   <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
   <ul>
     <li>build your own server-side function</li>
@@ -161,6 +153,9 @@
     <li>test with users</li>
   </ul>
   <p>Please feed back to the design system.</p>
+
+  <h4 id="sortable-tables-and-accessibility">Sortable tables and accessibility</h4>
+  <p>[CHECK] This component tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
