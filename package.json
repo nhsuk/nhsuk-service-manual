@@ -60,7 +60,7 @@
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.3",
-    "@eslint/compat": "^2.0.5",
+    "@eslint/config-helpers": "^0.6.0",
     "@eslint/js": "^10.0.1",
     "@eslint/markdown": "^8.0.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -107,7 +107,7 @@
     "stylelint-order": "^8.1.1",
     "typed-query-selector": "^2.12.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.2",
+    "typescript-eslint": "^8.59.3",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-manifest-plugin": "^6.0.1"

@@ -1,7 +1,7 @@
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { includeIgnoreFile } from '@eslint/compat'
+import { includeIgnoreFile } from '@eslint/config-helpers'
 import eslint from '@eslint/js'
 import pluginMarkdown from '@eslint/markdown'
 import configPrettier from 'eslint-config-prettier/flat'
