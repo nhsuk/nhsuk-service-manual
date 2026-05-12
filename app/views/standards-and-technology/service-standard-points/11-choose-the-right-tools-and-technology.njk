@@ -4,7 +4,6 @@
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Choose tools and technology that let you build a good service in an efficient, cost effective way." %}
-{% set dateUpdated = "February 2026" %}
 {% set backlog_issue_id = "354" %}
 
 {% block beforeContent %}
@@ -80,5 +79,34 @@
       href: "/standards-and-technology/service-standard-points/12-make-new-source-code-open"
     }
   }) }}
+
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: February 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content1')">See all updates</a></p>
+
+<div id="content1" style="display:none; margin-top: 40px">
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>February 2026</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated to follow GOV.UK and be clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>January 2026</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated and added links.</p>
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>May 2025</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated link to information standard DAPB3051, previously DCB3051.</p>
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>April 2025</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Added a new bullet point about use of resources to reflect our design principle about protecting the environment, with related links.</p>
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>January 2024</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Added link to the AI and Digital Regulations Service.</p>
+</div>
+
+<script>
+  function toggleContent(linkElement, contentId) {
+  var content = document.getElementById(contentId);
+
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        linkElement.innerHTML = "Hide all updates"; 
+       } else {
+        content.style.display = "none";
+        linkElement.innerHTML = "Show all updates"; 
+        }
+      } 
+      </script>
 
   {% endblock %}

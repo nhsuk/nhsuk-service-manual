@@ -4,7 +4,6 @@
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Build a service that's simple to use so that people can succeed first time. Test with users to make sure it works for them." %}
-{% set dateUpdated = "December 2019" %}
 {% set backlog_issue_id = "338" %}
 
 {% block beforeContent %}
@@ -60,5 +59,26 @@
       href: "/standards-and-technology/service-standard-points/5-make-sure-everyone-can-use-the-service"
     }
   }) }}
+
+<p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: May 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content1')">See all updates</a></p>
+
+<div id="content1" style="display:none; margin-top: 40px">
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>May 2026</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Added further GOV.UK resources to bring the standard into line with GOV's.</p>
+</div>
+
+<script>
+  function toggleContent(linkElement, contentId) {
+  var content = document.getElementById(contentId);
+
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        linkElement.innerHTML = "Hide all updates"; 
+       } else {
+        content.style.display = "none";
+        linkElement.innerHTML = "Show all updates"; 
+        }
+      } 
+      </script>
 
 {% endblock %}

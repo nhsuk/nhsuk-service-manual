@@ -4,7 +4,6 @@
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Make sure you have the capacity, resources and technical flexibility to iterate and improve the service frequently." %}
-{% set dateUpdated = "January 2024" %}
 {% set backlog_issue_id = "342" %}
 
 {% block beforeContent %}
@@ -57,5 +56,26 @@
       href: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy"
     }
   }) }}
+
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: January 2024 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content1')">See all updates</a></p>
+
+<div id="content1" style="display:none; margin-top: 40px">
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>January 2024</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Added section on AI and digital healthcare technologies.</p>
+</div>
+
+<script>
+  function toggleContent(linkElement, contentId) {
+  var content = document.getElementById(contentId);
+
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        linkElement.innerHTML = "Hide all updates"; 
+       } else {
+        content.style.display = "none";
+        linkElement.innerHTML = "Show all updates"; 
+        }
+      } 
+      </script>
 
   {% endblock %}
