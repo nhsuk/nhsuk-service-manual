@@ -10,6 +10,49 @@
 
 {% block bodyContent %}
 
+<h2>May 2026</h2>
+
+{% set designHtml202605 %}
+  <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
+{% endset %}
+
+{% set standardHtml202605 %}
+  <p>Updated links to related resources for <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2 and 3, 4 and 6 to align with GOV standard</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in May 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202605
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202605
+      }
+    ]
+  ]
+}) }}
+
+
 <h2>April 2026</h2>
 
 {% set contentHtml202604 %}
@@ -20,7 +63,6 @@
   <p>Updated <a href="/design-system/components/card">card component</a></p>
   <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
   <p>Added section on <a href="/design-system/components/date-input#using-autocomplete-attribute">using autocomplete attribute to date input</a></p>
-  <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
 {% endset %}
 
 {% set otherHtml202604 %}

@@ -9,25 +9,18 @@
 
   <h2>Latest updates</h2>
 
-  <h3>April 2026</h3>
-
-  {% set contentHtml %}
-    <p>Updated <a href="/content/writing-nhs-messages#nhs-app-messages">NHS App greeting section in Writing NHS messages</a></p>
-  {% endset %}
+  <h3>May 2026</h3>
 
   {% set designHtml %}
-    <p>Updated <a href="/design-system/components/card">card component</a></p>
-    <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
-    <p>Added section on <a href="/design-system/components/date-input#using-autocomplete-attribute">using autocomplete attribute to date input</a></p>
     <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
   {% endset %}
 
-  {% set otherHtml %}
-    <p>Updated <a href="/accessibility-statement">accessibility statement</a> after latest audit</p>
+  {% set standardHtml %}
+    <p>Updated links to related resources for <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2 and 3, 4 and 6 to align with GOV standard</p>
   {% endset %}
 
   {{ table({
-    caption: "Updates to the service manual in April 2026",
+    caption: "Updates to the service manual in May 2026",
     captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
@@ -41,14 +34,6 @@
     rows: [
       [
         {
-          text: "Content"
-        },
-        {
-          html: contentHtml
-        }
-      ],
-      [
-        {
           text: "Design system"
         },
         {
@@ -57,10 +42,10 @@
       ],
       [
         {
-          text: "Other"
+          text: "Standards and technology"
         },
         {
-          html: otherHtml
+          html: standardHtml
         }
       ]
     ]
