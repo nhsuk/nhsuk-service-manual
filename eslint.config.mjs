@@ -7,11 +7,11 @@ import pluginMarkdown from '@eslint/markdown'
 import configPrettier from 'eslint-config-prettier/flat'
 import pluginESx from 'eslint-plugin-es-x'
 import pluginJest from 'eslint-plugin-jest'
-import pluginJestDom from 'eslint-plugin-jest-dom'
 import pluginJsdoc from 'eslint-plugin-jsdoc'
 import pluginNode from 'eslint-plugin-n'
 import pluginNodeImport from 'eslint-plugin-node-import'
 import pluginPromise from 'eslint-plugin-promise'
+import pluginTestingLibrary from 'eslint-plugin-testing-library'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import pluginTypeScript from 'typescript-eslint'
@@ -153,7 +153,7 @@ export default defineConfig([
     extends: [
       pluginJest.configs['flat/recommended'],
       pluginJest.configs['flat/style'],
-      pluginJestDom.configs['flat/recommended']
+      pluginTestingLibrary.configs['flat/dom']
     ],
     languageOptions: {
       globals: pluginJest.environments.globals.globals
