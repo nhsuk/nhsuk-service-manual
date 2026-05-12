@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-env": "^7.29.3",
     "@eslint/compat": "^2.0.5",
     "@eslint/js": "^9.39.4",
     "@eslint/markdown": "^8.0.1",
@@ -78,7 +78,7 @@
     "babel-plugin-transform-import-meta": "^2.3.3",
     "concurrently": "^9.2.1",
     "copy-webpack-plugin": "^14.0.0",
-    "cssnano": "^7.1.5",
+    "cssnano": "^7.1.9",
     "del-cli": "^7.0.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
