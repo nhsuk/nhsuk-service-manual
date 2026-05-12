@@ -82,7 +82,8 @@
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
-  <p>When you click in the header of an unsorted column, the default is ascending first, but you can change the default per column.</p>
+  <p>This table only sorts by 1 column at a time. Users can click in the column header of an unsorted column to trigger sorting. The default sort order is ascending first, but you can change the default per column.</p>
+  <p>Clicking the column header for a sorted column will toggle it between ascending and descending.</p>
 
   {{ designExample({
     group: "components",
@@ -94,11 +95,8 @@
   <p>Use this table when users need to find and prioritise data, for example in staff systems.</p>
 
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
-  <p>This table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
-  <p>This table only sorts by 1 column at a time. Users can click on the column header to trigger sorting.</p>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
-
+  <p>This table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
   <h4 id="sort-order">Sort order</h4>
   <p>By default a column will be sorted:</p>
   <ul>
@@ -117,10 +115,8 @@
   </ul>
 
   <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
-
-  <p>By default when you click on the column heading for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column heading if descending is the more useful initial sort direction.</p>
-
-  <p>Clicking the column heading for a currently sorted column will always toggle it between ascending and descending.</p>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
 
   <p>See example:</p>
 
@@ -141,8 +137,8 @@
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
 
   <h4 id="session-storage">Session storage</h4>
-  <p>Do not add code to automatically save the sorting order. Users may not expect this and it could add clinical risk.</p>
-  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sorting order explicitly.</p>
+  <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
   <h4 id="server-side-sorting">Server-side sorting</h4>
   <p>This component uses JavaScript to sort the data in the user's browser (known as client-side sorting). It only sorts the data currently visible in the table on the page.</p>
