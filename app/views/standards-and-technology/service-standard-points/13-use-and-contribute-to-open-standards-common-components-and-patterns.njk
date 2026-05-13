@@ -5,7 +5,6 @@
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Build on open standards and use common components and patterns in the NHS design system." %}
 {% set hideDescription = true %}
-{% set dateUpdated = "January 2026" %}
 {% set backlog_issue_id = "356" %}
 
 {% block beforeContent %}
@@ -64,5 +63,26 @@
       href: "/standards-and-technology/service-standard-points/14-operate-a-reliable-service"
     }
   }) }}
+
+<p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated: January 2026 - <a href="javascript:void(0)" onclick="toggleContent(this, 'content1')">See all updates</a></p>
+
+<div id="content1" style="display:none; margin-top: 40px">
+  <p class="nhsuk-body-m nhsuk-u-secondary-text-colour"><strong>January 2026</strong></p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Brought standard into closer alignment with GOV.UK standard, emphasising open standards alongside common components and patterns.</p>
+</div>
+
+<script>
+  function toggleContent(linkElement, contentId) {
+  var content = document.getElementById(contentId);
+
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        linkElement.innerHTML = "Hide all updates"; 
+       } else {
+        content.style.display = "none";
+        linkElement.innerHTML = "Show all updates"; 
+        }
+      } 
+      </script>
 
   {% endblock %}
