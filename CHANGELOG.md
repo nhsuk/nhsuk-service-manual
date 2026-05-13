@@ -12,6 +12,7 @@
 - Clarify content guidance about full stops and linked text
 - Remove full stops from linked text
 - Amend alt text for BSL icon
+- Fix HTML and Nunjucks quote style
 
 ## 8.10.0 - 21 April 2026
 
