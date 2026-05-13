@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Add additional GOV.UK resources to bring service standards 2/3, 4 and 6 into line with GOV's
+- Add link to Writing NHS messages guidance to service standard 2/3
+
 ## 8.10.0 - 21 April 2026
 
 :new: **New features**
