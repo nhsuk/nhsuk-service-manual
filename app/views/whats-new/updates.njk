@@ -12,6 +12,10 @@
 
 <h2>May 2026</h2>
 
+{% set contentHtml202605 %}
+  <p>Updated <a href="/content/writing-nhs-messages#text-messages">text messages section of Writing NHS messages</a> after feedback</p>
+{% endset %}
+
 {% set designHtml202605 %}
   <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
 {% endset %}
@@ -33,6 +37,14 @@
     }
   ],
   rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202605
+      }
+    ],
     [
       {
         text: "Design system"
