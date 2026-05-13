@@ -4,6 +4,7 @@
 
 :wrench: **Maintenance**
 
+- Improve guidance on panel component, interruption page pattern and logged-in account header after user testing
 - Add additional GOV.UK resources to bring service standards 2/3, 4 and 6 into line with GOV's
 - Add link to Writing NHS messages guidance to service standard 2/3
 - Update intro to service standard 2 on service standard home page
