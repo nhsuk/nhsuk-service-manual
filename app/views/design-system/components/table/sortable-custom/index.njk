@@ -3,17 +3,17 @@
 {{ table({
   caption: "Organisations using the service",
   captionSize: "m",
+  firstCellIsHeader: true,
   head: [
     {
       text: "Organisation",
       attributes: {
-        "aria-sort": "ascending",
+        "aria-sort": "none",
         "data-initial-sort": "ascending"
       }
     },
     {
       text: "Joined",
-      format: "numeric",
       attributes: {
         "aria-sort": "none",
         "data-initial-sort": "descending"
@@ -23,7 +23,7 @@
       text: "Amount spent",
       format: "numeric",
       attributes: {
-        "aria-sort": "none",
+        "aria-sort": "descending",
         "data-initial-sort": "descending"
       }
     }
@@ -38,7 +38,6 @@
       },
       {
         text: "4 January 2025",
-        format: "numeric",
         attributes: {
           "data-sort-value": "2025-01-04"
         }
@@ -60,7 +59,6 @@
       },
       {
         text: "2 December 2025",
-        format: "numeric",
         attributes: {
           "data-sort-value": "2025-12-02"
         }
@@ -82,7 +80,6 @@
       },
       {
         text: "18 July 2024",
-        format: "numeric",
         attributes: {
           "data-sort-value": "2024-07-18"
         }
@@ -104,7 +101,6 @@
       },
       {
         text: "21 August 2022",
-        format: "numeric",
         attributes: {
           "data-sort-value": "2022-08-21"
         }
