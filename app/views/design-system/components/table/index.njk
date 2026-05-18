@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to scan and compare data or information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "May 2026" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -82,9 +82,8 @@
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
-  <p>This table only sorts by 1 column at a time. Users can click in the column header of an unsorted column to trigger sorting. The default sort order is ascending first, but you can change the default per column.</p>
-  <p>Clicking the column header for a sorted column will toggle it between ascending and descending.</p>
-
+  <p>This table only sorts by 1 column at a time. Users can click in the column header of an unsorted column to trigger sorting. Clicking again toggles between ascending and descending. The default sort order is ascending first, but you can change the default per column.</p>
+  <p>This example presents unsorted when the page loads.</p>
   {{ designExample({
     group: "components",
     item: "table",
@@ -92,19 +91,19 @@
   }) }}
 
   <h3 id="when-to-use-a-sortable-table">When to use a sortable table</h3>
-  <p>Use this table when users need to find and prioritise data, for example in staff systems.</p>
+  <p>Use this table when users need to analyse and prioritise data.</p>
 
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
-  <p>This table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
+  <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
   <h4 id="sort-order">Sort order</h4>
   <p>By default a column will be sorted:</p>
   <ul>
-    <li>numerically – if the cells contain numbers</li>
+    <li>numerically</li>
     <li>alphabetically</li>
   </ul>
 
-  <p>You can override the default sort order (strict alphabetical or numerical) to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
+  <p>You can override the default sort order to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
 
   <p>For example:</p>
   <ul>
@@ -114,11 +113,11 @@
     <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
   </ul>
 
-  <p>Do not sort data alphabetically if it has an established logical sequence, for example months of the year, January to December.</p>
+  <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
 
-  <p>See example:</p>
+  <p>In this example the default sort order is by amount spent (descending).</p>
 
  {{ designExample({
     group: "components",
@@ -127,31 +126,28 @@
   }) }}
 
   <h4 id="consider-search-and-filter">Consider search and filter</h3>
-  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts down the data set so users can focus on what they want. Search helps them find specific things they need.</p>
+  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts the data down so users can focus on what they want. Search helps them find specific things they need.</p>
   <p>For example, search or filter may work better than sorting for:</p>
   <ul>
-    <li>first names</li>
+    <li>names</li>
     <li>NHS numbers or other codes</li>
     <li>medical conditions</li>
   </ul>
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
 
-  <h4 id="session-storage">Session storage</h4>
+  <h4 id="saving-sort-order">Saving sort order</h4>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
-  <h4 id="server-side-sorting">Server-side sorting</h4>
-  <p>This component uses JavaScript to sort the data in the user's browser (known as client-side sorting). It only sorts the data currently visible in the table on the page.</p>
+  <h4 id="sorting-pages-of-data">Sorting pages of data</h4>
+  <p>This component uses JavaScript to sort the data in the user's browser (known as client-side sorting). It only sorts the data visible in the table on the current page.</p>
   <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
   <ul>
     <li>build your own server-side function</li>
-    <li>consider how to show "loading" states and error states if loading fails</li>
+    <li>consider how to show loading states and error states if loading fails</li>
     <li>test with users</li>
   </ul>
   <p>Please feed back to the design system.</p>
-
-  <h4 id="sortable-tables-and-accessibility">Sortable tables and accessibility</h4>
-  <p>[CHECK] This component tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
@@ -181,8 +177,7 @@
     type: "missing-data"
   }) }}
 
-  <h2 id="how-it-works">How tables work</h2>
-  <h3>Accessibility</h3>
+  <h2 id="accessibility">Accessibility</h2>
   <p>Follow <a href="https://webaim.org/techniques/tables/data">WebAIM's guidance for tables</a> and:</p>
   <ul>
     <li>give tables captions</li>
@@ -196,6 +191,9 @@
 
   <h3 id="table-headers">Table headers</h3>
   <p>Use table headers to tell users what the rows and columns represent.</p>
+
+  <h3 id="sortable-tables">Sortable tables</h3>
+  <p>The sortable table tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
 
   <h2 id="research">Research</h2>
 
