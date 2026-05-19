@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add page updates details to service standard points
+
 ## 8.10.0 - 21 April 2026
 
 :new: **New features**
