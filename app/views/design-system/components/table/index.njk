@@ -107,6 +107,8 @@
 
   <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
+  <h5>Sort order</h5>
+
   <p>By default a column will be sorted:</p>
   <ul>
     <li>numerically</li>
@@ -127,6 +129,9 @@
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
 
+  <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
+
   <p>In this example the default sort order is by amount spent (descending).</p>
 
  {{ designExample({
@@ -134,20 +139,6 @@
     item: "table",
     type: "sortable-custom"
   }) }}
-
-  <h4 id="consider-search-and-filter">Consider search and filter</h3>
-  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts the data down so users can focus on what they want. Search helps them find specific things they need.</p>
-  <p>For example, search or filter may work better than sorting for:</p>
-  <ul>
-    <li>names</li>
-    <li>NHS numbers or other codes</li>
-    <li>medical conditions</li>
-  </ul>
-  <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
-
-  <h4 id="saving-sort-order">Saving sort order</h4>
-  <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
-  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
   <h4 id="sorting-pages-of-data">Server-side version</h4>
 
@@ -168,6 +159,16 @@
   }) }}
 
   <p>Please feed back to the design system.</p>
+
+  <h4 id="consider-search-and-filter">Consider search and filter</h3>
+  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts the data down so users can focus on what they want. Search helps them find specific things they need.</p>
+  <p>For example, search or filter may work better than sorting for:</p>
+  <ul>
+    <li>names</li>
+    <li>NHS numbers or other codes</li>
+    <li>medical conditions</li>
+  </ul>
+  <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
