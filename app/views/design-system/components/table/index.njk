@@ -95,8 +95,18 @@
 
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
+
+  <p>There are 2 ways to use a sortable table:</p>
+
+  <ul>
+    <li>JavaScript version – this sorts the table without reloading the page</li>
+    <li>server-side version – this uses links to reload the page with the table sorted by a new column</li>
+  </ul>
+
+  <h4 id="sort-order">JavaScript version</h4>
+
   <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
-  <h4 id="sort-order">Sort order</h4>
+
   <p>By default a column will be sorted:</p>
   <ul>
     <li>numerically</li>
@@ -139,15 +149,23 @@
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
-  <h4 id="sorting-pages-of-data">Sorting pages of data</h4>
-  <p>This component uses JavaScript to sort the data in the user's browser (known as client-side sorting). It only sorts the data visible in the table on the current page.</p>
-  <p>For large data sets with many pages of data, use server-side sorting. You will need to:</p>
+  <h4 id="sorting-pages-of-data">Server-side version</h4>
+
+  <p>If your table is paginated, do not use the JavaScript based sorting as this will only sort the current page being shown.</p>
+
+  <p>Instead, use server-side sorting, with the column headings containing links that reload the page with the table sorted by that heading. You will need to:</p>
+
   <ul>
     <li>build your own server-side function</li>
-    <li>consider how to show loading states and error states if loading fails</li>
     <li>return users to the first page of new results after sorting</li>
     <li>test with users</li>
   </ul>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "sortable-server-side"
+  }) }}
 
   <p>Please feed back to the design system.</p>
 
