@@ -6,6 +6,10 @@
 
 - Add guidance to use table row headers
 
+:wrench: **Maintenance**
+
+- Update header guidance as logged-in account is now used on public services
+
 ## 8.11.0 - 14 May 2026
 
 :wrench: **Maintenance**
