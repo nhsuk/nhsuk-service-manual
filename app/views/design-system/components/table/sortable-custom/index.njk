@@ -7,25 +7,19 @@
   head: [
     {
       text: "Organisation",
-      attributes: {
-        "aria-sort": "none",
-        "data-initial-sort": "ascending"
-      }
+      sortable: true,
+      sortFirstDirection: "ascending"
     },
     {
       text: "Joined",
-      attributes: {
-        "aria-sort": "none",
-        "data-initial-sort": "descending"
-      }
-    },
+      sortable: true,
+      sortFirstDirection: "descending"
     {
       text: "Amount spent",
       format: "numeric",
-      attributes: {
-        "aria-sort": "descending",
-        "data-initial-sort": "descending"
-      }
+      sortable: true,
+      initialSortColumn: true,
+      sortFirstDirection: "descending"
     }
   ],
   rows: [
