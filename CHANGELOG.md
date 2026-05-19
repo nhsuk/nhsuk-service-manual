@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add page updates details to service standard points
+
 ## 8.13.1 - 19 August 2026
 
 :wrench: **Maintenance**
