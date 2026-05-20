@@ -9,7 +9,7 @@
   "main": "app/index.js",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=${NODE_ENV:-production} webpack",
+    "build": "webpack",
     "clean": "del-cli public/**",
     "lint": "npm run lint:types && npm run lint:js && npm run lint:css && npm run lint:prettier",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix && npm run lint:prettier:fix",
@@ -26,8 +26,8 @@
     "test": "npm run test:js",
     "test:js": "jest --color",
     "watch": "concurrently --prefix none npm:watch:*",
-    "watch:build": "NODE_ENV=development npm run build -- --watch",
-    "watch:start": "NODE_ENV=development node --watch ."
+    "watch:build": "npm run build -- --watch",
+    "watch:start": "node --watch ."
   },
   "author": "https://github.com/nhsuk",
   "repository": {
