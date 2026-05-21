@@ -10,12 +10,18 @@
       href: "#",
       sortable: true,
       initialSortColumn: true,
-      sortFirstDirection: "ascending"
+      sortFirstDirection: "ascending",
+      attributes: {
+        "aria-sort": "descending"
+      }
     },
     {
       text: "Last log in",
       href: "#",
-      sortable: true
+      sortable: true,
+      attributes: {
+        "aria-sort": "none"
+      }
     },
     {
       html: '<span class="nhsuk-u-visually-hidden">Action</span>'
