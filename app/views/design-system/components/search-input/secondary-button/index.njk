@@ -1,21 +1,21 @@
 {% from "search-input/macro.njk" import searchInput %}
 
 {{ searchInput({
-    label: {
-        text: "Find a patient by NHS number",
-        size: "m"
-    },
-    hint: {
-        html: "For example <span class='nhsuk-u-nowrap'>999 123 4567</span>"
-    },
-    name: "example",
-    id: "example",
-    button: {
-        variant: "secondary",
-        text: "Find"
-    },
-    classes: "nhsuk-u-width-full nhsuk-input--code",
-    formGroup: {
-        classes: "nhsuk-u-width-one-half"
-    }
+  label: {
+    text: "Find a patient by NHS number",
+    size: "m"
+  },
+  hint: {
+    html: "For example <span class='nhsuk-u-nowrap'>999 123 4567</span>"
+  },
+  name: "example",
+  id: "example",
+  button: {
+    variant: "secondary",
+    text: "Find"
+  },
+  classes: "nhsuk-u-width-full nhsuk-input--code",
+  formGroup: {
+    classes: "nhsuk-u-width-one-half"
+  }
 }) }}
