@@ -28,22 +28,27 @@
   <p>Do not rely on search in place of well structured information architecture and <a href="/design-system/components/header#navigation">navigation</a>.</p>
 
   <h2>How to use search input</h2>
-  <p>The search input can be large, depending on the context of the page. For example, a dedicated search page may want a large input.</p>
+  <p>If searching by a unique identifier, for example an NHS number, or users have an expectation that they may find one specific thing, users should be taken directly to the matching result's page. If the search does not return a single result, users should be presented with a results page.</p>
   {{ designExample({
     group: "components",
     item: "search-input",
-    type: "large"
+    type: "nhs-number"
   }) }}
 
   <p>Once a character has been typed and the input is focussed or hovered, an icon button appears allowing users to clear the input and start a new search.</p>
-  <p>If searching by a unique identifier, for example an NHS number, or users have an expectation that they may find one specific thing, users should be taken directly to the matching result's page. If the search does not return a single result, users should be presented with a results page.</p>
   <p>The search button can include a text label, for example "Find".</p>
-
   <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
   {{ designExample({
     group: "components",
     item: "search-input",
     type: "secondary-button"
+  }) }}
+
+  <p>The search input can be large, depending on the context of the page. For example, a dedicated search page may want a large input.</p>
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "large"
   }) }}
 
   <h2>Research</h2>
