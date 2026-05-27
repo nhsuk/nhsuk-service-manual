@@ -22,27 +22,20 @@
           },
           classes: "app-component-reading-width"
         }) %}
-          {{ input({
+          {{ searchInput({
             label: {
               text: "Search the NHS digital service manual",
               classes: "nhsuk-u-visually-hidden"
             },
+            placeholder: "Search",
+            id: "search-results-field",
             name: "q",
             value: query,
-            id: "search-results-field",
-            classes: "app-search__input nhsuk-u-width-full",
+            large: true,
             autocomplete: "off",
-            attributes: {
-              placeholder: "Search"
-            },
+            classes: "nhsuk-u-width-full",
             formGroup: {
-              classes: "nhsuk-u-width-one-half",
-              afterInput: {
-                html: button({
-                  html: nhsukIcon("search", { title: "Submit" }),
-                  classes: "app-search__submit nhsuk-button--small"
-                })
-              }
+              classes: "nhsuk-u-width-one-half"
             }
           }) }}
         {% endcall %}
