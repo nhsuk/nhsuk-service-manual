@@ -1,0 +1,15 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+    label: {
+        text: "Search the NHS website",
+        classes: "nhsuk-u-visually-hidden"
+    },
+    placeholder: "Search",
+    name: "example",
+    id: "example",
+    classes: "nhsuk-u-width-full",
+    formGroup: {
+        classes: "nhsuk-u-width-one-half"
+    }
+}) }}

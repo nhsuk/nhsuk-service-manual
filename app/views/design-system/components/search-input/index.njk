@@ -1,0 +1,52 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Search input" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a search input to help users find content by entering a word, phrase or part of a word." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "May 2026" %}
+{% set backlog_issue_id = "587" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "default"
+  }) }}
+
+  <h2>When to use search input</h2>
+  <p>Use a search input when users need to find specific content quickly by entering a word, phrase or part of a word.</p>
+  <p>Search can be enabled in the <a href="/design-system/components/header">header component</a>, use this to provide a global search.</p>
+
+  <h2>When not to use search input</h2>
+  <p>Do not rely on search in place of clear navigation.</p>
+
+  <h2>How to use search input</h2>
+  <p>The search input can be large or small, depending on the context of the page. For example, a dedicated search page may want a large size input.</p>
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "large"
+  }) }}
+
+  <p>The search input shows a cross icon once a character has been typed, allowing users to clear the input and start a new search.</p>
+  <p>If searching by a unique identifier, for example an NHS number, users should be taken directly to the matching result's page. If the search does not return a unique result, users should be presented with a results page.</p>
+  <p>The search button can include a text label for specific use cases, for example "Find".</p>
+
+  <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "secondary-button"
+  }) }}
+
+  <h2>Research</h2>
+  <p>If you've used a search input in your service, please share your user research findings.</p>
+
+{% endblock %}

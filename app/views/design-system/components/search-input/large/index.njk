@@ -1,0 +1,12 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+    label: {
+        text: "Search results for flu",
+        size: 'l',
+        isPageHeading: true
+    },
+    name: "example",
+    id: "example",
+    large: true
+}) }}

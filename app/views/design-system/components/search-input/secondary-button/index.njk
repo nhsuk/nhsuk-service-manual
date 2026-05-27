@@ -1,0 +1,21 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+    label: {
+        text: "Product order number",
+        size: 'm'
+    },
+    hint: {
+        text: "8 digits, found on your invoice, for example 12345678"
+    },
+    name: "example",
+    id: "example",
+    button: {
+        variant: "secondary",
+        text: "Find"
+    },
+    classes: "nhsuk-u-width-full nhsuk-input--code",
+    formGroup: {
+        classes: "nhsuk-u-width-one-half"
+    }
+}) }}
