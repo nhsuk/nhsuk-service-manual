@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add guidance to use table row headers
+
 ## 8.11.0 - 14 May 2026
 
 :wrench: **Maintenance**
