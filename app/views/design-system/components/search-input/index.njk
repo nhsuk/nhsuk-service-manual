@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a search input to help users find something specific by entering a word, phrase or characters." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "May 2026" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "587" %}
 
 {% block beforeContent %}
@@ -21,21 +21,23 @@
   }) }}
 
   <h2>When to use search input</h2>
-  <p>Use a search input when users need to find something specific quickly by entering a word, phrase or characters.</p>
-  <p>Search can be enabled in the <a href="/design-system/components/header">header component</a>. Use this to provide a global search.</p>
+  <p>Use the search input component to help users find a topic, person, task, place or other type of record, when navigation alone is not a practical option.</p>
+  <p>You can enable <a href="/design-system/components/header#search-bar">search in the header component</a>. Use this to provide a global search.</p>
 
   <h2>When not to use search input</h2>
-  <p>Do not rely on search in place of well structured information architecture and <a href="/design-system/components/header#navigation">navigation</a>.</p>
+  <p>Do not rely on search in place of a well-structured information architecture and navigation.</p>
 
   <h2>How to use search input</h2>
-  <p>If searching by a unique identifier, for example an NHS number, or users have an expectation that they may find one specific thing, users should be taken directly to the matching result's page. If the search does not return a single result, users should be presented with a results page.</p>
+  <p>If a user is searching for a reference number or other unique identifier, for example an NHS number, or if they expect to find 1 specific thing, take them directly to the matching result's page.</p>
+  
   {{ designExample({
     group: "components",
     item: "search-input",
     type: "nhs-number"
   }) }}
 
-  <p>Once a character has been typed and the input is focussed or hovered, an icon button appears allowing users to clear the input and start a new search.</p>
+  <p>If the search does not return a single result or if users expect more than 1 result (for example, on content-heavy websites), take users to a search results page.</p>
+  <p>When a user types a character and the input is focused or hovered, a cross (x) icon button appears which allows users to clear the input and start a new search.</p>
   <p>The search button can include a text label, for example "Find".</p>
   <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
   {{ designExample({
@@ -44,7 +46,7 @@
     type: "secondary-button"
   }) }}
 
-  <p>The search input can be large, depending on the context of the page. For example, a dedicated search page may want a large input.</p>
+  <p>The search input can be large, depending on the context of the page. For example, you can use a large input on a dedicated search page.</p>
   {{ designExample({
     group: "components",
     item: "search-input",
