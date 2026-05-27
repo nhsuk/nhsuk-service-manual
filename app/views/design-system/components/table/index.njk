@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to compare and scan information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -98,7 +98,8 @@
   <p>Style table captions to match the visual hierarchy of your page's content. If using Nunjucks, use the <code>captionSize</code> macro option. In HTML add the <code>nhsuk-table__caption--l</code> class. You can use sizes <code>s</code>, <code>m</code>, <code>l</code>, <code>xl</code>.</p>
 
   <h3 id="table-headers">Table headers</h3>
-  <p>Use table headers to tell users what the rows and columns represent.</p>
+  <p>Use table headers (<code>&lt;th&gt;</code>) to tell users what sort of data the rows and columns contain. The combination of row and column headers helps screen reader users identify the data in each cell.</p>
+  <p>If users need to refer to the first column to understand the context of a cell, for example a name or day of the week, make sure this column's cells are table headers with the <code>scope="row"</code> attribute.</p>
 
   <h2 id="research">Research</h2>
   <h3>Basic tables</h3>
