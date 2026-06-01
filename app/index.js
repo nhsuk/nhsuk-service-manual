@@ -18,6 +18,8 @@ const PageIndex = require('../lib/page-index')
 const authentication = require('../middleware/authentication')
 const routing = require('../middleware/routing')
 
+const { NODE_ENV } = process.env
+
 const pageIndex = new PageIndex(config)
 
 // Initialise applications
@@ -364,7 +366,7 @@ app.all('/*subPaths', (_, res) => {
 })
 
 // Run application on configured port
-if (config.env === 'development') {
+if (NODE_ENV !== 'production') {
   app.listen(config.port - 50, () => {
     browserSync({
       files: [

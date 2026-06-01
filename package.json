@@ -9,7 +9,7 @@
   "main": "app/index.js",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=${NODE_ENV:-production} webpack",
+    "build": "webpack",
     "clean": "del-cli public/**",
     "lint": "npm run lint:types && npm run lint:js && npm run lint:css && npm run lint:prettier",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix && npm run lint:prettier:fix",
@@ -26,8 +26,8 @@
     "test": "npm run test:js",
     "test:js": "jest --color",
     "watch": "concurrently --prefix none npm:watch:*",
-    "watch:build": "NODE_ENV=development npm run build -- --watch",
-    "watch:start": "NODE_ENV=development node --watch ."
+    "watch:build": "npm run build -- --watch",
+    "watch:start": "node --watch ."
   },
   "author": "https://github.com/nhsuk",
   "repository": {
@@ -101,14 +101,14 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.8.3",
     "sass-embedded": "^1.99.0",
-    "sass-loader": "^16.0.7",
+    "sass-loader": "^17.0.0",
     "stylelint": "^16.26.1",
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^8.1.1",
     "typed-query-selector": "^2.12.2",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.3",
-    "webpack": "^5.106.2",
+    "webpack": "^5.107.0",
     "webpack-cli": "^7.0.2",
     "webpack-manifest-plugin": "^6.0.1"
   },

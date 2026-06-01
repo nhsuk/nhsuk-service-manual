@@ -21,7 +21,6 @@ module.exports =
 
     res.locals.basePath = basePath
     res.locals.baseUrl = config.baseUrl
-    res.locals.env = config.env
 
     // Adobe Analytics
     res.locals.adobeTrackingUrl = config.adobeTrackingUrl

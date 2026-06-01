@@ -19,7 +19,7 @@ module.exports = (req, res, next) => {
   // External dependencies
 
   // Set configuration variables
-  const env = (process.env.NODE_ENV || 'development').toLowerCase()
+  const env = process.env.NODE_ENV
   const username = process.env.MANUAL_USERNAME
   const password = process.env.MANUAL_PASSWORD
 
