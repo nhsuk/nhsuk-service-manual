@@ -1,0 +1,29 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Service unavailable pages" %}
+{% set pageDescription = "Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "June 2026" %}
+{% set backlog_issue_id = "588" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "default"
+}) }}
+
+<h2 id="when-to-use">When to use this pattern</h2>
+
+<h2 id="how-to-use">How to use this pattern</h2>
+
+
+
+{% endblock %}
