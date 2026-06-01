@@ -28,7 +28,7 @@
   <p>Do not rely on search in place of a well-structured information architecture and navigation.</p>
 
   <h2>How to use search input</h2>
-  <p>If a user is searching for a reference number or other unique identifier, for example an NHS number, or if they expect to find 1 specific thing, take them directly to the matching result's page.</p>
+  <p>When a user types into the input and it is focused or hovered, a cross icon button appears which allows users to clear the input. This is an enhancement for browsers that support it. Some browsers such as Firefox will not show it.</p>
   
   {{ designExample({
     group: "components",
@@ -36,8 +36,6 @@
     type: "nhs-number"
   }) }}
 
-  <p>If the search does not return a single result or if users expect more than 1 result (for example, on content-heavy websites), take users to a search results page.</p>
-  <p>When a user types into the input and it is focused or hovered, a cross icon button appears which allows users to clear the input. This is an enhancement for browsers that support it. Some browsers such as Firefox will not show it.</p>
   <p>The search button can include a text label, for example "Find".</p>
   <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
   {{ designExample({
