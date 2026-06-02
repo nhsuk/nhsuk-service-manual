@@ -4,6 +4,7 @@
 
 :new: **New features**
 
+- Guidance on creating Service unavailable pages
 - Add guidance to use table row headers
 
 :wrench: **Maintenance**
