@@ -22,8 +22,54 @@
 
 <h2 id="when-to-use">When to use this pattern</h2>
 
-<h2 id="how-to-use">How to use this pattern</h2>
+<p>Use a service unavailable page when a service is temporaily not able to be used. This could be for planned reasons, or for reasons outside of your control such as a hosting provider outage.</p>
 
+<p>Have a general page in case you need to make a service unavailable quickly and do not have time to update the page. As soon as you know when the service will be available, update the page.</p>
+
+<p>You should consider what users should do while the service is unavailable. For example, you could include a phone number they could contact for urgent issues, or a link to a form which can be downloaded to record information temporarily.</p>
+<h2 id="how-to-use">How to use this pattern</h2>
+<h3 id="general-page">General page</h2>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "default"
+}) }}
+
+<h3 id="planned">When the unavailability is planned</h2>
+
+<p>Use this if you are planning to make the service unavailable for a short period.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "planned"
+}) }}
+
+<h3 id="updates">When you have updates about the issue</h2>
+
+<p>If the technical issue is unexpected, you can communicate any updates you have on progress to resolve it.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "with-update"
+}) }}
+
+<h3 id="standalone-page">Standalone page</h2>
+
+<p>If you are using a proxy server or content delivery network (CDN), it will have a error page which is shown automatically whenever your service is unavailable.</p>
+
+<p>As this page is hosted separately, you will need to configure a standalone error page which is not dependent on your service.</p>
+
+<p>Use this standalone template. You will need to edit it to add the name of your service and any relevant content to tell your users what to do if the service is unavailable.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "standalone",
+  htmlOnly: true
+}) }}
 
 
 {% endblock %}
