@@ -1,0 +1,36 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "What we're working on" %}
+{% set pageSection = "Community and contribution" %}
+{% set pageDescription = "An overview of the work currently under way across the service manual and design system." %}
+{% set dateUpdated = "May 2026" %}
+
+{% block beforeContent %}
+  {% include "community-and-contribution/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <h2 class="nhsuk-heading-m">Now</h2>
+
+  <ul  class="nhsuk-body">
+    <li>updates to card component and hub page pattern</li>
+    <li>updated accessibility statement</li>
+    <li>frontend v 10.5 - search input component and icon buttons</li>
+  </ul>
+
+  <h2 class="nhsuk-heading-m">Next</h2>
+
+  <ul>
+    <li>frontend v 11 - breaking release</li>
+    <li>sortable tables component, currently being piloted</li>
+    <li>secondary (tabbed) navigation component</li>
+    <li>enhancing expanders (using GOV.UK accordion functionality)</li>
+    <li>unhappy path pages, including Page not found and Problem with this service</li>
+  </ul>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}
