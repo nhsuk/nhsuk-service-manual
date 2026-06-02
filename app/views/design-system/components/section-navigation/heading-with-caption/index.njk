@@ -1,0 +1,24 @@
+{% from "section-navigation/macro.njk" import sectionNavigation -%}
+
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">
+  <span class="nhsuk-caption-xl">Today</span>
+  Cases
+</h1>
+
+{{ sectionNavigation({
+  items: [
+    {
+      href: "#",
+      text: "Today",
+      current: true
+    },
+    {
+      href: "#",
+      text: "Upcoming"
+    },
+    {
+      href: "#",
+      text: "Completed"
+    }
+  ]
+}) }}
