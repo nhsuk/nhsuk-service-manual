@@ -1,0 +1,9 @@
+{% from "header/macro.njk" import header %}
+
+{{ header({
+  classes: "nhsuk-header--inline",
+  search: {
+    placeholder: "Search",
+    visuallyHiddenLabel: "Search the NHS website"
+  }
+}) }}

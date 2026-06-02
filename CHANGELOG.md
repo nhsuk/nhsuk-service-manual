@@ -5,6 +5,65 @@
 :new: **New features**
 
 - Guidance on creating Service unavailable pages
+- Add guidance to use table row headers
+
+:wrench: **Maintenance**
+
+- Update header guidance as logged-in account is now used on public services
+
+## 8.11.0 - 14 May 2026
+
+:wrench: **Maintenance**
+
+- Improve guidance on panel component, interruption page pattern and logged-in account header after user testing
+- Update text messages section of Writing NHS messages after feedback
+- Add links to more GOV.UK resources to bring NHS service standard points 2/3, 4 and 6 into line with GOV
+- Add link to Writing NHS messages guidance to service standard 2/3
+- Update intro to service standard 2 on service standard home page
+- Fix typo in service standard 12
+- Clarify content guidance about full stops and linked text
+- Remove full stops from linked text
+- Amend alt text for BSL icon
+- Fix HTML and Nunjucks quote style
+
+## 8.10.0 - 21 April 2026
+
+:new: **New features**
+
+- Add blog post
+
+## 8.9.0 - 2 April 2026
+
+:new: **New features**
+
+- Update card component guidance to make it clearer
+- Add section on actions in cards
+- Split out use of cards for navigation into new hub page pattern
+- Update NHS App greeting section in Writing NHS messages
+- Add section on using autocomplete attribute to date input
+
+:wrench: **Maintenance**
+
+- Remove care card page from components and redirect to care card pattern
+
+## 8.8.0 - 19 March 2026
+
+:new: **New features**
+
+- Add a modifier class to make header component with account or search inline on small screens
+- Improve clickable card hover and active states, and target area
+- Remove table row hover styles
+
+:wrench: **Maintenance**
+
+- Port Nunjucks syntax highlighting from GOV.UK design system
+- Support focus and keyboard left/right scrolling on code blocks
+
+## 8.7.2 - 2 March 2026
+
+:wrench: **Maintenance**
+
+- Make minor changes to NHS messages guidance
 
 ## 8.7.1 - 18 February 2026
 

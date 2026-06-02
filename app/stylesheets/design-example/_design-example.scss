@@ -43,6 +43,19 @@
   }
 }
 
+// Widths bigger than expected to account for scrollbar and internal paddding of the frame
+.app-design-example--s .app-design-example__frame {
+  width: 320px; // sub-mobile / smart watch
+}
+
+.app-design-example--m .app-design-example__frame {
+  width: 440px; // common mobile
+}
+
+.app-design-example--l .app-design-example__frame {
+  width: 640px; // small tablet
+}
+
 .app-design-example__frame {
   display: block;
   position: relative;
@@ -67,8 +80,4 @@ p + .app-design-example {
 
 .nhsuk-lede-text + .app-design-example {
   @include nhsuk-responsive-padding(0, "top");
-}
-
-.app-tabs__container pre {
-  background-color: nhsuk-colour("grey-5");
 }

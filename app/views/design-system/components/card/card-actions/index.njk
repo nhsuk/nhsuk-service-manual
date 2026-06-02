@@ -1,0 +1,25 @@
+{% from "card/macro.njk" import card %}
+
+{% set cardDescriptionHtml %}
+  <p><strong>SenderID</strong>: NHS Blood Test</p>
+  <p>((firstName)) ((lastName)), you are due for your NHS blood test. Book your appointment or find out more at <a href="#">http://www.nhs.uk/service-name-invite</a></p>
+{% endset %}
+
+{{ card({
+  clickable: false,
+  heading: "Template: Appointment invitation 1",
+  headingSize: "m",
+  actions: {
+    items: [
+      {
+        text: "Edit",
+        href: "#"
+      },
+      {
+        text: "Delete",
+        href: "#"
+      }
+    ]
+  },
+  descriptionHtml: cardDescriptionHtml
+}) }}

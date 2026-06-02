@@ -1,5 +1,4 @@
 import { initialize } from '@open-iframe-resizer/core'
-import ClipboardJS from 'clipboard'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -14,11 +13,10 @@ export class DesignExample extends Component {
     this.hiddenClass = 'js-hidden'
 
     this.tabs = this.$root.querySelectorAll(`.${this.tabClass} a`)
-    this.examples = this.$root.querySelectorAll(
-      '.app-code-snippet__preformatted'
+    this.examples = /** @type {NodeListOf<HTMLElement>} */ (
+      this.$root.querySelectorAll('.app-code-snippet__preformatted')
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
-    this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
     this.state = { isMouseDown: false }
 
@@ -84,10 +82,6 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
-    if (ClipboardJS.isSupported()) {
-      this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
-    }
-
     if (this.iframe) {
       const { iframe, state } = this
 
@@ -111,7 +105,7 @@ export class DesignExample extends Component {
     this.tabs.forEach((tab) => {
       if (tab.href !== $tabLink.href) {
         tab.setAttribute('aria-expanded', 'false')
-        tab.parentElement.classList.remove(this.currentTabClass)
+        tab.parentElement?.classList.remove(this.currentTabClass)
       }
     })
 
@@ -127,31 +121,11 @@ export class DesignExample extends Component {
     })
 
     this.tabs.forEach((tab) => {
-      if (tab.parentElement.classList.contains(this.currentTabClass)) {
+      if (tab.parentElement?.classList.contains(this.currentTabClass)) {
         tab.setAttribute('aria-expanded', 'false')
         tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
-  }
-
-  initCopyClick(copyButton) {
-    const clipboard = new ClipboardJS(copyButton, {
-      target: () => copyButton.parentElement.querySelector('pre')
-    })
-
-    // Update button on success
-    clipboard.on('success', (event) => {
-      copyButton.innerText = 'Code copied'
-      event.clearSelection()
-
-      // Reset button after delay
-      setTimeout(() => {
-        copyButton.innerText = 'Copy code'
-      }, 2500)
-    })
-
-    // Reveal button
-    copyButton.removeAttribute('hidden')
   }
 
   showEl(el) {

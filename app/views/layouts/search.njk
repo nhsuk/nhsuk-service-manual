@@ -54,7 +54,7 @@
     <div class="nhsuk-grid-column-two-thirds">
     {% if results | length %}
       <p class="nhsuk-u-margin-bottom-4">
-        1 – {{ results | length }} of {{ resultsLen }} results for "{{ query }}"
+        {{ resultsStart }} – {{ resultsEnd }} of {{ resultsTotal }} results for "{{ query }}"
       </p>
 
       <ul class="nhsuk-list nhsuk-list--border">

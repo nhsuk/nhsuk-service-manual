@@ -34,7 +34,7 @@ export default (config) => {
 
   // Submit search using current input value if input is focused and enter is pressed
   form.addEventListener('keyup', ({ key }) => {
-    if (key === 'Enter' && document.activeElement.id === input.id) {
+    if (key === 'Enter' && document.activeElement?.id === input.id) {
       form.submit()
     }
   })

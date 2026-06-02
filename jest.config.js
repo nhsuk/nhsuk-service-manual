@@ -19,7 +19,7 @@ const config = {
   // Enable Babel transforms for ESM-only node_modules
   // See: https://jestjs.io/docs/ecmascript-modules
   transformIgnorePatterns: [
-    `<rootDir>/node_modules/(?!${['marked', 'slug'].join('|')}/)`
+    `<rootDir>/node_modules/(?!${['marked'].join('|')}/)`
   ]
 }
 
@@ -28,9 +28,8 @@ const config = {
  *
  * @type {Config}
  */
-export default {
+module.exports = {
   collectCoverageFrom: [
-    '<rootDir>/app.js',
     '<rootDir>/app/**/*.{js,mjs}',
     '<rootDir>/lib/**/*.{js,mjs}',
     '<rootDir>/middleware/**/*.{js,mjs}'
@@ -45,6 +44,7 @@ export default {
     {
       ...config,
       displayName: 'JavaScript behaviour tests',
+      setupFilesAfterEnv: ['./jest.jsdom.setup.mjs'],
       testEnvironment: 'jsdom',
       testMatch: ['<rootDir>/**/*.jsdom.test.{js,mjs}']
     }
@@ -53,10 +53,6 @@ export default {
   // Enable GitHub Actions reporter UI
   reporters: ['default', 'github-actions']
 }
-
-/**
- * @typedef {Exclude<Config['projects'][0], string>} ProjectConfig
- */
 
 /**
  * @import { Config } from 'jest'

@@ -29,7 +29,7 @@ jobs:
 
       - name: Setup Node
         if: steps.npm-install-cache.outputs.cache-hit != 'true'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
 
@@ -59,7 +59,7 @@ jobs:
           path: node_modules
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
@@ -84,7 +84,7 @@ jobs:
           path: node_modules
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
@@ -93,7 +93,7 @@ jobs:
         run: npm run test:js -- --coverage
 
       - name: Save test coverage
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Javascript unit tests coverage
           path: coverage
@@ -117,11 +117,11 @@ jobs:
 
       - name: Restore test coverage
         if: ${{ env.SONAR_TOKEN }}
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: Javascript unit tests coverage
           path: coverage
 
       - name: Sonar analysis
         if: ${{ env.SONAR_TOKEN }}
-        uses: SonarSource/sonarqube-scan-action@v7
+        uses: SonarSource/sonarqube-scan-action@v8

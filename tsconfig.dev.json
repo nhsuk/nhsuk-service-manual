@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": [
+      "@testing-library/jest-dom",
+      "jest",
+      "node",
+      "typed-query-selector"
+    ]
+  },
+  "include": [
+    "./app/**/*.test.mjs",
+    "./lib/**/*.test.mjs",
+    "./.prettierrc.js",
+    "./.stylelintrc.js",
+    "./*.config.js",
+    "./*.config.mjs",
+    "./*.setup.mjs"
+  ]
+}
