@@ -14,11 +14,11 @@
 
 {% block bodyContent %}
   
-  {{ designExample({
-    group: "components",
-    item: "section-navigation",
-    type: "default"
-  }) }}
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "default"
+}) }}
 
 <h2 id="when-to-use">When to use section navigation</h2>
 <p>Use the section navigation component when users need to move between related pages in a service. For example, if your service is a case management system, you could use section navigation if there are several pages associated with a single case.</p>
@@ -63,21 +63,25 @@
 <p>There are 2 ways to do this.</p>
 <h5>Hidden text</h5>
 <p>Keep the visual heading as-is and add a hidden span after it that names the current tab. Screen readers will announce both parts, while sighted users only see the main heading.</p>
-  {{ designExample({
-    group: "components",
-    item: "section-navigation",
-    type: "heading-with-hidden-text"
-  }) }}
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "heading-with-hidden-text"
+}) }}
+
 <p>The page <code>&lt;title&gt;</code> should also include the tab name, for example: Cases – Today – [Service name].</p>
 <p>This works well when the consistent heading is already meaningful context and you just need to make the tab heading unique for assistive technology.</p>
 <h5>Caption</h5>
 <p>You can use a caption inside the <code>&lt;h1&gt;</code> to provide context, with the tab name as the caption.</p>
 <p>The caption ("Today") appears visually above the heading text ("Cases") but is part of the same <code>&lt;h1&gt;</code> element, so screen readers announce it as a single heading.</p>
-  {{ designExample({
-    group: "components",
-    item: "section-navigation",
-    type: "heading-with-caption"
-  }) }}
+
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "heading-with-caption"
+}) }}
+
 <p>The page <code>&lt;title&gt;</code> should still be unique, for example: Today – Cases – [Service name].</p>
 
 <h3 id="labelling-and-ordering-items">Labelling and ordering items</h3>
@@ -86,16 +90,26 @@
 <p>Decide on the default item to load. Generally it's best to order items from most to least used, with the most-used item being the first in the list and the one that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not the most useful one to display by default.</p>
 <p>[Include example of past, current, future quarters?]</p>
 
-<h3 id="counts">Counts</h3>
-<p>The component allows you to include a count of items displayed on that tab. [Explain and include example?]</p>
-<p>[<a href="https://design-patterns.service.justice.gov.uk/components/sub-navigation/">MOJ sub-nav page</a> refers to a <a href="https://design-patterns.service.justice.gov.uk/components/notification-badge/">notification badge component</a>.]</p>
+<h3 id="badges">Badges</h3>
+<p>You can add a badge to a section navigation link to show a count or status label. Keep the visible label short. You can add visually hidden text to provide additional context for screen reader users.</p>
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "badges"
+}) }}
 
-<h3 id="dark-backgrounds">Section navigation component on dark backgrounds</h3>
-<p>[Include reverse example.]</p>
+<h3 id="dark-backgrounds">Section navigation on dark backgrounds</h3>
+<p>Use the <code>nhsuk-section-navigation--reverse</code> modifier class to show a white button on dark backgrounds.</p>
+<p>Make sure all users can see the section navigation. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a></p>
 
-<h2>Accessibility</h2>
-<p>[Anything to say about this?]</p>
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "reverse"
+}) }}
 
 <h2>Research</h2>
 <p>[Can we say where this was developed and tested? MAVIS?]</p>
+
 {% endblock %}
