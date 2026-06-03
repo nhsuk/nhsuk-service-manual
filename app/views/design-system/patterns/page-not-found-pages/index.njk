@@ -1,0 +1,60 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Page not found pages" %}
+{% set pageDescription = "A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "June 2026" %}
+{% set backlog_issue_id = "233" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{{ designExample({
+  group: "patterns",
+  item: "page-not-found-pages",
+  type: "default"
+}) }}
+
+<h2 id="when-to-use">When to use this pattern</h2>
+<p>Use a page not found if someone is trying to view a page that does not exist. This happens if someone:</p>
+<ul>
+    <li>selects a link or button that takes them to a page that does not exist</li>
+    <li>types or copies a web address for a page that does not exist</li>
+    <li>types or copies a web address incorrectly</li>
+</ul>
+<p>Test all links and buttons to make sure they work. Make sure any web addresses in your service, letters, forms and on the NHS website are for pages that exist or redirect to pages that exist.</p>
+
+<h2 id="how-to-use">How to use this pattern</h2>
+<p>The page should include:</p>
+<ul>
+    <li>"Page not found – service name – NHS" as the page title</li>
+    <li>"Page not found" as the <code>&lt;h1&gt;</code></li>
+    <li>options to navigate back, for example to the service start page or website home page</li>
+    <li>an alternative journey, if it's a transactional service</li>
+    <li>contact information</li>
+</ul>
+<p>If your page is part of a healthcare service, tell users how to complete their task through a different channel.</p>
+<p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "page-not-found-pages",
+  type: "with-contact-details"
+}) }}
+
+<p>The content should be clear and concise, not blame the user.</p>
+
+<p>Do not use:</p>
+<ul>
+    <li>breadcrumbs</li>
+    <li>technical jargon like 404 or bad request</li>
+    <li>informal or humorous words like "oops"</li>
+    <li>red text to warn people</li>
+</ul>
+
+{% endblock %}

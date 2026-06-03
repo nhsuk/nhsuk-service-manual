@@ -1,0 +1,33 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper-full-layout.njk" %}
+
+{% from "card/macro.njk" import card %}
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Home"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="nhsuk-heading-xl">Page not found</h1>
+<p>If you typed or pasted the web address, check it is correct.</p>
+<p>If the web address is correct or you selected a link or button, it could be a technical problem. <a href="#">Go back to the start page</a>.</p>
+
+<h2>Other ways to register</h2>
+<p>Print and fill in a <a href="#">Register with a GP surgery paper form</a> and return it to the surgery you want to register with.</p>
+<p>You can also get a copy of the form from any GP surgery.</p>
+<p><a href="#">Find your nearest GP surgery</a>.</p>
+
+{% endblock %}
+
