@@ -1,0 +1,54 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Search input" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Use a search input to help users find something specific by entering a word, phrase or characters." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "June 2026" %}
+{% set backlog_issue_id = "587" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "default"
+  }) }}
+
+  <h2>When to use search input</h2>
+  <p>Use the search input component to help users find a topic, person, task, place or other type of record when navigation alone is not practical.</p>
+  <p>You can enable <a href="/design-system/components/header#search-bar">search in the header component</a>. Use this to provide a global search.</p>
+
+  <h2>When not to use search input</h2>
+  <p>Do not rely on search in place of a well-structured information architecture and navigation.</p>
+
+  <h2>How to use search input</h2>
+  <p>When a user types into the input, a cross icon button appears which allows users to clear the input. This is an enhancement for browsers that support it. Some browsers such as Firefox will not show it.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "nhs-number"
+  }) }}
+
+  <p>The search button can include a text label, for example "Find".</p>
+  <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "secondary-button"
+  }) }}
+
+  <p>The search input can be large, depending on the context of the page. For example, you can use a large input on a dedicated search page.</p>
+  {{ designExample({
+    group: "components",
+    item: "search-input",
+    type: "large"
+  }) }}
+
+{% endblock %}

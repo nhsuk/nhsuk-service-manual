@@ -42,12 +42,8 @@
 }
 
 .app-side-nav__link {
-  text-decoration: none;
   @include nhsuk-link-style-no-visited-state;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  @include nhsuk-link-style-no-underline;
 
   @include nhsuk-media-query($until: desktop) {
     text-decoration: underline;

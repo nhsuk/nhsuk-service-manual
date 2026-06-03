@@ -1,0 +1,15 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+  label: {
+    text: "Search patients",
+    size: "m"
+  },
+  hint: {
+    text: "Search by name, NHS number, postcode, or date of birth"
+  },
+  name: "example",
+  id: "example",
+  classes: "nhsuk-input--width-10",
+  value: "LS1 4AP"
+}) }}

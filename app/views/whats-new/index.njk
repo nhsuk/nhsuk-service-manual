@@ -9,22 +9,16 @@
 
   <h2>Latest updates</h2>
 
-  <h3>May 2026</h3>
-
-  {% set contentHtml %}
-    <p>Updated <a href="/content/writing-nhs-messages#text-messages">text messages section of Writing NHS messages</a> after feedback</p>
-  {% endset %}
+  <h3>June 2026</h3>
 
   {% set designHtml %}
-    <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
-  {% endset %}
-
-  {% set standardHtml %}
-    <p>Updated links to related resources for <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2 and 3, 4 and 6 to align with GOV standard</p>
+    <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
+    <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
+    <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
   {% endset %}
 
   {{ table({
-    caption: "Updates to the service manual in May 2026",
+    caption: "Updates to the service manual in June 2026",
     captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
@@ -38,26 +32,10 @@
     rows: [
       [
         {
-          text: "Content guide"
-        },
-        {
-          html: contentHtml
-        }
-      ],
-      [
-        {
           text: "Design system"
         },
         {
           html: designHtml
-        }
-      ],
-      [
-        {
-          text: "Standards and technology"
-        },
-        {
-          html: standardHtml
         }
       ]
     ]

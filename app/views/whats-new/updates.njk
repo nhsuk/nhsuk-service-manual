@@ -10,6 +10,39 @@
 
 {% block bodyContent %}
 
+<h2>June 2026</h2>
+
+{% set designHtml202606 %}
+  <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
+  <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
+  <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in June 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202606
+      }
+    ]
+  ]
+}) }}
+
+
 <h2>May 2026</h2>
 
 {% set contentHtml202605 %}

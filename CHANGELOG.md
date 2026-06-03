@@ -4,7 +4,8 @@
 
 :new: **New features**
 
-- Add guidance to use table row headers
+- Add new search input component
+- Add row headers to tables and update guidance on using table headers
 
 :wrench: **Maintenance**
 
