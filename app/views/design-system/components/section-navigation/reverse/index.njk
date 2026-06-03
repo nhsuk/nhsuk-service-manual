@@ -1,0 +1,28 @@
+---
+background: blue
+---
+
+{% from "section-navigation/macro.njk" import sectionNavigation -%}
+
+{{ sectionNavigation({
+  classes: "nhsuk-section-navigation--reverse",
+  items: [
+    {
+      href: "#",
+      text: "Summary"
+    },
+    {
+      href: "#",
+      text: "Observations",
+      current: true
+    },
+    {
+      href: "#",
+      text: "Medicines"
+    },
+    {
+      href: "#",
+      text: "Referrals"
+    }
+  ]
+}) }}

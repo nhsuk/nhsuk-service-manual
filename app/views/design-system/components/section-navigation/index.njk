@@ -1,0 +1,111 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Section navigation" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "A list of links to allow users to navigate between pages in a section of a service." %}
+{% set theme = "Navigation" %}
+{% set dateUpdated = "June 2026" %}
+{% set backlog_issue_id = "556" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "default"
+}) }}
+
+<h2 id="when-to-use">When to use section navigation</h2>
+<p>Use the section navigation component when users need to move between related pages in a service. For example, if your service is a case management system, you could use section navigation if there are several pages associated with a single case.</p>
+<p>It is designed for staff-facing services that staff use repeatedly.</p>
+
+<h2 id="when-not-to-use">When not to use section navigation</h2>
+<p>Do not use section navigation as the primary navigation in a service. Use the <a href="/design-system/components/header">header component</a> with the navigation option.</p>
+<p>Be careful about using it on content-heavy public websites. Users may scroll past section navigation on content pages. Other patterns may help users navigate content better, for example, the:</p>
+<ul>
+    <li><a href="/design-system/patterns/hub-page">hub page pattern</a></li>
+    <li><a href="/design-system/patterns/mini-hub">mini hub pattern</a></li>
+</ul>
+<p>Do not use this component for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
+<ul>
+    <li>cutting the content back</li>
+    <li>using headings</li>    
+    <li><a href="/design-system/components/details">details</a></li>
+    <li><a href="/design-system/components/expander">expanders</a></li>
+    <li><a href="/design-system/components/tabs">tabs</a></li>
+</ul>
+
+<p>Details, expanders and tabs hide sections of content on a page which a user can choose to reveal.</p>
+
+<h2 id="how-to-use">How to use section navigation</h2>
+<p>Section navigation is a horizontal list of links. Use it in a full-width column.</p>
+<p>On small screens, it displays vertically if there's not enough space for all the links to display horizontally. (It uses JavaScript to do this.) You can also set it to display vertically. Read more about <a href="#vertical-section-navigation">vertical section navigation</a>.</p>
+<p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
+<p>If you put the component before your <code>&lt;h1&gt;</code>, put it before the <code>&lt;main&gt;</code> element of the page. This means it is skipped when the skip link is used.</p>
+<p>Unlike the navigation in the header, one of the items in section navigation should always be highlighted as the current page. This item remains a link, but uses black text.</p>
+<p>Each item in the navigation is a link to a separate full page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
+
+
+<h3>Making page titles and headings unique</h3>
+<p>Make sure each page linked from the section navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
+<p>There are different ways to do this, depending on where you put the section navigation. For example, if the section navigation is near to the <code>&lt;h1&gt;</code>, you can keep the visual heading as-is and add a hidden span after it that names the current page. Screen readers will announce both parts, while sighted users only see the main heading.</p>
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "heading-with-hidden-text"
+}) }}
+
+<p>The page <code>&lt;title&gt;</code> should also include the page name, for example: Cases – Today – Service name – NHS.</p>
+<p>Other ways to make headings unique include:</p>
+<ul>
+  <li>using a caption inside the <code>&lt;h1&gt;</code>, for example you could have a caption "Today" appear above the heading text "Cases"</li>
+  <li>writing a different heading for each page, such as "Today's cases"</li>
+</ul>
+
+<h3 id="vertical-section-navigation">Vertical section navigation</h3>
+<p>If your labels are long or there's not enough horizontal space, use the <code>vertical</code> option to keep section navigation stacked at all screen sizes. You can combine this with columns to provide a side navigation.</p>
+
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "vertical"
+}) }}
+
+<h3 id="labelling-and-ordering-links">Labelling and ordering links</h3>
+<p>Consider how many links to include in the navigation. Take into account link text length and how the navigation displays responsively. Keep link text as short as possible.</p>
+<p>Make sure that the link text reflects the heading of the page it links to.</p> 
+<p>Decide on the default page to load. Generally it's best to order links from most to least used, with the most-used link being the first in the list and the page that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not the most useful one to display by default.</p>
+
+<h3 id="badges">Badges</h3>
+<p>You can add a badge to a section navigation link to show a count or status label. Keep the visible label short. You can add visually hidden text to give additional context for screen reader users.</p>
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "badges"
+}) }}
+
+<h3 id="dark-backgrounds">Section navigation on dark backgrounds</h3>
+<p>Use the <code>nhsuk-section-navigation--reverse</code> modifier class to show a white button on dark backgrounds.</p>
+<p>Make sure all users can see the section navigation. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
+
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "reverse"
+}) }}
+
+<h2>Research</h2>
+<p>This component was used and tested in:</p>
+<ul>
+  <li>the Manage vaccinations in schools (Mavis) service</li>
+  <li>the Manage breast screening service</li>
+</ul>
+
+{% endblock %}
