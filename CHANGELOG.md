@@ -6,6 +6,8 @@
 
 - Add new search input component
 - Add row headers to tables and update guidance on using table headers
+- Add new radios default example and update guidance about inline radios
+- Update guidance and example for inline checkboxes
 
 :wrench: **Maintenance**
 
