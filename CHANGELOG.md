@@ -1,11 +1,13 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.12.0 - 4 June 2026
 
 :new: **New features**
 
 - Add new search input component
 - Add row headers to tables and update guidance on using table headers
+- Add new inline checkboxes feature and guidance
+- Update default example for radios and update guidance about inline radios
 
 :wrench: **Maintenance**
 
