@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a notification banner to tell the user something they need to know that's not directly related to the page content." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "559" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Notification banners added in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#notification-banners">notification banners in version 10</a></p>
-  {% endcall %}
 
 {{ designExample({
   group: "components",

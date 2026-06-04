@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Help users to" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "313" %}
 
 {% block beforeContent %}
@@ -13,8 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-change-answers">change information they've previously given in an answer</a>.</p>
 
   {{ designExample({
     group: "patterns",
@@ -67,27 +65,12 @@
 
   <p>You should provide a "Change" link next to each section on your check answers page so that users can add or change the information. "Change" links contain hidden text to make them accessible to screen reader users. Update the hidden text to describe what each "Change" link is for.</p>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-change-answers",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
+  <p>The answers pages should look the same way they did when the user last used them, with information they have already entered pre-populated.</p>
 
-    <p>If a user decides to go back to a previous answer through a link, make sure information they've previously entered is pre-populated.</p>
-    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
-  {% endcall %}
+  <p>When they've finished, the "Continue" button should return them to the check answers page. They should not need to go through the rest of the transaction again.</p>
 
-    <p>The answers pages should look the same way they did when the user last used them.</p>
+  <p>If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.</p>
 
-    <p>When they've finished, the "Continue" button should return them to the check answers page. They should not need to go through the rest of the transaction again.</p>
-
-    <p>If a user changes their response in a way that means you need to ask them more questions, do this before returning them to the check answers page.</p>
-
-    <p>If you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as "Not provided".</p>
+  <p>If you have questions that are optional, let users know that they've skipped them without giving an answer by showing their response as "Not provided".</p>
 
 {% endblock %}
