@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use back links to help users go back to the previous page in a multi-page transaction." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "32" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Back links updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#back-link">breaking code updates to back links in version 10</a></p>
-  {% endcall %}
-
-<p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-avoid-information-reentry">avoid re-entering information they've previously given when they go back to a page</a> and <a href="#wcag-interact-back-links">interact with back links</a>.</p>
 
 {{ designExample({
   group: "components",
@@ -45,42 +32,12 @@
 <p>Do not use a back link with <a href="/design-system/components/breadcrumbs">breadcrumbs</a>.</p>
 
 <h2>How to use back links</h2>
-<p>Make sure the text used in the link describes the action, for example "Back". Carry out research with users to
-  find the words that help them the most.</p>
-<p>The link should take users back to the page they were on in the state they last saw it.</p>
-
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-interact-back-links",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>If a user goes back to a previous page, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
-{% endcall %}
+<p>Make sure the text used in the link describes the action, for example "Back". Carry out research with users to find the words that help them the most.</p>
+<p>The link should take users back to the page they were on in the state they last saw it. Make sure information they have already entered is pre-populated. Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern.</p>
 
 <p>Generally, the back link should go at the top left of the page. Within the HTML it should appear before the <code>&lt;main&gt;</code> tag. This is so that <a href="/design-system/components/skip-link">skip link</a> skips past the back link to the main content.</p>
 
 <p>If you put the back link in a different position, do not put it close to other links or buttons where it might distract users from what they need to do. Also think about people who use a screen reader: is the page read out in a logical order?</p>
-
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-interact-back-links",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>Make sure no other interactive elements are too close to the back link so users can easily interact with it. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-{% endcall %}
 
 <h3 id="back-link-as-a-button">Back link as a button</h3>
 <p class="rich-text">You can render the back link as a <code>button</code> element if necessary in order to post form

@@ -4,7 +4,7 @@
 {% set pageDescription = "Use this small set of icons that we know our users need and understand to help them identify and navigate content more quickly." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "September 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "4" %}
 
 {% from "nhsuk/macros/icon.njk" import nhsukIcon %}
@@ -14,19 +14,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Icons updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#components">breaking code updates to components (including icons) in version 10</a></p>
-  {% endcall %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-icon-focus">interact with icons used as buttons</a>.</p>
 
   <h2 id="icons">Icons you can use</h2>
   <p>Use these icons to mark important parts of the page and highlight things you want users to do.</p>
@@ -94,21 +81,6 @@
   <h2 id="how-to-use-these-icons">How to use these icons</h2>
   <p>Use icons sparingly, and not for decoration.</p>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-icon-focus",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action. For example: a search icon to submit a query supported by a labelled "Search" button.</p>
-    <p>This is to make sure users can easily interact with them. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-  {% endcall %}
-
   <h3>Using SVG classes for icons</h3>
   <p>We use scalable vector graphics (SVG) for icons, rather than images such as PNG. SVG are code snippets that you can drop directly into the HTML.</p>
   <p>SVG icons are sharp, flexible, and load quickly. You can control how they appear, for example their colour, with style sheets (CSS).</p>
@@ -120,6 +92,7 @@
 
   <h3>Changing the size of an icon</h3>
   <p>If you want to make an icon bigger, you can use the size override classes to make an icon 25%, 50%, 75% or 100% larger.</p>
+  <p>Make sure any icons used as buttons are at least 24px by 24px in target size, or that there is another way to perform the action.</p>
 
   {{ designExample({
     group: "styles",
