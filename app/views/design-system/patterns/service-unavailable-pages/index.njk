@@ -1,7 +1,7 @@
 {% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Service unavailable pages" %}
-{% set pageDescription = "Tell the user a service is unavailable on purpose. These are also known as 503 and shutter pages." %}
+{% set pageDescription = "Tell users what to do when your service is unavailable." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
@@ -22,12 +22,44 @@
 
 <h2 id="when-to-use">When to use this pattern</h2>
 
-<p>Use a service unavailable page when a service is temporaily not able to be used. This could be for planned reasons, or for reasons outside of your control such as a hosting provider outage.</p>
-
+<p>Use a service unavailable page when your service cannot be used temporarily. This could be for:</p>
+<ul>
+  <li>planned maintenance or upgrades</li>
+  <li>unplanned problems which will take time to fix</li>
+  <li>reasons outside of your control such as a hosting provider outage</li>
+</ul>
+<p>If there is an unexpected problem and you can fix it quickly, use the <a href="/design-system/patterns/problem-with-the-service-pages">There is a problem with the service pattern</a>. If you cannot fix the problem quickly, use this pattern.</p> 
 <p>Have a general page in case you need to make a service unavailable quickly and do not have time to update the page. As soon as you know when the service will be available, update the page.</p>
+<p>Consider what users should do while the service is unavailable. For example, include a phone number they can contact for urgent issues or a link to a form they can download to record information temporarily.</p>
+<p>You can also use this pattern when a service closes permanently.</p>
+<p>There are different versions of this pattern:</p>
+<ul>
+  <li><a href="#general-page">general page</a></li>
+  <li><a href="#when-you-know-when-service-will-be-available">when you know when the service will be available</a></li>
+  <li><a href="#updates">when you have updates about availability</a></li>
+  <li><a href="#standalone-page">standalone page</a></li>
+  <li><a href="#service-closed-permanently">service closed permanently</a></li>
+</ul>
 
-<p>You should consider what users should do while the service is unavailable. For example, you could include a phone number they could contact for urgent issues, or a link to a form which can be downloaded to record information temporarily.</p>
 <h2 id="how-to-use">How to use this pattern</h2>
+<p>The page should include:</p>
+<ul> 
+  <li>"Sorry, the service is unavailable – service name – NHS" as the page title</li>
+  <li>"Sorry, the service is unavailable" as the <code>&lt;h1&gt;</code></li>
+  <li>the day, date and time it is going to be available or what to do if it is permanently closed</li>
+  <li>information about what has happened to their answers if they are in the middle of a transaction</li>
+  <li>an alternative journey, if it's a transactional service</li>
+  <li>contact information</li>
+</ul>
+<p>If your service is a healthcare service, tell users how to complete their task through a different channel.</p>
+<p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times.</p>
+<p>Have clear and concise content and do not use:</p>
+<ul>
+  <li>breadcrumbs</li>
+  <li>vague, unhelpful words like maintenance, improvements</li>
+  <li>red text to warn people</li>
+</ul>
+
 <h3 id="general-page">General page</h2>
 
 {{ designExample({
@@ -36,19 +68,29 @@
   type: "default"
 }) }}
 
-<h3 id="planned">When the unavailability is planned</h2>
+<h3 id="when-you-know-when-service-will-be-available">When you know when the service will be available</h2>
 
-<p>Use this if you are planning to make the service unavailable for a short period.</p>
+<p>Use this if you are planning to make the service unavailable for a short period and can tell people when it will be open again.</p>
 
 {{ designExample({
   group: "patterns",
   item: "service-unavailable-pages",
-  type: "planned"
+  type: "when-you-know-when-service-will-be-available"
 }) }}
 
-<h3 id="updates">When you have updates about the issue</h2>
+<p>If you are planning to make your service unavailable, give users advance warning of this on your service <a href="/design-system/patterns/start-page">start page</a>.</p>
+<div class="app-example app-example--content">
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+  <h2 class="nhsuk-heading-s">Service unavailable tonight</h2>
+  <p>This service will be temporarily unavailable from 11.59pm on 2 August to 2am on 3 August 2026</p>
+</div>
 
-<p>If the technical issue is unexpected, you can communicate any updates you have on progress to resolve it.</p>
+<h3 id="updates">When you have updates about availability</h2>
+
+<p>If the technical issue is unexpected, communicate any updates you have on progress to resolve it.</p>
 
 {{ designExample({
   group: "patterns",
@@ -71,5 +113,13 @@
   htmlOnly: true
 }) }}
 
+<h3 id="service-closed-permanently">Service closed permanently</h2>
+<p>Refer users to another service or to somewhere that helps them deal with their problem.</p>
 
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable-pages",
+  type: "closed-replaced"
+}) }}
+<p>Include a note on any pages that refer to the service. [Needs more work.]</p>
 {% endblock %}
