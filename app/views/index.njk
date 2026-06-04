@@ -17,16 +17,6 @@
             <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">Use the service manual to build consistent, usable services that put people first. Learn from the research and experience of other NHS teams.</p>
           </div>
         </div>
-        <div class="nhsuk-grid-column-one-third app-latest-update">
-          {% call card({
-            heading: "What's new",
-            headingSize: "m",
-            href: "/whats-new",
-            classes: "app-card--transparent nhsuk-u-margin-0"
-          }) %}
-            <p class="nhsuk-card__description">We've improved our guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing.</p>
-          {% endcall %}
-        </div>
       </div>
     </div>
   </section>
@@ -34,18 +24,6 @@
   <section class="nhsuk-section">
     <div class="nhsuk-width-container">
       <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-full nhsuk-card-group__item">
-          {% call card({
-            clickable: true
-          }) %}
-              {{ tag({
-                text: "Version 10",
-                classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-0 nhsuk-u-margin-right-3"
-              }) }}
-
-              <h2 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0 nhsuk-u-display-inline-block nhsuk-u-font-weight-normal">Design system and NHS.UK frontend library updated: <a href="/design-system/guides/updating-to-v10">see our update guide</a></h2>
-          {% endcall %}
-        </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
             heading: "Standards and technology",
@@ -101,6 +79,17 @@
           }) }}
         </li>
       </ul>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l">
+            What's new
+            <span class="nhsuk-caption-m">May 2026</span>
+          </h2>
+          <h3 class="nhsuk-heading-xs"></h3>
+          <p>We've improved our guidance on the panel component, interruption page pattern and logged-in account header after user testing.</p>
+          <p><a href="whats-new/">See our latest updates on the What's new page</a></p>
+        </div>
+      </div>
       <hr class="nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-6">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">

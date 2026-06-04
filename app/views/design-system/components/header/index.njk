@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "May 2026" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "16" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Header updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#header">breaking code updates to header in version 10</a></p>
-  {% endcall %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a> and <a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -64,35 +51,7 @@
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-do-not-cover-content",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Do not make header elements, like the "More" dropdown menu, sticky to the top of the page by using <code>position: fixed</code> or any other method. In other words, avoid anything that makes the menu sit on top of page content.</p>
-    <p>This is to make sure it does not hide or obscure any content which has a focus applied. This complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not Obscured (W3C)</a>.</p>
-  {% endcall %}
-
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-consistent-help-links",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>You can add a link to a "help" page in your service's header. If you do, the link must be positioned consistently in the header, and must always link to the same place.</p>
-    <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
-  {% endcall %}
+  <p>If you add a link to a "help" page in your service's header, the link must be positioned consistently in the header, and must always link to the same place.</p>
 
   <h3 id="nhs-logo-and-service-name">NHS logo and service name</h3>
   <p>The NHS logo must always be used. Add a service name to distinguish your service from the main NHS website at <a href="https://www.nhs.uk">www.nhs.uk</a>.</p>

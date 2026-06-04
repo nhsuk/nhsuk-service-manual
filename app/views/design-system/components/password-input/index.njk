@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users to create and enter passwords." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "521" %}
 
 {% block beforeContent %}
@@ -80,24 +80,10 @@
 
   <h3 id="allow-copy-and-paste">Allow copy and paste</h3>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-avoid-dragging-multiple-options",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Let users copy and paste passwords. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 success criterion 3.3.8 Accessible authentication (W3C)</a>.</p>
-  {% endcall %}
-
   <p>The NCSC recommends that online services let people:</p>
   <ul>
     <li>use password managers</li>
-    <li>paste passwords into web forms</li>
+    <li>let users copy and paste passwords</li>
   </ul>
 
   <h4 id="copying-text-from-password-fields">Copying text from password fields</h4>

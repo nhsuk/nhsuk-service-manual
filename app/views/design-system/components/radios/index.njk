@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use radios when you want users to select only 1 option from a list." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "19" %}
 
 {% block beforeContent %}
@@ -13,18 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component">Radios updates</h3>
-    <p>Added smaller radios in version 10.1</p>
-    <p>Made <a href="/design-system/guides/updating-to-v10#radios">"breaking code changes" to radios in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",

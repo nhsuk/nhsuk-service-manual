@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "242" %}
 
 {% block beforeContent %}
@@ -13,8 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-<p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-avoid-information-reentry">avoid re-entering information they've given in a previous answer</a> and <a href="#wcag-interact-without-click-drag-task">select an answer without relying on click and drag movements</a>.</p>
 
 {{ designExample({
   group: "patterns",
@@ -71,24 +69,12 @@
 
 <h4 id="input">Input</h4>
 <p>For example, a <a href="/design-system/components/text-input">text input</a> box, <a href="/design-system/components/radios">radios</a> or <a href="/design-system/components/checkboxes">checkboxes</a>.</p>
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-avoid-information-reentry",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>Make sure to only ask for a piece of information once within a single journey. Whenever possible, do not ask a user to re-enter information they've already provided. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
-  <p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
-  <ul>
-    <li>pre-populating the relevant fields</li>
-    <li>showing carried-forward responses as an option for the user to select</li>
-  </ul>
-{% endcall %}
+<p>Make sure to only ask for a piece of information once within a single journey. </p>
+<p>If the same type of information is needed more than once, make it easier to reuse previously entered answers by:</p>
+<ul>
+  <li>pre-populating the relevant fields</li>
+  <li>showing carried-forward responses as an option for the user to select</li>
+</ul>
 
 <h4 id="continue-button">Continue button</h4>
 <p>Make sure your Continue button is:</p>
@@ -189,19 +175,7 @@
 </ul>
 
 <h3>Using range sliders</h3>
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-interact-without-click-drag-task",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>Avoid using range slider questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
-  <p>If you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
-{% endcall %}
+<p>Avoid using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range"> range slider</a> questions, where the user needs to click and drag a selector across a range of answers or values. These types of controls are difficult for some users to interact with.</p>
+<p>If you do use a range slider, you must provide a method for selecting an answer that does not rely on click and drag movements. This relates to <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
 
 {% endblock %}
