@@ -8,3 +8,14 @@
   width: 100%;
   border: 1px solid nhsuk-colour("grey-3");
 }
+
+.app-hero__image {
+  width: 100%;
+  max-width: 70vw;
+  border: 0;
+  margin-inline: auto;
+
+  @include nhsuk-media-query($from: desktop) {
+    margin: 0;
+  }
+}
