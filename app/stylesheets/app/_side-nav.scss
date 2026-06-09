@@ -37,7 +37,7 @@
   border-left: 4px solid nhsuk-colour("blue");
 
   .app-side-nav__link {
-    font-weight: $nhsuk-font-weight-bold;
+    @include nhsuk-font-weight-bold;
   }
 }
 
@@ -60,7 +60,7 @@
   }
 
   .app-side-nav__link {
-    font-weight: 400;
+    @include nhsuk-font-weight-normal;
   }
 }
 

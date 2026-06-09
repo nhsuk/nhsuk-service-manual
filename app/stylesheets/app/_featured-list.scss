@@ -37,7 +37,7 @@
 .featured-list--item__number {
   display: none;
   margin-bottom: nhsuk-spacing(3);
-  font-weight: $nhsuk-font-weight-bold;
+  @include nhsuk-font-weight-bold;
 }
 
 @include nhsuk-media-query($from: tablet) {
