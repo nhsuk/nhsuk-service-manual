@@ -15,7 +15,8 @@
   max-width: 70vw;
   margin-inline: auto;
 
-  @include nhsuk-media-query($from: desktop) {
-    margin: 0;
+  @include nhsuk-media-query($from: large-desktop) {
+    margin: 0 auto;
+    max-width: 76%;
   }
 }
