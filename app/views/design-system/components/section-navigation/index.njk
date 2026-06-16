@@ -26,7 +26,7 @@
 
 <h2 id="when-not-to-use">When not to use section navigation</h2>
 <p>Do not use section navigation as the primary navigation in a service. Use the <a href="/design-system/components/header">header component</a> with the navigation option.</p>
-<p>Be careful about using it on content-heavy public websites. Users may scroll past section navigation on content pages. Other patterns may help users navigate content better, for example, the:</p>
+<p>Be careful about using it on content-heavy public websites. Users may scroll past section navigation on content pages. Test with your users. Other patterns may help them navigate content better, for example, the:</p>
 <ul>
     <li><a href="/design-system/patterns/hub-page">hub page pattern</a></li>
     <li><a href="/design-system/patterns/mini-hub">mini hub pattern</a></li>
@@ -43,17 +43,21 @@
 <p>Details, expanders and tabs hide sections of content on a page which a user can choose to reveal.</p>
 
 <h2 id="how-to-use">How to use section navigation</h2>
-<p>Section navigation can be used as a horizontal list of links. You can also set it to display vertically. Read more about <a href="#vertical-section-navigation">vertical section navigation</a>.</p>
-<h3 id="horizontal-section-navigation">Horizontal section navigation</h3>
-<p>Use it in a full-width column.</p>
+<p>Section navigation can be used as a horizontal list of links. Use it in a full-width column.</p>
 <p>On small screens, it displays vertically if there's not enough space for all the links to display horizontally. (It uses JavaScript to do this.)</p>
+<p>There are also options to:</p>
+<ul>
+  <li>set <a href="#vertical-section-navigation">vertical section navigation</a> at all screen sizes</li>
+  <li>display <a href="#dark-backgrounds">section navigation on dark backgrounds</a></li>
+  <li>add <a href="#badges">badges</a> to show a count or status label</li>
+</ul>
+
 <p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
 <p>If you put the component before your <code>&lt;h1&gt;</code>, put it before the <code>&lt;main&gt;</code> element of the page. This means it is skipped when the skip link is used.</p>
 <p>Unlike the navigation in the header, one of the items in section navigation should always be highlighted as the current page. This item remains a link, but uses black text.</p>
 <p>Each item in the navigation is a link to a separate full page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
 
-
-<h4>Making page titles and headings unique</h4>
+<h3 id="making-page-titles-and-headings-unique">Making page titles and headings unique</h3>
 <p>Make sure each page linked from the section navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
 <p>There are different ways to do this, depending on where you put the section navigation. For example, if the section navigation is near to the <code>&lt;h1&gt;</code>, you can keep the visual heading as-is and add a hidden span after it that names the current page. Screen readers will announce both parts, while sighted users only see the main heading.</p>
   
@@ -70,6 +74,11 @@
   <li>writing a different heading for each page, such as "Today's cases"</li>
 </ul>
 
+<h3 id="labelling-and-ordering-links">Labelling and ordering links</h3>
+<p>Consider how many links to include in the navigation. Take into account link text length and how the navigation displays responsively. Keep link text as short as possible.</p>
+<p>Make sure that the link text reflects the heading of the page it links to.</p> 
+<p>Decide on the default page to load. Generally it's best to order links from most to least used, with the most-used link being the first in the list and the page that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not be the most useful one to display by default.</p>
+
 <h3 id="vertical-section-navigation">Vertical section navigation</h3>
 <p>If your labels are long or there's not enough horizontal space, use the <code>vertical</code> option to keep section navigation stacked at all screen sizes. You can combine this with columns to provide a side navigation.</p>
 
@@ -77,20 +86,6 @@
   group: "components",
   item: "section-navigation",
   type: "vertical"
-}) }}
-
-<h3 id="labelling-and-ordering-links">Labelling and ordering links</h3>
-<p>Consider how many links to include in the navigation. Take into account link text length and how the navigation displays responsively. Keep link text as short as possible.</p>
-<p>Make sure that the link text reflects the heading of the page it links to.</p> 
-<p>Decide on the default page to load. Generally it's best to order links from most to least used, with the most-used link being the first in the list and the page that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not be the most useful one to display by default.</p>
-
-<h3 id="badges">Badges</h3>
-<p>You can add a badge to a section navigation link to show a count or status label. Keep the visible label short. You can add visually hidden text to give additional context for screen reader users.</p>
-  
-{{ designExample({
-  group: "components",
-  item: "section-navigation",
-  type: "badges"
 }) }}
 
 <h3 id="dark-backgrounds">Section navigation on dark backgrounds</h3>
@@ -101,6 +96,15 @@
   group: "components",
   item: "section-navigation",
   type: "reverse"
+}) }}
+
+<h3 id="badges">Badges</h3>
+<p>You can add a badge to a section navigation link to show a count or status label. Keep the visible label short. You can add visually hidden text to give additional context for screen reader users.</p>
+  
+{{ designExample({
+  group: "components",
+  item: "section-navigation",
+  type: "badges"
 }) }}
 
 <h2>Research</h2>
