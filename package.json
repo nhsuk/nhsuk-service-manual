@@ -58,7 +58,7 @@
     "slug": "^9.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.29.3",
     "@eslint/config-helpers": "^0.6.0",
     "@eslint/js": "^10.0.1",
