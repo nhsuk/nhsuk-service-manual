@@ -1,0 +1,60 @@
+{% from "checkboxes/macro.njk" import checkboxes %}
+
+{{ checkboxes({
+  idPrefix: "symptoms",
+  name: "symptoms",
+  fieldset: {
+    legend: {
+      text: "Which vaccines would you like to include?",
+      size: "l",
+      isPageHeading: true
+    }
+  },
+  items: [
+    {
+      value: "all",
+      text: "All",
+      behaviour: "inclusive"
+    },
+    {
+      divider: "or",
+      behaviour: "inclusive"
+    },
+    {
+      value: "4in1",
+      text: "4-in-1 pre-school booster"
+    },
+    {
+      value: "6in1",
+      text: "6-in-1"
+    },
+    {
+      value: "hpv",
+      text: "HPV"
+    },
+    {
+      value: "menb",
+      text: "MenB"
+    },
+    {
+      value: "menacwy",
+      text: "MenACWY"
+    },
+    {
+      value: "mmrv",
+      text: "MMRV"
+    },
+    {
+      value: "rotavirus",
+      text: "Rotavirus"
+    },
+    {
+      value: "pneumococcal",
+      text: "Pneumococcal"
+    },
+    {
+      value: "tdipv",
+      text: "Td/IPV"
+    }
+  ]
+}) }}
