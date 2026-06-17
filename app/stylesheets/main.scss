@@ -19,57 +19,22 @@
   text-align: center;
 }
 
-// Removal of table cell element top and bottom margins
-// Remove bottom margin from a <p>
-.nhsuk-table__cell {
-  @include nhsuk-top-and-bottom;
-}
-
-// Helper to break long words/URLs in tables
-.nhsuk-table__cell--break-all {
-  word-break: break-all;
-}
-
-.nhsuk-table__cell--break-all--tablet {
-  @include nhsuk-media-query($until: tablet) {
-    word-break: break-all;
-  }
-}
-
-.nhsuk-table__cell--break-all--desktop {
-  @include nhsuk-media-query($until: large-desktop) {
-    word-break: break-all;
-  }
-}
-
-// helper to make table full width of parent (instead of 'reading-width') for wide tables
-.nhsuk-table.nhsuk-table--full-width {
-  max-width: 100%;
-}
-
-// Header menu button alignment for Safari
-.nhsuk-header__menu-toggle {
-  @include nhsuk-media-query($from: tablet, $until: large-desktop) {
-    margin-top: 0;
-  }
-}
-
 // The 'What's new' box in the home page hero
 .app-latest-update {
-  padding-bottom: nhsuk-spacing(8);
   padding-top: nhsuk-spacing(8);
+  padding-bottom: nhsuk-spacing(8);
 
   @include nhsuk-media-query($until: desktop) {
-    padding-bottom: nhsuk-spacing(6);
     padding-top: 0;
+    padding-bottom: nhsuk-spacing(6);
   }
 }
 
 // Custom style for home page hero card
 .app-card--transparent {
-  background: transparent;
   border: 2px solid $nhsuk-secondary-border-colour;
   color: nhsuk-colour("white");
+  background: transparent;
 
   a {
     color: nhsuk-colour("white");
@@ -88,21 +53,21 @@
 // Card video
 
 .app-card__video {
-  height: 0;
-  max-width: 100%;
-  overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
 
-  iframe,
-  object,
-  embed {
-    border: 0;
-    height: 100%;
-    left: 0;
+  iframe {
     position: absolute;
     top: 0;
+    left: 0;
+
     width: 100%;
+    height: 100%;
+
+    border: 0;
   }
 }
 
@@ -110,31 +75,8 @@
 // Reducing the padding on smaller screens
 .app-hero__wrapper {
   @include nhsuk-media-query($until: desktop) {
-    padding-bottom: nhsuk-spacing(5);
     padding-top: nhsuk-spacing(5);
-  }
-}
-
-// Team pictures used for lists
-
-.app-team-pictures-list {
-  @include nhsuk-responsive-padding(0, "left");
-
-  img {
-    border: 2px solid transparent;
-    border-radius: 30px;
-    display: inline-block;
-    height: 40px;
-    line-height: 1;
-    overflow: hidden;
-    vertical-align: middle;
-    width: 40px;
-
-    @include nhsuk-responsive-margin(3, "right");
-  }
-
-  li {
-    list-style: none;
+    padding-bottom: nhsuk-spacing(5);
   }
 }
 
@@ -142,8 +84,8 @@
 
 .nhsuk-back-to-top__link {
   display: inline-block;
-  margin-top: 0;
   position: relative;
+  margin-top: 0;
   @include nhsuk-font-size(19);
 }
 
@@ -165,10 +107,4 @@
 
 .app-wcag-22 p:last-child {
   margin-bottom: 0;
-}
-
-.app-icon-table .nhsuk-icon__user {
-  height: 32px;
-  margin: 0 1px;
-  width: 32px;
 }

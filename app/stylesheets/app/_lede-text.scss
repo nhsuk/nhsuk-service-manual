@@ -5,12 +5,12 @@
 ////
 
 .nhsuk-lede-text + .app-lede-text--sub {
-  margin-bottom: nhsuk-spacing(7);
   margin-top: nhsuk-spacing(-3);
+  margin-bottom: nhsuk-spacing(7);
 
   @include nhsuk-media-query($until: tablet) {
-    margin-bottom: nhsuk-spacing(5);
     margin-top: nhsuk-spacing(-3);
+    margin-bottom: nhsuk-spacing(5);
   }
 }
 

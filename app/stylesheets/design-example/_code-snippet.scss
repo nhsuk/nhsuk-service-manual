@@ -10,17 +10,22 @@
 
   .app-button {
     &--close {
-      background-color: transparent;
-      border: 0;
-      bottom: 16px;
-      color: nhsuk-colour("blue");
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 16px;
       position: static;
-      right: 16px;
-      text-decoration: underline;
       z-index: 1;
+      right: 16px;
+      bottom: 16px;
+
+      margin-top: 16px;
+
+      border: 0;
+
+      color: nhsuk-colour("blue");
+      background-color: transparent;
+
+      font-size: 16px;
+      text-decoration: underline;
+
+      cursor: pointer;
 
       &:hover {
         color: $nhsuk-link-hover-colour;
@@ -36,17 +41,17 @@
       }
 
       @include nhsuk-media-query($from: tablet) {
-        bottom: 24px;
         right: 24px;
+        bottom: 24px;
       }
     }
   }
 
   &__preformatted {
-    align-items: flex-end;
-    border-bottom: 1px solid nhsuk-colour("grey-3");
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    border-bottom: 1px solid nhsuk-colour("grey-3");
 
     @include nhsuk-responsive-padding(4);
   }
