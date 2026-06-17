@@ -17,47 +17,51 @@
 }
 
 .app-colour-list__swatch {
-  background-color: nhsuk-colour("grey-5");
-  border: 1px solid transparent;
-  border-radius: 50%;
   display: inline-block;
-  height: nhsuk-spacing(6);
-  margin-right: 0;
-  vertical-align: middle;
-  width: nhsuk-spacing(6);
 
   position: absolute;
-  left: 0;
   top: math.div(nhsuk-spacing(1), 2);
+  left: 0;
+
+  width: nhsuk-spacing(6);
+  height: nhsuk-spacing(6);
+  margin-right: 0;
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  background-color: nhsuk-colour("grey-5");
+
+  vertical-align: middle;
 
   @include nhsuk-media-query($until: tablet) {
-    height: nhsuk-spacing(4);
-    width: nhsuk-spacing(4);
     top: nhsuk-spacing(1);
+    width: nhsuk-spacing(4);
+    height: nhsuk-spacing(4);
   }
 }
 
 .app-colour-list__column {
-  padding-left: 0;
   padding-top: nhsuk-spacing(2);
+  padding-left: 0;
   vertical-align: top;
 
   @include nhsuk-media-query($until: tablet) {
     display: block;
-    padding-left: nhsuk-spacing(5);
     position: relative;
+    padding-left: nhsuk-spacing(5);
   }
 }
 
 .app-colour-list__column--name {
-  font-weight: normal;
   position: relative;
   padding-left: nhsuk-spacing(8);
+  font-weight: normal;
 
   @include nhsuk-media-query($until: tablet) {
-    padding-left: nhsuk-spacing(5);
-    padding-bottom: nhsuk-spacing(1);
     padding-top: nhsuk-spacing(1);
+    padding-bottom: nhsuk-spacing(1);
+    padding-left: nhsuk-spacing(5);
   }
 }
 

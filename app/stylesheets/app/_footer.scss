@@ -11,8 +11,8 @@
 }
 
 .app-ogl-footer--text {
-  color: nhsuk-colour("grey-1");
   margin-bottom: 0;
+  color: nhsuk-colour("grey-1");
 
   @include nhsuk-font(16);
   @include nhsuk-responsive-padding(5, "bottom");
@@ -22,8 +22,8 @@
   }
 
   svg {
-    margin-right: nhsuk-spacing(2);
     position: relative;
     top: 2px;
+    margin-right: nhsuk-spacing(2);
   }
 }

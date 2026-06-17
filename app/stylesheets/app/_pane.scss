@@ -6,9 +6,9 @@
 
 .app-pane {
   display: flex;
+  position: relative;
   min-height: 0;
   overflow: inherit;
-  position: relative;
 }
 
 .app-pane__side-bar {

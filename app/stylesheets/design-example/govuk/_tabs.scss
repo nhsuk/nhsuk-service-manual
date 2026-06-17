@@ -4,16 +4,20 @@
 @use "../../settings" as *;
 
 .app-tabs {
-  list-style-type: none;
+  display: none;
+
   margin: -1px auto;
   margin-bottom: 0;
-  overflow: visible;
   padding: 0;
 
-  background: nhsuk-colour("white");
+  overflow: visible;
+
+  list-style-type: none;
+
   border: 1px solid nhsuk-colour("grey-3");
   border-bottom: 0;
-  display: none;
+
+  background: nhsuk-colour("white");
 
   @include nhsuk-media-query($from: tablet) {
     display: block;
@@ -21,41 +25,41 @@
 
   &__item {
     display: inline-block;
-    margin: 0;
     position: relative;
     z-index: 2;
+    margin: 0;
     background-color: transparent;
   }
 
   &__item a {
+    display: block;
     margin: 0;
     padding: 8px 16px;
-    background: inherit;
     color: nhsuk-colour("blue");
-    display: block;
+    background: inherit;
 
     @include nhsuk-media-query($from: tablet) {
       padding: 12px 24px;
     }
 
     &:hover {
-      color: $nhsuk-link-hover-colour;
       outline: 0;
+      color: $nhsuk-link-hover-colour;
       text-decoration: none;
     }
 
     &:focus {
+      outline: $nhsuk-focus-width solid transparent;
+      color: $nhsuk-focus-text-colour;
       background-color: $nhsuk-focus-colour;
       box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
-      color: $nhsuk-focus-text-colour;
-      outline: $nhsuk-focus-width solid transparent;
       text-decoration: none;
     }
   }
 
   &__item--current a {
-    border-bottom-color: nhsuk-colour("blue");
     border-top-color: nhsuk-colour("blue");
+    border-bottom-color: nhsuk-colour("blue");
     text-decoration: none;
 
     @include nhsuk-media-query($from: tablet) {
@@ -72,11 +76,11 @@
   }
 
   &__item--mobile {
-    background-color: nhsuk-colour("white");
-    border: 1px solid nhsuk-colour("grey-3");
-    border-width: 1px 0;
     display: block;
     margin: -1px 0;
+    border: 1px solid nhsuk-colour("grey-3");
+    border-width: 1px 0;
+    background-color: nhsuk-colour("white");
 
     @include nhsuk-media-query($from: tablet) {
       display: none;
@@ -88,18 +92,17 @@
   }
 
   &__container {
-    margin-top: 0;
     position: relative;
-
-    background-color: nhsuk-colour("white");
+    margin-top: 0;
     border: 1px solid nhsuk-colour("grey-3");
     border-bottom: 0;
+    background-color: nhsuk-colour("white");
   }
 
   &__container pre {
     margin-bottom: 0;
-    background-color: transparent;
     border: 0;
+    background-color: transparent;
   }
 
   &__container pre code {

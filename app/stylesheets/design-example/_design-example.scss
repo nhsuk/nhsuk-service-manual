@@ -6,22 +6,25 @@
 
 .app-design-example {
   $root: &;
-  margin-bottom: nhsuk-spacing(6);
   position: relative;
   width: 100%;
+  margin-bottom: nhsuk-spacing(6);
 
   @include nhsuk-media-query($until: tablet) {
     margin-bottom: nhsuk-spacing(5);
   }
 
   &__pop-out {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    padding: 8px 16px;
+
     border: 1px solid nhsuk-colour("grey-3");
     border-bottom: 0;
-    display: block;
     outline: 2px solid transparent;
-    padding: 8px 16px;
-    position: relative;
-    width: 100%;
     @include nhsuk-font(16);
 
     &:hover,
@@ -30,10 +33,10 @@
     }
 
     &:focus {
+      outline: $nhsuk-focus-width solid transparent;
+      color: $nhsuk-focus-text-colour;
       background-color: $nhsuk-focus-colour;
       box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
-      color: $nhsuk-focus-text-colour;
-      outline: $nhsuk-focus-width solid transparent;
       text-decoration: none;
 
       &:hover {
@@ -58,6 +61,7 @@
 
 .app-design-example__frame {
   display: block;
+
   position: relative;
 
   width: calc(100% + 1px);
@@ -67,10 +71,12 @@
   min-height: 80px;
 
   overflow: auto;
+
   resize: both;
 
   border: 0;
   border-right: 1px solid nhsuk-colour("grey-3");
+
   background: nhsuk-colour("grey-5");
 }
 

@@ -5,8 +5,8 @@
 ////
 
 .app-example {
-  border: 1px solid nhsuk-colour("grey-3");
   position: relative;
+  border: 1px solid nhsuk-colour("grey-3");
 
   @include nhsuk-top-and-bottom;
   @include nhsuk-responsive-margin(5, "bottom");
@@ -18,11 +18,11 @@
 }
 
 .app-example__heading {
-  background: nhsuk-colour("grey-1");
-  border: 0;
-  left: -1px;
   position: absolute;
   top: -1px;
+  left: -1px;
+  border: 0;
+  background: nhsuk-colour("grey-1");
 }
 
 .app-example + h2 {
