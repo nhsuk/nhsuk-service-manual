@@ -56,7 +56,7 @@
 .app-colour-list__column--name {
   position: relative;
   padding-left: nhsuk-spacing(8);
-  font-weight: normal;
+  @include nhsuk-font-weight-normal;
 
   @include nhsuk-media-query($until: tablet) {
     padding-top: nhsuk-spacing(1);
