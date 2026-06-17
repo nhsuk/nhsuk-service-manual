@@ -1,6 +1,197 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.12.1 - 17 June 2026
+
+:wrench: **Maintenance**
+
+- Install latest version of NHS.UK frontend (10.5.2)
+
+## 8.12.0 - 4 June 2026
+
+:new: **New features**
+
+- Add new search input component
+- Add row headers to tables and update guidance on using table headers
+- Add new inline checkboxes feature and guidance
+- Update default example for radios and update guidance about inline radios
+
+:wrench: **Maintenance**
+
+- Update header guidance as logged-in account is now used on public services
+
+## 8.11.0 - 14 May 2026
+
+:wrench: **Maintenance**
+
+- Improve guidance on panel component, interruption page pattern and logged-in account header after user testing
+- Update text messages section of Writing NHS messages after feedback
+- Add links to more GOV.UK resources to bring NHS service standard points 2/3, 4 and 6 into line with GOV
+- Add link to Writing NHS messages guidance to service standard 2/3
+- Update intro to service standard 2 on service standard home page
+- Fix typo in service standard 12
+- Clarify content guidance about full stops and linked text
+- Remove full stops from linked text
+- Amend alt text for BSL icon
+- Fix HTML and Nunjucks quote style
+
+## 8.10.0 - 21 April 2026
+
+:new: **New features**
+
+- Add blog post
+
+## 8.9.0 - 2 April 2026
+
+:new: **New features**
+
+- Update card component guidance to make it clearer
+- Add section on actions in cards
+- Split out use of cards for navigation into new hub page pattern
+- Update NHS App greeting section in Writing NHS messages
+- Add section on using autocomplete attribute to date input
+
+:wrench: **Maintenance**
+
+- Remove care card page from components and redirect to care card pattern
+
+## 8.8.0 - 19 March 2026
+
+:new: **New features**
+
+- Add a modifier class to make header component with account or search inline on small screens
+- Improve clickable card hover and active states, and target area
+- Remove table row hover styles
+
+:wrench: **Maintenance**
+
+- Port Nunjucks syntax highlighting from GOV.UK design system
+- Support focus and keyboard left/right scrolling on code blocks
+
+## 8.7.2 - 2 March 2026
+
+:wrench: **Maintenance**
+
+- Make minor changes to NHS messages guidance
+
+## 8.7.1 - 18 February 2026
+
+:wrench: **Maintenance**
+
+- Remove 1 example from NHS messages guidance
+- Resize example iframes when contents changes size
+
+## 8.7.0 - 17 February 2026
+
+:new: **New features**
+
+- Add guidance on writing NHS messages to the content guide
+
+:wrench: **Maintenance**
+
+- Update service standard points 2, 6, 11 and 14 with AI requirements to align with GOV standard
+- Update links to DAPB standard
+
+## 8.6.1 - 26 January 2026
+
+:wrench: **Maintenance**
+
+- Add guidance for border bottom class to summary cards
+- Fix top-level page routing with trailing slashes
+
+## 8.6.0 - 19 January 2026
+
+:new: **New features**
+
+- Add new file upload component
+- Add new interruption page pattern
+- Add interruption panel to panel component
+- Add summary cards to summary list component
+- Add new entries for addresses and Wi-Fi to A to Z in content guide
+- Update entry for seizure (fit) in A to Z in content guide
+- Improved Nunjucks macro option documentation
+
+:wrench: **Maintenance**
+
+- Amend page summary for service standard 3 to align with GOV's
+- Update and add links in service standards 5 and 11
+- Remove outdated beta label from service standard 11
+- Bring service standard 13 into closer alignment with GOV's
+- Update service standard 16 with clinical colleagues
+- Review and update service standard 17 with interoperability standards team
+- Move brackets content to punctuation page
+- Specify that we use en dashes and change hyphens used as dash to en dash
+- Add "third party" to guidance on numbers, measurements, dates and time
+- Add word "cold" to guidance on writing about temperature in A to Z
+- Update outdated references to NHS Digital, and fix broken links
+- Reorganise XML site map
+
+## 8.5.1 - 16 December 2025
+
+:new: **New features**
+
+- Add guidance on setting label and legend sizes
+- Mention staff-facing services on service manual home page and design system index page
+
+:wrench: **Maintenance**
+
+- Use NHS.UK frontend CSS and JS in design example previews
+
+## 8.5.0 - 27 November 2025
+
+:new: **New features**
+
+- Add password input component
+- Add smaller buttons
+- Add guidance on codes and sequences class for text input component
+
+## 8.4.0 - 19 November 2025
+
+:new: **New features**
+
+- Update guidance on asking users for their NHS number
+- Update section on avoiding binary choices in forms guidance
+- Add guidance around reverse examples (action link, back link, breadcrumb, button, typography)
+- Update select component guidance to bring it closer to GOV.UK design system
+
+:wrench: **Maintenance**
+
+- Change dummy NHS number to 999 123 4567
+- Update NHS number examples across design system, including adding span class (in details, hint text, and text input)
+- Update coded examples on breadcrumb, care cards, checkboxes, fieldset, error summary, hint text, inset text, radios, select, start page and text input component pages and in forms guidance
+- Bring guidance on labels and text input into line with GOV.UK
+- Remove duplicate example from summary list component
+- Change Active tag from green to blue
+- Update video review date on pattern for helping users know that a page is up to date
+
+## 8.3.0 - 4 November 2025
+
+:new: **New features**
+
+- Add latest blog post
+
+## 8.2.0 - 16 October 2025
+
+:new: **New features**
+
+- Add smaller checkboxes and radios and align guidance better with GOV.UK
+- Add new numbered variant for pagination component
+- Allow design examples to be manually resized
+
+:wrench: **Maintenance**
+
+- Tweak page title example to improve readability
+- Update page titles to use en-dash rather than hyphen
+- Replace BSL icons download file
+- Fix broken cookies URL
+- Bring content on contents list component and mini-hub pattern into line with updates to pagination component
+
+## 8.1.0 - 24 September 2025
+
+:new: **New features**
+
+- Add new pattern to help users find BSL content
+- Add new guidance about risks of using textarea
+- Update guidance on using textarea on page about character count component
 
 :wrench: **Maintenance**
 
@@ -16,8 +207,15 @@
 
 :wrench: **Maintenance**
 
-- Added form tags to pattern page examples
-- Removed form tags from component examples
+- Add form tags to pattern page examples
+- Remove form tags from component examples
+- Make heading styles consistent for single question coded examples
+- Make textarea examples consistent across design system
+- Add note on fullstops and links to content guide
+- Remove old Qualtrics links
+- Fix "feedback" typos
+- Fix missing update in last What's new
+- Update site map
 
 ## 8.0.0 - 27 August 2025
 
@@ -309,7 +507,7 @@
 
 :new: **New features**
 
-- Add new page "Feedback or share insights" in Community and contribution section
+- Add new page "Feed back or share insights" in Community and contribution section
 - Update "Help us improve this guidance" section at bottom of pages across site
 
 :wrench: **Maintenance**

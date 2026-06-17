@@ -1,7 +1,8 @@
-{% from 'tables/macro.njk' import table %}
+{% from "tables/macro.njk" import table %}
 
 {{ table({
   caption: "Vaccinations given",
+  firstCellIsHeader: true,
   head: [
     {
       text: "Date"

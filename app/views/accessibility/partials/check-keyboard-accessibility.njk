@@ -2,40 +2,30 @@
 <p>Keyboard accessibility is one of the most important parts of accessibility. It enables other input methods, including switches, speech input and screen readers.</p>
 <p>The starting point for keyboard accessibility is to use the correct HTML for links, buttons and form controls. Use <a href="/design-system/components">components from the service manual</a>, if you can. They've already been tested for keyboard accessibility.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      How to test with a keyboard
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Check that you can use:</p>
-    <ul>
-      <li>tab to progress through links and controls</li>
-      <li>shift-tab to reverse</li>
-      <li>enter to follow links</li>
-      <li>space to select form controls (such as checkboxes)</li>
-      <li>arrows for radio buttons or tabs</li>
-    </ul>
-  </div>
-</details>
+{% call details({
+  summaryText: "How to test with a keyboard"
+}) %}
+  <p>Check that you can use:</p>
+  <ul>
+    <li>tab to progress through links and controls</li>
+    <li>shift-tab to reverse</li>
+    <li>enter to follow links</li>
+    <li>space to select form controls (such as checkboxes)</li>
+    <li>arrows for radio buttons or tabs</li>
+  </ul>
+{% endcall %}
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Checklist for each page
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Check that:</p>
-    <ul>
-      <li>you can tab to all links, buttons and form controls</li>
-      <li>you cannot tab to non-functional elements (such as headings and paragraphs)</li>
-      <li>you can easily see where the focus is</li>
-      <li>the focus does not move to hidden elements</li>
-      <li>the focus does not get trapped in an element</li>
-      <li>scripted events (for keyboard, mouse and touch) only fire when expected</li>
-      <li>the visual order for tabbing progress is left-to-right and top-to-bottom</li>
-    </ul>
-  </div>
-</details>
+{% call details({
+  summaryText: "Checklist for each page"
+}) %}
+  <p>Check that:</p>
+  <ul>
+    <li>you can tab to all links, buttons and form controls</li>
+    <li>you cannot tab to non-functional elements (such as headings and paragraphs)</li>
+    <li>you can easily see where the focus is</li>
+    <li>the focus does not move to hidden elements</li>
+    <li>the focus does not get trapped in an element</li>
+    <li>scripted events (for keyboard, mouse and touch) only fire when expected</li>
+    <li>the visual order for tabbing progress is left-to-right and top-to-bottom</li>
+  </ul>
+{% endcall %}

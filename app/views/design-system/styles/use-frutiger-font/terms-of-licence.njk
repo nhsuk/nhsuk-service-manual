@@ -1,16 +1,19 @@
-{% from 'action-link/macro.njk' import actionLink %}
-{% from 'back-link/macro.njk' import backLink %}
-
 {% extends "template.njk" %}
 
-{% block head %}
-  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
-  <meta name="description" content="This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font.">
-{%- endblock %}
+{% from "action-link/macro.njk" import actionLink %}
+{% from "back-link/macro.njk" import backLink %}
+{% from "details/macro.njk" import details %}
 
-{% block pageTitle %}
-  Terms of NHS Frutiger licence
+{% block head %}
+  <meta name="description" content="This is a licence for specific Frutiger fonts for NHS organisations only. By registering for this licence, you can get access to authorised versions of the Frutiger font.">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/main.scss") }}">
 {% endblock %}
+
+{% block pageTitle -%}
+  Terms of NHS Frutiger licence – NHS digital service manual
+{%- endblock %}
 
 {% block beforeContent %}
   {{ backLink({
@@ -31,21 +34,16 @@
     <h2>Who can register for a licence</h2>
     <p>NHS organisations in England can register to use the font for free under this licence.</p>
     <p>You do not need to register if your team is part of NHS England.</p>
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-        Legal effects of these terms for different NHS organisations
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
+    {% call details({
+      summaryText: "Legal effects of these terms for different NHS organisations"
+    }) %}
       <p>The legal effects of the terms of the licence depend on what type of organisation you are.</p>
       <p>This licence is one of the following:</p>
       <ul>
         <li>an "NHS contract" (as defined in <a href="https://www.legislation.gov.uk/ukpga/2006/41/section/9">section 9 of the National Health Service Act 2006</a>) when made with NHS trusts (and other NHS organisations listed in that section, such as integrated care boards) – however, this licence should still be treated with the same degree of rigour and seriousness as if it were legally binding</li>
         <li>a legally binding agreement when made with organisations where the licence does not fall within the definition of an NHS contract (such as foundation trusts)</li>
       </ul>
-      </div>
-    </details>
+    {% endcall %}
 
     <p>You agree that NHS England has the right at any time to assign, replace with a new contract with our successor (or novate the contract), subcontract or otherwise transfer, without notice, all or any part of this agreement and all or any of its rights and obligations under it to any successor (including a successor body of all or part of its functions).</p>
 
@@ -108,89 +106,59 @@
     </ul>
 
     <h3>Using the font in different products, systems and services</h3>
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Online services, including websites
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>You can use the font to write text and create forms on websites you control.</p>
-        <p>You must make sure people cannot download, reformat or use the font code.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Online services, including websites"
+    }) %}
+      <p>You can use the font to write text and create forms on websites you control.</p>
+      <p>You must make sure people cannot download, reformat or use the font code.</p>
+    {% endcall %}
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Apps
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>You can include the font as an integrated part of software-only apps (for example, apps which are not part of any specific equipment).</p>
-        <p>You must not use the font software in apps or equipment that you sell or profit from.</p>
-        <p>If you want to use Frutiger Light in an app, you must buy your own licence. This licence does not cover it.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Apps"
+    }) %}
+      <p>You can include the font as an integrated part of software-only apps (for example, apps which are not part of any specific equipment).</p>
+      <p>You must not use the font software in apps or equipment that you sell or profit from.</p>
+      <p>If you want to use Frutiger Light in an app, you must buy your own licence. This licence does not cover it.</p>
+    {% endcall %}
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Desktop applications, including creating documents or other materials
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>You can install the software on servers that you control or servers that a third party controls for you.</p>
-        <p>You can:</p>
-        <ul>
-          <li>use the font to create, edit and distribute documents or other NHS materials</li>
-          <li>embed the font into electronic documents (note: digital marketing communications are covered below)</li>
-          <li>create internal-only backups</li>
-        </ul>
-        <p>You must make sure that materials you create:</p>
-        <ul>
-          <li>do not allow any part of the font software code to be downloaded or extracted</li>
-          <li>only have images of the font that cannot be edited (but note: Word documents are covered below)</li>
-        </ul>
-        <p>If you use the font, font software or materials in a collaborative cloud environment, you can let users view and edit the document but not otherwise use the font.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Desktop applications, including creating documents or other materials"
+    }) %}
+      <p>You can install the software on servers that you control or servers that a third party controls for you.</p>
+      <p>You can:</p>
+      <ul>
+        <li>use the font to create, edit and distribute documents or other NHS materials</li>
+        <li>embed the font into electronic documents (note: digital marketing communications are covered below)</li>
+        <li>create internal-only backups</li>
+      </ul>
+      <p>You must make sure that materials you create:</p>
+      <ul>
+        <li>do not allow any part of the font software code to be downloaded or extracted</li>
+        <li>only have images of the font that cannot be edited (but note: Word documents are covered below)</li>
+      </ul>
+      <p>If you use the font, font software or materials in a collaborative cloud environment, you can let users view and edit the document but not otherwise use the font.</p>
+    {% endcall %}
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Digital marketing communications
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>Digital marketing communications include, for example, sending marketing emails out or displaying an advertisement on websites you control.</p>
-        <p>You can embed the font into digital marketing communications and use the font in editable documents, like Word.</p>
-        <p>You must make sure your content does not allow people to download, reformat or re-use the font code.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Digital marketing communications"
+    }) %}
+      <p>Digital marketing communications include, for example, sending marketing emails out or displaying an advertisement on websites you control.</p>
+      <p>You can embed the font into digital marketing communications and use the font in editable documents, like Word.</p>
+      <p>You must make sure your content does not allow people to download, reformat or re-use the font code.</p>
+    {% endcall %}
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Print and other physical items
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>You can use the font to create, edit, print, and produce printed and other physical items.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Print and other physical items"
+    }) %}
+      <p>You can use the font to create, edit, print, and produce printed and other physical items.</p>
+    {% endcall %}
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary">
-        <span class="nhsuk-details__summary-text">
-          Logos and marks
-        </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <p>You can use the font as part of your logos.</p>
-        <p>The use of the NHS lozenge is subject to the NHS trade mark licence.</p>
-      </div>
-    </details>
+    {% call details({
+      summaryText: "Logos and marks"
+    }) %}
+      <p>You can use the font as part of your logos.</p>
+      <p>The use of the NHS lozenge is subject to the NHS trade mark licence.</p>
+    {% endcall %}
 
     <h2>Issues or claims about the font</h2>
     <p>The font is only provided with those warranties we can pass through from Monotype, as set out in the Annex. We do not provide any warranties as to its suitability or availability. If there are any third party claims about the font, you must let us (or, where we require, Monotype) take control of such claims.</p>

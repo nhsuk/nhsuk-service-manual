@@ -6,28 +6,29 @@ const basicAuth = require('basic-auth')
  * Based on template found at: http://www.danielstjules.com/2014/08/03/basic-auth-with-express-4/
  *
  * @example
+ * ```js
  * const authentication = required('authentication');
  * app.use(authentication);
- * @param {string} req - Express Request object
- * @param {string} res - Express Response object
- * @returns {Function} Express 4 middleware requiring the given credentials
+ * ```
+ * @param {Request} req
+ * @param {Response} res
+ * @param {NextFunction} next
+ * @returns Express 4 middleware requiring the given credentials
  */
-
 module.exports = (req, res, next) => {
   // External dependencies
 
   // Set configuration variables
-  const env = (process.env.NODE_ENV || 'development').toLowerCase()
+  const env = process.env.NODE_ENV
   const username = process.env.MANUAL_USERNAME
   const password = process.env.MANUAL_PASSWORD
 
   if (env === 'review' || env === 'staging') {
     if (!username || !password) {
-      // eslint-disable-next-line no-console
       console.error('Username or password is not set in environment variables.')
-      return res.send(
-        '<p>Username or password not set in environment variables.</p>'
-      )
+      return res
+        .status(200)
+        .send('<p>Username or password not set in environment variables.</p>')
     }
 
     const user = basicAuth(req)
@@ -39,3 +40,7 @@ module.exports = (req, res, next) => {
   }
   return next()
 }
+
+/**
+ * @import { Request, Response, NextFunction } from 'express'
+ */

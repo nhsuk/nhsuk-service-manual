@@ -6,17 +6,15 @@
   { title: "Skin symptoms", url: "/content/inclusive-content/skin-symptoms" }
 ] %}
 
-<nav class="nhsuk-contents-list app-contents-list app-u-hide-desktop" role="navigation" aria-label="Pages in this guide">
-  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
-  <ol class="nhsuk-contents-list__list">
-    {% for item in inclusiveContentNav %}
-    <li class="nhsuk-contents-list__item" {% if item.title == pageTitle %} aria-current="page"{% endif %}>
-      {% if item.title == pageTitle %}
-      <span class="nhsuk-contents-list__current">{{ item.title }}</span>
-      {% else %}
-      <a class="nhsuk-contents-list__link" href="{{ item.url }}">{{ item.title }}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ol>
-</nav>
+{% for item in inclusiveContentNav %}
+  {% set inclusiveContentNav = (inclusiveContentNav.splice(loop.index0, 1, {
+    text: item.title,
+    href: item.url,
+    current: item.title == pageTitle
+  }), inclusiveContentNav) %}
+{% endfor %}
+
+{{ contentsList({
+  classes: "app-contents-list app-u-hide-desktop",
+  items: inclusiveContentNav
+}) }}

@@ -1,32 +1,35 @@
-{% from 'radios/macro.njk' import radios %}
-{% from 'fieldset/macro.njk' import fieldset %}
-{% from 'hint/macro.njk' import hint %}
+{% from "radios/macro.njk" import radios %}
+{% from "fieldset/macro.njk" import fieldset %}
+{% from "hint/macro.njk" import hint %}
 
 {{ radios({
   idPrefix: "example-hints",
-  name: "example-hints",
+  name: "exampleHints",
   fieldset: {
     legend: {
-      text: "Do you know your NHS number?",
-      classes: "nhsuk-fieldset__legend--l",
+      text: "Have you had all the vaccinations you're eligible for in the UK?",
+      size: "l",
       isPageHeading: true
     }
   },
   hint: {
-    text: "This is a 10 digit number, like 485 777 3456, that you can find on an NHS letter, prescription or in the NHS App"
+    text: "You would have got these vaccinations at school, from your GP surgery or another healthcare provider"
   },
   items: [
     {
       value: "yes",
-      text: "Yes, I know my NHS number"
+      text: "Yes"
     },
     {
       value: "no",
-      text: "No, I do not know my NHS number"
+      text: "No"
     },
     {
-      value: "not sure",
-      text: "I'm not sure"
+      divider: "or"
+    },
+    {
+      value: "unknown",
+      text: "I do not know"
     }
   ]
 }) }}

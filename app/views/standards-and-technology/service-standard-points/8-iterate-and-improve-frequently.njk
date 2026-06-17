@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "8. Iterate and improve frequently" %}
 {% set pageSection = "Standards and technology" %}
 {% set subSection = "NHS service standard" %}
 {% set pageDescription = "Make sure you have the capacity, resources and technical flexibility to iterate and improve the service frequently." %}
 {% set dateUpdated = "January 2024" %}
 {% set backlog_issue_id = "342" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/service-standard-points/_breadcrumb.njk" %}
@@ -43,16 +43,19 @@
     <li><a href="https://gds.blog.gov.uk/2015/03/06/gov-uk-isnt-finished/">GOV.UK isn't finished</a> (GOV.UK blog, 2015)</li>
   </ul>
 
-
 {% endblock %}
 
 {% block afterContact %}
 
- {{ pagination({
-    previousUrl: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working",
-    previousPage: "Point 7",
-    nextUrl: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy",
-    nextPage: "Point 9"
+  {{ pagination({
+    previous: {
+      labelText: "Point 7",
+      href: "/standards-and-technology/service-standard-points/7-use-agile-ways-of-working"
+    },
+    next: {
+      labelText: "Point 9",
+      href: "/standards-and-technology/service-standard-points/9-create-a-secure-service-which-protects-peoples-privacy"
+    }
   }) }}
 
   {% endblock %}

@@ -10,14 +10,9 @@
       <li>If the link goes to a document, include the file type and size in the link phrase. For example: "Link name (PDF, 200KB)".</li>
     </ul>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Using the same link text for multiple links in tables
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You can use the same text for multiple links when they're in a good structure. The table row headings together with the link text must make the meaning clear.</p>
-    <p>There's an example in the <a href="/design-system/components/summary-list/">summary list component</a>. At the end of each row is a link that says: "Change". The context makes it clear what "Change" refers to.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "Using the same link text for multiple links in tables"
+}) %}
+  <p>You can use the same text for multiple links when they're in a good structure. The table row headings together with the link text must make the meaning clear.</p>
+  <p>There's an example in the <a href="/design-system/components/summary-list/">summary list component</a>. At the end of each row is a link that says: "Change". The context makes it clear what "Change" refers to.</p>
+{% endcall %}

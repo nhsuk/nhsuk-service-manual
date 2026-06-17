@@ -5,17 +5,13 @@
 ////
 
 .app-pane {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  position: relative;
   min-height: 0;
   overflow: inherit;
-  position: relative;
 }
 
 .app-pane__side-bar {
-  -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
   flex: 0 0 auto;
   width: 220px;
 
@@ -29,13 +25,6 @@
 }
 
 .app-pane__main-content {
-  -ms-flex: 1 1 100%;
-  -ms-flex-direction: column;
-  -webkit-box-direction: normal;
-  -webkit-box-flex: 1;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex: 1 1 100%;
   flex-direction: column;

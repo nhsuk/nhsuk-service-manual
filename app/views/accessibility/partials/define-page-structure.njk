@@ -2,22 +2,17 @@
 <p>You can help people who use assistive technologies understand the structure of the page and navigate it by including "landmarks" (hidden labels for sections of the page). Landmarks also help users looking at multiple pages skip repetitive sections.</p>
 <p>Use ARIA landmarks to identify the regions of a page.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Landmarks you need
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Make sure that you've defined these landmarks if your page includes them:</p>
-    <ul>
-      <li>banner: at the top of the page, usually contains the logo</li>
-      <li>navigation: elements that link to other pages, usually in the banner</li>
-      <li>search: the search field, usually in the banner</li>
-      <li>main: contains the main content of the page. It should be unique on each page.</li>
-      <li>contentinfo: the footer. This is shared across pages.</li>
-    </ul>
-    <p>You'll need to define headings, lists and data tables in content areas too.</p>
-    <p>Follow the <a href="/design-system/components/header">header</a> and <a href="/design-system/components/footer">footer</a> components in the service manual.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "Landmarks you need"
+}) %}
+  <p>Make sure that you've defined these landmarks if your page includes them:</p>
+  <ul>
+    <li>banner: at the top of the page, usually contains the logo</li>
+    <li>navigation: elements that link to other pages, usually in the banner</li>
+    <li>search: the search field, usually in the banner</li>
+    <li>main: contains the main content of the page. It should be unique on each page.</li>
+    <li>contentinfo: the footer. This is shared across pages.</li>
+  </ul>
+  <p>You'll need to define headings, lists and data tables in content areas too.</p>
+  <p>Follow the <a href="/design-system/components/header">header</a> and <a href="/design-system/components/footer">footer</a> components in the service manual.</p>
+{% endcall %}

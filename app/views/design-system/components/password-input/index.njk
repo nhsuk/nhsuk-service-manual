@@ -1,0 +1,146 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Password input" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Components" %}
+{% set pageDescription = "Help users to create and enter passwords." %}
+{% set theme = "Form elements" %}
+{% set dateUpdated = "November 2025" %}
+{% set backlog_issue_id = "521" %}
+
+{% block beforeContent %}
+  {% include "design-system/components/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "components",
+    item: "password-input",
+    type: "default"
+  }) }}
+
+  <h2 id="when-to-use-password-input">When to use password input</h2>
+  <p>Use this component whenever you need users to create or enter a password.</p>
+  <p>Before using this component, read:</p>
+  <ul>
+    <li>the <a href="https://www.ncsc.gov.uk/collection/passwords">National Cyber Security Centre (NCSC) guidance on password administration for system owners</a> (including their <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">password policy</a>) and <a href="https://digital.nhs.uk/cyber-and-data-security/guidance-and-assurance/multi-factor-authentication-mfa-policy">NHS England's multi-factor authentication (MFA) policy</a></li>
+    <li>about using <a href="/standards-and-technology/technology/NHS-login">NHS login</a> and <a href="https://digital.nhs.uk/services/care-identity-service">Care Identity Service (NHS England)</a> for authentication</li>
+  </ul>
+
+  <h2 id="when-not-to-use-password-input">When not to use password input</h2>
+  <p>Do not use this component to ask for any information other than a password.</p>
+  <p>Use a <a href="/design-system/components/text-input">text input component</a> to ask for other security information, such as:</p>
+  <ul>
+    <li>multi-factor authentication codes</li>
+    <li>answers to security questions</li>
+    <li>other personally identifiable information</li>
+  </ul>
+  <p>Also see <a href="https://design-system.service.gov.uk/patterns/confirm-a-phone-number/">GOV.UK's Confirm a phone number pattern</a>.</p>
+
+  <h2 id="how-to-use-password-input">How to use password input</h2>
+  <p>This component lets users enter a password, with an option to show what they've entered as plain text.</p>
+  <p>This allows users to visually check their password before they submit it, which helps them reduce errors and choose passwords that are more unique and secure.</p>
+  <p>Use this guidance with <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>, which explains how to help users create and enter secure and memorable passwords.</p>
+  <p>The password input component requires JavaScript to work. Without it, users will see a password input but no "Show" button.</p>
+
+  <h3 id="error-messages">Error messages</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "password-input",
+    type: "error"
+  }) }}
+
+  <p>If the user enters their account details incorrectly, do not reveal whether they got the username or password wrong. Clear any information entered into the password input.</p>
+  <p>Revealing the source of the error can help fraudsters break into people's accounts.</p>
+  <p>See how to handle incorrect login attempts and help users who forget their password in <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>.</p>
+
+  <h3 id="showing-and-hiding-passwords">Showing and hiding passwords</h3>
+  <p>Hide the password by default until the user chooses to show it using the "Show" button. Users might not be in a private space when entering or creating a password, so hide passwords by default.</p>
+  <p>If you do choose to include 2 or more password inputs on a page, the "Show" and "Hide" toggles and labels for each password input must be different.</p>
+  <p>For example, you can label:</p>
+  <ul>
+    <li>the 1st input as "Password" with a toggle of "Show password"</li>
+    <li>the 2nd input as "Re-enter password" with a toggle of "Show re-entered password"</li>
+  </ul>
+
+  <h3 id="avoid-adding-a-confirm-password-field">Avoid adding a "confirm password" field</h3>
+  <p>It's not necessary to add a 2nd password field, also known as a "confirm password" field, particularly as this component allows users to show and hide passwords.</p>
+
+  <h3 id="define-the-inputs-type-as-password">Define the input's type as "password"</h3>
+  <p>If the form is submitted when the input's text is visible, JavaScript will change the input <code>type</code> back to <code>password</code>. You must check this happens automatically.</p>
+  <p>This is to prevent browsers from remembering it as a value the user has entered before and potentially displaying it as an autofill option on non-password inputs.</p>
+
+  <h3 id="use-the-autocomplete-attribute">Use the autocomplete attribute</h3>
+  <p>Use the <code>autocomplete</code> attribute on password inputs to help users complete forms faster.</p>
+  <p><code>Autocomplete</code> indicates to browsers and password managers what kind of password is needed so it can be entered for the user.</p>
+  <p>Set the <code>autocomplete</code> attribute to <code>new-password</code> if the user is creating a password. Otherwise, use <code>current-password</code>.</p>
+  <p>Many browsers will autofill password inputs, even when the <code>autocomplete</code> attribute is missing or set to <code>off</code>.</p>
+
+  <h3 id="allow-copy-and-paste">Allow copy and paste</h3>
+
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "app-wcag-inset-text app-wcag-22",
+    id: "wcag-avoid-dragging-multiple-options",
+    attributes: { role: "note" }
+  }) %}
+    {{ tag({
+      text: "WCAG 2.2",
+      classes: "nhsuk-u-margin-bottom-2"
+    }) }}
+
+    <p>Let users copy and paste passwords. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 success criterion 3.3.8 Accessible authentication (W3C)</a>.</p>
+  {% endcall %}
+
+  <p>The NCSC recommends that online services let people:</p>
+  <ul>
+    <li>use password managers</li>
+    <li>paste passwords into web forms</li>
+  </ul>
+
+  <h4 id="copying-text-from-password-fields">Copying text from password fields</h4>
+  <p>Users can copy any text from a password field when it's set on "Show". This is a feature of browser behaviour and cannot be overridden.</p>
+  <p>This can be useful for users, for example to save a password that the browser has suggested into a separate password manager.</p>
+
+  <h3 id="avoid-restricting-the-users-input">Avoid restricting the user's input</h3>
+  <p>Support all the characters users may need to enter a password, including numbers and symbols.</p>
+  <p>Set a minimum length of at least 12 characters.</p>
+  <p>If you need to set a maximum password length on the server to prevent buffer overflow attacks without discouraging strong passwords, allow at least 64 characters.</p>
+  <p>The <a href="https://www.ncsc.gov.uk/collection/passwords/updating-your-approach">NCSC password policy</a> includes advice on technical solutions and reducing the burden on users.</p>
+  <p>Any restrictions must be identical wherever the user creates or enters a password. If you change the restrictions over time, you must continue to support existing user passwords or ask them to set a new one.</p>
+
+  <h4 id="do-not-use-maxlength-to-restrict-password-length">Do not use maxlength to restrict password length</h4>
+  <p>Users will not get any feedback when they've reached the <code>maxlength</code> and their text input has been truncated. This happens when a user has pasted text from elsewhere or it's been autofilled by a password manager.</p>
+  <p>If a user exceeds the maximum length, show an error message instead. See <a href="https://design-system.service.gov.uk/patterns/validation/">GOV.UK's pattern for helping users to recover from validation errors </a>.</p>
+  <h3 id="do-not-spell-check-or-autocapitalise-the-users-input">Do not spell-check or autocapitalise the user's input</h3>
+  <p>Some browsers might automatically change what the user is typing when the input's text is visible, such as correcting spelling or automatically turning on upper case letters at the start of sentences.</p>
+  <p>You can tell browsers not to correct spellings by setting the <code>spellcheck</code> attribute to <code>false</code>.</p>
+  <p>Doing this can avoid making your service vulnerable to "spell-jacking"</a>, where some spell-checking tools gather personal identifiable information, even user's passwords, from password input fields to send to third party services.</p>
+  <p>You can tell browsers not to autocapitalise values by setting the <code>autocapitalize</code> attribute to <code>off</code>.</p>
+
+  <h3 id="known-issues">Known issues</h3>
+  <p>Some apps and tools add their own native functionality to show and hide passwords.</p>
+  <p>These tools include:</p>
+  <ul>
+    <li>browsers (particularly when suggesting new passwords)</li>
+    <li>password managers</li>
+    <li>screen readers</li>
+  </ul>
+  <p>We've tried to minimise duplicate functionality by hiding other types of "Show password" button where possible.</p>
+  <p>There are also other instances where a password could be shown or hidden without the use of a button, causing a mismatch with the button label. In other words, the user would see a button to show a password that's already visible.</p>
+  <p>GOV.UK found this mismatch happens in some browsers when:</p>
+  <ul>
+  <li>a keyboard shortcut is pressed</li>
+  <li>a suggested password is created</li>
+  </ul>
+
+<h2 id="accessibility">Accessibility</h2>
+<p>Follow <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a>.</p>
+
+<h2 id="research-on-this-component">Research on this component</h2>
+<p>GOV.UK decided that having a 2nd field is not helpful for users, particularly on password inputs with show and hide buttons.</p>
+<p>We would like to see real-life examples from service teams and get your feedback.</p>
+
+{% endblock %}

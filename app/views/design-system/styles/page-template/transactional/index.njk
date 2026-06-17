@@ -5,11 +5,15 @@ previewLayout: design-example-wrapper-blank
 {% extends "template.njk" %}
 
 {% from "back-link/macro.njk" import backLink %}
+{% from "header/macro.njk" import header %}
+{% from "footer/macro.njk" import footer %}
+
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block head %}
+  <link rel="stylesheet" href="{{ getAssetPath("stylesheets/nhsuk-frontend.min.css") }}">
   <link rel="stylesheet" href="{{ getAssetPath("stylesheets/preview.scss") }}">
-{%- endblock %}
+{% endblock %}
 
 {% block pageTitle -%}
   Transactional page template
@@ -71,5 +75,9 @@ previewLayout: design-example-wrapper-blank
 {% endblock %}
 
 {% block bodyEnd %}
-  <script src="{{ getAssetPath("main.js") }}" type="module"></script>
+  <script src="{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}" type="module"></script>
+  <script type="module">
+    import { initAll } from '{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}'
+    initAll()
+  </script>
 {% endblock %}

@@ -1,15 +1,23 @@
-{% from 'card/macro.njk' import card %}
+{% from "card/macro.njk" import card %}
+{% from "action-link/macro.njk" import actionLink %}
+
+{% set cardDescriptionHtml %}
+  <p>You've been exposed to very cold temperatures and:</p>
+  <ul>
+    <li>have hard, frozen skin</li>
+    <li>have swelling and loss of feeling in the affected area</li>
+    <li>have blisters filled with blood or a clear or milky fluid</li>
+    <li>you're constantly shivering, have slurred speech, slow breathing and are tired and confused</li>
+  </ul>
+  {{ actionLink({
+    text: "Find your nearest A&E",
+    href: "#",
+    classes: "nhsuk-action-link--reverse"
+  }) }}
+{% endset %}
 
 {{ card({
   type: "emergency",
-  heading: "Call 999 if:",
-  descriptionHtml: "
-  <p>You have sudden chest pain that:</p>
-  <ul>
-    <li>spreads to your arms, back, neck or jaw</li>
-    <li>makes your chest feel tight or heavy</li>
-    <li>also started with shortness of breath, sweating and feeling or being sick</li>
-  </ul>
-  <p>You could be having a heart attack. Call 999 immediately as you need immediate treatment in hospital.</p>
-  "
+  heading: "Call 999 or go to A&E if:",
+  descriptionHtml: cardDescriptionHtml | safe
 }) }}

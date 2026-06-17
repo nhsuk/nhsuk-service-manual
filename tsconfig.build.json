@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["app/**/*.js", "lib/**/*.js", "middleware/**/*.js"],
+  "exclude": ["app/javascript/vendor/**/*.js"]
+}

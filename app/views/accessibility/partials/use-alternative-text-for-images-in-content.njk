@@ -2,33 +2,22 @@
 <p>People who cannot see a meaningful image need an alternative to understand the content. You need to add "alt-text" to explain what's in the image. Alt-text is not usually visible but is read out by screen readers or displayed if an image does not load or if images have been switched off.</p>
 <p>You can see what alt-text an image has by viewing it with <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Chrome's Web Developer toolbar</a>.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Informative images
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a functional image – one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
-    <p>You don't need to explain that it's an image because screen readers usually announce that.</p>
-    <p>Imagine you were reading the page out to a friend. How would you describe the image?</p>
-    <p>There's an example of alt text in the <a href="/design-system/components/images">images component in the design system</a>. The alt-text is: "Close-up of a person's tummy showing a number of creases in the skin under their belly button. Shown on light brown skin." It explains what users can see in the picture.</p>
-    <p>Some images have a caption underneath the image as well as alt-text. The images component explains about captions and how they work with alt-text.</p>
-    <p>Keep alt-text to a sentence or 2 and ideally under 125 characters including spaces.</p>
-    <p>If there's important information that you cannot fit in 125 characters (for example, you're describing a complex chart or image), include this information in the alt-text or consider linking to more information for screen reader users. <a href="/content/inclusive-content/skin-symptoms#provide-a-long-description">Find out how to provide a long description in our skin symptoms guidance</a>.</p>
-    <p>If your image has text which conveys its meaning, follow <a href="/accessibility/development#use-alternative-text-for-functional-images">the guidance on functional images</a>. An example would be a link to a health app which includes a brand image and the name of the app. The app name says the same as the brand image, so the image doesn't need explaining.</p>
+{% call details({
+  summaryText: "Informative images"
+}) %}
+  <p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a functional image – one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
+  <p>You don't need to explain that it's an image because screen readers usually announce that.</p>
+  <p>Imagine you were reading the page out to a friend. How would you describe the image?</p>
+  <p>There's an example of alt text in the <a href="/design-system/components/images">images component in the design system</a>. The alt-text is: "Close-up of a person's tummy showing a number of creases in the skin under their belly button. Shown on light brown skin." It explains what users can see in the picture.</p>
+  <p>Some images have a caption underneath the image as well as alt-text. The images component explains about captions and how they work with alt-text.</p>
+  <p>Keep alt-text to a sentence or 2 and ideally under 125 characters including spaces.</p>
+  <p>If there's important information that you cannot fit in 125 characters (for example, you're describing a complex chart or image), include this information in the alt-text or consider linking to more information for screen reader users. <a href="/content/inclusive-content/skin-symptoms#provide-a-long-description">Find out how to provide a long description in our skin symptoms guidance</a>.</p>
+  <p>If your image has text which conveys its meaning, follow <a href="/accessibility/development#use-alternative-text-for-functional-images">the guidance on functional images</a>. An example would be a link to a health app which includes a brand image and the name of the app. The app name says the same as the brand image, so the image doesn't need explaining.</p>
+{% endcall %}
 
-  </div>
-</details>
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Decorative images
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Decorative images are there to attract users' attention or motivate them, but they don't help users understand the topic. An example might be a bowl of fruit on a healthy eating page.</p>
-    <p>If your image is decorative, give it a null text alternative like this: (<code>alt=""</code>).</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "Decorative images"
+}) %}
+  <p>Decorative images are there to attract users' attention or motivate them, but they don't help users understand the topic. An example might be a bowl of fruit on a healthy eating page.</p>
+  <p>If your image is decorative, give it a null text alternative like this: (<code>alt=""</code>).</p>
+{% endcall %}

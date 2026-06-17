@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Task list" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
@@ -5,8 +7,6 @@
 {% set theme = "Content presentation" %}
 {% set dateUpdated = "November 2024" %}
 {% set backlog_issue_id = "304" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
@@ -59,7 +59,7 @@
 
 <h3 id="statuses">Statuses</h3>
 <p>Statuses use colour and a short descriptor to give users a quick overview of how much of the task list they have completed, and how much is left to do.</p>
-<p>Find more information on how to <a href="/design-system/patterns/complete-multiple-tasks#show-the-status-of-the-tasks">show statuses in the complete multiple tasks pattern guidance.</a></p>
+<p>Find more information on how to <a href="/design-system/patterns/complete-multiple-tasks#show-the-status-of-the-tasks">show statuses in the complete multiple tasks pattern guidance</a>.</p>
 
 <h2 id="research-on-the-task-list">Research on the task list</h2>
 <p>The GOV.UK design system developed and tested this component. Find out more about their research on the <a href="https://design-system.service.gov.uk/components/task-list/">GOV.UK task list page</a>.</p>

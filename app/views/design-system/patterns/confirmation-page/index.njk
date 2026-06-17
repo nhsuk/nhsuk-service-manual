@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Confirmation page" %}
 {% set pageDescription = "Use a confirmation page to show users they have completed a task." %}
 {% set pageSection = "Design system" %}
@@ -5,8 +7,6 @@
 {% set theme = "Pages" %}
 {% set dateUpdated = "February 2025" %}
 {% set backlog_issue_id = "144" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/patterns/_breadcrumb.njk" %}

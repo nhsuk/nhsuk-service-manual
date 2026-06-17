@@ -1,0 +1,59 @@
+/**
+ * Jest project config defaults
+ *
+ * @type {Config}
+ */
+const config = {
+  cacheDirectory: '<rootDir>/.cache/jest',
+
+  // Reset mocks between tests
+  resetMocks: true,
+  clearMocks: true,
+
+  // Enable Babel transforms until Jest supports ESM and `import()`
+  // See: https://jestjs.io/docs/ecmascript-modules
+  transform: {
+    '^.+\\.(js|mjs)$': ['babel-jest', { rootMode: 'upward' }]
+  },
+
+  // Enable Babel transforms for ESM-only node_modules
+  // See: https://jestjs.io/docs/ecmascript-modules
+  transformIgnorePatterns: [
+    `<rootDir>/node_modules/(?!${['marked'].join('|')}/)`
+  ]
+}
+
+/**
+ * Jest config
+ *
+ * @type {Config}
+ */
+module.exports = {
+  collectCoverageFrom: [
+    '<rootDir>/app/**/*.{js,mjs}',
+    '<rootDir>/lib/**/*.{js,mjs}',
+    '<rootDir>/middleware/**/*.{js,mjs}'
+  ],
+  projects: [
+    {
+      ...config,
+      displayName: 'JavaScript unit tests',
+      testEnvironment: 'node',
+      testMatch: ['<rootDir>/**/*.unit.test.{js,mjs}']
+    },
+    {
+      ...config,
+      displayName: 'JavaScript behaviour tests',
+      setupFilesAfterEnv: ['./jest.jsdom.setup.mjs'],
+      testEnvironment: 'jsdom',
+      testMatch: ['<rootDir>/**/*.jsdom.test.{js,mjs}']
+    }
+  ],
+
+  // Enable GitHub Actions reporter UI
+  reporters: ['default', 'github-actions']
+}
+
+/**
+ * @import { Config } from 'jest'
+ */

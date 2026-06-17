@@ -7,9 +7,9 @@
 ////
 
 .featured-list {
-  list-style: none;
   margin: nhsuk-spacing(4) 0 nhsuk-spacing(5);
   padding-left: 0;
+  list-style: none;
 }
 
 @include nhsuk-media-query($from: tablet) {
@@ -24,7 +24,6 @@
 
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item {
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: nhsuk-spacing(6);
     padding-left: nhsuk-spacing(9);
@@ -37,16 +36,16 @@
 
 .featured-list--item__number {
   display: none;
-  font-weight: $nhsuk-font-bold;
   margin-bottom: nhsuk-spacing(3);
+  @include nhsuk-font-weight-bold;
 }
 
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item__number {
     display: block;
+    position: absolute;
     left: nhsuk-spacing(-9);
     margin: 0;
-    position: absolute;
   }
 }
 
@@ -59,14 +58,16 @@
 }
 
 .featured-list--item__heading {
-  -ms-flex-align: center;
-  align-items: center;
-  border-top: nhsuk-spacing(1) solid nhsuk-colour("blue");
-  display: -ms-flexbox;
   display: flex;
+
+  position: relative;
+
+  align-items: center;
+
   margin-top: 0;
   padding-top: nhsuk-spacing(3);
-  position: relative;
+
+  border-top: nhsuk-spacing(1) solid nhsuk-colour("blue");
 }
 
 @include nhsuk-media-query($from: tablet) {

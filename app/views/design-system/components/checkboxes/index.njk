@@ -1,27 +1,29 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Checkboxes" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
 {% set pageDescription = "Use checkboxes to let users select 1 or more options on a form." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "9" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/components/_breadcrumb.njk" %}
 {% endblock %}
 
 {% block bodyContent %}
-
-  <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
-    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-bottom-2">
-      Version 10
-    </strong>
+  {% call insetText({
+    classes: "nhsuk-u-margin-top-0"
+  }) %}
+    {{ tag({
+      text: "Version 10",
+      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
+    }) }}
 
     <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Checkboxes updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#checkboxes">updates to checkboxes in version 10</a></p>
-  </div>
+    <p>See <a href="/design-system/guides/updating-to-v10#checkboxes">breaking code updates to checkboxes in version 10</a></p>
+  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -40,10 +42,31 @@
   <p>Do not use the checkboxes component if users can only choose 1 option from a selection. In this case, use a <a href="/design-system/components/radios">radio</a>.</p>
 
   <h2>How to use checkboxes</h2>
-  <p class="rich-text">Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How would you like to be contacted?".</p>
-  <p class="rich-text">If you're asking just <a href="/content/how-to-write-good-questions-for-forms/get-the-questions-into-order#begin-prototyping-with-1-thing-per-page">1 question per page</a> as we recommend, you can set the contents of the <code>&lt;legend&gt;</code> as the page heading. This is good practice as it means screen reader users will only hear the contents once.</p>
-  <p>Read more on the GOV.UK Design System about <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings/">making labels and legends headings</a>.</p>
+  <p>Position checkboxes to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.</p>
+  <p>Do not pre-select checkbox options as this makes it more likely that users will:</p>
+  <ul>
+    <li>not realise they've missed a question</li>
+    <li>submit the wrong answer</li>
+  </ul>
+  <p>Order checkbox options alphabetically by default. In some cases, it's helpful to order them from most-to-least common options, for example, by population size. But be careful, as this can reinforce bias. If in doubt, order alphabetically.</p>
+  <p>Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How do you want to be contacted about this?".</p>
+  <p>Read more about using <a href="/design-system/components/fieldset">fieldset</a>.</p>
 
+  <h3 id="inline-checkboxes">Inline checkboxes</h3>
+  <p>In some cases, you can choose to display checkboxes "inline" beside one another (horizontally).</p>
+  <p>Only use inline checkboxes when:</p>
+  <ul>
+    <li>the question only has 2 options</li>
+    <li>both options are short</li>
+  </ul>
+  <p>On small screens such as mobile devices, the checkboxes will still be "stacked" on top of one another (vertically).</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "inline"
+  }) }}
+  
   <h3 id="checkboxes-with-hint-text">Checkboxes with hint text</h3>
   <p>Unlike with <a href="/design-system/components/radios">radios</a>, users can select more than 1 option from a list of checkboxes. Do not assume that users will know how many options they can select.</p>
   <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>. For example, say "Select all the options that are relevant to you". Read more about <a href="/design-system/components/hint-text">hint text</a>.</p>
@@ -51,7 +74,7 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "hint"
+    type: "hint-text"
   }) }}
 
   <h3 id="checkbox-items-with-hints">Checkbox items with hints</h3>
@@ -63,19 +86,7 @@
     type: "items-with-hints"
   }) }}
 
-  <h3 id="conditionally-revealing-content">Conditionally revealing content</h3>
-  <p>You can add conditionally revealing content to checkboxes, so users only see content when it's relevant to them.</p>
-  <p>For example, you could reveal a phone number input only when a user chooses to be contacted by phone.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "checkboxes",
-    type: "conditional"
-  }) }}
-
-  <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
-
-  <h3 id="none-option">Adding an option for "none"</h3>
+  <h3 id="none-option">Add an option for "none"</h3>
   <p>You can give users the option to say none of the other options apply to them. </p>
   <p>This option means users need to actively select "none" rather than leave all the boxes unchecked, which makes sure they do not skip the question by accident.</p>
   <p>Remember to start by asking 1 question per page. You might be able to remove the need for a "none" option by asking the user a better question or by <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users">using filter questions</a> to filter users out beforehand.</p>
@@ -89,10 +100,42 @@
     type: "none-option"
   }) }}
 
-   <p>If JavaScript is unavailable, and a user selects both the "none" checkbox and another checkbox, display an error message.</p>
+  <p>If JavaScript is unavailable, and a user selects both the "none" checkbox and another checkbox, display an error message.</p>
+
+  <h3 id="conditionally-revealing-question">Conditionally revealing a related question</h3>
+  <p>You can add a conditionally revealing related question to checkboxes, so users only see the question when it's relevant to them.</p>
+  <p>For example, you could reveal a phone number input only when a user chooses to be contacted by phone.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "conditional"
+  }) }}
+
+  <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
+  <p>Only conditionally reveal questions. Do not show or hide anything that is not a question.</p>
+
+  <h4>Known issues</h4>
+  <p>Users are not always notified when a conditionally revealed question is shown or hidden. This fails <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">WCAG 2.2 success criterion 4.1.2 name, role, value (W3C)</a>.</p>
+  <p>However, GOV.UK found that screen reader users did not have difficulty answering a conditionally revealed question as long as it's simple. It confused users when they conditionally revealed complicated questions.</p>
+
+  <h3 id="smaller-checkboxes">Smaller checkboxes</h3>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "smaller"
+  }) }}
+
+  <p>Use standard-sized checkboxes in most cases.</p>
+  <p>You can use small checkboxes where you need something less visually prominent. For example, on:</p>
+  <ul>
+    <li>a page of search results where users need to see and change search filters without distracting them from the results</li>
+    <li>on information-dense screens in services designed for repeat use, like staff-facing systems</li>
+  </ul>
 
   <h3 id="error-messages">Error messages</h3>
-  <p>Error messages should be styled like this:</p>
+  <p>Style error messages like this.</p>
 
   {{ designExample({
     group: "components",
@@ -103,10 +146,10 @@
   <p>Follow:</p>
   <ul>
     <li><a href="/design-system/components/error-message">our guidance on error messages</a></li>
-    <li><a href="https://design-system.service.gov.uk/components/checkboxes#error-messages">GOV.UK Design System guidance on error messages for checkboxes</a></li>
+    <li><a href="https://design-system.service.gov.uk/components/checkboxes#error-messages">GOV.UK design system guidance on error messages for checkboxes</a></li>
   </ul>
 
   <h2>Research</h2>
-  <p>Our checkboxes are based on the GOV.UK Design System. Read more about <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">how GOV.UK developed and tested them</a>.</p>
+  <p>Our checkboxes are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>
 
 {% endblock %}

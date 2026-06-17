@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "resolvePackageJsonImports": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "types": []
+  },
+  "exclude": ["**/node_modules", "**/public"],
+  "typeAcquisition": {
+    "enable": false
+  }
+}

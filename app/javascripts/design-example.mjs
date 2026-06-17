@@ -1,5 +1,4 @@
-import ClipboardJS from 'clipboard'
-import { iframeResize } from 'iframe-resizer'
+import { initialize } from '@open-iframe-resizer/core'
 import { Component } from 'nhsuk-frontend'
 
 export class DesignExample extends Component {
@@ -13,47 +12,105 @@ export class DesignExample extends Component {
     this.currentTabClass = `${this.tabClass}--current`
     this.hiddenClass = 'js-hidden'
 
-    this.tabs = this.$root.querySelectorAll(`.${this.tabClass}`)
-    this.examples = this.$root.querySelectorAll(
-      '.app-code-snippet__preformatted'
+    this.tabs = this.$root.querySelectorAll(`.${this.tabClass} a`)
+    this.examples = /** @type {NodeListOf<HTMLElement>} */ (
+      this.$root.querySelectorAll('.app-code-snippet__preformatted')
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
-    this.copyButtons = this.$root.querySelectorAll('.app-button--copy')
     this.iframe = this.$root.querySelector('iframe')
+    this.state = { isMouseDown: false }
 
     this.bindEvents()
 
-    iframeResize([{ heightCalculationMethod: 'max' }], this.iframe)
+    const hash = window.location.hash
+
+    if (hash.match('^#options-')) {
+      const $optionsElement = this.$root.querySelector(hash)
+      if (!$optionsElement) {
+        return
+      }
+
+      // Is hash for a specific options table? eg. #options-checkboxes-example--hint
+      const isLinkToTable = hash.indexOf('--') > -1
+
+      const exampleName = isLinkToTable
+        ? hash.split('#options-')[1].split('--')[0]
+        : hash.split('#options-')[1]
+
+      if (exampleName) {
+        const $tabLink = this.$root.querySelector(
+          `a[href="#${exampleName}-nunjucks"]`
+        )
+
+        const $optionsDetailsElement = this.$root.querySelector(
+          `#options-${exampleName}-details`
+        )
+
+        if (
+          !($tabLink instanceof HTMLAnchorElement) ||
+          !($optionsDetailsElement instanceof HTMLDetailsElement)
+        ) {
+          return
+        }
+
+        this.handleTabClick($tabLink)
+
+        $optionsDetailsElement.open = true
+
+        window.setTimeout(() => {
+          $tabLink.focus()
+          if (isLinkToTable) $optionsElement.scrollIntoView()
+        }, 0)
+      }
+    }
   }
 
   bindEvents() {
     this.tabs.forEach((tab) =>
-      tab.addEventListener('click', (e) => this.handleTabClick(e))
+      tab.addEventListener('click', (event) => {
+        this.handleTabClick(event.currentTarget)
+        event.preventDefault()
+      })
     )
 
     this.closeButtons.forEach((closeButton) => {
-      closeButton.addEventListener('click', (e) => this.handleCloseClick(e))
+      closeButton.addEventListener('click', (event) => {
+        this.handleCloseClick()
+        event.preventDefault()
+      })
+
       closeButton.removeAttribute('hidden')
     })
 
-    if (ClipboardJS.isSupported()) {
-      this.copyButtons.forEach((copyButton) => this.initCopyClick(copyButton))
+    if (this.iframe) {
+      const { iframe, state } = this
+
+      iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
+      iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
+
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
     }
   }
 
-  handleTabClick(e) {
-    const targetEl = e.target.parentElement
-    const index = targetEl.dataset.index
+  isResizeAllowed() {
+    // Prevent resize when iframe has mouse down
+    // e.g. When resizing manually using handle
+    return !this.state.isMouseDown
+  }
 
-    e.preventDefault()
+  handleTabClick($tabLink) {
+    const $tabParent = $tabLink.parentElement
+    const index = $tabParent.dataset.index
 
     this.tabs.forEach((tab) => {
-      if (tab.classList.contains(this.currentTabClass)) {
-        tab.classList.remove(this.currentTabClass)
+      if (tab.href !== $tabLink.href) {
+        tab.setAttribute('aria-expanded', 'false')
+        tab.parentElement?.classList.remove(this.currentTabClass)
       }
     })
 
-    targetEl.classList.add(this.currentTabClass)
+    $tabLink.setAttribute('aria-expanded', 'true')
+    $tabParent.classList.add(this.currentTabClass)
 
     this.exampleToggler(index)
   }
@@ -64,30 +121,11 @@ export class DesignExample extends Component {
     })
 
     this.tabs.forEach((tab) => {
-      if (tab.classList.contains(this.currentTabClass)) {
-        tab.classList.remove(this.currentTabClass)
+      if (tab.parentElement?.classList.contains(this.currentTabClass)) {
+        tab.setAttribute('aria-expanded', 'false')
+        tab.parentElement.classList.remove(this.currentTabClass)
       }
     })
-  }
-
-  initCopyClick(copyButton) {
-    const clipboard = new ClipboardJS(copyButton, {
-      target: () => copyButton.parentElement.querySelector('pre')
-    })
-
-    // Update button on success
-    clipboard.on('success', (event) => {
-      copyButton.innerText = 'Code copied'
-      event.clearSelection()
-
-      // Reset button after delay
-      setTimeout(() => {
-        copyButton.innerText = 'Copy code'
-      }, 2500)
-    })
-
-    // Reveal button
-    copyButton.removeAttribute('hidden')
   }
 
   showEl(el) {
@@ -108,19 +146,6 @@ export class DesignExample extends Component {
         ? example.classList.remove(this.hiddenClass)
         : example.classList.add(this.hiddenClass)
     )
-  }
-
-  // Yoink attr: https://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
-  setIframeHeight(iframe) {
-    if (iframe) {
-      const iframeWin =
-        iframe.contentWindow || iframe.contentDocument.parentWindow
-      if (iframeWin.document.body) {
-        iframe.height =
-          iframeWin.document.documentElement.scrollHeight ||
-          iframeWin.document.body.scrollHeight
-      }
-    }
   }
 
   static moduleName = 'app-design-example'

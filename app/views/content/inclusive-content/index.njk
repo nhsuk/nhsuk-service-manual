@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Inclusive content" %}
 {% set pageSection = "Content guide" %}
 {% set subSection = "Inclusive content" %}
@@ -5,8 +7,6 @@
 {% set dateUpdated = "February 2022" %}
 {% set theme = "Content guide" %}
 {% set backlog_issue_id = "317" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "content/_breadcrumb.njk" %}
@@ -21,6 +21,5 @@
 <p>Check with your users how they want to be described and test your content with them.</p>
 
 {% include "content/inclusive-content/_side-nav-mobile.njk" %}
-
 
 {% endblock %}

@@ -1,13 +1,13 @@
-{% from 'button/macro.njk' import button %}
-{% from 'radios/macro.njk' import radios %}
+{% from "button/macro.njk" import button %}
+{% from "radios/macro.njk" import radios %}
 
 {{ radios({
   name: "haveYouCompletedThisSection",
   fieldset: {
     legend: {
       text: "Have you completed this section?",
-      isPageHeading: false,
-      classes: "nhsuk-fieldset__legend--m"
+      size: "m",
+      isPageHeading: false
     }
   },
   errorMessage: {

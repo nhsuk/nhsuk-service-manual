@@ -1,12 +1,14 @@
-{% from 'textarea/macro.njk' import textarea %}
+{% from "textarea/macro.njk" import textarea %}
 
 {{ textarea({
   name: "example",
   id: "example",
   label: {
-    text: "Can you provide more detail?"
+    text: "Can you provide more detail about how you move around (your mobility)?",
+    size: "l",
+    isPageHeading: true
   },
   hint: {
-    text: "Do not include personal information like your name, date of birth or NHS number"
+    text: "For example, if you use crutches, sticks, or a walking frame"
   }
 }) }}

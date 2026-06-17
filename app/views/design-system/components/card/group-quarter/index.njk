@@ -1,28 +1,44 @@
-{% from 'card/macro.njk' import card %}
+{% from "card/macro.njk" import card %}
 
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-    {{ card({
-      clickable: "true",
-      headingHtml: "<p class=\"nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1\">91 <span class=\"nhsuk-u-visually-hidden\">Applicants</span></p><a href=\"#\" class=\"nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state\">Applicants</a>"
-    }) }}
+    {% call card({
+      clickable: true,
+      heading: "91",
+      headingClasses: "nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1",
+      headingVisuallyHiddenText: "Applicants"
+    }) %}
+      <a href="#/applicants" class="nhsuk-card__link">Applicants</a>
+    {% endcall %}
   </li>
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-    {{ card({
-      clickable: "true",
-      headingHtml: "<p class=\"nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1\">23 <span class=\"nhsuk-u-visually-hidden\">Jobs</span></p><a href=\"#\" class=\"nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state\">Jobs</a>"
-    }) }}
+    {% call card({
+      clickable: true,
+      heading: "23",
+      headingClasses: "nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1",
+      headingVisuallyHiddenText: "Jobs"
+    }) %}
+      <a href="#/jobs" class="nhsuk-card__link">Jobs</a>
+    {% endcall %}
   </li>
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-    {{ card({
-      clickable: "true",
-      headingHtml: "<p class=\"nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1\">8 <span class=\"nhsuk-u-visually-hidden\">Services</span></p><a href=\"#\" class=\"nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state\">Services</a>"
-    }) }}
+    {% call card({
+      clickable: true,
+      heading: "8",
+      headingClasses: "nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1",
+      headingVisuallyHiddenText: "Services"
+    }) %}
+      <a href="#/services" class="nhsuk-card__link">Services</a>
+    {% endcall %}
   </li>
   <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-    {{ card({
-      clickable: "true",
-      headingHtml: "<p class=\"nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1\">33 <span class=\"nhsuk-u-visually-hidden\">Messages</span></p><a href=\"#\" class=\"nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state\">Messages</a>"
-    }) }}
+    {% call card({
+      clickable: true,
+      heading: "33",
+      headingClasses: "nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1",
+      headingVisuallyHiddenText: "Messages"
+    }) %}
+      <a href="#/messages" class="nhsuk-card__link">Messages</a>
+    {% endcall %}
   </li>
 </ul>

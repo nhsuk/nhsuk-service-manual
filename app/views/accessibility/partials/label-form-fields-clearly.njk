@@ -1,16 +1,11 @@
 <h2 id="label-form-fields-clearly">Label form fields clearly</h2>
 <p>Make sure that every form field has a label that tells users what information they need to enter.</p>
 
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      More about labels
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>Put the label next to the form field so that the user is clear which field it relates to.</p>
-    <p>Generally the label should be visible. (There are exceptions. For example, there's a hidden label "Search the NHS website" on the search box in the NHS.UK header. It doesn't need a visible label because people can see the search icon and the word "Search" in the box.)</p>
-    <p>Give grouped items a "legend". You can see examples in the <a href="/design-system/components/checkboxes">checkboxes</a> and <a href="/design-system/components/radios">radios</a> components in the service manual.</p>
-    <p>To test the code is correct, you can usually click on the label and the field should be focused by the browser. Otherwise, check there is a "for" attribute on the label and that it matches the "id" attribute of the field.</p>
-  </div>
-</details>
+{% call details({
+  summaryText: "More about labels"
+}) %}
+  <p>Put the label next to the form field so that the user is clear which field it relates to.</p>
+  <p>Generally the label should be visible. (There are exceptions. For example, there's a hidden label "Search the NHS website" on the search box in the NHS.UK header. It doesn't need a visible label because people can see the search icon and the word "Search" in the box.)</p>
+  <p>Give grouped items a "legend". You can see examples in the <a href="/design-system/components/checkboxes">checkboxes</a> and <a href="/design-system/components/radios">radios</a> components in the service manual.</p>
+  <p>To test the code is correct, you can usually click on the label and the field should be focused by the browser. Otherwise, check there is a "for" attribute on the label and that it matches the "id" attribute of the field.</p>
+{% endcall %}

@@ -1,0 +1,21 @@
+{% from "label/macro.njk" import label %}
+
+{{ label({
+  text: "Label size large",
+  size: "l",
+  isPageHeading: true
+}) }}
+
+{{ label({
+  text: "Label size medium",
+  size: "m"
+}) }}
+
+{{ label({
+  text: "Label size small",
+  size: "s"
+}) }}
+
+{{ label({
+  text: "Label default"
+}) }}

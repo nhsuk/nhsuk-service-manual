@@ -1,11 +1,11 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Spacing" %}
 {% set pageDescription = "The design system uses 2 different spacing scales: responsive and static." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set dateUpdated = "May 2025" %}
 {% set backlog_issue_id = "24" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "design-system/styles/_breadcrumb.njk" %}
@@ -51,8 +51,8 @@
   <p>The spacing for "large screens" is used when the screen is wider than the desktop breakpoint (768px). Spacing for the smallest units (0 to 2) stays the same for all screen sizes.
 
   {{ table({
-    panel: false,
-    caption: "",
+    caption: "The responsive spacing scale",
+    captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
         text: "Spacing unit"
@@ -243,8 +243,8 @@
   <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as "large screens" in the responsive spacing scale.</p>
 
   {{ table({
-    panel: false,
-    caption: "",
+    caption: "The static spacing scale",
+    captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
         text: "Spacing unit"

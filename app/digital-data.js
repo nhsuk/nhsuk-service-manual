@@ -1,11 +1,20 @@
+/**
+ * @param {string} path
+ */
 function getPageName(path) {
   return `nhs:manual${path.replace(/\/$/, '').replace(/\//g, ':')}`
 }
 
+/**
+ * @param {string} path
+ */
 function getCategories(path) {
   return path.split('/').filter(Boolean)
 }
 
+/**
+ * @param {Request} req
+ */
 function digitalData(req) {
   const { path } = req
   const categories = getCategories(path)
@@ -27,3 +36,7 @@ function digitalData(req) {
 }
 
 module.exports = digitalData
+
+/**
+ * @import { Request } from 'express'
+ */

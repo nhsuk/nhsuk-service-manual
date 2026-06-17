@@ -1,13 +1,12 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "Accessibility" %}
 {% set pageDescription = "How to make digital services in the NHS work for everyone." %}
 {% set pageSection = "Accessibility" %}
 {% set landingPage = true %}
 {% set hideContact = "true" %}
 
-{% extends "layouts/app-layout.njk" %}
-
 {% block bodyContent %}
-
 
   <p>Your service must be accessible to everyone who needs it. If it is not, you may be breaking the law.</p>
   <p>Everyone who works on NHS digital services has a role to play in making them accessible and inclusive.</p>
@@ -16,8 +15,6 @@
   <p>The service manual is up to date with WCAG 2.2.</p>
   <p><a href="/accessibility/new-criteria-in-wcag-2-2">Find out more about the new criteria that WCAG 2.2 introduced</a>.</p>
   <p>The Government Digital Service, Department of Health and Social Care and NHS England are now monitoring accessibility to WCAG 2.2.</p>
-
-
 
   <div class="app-index-navigation app-u-hide-desktop">
     {% include "includes/_side-nav.njk" %}

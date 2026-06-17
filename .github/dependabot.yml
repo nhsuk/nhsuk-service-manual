@@ -9,27 +9,31 @@ updates:
     groups:
       application:
         patterns:
+          - '@open-iframe-resizer/*'
+          - '@prettier/*'
           - 'accessible-autocomplete'
           - 'axios'
           - 'basic-auth'
           - 'cheerio'
-          - 'clipboard'
           - 'compression'
           - 'express'
           - 'gray-matter'
           - 'helmet'
           - 'highlight.js'
-          - 'iframe-resizer'
           - 'js-beautify'
           - 'lunr'
           - 'marked'
           - 'nhsuk-frontend'
           - 'nunjucks'
+          - 'outdent'
+          - 'slug'
 
       build:
         patterns:
           - '@babel/*'
           - 'autoprefixer'
+          - 'babel-plugin-*'
+          - 'baseline-browser-mapping'
           - 'caniuse-lite'
           - 'cssnano'
           - 'cssnano-*'
@@ -43,15 +47,22 @@ updates:
 
       lint:
         patterns:
-          - '@typescript-eslint/*'
+          - '@eslint/*'
+          - '@trivago/prettier-plugin-*'
+          - '@types/*'
           - 'eslint'
           - 'eslint-*'
+          - 'globals'
           - 'prettier'
           - 'stylelint'
           - 'stylelint-*'
+          - 'typed-query-selector'
+          - 'typescript'
+          - 'typescript-*'
 
       test:
         patterns:
+          - 'babel-jest'
           - 'jest'
           - 'jest-*'
 
@@ -60,10 +71,11 @@ updates:
           - 'browser-sync'
           - 'concurrently'
           - 'del-cli'
-          - 'husky'
 
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
 
     versioning-strategy: increase
 
@@ -72,5 +84,22 @@ updates:
       - dependency-type: direct
 
       # Include indirect browser data updates
+      # https://web.dev/baseline
+      - dependency-name: baseline-browser-mapping
       # https://caniuse.com
       - dependency-name: caniuse-lite
+
+  # Update GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+
+    # Group actions into shared PR
+    groups:
+      actions:
+        patterns:
+          - '*'
+
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7

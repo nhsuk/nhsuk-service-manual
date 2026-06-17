@@ -1,15 +1,37 @@
 const digitalData = require('./digital-data')
 
-module.exports = (config) => (req, res, next) => {
-  // eslint-disable-line arrow-parens
-  res.locals.BASE_URL = config.baseURL
-  res.locals.ENVIRONMENT = config.env
+/**
+ *
+ * @param {typeof Config} config
+ */
+module.exports =
+  (config) =>
+  /**
+   * @param {Request} req
+   * @param {Response} res
+   * @param {NextFunction} next
+   */
+  (req, res, next) => {
+    let { path: basePath } = req
 
-  // Adobe Analytics
-  res.locals.adobeTrackingUrl = config.adobeTrackingUrl
+    // Remove trailing slash
+    if (basePath.endsWith('/')) {
+      basePath = basePath.slice(0, -1)
+    }
 
-  // Datalayer info
-  res.locals.digitalData = digitalData(req)
+    res.locals.basePath = basePath
+    res.locals.baseUrl = config.baseUrl
 
-  next()
-}
+    // Adobe Analytics
+    res.locals.adobeTrackingUrl = config.adobeTrackingUrl
+
+    // Datalayer info
+    res.locals.digitalData = digitalData(req)
+
+    next()
+  }
+
+/**
+ * @import { Request, Response, NextFunction } from 'express'
+ * @import { default as Config } from './config.js'
+ */

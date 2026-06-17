@@ -1,3 +1,5 @@
+{% extends "layouts/app-layout.njk" %}
+
 {% set pageTitle = "What all NHS services need to do about accessibility" %}
 {% set pageSection = "Accessibility" %}
 {% set subSection = "Accessibility" %}
@@ -5,8 +7,6 @@
 {% set theme = "Everyone needs to know" %}
 {% set dateUpdated = "January 2024" %}
 {% set hideContact = "true" %}
-
-{% extends "layouts/app-layout.njk" %}
 
 {% block beforeContent %}
   {% include "accessibility/_breadcrumb.njk" %}

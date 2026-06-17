@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "target": "ES2015",
+    "types": ["node", "typed-query-selector"]
+  },
+  "include": ["javascripts/**/*.mjs"],
+  "exclude": ["javascripts/**/*.test.mjs"]
+}

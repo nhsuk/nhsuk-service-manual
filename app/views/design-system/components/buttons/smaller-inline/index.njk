@@ -1,0 +1,19 @@
+{% from "button/macro.njk" import button %}
+{% from "input/macro.njk" import input %}
+
+{{ input({
+  label: {
+    text: "Product code"
+  },
+  id: "product-code",
+  name: "productCode",
+  classes: "nhsuk-input--width-10 nhsuk-input--code",
+  formGroup: {
+    afterInput: {
+      html: button({
+        text: "Find",
+        classes: "nhsuk-button--small"
+      })
+    }
+  }
+}) }}

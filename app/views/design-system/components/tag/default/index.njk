@@ -1,86 +1,89 @@
-{% from 'tag/macro.njk' import tag %}
+{% from "tag/macro.njk" import tag %}
+{% from "tables/macro.njk" import table %}
 
-<table class="nhsuk-table">
-  <thead class="nhsuk-table__head">
-    <tr class="nhsuk-table__row">
-      <th class="nhsuk-table__header" scope="col"> Name of user </th>
-      <th class="nhsuk-table__header" scope="col"> Status </th>
-    </tr>
-  </thead>
-  <tbody class="nhsuk-table__body">
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Les Hunter
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+{{ table({
+  head: [
+    {
+      text: "Name of user"
+    },
+    {
+      text: "Status"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Les Hunter"
+      },
+      {
+        html: tag({
           text: "Inactive",
           classes: "nhsuk-tag--grey"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Naomi Edwards
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Naomi Edwards"
+      },
+      {
+        html: tag({
           text: "Inactive",
           classes: "nhsuk-tag--grey"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Lyra Louth
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Lyra Louth"
+      },
+      {
+        html: tag({
           text: "Active"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Michelle Flynn
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Michelle Flynn"
+      },
+      {
+        html: tag({
           text: "Active"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Brian Okello
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Brian Okello"
+      },
+      {
+        html: tag({
           text: "Inactive",
           classes: "nhsuk-tag--grey"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Lisa Lenehan
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Lisa Lenehan"
+      },
+      {
+        html: tag({
           text: "Active"
-        })}}
-      </td>
-    </tr>
-    <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">
-        Emily Snailham
-      </td>
-      <td class="nhsuk-table__cell">
-        {{ tag({
+        })
+      }
+    ],
+    [
+      {
+        text: "Emily Snailham"
+      },
+      {
+        html: tag({
           text: "Inactive",
           classes: "nhsuk-tag--grey"
-        })}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+        })
+      }
+    ]
+  ]
+}) }}
