@@ -4,39 +4,9 @@
 /// Utilities
 ////
 
-.app-u-border-top {
-  margin-top: 8px;
-  border-top: 2px solid nhsuk-colour("blue");
-
-  h3 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
-  ul {
-    padding-left: 0;
-    list-style: none;
-  }
-}
-
-// Hide content on mobile
-.app-u-hide-mobile {
-  @include nhsuk-media-query($until: desktop) {
-    display: none;
-  }
-}
-
 // Hide content on desktop
 .app-u-hide-desktop {
   @include nhsuk-media-query($from: desktop) {
     display: none;
   }
-}
-
-// Make content full width of its parent container
-.app-u-full-width {
-  // stylelint-disable-next-line declaration-no-important
-  width: 100% !important;
-  // stylelint-disable-next-line declaration-no-important
-  max-width: 100% !important;
 }

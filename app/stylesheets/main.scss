@@ -19,41 +19,6 @@
   text-align: center;
 }
 
-// Removal of table cell element top and bottom margins
-// Remove bottom margin from a <p>
-.nhsuk-table__cell {
-  @include nhsuk-top-and-bottom;
-}
-
-// Helper to break long words/URLs in tables
-.nhsuk-table__cell--break-all {
-  word-break: break-all;
-}
-
-.nhsuk-table__cell--break-all--tablet {
-  @include nhsuk-media-query($until: tablet) {
-    word-break: break-all;
-  }
-}
-
-.nhsuk-table__cell--break-all--desktop {
-  @include nhsuk-media-query($until: large-desktop) {
-    word-break: break-all;
-  }
-}
-
-// helper to make table full width of parent (instead of 'reading-width') for wide tables
-.nhsuk-table.nhsuk-table--full-width {
-  max-width: 100%;
-}
-
-// Header menu button alignment for Safari
-.nhsuk-header__menu-toggle {
-  @include nhsuk-media-query($from: tablet, $until: large-desktop) {
-    margin-top: 0;
-  }
-}
-
 // The 'What's new' box in the home page hero
 .app-latest-update {
   padding-top: nhsuk-spacing(8);
@@ -94,9 +59,7 @@
   padding-bottom: 56.25%;
   overflow: hidden;
 
-  iframe,
-  object,
-  embed {
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,33 +77,6 @@
   @include nhsuk-media-query($until: desktop) {
     padding-top: nhsuk-spacing(5);
     padding-bottom: nhsuk-spacing(5);
-  }
-}
-
-// Team pictures used for lists
-
-.app-team-pictures-list {
-  @include nhsuk-responsive-padding(0, "left");
-
-  img {
-    display: inline-block;
-
-    width: 40px;
-    height: 40px;
-
-    overflow: hidden;
-
-    border: 2px solid transparent;
-    border-radius: 30px;
-
-    line-height: 1;
-    vertical-align: middle;
-
-    @include nhsuk-responsive-margin(3, "right");
-  }
-
-  li {
-    list-style: none;
   }
 }
 
@@ -171,10 +107,4 @@
 
 .app-wcag-22 p:last-child {
   margin-bottom: 0;
-}
-
-.app-icon-table .nhsuk-icon__user {
-  width: 32px;
-  height: 32px;
-  margin: 0 1px;
 }

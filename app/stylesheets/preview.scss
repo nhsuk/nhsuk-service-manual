@@ -3,8 +3,6 @@
 @use "nhsuk-frontend/dist/nhsuk/core/tools" as *;
 @use "nhsuk-frontend/dist/nhsuk/core/helpers" as *;
 
-@use "settings" as *;
-
 // WARNING: This file is intended for adding extra styles to the code snippet
 // examples and standalone examples.
 // Beware of adding too much in to this file, we should aim for our example
@@ -21,11 +19,6 @@
   @include nhsuk-media-query($until: tablet) {
     padding: 16px;
   }
-}
-
-.app-example-page code {
-  font-family: $app-code-font;
-  @include nhsuk-font-size(16);
 }
 
 // Component examples on a blue background
@@ -56,14 +49,6 @@
 .spacing-example div:nth-of-type(odd) {
   // stylelint-disable-next-line color-no-hex
   background: #337ec6;
-}
-
-// Layout examples for on divs
-.app-example-page--layout [class^="nhsuk-grid-column"] > p {
-  padding: 20px;
-  color: nhsuk-colour("white");
-  background-color: nhsuk-colour("blue");
-  text-align: center;
 }
 
 // Page template annotation
