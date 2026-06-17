@@ -24,7 +24,6 @@
 
 @include nhsuk-media-query($from: tablet) {
   .featured-list--item {
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: nhsuk-spacing(6);
     padding-left: nhsuk-spacing(9);
@@ -59,10 +58,8 @@
 }
 
 .featured-list--item__heading {
-  -ms-flex-align: center;
   align-items: center;
   border-top: nhsuk-spacing(1) solid nhsuk-colour("blue");
-  display: -ms-flexbox;
   display: flex;
   margin-top: 0;
   padding-top: nhsuk-spacing(3);
