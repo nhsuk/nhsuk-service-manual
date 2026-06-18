@@ -2,6 +2,10 @@
 
 ## TBC
 
+:new: **New features**
+
+- Add option for "all" to checkboxes component
+
 :wrench: **Maintenance**
 
 - Add curly quote example to punctuation section
