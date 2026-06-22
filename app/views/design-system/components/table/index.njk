@@ -83,7 +83,6 @@
   <p>Descending order (down arrow) reverses this.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>This table only sorts by 1 column at a time. Users can click in the column header of an unsorted column to trigger sorting. Clicking again toggles between ascending and descending. The default sort order is ascending first, but you can change the default per column.</p>
-  <p>This example presents unsorted when the page loads.</p>
   {{ designExample({
     group: "components",
     item: "table",
@@ -127,6 +126,7 @@
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
+  <p>Cells with <a href="#missing-data-table">missing data</a> should show "no data" or similar. By default they will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
   <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
 
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
