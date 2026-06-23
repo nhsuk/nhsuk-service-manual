@@ -102,11 +102,14 @@ export class DesignExample extends Component {
       iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
       iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
 
-      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe).then(
-        ([resizer]) => {
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
+        .then(([resizer]) => {
           this.resizer = resizer
-        }
-      )
+          return null
+        })
+        .catch(() => {
+          // initialization failed, ignore
+        })
     }
   }
 
@@ -143,9 +146,14 @@ export class DesignExample extends Component {
         initialize(
           { onBeforeIframeResize: () => this.isResizeAllowed() },
           this.iframe
-        ).then(([resizer]) => {
-          this.resizer = resizer
-        })
+        )
+          .then(([resizer]) => {
+            this.resizer = resizer
+            return null
+          })
+          .catch(() => {
+            // initialization failed, ignore
+          })
       },
       { once: true }
     )
