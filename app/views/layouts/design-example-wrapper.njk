@@ -41,5 +41,9 @@
         }
       })
     </script>
+  {% else %}
+    <script>
+      document.body.classList.remove('nhsuk-frontend-supported')
+    </script>
   {% endif %}
 {% endblock %}
