@@ -1,6 +1,8 @@
 {% from "section-navigation/macro.njk" import sectionNavigation -%}
 
 <div class="nhsuk-width-container">
+
+  <h1 class="nhsuk-heading-l">Patient details</h1>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
 
@@ -30,14 +32,17 @@
           },
           {
             href: "#",
-            text: "Referrals"
+            text: "Referrals",
+            badge: {
+              text: "New"
+            }
           }
         ]
       }) }}
 
     </div>
     <div class="nhsuk-grid-column-two-thirds">
-      <h2 class="nhsuk-heading-l">Summary</h2>
+      <h2 class="nhsuk-heading-m">Summary</h2>
       <p>Content for the summary page.</p>
     </div>
   </div>
