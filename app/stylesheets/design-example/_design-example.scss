@@ -35,6 +35,13 @@
       font-weight: bold;
       text-decoration: none;
     }
+
+    .app-design-example__js-toggle + .app-design-example__js-toggle::before {
+      content: "|";
+      margin: 0 0.25em;
+      color: inherit;
+      font-weight: normal;
+    }
   }
 }
 
