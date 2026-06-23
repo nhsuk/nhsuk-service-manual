@@ -16,10 +16,11 @@
 
   .app-design-example__header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     position: relative;
+
+    align-items: center;
+    justify-content: space-between;
 
     width: 100%;
     padding: 8px 16px;
@@ -30,9 +31,9 @@
     @include nhsuk-font(16);
 
     .app-design-example__js-toggle[aria-current] {
+      color: inherit;
       font-weight: bold;
       text-decoration: none;
-      color: inherit;
     }
   }
 }

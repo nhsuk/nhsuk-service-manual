@@ -18,8 +18,12 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.iframe = this.$root.querySelector('iframe')
-    this.jsToggleLinks = this.$root.querySelectorAll('.app-design-example__js-toggle')
-    this.newTabLink = this.$root.querySelector('.app-design-example__new-tab-link')
+    this.jsToggleLinks = this.$root.querySelectorAll(
+      '.app-design-example__js-toggle'
+    )
+    this.newTabLink = this.$root.querySelector(
+      '.app-design-example__new-tab-link'
+    )
     this.state = { isMouseDown: false }
 
     this.bindEvents()
