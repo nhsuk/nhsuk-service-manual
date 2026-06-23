@@ -25,6 +25,7 @@ export class DesignExample extends Component {
       '.app-design-example__new-tab-link'
     )
     this.state = { isMouseDown: false }
+    this.resizer = null
 
     this.bindEvents()
 
@@ -101,7 +102,11 @@ export class DesignExample extends Component {
       iframe.addEventListener('mousedown', () => (state.isMouseDown = true))
       iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
 
-      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
+      initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe).then(
+        ([resizer]) => {
+          this.resizer = resizer
+        }
+      )
     }
   }
 
@@ -130,6 +135,20 @@ export class DesignExample extends Component {
 
   handleJsToggleClick($link) {
     if (!(this.iframe instanceof HTMLIFrameElement)) return
+
+    this.iframe.addEventListener(
+      'load',
+      () => {
+        this.resizer?.unsubscribe()
+        initialize(
+          { onBeforeIframeResize: () => this.isResizeAllowed() },
+          this.iframe
+        ).then(([resizer]) => {
+          this.resizer = resizer
+        })
+      },
+      { once: true }
+    )
 
     this.iframe.src = $link.href
 
