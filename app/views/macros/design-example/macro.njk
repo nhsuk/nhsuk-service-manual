@@ -84,19 +84,16 @@
 
     {% if showExample %}
       <div class="app-design-example__header">
-        <a href="{{ standaloneURL }}" class="app-design-example__header__link" target="_blank" rel="noopener noreferrer">
+        <a href="{{ standaloneURL }}{% if params.showJavaScriptToggle %}?javascript=on{% endif %}" class="app-design-example__header__link app-design-example__new-tab-link" target="_blank" rel="noopener noreferrer">
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}
-          <span style="margin-left: 10px;">Javascript: </span>
-
-          {# <a href="{{ standaloneURL }}?javascript=on" class="app-design-example__header__link">
-            On</a> |
-          <b>Off</b> #}
-          <b>On</b> |
-          <a href="{{ standaloneURL }}?javascript=off" class="app-design-example__header__link">
-            Off
-          </a>
+          <span class="app-design-example__js-toggle-group">
+            <span>JavaScript:</span>
+            <a href="{{ standaloneURL }}?javascript=on" class="app-design-example__header__link app-design-example__js-toggle" data-js="on" aria-current="true">On</a>
+            |
+            <a href="{{ standaloneURL }}?javascript=off" class="app-design-example__header__link app-design-example__js-toggle" data-js="off">Off</a>
+          </span>
         {% endif %}
       </div>
       <div class="app-code-embed">

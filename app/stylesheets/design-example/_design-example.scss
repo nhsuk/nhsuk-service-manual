@@ -14,8 +14,10 @@
     margin-bottom: nhsuk-spacing(5);
   }
 
-  &__pop-out {
-    display: block;
+  .app-design-example__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     position: relative;
 
@@ -26,27 +28,11 @@
     border-bottom: 0;
     outline: 2px solid transparent;
     @include nhsuk-font(16);
-  }
 
-  &__header__link:first-of-type {
-
-    margin-right: 20px;
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
-    }
-
-    &:focus {
-      outline: $nhsuk-focus-width solid transparent;
-      color: $nhsuk-focus-text-colour;
-      background-color: $nhsuk-focus-colour;
-      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
+    .app-design-example__js-toggle[aria-current] {
+      font-weight: bold;
       text-decoration: none;
-
-      &:hover {
-        color: $nhsuk-focus-text-colour;
-      }
+      color: inherit;
     }
   }
 }

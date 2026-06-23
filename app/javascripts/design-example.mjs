@@ -18,6 +18,8 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.iframe = this.$root.querySelector('iframe')
+    this.jsToggleLinks = this.$root.querySelectorAll('.app-design-example__js-toggle')
+    this.newTabLink = this.$root.querySelector('.app-design-example__new-tab-link')
     this.state = { isMouseDown: false }
 
     this.bindEvents()
@@ -82,6 +84,13 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
+    this.jsToggleLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        this.handleJsToggleClick(event.currentTarget)
+        event.preventDefault()
+      })
+    })
+
     if (this.iframe) {
       const { iframe, state } = this
 
@@ -113,6 +122,21 @@ export class DesignExample extends Component {
     $tabParent.classList.add(this.currentTabClass)
 
     this.exampleToggler(index)
+  }
+
+  handleJsToggleClick($link) {
+    if (!(this.iframe instanceof HTMLIFrameElement)) return
+
+    this.iframe.src = $link.href
+
+    if (this.newTabLink instanceof HTMLAnchorElement) {
+      this.newTabLink.href = $link.href
+    }
+
+    this.jsToggleLinks.forEach((link) => {
+      link.removeAttribute('aria-current')
+    })
+    $link.setAttribute('aria-current', 'true')
   }
 
   handleCloseClick() {
