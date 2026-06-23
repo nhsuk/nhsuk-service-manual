@@ -90,13 +90,13 @@
         {% if params.showJavaScriptToggle %}
           <span class="app-design-example__js-toggle-group">
             <span>JavaScript:</span>
-            <a href="{{ standaloneURL }}?javascript=on" class="app-design-example__header__link app-design-example__js-toggle" data-js="on" aria-current="true">On</a>
-            <a href="{{ standaloneURL }}?javascript=off" class="app-design-example__header__link app-design-example__js-toggle" data-js="off">Off</a>
+            <a href="{{ standaloneURL }}?javascript=on" class="app-design-example__header__link app-design-example__js-toggle" data-js="on" aria-controls="{{ exampleId }}-frame" aria-current="true">On</a>
+            <a href="{{ standaloneURL }}?javascript=off" class="app-design-example__header__link app-design-example__js-toggle" data-js="off" aria-controls="{{ exampleId }}-frame">Off</a>
           </span>
         {% endif %}
       </div>
       <div class="app-code-embed">
-        <iframe title="{{ params.type }}" src="{{ standaloneURL }}?javascript=on" class="app-design-example__frame"></iframe>
+        <iframe id="{{ exampleId }}-frame" title="{{ params.type }}" src="{{ standaloneURL }}?javascript=on" class="app-design-example__frame"></iframe>
       </div>
     {% endif %}
 
