@@ -3,7 +3,7 @@ const { join, resolve } = require('node:path')
 const {
   ADOBE_TRACKING_URL = '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
   BASE_URL = 'https://service-manual.nhs.uk',
-  NODE_ENV = 'production',
+  NODE_ENV,
   PORT = '3000'
 } = process.env
 
@@ -31,9 +31,6 @@ module.exports = {
 
   // Base URL
   baseUrl: BASE_URL,
-
-  // Environment
-  env: NODE_ENV,
 
   // Port to run local development server on
   port: parseInt(PORT, 10)

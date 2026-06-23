@@ -10,10 +10,10 @@
 ////
 
 .autocomplete {
-  width: 100%;
-  pointer-events: none;
   position: relative;
   z-index: 9;
+  width: 100%;
+  pointer-events: none;
 
   // Stack button above autocomplete
   + .nhsuk-button {
@@ -29,16 +29,16 @@
   @include nhsuk-media-query($until: tablet) {
     + .nhsuk-button {
       position: absolute;
-      right: 0;
       top: 0;
+      right: 0;
     }
   }
 }
 
 .autocomplete__input.nhsuk-input {
-  pointer-events: all;
   width: calc(100% - 44px); // [1]
   margin-left: 0;
+  pointer-events: all;
 
   @include nhsuk-media-query($from: tablet) {
     width: 100%; // [1]
@@ -46,40 +46,50 @@
 }
 
 .autocomplete__menu {
-  background-color: nhsuk-colour("white");
-  list-style: none;
+  position: relative;
+
   margin: 10px 0 0;
   padding: 0;
+
+  list-style: none;
+
   pointer-events: all;
-  position: relative;
+
+  background-color: nhsuk-colour("white");
   @include nhsuk-print-hide;
 
   &::after {
+    content: "";
+
+    display: block;
+
     position: absolute;
     top: 0;
     right: -$nhsuk-gutter;
     bottom: 0;
     left: -$nhsuk-gutter;
 
-    display: block;
     background-color: nhsuk-colour("white");
-    content: "";
   }
 
   @include nhsuk-media-query($from: tablet) {
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    right: 0;
+
+    width: 360px;
+    margin: 2px -44px 0;
+    padding: nhsuk-spacing(2) nhsuk-spacing(3);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
     border: solid nhsuk-colour("grey-4");
     border-width: 0 1px 1px;
     border-radius: $nhsuk-border-radius;
-    box-shadow: 0 0 3px 0 rgba(nhsuk-colour("grey-1"), 0.5); // [4]
-    margin: 2px -44px 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: nhsuk-spacing(2) nhsuk-spacing(3);
-    position: absolute;
-    right: 0;
-    top: 100%;
-    width: 360px;
-    z-index: -1;
+
+    box-shadow: 0 0 3px 0 rgb(nhsuk-colour("grey-1"), 0.5); // [4]
 
     &::after {
       display: none;
@@ -88,10 +98,10 @@
 }
 
 .autocomplete__option-category {
-  color: $nhsuk-secondary-text-colour;
   display: block;
-  @include nhsuk-font(16);
   margin-top: nhsuk-spacing(1);
+  color: $nhsuk-secondary-text-colour;
+  @include nhsuk-font(16);
 }
 
 .autocomplete__menu--visible {
@@ -104,13 +114,19 @@
 
 .autocomplete__option {
   display: block;
+
   position: relative;
   z-index: 1;
+
   margin: 0;
   padding: nhsuk-spacing(3) 2px;
-  white-space: nowrap;
+
   border-bottom: 1px solid nhsuk-colour("grey-5");
+
   color: $nhsuk-header-item-colour;
+
+  white-space: nowrap;
+
   cursor: pointer;
   @include nhsuk-font(16);
 
@@ -132,9 +148,9 @@
 
   &:focus,
   &:focus:visited {
+    border-color: nhsuk-colour("white");
     color: $nhsuk-focus-text-colour;
     box-shadow: inset 0 ($nhsuk-focus-width * -1) $nhsuk-focus-text-colour;
-    border-color: nhsuk-colour("white");
   }
 
   @include nhsuk-media-query($until: tablet) {

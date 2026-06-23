@@ -10,6 +10,96 @@
 
 {% block bodyContent %}
 
+<h2>June 2026</h2>
+
+{% set designHtml202606 %}
+  <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
+  <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
+  <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
+  <p>Added new <a href="/design-system/components/checkboxes#inline-checkboxes">inline checkboxes</a> feature and guidance</p>
+  <p>Updated <a href="/design-system/components/radios">radios</a> default example and guidance on inline radios</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in June 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202606
+      }
+    ]
+  ]
+}) }}
+
+
+<h2>May 2026</h2>
+
+{% set contentHtml202605 %}
+  <p>Updated <a href="/content/writing-nhs-messages#text-messages">text messages section of Writing NHS messages</a> after feedback</p>
+{% endset %}
+
+{% set designHtml202605 %}
+  <p>Improved guidance on the <a href="/design-system/components/panel">panel component</a>, <a href="/design-system/patterns/interruption-page">interruption page pattern</a> and <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account header</a> after user testing</p>
+{% endset %}
+
+{% set standardHtml202605 %}
+  <p>Updated links to related resources for <a href="/standards-and-technology/service-standard">NHS service standard</a> points 2 and 3, 4 and 6 to align with GOV standard</p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in May 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202605
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202605
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202605
+      }
+    ]
+  ]
+}) }}
+
+
 <h2>April 2026</h2>
 
 {% set contentHtml202604 %}

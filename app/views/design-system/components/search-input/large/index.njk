@@ -1,0 +1,13 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+  label: {
+    text: "Search",
+    size: "l",
+    isPageHeading: true
+  },
+  name: "example",
+  id: "example",
+  large: true,
+  classes: "nhsuk-input--width-20"
+}) }}

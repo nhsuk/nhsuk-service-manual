@@ -17,6 +17,8 @@ steps:
 
   - script: npm run build
     displayName: 'Build'
+    env:
+      NODE_ENV: production
 
   - script: npm test --ignore-scripts
     displayName: 'Test'

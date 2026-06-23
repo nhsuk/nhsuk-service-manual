@@ -21,5 +21,5 @@
 
 .app-meta-data--strong {
   color: $nhsuk-text-colour;
-  font-weight: 600;
+  @include nhsuk-font-weight-bold;
 }

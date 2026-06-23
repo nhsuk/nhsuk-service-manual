@@ -1,0 +1,18 @@
+{% from "search-input/macro.njk" import searchInput %}
+
+{{ searchInput({
+  label: {
+    text: "Find a patient by NHS number",
+    size: "m"
+  },
+  hint: {
+    html: 'For example <span class="nhsuk-u-nowrap">999 123 4567</span>'
+  },
+  name: "example",
+  id: "example",
+  classes: "nhsuk-input--width-10 nhsuk-input--code",
+  button: {
+    text: "Find",
+    variant: "secondary"
+  }
+}) }}

@@ -3,7 +3,7 @@
 {% set pageTitle = "Writing NHS messages" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "How to write NHS App messages, text messages, emails and letters for patients and the public, with advice on structure, tone and wording so your message is effective and easy to understand." %}
-{% set dateUpdated = "April 2026" %}
+{% set dateUpdated = "May 2026" %}
 {% set backlog_issue_id = "450" %}
 
 {% block beforeContent %}
@@ -124,7 +124,7 @@
 
 <h4>Parent, carer and proxy</h4>
 <p>If you are writing to an adult who has another person looking after their health (sometimes called a proxy), greet the patient and not their carer to avoid confusion over who the communication is intended for.</p>
-<p>Try to avoid using the word "proxy". Research has shown users prefer "carer" or "trusted person".</p> 
+<p>Try to avoid using the word "proxy". Research has shown users prefer "carer" or "trusted person".</p>
 <p>However, greet the parent or carer if you are writing to newborns or children. Try to include an identifying detail such as the name or date of birth of the child in the body of the message.</p>
 <div class="app-example app-example--content">
   {{ tag({
@@ -201,10 +201,10 @@
 
 <h2 id="text-messages">Text messages</h2>
 
-<p>Make sure text messages are brief, direct and contain a clear action that patients can follow. Use simple language and avoid unnecessary detail that may make the message too long or unclear.</p>
+<p>Make sure text messages are brief, direct and contain a clear action that patients can follow. Use simple language and avoid unnecessary detail that may make the message too long or unclear. Only include information your research shows is necessary.</p>
 
 <h3 id="greeting-text">Greeting</h3>
-<p>For brevity and to save characters, text messages do not always require a formal greeting. Start your message with the patient's first or full name as people are more likely to trust a text message if it is personalised.</p>
+<p>To save characters, text messages do not always require a formal greeting. Start your message with the patient's first or full name as people are more likely to trust a text message if it is personalised.</p>
 <p>You can consider a formal greeting if it matches the required tone or content of your message.</p>
 
 <h3 id="protecting-people-from-spam-and-phishing-text">Protecting people from spam and phishing</h3>
@@ -254,13 +254,18 @@
 <p><a href="https://notify.nhs.uk/using-nhs-notify/formatting">Find out more about message formatting on the NHS Notify website</a>.</p>
 
 <h3 id="telling-patients-who-your-message-is-from-text">Telling patients who your message is from</h3>
-<p>The text message sender name (also called SenderID) shows the reader who the text message is from and is often the first thing they see when reading a text notification. If you choose a recognisable SenderID, they can quickly tell who the message is from and are more likely to open and read it.</p>
-
+<p>The sender name shows the reader who the text is from and is often the first thing they see when reading a message. If you choose a recognisable sender name, they can quickly tell who the message is from and are more likely to open and read it.</p>
+<p>Some message sending services may have rules about:</p>
+<ul>
+  <li>acceptable sender names</li>
+  <li>number of characters</li>
+  <li>use of spaces and special characters</li>
+</ul>
 <p><a href="https://notify.nhs.uk/using-nhs-notify/tell-recipients-who-your-messages-are-from#text-message-sender-name">Read more about text message sender names on the NHS Notify website</a>.</p>
 
 <h3 id="length-of-message-text">Length of message</h3>
 
-<p>If a text message is longer than 160 characters including spaces, it will be charged as more than 1 message. Some signs and symbols count as 2 characters. Using accented characters may also increase the cost of your text message.</p>
+<p>If a text message is longer than 160 characters including spaces, it will be charged as more than 1 message. Some signs, symbols and accented characters count as 2 characters. This may increase the cost of your text message.</p>
 
 <p><a href="https://notify.nhs.uk/pricing-and-commercial/text-messages">Find the cost of sending text messages with NHS Notify</a>.</p>
 
@@ -270,7 +275,7 @@
   summaryText: "Example 1 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS Blood Test</p>
+<p><strong>Sender name:</strong> NHStest</p>
 <p>((firstName)) ((lastName)), you are due for your NHS blood test. Book your appointment or find out more at <a href="#">http://www.nhs.uk/service-name-invite</a></p>
 {% endcall %}
 
@@ -278,26 +283,11 @@
   summaryText: "Example 2 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
-<p><strong>SenderID:</strong> NHS App</p>
+<p><strong>Sender name:</strong> NHSApp</p>
 <p>((firstName)) ((lastName))</p>
 <p>You have a new secure message from the NHS.</p>
 <p>Open the NHS App to read it.</p>
 <p>Or you can log in through the website: <a href="#">https://www.nhs.uk/inbox</a></p>
-{% endcall %}
-
-{% call details({
-  summaryText: "Example 3 of an NHS text message",
-  classes: "nhsuk-expander"
-}) %}
-<p><strong>SenderID:</strong> NHS vaccination invitations</p>
-<p>((firstName)) ((lastName))</p>
-<p>You can get your free NHS winter COVID-19 vaccine because of your age.</p>
-<p>Book on the NHS App or at <a href="#">http://www.nhs.uk/book-covid</a></p>
-<p>Cannot get online? Phone 119. Translators are available. Contact your GP surgery if you need a home visit.</p>
-<p>COVID spreads more easily in winter. It's best to get vaccinated as soon as you can, ahead of the colder months. Vaccination tops up your protection against severe symptoms.</p>
-<p>Read more: <a href="#">http://www.nhs.uk/covidvaccination</a></p>
-<p>For easy read and other formats: <a href="#">http://www.england.nhs.uk/seasonal-invites</a></p>
-<p>To opt out: <a href="#">http://www.nhs.uk/covid-invite-preferences</a></p>
 {% endcall %}
 
 <h2 id="emails">Emails</h2>
@@ -314,7 +304,7 @@
 <p>Patients are more likely to engage with a message that's relevant and clearly meant for them. If you start your message with a greeting you should use "Dear" and not "Hi" or similar.</p>
 
 <h3 id="protecting-people-from-spam-and-phishing-email">Protecting people from spam and phishing</h3>
-<p>Patients do not trust emails with poor formatting, spelling mistakes, grammatical errors or inaccuracies. Write messages that follow our <a href="/content/voice-and-tone">voice and tone.</a> Consider asking someone to check your messages for errors before you send them.</p>
+<p>Patients do not trust emails with poor formatting, spelling mistakes, grammatical errors or inaccuracies. Write messages that follow our <a href="/content/voice-and-tone">voice and tone</a>. Consider asking someone to check your messages for errors before you send them.</p>
 
 <p>Further ways to protect people from spam or phishing:</p>
 <ul>
@@ -421,7 +411,7 @@
 <p>Dear ((firstName)) ((lastName)),</p>
 <p><strong>Confirm your address with NHS England</strong></p>
 <p>We are writing to you to confirm if the home address the NHS holds for you is up to date.</p>
-<p>If we do not receive the information we need from you within 30 days of the date of this letter, it will be assumed that you have moved and we will begin the process of removing you from your GP surgery’s patient list. This means you will not receive important information about your healthcare and will no longer be registered with a GP surgery.</p>
+<p>If we do not receive the information we need from you within 30 days of the date of this letter, it will be assumed that you have moved and we will begin the process of removing you from your GP surgery's patient list. This means you will not receive important information about your healthcare and will no longer be registered with a GP surgery.</p>
 <p>Please complete one of the options on the attached page. You may want to keep this page in a safe place for your records.</p>
 <p><strong>What to do if your address information is correct</strong></p>
 <p>Please complete one of the following options:</p>

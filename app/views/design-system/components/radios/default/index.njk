@@ -1,23 +1,32 @@
 {% from "radios/macro.njk" import radios %}
+{% from "fieldset/macro.njk" import fieldset %}
+{% from "hint/macro.njk" import hint %}
 
 {{ radios({
-  idPrefix: "example",
-  name: "example",
+  idPrefix: "example-hints",
+  name: "exampleHints",
   fieldset: {
     legend: {
-      text: "Are you 18 or over?",
+      text: "How do you want to be contacted about this?",
       size: "l",
       isPageHeading: true
     }
   },
+  hint: {
+    text: "Select 1 option"
+  },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "email",
+      text: "Email"
     },
     {
-      value: "no",
-      text: "No"
+      value: "phone",
+      text: "Phone"
+    },
+    {
+      value: "text",
+      text: "Text message"
     }
   ]
 }) }}
