@@ -4,7 +4,7 @@
 
 :new: **New features**
 
-- Add sortable table
+- Add sortable table with guidance
 - Add option for "all" to checkboxes component
 - Add new reference page for override classes
 
