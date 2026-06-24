@@ -139,13 +139,15 @@ export class DesignExample extends Component {
   handleJsToggleClick($link) {
     if (!(this.iframe instanceof HTMLIFrameElement)) return
 
-    this.iframe.addEventListener(
+    const iframe = this.iframe
+
+    iframe.addEventListener(
       'load',
       () => {
         this.resizer?.unsubscribe()
         initialize(
           { onBeforeIframeResize: () => this.isResizeAllowed() },
-          this.iframe
+          iframe
         )
           .then(([resizer]) => {
             this.resizer = resizer
@@ -158,7 +160,7 @@ export class DesignExample extends Component {
       { once: true }
     )
 
-    this.iframe.src = $link.href
+    iframe.src = $link.href
 
     if (this.newTabLink instanceof HTMLAnchorElement) {
       this.newTabLink.href = $link.href
