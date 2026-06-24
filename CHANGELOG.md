@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Update wording about terms of use on Start page pattern
+
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**
