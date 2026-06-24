@@ -61,7 +61,7 @@
   <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a responsive table instead.</p>
 
   <h2 id="responsive-table">Responsive table</h2>
-  <p>This table has a responsive layout. On large screens it displays as a 3 column table. However, on small screens it stacks vertically.</p>
+  <p>This table has a responsive layout. On large screens it displays as a 3-column table. However, on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
 
   {{ designExample({
@@ -82,7 +82,7 @@
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
-  <p>This table only sorts by 1 column at a time. Users can click in the column header of an unsorted column to trigger sorting. Clicking again toggles between ascending and descending. The default sort order is ascending first, but you can change the default per column.</p>
+  <p>This table only sorts by 1 column at a time. Sortable columns show a double arrow until they're sorted. When users click in the column header of an unsorted column, it sorts and shows a single arrow. Clicking again toggles between ascending and descending.</p>
   {{ designExample({
     group: "components",
     item: "table",
@@ -95,25 +95,23 @@
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
 
-  <p>There are 2 ways to use a sortable table:</p>
+  <p>There are 2 ways to sort data:</p>
 
   <ul>
-    <li>JavaScript version – this sorts the table without reloading the page</li>
-    <li>server-side version – this uses links to reload the page with the table sorted by a new column</li>
+    <li>sorting the data on the page</li>
+    <li>sorting pages of data</li>
   </ul>
 
-  <h4 id="sort-order">JavaScript version</h4>
+  <h4 id="sorting-data-on-the-page">Sorting the data on the page</h4>
 
   <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
-
-  <h5>Sort order</h5>
 
   <p>By default a column will be sorted:</p>
   <ul>
     <li>numerically</li>
     <li>alphabetically</li>
   </ul>
-
+  <p>Decide what your default sorting order is. Make sure users can get back to this. Do not sort make the default sort order on a column which cannot be sorted.</p>
   <p>You can override the default sort order to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
 
   <p>For example:</p>
@@ -126,8 +124,7 @@
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
-  <p>Decide what your default sorting order is. Make sure users can get back to this. Don't sort make the default sort order on a column which can't be sorted.</p>
-  <p>Cells with <a href="#missing-data-table">missing data</a> should show "no data" or similar. By default they will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
+  <p>Cells with <a href="#missing-data-table">missing data</a> should show "No data" or similar. By default they will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
   <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
 
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
@@ -141,9 +138,9 @@
     type: "sortable-custom"
   }) }}
 
-  <h4 id="sorting-pages-of-data">Server-side version</h4>
+  <h4 id="sorting-pages-of-data">Sorting pages of data</h4>
 
-  <p>If your table is paginated, do not use the JavaScript based sorting as this will only sort the current page being shown.</p>
+  <p>If your table is paginated, do not use the JavaScript-based sorting as this will only sort the current page being shown.</p>
 
   <p>Instead, use server-side sorting, with the column headings containing links that reload the page with the table sorted by that heading. You will need to:</p>
 
