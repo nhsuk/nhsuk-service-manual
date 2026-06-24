@@ -4,7 +4,7 @@
 
 :new: **New features**
 
-- Add sortable table
+- Add sortable table with guidance
 
 ## 8.11.0 - 14 May 2026
 
