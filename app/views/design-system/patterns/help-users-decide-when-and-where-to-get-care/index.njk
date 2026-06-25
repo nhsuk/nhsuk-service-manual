@@ -23,7 +23,7 @@
     <li>for information which is not about helping users understand the care they need now</li>
     <li>in question pages in a transactional journey</li>
     <li>to warn users about something – use a <a href="/design-system/components/warning-callout">warning callout</a> instead</li>
-    <li>to stop users in a journey, unless it is to tell them to get medical help now – consider using an <a href="/design-system/patterns/interruption-page">interruption page</a> instead</li>
+    <li>to stop users in a journey, unless it's to tell them to get medical help now – consider using an <a href="/design-system/patterns/interruption-page">interruption page</a> instead</li>
     <li>to signpost users to the start of a digital service – use an <a href="/design-system/components/action-link">action link</a>, for example, to find a pharmacy</li>
     <li>to point users to another organisation, like a charity – use <a href="/design-system/components/inset-text">inset text</a> or just link from a line of text</li>
     <li>to give users a brief summary of content or a task, often with a link to more detail – use a <a href="/design-system/components/card">card</a></li>
@@ -38,15 +38,18 @@
     <li><a href="#emergency-care-card-red-and-black">emergency care card (red and dark grey)</a></li>
   </ul>
 
-  <p>You can use more than 1 care card on a page – for example, if people need different kinds of care depending on how severe their symptoms are.</p>
+  <p>You can use more than 1 care card on a page, for example if people need different kinds of care depending on how severe their symptoms are.</p>
   <p>Avoid having too many care cards on the page. We want to give essential information and reassure people, not to scare them. Only include more than 1 of each type if you can show a clear clinical or user need.</p>
   <p>If you have 2 care cards close together, order them according to the likelihood and seriousness of symptoms. For example:</p>
   <ul>
     <li>for headaches, start with a non-urgent care card</li>
     <li>for head injury, start with an emergency care card</li>
   </ul>
-  <p>If you use a care card close to another one or a care card with another component such as a <a href="/design-system/components/warning-callout">warning callout</a>, be aware that users often overlook text between them.</p>
-  <p>If you have any text below a care card, screen reader users may assume that it is part of the care card, unless you give it its own heading.</p>
+  <p>Be aware that users often overlook text between components, for example if you have:</p>
+  <ul>
+    <li>2 care cards close together</li>
+    <li>a care card near another component such as a <a href="/design-system/components/warning-callout">warning callout</a></li>
+  </ul>
 
   <h3 id="non-urgent-care-card-blue">Non-urgent care card (blue)</h3>
   <p>Use the non-urgent care card when you want users to contact a health professional such as their GP.</p>
@@ -60,7 +63,7 @@
 
   <h3 id="urgent-care-card-red">Urgent care card (red)</h3>
   <p>Use the urgent care card if you want users to act quickly but it's not an emergency.</p>
-  <p>You can, for example, use the urgent care card to tell people to</p>
+  <p>You can, for example, use the urgent care card to tell people to:</p>
   <ul>
     <li>make an urgent GP appointment</li>
     <li>contact 111</li>
@@ -75,7 +78,7 @@
   }) }}
 
   <h3 id="emergency-care-card-red-and-black">Emergency care card (red and dark grey)</h3>
-  <p>If users need to get emergency help straight away, use the emergency care card. Tell them to dial 999 or go to A&E now.</p>
+  <p>If users need to get emergency help straight away, use the emergency care card. Depending on clinical advice, tell them to call 999 now, go to A&E now or include both.</p>
   <p>You can include an <a href="/design-system/components/action-link">action link</a> to help users find their nearest A&E. Do not include other links in an emergency care card.</p>
   <p>Only use this card for emergencies.</p>
 
@@ -89,49 +92,18 @@
   
   <h3 id="use-clear-headings">Use short clear headings</h3>
   <p>The card's heading should be 1 clear call to action. Use the format: "Call 111 if:" or "Speak to a GP if:" followed by a bulleted list in the body of the card.</p>
-  <p>People with visual disabilities may not be able to recognise care cards by their colour. Use the card's heading to tell them what to do. This will also help people who are stressed or need to act quickly.</p>
+  <p>People with visual disabilities may not recognise care cards by their colour. Use the card's heading to tell them what to do. This will also help people who are stressed or need to act quickly.</p>
   <p>To help care cards stand out from other components, you can also put them under a heading. For example, "When and where to get medical help".</p>
-
+  <p>If you have any text below a care card, screen reader users may assume that it's part of the care card, unless you give it its own heading.</p>
+  <p>Follow our guidance on <a href="/content/formatting#headings">headings</a>, including heading structure.</p>
+ 
   <h3 id="keep-card-content-brief-and-specific">Keep the card content brief and specific</h3>
-  <p>Keep bullet points short. Limit your list to the 5 most likely symptoms or scenarios, based on clinical sources or advice. In an urgent care card, you can add a 6th catch-all bullet point such as "you or your child have any other symptoms you're worried about".</p>
-  <p>Avoid vague or subjective language.</p>
-  {{ table({
-    head: [
-      {
-        text: "Instead of:"
-      },
-      {
-        text: "Use:"
-      }
-    ],
-    rows: [
-      [
-        {
-          text: "very unwell"
-        },
-        {
-          text: "their symptoms are getting worse"
-        }
-      ],
-      [
-        {
-          text: "a young child"
-        },
-        {
-          text: "a child aged 5 years or younger"
-        }
-      ]
-    ]
-  }) }}
-  
-  <p>If your care card includes different advice for different groups, you can use sub-headings in the care card.</p>
-  <h3 id="self-contained">Make the card self-contained</h3>
-  <p>Include the information the user needs to make a decision about when and where to get medical help.</p>
-  <p>Do not say: "Contact your GP if this happens." Explain in what circumstances users should contact their GP.</p>
+  <p>Keep bullet points short. Try to limit your list to the 5 most likely symptoms or scenarios, based on clinical sources or advice. In an urgent care card, you can add a 6th catch-all bullet point such as "you or your child have any other symptoms you're worried about".</p>
+  <p>Avoid vague or subjective language. Instead of "a young child", for example, say "a child aged 5 years or younger".</p>
 
   <h3 id="detail-in-body">Put the detail in the body of the card</h3>
   <p>Do not overload the heading. Use the space in the body of the card, but keep it short.</p>
-  <p>It's OK to use a single bullet point after the "if:" in the header. It's clearer than including a stand-alone sentence in the card.</p>
+  <p>Even if your care card includes only 1 symptom, use a bullet point after the "if:" in the header. It's clearer than including a stand-alone sentence in the card.</p>
   <p>It's also OK to have 2 colons, 1 in the header and 1 in the body of the card, as in this example.</p>
 
   {{ designExample({
