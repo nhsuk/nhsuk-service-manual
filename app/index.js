@@ -162,6 +162,8 @@ env.addFilter('unindent', filters.unindent)
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
   const { group, item, type } = req.params
 
+  const javascript = req.query.javascript !== 'off'
+
   // Continue to 404 page
   if (!fileHelper.hasNunjucksPath({ group, item, type })) {
     return next()
@@ -189,7 +191,8 @@ app.get('/design-example/:group/:item/:type', (req, res, next) => {
   res.render(`layouts/${previewLayout}`, {
     ...data,
     exampleHtml,
-    item
+    item,
+    javascript
   })
 })
 
