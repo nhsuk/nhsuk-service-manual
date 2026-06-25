@@ -17,30 +17,29 @@
   .app-design-example__header {
     display: flex;
 
+    gap: nhsuk-spacing(3);
+
     position: relative;
 
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
-    padding: 8px 16px;
+    padding: nhsuk-spacing(2) nhsuk-spacing(3);
 
     border: 1px solid nhsuk-colour("grey-3");
     border-bottom: 0;
     outline: 2px solid transparent;
     @include nhsuk-font(16);
 
-    .app-design-example__js-toggle[aria-current] {
+    .app-design-example__js-toggle-group {
+      flex-shrink: 0;
+    }
+
+    .app-design-example__js-toggle[aria-pressed="true"] {
       color: inherit;
       font-weight: bold;
       text-decoration: none;
-    }
-
-    .app-design-example__js-toggle + .app-design-example__js-toggle::before {
-      content: "|";
-      margin: 0 0.5em 0 0.25em;
-      color: nhsuk-colour("black");
-      font-weight: normal;
     }
   }
 }

@@ -21,6 +21,7 @@ export class DesignExample extends Component {
     this.jsToggleLinks = this.$root.querySelectorAll(
       '.app-design-example__js-toggle'
     )
+    this.jsStateEl = this.$root.querySelector('.app-design-example__js-state')
     this.newTabLink = this.$root.querySelector(
       '.app-design-example__new-tab-link'
     )
@@ -89,10 +90,9 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
-    this.jsToggleLinks.forEach((link) => {
-      link.addEventListener('click', (event) => {
+    this.jsToggleLinks.forEach((button) => {
+      button.addEventListener('click', (event) => {
         this.handleJsToggleClick(event.currentTarget)
-        event.preventDefault()
       })
     })
 
@@ -160,16 +160,23 @@ export class DesignExample extends Component {
       { once: true }
     )
 
-    iframe.src = $link.href
+    const url = $link.dataset.href
+
+    iframe.src = url
 
     if (this.newTabLink instanceof HTMLAnchorElement) {
-      this.newTabLink.href = $link.href
+      this.newTabLink.href = url
     }
 
     this.jsToggleLinks.forEach((link) => {
-      link.removeAttribute('aria-current')
+      link.setAttribute('aria-pressed', 'false')
     })
-    $link.setAttribute('aria-current', 'true')
+    $link.setAttribute('aria-pressed', 'true')
+
+    if (this.jsStateEl) {
+      this.jsStateEl.textContent =
+        $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
+    }
   }
 
   handleCloseClick() {
