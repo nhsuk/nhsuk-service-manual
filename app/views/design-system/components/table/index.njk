@@ -81,7 +81,6 @@
     <li>text in alphabetical order A to Z</li>
   </ul>
   <p>Descending order (down arrow) reverses this.</p>
-  <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>This table only sorts by 1 column at a time. Sortable columns show a double arrow until they're sorted. When users click in the column header of an unsorted column, it sorts and shows a single arrow. Clicking again toggles between ascending and descending.</p>
   {{ designExample({
     group: "components",
@@ -106,12 +105,21 @@
 
   <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
+  <h5 id="default-sort-order">Sorting columns</h5>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
+  <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which cannot be sorted by the user.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
+  <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
+  <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
+  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
+
+  
+  <h5 id="overriding-default-sort-order">Custom ordering within columns</h5>
   <p>By default a column will be sorted:</p>
   <ul>
     <li>numerically</li>
     <li>alphabetically</li>
   </ul>
-  <p>Decide what your default sorting order is. Make sure users can get back to this. Do not sort make the default sort order on a column which cannot be sorted.</p>
   <p>You can override the default sort order to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
 
   <p>For example:</p>
@@ -123,12 +131,7 @@
   </ul>
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Cells with <a href="#missing-data-table">missing data</a> should show "No data" or similar. By default they will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
-  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
-
-  <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
-  <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
