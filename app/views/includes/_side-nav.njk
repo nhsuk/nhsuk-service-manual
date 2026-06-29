@@ -20,8 +20,7 @@
 
 {% set dsGuides = [
   { title: "Updating to v10", url: "/design-system/guides/updating-to-v10" },
-  { title: "Changes to meet WCAG 2.2", url: "/design-system/changes-to-design-system-wcag-2-2" },
-  { title: "Override classes", url: "/design-system/guides/override-classes" }
+  { title: "Changes to meet WCAG 2.2", url: "/design-system/changes-to-design-system-wcag-2-2" }
 ] %}
 
 {% set dsDesign = [
@@ -91,6 +90,10 @@
   { title: "Spacing", url: "/design-system/styles/spacing" },
   { title: "Typography", url: "/design-system/styles/typography" },
   { title: "Use the NHS Frutiger font", url: "/design-system/styles/use-frutiger-font" }
+] %}
+
+{% set stylesReference = [
+  { title: "Override classes", url: "/design-system/styles/override-classes" }
 ] %}
 
 {% set navigation = [
@@ -232,6 +235,13 @@
     <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Reference <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in stylesReference %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
