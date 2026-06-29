@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add new reference page for override classes
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**
