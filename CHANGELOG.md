@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC June 2026
+
+:new: **New features**
+
+- Add option for "all" to checkboxes component
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**
