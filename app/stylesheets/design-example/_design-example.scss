@@ -14,34 +14,32 @@
     margin-bottom: nhsuk-spacing(5);
   }
 
-  &__pop-out {
-    display: block;
+  .app-design-example__header {
+    display: flex;
+
+    gap: nhsuk-spacing(3);
 
     position: relative;
 
+    align-items: center;
+    justify-content: space-between;
+
     width: 100%;
-    padding: 8px 16px;
+    padding: nhsuk-spacing(2) nhsuk-spacing(3);
 
     border: 1px solid nhsuk-colour("grey-3");
     border-bottom: 0;
     outline: 2px solid transparent;
     @include nhsuk-font(16);
 
-    &:hover,
-    &:focus {
-      box-shadow: none;
+    .app-design-example__js-toggle-group {
+      flex-shrink: 0;
     }
 
-    &:focus {
-      outline: $nhsuk-focus-width solid transparent;
-      color: $nhsuk-focus-text-colour;
-      background-color: $nhsuk-focus-colour;
-      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
+    .app-design-example__js-toggle[aria-pressed="true"] {
+      color: inherit;
+      font-weight: bold;
       text-decoration: none;
-
-      &:hover {
-        color: $nhsuk-focus-text-colour;
-      }
     }
   }
 }

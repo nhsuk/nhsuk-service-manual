@@ -18,7 +18,15 @@ export class DesignExample extends Component {
     )
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
     this.iframe = this.$root.querySelector('iframe')
+    this.jsToggleLinks = this.$root.querySelectorAll(
+      '.app-design-example__js-toggle'
+    )
+    this.jsStateEl = this.$root.querySelector('.app-design-example__js-state')
+    this.newTabLink = this.$root.querySelector(
+      '.app-design-example__new-tab-link'
+    )
     this.state = { isMouseDown: false }
+    this.resizer = null
 
     this.bindEvents()
 
@@ -82,6 +90,12 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
+    this.jsToggleLinks.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        this.handleJsToggleClick(event.currentTarget)
+      })
+    })
+
     if (this.iframe) {
       const { iframe, state } = this
 
@@ -89,6 +103,13 @@ export class DesignExample extends Component {
       iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
 
       initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
+        .then(([resizer]) => {
+          this.resizer = resizer
+          return null
+        })
+        .catch(() => {
+          // initialization failed, ignore
+        })
     }
   }
 
@@ -113,6 +134,49 @@ export class DesignExample extends Component {
     $tabParent.classList.add(this.currentTabClass)
 
     this.exampleToggler(index)
+  }
+
+  handleJsToggleClick($link) {
+    if (!(this.iframe instanceof HTMLIFrameElement)) return
+
+    const iframe = this.iframe
+
+    iframe.addEventListener(
+      'load',
+      () => {
+        this.resizer?.unsubscribe()
+        initialize(
+          { onBeforeIframeResize: () => this.isResizeAllowed() },
+          iframe
+        )
+          .then(([resizer]) => {
+            this.resizer = resizer
+            return null
+          })
+          .catch(() => {
+            // initialization failed, ignore
+          })
+      },
+      { once: true }
+    )
+
+    const url = $link.dataset.href
+
+    iframe.src = url
+
+    if (this.newTabLink instanceof HTMLAnchorElement) {
+      this.newTabLink.href = url
+    }
+
+    this.jsToggleLinks.forEach((link) => {
+      link.setAttribute('aria-pressed', 'false')
+    })
+    $link.setAttribute('aria-pressed', 'true')
+
+    if (this.jsStateEl) {
+      this.jsStateEl.textContent =
+        $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
+    }
   }
 
   handleCloseClick() {
