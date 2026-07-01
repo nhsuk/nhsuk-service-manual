@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Update character count component to mention new data-count-type
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**
