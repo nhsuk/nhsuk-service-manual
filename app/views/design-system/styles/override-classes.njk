@@ -122,59 +122,60 @@
 
   <p>See the <a href="/design-system/styles/layout">layout styles page</a> for guidance on using the grid system.
 
-  <h3>Grid column widths</h3>
+  <h3>Grid widths</h3>
 
   {% call insetText({
     visuallyHiddenText: "Information",
     classes: "nhsuk-u-margin-top-4"
   }) %}
-    <p>These grid column width override classes are deprecated and will be removed in version 11. Use the <a href="/design-system/styles/layout#grid">grid classes</a> instead.</p>
+    <p>These grid width override classes are deprecated and will be removed in version 11. Use the <a href="/design-system/styles/layout#grid">grid classes</a> starting with <code>nhsuk-grid-column-</code> instead.</p>
+
+    {{ summaryList({
+      rows: [
+        {
+          key: { html: "<code>nhsuk-u-one-half</code>", classes: "nhsuk-u-width-one-half" },
+          value: { text: "one-half width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-third</code>" },
+          value: { text: "one-third width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-two-thirds</code>" },
+          value: { text: "two-thirds width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-quarter</code>" },
+          value: { text: "one-quarter width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-three-quarters</code>" },
+          value: { text: "three-quarters width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-half-tablet</code>" },
+          value: { text: "one-half width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-third-tablet</code>" },
+          value: { text: "one-third width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-two-thirds-tablet</code>" },
+          value: { text: "two-thirds width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-quarter-tablet</code>" },
+          value: { text: "one-quarter width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-three-quarters-tablet</code>" },
+          value: { text: "three-quarters width on tablet and above, full width on mobile" }
+        }
+      ]
+    }) }}
   {% endcall %}
 
-  {{ summaryList({
-    rows: [
-      {
-        key: { html: "<code>nhsuk-u-one-half</code>", classes: "nhsuk-u-width-one-half" },
-        value: { text: "one-half width at all screen sizes" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-one-third</code>" },
-        value: { text: "one-third width at all screen sizes" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-two-thirds</code>" },
-        value: { text: "two-thirds width at all screen sizes" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-one-quarter</code>" },
-        value: { text: "one-quarter width at all screen sizes" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-three-quarters</code>" },
-        value: { text: "three-quarters width at all screen sizes" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-one-half-tablet</code>" },
-        value: { text: "one-half width on tablet and above, full width on mobile" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-one-third-tablet</code>" },
-        value: { text: "one-third width on tablet and above, full width on mobile" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-two-thirds-tablet</code>" },
-        value: { text: "two-thirds width on tablet and above, full width on mobile" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-one-quarter-tablet</code>" },
-        value: { text: "one-quarter width on tablet and above, full width on mobile" }
-      },
-      {
-        key: { html: "<code>nhsuk-u-three-quarters-tablet</code>" },
-        value: { text: "three-quarters width on tablet and above, full width on mobile" }
-      }
-    ]
-  }) }}
 
   <h3>Widths</h3>
 
