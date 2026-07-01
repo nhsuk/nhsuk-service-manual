@@ -124,7 +124,12 @@
 
   <h3>Grid column widths</h3>
 
-  <p>Use these classes to set the width of grid columns. They apply <code>float: left</code> alongside the width. Use the <code>-tablet</code> variants if you want the column to expand to full width on mobile.</p>
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
+    <p>These grid column width override classes are deprecated and will be removed in version 11. Use the <a href="/design-system/styles/layout#grid">grid classes</a> instead.</p>
+  {% endcall %}
 
   {{ summaryList({
     rows: [
