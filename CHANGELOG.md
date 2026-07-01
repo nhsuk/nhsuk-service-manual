@@ -5,6 +5,7 @@
 :wrench: **Maintenance**
 
 - Add curly quote example to punctuation section
+- Update character count component to mention new data-count-type
 
 ## 8.12.1 - 17 June 2026
 
