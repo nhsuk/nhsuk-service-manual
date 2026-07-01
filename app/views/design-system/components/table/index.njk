@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a table to make it easier for users to scan and compare data or information." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "June 2026" %}
+{% set dateUpdated = "July 2026" %}
 {% set backlog_issue_id = "26" %}
 
 {% block beforeContent %}
@@ -74,7 +74,7 @@
   <p>Do not use a responsive table if your content is easier to read and understand on a small screen in a non-responsive layout. Use a <a href="#basic-tables">basic table</a> instead.</p>
 
   <h2 id="sortable-table">Sortable table</h2>
-  <p>A sortable table lets users sort columns in ascending or descending order.</p>
+  <p>A sortable table lets users sort columns in ascending or descending order, alphabetically or numerically.</p>
   <p>Ascending order (up arrow) arranges:</p>
   <ul>
     <li>numerical data from the lowest to the highest value</li>
@@ -94,34 +94,27 @@
   <h3 id="how-to-use-a-sortable-table">How to use a sortable table</h3>
   <p>Carry out user research to understand what your users need to do with the data and if a sortable table is the best way to meet their needs.</p>
 
-  <p>There are 2 ways to sort data:</p>
+  <p>There are 2 ways to sort a table. You can:</p>
 
   <ul>
-    <li>sorting the data on the page</li>
-    <li>sorting pages of data</li>
+    <li>sort data that fits on 1 page</li>
+    <li>sort more than 1 page of data</li>
   </ul>
 
-  <h4 id="sorting-data-on-the-page">Sorting the data on the page</h4>
+  <h4 id="sort-data-on-1-page">Sort data on 1 page</h4>
 
-  <p>The table uses JavaScript to sort the data in the user's browser. Make sure your data has a suitable sort order if JavaScript does not run.</p>
+  <p>The sortable table component uses JavaScript to sort the data in the user's browser. Use it where you have only 1 page of data. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
   <h5 id="default-sort-order">Sorting columns</h5>
-  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which cannot be sorted by the user.</p>
   <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
+  <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
-  
-  <h5 id="overriding-default-sort-order">Custom ordering within columns</h5>
-  <p>By default a column will be sorted:</p>
-  <ul>
-    <li>numerically</li>
-    <li>alphabetically</li>
-  </ul>
+  <h5 id="overriding-default-sort-order">Overriding the default sort order</h5>
   <p>You can override the default sort order to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
-
   <p>For example:</p>
   <ul>
     <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
@@ -131,7 +124,7 @@
   </ul>
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
-  <p>Cells with <a href="#missing-data-table">missing data</a> should show "No data" or similar. By default they will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
+  <p>If a cell displays <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
@@ -141,7 +134,7 @@
     type: "sortable-custom"
   }) }}
 
-  <h4 id="sorting-pages-of-data">Sorting pages of data</h4>
+  <h4 id="sort-more-than-1-page-of-data">Sort more than 1 page of data</h4>
 
   <p>If your table is paginated, do not use the JavaScript-based sorting as this will only sort the current page being shown.</p>
 
@@ -162,7 +155,7 @@
   <p>Please feed back to the design system.</p>
 
   <h4 id="consider-search-and-filter">Consider search and filter</h3>
-  <p>Sometimes it's better to let users search or filter results instead. Filtering cuts the data down so users can focus on what they want. Search helps them find specific things they need.</p>
+  <p>Sometimes it's better to let users search or filter results instead of sorting. Filtering cuts the data down so users can focus on what they want. Search helps them find specific things they need.</p>
   <p>For example, search or filter may work better than sorting for:</p>
   <ul>
     <li>names</li>
