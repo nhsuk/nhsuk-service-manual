@@ -5,7 +5,7 @@
 {% set subSection = "Technology" %}
 {% set pageDescription = "You must use PDS if you're building products and services and need to access or manage patient demographic data." %}
 {% set hideContact = "true" %}
-{% set dateUpdated = "March 2022" %}
+{% set dateUpdated = "July 2026" %}
 
 {% block beforeContent %}
   {% include "standards-and-technology/_breadcrumb.njk" %}
@@ -32,18 +32,9 @@
   <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">PDS FHIR API (NHS England)</a>: the preferred API which meets the latest standards</li>
   <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3">PDS HL7 V3 API (NHS England)</a>: use it to create new records or register a birth</li>
 </ul>
-<p>Note: the <a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp">PDS Spine Mini Service Provider (SMSP) API (NHS England)</a> is now deprecated. <a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp#api-status">Read more about this API's status on the SMSP page</a></p>
 
 <h2>When not to use PDS</h2>
-<p>You cannot use the PDS FHIR API to:</p>
-<ul>
-  <li>create a new record for a birth</li>
-  <li>register a birth</li>
-  <li>create a record for a new patient</li>
-  <li>register a new patient at a GP practice: use <a href="https://digital.nhs.uk/services/nhais">National Health Application and Infrastructure Services (NHAIS) (NHS England)</a></li>
-</ul>
-
-<p>Keep up to date with product developments through <a href="https://nhs-digital-api-management.featureupvote.com/?order=popular&filter=allexceptdone&tag=pds-fhir-api">NHS England's API roadmap and interactive backlog for PDS FHIR API</a>.</p>
+<p>You cannot use the PDS FHIR API to register a new patient at a GP practice. Use <a href="https://digital.nhs.uk/services/primary-care-registration-management">Primary Care Registration Management (NHS England)</a> instead.</p>
 
 <h2>Why it's important</h2>
 <p>The PDS service:</p>
@@ -60,7 +51,6 @@
   <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir">PDS FHIR API (NHS England)</a>, includes overview and onboarding sections</li>
   <li><a href="https://digital.nhs.uk/services/demographics">Personal Demographics Service (NHS England)</a></li>
   <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3">PDS HL7 V3 API (NHS England)</a></li>
-  <li><a href="https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp">PDS Spine Mini Service Provider (SMSP) API (NHS England)</a>: simplified ways to connect to Spine, deprecated</li>
   <li><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/isb-0149-nhs-number">Information standard ISB 0149 NHS number (NHS England)</a>, which PDS supports</li>
 </ul>
   <p>We're very interested in hearing what you think about the standards and technology section of the service manual and how it might, or might not, help you develop digital services in health.</p>
