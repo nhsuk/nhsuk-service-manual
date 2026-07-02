@@ -1,11 +1,11 @@
 {% extends "layouts/app-layout.njk" %}
 
-{% set pageTitle = "Service unavailable pages" %}
+{% set pageTitle = "Service unavailable page" %}
 {% set pageDescription = "Tell users what to do when your service is unavailable." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "June 2026" %}
+{% set dateUpdated = "July 2026" %}
 {% set backlog_issue_id = "588" %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "default"
 }) }}
 
@@ -52,19 +52,21 @@
   <li>contact information</li>
 </ul>
 <p>If your service is a healthcare service, tell users how to complete their task through a different channel.</p>
-<p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times.</p>
+<p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times. If it's helpful, include "For urgent medical advice" followed by the text "Use <a href="#">111 online</a> or call 111."</p>
+<p>Do not ask users to report errors unless you know that this meets a user need.</p>
 <p>Have clear and concise content and do not use:</p>
 <ul>
-  <li>breadcrumbs</li>
+  <li>breadcrumbs or a back button</li>
   <li>vague, unhelpful words like maintenance, improvements</li>
   <li>red text to warn people</li>
+  <li>too many links</li>
 </ul>
 
 <h3 id="general-page">General page</h2>
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "default"
 }) }}
 
@@ -74,7 +76,7 @@
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "when-you-know-when-service-will-be-available"
 }) }}
 
@@ -94,7 +96,7 @@
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "with-update"
 }) }}
 
@@ -108,7 +110,7 @@
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "standalone",
   htmlOnly: true
 }) }}
@@ -118,7 +120,7 @@
 
 {{ designExample({
   group: "patterns",
-  item: "service-unavailable-pages",
+  item: "service-unavailable-page",
   type: "closed-replaced"
 }) }}
 <p>Include a note on any pages that refer to the service. [Needs more work.]</p>

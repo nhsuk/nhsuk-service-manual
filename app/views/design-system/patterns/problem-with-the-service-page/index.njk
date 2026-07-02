@@ -1,0 +1,70 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "There is a problem with the service page" %}
+{% set pageDescription = "Tell the user there is something wrong with the service. These pages are also known as 500 and internal server error pages." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "July 2026" %}
+{% set backlog_issue_id = "233" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{{ designExample({
+  group: "patterns",
+  item: "problem-with-the-service-page",
+  type: "default"
+}) }}
+
+<h2 id="when-to-use">When to use this pattern</h2>
+<p>Use this page when there is an unexpected problem with the service. Use the same page for all unexpected problems.</p>
+<p>Log all errors and fix them as quickly as possible.</p>
+<p>Only display the page for a short time. If you cannot fix a problem quickly, close the service and use a <a href="/design-system/patterns/service-unavailable-pages">Service unavailable page</a>. "Quickly" means different things for different services, but for example, within an hour.</p>
+
+<h2 id="when-not-to-use">When not to use this pattern</h2>
+<p>Do not use this pattern when:</p>
+<ul>
+  <li>a user makes a mistake completing a form – instead, use <a href="/design-system/components/error-message">error messages</a> and <a href="/design-system/components/error-summary">errors summaries</a></li>
+  <li>a user cannot continue for an expected reason, for example because they are not eligible</li>
+</ul>
+
+<h2 id="how-to-use">How to use this pattern</h2>
+<p>These pages should include:</p>
+<ul>
+  <li>"Sorry, there is a problem with the service – service name – NHS" as the page title</li>
+  <li>"Sorry, there is a problem with the service" as the <code>&lt;h1&gt;</code></li>
+  <li>telling users to try again as a normal paragraph</li>
+  <li>an alternative journey, for users on a transactional service</li>
+  <li>contact information, if it helps meet a user need</li>
+</ul>
+
+<p>If your service is a healthcare service, tell users how to complete their task through a different channel.</p>
+<p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times. If it's helpful, include "For urgent medical advice" followed by the text "Use <a href="#">111 online</a> or call 111."</p>
+<p>If you can:</p>
+<ul>
+  <li>store previously entered information for a reasonable amount of time so users can resume their journey with re-populated information when the service becomes available again</li>
+  <li>tell the user what has happened to their answers if they are in the middle of a transaction</li>
+</ul>
+<p>Do not ask users to report errors unless you know that this meets a user need.</p>
+<p>Have clear and concise content and do not use:</p>
+<ul>
+  <li>breadcrumbs</li>
+  <li>jargon like 500 or "bad request"</li>
+  <li>"We are experiencing technical difficulties"</li>
+  <li>red text to warn people</li>
+  <li>too many links</li>
+</ul>
+
+<h2 id="research">Research</h2>
+<p>The NHS App team found that users may:</p>
+<ul>
+  <li>be unsure about whether the problem was their fault or not</li>
+  <li>go straight to buttons and links without fully reading error pages</li>
+  <li>not notice error codes</li>
+</ul>
+
+{% endblock %}

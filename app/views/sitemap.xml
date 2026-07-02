@@ -344,13 +344,16 @@
     <loc>https://service-manual.nhs.uk/design-system/patterns/mini-hub</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/page-not-found-pages</loc>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/page-not-found-page</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/problem-with-the-service-page</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/question-pages</loc>
   </url>
   <url>
-    <loc>https://service-manual.nhs.uk/design-system/patterns/service-unavailable-pages</loc>
+    <loc>https://service-manual.nhs.uk/design-system/patterns/service-unavailable-page</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/design-system/patterns/start-page</loc>
