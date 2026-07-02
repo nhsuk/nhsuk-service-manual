@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Update page about the Personal Demographics Service (PDS)
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**
