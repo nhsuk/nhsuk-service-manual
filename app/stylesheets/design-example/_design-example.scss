@@ -13,51 +13,52 @@
   @include nhsuk-media-query($until: tablet) {
     margin-bottom: nhsuk-spacing(5);
   }
+}
 
-  .app-design-example__header {
-    display: flex;
+.app-design-example__header {
+  display: flex;
 
-    gap: nhsuk-spacing(3);
+  gap: nhsuk-spacing(3);
 
-    position: relative;
+  position: relative;
 
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 
-    width: 100%;
-    padding: nhsuk-spacing(2) nhsuk-spacing(3);
+  width: 100%;
+  padding: nhsuk-spacing(2) nhsuk-spacing(3);
 
-    border: 1px solid nhsuk-colour("grey-3");
-    border-bottom: 0;
-    outline: 2px solid transparent;
-    @include nhsuk-font(16);
+  border: 1px solid nhsuk-colour("grey-3");
+  border-bottom: 0;
+  outline: 2px solid transparent;
+  @include nhsuk-font(16);
 
-    @include nhsuk-media-query($until: tablet) {
-      flex-direction: column;
-      gap: nhsuk-spacing(1);
-    }
+  @include nhsuk-media-query($until: tablet) {
+    flex-direction: column;
+    gap: nhsuk-spacing(1);
+  }
+}
 
-    .app-design-example__js-toggle-group {
-      flex-shrink: 0;
-    }
+.app-design-example__js-toggle-group {
+  flex-shrink: 0;
+}
 
-    .app-design-example__js-toggle {
-      padding: 0 nhsuk-spacing(1);
-    }
+.app-design-example__js-toggle-divider {
+  margin: 0 -1px;
+  color: nhsuk-colour("grey-3");
+}
 
-    .app-design-example__js-toggle-divider {
-      margin: 0 -1px;
-      color: nhsuk-colour("grey-3");
-    }
+.app-design-example__js-toggle {
+  // stylelint-disable-next-line declaration-no-important
+  padding: 0 nhsuk-spacing(1) !important;
+}
 
-    .app-design-example__js-toggle[aria-pressed="true"] {
-      font-weight: bold;
-      @include nhsuk-link-style-no-underline;
+.app-design-example__js-toggle[aria-pressed="true"] {
+  font-weight: bold;
+  @include nhsuk-link-style-no-underline;
 
-      &:not(:focus):not(:hover):not(:active) {
-        color: inherit;
-      }
-    }
+  &:not(:focus):not(:hover):not(:active) {
+    color: inherit;
   }
 }
 
