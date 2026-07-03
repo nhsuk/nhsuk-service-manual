@@ -24,7 +24,7 @@ export class DesignExample extends Component {
     this.announcement = this.$root.querySelector(
       '.app-design-example__announcement'
     )
-    this.link = this.$root.querySelector('.app-design-example__link')
+    this.link = this.$root.querySelector('a.app-design-example__link')
     this.state = { isMouseDown: false }
     this.resizer = null
 
@@ -136,10 +136,21 @@ export class DesignExample extends Component {
     this.exampleToggler(index)
   }
 
+  /**
+   * @param {EventTarget | null} $link
+   */
   handleJsToggleClick($link) {
-    if (!(this.iframe instanceof HTMLIFrameElement)) return
+    const { announcement, iframe, link } = this
 
-    const iframe = this.iframe
+    if (
+      !($link instanceof HTMLButtonElement) ||
+      !$link.dataset.href ||
+      !announcement ||
+      !iframe ||
+      !link
+    ) {
+      return
+    }
 
     iframe.addEventListener(
       'load',
@@ -163,20 +174,15 @@ export class DesignExample extends Component {
     const url = $link.dataset.href
 
     iframe.src = url
-
-    if (this.link instanceof HTMLAnchorElement) {
-      this.link.href = url
-    }
+    link.href = url
 
     this.jsToggleLinks.forEach((link) => {
       link.setAttribute('aria-pressed', 'false')
     })
     $link.setAttribute('aria-pressed', 'true')
 
-    if (this.announcement) {
-      this.announcement.textContent =
-        $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
-    }
+    announcement.textContent =
+      $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
   }
 
   handleCloseClick() {
