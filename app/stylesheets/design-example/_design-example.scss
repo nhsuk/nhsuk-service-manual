@@ -32,6 +32,11 @@
     outline: 2px solid transparent;
     @include nhsuk-font(16);
 
+    @include nhsuk-media-query($until: tablet) {
+      flex-direction: column;
+      gap: nhsuk-spacing(1);
+    }
+
     .app-design-example__js-toggle-group {
       flex-shrink: 0;
     }
