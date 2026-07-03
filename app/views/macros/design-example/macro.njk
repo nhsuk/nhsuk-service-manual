@@ -84,7 +84,7 @@
 
     {% if showExample %}
       <div class="app-design-example__header">
-        <a href="{{ standaloneURL }}{% if params.showJavaScriptToggle %}?javascript=on{% endif %}" class="app-design-example__header__link app-design-example__new-tab-link" target="_blank" rel="noopener noreferrer">
+        <a href="{{ standaloneURL }}{% if params.showJavaScriptToggle %}?javascript=on{% endif %}" class="app-design-example__link" target="_blank" rel="noopener noreferrer">
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}

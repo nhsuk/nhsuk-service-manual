@@ -22,9 +22,7 @@ export class DesignExample extends Component {
       '.app-design-example__js-toggle'
     )
     this.jsStateEl = this.$root.querySelector('.app-design-example__js-state')
-    this.newTabLink = this.$root.querySelector(
-      '.app-design-example__new-tab-link'
-    )
+    this.link = this.$root.querySelector('.app-design-example__link')
     this.state = { isMouseDown: false }
     this.resizer = null
 
@@ -164,8 +162,8 @@ export class DesignExample extends Component {
 
     iframe.src = url
 
-    if (this.newTabLink instanceof HTMLAnchorElement) {
-      this.newTabLink.href = url
+    if (this.link instanceof HTMLAnchorElement) {
+      this.link.href = url
     }
 
     this.jsToggleLinks.forEach((link) => {
