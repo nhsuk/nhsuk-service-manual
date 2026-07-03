@@ -36,6 +36,15 @@
       flex-shrink: 0;
     }
 
+    .app-design-example__js-toggle {
+      padding: 0 nhsuk-spacing(1);
+    }
+
+    .app-design-example__js-toggle-divider {
+      margin: 0 -1px;
+      color: nhsuk-colour("grey-3");
+    }
+
     .app-design-example__js-toggle[aria-pressed="true"] {
       color: inherit;
       font-weight: bold;
