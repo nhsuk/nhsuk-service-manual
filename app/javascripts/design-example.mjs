@@ -21,7 +21,9 @@ export class DesignExample extends Component {
     this.jsToggleLinks = this.$root.querySelectorAll(
       '.app-design-example__js-toggle'
     )
-    this.jsStateEl = this.$root.querySelector('.app-design-example__js-state')
+    this.announcement = this.$root.querySelector(
+      '.app-design-example__announcement'
+    )
     this.link = this.$root.querySelector('.app-design-example__link')
     this.state = { isMouseDown: false }
     this.resizer = null
@@ -171,8 +173,8 @@ export class DesignExample extends Component {
     })
     $link.setAttribute('aria-pressed', 'true')
 
-    if (this.jsStateEl) {
-      this.jsStateEl.textContent =
+    if (this.announcement) {
+      this.announcement.textContent =
         $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
     }
   }
