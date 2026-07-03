@@ -87,7 +87,7 @@
   }) }}>
     {% if showExample %}
       <div class="app-design-example__header">
-        <a href="{{ standaloneURL }}{% if params.showJavaScriptToggle %}?javascript=on{% endif %}" class="app-design-example__link" target="_blank" rel="noopener noreferrer">
+        <a href="{{ standaloneURL }}" class="app-design-example__link" target="_blank" rel="noopener noreferrer">
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}
@@ -96,7 +96,7 @@
             class: "nhsuk-u-visually-hidden app-design-example__announcement",
             "aria-live": "polite"
           }) }}>
-            JavaScript is on
+            {{ "JavaScript is off" if params.javascript === false else "JavaScript is on" }}
           </span>
 
           <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label" aria-describedby="{{ exampleId }}-announcement">
@@ -106,7 +106,7 @@
               class: "nhsuk-link app-button--js-toggle",
               "data-href": standaloneURL ~ "?javascript=on",
               "aria-controls": exampleId ~ "-frame",
-              "aria-pressed": "true"
+              "aria-pressed": params.javascript | default(true) | string
             }) }}>
               On
             </button>
@@ -117,7 +117,7 @@
               class: "nhsuk-link app-button--js-toggle",
               "data-href": standaloneURL ~ "?javascript=off",
               "aria-controls": exampleId ~ "-frame",
-              "aria-pressed": "false"
+              "aria-pressed": (params.javascript === false) | string
             }) }}>
               Off
             </button>
@@ -128,7 +128,7 @@
         <iframe {{- nhsukAttributes({
           id: exampleId ~ "-frame",
           title: params.type,
-          src: standaloneURL ~ "?javascript=on",
+          src: standaloneURL ~ "?javascript=off" if params.javascript === false else standaloneURL,
           class: "app-design-example__frame"
         }) }}></iframe>
       </div>
