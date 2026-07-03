@@ -14,11 +14,8 @@
 
 // Component examples need a bit of space around them
 .app-example-page {
-  padding: 32px;
-
-  @include nhsuk-media-query($until: tablet) {
-    padding: 16px;
-  }
+  margin-trim: block;
+  @include nhsuk-responsive-padding(5);
 }
 
 // Component examples on a blue background
