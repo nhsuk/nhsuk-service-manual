@@ -48,12 +48,12 @@
   color: nhsuk-colour("grey-3");
 }
 
-.app-design-example__js-toggle {
+.app-button--js-toggle {
   // stylelint-disable-next-line declaration-no-important
   padding: 0 nhsuk-spacing(1) !important;
 }
 
-.app-design-example__js-toggle[aria-pressed="true"] {
+.app-button--js-toggle[aria-pressed="true"] {
   font-weight: bold;
   @include nhsuk-link-style-no-underline;
 

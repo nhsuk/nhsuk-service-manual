@@ -103,9 +103,8 @@
             <span id="{{ exampleId }}-label"><span class="nhsuk-u-visually-hidden">Toggle </span>JavaScript</span>
 
             <button {{- nhsukAttributes({
-              class: "nhsuk-link app-design-example__js-toggle",
+              class: "nhsuk-link app-button--js-toggle",
               "data-href": standaloneURL ~ "?javascript=on",
-              "data-js": "on",
               "aria-controls": exampleId ~ "-frame",
               "aria-pressed": "true"
             }) }}>
@@ -115,9 +114,8 @@
             <span class="app-design-example__js-toggle-divider" aria-hidden="true">|</span>
 
             <button {{- nhsukAttributes({
-              class: "nhsuk-link app-design-example__js-toggle",
+              class: "nhsuk-link app-button--js-toggle",
               "data-href": standaloneURL ~ "?javascript=off",
-              "data-js": "off",
               "aria-controls": exampleId ~ "-frame",
               "aria-pressed": "false"
             }) }}>

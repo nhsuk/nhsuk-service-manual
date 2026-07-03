@@ -16,11 +16,13 @@ export class DesignExample extends Component {
     this.examples = /** @type {NodeListOf<HTMLElement>} */ (
       this.$root.querySelectorAll('.app-code-snippet__preformatted')
     )
+
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
+    this.jsToggleButtons = this.$root.querySelectorAll('.app-button--js-toggle')
+    this.jsToggleOnButton = this.jsToggleButtons[0]
+    this.jsToggleOffButton = this.jsToggleButtons[1]
+
     this.iframe = this.$root.querySelector('iframe')
-    this.jsToggleLinks = this.$root.querySelectorAll(
-      '.app-design-example__js-toggle'
-    )
     this.announcement = this.$root.querySelector(
       '.app-design-example__announcement'
     )
@@ -90,7 +92,7 @@ export class DesignExample extends Component {
       closeButton.removeAttribute('hidden')
     })
 
-    this.jsToggleLinks.forEach((button) => {
+    this.jsToggleButtons.forEach((button) => {
       button.addEventListener('click', (event) => {
         this.handleJsToggleClick(event.currentTarget)
       })
@@ -137,14 +139,14 @@ export class DesignExample extends Component {
   }
 
   /**
-   * @param {EventTarget | null} $link
+   * @param {EventTarget | null} $button
    */
-  handleJsToggleClick($link) {
+  handleJsToggleClick($button) {
     const { announcement, iframe, link } = this
 
     if (
-      !($link instanceof HTMLButtonElement) ||
-      !$link.dataset.href ||
+      !($button instanceof HTMLButtonElement) ||
+      !$button.dataset.href ||
       !announcement ||
       !iframe ||
       !link
@@ -171,18 +173,21 @@ export class DesignExample extends Component {
       { once: true }
     )
 
-    const url = $link.dataset.href
+    const url = $button.dataset.href
 
     iframe.src = url
     link.href = url
 
-    this.jsToggleLinks.forEach((link) => {
+    this.jsToggleButtons.forEach((link) => {
       link.setAttribute('aria-pressed', 'false')
     })
-    $link.setAttribute('aria-pressed', 'true')
+
+    $button.setAttribute('aria-pressed', 'true')
 
     announcement.textContent =
-      $link.dataset.js === 'on' ? 'JavaScript is on' : 'JavaScript is off'
+      $button === this.jsToggleOnButton
+        ? 'JavaScript is on'
+        : 'JavaScript is off'
   }
 
   handleCloseClick() {
