@@ -26,6 +26,15 @@
 
 {% block footer %}{% endblock %}
 
+{% block bodyStart %}
+  {% if not javascript %}
+    <script>
+      document.body.classList.remove('nhsuk-frontend-supported')
+      document.body.classList.remove('js-enabled')
+    </script>
+  {% endif %}
+{% endblock %}
+
 {% block bodyEnd %}
   {% if javascript %}
     <script src="{{ getAssetPath("javascripts/nhsuk-frontend.min.js") }}" type="module"></script>
@@ -40,11 +49,6 @@
           disableAutoFocus: true
         }
       })
-    </script>
-  {% else %}
-    <script>
-      document.body.classList.remove('nhsuk-frontend-supported')
-      document.body.classList.remove('js-enabled')
     </script>
   {% endif %}
 {% endblock %}
