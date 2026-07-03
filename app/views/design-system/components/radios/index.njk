@@ -145,6 +145,18 @@
     <li><a href="https://design-system.service.gov.uk/components/radios#error-messages">GOV.UK design system guidance on error messages for radios</a></li>
   </ul>
 
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The radios component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, conditionally revealed content will be revealed by default.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "radios",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
 
   <h2>Research</h2>
   <p>Our radios are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>

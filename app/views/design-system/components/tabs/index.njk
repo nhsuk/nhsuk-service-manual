@@ -71,9 +71,6 @@
   <h2 id="how-to-use-tabs">How to use tabs</h2>
   <p>There are 2 ways to use the tabs component. You can use HTML or, if you're using Nunjucks or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
-  <p>The tabs component uses JavaScript. When JavaScript is not available, users will see the tabbed content on a single page, in order from 1st to last, with a table of contents that links to each of the sections.</p>
-  <p>This is also how the component currently behaves on small screens, but more research is needed on this.</p>
-
   <h3>Use clear labels</h3>
   <p>Tabs hide content, so the tab labels need to make it very clear what they link to. Otherwise users will not know if they need to click on them.</p>
   <p>If you struggle to come up with clear labels, it might be because the way you've separated the content is not clear.</p>
@@ -90,6 +87,20 @@
   <h2 id="accessibility">Accessibility</h2>
   <p>Keyboard users should be able to move focus between tabs using arrow keys and select a tab by pressing enter.</p>
   <p>Screen reader users should hear which tab is currently focused, how many tabs there are and whether the current tab is open.</p>
+
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The tabs component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, users will see the tabbed content on a single page, in order from 1st to last, with a table of contents that links to each of the sections.</p>
+  <p>This is also how the component currently behaves on small screens, but more research is needed on this.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "tabs",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
 
   <h2>Research and testing</h2>
   <p>The Government Digital Service (GDS) developed and tested the tabs component. Several NHS services are using tabs but we need to know more about how they test with users.</p>

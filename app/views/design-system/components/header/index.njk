@@ -238,4 +238,17 @@
     {% endfilter %}
   {% endcall %}
 
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The header component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, users will not see the drop-down "More" button. Navigation links will be wrapped onto multiple lines.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "header",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
+
 {% endblock %}

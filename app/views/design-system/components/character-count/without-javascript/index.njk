@@ -1,0 +1,20 @@
+---
+javascript: false
+---
+
+{% from "character-count/macro.njk" import characterCount %}
+
+{{ characterCount({
+  name: "moreDetail",
+  id: "more-detail",
+  maxlength: 200,
+  countType: "characters",
+  label: {
+    text: "Can you provide more detail about how you move about (your mobility)?",
+    size: "l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "For example, if you use crutches, sticks, or a walking frame"
+  }
+}) }}
