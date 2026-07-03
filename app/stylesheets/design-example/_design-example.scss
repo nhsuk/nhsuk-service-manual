@@ -51,9 +51,12 @@
     }
 
     .app-design-example__js-toggle[aria-pressed="true"] {
-      color: inherit;
       font-weight: bold;
-      text-decoration: none;
+      @include nhsuk-link-style-no-underline;
+
+      &:not(:focus):not(:hover):not(:active) {
+        color: inherit;
+      }
     }
   }
 }
