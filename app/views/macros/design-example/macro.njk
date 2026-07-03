@@ -1,6 +1,7 @@
 {% from "details/macro.njk" import details %}
 {% from "tables/macro.njk" import table %}
 {% from "code/macro.njk" import code %}
+{% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.alias or option.slug) %}
@@ -80,25 +81,58 @@
     {% set classNames = classNames ~ " " ~ params.classes %}
   {% endif %}
 
-  <div class="app-design-example{% if params.classes %} {{ params.classes }}{% endif %}" data-module="app-design-example">
-
+  <div {{- nhsukAttributes({
+    class: "app-design-example" ~ (" " ~ params.classes if params.classes else ""),
+    "data-module": "app-design-example"
+  }) }}>
     {% if showExample %}
       <div class="app-design-example__header">
         <a href="{{ standaloneURL }}{% if params.showJavaScriptToggle %}?javascript=on{% endif %}" class="app-design-example__link" target="_blank" rel="noopener noreferrer">
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}
-          <span id="{{ exampleId }}-announcement" class="nhsuk-u-visually-hidden app-design-example__announcement" aria-live="polite">JavaScript is on</span>
+          <span {{- nhsukAttributes({
+            id: exampleId ~ "-announcement",
+            class: "nhsuk-u-visually-hidden app-design-example__announcement",
+            "aria-live": "polite"
+          }) }}>
+            JavaScript is on
+          </span>
+
           <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label" aria-describedby="{{ exampleId }}-announcement">
             <span id="{{ exampleId }}-label"><span class="nhsuk-u-visually-hidden">Toggle </span>JavaScript</span>
-            <button class="nhsuk-link app-design-example__js-toggle" data-href="{{ standaloneURL }}?javascript=on" data-js="on" aria-controls="{{ exampleId }}-frame" aria-pressed="true">On</button>
+
+            <button {{- nhsukAttributes({
+              class: "nhsuk-link app-design-example__js-toggle",
+              "data-href": standaloneURL ~ "?javascript=on",
+              "data-js": "on",
+              "aria-controls": exampleId ~ "-frame",
+              "aria-pressed": "true"
+            }) }}>
+              On
+            </button>
+
             <span class="app-design-example__js-toggle-divider" aria-hidden="true">|</span>
-            <button class="nhsuk-link app-design-example__js-toggle" data-href="{{ standaloneURL }}?javascript=off" data-js="off" aria-controls="{{ exampleId }}-frame" aria-pressed="false">Off</button>
+
+            <button {{- nhsukAttributes({
+              class: "nhsuk-link app-design-example__js-toggle",
+              "data-href": standaloneURL ~ "?javascript=off",
+              "data-js": "off",
+              "aria-controls": exampleId ~ "-frame",
+              "aria-pressed": "false"
+            }) }}>
+              Off
+            </button>
           </span>
         {% endif %}
       </div>
       <div class="app-code-embed">
-        <iframe id="{{ exampleId }}-frame" title="{{ params.type }}" src="{{ standaloneURL }}?javascript=on" class="app-design-example__frame"></iframe>
+        <iframe {{- nhsukAttributes({
+          id: exampleId ~ "-frame",
+          title: params.type,
+          src: standaloneURL ~ "?javascript=on",
+          class: "app-design-example__frame"
+        }) }}></iframe>
       </div>
     {% endif %}
 
@@ -126,7 +160,11 @@
                 </a>
               </div>
             {% endif %}
-            <div class="app-code-snippet__preformatted {%- if snippets | length > 1 %} js-hidden {%- endif %}" data-index="ex-{{ loop.index }}">
+
+            <div {{- nhsukAttributes({
+              class: "app-code-snippet__preformatted" ~ (" js-hidden" if snippets | length > 1 else ""),
+              "data-index": "ex-" ~ loop.index
+            }) }}>
               {% set macroOptions = getMacroOptions(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
 
               {% if macroOptions | length %}
