@@ -88,9 +88,9 @@
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}
-          <span class="app-design-example__js-toggle-group" role="group" aria-label="Toggle JavaScript" aria-describedby="{{ exampleId }}-js-state">
+          <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label" aria-describedby="{{ exampleId }}-js-state">
             <span id="{{ exampleId }}-js-state" class="nhsuk-u-visually-hidden app-design-example__js-state" aria-live="polite">JavaScript is on</span>
-            <span aria-hidden="true">JavaScript:</span>
+            <span id="{{ exampleId }}-label"><span class="nhsuk-u-visually-hidden">Toggle </span>JavaScript</span>
             <button class="nhsuk-link app-design-example__js-toggle" data-href="{{ standaloneURL }}?javascript=on" data-js="on" aria-controls="{{ exampleId }}-frame" aria-pressed="true">On</button>
             <span class="nhsuk-u-padding-1 nhsuk-u-secondary-text-colour" aria-hidden="true">|</span>
             <button class="nhsuk-link app-design-example__js-toggle" data-href="{{ standaloneURL }}?javascript=off" data-js="off" aria-controls="{{ exampleId }}-frame" aria-pressed="false">Off</button>
