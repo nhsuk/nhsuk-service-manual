@@ -84,7 +84,8 @@
   <div {{- nhsukAttributes({
     class: "app-design-example" ~ (" " ~ params.classes if params.classes else ""),
     "data-module": "app-design-example",
-    "data-example-id": exampleId
+    "data-example-id": exampleId,
+    "data-javascript": params.javascript | default(true) | string
   }) }}>
     {% if showExample %}
       <div class="app-design-example__header">
@@ -92,15 +93,7 @@
           Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
 
         {% if params.showJavaScriptToggle %}
-          <span {{- nhsukAttributes({
-            id: exampleId ~ "-announcement",
-            class: "nhsuk-u-visually-hidden app-design-example__announcement",
-            "aria-live": "polite"
-          }) }}>
-            {{ "JavaScript is off" if params.javascript === false else "JavaScript is on" }}
-          </span>
-
-          <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label" aria-describedby="{{ exampleId }}-announcement">
+          <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label">
             <span id="{{ exampleId }}-label"><span class="nhsuk-u-visually-hidden">Toggle </span>JavaScript</span>
 
             <button {{- nhsukAttributes({

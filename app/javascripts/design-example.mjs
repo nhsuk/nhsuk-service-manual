@@ -15,6 +15,7 @@ export class DesignExample extends ConfigurableComponent {
     super($root, config)
 
     this.tabs = this.$root.querySelectorAll(`.${this.config.tabClass} a`)
+    this.jsToggle = this.$root.querySelector(`.${this.config.toggleGroupClass}`)
     this.examples = /** @type {NodeListOf<HTMLElement>} */ (
       this.$root.querySelectorAll(`.${this.config.codeSnippetClass}`)
     )
@@ -25,11 +26,25 @@ export class DesignExample extends ConfigurableComponent {
     this.jsToggleOffButton = this.jsToggleButtons[1]
 
     this.iframe = this.$root.querySelector('iframe')
-    this.announcements = this.$root.querySelector(
-      `.${this.config.announcementsClass}`
-    )
     this.link = this.$root.querySelector(`a.${this.config.linkClass}`)
     this.state = { isMouseDown: false }
+
+    if (this.jsToggle && this.link) {
+      this.announcements = document.createElement('span')
+      this.announcements.classList.add(
+        this.config.announcementsClass,
+        'nhsuk-u-visually-hidden'
+      )
+      this.announcements.id = `${this.config.exampleId}-announcements`
+      this.announcements.setAttribute('aria-live', 'polite')
+
+      this.link.insertAdjacentElement('afterend', this.announcements)
+      this.jsToggle.setAttribute('aria-describedby', this.announcements.id)
+
+      this.announcements.textContent = this.config.javascript
+        ? 'JavaScript is on'
+        : 'JavaScript is off'
+    }
 
     this.bindEvents()
 
@@ -225,9 +240,12 @@ export class DesignExample extends ConfigurableComponent {
   static defaults = Object.freeze({
     announcementsClass: 'app-design-example__announcements',
     codeSnippetClass: 'app-code-snippet__preformatted',
+    exampleId: 'example',
     hiddenClass: 'js-hidden',
+    javascript: true,
     linkClass: 'app-design-example__link',
-    tabClass: 'app-tabs__item'
+    tabClass: 'app-tabs__item',
+    toggleGroupClass: 'app-design-example__js-toggle-group'
   })
 
   /**
@@ -240,9 +258,12 @@ export class DesignExample extends ConfigurableComponent {
     properties: {
       announcementsClass: { type: 'string' },
       codeSnippetClass: { type: 'string' },
+      exampleId: { type: 'string' },
       hiddenClass: { type: 'string' },
+      javascript: { type: 'boolean' },
       linkClass: { type: 'string' },
-      tabClass: { type: 'string' }
+      tabClass: { type: 'string' },
+      toggleGroupClass: { type: 'string' }
     }
   })
 }
@@ -253,9 +274,12 @@ export class DesignExample extends ConfigurableComponent {
  * @typedef {object} DesignExampleConfig
  * @property {string} announcementsClass - Announcements class
  * @property {string} codeSnippetClass - Code snippet class
+ * @property {string} exampleId - Design example ID
  * @property {string} hiddenClass - Hidden class
+ * @property {boolean} [javascript] - Whether JavaScript is enabled
  * @property {string} linkClass - Link class
  * @property {string} tabClass - Tab class
+ * @property {string} toggleGroupClass - Toggle group class
  */
 
 /**
