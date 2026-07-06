@@ -28,7 +28,6 @@ export class DesignExample extends Component {
     )
     this.link = this.$root.querySelector('a.app-design-example__link')
     this.state = { isMouseDown: false }
-    this.resizer = null
 
     this.bindEvents()
 
@@ -105,13 +104,6 @@ export class DesignExample extends Component {
       iframe.addEventListener('mouseup', () => (state.isMouseDown = false))
 
       initialize({ onBeforeIframeResize: () => this.isResizeAllowed() }, iframe)
-        .then(([resizer]) => {
-          this.resizer = resizer
-          return null
-        })
-        .catch(() => {
-          // initialization failed, ignore
-        })
     }
   }
 
@@ -153,25 +145,6 @@ export class DesignExample extends Component {
     ) {
       return
     }
-
-    iframe.addEventListener(
-      'load',
-      () => {
-        this.resizer?.unsubscribe()
-        initialize(
-          { onBeforeIframeResize: () => this.isResizeAllowed() },
-          iframe
-        )
-          .then(([resizer]) => {
-            this.resizer = resizer
-            return null
-          })
-          .catch(() => {
-            // initialization failed, ignore
-          })
-      },
-      { once: true }
-    )
 
     const url = $button.dataset.href
 
