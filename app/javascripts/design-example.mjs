@@ -241,7 +241,7 @@ export class DesignExample extends ConfigurableComponent {
     announcementsClass: 'app-design-example__announcements',
     codeSnippetClass: 'app-code-snippet__preformatted',
     exampleId: 'example',
-    hiddenClass: 'js-hidden',
+    hiddenClass: 'nhsuk-u-frontend-supported-hidden',
     javascript: true,
     linkClass: 'app-design-example__link',
     tabClass: 'app-tabs__item',

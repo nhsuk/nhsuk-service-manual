@@ -154,7 +154,8 @@
             {% endif %}
 
             <div {{- nhsukAttributes({
-              class: "app-code-snippet__preformatted" ~ (" js-hidden" if snippets | length > 1 else ""),
+              class: "app-code-snippet__preformatted" ~ (" nhsuk-u-frontend-supported-hidden" if snippets | length > 1 else ""),
+              id: exampleId ~ "-" ~ snippet.id,
               "data-index": "ex-" ~ loop.index
             }) }}>
               {% set macroOptions = getMacroOptions(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
