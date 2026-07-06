@@ -118,8 +118,8 @@
   <p>The sortable table component uses JavaScript to sort the data in the user's browser. Use it where you have only 1 page of data. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
   <h5 id="default-sort-order">Sorting columns</h5>
-  <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which cannot be sorted by the user.</p>
-  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful initial sort direction.</p>
+  <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which users cannot sort.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful way to sort it initially.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
