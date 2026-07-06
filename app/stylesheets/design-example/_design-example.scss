@@ -40,7 +40,12 @@
 }
 
 .app-design-example__js-toggle-group {
-  flex-shrink: 0;
+  display: none;
+
+  @include nhsuk-frontend-supported {
+    display: block;
+    flex-shrink: 0;
+  }
 }
 
 .app-design-example__js-toggle-divider {
