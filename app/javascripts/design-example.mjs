@@ -1,20 +1,22 @@
 import { initialize } from '@open-iframe-resizer/core'
-import { Component } from 'nhsuk-frontend'
+import { ConfigurableComponent } from 'nhsuk-frontend'
 
-export class DesignExample extends Component {
+/**
+ * Design example component
+ *
+ * @augments ConfigurableComponent<DesignExampleConfig>
+ */
+export class DesignExample extends ConfigurableComponent {
   /**
    * @param {Element | null} $root - HTML element to use for component
+   * @param {Partial<DesignExampleConfig>} [config] - Design example config
    */
-  constructor($root) {
-    super($root)
+  constructor($root, config) {
+    super($root, config)
 
-    this.tabClass = 'app-tabs__item'
-    this.currentTabClass = `${this.tabClass}--current`
-    this.hiddenClass = 'js-hidden'
-
-    this.tabs = this.$root.querySelectorAll(`.${this.tabClass} a`)
+    this.tabs = this.$root.querySelectorAll(`.${this.config.tabClass} a`)
     this.examples = /** @type {NodeListOf<HTMLElement>} */ (
-      this.$root.querySelectorAll('.app-code-snippet__preformatted')
+      this.$root.querySelectorAll(`.${this.config.codeSnippetClass}`)
     )
 
     this.closeButtons = this.$root.querySelectorAll('.app-button--close')
@@ -23,10 +25,10 @@ export class DesignExample extends Component {
     this.jsToggleOffButton = this.jsToggleButtons[1]
 
     this.iframe = this.$root.querySelector('iframe')
-    this.announcement = this.$root.querySelector(
-      '.app-design-example__announcement'
+    this.announcements = this.$root.querySelector(
+      `.${this.config.announcementsClass}`
     )
-    this.link = this.$root.querySelector('a.app-design-example__link')
+    this.link = this.$root.querySelector(`a.${this.config.linkClass}`)
     this.state = { isMouseDown: false }
 
     this.bindEvents()
@@ -114,18 +116,20 @@ export class DesignExample extends Component {
   }
 
   handleTabClick($tabLink) {
+    const { config, tabs } = this
+
     const $tabParent = $tabLink.parentElement
     const index = $tabParent.dataset.index
 
-    this.tabs.forEach((tab) => {
+    tabs.forEach((tab) => {
       if (tab.href !== $tabLink.href) {
         tab.setAttribute('aria-expanded', 'false')
-        tab.parentElement?.classList.remove(this.currentTabClass)
+        tab.parentElement?.classList.remove(`${config.tabClass}--current`)
       }
     })
 
     $tabLink.setAttribute('aria-expanded', 'true')
-    $tabParent.classList.add(this.currentTabClass)
+    $tabParent.classList.add(`${config.tabClass}--current`)
 
     this.exampleToggler(index)
   }
@@ -134,12 +138,12 @@ export class DesignExample extends Component {
    * @param {EventTarget | null} $button
    */
   handleJsToggleClick($button) {
-    const { announcement, iframe, link } = this
+    const { announcements, iframe, link } = this
 
     if (
       !($button instanceof HTMLButtonElement) ||
       !$button.dataset.href ||
-      !announcement ||
+      !announcements ||
       !iframe ||
       !link
     ) {
@@ -157,44 +161,103 @@ export class DesignExample extends Component {
 
     $button.setAttribute('aria-pressed', 'true')
 
-    announcement.textContent =
+    announcements.textContent =
       $button === this.jsToggleOnButton
         ? 'JavaScript is on'
         : 'JavaScript is off'
   }
 
   handleCloseClick() {
-    this.examples.forEach((example) => {
+    const { config, examples, tabs } = this
+
+    examples.forEach((example) => {
       this.hideEl(example)
     })
 
-    this.tabs.forEach((tab) => {
-      if (tab.parentElement?.classList.contains(this.currentTabClass)) {
+    tabs.forEach((tab) => {
+      if (
+        tab.parentElement?.classList.contains(`${config.tabClass}--current`)
+      ) {
         tab.setAttribute('aria-expanded', 'false')
-        tab.parentElement.classList.remove(this.currentTabClass)
+        tab.parentElement.classList.remove(`${config.tabClass}--current`)
       }
     })
   }
 
   showEl(el) {
-    if (el.classList.contains(this.hiddenClass)) {
-      el.classList.remove(this.hiddenClass)
+    const { config } = this
+
+    if (el.classList.contains(config.hiddenClass)) {
+      el.classList.remove(config.hiddenClass)
     }
   }
 
   hideEl(el) {
-    if (!el.classList.contains(this.hiddenClass)) {
-      el.classList.add(this.hiddenClass)
+    const { config } = this
+
+    if (!el.classList.contains(config.hiddenClass)) {
+      el.classList.add(config.hiddenClass)
     }
   }
 
   exampleToggler(index) {
-    this.examples.forEach((example) =>
+    const { config, examples } = this
+
+    examples.forEach((example) =>
       example.dataset.index === index
-        ? example.classList.remove(this.hiddenClass)
-        : example.classList.add(this.hiddenClass)
+        ? example.classList.remove(config.hiddenClass)
+        : example.classList.add(config.hiddenClass)
     )
   }
 
+  /**
+   * Name for the component used when initialising using data-module attributes
+   */
   static moduleName = 'app-design-example'
+
+  /**
+   * Design example default config
+   *
+   * @see {@link DesignExampleConfig}
+   * @constant
+   * @type {DesignExampleConfig}
+   */
+  static defaults = Object.freeze({
+    announcementsClass: 'app-design-example__announcements',
+    codeSnippetClass: 'app-code-snippet__preformatted',
+    hiddenClass: 'js-hidden',
+    linkClass: 'app-design-example__link',
+    tabClass: 'app-tabs__item'
+  })
+
+  /**
+   * Design example config schema
+   *
+   * @constant
+   * @satisfies {Schema<DesignExampleConfig>}
+   */
+  static schema = Object.freeze({
+    properties: {
+      announcementsClass: { type: 'string' },
+      codeSnippetClass: { type: 'string' },
+      hiddenClass: { type: 'string' },
+      linkClass: { type: 'string' },
+      tabClass: { type: 'string' }
+    }
+  })
 }
+
+/**
+ * Design example config
+ *
+ * @typedef {object} DesignExampleConfig
+ * @property {string} announcementsClass - Announcements class
+ * @property {string} codeSnippetClass - Code snippet class
+ * @property {string} hiddenClass - Hidden class
+ * @property {string} linkClass - Link class
+ * @property {string} tabClass - Tab class
+ */
+
+/**
+ * @import { Schema } from 'nhsuk-frontend'
+ */

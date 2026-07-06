@@ -83,7 +83,8 @@
 
   <div {{- nhsukAttributes({
     class: "app-design-example" ~ (" " ~ params.classes if params.classes else ""),
-    "data-module": "app-design-example"
+    "data-module": "app-design-example",
+    "data-example-id": exampleId
   }) }}>
     {% if showExample %}
       <div class="app-design-example__header">
