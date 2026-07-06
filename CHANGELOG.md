@@ -6,14 +6,18 @@
 
 - Add sortable table with guidance
 - Add option for "all" to checkboxes component
-- Add new reference page for override classes
+- Add new reference list of override classes
+- Add JavaScript on-off toggle to components that use progressive enhancement
 
 :wrench: **Maintenance**
 
-- Add curly quote example to punctuation section
+- Fix curly quote example to punctuation section
 - Update character count component to mention new data-count-type
-- Update guidance on getting accessibility audits
+- Update guidance to get an independent accessibility audit
 - Update wording about terms of use on Start page pattern
+- Remove frontend version 10 banner and callouts
+- Move WCAG 2.2 callout content into normal page content
+- Add hero image and restructure service manual home page
 
 ## 8.12.1 - 17 June 2026
 
