@@ -1,0 +1,44 @@
+---
+javascript: false
+---
+
+{% from "header/macro.njk" import header %}
+
+{{ header({
+  logo: {
+    href: "#",
+    ariaLabel: "NHS digital service manual homepage"
+  },
+  service: {
+    text: "Digital service manual",
+    href: "#"
+  },
+  search: {
+    placeholder: "Search",
+    visuallyHiddenLabel: "Search the NHS digital service manual"
+  },
+  navigation: {
+    items: [
+      {
+        text: "NHS service standard",
+        href: "#"
+      },
+      {
+        text: "Design system",
+        href: "#"
+      },
+      {
+        text: "Content guide",
+        href: "#"
+      },
+      {
+        text: "Accessibility",
+        href: "#"
+      },
+      {
+        text: "Community and contribution",
+        href: "#"
+      }
+    ]
+  }
+}) }}

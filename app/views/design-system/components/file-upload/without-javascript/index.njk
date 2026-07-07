@@ -1,0 +1,14 @@
+---
+javascript: false
+---
+
+{% from "file-upload/macro.njk" import fileUpload %}
+
+{{ fileUpload({
+  label: {
+    text: "Upload a file",
+    size: "l",
+    isPageHeading: true
+  },
+  name: "file-hint"
+}) }}

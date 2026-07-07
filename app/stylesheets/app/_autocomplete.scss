@@ -56,7 +56,10 @@
   pointer-events: all;
 
   background-color: nhsuk-colour("white");
-  @include nhsuk-print-hide;
+
+  @media print {
+    display: none;
+  }
 
   &::after {
     content: "";

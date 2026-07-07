@@ -160,7 +160,8 @@ env.addFilter('unindent', filters.unindent)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
-  const { group, item, type } = req.params
+  const { params, query } = req
+  const { group, item, type } = params
 
   // Continue to 404 page
   if (!fileHelper.hasNunjucksPath({ group, item, type })) {
@@ -186,10 +187,15 @@ app.get('/design-example/:group/:item/:type', (req, res, next) => {
   // Wrap the example HTML in a basic html base template.
   const { previewLayout = 'design-example-wrapper' } = data
 
+  const javascript = query.javascript
+    ? query.javascript === 'on'
+    : data.javascript !== false
+
   res.render(`layouts/${previewLayout}`, {
     ...data,
     exampleHtml,
-    item
+    item,
+    javascript
   })
 })
 

@@ -17,7 +17,8 @@
   {{ designExample({
     group: "components",
     item: "file-upload",
-    type: "default"
+    type: "default",
+    showJavaScriptToggle: true
   }) }}
 
   <h2 id="when-to-use-file-upload">When to use file upload</h2>
@@ -40,7 +41,8 @@
     group: "components",
     item: "file-upload",
     type: "default",
-    titleSuffix: "second"
+    titleSuffix: "second",
+    showJavaScriptToggle: true
   }) }}
 
   <h3>Changing the button text</h3>
@@ -54,7 +56,8 @@
   {{ designExample({
     group: "components",
     item: "file-upload",
-    type: "error-message"
+    type: "error-message",
+    showJavaScriptToggle: true
   }) }}
 
   <p>Make sure errors follow the guidance in the <a href="/design-system/components/error-message">error message component</a> and have specific error messages for specific error states.</p>
@@ -93,6 +96,19 @@
   <h2>Accessibility</h2>
   <p>Users of Dragon, a speech recognition tool, may not be able to interact with the component until they have first interacted with another part of the page. For example they could click the mouse in an empty area or they could say "press tab" to move the focus. After that, the Dragon user should be able to interact successfully with the file upload component.</p>
   <p>If they need to use the component more than once (for example, to correct a mistake), they may need to perform another action again before using it.</p>
+
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The file upload component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, users will see their browser's native file input.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "file-upload",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
 
   <h2>Research</h2>
   <p>This component is based on GOV.UK's March 2025 file upload component.</p>

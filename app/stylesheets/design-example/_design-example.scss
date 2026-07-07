@@ -13,36 +13,57 @@
   @include nhsuk-media-query($until: tablet) {
     margin-bottom: nhsuk-spacing(5);
   }
+}
 
-  &__pop-out {
+.app-design-example__header {
+  display: flex;
+
+  gap: nhsuk-spacing(3);
+
+  position: relative;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: nhsuk-spacing(2) nhsuk-spacing(3);
+
+  border: 1px solid nhsuk-colour("grey-3");
+  border-bottom: 0;
+  outline: 2px solid transparent;
+  @include nhsuk-font(16);
+
+  @include nhsuk-media-query($until: tablet) {
+    flex-direction: column;
+    gap: nhsuk-spacing(1);
+  }
+}
+
+.app-design-example__js-toggle-group {
+  display: none;
+
+  @include nhsuk-frontend-supported {
     display: block;
+    flex-shrink: 0;
+  }
+}
 
-    position: relative;
+.app-design-example__js-toggle-divider {
+  margin: 0 -1px;
+  color: nhsuk-colour("grey-3");
+}
 
-    width: 100%;
-    padding: 8px 16px;
+.app-button--js-toggle {
+  // stylelint-disable-next-line declaration-no-important
+  padding: 0 nhsuk-spacing(1) !important;
+}
 
-    border: 1px solid nhsuk-colour("grey-3");
-    border-bottom: 0;
-    outline: 2px solid transparent;
-    @include nhsuk-font(16);
+.app-button--js-toggle[aria-pressed="true"] {
+  font-weight: bold;
+  @include nhsuk-link-style-no-underline;
 
-    &:hover,
-    &:focus {
-      box-shadow: none;
-    }
-
-    &:focus {
-      outline: $nhsuk-focus-width solid transparent;
-      color: $nhsuk-focus-text-colour;
-      background-color: $nhsuk-focus-colour;
-      box-shadow: 0 $nhsuk-focus-width $nhsuk-focus-text-colour;
-      text-decoration: none;
-
-      &:hover {
-        color: $nhsuk-focus-text-colour;
-      }
-    }
+  &:not(:focus):not(:hover):not(:active) {
+    color: inherit;
   }
 }
 

@@ -97,7 +97,8 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "none-option"
+    type: "none-option",
+    showJavaScriptToggle: true
   }) }}
 
   <p>If JavaScript is unavailable, and a user selects both the "none" checkbox and another checkbox, display an error message.</p>
@@ -113,7 +114,8 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "all-option"
+    type: "all-option",
+    showJavaScriptToggle: true
   }) }}
 
   <h3 id="conditionally-revealing-question">Conditionally revealing a related question</h3>
@@ -123,7 +125,8 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "conditional"
+    type: "conditional",
+    showJavaScriptToggle: true
   }) }}
 
   <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
@@ -162,6 +165,19 @@
     <li><a href="/design-system/components/error-message">our guidance on error messages</a></li>
     <li><a href="https://design-system.service.gov.uk/components/checkboxes#error-messages">GOV.UK design system guidance on error messages for checkboxes</a></li>
   </ul>
+
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The checkboxes component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, conditionally revealed content will be revealed by default and "none" checkboxes will not uncheck all other checkboxes when clicked.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
 
   <h2>Research</h2>
   <p>Our checkboxes are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>
