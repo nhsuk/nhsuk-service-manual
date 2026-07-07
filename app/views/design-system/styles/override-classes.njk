@@ -1,0 +1,426 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Override classes" %}
+{% set pageDescription = "A reference list of all override classes provided by the design system, grouped by category." %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Styles" %}
+{% set theme = "Reference" %}
+{% set dateUpdated = "July 2026" %}
+
+{% block beforeContent %}
+  {% include "design-system/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <p>You can change the default appearance of components by using override classes, sometimes known as "utility classes".</p>
+
+  <p>Override classes provided by the design system all have the prefix <code>nhsuk-u-</code>.</p>
+
+  <h2>Spacing</h2>
+
+  <p>Spacing override classes control the margin and padding on elements. They come in 2 types: responsive and static. See the <a href="/design-system/styles/spacing">spacing styles page</a> for guidance on when and how to use spacing.</p>
+
+  <h3>Responsive spacing</h3>
+
+  <p>Responsive spacing classes apply different values on mobile and on tablet and larger screens. You can replace <code>3</code> with any number from 0 to 9.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-margin-3</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Responsive margin on all sides" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-margin-top-3</code>" },
+        value: { text: "Responsive margin on the top" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-margin-right-3</code>" },
+        value: { text: "Responsive margin on the right" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-margin-bottom-3</code>" },
+        value: { text: "Responsive margin on the bottom" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-margin-left-3</code>" },
+        value: { text: "Responsive margin on the left" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-padding-3</code>" },
+        value: { text: "Responsive padding on all sides" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-padding-top-3</code>" },
+        value: { text: "Responsive padding on the top" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-padding-right-3</code>" },
+        value: { text: "Responsive padding on the right" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-padding-bottom-3</code>" },
+        value: { text: "Responsive padding on the bottom" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-padding-left-3</code>" },
+        value: { text: "Responsive padding on the left" }
+      }
+    ]
+  }) }}
+
+  <h3>Static spacing</h3>
+
+  <p>Static spacing classes apply a fixed value at all screen sizes. You can replace <code>3</code> with any number from 0 to 9.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-static-margin-3</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Fixed margin on all sides" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-margin-top-3</code>" },
+        value: { text: "Fixed margin on the top" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-margin-right-3</code>" },
+        value: { text: "Fixed margin on the right" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-margin-bottom-3</code>" },
+        value: { text: "Fixed margin on the bottom" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-margin-left-3</code>" },
+        value: { text: "Fixed margin on the left" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-padding-3</code>" },
+        value: { text: "Fixed padding on all sides" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-padding-top-3</code>" },
+        value: { text: "Fixed padding on the top" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-padding-right-3</code>" },
+        value: { text: "Fixed padding on the right" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-padding-bottom-3</code>" },
+        value: { text: "Fixed padding on the bottom" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-static-padding-left-3</code>" },
+        value: { text: "Fixed padding on the left" }
+      }
+    ]
+  }) }}
+
+  <h2>Layout</h2>
+
+  <p>See the <a href="/design-system/styles/layout">layout styles page</a> for guidance on using the grid system.
+
+  <h3>Grid widths</h3>
+
+  {% call insetText({
+    visuallyHiddenText: "Information",
+    classes: "nhsuk-u-margin-top-4"
+  }) %}
+    <p>These grid width override classes are deprecated and will be removed in version 11. Use the <a href="/design-system/styles/layout#grid">grid classes</a> starting with <code>nhsuk-grid-column-</code> instead.</p>
+
+    {{ summaryList({
+      rows: [
+        {
+          key: { html: "<code>nhsuk-u-one-half</code>", classes: "nhsuk-u-width-one-half" },
+          value: { text: "one-half width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-third</code>" },
+          value: { text: "one-third width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-two-thirds</code>" },
+          value: { text: "two-thirds width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-quarter</code>" },
+          value: { text: "one-quarter width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-three-quarters</code>" },
+          value: { text: "three-quarters width at all screen sizes" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-half-tablet</code>" },
+          value: { text: "one-half width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-third-tablet</code>" },
+          value: { text: "one-third width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-two-thirds-tablet</code>" },
+          value: { text: "two-thirds width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-one-quarter-tablet</code>" },
+          value: { text: "one-quarter width on tablet and above, full width on mobile" }
+        },
+        {
+          key: { html: "<code>nhsuk-u-three-quarters-tablet</code>" },
+          value: { text: "three-quarters width on tablet and above, full width on mobile" }
+        }
+      ]
+    }) }}
+  {% endcall %}
+
+
+  <h3>Widths</h3>
+
+  <p>Use these classes to constrain the width of text inputs, table columns or other components. On mobile they expand to 100% width.</p>
+
+  <p>See <a href="/design-system/components/text-input#fluid-width-inputs">fluid width inputs in the text input component</a> for more detail.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-width-full</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "full width at all screen sizes" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-width-three-quarters</code>" },
+        value: { text: "three-quarters width on tablet and above, full width on mobile" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-width-two-thirds</code>" },
+        value: { text: "two-thirds width on tablet and above, full width on mobile" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-width-one-half</code>" },
+        value: { text: "one-half width on tablet and above, full width on mobile" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-width-one-third</code>" },
+        value: { text: "one-third width on tablet and above, full width on mobile" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-width-one-quarter</code>" },
+        value: { text: "one-quarter width on tablet and above, full width on mobile" }
+      }
+    ]
+  }) }}
+
+
+
+  <h3>Reading width</h3>
+
+  <p>See <a href="/design-system/styles/layout#utility-classes">layout utility classes</a> for guidance on when to use reading width.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-reading-width</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Constrains the maximum width of a block of text to an optimal reading width" }
+      }
+    ]
+  }) }}
+
+  <h3>Float</h3>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-float-left</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Floats an element to the left" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-float-right</code>" },
+        value: { text: "Floats an element to the right" }
+      }
+    ]
+  }) }}
+
+  <h3>Clearfix</h3>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-clear</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Clears floated children so the parent element contains them" }
+      }
+    ]
+  }) }}
+
+  <h2>Colour</h2>
+
+  <p>See the <a href="/design-system/styles/colour">colour styles page</a> for guidance on using colour.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-secondary-text-colour</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Secondary (grey) text colour" }
+      }
+    ]
+  }) }}
+
+  <h2>Typography</h2>
+
+  <p>See the <a href="/design-system/styles/typography">typography styles page</a> for guidance on type sizes, weights and styles.</p>
+
+  <h3>Font size</h3>
+
+  <p>Font size override classes set the font size and line height to a specific point in the typography scale. See <a href="/design-system/styles/typography#font-size">font size</a>.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-font-size-14</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "14px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-16</code>" },
+        value: { text: "16px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-19</code>" },
+        value: { text: "19px font size (the default body size)" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-22</code>" },
+        value: { text: "22px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-26</code>" },
+        value: { text: "26px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-36</code>" },
+        value: { text: "36px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-48</code>" },
+        value: { text: "48px font size" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-size-64</code>" },
+        value: { text: "64px font size" }
+      }
+    ]
+  }) }}
+
+  <h3>Font weight</h3>
+
+  <p>See the guidance on <a href="/content/formatting#bold-italics-and-underlining">bold, italics and underlining in the content guide</a>.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-font-weight-bold</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Bold font weight" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-weight-normal</code>" },
+        value: { text: "Normal (regular) font weight" }
+      }
+    ]
+  }) }}
+
+  <h3>Font family</h3>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-font-code</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Code font family" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-font-monospace</code>" },
+        value: { text: "Monospace font family" }
+      }
+    ]
+  }) }}
+
+  <h3>Text alignment</h3>
+
+  <p>See <a href="/design-system/styles/typography#text-alignment">text alignment guidance on typography page</a>.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-text-align-left</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Aligns text to the left" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-text-align-centre</code>" },
+        value: { text: "Centres text" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-text-align-right</code>" },
+        value: { text: "Aligns text to the right" }
+      }
+    ]
+  }) }}
+
+  <h3>Other text utilities</h3>
+
+  <p>See <a href="/design-system/styles/typography#breaking-up-long-words">breaking up long words on typography page</a>.</p>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-text-break-word</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Forces long words or URLs to break onto a new line" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-nowrap</code>" },
+        value: { text: "Prevents text from wrapping onto multiple lines on mobile" }
+      }
+    ]
+  }) }}
+
+  <h2>Display</h2>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-display-block</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Sets display to block" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-display-inline</code>" },
+        value: { text: "Sets display to inline" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-display-inline-block</code>" },
+        value: { text: "Sets display to inline-block" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-display-none</code>" },
+        value: { text: "Hides an element from all users" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-display-none-print</code>" },
+        value: { text: "Hides an element when printing" }
+      }
+    ]
+  }) }}
+
+  <h2>Visibility</h2>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { html: "<code>nhsuk-u-visually-hidden</code>", classes: "nhsuk-u-width-one-half" },
+        value: { text: "Hides an element visually but keeps it available to screen readers" }
+      },
+      {
+        key: { html: "<code>nhsuk-u-visually-hidden-focusable</code>" },
+        value: { text: "Hides an element visually but reveals it when it receives keyboard focus" }
+      }
+    ]
+  }) }}
+
+{% endblock %}

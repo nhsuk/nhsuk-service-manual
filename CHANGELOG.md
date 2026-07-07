@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Add option for "all" to checkboxes component
+- Add new reference page for override classes
 
 :wrench: **Maintenance**
 

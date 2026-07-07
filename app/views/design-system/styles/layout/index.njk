@@ -4,7 +4,7 @@
 {% set pageDescription = "Structure your page content and elements." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "May 2020" %}
+{% set dateUpdated = "July 2026" %}
 {% set backlog_issue_id = "3" %}
 
 {% block beforeContent %}
@@ -43,6 +43,11 @@
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/use-frutiger-font">Use the NHS Frutiger font</a></li>
 
+  </ul>
+
+  <h2 class="app-side-nav__heading">Reference <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+  <ul class="nhsuk-list app-side-nav__list">
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/override-classes">Override classes</a></li>
   </ul>
 
 </nav>
@@ -174,8 +179,8 @@
   <p class="rich-text">The width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
   <p>For example:</p>
   <ul>
-    <li><p class="rich-text"><code>nhsuk-u-width-one-half</code>  will apply a width of 50% and</p></li>
-    <li><p class="rich-text"><code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p></li>
+    <li><code>nhsuk-u-width-one-half</code> will apply a width of one-half</li>
+    <li><code>nhsuk-u-width-two-thirds</code> will apply a width of two-thirds</li>
   </ul>
 
   {{ designExample({
@@ -196,7 +201,7 @@
     htmlOnly: true
   }) }}
 
-  <h3 id="fluid-example">One-third / two-thirds in a fluid-width container</h3>
+  <h3 id="fluid-example">One-third and two-thirds in a fluid-width container</h3>
 
   {{ designExample({
     group: "styles",
@@ -219,7 +224,7 @@
   }) }}
 
   <h3>Tablet and mobile specific grid classes</h3>
-  <p>By default, grid columns sizes will go to 100% width of the container on screen sizes below the desktop breakpoint (769px). These override classes will enforce column widths on all screen sizes.</p>
+  <p>By default, grid columns sizes will go to full width of the container on screen sizes below the desktop breakpoint (769px). These override classes will enforce column widths on all screen sizes.</p>
   <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> override class followed by the width to an existing grid column, for example <code>nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
 
   {{ designExample({

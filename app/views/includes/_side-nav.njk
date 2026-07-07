@@ -92,6 +92,10 @@
   { title: "Use the NHS Frutiger font", url: "/design-system/styles/use-frutiger-font" }
 ] %}
 
+{% set stylesReference = [
+  { title: "Override classes", url: "/design-system/styles/override-classes" }
+] %}
+
 {% set navigation = [
   { title: "Action link", url: "/design-system/components/action-link" },
   { title: "Back link", url: "/design-system/components/back-link" },
@@ -231,6 +235,13 @@
     <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Reference <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in stylesReference %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

@@ -10,6 +10,36 @@
 
 {% block bodyContent %}
 
+<h2>July 2026</h2>
+
+{% set designHtml202607 %}
+  <p>Added <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in July 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202607
+      }
+    ]
+  ]
+}) }}
+
 <h2>June 2026</h2>
 
 {% set designHtml202606 %}
