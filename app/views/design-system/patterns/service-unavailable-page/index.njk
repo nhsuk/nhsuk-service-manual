@@ -22,16 +22,16 @@
 
 <h2 id="when-to-use">When to use this pattern</h2>
 
-<p>Use a service unavailable page when your service cannot be used temporarily. This could be for:</p>
+<p>Use a service unavailable page when your service cannot be used temporarily or permanently.</p>
+<p>You might close a service temporarily for:</p>
 <ul>
   <li>planned maintenance or upgrades</li>
   <li>unplanned problems which will take time to fix</li>
   <li>reasons outside of your control such as a hosting provider outage</li>
 </ul>
-<p>If there is an unexpected problem and you can fix it quickly, use the <a href="/design-system/patterns/problem-with-the-service-pages">There is a problem with the service pattern</a>. If you cannot fix the problem quickly, use this pattern.</p> 
-<p>Have a general page in case you need to make a service unavailable quickly and do not have time to update the page. As soon as you know when the service will be available, update the page.</p>
+<p>If there is an unexpected problem and you can fix it quickly, use the <a href="/design-system/patterns/problem-with-this-service-page">There is a problem with this service page</a>. If you cannot fix the problem quickly, use this service unavailable pattern. "Quickly" means different things for different services, but for example, within an hour.</p> 
+<p>Have a general page in case you need to make a service unavailable quickly and do not have time to update the page. As soon as you know when the service will be available, update the page and let users know.</p>
 <p>Consider what users should do while the service is unavailable. For example, include a phone number they can contact for urgent issues or a link to a form they can download to record information temporarily.</p>
-<p>You can also use this pattern when a service closes permanently.</p>
 <p>There are different versions of this pattern:</p>
 <ul>
   <li><a href="#general-page">general page</a></li>
@@ -44,20 +44,24 @@
 <h2 id="how-to-use">How to use this pattern</h2>
 <p>The page should include:</p>
 <ul> 
-  <li>"Sorry, the service is unavailable – service name – NHS" as the page title</li>
-  <li>"Sorry, the service is unavailable" as the <code>&lt;h1&gt;</code></li>
+  <li>"Sorry, this service is unavailable – service name – NHS" as the page title</li>
+  <li>"Sorry, this service is unavailable" as the <code>&lt;h1&gt;</code></li>
   <li>the day, date and time it is going to be available or what to do if it is permanently closed</li>
-  <li>information about what has happened to their answers if they are in the middle of a transaction</li>
-  <li>an alternative journey, if it's a transactional service</li>
-  <li>contact information</li>
+  <li>an alternative journey, for users on a transactional service</li>
+  <li>contact information, if it helps meet a user need</li>
 </ul>
 <p>If your service is a healthcare service, tell users how to complete their task through a different channel.</p>
 <p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times. If it's helpful, include "For urgent medical advice" followed by the text "Use <a href="#">111 online</a> or call 111."</p>
+<p>If you can:</p>
+<ul>
+  <li>store previously entered information for a reasonable amount of time so users can resume their journey with re-populated information when the service becomes available again</li>
+  <li>tell the user what has happened to their answers if they're in the middle of a transaction</li>
+</ul>
 <p>Do not ask users to report errors unless you know that this meets a user need.</p>
 <p>Have clear and concise content and do not use:</p>
 <ul>
   <li>breadcrumbs or a back button</li>
-  <li>vague, unhelpful words like maintenance, improvements</li>
+  <li>vague, unhelpful words like "maintenance", "improvements"</li>
   <li>red text to warn people</li>
   <li>too many links</li>
 </ul>
@@ -80,19 +84,40 @@
   type: "when-you-know-when-service-will-be-available"
 }) }}
 
-<p>If you are planning to make your service unavailable, give users advance warning of this on your service <a href="/design-system/patterns/start-page">start page</a>.</p>
+<p>If you are planning to make your service unavailable, if possible, give users advance warning of this on your service <a href="/design-system/patterns/start-page">start page</a>, above the "Start now" button.</p>
+
 <div class="app-example app-example--content">
   {{ tag({
     text: "Example",
     classes: "app-example__heading"
   }) }}
   <h2 class="nhsuk-heading-s">Service unavailable tonight</h2>
-  <p>This service will be temporarily unavailable from 11.59pm on 2 August to 2am on 3 August 2026</p>
+  <p>This service will be temporarily unavailable from 11.59pm on 2 August to 2am on 3 August 2026.</p>
+  <p>If you need urgent medical advice during this time, use <a href="#">111 online</a> or call 111.</p>
+
 </div>
+<p>During the time your service is unavailable, if you can, include a message on your start page to tell them when it will reopen.</p>
+<div class="app-example app-example--content">
+  {{ tag({
+    text: "Example",
+    classes: "app-example__heading"
+  }) }}
+  <h2 class="nhsuk-heading-s">Service unavailable now</h2>
+  <p>This service is temporarily unavailable. You will be able to use it again from 2am on 3 August 2026.</p>
+  <p>If you need urgent medical advice during this time, use <a href="#">111 online</a> or call 111.</p>
+
+</div>
+
+<p>If you are planning a longer closure, remove the Start button and make sure that any information users need during this time is on the service start page.</p>
 
 <h3 id="updates">When you have updates about availability</h2>
 
-<p>If the technical issue is unexpected, communicate any updates you have on progress to resolve it.</p>
+<p>If the technical issue is unexpected, tell users:</p>
+<ul>
+  <li>any updates you have on progress to resolve it</li>
+  <li>if possible, how long it might take</li>
+</ul>
+<p>Keep it updated if the situation changes.</p>
 
 {{ designExample({
   group: "patterns",
@@ -106,22 +131,22 @@
 
 <p>As this page is hosted separately, you will need to configure a standalone error page which is not dependent on your service.</p>
 
-<p>Use this standalone template. You will need to edit it to add the name of your service and any relevant content to tell your users what to do if the service is unavailable.</p>
-
-{{ designExample({
-  group: "patterns",
-  item: "service-unavailable-page",
-  type: "standalone",
-  htmlOnly: true
-}) }}
+<p>There is a <a href="#">standalone HTML template in the NHS frontend [fix link]</a>. You will need to edit it to add the name of your service and any relevant content to tell your users what to do if the service is unavailable.</p>
 
 <h3 id="service-closed-permanently">Service closed permanently</h2>
-<p>Refer users to another service or to somewhere that helps them deal with their problem.</p>
+<p>If your service is closing permanently, use a "This service is now closed" page. Refer users to another service or to somewhere that helps them deal with their problem.</p>
+<p>Do not use a Page not found (404) page.</p>
 
 {{ designExample({
   group: "patterns",
   item: "service-unavailable-page",
   type: "closed-replaced"
 }) }}
-<p>Include a note on any pages that refer to the service. [Needs more work.]</p>
+<p>If users will look for your service, consider keeping the start page for a while but:</p>
+<ul>
+  <li>remove the start button</li>
+  <li>explain to users how to get the help they need</li>
+</ul>
+<p>Take your start page down when users are no longer searching for it. Make sure that you also remove any links to the closed service.</p>
+
 {% endblock %}
