@@ -12,19 +12,73 @@
 {% block bodyContent %}
 
   <h2 class="nhsuk-heading-l">Now</h2>
-  <ul  class="nhsuk-body">
-    <li>Page not found, Service unavailable and There is a problem with the service patterns</li>
-    <li>ways to show what we've updated on service standard and design system pages</li>
-    <li>understanding how people use the NHS and GOV service standards and what could be improved</li>
-  </ul>
+
+  {{ summaryList({
+    rows: [
+      {
+        key: { 
+          text: "Common error pages" 
+        },
+        value: { 
+          text: "Page not found, Service unavailable and There is a problem with the service patterns" 
+        }
+      },
+      {
+        key: { 
+          text: "Section navigation" 
+        },
+        value: { 
+          text: "A list of links to allow users to navigate between pages in a section of a service" 
+        }
+      },
+      {
+        key: { 
+          text: "Showing updates" 
+        },
+        value: { 
+          text: "Ways to show what we've updated on service standard and design system pages" 
+        }
+      },
+      {
+        key: { 
+          text: "Service standard discovery" 
+        },
+        value: { 
+          text: "Understanding how people use the NHS and GOV service standards and what could be improved" 
+        }
+      }
+    ]
+  }) }}
 
   <h2 class="nhsuk-heading-l">Next</h2>
-  <ul>
-    <li>NHS.UK frontend v11 – breaking release</li>
-    <li>section navigation component</li>
-    <li>enhancing expanders (using GOV.UK accordion functionality)</li>
-    <li>address lookup pattern</li>
-  </ul>
+  {{ summaryList({
+    rows: [
+      {
+        key: { 
+          text: "NHS.UK frontend v11" 
+        },
+        value: { 
+          text: "Breaking release featuring new link styling, and updated grid and code improvements" 
+        }
+      },
+      {
+        key: { 
+          text: "Enhancing expanders" 
+        },
+        value: { 
+          text: "Enhancing expanders using GOV.UK accordion functionality and accessibility improvements" 
+        }
+      },
+      {
+        key: { 
+          text: "Address lookup" 
+        },
+        value: { 
+          text: "Helping users to find a full address from a postcode"
+        }
+      }
+    ]
+  }) }}
 
   <h2 class="nhsuk-heading-l">Get involved</h2>
   <p>If you'd like to get involved in the work we're doing now, or have suggestions for what we should be working on next, <a href="/get-in-touch">get in touch</a>.
