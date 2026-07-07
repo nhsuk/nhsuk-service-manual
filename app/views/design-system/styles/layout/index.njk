@@ -4,7 +4,7 @@
 {% set pageDescription = "Structure your page content and elements." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "May 2020" %}
+{% set dateUpdated = "July 2026" %}
 {% set backlog_issue_id = "3" %}
 
 {% block beforeContent %}
@@ -14,10 +14,9 @@
 {% block sideNav %}
 <nav class="app-side-nav">
 
+  <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+
   <ul class="nhsuk-list app-side-nav__list">
-
-    <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
-
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/colour">Colour</a></li>
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/focus-state">Focus state</a></li>
@@ -32,7 +31,7 @@
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#grid">Grid system</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#width-override-classes">Width override classes</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#layouts">Common layouts</a></li>
-        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#utility-classes">Layout utility classes</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#override-classes">Layout override classes</a></li>
       </ul>
     </li>
 
@@ -44,6 +43,11 @@
 
     <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/use-frutiger-font">Use the NHS Frutiger font</a></li>
 
+  </ul>
+
+  <h2 class="app-side-nav__heading">Reference <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+  <ul class="nhsuk-list app-side-nav__list">
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/design-system/styles/override-classes">Override classes</a></li>
   </ul>
 
 </nav>
@@ -175,8 +179,8 @@
   <p class="rich-text">The width override classes start with <code>nhsuk-u-</code>. The second part of the class name indicates the width on larger screen sizes.
   <p>For example:</p>
   <ul>
-    <li><p class="rich-text"><code>nhsuk-u-width-one-half</code>  will apply a width of 50% and</p></li>
-    <li><p class="rich-text"><code>nhsuk-u-width-two-thirds</code> will apply a width of 66.66%.</p></li>
+    <li><code>nhsuk-u-width-one-half</code> will apply a width of one-half</li>
+    <li><code>nhsuk-u-width-two-thirds</code> will apply a width of two-thirds</li>
   </ul>
 
   {{ designExample({
@@ -197,7 +201,7 @@
     htmlOnly: true
   }) }}
 
-  <h3 id="fluid-example">One-third / two-thirds in a fluid-width container</h3>
+  <h3 id="fluid-example">One-third and two-thirds in a fluid-width container</h3>
 
   {{ designExample({
     group: "styles",
@@ -206,7 +210,7 @@
     htmlOnly: true
   }) }}
 
-  <h2 id="utility-classes">Layout utility classes</h2>
+  <h2 id="override-classes">Layout override classes</h2>
 
   <h3>Reading width</h3>
   <p>To make it easy to read, lines of text should be no longer than 70 to 80 characters.</p>
@@ -220,8 +224,8 @@
   }) }}
 
   <h3>Tablet and mobile specific grid classes</h3>
-  <p>By default, grid columns sizes will go to 100% width of the container on screen sizes below the desktop breakpoint (769px). These utility classes will enforce column widths on all screen sizes.</p>
-  <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> utility class followed by the width to an existing grid column, for example <code>nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
+  <p>By default, grid columns sizes will go to full width of the container on screen sizes below the desktop breakpoint (769px). These override classes will enforce column widths on all screen sizes.</p>
+  <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> override class followed by the width to an existing grid column, for example <code>nhsuk-u-one-half</code> will set your column width to be one-half on all screen sizes.</p>
 
   {{ designExample({
     group: "styles",
@@ -231,8 +235,8 @@
   }) }}
 
   <h3>Tablet specific grid classes</h3>
-  <p>These utility classes will enforce column widths on screen sizes above the mobile breakpoint (320px).</p>
-  <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> utility class followed by the width and the suffix <code>-tablet</code> to an existing grid column. For example, <code>nhsuk-u-one-third-tablet</code> will set your column width to be one-third on screen sizes tablet and above.</p>
+  <p>These override classes will enforce column widths on screen sizes above the mobile breakpoint (320px).</p>
+  <p class="rich-text">To define your column sizes, add the <code>nhsuk-u-</code> override class followed by the width and the suffix <code>-tablet</code> to an existing grid column. For example, <code>nhsuk-u-one-third-tablet</code> will set your column width to be one-third on screen sizes tablet and above.</p>
 
   {{ designExample({
     group: "styles",

@@ -1,5 +1,19 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add option for "all" to checkboxes component
+- Add new reference page for override classes
+
+:wrench: **Maintenance**
+
+- Add curly quote example to punctuation section
+- Update character count component to mention new data-count-type
+- Update guidance on getting accessibility audits
+- Update wording about terms of use on Start page pattern
+
 ## 8.12.1 - 17 June 2026
 
 :wrench: **Maintenance**

@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users know how much text they can enter when there is a limit on the number of characters." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "September 2025" %}
+{% set dateUpdated = "July 2026" %}
 {% set backlog_issue_id = "172" %}
 
 {% block beforeContent %}
@@ -17,7 +17,8 @@
   {{ designExample({
     group: "components",
     item: "character-count",
-    type: "default"
+    type: "default",
+    showJavaScriptToggle: true
   }) }}
 
   <h2 id="when-to-use">When to use character count</h2>
@@ -51,16 +52,15 @@
     <li>it's clearly separate from any hint text or error message above the textarea</li>
     <li>if it's below the visible screen area, users will still see it again when they scroll down to send their response</li>
   </ul>
-  <p>This component uses JavaScript. If JavaScript is not available, users will see a static message in place of the count message, telling them how many characters they can enter.</p>
-  <p>There are 2 ways to use the character count component. You can use HTML or, if you're using Nunjucks or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
   <h3>Consider if a word count is more helpful</h3>
   <p>In some cases it may be more helpful to show a word count. For example, if your question requires a longer answer.</p>
-  <p>Do this by setting <code>data-maxwords</code> in the component markup. For example, <code>data-maxwords="150"</code> will set a word limit of 150.</p>
+  <p>Do this by setting <code>data-count-type="words"</code> and <code>data-maxlength</code> in the component markup. For example, <code>data-maxwords="150"</code> will set a word limit of 150.</p>
   {{ designExample({
     group: "components",
     item: "character-count",
-    type: "word-count"
+    type: "word-count",
+    showJavaScriptToggle: true
   }) }}
 
   <h3>Avoid narrow limits</h3>
@@ -71,7 +71,8 @@
   {{ designExample({
     group: "components",
     item: "character-count",
-    type: "threshold"
+    type: "threshold",
+    showJavaScriptToggle: true
   }) }}
 
   <h3>If you're asking more than 1 question on the page</h3>
@@ -79,7 +80,8 @@
   {{ designExample({
     group: "components",
     item: "character-count",
-    type: "without-heading"
+    type: "without-heading",
+    showJavaScriptToggle: true
   }) }}
 
   <h3>Error messages</h3>
@@ -87,7 +89,8 @@
   {{ designExample({
     group: "components",
     item: "character-count",
-    type: "error"
+    type: "error",
+    showJavaScriptToggle: true
   }) }}
 
   <p>If a user tries to send their response with too many characters, you must show an error message above the field as well as the count message below it.</p>
@@ -103,11 +106,23 @@
   <p>Say "[whatever it is] must be [number] characters or less".</p>
   <p>For example, "Summary must be 400 characters or less".</p>
 
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The character count component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, users will see a static message in place of the count message, telling them how many characters or words they can enter.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "character-count",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
+
   <h2>Research and testing</h2>
   <p>The Government Digital Service (GDS) developed and tested the character count component. Several NHS services are using a character count but we need to know more about how it tests with users.</p>
 
   <h3>Known issues and gaps</h3>
   <p>In Internet Explorer 11, JAWS will ignore any set threshold and announce the character count, even if the user entered less than the threshold.</p>
   <p>In Chrome version 99, JAWS will not announce the hint or character count of a pre-populated textarea. This is a known <a href="https://github.com/FreedomScientific/VFO-standards-support/issues/201">issue for the developer of JAWS (FreedomScientific GitHub issue)</a>.</p>
-  <p>Also, this component <a href="https://github.com/alphagov/govuk-frontend/issues/1104">counts some characters as multiple characters (GOV.UK GitHub issue)</a>. For example, emojis and some non-Latin characters.</p>
 {% endblock %}

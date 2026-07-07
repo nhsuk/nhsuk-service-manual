@@ -77,17 +77,26 @@ app.use('/javascripts', [
     }
   }),
   (req, res, next) => {
-    const { name, ext } = parse(req.path)
+    const { name } = parse(req.path)
     const [basename] = name.split('.')
 
+    let redirectTo
+
     // Redirect to latest javascript
-    if (['main.js'].includes(`${basename}${ext}`)) {
-      res.redirect(fileHelper.getAssetPath(`${basename}.js`))
-      return
+    if (['main', 'preview', 'nhsuk-frontend'].includes(basename)) {
+      for (const assetPath of [
+        `javascripts/${basename}.min.js`,
+        `javascripts/${basename}.js`
+      ]) {
+        if (fileHelper.hasAssetPath(assetPath)) {
+          redirectTo = fileHelper.getAssetPath(assetPath)
+          break
+        }
+      }
     }
 
-    // 404 page
-    next()
+    // Redirect or 404 page
+    return redirectTo ? res.redirect(redirectTo) : next()
   }
 ])
 
@@ -102,17 +111,26 @@ app.use('/stylesheets', [
     }
   }),
   (req, res, next) => {
-    const { name, ext } = parse(req.path)
+    const { name } = parse(req.path)
     const [basename] = name.split('.')
 
+    let redirectTo
+
     // Redirect to latest stylesheet
-    if (['main.css', 'preview.css'].includes(`${basename}${ext}`)) {
-      res.redirect(fileHelper.getAssetPath(`stylesheets/${basename}.scss`))
-      return
+    if (['main', 'preview', 'nhsuk-frontend'].includes(basename)) {
+      for (const assetPath of [
+        `stylesheets/${basename}.min.css`,
+        `stylesheets/${basename}.scss`
+      ]) {
+        if (fileHelper.hasAssetPath(assetPath)) {
+          redirectTo = fileHelper.getAssetPath(assetPath)
+          break
+        }
+      }
     }
 
-    // 404 page
-    next()
+    // Redirect or 404 page
+    return redirectTo ? res.redirect(redirectTo) : next()
   }
 ])
 
@@ -142,7 +160,8 @@ env.addFilter('unindent', filters.unindent)
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res, next) => {
-  const { group, item, type } = req.params
+  const { params, query } = req
+  const { group, item, type } = params
 
   // Continue to 404 page
   if (!fileHelper.hasNunjucksPath({ group, item, type })) {
@@ -168,10 +187,15 @@ app.get('/design-example/:group/:item/:type', (req, res, next) => {
   // Wrap the example HTML in a basic html base template.
   const { previewLayout = 'design-example-wrapper' } = data
 
+  const javascript = query.javascript
+    ? query.javascript === 'on'
+    : data.javascript !== false
+
   res.render(`layouts/${previewLayout}`, {
     ...data,
     exampleHtml,
-    item
+    item,
+    javascript
   })
 })
 

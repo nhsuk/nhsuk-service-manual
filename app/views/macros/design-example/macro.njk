@@ -1,6 +1,7 @@
 {% from "details/macro.njk" import details %}
 {% from "tables/macro.njk" import table %}
 {% from "code/macro.njk" import code %}
+{% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.alias or option.slug) %}
@@ -80,14 +81,50 @@
     {% set classNames = classNames ~ " " ~ params.classes %}
   {% endif %}
 
-  <div class="app-design-example{% if params.classes %} {{ params.classes }}{% endif %}" data-module="app-design-example">
-
+  <div {{- nhsukAttributes({
+    class: "app-design-example" ~ (" " ~ params.classes if params.classes else ""),
+    "data-module": "app-design-example",
+    "data-example-id": exampleId,
+    "data-javascript": params.javascript | default(true) | string
+  }) }}>
     {% if showExample %}
-      <a href="{{ standaloneURL }}" class="app-design-example__pop-out" target="_blank" rel="noopener noreferrer">
-        Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
-      </a>
+      <div class="app-design-example__header">
+        <a href="{{ standaloneURL }}" class="app-design-example__link" target="_blank" rel="noopener noreferrer">
+          Open this example in a new tab<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span></a>
+
+        {% if params.showJavaScriptToggle %}
+          <span class="app-design-example__js-toggle-group" role="group" aria-labelledby="{{ exampleId }}-label">
+            <span id="{{ exampleId }}-label"><span class="nhsuk-u-visually-hidden">Toggle </span>JavaScript</span>
+
+            <button {{- nhsukAttributes({
+              class: "nhsuk-link app-button--js-toggle",
+              "data-href": standaloneURL ~ "?javascript=on",
+              "aria-controls": exampleId ~ "-frame",
+              "aria-pressed": params.javascript | default(true) | string
+            }) }}>
+              On
+            </button>
+
+            <span class="app-design-example__js-toggle-divider" aria-hidden="true">|</span>
+
+            <button {{- nhsukAttributes({
+              class: "nhsuk-link app-button--js-toggle",
+              "data-href": standaloneURL ~ "?javascript=off",
+              "aria-controls": exampleId ~ "-frame",
+              "aria-pressed": (params.javascript === false) | string
+            }) }}>
+              Off
+            </button>
+          </span>
+        {% endif %}
+      </div>
       <div class="app-code-embed">
-        <iframe title="{{ params.type }}" src="{{ standaloneURL }}" class="app-design-example__frame"></iframe>
+        <iframe {{- nhsukAttributes({
+          id: exampleId ~ "-frame",
+          title: params.type,
+          src: standaloneURL ~ "?javascript=off" if params.javascript === false else standaloneURL,
+          class: "app-design-example__frame"
+        }) }}></iframe>
       </div>
     {% endif %}
 
@@ -115,7 +152,12 @@
                 </a>
               </div>
             {% endif %}
-            <div class="app-code-snippet__preformatted {%- if snippets | length > 1 %} js-hidden {%- endif %}" data-index="ex-{{ loop.index }}">
+
+            <div {{- nhsukAttributes({
+              class: "app-code-snippet__preformatted" ~ (" nhsuk-u-frontend-supported-hidden" if snippets | length > 1 else ""),
+              id: exampleId ~ "-" ~ snippet.id,
+              "data-index": "ex-" ~ loop.index
+            }) }}>
               {% set macroOptions = getMacroOptions(params.item) if params.group == "components" and snippet.name == "Nunjucks" else [] %}
 
               {% if macroOptions | length %}

@@ -10,9 +10,40 @@
 
 {% block bodyContent %}
 
+<h2>July 2026</h2>
+
+{% set designHtml202607 %}
+  <p>Added <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+{% endset %}
+
+{{ table({
+  caption: "Updates to the service manual in July 2026",
+  captionClasses: "nhsuk-u-visually-hidden",
+  head: [
+    {
+      text: "Section",
+      classes: "nhsuk-u-width-one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202607
+      }
+    ]
+  ]
+}) }}
+
 <h2>June 2026</h2>
 
 {% set designHtml202606 %}
+  <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" checkbox option</a></p>
   <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
   <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
   <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
@@ -607,7 +638,7 @@
   <p>Added <a href="/design-system/styles/typography#breaking-up-long-words">typography helper class and guidance on breaking up long words</a></p>
   <p>Added example of <a href="/design-system/components/table#word-breaks-table">using word-breaks in tables</a></p>
   <p>Updated <a href="/design-system/styles/page-template">page template</a> to use template from nhsuk-frontend, with new Nunjucks options</p>
-  <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#utility-classes">reading width helper classes</a></p>
+  <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#override-classes">reading width helper classes</a></p>
 {% endset %}
 
 {% set standardHtml202504 %}

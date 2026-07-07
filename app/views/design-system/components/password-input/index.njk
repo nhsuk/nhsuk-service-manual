@@ -17,7 +17,8 @@
   {{ designExample({
     group: "components",
     item: "password-input",
-    type: "default"
+    type: "default",
+    showJavaScriptToggle: true
   }) }}
 
   <h2 id="when-to-use-password-input">When to use password input</h2>
@@ -42,14 +43,14 @@
   <p>This component lets users enter a password, with an option to show what they've entered as plain text.</p>
   <p>This allows users to visually check their password before they submit it, which helps them reduce errors and choose passwords that are more unique and secure.</p>
   <p>Use this guidance with <a href="https://design-system.service.gov.uk/patterns/passwords/">GOV.UK's Ask users for passwords pattern</a>, which explains how to help users create and enter secure and memorable passwords.</p>
-  <p>The password input component requires JavaScript to work. Without it, users will see a password input but no "Show" button.</p>
 
   <h3 id="error-messages">Error messages</h3>
 
   {{ designExample({
     group: "components",
     item: "password-input",
-    type: "error"
+    type: "error",
+    showJavaScriptToggle: true
   }) }}
 
   <p>If the user enters their account details incorrectly, do not reveal whether they got the username or password wrong. Clear any information entered into the password input.</p>
@@ -138,6 +139,19 @@
 
 <h2 id="accessibility">Accessibility</h2>
 <p>Follow <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">WCAG 2.2 on accessible authentication (W3C)</a>.</p>
+
+<h2 id="progressive-enhancement">Progressive enhancement</h2>
+<p>The password input component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+<p>When JavaScript is not available, users will see their browser's native password input without the "Show" button.</p>
+
+{{ designExample({
+  group: "components",
+  item: "password-input",
+  type: "without-javascript",
+  javascript: false,
+  showJavaScriptToggle: true,
+  showCode: false
+}) }}
 
 <h2 id="research-on-this-component">Research on this component</h2>
 <p>GOV.UK decided that having a 2nd field is not helpful for users, particularly on password inputs with show and hide buttons.</p>
