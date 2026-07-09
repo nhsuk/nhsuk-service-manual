@@ -60,6 +60,16 @@
   <h3 id="when-not-to-use-a-basic-table">When not to use a basic table</h3>
   <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a responsive table instead.</p>
 
+  <h2 id="compact-table">Compact table</h2>
+  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data. Add the <code>nhsuk-table--compact</code> class to the table.</p> 
+  <p>Try first to reduce the amount of data you display, for example by splitting it into multiple tables or combining columns. For example, showing a name and NHS number together in one column.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "compact"
+  }) }}
+  
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays as a 3-column table. However, on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
@@ -177,16 +187,6 @@
     <li>medical conditions</li>
   </ul>
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
-
-  <h2 id="compact-tables">Compact tables</h2>
-  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data. Add the <code>nhsuk-table--compact</code> class to the table.</p> 
-  <p>Try first to reduce the amount of data you display, for example by splitting it into multiple tables or combining columns.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "table",
-    type: "compact"
-  }) }}
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
   <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
