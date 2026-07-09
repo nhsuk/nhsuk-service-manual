@@ -16,7 +16,9 @@
   <p>We have 3 kinds of tables:</p>
   <ul>
     <li><a href="#basic-table">basic</a></li>
+    <li><a href="#compact-table">compact</a></li>
     <li><a href="#responsive-table">responsive</a></li>
+    <li><a href="#scrolling-table">scrolling</a></li>
     <li><a href="#sortable-table">sortable</a></li>
   </ul>
   <h2 id="when-to-use-a-table">When to use a table</h2>
@@ -69,7 +71,7 @@
     item: "table",
     type: "compact"
   }) }}
-  
+
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays as a 3-column table. However, on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
@@ -84,7 +86,7 @@
   <p>Do not use a responsive table if your content is easier to read and understand on a small screen in a non-stacked layout. Use a <a href="#basic-tables">basic table</a> instead. If you have too many columns to fit, use a <a href="#scrolling-table">scrolling table</a>.</p>
 
   <h2 id="scrolling-table">Scrolling table</h2>
-  <p>Add the scrolling container when your table has many columns and you cannot split it up into multiple tables or pages.</p>
+  <p>Add the scrolling container when your table has many columns and you cannot split it up or use a responsive table.</p>
 
   {{ designExample({
     group: "components",
