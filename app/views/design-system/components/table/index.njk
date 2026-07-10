@@ -63,7 +63,7 @@
   <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a <a href="#responsive-table">responsive table</a> instead.</p>
 
   <h2 id="compact-table">Compact table</h2>
-  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data. Add the <code>nhsuk-table--compact</code> class to the table.</p> 
+  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data. Add the <code>nhsuk-table--compact</code> class to the table.</p>
   <p>Try first to reduce the amount of data you display, for example by splitting it into multiple tables or combining columns. For example, showing a name and NHS number together in 1 column.</p>
 
   {{ designExample({
@@ -233,6 +233,16 @@
 
   <h3 id="sortable-tables">Sortable tables</h3>
   <p>The sortable table tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
+
+  <h2 id="tables-on-dark-backgrounds">Tables on dark backgrounds</h2>
+  <p>Use the <code>nhsuk-table--reverse</code> modifier class to show white text on dark backgrounds.</p>
+  <p>Make sure all users can see the table content. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "reverse"
+  }) }}
 
   <h2 id="research">Research</h2>
 
