@@ -221,7 +221,7 @@
               {% call code({
                 background: "body",
                 button: true,
-                classes: "app-code-snippet__code",
+                classes: "nhsuk-u-margin-bottom-1",
                 copyButtonClassList: [
                   "nhsuk-button--secondary-solid",
                   "nhsuk-button--small"
@@ -232,7 +232,7 @@
                 {% endfilter %}
               {% endcall %}
               <div class="app-code-snippet__footer">
-                <p class="app-code-snippet__footer-version">From NHS.UK frontend 10.3.0 &nbsp;<a href="/design-system/guides/check-frontend-version">Check your <span class="nhsuk-u-visually-hidden">frontend</span> version</a></p>
+                <p class="app-code-snippet__footer-version">Requires nhsuk-frontend 10.3.0 - <a href="/design-system/guides/check-frontend-version">check your <span class="nhsuk-u-visually-hidden">frontend</span> version</a></p>
                 {% if snippets | length > 1 %}
                   <button class="app-button--close" hidden>
                     Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>

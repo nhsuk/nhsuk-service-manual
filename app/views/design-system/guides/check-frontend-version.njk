@@ -25,12 +25,13 @@
 <p>On Mac you can use the Terminal application.</p>
 <p>You can also use the terminal in your code editor.</p>
 
-<pre><code class="language-js nhsuk-u-margin-bottom-4">
-  $ npm list nhsuk-frontend
-  project@1.0.0 /path/to/your/project
-  └── nhsuk-frontend@10.0.0
-
-</code></pre>
+{% call code() %}
+  {% filter highlight("js") %}
+    $ npm list nhsuk-frontend
+    project@1.0.0 /path/to/your/project
+    └── nhsuk-frontend@10.0.0
+  {% endfilter %}
+{% endcall %}
 
 <p>If you are using a lower version than the latest version (10.3.0), you will need to update to use the latest features.</p>
 
