@@ -178,15 +178,12 @@
                       {% set optionName = option.name.split(" ") | last -%}
                       {% set optionRows = (optionRows.push([
                         {
-                          header: "Name",
                           html: optionName
                         },
                         {
-                          header: "Type",
                           text: option.type
                         },
                         {
-                          header: "Description",
                           html: macroOption(option, optionName, exampleId)
                         }
                       ]), optionRows) %}
