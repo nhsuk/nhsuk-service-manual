@@ -141,14 +141,14 @@
 
   <h5 id="default-sort-order">Sorting columns</h5>
   <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which users cannot sort.</p>
-  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>data-initial-sort="descending"</code> to the column header if descending is the more useful way to sort it initially.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>sortNext: "descending"</code> in Nunjucks (or in HTML <code>data-initial-sort="descending"</code>) to the column header if descending is the more useful way to sort it initially.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
   <h5 id="overriding-default-sort-order">Overriding the default sort order</h5>
-  <p>You can override the default sort order to make the data easier for users to understand. Do this by adding <code>data-sort-value</code> attributes to the individual table cells containing either a number or text on which to sort.</p>
+  <p>You can override the default sort order to make the data easier for users to understand. Do this by adding the Nunjucks option <code>sortValue</code> (or in HTML the <code>data-sort-value</code> attribute) to the individual table cells containing either a number or text on which to sort.</p>
   <p>For example:</p>
   <ul>
     <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
@@ -158,7 +158,8 @@
   </ul>
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
-  <p>If a cell displays <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted top when ascending and bottom when descending. You can change this by adding a custom <code>data-sort-value</code>.</p>
+
+  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted by first letter or if numeric, infinite. You can change this by adding a custom <code>sortValue</code>.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
@@ -245,7 +246,7 @@
   <p>The sortable table tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
 
   <h2 id="tables-on-dark-backgrounds">Tables on dark backgrounds</h2>
-  <p>Use the <code>nhsuk-table--reverse</code> modifier class to show white text on dark backgrounds.</p>
+  <p>Use <code>variant: "reverse"</code> in Nunjucks or the <code>nhsuk-table--reverse</code> modifier class in HTML to show white text on dark backgrounds.</p>
   <p>Make sure all users can see the table content. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
   {{ designExample({
