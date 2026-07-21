@@ -53,7 +53,7 @@
 
   <h3 id="3-or-more-column-table">3 or more column table</h3>
   <p>If you have numeric data, right align the column header and cells to make it easier to compare numbers. If using Nunjucks, set the <code>format: numeric</code> macro option. In HTML add the <code>nhsuk-table__cell--numeric</code> class to the column's header and cells.</p>
-  <p>For non-numeric data that you want to right align, use the <code>nhsuk-u-text-align-right</code> class instead.</p>
+  <p>For non-numeric data that you want to right align, use the <code>nhsuk-u-text-align-right</code> class instead. If using Nunjucks, set it with <code>classes</code>.</p>
 
   {{ designExample({
     group: "components",
@@ -201,7 +201,7 @@
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
-  <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class.</p>
+  <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class to the cell. In Nunjucks set it via <code>classes</code>.</p>
 
   {{ designExample({
     group: "components",
@@ -220,7 +220,7 @@
     <li>"Not known"</li>
   </ul>
 
-  <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-colour</code> modifier class to make it dark grey.</p>
+  <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-colour</code> modifier class to make it dark grey. In Nunjucks set it via <code>classes</code>.</p>
 
   {{ designExample({
     group: "components",
