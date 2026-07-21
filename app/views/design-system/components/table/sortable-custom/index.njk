@@ -1,0 +1,107 @@
+{% from "tables/macro.njk" import table %}
+
+{{ table({
+  caption: "Organisations using the service",
+  captionSize: "m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Organisation",
+      classes: "nhsuk-u-width-one-third",
+      sort: true
+    },
+    {
+      text: "ODS code"
+    },
+    {
+      text: "Joined",
+      format: "numeric",
+      sort: true,
+      sortNext: "descending"
+    },
+    {
+      text: "Amount spent",
+      format: "numeric",
+      sort: "descending"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Warrington and Halton Hospitals",
+        sortValue: "Warrington and Halton Hospitals"
+      },
+      {
+        text: "RY2N0"
+      },
+      {
+        text: "18 July 2024",
+        sortValue: "2024-07-18",
+        format: "numeric"
+      },
+      {
+        text: "£16,821",
+        sortValue: "16821",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "The Christie",
+        sortValue: "Christie"
+      },
+      {
+        text: "J3P0W"
+      },
+      {
+        text: "4 January 2025",
+        sortValue: "2025-01-04",
+        format: "numeric"
+      },
+      {
+        text: "£12,013",
+        sortValue: "12013",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "University College London Hospitals",
+        sortValue: "University College London Hospitals"
+      },
+      {
+        text: "RRV00"
+      },
+      {
+        text: "2 December 2025",
+        sortValue: "2025-12-02",
+        format: "numeric"
+      },
+      {
+        text: "£4,102",
+        sortValue: "4102",
+        format: "numeric"
+      }
+    ],
+    [
+      {
+        text: "The Whittington Hospital",
+        sortValue: "Whittington Hospital"
+      },
+      {
+        text: "RALWH"
+      },
+      {
+        text: "21 August 2022",
+        sortValue: "2022-08-21",
+        format: "numeric"
+      },
+      {
+        text: "No data",
+        sortValue: "0",
+        format: "numeric",
+        classes: "nhsuk-u-secondary-text-colour"
+      }
+    ]
+  ]
+}) }}

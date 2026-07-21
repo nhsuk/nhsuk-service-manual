@@ -12,9 +12,32 @@
 
 <h2>July 2026</h2>
 
-{% set designHtml202607 %}
-  <p>Added <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+{% set accessibilityHtml202607 %}
+<p>Updated <a href="/accessibility/how-to-make-digital-services-accessible#test-throughout-and-consider-an-independent-audit">guidance to get an independent accessibility audit</a></p>
+
 {% endset %}
+  
+{% set designHtml202607 %}
+    <p>Added a new <a href="/design-system/components/table#sortable-table">sortable table</a> component</p>
+    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
+    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
+    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
+    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
+    <p>Removed frontend version 10 banner and callouts</p>
+    <p>Moved WCAG 2.2 callout content into normal page content</p>
+{% endset %}
+
+{% set communityHtml202607 %}
+<p>Added new <a href="/community-and-contribution/coming-soon">Coming soon page</a></p>
+
+{% endset %}
+
+{% set otherHtml202607 %}
+<p>Added hero image and restructured service manual home page</p>
+
+{% endset %}
+
 
 {{ table({
   caption: "Updates to the service manual in July 2026",
@@ -31,10 +54,34 @@
   rows: [
     [
       {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202607
+      }
+    ],
+    [
+      {
         text: "Design system"
       },
       {
         html: designHtml202607
+      }
+    ],
+    [
+      {
+        text: "Community and contribution"
+      },
+      {
+        html: communityHtml202607
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202607
       }
     ]
   ]
@@ -43,7 +90,6 @@
 <h2>June 2026</h2>
 
 {% set designHtml202606 %}
-  <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" checkbox option</a></p>
   <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
   <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
   <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>

@@ -1,0 +1,188 @@
+{% from "tables/macro.njk" import table %}
+{% from "pagination/macro.njk" import pagination %}
+
+{{ table({
+  caption: "Users",
+  captionSize: "m",
+  head: [
+    {
+      text: "Name",
+      href: "#",
+      sort: "descending"
+    },
+    {
+      text: "Last log in",
+      href: "#",
+      classes: "nhsuk-u-text-align-right",
+      sort: true
+    },
+    {
+      html: '<span class="nhsuk-u-visually-hidden">Action</span>'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Abel Pope"
+      },
+      {
+        text: "15 January 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Abel Pope</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Adalee Arellano"
+      },
+      {
+        text: "26 March 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Adalee Arellano</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Adley Hale"
+      },
+      {
+        text: "9 April 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Adley Hale</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Adrian Miranda"
+      },
+      {
+        text: "17 May 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Adrian Miranda</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Aidan Morales"
+      },
+      {
+        text: "12 May 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Aidan Morales</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Alden Love"
+      },
+      {
+        text: "4 March 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Alden Love</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Alianna Barber"
+      },
+      {
+        text: "25 May 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Alianna Barber</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Allie Rojas"
+      },
+      {
+        text: "28 May 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Allie Rojas</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Alora Harris"
+      },
+      {
+        text: "19 April 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Alora Harris</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ],
+    [
+      {
+        text: "Alvaro Walls"
+      },
+      {
+        text: "13 January 2026",
+        classes: "nhsuk-u-text-align-right"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Alvaro Walls</span>',
+        classes: "nhsuk-u-text-align-right"
+      }
+    ]
+  ]
+}) }}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#",
+      current: true
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    },
+    {
+      number: 4,
+      href: "#"
+    },
+    {
+      number: 5,
+      href: "#"
+    },
+    {
+      number: 6,
+      href: "#"
+    }
+  ]
+}) }}
