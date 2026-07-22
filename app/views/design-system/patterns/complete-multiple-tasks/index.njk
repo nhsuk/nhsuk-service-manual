@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Help users to" %}
-{% set dateUpdated = "July 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "539" %}
 
 {% block beforeContent %}
@@ -19,8 +19,6 @@
   <li>the tasks involved in completing a transaction</li>
   <li>whether they've completed tasks</li>
 </ul>
-
-<p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-without-click-drag-task">interact with tasks without relying on click and drag movements</a> (if you choose to add functionality to reorder tasks). And <a href="#wcag-edit-information-previous-task">edit information they have given when going back to a previous task</a>.</p>
 
 {{ designExample({
   group: "patterns",
@@ -52,20 +50,6 @@
 
 <h3 id="show-related-actions-as-a-task">Show related actions as a task</h3>
 <p>Summarise a set of related activities and questions into a task, for example, "Give medical information". This will help users understand and plan what they need to do.</p>
-
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-interact-without-click-drag-task",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>Any task list that lets the user reorder the tasks must offer a way to do so without relying on click and drag movements. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">WCAG 2.2 success criterion 2.5.7 Dragging movements (W3C)</a>.</p>
-{% endcall %}
 
 <h3 id="show-the-status-of-the-tasks">Show the status of the tasks</h3>
 <p>Make it clear to users which tasks they have completed and which still need their attention, by labelling them using statuses.</p>
@@ -164,28 +148,13 @@
 
 <p>If the user selects "Yes, I've completed this section", mark the task as "Completed".</p>
 
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-edit-information-previous-task",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>If a user decides to go back to a previous task, make sure information they have already entered is pre-populated.</p>
-  <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant entry (W3C)</a>.</p>
-{% endcall %}
-
 {{ designExample({
   group: "patterns",
   item: "complete-multiple-tasks",
   type: "have-you-completed-this-section"
 }) }}
 
-<p>Always allow users to go back into a task to change their answer.</p>
+<p>Always allow users to go back into a task to change their answer, make sure information they have already entered is pre-populated.</p>
 
 <h4 id="error-messages">Error messages</h4>
 

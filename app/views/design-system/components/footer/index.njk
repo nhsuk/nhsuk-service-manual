@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the footer to show users they are on an NHS service and to help them find links they expect at the bottom of our pages." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "15" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Footer updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#footer">breaking code updates to footer in version 10</a></p>
-  {% endcall %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-consistent-links">find help links in a consistent place on each page</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -55,22 +42,9 @@
     <li>terms and conditions</li>
   </ul>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-consistent-links",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>If you include links to "help" pages in a footer, make sure to place those links consistently in the footer content. Also make sure that "help" links always work in a similar way across each page. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
-  {% endcall %}
-
   <p>Keep links to a minimum, especially in a transactional journey. Too many links can distract users. Link to specific policies for the transaction, if appropriate.</p>
   <p>If your total number of links is less than 7, arrange them horizontally in lines.</p>
+  <p>If you include links to "help" pages in a footer, make sure to place those links consistently in the footer content. Also make sure that "help" links always work in a similar way across each page.</p>
 
   <h3 id="footer-with-navigation-links">Footer with navigation links</h3>
   <p>If your users need lots of footer links to help them navigate a complex information architecture, include navigation links and arrange the links in columns.</p>

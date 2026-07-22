@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use buttons to help users carry out an action on a page like starting an application or saving their progress." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "7" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Buttons updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#button">breaking code updates to buttons in version 10</a></p>
-  {% endcall %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-button">interact with buttons</a>.</p>
 
   <h2 id="when-to-use-buttons">When to use buttons</h2>
   <p>Use buttons to start transactional journeys and carry out actions, like saving information.</p>
@@ -50,23 +37,8 @@
   </ul>
 
   <p>Align the primary action button to the left edge of your form.</p>
-
   <p>On smaller screens, such as on mobile, buttons stretch across the screen's width. This makes them easier to press for users holding a phone in their right hand.</p>
-
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-interact-button",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Do not decrease the height or target area of buttons. This is to make sure users can easily interact with them. It complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-  {% endcall %}
-
+  <p>Do not decrease the height of buttons to less than our <a href="#smaller-buttons">smaller buttons</a>.</p>
 
   <h3 id="primary-buttons">Primary buttons</h3>
   <p>There are 2 versions of the primary button: the default version and the reverse version.</p>
