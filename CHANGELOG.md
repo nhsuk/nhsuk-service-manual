@@ -6,6 +6,7 @@
 
 - Add option for "all" to checkboxes component
 - Add new reference page for override classes
+- Add a new product page pattern
 
 :wrench: **Maintenance**
 
