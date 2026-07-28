@@ -149,19 +149,22 @@
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
   <p>A page refresh or navigation must return the page to its default sort order, unless you add functionality to allow users to save their sort order explicitly.</p>
 
+  <h5 id="sorting-numbers">Sorting numbers</h5>
+  <p>By default, columns will be sorted as text. To correctly order columns containing numbers, set the <code>format: numeric</code> option in Nunjucks. In HTML add the <code>nhsuk-table__header--numeric</code> class to the column header and <code>nhsuk-table__cell--numeric</code> class to the cells).</p>
+  <p>Columns set to <code>numeric</code> will work correctly with most number symbols, including commas, decimals, percentages and currencies.</p>
+  <p>Use <code>numeric</code> for dates.</p>
+
   <h5 id="overriding-default-sort-order">Overriding the default sort order</h5>
   <p>You can override the default sort order to make the data easier for users to understand. Do this by adding the Nunjucks option <code>sortValue</code> (or in HTML the <code>data-sort-value</code> attribute) to the individual table cells containing either a number or text on which to sort.</p>
   <p>For example:</p>
   <ul>
     <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
-    <li>formatting numbers: 123,456 would be <code>123456</code></li>
-    <li>currencies: £3.50 would be <code>3.5</code></li>
     <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
   </ul>
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
 
-  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted by first letter or if numeric, infinite. You can change this by adding a custom <code>sortValue</code>.</p>
+  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted by first letter. With numbers, they will be treated as zero. You can change this by adding a custom <code>sortValue</code>. If using <code>numeric</code> columns with symbols, include the symbol, for example <code>sortValue: "£0"</code>.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
