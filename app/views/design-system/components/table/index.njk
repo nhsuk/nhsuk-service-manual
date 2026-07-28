@@ -53,7 +53,7 @@
 
   <h3 id="3-or-more-column-table">3 or more column table</h3>
   <p>If you have numeric data, right align the column header and cells to make it easier to compare numbers.</p>
-  <p>If using Nunjucks, set the <code>format: numeric</code> macro option. In HTML add the <code>nhsuk-table__header--numeric</code> class to the column's header and <code>nhsuk-table__cell--numeric</code> class to the cells.</p>
+  <p>If using Nunjucks, set the <code>format: "numeric"</code> macro option to the table header cells. In HTML add the <code>nhsuk-table__header--numeric</code> class to the column's header and <code>nhsuk-table__cell--numeric</code> class to the cells.</p>
   <p>For non-numeric data that you want to right align, use the <code>nhsuk-u-text-align-right</code> class instead. If using Nunjucks, set it with <code>classes</code>.</p>
 
   {{ designExample({
@@ -87,6 +87,7 @@
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays horizontally but on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
+  <p>Enable it in Nunjucks by adding the <code>responsive: true</code> option to the table. In HTML add the <code>nhsuk-table--responsive</code> class to the table and set the correct <code>role</code> attribute for each element of the table.</p>
 
   {{ designExample({
     group: "components",
@@ -99,6 +100,7 @@
 
   <h2 id="scrolling-table">Scrolling table</h2>
   <p>Add the scrolling container when your table has many columns and you cannot split it up or use a responsive table.</p>
+  <p>Enable it in Nunjucks by adding the <code>scroll: true</code> option to the table. In HTML wrap the table with a container <code>&lt;div class="nhsuk-table-container"&gt;</code>.</p>
 
   {{ designExample({
     group: "components",
@@ -142,8 +144,7 @@
   <p>The sortable table component uses JavaScript to sort the data in the user's browser. Use it where you have only 1 page of data. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
   <h5 id="default-sort-order">Sorting columns</h5>
-  <p>Decide which column you want to sort by when the page first loads. Make sure users can get back to this. Do not load the page sorted on a column which users cannot sort.</p>
-  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>sortNext: "descending"</code> in Nunjucks (or in HTML <code>data-initial-sort="descending"</code>) to the column header if descending is the more useful way to sort it initially.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>sortNext: "descending"</code> in Nunjucks (or in HTML <code>data-sort-next="descending"</code>) to the column header if descending is the more useful way to sort it when clicked.</p>
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
@@ -163,8 +164,7 @@
   </ul>
 
   <p>Do not sort data alphabetically if it has an established sequence, for example months of the year (January to December).</p>
-
-  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted by first letter. With numbers, they will be treated as zero. You can change this by adding a custom <code>sortValue</code>. If using <code>numeric</code> columns with symbols, include the symbol, for example <code>sortValue: "£0"</code>.</p>
+  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted alphabetically. To sort numerically, add the Nunjucks option <code>sortValue</code> (or in HTML the <code>data-sort-value</code> attribute), for example <code>sortValue: "£0"</code>. Include symbols or units to sort consistently with other cells.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
@@ -177,9 +177,9 @@
 
   <h4 id="sort-more-than-1-page-of-data">Sort more than 1 page of data</h4>
 
-  <p>If your table is paginated, do not use the JavaScript-based sorting as this will only sort the current page being shown.</p>
+  <p>If your table is paginated, sorting should be applied server-side across all pages. Do not sort the current page only.</p>
 
-  <p>Instead, use server-side sorting, with the column header containing links that reload the page with the table sorted by that column. You will need to:</p>
+  <p>Use server-side sorting by adding a link to the column header to navigate to a page with the table sorting already applied. You will need to:</p>
 
   <ul>
     <li>build your own server-side function</li>
@@ -190,7 +190,7 @@
   {{ designExample({
     group: "components",
     item: "table",
-    type: "sortable-server-side",
+    type: "sortable-server-side-last-login-descending",
     showJavaScriptToggle: true
   }) }}
 

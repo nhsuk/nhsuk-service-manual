@@ -1,0 +1,167 @@
+{% from "tables/macro.njk" import table %}
+{% from "pagination/macro.njk" import pagination %}
+
+{{ table({
+  caption: "Users",
+  captionSize: "m",
+  head: [
+    {
+      text: "Name",
+      href: "sortable-server-side",
+      sort: "ascending"
+    },
+    {
+      text: "Last log in",
+      href: "sortable-server-side-last-login-ascending",
+      sort: true
+    },
+    {
+      html: '<span class="nhsuk-u-visually-hidden">Action</span>'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Abi Dunn"
+      },
+      {
+        text: "8 June 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Abi Dunn</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Ahmed Ali"
+      },
+      {
+        text: "24 April 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Ahmed Ali</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Aleksandra Wojciechowska"
+      },
+      {
+        text: "17 February 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Aleksandra Wojciechowska</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Beau Fox"
+      },
+      {
+        text: "3 May 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Beau Fox</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Cal Sherwood"
+      },
+      {
+        text: "30 January 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Cal Sherwood</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Danika Reyes-Flores"
+      },
+      {
+        text: "12 March 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Danika Reyes-Flores</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Ed Wu"
+      },
+      {
+        text: "19 May 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Ed Wu</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Fatou Diallo"
+      },
+      {
+        text: "6 April 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Fatou Diallo</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Gregor MacTavish"
+      },
+      {
+        text: "25 January 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Gregor MacTavish</span></a>'
+      }
+    ],
+    [
+      {
+        text: "Harriet Voss"
+      },
+      {
+        text: "11 June 2026"
+      },
+      {
+        html: '<a href="#" class="nhsuk-link">Change<span class="nhsuk-u-visually-hidden"> details for Harriet Voss</span></a>'
+      }
+    ]
+  ]
+}) }}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#",
+      current: true
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    },
+    {
+      number: 4,
+      href: "#"
+    },
+    {
+      number: 5,
+      href: "#"
+    },
+    {
+      number: 6,
+      href: "#"
+    }
+  ]
+}) }}
