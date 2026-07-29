@@ -9,6 +9,7 @@
 - Add new reference list of override classes
 - Add JavaScript on-off toggle to components that use progressive enhancement
 - Add Coming soon page
+- Add frontend version number to design system examples and a guide to versions
 
 :wrench: **Maintenance**
 
@@ -21,7 +22,6 @@
 - Add Eleventy theme to community resources
 - Remove frontend version 10 banner and callouts
 - Move WCAG 2.2 callout content into normal page content
-- Add frontend version number to design system examples
 - Add hero image and restructure service manual home page
 
 ## 8.12.1 - 17 June 2026
