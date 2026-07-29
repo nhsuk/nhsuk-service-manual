@@ -8,25 +8,25 @@
 {% block main %}
 <main id="maincontent" role="main">
 
-  <section class="nhsuk-hero">
-    <div class="nhsuk-width-container nhsuk-hero--border">
-      <div class="nhsuk-hero__wrapper app-hero__wrapper">
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-one-half">
-              <h1 class="nhsuk-u-margin-bottom-4">Design and build NHS digital services for the public and staff</h1>
-              <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">Use the service manual to build consistent, usable services that put people first. Learn from the research and experience of other NHS teams.</p>
-          </div>
-          <div class="nhsuk-grid-column-one-half">
-            {{ image({
-              src: "/assets/hero-image.svg",
-              alt: "",
-              classes: "app-hero__image"
-            }) }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ hero({
+    content: [
+      {
+        heading: {
+          text: "Design and build NHS digital services for the public and staff",
+          size: "xl"
+        },
+        text: "Use the service manual to build consistent, usable services that put people first. Learn from the research and experience of other NHS teams."
+      },
+      {
+        image: {
+          src: "/assets/hero-image.svg",
+          background: false,
+          border: false,
+          width: "two-thirds"
+        }
+      }
+    ]
+  }) }}
 
   <section class="nhsuk-section">
     <div class="nhsuk-width-container">
