@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block bodyContent %}
-  <p>We have 5 kinds of table:</p>
+  <p>We have 6 kinds of table:</p>
   <ul>
     <li><a href="#basic-table">basic</a></li>
     <li><a href="#compact-table">compact</a></li>
@@ -22,6 +22,13 @@
     <li><a href="#scrolling-table">scrolling</a></li>
     <li><a href="#sortable-table">sortable</a></li>
   </ul>
+  <p>The page also explains how to:</p>
+  <ul>
+    <li><a href="#word-breaks-table">use word breaks in a table</a></li>
+    <li><a href="#missing-data-table">display missing data</a></li>
+    <li><a href="#tables-on-dark-backgrounds">display tables on dark backgrounds</a></li>
+  </ul>
+
   <h2 id="when-to-use-a-table">When to use a table</h2>
   <p>Use a table to:</p>
   <ul>
@@ -238,6 +245,16 @@
     type: "missing-data"
   }) }}
 
+  <h2 id="tables-on-dark-backgrounds">Tables on dark backgrounds</h2>
+  <p>Use <code>variant: "reverse"</code> in Nunjucks or the <code>nhsuk-table--reverse</code> modifier class in HTML to show white text on dark backgrounds.</p>
+  <p>Make sure all users can see the table content. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "table",
+    type: "reverse"
+  }) }}
+
   <h2 id="accessibility">Accessibility</h2>
   <p>Follow <a href="https://webaim.org/techniques/tables/data">WebAIM's guidance for tables</a> and:</p>
   <ul>
@@ -255,16 +272,6 @@
 
   <h3 id="sortable-tables">Sortable tables</h3>
   <p>The sortable table tells screen reader users that it can be sorted. When the user sorts the table, it announces what the new sort order is.</p>
-
-  <h2 id="tables-on-dark-backgrounds">Tables on dark backgrounds</h2>
-  <p>Use <code>variant: "reverse"</code> in Nunjucks or the <code>nhsuk-table--reverse</code> modifier class in HTML to show white text on dark backgrounds.</p>
-  <p>Make sure all users can see the table content. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "table",
-    type: "reverse"
-  }) }}
 
   <h2 id="research">Research</h2>
 
