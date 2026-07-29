@@ -10,8 +10,8 @@
 {% endblock %}
 
 {% block bodyContent %}
-
-  <h2 class="nhsuk-heading-l">Now</h2>
+  <p>For more detail, see the relevant GitHub issue in the community backlog.</p>
+  <h2 class="nhsuk-heading-l">In progress</h2>
 
   {{ summaryList({
     rows: [
@@ -20,7 +20,7 @@
           text: "Common error pages" 
         },
         value: { 
-          html: "Page not found (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/233\">GitHub backlog issue #233</a>), Service unavailable (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/588\">issue #588</a>) and There is a problem with the service (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/413\">issue #413</a>) patterns" 
+          html: "Page not found (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/233\">GitHub backlog issue #233</a>), Service unavailable (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/588\">issue #588<span class=\"nhsuk-u-visually-hidden\"> in GitHub</span></a>) and There is a problem with the service (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/413\">issue #413<span class=\"nhsuk-u-visually-hidden\"> in GitHub</span></a>)"
         }
       },
       {
@@ -28,7 +28,7 @@
           text: "Section navigation" 
         },
         value: { 
-          text: "A list of links to allow users to navigate between pages in a section of a service" 
+          html: "A list of links to allow users to navigate between pages in a section of a service (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/556\">issue #556<span class=\"nhsuk-u-visually-hidden\"> in GitHub</span></a>)"
         }
       },
       {
@@ -37,14 +37,6 @@
         },
         value: { 
           text: "Ways to show what we've updated on service standard and design system pages" 
-        }
-      },
-      {
-        key: { 
-          text: "Service standard discovery" 
-        },
-        value: { 
-          text: "Understanding how people use the NHS and GOV service standards and what could be improved" 
         }
       }
     ]
@@ -71,10 +63,10 @@
       },
       {
         key: { 
-          text: "Address lookup" 
+          text: "Address lookup and manual entry" 
         },
         value: { 
-          text: "Helping users to find a full address from a postcode"
+          html: "Helping users to find a full address from a postcode (<a href=\"https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/226\">issue #226<span class=\"nhsuk-u-visually-hidden\"> in GitHub</span></a>)"
         }
       }
     ]

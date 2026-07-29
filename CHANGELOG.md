@@ -8,6 +8,7 @@
 - Add option for "all" to checkboxes component
 - Add new reference list of override classes
 - Add JavaScript on-off toggle to components that use progressive enhancement
+- Add Coming soon page
 
 :wrench: **Maintenance**
 
@@ -16,6 +17,8 @@
 - Update guidance to get an independent accessibility audit
 - Update wording about terms of use on Start page pattern
 - Update page about the Personal Demographics Service (PDS)
+- Update contribution criteria to reflect current practice
+- Add Eleventy theme to community resources
 - Remove frontend version 10 banner and callouts
 - Move WCAG 2.2 callout content into normal page content
 - Add hero image and restructure service manual home page
