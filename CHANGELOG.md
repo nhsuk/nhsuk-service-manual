@@ -4,12 +4,13 @@
 
 :new: **New features**
 
-- Add sortable table with guidance
+- Add sortable, compact, scrollable, striped and reverse tables with guidance
 - Add option for "all" to checkboxes component
 - Add new reference list of override classes
+- Add frontend version number to design system examples and a guide to checking your frontend version
 - Add JavaScript on-off toggle to components that use progressive enhancement
 - Add Coming soon page
-- Add frontend version number to design system examples and a guide to versions
+
 
 :wrench: **Maintenance**
 
