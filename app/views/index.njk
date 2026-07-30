@@ -88,17 +88,33 @@
       </ul>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-          <h2 class="nhsuk-heading-l">
-            What's new
-            <span class="nhsuk-caption-l nhsuk-caption--bottom">August 2026</span>
-          </h2>
+          {{ heading({
+            text: "What's new",
+            caption: {
+              text: "August 2026",
+              placement: "end"
+            },
+            size: "l",
+            level: 2
+          }) }}
+
           <p>We've added a <a href="/design-system/components/table#sortable-table">sortable table</a> and other new table styles, a <a href="/design-system/styles/override-classes">reference list of override classes</a></li> and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a>, as well as other minor updates.</p>
           <p>See our full list of updates on the <a href="/whats-new/">What's new page</a>.</p>
 
-          <h2 class="nhsuk-heading-l">Coming soon</h2>
+          {{ heading({
+            text: "Coming soon",
+            size: "l",
+            level: 2
+          }) }}
+
           <p>We're always working with the community to improve the service manual. Find out what the team is working on now on our <a href="/community-and-contribution/coming-soon/">Coming soon page</a> and how you can contribute.</p>
 
-          <h2 class="nhsuk-heading-l">Support</h2>
+          {{ heading({
+            text: "Support",
+            size: "l",
+            level: 2
+          }) }}
+
           <p>The manual is maintained by the <a href="/service-manual-team">service manual team at NHS England</a>. If you've got a question or want to feed back, you can <a href="/get-in-touch">get in touch</a>.</p>
         </div>
       </div>

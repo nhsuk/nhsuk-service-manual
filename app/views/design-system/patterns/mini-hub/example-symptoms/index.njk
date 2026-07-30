@@ -33,17 +33,15 @@ previewLayout: design-example-wrapper-full
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        <span role="text">
-          Symptoms
-          <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-            <span class="nhsuk-u-visually-hidden">
-            -
-            </span>
-              Age-related macular degeneration (AMD)
-          </span>
-        </span>
-      </h1>
+      {{ heading({
+        text: "Symptoms",
+        caption: {
+          html: '<span class="nhsuk-u-visually-hidden"> – </span>' ~
+            "Age-related macular degeneration (AMD)",
+          placement: "end"
+        },
+        size: "xl"
+      }) }}
 
       <p>AMD affects the middle part of your vision, not the edges (peripheral vision).</p>
       <p>You can get it in one eye or both.</p>

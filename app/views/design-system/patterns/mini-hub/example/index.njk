@@ -6,6 +6,7 @@ previewLayout: design-example-wrapper-full
 
 {% from "breadcrumb/macro.njk" import breadcrumb %}
 {% from "contents-list/macro.njk" import contentsList %}
+{% from "heading/macro.njk" import heading %}
 {% from "pagination/macro.njk" import pagination %}
 
 {% block beforeContent %}
@@ -27,17 +28,15 @@ previewLayout: design-example-wrapper-full
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        <span role="text">
-          What is AMD?
-          <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-            <span class="nhsuk-u-visually-hidden">
-            -
-            </span>
-              Age-related macular degeneration (AMD)
-          </span>
-        </span>
-      </h1>
+      {{ heading({
+        text: "What is AMD?",
+        caption: {
+          html: '<span class="nhsuk-u-visually-hidden"> – </span>' ~
+            "Age-related macular degeneration (AMD)",
+          placement: "end"
+        },
+        size: "xl"
+      }) }}
 
       {{ contentsList({
         items: [
