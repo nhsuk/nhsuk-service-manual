@@ -11,7 +11,6 @@
 - Add JavaScript on-off toggle to components that use progressive enhancement
 - Add Coming soon page
 
-
 :wrench: **Maintenance**
 
 - Fix curly quote example to punctuation section
