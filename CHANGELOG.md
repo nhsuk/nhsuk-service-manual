@@ -5,6 +5,7 @@
 :new: **New features**
 
 - Add page updates details to service standard points
+- Update the pattern for helping users decide when and where to get care works and how to write content for care cards
 
 ## 8.13.1 - 19 August 2026
 
