@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a search input to help users find something specific by entering a word, phrase or characters." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "June 2026" %}
+{% set dateUpdated = "August 2026" %}
 {% set backlog_issue_id = "587" %}
 
 {% block beforeContent %}
@@ -26,9 +26,13 @@
 
   <h2>When not to use search input</h2>
   <p>Do not rely on search in place of a well-structured information architecture and navigation.</p>
+  <p>Consider using sorting or filtering alongside or instead of search.</p>
 
   <h2>How to use search input</h2>
-  <p>When a user types into the input, a cross icon button appears which allows users to clear the input. This is an enhancement for browsers that support it. Some browsers such as Firefox will not show it.</p>
+  <p>Use hint text to <a href="/content/how-to-write-good-questions-for-forms/write-the-supporting-content-for-your-form#give-users-help-in-context">give users help in context</a>. Read more about <a href="/design-system/components/hint-text">hint text</a>.</p>
+  
+  <h3 id="cross-icon">Cross icon</h3>
+  <p>When a user types into the input, a cross icon button appears which allows users to clear the input. This is an enhancement for browsers that support it. Some browsers such as Firefox do not show it.</p>
 
   {{ designExample({
     group: "components",
@@ -36,7 +40,10 @@
     type: "nhs-number"
   }) }}
 
+  <h3 id="text-label">Text label</h3>
   <p>The search button can include a text label, for example "Find".</p>
+
+  <h3 id="secondary-button">Secondary button</h3>
   <p>Depending on the hierarchy of the page, the search input can use a secondary button.</p>
   {{ designExample({
     group: "components",
@@ -44,6 +51,7 @@
     type: "secondary-button"
   }) }}
 
+  <h3 id="large-search-input">Large search input</h3>
   <p>The search input can be large, depending on the context of the page. For example, you can use a large input on a dedicated search page.</p>
   {{ designExample({
     group: "components",
