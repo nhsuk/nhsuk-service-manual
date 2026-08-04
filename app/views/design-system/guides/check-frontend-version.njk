@@ -14,15 +14,15 @@
 {% block bodyContent %}
 
 <h2 id="the-frontend-and-the-design-system">The frontend and the design system</h2>
-<p>The <a href="https://github.com/nhsuk/nhsuk-frontend">NHS.UK frontend</a> codebase contains the code used to create the design system components and styles.</p>
-<p>Each time the design system is updated, for example to add a new component, the frontend is also updated. If you are using an older version of the frontend, for example with the prototype kit, then you will not be able to use the new component until you update your frontend version.</p>
+<p>The <a href="https://github.com/nhsuk/nhsuk-frontend">NHS.UK frontend codebase (in GitHub)</a> contains the code used to create the design system components and styles.</p>
+<p>When the design system is updated, for example with a new component, the frontend is updated too. If you're using an older version, for example with the <a href="https://prototype-kit.service-manual.nhs.uk/">NHS prototype kit</a>, you cannot use the new component until you update your frontend version.</p>
 <p>The current version of NHS.UK frontend is <code>{{ nhsukFrontendVersion }}</code>.</p>
 <p>Note: this guidance applies to the NHS prototype kit and production services. <a href="/community-and-contribution/community-resources">Community resources</a>, such as the NHS Figma design library, are not based on the frontend code and are updated separately.</p>
 
 <h2 id="how-to-check-your-nhsuk-frontend-version">How to check your NHS.UK frontend version</h2>
 <p>To check the version you are currently using, run <code>npm list nhsuk-frontend</code> on your project directory.</p>
-<p>On Windows you can run this with Command Prompt.</p>
-<p>On Mac you can use the Terminal application.</p>
+<p>On Windows, you can run this with Command Prompt.</p>
+<p>On a Mac, you can use the Terminal application.</p>
 <p>You can also use the terminal in your code editor.</p>
 
 {% call code() %}
@@ -37,10 +37,10 @@
 
 <h2 id="how-to-update-your-frontend">How to update your frontend</h2>
 
-<h3 id="how-to-update-a-prototype">How to update a prototype</h3>
-<p>If you need to update your frontend version and you are using the prototype kit, visit the <a href="https://prototype-kit.service-manual.nhs.uk/install/updating-the-kit/">updating the kit guide on the prototype kit website</a>. When the frontend is released, we also update the NHS prototype kit to the latest version.</p>
+<h3 id="updating-a-prototype">Updating a prototype</h3>
+<p>If you are using the prototype kit, visit the <a href="https://prototype-kit.service-manual.nhs.uk/install/updating-the-kit/">updating the kit guide on the prototype kit website</a>. When the frontend is released, we also update the NHS prototype kit to the latest version.</p>
 
-<h3 id="how-to-update-a-production-service">How to update a production service</h3>
-<p>To update a production service or other code that uses the NHS.UK frontend, you can follow our <a href="https://github.com/nhsuk/nhsuk-frontend/blob/main/docs/installation/staying-up-to-date.md">guide on staying up to date on nhsuk-frontend (in GitHub)</a>.</p>
+<h3 id="updating-a-production-service">Updating a production service</h3>
+<p>To update a production service or other code that uses the NHS.UK frontend, follow our <a href="https://github.com/nhsuk/nhsuk-frontend/blob/main/docs/installation/staying-up-to-date.md">guide to staying up to date on nhsuk-frontend (in GitHub)</a>.</p>
 
 {% endblock %}
