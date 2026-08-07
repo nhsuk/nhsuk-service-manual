@@ -61,10 +61,15 @@
   <h3 id="3-or-more-column-table">3 or more column table</h3>
   <p>If you have numeric data, right align the column header and cells to make it easier to compare numbers:</p>
   <ul>
-    <li>in Nunjucks, set the <code>format: "numeric"</code> macro option to the table header</li>
-    <li>for HTML, add the <code>nhsuk-table__header--numeric</code> class to the column's header and <code>nhsuk-table__cell--numeric</code> class to the cells</li>
+    <li>in Nunjucks, add the <code>format: "numeric"</code> option to the column header</li>
+    <li>for HTML, add the <code>nhsuk-table__header--numeric</code> class to the column header and <code>nhsuk-table__cell--numeric</code> class to the cells</li>
   </ul>
-  <p>For non-numeric data that you want to right align, use the <code>nhsuk-u-text-align-right</code> class instead. If using Nunjucks, set it with <code>align: "right"</code>.</p>
+
+  <p>If you have non-numeric data that you want to right align:</p>
+  <ul>
+    <li>in Nunjucks, add the <code>align: "right"</code> option to the column header</li>
+    <li>for HTML, add the <code>nhsuk-u-text-align-right</code> override class to both the column header and cells</li>
+  </ul>
 
   {{ designExample({
     group: "components",
@@ -76,7 +81,8 @@
   <p>Do not use a basic table if your table content becomes squashed and hard to read on small screens. Use a <a href="#responsive-table">responsive table</a> instead.</p>
 
   <h2 id="compact-table">Compact table</h2>
-  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data. If using Nunjucks, set the <code>compact: true</code> macro option. In HTML add the <code>nhsuk-table--compact</code> class to the table.</p>
+  <p>Use a compact table when you have a lot of data to display. It reduces the vertical padding between rows, making it easier to scan the data.</p>
+  <p>If you're using Nunjucks, add the <code>compact: true</code> option. For HTML add the <code>nhsuk-table--compact</code> class to the table.</p>
   <p>Try first to reduce the amount of data you display, for example by splitting it into multiple tables or combining columns. For example, showing a name and NHS number together in 1 column.</p>
 
   {{ designExample({
@@ -86,7 +92,8 @@
   }) }}
 
   <h2 id="striped-table">Striped table</h2>
-  <p>Add striping (sometimes called zebra stripes) to tables with many rows and columns of data to help users distinguish between rows. If using Nunjucks, set the <code>striped: true</code> macro option. In HTML add the <code>nhsuk-table--striped</code> class to the table.</p>
+  <p>Add striping (sometimes called zebra stripes) to tables with many rows and columns of data to help users distinguish between rows.</p>
+  <p>If you're using Nunjucks, add the <code>striped: true</code> option. For HTML add the <code>nhsuk-table--striped</code> class to the table.</p>
 
   {{ designExample({
     group: "components",
@@ -97,7 +104,7 @@
   <h2 id="responsive-table">Responsive table</h2>
   <p>This table has a responsive layout. On large screens it displays horizontally but on small screens it stacks vertically.</p>
   <p>Use a responsive table when your table becomes squashed and hard to read on small screens, 768px and smaller.</p>
-  <p>Enable it in Nunjucks by adding the <code>responsive: true</code> option to the table. In HTML add the <code>nhsuk-table--responsive</code> class to the table and set the correct <code>role</code> attribute for each element of the table.</p>
+  <p>If you're using Nunjucks, add the <code>responsive: true</code> option. For HTML add the <code>nhsuk-table--responsive</code> class to the table and set the correct <code>role</code> attribute for each element of the table.</p>
 
   {{ designExample({
     group: "components",
@@ -110,7 +117,7 @@
 
   <h2 id="scrolling-table">Scrolling table</h2>
   <p>Add the scrolling container when your table has many columns and you cannot split it up or use a responsive table.</p>
-  <p>Enable it in Nunjucks by adding the <code>scroll: true</code> option to the table. In HTML wrap the table with a scroll container.</p>
+  <p>If you're using Nunjucks, add the <code>scroll: true</code> option. For HTML add the scrolling container from the example below.</p>
 
   {{ designExample({
     group: "components",
@@ -163,7 +170,12 @@
   <p>The sortable table component uses JavaScript to sort the data in the user's browser. Use it where you have only 1 page of data. Make sure your data has a suitable sort order if JavaScript does not run.</p>
 
   <h5 id="default-sort-order">Sorting columns</h5>
-  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. You can change this by adding <code>sortNext: "descending"</code> in Nunjucks (or in HTML <code>data-sort-next="descending"</code>) to the column header if descending is the more useful way to sort it when clicked.</p>
+  <p>By default when you click on the column header for an unsorted column, it will sort that column in ascending order. To apply descending order when clicked:</p>
+  <ul>
+    <li>in Nunjucks, add the <code>sortNext: "descending"</code> option to the column header</li>
+    <li>for HTML, add the <code>data-sort-next="descending"</code> attribute to the column header</li>
+  </ul>
+
   <p>Typically users expect text to sort A to Z by default. With numbers, they often expect them to sort with the biggest number first.</p>
   <p>Do not allow sorting on columns that cannot be meaningfully ordered, for example comments from users.</p>
   <p>Do not add code to automatically save the sort order. Users may not expect this and it could add clinical risk.</p>
@@ -172,26 +184,34 @@
   <h5 id="sorting-numbers">Sorting numbers</h5>
   <p>By default, columns will be sorted as text. To correctly order columns containing numbers:
     <ul>
-      <li>in Nunjucks, set the <code>format: "numeric"</code> macro option to the table header</li>
-      <li>for HTML, add the <code>nhsuk-table__header--numeric</code> class to the column's header and <code>nhsuk-table__cell--numeric</code> class to the cells</li>
+      <li>in Nunjucks, add the <code>format: "numeric"</code> option to the column header</li>
+      <li>for HTML, add the <code>nhsuk-table__header--numeric</code> class to the column header and <code>nhsuk-table__cell--numeric</code> class to the cells</li>
     </ul>
   <p>Columns set to <code>numeric</code> will work correctly with most number symbols, including commas, decimals, percentages and currencies.</p>
   <p>Use <code>numeric</code> for dates.</p>
 
   <h5 id="overriding-default-sort-order">Overriding the default sort order</h5>
-  <p>You can override the default sort order to make the data easier for users to understand. Do this by adding the Nunjucks option <code>sortValue</code> (or in HTML the <code>data-sort-value</code> attribute) to the individual table cells containing either a number or text on which to sort.</p>
+  <p>You can override the default sort value to make the presented data easier for users to understand.</p>
+
   <p>For example:</p>
   <ul>
-    <li>dates: 30 November 2026 would be <code>2026-11-30</code></li>
-    <li>months: January would be <code>01 January</code></li>
-    <li>prefixes: The Whittington Hospital would be <code>Whittington Hospital</code></li>
+    <li>dates: 30 November 2026 sorted as <code>2026-11-30</code></li>
+    <li>months: January sorted as <code>01 January</code></li>
+    <li>prefixes: The Whittington Hospital sorted as <code>Whittington Hospital</code></li>
   </ul>
 
-  <p>If a cell contains <a href="#missing-data-table">missing data</a>, say "No data" or similar. By default these cells will be sorted alphabetically. To sort numerically, add the Nunjucks option <code>sortValue</code> (or in HTML the <code>data-sort-value</code> attribute), for example <code>sortValue: "£0"</code>. Include symbols or units to sort consistently with other cells.</p>
+  <p>To override the default sort value:</p>
+
+  <ul>
+    <li>in Nunjucks, add the <code>sortValue</code> option to the table cell</li>
+    <li>for HTML, add the <code>data-sort-value</code> attribute to the table cell</li>
+  </ul>
+
+  <p>Make sure to override the sort value for <a href="#missing-data-table">missing data</a>. For example, setting <code>sortValue: "£0"</code> will sort the text "No data" consistently with other cells.</p>
 
   <p>In this example the default sort order is by amount spent (descending).</p>
 
- {{ designExample({
+  {{ designExample({
     group: "components",
     item: "table",
     type: "sortable-custom",
@@ -227,7 +247,11 @@
   <p>If your team is researching filtering, please feed back your findings via our <a href="https://github.com/nhsuk/nhsuk-service-manual-community-backlog/issues/217">community backlog issue on filtering a list (in GitHub)</a>.
 
   <h2 id="word-breaks-table">Using word-breaks in a table</h2>
-  <p>To avoid very long words, such as email addresses, breaking the layout of a table, add the <code>nhsuk-u-text-break-word</code> class to the cell. In Nunjucks set it via <code>classes</code>.</p>
+  <p>To avoid very long words, such as email addresses, breaking the layout of a table, you can use word-breaks.</p>
+  <ul>
+    <li>in Nunjucks, add the <code>class: "nhsuk-u-text-break-word"</code> option to the table cell</li>
+    <li>for HTML, add the <code>nhsuk-u-text-break-word</code> override class to the table cell</li>
+  </ul>
 
   {{ designExample({
     group: "components",
@@ -246,7 +270,7 @@
     <li>"Not known"</li>
   </ul>
 
-  <p>To distinguish the text from other table content, use the <code>nhsuk-u-secondary-text-colour</code> modifier class to make it dark grey. In Nunjucks set it via <code>classes</code>.</p>
+  <p>To distinguish missing data from other table content, make the text dark grey by adding the <code>class: "nhsuk-u-secondary-text-colour"</code> Nunjucks option to the table cell. For HTML set it via the <code>class</code> attribute.</p>
 
   {{ designExample({
     group: "components",
@@ -255,7 +279,7 @@
   }) }}
 
   <h2 id="tables-on-dark-backgrounds">Tables on dark backgrounds</h2>
-  <p>Use <code>variant: "reverse"</code> in Nunjucks or the <code>nhsuk-table--reverse</code> modifier class in HTML to show white text on dark backgrounds.</p>
+  <p>To show tables with white text on dark backgrounds, add the <code>variant: "reverse"</code> option using Nunjucks. For HTML add the <code>nhsuk-table--reverse</code> class to the table.</p>
   <p>Make sure all users can see the table content. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
   {{ designExample({
@@ -274,7 +298,9 @@
 
   <h3 id="table-captions">Table captions</h3>
   <p>Use the <code>&lt;caption&gt;</code> element to describe a table in the same way you would use a heading. A caption helps users find, navigate and understand tables.</p>
-  <p>Style table captions to match the visual hierarchy of your page's content. If using Nunjucks, use the <code>captionSize</code> macro option. In HTML add the <code>nhsuk-table__caption--l</code> class. You can use sizes <code>s</code>, <code>m</code>, <code>l</code>, <code>xl</code>.</p>
+  <p>Style table captions to match the visual hierarchy of your page's content.</p>
+  <p>If you're using Nunjucks, add the <code>captionSize: "l"</code> option to the caption. For HTML add the <code>nhsuk-table__caption--l</code> class to the caption.</p>
+  <p>You can use sizes <code>s</code>, <code>m</code>, <code>l</code>, <code>xl</code>.</p>
 
   <h3 id="table-headers">Table headers</h3>
   <p>Use table headers to tell users what the rows and columns represent.</p>
