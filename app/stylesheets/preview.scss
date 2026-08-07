@@ -14,8 +14,16 @@
 
 // Component examples need a bit of space around them
 .app-example-page {
-  margin-trim: block;
-  @include nhsuk-responsive-padding(5);
+  margin-trim: block-end;
+  padding: nhsuk-spacing(3);
+
+  @include nhsuk-media-query($from: desktop) {
+    padding: nhsuk-spacing(5);
+  }
+}
+
+.app-example-page:has(> .nhsuk-scroll) {
+  padding-bottom: $nhsuk-focus-width * 2;
 }
 
 // Component examples on a blue background
