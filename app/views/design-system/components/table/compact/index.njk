@@ -1,15 +1,19 @@
 {% from "tables/macro.njk" import table %}
 
 {{ table({
-  caption: "Vaccination coverage by nation and year",
+  caption: "Childhood vaccination coverage by nation",
   captionSize: "m",
   captionId: "vaccination-coverage-caption",
+  firstCellIsHeader: true,
   compact: true,
   scrollable: true,
-  firstCellIsHeader: true,
   head: [
     {
       text: "Nation"
+    },
+    {
+      text: "2022 to 2023",
+      format: "numeric"
     },
     {
       text: "2023 to 2024",
@@ -17,10 +21,6 @@
     },
     {
       text: "2024 to 2025",
-      format: "numeric"
-    },
-    {
-      text: "2025 to 2026",
       format: "numeric"
     }
   ],
@@ -30,13 +30,13 @@
         text: "England"
       },
       {
-        text: "83.7%"
+        text: "91.80%"
       },
       {
-        text: "85.1%"
+        text: "91.22%"
       },
       {
-        text: "86.4%"
+        text: "91.30%"
       }
     ],
     [
@@ -44,13 +44,13 @@
         text: "Northern Ireland"
       },
       {
-        text: "86.4%"
+        text: "93.10%"
       },
       {
-        text: "87.9%"
+        text: "91.80%"
       },
       {
-        text: "89.1%"
+        text: "91.00%"
       }
     ],
     [
@@ -58,13 +58,13 @@
         text: "Scotland"
       },
       {
-        text: "89.2%"
+        text: "95.55%"
       },
       {
-        text: "90.5%"
+        text: "94.84%"
       },
       {
-        text: "91.3%"
+        text: "94.50%"
       }
     ],
     [
@@ -72,13 +72,13 @@
         text: "Wales"
       },
       {
-        text: "89.5%"
+        text: "94.47%"
       },
       {
-        text: "91.0%"
+        text: "94.19%"
       },
       {
-        text: "92.2%"
+        text: "94.10%"
       }
     ]
   ]
