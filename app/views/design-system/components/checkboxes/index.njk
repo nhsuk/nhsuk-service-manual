@@ -20,17 +20,17 @@
     type: "default"
   }) }}
 
-  <h2>When to use checkboxes</h2>
+  <h2 id="when-to-use-checkboxes">When to use checkboxes</h2>
   <p>Use checkboxes when you need to help users:</p>
   <ul>
     <li>select more than 1 option from a list</li>
     <li>toggle a single option on or off</li>
   </ul>
 
-  <h2>When not to use checkboxes</h2>
+  <h2 id="when-not-to-use-checkboxes">When not to use checkboxes</h2>
   <p>Do not use the checkboxes component if users can only choose 1 option from a selection. In this case, use a <a href="/design-system/components/radios">radio</a>.</p>
 
-  <h2>How to use checkboxes</h2>
+  <h2 id="how-to-use-checkboxes">How to use checkboxes</h2>
   <p>Position checkboxes to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.</p>
   <p>Do not pre-select checkbox options as this makes it more likely that users will:</p>
   <ul>
@@ -121,7 +121,7 @@
   <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
   <p>Only conditionally reveal questions. Do not show or hide anything that is not a question.</p>
 
-  <h4>Known issues</h4>
+  <h4 id="known-issues">Known issues</h4>
   <p>Users are not always notified when a conditionally revealed question is shown or hidden. This fails <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">WCAG 2.2 success criterion 4.1.2 name, role, value (W3C)</a>.</p>
   <p>However, GOV.UK found that screen reader users did not have difficulty answering a conditionally revealed question as long as it's simple. It confused users when they conditionally revealed complicated questions.</p>
 
@@ -168,7 +168,7 @@
     showCode: false
   }) }}
 
-  <h2>Research</h2>
+  <h2 id="research">Research</h2>
   <p>Our checkboxes are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>
 
 {% endblock %}
