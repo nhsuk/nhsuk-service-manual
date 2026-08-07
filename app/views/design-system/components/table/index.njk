@@ -110,7 +110,7 @@
 
   <h2 id="scrolling-table">Scrolling table</h2>
   <p>Add the scrolling container when your table has many columns and you cannot split it up or use a responsive table.</p>
-  <p>Enable it in Nunjucks by adding the <code>scroll: true</code> option to the table. In HTML wrap the table with a container <code>&lt;div class="nhsuk-table-container"&gt;</code>.</p>
+  <p>Enable it in Nunjucks by adding the <code>scroll: true</code> option to the table. In HTML wrap the table with a scroll container.</p>
 
   {{ designExample({
     group: "components",
@@ -118,6 +118,15 @@
     item: "table",
     type: "scrolling"
   }) }}
+
+  <p>The example uses an <code>nhsuk-scroll</code> container to automatically toggle left or right shadows when scrolling.</p>
+
+  {% call code() %}
+    {% filter highlight("html") %}
+      <div class="nhsuk-scroll" data-module="nhsuk-scroll">
+        <div class="nhsuk-scroll__content" role="region" aria-labelledby="table-caption-id">
+    {% endfilter %}
+  {% endcall %}
 
   <h2 id="sortable-table">Sortable table</h2>
   <p>A sortable table lets users sort columns in ascending or descending order, alphabetically or numerically.</p>
