@@ -1,30 +1,29 @@
 {% from "tables/macro.njk" import table %}
 
 {{ table({
-  caption: "Ibuprofen liquid dosages for children",
+  caption: "Ibuprofen 100mg/5ml liquid dosages for children by age",
   firstCellIsHeader: true,
   responsive: true,
   head: [
     {
       text: "Age",
-      width: "one-half"
+      width: "one-third"
     },
     {
       text: "How much?",
       width: "one-quarter"
     },
     {
-      text: "How often?",
-      width: "one-quarter"
+      text: "How often?"
     }
   ],
   rows: [
     [
       {
-        text: "3 to 5 months (weighing more than 5kg)"
+        html: "3 to 5 months (weighing more than 5kg)"
       },
       {
-        text: "2.5ml"
+        text: "2.5ml (50mg)"
       },
       {
         text: "Max 3 times in 24 hours"
@@ -35,7 +34,7 @@
         text: "6 to 11 months"
       },
       {
-        text: "2.5l"
+        text: "2.5ml (50mg)"
       },
       {
         text: "Max 3 to 4 times in 24 hours"
@@ -46,7 +45,40 @@
         text: "1 to 3 years"
       },
       {
-        text: "5ml"
+        text: "5ml (100mg)"
+      },
+      {
+        text: "Max 3 times in 24 hours"
+      }
+    ],
+    [
+      {
+        text: "4 to 6 years"
+      },
+      {
+        text: "7.5ml (150mg)"
+      },
+      {
+        text: "Max 3 times in 24 hours"
+      }
+    ],
+    [
+      {
+        text: "7 to 9 years"
+      },
+      {
+        text: "10ml (200mg)"
+      },
+      {
+        text: "Max 3 times in 24 hours"
+      }
+    ],
+    [
+      {
+        text: "10 to 11 years"
+      },
+      {
+        text: "15ml (300mg)"
       },
       {
         text: "Max 3 times in 24 hours"
