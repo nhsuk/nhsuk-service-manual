@@ -13,6 +13,7 @@
 - Update character count component to mention new data-count-type
 - Update guidance on getting accessibility audits
 - Update wording about terms of use on Start page pattern
+- Update page about the Personal Demographics Service (PDS)
 
 ## 8.12.1 - 17 June 2026
 
