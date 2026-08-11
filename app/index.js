@@ -152,6 +152,7 @@ const env = nunjucks.configure(config.nunjucksPaths, {
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode)
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
 env.addGlobal('getAssetPath', fileHelper.getAssetPath)
+env.addGlobal('getFrontendVersion', macroOptions.getFrontendVersion)
 env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
 env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
 env.addGlobal('nhsukFrontendVersion', nhsukFrontendPkg.version)
