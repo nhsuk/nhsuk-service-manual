@@ -4,7 +4,7 @@ const {
   ADOBE_TRACKING_URL = '//assets.adobedtm.com/f8560165ec6a/5d91bd521a81/launch-c545cb3a904a-development.min.js',
   BASE_URL = 'https://service-manual.nhs.uk',
   NODE_ENV,
-  PORT = '3000'
+  PORT = '4000'
 } = process.env
 
 const rootPath = resolve(__dirname, '..')

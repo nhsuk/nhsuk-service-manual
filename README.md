@@ -12,7 +12,7 @@ Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">
 
 Clone the repo: `git clone https://github.com/nhsuk/nhsuk-service-manual.git nhsuk-service-manual` and while in the project directory `cd nhsuk-service-manual`, install the required npm packages with: `npm install`.
 
-Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
+Run the project in development mode `npm run watch` and visit <a href="http://localhost:4000">http://localhost:4000</a>.
 
 Run automated tests locally with `npm run test`.
 
