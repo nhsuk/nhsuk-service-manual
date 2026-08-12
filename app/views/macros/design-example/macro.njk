@@ -30,6 +30,7 @@
 {% endmacro %}
 
 {% macro designExample(params) %}
+  {% set frontendVersion = getFrontendVersion(params) %}
   {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
@@ -221,7 +222,7 @@
               {% call code({
                 background: "body",
                 button: true,
-                classes: "app-code-snippet__code",
+                classes: "nhsuk-u-margin-bottom-1",
                 copyButtonClassList: [
                   "nhsuk-button--secondary-solid",
                   "nhsuk-button--small"
@@ -231,11 +232,18 @@
                   {{- snippet.code | safe -}}
                 {% endfilter %}
               {% endcall %}
-              {% if snippets | length > 1 %}
-              <button class="app-button--close" hidden>
-                Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
-              </button>
-              {% endif %}
+              <div class="app-code-snippet__footer">
+                {% if frontendVersion %}
+                <p class="app-code-snippet__footer-version">
+                  Requires NHS.UK frontend {{ frontendVersion }} – <a class="nhsuk-link--no-visited-state" href="/design-system/guides/check-frontend-version">check your version<span class="nhsuk-u-visually-hidden"> of NHS.UK frontend</span></a>
+                </p>
+                {% endif %}
+                {% if snippets | length > 1 %}
+                  <button class="app-button--close" hidden>
+                    Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
+                  </button>
+                {% endif %}
+              </div>
             </div>
           {% endfor %}
         </div>
