@@ -22,10 +22,6 @@
   }
 }
 
-.app-example-page:has(> .nhsuk-scroll) {
-  padding-bottom: $nhsuk-focus-width * 2;
-}
-
 // Component examples on a blue background
 .app-example-page--background-blue {
   background-color: nhsuk-colour("blue");
