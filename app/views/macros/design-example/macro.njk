@@ -4,7 +4,8 @@
 {% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 
 {% macro macroOption(option, optionName, exampleId) %}
-{% set componentPath = getMacroPageName(option.alias or option.slug) %}
+{% set componentPath = getMacroPageName(option.alias or option.id) %}
+{% set hasComponentPage = (option.alias or option.id) in ["caption", "heading", "label", "legend"] %}
 
 {% if option.deprecated | length %}
   <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }} (see GitHub)</a>.
@@ -15,15 +16,15 @@
   <strong>Required.</strong>
 {% endif %}
   {{ option.description | safe }}
-{% if (option.params) or (option.isComponent and ["label", "legend"].includes(option.id)) %}
-  {% if option.isComponent and not ["label", "legend"].includes(option.id) %}
+{% if (option.params) or (option.isComponent and not option.deprecated and hasComponentPage) %}
+  {% if option.isComponent and not hasComponentPage %}
     {# Link to subset of Nunjucks macro options table and design system component page -#}
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See {{ option.name | safe }} macro options</a> using <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ option.alias or optionName | safe }} component macro</a>.
   {% else %}
     {# Link to Nunjucks macro options table only -#}
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See macro options for {{ option.name | safe }}</a>.
   {% endif %}
-{% elif option.isComponent %}
+{% elif option.isComponent and not option.deprecated %}
   {# Link to design system component page for nested components -#}
   <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">See macro options for {{ optionName | safe }}</a>.
 {% endif %}
