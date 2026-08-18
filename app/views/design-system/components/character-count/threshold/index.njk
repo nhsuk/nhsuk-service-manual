@@ -1,12 +1,6 @@
 {% from "character-count/macro.njk" import characterCount %}
 
 {{ characterCount({
-  name: "threshold",
-  id: "threshold",
-  maxlength: 112,
-  countType: "characters",
-  threshold: 75,
-  value: "Type another letter into this field after this message to see the threshold feature",
   label: {
     text: "Can you provide more detail about how you move about (your mobility)?",
     size: "l",
@@ -14,5 +8,11 @@
   },
   hint: {
     text: "For example, if you use crutches, sticks, or a walking frame"
-  }
+  },
+  id: "threshold",
+  name: "threshold",
+  value: "Type another letter into this field after this message to see the threshold feature",
+  maxlength: 112,
+  threshold: 75,
+  countType: "characters"
 }) }}

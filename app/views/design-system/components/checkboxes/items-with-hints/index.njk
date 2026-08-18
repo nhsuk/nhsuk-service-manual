@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "nationality",
-  name: "nationality",
   fieldset: {
     legend: {
       text: "What medical conditions do you have?",
@@ -13,6 +11,8 @@
   hint: {
     text: "Select 1 or more"
   },
+  idPrefix: "nationality",
+  name: "nationality",
   items: [
     {
       value: "alzheimers",

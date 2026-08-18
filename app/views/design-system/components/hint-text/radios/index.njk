@@ -3,8 +3,6 @@
 {% from "hint/macro.njk" import hint %}
 
 {{ radios({
-  idPrefix: "example-hints",
-  name: "exampleHints",
   fieldset: {
     legend: {
       text: "Have you had all the vaccinations you're eligible for in the UK?",
@@ -15,6 +13,8 @@
   hint: {
     text: "You would have got these vaccinations at school, from your GP surgery or another healthcare provider"
   },
+  idPrefix: "example-hints",
+  name: "exampleHints",
   items: [
     {
       value: "yes",

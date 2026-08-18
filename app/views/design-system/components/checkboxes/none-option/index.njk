@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "symptoms",
-  name: "symptoms",
   fieldset: {
     legend: {
       text: "Do you have any of these symptoms?",
@@ -13,6 +11,8 @@
   hint: {
     text: "Select all the symptoms you have"
   },
+  idPrefix: "symptoms",
+  name: "symptoms",
   items: [
     {
       value: "sorethroat",

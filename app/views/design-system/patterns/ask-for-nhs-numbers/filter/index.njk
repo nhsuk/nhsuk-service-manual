@@ -16,8 +16,6 @@ previewLayout: design-example-wrapper-full
     <div class="nhsuk-grid-column-two-thirds">
 
       {{ radios({
-        idPrefix: "example-hints",
-        name: "exampleHints",
         fieldset: {
           legend: {
             text: "Do you know your NHS number?",
@@ -28,6 +26,8 @@ previewLayout: design-example-wrapper-full
         hint: {
           html: 'This is a 10 digit number (like <span class="nhsuk-u-nowrap">' ~ dummyNhsNumber ~ '</span>) that you can find on an NHS letter, prescription or in the NHS App'
         },
+        idPrefix: "example-hints",
+        name: "exampleHints",
         items: [
         {
           value: "yes",

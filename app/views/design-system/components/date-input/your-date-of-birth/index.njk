@@ -1,8 +1,6 @@
 {% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "date-of-birth",
-  namePrefix: "dateOfBirth",
   fieldset: {
     legend: {
       text: "What is your date of birth?",
@@ -13,6 +11,8 @@
   hint: {
     text: "For example, 15 3 1984"
   },
+  id: "date-of-birth",
+  namePrefix: "dateOfBirth",
   items: [
     {
       name: "day",

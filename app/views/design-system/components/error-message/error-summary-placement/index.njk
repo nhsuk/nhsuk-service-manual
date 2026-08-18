@@ -32,7 +32,6 @@ previewLayout: design-example-wrapper-full
         }) }}
 
         {{ dateInput({
-          id: "dob-errors",
           fieldset: {
             legend: {
               text: "What is your date of birth?",
@@ -46,6 +45,7 @@ previewLayout: design-example-wrapper-full
           errorMessage: {
             text: "Date of birth must include a year"
           },
+          id: "dob-errors",
           items: [
             {
               name: "day",

@@ -1,8 +1,6 @@
 {% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "appointment-date",
-  namePrefix: "appointmentDate",
   fieldset: {
     legend: {
       text: "When was your appointment?",
@@ -13,6 +11,8 @@
   hint: {
     text: "For example, ((dateLastMonth))"
   },
+  id: "appointment-date",
+  namePrefix: "appointmentDate",
   items: [
     {
       name: "day",

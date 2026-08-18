@@ -23,8 +23,6 @@ previewLayout: design-example-wrapper-full
       <form action="/form-handler" method="post" novalidate>
 
         {{ dateInput({
-          id: "example",
-          namePrefix: "example",
           fieldset: {
             legend: {
               text: "What is your date of birth?",
@@ -35,6 +33,8 @@ previewLayout: design-example-wrapper-full
           hint: {
             text: "For example, 15 3 1984"
           },
+          id: "example",
+          namePrefix: "example",
           items: [
             {
               name: "day",

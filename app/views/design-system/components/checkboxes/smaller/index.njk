@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "example",
-  name: "example",
   fieldset: {
     legend: {
       text: "Care setting",
@@ -10,6 +8,8 @@
       isPageHeading: true
     }
   },
+  idPrefix: "example",
+  name: "example",
   classes: "nhsuk-checkboxes--small",
   items: [
     {

@@ -188,7 +188,6 @@
       <p>We'll only use these cookies if you say it's OK. We'll use a cookie to save your settings.</p>
 
       {{ radios({
-        classes: "nhsuk-radios--inline",
         fieldset: {
           legend: {
             text: "Tell us if we can use analytics cookies",
@@ -197,6 +196,7 @@
         },
         name: "inputStatistics",
         idPrefix: "input-statistics",
+        classes: "nhsuk-radios--inline",
         items: [
           {
             text: "Use cookies to measure my website use",

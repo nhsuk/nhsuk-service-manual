@@ -1,9 +1,6 @@
 {% from "radios/macro.njk" import radios %}
 
 {{ radios({
-  idPrefix: "example-inline",
-  name: "exampleInline",
-  classes: "nhsuk-radios--inline",
   fieldset: {
     legend: {
       text: "Are you 18 or over?",
@@ -11,6 +8,9 @@
       isPageHeading: true
     }
   },
+  idPrefix: "example-inline",
+  name: "exampleInline",
+  classes: "nhsuk-radios--inline",
   items: [
     {
       value: "yes",

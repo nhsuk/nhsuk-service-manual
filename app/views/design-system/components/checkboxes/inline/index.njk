@@ -1,9 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "example-inline",
-  name: "exampleInline",
-  classes: "nhsuk-checkboxes--inline",
   fieldset: {
     legend: {
       text: "Which nipple has changed?",
@@ -11,6 +8,9 @@
       isPageHeading: true
     }
   },
+  idPrefix: "example-inline",
+  name: "exampleInline",
+  classes: "nhsuk-checkboxes--inline",
   items: [
     {
       value: "right",

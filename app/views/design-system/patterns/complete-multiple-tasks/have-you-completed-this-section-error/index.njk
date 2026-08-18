@@ -2,7 +2,6 @@
 {% from "radios/macro.njk" import radios %}
 
 {{ radios({
-  name: "haveYouCompletedThisSection",
   fieldset: {
     legend: {
       text: "Have you completed this section?",
@@ -13,6 +12,7 @@
   errorMessage: {
     text: "Select whether you've completed this section"
   },
+  name: "haveYouCompletedThisSection",
   items: [
     {
       value: "yes",
