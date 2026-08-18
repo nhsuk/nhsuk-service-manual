@@ -55,8 +55,10 @@
   <p>The spacing for "large screens" is used when the screen is wider than the desktop breakpoint (768px). Spacing for the smallest units (0 to 2) stays the same for all screen sizes.
 
   {{ table({
-    caption: "The responsive spacing scale",
-    captionClasses: "nhsuk-u-visually-hidden",
+    caption: {
+      text: "The responsive spacing scale",
+      classes: "nhsuk-u-visually-hidden"
+    },
     head: [
       {
         text: "Spacing unit"
@@ -247,8 +249,10 @@
   <p>The static spacing scale stays the same for all screen sizes, and uses the same spacing as "large screens" in the responsive spacing scale.</p>
 
   {{ table({
-    caption: "The static spacing scale",
-    captionClasses: "nhsuk-u-visually-hidden",
+    caption: {
+      text: "The static spacing scale",
+      classes: "nhsuk-u-visually-hidden"
+    },
     head: [
       {
         text: "Spacing unit"

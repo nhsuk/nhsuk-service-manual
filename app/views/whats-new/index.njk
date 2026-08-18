@@ -47,8 +47,10 @@
   {% endset %}
 
   {{ table({
-    caption: "Updates to the service manual in August 2026",
-    captionClasses: "nhsuk-u-visually-hidden",
+    caption: {
+      text: "Updates to the service manual in August 2026",
+      classes: "nhsuk-u-visually-hidden"
+    },
     head: [
       {
         text: "Section",
@@ -113,10 +115,12 @@
         image: {
           src: "/assets/one-design-system-blog-post.png"
         },
-        clickable: true,
+        heading: {
+          text: "One design system is better than 2",
+          level: 3
+        },
         href: "https://digital.nhs.uk/blog/design-matters/2026/one-design-system-is-better-than-2",
-        heading: "One design system is better than 2",
-        headingLevel: 3
+        clickable: true
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 April 2026</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
@@ -128,10 +132,12 @@
         image: {
           src: "/assets/blog-post-frontend-v10.jpg"
         },
-        clickable: true,
+        heading: {
+          text: "Making the NHS design system fit for the future",
+          level: 3
+        },
         href: "https://digital.nhs.uk/blog/design-matters/2025/making-the-nhs-design-system-fit-for-the-future",
-        heading: "Making the NHS design system fit for the future",
-        headingLevel: 3
+        clickable: true
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
@@ -152,8 +158,10 @@
             '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual – show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
           "</div>"
         },
-        heading: "NHS digital service manual show and tell",
-        headingLevel: 3
+        heading: {
+          text: "NHS digital service manual show and tell",
+          level: 3
+        }
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
         <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>

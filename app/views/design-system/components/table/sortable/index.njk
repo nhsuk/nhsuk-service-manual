@@ -1,9 +1,11 @@
 {% from "tables/macro.njk" import table %}
 
 {{ table({
-  caption: "Childhood vaccination coverage",
+  caption: {
+    text: "Childhood vaccination coverage",
+    size: "m"
+  },
   firstCellIsHeader: true,
-  captionSize: "m",
   head: [
     {
       text: "Nation",

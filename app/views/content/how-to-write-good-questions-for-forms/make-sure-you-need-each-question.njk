@@ -34,7 +34,7 @@
   <p>If you do not know how you'll use an answer, find out or remove the question.</p>
 
   {% call details({
-    summaryText: "Example: signatures"
+    summary: "Example: signatures"
   }) %}
     <p>Paper forms often ask for a signature but not many organisations authenticate them. Does your service need a signature and if so, how will you check the user's identity?</p>
     <p>If you do have to verify and authenticate individuals, read <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">NHS England's DAPB3051: Identity verification and authentication standard for health and care digital, data, analytics and technology use (previously DCB3051)</a>.</p>
@@ -92,7 +92,7 @@
   <p>Investigate whether you can get some of the information you need from another NHS system.</p>
 
   {% call details({
-    summaryText: "Example: doing the hard work to avoid asking a question"
+    summary: "Example: doing the hard work to avoid asking a question"
   }) %}
     <p>The NHS has <a href="https://your-data-matters.service.nhs.uk/">a service that lets patients choose if data from their health records is shared for research and planning</a>. As part of the service, users need to confirm their identity. They can do this by giving their NHS number. But the team found that some users struggled to find their number.</p>
     <p>So they designed a way users could prove their identity by using their personal details instead. This involved looking up a patient database which needed the user's:</p>
@@ -127,11 +127,11 @@
 
   {{ pagination({
     previous: {
-      labelText: "Understand the problem before you write your questions",
+      label: "Understand the problem before you write your questions",
       href: "/content/how-to-write-good-questions-for-forms/understand-the-problem-before-you-write-your-questions"
     },
     next: {
-      labelText: "Consider the sensitivities around your questions",
+      label: "Consider the sensitivities around your questions",
       href: "/content/how-to-write-good-questions-for-forms/consider-the-sensitivities-around-your-questions"
     }
   }) }}

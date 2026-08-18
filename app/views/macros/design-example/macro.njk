@@ -32,7 +32,7 @@
 
 {% macro designExample(params) %}
   {% set frontendVersion = getFrontendVersion(params) %}
-  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
+  {% set standaloneURL = "/design-example/" ~ params.group ~ "/" ~ params.item ~ "/" ~ params.type %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
@@ -68,15 +68,15 @@
 
   {% set exampleType = params.type | lower | replace("-", " ") %}
   {% set exampleItem = params.item | lower | replace("-", " ") %}
-  {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem + " " + exampleType) %}
+  {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem ~ " " ~ exampleType) %}
   {% if params.titleSuffix %}
-    {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
+    {% set exampleTitle = exampleTitle ~ " " ~ params.titleSuffix %}
   {% endif %}
 
   {% if params.id %}
     {% set exampleId = params.id %}
   {% else %}
-    {% set exampleId = (exampleTitle + " example") | slugify %}
+    {% set exampleId = (exampleTitle ~ " example") | slugify %}
   {% endif %}
 
   {% if params.classes %}
@@ -165,9 +165,9 @@
               {% if macroOptions | length %}
               <div class="app-code-snippet__macro">
                 {% call details({
-                  summaryText: "Nunjucks macro options",
+                  summary: "Nunjucks macro options",
                   classes: "app-code-snippet__details",
-                  id: "options-" + exampleId + "-details"
+                  id: "options-" ~ exampleId ~ "-details"
                 }) %}
                   <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
                   <p>Some options are required for the macro to work. These are marked as "Required" in the option description. Deprecated options are marked as "Deprecated".</p>
@@ -192,12 +192,14 @@
                     {% endfor %}
 
                     {{ table({
-                      caption: options.name | safe,
-                      captionClasses: "nhsuk-u-visually-hidden" if options.slug == 'primary',
+                      caption: {
+                        text: options.name | safe,
+                        classes: "nhsuk-u-visually-hidden" if options.slug == "primary"
+                      },
                       firstCellIsHeader: true,
                       responsive: true,
                       classes: "app-code-snippet__options",
-                      id: "options-" + exampleId + "--" + options.slug,
+                      id: "options-" ~ exampleId ~ "--" ~ options.slug,
                       head: [
                         {
                           text: "Name",

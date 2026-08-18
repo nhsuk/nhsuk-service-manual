@@ -1,8 +1,10 @@
 {% from "tables/macro.njk" import table %}
 
 {{ table({
-  caption: "Organisations using the service",
-  captionSize: "m",
+  caption: {
+    text: "Organisations using the service",
+    size: "m"
+  },
   firstCellIsHeader: true,
   head: [
     {

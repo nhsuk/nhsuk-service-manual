@@ -30,11 +30,13 @@
     </div>
 
     {% call details({
-      summaryText: "List of cookies that make our website work"
+      summary: "List of cookies that make our website work"
     }) %}
       {{ table({
-        caption: "Cookie names and purposes",
-        captionClasses: "nhsuk-u-visually-hidden",
+        caption: {
+          text: "Cookie names and purposes",
+          classes: "nhsuk-u-visually-hidden"
+        },
         responsive: true,
         head: [
           {
@@ -69,11 +71,13 @@
     </div>
 
     {% call details({
-      summaryText: "List of cookies that measure website use"
+      summary: "List of cookies that measure website use"
     }) %}
       {{ table({
-        caption: "Cookie names and purposes",
-        captionClasses: "nhsuk-u-visually-hidden",
+        caption: {
+          text: "Cookie names and purposes",
+          classes: "nhsuk-u-visually-hidden"
+        },
         responsive: true,
         head: [
           {

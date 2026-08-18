@@ -5,7 +5,11 @@
 {% endset %}
 
 {{ card({
-  heading: "If you need help now, but it's not an emergency",
-  headingLevel: "3",
-  descriptionHtml: cardDescriptionHtml
+  heading: {
+    text: "If you need help now, but it's not an emergency",
+    level: "3"
+  },
+  description: {
+    html: cardDescriptionHtml
+  }
 }) }}

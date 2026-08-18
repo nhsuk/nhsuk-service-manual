@@ -11,7 +11,9 @@
 {% endset %}
 
 {{ card({
-  type: "non-urgent",
   heading: "Speak to a GP if:",
-  descriptionHtml: cardDescriptionHtml
+  description: {
+    html: cardDescriptionHtml
+  },
+  variant: "non-urgent"
 }) }}

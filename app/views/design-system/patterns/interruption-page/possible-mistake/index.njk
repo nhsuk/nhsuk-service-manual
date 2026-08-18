@@ -34,10 +34,12 @@ previewLayout: design-example-wrapper-full
       {% endset %}
 
       {{ panel({
-        titleText: "Is your weight correct?",
-        titleSize: "l",
-        classes: "nhsuk-panel--interruption",
-        html: panelHtml
+        heading: {
+          text: "Is your weight correct?",
+          size: "l"
+        },
+        html: panelHtml,
+        variant: "interruption"
       }) }}
 
     </div>

@@ -69,7 +69,7 @@
   <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by an en dash. For example: <code>&lt;title&gt;Flu – NHS&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p>
 
   {% call details({
-    summaryText: "More complex page titles"
+    summary: "More complex page titles"
   }) %}
     <p>A page title can have up to 4 elements separated by dashes. They are the:</p>
     <ul>
@@ -89,7 +89,7 @@
   {% endcall %}
 
   {% call details({
-    summaryText: "Personally identifiable information"
+    summary: "Personally identifiable information"
   }) %}
     <p>If there is personally identifiable information in the <code>&lt;h1&gt;</code>, for example, in a transactional journey, you must make sure it is not recorded in your analytics package.</p>
     <p>For example, if the <code>&lt;h1&gt;</code> is "What is Gordon's date of birth?", record "What is their date of birth?".</p>
@@ -175,9 +175,11 @@
   <h3 id="options">Options</h3>
 
   {{ table({
+    caption: {
+      text: "Page template options and descriptions",
+      classes: "nhsuk-u-visually-hidden"
+    },
     responsive: true,
-    caption: "Options that you can use with the page template",
-    captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
         text: "Option name"

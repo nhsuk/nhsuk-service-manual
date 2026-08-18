@@ -2,8 +2,10 @@
 {% from "pagination/macro.njk" import pagination %}
 
 {{ table({
-  caption: "Users",
-  captionSize: "m",
+  caption: {
+    text: "Users",
+    size: "m"
+  },
   head: [
     {
       text: "Name",

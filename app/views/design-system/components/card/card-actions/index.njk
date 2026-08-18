@@ -6,9 +6,11 @@
 {% endset %}
 
 {{ card({
+  heading: {
+    text: "Template: Appointment invitation 1",
+    size: "m"
+  },
   clickable: false,
-  heading: "Template: Appointment invitation 1",
-  headingSize: "m",
   actions: {
     items: [
       {
@@ -21,5 +23,7 @@
       }
     ]
   },
-  descriptionHtml: cardDescriptionHtml
+  description: {
+    html: cardDescriptionHtml
+  }
 }) }}

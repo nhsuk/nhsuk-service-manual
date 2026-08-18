@@ -3,7 +3,7 @@
 <p>You can see what alt-text an image has by viewing it with <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Chrome's Web Developer toolbar</a>.</p>
 
 {% call details({
-  summaryText: "Informative images"
+  summary: "Informative images"
 }) %}
   <p>The content of the alt-text depends on the image and its context. If the image is part of the main content of the page (not a functional image – one that triggers an action), use the alt-text to describe the image in a way that makes sense in the context.</p>
   <p>You don't need to explain that it's an image because screen readers usually announce that.</p>
@@ -16,7 +16,7 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Decorative images"
+  summary: "Decorative images"
 }) %}
   <p>Decorative images are there to attract users' attention or motivate them, but they don't help users understand the topic. An example might be a bowl of fruit on a healthy eating page.</p>
   <p>If your image is decorative, give it a null text alternative like this: (<code>alt=""</code>).</p>
