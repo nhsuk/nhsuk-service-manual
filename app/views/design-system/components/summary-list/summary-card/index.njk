@@ -1,6 +1,7 @@
 {% from "summary-list/macro.njk" import summaryList %}
 
 {{ summaryList({
+  lastRowBorder: false,
   card: {
     heading: {
       text: "Karen Francis",
@@ -43,7 +44,6 @@
       }
     },
     {
-      classes: "nhsuk-summary-list__row--no-border",
       key: {
         text: "Contact details"
       },
@@ -64,6 +64,7 @@
 }) }}
 
 {{ summaryList({
+  lastRowBorder: false,
   card: {
     heading: {
       text: "Dwayne Harvey",
@@ -106,7 +107,6 @@
       }
     },
     {
-      classes: "nhsuk-summary-list__row--no-border",
       key: {
         text: "Contact details"
       },

@@ -46,22 +46,18 @@ previewLayout: design-example-wrapper-full
             text: "Date of birth must include a year"
           },
           id: "dob-errors",
-          items: [
-            {
-              name: "day",
-              classes: "nhsuk-input--width-2",
-              value: "15"
-            },
-            {
-              name: "month",
-              classes: "nhsuk-input--width-2",
-              value: "3"
-            },
-            {
-              name: "year",
-              classes: "nhsuk-input--width-4 nhsuk-input--error"
-            }
-          ]
+          day: {
+            width: 2,
+            value: "15"
+          },
+          month: {
+            width: 2,
+            value: "3"
+          },
+          year: {
+            width: 4,
+            error: true
+          }
         }) }}
 
         {{ button({
