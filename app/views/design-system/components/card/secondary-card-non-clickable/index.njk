@@ -9,10 +9,14 @@
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
     {{ card({
-      secondary: true,
-      heading: "Help from NHS 111",
-      headingSize: "m",
-      descriptionHtml: cardDescriptionHtml
+      heading: {
+        text: "Help from NHS 111",
+        size: "m"
+      },
+      description: {
+        html: cardDescriptionHtml
+      },
+      variant: "secondary"
     }) }}
   </li>
 </ul>

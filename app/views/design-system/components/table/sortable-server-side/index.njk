@@ -1,0 +1,194 @@
+{% from "tables/macro.njk" import table %}
+{% from "pagination/macro.njk" import pagination %}
+
+{{ table({
+  caption: {
+    text: "Users",
+    size: "m"
+  },
+  head: [
+    {
+      text: "Name",
+      href: "sortable-server-side-name-ascending",
+      width: "one-half",
+      sort: "descending"
+    },
+    {
+      text: "Last log in",
+      href: "sortable-server-side-last-login-ascending",
+      width: "one-third",
+      align: "right",
+      classes: "nhsuk-u-nowrap",
+      sort: true
+    },
+    {
+      visuallyHiddenText: "Action",
+      align: "right"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Zara al-Masri"
+      },
+      {
+        text: "21 May 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Zara al-Masri",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Yewande Okonkwo"
+      },
+      {
+        text: "3 March 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Yewande Okonkwo",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Xu Chen"
+      },
+      {
+        text: "14 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Xu Chen",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Winter Gallagher"
+      },
+      {
+        text: "9 January 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Winter Gallagher",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Valentina Kowalczyk"
+      },
+      {
+        text: "7 June 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Valentina Kowalczyk",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Uma Nair"
+      },
+      {
+        text: "28 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Uma Nair",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Theo Ashworth"
+      },
+      {
+        text: "16 May 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Theo Ashworth",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Suki Papadopoulos"
+      },
+      {
+        text: "11 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Suki Papadopoulos",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Reza Tehrani"
+      },
+      {
+        text: "22 March 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Reza Tehrani",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Quinn O'Brien"
+      },
+      {
+        text: "5 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Quinn O'Brien",
+        href: "#"
+      }
+    ]
+  ]
+}) }}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#",
+      current: true
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    },
+    {
+      number: 4,
+      href: "#"
+    },
+    {
+      number: 5,
+      href: "#"
+    },
+    {
+      number: 6,
+      href: "#"
+    }
+  ]
+}) }}

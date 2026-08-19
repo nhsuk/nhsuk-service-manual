@@ -1,11 +1,6 @@
 {% from "radios/macro.njk" import radios %}
 
 {{ radios({
-  idPrefix: "example-error",
-  name: "exampleError",
-  errorMessage: {
-    text: "Select yes if you have changed your name"
-  },
   fieldset: {
     legend: {
       text: "Have you changed your name?",
@@ -16,6 +11,11 @@
   hint: {
     text: "This includes changing your last name or spelling your name differently"
   },
+  errorMessage: {
+    text: "Select yes if you have changed your name"
+  },
+  idPrefix: "example-error",
+  name: "exampleError",
   items: [
     {
       value: "yes",

@@ -49,12 +49,12 @@
     type: "default"
   }) }}
 
-  <h4>When to use a primary button</h4>
+  <h4 id="when-to-use-a-primary-button">When to use a primary button</h4>
   <p>Use a primary button for the main call to action on a page, for example to help users start an application or save their progress.</p>
   <p>Use only 1 primary button on a page. Having more than 1 reduces their impact and makes it harder for users to know what to do next.</p>
 
   <h4 id="primary-buttons-on-dark-backgrounds">Primary buttons on dark backgrounds</h4>
-  <p>Use the <code>nhsuk-button--reverse</code> modifier class to show a white button on dark backgrounds.</p>
+  <p>To show a white button on dark backgrounds, add the <code>variant: "reverse"</code> option using Nunjucks. For HTML add the <code>nhsuk-button--reverse</code> class to the button.</p>
   <p>Make sure all users can see the button. The background colour must have a contrast ratio of at least 3:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">WCAG 2.2 success criterion 1.4.11 Non-text Contrast, level AA (W3C)</a>.</p>
 
   {{ designExample({
@@ -72,7 +72,7 @@
     item: "buttons",
     type: "secondary"
   }) }}
-  <p>You can make the button white when you use it on darker backgrounds. Use the <code>nhsuk-button--secondary-solid</code> class to maintain colour contrast.</p>
+  <p>You can make the button white when you use it on darker backgrounds. Use the <code>variant: "secondary-solid"</code> Nunjucks option to maintain colour contrast, or in HTML add the <code>nhsuk-button--secondary-solid</code> class.</p>
 
   {{ designExample({
     group: "components",
@@ -80,7 +80,7 @@
     type: "secondary-solid"
   }) }}
 
-  <h4>When to use a secondary button</h4>
+  <h4 id="when-to-use-a-secondary-button">When to use a secondary button</h4>
   <p>Use a secondary button either:</p>
   <ul>
     <li>for secondary actions on a page</li>
@@ -97,7 +97,7 @@
     type: "warning"
   }) }}
 
-  <h4>When to use a warning button</h4>
+  <h4 id="when-to-use-a-warning-button">When to use a warning button</h4>
   <p>Warning buttons are designed to make users think carefully before they use them. They are only effective if used very sparingly. Most services should not need one.</p>
   <p>Only use warning buttons for actions with serious destructive consequences that a user cannot easily undo, for example permanently deleting an account.</p>
   <p>For important destructive actions like this, include an additional step to confirm it. Use another style of button for the initial call to action, and a warning button for the final confirmation.</p>
@@ -137,7 +137,7 @@
   <h3 id="disabled-buttons">Disabled buttons</h3>
   <p>Disabled buttons have poor contrast and can confuse some users. Only use them if user research shows it makes things easier for users to understand.</p>
 
-  <h4>Colour contrast</h4>
+  <h4 id="colour-contrast">Colour contrast</h4>
   <p>All our buttons pass AA guidelines for colour contrast. The disabled versions of the buttons do not meet accessibility colour contrast ratios. If your team has discovered a user need for disabled buttons, use them carefully and test them with users with access needs.</p>
 
   <h3 id="grouping-buttons">Grouping buttons</h3>

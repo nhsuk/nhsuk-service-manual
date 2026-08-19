@@ -11,9 +11,11 @@
     {% endset %}
 
     {{ card({
-      feature: true,
       heading: "A",
-      descriptionHtml: cardADescriptionHtml
+      description: {
+        html: cardADescriptionHtml
+      },
+      variant: "feature"
     }) }}
 
     <div class="nhsuk-back-to-top">
@@ -29,9 +31,11 @@
     {% endset %}
 
     {{ card({
-      feature: true,
       heading: "B",
-      descriptionHtml: cardBDescriptionHtml
+      description: {
+        html: cardBDescriptionHtml
+      },
+      variant: "feature"
     }) }}
 
     <div class="nhsuk-back-to-top">
@@ -48,9 +52,11 @@
     {% endset %}
 
     {{ card({
-      feature: true,
       heading: "C",
-      descriptionHtml: cardCDescriptionHtml
+      description: {
+        html: cardCDescriptionHtml
+      },
+      variant: "feature"
     }) }}
 
     <div class="nhsuk-back-to-top">
@@ -68,9 +74,11 @@
     {% endset %}
 
     {{ card({
-      feature: true,
       heading: "D",
-      descriptionHtml: cardDDescriptionHtml
+      description: {
+        html: cardDDescriptionHtml
+      },
+      variant: "feature"
     }) }}
 
     <div class="nhsuk-back-to-top">

@@ -2,8 +2,6 @@
 {% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "dob-day-error",
-  namePrefix: "dob-day-error",
   fieldset: {
     legend: {
       text: "What is your date of birth?",
@@ -17,21 +15,18 @@
   errorMessage: {
     text: "Date of birth must be in the past"
   },
-  items: [
-    {
-      name: "day",
-      classes: "nhsuk-input--width-2 nhsuk-input--error",
-      value: "15"
-    },
-    {
-      name: "month",
-      classes: "nhsuk-input--width-2 nhsuk-input--error",
-      value: "3"
-    },
-    {
-      name: "year",
-      classes: "nhsuk-input--width-4 nhsuk-input--error",
-      value: "2084"
-    }
-  ]
+  id: "dob-day-error",
+  namePrefix: "dob-day-error",
+  day: {
+    width: 2,
+    value: "15"
+  },
+  month: {
+    width: 2,
+    value: "3"
+  },
+  year: {
+    width: 4,
+    value: "2084"
+  }
 }) }}

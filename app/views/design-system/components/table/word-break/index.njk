@@ -1,7 +1,10 @@
 {% from "tables/macro.njk" import table %}
 
 {{ table({
-  caption: "Users",
+  caption: {
+    text: "Users",
+    size: "m"
+  },
   firstCellIsHeader: true,
   head: [
     {

@@ -12,7 +12,6 @@
 }) }}
 
 {{ dateInput({
-  id: "dob-errors",
   fieldset: {
     legend: {
       text: "What is your date of birth?",
@@ -26,20 +25,17 @@
   errorMessage: {
     text: "Date of birth must include a year"
   },
-  items: [
-    {
-      name: "day",
-      classes: "nhsuk-input--width-2",
-      value: "15"
-    },
-    {
-      name: "month",
-      classes: "nhsuk-input--width-2",
-      value: "3"
-    },
-    {
-      name: "year",
-      classes: "nhsuk-input--width-4 nhsuk-input--error"
-    }
-  ]
+  id: "dob-errors",
+  day: {
+    width: 2,
+    value: "15"
+  },
+  month: {
+    width: 2,
+    value: "3"
+  },
+  year: {
+    width: 4,
+    error: true
+  }
 }) }}

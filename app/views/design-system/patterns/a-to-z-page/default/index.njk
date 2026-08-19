@@ -96,10 +96,12 @@ previewLayout: design-example-wrapper-full
       </nav>
 
       {% call card({
-        feature: true,
-        heading: "A",
-        headingId: "a",
-        headingSize: "m"
+        heading: {
+          text: "A",
+          id: "a",
+          size: "m"
+        },
+        variant: "feature"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/abdominal-aortic-aneurysm/">AAA, see Abdominal aortic aneurysm</a></li>
@@ -115,10 +117,12 @@ previewLayout: design-example-wrapper-full
       </div>
 
       {% call card({
-        feature: true,
-        heading: "B",
-        headingId: "b",
-        headingSize: "m"
+        heading: {
+          text: "B",
+          id: "b",
+          size: "m"
+        },
+        variant: "feature"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li>There are currently no conditions listed</li>
@@ -132,10 +136,12 @@ previewLayout: design-example-wrapper-full
       </div>
 
       {% call card({
-        feature: true,
-        heading: "C",
-        headingId: "c",
-        headingSize: "m"
+        heading: {
+          text: "C",
+          id: "c",
+          size: "m"
+        },
+        variant: "feature"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/chest-pain/">Chest pain</a></li>
@@ -150,10 +156,12 @@ previewLayout: design-example-wrapper-full
       </div>
 
       {% call card({
-        feature: true,
-        heading: "D",
-        headingId: "d",
-        headingSize: "m"
+        heading: {
+          text: "D",
+          id: "d",
+          size: "m"
+        },
+        variant: "feature"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/dandruff/">Dandruff</a></li>

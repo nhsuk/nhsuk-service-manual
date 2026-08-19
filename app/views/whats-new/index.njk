@@ -9,20 +9,52 @@
 
   <h2>Latest updates</h2>
 
-  <h3>July 2026</h3>
+  <h3>August 2026</h3>
+
+  {% set accessibilityHtml %}
+  <p>Updated <a href="/accessibility/how-to-make-digital-services-accessible#test-throughout-and-consider-an-independent-audit">guidance to get an independent accessibility audit</a></p>
+
+  {% endset %}
 
   {% set designHtml %}
-    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" checkbox option</a></p>
-    <p>Added <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Added new features to the <a href="/design-system/components/table">table component</a> including a sortable table, compact, striped, scrolling and reverse (dark background) styles</p>
+    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
+    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Added frontend version number to <a href="/design-system">design system</a> examples and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a></p>
+    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
+    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
+    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
+    <p>Removed frontend version 10 banner and callouts</p>
+    <p>Moved WCAG 2.2 callout content into normal page content</p>
+
+  {% endset %}
+
+  {% set communityHtml %}
+  <p>Added new <a href="/community-and-contribution/coming-soon">Coming soon page</a></p>
+  <p>Updated <a href="/community-and-contribution/contribution-criteria">Contribution criteria</a> to reflect current practice</p>
+  <p>Added Eleventy theme to <a href="/community-and-contribution/community-resources">Community resources page</a></p>
+
+  {% endset %}
+
+  {% set standardHtml %}
+  <p>Updated page about <a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></p>
+
+  {% endset %}
+
+  {% set otherHtml %}
+  <p>Added hero image and restructured service manual home page</p>
+
   {% endset %}
 
   {{ table({
-    caption: "Updates to the service manual in June 2026",
-    captionClasses: "nhsuk-u-visually-hidden",
+    caption: {
+      text: "Updates to the service manual in August 2026",
+      classes: "nhsuk-u-visually-hidden"
+    },
     head: [
       {
         text: "Section",
-        classes: "nhsuk-u-width-one-quarter"
+        width: "one-quarter"
       },
       {
         text: "Update"
@@ -31,16 +63,48 @@
     rows: [
       [
         {
+          text: "Accessibility guidance"
+        },
+        {
+          html: accessibilityHtml
+        }
+      ],
+      [
+        {
           text: "Design system"
         },
         {
           html: designHtml
         }
+      ],
+      [
+        {
+          text: "Community and contribution"
+        },
+        {
+          html: communityHtml
+        }
+      ],
+      [
+        {
+          text: "Standards and technology"
+        },
+        {
+          html: standardHtml
+        }
+      ],
+      [
+        {
+          text: "Other"
+        },
+        {
+          html: otherHtml
+        }
       ]
     ]
   }) }}
 
-  <p><a href="/whats-new/updates">See all updates</a></p>
+  <p><a href="/whats-new/updates">See all updates</a> or find out what's <a href="/community-and-contribution/coming-soon">coming soon</a>.</p>
 
   <h2>Latest blog posts</h2>
   <p>Posts by the service manual team and community.</p>
@@ -51,10 +115,12 @@
         image: {
           src: "/assets/one-design-system-blog-post.png"
         },
-        clickable: true,
+        heading: {
+          text: "One design system is better than 2",
+          level: 3
+        },
         href: "https://digital.nhs.uk/blog/design-matters/2026/one-design-system-is-better-than-2",
-        heading: "One design system is better than 2",
-        headingLevel: 3
+        clickable: true
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>21 April 2026</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
@@ -66,10 +132,12 @@
         image: {
           src: "/assets/blog-post-frontend-v10.jpg"
         },
-        clickable: true,
+        heading: {
+          text: "Making the NHS design system fit for the future",
+          level: 3
+        },
         href: "https://digital.nhs.uk/blog/design-matters/2025/making-the-nhs-design-system-fit-for-the-future",
-        heading: "Making the NHS design system fit for the future",
-        headingLevel: 3
+        clickable: true
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">Published on: </span>31 October 2025</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">NHS England Design Matters blog</p>
@@ -90,8 +158,10 @@
             '<iframe src="https://www.youtube-nocookie.com/embed/ZNrewVbVQbo?si=yET82SOAxlr34kN2" title="NHS digital service manual – show and tell 20 February 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
           "</div>"
         },
-        heading: "NHS digital service manual show and tell",
-        headingLevel: 3
+        heading: {
+          text: "NHS digital service manual show and tell",
+          level: 3
+        }
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour"><span class="nhsuk-u-visually-hidden">Recorded on: </span>13 February 2020</p>
         <p class="nhsuk-card__description">We live-streamed the show and tell but the original video quality was not very good. This video has the presentation slides with the live audio.</p>

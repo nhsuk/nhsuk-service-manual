@@ -1,11 +1,11 @@
-<h1>
-  <span role="text">
-    What is AMD?
-    <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-      <span class="nhsuk-u-visually-hidden"> 
-			-
-			</span> 
-        Age-related macular degeneration (AMD)
-		</span>
-  </span>
-</h1>
+{% from "heading/macro.njk" import heading %}
+
+{{ heading({
+  text: "What is AMD?",
+  caption: {
+    html: '<span class="nhsuk-u-visually-hidden"> – </span>' ~
+      "Age-related macular degeneration (AMD)",
+    placement: "end"
+  },
+  size: "xl"
+}) }}

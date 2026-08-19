@@ -1,0 +1,96 @@
+{% from "tables/macro.njk" import table %}
+
+{{ table({
+  caption: {
+    text: "Organisations using the service",
+    size: "m"
+  },
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Organisation",
+      width: "one-third",
+      sort: true
+    },
+    {
+      text: "ODS code"
+    },
+    {
+      text: "Joined",
+      align: "right",
+      sort: true,
+      sortNext: "descending"
+    },
+    {
+      text: "Amount spent",
+      format: "numeric",
+      sort: "descending"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Warrington and Halton Hospitals"
+      },
+      {
+        text: "RY2N0"
+      },
+      {
+        text: "18 July 2024",
+        sortValue: "2024-07-18"
+      },
+      {
+        text: "£16,821"
+      }
+    ],
+    [
+      {
+        text: "The Christie",
+        sortValue: "Christie"
+      },
+      {
+        text: "J3P0W"
+      },
+      {
+        text: "4 January 2025",
+        sortValue: "2025-01-04"
+      },
+      {
+        text: "£12,013"
+      }
+    ],
+    [
+      {
+        text: "University College London Hospitals"
+      },
+      {
+        text: "RRV00"
+      },
+      {
+        text: "2 December 2025",
+        sortValue: "2025-12-02"
+      },
+      {
+        text: "£4,102"
+      }
+    ],
+    [
+      {
+        text: "The Whittington Hospital",
+        sortValue: "Whittington Hospital"
+      },
+      {
+        text: "RALWH"
+      },
+      {
+        text: "21 August 2022",
+        sortValue: "2022-08-21"
+      },
+      {
+        text: "No data",
+        sortValue: "£0",
+        classes: "nhsuk-u-secondary-text-colour"
+      }
+    ]
+  ]
+}) }}

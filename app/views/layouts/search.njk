@@ -63,11 +63,11 @@
       {% if maxPage > 1 %}
       {{ pagination({
         previous: {
-          labelText: (currentPage - 1) ~ " of " ~ maxPage,
+          label: (currentPage - 1) ~ " of " ~ maxPage,
           href: "/search/?q=" ~ query ~ "&page=" ~ (currentPage - 1)
         } if currentPage != 1,
         next: {
-          labelText: (currentPage + 1) ~ " of " ~ maxPage,
+          label: (currentPage + 1) ~ " of " ~ maxPage,
           href: "/search/?q=" ~ query ~ "&page=" ~ (currentPage + 1)
         } if currentPage != maxPage
       }) }}

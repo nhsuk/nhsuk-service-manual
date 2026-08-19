@@ -1,0 +1,92 @@
+{% from "tables/macro.njk" import table %}
+
+{{ table({
+  caption: {
+    text: "Childhood vaccination coverage",
+    size: "m"
+  },
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Nation",
+      sort: "ascending"
+    },
+    {
+      text: "MMR",
+      format: "numeric",
+      sort: true,
+      sortNext: "descending"
+    },
+    {
+      text: "6-in-1",
+      classes: "nhsuk-u-nowrap",
+      format: "numeric",
+      sort: true,
+      sortNext: "descending"
+    },
+    {
+      text: "Rotavirus",
+      format: "numeric",
+      sort: true,
+      sortNext: "descending"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "England"
+      },
+      {
+        text: "83.7%"
+      },
+      {
+        text: "92.8%"
+      },
+      {
+        text: "88.8%"
+      }
+    ],
+    [
+      {
+        text: "Northern Ireland"
+      },
+      {
+        text: "86.4%"
+      },
+      {
+        text: "94.6%"
+      },
+      {
+        text: "88.0%"
+      }
+    ],
+    [
+      {
+        text: "Scotland"
+      },
+      {
+        text: "89.2%"
+      },
+      {
+        text: "96.9%"
+      },
+      {
+        text: "92.2%"
+      }
+    ],
+    [
+      {
+        text: "Wales"
+      },
+      {
+        text: "89.5%"
+      },
+      {
+        text: "95.4%"
+      },
+      {
+        text: "92.0%"
+      }
+    ]
+  ]
+}) }}

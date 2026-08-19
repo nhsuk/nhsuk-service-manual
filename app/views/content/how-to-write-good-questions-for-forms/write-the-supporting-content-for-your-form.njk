@@ -39,9 +39,8 @@
       text: "Example",
       classes: "app-example__heading"
     }) }}
+
     {{ checkboxes({
-      idPrefix: "contact",
-      name: "contact",
       fieldset: {
         legend: {
           text: "How do you want to be contacted about this?",
@@ -51,6 +50,8 @@
       hint: {
         text: "Select all options that are relevant to you"
       },
+      idPrefix: "contact",
+      name: "contact",
       items: [
         {
           value: "email",
@@ -126,13 +127,13 @@
 
 {% block afterContact %}
 
- {{ pagination({
+  {{ pagination({
     previous: {
-      labelText: "Think of the form as a conversation",
+      label: "Think of the form as a conversation",
       href: "/content/how-to-write-good-questions-for-forms/think-of-the-form-as-a-conversation"
     },
     next: {
-      labelText: "Test your questions",
+      label: "Test your questions",
       href: "/content/how-to-write-good-questions-for-forms/test-your-questions"
     }
   }) }}

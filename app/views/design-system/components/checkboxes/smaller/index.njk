@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "example",
-  name: "example",
   fieldset: {
     legend: {
       text: "Care setting",
@@ -10,7 +8,9 @@
       isPageHeading: true
     }
   },
-  classes: "nhsuk-checkboxes--small",
+  idPrefix: "example",
+  name: "example",
+  small: true,
   items: [
     {
       value: "ambulance or urgent and emergency care",

@@ -3,8 +3,6 @@
 {% from "hint/macro.njk" import hint %}
 
 {{ radios({
-  idPrefix: "example-hints",
-  name: "exampleHints",
   fieldset: {
     legend: {
       text: "How do you want to be contacted about this?",
@@ -15,6 +13,8 @@
   hint: {
     text: "Select 1 option"
   },
+  idPrefix: "example-hints",
+  name: "exampleHints",
   items: [
     {
       value: "email",

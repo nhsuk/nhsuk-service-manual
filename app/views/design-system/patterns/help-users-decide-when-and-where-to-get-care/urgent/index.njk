@@ -11,7 +11,9 @@
 {% endset %}
 
 {{ card({
-  type: "urgent",
   heading: "Ask for an urgent GP appointment or get help from NHS 111 if you have:",
-  descriptionHtml: cardDescriptionHtml
+  description: {
+    html: cardDescriptionHtml
+  },
+  variant: "urgent"
 }) }}
