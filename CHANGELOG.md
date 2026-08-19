@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:wrench: **Maintenance**
+
+- Fix do and don't list icons in design system examples
+- Fix increased top margin in design system examples
+
 ## 8.13.0 - 17 August 2026
 
 :new: **New features**
