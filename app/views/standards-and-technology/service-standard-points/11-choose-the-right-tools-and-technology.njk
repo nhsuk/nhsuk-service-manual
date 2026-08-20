@@ -80,29 +80,30 @@
     }
   }) }}
 
-<h2 class="nhsuk-u-visually-hidden">Updates to this page</h2>
+{% endblock %}
 
-<p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: February 2026</p>
+{% block updateContent %}
+  {% call updates("2026-02-01") %}
 
-{% call details({
-  summary: {
-    html: '<span class="nhsuk-body-s">See page updates</span>'
-  }
-}) %}
-  <h3><time datetime="2026-02-01">February 2026</time></h3>
-  <p>Updated to follow GOV.UK and be clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+    {% call update("2026-02-01") %}
+      <p class="nhsuk-body-s">Updated to follow GOV.UK and be clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+    {% endcall %}
 
-  <h3><time datetime="2026-01-01">January 2026</time></h3>
-  <p>Updated and added links.</p>
+    {% call update("2026-01-01") %}
+      <p class="nhsuk-body-s">Updated and added links.</p>
+    {% endcall %}
 
-  <h3><time datetime="2025-05-01">May 2025</time></h3>
-  <p>Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% call update("2025-05-01") %}
+      <p class="nhsuk-body-s">Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% endcall %}
 
-  <h3><time datetime="2025-04-01">April 2025</time></h3>
-  <p>Added a new bullet point about use of resources to reflect our design principle about protecting the environment, with related links.</p>
+    {% call update("2025-04-01") %}
+      <p class="nhsuk-body-s">Added a new bullet point about use of resources to reflect our design principle about protecting the environment, with related links.</p>
+    {% endcall %}
 
-  <h3><time datetime="2024-01-01">January 2024</time></h3>
-  <p>Added link to the AI and Digital Regulations Service.</p>
-{% endcall %}
+    {% call update("2024-01-01") %}
+      <p class="nhsuk-body-s">Added link to the AI and Digital Regulations Service.</p>
+    {% endcall %}
 
+  {% endcall %}
 {% endblock %}

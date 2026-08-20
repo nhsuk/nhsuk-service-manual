@@ -77,17 +77,14 @@
     }
   }) }}
 
-<h2 class="nhsuk-u-visually-hidden">Updates to this page</h2>
+{% endblock %}
 
-<p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: April 2025</p>
+{% block updateContent %}
+  {% call updates("2025-04-01") %}
 
-{% call details({
-  summary: {
-    html: '<span class="nhsuk-body-s">See page updates</span>'
-  }
-}) %}
-  <h3><time datetime="2025-04-01">April 2025</time></h3>
-  <p>Made minor changes to wording to help teams consider the risks of online services being misused for domestic abuse.</p>
-{% endcall %}
+    {% call update("2025-04-01") %}
+      <p class="nhsuk-body-s">Made minor changes to wording to help teams consider the risks of online services being misused for domestic abuse.</p>
+    {% endcall %}
 
+  {% endcall %}
 {% endblock %}

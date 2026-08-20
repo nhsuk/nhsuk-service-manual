@@ -57,18 +57,14 @@
     }
   }) }}
 
+{% endblock %}
 
-<h2 class="nhsuk-u-visually-hidden">Updates to this page</h2>
+{% block updateContent %}
+  {% call updates("2024-01-01") %}
 
-<p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: January 2024</p>
+    {% call update("2024-01-01") %}
+      <p class="nhsuk-body-s">Added section on AI and digital healthcare technologies.</p>
+    {% endcall %}
 
-{% call details({
-  summary: {
-    html: '<span class="nhsuk-body-s">See page updates</span>'
-  }
-}) %}
-  <h3><time datetime="2024-01-01">January 2024</time></h3>
-  <p>Added section on AI and digital healthcare technologies.</p>
-{% endcall %}
-
+  {% endcall %}
 {% endblock %}

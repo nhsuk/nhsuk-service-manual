@@ -79,28 +79,27 @@
     }
   }) }}
 
-<h2 class="nhsuk-u-visually-hidden">Updates to this page</h2>
+{% endblock %}
 
-<p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: May 2026</p>
+{% block updateContent %}
+  {% call updates("2026-05-01") %}
 
-{% call details({
-  summary: {
-    html: '<span class="nhsuk-body-s">See page updates</span>'
-  }
-}) %}
-  <h3><time datetime="2026-05-01">May 2026</time></h3>
-  <p>Added further GOV.UK resources to bring the standard into line with GOV's.</p>
-  <p>Added link to NHS service manual's Write NHS messages guidance.</p>
+    {% call update("2026-05-01") %}
+      <p class="nhsuk-body-s">Added further GOV.UK resources to bring the standard into line with GOV's.</p>
+      <p class="nhsuk-body-s">Added link to NHS service manual's Write NHS messages guidance.</p>
+    {% endcall %}
 
-  <h3><time datetime="2026-02-01">February 2026</h3>
-  <p>Updated to follow GOV.UK and make it clear that:</p>
-    <ul>
-      <li>not designing services around technologies includes not designing them around AI technologies</li>
-      <li>checking for existing solutions includes existing AI solutions</li>
-    </ul></p>
+    {% call update("2026-02-01") %}
+      <p class="nhsuk-body-s">Updated to follow GOV.UK and make it clear that:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet nhsuk-body-s">
+        <li>not designing services around technologies includes not designing them around AI technologies</li>
+        <li>checking for existing solutions includes existing AI solutions</li>
+      </ul>
+    {% endcall %}
 
-  <h3><time datetime="2026-01-01">January 2026</h3>
-  <p>Made a small change to the intro paragraph following GOV to clarify that you need to provide the mix of channels that users need.</p>
-{% endcall %}
+    {% call update("2026-01-01") %}
+      <p class="nhsuk-body-s">Made a small change to the intro paragraph following GOV to clarify that you need to provide the mix of channels that users need.</p>
+    {% endcall %}
 
+  {% endcall %}
 {% endblock %}
