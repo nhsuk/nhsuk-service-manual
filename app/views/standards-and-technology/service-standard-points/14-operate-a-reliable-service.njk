@@ -57,7 +57,9 @@
 <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">Updated: February 2026</p>
 
 {% call details({
-  summaryHtml: '<span class="nhsuk-body-s">See page updates</span>'
+  summary: {
+    html: '<span class="nhsuk-body-s">See page updates</span>'
+  }
 }) %}
   <h3><time datetime="2026-02-01">February 2026</time></h3>
   <p>Updated to follow GOV and require quality assurance testing to not be left to automated tools. Service teams must also now monitor outcomes for users and ethical issues such as bias.</p>
