@@ -1,0 +1,16 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+////
+/// Updates component
+////
+
+.app-updates {
+  .app-updates__item {
+    @include nhsuk-top-and-bottom;
+    @include nhsuk-responsive-margin(6, "bottom");
+  }
+
+  .nhsuk-details {
+    @include nhsuk-font(16);
+  }
+}
