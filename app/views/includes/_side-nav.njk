@@ -176,6 +176,12 @@
   { title: "Community resources", url: "/community-and-contribution/community-resources" }
 ] %}
 
+{% set aiUCD = [
+  { title: "Definitions", url: "/ai-and-user-centred-design/definitions" },
+  { title: "Principles", url: "/ai-and-user-centred-design/principles" },
+  { title: "Risks and benefits", url: "/ai-and-user-centred-design/risks-and-benefits" }
+] %}
+
 {% set whatsNew = [
   { title: "Updates", url: "/whats-new/updates" },
   { title: "Blog posts", url: "/whats-new/blog-posts" },
@@ -348,6 +354,14 @@
   {%- if pageSection == "Community and contribution" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in community %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == "AI and user-centred-design" %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in aiUCD %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
