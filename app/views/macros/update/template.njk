@@ -1,7 +1,7 @@
 {% set dateFormatted = dateUpdated | formatDate %}
 
 <li class="app-updates__item">
-  <h3 class="nhsuk-heading-s">
+  <h3 class="nhsuk-heading-m">
   {% if dateFormatted != "Invalid date" %}
     <time datetime="{{ dateUpdated }}">{{ dateFormatted }}</time>
   {% else %}
