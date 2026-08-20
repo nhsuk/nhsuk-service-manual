@@ -79,3 +79,13 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2025-04-01") %}
+      <p>Made minor changes to wording to help teams consider the risks of online services being misused for domestic abuse.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

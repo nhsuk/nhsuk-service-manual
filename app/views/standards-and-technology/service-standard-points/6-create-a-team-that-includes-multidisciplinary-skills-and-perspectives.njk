@@ -62,4 +62,18 @@
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2026-05-01") %}
+      <p>Added further GOV.UK resources to bring the standard into line with GOV's.</p>
+    {% endcall %}
+
+    {% call update("2026-02-01") %}
+      <p>Updated to follow GOV.UK with new requirement for service teams using AI in a service to have someone on or available to the team who fully understands how it works and the impact of using it.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

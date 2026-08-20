@@ -1,0 +1,27 @@
+{% from "nhsuk/components/details/macro.njk" import details %}
+
+{% set dateFormatted = dateUpdated | formatDate %}
+
+{% set updatesHtml %}
+<ol class="app-updates__list nhsuk-list">
+  {% if caller %}
+    {{- caller() }}
+  {% endif %}
+</ol>
+{% endset %}
+
+<div class="app-updates">
+  <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <h2 class="nhsuk-u-visually-hidden">Updates to this page</h2>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-colour">
+    Updated: {{ dateFormatted if dateFormatted != "Invalid date" else dateUpdated }}
+  </p>
+
+  {% if caller %}
+    {{- details({
+      summary: "See page updates",
+      html: updatesHtml
+    }) | trim | indent(2, true) }}
+  {% endif %}
+</div>

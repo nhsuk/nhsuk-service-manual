@@ -81,4 +81,30 @@
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2026-02-01") %}
+      <p>Updated to follow GOV.UK and be clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+    {% endcall %}
+
+    {% call update("2026-01-01") %}
+      <p>Updated and added links.</p>
+    {% endcall %}
+
+    {% call update("2025-05-01") %}
+      <p>Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% endcall %}
+
+    {% call update("2025-04-01") %}
+      <p>Added a new bullet point about use of resources to reflect our design principle about protecting the environment, with related links.</p>
+    {% endcall %}
+
+    {% call update("2024-01-01") %}
+      <p>Added link to the AI and Digital Regulations Service.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

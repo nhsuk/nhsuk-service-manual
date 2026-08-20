@@ -63,3 +63,13 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2026-05-01") %}
+      <p>Added further GOV.UK resources to bring the standard into line with GOV's.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

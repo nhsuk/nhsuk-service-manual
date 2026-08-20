@@ -86,3 +86,17 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2025-05-01") %}
+      <p>Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% endcall %}
+
+    {% call update("2025-04-01") %}
+      <p>Updated to reflect changes made to this GOV.UK standard in December 2024. With links to Secure by Design principles and IBM's MISUSE threat modelling framework. Plus new points on privacy preferences and settings from a working group on domestic abuse and coercive control.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

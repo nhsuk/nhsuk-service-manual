@@ -84,3 +84,17 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("2026-01-01") %}
+      <p>Updated and added links.</p>
+    {% endcall %}
+
+    {% call update("2024-01-01") %}
+      <p>Updated to refer to WCAG 2.2.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}
