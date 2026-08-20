@@ -177,9 +177,9 @@
 ] %}
 
 {% set aiUCD = [
-  { title: "Definitions", url: "/ai-for-user-centred-design/definitions" },
-  { title: "Principles", url: "/ai-for-user-centred-design/principles" },
-  { title: "Principles", url: "/ai-for-user-centred-design/risks-and-benefits" }
+  { title: "Definitions", url: "/ai-and-user-centred-design/definitions" },
+  { title: "Principles", url: "/ai-and-user-centred-design/principles" },
+  { title: "Risks and benefits", url: "/ai-and-user-centred-design/risks-and-benefits" }
 ] %}
 
 {% set whatsNew = [
@@ -359,7 +359,7 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "AI and user-centred design" %}
+  {%- if pageSection == "AI and user-centred-design" %}
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in aiUCD %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>

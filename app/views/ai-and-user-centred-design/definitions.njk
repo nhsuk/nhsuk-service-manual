@@ -2,8 +2,7 @@
 
 {% set pageTitle = "Definitions" %}
 {% set pageDescription = "These definitions are taken from the AI Playbook for the UK Government." %}
-{% set pageSection = "AI and user-centred-design (UCD)" %}
-
+{% set pageSection = "AI and user-centred-design" %}
 {% set dateUpdated = "September 2026" %}
 
 {% block beforeContent %}
@@ -39,5 +38,9 @@
 <h2>Large language model (LLM)</h2>
 <p>A neural network [=what?] that is trained on a vast amount of text. The training uses unlabelled text and some form of self-supervised learning.</p>
 <p>[From rather outdated NHSX source. Are there better definitions? This <a href="https://governmentdigitalanddatahub.campaign.gov.uk/learn/digital-and-data-industry-led-learning/artificial-intelligence/artificial-intelligence-working-with-large-language-models/">GOV learning around AI</a> suggests that LLMs are part of Gen AI.]</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
 
 {% endblock %}
