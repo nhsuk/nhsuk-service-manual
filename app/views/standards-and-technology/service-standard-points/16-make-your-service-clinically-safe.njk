@@ -83,4 +83,22 @@
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("January 2026") %}
+      <p>Reviewed and updated this standard with clinical safety team, in particular emphasising documented processes.</p>
+    {% endcall %}
+
+    {% call update("April 2025") %}
+      <p>Made minor changes to wording to help teams consider the risks of online services being misused for domestic abuse.</p>
+    {% endcall %}
+
+    {% call update("January 2024") %}
+      <p>Added section about the AI and Digital Regulations Service.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

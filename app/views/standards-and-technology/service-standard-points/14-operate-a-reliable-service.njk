@@ -53,4 +53,14 @@
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("February 2026") %}
+      <p>Updated to follow GOV and require quality assurance testing to not be left to automated tools. Service teams must also now monitor outcomes for users and ethical issues such as bias.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

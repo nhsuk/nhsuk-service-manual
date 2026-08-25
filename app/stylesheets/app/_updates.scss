@@ -1,0 +1,27 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+////
+/// Updates component
+////
+
+.app-updates {
+  border-top: 1px solid $nhsuk-border-colour;
+
+  @include nhsuk-responsive-margin(8, "top");
+  @include nhsuk-responsive-padding(5, "top");
+  @include nhsuk-responsive-padding(2, "bottom");
+  @include nhsuk-top-and-bottom;
+
+  .app-updates__item {
+    @include nhsuk-top-and-bottom;
+    @include nhsuk-responsive-margin(6, "bottom");
+  }
+
+  .nhsuk-details {
+    @include nhsuk-font(16);
+  }
+}
+
+.nhsuk-pagination + .app-updates {
+  margin-top: 0;
+}
