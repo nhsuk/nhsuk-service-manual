@@ -7,6 +7,10 @@
 - Add page updates details to service standard points
 - Update the pattern for helping users decide when and where to get care works and how to write content for care cards
 
+:wrench: **Maintenance**
+
+- Fix link to table in a card
+
 ## 8.13.1 - 19 August 2026
 
 :wrench: **Maintenance**
