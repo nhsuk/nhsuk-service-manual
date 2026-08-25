@@ -60,7 +60,7 @@
 
   <p>The file structure for the stylesheets has changed. You will have to make different updates depending on whether you are compiling the <a href="https://sass-lang.com/">Sass</a> or using the precompiled CSS files.</p>
 
-  <h3>Sass</h3>
+  <h3 id="sass">Sass</h3>
 
   <p>If you are compiling the Sass files, you must add <code>node_modules</code> to load paths, by either:</p>
 
@@ -78,7 +78,7 @@
     {% endfilter %}
   {% endcall %}
 
-  <h3>Precompiled stylesheets</h3>
+  <h3 id="precompiled-stylesheets">Precompiled stylesheets</h3>
 
   <p>If you are using the precompiled file in the npm package at <code>node_modules/nhsuk-frontend/dist/nhsuk.min.css</code>, update this path to <code>node_modules/nhsuk-frontend/dist/nhsuk/nhsuk-frontend.min.css</code>.</p>
 
@@ -90,7 +90,7 @@
 
   <p>The file structure for the JavaScript has changed. You will have to make different updates depending on whether you are using a bundler or the precompiled JavaScript.</p>
 
-  <h3>Using a JavaScript bundler</h3>
+  <h3 id="using-a-javascript-bundler">Using a JavaScript bundler</h3>
 
   <p>For JavaScript imported using a bundler, consolidate all <code>import</code> or <code>require()</code> calls to <code>nhsuk-frontend/packages/components/*</code> into a single statement:</p>
 
@@ -137,7 +137,7 @@
     {% endfilter %}
   {% endcall %}
 
-  <h3>Using precompiled JavaScript</h3>
+  <h3 id="using-precompiled-javascript">Using precompiled JavaScript</h3>
 
   <p>For precompiled JavaScript, note the following path changes:</p>
 
@@ -193,7 +193,7 @@
 
   <p>We have made several updates to the <a href="/design-system/styles/page-template">page template</a>.</p>
 
-  <h3>Update the JavaScript supported script snippet</h3>
+  <h3 id="update-the-javascript-supported-script-snippet">Update the JavaScript supported script snippet</h3>
 
   <p>The <code>&lt;script&gt;</code> snippet at the top of the <code>&lt;body&gt;</code> tag to check whether JavaScript is supported has been updated.</p>
 
@@ -215,7 +215,7 @@
 
   <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
-  <h3>Update the main script tag</h3>
+  <h3 id="update-the-main-script-tag">Update the main script tag</h3>
 
   <p>The main <code>&lt;script&gt;</code> tag for the JavaScript has been updated and moved.</p>
 
@@ -251,7 +251,7 @@
 
   <p>If you are using the Nunjucks page template included within NHS frontend, the code should moved from the <code>head</code> block to the <code>bodyEnd</code> block.</p>
 
-  <h3>Remove the X-UA-Compatible meta tag</h3>
+  <h3 id="remove-the-x-ua-compatible-meta-tag">Remove the X-UA-Compatible meta tag</h3>
 
   <p>Remove the <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code> tag.</p>
 
@@ -263,7 +263,7 @@
 
   <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
-  <h3>Update the viewport meta tag</h3>
+  <h3 id="update-the-viewport-meta-tag">Update the viewport meta tag</h3>
 
   <p>Update the viewport meta tag by changing <code>shrink-to-fit=no</code> to <code>viewport-fit=cover</code>:</p>
 
@@ -278,7 +278,7 @@
 
   <p>If you are using the Nunjucks page template included within NHS frontend, you do not need to make this change.</p>
 
-  <h3>Update the favicons, app icons and Open Graph image tags</h3>
+  <h3 id="update-the-favicons-app-icons-and-open-graph-image-tags">Update the favicons, app icons and Open Graph image tags</h3>
 
   <p>We've changed the names, formats and sizes of icon assets we distribute in NHS.UK frontend.</p>
 
@@ -318,7 +318,7 @@
     <li> remove the boolean <code>showNav</code> and <code>showSearch</code> options – the respective parts of the header are now shown automatically when <code>navigation.items</code> or <code>search</code> options are provided</li>
   </ul>
 
-  <h4>Header modifier classes</h4>
+  <h4 id="header-modifier-classes">Header modifier classes</h4>
 
   <p>If you are using the <code>nhsuk-header--white-nav</code> class to have a white background on the navigation bar, update this to <code>nhsuk-header__navigation--white</code>.</p>
 
@@ -457,7 +457,7 @@
 
   <p>There are no changes to the HTML.</p>
 
-  <p>If you are using the Nunjucks macro, you need to rename the <code>text</code> param to <code>summaryText</code>.</p>
+  <p>If you are using the Nunjucks macro, you need to rename the <code>text</code> param to <code>summary</code>.</p>
 
   <p>You can also rename the <code>html</code> option to <code>text</code> if there is no HTML markup within your content.</p>
 
@@ -624,7 +624,7 @@
 
   <p>If you make use of the Sass functions, variables or mixins for your own custom CSS, you may need to make some changes.</p>
 
-  <h3>Tinted and shaded colours</h3>
+  <h3 id="tinted-and-shaded-colours">Tinted and shaded colours</h3>
 
   <p>Sass colour tint and shade variables (e.g. <code>$color_tint_nhsuk-black-10</code>) have been removed but are available using the <code>nhsuk-tint</code> and <code>nhsuk-shade</code> functions:</p>
 
@@ -645,7 +645,7 @@
     </tbody>
   </table>
 
-  <h3>NHS colour function added</h3>
+  <h3 id="nhs-colour-function-added">NHS colour function added</h3>
 
   <p>The Sass colour palette variables (e.g. <code>$color_nhsuk-blue</code>) have been moved into a new single <code>$nhsuk-colours</code> map.</p>
 
@@ -662,19 +662,19 @@
 
   <p>The existing colour variables will continue to work but are deprecated and will be removed in a future release.</p>
 
-  <h3>Typography scale point 24 removed</h3>
+  <h3 id="typography-scale-point-24-removed">Typography scale point 24 removed</h3>
 
   <p>The point 24 (24px large screens, 20px small screens) on the typography scale has been removed, after previously being deprecated in version 9.5.0.</p>
 
   <p>Use either point 22 or point 26 instead.</p>
 
-  <h3>Main wrapper mixins removed</h3>
+  <h3 id="main-wrapper-mixins-removed">Main wrapper mixins removed</h3>
 
   <p>We've removed the <code>govuk-main-wrapper()</code>, <code>govuk-main-wrapper--l()</code> and <code>govuk-main-wrapper--s()</code> Sass mixins, after previously being deprecated in version 9.5.0.</p>
 
   <p>Remove any use of these mixins and replace them with the <code>nhsuk-main-wrapper</code>, <code>nhsuk-main-wrapper--l</code> and <code>nhsuk-main-wrapper--s</code> classes in your HTML instead.</p>
 
-  <h3>Class param removed from grid column mixin</h3>
+  <h3 id="class-param-removed-from-grid-column-mixin">Class param removed from grid column mixin</h3>
 
   <p>If you're using the <code>nhsuk-grid-column()</code> Sass mixin to create custom grid classes, you must remove the <code>$class</code> parameter:</p>
 
@@ -689,7 +689,7 @@
     {% endfilter %}
   {% endcall %}
 
-  <h3>Prefix added to mixins and functions</h3>
+  <h3 id="prefix-added-to-mixins-and-functions">Prefix added to mixins and functions</h3>
 
   <p>Sass mixins have been updated to all have an <code>nhsuk-</code> prefix. If you are using any of these in your code, update the names of the functions as follows:</p>
 
@@ -703,7 +703,7 @@
     <li><code>shade</code> updated to <code>nhsuk-shade</code>
   </ul>
 
-  <h3>Color spelling updated to colour</h3>
+  <h3 id="color-spelling-updated-to-colour">Color spelling updated to colour</h3>
 
   <p>All Sass variables and mixins have been updated to use "colour" (not "color") spelling.</p>
 
@@ -720,11 +720,11 @@
 
   <p>You can still use the previous names but they are deprecated and will be removed in a future breaking release.</p>
 
-  <h3>Grid row mixin removed</h3>
+  <h3 id="grid-row-mixin-removed">Grid row mixin removed</h3>
 
   <p>The <code>govuk-grid-row</code> mixin has been removed. If you are using this, update your code to use the <code>nhsuk-grid-row</code> class in your HTML instead.</p>
 
-  <h3>Iff function removed</h3>
+  <h3 id="iff-function-removed">Iff function removed</h3>
 
   <p>The <code>iff</code> function has been removed. If you are using this, update your code to use the <a href="https://sass-lang.com/documentation/modules/#if">Sass <code>if</code> function</a> instead.</p>
 

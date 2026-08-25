@@ -10,20 +10,51 @@
 
 {% block bodyContent %}
 
-<h2>July 2026</h2>
+<h2>August 2026</h2>
 
-{% set designHtml202607 %}
-  <p>Added <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
-  <p>Added a <a href="/design-system/patterns/product-page">product page pattern</a></p>
+{% set accessibilityHtml202608 %}
+<p>Updated <a href="/accessibility/how-to-make-digital-services-accessible#test-throughout-and-consider-an-independent-audit">guidance to get an independent accessibility audit</a></p>
 {% endset %}
 
+{% set designHtml202608 %}
+    <p>Added new features to the <a href="/design-system/components/table">table component</a> including a sortable table, compact, striped, scrolling and reverse (dark background) styles</p>
+    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
+    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Added frontend version number to <a href="/design-system">design system</a> examples and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a></p>
+    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
+    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
+    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
+    <p>Removed frontend version 10 banner and callouts</p>
+    <p>Moved WCAG 2.2 callout content into normal page content</p>
+{% endset %}
+
+{% set communityHtml202608 %}
+<p>Added new <a href="/community-and-contribution/coming-soon">Coming soon page</a></p>
+<p>Updated <a href="/community-and-contribution/contribution-criteria">Contribution criteria</a> to reflect current practice</p>
+<p>Added Eleventy theme to <a href="/community-and-contribution/community-resources">Community resources page</a></p>
+
+{% endset %}
+
+{% set standardHtml202608 %}
+<p>Updated page about <a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></p>
+
+{% endset %}
+
+{% set otherHtml202608 %}
+<p>Added hero image and restructured service manual home page</p>
+
+{% endset %}
+
+
 {{ table({
-  caption: "Updates to the service manual in July 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in August 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -32,10 +63,42 @@
   rows: [
     [
       {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202608
+      }
+    ],
+    [
+      {
         text: "Design system"
       },
       {
-        html: designHtml202607
+        html: designHtml202608
+      }
+    ],
+    [
+      {
+        text: "Community and contribution"
+      },
+      {
+        html: communityHtml202608
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202608
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202608
       }
     ]
   ]
@@ -44,7 +107,6 @@
 <h2>June 2026</h2>
 
 {% set designHtml202606 %}
-  <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" checkbox option</a></p>
   <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
   <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
   <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
@@ -53,12 +115,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in June 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in June 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -92,12 +156,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in May 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in May 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -149,12 +215,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -199,12 +267,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in March 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in March 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -233,12 +303,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in February 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in February 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -292,12 +364,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -338,12 +412,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in November 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -379,12 +455,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in November 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -418,12 +496,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in October 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in October 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -452,12 +532,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in September 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in September 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -499,12 +581,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in August 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in August 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -543,12 +627,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in July 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in July 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -597,12 +683,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in May 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in May 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -649,12 +737,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -695,12 +785,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in March 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in March 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -743,12 +835,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in February 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in February 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -800,12 +894,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -846,12 +942,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in December 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in December 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -881,12 +979,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in November 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -923,12 +1023,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in October 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in October 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -989,12 +1091,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in September 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in September 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1056,12 +1160,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in July 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in July 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1096,12 +1202,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1165,12 +1273,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1223,12 +1333,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1299,12 +1411,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"

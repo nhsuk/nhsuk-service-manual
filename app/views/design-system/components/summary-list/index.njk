@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the summary list to summarise information, for example, a user's responses at the end of a form." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "January 2026" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "36" %}
 
 {% block beforeContent %}
@@ -14,15 +14,13 @@
 
 {% block bodyContent %}
 
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-row-actions">interact with row actions</a> and <a href="#wcag-change-answers">change information they've previously given in an answer</a>.</p>
-
   {{ designExample({
     group: "components",
     item: "summary-list",
     type: "default"
   }) }}
 
-  <h2>When to use summary lists</h2>
+  <h2 id="when-to-use-summary-lists">When to use summary lists</h2>
   <p>Use the summary list component to present pairs of related information, known as key-value pairs, in a list, where:</p>
   <ul>
     <li>the key is a label, like "Name"</li>
@@ -30,42 +28,14 @@
   </ul>
   <p>Think about how you can use the summary list along with other components or patterns to give users a sense of control. You can use it to summarise a user's responses at the end of a form, for example as part of the <a href="/design-system/patterns/check-answers">check answers pattern</a>.</p>
 
-  <h2>When not to use summary lists </h2>
+  <h2 id="when-not-to-use-summary-lists">When not to use summary lists </h2>
   <p class="rich-text">The summary list uses the description list <code>&lt;dl&gt;</code> HTML element, so only use it to present information that has a key and at least 1 value.</p>
   <p class="rich-text">Do not use it for tabular data or a simple list of information or tasks, like a task list page. (See the <a href="/design-system/patterns/complete-multiple-tasks">complete multiple tasks pattern</a>.) For those, use a <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</p>
 
-  <h2>How to use summary lists</h2>
+  <h2 id="how-to-use-summary-lists">How to use summary lists</h2>
 
   <h3 id="summary-list-with-actions">Summary list with actions</h3>
-  <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer.</p>
-
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-interact-row-actions",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Make sure any "Change" or other action links are at least 24px by 24px in size, or have adequate spacing. This is to make sure users can easily interact with the links. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-  {% endcall %}
-
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-change-answers",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-    <p>If a user decides to go back to a previous answer through a link, make sure information they have already entered is pre-populated.</p>
-    <p>Do not pre-populate if the information is no longer valid, or when pre-populating would be a major safety or security concern. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 2.2 success criterion 3.3.7 Redundant Entry (W3C)</a>.</p>
-  {% endcall %}
+  <p>You can add actions to a summary list, like a "Change" link to let users go back and edit their answer. If you do this, make sure information they have already entered is pre-populated.</p>
 
   <p>People who use assistive technology, like a screen reader, may hear the links out of context and not know what they do. To give more context, add visually hidden text to the links. This means a screen reader user will hear a meaningful action, like "Change name" or "Change date of birth".</p>
 

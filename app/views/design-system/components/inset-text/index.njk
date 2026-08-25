@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use inset text to help users identify and understand important content on the page, even if they do not read the whole page." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "18" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Inset text updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#inset-text">breaking code updates to inset text in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -31,7 +20,7 @@
     type: "default"
   }) }}
 
-  <h2>When to use inset text</h2>
+  <h2 id="when-to-use-inset-text">When to use inset text</h2>
   <p>Use inset text for content that needs to stand out from the rest of the page.</p>
 
   <h2 id="when-not-to-use-inset-text">When not to use inset text</h2>
@@ -47,7 +36,7 @@
   <h2 id="how-to-use-inset-text">How to use inset text</h2>
   <p>Don't overdo inset text. Think about whether you need it and the best place to put it.</p>
 
-  <h3>Accessibility</h3>
+  <h3 id="accessibility">Accessibility</h3>
   <p>People with visual disabilities may not be able to see the colour that marks out inset text. Instead they may rely on hidden labels to recognise it.</p>
   <p class="rich-text">We use <code>&lt;span class="visually-hidden"&gt;Information: &lt;/span&gt;</code> to let users with screen readers know that this is different to the body text.</p>
 

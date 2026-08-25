@@ -1,8 +1,6 @@
 {% from "radios/macro.njk" import radios %}
 
 {{ radios({
-  idPrefix: "filter",
-  name: "filter",
   fieldset: {
     legend: {
       text: "Filter",
@@ -10,7 +8,9 @@
       isPageHeading: true
     }
   },
-  classes: "nhsuk-radios--small",
+  idPrefix: "filter",
+  name: "filter",
+  small: true,
   items: [
     {
       value: "monthly",

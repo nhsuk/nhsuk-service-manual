@@ -13,18 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component">Radios updates</h3>
-    <p>Added smaller radios in version 10.1</p>
-    <p>Made <a href="/design-system/guides/updating-to-v10#radios">"breaking code changes" to radios in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -107,7 +95,7 @@
   <p>Do not use this component to add conditionally revealing questions to inline radios.</p>
   <p>Only conditionally reveal questions. Do not show or hide anything that is not a question.</p>
 
-  <h4>Known issues</h4>
+  <h4 id="known-issues">Known issues</h4>
   <p>Users are not always notified when a conditionally revealed question is shown or hidden. This fails <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">WCAG 2.2 success criterion 4.1.2 name, role, value (W3C)</a></p>
   <p>However, GOV.UK found that screen reader users did not have difficulty answering a conditionally revealed question as long as it's simple. It confused users when they conditionally revealed complicated questions, particularly questions with more than 1 part.</p>
 
@@ -158,7 +146,7 @@
     showCode: false
   }) }}
 
-  <h2>Research</h2>
+  <h2 id="research">Research</h2>
   <p>Our radios are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>
 
 {% endblock %}

@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use breadcrumbs to help users understand where they are in the website." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "6" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Breadcrumbs updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#breadcrumbs">breaking code updates to breadcrumbs in version 10</a></p>
-  {% endcall %}
-
-<p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-interact-breadcrumbs">interact with breadcrumbs</a>.</p>
 
 {{ designExample({
   group: "components",
@@ -33,30 +20,17 @@
   type: "default"
 }) }}
 
-<h2>When to use breadcrumbs</h2>
+<h2 id="when-to-use-breadcrumbs">When to use breadcrumbs</h2>
 <p>Use breadcrumbs to give users context and let them move back or up a level if they cannot find what they want on the
   page.</p>
 
-<h2>When not to use breadcrumbs</h2>
+<h2 id="when-not-to-use-breadcrumbs">When not to use breadcrumbs</h2>
 <p>Do not use breadcrumbs in transactional journeys as they can get in the way of the user completing the task.</p>
 
-<h2>How to use breadcrumbs</h2>
-<p>If the full breadcrumb trail doesn't fit the screen size, it can wrap onto 2 lines, but do not break a breadcrumb if
-  it doesn't fit the line.</p>
+<h2 id="how-to-use-breadcrumbs">How to use breadcrumbs</h2>
+<p>If the full breadcrumb trail does not fit the screen size, it can wrap onto 2 lines. Do not break the breadcrumb if it fits on 1 line.</p>
 
-{% call insetText({
-  visuallyHiddenText: "Information",
-  classes: "app-wcag-inset-text app-wcag-22",
-  id: "wcag-interact-breadcrumbs",
-  attributes: { role: "note" }
-}) %}
-  {{ tag({
-    text: "WCAG 2.2",
-    classes: "nhsuk-u-margin-bottom-2"
-  }) }}
-
-  <p>Make sure no other interactive elements are too close to the breadcrumbs. This is to make sure users can easily interact with the breadcrumbs. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.2 success criterion 2.5.8 Target Size (W3C)</a>.</p>
-{% endcall %}
+<p>If you put the back link in a different position, do not put it close to other links or buttons where it might distract users from what they need to do. Also think about people who use a screen reader: is the page read out in a logical order?</p>
 
 <p>You do not need to show the current page in the breadcrumb because this information is in the H1.</p>
 <p>On mobile, we replace the full breadcrumb trail with a "Back to [parent]" link.</p>
@@ -64,7 +38,7 @@
   screen readers know what it is.</p>
 
 <h2 id="breadcrumbs-on-dark-backgrounds">Breadcrumbs on dark backgrounds</h2>
-<p>Use the <code>nhsuk-breadcrumb--reverse</code> modifier class to show white links and arrows on dark backgrounds.</p>
+<p>To show white links and arrows on dark backgrounds, add the <code>variant: "reverse"</code> option using Nunjucks. For HTML add the <code>nhsuk-breadcrumb--reverse</code> class to the breadcrumb.</p>
 <p>Make sure all users can see the breadcrumbs. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
 {{ designExample({
@@ -73,7 +47,7 @@
   type: "reverse"
 }) }}
 
-<h2>Research</h2>
+<h2 id="research">Research</h2>
 <p>We tested breadcrumbs on pages with lots of content about conditions or medicines. They helped people understand
   their place on the website. People noticed them and appreciated the context they gave. People also used them to get
   back to where they came from or to get back home.</p>

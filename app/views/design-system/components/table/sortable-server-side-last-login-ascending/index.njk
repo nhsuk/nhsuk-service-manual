@@ -1,0 +1,194 @@
+{% from "tables/macro.njk" import table %}
+{% from "pagination/macro.njk" import pagination %}
+
+{{ table({
+  caption: {
+    text: "Users",
+    size: "m"
+  },
+  head: [
+    {
+      text: "Name",
+      href: "sortable-server-side",
+      width: "one-half",
+      sort: true
+    },
+    {
+      text: "Last log in",
+      href: "sortable-server-side-last-login-descending",
+      width: "one-third",
+      align: "right",
+      classes: "nhsuk-u-nowrap",
+      sort: "ascending"
+    },
+    {
+      visuallyHiddenText: "Action",
+      align: "right"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Si Xu"
+      },
+      {
+        text: "8 January 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Si Xu",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Tobias Crane"
+      },
+      {
+        text: "19 January 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Tobias Crane",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Uju Eze"
+      },
+      {
+        text: "2 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Uju Eze",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Viktoriya Bondarenko"
+      },
+      {
+        text: "14 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Viktoriya Bondarenko",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Wren Albright-Moss"
+      },
+      {
+        text: "27 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Wren Albright-Moss",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Yasmin Okafor"
+      },
+      {
+        text: "11 March 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Yasmin Okafor",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Zeb Moss"
+      },
+      {
+        text: "23 March 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Zeb Moss",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Raj Krishnamurthy"
+      },
+      {
+        text: "5 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Raj Krishnamurthy",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Steph Obi"
+      },
+      {
+        text: "18 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Steph Obi",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Teo Li"
+      },
+      {
+        text: "30 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Teo Li",
+        href: "#"
+      }
+    ]
+  ]
+}) }}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#",
+      current: true
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    },
+    {
+      number: 4,
+      href: "#"
+    },
+    {
+      number: 5,
+      href: "#"
+    },
+    {
+      number: 6,
+      href: "#"
+    }
+  ]
+}) }}

@@ -1,8 +1,6 @@
 {% from "date-input/macro.njk" import dateInput %}
 
 {{ dateInput({
-  id: "appointment-date",
-  namePrefix: "appointmentDate",
   fieldset: {
     legend: {
       text: "When was your appointment?",
@@ -16,18 +14,15 @@
   errorMessage: {
     text: "Enter your appointment date"
   },
-  items: [
-    {
-      name: "day",
-      classes: "nhsuk-input--width-2 nhsuk-input--error"
-    },
-    {
-      name: "month",
-      classes: "nhsuk-input--width-2 nhsuk-input--error"
-    },
-    {
-      name: "year",
-      classes: "nhsuk-input--width-4 nhsuk-input--error"
-    }
-  ]
+  id: "appointment-date",
+  namePrefix: "appointmentDate",
+  day: {
+    width: 2
+  },
+  month: {
+    width: 2
+  },
+  year: {
+    width: 4
+  }
 }) }}

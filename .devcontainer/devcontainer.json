@@ -1,0 +1,15 @@
+{
+  "name": "NHS digital service manual",
+  "portsAttributes": {
+    "4000": {
+      "label": "Running server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "forwardPorts": [4000],
+  "otherPortsAttributes": { "onAutoForward": "ignore" },
+  "postCreateCommand": "npm install",
+  "postAttachCommand": {
+    "server": "npm run watch"
+  }
+}

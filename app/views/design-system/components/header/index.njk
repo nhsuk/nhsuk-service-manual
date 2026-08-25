@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use the appropriate header at the top of every page to show users they are on an NHS service and help them get started in finding what they need." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "May 2026" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "16" %}
 
 {% block beforeContent %}
@@ -13,19 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Header updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#header">breaking code updates to header in version 10</a></p>
-  {% endcall %}
-
-  <p>WCAG 2.2: Make sure that users can successfully <a href="#wcag-do-not-cover-content">see all page content when interacting with a dropdown menu</a> and <a href="#wcag-consistent-help-links">find help links in a consistent place on each page</a>.</p>
 
   {{ designExample({
     group: "components",
@@ -65,35 +52,7 @@
   <p>The elements you include depend on the nature of your service and your users' needs.</p>
   <p>For example, transactional services (like <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/">Find your NHS number, on the NHS website</a>) do not usually include navigation and search, just the logo and service name. This is less distracting for users in a transactional journey.</p>
 
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-do-not-cover-content",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>Do not make header elements, like the "More" dropdown menu, sticky to the top of the page by using <code>position: fixed</code> or any other method. In other words, avoid anything that makes the menu sit on top of page content.</p>
-    <p>This is to make sure it does not hide or obscure any content which has a focus applied. This complies with <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">WCAG 2.2 success criterion 2.4.11 Focus not Obscured (W3C)</a>.</p>
-  {% endcall %}
-
-  {% call insetText({
-    visuallyHiddenText: "Information",
-    classes: "app-wcag-inset-text app-wcag-22",
-    id: "wcag-consistent-help-links",
-    attributes: { role: "note" }
-  }) %}
-    {{ tag({
-      text: "WCAG 2.2",
-      classes: "nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <p>You can add a link to a "help" page in your service's header. If you do, the link must be positioned consistently in the header, and must always link to the same place.</p>
-    <p>For example, a header link to "Get help with this service" must go to the same place as similar header links elsewhere in your service. This is to comply with <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">WCAG 2.2 success criterion 3.2.6 Consistent Help (W3C)</a>.</p>
-  {% endcall %}
+  <p>If you add a link to a "help" page in your service's header, you must position it consistently in the header and always link to the same place.</p>
 
   <h3 id="nhs-logo-and-service-name">NHS logo and service name</h3>
   <p>The NHS logo must always be used. Add a service name to distinguish your service from the main NHS website at <a href="https://www.nhs.uk">www.nhs.uk</a>.</p>
@@ -137,19 +96,19 @@
     type: "account-basic"
   }) }}
 
-  <h4>When to use it</h4>
+  <h4 id="when-to-use-it">When to use it</h4>
   <p>Use the logged-in header for services where users have an account. The header can display a "log out" link and other account-related information and links.</p>
 
-  <h4>How to use it</h4>
+  <h4 id="how-to-use-it">How to use it</h4>
   <p>Account information and links can be used with the other header features, for example service name and search. However, keep the number of items in the header to a minimum.</p>
   <p>When allowing users to log in to your service, make sure you have a visible service name, so that they know which system they are logging in to.</p>
 
-  <h4>Using account information and links</h4>
+  <h4 id="using-account-information-and-links">Using account information and links</h4>
   <p>You can add multiple items to the account information and links section, such as the logged-in user's name and role. Items can be links or just plain text information.</p>
   <p>Keep the number of links to a minimum. If you have more than 3 account links, consider combining functions and putting them on a separate page. For example, an account settings page could include actions like change name, change role and reset password. Test with users so you know which combination of items best meets their needs.</p>
   <p>If you use a "log out" link, put it last in the list, showing top right on desktop screens and last on small screens. If you put log out and other account actions on a separate page, show the "log out" link last.</p>
 
-  <h4>User information</h4>
+  <h4 id="user-information">User information</h4>
   <p>Consider whether you need to show the user information about the account they have logged in to. This may depend on whether they:</p>
   <ul class="nhsuk-list nhsuk-list--bullet">
     <li>share a computer</li>
@@ -157,7 +116,7 @@
   </ul>
   <p>When showing the user their account, you can highlight this with the profile icon (on the <a href="/design-system/styles/icons">icons page</a>). Only show the icon next to 1 item. Test with users how best to display the user's account information, for example whether to show their full name or their email address.</p>
 
-  <h4>Header with complex account information and links</h4>
+  <h4 id="header-with-complex-account-information-and-links">Header with complex account information and links</h4>
   <p>This example shows account information and multiple links, with a service name and navigation.</p>
 
   {{ designExample({
@@ -168,9 +127,9 @@
   }) }}
 
   <h3 id="inline-account-search">Inline account or search</h3>
-  <p>To keep account links or the search bar inline with the logo and service name on small screens, add the <code>nhsuk-header--inline</code> class to <code>nhsuk-header</code>. If there is not enough space, they will still wrap to the next line.</p>
+  <p>To keep account links or the search bar inline with the logo and service name on small screens, add the <code>inline: true</code> Nunjucks option. For HTML add the <code>nhsuk-header--inline</code> class to the table.</p>
 
-  <h4>Inline account links</h4>
+  <h4 id="inline-account-links">Inline account links</h4>
   {{ designExample({
     group: "components",
     classes: "app-design-example--m",
@@ -178,7 +137,7 @@
     type: "account-inline"
   }) }}
 
-  <h4>Inline search</h4>
+  <h4 id="inline-search">Inline search</h4>
   {{ designExample({
     group: "components",
     classes: "app-design-example--m",
@@ -196,7 +155,7 @@
     <li>white header with blue navigation</li>
   </ul>
 
-  <h3>Blue header</h3>
+  <h3 id="blue-header">Blue header</h3>
 
   {{ designExample({
     group: "components",
@@ -205,7 +164,7 @@
     showJavaScriptToggle: true
   }) }}
 
-  <h3>White header</h3>
+  <h3 id="white-header">White header</h3>
 
   {{ designExample({
     group: "components",
@@ -214,7 +173,7 @@
     showJavaScriptToggle: true
   }) }}
 
-  <h3>White header with blue navigation</h3>
+  <h3 id="white-header-with-blue-navigation">White header with blue navigation</h3>
 
   {{ designExample({
     group: "components",
@@ -225,7 +184,7 @@
 
   <p>You must have a Frutiger font licence to use an NHS organisational logo. Find out about <a href="/design-system/styles/use-frutiger-font">using the Frutiger font</a>, including registering for a free licence.</p>
 
-  <h3>Organisational logos</h3>
+  <h3 id="organisational-logos">Organisational logos</h3>
   <p>Read more about creating NHS <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/organisational-logos/">organisational logos in the NHS England identity guidelines</a>.</p>
   <p>The organisational logo is an SVG (scalable vector graphic) and you can change the organisation name and descriptor in the code. Longer organisation names should be split onto 2 lines.</p>
   <p>You can also use a static asset, such as a PNG file.</p>

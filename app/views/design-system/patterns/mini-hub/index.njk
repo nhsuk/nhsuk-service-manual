@@ -27,22 +27,22 @@
     <li>the <a href="/design-system/components/pagination">pagination component</a> which goes at the bottom of the page</li>
   </ul>
 
-  <h2 class="nhsuk-u-margin-top-6">When to use this pattern</h2>
+  <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
   <p>Use mini-hubs to present information on 1 complex topic spread over 2 to 8 pages.</p>
   <p>We've found that mini-hubs help users understand complex topics, for example health conditions. They break the topic down into manageable chunks and help users digest the information in a way that meets their needs.</p>
   <p>But this is not always the case. Test the pattern with your users to make sure that it works for your content.</p>
 
-  <h2>When not to use this pattern</h2>
+  <h2 id="when-not-to-use-this-pattern">When not to use this pattern</h2>
   <p>Do not use mini-hubs:</p>
   <ul>
     <li>for pages that are about more than 1 topic</li>
     <li>in a transactional service</li>
   </ul>
 
-  <h2>Elements of the mini-hub</h2>
-  <h3>Heading and sub-heading</h3>
+  <h2 id="elements-of-the-mini-hub">Elements of the mini-hub</h2>
+  <h3 id="heading-and-sub-heading">Heading and sub-heading</h3>
   <p>Put an <code>&lt;h1&gt;</code> heading at the top of the page. The first thing in the <code>&lt;h1&gt;</code> heading should be the name of the page you're on, not the mini-hub topic.</p>
-  <p class="rich-text">Put the mini-hub topic underneath the page heading. We include it in the same <code>&lt;h1&gt;</code> with <code>class="nhsuk-caption-xl"</code> which makes it look like a sub-heading.</p>
+  <p class="rich-text">Put the mini-hub topic underneath the page heading. We include it in the same <code>&lt;h1&gt;</code> with <code>class="nhsuk-caption-xl nhsuk-caption--bottom"</code> which makes it look like a sub-heading.</p>
   <p>The page heading and topic are both part of the <code>&lt;h1&gt;</code> but the page heading looks more important than the topic. (We explain why we do this in the <a href=#research>Research section</a> on this page.)</p>
   <p>In this example, "What is AMD?" is the heading for the page. "Age-related macular degeneration (AMD)" is the topic.</p>
 
@@ -53,7 +53,7 @@
     htmlOnly: true
   }) }}
 
-  <h3 class="nhsuk-u-margin-top-6">Contents list</h3>
+  <h3 id="contents-list">Contents list</h3>
   <p>Use a <a href="/design-system/components/contents-list">contents list</a> at the top of the page, underneath the heading and sub-heading, to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition. The example on this page is based on an NHS website page about age-related macular degeneration (AMD).</p>
 
   {{ designExample({
@@ -63,7 +63,7 @@
     titleSuffix: "second"
   }) }}
 
-  <h3 class="nhsuk-u-margin-top-6">Pagination</h3>
+  <h3 id="pagination">Pagination</h3>
   <p>Use <a href="/design-system/components/pagination">pagination</a> at the bottom of the page to help users navigate around a small group of related pages (up to 8 pages), for example a group of pages about a specific health condition.</p>
 
   {{ designExample({
@@ -82,7 +82,7 @@
     <li>most users (including a user with very low digital skills) used the pagination to navigate through pages and knew it was related to the contents list at the top of the page</li>
   </ul>
 
-  <h3>Heading structure</h3>
+  <h3 id="heading-structure">Heading structure</h3>
   <p>At first we made the mini-hub topic the main <code>&lt;h1&gt;</code> heading but, when users navigated between pages, it was not obvious to them which page they were on. In some cases they did not realise they had moved between pages. It was only when we made the page heading into the larger <code>&lt;h1&gt;</code> heading that users were clear which page they were on.</p>
   <p class="rich-text">We found that screen readers struggled to pronounce the heading and sub-heading together and that confused people. So we've used <code>&lt;span&gt;</code> tags around the headings in the <code>&lt;h1&gt;</code> to help screen readers read more naturally. We've also included <code>&lt;span class="nhsuk-u-visually-hidden"&gt;-&lt;/span&gt;</code> to add a natural pause.</p>
 

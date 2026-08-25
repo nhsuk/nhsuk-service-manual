@@ -1,8 +1,6 @@
 {% from "radios/macro.njk" import radios %}
 
 {{ radios({
-  idPrefix: "example-divider",
-  name: "exampleDivider",
   fieldset: {
     legend: {
       text: "Have you had all the vaccinations you're eligible for in the UK?",
@@ -13,6 +11,8 @@
   hint: {
     text: "You would have got these vaccinations at school, from your GP surgery or another healthcare provider"
   },
+  idPrefix: "example-divider",
+  name: "exampleDivider",
   items: [
     {
       value: "yes",

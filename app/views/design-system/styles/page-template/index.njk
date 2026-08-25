@@ -4,7 +4,7 @@
 {% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "200" %}
 
 {% block beforeContent %}
@@ -51,17 +51,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Page template updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#page-template">breaking code updates to page template in version 10</a></p>
-  {% endcall %}
 
   <p>This page template combines boilerplate markup and <a href="/design-system/components">components</a> needed for a content page and a transactional page. This includes:</p>
   <ul>
@@ -80,7 +69,7 @@
   <p>A basic page title is made up of the main page heading (the <code>&lt;h1&gt;</code>) and the website name, separated by an en dash. For example: <code>&lt;title&gt;Flu – NHS&lt;/title&gt;</code>, which is the title for the <a href="https://www.nhs.uk/conditions/flu/">flu page on the NHS website</a>. Use a unique and informative title on every page.</p>
 
   {% call details({
-    summaryText: "More complex page titles"
+    summary: "More complex page titles"
   }) %}
     <p>A page title can have up to 4 elements separated by dashes. They are the:</p>
     <ul>
@@ -100,7 +89,7 @@
   {% endcall %}
 
   {% call details({
-    summaryText: "Personally identifiable information"
+    summary: "Personally identifiable information"
   }) %}
     <p>If there is personally identifiable information in the <code>&lt;h1&gt;</code>, for example, in a transactional journey, you must make sure it is not recorded in your analytics package.</p>
     <p>For example, if the <code>&lt;h1&gt;</code> is "What is Gordon's date of birth?", record "What is their date of birth?".</p>
@@ -124,7 +113,7 @@
 
   <p>You can customise the page template, for example, by <a href="/design-system/styles/layout">structuring your page layout</a>, using the <a href="/design-system/components/header#organisational-header">organisational header</a> or adding a block before the main container to include a <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component.</p>
 
-  <h3>Transactional page template</h3>
+  <h3 id="transactional-page-template">Transactional page template</h3>
 
   <p>The transactional page template example uses the <a href="/design-system/components/header#NHS-transactional-service-header">transactional service header</a> and a <a href="/design-system/components/back-link">back link</a> component.</p>
 
@@ -137,7 +126,7 @@
   <p>Vertical padding is reduced on transactional services using the <code>nhsuk-main-wrapper--s</code> modifier class.
   We also recommend you use a smaller <code>{{ "<h1>" | escape }}</code> heading size using the <code>nhsuk-heading-l</code> modifier class.
 
-  <h3>Content page template</h3>
+  <h3 id="content-page-template">Content page template</h3>
 
   <p>The content page template example includes navigation and search in the <a href="/design-system/components/header">header</a> and a <a href="/design-system/components/back-link">breadcrumbs</a> component.</p>
 
@@ -186,9 +175,11 @@
   <h3 id="options">Options</h3>
 
   {{ table({
+    caption: {
+      text: "Page template options and descriptions",
+      classes: "nhsuk-u-visually-hidden"
+    },
     responsive: true,
-    caption: "Options that you can use with the page template",
-    captionClasses: "nhsuk-u-visually-hidden",
     head: [
       {
         text: "Option name"

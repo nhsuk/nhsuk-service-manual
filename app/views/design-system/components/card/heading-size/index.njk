@@ -1,19 +1,25 @@
 {% from "card/macro.njk" import card %}
 
 {{ card({
-  heading: "Heading size large",
-  headingSize: "l",
+  heading: {
+    text: "Heading size large",
+    size: "l"
+  },
   description: "Card description text goes here"
 }) }}
 
 {{ card({
-  heading: "Heading size medium",
-  headingSize: "m",
+  heading: {
+    text: "Heading size medium",
+    size: "m"
+  },
   description: "Card description text goes here"
 }) }}
 
 {{ card({
-  heading: "Heading size small",
-  headingSize: "s",
+  heading: {
+    text: "Heading size small",
+    size: "s"
+  },
   description: "Card description text goes here"
 }) }}

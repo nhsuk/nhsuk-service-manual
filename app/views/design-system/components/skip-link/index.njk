@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use a skip link to help keyboard-only users skip to the main content on a page." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "August 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "33" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Skip link updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#skip-link">breaking code updates to skip link in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -31,14 +20,14 @@
     type: "default"
   }) }}
 
-  <h2>When to use a skip link </h2>
+  <h2 id="when-to-use-a-skip-link">When to use a skip link </h2>
   <p>All nhs.uk pages must include a skip link in the header <a href="https://design-system.service.gov.uk/components/skip-link/">following guidance in the GOV.UK Design System</a>.</p>
 
   <h2 id="how-it-works">How skip links work</h2>
   <p>Some people use the tab key on their keyboard to navigate through the links and form elements on a web page. Including a skip link gives users the option to bypass the top-level navigation links and jump to the main content on the page.</p>
   <p>The skip link component is visually hidden until a keyboard press activates it.</p>
 
-  <h2>Research</h2>
+  <h2 id="research">Research</h2>
   <p>If you've used skip links, please share your user research findings.</p>
 
 {% endblock %}

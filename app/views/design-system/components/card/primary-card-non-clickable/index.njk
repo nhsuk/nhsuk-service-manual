@@ -10,11 +10,15 @@
 <ul class="nhsuk-grid-row nhsuk-card-group">
   <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
     {{ card({
-      clickable: false,
-      heading: "Berrylands Pharmacy",
-      headingSize: "m",
+      heading: {
+        text: "Berrylands Pharmacy",
+        size: "m"
+      },
+      description: {
+        html: cardDescriptionHtml
+      },
       href: "/#",
-      descriptionHtml: cardDescriptionHtml
+      clickable: false
     }) }}
   </li>
 </ul>

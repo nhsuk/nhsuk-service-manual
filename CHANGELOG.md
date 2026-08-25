@@ -1,19 +1,41 @@
 # NHS digital service manual Changelog
 
-## TBC
+## Unreleased
 
 :new: **New features**
 
-- Add option for "all" to checkboxes component
-- Add new reference page for override classes
 - Add a new product page pattern
+
+## 8.13.1 - 19 August 2026
 
 :wrench: **Maintenance**
 
-- Add curly quote example to punctuation section
+- Fix do and don't list icons in design system examples
+- Fix increased top margin in design system examples
+
+## 8.13.0 - 17 August 2026
+
+:new: **New features**
+
+- Add sortable, compact, scrollable, striped and reverse tables with guidance
+- Add option for "all" to checkboxes component
+- Add new reference list of override classes
+- Add frontend version number to design system examples and a guide to checking your frontend version
+- Add JavaScript on-off toggle to components that use progressive enhancement
+- Add Coming soon page
+
+:wrench: **Maintenance**
+
+- Fix curly quote example to punctuation section
 - Update character count component to mention new data-count-type
-- Update guidance on getting accessibility audits
+- Update guidance to get an independent accessibility audit
 - Update wording about terms of use on Start page pattern
+- Update page about the Personal Demographics Service (PDS)
+- Update contribution criteria to reflect current practice
+- Add Eleventy theme to community resources
+- Remove frontend version 10 banner and callouts
+- Move WCAG 2.2 callout content into normal page content
+- Add hero image and restructure service manual home page
 
 ## 8.12.1 - 17 June 2026
 

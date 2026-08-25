@@ -33,17 +33,15 @@ previewLayout: design-example-wrapper-full
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        <span role="text">
-          Symptoms
-          <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-            <span class="nhsuk-u-visually-hidden">
-            -
-            </span>
-              Age-related macular degeneration (AMD)
-          </span>
-        </span>
-      </h1>
+      {{ heading({
+        text: "Symptoms",
+        caption: {
+          html: '<span class="nhsuk-u-visually-hidden"> – </span>' ~
+            "Age-related macular degeneration (AMD)",
+          placement: "end"
+        },
+        size: "xl"
+      }) }}
 
       <p>AMD affects the middle part of your vision, not the edges (peripheral vision).</p>
       <p>You can get it in one eye or both.</p>
@@ -89,9 +87,11 @@ previewLayout: design-example-wrapper-full
       {% endset %}
 
       {{ card({
-        type: "non-urgent",
         heading: "See an optician if you're worried about your vision",
-        html: nonUrgentCardContentHtml
+        description: {
+          html: nonUrgentCardContentHtml
+        },
+        variant: "non-urgent"
       }) }}
 
       {% set urgentCardContentHtml %}
@@ -106,9 +106,11 @@ previewLayout: design-example-wrapper-full
       {% endset %}
 
       {{ card({
-        type: "urgent",
         heading: "Ask for an urgent GP appointment if:",
-        html: urgentCardContentHtml
+        description: {
+          html: urgentCardContentHtml
+        },
+        variant: "urgent"
       }) }}
 
       <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-colour">
@@ -118,11 +120,11 @@ previewLayout: design-example-wrapper-full
 
       {{ pagination({
         previous: {
-          labelText: "Age-related macular degeneration (AMD)",
+          label: "Age-related macular degeneration (AMD)",
           href: "/design-example/patterns/mini-hub/example?fullpage=true"
         },
         next: {
-          labelText: "Getting diagnosed",
+          label: "Getting diagnosed",
           href: "#"
         }
       }) }}

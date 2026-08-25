@@ -12,12 +12,14 @@
   {{ actionLink({
     text: "Find your nearest A&E",
     href: "#",
-    classes: "nhsuk-action-link--reverse"
+    variant: "reverse"
   }) }}
 {% endset %}
 
 {{ card({
-  type: "emergency",
   heading: "Call 999 or go to A&E if:",
-  descriptionHtml: cardDescriptionHtml | safe
+  description: {
+    html: cardDescriptionHtml
+  },
+  variant: "emergency"
 }) }}

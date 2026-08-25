@@ -7,6 +7,7 @@ const compression = require('compression')
 const express = require('express')
 const helmet = require('helmet')
 const { nunjucks } = require('nhsuk-frontend/lib')
+const nhsukFrontendPkg = require('nhsuk-frontend/package.json')
 
 // Local dependencies
 const config = require('./config')
@@ -151,8 +152,10 @@ const env = nunjucks.configure(config.nunjucksPaths, {
 env.addGlobal('getHTMLCode', fileHelper.getHTMLCode)
 env.addGlobal('getNunjucksCode', fileHelper.getNunjucksCode)
 env.addGlobal('getAssetPath', fileHelper.getAssetPath)
+env.addGlobal('getFrontendVersion', macroOptions.getFrontendVersion)
 env.addGlobal('getMacroOptions', macroOptions.getMacroOptions)
 env.addGlobal('getMacroPageName', macroOptions.getMacroPageName)
+env.addGlobal('nhsukFrontendVersion', nhsukFrontendPkg.version)
 env.addFilter('highlight', filters.highlight)
 env.addFilter('kebabCase', filters.kebabCase)
 env.addFilter('slugify', filters.slugify)
@@ -391,7 +394,7 @@ app.all('/*subPaths', (_, res) => {
 
 // Run application on configured port
 if (NODE_ENV !== 'production') {
-  app.listen(config.port - 50, () => {
+  app.listen(config.port + 1, () => {
     browserSync({
       files: [
         join(config.sourcePath, 'views/**'),
@@ -400,7 +403,7 @@ if (NODE_ENV !== 'production') {
       notify: true,
       open: false,
       port: config.port,
-      proxy: `localhost:${config.port - 50}`,
+      proxy: `localhost:${config.port + 1}`,
       ui: false
     })
   })

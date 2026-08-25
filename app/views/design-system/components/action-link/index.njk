@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use action links to help users get to the next stage of a journey quickly by signposting the start of a digital service." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "5" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Action link updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#action-link">breaking code updates to action link in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -31,10 +20,10 @@
     type: "default"
   }) }}
 
-  <h2>When to use action links </h2>
+  <h2 id="when-to-use-action-links">When to use action links </h2>
   <p>Use action links to signpost the start of a digital service.</p>
 
-  <h2>When not to use action links</h2>
+  <h2 id="when-not-to-use-action-links">When not to use action links</h2>
   <p>Do not use action links in forms. Use a <a href="/design-system/components/buttons">button</a> instead.</p>
   <p>We don't use action links just to link to another page or site. If you need a link to stand out, you can use <a href="/design-system/components/inset-text">inset text</a>.</p>
 
@@ -45,7 +34,7 @@
   <p>The link colour and background colour contrast ratio is 5.76:1, which passes AAA guidelines at that font size.</p>
 
   <h3 id="action-link-on-dark-backgrounds">Action link on dark backgrounds</h3>
-  <p>Use the <code>nhsuk-action-link--reverse</code> modifier class to show white links and arrows on dark backgrounds.</p>
+  <p>To show white links and arrows on dark backgrounds, add the <code>variant: "reverse"</code> option using Nunjucks. For HTML add the <code>nhsuk-action-link--reverse</code> class to the action link.</p>
   <p>Make sure all users can see the action link. The background colour must have a contrast ratio of at least 4.5:1 with white to meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA (W3C)</a>.</p>
 
   {{ designExample({

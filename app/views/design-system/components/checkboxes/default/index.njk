@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "example",
-  name: "example",
   fieldset: {
     legend: {
       text: "How do you want to be contacted about this?",
@@ -13,6 +11,8 @@
   hint: {
     text: "Select all options that are relevant to you"
   },
+  idPrefix: "example",
+  name: "example",
   items: [
     {
       value: "email",

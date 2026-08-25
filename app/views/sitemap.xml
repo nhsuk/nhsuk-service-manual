@@ -359,6 +359,9 @@
     <loc>https://service-manual.nhs.uk/design-system/changes-to-design-system-wcag-2-2</loc>
   </url>
   <url>
+    <loc>https://service-manual.nhs.uk/design-system/guides/check-frontend-version</loc>
+  </url>
+  <url>
     <loc>https://service-manual.nhs.uk/design-system/guides/updating-to-v10</loc>
   </url>
   <url>
@@ -483,6 +486,9 @@
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/community-and-contribution/backlog-of-components-and-patterns</loc>
+  </url>
+  <url>
+    <loc>https://service-manual.nhs.uk/community-and-contribution/coming-soon</loc>
   </url>
   <url>
     <loc>https://service-manual.nhs.uk/community-and-contribution/contribution-criteria</loc>

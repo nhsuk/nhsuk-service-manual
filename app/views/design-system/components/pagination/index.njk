@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use pagination to help users navigate forwards and backwards through a series of pages." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "October 2025" %}
+{% set dateUpdated = "June 2026" %}
 {% set backlog_issue_id = "27" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Pagination updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#pagination">breaking code updates to pagination in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -32,7 +21,7 @@
     type: "numbered"
   }) }}
 
-  <h2>When to use pagination</h2>
+  <h2 id="when-to-use-pagination">When to use pagination</h2>
   <p>Use pagination at the bottom of the page to help users navigate forwards and backwards through a series of related pages. For example, pages of search results or information about a health condition that's divided into multiple web pages.</p>
   <p>Consider using pagination when:</p>
   <ul>
@@ -40,7 +29,7 @@
     <li>most users only need the content on the 1st page or 1st few pages</li>
   </ul>
   <p>Use pagination rather than the "infinite scroll" technique which automatically loads content when the user approaches the bottom of the page. This causes problems for keyboard users.</p>
-  <h2>When not to use pagination</h2>
+  <h2 id="when-not-to-use-pagination">When not to use pagination</h2>
   <p>Only break up content onto separate pages if it improves the performance or usability of your service.</p>
   <p>Do not use pagination on pages which are not grouped together or "related" as this is likely to confuse users.</p>
   <p>Do not use pagination to navigate through a multi-page form. We use other components instead, including:</p>
@@ -49,7 +38,7 @@
     <li><a href="/design-system/components/back-link">back link</a> to navigate back</li>
   </ul>
 
-  <h2>How to use pagination</h2>
+  <h2 id="how-to-use-pagination">How to use pagination</h2>
   <p>Add the pagination component after the content on each page that you're paginating.</p>
   <p>Do not show pagination if there's only 1 page of content.</p>
   <p>Redirect users to the 1st page if they enter a URL of a page that no longer exists.</p>
@@ -118,17 +107,17 @@
     type: "numbered-last-page"
   }) }}
 
-  <h3>Accessibility</h3>
+  <h3 id="accessibility">Accessibility</h3>
   <p class="rich-text">The pagination components are surrounded by a <code>&lt;nav&gt;</code> element to show that they are navigation links. This element has an <code>aria-label</code> attribute with the value <code>Pagination</code>. Screen readers that support this attribute will read this.</p>
   <p class="rich-text">There is also a visually hidden heading title <code>pagination</code> which will be read by screen readers as a heading to the links. </p>
   <p class="rich-text">If the link describes the current page that you are on, then it has the <code>aria-current="page"</code> value to indicate to screen readers that this is the case.</p>
 
-  <h2>Research</h2>
-  <h3>Content page navigation</h3>
+  <h2 id="research">Research</h2>
+  <h3 id="content-page-navigation">Content page navigation</h3>
   <p>We tested content page pagination in grouped information pages in 3 labs in 2018. We have not tested it in forms.</p>
   <p>4 out of 5 users, including a user with a very low level of digital skill, used pagination to navigate through the pages. They understood that it was associated with the navigation at the top of the page.</p>
   <p>Users found that the pagination reflected the way they read content and their mental model of the structure of the content. </p>
-  <h3>Numbered page navigation</h3>
+  <h3 id="numbered-page-navigation">Numbered page navigation</h3>
   <p>GOV.UK based their component for navigating between pages of items on similar ones developed and used successfully by the Government Digital Service, Ministry of Justice and the Home Office.</p>
 
 {% endblock %}

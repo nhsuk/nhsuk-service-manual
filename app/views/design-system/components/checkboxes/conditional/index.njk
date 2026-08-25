@@ -3,40 +3,38 @@
 
 {% set emailHtml %}
   {{ input({
-    id: "email",
-    name: "email",
-    classes: "nhsuk-u-width-two-thirds",
     label: {
       text: "Email address"
-    }
+    },
+    id: "email",
+    name: "email",
+    classes: "nhsuk-u-width-two-thirds"
   }) }}
 {% endset -%}
 
 {% set phoneHtml %}
   {{ input({
-    id: "phone",
-    name: "phone",
-    classes: "nhsuk-u-width-two-thirds",
     label: {
       text: "Phone number"
-    }
+    },
+    id: "phone",
+    name: "phone",
+    classes: "nhsuk-u-width-two-thirds"
   }) }}
 {% endset -%}
 
 {% set mobileHtml %}
   {{ input({
-    id: "mobile",
-    name: "mobile",
-    classes: "nhsuk-u-width-two-thirds",
     label: {
       text: "Mobile phone number"
-    }
+    },
+    id: "mobile",
+    name: "mobile",
+    classes: "nhsuk-u-width-two-thirds"
   }) }}
 {% endset -%}
 
 {{ checkboxes({
-  idPrefix: "contact",
-  name: "contact",
   fieldset: {
     legend: {
       text: "How do you want to be contacted about this?",
@@ -47,6 +45,8 @@
   hint: {
     text: "Select all options that are relevant to you"
   },
+  idPrefix: "contact",
+  name: "contact",
   items: [
     {
       value: "email",

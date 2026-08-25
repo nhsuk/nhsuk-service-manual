@@ -22,10 +22,12 @@
         image: {
           src: "/assets/word-of-mouth.jpg"
         },
-        clickable: true,
+        heading: {
+          text: "Interview: Word of Mouth – NHS language use",
+          level: 3
+        },
         href: "https://www.bbc.co.uk/programmes/m000dpkc",
-        heading: "Interview: Word of Mouth – NHS language use",
-        headingLevel: 3
+        clickable: true
       }) %}
         <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
         <p class="nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 – 28 minutes</p>
@@ -34,7 +36,7 @@
     </div>
   </div>
 
-  <div class="app-index-navigation app-u-hide-desktop">
+  <div class="app-index-navigation nhsuk-u-display-none-from-desktop">
     {% include "includes/_side-nav.njk" %}
   </div>
 

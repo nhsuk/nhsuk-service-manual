@@ -28,17 +28,19 @@ previewLayout: design-example-wrapper-full
         <div class="nhsuk-button-group">
           {{ button({
             text: "Cancel appointment",
-            classes: "nhsuk-button--reverse",
-            href: "#"
+            href: "#",
+            variant: "reverse"
           }) }}
         </div>
       {% endset %}
 
       {{ panel({
-        titleText: "Confirm you want to cancel your hospital appointment",
-        titleSize: "l",
-        classes: "nhsuk-panel--interruption",
-        html: panelHtml
+        heading: {
+          text: "Confirm you want to cancel your hospital appointment",
+          size: "l"
+        },
+        html: panelHtml,
+        variant: "interruption"
       }) }}
 
     </div>

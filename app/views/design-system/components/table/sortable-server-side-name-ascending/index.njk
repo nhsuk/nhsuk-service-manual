@@ -1,0 +1,194 @@
+{% from "tables/macro.njk" import table %}
+{% from "pagination/macro.njk" import pagination %}
+
+{{ table({
+  caption: {
+    text: "Users",
+    size: "m"
+  },
+  head: [
+    {
+      text: "Name",
+      href: "sortable-server-side",
+      width: "one-half",
+      sort: "ascending"
+    },
+    {
+      text: "Last log in",
+      href: "sortable-server-side-last-login-ascending",
+      width: "one-third",
+      align: "right",
+      classes: "nhsuk-u-nowrap",
+      sort: true
+    },
+    {
+      visuallyHiddenText: "Action",
+      align: "right"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Abi Dunn"
+      },
+      {
+        text: "8 June 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Abi Dunn",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Ahmed Ali"
+      },
+      {
+        text: "24 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Ahmed Ali",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Aleksandra Wojciechowska"
+      },
+      {
+        text: "17 February 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Aleksandra Wojciechowska",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Beau Fox"
+      },
+      {
+        text: "3 May 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Beau Fox",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Cal Sherwood"
+      },
+      {
+        text: "30 January 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Cal Sherwood",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Danika Reyes-Flores"
+      },
+      {
+        text: "12 March 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Danika Reyes-Flores",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Ed Wu"
+      },
+      {
+        text: "19 May 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Ed Wu",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Fatou Diallo"
+      },
+      {
+        text: "6 April 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Fatou Diallo",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Gregor MacTavish"
+      },
+      {
+        text: "25 January 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Gregor MacTavish",
+        href: "#"
+      }
+    ],
+    [
+      {
+        text: "Harriet Voss"
+      },
+      {
+        text: "11 June 2026"
+      },
+      {
+        text: "Change",
+        visuallyHiddenText: "details for Harriet Voss",
+        href: "#"
+      }
+    ]
+  ]
+}) }}
+
+{{ pagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      href: "#",
+      current: true
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    },
+    {
+      number: 4,
+      href: "#"
+    },
+    {
+      number: 5,
+      href: "#"
+    },
+    {
+      number: 6,
+      href: "#"
+    }
+  ]
+}) }}

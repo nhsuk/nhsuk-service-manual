@@ -158,7 +158,7 @@
 <h3 id="nhs-app-message-examples">NHS App message examples</h3>
 
 {% call details({
-  summaryText: "Example 1 of an NHS App message",
+  summary: "Example 1 of an NHS App message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> NHS App</p>
@@ -174,7 +174,7 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Example 2 of an NHS App message",
+  summary: "Example 2 of an NHS App message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> ((serviceName))</p>
@@ -211,8 +211,8 @@
 <p>Patients are more likely to read and engage with your message if they are confident it is from the NHS. There are ways you can make it easier for them to correctly recognise a genuine NHS message.</p>
 
 {{ list({
-  title: "Do",
-  type: "tick",
+  heading: "Do",
+  icon: "tick",
   items: [
     {
       text: "include the name of your service or organisation"
@@ -227,8 +227,8 @@
 }) }}
 
 {{ list({
-  title: "Don't",
-  type: "cross",
+  heading: "Don't",
+  icon: "cross",
   items: [
     {
       text: "include spelling mistakes, grammatical errors, inaccuracies or poor formatting"
@@ -272,7 +272,7 @@
 <h3 id="text-message-examples">Text message examples</h3>
 
 {% call details({
-  summaryText: "Example 1 of an NHS text message",
+  summary: "Example 1 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>Sender name:</strong> NHStest</p>
@@ -280,7 +280,7 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Example 2 of an NHS text message",
+  summary: "Example 2 of an NHS text message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>Sender name:</strong> NHSApp</p>
@@ -332,7 +332,7 @@
 <h3 id="email-message-examples">Email message examples</h3>
 
 {% call details({
-  summaryText: "Example 1 of an NHS email message",
+  summary: "Example 1 of an NHS email message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> NHS ((serviceName))</p>
@@ -345,7 +345,7 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Example 2 of an NHS email message",
+  summary: "Example 2 of an NHS email message",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>SenderID:</strong> NHS vaccination invitations</p>
@@ -403,7 +403,7 @@
 <h3 id="paper-letter-examples">Paper letter examples</h3>
 
 {% call details({
-  summaryText: "Example 1 of an NHS paper letter",
+  summary: "Example 1 of an NHS paper letter",
   classes: "nhsuk-expander"
 }) %}
 <p><strong>Reference number -</strong></p>
@@ -440,7 +440,7 @@
 {% endcall %}
 
 {% call details({
-  summaryText: "Example 2 of an NHS paper letter",
+  summary: "Example 2 of an NHS paper letter",
   classes: "nhsuk-expander"
 }) %}
 <p>Date: DD MONTH YYYY</p>

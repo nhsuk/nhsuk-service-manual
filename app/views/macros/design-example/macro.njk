@@ -4,33 +4,35 @@
 {% from "nhsuk/macros/attributes.njk" import nhsukAttributes %}
 
 {% macro macroOption(option, optionName, exampleId) %}
-{% set componentPath = getMacroPageName(option.alias or option.slug) %}
+{% set componentPath = getMacroPageName(option.alias or option.id) %}
+{% set hasComponentPage = (option.alias or option.id) in ["caption", "heading", "label", "legend"] %}
 
 {% if option.deprecated | length %}
-  <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }}</a><br><br>
+  <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }} (see GitHub)</a>.
 {% elif option.deprecated %}
-  <strong>Deprecated</strong><br><br>
+  <strong>Deprecated.</strong>
 {% endif %}
-{% if (option.required) %}
+{% if option.required %}
   <strong>Required.</strong>
 {% endif %}
   {{ option.description | safe }}
-{% if (option.params) or (option.isComponent and ["label", "legend"].includes(option.id)) %}
-  {% if option.isComponent and not ["label", "legend"].includes(option.id) %}
+{% if (option.params) or (option.isComponent and not option.deprecated and hasComponentPage) %}
+  {% if option.isComponent and not hasComponentPage %}
     {# Link to subset of Nunjucks macro options table and design system component page -#}
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See {{ option.name | safe }} macro options</a> using <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">{{ option.alias or optionName | safe }} component macro</a>.
   {% else %}
     {# Link to Nunjucks macro options table only -#}
     <a href="#options-{{ exampleId }}--{{ option.slug }}">See macro options for {{ option.name | safe }}</a>.
   {% endif %}
-{% elif option.isComponent %}
+{% elif option.isComponent and not option.deprecated %}
   {# Link to design system component page for nested components -#}
   <a href="/design-system/components/{{ componentPath }}/#options-{{ componentPath }}-example">See macro options for {{ optionName | safe }}</a>.
 {% endif %}
 {% endmacro %}
 
 {% macro designExample(params) %}
-  {% set standaloneURL = "/design-example/" + params.group + "/" + params.item + "/" + params.type %}
+  {% set frontendVersion = getFrontendVersion(params) %}
+  {% set standaloneURL = "/design-example/" ~ params.group ~ "/" ~ params.item ~ "/" ~ params.type %}
 
   {# `showExample` and `showCode` is true, unless explicitly turned off with params #}
   {% set showExample = params.showExample !== false %}
@@ -66,15 +68,15 @@
 
   {% set exampleType = params.type | lower | replace("-", " ") %}
   {% set exampleItem = params.item | lower | replace("-", " ") %}
-  {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem + " " + exampleType) %}
+  {% set exampleTitle = exampleItem if exampleType == "default" else (exampleItem ~ " " ~ exampleType) %}
   {% if params.titleSuffix %}
-    {% set exampleTitle = exampleTitle + " " + params.titleSuffix %}
+    {% set exampleTitle = exampleTitle ~ " " ~ params.titleSuffix %}
   {% endif %}
 
   {% if params.id %}
     {% set exampleId = params.id %}
   {% else %}
-    {% set exampleId = (exampleTitle + " example") | slugify %}
+    {% set exampleId = (exampleTitle ~ " example") | slugify %}
   {% endif %}
 
   {% if params.classes %}
@@ -163,13 +165,13 @@
               {% if macroOptions | length %}
               <div class="app-code-snippet__macro">
                 {% call details({
-                  summaryText: "Nunjucks macro options",
+                  summary: "Nunjucks macro options",
                   classes: "app-code-snippet__details",
-                  id: "options-" + exampleId + "-details"
+                  id: "options-" ~ exampleId ~ "-details"
                 }) %}
                   <p>Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.</p>
                   <p>Some options are required for the macro to work. These are marked as "Required" in the option description. Deprecated options are marked as "Deprecated".</p>
-                  <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
+                  <p>If you're using Nunjucks macros in production with "html" options, or ones ending with "html", you must sanitise the HTML to protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting exploits</a>.</p>
 
                   {% for options in macroOptions %}
                     {% set optionRows = [] %}
@@ -178,27 +180,26 @@
                       {% set optionName = option.name.split(" ") | last -%}
                       {% set optionRows = (optionRows.push([
                         {
-                          header: "Name",
                           html: optionName
                         },
                         {
-                          header: "Type",
                           text: option.type
                         },
                         {
-                          header: "Description",
                           html: macroOption(option, optionName, exampleId)
                         }
                       ]), optionRows) %}
                     {% endfor %}
 
                     {{ table({
-                      caption: options.name | safe,
-                      captionClasses: "nhsuk-u-visually-hidden" if options.slug == 'primary',
+                      caption: {
+                        text: options.name | safe,
+                        classes: "nhsuk-u-visually-hidden" if options.slug == "primary"
+                      },
                       firstCellIsHeader: true,
                       responsive: true,
                       classes: "app-code-snippet__options",
-                      id: "options-" + exampleId + "--" + options.slug,
+                      id: "options-" ~ exampleId ~ "--" ~ options.slug,
                       head: [
                         {
                           text: "Name",
@@ -221,7 +222,7 @@
               {% call code({
                 background: "body",
                 button: true,
-                classes: "app-code-snippet__code",
+                classes: "nhsuk-u-margin-bottom-1",
                 copyButtonClassList: [
                   "nhsuk-button--secondary-solid",
                   "nhsuk-button--small"
@@ -231,11 +232,18 @@
                   {{- snippet.code | safe -}}
                 {% endfilter %}
               {% endcall %}
-              {% if snippets | length > 1 %}
-              <button class="app-button--close" hidden>
-                Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
-              </button>
-              {% endif %}
+              <div class="app-code-snippet__footer">
+                {% if frontendVersion %}
+                <p class="app-code-snippet__footer-version">
+                  Requires NHS.UK frontend {{ frontendVersion }} – <a class="nhsuk-link--no-visited-state" href="/design-system/guides/check-frontend-version">check your version<span class="nhsuk-u-visually-hidden"> of NHS.UK frontend</span></a>
+                </p>
+                {% endif %}
+                {% if snippets | length > 1 %}
+                  <button class="app-button--close" hidden>
+                    Close<span class="nhsuk-u-visually-hidden">: {{ exampleTitle }}</span>
+                  </button>
+                {% endif %}
+              </div>
             </div>
           {% endfor %}
         </div>

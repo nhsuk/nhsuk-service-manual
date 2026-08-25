@@ -12,8 +12,6 @@
 }) }}
 
 {{ checkboxes({
-  idPrefix: "contact",
-  name: "contact",
   fieldset: {
     legend: {
       text: "How do you want to be contacted about this?",
@@ -27,6 +25,8 @@
   errorMessage: {
     text: "Select how you want to be contacted"
   },
+  idPrefix: "contact",
+  name: "contact",
   items: [
     {
       value: "email",
