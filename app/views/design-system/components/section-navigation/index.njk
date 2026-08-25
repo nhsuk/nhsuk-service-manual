@@ -3,9 +3,9 @@
 {% set pageTitle = "Section navigation" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "A list of links to allow users to navigate between pages in a section of a service." %}
+{% set pageDescription = "A list of secondary navigation links to allow users to navigate between pages in a section of a service." %}
 {% set theme = "Navigation" %}
-{% set dateUpdated = "July 2026" %}
+{% set dateUpdated = "September 2026" %}
 {% set backlog_issue_id = "556" %}
 
 {% block beforeContent %}
@@ -22,14 +22,15 @@
 
 <h2 id="when-to-use">When to use section navigation</h2>
 <p>Use the section navigation component when users need to move between related pages in a service. For example, if your service is a case management system, you could use section navigation where there are several pages associated with a single case.</p>
-<p>It is designed for staff-facing services that staff use repeatedly.</p>
+<p>This component is designed to display horizontally for staff-facing services that staff use repeatedly.</p>
+<p>There is also an option to set it to display vertically at all screen sizes. You can use this on public websites.</p>
 
 <h2 id="when-not-to-use">When not to use section navigation</h2>
-<p>Do not use section navigation as the primary navigation in a service. Use the <a href="/design-system/components/header">header component</a> with the navigation option.</p>
-<p>Be careful about using it on content-heavy public websites. Users may scroll past section navigation on content pages. Test with your users. Other patterns may help them navigate content better, for example, the:</p>
+<p>Do not use section navigation as your main navigation. Use the <a href="/design-system/components/header#navigation">navigation option in the header component</a> instead.</p>
+<p>Be careful about using section navigation on content-heavy public websites. Users may scroll past it on content pages. Test with your users. Other patterns may help them navigate content better, for example, the:</p>
 <ul>
     <li><a href="/design-system/patterns/hub-page">hub page pattern</a></li>
-    <li><a href="/design-system/patterns/mini-hub">mini hub pattern</a></li>
+    <li><a href="/design-system/patterns/mini-hub">mini-hub pattern</a></li>
 </ul>
 <p>Do not use this component for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
 <ul>
@@ -43,19 +44,18 @@
 <p>Details, expanders and tabs hide sections of content on a page which a user can choose to reveal.</p>
 
 <h2 id="how-to-use">How to use section navigation</h2>
-<p>Section navigation can be used as a horizontal list of links. Use it in a full-width column.</p>
-<p>On small screens, it displays vertically if there's not enough space for all the links to display horizontally. (It uses JavaScript to do this.)</p>
-<p>There are also options to:</p>
+<p>If you use section navigation as a horizontal list of links, use it in a full-width column. On small screens, it displays vertically if there's not enough space for all the links to display horizontally. (It uses JavaScript to do this.)</p>
+<p>You can also:</p>
 <ul>
   <li>set <a href="#vertical-section-navigation">vertical section navigation</a> at all screen sizes</li>
   <li>display <a href="#dark-backgrounds">section navigation on dark backgrounds</a></li>
-  <li>add <a href="#badges">badges</a> to show a count or status label</li>
+  <li>add "<a href="#badges">badges</a>" to show a count or status label</li>
 </ul>
 
 <p>Put the component near the top of the page. Users may not see it if it is further down. You can put it before or after the main heading (<code>&lt;h1&gt;</code>).</p>
 <p>If you put the component before your <code>&lt;h1&gt;</code>, put it before the <code>&lt;main&gt;</code> element of the page. This means it is skipped when the skip link is used.</p>
-<p>Unlike the navigation in the header, one of the items in section navigation should always be highlighted as the current page. This item remains a link, but uses black text.</p>
-<p>Each item in the navigation is a link to a separate full page with a different URL. If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
+<p>Unlike the main navigation in the header, one of the items in section navigation should always be highlighted as the current page. This item remains a link, but uses black text.</p>
+<p>Each item in the navigation is a link to a separate full page with a different URL. (See <a href="https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/follow-url-standards/">GOV.UK's URL standards</a>.) If you use the component for filtering a list or table, update the page's URL with a query string instead.</p>
 
 <h3 id="making-page-titles-and-headings-unique">Making page titles and headings unique</h3>
 <p>Make sure each page linked from the section navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
@@ -99,7 +99,7 @@
 }) }}
 
 <h3 id="badges">Badges</h3>
-<p>You can add a badge to a section navigation link to show a count or status label. Keep the visible label short. You can add visually hidden text to give additional context for screen reader users.</p>
+<p>You can add a "badge" to a section navigation link to show a count or status label. Keep the visible label short, for example "New". You can add visually hidden text to give additional context for screen reader users.</p>
   
 {{ designExample({
   group: "components",
@@ -108,7 +108,7 @@
 }) }}
 
 <h2>Research</h2>
-<p>This component has used and tested in several services, including:</p>
+<p>This component has been tested in several services, including:</p>
 <ul>
   <li>the Manage vaccinations in schools (Mavis) service</li>
   <li>the Manage breast screening service</li>
