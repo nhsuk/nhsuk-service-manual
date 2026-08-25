@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-service-manual",
-  "version": "8.13.1",
+  "version": "8.14.0",
   "description": "NHS digital service manual",
   "engines": {
     "node": "^20.9.0 || ^22.11.0",
@@ -52,7 +52,7 @@
     "js-beautify": "^2.0.3",
     "lunr": "^2.3.9",
     "marked": "^18.0.9",
-    "nhsuk-frontend": "^10.6.0",
+    "nhsuk-frontend": "^10.6.1",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "semver": "^7.8.5",

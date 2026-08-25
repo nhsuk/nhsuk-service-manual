@@ -1,11 +1,12 @@
 # NHS digital service manual Changelog
 
-## Unreleased
+## 8.14.0 - 26 August 2026
 
 :new: **New features**
 
+- Update the guidance on Writing NHS messages
+- Update the guidance on how care cards (the pattern for helping users decide when and where to get care) work and how to write content for care cards
 - Add page updates details to service standard points
-- Update the pattern for helping users decide when and where to get care works and how to write content for care cards
 
 :wrench: **Maintenance**
 
