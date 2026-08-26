@@ -6,6 +6,19 @@
 
 - Add a new product page pattern
 
+## 8.14.0 - 26 August 2026
+
+:new: **New features**
+
+- Update the guidance on Writing NHS messages
+- Update the guidance on how care cards (the pattern for helping users decide when and where to get care) work and how to write content for care cards
+- Add new entries to content guide for "data" and "third party"
+- Add page updates details to service standard points
+
+:wrench: **Maintenance**
+
+- Fix link to table in a card
+
 ## 8.13.1 - 19 August 2026
 
 :wrench: **Maintenance**

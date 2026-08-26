@@ -58,4 +58,14 @@
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("January 2024") %}
+      <p>Added section on AI and digital healthcare technologies.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

@@ -71,3 +71,13 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("January 2026") %}
+      <p>Reviewed and updated the standard with the interoperability team, in particular the detail about APIs.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

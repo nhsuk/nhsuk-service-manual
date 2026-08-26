@@ -81,3 +81,26 @@
   }) }}
 
 {% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("May 2026") %}
+      <p>Added further GOV.UK resources to bring the standard into line with GOV's.</p>
+      <p>Added link to NHS service manual's Writing NHS messages guidance.</p>
+    {% endcall %}
+
+    {% call update("February 2026") %}
+      <p>Updated to follow GOV.UK and make it clear that:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>not designing services around technologies includes not designing them around AI technologies</li>
+        <li>checking for existing solutions includes existing AI solutions</li>
+      </ul>
+    {% endcall %}
+
+    {% call update("January 2026") %}
+      <p>Made a small change to the intro paragraph following GOV to clarify that you need to provide the mix of channels that users need.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

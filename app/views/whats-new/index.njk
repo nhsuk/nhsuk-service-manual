@@ -16,19 +16,6 @@
 
   {% endset %}
 
-  {% set designHtml %}
-    <p>Added new features to the <a href="/design-system/components/table">table component</a> including a sortable table, compact, striped, scrolling and reverse (dark background) styles</p>
-    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
-    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
-    <p>Added frontend version number to <a href="/design-system">design system</a> examples and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a></p>
-    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
-    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
-    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
-    <p>Removed frontend version 10 banner and callouts</p>
-    <p>Moved WCAG 2.2 callout content into normal page content</p>
-
-  {% endset %}
-
   {% set communityHtml %}
   <p>Added new <a href="/community-and-contribution/coming-soon">Coming soon page</a></p>
   <p>Updated <a href="/community-and-contribution/contribution-criteria">Contribution criteria</a> to reflect current practice</p>
@@ -36,8 +23,29 @@
 
   {% endset %}
 
+  {% set contentHtml %}
+  <p>Updated guidance on <a href="/content/writing-nhs-messages">Writing NHS messages</a></p>
+  <p>Added new entries to content guide for "<a href="/content/a-to-z-of-nhs-health-writing#data">data</a>" and "<a href="/content/a-to-z-of-nhs-health-writing#third-party">third party</a>"</p>
+  
+  {% endset %}
+
+  {% set designHtml %}
+    <p>Added new features to the <a href="/design-system/components/table">table component</a> including a sortable table, compact, striped, scrolling and reverse (dark background) styles</p>
+    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
+    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Updated guidance on how <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">care cards (the pattern to help users decide when and where to get care)</a> work and how to write content for care cards</p>
+    <p>Added frontend version number to <a href="/design-system">design system</a> examples and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a></p>
+    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
+    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
+    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
+    <p>Removed frontend version 10 banner and callouts</p>
+    <p>Moved WCAG 2.2 callout content into normal page content</p>
+  
+  {% endset %}
+
   {% set standardHtml %}
   <p>Updated page about <a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></p>
+  <p>Added details of updates made to <a href="/standards-and-technology/service-standard">NHS service standard</a> pages since publication</p>
 
   {% endset %}
 
@@ -71,18 +79,26 @@
       ],
       [
         {
-          text: "Design system"
-        },
-        {
-          html: designHtml
-        }
-      ],
-      [
-        {
           text: "Community and contribution"
         },
         {
           html: communityHtml
+        }
+      ],
+      [
+        {
+          text: "Content guide"
+        },
+        {
+          html: contentHtml
+        }
+      ],
+      [
+        {
+          text: "Design system"
+        },
+        {
+          html: designHtml
         }
       ],
       [
