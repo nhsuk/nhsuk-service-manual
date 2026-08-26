@@ -176,10 +176,11 @@
   { title: "Community resources", url: "/community-and-contribution/community-resources" }
 ] %}
 
-{% set aiUCD = [
-  { title: "Definitions", url: "/ai-and-user-centred-design/definitions" },
-  { title: "Principles", url: "/ai-and-user-centred-design/principles" },
-  { title: "Risks and benefits", url: "/ai-and-user-centred-design/risks-and-benefits" }
+{% set aiDigitalServices = [
+  { title: "Using AI in digital services", url: "/ai-and-digital-services/using-ai-in-digital-services" },
+  { title: "Definitions", url: "/ai-and-digital-services/definitions" },
+  { title: "Principles", url: "/ai-and-digital-services/principles" },
+  { title: "Risks and benefits", url: "/ai-and-digital-services/risks-and-benefits" }
 ] %}
 
 {% set whatsNew = [
@@ -359,9 +360,9 @@
     </ul>
   {% endif %}
 
-  {%- if pageSection == "AI and user-centred-design" %}
+  {%- if pageSection == "AI and digital services" %}
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in aiUCD %}
+    {% for item in aiDigitalServices %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
