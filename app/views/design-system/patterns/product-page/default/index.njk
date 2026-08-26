@@ -25,15 +25,11 @@ previewLayout: design-example-wrapper-full
 
 {% block main %}
   {{ hero({
-    content: [
-      {
-        heading: {
-          text: "Headline to describe the service",
-          size: "l"
-        },
-        html: heroContentHtml
-      }
-    ],
+    heading: {
+      text: "Headline to describe the service",
+      size: "l"
+    },
+    html: heroContentHtml,
     border: false
   }) }}
 
