@@ -166,6 +166,14 @@
   { title: "Start page", url: "/design-system/patterns/start-page" }
 ] %}
 
+{% set userResearch = [
+  { title: "Principles", url: "/user-research/principles" },
+  { title: "Introduction to user research in the NHS", url: "/user-research/introduction-to-user-research-in-the-nhs" },
+  { title: "Research methods", url: "/user-research/research-methods" },
+  { title: "Ethics, safeguarding and responsible research", url: "/user-research/ethics-safeguarding-responsible-research" },
+  { title: "Inclusive research...", url: "/user-research/inclusive-research" }
+] %}
+
 {% set community = [
   { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
   { title: "Coming soon", url: "/community-and-contribution/coming-soon" },
@@ -340,6 +348,14 @@
     <h2 class="app-side-nav__heading">Health literacy <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in healthLiteracy %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == "User research" %}
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in userResearch %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
