@@ -1,0 +1,24 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Selectable table" %}
+{% set pageDescription = "TODO" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "October 2025" %}
+{% set backlog_issue_id = "86" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  {{ designExample({
+    group: "patterns",
+    item: "selectable-table",
+    type: "default"
+  }) }}
+
+
+{% endblock %}
