@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-### TBC 
+### TBC
 
 :new: **New features**
 

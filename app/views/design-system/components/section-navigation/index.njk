@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block bodyContent %}
-  
+
 {{ designExample({
   group: "components",
   item: "section-navigation",
@@ -35,7 +35,7 @@
 <p>Do not use this component for links between sections of the same page. If you need to organise large amounts of content on a single page, consider:</p>
 <ul>
     <li>cutting the content back</li>
-    <li>using headings</li>    
+    <li>using headings</li>
     <li><a href="/design-system/components/details">details</a></li>
     <li><a href="/design-system/components/expander">expanders</a></li>
     <li><a href="/design-system/components/tabs">tabs</a></li>
@@ -60,7 +60,7 @@
 <h3 id="making-page-titles-and-headings-unique">Making page titles and headings unique</h3>
 <p>Make sure each page linked from the section navigation has a unique <code>&lt;h1&gt;</code> and a unique browser page title (<code>&lt;title&gt;</code>). This helps screen reader users who navigate by headings know when a page has changed. It also helps users who bookmark a page.</p>
 <p>There are different ways to do this, depending on where you put the section navigation. For example, if the section navigation is near to the <code>&lt;h1&gt;</code>, you can keep the visual heading as-is and add a hidden span after it that names the current page. Screen readers will announce both parts, while sighted users only see the main heading.</p>
-  
+
 {{ designExample({
   group: "components",
   item: "section-navigation",
@@ -76,7 +76,7 @@
 
 <h3 id="labelling-and-ordering-links">Labelling and ordering links</h3>
 <p>Consider how many links to include in the navigation. Take into account link text length and how the navigation displays responsively. Keep link text as short as possible.</p>
-<p>Make sure that the link text reflects the heading of the page it links to.</p> 
+<p>Make sure that the link text reflects the heading of the page it links to.</p>
 <p>Decide on the default page to load. Generally it's best to order links from most to least used, with the most-used link being the first in the list and the page that's open by default. However, you can choose a different order. For example, if there is a chronological or workflow order, the first in the list may not be the most useful one to display by default.</p>
 
 <h3 id="vertical-section-navigation">Vertical section navigation</h3>
@@ -100,7 +100,7 @@
 
 <h3 id="badges">Badges</h3>
 <p>You can add a "badge" to a section navigation link to show a count or status label. Keep the visible label short, for example "New". You can add visually hidden text to give additional context for screen reader users.</p>
-  
+
 {{ designExample({
   group: "components",
   item: "section-navigation",
