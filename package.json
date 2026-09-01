@@ -78,7 +78,7 @@
     "babel-jest": "^30.4.1",
     "babel-loader": "^10.1.1",
     "babel-plugin-transform-import-meta": "^2.3.3",
-    "concurrently": "^10.0.4",
+    "concurrently": "^10.0.5",
     "copy-webpack-plugin": "^14.0.0",
     "cssnano": "^8.0.2",
     "del-cli": "^7.0.0",
