@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add a new product page pattern
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**

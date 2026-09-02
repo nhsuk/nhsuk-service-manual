@@ -1,0 +1,54 @@
+---
+previewLayout: design-example-wrapper-full
+---
+
+{% extends "layouts/design-example-wrapper.njk" %}
+
+{% from "back-link/macro.njk" import backLink %}
+{% from "button/macro.njk" import button %}
+{% from "radios/macro.njk" import radios %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% set heroContentHtml %}
+  <p class="nhsuk-body-l">A short tagline to add a bit more detail.</p>
+  <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+    {{ button({
+      text: "Get started",
+      href: "#",
+      classes: "nhsuk-button--reverse"
+    }) }}
+
+    <a href="#" class="nhsuk-link nhsuk-link--reverse">Log in</a>
+  </div>
+{% endset %}
+
+{% block main %}
+  {{ hero({
+    heading: {
+      text: "Headline to describe the service",
+      size: "l"
+    },
+    html: heroContentHtml,
+    border: true
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper nhsuk-u-padding-bottom-4">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">1st benefit</h2>
+          <p>Description of how the service solves a problem.</p>
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">2nd benefit</h2>
+          <p>Another reason to use the service.</p>
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+          <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">3rd benefit</h2>
+          <p>Something else about the service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
