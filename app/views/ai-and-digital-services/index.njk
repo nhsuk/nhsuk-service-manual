@@ -1,0 +1,37 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "AI and digital services" %}
+{% set pageDescription = "This guidance explains how digital teams can use artificial intelligence (AI) responsibly." %}
+{% set pageSection = "AI and digital services" %}
+{% set landingPage = true %}
+{% set dateUpdated = "September 2026" %}
+
+{% block bodyContent %}
+
+<p>It applies to digital teams who are building NHS digital services, including contractors and other outside suppliers.</p>
+<p>The guidance explains how you can use AI:</p>
+<ul>
+  <li>as part of your digital service</li>
+  <li>in your day-to-day work</li>
+</ul>
+<p>It will help your team to:</p>
+<ul>
+  <li>learn and maintain AI literacy</li>
+  <li>be more creative and efficient</li>
+  <li>stay ethical, safe and inclusive</li>
+  <li>meet the standards in the service manual</li>
+</ul>
+
+<p>It does not tell you how to:</p>
+<ul>
+  <li>develop production code <code>it probably should</code></li>
+  <li>use agentic AI for user research <code>what does this mean?</code></li>
+  <li>use AI as a tool for wider design practice, for example for service design or creating design artefacts <code>what do we mean by artifacts?</code></li>
+</ul>
+<p>We will be adding more guidance and improving it over time.</p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}

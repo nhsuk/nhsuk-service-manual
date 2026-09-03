@@ -1,0 +1,48 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Definitions" %}
+{% set pageDescription = "Summary?" %}
+{% set pageSection = "AI and digital services" %}
+{% set dateUpdated = "September 2026" %}
+
+{% block beforeContent %}
+  {% include "ai-and-digital-services/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+<p><code>Do people want definitions? Are these the things they need definitions for?</code></p>
+<p><code><b>Proposal</b>: hide this page till we have evidence that people need definitions?</code>
+<p><code>I can't tie up all of these definitions with GOV's AI Playbook, so probably best not to say that we've taken them from there.</code></p>
+<h2>Artificial intelligence (AI)</h2>
+<p>AI is about using digital technology to create systems capable of performing tasks commonly thought to require human intelligence. <code>from <a href="https://nhsx.github.io/ai-dictionary">NHSX source</a> but this is quite dated</code></p>
+<p>This definition is based on the <a href="https://oecd.ai/en/wonk/ai-system-definition-update">OECD definition of AI</a>, which is used in the <a href="https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html">AI playbook for the UK Government (GOV.UK)</a>. <code>I've reworded the OECD definition to make it easier to read.</code></p>
+<ul>
+    <li>An AI system is a machine-based system.</li>
+    <li>It may have explicit or implicit objectives. <code>what does this mean? That they can be programmed or can learn?</code></li>
+    <li>AI takes what you input into it and infers how to generate outputs such as predictions, content, recommendations, or decisions.</li>
+    <li>Its outputs can influence physical or virtual environments.</li>
+    <li>AI systems vary in how autonomous and adaptive they are after deployment.</li>
+</ul>
+ 
+<h2>Generative or Gen AI</h2>
+<p><code>I shortened this to Gen AI.</code>
+<p>A subset of AI which can generate text, images, video or other forms of output by using probabilistic models trained across various domains. <code>domains=?</code></p>
+<p>Gen AI learns from large amounts of specially curated training data to discern and replicate complex patterns and structures. <code>plain English?</code></p>
+<p>The output of generative AI models mimics the characteristics learned from the training data, enabling a range of novel applications. These include personalised content generation, advanced analysis and evaluation, and helping creative processes.</p>
+<p><code>Do we need all this? It's all taken from GOV's playbook.</code></p>
+<p><code>Might be worth adding, also from playbook: Examples of publicly accessible gen AI tools are ChatGPT, Claude, and Gemini. Gen AI is also becoming increasingly integrated into mainstream products such as Microsoft 365 Copilot.</code></p>
+     
+<h2>Agentic AI</h2>
+<p><code>We say in the intro that we're not dealing with agentic AI.</code></p>
+<p><code>From GOV playbook.</code> Autonomous AI systems that can make decisions and perform actions with minimal human intervention. These agents are capable of understanding their environment, identifying the set of tools and functions at their disposal, and using those to take actions to achieve their objectives.</p>
+<p><code>Give examples?</code></p>
+
+<h2>Large language model (LLM)</h2>
+<p>A neural network <code>= what?</code> that is trained on a vast amount of text. The training uses unlabelled text and some form of self-supervised learning.</p>
+<p><code>From rather outdated NHSX source. Are there better definitions? This <a href="https://governmentdigitalanddatahub.campaign.gov.uk/learn/digital-and-data-industry-led-learning/artificial-intelligence/artificial-intelligence-working-with-large-language-models/">GOV learning around AI</a> suggests that LLMs are part of Gen AI.</code></p>
+
+  <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}
