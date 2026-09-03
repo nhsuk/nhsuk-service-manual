@@ -1,0 +1,48 @@
+{% from "section-navigation/macro.njk" import sectionNavigation %}
+
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-third">
+      <h1 class="nhsuk-heading-l">Care record</h1>
+
+      {{ sectionNavigation({
+        direction: "vertical",
+        items: [
+          {
+            href: "#",
+            text: "Summary",
+            current: true
+          },
+          {
+            href: "#",
+            text: "Observations"
+          },
+          {
+            href: "#",
+            text: "Medicines"
+          },
+          {
+            href: "#",
+            text: "Allergies"
+          },
+          {
+            href: "#",
+            text: "Vaccinations"
+          },
+          {
+            href: "#",
+            text: "Referrals",
+            badge: {
+              text: "New"
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 class="nhsuk-heading-m">Summary</h2>
+      <p>Content for the summary page.</p>
+    </div>
+  </div>
+</div>
