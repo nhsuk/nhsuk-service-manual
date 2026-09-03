@@ -4,7 +4,8 @@
 
 :new: **New features**
 
-- Add new section nav component
+- Add new section navigation component
+- Update tabs component guidance
 
 ## 8.14.0 - 26 August 2026
 
