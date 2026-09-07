@@ -1,0 +1,27 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "User research" %}
+{% set pageDescription = "We're working on a new section of guidance around user research." %}
+{% set pageSection = "User research" %}
+{% set landingPage = true %}
+
+{% block bodyContent %}
+
+<p>This could start with one of the following:</p>
+<ul>
+  <li>prototype 1: a set of <a href="/user-research/principles">principles</a></li>
+  <li>prototype 2: an <a href="/user-research/introduction-to-user-research-in-the-nhs">introduction to user research in the NHS</a> based on <a href="https://www.gov.uk/service-manual/user-research/how-user-research-improves-service-design">GOV.UK's introduction</a></li>
+</ul>
+
+<p>We expect to add more content over time. Initially, we think we'll be focusing on:</p>
+<ul>
+  <li>research methods</li>
+  <li>ethics, safeguarding and responsible research</li>
+  <li>inclusive research</li>
+</ul>
+
+ <div class="app-index-navigation app-u-hide-desktop">
+    {% include "includes/_side-nav.njk" %}
+  </div>
+
+{% endblock %}
