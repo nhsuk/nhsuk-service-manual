@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Add hidden text to red warning button for screen reader users
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**
