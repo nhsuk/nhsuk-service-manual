@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+### TBC
+
+:new: **New features**
+
+- Add new section navigation component
+- Update tabs component guidance
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**
