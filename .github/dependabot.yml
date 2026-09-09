@@ -15,6 +15,7 @@ updates:
           - 'axios'
           - 'basic-auth'
           - 'cheerio'
+          - 'chokidar'
           - 'compression'
           - 'express'
           - 'gray-matter'
@@ -26,6 +27,7 @@ updates:
           - 'nhsuk-frontend'
           - 'nunjucks'
           - 'outdent'
+          - 'semver'
           - 'slug'
 
       build:
@@ -60,11 +62,20 @@ updates:
           - 'typescript'
           - 'typescript-*'
 
+        # Exclude packages in other groups
+        exclude-patterns:
+          - '@types/jest'
+          - '@types/jest-*'
+
       test:
         patterns:
+          - '@testing-library/*'
+          - '@types/jest'
+          - '@types/jest-*'
           - 'babel-jest'
           - 'jest'
           - 'jest-*'
+          - 'jsdom-testing-mocks'
 
       tools:
         patterns:
