@@ -1,0 +1,65 @@
+{% from "tables/macro.njk" import table %}
+{% from "checkboxes/macro.njk" import checkboxes %}
+
+{% set organisations = [{name: "NHS England", code: "X26"}, {name: "NHS Business Services Authority", code: "T1450"}, {name: "NHS Blood and Tranplant", code: "T1460"}, {name: "UK Health Security Agency", code: "X36"}] %}
+
+{% set rows = [] %}
+
+{% set headerCheckboxHtml %}
+  {{ checkboxes({
+    idPrefix: "organisations",
+    name: "organisations",
+    classes: "nhsuk-checkboxes--small",
+    formGroup: {
+      classes: "nhsuk-u-margin-bottom-0"
+    },
+    items: [
+      {
+        value: "",
+        text: "Name",
+        id: "organisation-select-all",
+        inclusive: true,
+        label: {
+          classes: "nhsuk-label--s"
+        }
+      }
+    ]
+  }) }}
+{% endset %}
+
+{% for organisation in organisations %}
+  {% set nameCheckboxHtml %}
+    {{ checkboxes({
+      idPrefix: "organisations",
+      name: "organisations",
+      classes: "nhsuk-checkboxes--small",
+      formGroup: {
+        classes: "nhsuk-u-margin-bottom-0"
+      },
+      items: [
+        {
+          value: organisation.code,
+          text: organisation.name,
+          id: "organisation-" + loop.index0
+        }
+      ]
+    }) }}
+  {% endset %}
+
+  {% set rows = (rows.push([{ html: nameCheckboxHtml}, {text: organisation.code}]), rows) %}
+{% endfor %}
+
+{{ table({
+  panel: false,
+  caption: "Organisations",
+  firstCellIsHeader: false,
+  head: [
+    {
+      html: headerCheckboxHtml
+    },
+    {
+      text: "ODS code"
+    }
+  ],
+  rows: rows
+}) }}
