@@ -1,0 +1,67 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Service unavailable pages" %}
+{% set pageDescription = "Tell users what do do when your service is unavailable" %}
+{% set pageSection = "Design system" %}
+{% set subSection = "Patterns" %}
+{% set theme = "Pages" %}
+{% set dateUpdated = "November 2025" %}
+{% set backlog_issue_id = "8" %}
+
+{% block beforeContent %}
+  {% include "design-system/patterns/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<p>Use a service unavailable page when a service is temporaily not able to be used. This could be for planned reasons, or for reasons outside of your control such as a hosting provider outage.</p>
+
+<p>Have a general page in case you need to make a service unavailable quickly and do not have time to update the page. As soon as you know when the service will be available, update the page.</p>
+
+<p>You should consider what users should do whils the service is unavailable. For example, you could include a phone number they could contact for urgent issues, or a link to a form which can be downloaded to record information temporarily.</p>
+
+<h2 id="general-page">General page</h2>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "default"
+}) }}
+
+<h2 id="planned">When the unavailability is planned</h2>
+
+<p>Use this if you are planning to make the service unavailable for a short period.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "planned"
+}) }}
+
+<h2 id="updates">When you have updates about the issue</h2>
+
+<p>If the technical issue is unexpected, you can communicate any updates you have on progress to resolve it.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "with-update"
+}) }}
+
+<h2>Standalone page</h2>
+
+<p>If you are using a proxy server or content delivery network (CDN), it will have a error page which is shown automatically whenever your service is unavailable.</p>
+
+<p>As this page is hosted separately, you will need to configure a standalone error page which is not dependent on your service.</p>
+
+<p>Use this standalone template. You will need to edit it to add the name of your service and any relevant content to tell your users what to do if the service is unavailable.</p>
+
+{{ designExample({
+  group: "patterns",
+  item: "service-unavailable",
+  type: "standalone",
+  htmlOnly: true
+}) }}
+
+
+{% endblock %}
