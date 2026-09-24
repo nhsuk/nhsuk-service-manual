@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
-{% set dateUpdated = "September 2026" %}
+{% set dateUpdated = "October 2026" %}
 {% set backlog_issue_id = "233" %}
 
 {% block beforeContent %}
@@ -33,18 +33,26 @@
   <li>checking that all the web addresses in your service, including posters or letters, are correct</li>
 </ul>
 
+<h2 id="when-not-to-use">When not to use this pattern</h2>
+<p>Do not use this pattern instead of a:</p>
+<ul>
+  <li><a href="/design-system/patterns/service-unavailable-page">service unavailable page</a></li>
+  <li><a href="/design-system/patterns/problem-with-this-service-page">there is a problem with this service page</a></li>
+</ul>
+
+
 <h2 id="how-to-use">How to use this pattern</h2>
 <p>The page should include:</p>
 <ul>
     <li>"Page not found – service name – NHS" as the page title</li>
     <li>"Page not found" as the <code>&lt;h1&gt;</code></li>
     <li>options to navigate to the start page in a service or the home page in a website</li>
-    <li>an <a href="#with-alternative-journey">alternative journey</a>, for users on a transactional service</li>
-    <li><a href="#contact-information">contact information</a>, if it helps meet a user need</li>
+    <li>an <a href="#with-alternative-journey">alternative journey</a> for users on a transactional service</li>
+    <li><a href="#contact-information">contact information</a> if it helps meet a user need</li>
 </ul>
 
 <p>If your users find it helpful, include a search option.</p>
-<p>Do not ask the public to report broken links, unless you know that this meets a user need. On internal systems and services, users may expect to report issues.</p>
+<p>Do not ask the public to report broken links, unless you know that this meets a user need. Users of internal systems and services may want to report issues.</p>
 
 <p>The content should be clear and concise, not blame the user.</p>
 
@@ -58,7 +66,7 @@
 </ul>
 
 <h3 id="with-alternative-journey">Page not found with an alternative journey</h3>
-<p>If your users are trying to complete a task, offer them an alternative way to do it. For example, another way to complete a form.</p>
+<p>If your users are trying to complete a task, such as registering for something, offer them an alternative way to do it. For example, another way to complete a form.</p>
 <p>Consider the options with your clinical team.</p>
 {{ designExample({
   group: "patterns",
@@ -69,6 +77,7 @@
 <h4 id="contact-information">Contact information</h4>
 <p>Include contact information if it meets a user need or helps them complete their task. For example, if someone wants to cancel an appointment.</p>
 <p>Contact information should include all numbers and opening times or link to a specific page that includes numbers and opening times.</p>
+<p>If it's helpful, include "For urgent medical advice, use <a href="#">111 online</a> or call 111."</p>
 
 {{ designExample({
   group: "patterns",
