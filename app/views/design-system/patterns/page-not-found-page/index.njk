@@ -1,7 +1,7 @@
 {% extends "layouts/app-layout.njk" %}
 
 {% set pageTitle = "Page not found page" %}
-{% set pageDescription = "A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages." %}
+{% set pageDescription = "A page not found tells someone we cannot find the page they were trying to view. It's also known as a 404 page." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Patterns" %}
 {% set theme = "Pages" %}
@@ -84,5 +84,13 @@
   item: "page-not-found-page",
   type: "with-contact-details"
 }) }}
+
+<h2 id="research">Research</h2>
+<p>The NHS App team found that users may:</p>
+<ul>
+  <li>be unsure about whether the problem was their fault or not</li>
+  <li>go straight to buttons and links without fully reading error pages</li>
+  <li>not notice error codes</li>
+</ul>
 
 {% endblock %}
