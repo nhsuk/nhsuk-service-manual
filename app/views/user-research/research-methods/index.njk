@@ -1,0 +1,120 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Research methods" %}
+{% set pageDescription = "Plan your user research using an appropriate mix of methods." %}
+{% set pageSection = "User research" %}
+{% set subSection = "Research methods" %}
+{% set dateUpdated = "September 2026" %}
+
+{% block beforeContent %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% include "user-research/research-methods/_side-nav-mobile.njk" %}
+
+<p>User research methods are ways to learn about users, their needs and how they use or experience a service. Different methods answer different research questions, so choose the method that gives your team reliable evidence for the decision it needs to make.</p>
+<p>This page does not cover every method, but it gives guidance on some commonly-used methods and techniques.</p>
+
+<h2 id="choose-a-research-method">Choose a research method</h2>
+<p>Start with what you need to learn, the people you need to learn from and how you will use the findings. Also consider:</p>
+<ul>
+  <li>the stage of your work</li>
+  <li>the risks and complexity of the service</li>
+  <li>the time and resources you have</li>
+  <li>how to make the research inclusive and accessible</li>
+</ul>
+<p>You may need to combine methods to answer different questions or compare evidence from more than one source. Decide separately whether to run research in person or remotely, and whether it should be moderated or unmoderated. (Moderated testing lets you observe and ask follow-up questions in real time, while unmoderated testing lets people complete tasks independently and can help you collect evidence from more participants.)</p>
+<p>Follow our guidance on ethics, safeguarding, consent, recruitment and accessibility <code>[LINKS]</code> when you plan and carry out research.</p> 
+
+<h2 id="plan-your-research">Plan your research</h2>
+<h3 id="capturing-research-questions">Capturing research questions</h3>
+<p>Use this activity to:</p>
+<ul>
+  <li>agree what your team needs to learn</li>
+  <li>turn assumptions into questions</li>
+  <li>prioritise what to research first</li>
+</ul>
+<p>Do this at the start of a new phase and revisit the questions as you learn.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/capturing-research-questions">Read about capturing research questions (GOV.UK service manual)</a></p> 
+
+<h2 id="understand-users-and-their-experiences">Understand users and their experiences</h2>
+<h3 id="user-interviews">User interviews</h3>
+<p>Use in-depth interviews to explore people's experiences, needs, behaviours and motivations in detail. Interviews are useful when you need to understand why people behave or respond in a particular way, especially during the discovery phase.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/using-in-depth-interviews">Read about using in-depth interviews (GOV.UK service manual)</a></p>
+
+<h3 id="contextual-research-and-observation">Contextual research and observation</h3>
+<p>Watch people in their usual environment to understand how they do a task, with their own tools, processes, interruptions and constraints. It can reveal needs and barriers that may not come up in an interview.</p>
+<p>Read about:</p>
+<ul>
+  <li><a href="/user-research/research-methods/face-to-face-research">face-to-face research in this user research guide</a></li>
+  <li><a href="https://www.gov.uk/service-manual/user-research/contextual-research-and-observation">contextual research and observation (GOV.UK service manual)</a></li>
+</ul>
+
+<h3 id="researching-user-experiences">Researching user experiences</h3>
+<p>Use experience research to understand what people go through when they interact with a service over time and across different channels. It can help you identify important moments, unmet needs and problems that involve more than one part of a service or organisation.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/researching-user-experiences">Read about researching user experiences (GOV.UK service manual)</a></p>
+
+<h3 id="researching-in-small-group-workshops">Researching in small group workshops</h3>
+<p>Use small group workshops to explore a topic with several participants at the same time and understand where their experiences or views are similar or different. Workshops can help discuss shared processes, generate ideas or prioritise needs, but may not suit sensitive topics or people who need more individual support.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/researching-user-experiences">Read about researching in small group workshops (GOV.UK service manual)</a></p>
+
+<h3 id="surveys">Surveys</h3>
+<p>Use surveys to collect structured information from a larger group of people. They can help measure behaviours, experiences or attitudes, explore patterns and check how widely a finding may apply. Use another method when you need to understand why people responded in a particular way.</p>
+<p><a href="/user-research/research-methods/surveys">Read about surveys in this user research guide</a></p>
+
+<h3 id="data-analytics-and-user-feedback">Data, analytics and user feedback</h3>
+<p>Use data, analytics and user feedback to understand how people use a live service, identify patterns and problems, and decide what to research or improve. Review evidence such as web analytics, search terms, complaints, feedback forms and operational data. Check what the data includes and who may be missing, and combine it with interviews, observation or usability testing to understand why patterns occur.</p>
+<p>Read about:</p>
+<ul>
+  <li><a href="https://www.gov.uk/service-manual/user-research/user-research-in-live">user research in live (GOV.UK service manual)</a></li>
+  <li><code>Include?</code><a href="https://nhs.sharepoint.com/sites/X26_URPG/SitePages/surveys/analysing-and-presenting-quantitative-data.aspx">analysing & presenting quantitative data (SharePoint)</a></li>
+  </li>
+</ul>
+<h2 id="evaluate-designs-and-services">Evaluate designs and services</h2>
+<h3 id="usability-testing">Usability testing</h3>
+<p>Use usability testing to find out whether people can use a product or service to complete realistic tasks. It can be:</p>
+<ul>
+  <li>used with early prototypes and live services</li>
+  <li>moderated or unmoderated</li>
+  <li>remote or in person</li>
+</ul>
+<p>Include people with access needs and those who use assistive technology to identify barriers that automated checks may miss.</p> 
+<p>Read about:</p>
+<ul>
+  <li><a href="https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing">using moderated usability testing (GOV.UK service manual)</a></li>
+  <li><a href="https://www.gov.uk/service-manual/user-research/remote-user-research-phone-video-call">doing user research remotely by phone or video call (GOV.UK service manual)</a></li>
+  <li><code>Include? </code>conducting digital accessibility user testing (NHS England SharePoint)</li>
+</ul>
+
+<h3 id="research-for-information-architecture">Research for information architecture</h3> 
+<p>Use information architecture research to understand how people expect content and features to be grouped, labelled and found. Card sorting can help explore people's mental models and language. Tree testing can show whether people can find information in a proposed navigation structure.</p>
+<p><code>Include? </code>Read about generative information architecture research (NHS England SharePoint)</p>
+
+<h3 id="pop-up-research">Pop-up research</h3>
+<p>Use pop-up research for short interviews or usability tests in places used by the people you need to reach. It can provide quick feedback on a clear, focused question and help you speak to a broad range of people or groups that are harder to recruit.</p>
+<p>Read about:</p>
+<ul>
+  <li><a href="/user-research/research-methods/face-to-face-research">face-to-face research in this user research guide</a></li>
+  <li><a href="https://www.gov.uk/service-manual/user-research/doing-pop-up-research">doing pop-up research (GOV.UK service manual)</a></li>
+</ul>
+
+<h2 id="capture-findings-and-make-sense-of-research">Capture findings and make sense of research</h2>
+<h3 id="observing-and-taking-notes">Observing and taking notes</h3>
+<p>Use observation and note-taking alongside research methods to involve team members and create an accurate record of what participants do and say. Agree roles and a note-taking structure before each session, protect personal information and make sure observers do not distract or influence participants.</p>
+<p>Read about:</p>
+<ul>
+  <li><code>Include? </code>observing user research (NHS England SharePoint)</li>
+  <li><a href="https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions">taking notes and recording user research sessions (GOV.UK service manual)</a></li>
+</ul>
+
+<h3 id="creating-an-experience-map">Creating an experience map</h3>
+<p>Use an experience map to synthesise research evidence and show the stages, interactions, needs and problems in a person's experience. It can help teams develop a shared understanding, see how parts of a service connect and decide where to focus improvements.</p>
+<p>Read about <a href="https://www.gov.uk/service-manual/user-research/creating-an-experience-map">creating an experience map (GOV.UK service manual)</a></p>
+
+<h3 id="medical-device-research">Medical device research</h3> 
+<p>Use medical device research when a product is, or may be, classed as a medical device because it is intended for a medical purpose, such as diagnosing, preventing, monitoring or treating disease. This research is part of a regulated development process and provides evidence that intended users can use the product safely and effectively. Involve your regulatory lead before planning research [<code>how</code>].</p> 
+<p><code>Include? </code>Read about Research with medical devices (NHS England SharePoint)</p>
+
+{% endblock %}

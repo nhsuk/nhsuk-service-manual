@@ -174,6 +174,11 @@
   { title: "Inclusive research...", url: "/user-research/inclusive-research" }
 ] %}
 
+{% set researchMethods = [
+  { title: "Face-to-face research", url: "/user-research/research-methods/face-to-face-research" },
+  { title: "Surveys", url: "/user-research/research-methods/surveys" }
+] %}
+
 {% set community = [
   { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
   { title: "What's coming soon", url: "/community-and-contribution/whats-coming-soon" },
@@ -354,11 +359,20 @@
   {% endif %}
 
   {%- if pageSection == "User research" %}
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in userResearch %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
+    {% if subSection == "Research methods" %}
+      <h2 class="app-side-nav__heading">Research methods <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+      <ul class="nhsuk-list app-side-nav__list">
+      {% for item in researchMethods %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <ul class="nhsuk-list app-side-nav__list">
+      {% for item in userResearch %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
 
   {%- if pageSection == "Community and contribution" %}
