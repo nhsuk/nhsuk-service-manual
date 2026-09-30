@@ -1,0 +1,17 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Surveys" %}
+{% set pageDescription = "Summary." %}
+{% set pageSection = "User research" %}
+{% set subSection = "Research methods" %}
+{% set dateUpdated = "September 2026" %}
+
+{% block beforeContent %}
+  {% include "user-research/research-methods/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% include "user-research/research-methods/_side-nav-mobile.njk" %}
+
+{% endblock %}
