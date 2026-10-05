@@ -3,9 +3,9 @@
 {% set pageTitle = "Tabs" %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Components" %}
-{% set pageDescription = "The tabs component lets users navigate between related sections of content, displaying 1 section at a time." %}
+{% set pageDescription = "The tabs component lets users navigate between related sections of content within a page, displaying 1 section at a time." %}
 {% set theme = "Content presentation" %}
-{% set dateUpdated = "June 2026" %}
+{% set dateUpdated = "September 2026" %}
 {% set backlog_issue_id = "279" %}
 
 {% block beforeContent %}
@@ -35,7 +35,7 @@
     <li>simplify and reduce the amount of content</li>
     <li>split the content across multiple pages</li>
     <li>keep the content on a single page, separated by headings</li>
-    <li>use a table of contents to let users navigate quickly to specific sections of content</li>
+    <li>use a contents list to let users navigate quickly to specific sections of content</li>
   </ul>
 
   <h2 id="when-not-to-use">When not to use tabs</h2>
@@ -45,6 +45,7 @@
   <ul>
     <li>read through all of the content in order, for example, to understand a step-by-step process</li>
     <li>compare information in different tabs, because having to memorise information and switch backwards and forwards can be difficult</li>
+    <li>navigate between pages – use <a href="/design-system/components/section-navigation">section navigation</a> instead</li>
   </ul>
 
   <h2 id="decide-between-tabs-expanders-and-details">Decide between using tabs, expanders and the details component</h2>
@@ -58,7 +59,15 @@
   </ul>
 
   <h2 id="how-to-use-tabs">How to use tabs</h2>
-  <p>There are 2 ways to use the tabs component. You can use HTML or, if you're using Nunjucks or the <a href="https://prototype-kit.service-manual.nhs.uk">NHS.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+
+  <h3 id="consider-small-screens">Consider small screens</h3>
+  <p>On small screens, tabs display as a vertical list of links if:</p>
+  <ul>
+    <li>there's not enough space for all the links to display horizontally</li>
+    <li>JavaScript is not running</li>
+  </ul>
+  <p>See the example in the section on <a href="#progressive-enhancement">progressive enhancement</a>.</p>
+
 
   <h3 id="use-clear-labels">Use clear labels</h3>
   <p>Tabs hide content, so the tab labels need to make it very clear what they link to. Otherwise users will not know if they need to click on them.</p>
@@ -79,8 +88,7 @@
 
   <h2 id="progressive-enhancement">Progressive enhancement</h2>
   <p>The tabs component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
-  <p>When JavaScript is not available, users will see the tabbed content on a single page, in order from 1st to last, with a table of contents that links to each of the sections.</p>
-  <p>This is also how the component currently behaves on small screens, but more research is needed on this.</p>
+  <p>When JavaScript is not available, users will see the tabbed content on a single page, in order from 1st to last, with a contents list that links to each of the sections.</p>
 
   {{ designExample({
     group: "components",
