@@ -1,6 +1,6 @@
 {% from "button/macro.njk" import button %}
 
 {{ button({
-  text: "Yes, delete this vaccine",
+  html: '<span class="nhsuk-u-visually-hidden">Warning: </span>Yes, delete this vaccine',
   variant: "warning"
 }) }}
