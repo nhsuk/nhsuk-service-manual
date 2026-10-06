@@ -1,0 +1,13 @@
+{% from "file-upload/macro.njk" import fileUpload %}
+
+{{ fileUpload({
+  label: {
+    text: "Upload a file",
+    size: "l",
+    isPageHeading: true
+  },
+    hint: {
+    text: "You can upload 1 file from these file types: Word (DOC, DOCX) PDFs or images (JPEG, PNG) – maximum file size 10MB"
+  },
+  name: "file-hint"
+}) }}
