@@ -2,14 +2,17 @@
 
 {{ searchInput({
   label: {
-    text: "Search",
-    size: "s"
+    text: "Find a patient by NHS number",
+    size: "m"
+  },
+  hint: {
+    html: 'For example <span class="nhsuk-u-nowrap">999 123 4567</span>'
   },
   id: "example",
   name: "example",
   width: 10,
   code: true,
   button: {
-    variant: "secondary"
+    text: "Find"
   }
 }) }}
