@@ -77,42 +77,57 @@ previewLayout: design-example-wrapper-blank
 
 {% block footer %}
   {{ footer({
-    navigation: {
-      items: [
-        {
-          href: "#",
-          text: "NHS sites"
-        },
-        {
-          href: "#",
-          text: "About us"
-        },
-        {
-          href: "#",
-          text: "Contact us"
-        },
-        {
-          href: "#",
-          text: "Profile editor login"
-        },
-        {
-          href: "#",
-          text: "Site map"
-        },
-        {
-          href: "#",
-          text: "Accessibility statement"
-        },
-        {
-          href: "#",
-          text: "Our policies"
-        },
-        {
-          href: "#",
-          text: "Cookies"
-        }
-      ]
-    }
+    navigation: [
+      {
+        items: [
+          {
+            href: "#",
+            text: "Home"
+          },
+          {
+            href: "#",
+            text: "Health A to Z"
+          },
+          {
+            href: "#",
+            text: "NHS services"
+          }
+        ]
+      },
+      {
+        items: [
+          {
+            href: "#",
+            text: "NHS App"
+          },
+          {
+            href: "#",
+            text: "Find my NHS number"
+          },
+          {
+            href: "#",
+            text: "View your test results"
+          }
+        ]
+      },
+      {
+        items: [
+          {
+            href: "#",
+            text: "Accessibility statement"
+          },
+          {
+            href: "#",
+            text: "Our policies"
+          },
+          {
+            href: "#",
+            text: "Cookies"
+          }
+        ]
+      }
+    ],
+    columns: 3
   }) }}
 {% endblock %}
 
