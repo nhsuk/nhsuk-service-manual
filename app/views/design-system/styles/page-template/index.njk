@@ -201,7 +201,7 @@
         },
         {
           html: [
-            'Path to <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets">the NHS frontend assets</a> (icons and images).',
+            'Specify a path to <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets">the NHS frontend assets</a> (icons and images).',
             'Defaults to <code>"/assets"</code>.'
           ] | join('<br>')
         }
@@ -283,7 +283,7 @@
           text: "Block"
         },
         {
-          html: 'Add content that needs to appear centered in the <code>&lt;main&gt;</code> element.'
+          html: 'Add content that needs to appear in the <code>&lt;main&gt;</code> element.'
         }
       ],
       [
@@ -377,7 +377,10 @@
           text: "Variable"
         },
         {
-          html: 'Override the default language of your page. Defaults to <code>"en"</code> for English.'
+          html: [
+            'Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.',
+            'Defaults to <code>"en"</code> for English.'
+          ] | join('<br>')
         }
       ],
       [
