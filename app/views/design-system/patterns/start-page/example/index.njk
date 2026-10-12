@@ -9,7 +9,6 @@ previewLayout: design-example-wrapper-full
 {% from "inset-text/macro.njk" import insetText %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
-{% set dummyNhsNumber = "999 123 4567" %}
 
 {% block beforeContent %}
   {{ breadcrumb({
@@ -21,10 +20,6 @@ previewLayout: design-example-wrapper-full
       {
         href: "#",
         text: "NHS services"
-      },
-      {
-        href: "#",
-        text: "Online services"
       }
     ]
   }) }}
@@ -34,34 +29,19 @@ previewLayout: design-example-wrapper-full
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1 class="nhsuk-heading-xl">Find your NHS number</h1>
-      <p>Use this service to get your NHS number.</p>
-      <p>Your NHS number is a 10 digit number, like <span class="nhsuk-u-nowrap">{{dummyNhsNumber}}</span>.</p>
-      <p>You do not need to know your NHS number to use NHS services, but it can be useful to have it.</p>
-
-      {% set insetTextHtml %}
-        <p>You can also get your NHS number in your <a href="#">NHS account</a>.</p>
-      {% endset %}
-
-      {{ insetText({
-        html: insetTextHtml | safe
-      }) }}
-
-      <h2 class="nhsuk-heading-l"> Who can use this service</h2>
-      <p>You can use this service if you live in England.</p>
-      <p>You can also use this service for someone else.</p>
-
-      <h2 class="nhsuk-heading-l">Before you start</h2>
-      <p>You will need your:</p>
-      <ul class="nhsuk-list nhsuk-list--bullet">
-        <li>full name</li>
-        <li>date of birth</li>
-        <li>postcode of the address you've registered at a GP surgery with</li>
+      <h1 class="nhsuk-heading-xl">Find alcohol addiction support services</h1>
+      <p>Alcohol addiction services can help you reduce or stop your drinking if it's affecting your life or your health.</p>
+      <p>Alcohol addiction services include:</p>
+      <ul>
+        <li>support to help you stop drinking</li>
+        <li>rehabilitation</li>
+        <li>counselling and cognitive behavioural therapy (CBT)</li>
+        <li>group therapy</li>
+        <li>self-help</li>
       </ul>
-
-      <p>You will have your NHS number sent to you by text, email or letter.</p>
-      <p>If you're using this service for someone else, enter their details. They will be sent their NHS number.</p>
-
+      <h2 class="nhsuk-heading-l">Before you start</h2>
+      <p>We'll ask you where you live in England. This is so we can find the right services for you.</p>      
+ 
       <p>By using this service you agree to our <a href="#">terms of use</a> and confirm that you have read the <a href="#">privacy policy</a>.</p>
 
       {{ button({
@@ -69,12 +49,7 @@ previewLayout: design-example-wrapper-full
         href: "#"
       }) }}
 
-      <h2 class="nhsuk-heading-m">Other ways to get your NHS number</h2>
-      <p>If you cannot get your NHS number online you can:</p>
-      <ul class="nhsuk-list nhsuk-list--bullet">
-        <li>find it on any letter from the NHS like a prescription or appointment letter</li>
-        <li>call your GP surgery and ask them for your number</li>
-      </ul>
+      <p>If you do not live in England visit <a href="#">NHS Inform for Scotland</a>, <a href="#">NHS 111 for Wales</a> or <a href="#">Health and Social Care online for Northern Ireland</a>.</p>
 
     </div>
   </div>
