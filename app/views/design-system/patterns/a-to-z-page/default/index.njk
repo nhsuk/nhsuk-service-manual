@@ -5,6 +5,7 @@ previewLayout: design-example-wrapper-full
 {% extends "layouts/design-example-wrapper-full-layout.njk" %}
 
 {% from "card/macro.njk" import card %}
+{% from "icon.njk" import nhsukIcon %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -101,7 +102,8 @@ previewLayout: design-example-wrapper-full
           id: "a",
           size: "m"
         },
-        variant: "feature"
+        variant: "feature",
+        classes: "nhsuk-u-margin-bottom-4"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/abdominal-aortic-aneurysm/">AAA, see Abdominal aortic aneurysm</a></li>
@@ -112,6 +114,7 @@ previewLayout: design-example-wrapper-full
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+          {{ nhsukIcon("arrow-up") | trim | indent(10) -}}
           Back to top
         </a>
       </div>
@@ -122,7 +125,8 @@ previewLayout: design-example-wrapper-full
           id: "b",
           size: "m"
         },
-        variant: "feature"
+        variant: "feature",
+        classes: "nhsuk-u-margin-bottom-4"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li>There are currently no conditions listed</li>
@@ -131,6 +135,7 @@ previewLayout: design-example-wrapper-full
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+          {{ nhsukIcon("arrow-up") | trim | indent(10) -}}
           Back to top
         </a>
       </div>
@@ -141,7 +146,8 @@ previewLayout: design-example-wrapper-full
           id: "c",
           size: "m"
         },
-        variant: "feature"
+        variant: "feature",
+        classes: "nhsuk-u-margin-bottom-4"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/chest-pain/">Chest pain</a></li>
@@ -151,6 +157,7 @@ previewLayout: design-example-wrapper-full
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+          {{ nhsukIcon("arrow-up") | trim | indent(10) -}}
           Back to top
         </a>
       </div>
@@ -161,7 +168,8 @@ previewLayout: design-example-wrapper-full
           id: "d",
           size: "m"
         },
-        variant: "feature"
+        variant: "feature",
+        classes: "nhsuk-u-margin-bottom-4"
       }) %}
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="/conditions/dandruff/">Dandruff</a></li>
@@ -172,6 +180,7 @@ previewLayout: design-example-wrapper-full
 
       <div class="nhsuk-back-to-top">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+          {{ nhsukIcon("arrow-up") | trim | indent(10) -}}
           Back to top
         </a>
       </div>
