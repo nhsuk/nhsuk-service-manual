@@ -5,7 +5,7 @@
 
 {% macro macroOption(option, optionName, exampleId) %}
 {% set componentPath = getMacroPageName(option.alias or option.id) %}
-{% set hasComponentPage = (option.alias or option.id) in ["caption", "heading", "label", "legend"] %}
+{% set hasComponentPage = (option.alias or option.id) in ["badge", "caption", "heading", "label", "legend"] %}
 
 {% if option.deprecated | length %}
   <a href="https://github.com/nhsuk/nhsuk-frontend/releases/tag/v{{ option.deprecated }}">Deprecated in {{ option.deprecated }} (see GitHub)</a>.
