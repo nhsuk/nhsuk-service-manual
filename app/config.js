@@ -24,10 +24,7 @@ module.exports = {
       : join(rootPath, 'public'),
 
   // Nunjucks search paths
-  nunjucksPaths: [
-    join(sourcePath, 'views'),
-    join(sourcePath, 'views/components')
-  ],
+  nunjucksPaths: [sourcePath, join(sourcePath, 'views')],
 
   // Base URL
   baseUrl: BASE_URL,
