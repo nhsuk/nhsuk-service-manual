@@ -1,5 +1,15 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add hint text example to file upload component with guidance on file types and sizes
+
+:wrench: **Maintenance**
+
+- Remove duplicate default example from file upload component
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**
