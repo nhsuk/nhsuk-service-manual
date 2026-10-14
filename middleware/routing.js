@@ -18,7 +18,7 @@
  * @param {NextFunction} next
  */
 function renderPath(path, res, next) {
-  res.render(path, undefined, (error, html) => {
+  res.render(`views/${path}`, undefined, (error, html) => {
     // [1] //
     if (!error) {
       res.set({

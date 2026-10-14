@@ -5,10 +5,14 @@
 :new: **New features**
 
 - Add hint text example to file upload component with guidance on file types and sizes
+- Add guidance on not relying on users seeing red colour of warning button
 
 :wrench: **Maintenance**
 
 - Remove duplicate default example from file upload component
+- Add hidden text to red warning button for screen reader users
+- Fix page template footers
+- Document additional page template variables
 
 ## 8.14.0 - 26 August 2026
 
