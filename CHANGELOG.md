@@ -12,7 +12,7 @@
 
 - Remove duplicate default example from file upload component
 - Add hidden text to red warning button for screen reader users
-- Fix back to top arrow on A to Z pattern page
+- Fix back to top arrow on A to Z pattern page and content A to Z
 - Fix page template footers
 - Document additional page template variables
 
