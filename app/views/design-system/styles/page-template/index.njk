@@ -4,7 +4,7 @@
 {% set pageDescription = "Use this template to keep your pages consistent with other NHS services." %}
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
-{% set dateUpdated = "June 2026" %}
+{% set dateUpdated = "October 2026" %}
 {% set backlog_issue_id = "200" %}
 
 {% block beforeContent %}
@@ -31,6 +31,7 @@
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#default-page-template">Default page template</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#customised-page-template">Customised page template</a></li>
         <li class="app-side-nav__item"><a class="app-side-nav__link" href="#changing-template-content">Changing template content</a></li>
+        <li class="app-side-nav__item"><a class="app-side-nav__link" href="#template-blocks-and-options">Template blocks and options</a></li>
       </ul>
     </li>
 
@@ -172,246 +173,436 @@
     showExample: false
   }) }}
 
-  <h3 id="options">Options</h3>
+  <h2 id="template-blocks-and-options">Template blocks and options</h2>
 
-  {{ table({
-    caption: {
-      text: "Page template options and descriptions",
-      classes: "nhsuk-u-visually-hidden"
-    },
-    responsive: true,
-    head: [
-      {
-        text: "Option name"
-      },
-      {
-        text: "Option type"
-      },
-      {
-        text: "Description"
-      }
-    ],
-    rows: [
-      [
-        {
-          text: "assetPath"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: [
-            'Path to <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets">the NHS frontend assets</a> (icons and images).',
-            'Defaults to <code>/assets</code>.'
-          ] | join('<br>')
-        }
-      ],
-      [
-        {
-          text: "bodyAttributes"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.'
-        }
-      ],
-      [
-        {
-          text: "bodyClasses"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Add a class to the <code>&lt;body&gt;</code> element.'
-        }
-      ],
-      [
-        {
-          text: "beforeContent"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: [
-            'Add content that needs to appear within the <code>&lt;div class="nhsuk-width-container"&gt;</code> container but outside the <code>&lt;main&gt;</code> element.',
-            'For example: the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component and the <a href="/design-system/components/back-link">back link</a>.'
-          ] | join('<br>')
-        }
-      ],
-      [
-        {
-          text: "bodyEnd"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Add content just before the closing <code>&lt;/body&gt;</code> element.'
-        }
-      ],
-      [
-        {
-          text: "bodyStart"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Add content after the opening <code>&lt;body&gt;</code> element.'
-        }
-      ],
-      [
-        {
-          text: "containerClasses"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Add a class to the container. This is useful if you want to make the page wrapper a fixed width.'
-        }
-      ],
-      [
-        {
-          text: "content"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Add content that needs to appear centered in the <code>&lt;main&gt;</code> element.'
-        }
-      ],
-      [
-        {
-          text: "footer"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Override the default <a href="/design-system/components/footer">footer</a> component.'
-        }
-      ],
-      [
-        {
-          text: "head"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: [
-            'Add additional items inside the <code>&lt;head&gt;</code> element.',
-            'For example: <code>&lt;meta name="description" content="My page description"&gt;</code>'
-          ] | join('<br>')
-        }
-      ],
-      [
-        {
-          text: "header"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Override the default <a href="/design-system/components/header">header</a> component.'
-        }
-      ],
-      [
-        {
-          text: "headIcons"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: [
-            'Override the default icons used for NHS.UK branded pages.',
-            'For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>'
-          ] | join('<br>')
-        }
-      ],
-      [
-        {
-          text: "htmlAttributes"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Add attributes to the <code>&lt;html&gt;</code> element. Add each attribute and its value in the <code>htmlAttributes</code> object.'
-        }
-      ],
-      [
-        {
-          text: "htmlLang"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Override the default language of your page. Defaults is <code>en</code> for English.'
-        }
-      ],
-      [
-        {
-          text: "main"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Override the main section of the page, which by default wraps the <code>beforeContent</code> block, the <code>&lt;main&gt;</code> element, and <code>content</code> block.'
-        }
-      ],
-      [
-        {
-          text: "mainClasses"
-        },
-        {
-          text: "Variable"
-        },
-        {
-          html: 'Add a class to the <code>&lt;main&gt;</code> element.'
-        }
-      ],
-      [
-        {
-          text: "pageTitle"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Override the default page title (<code>&lt;title&gt;</code> element).'
-        }
-      ],
-      [
-        {
-          text: "skipLink"
-        },
-        {
-          text: "Block"
-        },
-        {
-          html: 'Override the default <a href="/design-system/components/skip-link">skip link</a> component.'
-        }
-      ]
-    ]
-  }) }}
+  <p>Options are listed within the template blocks where they're used:</p>
 
-  <h4 id="exploded-view-of-the-page-template-block-areas">Exploded view of the page template block areas</h4>
+  <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-8">
+    <li><a href="#width-container-and-content-blocks">Width container and content blocks</a></li>
+    <li><a href="#html-and-body"><code>&lt;html&gt;</code> and <code>&lt;body&gt;</code></a></li>
+    <li><a href="#head-and-metadata"><code>&lt;head&gt;</code> and metadata</a></li>
+    <li><a href="#other-options">Other options</a></li>
+  </ul>
+
+  <h3 id="width-container-and-content-blocks">Width container and content blocks</h3>
+
+  <p>The page template renders your content in a <code>&lt;main&gt;</code> element, wrapped in a container limiting the content's width.</p>
+
+  <p>Use options in width container and content blocks to:</p>
+
+  <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-8">
+    <li><a href="#add-classes-or-attributes">add classes or attributes</a></li>
+    <li><a href="#render-your-content-inside-the-template">render your content inside the template</a></li>
+  </ul>
 
   {{ designExample({
     group: "styles",
     item: "page-template",
     type: "annotated",
     showCode: false
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "add-classes-or-attributes",
+        html: "Add classes or attributes",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>containerClasses</code> (Variable)",
+          width: "one-third"
+        },
+        value: {
+          html: 'Add a class to the container. This is useful if you want to make the page wrapper a fixed width.'
+        }
+      },
+      {
+        key: {
+          html: "<code>mainClasses</code> (Variable)"
+        },
+        value: {
+          html: "Add a class to the <code>&lt;main&gt;</code> element."
+        }
+      },
+      {
+        key: {
+          html: "<code>mainLang</code> (Variable)"
+        },
+        value: {
+          html: "Set the language of the <code>&lt;main&gt;</code> element if it's different to <a href='#htmllang-variable'><code>htmlLang</code></a>."
+        }
+      }
+    ]
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "render-your-content-inside-the-template",
+        html: "Render your content inside the template",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>pageTitle</code> (Block)"
+        },
+        value: {
+          html: "Override the default page title (<code>&lt;title&gt;</code> element)."
+        }
+      },
+      {
+        key: {
+          html: "<code>headIcons</code> (Block)"
+        },
+        value: {
+          html: [
+            'Override the default icons used for NHS.UK branded pages.',
+            'For example: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /&gt;</code>'
+          ] | join('<br>')
+        }
+      },
+      {
+        key: {
+          html: "<code>head</code> (Block)"
+        },
+        value: {
+          html: [
+            'Add additional items inside the <code>&lt;head&gt;</code> element.',
+            'For example: <code>&lt;meta name="description" content="My page description"&gt;</code>'
+          ] | join('<br>')
+        }
+      },
+      {
+        key: {
+          html: "<code>bodyStart</code> (Block)"
+        },
+        value: {
+          html: 'Add content after the opening <code>&lt;body&gt;</code> element.'
+        }
+      },
+      {
+        key: {
+          html: "<code>skipLink</code> (Block)"
+        },
+        value: {
+          html: 'Override the default <a href="/design-system/components/skip-link">skip link</a> component.'
+        }
+      },
+      {
+        key: {
+          html: "<code>header</code> (Block)"
+        },
+        value: {
+          html: 'Override the default <a href="/design-system/components/header">header</a> component.'
+        }
+      },
+      {
+        key: {
+          html: "<code>main</code> (Block)"
+        },
+        value: {
+          html: 'Override the main section of the page, which by default wraps the <a href="#beforecontent-block"><code>beforeContent</code></a> block, the <code>&lt;main&gt;</code> element, and <a href="#content-block"><code>content</code></a> block.'
+        }
+      },
+      {
+        key: {
+          html: "<code>beforeContent</code> (Block)"
+        },
+        value: {
+          html: [
+            'Add content that needs to appear within the <code>&lt;div class="nhsuk-width-container"&gt;</code> container but outside the <code>&lt;main&gt;</code> element.',
+            'For example: the <a href="/design-system/components/breadcrumbs">breadcrumbs</a> component and the <a href="/design-system/components/back-link">back link</a>.'
+          ] | join('<br>')
+        }
+      },
+      {
+        key: {
+          html: "<code>content</code> (Block)"
+        },
+        value: {
+          html: "Add content that needs to appear in the <code>&lt;main&gt;</code> element."
+        }
+      },
+      {
+        key: {
+          html: "<code>footer</code> (Block)"
+        },
+        value: {
+          html: 'Override the default <a href="/design-system/components/footer">footer</a> component.'
+        }
+      },
+      {
+        key: {
+          html: "<code>bodyEnd</code> (Block)"
+        },
+        value: {
+          html: "Add content just before the closing <code>&lt;/body&gt;</code> element."
+        }
+      }
+    ]
+  }) }}
+
+  <h3 id="html-and-body"><code>&lt;html&gt;</code> and <code>&lt;body&gt;</code></h3>
+
+  <p>Use options in <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> to:</p>
+
+  <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-8">
+    <li><a href="#configure-classes-and-attributes-on-the-html-element">configure classes and attributes on the <code>&lt;html&gt;</code> element</a></li>
+    <li><a href="#configure-classes-and-attributes-on-the-body-element">configure classes and attributes on the <code>&lt;body&gt;</code> element</a></li>
+  </ul>
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "configure-classes-and-attributes-on-the-html-element",
+        html: "Configure classes and attributes on the <code>&lt;html&gt;</code> element",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>htmlClasses</code> (Variable)"
+        },
+        value: {
+          html: "Add a class to the <code>&lt;html&gt;</code> element."
+        }
+      },
+      {
+        key: {
+          html: "<code>htmlAttributes</code> (Variable)"
+        },
+        value: {
+          html: 'Add attributes to the <code>&lt;html&gt;</code> element. Add each attribute and its value in the <code>htmlAttributes</code> object.'
+        }
+      },
+      {
+        key: {
+          html: "<code>htmlLang</code> (Variable)"
+        },
+        value: {
+          html: [
+            'Set the language of the whole document. If your <code>&lt;title&gt;</code> and <code>&lt;main&gt;</code> element are in a different language to the rest of the page, use <code>htmlLang</code> to set the language of the rest of the page.',
+            'Defaults to <code>"en"</code> for English.'
+          ] | join('<br>')
+        }
+      }
+    ]
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "configure-classes-and-attributes-on-the-body-element",
+        html: "Configure classes and attributes on the <code>&lt;body&gt;</code> element",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>bodyClasses</code> (Variable)"
+        },
+        value: {
+          html: 'Add a class to the <code>&lt;body&gt;</code> element.'
+        }
+      },
+      {
+        key: {
+          html: "<code>bodyAttributes</code> (Variable)"
+        },
+        value: {
+          html: 'Add attributes to the <code>&lt;body&gt;</code> element. Add each attribute and its value in the <code>bodyAttributes</code> object.'
+        }
+      }
+    ]
+  }) }}
+
+  <h3 id="head-and-metadata"><code>&lt;head&gt;</code> and metadata</h3>
+
+  <p>Use options in <code>&lt;head&gt;</code> and metadata to:</p>
+
+  <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-8">
+    <li><a href="#configure-where-your-page-can-access-nhsuk-frontend-assets">configure where your page can access NHS.UK frontend assets</a></li>
+    <li><a href="#customise-the-open-graph-image">customise the Open Graph image</a></li>
+    <li><a href="#customise-theme-colours">customise theme colours</a></li>
+    <li><a href="#set-the-pages-title">set the page's title</a></li>
+  </ul>
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "configure-where-your-page-can-access-nhsuk-frontend-assets",
+        html: "Configure where your page can access NHS.UK frontend assets",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>assetPath</code> (Variable)"
+        },
+        value: {
+          html: [
+            'Specify a path to <a href="https://github.com/nhsuk/nhsuk-frontend/tree/main/packages/nhsuk-frontend/src/nhsuk/assets">the NHS frontend assets</a> (icons and images).',
+            'Defaults to <code>"/assets"</code>.'
+          ] | join('<br>')
+        }
+      },
+      {
+        key: {
+          html: "<code>assetUrl</code> (Variable)"
+        },
+        value: {
+          html: 'Set the domain for assets where an absolute URL is required, for example the Open Graph image.'
+        }
+      }
+    ]
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "customise-the-open-graph-image",
+        html: "Customise the Open Graph image",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>opengraphImageUrl</code> (Variable)"
+        },
+        value: {
+          html: 'Set the URL for the Open Graph image meta tag. The URL must be absolute, including the protocol and domain name. Defaults to <code>assetUrl ~ "/images/nhsuk-opengraph-image.png"</code> if <code>opengraphImageUrl</code> or <a href="#asseturl-variable"><code>assetUrl</code></a> are set.'
+        }
+      }
+    ]
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "customise-theme-colours",
+        html: "Customise theme colours",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>themeColor</code> (Variable)"
+        },
+        value: {
+          html: 'Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android">toolbar colour on some devices</a>. Defaults to <code>"#005eb8"</code>.'
+        }
+      },
+      {
+        key: {
+          html: "<code>themeName</code> (Variable)"
+        },
+        value: {
+          html: [
+            'Set the <a href="https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android">toolbar colour on some devices</a> using a <a href="#themecolors-variable"><code>themeColors</code></a> name',
+            '– <code>"white"</code>, <code>"grey"</code>, <code>"green"</code>, <code>"aqua-green"</code>, <code>"blue"</code>, <code>"purple"</code>, <code>"pink"</code>, <code>"red"</code>, <code>"orange"</code> or <code>"yellow"</code>.'
+          ] | join(' ')
+        }
+      },
+      {
+        key: {
+          html: "<code>themeColors</code> (Variable)"
+        },
+        value: {
+          html: 'Override the named colours used by <a href="#themename-variable"><code>themeName</code></a> or <a href="#environmentname-variable"><code>environmentName</code></a>.'
+        }
+      },
+      {
+        key: {
+          html: "<code>environmentName</code> (Variable)"
+        },
+        value: {
+          html: [
+            'Add an environment name to automatically set the <a href="#themename-variable"><code>themeName</code></a> colour.',
+            'For example: <code>"Development"</code> (white), <code>"Review"</code> (purple), <code>"Test"</code> (red), <code>"QA"</code> (orange) or <code>"Preview"</code> (yellow).'
+          ] | join('<br>')
+        }
+      }
+    ]
+  }) }}
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "set-the-pages-title",
+        html: "Set the page's title",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>pageTitleLang</code> (Variable)"
+        },
+        value: {
+          html: "Set the language of the <code>&lt;title&gt;</code> element if it's different to <a href='#htmllang-variable'><code>htmlLang</code></a>."
+        }
+      }
+    ]
+  }) }}
+
+  <h3 id="other-options">Other options</h3>
+
+  {{ summaryList({
+    lastRowBorder: false,
+    card: {
+      heading: heading({
+        id: "security",
+        html: "Security",
+        classes: "nhsuk-card__heading",
+        level: 4
+      }),
+      variant: "secondary"
+    },
+    rows: [
+      {
+        key: {
+          html: "<code>cspNonce</code> (Variable)"
+        },
+        value: {
+          html: "Add a nonce attribute to the script for your Content Security Policy (CSP). Provide a nonce that hostile actors cannot guess, as otherwise they can easily find a way around your CSP. However, you should use this attribute only if you're not able to include the hash for the inline scripts in your service's CSP."
+        }
+      }
+    ]
   }) }}
 
 {% endblock %}
