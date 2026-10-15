@@ -79,12 +79,3 @@
     padding-bottom: nhsuk-spacing(5);
   }
 }
-
-// Back to top link
-
-.nhsuk-back-to-top__link {
-  display: inline-block;
-  position: relative;
-  margin-top: 0;
-  @include nhsuk-font-size(19);
-}
