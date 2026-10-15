@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Help users select and upload a file."%}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "January 2026" %}
+{% set dateUpdated = "October 2026" %}
 {% set backlog_issue_id = "93" %}
 
 {% block beforeContent %}
@@ -32,18 +32,21 @@
     <li>drag and drop a file into the file upload input area</li>
   </ul>
 
+  <h3 id="accept-different-file-types-and-large-files">Accept different file types and large file sizes</h3>
+  <p>Research your users' typical file types and let them upload as many different types as possible. Also, wherever possible, let users upload large file sizes. You can convert or reduce files automatically if you need to.</p>
+  <p>If you must limit file types or sizes, let users know by using hint text.</p>
+  
+  {{ designExample({
+    group: "components",
+    item: "file-upload",
+    type: "with-hint-text",
+    showJavaScriptToggle: true
+  }) }}
+
   <h3 id="let-users-reuse-uploaded-files">Let users reuse uploaded files</h3>
   <p>Make sure users can easily reuse a previously uploaded file within a single journey, unless doing so would be a major security or privacy concern.</p>
   <p>For example, a user might need to upload a photo of their driving licence to prove their identity, and again to prove their address.</p>
   <p>You can make it easier for the user to reuse a file by showing it as an option for the user to select. Consider users on public devices before choosing to make the file available to preview or download.</p>
-
-  {{ designExample({
-    group: "components",
-    item: "file-upload",
-    type: "default",
-    titleSuffix: "second",
-    showJavaScriptToggle: true
-  }) }}
 
   <h3 id="changing-the-button-text">Changing the button text</h3>
   <p>You can change the text on the button and in the "No file chosen" message. This text is changeable so you can translate it or be specific about the file to upload.</p>
@@ -68,7 +71,7 @@
 
   <h4 id="if-the-file-is-the-wrong-file-type">If the file is the wrong file type</h4>
   <p>Say "The selected file must be a [list of file types]".</p>
-  <p>For example, "The selected file must be a CSV" or "The selected file must be a JPG, BMP, PNG, TIF or PDF".</p>
+  <p>For example, "The selected file must be a DOC, DOCX, PDF, JPEG or PNG".</p>
 
   <h4 id="if-the-file-is-too-big">If the file is too big</h4>
   <p>Say "The selected file must be smaller than [largest file size]".</p>
