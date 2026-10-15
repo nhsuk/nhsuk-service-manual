@@ -1,12 +1,12 @@
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
+import autoprefixer from 'autoprefixer'
+import cssnano from 'cssnano'
 
 const { NODE_ENV } = process.env
 
 /**
  * @type {Config}
  */
-module.exports = {
+export default {
   plugins: [
     // Add vendor prefixes
     autoprefixer({
