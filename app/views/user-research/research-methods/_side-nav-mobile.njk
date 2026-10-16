@@ -1,0 +1,17 @@
+{% set researchMethodsNav = [
+  { title: "Face-to-face research", url: "/user-research/research-methods/face-to-face-research" },
+  { title: "Surveys", url: "/user-research/research-methods/surveys" }
+] %}
+
+{% for item in researchMethodsNav %}
+  {% set researchMethodsNav = (researchMethodsNav.splice(loop.index0, 1, {
+    text: item.title,
+    href: item.url,
+    current: item.title == pageTitle
+  }), researchMethodsNav) %}
+{% endfor %}
+
+{{ contentsList({
+  classes: "app-contents-list app-u-hide-desktop",
+  items: researchMethodsNav
+}) }}
