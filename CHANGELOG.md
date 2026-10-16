@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Guidance on creating Service unavailable pages
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**
