@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## Unreleased
+
+:new: **New features**
+
+- Add new patterns for Page not found, Service unavailable, There is a problem with the service
+
 ## 8.14.0 - 26 August 2026
 
 :new: **New features**
