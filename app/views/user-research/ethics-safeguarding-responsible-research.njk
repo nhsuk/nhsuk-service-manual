@@ -1,0 +1,70 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Ethics, safeguarding and responsible research" %}
+{% set pageDescription = "Responsible user research protects the rights, safety, dignity and wellbeing of participants and researchers." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "October 2026" %}
+
+{% block beforeContent %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+<p>Consider ethics, safeguarding, consent and privacy from the start of every project, not only when a topic appears sensitive.</p>
+
+<h2 id="identify-ethical-risks-early">Identify ethical risks early</h2>
+<p>Be clear why the research is needed and whether the benefit justifies asking people to take part. Identify possible harm to participants, researchers and observers, record how you will reduce it, and review the plan when the topic, method, setting or participants change. Ask an appropriate specialist for advice when risks are unclear.</p>
+
+<h2 id="get-informed-consent">Get informed consent</h2>
+<p>Give participants clear, accessible information about the purpose of the research, what will happen, what you will collect and how findings will be used. Make clear that taking part is voluntary, that they can pause or stop, and when confidentiality may need to be broken because someone is at risk of harm.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research">Read about getting informed consent for user research (GOV.UK service manual)</a></p>
+
+<h2 id="protect-privacy-and-research-data">Protect privacy and research data</h2>
+<p>Collect only the personal information you need and plan how it will be used, shared, stored and deleted. Keep it secure, limit access and remove identifying details from findings where possible. Tell participants who is responsible for their information, how long it will be kept and how they can exercise their data rights.</p>
+<p>Check whether you need a data protection impact assessment (DPIA), particularly for:</p>
+<ul>
+  <li>high-risk processing</li>
+  <li>new technology</li>
+  <li>sensitive information at scale</li>
+  <li>combined datasets</li>
+  <li>research panels</li>
+  <li>longitudinal research</li>
+</ul>
+<p>Involve data protection or information governance specialists early.</p>
+<p>Read about:</p>
+<ul>
+  <li><a href="https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy">managing user research data and participant privacy (GOV.UK service manual)</a></li>
+  <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/guide-to-accountability-and-governance/data-protection-impact-assessments/">data protection impact assessments (Information Commissioner's Office)</a></li>
+</ul>
+
+<h2 id="plan-for-safeguarding-concerns">Plan for safeguarding concerns</h2>
+<p>Before research begins, agree which safeguarding policy and local process applies, who the safeguarding lead is, and what to do if someone makes a disclosure or appears at risk. Follow the agreed route rather than investigating a concern yourself. If there is immediate danger, prioritise safety and contact the emergency services.</p>
+
+<h2 id="research-sensitive-subjects-responsibly">Research sensitive subjects responsibly</h2>
+<p>For sensitive subjects, learn about the context, use appropriate language and methods, and involve subject experts or trusted organisations where needed. Do not ask for unnecessary detail or encourage people to recount traumatic experiences that are not needed. Offer breaks, change topic or end the session when necessary, and prepare suitable support information in advance.</p>
+<p><a href="https://www.gov.uk/service-manual/user-research/researching-emotionally-sensitive-subjects">Read about researching emotionally sensitive subjects (GOV.UK service manual)</a></p>
+
+<h2 id="support-participants-and-researchers">Support participants and researchers</h2>
+<p>Do not exclude people simply because participation may require more care. Consider adjustments, support and specialist advice that would make involvement safe and meaningful. Research involving children, people who may lack capacity to consent or people in restricted settings may have additional requirements.</p>
+<p>Assess risks to researchers and observers, including:</p>
+<ul>
+  <li>lone working</li>
+  <li>travel</li>
+  <li>hostility</li>
+  <li>the emotional impact of difficult subjects</li>
+</ul>
+<p>Use appropriate check-ins, breaks, debriefs and support. Anyone should be able to stop a session if they feel unsafe.</p>
+
+<h2 id="check-if-you-need-formal-approval">Check if you need formal approval</h2>
+<p>Most service-design user research is managed through organisational governance, but some work may need formal health and social care research approval or have regulatory requirements. Check before recruitment when work involves:</p>
+<ul>
+  <li>patients or staff</li>
+  <li>health or care data</li>
+  <li>changes to treatment or care</li>
+  <li>a medical device</li>
+  <li>people who may lack capacity</li>
+  <li>methods intended to produce generalisable knowledge</li>
+</ul>
+<p><a href="https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/">Read What approvals and decisions do I need? (Health Research Authority)</a></p>
+
+{% endblock %}
