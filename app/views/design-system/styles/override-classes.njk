@@ -5,7 +5,7 @@
 {% set pageSection = "Design system" %}
 {% set subSection = "Styles" %}
 {% set theme = "Reference" %}
-{% set dateUpdated = "August 2026" %}
+{% set dateUpdated = "October 2026" %}
 
 {% block beforeContent %}
   {% include "design-system/_breadcrumb.njk" %}
@@ -736,7 +736,7 @@
       },
       {
         key: {
-          html: "<code>nhsuk-u-display-none-from-mobile</code>",
+          html: "<code>nhsuk-u-display-none-until-mobile</code>",
           classes: "nhsuk-u-font-weight-normal"
         },
         value: {
@@ -745,7 +745,7 @@
       },
       {
         key: {
-          html: "<code>nhsuk-u-display-none-from-tablet</code>",
+          html: "<code>nhsuk-u-display-none-until-tablet</code>",
           classes: "nhsuk-u-font-weight-normal"
         },
         value: {
@@ -754,7 +754,7 @@
       },
       {
         key: {
-          html: "<code>nhsuk-u-display-none-from-desktop</code>",
+          html: "<code>nhsuk-u-display-none-until-desktop</code>",
           classes: "nhsuk-u-font-weight-normal"
         },
         value: {
@@ -763,7 +763,7 @@
       },
       {
         key: {
-          html: "<code>nhsuk-u-display-none-from-large-desktop</code>",
+          html: "<code>nhsuk-u-display-none-until-large-desktop</code>",
           classes: "nhsuk-u-font-weight-normal"
         },
         value: {
@@ -804,6 +804,24 @@
         },
         value: {
           text: "Hides an element on large desktop (990px) and above"
+        }
+      },
+      {
+        key: {
+          html: "<code>nhsuk-u-frontend-supported-hidden</code>",
+          classes: "nhsuk-u-font-weight-normal"
+        },
+        value: {
+          text: "Hides an element in modern browsers that support NHS.UK frontend JavaScript"
+        }
+      },
+      {
+        key: {
+          html: "<code>nhsuk-u-frontend-not-supported-hidden</code>",
+          classes: "nhsuk-u-font-weight-normal"
+        },
+        value: {
+          text: "Hides an element in older browsers that do not support NHS.UK frontend JavaScript"
         }
       }
     ]
