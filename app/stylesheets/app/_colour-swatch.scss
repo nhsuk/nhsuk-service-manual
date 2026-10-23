@@ -7,21 +7,12 @@
 /// Custom table for the colour palette
 ////
 
-.app-colour-list {
-  margin-top: 0;
-
-  th,
-  td {
-    border: 0;
-  }
-}
-
 .app-colour-list__swatch {
   display: inline-block;
 
   position: absolute;
   top: math.div(nhsuk-spacing(1), 2);
-  left: 0;
+  left: 2px;
 
   width: nhsuk-spacing(6);
   height: nhsuk-spacing(6);
