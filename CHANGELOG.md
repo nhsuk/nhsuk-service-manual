@@ -1,9 +1,10 @@
 # NHS digital service manual Changelog
 
-## TBC
+## 8.15.0 - TBC October 2026
 
 :new: **New features**
 
+- Update search input guidance and examples after user research
 - Add hint text example to file upload component with guidance on file types and sizes
 - Add guidance on not relying on users seeing red colour of warning button
 
@@ -11,6 +12,8 @@
 
 - Remove duplicate default example from file upload component
 - Add hidden text to red warning button for screen reader users
+- Fix back to top arrow on A to Z pattern page and content A to Z
+- Change name of "A to Z list panel" to "A to Z list card"
 - Fix page template footers
 - Document additional page template variables
 

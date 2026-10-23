@@ -1,4 +1,5 @@
 {% from "card/macro.njk" import card %}
+{% from "icon.njk" import nhsukIcon %}
 
 {% block content %}
   <div id="nhsuk-nav-a-z">
@@ -15,11 +16,13 @@
       description: {
         html: cardADescriptionHtml
       },
-      variant: "feature"
+      variant: "feature",
+      classes: "nhsuk-u-margin-bottom-4"
     }) }}
 
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+        {{ nhsukIcon("arrow-up") | trim | indent(8) -}}
         Back to top
       </a>
     </div>
@@ -35,11 +38,13 @@
       description: {
         html: cardBDescriptionHtml
       },
-      variant: "feature"
+      variant: "feature",
+      classes: "nhsuk-u-margin-bottom-4"
     }) }}
 
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+        {{ nhsukIcon("arrow-up") | trim | indent(8) -}}
         Back to top
       </a>
     </div>
@@ -56,11 +61,13 @@
       description: {
         html: cardCDescriptionHtml
       },
-      variant: "feature"
+      variant: "feature",
+      classes: "nhsuk-u-margin-bottom-4"
     }) }}
 
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+        {{ nhsukIcon("arrow-up") | trim | indent(8) -}}
         Back to top
       </a>
     </div>
@@ -78,11 +85,13 @@
       description: {
         html: cardDDescriptionHtml
       },
-      variant: "feature"
+      variant: "feature",
+      classes: "nhsuk-u-margin-bottom-4"
     }) }}
 
     <div class="nhsuk-back-to-top">
       <a class="nhsuk-back-to-top__link" href="#nhsuk-nav-a-z">
+        {{ nhsukIcon("arrow-up") | trim | indent(8) -}}
         Back to top
       </a>
     </div>
