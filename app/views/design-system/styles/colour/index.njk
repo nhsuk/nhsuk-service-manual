@@ -27,194 +27,141 @@
   <p>If you are using the <a href="/design-system/production">NHS.UK frontend</a> or the <a href="/design-system/prototyping">NHS.UK prototype kit</a>, use the <a href="https://sass-lang.com/guide#topic-2">Sass variables</a> provided rather than copying the hexadecimal (hex) colour values. For example, use <code>$nhsuk-text-colour</code> rather than <code>#212b32</code>. This means that your service will always use the most recent colour palette whenever you update.</p>
   <p>Only use the variables in the context they're designed for. In all other cases, you should reference the <a href="#colour-palette">colour palette</a> directly. For example, if you wanted to use red to represent some data in a graph you should use <code>nhsuk-colour("red")</code> rather than <code>$nhsuk-error-colour</code>.</p>
 
-  <table class="app-colour-list" summary="Table of main colours">
-    <tbody>
+  {%- set groups = {
+    "text": {
+      caption: "Text",
+      colours: [
+        {
+          name: "$nhsuk-text-colour",
+          value: "#212b32"
+        },
+        {
+          name: "$nhsuk-secondary-text-colour",
+          value: "#4c6272",
+          modifier: "nhsuk-u-secondary-text-colour"
+        }
+      ]
+    },
+    "link": {
+      caption: "Links",
+      colours: [
+        {
+          name: "$nhsuk-link-colour",
+          value: "#005eb8"
+        },
+        {
+          name: "$nhsuk-link-hover-colour",
+          value: "#7C2855"
+        },
+        {
+          name: "$nhsuk-link-visited-colour",
+          value: "#330072"
+        },
+        {
+          name: "$nhsuk-link-active-colour",
+          value: "#002f5c"
+        }
+      ]
+    },
+    "focus-state": {
+      caption: "Focus state",
+      colours: [
+        {
+          name: "$nhsuk-focus-colour",
+          value: "#ffeb3b"
+        },
+        {
+          name: "$nhsuk-focus-text-colour",
+          value: "#212b32"
+        }
+      ]
+    },
+    "border": {
+      caption: "Border",
+      colours: [
+        {
+          name: "$nhsuk-border-colour",
+          value: "#d8dde0"
+        },
+        {
+          name: "$nhsuk-input-border-colour",
+          value: "#4c6272"
+        }
+      ]
+    },
+    "error-state": {
+      caption: "Error state",
+      colours: [
+        {
+          name: "$nhsuk-error-colour",
+          value: "#d5281b"
+        }
+      ]
+    },
+    "success-state": {
+      caption: "Success state",
+      colours: [
+        {
+          name: "$nhsuk-success-colour",
+          value: "#007f3b"
+        }
+      ]
+    },
+    "button": {
+      caption: "Button",
+      colours: [
+        {
+          name: "$nhsuk-button-colour",
+          value: "#007f3b"
+        },
+        {
+          name: "$nhsuk-secondary-button-border-colour",
+          value: "#005eb8"
+        }
+      ]
+    }
+  } %}
 
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-0" id="text-colours">
-          Text
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>$nhsuk-text-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #212b32
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>$nhsuk-secondary-text-colour</code>
-          <p class="nhsuk-u-margin-bottom-0">Modifier class: <code>nhsuk-u-secondary-text-colour</code></p>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #4c6272
-        </td>
-      </tr>
+  {%- for id, category in groups %}
+    {%- set rows = [] %}
 
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="link-colours">
-          Links
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#005eb8"></span>
-          <code>$nhsuk-link-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #005eb8
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#7C2855"></span>
-          <code>$nhsuk-link-hover-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #7C2855
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#330072"></span>
-          <code>$nhsuk-link-visited-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #330072
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#002f5c"></span>
-          <code>$nhsuk-link-active-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #002f5c
-        </td>
-      </tr>
+    {%- for colour in category.colours %}
+      {%- set swatchHtml -%}
+        <span {{- nhsukAttributes({
+          class: "app-colour-list__swatch" ~ (" " ~ colour.classes if colour.classes),
+          style: "background-color: " ~ colour.value | escape
+        }) }}></span>
+        <code>{{ colour.name }}</code>
+        {% if colour.modifier %}
+        <p class="nhsuk-u-margin-bottom-0">Modifier class: <code>{{ colour.modifier }}</code></p>
+        {% endif %}
+      {%- endset %}
 
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="focus-state-colours">
-          Focus state
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ffeb3b"></span>
-          <code>$nhsuk-focus-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ffeb3b
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>$nhsuk-focus-text-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #212b32
-        </td>
-      </tr>
+      {%- set rows = (rows.push([
+        {
+          text: swatchHtml | safe,
+          classes: "app-colour-list__column app-colour-list__column--name"
+        },
+        {
+          html: "<samp>" ~ colour.value ~ "</samp>",
+          classes: "app-colour-list__column app-colour-list__column--colour",
+          width: "one-quarter"
+        }
+      ]), rows) %}
+    {%- endfor %}
 
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="border-colours">
-          Border
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#d8dde0"></span>
-          <code>$nhsuk-border-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #d8dde0
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>$nhsuk-input-border-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #4c6272
-        </td>
-      </tr>
-
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="error-state-colours">
-          Error state
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#d5281b"></span>
-          <code>$nhsuk-error-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #d5281b
-        </td>
-      </tr>
-
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="success-state-colours">
-          Success state
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#007f3b"></span>
-          <code>$nhsuk-success-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #007f3b
-        </td>
-      </tr>
-
-      <tr>
-        <td class="nhsuk-u-padding-left-0" colspan="3">
-          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0" id="button-colours">
-          Button
-          </h3>
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#007f3b"></span>
-          <code>$nhsuk-button-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #007f3b
-        </td>
-      </tr>
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#005eb8"></span>
-          <code>$nhsuk-secondary-button-border-colour</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #005eb8
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
+    {{ table({
+      caption: {
+        id: id ~ "-colours",
+        text: category.caption,
+        size: "m"
+      },
+      classes: "app-colour-list",
+      firstCellIsHeader: true,
+      border: false,
+      rows: rows
+    }) }}
+  {%- endfor %}
 
   <h3 id="page-background-colour">Page background colour</h3>
   <p>We use <code>$nhsuk-body-background-colour</code> or <code>nhsuk-colour("grey-5")</code> as a background tint. This is because:</p>
@@ -234,201 +181,179 @@
   <h2 id="colour-palette">Colour palette</h2>
   <p>Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-colour</code> Sass variable rather than <code>nhsuk-colour("red")</code>.</p>
 
-  <table class="app-colour-list" summary="Table of the full colour palette">
-    <tbody>
+  {%- set colours = [
+    {
+      name: "dark-blue",
+      value: "#003087"
+    },
+    {
+      name: "blue",
+      value: "#005eb8"
+    },
+    {
+      name: "pale-blue",
+      value: "#ccdff1"
+    },
+    {
+      name: "dark-aqua-green",
+      value: "#004a45"
+    },
+    {
+      name: "aqua-green",
+      value: "#00a499"
+    },
+    {
+      name: "pale-aqua-green",
+      value: "#bae6e3"
+    },
+    {
+      name: "dark-green",
+      value: "#004c23"
+    },
+    {
+      name: "green",
+      value: "#007f3b"
+    },
+    {
+      name: "pale-green",
+      value: "#cce5d8"
+    },
+    {
+      name: "dark-yellow",
+      value: "#595215"
+    },
+    {
+      name: "yellow",
+      value: "#ffeb3b"
+    },
+    {
+      name: "pale-yellow",
+      value: "#fff9c4"
+    },
+    {
+      name: "dark-warm-yellow",
+      value: "#664a0b"
+    },
+    {
+      name: "warm-yellow",
+      value: "#ffb81c"
+    },
+    {
+      name: "pale-warm-yellow",
+      value: "#fff1d2"
+    },
+    {
+      name: "dark-orange",
+      value: "#5f3800"
+    },
+    {
+      name: "orange",
+      value: "#ed8b00"
+    },
+    {
+      name: "pale-orange",
+      value: "#fbe8cc"
+    },
+    {
+      name: "dark-red",
+      value: "#801810"
+    },
+    {
+      name: "red",
+      value: "#d5281b"
+    },
+    {
+      name: "pale-red",
+      value: "#f7d4d1"
+    },
+    {
+      name: "dark-pink",
+      value: "#6e234b"
+    },
+    {
+      name: "pink",
+      value: "#ae2573"
+    },
+    {
+      name: "pale-pink",
+      value: "#efd3e3"
+    },
+    {
+      name: "dark-purple",
+      value: "#330072"
+    },
+    {
+      name: "purple",
+      value: "#5c338e"
+    },
+    {
+      name: "pale-purple",
+      value: "#ded6e8"
+    },
+    {
+      name: "black",
+      value: "#212b32"
+    },
+    {
+      name: "grey-1",
+      value: "#4c6272"
+    },
+    {
+      name: "grey-2",
+      value: "#768692"
+    },
+    {
+      name: "grey-3",
+      value: "#aeb7bd"
+    },
+    {
+      name: "grey-4",
+      value: "#d8dde0"
+    },
+    {
+      name: "grey-5",
+      value: "#f0f4f5",
+      classes: "app-colour-list__swatch--border"
+    },
+    {
+      name: "white",
+      value: "#ffffff"
+    }
+  ] %}
 
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#d5281b"></span>
-          <code>nhsuk-colour("red")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #d5281b
-        </td>
-      </tr>
+  {%- set rows = [] %}
 
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ffeb3b"></span>
-          <code>nhsuk-colour("yellow")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ffeb3b
-        </td>
-      </tr>
+  {%- for colour in colours %}
+    {%- set swatchHtml -%}
+      <span {{- nhsukAttributes({
+        class: "app-colour-list__swatch" ~ (" " ~ colour.classes if colour.classes),
+        style: "background-color: " ~ colour.value | escape
+      }) }}></span>
+      <code>nhsuk-colour("{{ colour.name }}")</code>
+    {%- endset %}
 
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#007f3b"></span>
-          <code>nhsuk-colour("green")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #007f3b
-        </td>
-      </tr>
+    {%- set rows = (rows.push([
+      {
+        text: swatchHtml | safe,
+        classes: "app-colour-list__column app-colour-list__column--name"
+      },
+      {
+        html: "<samp>" ~ colour.value ~ "</samp>",
+        classes: "app-colour-list__column app-colour-list__column--colour",
+        width: "one-quarter"
+      }
+    ]), rows) %}
+  {%- endfor %}
 
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#00a499"></span>
-          <code>nhsuk-colour("aqua-green")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #00a499
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#005eb8"></span>
-          <code>nhsuk-colour("blue")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #005eb8
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#003087"></span>
-          <code>nhsuk-colour("dark-blue")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #003087
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#330072"></span>
-          <code>nhsuk-colour("purple")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #330072
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#7c2855"></span>
-          <code>nhsuk-colour("dark-pink")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #7c2855
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ae2573"></span>
-          <code>nhsuk-colour("pink")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ae2573
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ed8b00"></span>
-          <code>nhsuk-colour("orange")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ed8b00
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ffb81c"></span>
-          <code>nhsuk-colour("warm-yellow")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ffb81c
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#fff9c4"></span>
-          <code>nhsuk-colour("pale-yellow")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #fff9c4
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#212b32"></span>
-          <code>nhsuk-colour("black")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #212b32
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#4c6272"></span>
-          <code>nhsuk-colour("grey-1")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #4c6272
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#768692"></span>
-          <code>nhsuk-colour("grey-2")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #768692
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#aeb7bd"></span>
-          <code>nhsuk-colour("grey-3")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #aeb7bd
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#d8dde0"></span>
-          <code>nhsuk-colour("grey-4")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #d8dde0
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch app-colour-list__swatch--border" style="background-color:#f0f4f5"></span>
-          <code>nhsuk-colour("grey-5")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #f0f4f5
-        </td>
-      </tr>
-
-      <tr class="app-colour-list__row">
-        <th class="app-colour-list__column app-colour-list__column--name" scope="row">
-          <span class="app-colour-list__swatch" style="background-color:#ffffff"></span>
-          <code>nhsuk-colour("white")</code>
-        </th>
-        <td class="app-colour-list__column app-colour-list__column--colour">
-          #ffffff
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
+  {{ table({
+    caption: {
+      visuallyHiddenText: "Table of the full colour palette"
+    },
+    classes: "app-colour-list",
+    firstCellIsHeader: true,
+    border: false,
+    rows: rows
+  }) }}
 
   <h2 id="extended-colours">Extended colours</h2>
   <p><a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/">The NHS Identity Guidelines have an extended colour palette</a>. We haven't tested these colours yet for digital use.</p>
