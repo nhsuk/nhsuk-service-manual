@@ -181,179 +181,133 @@
   <h2 id="colour-palette">Colour palette</h2>
   <p>Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the <code>$nhsuk-error-colour</code> Sass variable rather than <code>nhsuk-colour("red")</code>.</p>
 
-  {%- set colours = [
+  {%- set colourGroups = [
     {
-      name: "dark-blue",
-      value: "#003087"
+      name: "Blue",
+      colours: [
+        { name: "dark-blue", value: "#003087" },
+        { name: "blue", value: "#005eb8" },
+        { name: "pale-blue", value: "#ccdff1" }
+      ]
     },
     {
-      name: "blue",
-      value: "#005eb8"
+      name: "Aqua green",
+      colours: [
+        { name: "dark-aqua-green", value: "#004a45" },
+        { name: "aqua-green", value: "#00a499" },
+        { name: "pale-aqua-green", value: "#bae6e3" }
+      ]
     },
     {
-      name: "pale-blue",
-      value: "#ccdff1"
+      name: "Green",
+      colours: [
+        { name: "dark-green", value: "#004c23" },
+        { name: "green", value: "#007f3b" },
+        { name: "pale-green", value: "#cce5d8" }
+      ]
     },
     {
-      name: "dark-aqua-green",
-      value: "#004a45"
+      name: "Yellow",
+      colours: [
+        { name: "dark-yellow", value: "#595215" },
+        { name: "yellow", value: "#ffeb3b" },
+        { name: "pale-yellow", value: "#fff9c4" }
+      ]
     },
     {
-      name: "aqua-green",
-      value: "#00a499"
+      name: "Warm yellow",
+      colours: [
+        { name: "dark-warm-yellow", value: "#664a0b" },
+        { name: "warm-yellow", value: "#ffb81c" },
+        { name: "pale-warm-yellow", value: "#fff1d2" }
+      ]
     },
     {
-      name: "pale-aqua-green",
-      value: "#bae6e3"
+      name: "Orange",
+      colours: [
+        { name: "dark-orange", value: "#5f3800" },
+        { name: "orange", value: "#ed8b00" },
+        { name: "pale-orange", value: "#fbe8cc" }
+      ]
     },
     {
-      name: "dark-green",
-      value: "#004c23"
+      name: "Red",
+      colours: [
+        { name: "dark-red", value: "#801810" },
+        { name: "red", value: "#d5281b" },
+        { name: "pale-red", value: "#f7d4d1" }
+      ]
     },
     {
-      name: "green",
-      value: "#007f3b"
+      name: "Pink",
+      colours: [
+        { name: "dark-pink", value: "#6e234b" },
+        { name: "pink", value: "#ae2573" },
+        { name: "pale-pink", value: "#efd3e3" }
+      ]
     },
     {
-      name: "pale-green",
-      value: "#cce5d8"
+      name: "Purple",
+      colours: [
+        { name: "dark-purple", value: "#330072" },
+        { name: "purple", value: "#5c338e" },
+        { name: "pale-purple", value: "#ded6e8" }
+      ]
     },
     {
-      name: "dark-yellow",
-      value: "#595215"
-    },
-    {
-      name: "yellow",
-      value: "#ffeb3b"
-    },
-    {
-      name: "pale-yellow",
-      value: "#fff9c4"
-    },
-    {
-      name: "dark-warm-yellow",
-      value: "#664a0b"
-    },
-    {
-      name: "warm-yellow",
-      value: "#ffb81c"
-    },
-    {
-      name: "pale-warm-yellow",
-      value: "#fff1d2"
-    },
-    {
-      name: "dark-orange",
-      value: "#5f3800"
-    },
-    {
-      name: "orange",
-      value: "#ed8b00"
-    },
-    {
-      name: "pale-orange",
-      value: "#fbe8cc"
-    },
-    {
-      name: "dark-red",
-      value: "#801810"
-    },
-    {
-      name: "red",
-      value: "#d5281b"
-    },
-    {
-      name: "pale-red",
-      value: "#f7d4d1"
-    },
-    {
-      name: "dark-pink",
-      value: "#6e234b"
-    },
-    {
-      name: "pink",
-      value: "#ae2573"
-    },
-    {
-      name: "pale-pink",
-      value: "#efd3e3"
-    },
-    {
-      name: "dark-purple",
-      value: "#330072"
-    },
-    {
-      name: "purple",
-      value: "#5c338e"
-    },
-    {
-      name: "pale-purple",
-      value: "#ded6e8"
-    },
-    {
-      name: "black",
-      value: "#212b32"
-    },
-    {
-      name: "grey-1",
-      value: "#4c6272"
-    },
-    {
-      name: "grey-2",
-      value: "#768692"
-    },
-    {
-      name: "grey-3",
-      value: "#aeb7bd"
-    },
-    {
-      name: "grey-4",
-      value: "#d8dde0"
-    },
-    {
-      name: "grey-5",
-      value: "#f0f4f5",
-      classes: "app-colour-list__swatch--border"
-    },
-    {
-      name: "white",
-      value: "#ffffff"
+      name: "Black, white and grey",
+      colours: [
+        { name: "black", value: "#212b32" },
+        { name: "grey-1", value: "#4c6272" },
+        { name: "grey-2", value: "#768692" },
+        { name: "grey-3", value: "#aeb7bd" },
+        { name: "grey-4", value: "#d8dde0" },
+        {
+          name: "grey-5",
+          value: "#f0f4f5",
+          classes: "app-colour-list__swatch--border"
+        },
+        { name: "white", value: "#ffffff" }
+      ]
     }
   ] %}
 
-  {%- set rows = [] %}
+  {%- for colourGroup in colourGroups %}
+    <h3>{{ colourGroup.name }}</h3>
+    {%- set rows = [] %}
 
-  {%- for colour in colours %}
-    {%- set swatchHtml -%}
-      <span {{- nhsukAttributes({
-        class: "app-colour-list__swatch" ~ (" " ~ colour.classes if colour.classes),
-        style: "background-color: " ~ colour.value | escape
-      }) }}></span>
-      <code>nhsuk-colour("{{ colour.name }}")</code>
-    {%- endset %}
+    {%- for colour in colourGroup.colours %}
+      {%- set swatchHtml -%}
+        <span {{- nhsukAttributes({
+          class: "app-colour-list__swatch" ~ (" " ~ colour.classes if colour.classes),
+          style: "background-color: " ~ colour.value | escape
+        }) }}></span>
+        <code>nhsuk-colour("{{ colour.name }}")</code>
+      {%- endset %}
 
-    {%- set rows = (rows.push([
-      {
-        text: swatchHtml | safe,
-        classes: "app-colour-list__column app-colour-list__column--name"
+      {%- set rows = (rows.push([
+        {
+          text: swatchHtml | safe,
+          classes: "app-colour-list__column app-colour-list__column--name"
+        },
+        {
+          html: "<samp>" ~ colour.value ~ "</samp>",
+          classes: "app-colour-list__column app-colour-list__column--colour",
+          width: "one-quarter"
+        }
+      ]), rows) %}
+    {%- endfor %}
+
+    {{ table({
+      caption: {
+        visuallyHiddenText: "Table of " ~ colourGroup.name | lower ~ " colours"
       },
-      {
-        html: "<samp>" ~ colour.value ~ "</samp>",
-        classes: "app-colour-list__column app-colour-list__column--colour",
-        width: "one-quarter"
-      }
-    ]), rows) %}
+      classes: "app-colour-list",
+      firstCellIsHeader: true,
+      border: false,
+      rows: rows
+    }) }}
   {%- endfor %}
-
-  {{ table({
-    caption: {
-      visuallyHiddenText: "Table of the full colour palette"
-    },
-    classes: "app-colour-list",
-    firstCellIsHeader: true,
-    border: false,
-    rows: rows
-  }) }}
 
   <h2 id="extended-colours">Extended colours</h2>
   <p><a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/">The NHS Identity Guidelines have an extended colour palette</a>. We haven't tested these colours yet for digital use.</p>
