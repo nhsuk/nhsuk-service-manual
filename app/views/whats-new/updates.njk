@@ -10,6 +10,40 @@
 
 {% block bodyContent %}
 
+<h2>October 2026</h2>
+
+{% set designHtml202610 %}
+<p>Added hidden text to the <a href="/design-system/components/buttons#warning-buttons">warning button</a> with guidance on not relying on users seeing the red colour</p>
+  
+{% endset %}
+
+{{ table({
+  caption: {
+    text: "Updates to the service manual in October 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
+  head: [
+    {
+      text: "Section",
+      width: "one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202610
+      }
+    ]
+  ]
+}) }}
+
+
 <h2>August 2026</h2>
 
 {% set accessibilityHtml202608 %}
