@@ -36,12 +36,3 @@
 .app-example--white {
   background: nhsuk-colour("white");
 }
-
-// Image example
-.app-example--image {
-  @include nhsuk-responsive-margin(4, "bottom");
-
-  & + h2 {
-    @include nhsuk-responsive-padding(4, "top");
-  }
-}

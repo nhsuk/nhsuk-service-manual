@@ -40,7 +40,7 @@
     .app-example,
     .nhsuk-table,
     .app-colour-list,
-    .app-example--image {
+    .app-image:not(.nhsuk-image) {
       max-width: 44em;
     }
 
