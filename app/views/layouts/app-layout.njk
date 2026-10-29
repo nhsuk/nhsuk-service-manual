@@ -6,68 +6,59 @@
   not (landingPage or pageTitle == "Community" or pageTitle == "NHS standards and technical policy") %}
 
 {% block content %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full app-component-reading-width">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full app-side-bar">
+      {% block sideNav %}
+        {% include "includes/_side-nav.njk" %}
+      {% endblock %}
+    </div>
+    <div class="nhsuk-grid-column-full app-main-content app-component-reading-width">
+      {% call heading({
+        caption: {
+          html: (theme | default(subSection) if subSection else pageSection) ~
+            ' <span class="nhsuk-u-visually-hidden"> – </span>'
+        } if hasCaption,
+        size: "xl",
+        classes: "app-page-heading"
+      }) %}
+      {% if experimental %}
+        {{ pageTitle }}<br>
+        {{ tag({
+          text: "Experimental",
+          colour: "yellow"
+        }) }}
+      {% else %}
+        {{ pageTitle }}
+      {% endif %}
+      {% endcall %}
 
-    <div class="app-pane">
+      {%- if hideDescription %}
+      {% else %}
+        <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
+      {% endif %}
 
-        <div class="app-pane__side-bar">
-          {% block sideNav %}
-            {% include "includes/_side-nav.njk" %}
-          {% endblock %}
-        </div>
+      {% block bodyContent %}
+      {% endblock %}
 
-        <div class="app-pane__main-content">
-
-          {% call heading({
-            caption: {
-              html: (theme | default(subSection) if subSection else pageSection) ~
-                ' <span class="nhsuk-u-visually-hidden"> – </span>'
-            } if hasCaption,
-            size: "xl",
-            classes: "app-page-heading"
-          }) %}
-          {% if experimental %}
-            {{ pageTitle }}<br>
-            {{ tag({
-              text: "Experimental",
-              colour: "yellow"
-            }) }}
-          {% else %}
-            {{ pageTitle }}
+      {% block contactPanel %}
+        {% if hideContact != "true" %}
+          {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content guide" or pageSection === "Accessibility" or pageSection === "Standards and technology" or pageTitle === "Design principles" %}
+            {% include "includes/_contact-panel.njk" %}
           {% endif %}
-          {% endcall %}
-
-          {%- if hideDescription %}
           {% else %}
-            <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
-          {% endif %}
+        {% endif %}
+      {% endblock %}
 
-          {% block bodyContent %}
-          {% endblock %}
+      {% block afterContact %}
+      {% endblock %}
 
-          {% block contactPanel %}
-            {% if hideContact != "true" %}
-              {% if subSection === "Styles" or subSection === "Components" or subSection === "Patterns" or pageSection === "Content guide" or pageSection === "Accessibility" or pageSection === "Standards and technology" or pageTitle === "Design principles" %}
-                {% include "includes/_contact-panel.njk" %}
-              {% endif %}
-              {% else %}
-            {% endif %}
-          {% endblock %}
-
-          {% block afterContact %}
-          {% endblock %}
-
-          {% block updateContent %}
-          {% if dateUpdated %}
-            {{ updates(dateUpdated) }}
-          {% else %}
-            {{ super() }}
-          {% endif %}
-          {% endblock %}
-
-        </div>
-      </div>
+      {% block updateContent %}
+      {% if dateUpdated %}
+        {{ updates(dateUpdated) }}
+      {% else %}
+        {{ super() }}
+      {% endif %}
+      {% endblock %}
     </div>
   </div>
 {% endblock %}
