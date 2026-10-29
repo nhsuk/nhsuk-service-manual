@@ -52,7 +52,7 @@
     "js-beautify": "^2.0.3",
     "lunr": "^2.3.9",
     "marked": "^18.1.0",
-    "nhsuk-frontend": "^10.7.0",
+    "nhsuk-frontend": "^10.7.1",
     "nunjucks": "^3.2.4",
     "outdent": "^0.8.0",
     "semver": "^7.8.5",
