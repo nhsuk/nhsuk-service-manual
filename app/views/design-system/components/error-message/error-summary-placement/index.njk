@@ -22,7 +22,7 @@ previewLayout: design-example-wrapper-full
       <form action="/form-handler" method="post" novalidate>
 
         {{ errorSummary({
-          titleText: "There is a problem",
+          heading: "There is a problem",
           errorList: [
             {
               text: "Date of birth must include a year",
@@ -34,9 +34,8 @@ previewLayout: design-example-wrapper-full
         {{ dateInput({
           fieldset: {
             legend: {
-              text: "What is your date of birth?",
-              size: "l",
-              isPageHeading: true
+              heading: "What is your date of birth?",
+              size: "l"
             }
           },
           hint: {
