@@ -17,6 +17,9 @@
 - Change name of "A to Z list panel" to "A to Z list card"
 - Fix page template footers
 - Document additional page template variables
+- Replace deprecated NHS.UK frontend `isPageHeading` option with `heading` text
+- Rename deprecated NHS.UK frontend `titleText` option to `heading`
+- Replace deprecated NHS.UK frontend task list status classes with tags
 
 ## 8.14.0 - 26 August 2026
 
