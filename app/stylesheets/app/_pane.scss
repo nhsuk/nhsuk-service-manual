@@ -4,36 +4,33 @@
 /// Pane component
 ////
 
-.app-pane {
-  display: flex;
-  position: relative;
-  min-height: 0;
-  overflow: inherit;
-}
+$side-bar-width-desktop: 220px;
+$side-bar-width-large-desktop: 260px;
 
-.app-pane__side-bar {
-  flex: 0 0 auto;
-  width: 220px;
+.app-side-bar {
+  display: none;
 
   @include nhsuk-responsive-margin(6, "bottom");
 
-  @include nhsuk-media-query($until: large-desktop) {
-    width: 200px;
+  @include nhsuk-media-query($from: desktop) {
+    display: block;
+    width: $side-bar-width-desktop;
   }
 
-  @include nhsuk-media-query($until: desktop) {
-    display: none;
+  @include nhsuk-media-query($from: large-desktop) {
+    width: $side-bar-width-large-desktop;
   }
 }
 
-.app-pane__main-content {
-  display: flex;
-  flex: 1 1 100%;
-  flex-direction: column;
-  min-width: 0;
-
+.app-main-content {
   @include nhsuk-media-query($from: desktop) {
-    padding-left: nhsuk-spacing(9);
+    width: calc(100% - $side-bar-width-desktop);
+    padding-left: nhsuk-spacing(6);
+  }
+
+  @include nhsuk-media-query($from: large-desktop) {
+    width: calc(100% - $side-bar-width-large-desktop);
+    // padding-left: nhsuk-spacing(9);
   }
 }
 
