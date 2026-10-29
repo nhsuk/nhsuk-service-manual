@@ -19,37 +19,6 @@
   text-align: center;
 }
 
-// The 'What's new' box in the home page hero
-.app-latest-update {
-  padding-top: nhsuk-spacing(8);
-  padding-bottom: nhsuk-spacing(8);
-
-  @include nhsuk-media-query($until: desktop) {
-    padding-top: 0;
-    padding-bottom: nhsuk-spacing(6);
-  }
-}
-
-// Custom style for home page hero card
-.app-card--transparent {
-  border: 2px solid $nhsuk-reverse-border-colour;
-  color: nhsuk-colour("white");
-  background: transparent;
-
-  a {
-    color: nhsuk-colour("white");
-
-    &:hover,
-    &:visited {
-      color: nhsuk-colour("grey-5");
-    }
-
-    &:focus {
-      color: $nhsuk-focus-text-colour;
-    }
-  }
-}
-
 // Card video
 
 .app-card__video {
@@ -68,14 +37,5 @@
     height: 100%;
 
     border: 0;
-  }
-}
-
-// Custom style for the home page hero
-// Reducing the padding on smaller screens
-.app-hero__wrapper {
-  @include nhsuk-media-query($until: desktop) {
-    padding-top: nhsuk-spacing(5);
-    padding-bottom: nhsuk-spacing(5);
   }
 }
