@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 8.15.0 - TBC October 2026
+## 8.15.0 - 2 November 2026
 
 :new: **New features**
 
