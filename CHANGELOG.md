@@ -7,6 +7,7 @@
 - Update search input guidance and examples after user research
 - Add hint text example to file upload component with guidance on file types and sizes
 - Add guidance on not relying on users seeing red colour of warning button
+- Add dark shades and pale tints to our colour palette
 
 :wrench: **Maintenance**
 
