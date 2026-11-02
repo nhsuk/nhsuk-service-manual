@@ -1,6 +1,6 @@
 # NHS digital service manual Changelog
 
-## 8.15.0 - TBC October 2026
+## 8.15.0 - 2 November 2026
 
 :new: **New features**
 
@@ -8,6 +8,8 @@
 - Add hint text example to file upload component with guidance on file types and sizes
 - Add guidance on not relying on users seeing red colour of warning button
 - Add dark shades and pale tints to our colour palette
+- Add tag "warm yellow" colour, same as previous (incorrect) orange
+- Add warm yellow tags to tags and task list examples
 
 :wrench: **Maintenance**
 
@@ -17,6 +19,11 @@
 - Change name of "A to Z list panel" to "A to Z list card"
 - Fix page template footers
 - Document additional page template variables
+- Replace deprecated NHS.UK frontend `isPageHeading` option with `heading` text
+- Rename deprecated NHS.UK frontend `titleText` option to `heading`
+- Replace deprecated NHS.UK frontend task list status classes with tags
+- Change tag "orange" colour to use orange from the palette
+- Change A to Z "panel" to "card" and include back to top icons
 
 ## 8.14.0 - 26 August 2026
 
