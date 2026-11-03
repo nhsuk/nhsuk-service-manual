@@ -81,7 +81,7 @@
     "concurrently": "^10.0.6",
     "copy-webpack-plugin": "^14.0.0",
     "cssnano": "^9.9.0",
-    "del-cli": "^7.0.0",
+    "del-cli": "^8.0.1",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-es-x": "^10.1.0",
