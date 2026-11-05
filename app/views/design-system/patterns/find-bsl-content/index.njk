@@ -14,23 +14,11 @@
 
 {% block bodyContent %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
-    {{ image({
-      src: "/assets/BSL-icon-01.svg",
-      alt: "British Sign Language supported",
-      classes: "app-image nhsuk-u-padding-6 nhsuk-u-margin-top-0"
-    }) }}
-  </div>
-  <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
-    {{ image({
-      src: "/assets/BSL-icon-02.svg",
-      alt: "Two hands signing translation in British Sign Language",
-      classes: "app-image nhsuk-u-padding-6 nhsuk-u-margin-top-0",
-      width: "one-half"
-    }) }}
-  </div>
-</div>
+  {{ designExample({
+    group: "patterns",
+    item: "find-bsl-content",
+    type: "default"
+  }) }}
 
 <h2 id="when-to-use">When to use it</h2>
 <p>You can use it:</p>
@@ -45,7 +33,7 @@
   {{ designExample({
     group: "patterns",
     item: "find-bsl-content",
-    type: "default"
+    type: "in-content"
   }) }}
 
 <p>Do not use the icon on its own without content to explain what it is.</p>
@@ -53,7 +41,17 @@
 
 <h3 id="in-video-thumbnails">In video thumbnails</h3>
 <p>See the <a href="https://www.youtube.com/playlist?list=PLnhASgDToTkuhwx3rRTVszXKoIaU4ej0o">NHS BSL video playlist</a> for examples of video thumbnails with the BSL icon.</p>
-<h2 id="download-the-icons">Download the icons</h2>
+
+<h3>On dark backgrounds</h3>
+<p>Use the blue on white version of the icon on dark backgrounds.</p>
+
+  {{ designExample({
+    group: "patterns",
+    item: "find-bsl-content",
+    type: "reverse"
+  }) }}
+
+{# <h2 id="download-the-icons">Download the icons</h2>
 <p>Download a zip folder containing the icons in SVG and PNG format.</p>
 
 <div class="nhsuk-u-margin-bottom-4">
@@ -62,7 +60,7 @@
     href: "/assets/bsl-icons.zip",
     preventDoubleClick: true
   }) }}
-</div>
+</div> #}
 
 <h2 id="feed-back-your-findings">Feed back your findings</h2>
 <p>We have tested the icon with BSL users but we need more information about:</p>
