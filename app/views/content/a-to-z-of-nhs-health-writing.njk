@@ -3,7 +3,7 @@
 {% set pageTitle = "A to Z of NHS health writing" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Words and phrases we use to make our content about health and the NHS easy to understand." %}
-{% set dateUpdated = "August 2026" %}
+{% set dateUpdated = "December 2026" %}
 {% set backlog_issue_id = "318" %}
 
 {% block head %}
@@ -124,6 +124,8 @@
       <p>We use "take in".</p>
       <h3 id="accessibility">accessibility</h3>
       <p>Follow our <a href="/accessibility">accessibility guidance</a>.</p>
+      <h3 id="account">account</h3>
+      <p>See <a href="#nhs-account">NHS account</a></p>
       <h3 id="acronyms">acronyms</h3>
       <p>See the guidance on <a href="/content/formatting#abbreviations-and-acronyms">abbreviations and acronyms on the Formatting page</a>.</p>
       <h3 id="acute">acute</h3>
@@ -178,7 +180,7 @@
       <p>Or you can use "anus" on its own when you need to be more precise, for example when you're talking about anal cancer.</p>
       <p>User testing showed that people understand "bottom" better than "anus". They do search for "anus" in Google, however.</p>
       <h3 id="app">app</h3>
-      <p>Lower case, unless referring to an official name, such as the <a href="#nhs-app">NHS App</a>.</p>
+      <p>Lower case. See also <a href="#nhs-app">NHS app</a>.</p>
       <h3 id="apply">apply</h3>
       <p>If we are talking about a medicine, we prefer "use", "put on" or "rub in".</p>
       <h3 id="apostrophes">apostrophes</h3>
@@ -318,7 +320,7 @@
       <h3 id="contractions">contractions</h3>
       <p>To find out how we use contractions, like "we're" and "don't", see the guidance on <a href="/content/punctuation#contractions">contractions on the Punctuation page</a>.</p>
       <h3 id="convulsions">convulsions</h3>
-      <p>See <a href="#seizure-or-fit">seizure or fit</a>.</p>
+      <p>See <a href="#seizure-fit">seizure or fit</a>.</p>
       <h3 id="covid-19">COVID-19</h3>
       <p>Upper case.</p>
       <p>Do not use:</p>
@@ -332,7 +334,7 @@
         <li><a href="#covid-19-vaccination-status">COVID-19 vaccination status</a></li>
         <li><a href="#long-covid">long COVID</a></li>
       </ul>
-      <h3 id="covid-19-vaccination-status">COVID-19 vaccination status</a></h3>
+      <h3 id="covid-19-vaccination-status">COVID-19 vaccination status</h3>
       <p>In the context of COVID-19, vaccination status refers to which vaccine someone has had and how many doses.</p>
       <p>Use "vaccination status" lower case.</p>
       <p>Do not use "COVID-19 status".</p>
@@ -472,6 +474,12 @@
       <p>We are taking references to Fahrenheit out of our content and just using Celsius. This is because healthcare professionals in the UK use Celsius. The National Institute for Health and Care Excellence (NICE) also uses it and we refer to NICE for evidence-based guidance.</p>
       <p>Celsius has been the official <a href="#temperature">temperature</a> scale in the UK since 1965.</p>
       <p>Giving 2 different temperatures can confuse people who may be anxious or unwell. It's easier to have just one number to tell your GP.</p>
+      <h3 id="family-and-carer-access">family and carer access</h3>
+      <p>A GP surgery can give someone family and carer access so they can help another person manage their health and care, for example in the NHS app. Use:</p>
+      <ul>
+        <li>"family and carer access"</li>
+        <li>"family and carer access (sometimes called proxy access)" if users may come across the term "proxy"</li>
+      </ul>
       <h3 id="fart">fart</h3>
       <p>We use "fart" and "farting" when we're talking about symptoms. People understand "fart" better than "passing wind" or "<a href="#flatulence">flatulence</a>".</p>
       <p>We use "<a href="#wind">wind</a>" for "trapped wind" or bloating.</p>
@@ -560,7 +568,7 @@
       <p>Note that a GP practice can have more than 1 surgery.</p>
       <h3 id="gp-system-supplier-names-and-patient-facing-services">GP system supplier names and patient-facing services</h3>
       <p>Users often do not recognise the name of GP systems in isolation from their patient-facing services.</p>
-      <p>Usability testing by the NHS App team showed that:</p>
+      <p>Usability testing by the NHS app team showed that:</p>
       <ul>
         <li>users recognise "Patient Access" but often do not recognise the name of the supplier "EMIS"</li>
         <li>they recognise "SystmOnline" but often do not recognise the name of the supplier "TPP"</li>
@@ -817,21 +825,27 @@
       <p>On the NHS website and in national digital services, say "Go to <a href="https://111.nhs.uk">NHS 111 online</a> or call 111" if it's a call to action. Include the word "NHS" and give "online" a small "o". Shorten it to "111 online" if you mention it more than once on a page.</p>
       <p>On non-NHS services, always use "NHS 111 online".</p>
       <p>111 online is not for children under 5. Do not direct users to 111 online if the call to action is only about young children.</p>
-      <h3 id="nhs-app">NHS App</h3>
-      <p>With an upper case A. It's the name of a specific app.</p>
-      <p>To avoid repetition of "NHS App", you can use "the app" where needed, for example "You can also order repeat prescriptions in the app".</p>
-      <p>When referring to something inside the NHS App, use "in" the app, not "on" or "with" the app.</p>
-      <div class="app-example app-example--content">
-        {{ tag({
-          text: "Example",
-          classes: "app-example__heading"
-        }) }}
+      <h3 id="nhs-account">NHS account</h3>
+      <p>Lower case a. "NHS account" is the patient-facing name for NHS login. Research shows that creating an NHS account is a more familiar concept than creating an NHS login.​</p>
+      <p>Use "NHS account" when a user is:</p>
+      <ul>
+        <li>creating an NHS account for the first time​</li>
+        <li>confirming their identity to use a patient-facing service, including the NHS app​</p>
+      </ul>
+      <p>Do not use "NHS account" to describe any other account the user has with the NHS. If you're directing a user to create an account to use your service, specify the account they are creating.</p>
+      <p>Do not use "account", "NHS account" or "NHS app account" to describe the NHS app. Users log in "with" their NHS account, or "to" the NHS app.</p>
+      <p>People who use <a href="#family-and-carer-access">family and carer access</a> in the NHS app switch between profiles, not accounts.​</p>
+      <p>See also NHS app.​</p>
 
-        <p>You can get health advice in the NHS App.</p>
-      </div>
-      <p>When advising users about the browser version of the NHS App, we say: "You can also access NHS App services from the browser on your desktop or laptop computer".</p>
-      <p><a href="https://digital.nhs.uk/services/nhs-app">Find out more about the NHS App on NHS England's website</a></p>
-      <p>See also "<a href="#app">app</a>".</p>
+      <h3 id="nhs-app">NHS app</h3>
+      <p>The name of the app that users download from their phone's app store. Lower case a.​</p>
+      <p>Many GP surgeries and hospitals have their own apps. Use "the NHS app" the first time you refer to it to be clear. To avoid repetition you can use "the app" after this.​</p>
+      <p>There's usually no need to refer to the log-in step when you're describing doing something in the NHS app. "Cancel your appointment in the NHS app" is clearer than "Log in to the NHS app to cancel your appointment".</p>
+      <p>Some users cannot or do not want to install the NHS app on their device. Always consider how you'll offer people other ways to use your service. See also <a href="#online-services">online services</a>.</p>
+      <p>Do not use the word "account", "NHS account" or "NHS app account" to describe the NHS app. Users log in "with" their NHS account, or "to" the NHS app. See the guidance on using <a href="#nhs-account">NHS account</a>.</p>
+      <p>Follow the guidance on using <a href="/content/formatting#bold-italics-and-underlining">bold</a> when writing technical instructions to describe how to complete tasks in the app.</p>
+      <p>The app has "screens", not "pages".</p>
+      <p>When referring to something in the NHS app, use "in" the app, not "on", "within" or "with" the app.​</p>
       <h3 id="nhs-england">NHS England (NHSE)</h3>
       <p>The full name of the organisation is NHS England. The abbreviation is NHSE.</p>
       <h3 id="nhs-login">NHS login</h3>
@@ -889,8 +903,16 @@
       </ul>
       <p>Our research showed people are not familiar with "online consultation". When the term is used for an online form it's misleading. Many people think it means they'll have a consultation with a doctor online, rather than complete a form to request an appointment.</p>
       <p>If you are talking about a phone, video or face to face consultation with a doctor or other health professional, be clear about the format.</p>
-      <h3 id="online services">online services</h3>
-      <p>See <a href="#gp-system-supplier-names-and-patient-facing-services">GP system supplier names and patient-facing services</a>.</p>
+      <h3 id="online-services">online services</h3>
+      <p>Users can log in on the NHS website to manage their healthcare online. Do not describe this as using the NHS app online.</p>
+      <p>Research shows some users find the term "services" unclear. Try to focus on the task that users are doing and the different ways they can do it.</p>
+      <p>Always direct users online or in the NHS app first.</p>
+      <p>See also:</p>
+      <ul>
+        <li><a href="#gp-system-supplier-names-and-patient-facing-services">GP system supplier names and patient-facing services</a></li>
+        <li><a href="#nhs-account">NHS account</a></li>
+        <li><a href="#nhs-app">NHS app</a></li>
+      </ul>
       <h3 id="opticians-optometrists-ophthalmologists-and-orthoptists">opticians, optometrists, ophthalmologists and orthoptists</h3>
       <p>We say "go to an opticians" (plural in this context) when we're telling people to take action. We only mention specific job roles where there's a user need for this.</p>
       <p>An optician (sometimes called a dispensing optician) checks prescriptions, fits and repairs glasses and lenses and helps with choosing frames and lenses. We use "opticians" for the place where you get your eyes tested. Note: an optician does not carry out eye tests.</p>
@@ -1021,6 +1043,8 @@
       <p>See "<a href="#pms-(premenstrual-syndrome)">PMS (premenstrual syndrome)</a>".</p>
       <h3 id="prognosis">prognosis</h3>
       <p>We prefer "outlook".</p>
+      <h3 id="proxy access">proxy access</h3>
+      <p>See <a href="#family-and-carer-access">family and carer access</a>.</p>
 
       <div class="nhsuk-back-to-top nhsuk-u-margin-top-2">
         <a class="nhsuk-back-to-top__link" href="#nhsuk-a-z-list">
