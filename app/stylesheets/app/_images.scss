@@ -9,10 +9,6 @@
   border: 1px solid nhsuk-colour("grey-3");
 }
 
-.app-image-background--dark {
-  background-color: nhsuk-colour("blue");
-}
-
 .app-image:not(.nhsuk-image) {
   @include nhsuk-responsive-margin(4, "bottom");
 
