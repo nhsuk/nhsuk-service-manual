@@ -1,0 +1,13 @@
+---
+background: blue
+---
+
+{% from "images/macro.njk" import image %}
+
+{{ image({
+  src: "/assets/BSL-icon-02.svg",
+  alt: "British Sign Language supported",
+  background: false,
+  border: false,
+  width: "one-third"
+}) }}
