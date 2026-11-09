@@ -4,7 +4,7 @@
 
 :wrench: **Maintenance**
 
-- Update nhsuk-frontend to v10.7.2
+- Update `nhsuk-frontend` to version `10.7.2`
 
 ## 8.15.0 - 2 November 2026
 
