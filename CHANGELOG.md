@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.15.1 - 10 November 2026
+
+:wrench: **Maintenance**
+
+- Install latest version of NHS.UK frontend (10.7.2)
+
 ## 8.15.0 - 2 November 2026
 
 :new: **New features**
