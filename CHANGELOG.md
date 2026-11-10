@@ -4,7 +4,7 @@
 
 :wrench: **Maintenance**
 
-- Update `nhsuk-frontend` to version `10.7.2`
+- Install latest version of NHS.UK frontend (10.7.2)
 
 ## 8.15.0 - 2 November 2026
 
