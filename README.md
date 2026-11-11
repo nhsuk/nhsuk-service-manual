@@ -16,17 +16,11 @@ Run the project in development mode `npm run watch` and visit <a href="http://lo
 
 Run automated tests locally with `npm run test`.
 
-## Running the application via the browser with Gitpod
+## Running the application via the browser with GitHub Codespaces
 
-Before running Gitpod, you must <a href="https://github.com/apps/gitpod-io/installations/new">install the Gitpod.io application on your GitHub account</a>.
+You can run the application in a browser by using [GitHub Codespaces](https://github.com/features/codespaces).
 
-Gitpod also requires access to public repositories. Enable this via <a href="https://gitpod.io/integrations">Gitpod integrations</a>. (Click on the 3 dots to edit permissions for your GitHub account. Gitpod may pre-select permissions. You need read/write access to code in the repos.)
-
-Using your own Github credentials you can create, change, commit and push to branches on our Gitpod container via the "ready to code" button below.
-
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nhsuk/nhsuk-service-manual)
-
-Read an <a href="https://www.gitpod.io/docs">introduction to Gitpod (on Gitpod's website)</a>.
+To do so, click the 'Code' button on GitHub, and select the 'Codespaces' tab from the popup. Next click the 'Create codespace on main' button. This will open your new codespace in a new browser tab or window.
 
 ## Release lifecycle
 
