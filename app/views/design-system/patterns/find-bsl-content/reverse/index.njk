@@ -4,10 +4,11 @@ background: blue
 
 {% from "images/macro.njk" import image %}
 
-{{ image({
-  src: "/assets/BSL-icon-02.svg",
-  alt: "British Sign Language supported",
-  background: false,
-  border: false,
-  width: "one-third"
-}) }}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <p style="display: flex; align-items: center;">
+      <img src="/assets/BSL-icon-02.svg" alt="BSL " style="max-width: 120px;" class="nhsuk-u-padding-right-4">
+      <a class="nhsuk-link nhsuk-link--reverse" href="#">Visit the NHS BSL video playlist on YouTube</a>
+    </p>
+  </div>
+</div>
