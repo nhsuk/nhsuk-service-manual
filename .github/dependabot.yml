@@ -38,7 +38,6 @@ updates:
           - 'baseline-browser-mapping'
           - 'caniuse-lite'
           - 'cssnano'
-          - 'cssnano-*'
           - '*-loader'
           - 'postcss'
           - 'postcss-*'
@@ -65,17 +64,14 @@ updates:
         # Exclude packages in other groups
         exclude-patterns:
           - '@types/jest'
-          - '@types/jest-*'
 
       test:
         patterns:
           - '@testing-library/*'
           - '@types/jest'
-          - '@types/jest-*'
           - 'babel-jest'
           - 'jest'
           - 'jest-*'
-          - 'jsdom-testing-mocks'
 
       tools:
         patterns:
