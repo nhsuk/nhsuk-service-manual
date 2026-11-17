@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## 8.16.1 - TBC
+
+:wrench: **Maintenance**
+
+- Clarify how and where to add content in panel component and confirmation page
+
+
 ## 8.15.1 - 10 November 2026
 
 :wrench: **Maintenance**
