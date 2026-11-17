@@ -3,8 +3,8 @@
   "version": "8.15.1",
   "description": "NHS digital service manual",
   "engines": {
-    "node": "^20.9.0 || ^22.11.0",
-    "npm": "^10.5.0"
+    "node": "^26.13.0",
+    "npm": "^11.20.0 || ^12.1.0"
   },
   "main": "app/index.js",
   "scripts": {
@@ -72,6 +72,7 @@
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
     "@types/lunr": "^2.3.7",
+    "@types/node": "^26.6.6",
     "@types/nunjucks": "^3.2.6",
     "@types/semver": "^7.8.0",
     "autoprefixer": "^10.6.2",
@@ -94,8 +95,6 @@
     "globals": "^17.13.0",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
-    "jest-environment-node": "^30.3.0",
-    "jsdom-testing-mocks": "^1.16.0",
     "postcss": "^8.5.32",
     "postcss-load-config": "^6.0.1",
     "postcss-loader": "^8.2.1",
@@ -120,5 +119,10 @@
     "middleware",
     "public",
     "!**/*.test.*"
-  ]
+  ],
+  "allowScripts": {
+    "@parcel/watcher": false,
+    "fsevents": false,
+    "unrs-resolver": false
+  }
 }
