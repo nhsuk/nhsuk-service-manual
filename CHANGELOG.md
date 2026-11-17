@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.16.1 - TBC
+
+:wrench: **Maintenance**
+
+- Improve signposting from card component to care cards
+
 ## 8.15.1 - 10 November 2026
 
 :wrench: **Maintenance**
