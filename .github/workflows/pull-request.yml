@@ -125,3 +125,64 @@ jobs:
       - name: Sonar analysis
         if: ${{ env.SONAR_TOKEN }}
         uses: SonarSource/sonarqube-scan-action@v8
+
+  infra:
+    name: Infrastructure checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: infrastructure
+    env:
+      TF_IN_AUTOMATION: 'true'
+      TF_INPUT: 'false'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
+        with:
+          terraform_version: 1.14.5
+          terraform_wrapper: false
+
+      - name: Check Terraform formatting
+        run: terraform fmt -check -diff -recursive
+
+      - name: Initialize Terraform
+        run: terraform init -backend=false -lockfile=readonly
+
+      - name: Validate Terraform
+        run: terraform validate
+
+      - name: Test staging Terraform
+        run: terraform test -var-file=vars/stag.tfvars
+
+      - name: Test production Terraform
+        run: terraform test -var-file=vars/prod.tfvars
+
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@6ffdbaa3be476b3431f7275c26966ef32ff60337 # v6.3.2
+        with:
+          tflint_version: v0.66.0
+
+      - name: Run TFLint
+        run: |
+          tflint --init
+          tflint --recursive
+
+      - name: Setup Python for Checkov
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      - name: Run Checkov
+        env:
+          CKV_NO_TELEMETRY: '1'
+        run: |
+          python -m pip install checkov==3.4.6
+          checkov --directory . --framework terraform --compact --quiet --skip-download
