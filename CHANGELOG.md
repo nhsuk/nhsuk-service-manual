@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## 8.16.0 - TBC
+
+:wrench: **Maintenance**
+
+- Correct info about NHS numbers reserved for testing 
+
 ## 8.15.1 - 10 November 2026
 
 :wrench: **Maintenance**
