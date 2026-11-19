@@ -192,7 +192,29 @@
     {% endfilter %}
   {% endcall %}
 
-  <p>Where a component config object or scope is required, these can also be passed to the <code>createAll</code> function.</p>
+  <p>Where a component config object or scope is required, these can also be passed to the <code>createAll</code> function:</p>
+
+  {% call code() %}
+    {% filter highlight("diff") %}
+      - import { initButtons, initCheckboxes } from 'nhsuk-frontend'
+      + import { createAll, Button, Checkboxes } from 'nhsuk-frontend'
+
+        const $element = document.querySelector('.app-modal')
+
+      - initButtons({
+      + createAll(Button, {
+          preventDoubleClick: true,
+          scope: $element,
+        })
+
+      - initCheckboxes({ scope: $element })
+      + createAll(Checkboxes, $element)
+    {% endfilter %}
+  {% endcall %}
+
+  <h3 id="deprecated-javascript-options-removed">Deprecated JavaScript options removed</h3>
+
+  <p>We've removed the deprecated <code>focusOnPageLoad</code> option from the error summary component JavaScript. You must use the <code>disableAutoFocus</code> JavaScript API option instead:</p>
 
   {% call code() %}
     {% filter highlight("js") %}
@@ -204,11 +226,19 @@
     {% endfilter %}
   {% endcall %}
 
-  <h3 id="deprecated-javascript-options-removed">Deprecated JavaScript options removed</h3>
+  <p>We've also removed the deprecated <code>jsHiddenClass</code> property from the tabs component JavaScript. You must use the <code>panelClass</code> JavaScript API option instead:</p>
 
-  <p>We've removed the deprecated <code>focusOnPageLoad</code> option from the error summary component JavaScript. You must use the <code>disableAutoFocus</code> JavaScript API option instead.</p>
+  {% call code() %}
+    {% filter highlight("js") %}
+      import { createAll, Tabs } from 'nhsuk-frontend'
 
-  <p>We've also removed the deprecated <code>jsHiddenClass</code> property from the tabs component JavaScript. You must use the <code>panelClass</code> JavaScript API option instead.</p>
+      createAll(Tabs, {
+        panelClass: 'nhsuk-tabs__panel'
+      })
+    {% endfilter %}
+  {% endcall %}
+
+  <p>The modifier <code>--hidden</code> is appended automatically to <code>panelClass</code> when used to hide a tab panel.</p>
 
   <h2 id="page-template">Page template</h2>
 
@@ -233,7 +263,7 @@
 
   <h3 id="action-links-back-links-and-buttons">Action links, back links and buttons</h3>
 
-  <p>The deprecated <code>element</code> option has been removed from action links, back links and buttons. Components now use an anchor when <code>href</code> is set and a button otherwise. For a button, use <code>type</code> instead:</p>
+  <p>The deprecated <code>element</code> option has been removed from action links, back links and buttons. Components now use an anchor when <code>href</code> is set and a button otherwise. Button components no longer support the <code>&lt;input&gt;</code> element. For a button, use <code>type</code> instead:</p>
 
   {% call code() %}
     {% filter highlight("diff") %}
@@ -242,15 +272,6 @@
       - element: "button"
       + type: "submit"
       })
-    {% endfilter %}
-  {% endcall %}
-
-  <p>The <code>nhsuk-button--disabled</code> class has been removed. Use the <code>disabled</code> attribute.</p>
-
-  {% call code() %}
-    {% filter highlight("diff") %}
-      - <button class="nhsuk-button nhsuk-button--disabled">Continue</button>
-      + <button class="nhsuk-button" disabled>Continue</button>
     {% endfilter %}
   {% endcall %}
 
@@ -263,43 +284,63 @@
   <p>For the <code>card</code> macro:</p>
 
   <ul>
-    <li>replace <code>imgURL</code> and <code>imgALT</code> with <code>image.src</code> and <code>image.alt</code></li>
-    <li>replace boolean variants such as <code>feature</code> and <code>warning</code> with <code>variant: "feature"</code> and <code>variant: "warning"</code></li>
-    <li>move heading options into <code>heading</code>, and description HTML into <code>description.html</code></li>
-    <li>use lowercase <code>html</code> options</li>
+    <li>replace <code>imgURL</code> with <code>image.src</code></li>
+    <li>replace <code>imgALT</code> with <code>image.alt</code></li>
+    <li>replace <code>feature: true</code> with <code>variant: "feature"</code></li>
+    <li>replace <code>primary: true</code> with <code>variant: "primary"</code></li>
+    <li>replace <code>secondary: true</code> with <code>variant: "secondary"</code></li>
+    <li>replace <code>warning: true</code> with <code>variant: "warning"</code></li>
+    <li>replace <code>type: "non-urgent"</code> with <code>variant: "non-urgent"</code></li>
+    <li>replace <code>type: "urgent"</code> with <code>variant: "urgent"</code></li>
+    <li>replace <code>type: "emergency"</code> with <code>variant: "emergency"</code></li>
+    <li>replace <code>headingHtml</code> with <code>heading.html</code></li>
+    <li>replace <code>headingClasses</code> with <code>heading.classes</code></li>
+    <li>replace <code>headingId</code> with <code>heading.id</code></li>
+    <li>replace <code>headingSize</code> with <code>heading.size</code></li>
+    <li>replace <code>headingLevel</code> with <code>heading.level</code></li>
+    <li>replace <code>headingVisuallyHiddenText</code> with <code>heading.visuallyHiddenText</code></li>
+    <li>replace <code>descriptionHtml</code> with <code>description.html</code></li>
   </ul>
 
   <p>If you are not using the Nunjucks macro, update the card classes as follows:</p>
 
-  {% call code() %}
-    {% filter highlight("diff") %}
-      - <div class="nhsuk-card">
-      + <div class="nhsuk-card nhsuk-card--primary">
-          <div class="nhsuk-card__content">
-      -     <h3 class="nhsuk-card__heading nhsuk-card__heading--feature">
-      +     <h3 class="nhsuk-card__heading">
-            <!-- Heading -->
-          </div>
-        </div>
-    {% endfilter %}
-  {% endcall %}
+  <ul>
+    <li>add the missing <code>nhsuk-card--primary</code> modifier class to primary cards</li>
+    <li>remove the <code>nhsuk-card__heading--feature</code> modifier class from feature card headings</li>
+    <li>remove the <code>nhsuk-card__content--feature</code> modifier class from feature card content</li>
+    <li>remove the <code>nhsuk-card__content--primary</code> modifier class from primary card content</li>
+    <li>remove the <code>nhsuk-card__content--secondary</code> modifier class from secondary card content</li>
+    <li>rename <code>nhsuk-card--care__heading-container</code> to <code>nhsuk-card__heading-container</code></li>
+    <li>rename <code>nhsuk-card--care__heading</code> to <code>nhsuk-card__heading</code></li>
+  </ul>
 
   <h3 id="character-count">Character count</h3>
 
-  <p>Replace <code>maxwords</code> with <code>maxlength</code> and <code>countType: "words"</code>. The default <code>countType</code> is now <code>"characters"</code>. Remove the deprecated <code>nhsuk-character-count__status--disabled</code> and <code>nhsuk-character-count__message--disabled</code> classes.</p>
+  <p>Replace <code>maxwords</code> with <code>maxlength</code> and <code>countType: "words"</code>. The default <code>countType</code> is now <code>"characters"</code>, so you can remove <code>countType: "characters"</code>. Remove the deprecated <code>nhsuk-character-count__status--disabled</code> and <code>nhsuk-character-count__message--disabled</code> classes.</p>
 
-  <p>If you are not using the Nunjucks macro, add the <code>hidden</code> attribute to empty count messages and textarea descriptions when they are not needed:</p>
+  <p>If you're using the JavaScript API, make the same change:</p>
 
   {% call code() %}
     {% filter highlight("diff") %}
-      - <span class="nhsuk-character-count__message"></span>
-      + <span class="nhsuk-character-count__message" hidden></span>
+        new CharacterCount($root, {
+      -   maxwords: 150
+      +   maxlength: 150,
+      +   countType: 'words'
+        })
     {% endfilter %}
   {% endcall %}
 
+  <p>If you are not using the Nunjucks macro, add the <code>hidden</code> attribute to an:</p>
+
+  <ul>
+    <li>empty visible count message with a <code>threshold</code> set but not yet reached</li>
+    <li>empty textarea description with neither <code>maxlength</code> nor <code>maxwords</code> set</li>
+  </ul>
+
   <h3 id="checkboxes-and-radios">Checkboxes and radios</h3>
 
-  <p>For exclusive checkboxes, replace <code>exclusive</code> with <code>behaviour: "exclusive"</code>, and rename <code>exclusiveGroup</code> to <code>behaviourGroup</code>. In hand-written HTML, use <code>data-behaviour</code> and <code>data-behaviour-group</code>.</p>
+  <p>For exclusive checkboxes, replace <code>exclusive</code> with <code>behaviour: "exclusive"</code>, and rename <code>exclusiveGroup</code> to <code>behaviourGroup</code>.</p>
+  <p>In hand-written HTML, use <code>data-behaviour</code> and <code>data-behaviour-group</code>.</p>
 
   <p>For conditionally revealed checkboxes and radios, replace <code>aria-controls</code> with <code>data-aria-controls</code>.</p>
 
@@ -317,23 +358,66 @@
     {% endfilter %}
   {% endcall %}
 
+  <h3 id="contents-list">Contents list</h3>
+
+  <p>For the <code>contentsList</code> macro, rename <code>landmarkLabel</code> to <code>ariaLabel</code>.</p>
+
   <h3 id="details">Details</h3>
 
   <p>For the <code>details</code> macro, replace <code>summaryText</code> and <code>summaryHtml</code> with <code>summary.text</code> and <code>summary.html</code>.</p>
 
   <h3 id="do-and-dont-lists">Do and don't lists</h3>
 
-  <p>For the <code>list</code> macro, use <code>heading</code>, <code>icon: "tick"</code> or <code>icon: "cross"</code>, and <code>text</code> or <code>html</code> for each item. Hand-written lists should use the card classes shown in the <a href="/design-system/components/do-and-dont-lists">Do and don't lists examples</a>.</p>
+  <p>For the <code>list</code> macro:</p>
+
+  <ul>
+    <li>replace <code>title</code> with <code>heading.text</code></li>
+    <li>replace <code>headingLevel</code> with <code>heading.level</code></li>
+    <li>replace <code>type: "tick"</code> and <code>type: "cross"</code> with <code>icon: "tick"</code> and <code>icon: "cross"</code></li>
+    <li>use <code>text</code> or <code>html</code> instead of <code>item</code> for each item</li>
+  </ul>
+
+  {% call code() %}
+    {% filter highlight("diff") %}
+      {% raw %}
+      {{ list({
+      -   title: "Do",
+      -   headingLevel: 3,
+      -   type: "tick",
+      +   heading: {
+      +     text: "Do",
+      +     level: 3
+      +   },
+      +   icon: "tick",
+          items: [
+            {
+      -       item: "cover blisters with a soft plaster or padded dressing"
+      +       text: "cover blisters with a soft plaster or padded dressing"
+            }
+          ]
+      }) }}
+      {% endraw %}
+    {% endfilter %}
+  {% endcall %}
+
+  <p>Hand-written HTML lists should use card classes and rename <code>nhsuk-icon__tick</code> to <code>nhsuk-icon--tick</code> and <code>nhsuk-icon__cross</code> to <code>nhsuk-icon--cross</code>:</p>
 
   {% call code() %}
     {% filter highlight("diff") %}
       + <div class="nhsuk-card nhsuk-card--feature">
       -   <div class="nhsuk-do-dont-list">
-      -     <h3 class="nhsuk-do-dont-list__label">
+      -     <h3 class="nhsuk-do-dont-list__label">Do</h3>
       +   <div class="nhsuk-card__content">
-      +     <h3 class="nhsuk-card__heading">
-            Do
-          </h3>
+      +     <h3 class="nhsuk-card__heading">Do</h3>
+          <ul class="nhsuk-list nhsuk-list--tick" role="list">
+            <li>
+      -       <svg class="nhsuk-icon nhsuk-icon__tick" aria-hidden="true" focusable="false">
+      +       <svg class="nhsuk-icon nhsuk-icon--tick" aria-hidden="true" focusable="false">
+                <!-- Tick icon -->
+              </svg>
+              cover blisters with a soft plaster or padded dressing
+            </li>
+          </ul>
         </div>
       + </div>
     {% endfilter %}
@@ -381,19 +465,55 @@
     <li>replace <code>search.visuallyHiddenButton</code> with <code>search.button.ariaLabel</code></li>
   </ul>
 
-  <p>The header search now uses the search input component. If you write the HTML yourself, update it as follows:</p>
+  <p>The header search now uses the search input component. If you write the HTML yourself, use the <a href="/design-system/components/header">header examples</a>.</p>
+
+  <p>If not done already, apply the changes from version 10.3.0:</p>
+
+  <ul>
+    <li>add the <code>novalidate</code> boolean attribute to the search form element and account item forms</li>
+    <li>add the <code>&lt;div class="nhsuk-form-group"&gt;</code> wrapper around the search label, input and button</li>
+    <li>add the <code>&lt;div class="nhsuk-input-wrapper"&gt;</code> wrapper around the search input and button</li>
+    <li>add the <code>nhsuk-button</code> and <code>nhsuk-button--small</code> classes to the search button</li>
+    <li>remove the <code>nhsuk-header__search-submit</code> class from the search button</li>
+    <li>remove the <code>nhsuk-header__search-input</code> class from the search input</li>
+  </ul>
+
+  <p>If not done already, apply the changes from version 10.5.0:</p>
+
+  <ul>
+    <li>add the <code>aria-label="Search"</code> attribute to the search button</li>
+    <li>remove the <code>aria-label="Search"</code> and <code>role="img"</code> attributes, and the <code>&lt;title&gt;</code> child element, from the search icon SVG</li>
+    <li>add the <code>aria-hidden="true"</code> attribute to the search icon SVG</li>
+    <li>update the search icon SVG path</li>
+  </ul>
+
+  <p>Finally, apply the changes to use the search input component:</p>
+
+  <ul>
+    <li>add the <code>nhsuk-search-input</code> class to the <code>nhsuk-form-group</code> element</li>
+    <li>add the <code>nhsuk-search-input__wrapper</code> class to the <code>nhsuk-input-wrapper</code> element</li>
+    <li>add the <code>nhsuk-search-input__input</code> class to the search input</li>
+    <li>add the <code>nhsuk-search-input__button</code> class to the search button</li>
+    <li>add the <code>nhsuk-button--brand-reverse</code> class to the search button for the blue header, or <code>nhsuk-button--brand</code> for the white header</li>
+  </ul>
 
   {% call code() %}
     {% filter highlight("diff") %}
-      - <div class="nhsuk-input-wrapper">
-      -   <input class="nhsuk-input" type="search">
-      -   <button class="nhsuk-button nhsuk-button--icon nhsuk-button--small">
-      + <div class="nhsuk-input-wrapper nhsuk-search-input__wrapper">
-      +   <input class="nhsuk-input nhsuk-search-input__input" type="search">
-      +   <button class="nhsuk-button nhsuk-button--brand-reverse nhsuk-button--icon nhsuk-button--small nhsuk-search-input__button" aria-label="Search">
-          <!-- Search icon -->
-        </button>
-      </div>
+      - <div class="nhsuk-form-group">
+      + <div class="nhsuk-form-group nhsuk-search-input">
+          <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">
+            Search the NHS website
+          </label>
+      -   <div class="nhsuk-input-wrapper">
+      -     <input class="nhsuk-input" id="search-field" name="q" type="search" autocomplete="off" placeholder="Search">
+      -     <button class="nhsuk-button nhsuk-button--icon nhsuk-button--small" data-module="nhsuk-button" type="submit" aria-label="Search">
+      +   <div class="nhsuk-input-wrapper nhsuk-search-input__wrapper">
+      +     <input class="nhsuk-input nhsuk-search-input__input" id="search-field" name="q" type="search" autocomplete="off" placeholder="Search">
+      +     <button class="nhsuk-button nhsuk-button--brand-reverse nhsuk-button--icon nhsuk-button--small nhsuk-search-input__button" data-module="nhsuk-button" type="submit" aria-label="Search">
+              <!-- Search icon -->
+            </button>
+          </div>
+        </div>
     {% endfilter %}
   {% endcall %}
 
@@ -420,6 +540,27 @@
       - </div>
       + <div class="nhsuk-hero__overlay"></div>
       </section>
+    {% endfilter %}
+  {% endcall %}
+
+  <p>For heroes without images, move the <code>nhsuk-hero--border</code> class to the top-level and rename <code>nhsuk-hero__wrapper</code> to <code>nhsuk-hero__content</code>:</p>
+
+  {% call code() %}
+    {% filter highlight("diff") %}
+      - <section class="nhsuk-hero">
+      -   <div class="nhsuk-width-container nhsuk-hero--border">
+      + <section class="nhsuk-hero nhsuk-hero--border">
+      +   <div class="nhsuk-width-container">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+      -         <div class="nhsuk-hero__wrapper">
+      +         <div class="nhsuk-hero__content">
+                  <!-- Hero content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     {% endfilter %}
   {% endcall %}
 
@@ -454,8 +595,8 @@
         label: {
       -   text: "Can you provide more detail?",
       +   heading: "Can you provide more detail?",
-          size: "l"
       -   isPageHeading: true,
+          size: "l"
         },
         name: "more-detail",
         maxlength: 350,
@@ -466,13 +607,19 @@
 
   <h3 id="notification-banners">Notification banners</h3>
 
-  <p>In the <code>notificationBanner</code> macro, replace <code>type: "success"</code> with <code>variant: "success"</code> and move title options into a nested <code>title</code> object.</p>
+  <p>In the <code>notificationBanner</code> macro:</p>
+
+  <ul>
+    <li>replace <code>type: "success"</code> with <code>variant: "success"</code></li>
+    <li>replace <code>titleText</code>, <code>titleHtml</code> and <code>titleId</code> with <code>title.text</code>, <code>title.html</code> and <code>title.id</code></li>
+    <li>replace <code>titleHeadingLevel</code> with <code>title.level</code></li>
+  </ul>
 
   <h3 id="panels">Panels</h3>
 
   <p>In the <code>panel</code> macro, move title options into a nested <code>heading</code> object.</p>
 
-  <p>For hand-written HTML, rename the panel heading classes:</p>
+  <p>For hand-written HTML, rename the panel heading class <code>nhsuk-panel__title</code> to <code>nhsuk-panel__heading</code>, and the <code>nhsuk-panel__title--xl</code>, <code>nhsuk-panel__title--l</code> and <code>nhsuk-panel__title--m</code> modifier classes to <code>nhsuk-panel__heading--xl</code>, <code>nhsuk-panel__heading--l</code> and <code>nhsuk-panel__heading--m</code>:</p>
 
   {% call code() %}
     {% filter highlight("diff") %}
@@ -485,7 +632,18 @@
 
   <h3 id="pagination">Pagination</h3>
 
-  <p>In the <code>pagination</code> macro, move pagination options into <code>previous</code> and <code>next</code> objects, and use <code>ariaLabel</code> for the landmark label:</p>
+  <p>In the <code>pagination</code> macro:</p>
+
+  <ul>
+    <li>replace <code>previousUrl</code> with <code>previous.href</code></li>
+    <li>replace <code>previousPage</code> with <code>previous.label</code></li>
+    <li>replace <code>nextUrl</code> with <code>next.href</code></li>
+    <li>replace <code>nextPage</code> with <code>next.label</code></li>
+    <li>replace <code>previous.labelText</code> with <code>previous.label</code></li>
+    <li>replace <code>next.labelText</code> with <code>next.label</code></li>
+    <li>replace <code>landmarkLabel</code> with <code>ariaLabel</code></li>
+    <li>replace <code>visuallyHiddenText</code> for <code>items</code> with <code>item.ariaLabel</code></li>
+  </ul>
 
   {% call code() %}
     {% filter highlight("diff") %}
@@ -693,6 +851,8 @@
     {% endfilter %}
   {% endcall %}
 
+  <p>For "Cannot start yet" statuses, replace <code>nhsuk-task-list__status--cannot-start-yet</code> the same way, but also add the <code>nhsuk-u-secondary-text-colour</code> class to the tag, for example <code>classes: "nhsuk-u-font-weight-normal nhsuk-u-secondary-text-colour"</code>.</p>
+
   <p>For hand-written HTML, remove the old modifier class from the status container and wrap the status text in a tag with no colour or border. This example shows the change for a completed task:</p>
 
   {% call code() %}
@@ -701,6 +861,18 @@
       -   Completed
       + <div class="nhsuk-task-list__status">
       +   <strong class="nhsuk-tag nhsuk-tag--no-colour nhsuk-tag--no-border nhsuk-u-font-weight-normal">Completed</strong>
+        </div>
+    {% endfilter %}
+  {% endcall %}
+
+  <p>And for a task that cannot start yet:</p>
+
+  {% call code() %}
+    {% filter highlight("diff") %}
+      - <div class="nhsuk-task-list__status nhsuk-task-list__status--cannot-start-yet">
+      -   Cannot start yet
+      + <div class="nhsuk-task-list__status">
+      +   <strong class="nhsuk-tag nhsuk-tag--no-colour nhsuk-tag--no-border nhsuk-u-font-weight-normal nhsuk-u-secondary-text-colour">Cannot start yet</strong>
         </div>
     {% endfilter %}
   {% endcall %}
@@ -740,7 +912,7 @@
     {% endfilter %}
   {% endcall %}
 
-  <p>Update these Sass variables and CSS classes:</p>
+  <p>Update these Sass variables and CSS classes, for example:</p>
 
   <ul>
     <li>Replace <code>$nhsuk-link-color</code> with <code>$nhsuk-link-colour</code>.</li>
@@ -751,6 +923,8 @@
     <li>Replace <code>$nhsuk-form-element-background-color</code> with <code>$nhsuk-input-background-colour</code>.</li>
     <li>Replace <code>nhsuk-u-secondary-text-color</code> with <code>nhsuk-u-secondary-text-colour</code>.</li>
   </ul>
+
+  <p>See <a href="https://github.com/nhsuk/nhsuk-frontend/pull/1526">NHS.UK frontend pull request #1526</a> for the full list of renamed variables.</p>
 
   <p>For example, update custom input styles to use the renamed border and background variables:</p>
 
@@ -811,6 +985,8 @@
   </ul>
 
   <h4 id="removed-sass-mixins">Mixins with no direct replacement</h4>
+
+  <p>Replace <code>care-card</code>, <code>nhsuk-care-card</code>, <code>heading-label</code> and <code>nhsuk-heading-label</code> with the <a href="/design-system/components/card">card component</a>.</p>
 
   <p>Use <code>@media print</code> instead of <code>print-color</code>, <code>nhsuk-print-color</code>, <code>nhsuk-print-colour</code>, <code>print-hide</code> or <code>nhsuk-print-hide</code>:</p>
 
