@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC December 2026?
+
+:new: **New features**
+
+- Update entries in the A to Z of NHS health writing for: family and carer access (proxy access), NHS account, NHS app and online services
+
 ## 8.15.0 - 2 November 2026
 
 :new: **New features**
