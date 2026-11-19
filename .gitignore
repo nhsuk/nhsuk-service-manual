@@ -6,5 +6,11 @@ coverage
 .idea
 .scannerwork
 .terraform
+.terraform-*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
 .vscode
 *.tsbuildinfo
