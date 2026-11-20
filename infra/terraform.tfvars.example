@@ -1,4 +1,5 @@
-app_name    = "svcman"
+organisation = "nhsuk"
+app_name    = "servicemanual"
 environment = "prod"
 location = {
   short = "uks"

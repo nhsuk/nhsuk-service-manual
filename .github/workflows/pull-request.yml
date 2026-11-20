@@ -133,7 +133,7 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: infrastructure
+        working-directory: infra
     env:
       TF_IN_AUTOMATION: 'true'
       TF_INPUT: 'false'
@@ -159,11 +159,8 @@ jobs:
       - name: Validate Terraform
         run: terraform validate
 
-      - name: Test staging Terraform
-        run: terraform test -var-file=vars/stag.tfvars
-
-      - name: Test production Terraform
-        run: terraform test -var-file=vars/prod.tfvars
+      - name: Test Terraform
+        run: terraform test -var="organisation=nhsuk" -var="app_name=servicemanual" -var="environment=prod"
 
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@6ffdbaa3be476b3431f7275c26966ef32ff60337 # v6.3.2

@@ -7,10 +7,12 @@ Dev uses Linux Basic (`B1`) with the same worker count, runtime, and region.
 
 ## Resource names
 
-Names follow `nhsuk-<app_name>-<azure_abbreviation>-<environment>-<location>`.
-Use the app name without the `nhsuk-` prefix in tfvars. The `location` object
-sets `short` for the three-letter suffix in resource names and `long` for the
-Azure region. Both environments use `location = { short = "uks", long = "uksouth" }`.
+Names follow `<organisation>-<app_name>-<azure_abbreviation>-<environment>-<location>`.
+The organisation defaults to `nhsuk`; set it in tfvars when using a different
+organisation. Use the app name without the organisation prefix in tfvars. The
+`location` object sets `short` for the three-letter suffix in resource names
+and `long` for the Azure region. Both environments use
+`location = { short = "uks", long = "uksouth" }`.
 UK South is the only deployment region currently supported.
 
 | Resource | [Microsoft abbreviation](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | Staging example |
@@ -42,27 +44,27 @@ web app's default hostname will change.
 Use Terraform directly. Azure Developer CLI (`azd`) and an `azd` deployment
 record are not required.
 
-From the repository root in PowerShell, choose `dev`, `stag`, or `prod`. Use the
-same selection for the input file, state key and Terraform data directory.
-The example assumes the state account is in the target subscription.
+From the repository root in PowerShell, copy `terraform.tfvars.example` to
+`terraform.tfvars` and update the application and environment values. Choose
+`dev`, `stag`, or `prod`; use the same selection for the state key. The local
+`terraform.tfvars` file is ignored by Git.
 
 ```powershell
-Set-Location infrastructure
-$environment = 'stag'
+Set-Location infra
+$environment = 'prod'
 $stateAccount = '<state-storage-account>'
 $stateContainer = '<state-container>'
 
-terraform init "-backend-config=storage_account_name=$stateAccount" `
+terraform init `
+  "-backend-config=storage_account_name=$stateAccount" `
   "-backend-config=container_name=$stateContainer" `
   "-backend-config=key=nhsuk-service-manual-$environment.tfstate"
 
-terraform plan "-var-file=vars\$environment.tfvars" "-out=$environment.tfplan"
-# Review the plan before applying:
-terraform apply "$environment.tfplan"
+terraform apply "-var-file=terraform.tfvars"
 ```
 
 Web app names are globally unique. If Azure reports a name collision, choose
-a different `app_name` in the relevant tfvars file before the first deployment.
+a different `app_name` in `terraform.tfvars` before the first deployment.
 Mock tests cannot check live name availability, subscription quota, or
 regional support for the SKU and runtime.
 
@@ -84,8 +86,7 @@ $env:TF_DATA_DIR = '.terraform-test'
 terraform init -backend=false
 terraform fmt -check -recursive
 terraform validate
-terraform test "-var-file=vars\stag.tfvars"
-terraform test "-var-file=vars\prod.tfvars"
+terraform test "-var-file=terraform.tfvars" "-var=environment=prod"
 ```
 
 Tests use a mocked AzureRM provider. Even the test marked `apply` runs only

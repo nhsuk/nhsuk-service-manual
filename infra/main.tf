@@ -1,5 +1,5 @@
 locals {
-  resource_name_format = "nhsuk-${var.app_name}-%s-${var.environment}-${var.location.short}"
+  resource_name_format = "${var.organisation}-${var.app_name}-%s-${var.environment}-${var.location.short}"
 }
 
 resource "azurerm_resource_group" "app" {

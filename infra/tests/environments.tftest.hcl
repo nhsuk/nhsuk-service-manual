@@ -16,14 +16,15 @@ run "app_service_configuration" {
   command = apply
 
   variables {
-    tags = { purpose = "terraform-tests" }
+    organisation = "example"
+    tags         = { purpose = "terraform-tests" }
   }
 
   assert {
     condition = (
-      azurerm_resource_group.app.name == "nhsuk-${var.app_name}-rg-${var.environment}-uks" &&
-      azurerm_service_plan.app.name == "nhsuk-${var.app_name}-asp-${var.environment}-uks" &&
-      azurerm_linux_web_app.app.name == "nhsuk-${var.app_name}-app-${var.environment}-uks"
+      azurerm_resource_group.app.name == "${var.organisation}-${var.app_name}-rg-${var.environment}-uks" &&
+      azurerm_service_plan.app.name == "${var.organisation}-${var.app_name}-asp-${var.environment}-uks" &&
+      azurerm_linux_web_app.app.name == "${var.organisation}-${var.app_name}-app-${var.environment}-uks"
     )
     error_message = "Names must follow the NHS.UK convention with the correct Azure resource abbreviation and UK South suffix."
   }
