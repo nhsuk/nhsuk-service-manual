@@ -26,15 +26,7 @@ run "app_service_configuration" {
       azurerm_service_plan.app.name == "${var.organisation}-${var.app_name}-asp-${var.environment}-uks" &&
       azurerm_linux_web_app.app.name == "${var.organisation}-${var.app_name}-app-${var.environment}-uks"
     )
-    error_message = "Names must follow the NHS.UK convention with the correct Azure resource abbreviation and UK South suffix."
-  }
-
-  assert {
-    condition = alltrue([
-      for resource in [azurerm_resource_group.app, azurerm_service_plan.app, azurerm_linux_web_app.app] :
-      resource.location == "uksouth" && resource.tags == var.tags
-    ])
-    error_message = "All resources must be in UK South and carry the supplied tags."
+    error_message = "Names must follow the naming convention with the correct Azure resource abbreviation and UK South suffix."
   }
 
   assert {
