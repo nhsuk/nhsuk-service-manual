@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:new: **New features**
+
+- Add BSL icon to frontend library and update guidance on using the icon 
+
 ## 8.15.0 - 2 November 2026
 
 :new: **New features**
