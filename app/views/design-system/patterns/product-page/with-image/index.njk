@@ -69,14 +69,14 @@ previewLayout: design-example-wrapper-full
       <div class="nhsuk-u-padding-top-7 nhsuk-u-padding-bottom-4" style="background-color: #ffffff;">
         <div class="nhsuk-width-container">
 
-          <h2 class="nhsuk-heading-l">How it works</h2>
+          <h2 class="nhsuk-heading-m">How it works</h2>
 
-          <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
-            <div class="nhsuk-grid-column-one-half">
-              <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Step 1</h2>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">1. Do this first</h2>
               <p>Description of the first step to get started using this service.</p>
             </div>
-            <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-grid-column-one-third">
               {{ image({
                 src: "/assets/image-example.svg",
                 alt: "Placeholder image",
@@ -88,11 +88,11 @@ previewLayout: design-example-wrapper-full
           </div>
 
           <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-one-half">
-              <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Step 2</h2>
+            <div class="nhsuk-grid-column-two-thirds">
+              <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">2. Do this next</h2>
               <p>Description of the second step to get started using this service.</p>
             </div>
-            <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-grid-column-one-third">
               {{ image({
                 src: "/assets/image-example.svg",
                 alt: "Placeholder image",
@@ -108,10 +108,10 @@ previewLayout: design-example-wrapper-full
 
     <div class="nhsuk-width-container">
 
-      <h2 class="nhsuk-heading-l nhsuk-u-padding-top-7">Who uses this service</h2>
+      <h2 class="nhsuk-heading-m nhsuk-u-padding-top-7">Who uses this service</h2>
 
-      <div class="nhsuk-grid-row nhsuk-u-padding-top-4">
-        <div class="nhsuk-grid-column-one-third">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
             heading: {
               text: "64",
@@ -123,8 +123,8 @@ previewLayout: design-example-wrapper-full
               text: "Trusts"
             }
           }) }}
-        </div>
-        <div class="nhsuk-grid-column-one-third">
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
             heading: {
               text: "46,000",
@@ -136,11 +136,11 @@ previewLayout: design-example-wrapper-full
               text: "Daily users"
             }
           }) }}
-        </div>
-        <div class="nhsuk-grid-column-one-third">
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
             heading: {
-              text: "4m",
+              text: "4 million",
               size: "m",
               visuallyHiddenText: "Bookings",
               classes: "nhsuk-u-margin-bottom-1"
@@ -149,8 +149,8 @@ previewLayout: design-example-wrapper-full
               text: "Bookings"
             }
           }) }}
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
   </div>
