@@ -64,15 +64,7 @@
 
 <h2 id="how-to-get-the-bsl-icons">How to get the BSL icons</h2>
 <p>The main BSL icon is included in the NHS.UK frontend library.</p>
-<p>If you need all the icon files in SVG, PNG and PDF formats, for example for print, you can download them in a zip folder.</p>
-
-<div class="nhsuk-u-margin-bottom-4">
-  {{ button({
-    text: "Download BSL icons (2.13MB)",
-    href: "/assets/bsl-icons.zip",
-    preventDoubleClick: true
-  }) }}
-</div> 
+<p>If you need all the icon files in SVG, PNG and PDF formats, for example for print, you can <a href="/assets/bsl-icons.zip">download them in a zip folder</a>.</p>
 
 <h2 id="feed-back-your-findings">Feed back your findings</h2>
 <p>We have tested the icon with BSL users but we need more information about:</p>
@@ -80,34 +72,5 @@
   <li>how non-BSL users react to the icon as part of their user journey</li>
   <li>where BSL users expect to find the BSL icon as part of their user journey</li>
 </ul>
-
-{#
-  {{ designExample({
-    group: "patterns",
-    item: "find-bsl-content",
-    type: "default"
-  }) }}
-
-  <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
-  <p>Use this pattern when your research shows users need to know when the whole page was last checked and when it will be checked again.</p>
-
-  <h2 id="when-not-to-use-this-pattern">When not to use this pattern</h2>
-  <p>Do not use this pattern in transactional services. We have not tested review dates in forms.</p>
-
-  <h2 id="how-the-pattern-works">How the pattern works</h2>
-  <p>The pattern consists of 2 dates:</p>
-  <ul>
-    <li>when you last reviewed the page</li>
-    <li>when you will review it again</li>
-  </ul>
-
-  {{ image({
-    src: "/assets/review-date-pattern-embedded-content.png",
-    alt: "Image of video showing exercise trainer doing workout on mat in fitness studio",
-    caption: {
-      text: "Example of review date used under a video"
-    },
-    classes: "app-image"
-  }) }} #}
 
 {% endblock %}
