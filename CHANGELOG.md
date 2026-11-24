@@ -1,5 +1,11 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Remove broken link and reference to British Dyslexia Association
+
 ## 8.15.1 - 10 November 2026
 
 :wrench: **Maintenance**
