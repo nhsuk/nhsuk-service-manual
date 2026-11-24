@@ -13,6 +13,7 @@
 
 {% block header %}
   {{ header({
+    inline: true,
     service: {
       text: "Service name"
     },
@@ -30,7 +31,9 @@
 {% block beforeContent %}{% endblock %}
 
 {% block main %}
-  {{ exampleHtml | safe }}
+  <main id="maincontent" role="main">
+    {{ exampleHtml | safe }}
+  </main>
 {% endblock %}
 
 {% block footer %}

@@ -1,12 +1,21 @@
 ---
-previewLayout: design-example-wrapper-full
+previewLayout: design-example-wrapper-blank
 ---
 
-{% extends "layouts/design-example-wrapper.njk" %}
+{% extends "layouts/design-example-wrapper-full.njk" %}
 
 {% from "back-link/macro.njk" import backLink %}
 {% from "button/macro.njk" import button %}
+{% from "header/macro.njk" import header %}
 {% from "radios/macro.njk" import radios %}
+
+{% block header %}
+  {{ header({
+    service: {
+      text: "Service name"
+    }
+  }) }}
+{% endblock %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -18,8 +27,6 @@ previewLayout: design-example-wrapper-full
       href: "#",
       classes: "nhsuk-button--reverse"
     }) }}
-
-    <a href="#" class="nhsuk-link nhsuk-link--reverse">Log in</a>
   </div>
 {% endset %}
 
