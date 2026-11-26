@@ -1,5 +1,12 @@
 # NHS digital service manual Changelog
 
+## TBC
+
+:wrench: **Maintenance**
+
+- Remove abbreviation NHSE from entry for NHS England
+
+
 ## 8.15.1 - 10 November 2026
 
 :wrench: **Maintenance**
