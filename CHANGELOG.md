@@ -4,7 +4,8 @@
 
 :new: **New features**
 
-- Update entries in the A to Z of NHS health writing for: family and carer access (proxy access), NHS account, NHS app and online services
+- Update or add entries in the A to Z of NHS health writing for: family and carer access (proxy access), NHS account, NHS app, online services and pregnancy, with linking "see" references
+- Update guidance on repeating the unit of measurement in lists and ranges when writing about weight, volume or time
 
 ## 8.15.0 - 2 November 2026
 

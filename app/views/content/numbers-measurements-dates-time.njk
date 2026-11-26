@@ -3,7 +3,7 @@
 {% set pageTitle = "Numbers, measurements, dates and time" %}
 {% set pageSection = "Content guide" %}
 {% set pageDescription = "Content styles, including numerals, ordinals, dosage, temperature, fractions and percentages" %}
-{% set dateUpdated = "August 2026" %}
+{% set dateUpdated = "December 2026" %}
 {% set backlog_issue_id = "321" %}
 
 {% block beforeContent %}
@@ -40,7 +40,6 @@
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#measurements">Measurements</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#dates">Dates</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#time">Time</a></li>
-          <li class="app-side-nav__item"><a class="app-side-nav__link" href="#ranges">Ranges of numbers, dates and time</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#fractions-and-percentages">Fractions and percentages</a></li>
           <li class="app-side-nav__item"><a class="app-side-nav__link" href="#statistics">Statistics</a></li>
         </ul>
@@ -187,6 +186,25 @@
   </ul>
 
   <h2 id="measurements">Measurements</h2>
+  <p>When you're writing about weight, volume or time, repeat the unit of measurement in lists and ranges to avoid ambiguity, for example:</p>
+  <ul>
+    <li>10g to 30g</li>
+    <li>5ml to 15ml</li>
+    <li>2pm to 6pm</li>
+  </ul>
+  <p>We use "to" for time, date and numerical ranges, not hyphens or dashes.</p>
+  <div class="app-example app-example--content">
+    {{ tag({
+      text: "Examples",
+      classes: "app-example__heading"
+    }) }}
+
+    <ul>
+      <li>The surgery is open Monday to Friday, 2pm to 6pm.</li>
+      <li>A BMI of 18.5 to 24.9 means you're a healthy weight.</li>
+    </ul>
+  </div>
+
   <h3 id="calories">Calories</h3>
   <p>We use "calorie" when talking about calories in general, for example "calorie information on menus". Where appropriate, we explain that calories are often written as "kcal".</p>
   <p>We use "kcal" as the unit of measurement. We do not put a space between the number and the measurement.</p>
@@ -308,20 +326,6 @@
       ]
     ]
   }) }}
-
-  <h2 id="ranges">Ranges of numbers, dates and time</h2>
-  <p>We use "to" for time, date and numerical ranges, not hyphens or dashes.</p>
-  <div class="app-example app-example--content">
-    {{ tag({
-      text: "Examples",
-      classes: "app-example__heading"
-    }) }}
-
-    <ul>
-      <li>The surgery is open Monday to Friday, 2pm to 6pm.</li>
-      <li>A BMI of 18.5 to 24.9 means you're a healthy weight.</li>
-    </ul>
-  </div>
 
   <h2 id="fractions-and-percentages">Fractions and percentages</h2>
   <p>Spell out common fractions like two-thirds.</p>
